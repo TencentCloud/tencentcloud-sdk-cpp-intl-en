@@ -18,15 +18,16 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 AiRecognitionTaskOcrWordsResultOutput::AiRecognitionTaskOcrWordsResultOutput() :
-    m_resultSetHasBeenSet(false)
+    m_resultSetHasBeenSet(false),
+    m_resultSetFileUrlHasBeenSet(false),
+    m_resultSetFileUrlExpireTimeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome AiRecognitionTaskOcrWordsResultOutput::Deserialize(const Value &value)
+CoreInternalOutcome AiRecognitionTaskOcrWordsResultOutput::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -34,10 +35,10 @@ CoreInternalOutcome AiRecognitionTaskOcrWordsResultOutput::Deserialize(const Val
     if (value.HasMember("ResultSet") && !value["ResultSet"].IsNull())
     {
         if (!value["ResultSet"].IsArray())
-            return CoreInternalOutcome(Error("response `AiRecognitionTaskOcrWordsResultOutput.ResultSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionTaskOcrWordsResultOutput.ResultSet` is not array type"));
 
-        const Value &tmpValue = value["ResultSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["ResultSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             AiRecognitionTaskOcrWordsResultItem item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -51,26 +52,62 @@ CoreInternalOutcome AiRecognitionTaskOcrWordsResultOutput::Deserialize(const Val
         m_resultSetHasBeenSet = true;
     }
 
+    if (value.HasMember("ResultSetFileUrl") && !value["ResultSetFileUrl"].IsNull())
+    {
+        if (!value["ResultSetFileUrl"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionTaskOcrWordsResultOutput.ResultSetFileUrl` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_resultSetFileUrl = string(value["ResultSetFileUrl"].GetString());
+        m_resultSetFileUrlHasBeenSet = true;
+    }
+
+    if (value.HasMember("ResultSetFileUrlExpireTime") && !value["ResultSetFileUrlExpireTime"].IsNull())
+    {
+        if (!value["ResultSetFileUrlExpireTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionTaskOcrWordsResultOutput.ResultSetFileUrlExpireTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_resultSetFileUrlExpireTime = string(value["ResultSetFileUrlExpireTime"].GetString());
+        m_resultSetFileUrlExpireTimeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void AiRecognitionTaskOcrWordsResultOutput::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AiRecognitionTaskOcrWordsResultOutput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_resultSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResultSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_resultSet.begin(); itr != m_resultSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_resultSetFileUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ResultSetFileUrl";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resultSetFileUrl.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_resultSetFileUrlExpireTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ResultSetFileUrlExpireTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resultSetFileUrlExpireTime.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -90,5 +127,37 @@ void AiRecognitionTaskOcrWordsResultOutput::SetResultSet(const vector<AiRecognit
 bool AiRecognitionTaskOcrWordsResultOutput::ResultSetHasBeenSet() const
 {
     return m_resultSetHasBeenSet;
+}
+
+string AiRecognitionTaskOcrWordsResultOutput::GetResultSetFileUrl() const
+{
+    return m_resultSetFileUrl;
+}
+
+void AiRecognitionTaskOcrWordsResultOutput::SetResultSetFileUrl(const string& _resultSetFileUrl)
+{
+    m_resultSetFileUrl = _resultSetFileUrl;
+    m_resultSetFileUrlHasBeenSet = true;
+}
+
+bool AiRecognitionTaskOcrWordsResultOutput::ResultSetFileUrlHasBeenSet() const
+{
+    return m_resultSetFileUrlHasBeenSet;
+}
+
+string AiRecognitionTaskOcrWordsResultOutput::GetResultSetFileUrlExpireTime() const
+{
+    return m_resultSetFileUrlExpireTime;
+}
+
+void AiRecognitionTaskOcrWordsResultOutput::SetResultSetFileUrlExpireTime(const string& _resultSetFileUrlExpireTime)
+{
+    m_resultSetFileUrlExpireTime = _resultSetFileUrlExpireTime;
+    m_resultSetFileUrlExpireTimeHasBeenSet = true;
+}
+
+bool AiRecognitionTaskOcrWordsResultOutput::ResultSetFileUrlExpireTimeHasBeenSet() const
+{
+    return m_resultSetFileUrlExpireTimeHasBeenSet;
 }
 

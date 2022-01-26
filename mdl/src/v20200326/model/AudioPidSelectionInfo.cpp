@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mdl::V20200326::Model;
-using namespace rapidjson;
 using namespace std;
 
 AudioPidSelectionInfo::AudioPidSelectionInfo() :
@@ -26,7 +25,7 @@ AudioPidSelectionInfo::AudioPidSelectionInfo() :
 {
 }
 
-CoreInternalOutcome AudioPidSelectionInfo::Deserialize(const Value &value)
+CoreInternalOutcome AudioPidSelectionInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -35,7 +34,7 @@ CoreInternalOutcome AudioPidSelectionInfo::Deserialize(const Value &value)
     {
         if (!value["Pid"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AudioPidSelectionInfo.Pid` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AudioPidSelectionInfo.Pid` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_pid = value["Pid"].GetUint64();
         m_pidHasBeenSet = true;
@@ -45,12 +44,12 @@ CoreInternalOutcome AudioPidSelectionInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void AudioPidSelectionInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AudioPidSelectionInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_pidHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Pid";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_pid, allocator);

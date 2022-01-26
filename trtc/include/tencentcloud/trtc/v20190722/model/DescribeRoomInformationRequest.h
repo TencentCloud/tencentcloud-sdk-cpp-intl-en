@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
-                     * @return StartTime Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
+                     * 获取Query start time (s) in the format of Unix timestamp (e.g., 1588031999), which must be a time point in the last 14 days
+                     * @return StartTime Query start time (s) in the format of Unix timestamp (e.g., 1588031999), which must be a time point in the last 14 days
                      */
                     uint64_t GetStartTime() const;
 
                     /**
-                     * 设置Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
-                     * @param StartTime Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
+                     * 设置Query start time (s) in the format of Unix timestamp (e.g., 1588031999), which must be a time point in the last 14 days
+                     * @param StartTime Query start time (s) in the format of Unix timestamp (e.g., 1588031999), which must be a time point in the last 14 days
                      */
                     void SetStartTime(const uint64_t& _startTime);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Query end time in the format of local UNIX timestamp, such as 1588031999s.
-                     * @return EndTime Query end time in the format of local UNIX timestamp, such as 1588031999s.
+                     * 获取Query end time (s) in the format of Unix timestamp, e.g., 1588034999
+                     * @return EndTime Query end time (s) in the format of Unix timestamp, e.g., 1588034999
                      */
                     uint64_t GetEndTime() const;
 
                     /**
-                     * 设置Query end time in the format of local UNIX timestamp, such as 1588031999s.
-                     * @param EndTime Query end time in the format of local UNIX timestamp, such as 1588031999s.
+                     * 设置Query end time (s) in the format of Unix timestamp, e.g., 1588034999
+                     * @param EndTime Query end time (s) in the format of Unix timestamp, e.g., 1588034999
                      */
                     void SetEndTime(const uint64_t& _endTime);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Room ID of uint type
-                     * @return RoomId Room ID of uint type
+                     * 获取Room ID in string type
+                     * @return RoomId Room ID in string type
                      */
                     std::string GetRoomId() const;
 
                     /**
-                     * 设置Room ID of uint type
-                     * @param RoomId Room ID of uint type
+                     * 设置Room ID in string type
+                     * @param RoomId Room ID in string type
                      */
                     void SetRoomId(const std::string& _roomId);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool RoomIdHasBeenSet() const;
 
                     /**
-                     * 获取Page index. If it is left empty, 10 entries will be returned by default.
-                     * @return PageNumber Page index. If it is left empty, 10 entries will be returned by default.
+                     * 获取Page index starting from 0 (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default)
+                     * @return PageNumber Page index starting from 0 (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default)
                      */
                     std::string GetPageNumber() const;
 
                     /**
-                     * 设置Page index. If it is left empty, 10 entries will be returned by default.
-                     * @param PageNumber Page index. If it is left empty, 10 entries will be returned by default.
+                     * 设置Page index starting from 0 (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default)
+                     * @param PageNumber Page index starting from 0 (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default)
                      */
                     void SetPageNumber(const std::string& _pageNumber);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool PageNumberHasBeenSet() const;
 
                     /**
-                     * 获取Page size. Maximum value: 100. If it is left empty, 10 entries will be returned by default.
-                     * @return PageSize Page size. Maximum value: 100. If it is left empty, 10 entries will be returned by default.
+                     * 获取Number of entries per page (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default. Maximum value: 100)
+                     * @return PageSize Number of entries per page (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default. Maximum value: 100)
                      */
                     std::string GetPageSize() const;
 
                     /**
-                     * 设置Page size. Maximum value: 100. If it is left empty, 10 entries will be returned by default.
-                     * @param PageSize Page size. Maximum value: 100. If it is left empty, 10 entries will be returned by default.
+                     * 设置Number of entries per page (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default. Maximum value: 100)
+                     * @param PageSize Number of entries per page (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default. Maximum value: 100)
                      */
                     void SetPageSize(const std::string& _pageSize);
 
@@ -159,31 +159,31 @@ namespace TencentCloud
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
+                     * Query start time (s) in the format of Unix timestamp (e.g., 1588031999), which must be a time point in the last 14 days
                      */
                     uint64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Query end time in the format of local UNIX timestamp, such as 1588031999s.
+                     * Query end time (s) in the format of Unix timestamp, e.g., 1588034999
                      */
                     uint64_t m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Room ID of uint type
+                     * Room ID in string type
                      */
                     std::string m_roomId;
                     bool m_roomIdHasBeenSet;
 
                     /**
-                     * Page index. If it is left empty, 10 entries will be returned by default.
+                     * Page index starting from 0 (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default)
                      */
                     std::string m_pageNumber;
                     bool m_pageNumberHasBeenSet;
 
                     /**
-                     * Page size. Maximum value: 100. If it is left empty, 10 entries will be returned by default.
+                     * Number of entries per page (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default. Maximum value: 100)
                      */
                     std::string m_pageSize;
                     bool m_pageSizeHasBeenSet;

@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CLB instance ID.
-                     * @return LoadBalancerIds CLB instance ID.
+                     * 获取CLB instance ID
+                     * @return LoadBalancerIds CLB instance ID
                      */
                     std::vector<std::string> GetLoadBalancerIds() const;
 
                     /**
-                     * 设置CLB instance ID.
-                     * @param LoadBalancerIds CLB instance ID.
+                     * 设置CLB instance ID
+                     * @param LoadBalancerIds CLB instance ID
                      */
                     void SetLoadBalancerIds(const std::vector<std::string>& _loadBalancerIds);
 
@@ -340,14 +340,14 @@ Basic network does not support queries by VpcId.
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Security group ID, such as sg-m1cc9123
-                     * @return SecurityGroup Security group ID, such as sg-m1cc9123
+                     * 获取Security group ID, e.g., `sg-m1cc****`.
+                     * @return SecurityGroup Security group ID, e.g., `sg-m1cc****`.
                      */
                     std::string GetSecurityGroup() const;
 
                     /**
-                     * 设置Security group ID, such as sg-m1cc9123
-                     * @param SecurityGroup Security group ID, such as sg-m1cc9123
+                     * 设置Security group ID, e.g., `sg-m1cc****`.
+                     * @param SecurityGroup Security group ID, e.g., `sg-m1cc****`.
                      */
                     void SetSecurityGroup(const std::string& _securityGroup);
 
@@ -358,14 +358,14 @@ Basic network does not support queries by VpcId.
                     bool SecurityGroupHasBeenSet() const;
 
                     /**
-                     * 获取Master AZ, such as "100001" (Guangzhou Zone 1)
-                     * @return MasterZone Master AZ, such as "100001" (Guangzhou Zone 1)
+                     * 获取Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
+                     * @return MasterZone Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
                      */
                     std::string GetMasterZone() const;
 
                     /**
-                     * 设置Master AZ, such as "100001" (Guangzhou Zone 1)
-                     * @param MasterZone Master AZ, such as "100001" (Guangzhou Zone 1)
+                     * 设置Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
+                     * @param MasterZone Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
                      */
                     void SetMasterZone(const std::string& _masterZone);
 
@@ -400,7 +400,7 @@ Basic network does not support queries by VpcId.
                 private:
 
                     /**
-                     * CLB instance ID.
+                     * CLB instance ID
                      */
                     std::vector<std::string> m_loadBalancerIds;
                     bool m_loadBalancerIdsHasBeenSet;
@@ -498,13 +498,13 @@ Basic network does not support queries by VpcId.
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Security group ID, such as sg-m1cc9123
+                     * Security group ID, e.g., `sg-m1cc****`.
                      */
                     std::string m_securityGroup;
                     bool m_securityGroupHasBeenSet;
 
                     /**
-                     * Master AZ, such as "100001" (Guangzhou Zone 1)
+                     * Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
                      */
                     std::string m_masterZone;
                     bool m_masterZoneHasBeenSet;

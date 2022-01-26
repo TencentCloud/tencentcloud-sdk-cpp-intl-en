@@ -18,17 +18,17 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Batch::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 SystemDisk::SystemDisk() :
     m_diskTypeHasBeenSet(false),
     m_diskIdHasBeenSet(false),
-    m_diskSizeHasBeenSet(false)
+    m_diskSizeHasBeenSet(false),
+    m_cdcIdHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome SystemDisk::Deserialize(const Value &value)
+CoreInternalOutcome SystemDisk::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +37,7 @@ CoreInternalOutcome SystemDisk::Deserialize(const Value &value)
     {
         if (!value["DiskType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SystemDisk.DiskType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SystemDisk.DiskType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_diskType = string(value["DiskType"].GetString());
         m_diskTypeHasBeenSet = true;
@@ -47,7 +47,7 @@ CoreInternalOutcome SystemDisk::Deserialize(const Value &value)
     {
         if (!value["DiskId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SystemDisk.DiskId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SystemDisk.DiskId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_diskId = string(value["DiskId"].GetString());
         m_diskIdHasBeenSet = true;
@@ -57,41 +57,59 @@ CoreInternalOutcome SystemDisk::Deserialize(const Value &value)
     {
         if (!value["DiskSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SystemDisk.DiskSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SystemDisk.DiskSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_diskSize = value["DiskSize"].GetInt64();
         m_diskSizeHasBeenSet = true;
+    }
+
+    if (value.HasMember("CdcId") && !value["CdcId"].IsNull())
+    {
+        if (!value["CdcId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SystemDisk.CdcId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_cdcId = string(value["CdcId"].GetString());
+        m_cdcIdHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void SystemDisk::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SystemDisk::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_diskTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_diskType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_diskType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_diskIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_diskId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_diskId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_diskSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_diskSize, allocator);
+    }
+
+    if (m_cdcIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CdcId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cdcId.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -143,5 +161,21 @@ void SystemDisk::SetDiskSize(const int64_t& _diskSize)
 bool SystemDisk::DiskSizeHasBeenSet() const
 {
     return m_diskSizeHasBeenSet;
+}
+
+string SystemDisk::GetCdcId() const
+{
+    return m_cdcId;
+}
+
+void SystemDisk::SetCdcId(const string& _cdcId)
+{
+    m_cdcId = _cdcId;
+    m_cdcIdHasBeenSet = true;
+}
+
+bool SystemDisk::CdcIdHasBeenSet() const
+{
+    return m_cdcIdHasBeenSet;
 }
 

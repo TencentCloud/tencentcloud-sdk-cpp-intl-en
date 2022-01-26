@@ -18,16 +18,16 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Batch::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 EnhancedService::EnhancedService() :
     m_securityServiceHasBeenSet(false),
-    m_monitorServiceHasBeenSet(false)
+    m_monitorServiceHasBeenSet(false),
+    m_automationServiceHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome EnhancedService::Deserialize(const Value &value)
+CoreInternalOutcome EnhancedService::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +36,7 @@ CoreInternalOutcome EnhancedService::Deserialize(const Value &value)
     {
         if (!value["SecurityService"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `EnhancedService.SecurityService` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EnhancedService.SecurityService` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_securityService.Deserialize(value["SecurityService"]);
@@ -53,7 +53,7 @@ CoreInternalOutcome EnhancedService::Deserialize(const Value &value)
     {
         if (!value["MonitorService"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `EnhancedService.MonitorService` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EnhancedService.MonitorService` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_monitorService.Deserialize(value["MonitorService"]);
@@ -66,29 +66,55 @@ CoreInternalOutcome EnhancedService::Deserialize(const Value &value)
         m_monitorServiceHasBeenSet = true;
     }
 
+    if (value.HasMember("AutomationService") && !value["AutomationService"].IsNull())
+    {
+        if (!value["AutomationService"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `EnhancedService.AutomationService` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_automationService.Deserialize(value["AutomationService"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_automationServiceHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void EnhancedService::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void EnhancedService::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_securityServiceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SecurityService";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_securityService.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_monitorServiceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MonitorService";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_monitorService.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_automationServiceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutomationService";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_automationService.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -124,5 +150,21 @@ void EnhancedService::SetMonitorService(const RunMonitorServiceEnabled& _monitor
 bool EnhancedService::MonitorServiceHasBeenSet() const
 {
     return m_monitorServiceHasBeenSet;
+}
+
+RunAutomationServiceEnabled EnhancedService::GetAutomationService() const
+{
+    return m_automationService;
+}
+
+void EnhancedService::SetAutomationService(const RunAutomationServiceEnabled& _automationService)
+{
+    m_automationService = _automationService;
+    m_automationServiceHasBeenSet = true;
+}
+
+bool EnhancedService::AutomationServiceHasBeenSet() const
+{
+    return m_automationServiceHasBeenSet;
 }
 

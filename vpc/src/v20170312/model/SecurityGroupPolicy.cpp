@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 SecurityGroupPolicy::SecurityGroupPolicy() :
@@ -36,7 +35,7 @@ SecurityGroupPolicy::SecurityGroupPolicy() :
 {
 }
 
-CoreInternalOutcome SecurityGroupPolicy::Deserialize(const Value &value)
+CoreInternalOutcome SecurityGroupPolicy::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -45,7 +44,7 @@ CoreInternalOutcome SecurityGroupPolicy::Deserialize(const Value &value)
     {
         if (!value["PolicyIndex"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SecurityGroupPolicy.PolicyIndex` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityGroupPolicy.PolicyIndex` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_policyIndex = value["PolicyIndex"].GetInt64();
         m_policyIndexHasBeenSet = true;
@@ -55,7 +54,7 @@ CoreInternalOutcome SecurityGroupPolicy::Deserialize(const Value &value)
     {
         if (!value["Protocol"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityGroupPolicy.Protocol` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityGroupPolicy.Protocol` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_protocol = string(value["Protocol"].GetString());
         m_protocolHasBeenSet = true;
@@ -65,7 +64,7 @@ CoreInternalOutcome SecurityGroupPolicy::Deserialize(const Value &value)
     {
         if (!value["Port"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityGroupPolicy.Port` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityGroupPolicy.Port` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_port = string(value["Port"].GetString());
         m_portHasBeenSet = true;
@@ -75,7 +74,7 @@ CoreInternalOutcome SecurityGroupPolicy::Deserialize(const Value &value)
     {
         if (!value["ServiceTemplate"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `SecurityGroupPolicy.ServiceTemplate` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityGroupPolicy.ServiceTemplate` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_serviceTemplate.Deserialize(value["ServiceTemplate"]);
@@ -92,7 +91,7 @@ CoreInternalOutcome SecurityGroupPolicy::Deserialize(const Value &value)
     {
         if (!value["CidrBlock"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityGroupPolicy.CidrBlock` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityGroupPolicy.CidrBlock` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cidrBlock = string(value["CidrBlock"].GetString());
         m_cidrBlockHasBeenSet = true;
@@ -102,7 +101,7 @@ CoreInternalOutcome SecurityGroupPolicy::Deserialize(const Value &value)
     {
         if (!value["Ipv6CidrBlock"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityGroupPolicy.Ipv6CidrBlock` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityGroupPolicy.Ipv6CidrBlock` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ipv6CidrBlock = string(value["Ipv6CidrBlock"].GetString());
         m_ipv6CidrBlockHasBeenSet = true;
@@ -112,7 +111,7 @@ CoreInternalOutcome SecurityGroupPolicy::Deserialize(const Value &value)
     {
         if (!value["SecurityGroupId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityGroupPolicy.SecurityGroupId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityGroupPolicy.SecurityGroupId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_securityGroupId = string(value["SecurityGroupId"].GetString());
         m_securityGroupIdHasBeenSet = true;
@@ -122,7 +121,7 @@ CoreInternalOutcome SecurityGroupPolicy::Deserialize(const Value &value)
     {
         if (!value["AddressTemplate"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `SecurityGroupPolicy.AddressTemplate` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityGroupPolicy.AddressTemplate` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_addressTemplate.Deserialize(value["AddressTemplate"]);
@@ -139,7 +138,7 @@ CoreInternalOutcome SecurityGroupPolicy::Deserialize(const Value &value)
     {
         if (!value["Action"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityGroupPolicy.Action` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityGroupPolicy.Action` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_action = string(value["Action"].GetString());
         m_actionHasBeenSet = true;
@@ -149,7 +148,7 @@ CoreInternalOutcome SecurityGroupPolicy::Deserialize(const Value &value)
     {
         if (!value["PolicyDescription"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityGroupPolicy.PolicyDescription` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityGroupPolicy.PolicyDescription` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_policyDescription = string(value["PolicyDescription"].GetString());
         m_policyDescriptionHasBeenSet = true;
@@ -159,7 +158,7 @@ CoreInternalOutcome SecurityGroupPolicy::Deserialize(const Value &value)
     {
         if (!value["ModifyTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityGroupPolicy.ModifyTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityGroupPolicy.ModifyTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_modifyTime = string(value["ModifyTime"].GetString());
         m_modifyTimeHasBeenSet = true;
@@ -169,12 +168,12 @@ CoreInternalOutcome SecurityGroupPolicy::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void SecurityGroupPolicy::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SecurityGroupPolicy::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_policyIndexHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PolicyIndex";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_policyIndex, allocator);
@@ -182,84 +181,84 @@ void SecurityGroupPolicy::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_protocolHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Protocol";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_protocol.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
     }
 
     if (m_portHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Port";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_port.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_port.c_str(), allocator).Move(), allocator);
     }
 
     if (m_serviceTemplateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceTemplate";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_serviceTemplate.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_cidrBlockHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CidrBlock";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cidrBlock.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cidrBlock.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ipv6CidrBlockHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Ipv6CidrBlock";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ipv6CidrBlock.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ipv6CidrBlock.c_str(), allocator).Move(), allocator);
     }
 
     if (m_securityGroupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SecurityGroupId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_securityGroupId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_securityGroupId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_addressTemplateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AddressTemplate";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_addressTemplate.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_actionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Action";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_action.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_action.c_str(), allocator).Move(), allocator);
     }
 
     if (m_policyDescriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PolicyDescription";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_policyDescription.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_policyDescription.c_str(), allocator).Move(), allocator);
     }
 
     if (m_modifyTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ModifyTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_modifyTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_modifyTime.c_str(), allocator).Move(), allocator);
     }
 
 }

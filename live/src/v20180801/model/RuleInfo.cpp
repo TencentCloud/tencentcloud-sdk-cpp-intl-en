@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Live::V20180801::Model;
-using namespace rapidjson;
 using namespace std;
 
 RuleInfo::RuleInfo() :
@@ -31,7 +30,7 @@ RuleInfo::RuleInfo() :
 {
 }
 
-CoreInternalOutcome RuleInfo::Deserialize(const Value &value)
+CoreInternalOutcome RuleInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome RuleInfo::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RuleInfo.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RuleInfo.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -50,7 +49,7 @@ CoreInternalOutcome RuleInfo::Deserialize(const Value &value)
     {
         if (!value["UpdateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RuleInfo.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RuleInfo.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_updateTime = string(value["UpdateTime"].GetString());
         m_updateTimeHasBeenSet = true;
@@ -60,7 +59,7 @@ CoreInternalOutcome RuleInfo::Deserialize(const Value &value)
     {
         if (!value["TemplateId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `RuleInfo.TemplateId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RuleInfo.TemplateId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_templateId = value["TemplateId"].GetInt64();
         m_templateIdHasBeenSet = true;
@@ -70,7 +69,7 @@ CoreInternalOutcome RuleInfo::Deserialize(const Value &value)
     {
         if (!value["DomainName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RuleInfo.DomainName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RuleInfo.DomainName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_domainName = string(value["DomainName"].GetString());
         m_domainNameHasBeenSet = true;
@@ -80,7 +79,7 @@ CoreInternalOutcome RuleInfo::Deserialize(const Value &value)
     {
         if (!value["AppName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RuleInfo.AppName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RuleInfo.AppName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_appName = string(value["AppName"].GetString());
         m_appNameHasBeenSet = true;
@@ -90,7 +89,7 @@ CoreInternalOutcome RuleInfo::Deserialize(const Value &value)
     {
         if (!value["StreamName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RuleInfo.StreamName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RuleInfo.StreamName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_streamName = string(value["StreamName"].GetString());
         m_streamNameHasBeenSet = true;
@@ -100,28 +99,28 @@ CoreInternalOutcome RuleInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void RuleInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void RuleInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_updateTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UpdateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_updateTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_updateTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_templateIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TemplateId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_templateId, allocator);
@@ -129,26 +128,26 @@ void RuleInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_domainNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DomainName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_domainName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_domainName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_appNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AppName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_appName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_appName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_streamNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StreamName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_streamName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_streamName.c_str(), allocator).Move(), allocator);
     }
 
 }

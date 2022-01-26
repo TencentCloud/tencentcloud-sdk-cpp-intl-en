@@ -80,69 +80,41 @@ namespace TencentCloud
 
                     /**
                      * 获取Specifies the query metric, which can be:
-flux: traffic in bytes
-bandwidth: bandwidth in bps
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
 2xx: returns the number of 2xx status codes or details of status codes starting with 2
 3xx: returns the number of 3xx status codes or details of status codes starting with 3
 4xx: returns the number of 4xx status codes or details of status codes starting with 4
 5xx: returns the number of 5xx status codes or details of status codes starting with 5
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
                      * @return Metrics Specifies the query metric, which can be:
-flux: traffic in bytes
-bandwidth: bandwidth in bps
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
 2xx: returns the number of 2xx status codes or details of status codes starting with 2
 3xx: returns the number of 3xx status codes or details of status codes starting with 3
 4xx: returns the number of 4xx status codes or details of status codes starting with 4
 5xx: returns the number of 5xx status codes or details of status codes starting with 5
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
                      */
                     std::vector<std::string> GetMetrics() const;
 
                     /**
                      * 设置Specifies the query metric, which can be:
-flux: traffic in bytes
-bandwidth: bandwidth in bps
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
 2xx: returns the number of 2xx status codes or details of status codes starting with 2
 3xx: returns the number of 3xx status codes or details of status codes starting with 3
 4xx: returns the number of 4xx status codes or details of status codes starting with 4
 5xx: returns the number of 5xx status codes or details of status codes starting with 5
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
                      * @param Metrics Specifies the query metric, which can be:
-flux: traffic in bytes
-bandwidth: bandwidth in bps
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
 2xx: returns the number of 2xx status codes or details of status codes starting with 2
 3xx: returns the number of 3xx status codes or details of status codes starting with 3
 4xx: returns the number of 4xx status codes or details of status codes starting with 4
 5xx: returns the number of 5xx status codes or details of status codes starting with 5
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
                      */
                     void SetMetrics(const std::vector<std::string>& _metrics);
 
@@ -155,28 +127,28 @@ dynamic_bandwidth: dynamic bandwidth in bps
                     /**
                      * 获取Time granularity, which can be:
 1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2–3 days 15, 30, 60, 120, 240, 1440
-4–7 days 30, 60, 120, 240, 1440
-8–90 days	 60, 120, 240, 1440
+2-3 days 15, 30, 60, 120, 240, 1440
+4-7 days 30, 60, 120, 240, 1440
+8-90 days	 60, 120, 240, 1440
                      * @return Interval Time granularity, which can be:
 1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2–3 days 15, 30, 60, 120, 240, 1440
-4–7 days 30, 60, 120, 240, 1440
-8–90 days	 60, 120, 240, 1440
+2-3 days 15, 30, 60, 120, 240, 1440
+4-7 days 30, 60, 120, 240, 1440
+8-90 days	 60, 120, 240, 1440
                      */
                     int64_t GetInterval() const;
 
                     /**
                      * 设置Time granularity, which can be:
 1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2–3 days 15, 30, 60, 120, 240, 1440
-4–7 days 30, 60, 120, 240, 1440
-8–90 days	 60, 120, 240, 1440
+2-3 days 15, 30, 60, 120, 240, 1440
+4-7 days 30, 60, 120, 240, 1440
+8-90 days	 60, 120, 240, 1440
                      * @param Interval Time granularity, which can be:
 1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2–3 days 15, 30, 60, 120, 240, 1440
-4–7 days 30, 60, 120, 240, 1440
-8–90 days	 60, 120, 240, 1440
+2-3 days 15, 30, 60, 120, 240, 1440
+4-7 days 30, 60, 120, 240, 1440
+8-90 days	 60, 120, 240, 1440
                      */
                     void SetInterval(const int64_t& _interval);
 
@@ -234,6 +206,40 @@ If no domain name is entered, the specified project will be queried; otherwise, 
                      */
                     bool ProjectsHasBeenSet() const;
 
+                    /**
+                     * 获取Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
+                     * @return Area Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
+                     */
+                    std::string GetArea() const;
+
+                    /**
+                     * 设置Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
+                     * @param Area Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
+                     */
+                    void SetArea(const std::string& _area);
+
+                    /**
+                     * 判断参数 Area 是否已赋值
+                     * @return Area 是否已赋值
+                     */
+                    bool AreaHasBeenSet() const;
+
                 private:
 
                     /**
@@ -250,20 +256,13 @@ If no domain name is entered, the specified project will be queried; otherwise, 
 
                     /**
                      * Specifies the query metric, which can be:
-flux: traffic in bytes
-bandwidth: bandwidth in bps
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
 2xx: returns the number of 2xx status codes or details of status codes starting with 2
 3xx: returns the number of 3xx status codes or details of status codes starting with 3
 4xx: returns the number of 4xx status codes or details of status codes starting with 4
 5xx: returns the number of 5xx status codes or details of status codes starting with 5
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
                      */
                     std::vector<std::string> m_metrics;
                     bool m_metricsHasBeenSet;
@@ -271,9 +270,9 @@ dynamic_bandwidth: dynamic bandwidth in bps
                     /**
                      * Time granularity, which can be:
 1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2–3 days 15, 30, 60, 120, 240, 1440
-4–7 days 30, 60, 120, 240, 1440
-8–90 days	 60, 120, 240, 1440
+2-3 days 15, 30, 60, 120, 240, 1440
+4-7 days 30, 60, 120, 240, 1440
+8-90 days	 60, 120, 240, 1440
                      */
                     int64_t m_interval;
                     bool m_intervalHasBeenSet;
@@ -292,6 +291,16 @@ If no domain name is entered, the specified project will be queried; otherwise, 
                      */
                     std::vector<int64_t> m_projects;
                     bool m_projectsHasBeenSet;
+
+                    /**
+                     * Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
+                     */
+                    std::string m_area;
+                    bool m_areaHasBeenSet;
 
                 };
             }

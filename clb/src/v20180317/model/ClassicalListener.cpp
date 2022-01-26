@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Clb::V20180317::Model;
-using namespace rapidjson;
 using namespace std;
 
 ClassicalListener::ClassicalListener() :
@@ -43,7 +42,7 @@ ClassicalListener::ClassicalListener() :
 {
 }
 
-CoreInternalOutcome ClassicalListener::Deserialize(const Value &value)
+CoreInternalOutcome ClassicalListener::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -52,7 +51,7 @@ CoreInternalOutcome ClassicalListener::Deserialize(const Value &value)
     {
         if (!value["ListenerId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClassicalListener.ListenerId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalListener.ListenerId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_listenerId = string(value["ListenerId"].GetString());
         m_listenerIdHasBeenSet = true;
@@ -62,7 +61,7 @@ CoreInternalOutcome ClassicalListener::Deserialize(const Value &value)
     {
         if (!value["ListenerPort"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ClassicalListener.ListenerPort` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalListener.ListenerPort` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_listenerPort = value["ListenerPort"].GetInt64();
         m_listenerPortHasBeenSet = true;
@@ -72,7 +71,7 @@ CoreInternalOutcome ClassicalListener::Deserialize(const Value &value)
     {
         if (!value["InstancePort"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ClassicalListener.InstancePort` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalListener.InstancePort` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_instancePort = value["InstancePort"].GetInt64();
         m_instancePortHasBeenSet = true;
@@ -82,7 +81,7 @@ CoreInternalOutcome ClassicalListener::Deserialize(const Value &value)
     {
         if (!value["ListenerName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClassicalListener.ListenerName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalListener.ListenerName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_listenerName = string(value["ListenerName"].GetString());
         m_listenerNameHasBeenSet = true;
@@ -92,7 +91,7 @@ CoreInternalOutcome ClassicalListener::Deserialize(const Value &value)
     {
         if (!value["Protocol"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClassicalListener.Protocol` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalListener.Protocol` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_protocol = string(value["Protocol"].GetString());
         m_protocolHasBeenSet = true;
@@ -102,7 +101,7 @@ CoreInternalOutcome ClassicalListener::Deserialize(const Value &value)
     {
         if (!value["SessionExpire"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ClassicalListener.SessionExpire` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalListener.SessionExpire` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_sessionExpire = value["SessionExpire"].GetInt64();
         m_sessionExpireHasBeenSet = true;
@@ -112,7 +111,7 @@ CoreInternalOutcome ClassicalListener::Deserialize(const Value &value)
     {
         if (!value["HealthSwitch"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ClassicalListener.HealthSwitch` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalListener.HealthSwitch` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_healthSwitch = value["HealthSwitch"].GetInt64();
         m_healthSwitchHasBeenSet = true;
@@ -122,7 +121,7 @@ CoreInternalOutcome ClassicalListener::Deserialize(const Value &value)
     {
         if (!value["TimeOut"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ClassicalListener.TimeOut` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalListener.TimeOut` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_timeOut = value["TimeOut"].GetInt64();
         m_timeOutHasBeenSet = true;
@@ -132,7 +131,7 @@ CoreInternalOutcome ClassicalListener::Deserialize(const Value &value)
     {
         if (!value["IntervalTime"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ClassicalListener.IntervalTime` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalListener.IntervalTime` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_intervalTime = value["IntervalTime"].GetInt64();
         m_intervalTimeHasBeenSet = true;
@@ -142,7 +141,7 @@ CoreInternalOutcome ClassicalListener::Deserialize(const Value &value)
     {
         if (!value["HealthNum"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ClassicalListener.HealthNum` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalListener.HealthNum` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_healthNum = value["HealthNum"].GetInt64();
         m_healthNumHasBeenSet = true;
@@ -152,7 +151,7 @@ CoreInternalOutcome ClassicalListener::Deserialize(const Value &value)
     {
         if (!value["UnhealthNum"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ClassicalListener.UnhealthNum` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalListener.UnhealthNum` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_unhealthNum = value["UnhealthNum"].GetInt64();
         m_unhealthNumHasBeenSet = true;
@@ -162,7 +161,7 @@ CoreInternalOutcome ClassicalListener::Deserialize(const Value &value)
     {
         if (!value["HttpHash"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClassicalListener.HttpHash` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalListener.HttpHash` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_httpHash = string(value["HttpHash"].GetString());
         m_httpHashHasBeenSet = true;
@@ -172,7 +171,7 @@ CoreInternalOutcome ClassicalListener::Deserialize(const Value &value)
     {
         if (!value["HttpCode"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ClassicalListener.HttpCode` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalListener.HttpCode` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_httpCode = value["HttpCode"].GetInt64();
         m_httpCodeHasBeenSet = true;
@@ -182,7 +181,7 @@ CoreInternalOutcome ClassicalListener::Deserialize(const Value &value)
     {
         if (!value["HttpCheckPath"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClassicalListener.HttpCheckPath` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalListener.HttpCheckPath` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_httpCheckPath = string(value["HttpCheckPath"].GetString());
         m_httpCheckPathHasBeenSet = true;
@@ -192,7 +191,7 @@ CoreInternalOutcome ClassicalListener::Deserialize(const Value &value)
     {
         if (!value["SSLMode"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClassicalListener.SSLMode` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalListener.SSLMode` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_sSLMode = string(value["SSLMode"].GetString());
         m_sSLModeHasBeenSet = true;
@@ -202,7 +201,7 @@ CoreInternalOutcome ClassicalListener::Deserialize(const Value &value)
     {
         if (!value["CertId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClassicalListener.CertId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalListener.CertId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_certId = string(value["CertId"].GetString());
         m_certIdHasBeenSet = true;
@@ -212,7 +211,7 @@ CoreInternalOutcome ClassicalListener::Deserialize(const Value &value)
     {
         if (!value["CertCaId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClassicalListener.CertCaId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalListener.CertCaId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_certCaId = string(value["CertCaId"].GetString());
         m_certCaIdHasBeenSet = true;
@@ -222,7 +221,7 @@ CoreInternalOutcome ClassicalListener::Deserialize(const Value &value)
     {
         if (!value["Status"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ClassicalListener.Status` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalListener.Status` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_status = value["Status"].GetInt64();
         m_statusHasBeenSet = true;
@@ -232,20 +231,20 @@ CoreInternalOutcome ClassicalListener::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ClassicalListener::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ClassicalListener::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_listenerIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ListenerId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_listenerId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_listenerId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_listenerPortHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ListenerPort";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_listenerPort, allocator);
@@ -253,7 +252,7 @@ void ClassicalListener::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_instancePortHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstancePort";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_instancePort, allocator);
@@ -261,23 +260,23 @@ void ClassicalListener::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_listenerNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ListenerName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_listenerName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_listenerName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_protocolHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Protocol";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_protocol.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sessionExpireHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SessionExpire";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_sessionExpire, allocator);
@@ -285,7 +284,7 @@ void ClassicalListener::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_healthSwitchHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HealthSwitch";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_healthSwitch, allocator);
@@ -293,7 +292,7 @@ void ClassicalListener::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_timeOutHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TimeOut";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_timeOut, allocator);
@@ -301,7 +300,7 @@ void ClassicalListener::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_intervalTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IntervalTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_intervalTime, allocator);
@@ -309,7 +308,7 @@ void ClassicalListener::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_healthNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HealthNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_healthNum, allocator);
@@ -317,7 +316,7 @@ void ClassicalListener::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_unhealthNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UnhealthNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_unhealthNum, allocator);
@@ -325,15 +324,15 @@ void ClassicalListener::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_httpHashHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HttpHash";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_httpHash.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_httpHash.c_str(), allocator).Move(), allocator);
     }
 
     if (m_httpCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HttpCode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_httpCode, allocator);
@@ -341,39 +340,39 @@ void ClassicalListener::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_httpCheckPathHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HttpCheckPath";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_httpCheckPath.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_httpCheckPath.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sSLModeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SSLMode";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_sSLMode.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sSLMode.c_str(), allocator).Move(), allocator);
     }
 
     if (m_certIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CertId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_certId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_certId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_certCaIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CertCaId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_certCaId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_certCaId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);

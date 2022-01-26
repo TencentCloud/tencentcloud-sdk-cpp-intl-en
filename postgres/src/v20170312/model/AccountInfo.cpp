@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Postgres::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 AccountInfo::AccountInfo() :
@@ -31,7 +30,7 @@ AccountInfo::AccountInfo() :
 {
 }
 
-CoreInternalOutcome AccountInfo::Deserialize(const Value &value)
+CoreInternalOutcome AccountInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome AccountInfo::Deserialize(const Value &value)
     {
         if (!value["DBInstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccountInfo.DBInstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccountInfo.DBInstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_dBInstanceId = string(value["DBInstanceId"].GetString());
         m_dBInstanceIdHasBeenSet = true;
@@ -50,7 +49,7 @@ CoreInternalOutcome AccountInfo::Deserialize(const Value &value)
     {
         if (!value["UserName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccountInfo.UserName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccountInfo.UserName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_userName = string(value["UserName"].GetString());
         m_userNameHasBeenSet = true;
@@ -60,7 +59,7 @@ CoreInternalOutcome AccountInfo::Deserialize(const Value &value)
     {
         if (!value["Remark"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccountInfo.Remark` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccountInfo.Remark` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_remark = string(value["Remark"].GetString());
         m_remarkHasBeenSet = true;
@@ -70,7 +69,7 @@ CoreInternalOutcome AccountInfo::Deserialize(const Value &value)
     {
         if (!value["Status"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `AccountInfo.Status` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccountInfo.Status` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_status = value["Status"].GetInt64();
         m_statusHasBeenSet = true;
@@ -80,7 +79,7 @@ CoreInternalOutcome AccountInfo::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccountInfo.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccountInfo.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -90,7 +89,7 @@ CoreInternalOutcome AccountInfo::Deserialize(const Value &value)
     {
         if (!value["UpdateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccountInfo.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccountInfo.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_updateTime = string(value["UpdateTime"].GetString());
         m_updateTimeHasBeenSet = true;
@@ -100,36 +99,36 @@ CoreInternalOutcome AccountInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void AccountInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AccountInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_dBInstanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DBInstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_dBInstanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_dBInstanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_userNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UserName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_userName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_userName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_remarkHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Remark";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_remark.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_remark.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);
@@ -137,18 +136,18 @@ void AccountInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_updateTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UpdateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_updateTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_updateTime.c_str(), allocator).Move(), allocator);
     }
 
 }

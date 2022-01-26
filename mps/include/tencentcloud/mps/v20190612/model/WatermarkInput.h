@@ -66,14 +66,22 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RawParameter 
+                     * 获取Custom watermark parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
+Custom watermark parameter is not available for screenshot.
+                     * @return RawParameter Custom watermark parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
+Custom watermark parameter is not available for screenshot.
                      */
                     RawWatermarkParameter GetRawParameter() const;
 
                     /**
-                     * 设置
-                     * @param RawParameter 
+                     * 设置Custom watermark parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
+Custom watermark parameter is not available for screenshot.
+                     * @param RawParameter Custom watermark parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
+Custom watermark parameter is not available for screenshot.
                      */
                     void SetRawParameter(const RawWatermarkParameter& _rawParameter);
 
@@ -85,13 +93,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Text content of up to 100 characters. This field is required only when the watermark type is text.
+Text watermark is not available for screenshot.
                      * @return TextContent Text content of up to 100 characters. This field is required only when the watermark type is text.
+Text watermark is not available for screenshot.
                      */
                     std::string GetTextContent() const;
 
                     /**
                      * 设置Text content of up to 100 characters. This field is required only when the watermark type is text.
+Text watermark is not available for screenshot.
                      * @param TextContent Text content of up to 100 characters. This field is required only when the watermark type is text.
+Text watermark is not available for screenshot.
                      */
                     void SetTextContent(const std::string& _textContent);
 
@@ -103,13 +115,17 @@ namespace TencentCloud
 
                     /**
                      * 获取SVG content of up to 2,000,000 characters. This field is required only when the watermark type is `SVG`.
+SVG watermark is not available for screenshot.
                      * @return SvgContent SVG content of up to 2,000,000 characters. This field is required only when the watermark type is `SVG`.
+SVG watermark is not available for screenshot.
                      */
                     std::string GetSvgContent() const;
 
                     /**
                      * 设置SVG content of up to 2,000,000 characters. This field is required only when the watermark type is `SVG`.
+SVG watermark is not available for screenshot.
                      * @param SvgContent SVG content of up to 2,000,000 characters. This field is required only when the watermark type is `SVG`.
+SVG watermark is not available for screenshot.
                      */
                     void SetSvgContent(const std::string& _svgContent);
 
@@ -188,19 +204,23 @@ namespace TencentCloud
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * Custom watermark parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
+Custom watermark parameter is not available for screenshot.
                      */
                     RawWatermarkParameter m_rawParameter;
                     bool m_rawParameterHasBeenSet;
 
                     /**
                      * Text content of up to 100 characters. This field is required only when the watermark type is text.
+Text watermark is not available for screenshot.
                      */
                     std::string m_textContent;
                     bool m_textContentHasBeenSet;
 
                     /**
                      * SVG content of up to 2,000,000 characters. This field is required only when the watermark type is `SVG`.
+SVG watermark is not available for screenshot.
                      */
                     std::string m_svgContent;
                     bool m_svgContentHasBeenSet;

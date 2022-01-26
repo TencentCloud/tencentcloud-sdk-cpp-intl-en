@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Video clipping task information. This structure is only used for tasks initiated by the [ClipVideo](https://cloud.tencent.com/document/product/266/10156) API in v2017.
+                * Video clipping task information. This structure is only used for tasks initiated by the [ClipVideo](https://intl.cloud.tencent.com/document/product/266/10156?from_cn_redirect=1) API in v2017.
                 */
                 class ClipTask2017 : public AbstractModel
                 {

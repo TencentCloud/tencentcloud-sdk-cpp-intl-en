@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/dts/v20180330/model/SubscribeObject.h>
+#include <tencentcloud/dts/v20180330/model/TagItem.h>
 
 
 namespace TencentCloud
@@ -41,6 +42,7 @@ namespace TencentCloud
                     DescribeSubscribeConfResponse();
                     ~DescribeSubscribeConfResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -331,6 +333,34 @@ namespace TencentCloud
                      */
                     bool RegionHasBeenSet() const;
 
+                    /**
+                     * 获取Tags of the subscription
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Tags Tags of the subscription
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<TagItem> GetTags() const;
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取Whether auto-renewal is enabled. 0: do not enable, 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return AutoRenewFlag Whether auto-renewal is enabled. 0: do not enable, 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetAutoRenewFlag() const;
+
+                    /**
+                     * 判断参数 AutoRenewFlag 是否已赋值
+                     * @return AutoRenewFlag 是否已赋值
+                     */
+                    bool AutoRenewFlagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -476,6 +506,20 @@ namespace TencentCloud
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
+
+                    /**
+                     * Tags of the subscription
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<TagItem> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * Whether auto-renewal is enabled. 0: do not enable, 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_autoRenewFlag;
+                    bool m_autoRenewFlagHasBeenSet;
 
                 };
             }

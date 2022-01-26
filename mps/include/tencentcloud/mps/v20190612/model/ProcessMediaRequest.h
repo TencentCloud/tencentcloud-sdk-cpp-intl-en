@@ -140,14 +140,14 @@ namespace TencentCloud
                     bool AiContentReviewTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AiAnalysisTask 
+                     * 获取Video content analysis task parameter.
+                     * @return AiAnalysisTask Video content analysis task parameter.
                      */
                     AiAnalysisTaskInput GetAiAnalysisTask() const;
 
                     /**
-                     * 设置
-                     * @param AiAnalysisTask 
+                     * 设置Video content analysis task parameter.
+                     * @param AiAnalysisTask Video content analysis task parameter.
                      */
                     void SetAiAnalysisTask(const AiAnalysisTaskInput& _aiAnalysisTask);
 
@@ -212,14 +212,14 @@ namespace TencentCloud
                     bool TasksPriorityHasBeenSet() const;
 
                     /**
-                     * 获取The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
-                     * @return SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+                     * 获取The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+                     * @return SessionId The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
-                     * @param SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+                     * 设置The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+                     * @param SessionId The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
                      */
                     void SetSessionId(const std::string& _sessionId);
 
@@ -280,7 +280,7 @@ namespace TencentCloud
                     bool m_aiContentReviewTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Video content analysis task parameter.
                      */
                     AiAnalysisTaskInput m_aiAnalysisTask;
                     bool m_aiAnalysisTaskHasBeenSet;
@@ -304,7 +304,7 @@ namespace TencentCloud
                     bool m_tasksPriorityHasBeenSet;
 
                     /**
-                     * The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+                     * The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;

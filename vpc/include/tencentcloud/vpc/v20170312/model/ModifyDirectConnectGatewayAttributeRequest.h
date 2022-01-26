@@ -96,6 +96,24 @@ namespace TencentCloud
                      */
                     bool CcnRouteTypeHasBeenSet() const;
 
+                    /**
+                     * 获取CCN route publishing method. Valid values: `standard` and `exquisite`. You can only modify `ModeType` for a CCN direct connect gateway.
+                     * @return ModeType CCN route publishing method. Valid values: `standard` and `exquisite`. You can only modify `ModeType` for a CCN direct connect gateway.
+                     */
+                    std::string GetModeType() const;
+
+                    /**
+                     * 设置CCN route publishing method. Valid values: `standard` and `exquisite`. You can only modify `ModeType` for a CCN direct connect gateway.
+                     * @param ModeType CCN route publishing method. Valid values: `standard` and `exquisite`. You can only modify `ModeType` for a CCN direct connect gateway.
+                     */
+                    void SetModeType(const std::string& _modeType);
+
+                    /**
+                     * 判断参数 ModeType 是否已赋值
+                     * @return ModeType 是否已赋值
+                     */
+                    bool ModeTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +133,12 @@ namespace TencentCloud
                      */
                     std::string m_ccnRouteType;
                     bool m_ccnRouteTypeHasBeenSet;
+
+                    /**
+                     * CCN route publishing method. Valid values: `standard` and `exquisite`. You can only modify `ModeType` for a CCN direct connect gateway.
+                     */
+                    std::string m_modeType;
+                    bool m_modeTypeHasBeenSet;
 
                 };
             }

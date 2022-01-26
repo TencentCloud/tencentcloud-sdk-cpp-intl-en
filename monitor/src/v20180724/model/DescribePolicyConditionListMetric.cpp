@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Monitor::V20180724::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribePolicyConditionListMetric::DescribePolicyConditionListMetric() :
@@ -29,7 +28,7 @@ DescribePolicyConditionListMetric::DescribePolicyConditionListMetric() :
 {
 }
 
-CoreInternalOutcome DescribePolicyConditionListMetric::Deserialize(const Value &value)
+CoreInternalOutcome DescribePolicyConditionListMetric::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome DescribePolicyConditionListMetric::Deserialize(const Value &
     {
         if (!value["ConfigManual"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyConditionListMetric.ConfigManual` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyConditionListMetric.ConfigManual` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_configManual.Deserialize(value["ConfigManual"]);
@@ -55,7 +54,7 @@ CoreInternalOutcome DescribePolicyConditionListMetric::Deserialize(const Value &
     {
         if (!value["MetricId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyConditionListMetric.MetricId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyConditionListMetric.MetricId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_metricId = value["MetricId"].GetInt64();
         m_metricIdHasBeenSet = true;
@@ -65,7 +64,7 @@ CoreInternalOutcome DescribePolicyConditionListMetric::Deserialize(const Value &
     {
         if (!value["MetricShowName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyConditionListMetric.MetricShowName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyConditionListMetric.MetricShowName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_metricShowName = string(value["MetricShowName"].GetString());
         m_metricShowNameHasBeenSet = true;
@@ -75,7 +74,7 @@ CoreInternalOutcome DescribePolicyConditionListMetric::Deserialize(const Value &
     {
         if (!value["MetricUnit"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyConditionListMetric.MetricUnit` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyConditionListMetric.MetricUnit` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_metricUnit = string(value["MetricUnit"].GetString());
         m_metricUnitHasBeenSet = true;
@@ -85,21 +84,21 @@ CoreInternalOutcome DescribePolicyConditionListMetric::Deserialize(const Value &
     return CoreInternalOutcome(true);
 }
 
-void DescribePolicyConditionListMetric::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DescribePolicyConditionListMetric::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_configManualHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ConfigManual";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_configManual.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_metricIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MetricId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_metricId, allocator);
@@ -107,18 +106,18 @@ void DescribePolicyConditionListMetric::ToJsonObject(Value &value, Document::All
 
     if (m_metricShowNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MetricShowName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_metricShowName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_metricShowName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_metricUnitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MetricUnit";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_metricUnit.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_metricUnit.c_str(), allocator).Move(), allocator);
     }
 
 }

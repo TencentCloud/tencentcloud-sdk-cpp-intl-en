@@ -18,27 +18,28 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 AiReviewTerrorismTaskOutput::AiReviewTerrorismTaskOutput() :
     m_confidenceHasBeenSet(false),
     m_suggestionHasBeenSet(false),
     m_labelHasBeenSet(false),
-    m_segmentSetHasBeenSet(false)
+    m_segmentSetHasBeenSet(false),
+    m_segmentSetFileUrlHasBeenSet(false),
+    m_segmentSetFileUrlExpireTimeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome AiReviewTerrorismTaskOutput::Deserialize(const Value &value)
+CoreInternalOutcome AiReviewTerrorismTaskOutput::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
 
     if (value.HasMember("Confidence") && !value["Confidence"].IsNull())
     {
-        if (!value["Confidence"].IsDouble())
+        if (!value["Confidence"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `AiReviewTerrorismTaskOutput.Confidence` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiReviewTerrorismTaskOutput.Confidence` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_confidence = value["Confidence"].GetDouble();
         m_confidenceHasBeenSet = true;
@@ -48,7 +49,7 @@ CoreInternalOutcome AiReviewTerrorismTaskOutput::Deserialize(const Value &value)
     {
         if (!value["Suggestion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AiReviewTerrorismTaskOutput.Suggestion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiReviewTerrorismTaskOutput.Suggestion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_suggestion = string(value["Suggestion"].GetString());
         m_suggestionHasBeenSet = true;
@@ -58,7 +59,7 @@ CoreInternalOutcome AiReviewTerrorismTaskOutput::Deserialize(const Value &value)
     {
         if (!value["Label"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AiReviewTerrorismTaskOutput.Label` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiReviewTerrorismTaskOutput.Label` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_label = string(value["Label"].GetString());
         m_labelHasBeenSet = true;
@@ -67,10 +68,10 @@ CoreInternalOutcome AiReviewTerrorismTaskOutput::Deserialize(const Value &value)
     if (value.HasMember("SegmentSet") && !value["SegmentSet"].IsNull())
     {
         if (!value["SegmentSet"].IsArray())
-            return CoreInternalOutcome(Error("response `AiReviewTerrorismTaskOutput.SegmentSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `AiReviewTerrorismTaskOutput.SegmentSet` is not array type"));
 
-        const Value &tmpValue = value["SegmentSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["SegmentSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             MediaContentReviewSegmentItem item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -84,16 +85,36 @@ CoreInternalOutcome AiReviewTerrorismTaskOutput::Deserialize(const Value &value)
         m_segmentSetHasBeenSet = true;
     }
 
+    if (value.HasMember("SegmentSetFileUrl") && !value["SegmentSetFileUrl"].IsNull())
+    {
+        if (!value["SegmentSetFileUrl"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AiReviewTerrorismTaskOutput.SegmentSetFileUrl` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_segmentSetFileUrl = string(value["SegmentSetFileUrl"].GetString());
+        m_segmentSetFileUrlHasBeenSet = true;
+    }
+
+    if (value.HasMember("SegmentSetFileUrlExpireTime") && !value["SegmentSetFileUrlExpireTime"].IsNull())
+    {
+        if (!value["SegmentSetFileUrlExpireTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AiReviewTerrorismTaskOutput.SegmentSetFileUrlExpireTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_segmentSetFileUrlExpireTime = string(value["SegmentSetFileUrlExpireTime"].GetString());
+        m_segmentSetFileUrlExpireTimeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void AiReviewTerrorismTaskOutput::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AiReviewTerrorismTaskOutput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_confidenceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Confidence";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_confidence, allocator);
@@ -101,33 +122,49 @@ void AiReviewTerrorismTaskOutput::ToJsonObject(Value &value, Document::Allocator
 
     if (m_suggestionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Suggestion";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_suggestion.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_suggestion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_labelHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Label";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_label.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_label.c_str(), allocator).Move(), allocator);
     }
 
     if (m_segmentSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SegmentSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_segmentSet.begin(); itr != m_segmentSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_segmentSetFileUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SegmentSetFileUrl";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_segmentSetFileUrl.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_segmentSetFileUrlExpireTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SegmentSetFileUrlExpireTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_segmentSetFileUrlExpireTime.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -195,5 +232,37 @@ void AiReviewTerrorismTaskOutput::SetSegmentSet(const vector<MediaContentReviewS
 bool AiReviewTerrorismTaskOutput::SegmentSetHasBeenSet() const
 {
     return m_segmentSetHasBeenSet;
+}
+
+string AiReviewTerrorismTaskOutput::GetSegmentSetFileUrl() const
+{
+    return m_segmentSetFileUrl;
+}
+
+void AiReviewTerrorismTaskOutput::SetSegmentSetFileUrl(const string& _segmentSetFileUrl)
+{
+    m_segmentSetFileUrl = _segmentSetFileUrl;
+    m_segmentSetFileUrlHasBeenSet = true;
+}
+
+bool AiReviewTerrorismTaskOutput::SegmentSetFileUrlHasBeenSet() const
+{
+    return m_segmentSetFileUrlHasBeenSet;
+}
+
+string AiReviewTerrorismTaskOutput::GetSegmentSetFileUrlExpireTime() const
+{
+    return m_segmentSetFileUrlExpireTime;
+}
+
+void AiReviewTerrorismTaskOutput::SetSegmentSetFileUrlExpireTime(const string& _segmentSetFileUrlExpireTime)
+{
+    m_segmentSetFileUrlExpireTime = _segmentSetFileUrlExpireTime;
+    m_segmentSetFileUrlExpireTimeHasBeenSet = true;
+}
+
+bool AiReviewTerrorismTaskOutput::SegmentSetFileUrlExpireTimeHasBeenSet() const
+{
+    return m_segmentSetFileUrlExpireTimeHasBeenSet;
 }
 

@@ -40,6 +40,7 @@ namespace TencentCloud
                     CreateOrganizationResponse();
                     ~CreateOrganizationResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -55,8 +56,8 @@ namespace TencentCloud
                     bool OrgIdHasBeenSet() const;
 
                     /**
-                     * 获取Creator’s name
-                     * @return Nickname Creator’s name
+                     * 获取Creator's name
+                     * @return Nickname Creator's name
                      */
                     std::string GetNickname() const;
 
@@ -67,8 +68,8 @@ namespace TencentCloud
                     bool NicknameHasBeenSet() const;
 
                     /**
-                     * 获取Creator’s email address
-                     * @return Mail Creator’s email address
+                     * 获取Creator's email address
+                     * @return Mail Creator's email address
                      */
                     std::string GetMail() const;
 
@@ -99,13 +100,13 @@ namespace TencentCloud
                     bool m_orgIdHasBeenSet;
 
                     /**
-                     * Creator’s name
+                     * Creator's name
                      */
                     std::string m_nickname;
                     bool m_nicknameHasBeenSet;
 
                     /**
-                     * Creator’s email address
+                     * Creator's email address
                      */
                     std::string m_mail;
                     bool m_mailHasBeenSet;

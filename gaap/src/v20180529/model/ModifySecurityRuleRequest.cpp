@@ -20,50 +20,85 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 ModifySecurityRuleRequest::ModifySecurityRuleRequest() :
     m_ruleIdHasBeenSet(false),
     m_aliasNameHasBeenSet(false),
-    m_policyIdHasBeenSet(false)
+    m_policyIdHasBeenSet(false),
+    m_ruleActionHasBeenSet(false),
+    m_sourceCidrHasBeenSet(false),
+    m_protocolHasBeenSet(false),
+    m_destPortRangeHasBeenSet(false)
 {
 }
 
 string ModifySecurityRuleRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_ruleIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RuleId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_ruleId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_ruleId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_aliasNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AliasName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_aliasName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_aliasName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_policyIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PolicyId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_policyId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_policyId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_ruleActionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RuleAction";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_ruleAction.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_sourceCidrHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SourceCidr";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_sourceCidr.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_protocolHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Protocol";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_destPortRangeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DestPortRange";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_destPortRange.c_str(), allocator).Move(), allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -115,6 +150,70 @@ void ModifySecurityRuleRequest::SetPolicyId(const string& _policyId)
 bool ModifySecurityRuleRequest::PolicyIdHasBeenSet() const
 {
     return m_policyIdHasBeenSet;
+}
+
+string ModifySecurityRuleRequest::GetRuleAction() const
+{
+    return m_ruleAction;
+}
+
+void ModifySecurityRuleRequest::SetRuleAction(const string& _ruleAction)
+{
+    m_ruleAction = _ruleAction;
+    m_ruleActionHasBeenSet = true;
+}
+
+bool ModifySecurityRuleRequest::RuleActionHasBeenSet() const
+{
+    return m_ruleActionHasBeenSet;
+}
+
+string ModifySecurityRuleRequest::GetSourceCidr() const
+{
+    return m_sourceCidr;
+}
+
+void ModifySecurityRuleRequest::SetSourceCidr(const string& _sourceCidr)
+{
+    m_sourceCidr = _sourceCidr;
+    m_sourceCidrHasBeenSet = true;
+}
+
+bool ModifySecurityRuleRequest::SourceCidrHasBeenSet() const
+{
+    return m_sourceCidrHasBeenSet;
+}
+
+string ModifySecurityRuleRequest::GetProtocol() const
+{
+    return m_protocol;
+}
+
+void ModifySecurityRuleRequest::SetProtocol(const string& _protocol)
+{
+    m_protocol = _protocol;
+    m_protocolHasBeenSet = true;
+}
+
+bool ModifySecurityRuleRequest::ProtocolHasBeenSet() const
+{
+    return m_protocolHasBeenSet;
+}
+
+string ModifySecurityRuleRequest::GetDestPortRange() const
+{
+    return m_destPortRange;
+}
+
+void ModifySecurityRuleRequest::SetDestPortRange(const string& _destPortRange)
+{
+    m_destPortRange = _destPortRange;
+    m_destPortRangeHasBeenSet = true;
+}
+
+bool ModifySecurityRuleRequest::DestPortRangeHasBeenSet() const
+{
+    return m_destPortRangeHasBeenSet;
 }
 
 

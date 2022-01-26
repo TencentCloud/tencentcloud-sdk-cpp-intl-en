@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Clb::V20180317::Model;
-using namespace rapidjson;
 using namespace std;
 
 TargetGroupAssociation::TargetGroupAssociation() :
@@ -29,7 +28,7 @@ TargetGroupAssociation::TargetGroupAssociation() :
 {
 }
 
-CoreInternalOutcome TargetGroupAssociation::Deserialize(const Value &value)
+CoreInternalOutcome TargetGroupAssociation::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome TargetGroupAssociation::Deserialize(const Value &value)
     {
         if (!value["LoadBalancerId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TargetGroupAssociation.LoadBalancerId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TargetGroupAssociation.LoadBalancerId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_loadBalancerId = string(value["LoadBalancerId"].GetString());
         m_loadBalancerIdHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome TargetGroupAssociation::Deserialize(const Value &value)
     {
         if (!value["ListenerId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TargetGroupAssociation.ListenerId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TargetGroupAssociation.ListenerId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_listenerId = string(value["ListenerId"].GetString());
         m_listenerIdHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome TargetGroupAssociation::Deserialize(const Value &value)
     {
         if (!value["TargetGroupId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TargetGroupAssociation.TargetGroupId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TargetGroupAssociation.TargetGroupId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_targetGroupId = string(value["TargetGroupId"].GetString());
         m_targetGroupIdHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome TargetGroupAssociation::Deserialize(const Value &value)
     {
         if (!value["LocationId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TargetGroupAssociation.LocationId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TargetGroupAssociation.LocationId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_locationId = string(value["LocationId"].GetString());
         m_locationIdHasBeenSet = true;
@@ -78,39 +77,39 @@ CoreInternalOutcome TargetGroupAssociation::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void TargetGroupAssociation::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TargetGroupAssociation::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_loadBalancerIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LoadBalancerId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_loadBalancerId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_loadBalancerId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_listenerIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ListenerId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_listenerId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_listenerId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_targetGroupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TargetGroupId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_targetGroupId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_targetGroupId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_locationIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LocationId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_locationId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_locationId.c_str(), allocator).Move(), allocator);
     }
 
 }

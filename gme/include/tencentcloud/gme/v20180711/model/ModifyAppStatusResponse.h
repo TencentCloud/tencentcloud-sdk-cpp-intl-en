@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/gme/v20180711/model/ModifyAppStatusResp.h>
 
 
 namespace TencentCloud
@@ -32,7 +33,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * ModifyAppStatus API output parameters
+                * ModifyAppStatus response structure.
                 */
                 class ModifyAppStatusResponse : public AbstractModel
                 {
@@ -40,45 +41,28 @@ namespace TencentCloud
                     ModifyAppStatusResponse();
                     ~ModifyAppStatusResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取GME application ID
-                     * @return BizId GME application ID
+                     * 获取Returned data
+                     * @return Data Returned data
                      */
-                    uint64_t GetBizId() const;
+                    ModifyAppStatusResp GetData() const;
 
                     /**
-                     * 判断参数 BizId 是否已赋值
-                     * @return BizId 是否已赋值
+                     * 判断参数 Data 是否已赋值
+                     * @return Data 是否已赋值
                      */
-                    bool BizIdHasBeenSet() const;
-
-                    /**
-                     * 获取Application status. Valid values: open, close
-                     * @return Status Application status. Valid values: open, close
-                     */
-                    std::string GetStatus() const;
-
-                    /**
-                     * 判断参数 Status 是否已赋值
-                     * @return Status 是否已赋值
-                     */
-                    bool StatusHasBeenSet() const;
+                    bool DataHasBeenSet() const;
 
                 private:
 
                     /**
-                     * GME application ID
+                     * Returned data
                      */
-                    uint64_t m_bizId;
-                    bool m_bizIdHasBeenSet;
-
-                    /**
-                     * Application status. Valid values: open, close
-                     */
-                    std::string m_status;
-                    bool m_statusHasBeenSet;
+                    ModifyAppStatusResp m_data;
+                    bool m_dataHasBeenSet;
 
                 };
             }

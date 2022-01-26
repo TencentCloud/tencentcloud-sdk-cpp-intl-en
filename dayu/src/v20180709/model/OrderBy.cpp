@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dayu::V20180709::Model;
-using namespace rapidjson;
 using namespace std;
 
 OrderBy::OrderBy() :
@@ -27,7 +26,7 @@ OrderBy::OrderBy() :
 {
 }
 
-CoreInternalOutcome OrderBy::Deserialize(const Value &value)
+CoreInternalOutcome OrderBy::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome OrderBy::Deserialize(const Value &value)
     {
         if (!value["Field"].IsString())
         {
-            return CoreInternalOutcome(Error("response `OrderBy.Field` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OrderBy.Field` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_field = string(value["Field"].GetString());
         m_fieldHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome OrderBy::Deserialize(const Value &value)
     {
         if (!value["Order"].IsString())
         {
-            return CoreInternalOutcome(Error("response `OrderBy.Order` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OrderBy.Order` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_order = string(value["Order"].GetString());
         m_orderHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome OrderBy::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void OrderBy::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void OrderBy::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_fieldHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Field";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_field.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_field.c_str(), allocator).Move(), allocator);
     }
 
     if (m_orderHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Order";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_order.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_order.c_str(), allocator).Move(), allocator);
     }
 
 }

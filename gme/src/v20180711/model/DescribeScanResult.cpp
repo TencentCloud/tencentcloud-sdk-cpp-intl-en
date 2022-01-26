@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gme::V20180711::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeScanResult::DescribeScanResult() :
@@ -33,11 +32,12 @@ DescribeScanResult::DescribeScanResult() :
     m_scenesHasBeenSet(false),
     m_taskIdHasBeenSet(false),
     m_urlHasBeenSet(false),
-    m_statusHasBeenSet(false)
+    m_statusHasBeenSet(false),
+    m_bizIdHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DescribeScanResult::Deserialize(const Value &value)
+CoreInternalOutcome DescribeScanResult::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -46,7 +46,7 @@ CoreInternalOutcome DescribeScanResult::Deserialize(const Value &value)
     {
         if (!value["Code"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribeScanResult.Code` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeScanResult.Code` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_code = value["Code"].GetInt64();
         m_codeHasBeenSet = true;
@@ -56,7 +56,7 @@ CoreInternalOutcome DescribeScanResult::Deserialize(const Value &value)
     {
         if (!value["DataId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeScanResult.DataId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeScanResult.DataId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_dataId = string(value["DataId"].GetString());
         m_dataIdHasBeenSet = true;
@@ -66,7 +66,7 @@ CoreInternalOutcome DescribeScanResult::Deserialize(const Value &value)
     {
         if (!value["ScanFinishTime"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DescribeScanResult.ScanFinishTime` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeScanResult.ScanFinishTime` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_scanFinishTime = value["ScanFinishTime"].GetUint64();
         m_scanFinishTimeHasBeenSet = true;
@@ -76,7 +76,7 @@ CoreInternalOutcome DescribeScanResult::Deserialize(const Value &value)
     {
         if (!value["HitFlag"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `DescribeScanResult.HitFlag` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeScanResult.HitFlag` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_hitFlag = value["HitFlag"].GetBool();
         m_hitFlagHasBeenSet = true;
@@ -86,7 +86,7 @@ CoreInternalOutcome DescribeScanResult::Deserialize(const Value &value)
     {
         if (!value["Live"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `DescribeScanResult.Live` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeScanResult.Live` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_live = value["Live"].GetBool();
         m_liveHasBeenSet = true;
@@ -96,7 +96,7 @@ CoreInternalOutcome DescribeScanResult::Deserialize(const Value &value)
     {
         if (!value["Msg"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeScanResult.Msg` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeScanResult.Msg` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_msg = string(value["Msg"].GetString());
         m_msgHasBeenSet = true;
@@ -105,10 +105,10 @@ CoreInternalOutcome DescribeScanResult::Deserialize(const Value &value)
     if (value.HasMember("ScanPiece") && !value["ScanPiece"].IsNull())
     {
         if (!value["ScanPiece"].IsArray())
-            return CoreInternalOutcome(Error("response `DescribeScanResult.ScanPiece` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DescribeScanResult.ScanPiece` is not array type"));
 
-        const Value &tmpValue = value["ScanPiece"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["ScanPiece"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             ScanPiece item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -126,7 +126,7 @@ CoreInternalOutcome DescribeScanResult::Deserialize(const Value &value)
     {
         if (!value["ScanStartTime"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DescribeScanResult.ScanStartTime` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeScanResult.ScanStartTime` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_scanStartTime = value["ScanStartTime"].GetUint64();
         m_scanStartTimeHasBeenSet = true;
@@ -135,10 +135,10 @@ CoreInternalOutcome DescribeScanResult::Deserialize(const Value &value)
     if (value.HasMember("Scenes") && !value["Scenes"].IsNull())
     {
         if (!value["Scenes"].IsArray())
-            return CoreInternalOutcome(Error("response `DescribeScanResult.Scenes` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DescribeScanResult.Scenes` is not array type"));
 
-        const Value &tmpValue = value["Scenes"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Scenes"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_scenes.push_back((*itr).GetString());
         }
@@ -149,7 +149,7 @@ CoreInternalOutcome DescribeScanResult::Deserialize(const Value &value)
     {
         if (!value["TaskId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeScanResult.TaskId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeScanResult.TaskId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_taskId = string(value["TaskId"].GetString());
         m_taskIdHasBeenSet = true;
@@ -159,7 +159,7 @@ CoreInternalOutcome DescribeScanResult::Deserialize(const Value &value)
     {
         if (!value["Url"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeScanResult.Url` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeScanResult.Url` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_url = string(value["Url"].GetString());
         m_urlHasBeenSet = true;
@@ -169,22 +169,32 @@ CoreInternalOutcome DescribeScanResult::Deserialize(const Value &value)
     {
         if (!value["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeScanResult.Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeScanResult.Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(value["Status"].GetString());
         m_statusHasBeenSet = true;
+    }
+
+    if (value.HasMember("BizId") && !value["BizId"].IsNull())
+    {
+        if (!value["BizId"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeScanResult.BizId` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_bizId = value["BizId"].GetUint64();
+        m_bizIdHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void DescribeScanResult::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DescribeScanResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_codeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Code";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_code, allocator);
@@ -192,15 +202,15 @@ void DescribeScanResult::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_dataIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DataId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_dataId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_dataId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_scanFinishTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ScanFinishTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_scanFinishTime, allocator);
@@ -208,7 +218,7 @@ void DescribeScanResult::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_hitFlagHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HitFlag";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_hitFlag, allocator);
@@ -216,7 +226,7 @@ void DescribeScanResult::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_liveHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Live";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_live, allocator);
@@ -224,30 +234,30 @@ void DescribeScanResult::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_msgHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Msg";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_msg.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_msg.c_str(), allocator).Move(), allocator);
     }
 
     if (m_scanPieceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ScanPiece";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_scanPiece.begin(); itr != m_scanPiece.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_scanStartTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ScanStartTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_scanStartTime, allocator);
@@ -255,39 +265,47 @@ void DescribeScanResult::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_scenesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Scenes";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_scenes.begin(); itr != m_scenes.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_taskIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TaskId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_taskId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_taskId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_urlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Url";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_url.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_url.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_status.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_bizIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BizId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_bizId, allocator);
     }
 
 }
@@ -483,5 +501,21 @@ void DescribeScanResult::SetStatus(const string& _status)
 bool DescribeScanResult::StatusHasBeenSet() const
 {
     return m_statusHasBeenSet;
+}
+
+uint64_t DescribeScanResult::GetBizId() const
+{
+    return m_bizId;
+}
+
+void DescribeScanResult::SetBizId(const uint64_t& _bizId)
+{
+    m_bizId = _bizId;
+    m_bizIdHasBeenSet = true;
+}
+
+bool DescribeScanResult::BizIdHasBeenSet() const
+{
+    return m_bizIdHasBeenSet;
 }
 

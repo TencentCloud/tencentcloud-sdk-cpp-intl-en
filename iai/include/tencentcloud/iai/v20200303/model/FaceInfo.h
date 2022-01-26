@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 人脸信息列表。
+                * Face information list.
                 */
                 class FaceInfo : public AbstractModel
                 {
@@ -49,22 +49,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取人脸框左上角横坐标。
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
-                     * @return X 人脸框左上角横坐标。
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
+                     * 获取Horizontal coordinate of the top-left vertex of the face frame.
+The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+                     * @return X Horizontal coordinate of the top-left vertex of the face frame.
+The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
                      */
                     int64_t GetX() const;
 
                     /**
-                     * 设置人脸框左上角横坐标。
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
-                     * @param X 人脸框左上角横坐标。
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
+                     * 设置Horizontal coordinate of the top-left vertex of the face frame.
+The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+                     * @param X Horizontal coordinate of the top-left vertex of the face frame.
+The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
                      */
                     void SetX(const int64_t& _x);
 
@@ -75,22 +75,22 @@ namespace TencentCloud
                     bool XHasBeenSet() const;
 
                     /**
-                     * 获取人脸框左上角纵坐标。 
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
-                     * @return Y 人脸框左上角纵坐标。 
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
+                     * 获取Vertical coordinate of the top-left vertex of the face frame. 
+The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+                     * @return Y Vertical coordinate of the top-left vertex of the face frame. 
+The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
                      */
                     int64_t GetY() const;
 
                     /**
-                     * 设置人脸框左上角纵坐标。 
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
-                     * @param Y 人脸框左上角纵坐标。 
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
+                     * 设置Vertical coordinate of the top-left vertex of the face frame. 
+The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+                     * @param Y Vertical coordinate of the top-left vertex of the face frame. 
+The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
                      */
                     void SetY(const int64_t& _y);
 
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool YHasBeenSet() const;
 
                     /**
-                     * 获取人脸框宽度。
-                     * @return Width 人脸框宽度。
+                     * 获取Face frame width.
+                     * @return Width Face frame width.
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置人脸框宽度。
-                     * @param Width 人脸框宽度。
+                     * 设置Face frame width.
+                     * @param Width Face frame width.
                      */
                     void SetWidth(const int64_t& _width);
 
@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取人脸框高度。
-                     * @return Height 人脸框高度。
+                     * 获取Face frame height.
+                     * @return Height Face frame height.
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置人脸框高度。
-                     * @param Height 人脸框高度。
+                     * 设置Face frame height.
+                     * @param Height Face frame height.
                      */
                     void SetHeight(const int64_t& _height);
 
@@ -137,18 +137,18 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、 
-魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。只有当 NeedFaceAttributes 设为 1 时才返回有效信息。
-                     * @return FaceAttributesInfo 人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、 
-魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。只有当 NeedFaceAttributes 设为 1 时才返回有效信息。
+                     * 获取Face attributes, including gender, age, expression, 
+beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1.
+                     * @return FaceAttributesInfo Face attributes, including gender, age, expression, 
+beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1.
                      */
                     FaceAttributesInfo GetFaceAttributesInfo() const;
 
                     /**
-                     * 设置人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、 
-魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。只有当 NeedFaceAttributes 设为 1 时才返回有效信息。
-                     * @param FaceAttributesInfo 人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、 
-魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。只有当 NeedFaceAttributes 设为 1 时才返回有效信息。
+                     * 设置Face attributes, including gender, age, expression, 
+beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1.
+                     * @param FaceAttributesInfo Face attributes, including gender, age, expression, 
+beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1.
                      */
                     void SetFaceAttributesInfo(const FaceAttributesInfo& _faceAttributesInfo);
 
@@ -159,14 +159,18 @@ namespace TencentCloud
                     bool FaceAttributesInfoHasBeenSet() const;
 
                     /**
-                     * 获取人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
-                     * @return FaceQualityInfo 人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
+                     * 获取Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return FaceQualityInfo Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     FaceQualityInfo GetFaceQualityInfo() const;
 
                     /**
-                     * 设置人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
-                     * @param FaceQualityInfo 人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
+                     * 设置Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param FaceQualityInfo Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetFaceQualityInfo(const FaceQualityInfo& _faceQualityInfo);
 
@@ -179,42 +183,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 人脸框左上角横坐标。
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
+                     * Horizontal coordinate of the top-left vertex of the face frame.
+The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
                      */
                     int64_t m_x;
                     bool m_xHasBeenSet;
 
                     /**
-                     * 人脸框左上角纵坐标。 
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
+                     * Vertical coordinate of the top-left vertex of the face frame. 
+The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
                      */
                     int64_t m_y;
                     bool m_yHasBeenSet;
 
                     /**
-                     * 人脸框宽度。
+                     * Face frame width.
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * 人脸框高度。
+                     * Face frame height.
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * 人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、 
-魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。只有当 NeedFaceAttributes 设为 1 时才返回有效信息。
+                     * Face attributes, including gender, age, expression, 
+beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1.
                      */
                     FaceAttributesInfo m_faceAttributesInfo;
                     bool m_faceAttributesInfoHasBeenSet;
 
                     /**
-                     * 人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
+                     * Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     FaceQualityInfo m_faceQualityInfo;
                     bool m_faceQualityInfoHasBeenSet;

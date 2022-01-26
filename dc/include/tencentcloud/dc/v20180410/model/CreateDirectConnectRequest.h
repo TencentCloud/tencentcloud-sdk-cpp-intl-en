@@ -101,24 +101,6 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
                     bool LineOperatorHasBeenSet() const;
 
                     /**
-                     * 获取Local IDC location.
-                     * @return Location Local IDC location.
-                     */
-                    std::string GetLocation() const;
-
-                    /**
-                     * 设置Local IDC location.
-                     * @param Location Local IDC location.
-                     */
-                    void SetLocation(const std::string& _location);
-
-                    /**
-                     * 判断参数 Location 是否已赋值
-                     * @return Location 是否已赋值
-                     */
-                    bool LocationHasBeenSet() const;
-
-                    /**
                      * 获取Port type of connection. Valid values: 100Base-T (100-Megabit electrical Ethernet interface), 1000Base-T (1-Gigabit electrical Ethernet interface), 1000Base-LX (1-Gigabit single-module optical Ethernet interface; 10 KM), 10GBase-T (10-Gigabit electrical Ethernet interface), 10GBase-LR (10-Gigabit single-module optical Ethernet interface; 10 KM). Default value: 1000Base-LX.
                      * @return PortType Port type of connection. Valid values: 100Base-T (100-Megabit electrical Ethernet interface), 1000Base-T (1-Gigabit electrical Ethernet interface), 1000Base-LX (1-Gigabit single-module optical Ethernet interface; 10 KM), 10GBase-T (10-Gigabit electrical Ethernet interface), 10GBase-LR (10-Gigabit single-module optical Ethernet interface; 10 KM). Default value: 1000Base-LX.
                      */
@@ -137,14 +119,14 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
                     bool PortTypeHasBeenSet() const;
 
                     /**
-                     * 获取Circuit code of connection, which is provided by the ISP or connection provider.
-                     * @return CircuitCode Circuit code of connection, which is provided by the ISP or connection provider.
+                     * 获取Circuit code of a connection, which is provided by the ISP or connection provider.
+                     * @return CircuitCode Circuit code of a connection, which is provided by the ISP or connection provider.
                      */
                     std::string GetCircuitCode() const;
 
                     /**
-                     * 设置Circuit code of connection, which is provided by the ISP or connection provider.
-                     * @param CircuitCode Circuit code of connection, which is provided by the ISP or connection provider.
+                     * 设置Circuit code of a connection, which is provided by the ISP or connection provider.
+                     * @param CircuitCode Circuit code of a connection, which is provided by the ISP or connection provider.
                      */
                     void SetCircuitCode(const std::string& _circuitCode);
 
@@ -153,6 +135,24 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
                      * @return CircuitCode 是否已赋值
                      */
                     bool CircuitCodeHasBeenSet() const;
+
+                    /**
+                     * 获取Local IDC location.
+                     * @return Location Local IDC location.
+                     */
+                    std::string GetLocation() const;
+
+                    /**
+                     * 设置Local IDC location.
+                     * @param Location Local IDC location.
+                     */
+                    void SetLocation(const std::string& _location);
+
+                    /**
+                     * 判断参数 Location 是否已赋值
+                     * @return Location 是否已赋值
+                     */
+                    bool LocationHasBeenSet() const;
 
                     /**
                      * 获取Connection port bandwidth in Mbps. Value range: [2,10240]. Default value: 1000.
@@ -334,6 +334,24 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
                      */
                     bool FaultReportContactNumberHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the connection applicant has signed the service agreement. Default value: true.
+                     * @return SignLaw Whether the connection applicant has signed the service agreement. Default value: true.
+                     */
+                    bool GetSignLaw() const;
+
+                    /**
+                     * 设置Whether the connection applicant has signed the service agreement. Default value: true.
+                     * @param SignLaw Whether the connection applicant has signed the service agreement. Default value: true.
+                     */
+                    void SetSignLaw(const bool& _signLaw);
+
+                    /**
+                     * 判断参数 SignLaw 是否已赋值
+                     * @return SignLaw 是否已赋值
+                     */
+                    bool SignLawHasBeenSet() const;
+
                 private:
 
                     /**
@@ -356,22 +374,22 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
                     bool m_lineOperatorHasBeenSet;
 
                     /**
-                     * Local IDC location.
-                     */
-                    std::string m_location;
-                    bool m_locationHasBeenSet;
-
-                    /**
                      * Port type of connection. Valid values: 100Base-T (100-Megabit electrical Ethernet interface), 1000Base-T (1-Gigabit electrical Ethernet interface), 1000Base-LX (1-Gigabit single-module optical Ethernet interface; 10 KM), 10GBase-T (10-Gigabit electrical Ethernet interface), 10GBase-LR (10-Gigabit single-module optical Ethernet interface; 10 KM). Default value: 1000Base-LX.
                      */
                     std::string m_portType;
                     bool m_portTypeHasBeenSet;
 
                     /**
-                     * Circuit code of connection, which is provided by the ISP or connection provider.
+                     * Circuit code of a connection, which is provided by the ISP or connection provider.
                      */
                     std::string m_circuitCode;
                     bool m_circuitCodeHasBeenSet;
+
+                    /**
+                     * Local IDC location.
+                     */
+                    std::string m_location;
+                    bool m_locationHasBeenSet;
 
                     /**
                      * Connection port bandwidth in Mbps. Value range: [2,10240]. Default value: 1000.
@@ -432,6 +450,12 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
                      */
                     std::string m_faultReportContactNumber;
                     bool m_faultReportContactNumberHasBeenSet;
+
+                    /**
+                     * Whether the connection applicant has signed the service agreement. Default value: true.
+                     */
+                    bool m_signLaw;
+                    bool m_signLawHasBeenSet;
 
                 };
             }

@@ -20,55 +20,82 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Clb::V20180317::Model;
-using namespace rapidjson;
 using namespace std;
 
 AutoRewriteRequest::AutoRewriteRequest() :
     m_loadBalancerIdHasBeenSet(false),
     m_listenerIdHasBeenSet(false),
-    m_domainsHasBeenSet(false)
+    m_domainsHasBeenSet(false),
+    m_rewriteCodesHasBeenSet(false),
+    m_takeUrlsHasBeenSet(false)
 {
 }
 
 string AutoRewriteRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_loadBalancerIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LoadBalancerId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_loadBalancerId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_loadBalancerId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_listenerIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ListenerId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_listenerId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_listenerId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_domainsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Domains";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_domains.begin(); itr != m_domains.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_rewriteCodesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RewriteCodes";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_rewriteCodes.begin(); itr != m_rewriteCodes.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
+        }
+    }
+
+    if (m_takeUrlsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TakeUrls";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_takeUrls.begin(); itr != m_takeUrls.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetBool(*itr), allocator);
         }
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -120,6 +147,38 @@ void AutoRewriteRequest::SetDomains(const vector<string>& _domains)
 bool AutoRewriteRequest::DomainsHasBeenSet() const
 {
     return m_domainsHasBeenSet;
+}
+
+vector<int64_t> AutoRewriteRequest::GetRewriteCodes() const
+{
+    return m_rewriteCodes;
+}
+
+void AutoRewriteRequest::SetRewriteCodes(const vector<int64_t>& _rewriteCodes)
+{
+    m_rewriteCodes = _rewriteCodes;
+    m_rewriteCodesHasBeenSet = true;
+}
+
+bool AutoRewriteRequest::RewriteCodesHasBeenSet() const
+{
+    return m_rewriteCodesHasBeenSet;
+}
+
+vector<bool> AutoRewriteRequest::GetTakeUrls() const
+{
+    return m_takeUrls;
+}
+
+void AutoRewriteRequest::SetTakeUrls(const vector<bool>& _takeUrls)
+{
+    m_takeUrls = _takeUrls;
+    m_takeUrlsHasBeenSet = true;
+}
+
+bool AutoRewriteRequest::TakeUrlsHasBeenSet() const
+{
+    return m_takeUrlsHasBeenSet;
 }
 
 

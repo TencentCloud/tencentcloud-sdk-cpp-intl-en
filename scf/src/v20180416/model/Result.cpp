@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Scf::V20180416::Model;
-using namespace rapidjson;
 using namespace std;
 
 Result::Result() :
@@ -33,7 +32,7 @@ Result::Result() :
 {
 }
 
-CoreInternalOutcome Result::Deserialize(const Value &value)
+CoreInternalOutcome Result::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +41,7 @@ CoreInternalOutcome Result::Deserialize(const Value &value)
     {
         if (!value["Log"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Result.Log` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Result.Log` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_log = string(value["Log"].GetString());
         m_logHasBeenSet = true;
@@ -52,7 +51,7 @@ CoreInternalOutcome Result::Deserialize(const Value &value)
     {
         if (!value["RetMsg"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Result.RetMsg` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Result.RetMsg` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_retMsg = string(value["RetMsg"].GetString());
         m_retMsgHasBeenSet = true;
@@ -62,7 +61,7 @@ CoreInternalOutcome Result::Deserialize(const Value &value)
     {
         if (!value["ErrMsg"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Result.ErrMsg` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Result.ErrMsg` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_errMsg = string(value["ErrMsg"].GetString());
         m_errMsgHasBeenSet = true;
@@ -72,7 +71,7 @@ CoreInternalOutcome Result::Deserialize(const Value &value)
     {
         if (!value["MemUsage"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Result.MemUsage` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Result.MemUsage` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_memUsage = value["MemUsage"].GetInt64();
         m_memUsageHasBeenSet = true;
@@ -80,9 +79,9 @@ CoreInternalOutcome Result::Deserialize(const Value &value)
 
     if (value.HasMember("Duration") && !value["Duration"].IsNull())
     {
-        if (!value["Duration"].IsDouble())
+        if (!value["Duration"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `Result.Duration` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Result.Duration` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_duration = value["Duration"].GetDouble();
         m_durationHasBeenSet = true;
@@ -92,7 +91,7 @@ CoreInternalOutcome Result::Deserialize(const Value &value)
     {
         if (!value["BillDuration"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Result.BillDuration` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Result.BillDuration` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_billDuration = value["BillDuration"].GetInt64();
         m_billDurationHasBeenSet = true;
@@ -102,7 +101,7 @@ CoreInternalOutcome Result::Deserialize(const Value &value)
     {
         if (!value["FunctionRequestId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Result.FunctionRequestId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Result.FunctionRequestId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_functionRequestId = string(value["FunctionRequestId"].GetString());
         m_functionRequestIdHasBeenSet = true;
@@ -112,7 +111,7 @@ CoreInternalOutcome Result::Deserialize(const Value &value)
     {
         if (!value["InvokeResult"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Result.InvokeResult` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Result.InvokeResult` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_invokeResult = value["InvokeResult"].GetInt64();
         m_invokeResultHasBeenSet = true;
@@ -122,36 +121,36 @@ CoreInternalOutcome Result::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Result::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Result::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_logHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Log";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_log.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_log.c_str(), allocator).Move(), allocator);
     }
 
     if (m_retMsgHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RetMsg";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_retMsg.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_retMsg.c_str(), allocator).Move(), allocator);
     }
 
     if (m_errMsgHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ErrMsg";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_errMsg.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_errMsg.c_str(), allocator).Move(), allocator);
     }
 
     if (m_memUsageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MemUsage";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_memUsage, allocator);
@@ -159,7 +158,7 @@ void Result::ToJsonObject(Value &value, Document::AllocatorType& allocator) cons
 
     if (m_durationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Duration";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_duration, allocator);
@@ -167,7 +166,7 @@ void Result::ToJsonObject(Value &value, Document::AllocatorType& allocator) cons
 
     if (m_billDurationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BillDuration";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_billDuration, allocator);
@@ -175,15 +174,15 @@ void Result::ToJsonObject(Value &value, Document::AllocatorType& allocator) cons
 
     if (m_functionRequestIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FunctionRequestId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_functionRequestId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_functionRequestId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_invokeResultHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InvokeResult";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_invokeResult, allocator);

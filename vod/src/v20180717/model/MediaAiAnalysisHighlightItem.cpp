@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 MediaAiAnalysisHighlightItem::MediaAiAnalysisHighlightItem() :
@@ -30,7 +29,7 @@ MediaAiAnalysisHighlightItem::MediaAiAnalysisHighlightItem() :
 {
 }
 
-CoreInternalOutcome MediaAiAnalysisHighlightItem::Deserialize(const Value &value)
+CoreInternalOutcome MediaAiAnalysisHighlightItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome MediaAiAnalysisHighlightItem::Deserialize(const Value &value
     {
         if (!value["HighlightUrl"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaAiAnalysisHighlightItem.HighlightUrl` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaAiAnalysisHighlightItem.HighlightUrl` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_highlightUrl = string(value["HighlightUrl"].GetString());
         m_highlightUrlHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome MediaAiAnalysisHighlightItem::Deserialize(const Value &value
     {
         if (!value["CovImgUrl"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaAiAnalysisHighlightItem.CovImgUrl` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaAiAnalysisHighlightItem.CovImgUrl` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_covImgUrl = string(value["CovImgUrl"].GetString());
         m_covImgUrlHasBeenSet = true;
@@ -57,9 +56,9 @@ CoreInternalOutcome MediaAiAnalysisHighlightItem::Deserialize(const Value &value
 
     if (value.HasMember("Confidence") && !value["Confidence"].IsNull())
     {
-        if (!value["Confidence"].IsDouble())
+        if (!value["Confidence"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `MediaAiAnalysisHighlightItem.Confidence` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaAiAnalysisHighlightItem.Confidence` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_confidence = value["Confidence"].GetDouble();
         m_confidenceHasBeenSet = true;
@@ -67,9 +66,9 @@ CoreInternalOutcome MediaAiAnalysisHighlightItem::Deserialize(const Value &value
 
     if (value.HasMember("Duration") && !value["Duration"].IsNull())
     {
-        if (!value["Duration"].IsDouble())
+        if (!value["Duration"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `MediaAiAnalysisHighlightItem.Duration` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaAiAnalysisHighlightItem.Duration` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_duration = value["Duration"].GetDouble();
         m_durationHasBeenSet = true;
@@ -78,10 +77,10 @@ CoreInternalOutcome MediaAiAnalysisHighlightItem::Deserialize(const Value &value
     if (value.HasMember("SegmentSet") && !value["SegmentSet"].IsNull())
     {
         if (!value["SegmentSet"].IsArray())
-            return CoreInternalOutcome(Error("response `MediaAiAnalysisHighlightItem.SegmentSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `MediaAiAnalysisHighlightItem.SegmentSet` is not array type"));
 
-        const Value &tmpValue = value["SegmentSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["SegmentSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             HighlightSegmentItem item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -99,28 +98,28 @@ CoreInternalOutcome MediaAiAnalysisHighlightItem::Deserialize(const Value &value
     return CoreInternalOutcome(true);
 }
 
-void MediaAiAnalysisHighlightItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MediaAiAnalysisHighlightItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_highlightUrlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HighlightUrl";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_highlightUrl.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_highlightUrl.c_str(), allocator).Move(), allocator);
     }
 
     if (m_covImgUrlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CovImgUrl";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_covImgUrl.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_covImgUrl.c_str(), allocator).Move(), allocator);
     }
 
     if (m_confidenceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Confidence";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_confidence, allocator);
@@ -128,7 +127,7 @@ void MediaAiAnalysisHighlightItem::ToJsonObject(Value &value, Document::Allocato
 
     if (m_durationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Duration";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_duration, allocator);
@@ -136,15 +135,15 @@ void MediaAiAnalysisHighlightItem::ToJsonObject(Value &value, Document::Allocato
 
     if (m_segmentSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SegmentSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_segmentSet.begin(); itr != m_segmentSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }

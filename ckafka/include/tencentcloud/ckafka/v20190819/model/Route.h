@@ -100,14 +100,14 @@ namespace TencentCloud
                     bool RouteIdHasBeenSet() const;
 
                     /**
-                     * 获取VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: Tencent Cloud-supported environment (generally used for internal instances); 5: SSL public network access; 6: BM VPC)
-                     * @return VipType VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: Tencent Cloud-supported environment (generally used for internal instances); 5: SSL public network access; 6: BM VPC)
+                     * 获取VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: supporting network (Standard Edition); 5: SSL public network access; 6: BM VPC; 7: supporting network (Pro Edition))
+                     * @return VipType VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: supporting network (Standard Edition); 5: SSL public network access; 6: BM VPC; 7: supporting network (Pro Edition))
                      */
                     int64_t GetVipType() const;
 
                     /**
-                     * 设置VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: Tencent Cloud-supported environment (generally used for internal instances); 5: SSL public network access; 6: BM VPC)
-                     * @param VipType VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: Tencent Cloud-supported environment (generally used for internal instances); 5: SSL public network access; 6: BM VPC)
+                     * 设置VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: supporting network (Standard Edition); 5: SSL public network access; 6: BM VPC; 7: supporting network (Pro Edition))
+                     * @param VipType VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: supporting network (Standard Edition); 5: SSL public network access; 6: BM VPC; 7: supporting network (Pro Edition))
                      */
                     void SetVipType(const int64_t& _vipType);
 
@@ -179,6 +179,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool DomainPortHasBeenSet() const;
 
+                    /**
+                     * 获取Timestamp
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return DeleteTimestamp Timestamp
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDeleteTimestamp() const;
+
+                    /**
+                     * 设置Timestamp
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param DeleteTimestamp Timestamp
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDeleteTimestamp(const std::string& _deleteTimestamp);
+
+                    /**
+                     * 判断参数 DeleteTimestamp 是否已赋值
+                     * @return DeleteTimestamp 是否已赋值
+                     */
+                    bool DeleteTimestampHasBeenSet() const;
+
                 private:
 
                     /**
@@ -198,7 +220,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_routeIdHasBeenSet;
 
                     /**
-                     * VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: Tencent Cloud-supported environment (generally used for internal instances); 5: SSL public network access; 6: BM VPC)
+                     * VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: supporting network (Standard Edition); 5: SSL public network access; 6: BM VPC; 7: supporting network (Pro Edition))
                      */
                     int64_t m_vipType;
                     bool m_vipTypeHasBeenSet;
@@ -222,6 +244,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_domainPort;
                     bool m_domainPortHasBeenSet;
+
+                    /**
+                     * Timestamp
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_deleteTimestamp;
+                    bool m_deleteTimestampHasBeenSet;
 
                 };
             }

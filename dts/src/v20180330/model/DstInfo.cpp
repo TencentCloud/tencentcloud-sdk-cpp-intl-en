@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dts::V20180330::Model;
-using namespace rapidjson;
 using namespace std;
 
 DstInfo::DstInfo() :
@@ -32,7 +31,7 @@ DstInfo::DstInfo() :
 {
 }
 
-CoreInternalOutcome DstInfo::Deserialize(const Value &value)
+CoreInternalOutcome DstInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +40,7 @@ CoreInternalOutcome DstInfo::Deserialize(const Value &value)
     {
         if (!value["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DstInfo.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DstInfo.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(value["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -51,7 +50,7 @@ CoreInternalOutcome DstInfo::Deserialize(const Value &value)
     {
         if (!value["Region"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DstInfo.Region` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DstInfo.Region` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_region = string(value["Region"].GetString());
         m_regionHasBeenSet = true;
@@ -61,7 +60,7 @@ CoreInternalOutcome DstInfo::Deserialize(const Value &value)
     {
         if (!value["Ip"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DstInfo.Ip` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DstInfo.Ip` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ip = string(value["Ip"].GetString());
         m_ipHasBeenSet = true;
@@ -71,7 +70,7 @@ CoreInternalOutcome DstInfo::Deserialize(const Value &value)
     {
         if (!value["Port"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DstInfo.Port` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DstInfo.Port` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_port = value["Port"].GetInt64();
         m_portHasBeenSet = true;
@@ -81,7 +80,7 @@ CoreInternalOutcome DstInfo::Deserialize(const Value &value)
     {
         if (!value["ReadOnly"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DstInfo.ReadOnly` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DstInfo.ReadOnly` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_readOnly = value["ReadOnly"].GetInt64();
         m_readOnlyHasBeenSet = true;
@@ -91,7 +90,7 @@ CoreInternalOutcome DstInfo::Deserialize(const Value &value)
     {
         if (!value["User"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DstInfo.User` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DstInfo.User` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_user = string(value["User"].GetString());
         m_userHasBeenSet = true;
@@ -101,7 +100,7 @@ CoreInternalOutcome DstInfo::Deserialize(const Value &value)
     {
         if (!value["Password"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DstInfo.Password` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DstInfo.Password` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_password = string(value["Password"].GetString());
         m_passwordHasBeenSet = true;
@@ -111,36 +110,36 @@ CoreInternalOutcome DstInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void DstInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DstInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_regionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Region";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_region.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_region.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ipHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Ip";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ip.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ip.c_str(), allocator).Move(), allocator);
     }
 
     if (m_portHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Port";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_port, allocator);
@@ -148,7 +147,7 @@ void DstInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_readOnlyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReadOnly";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_readOnly, allocator);
@@ -156,18 +155,18 @@ void DstInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_userHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "User";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_user.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_user.c_str(), allocator).Move(), allocator);
     }
 
     if (m_passwordHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Password";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_password.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_password.c_str(), allocator).Move(), allocator);
     }
 
 }

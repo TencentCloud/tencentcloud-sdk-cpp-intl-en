@@ -40,11 +40,12 @@ namespace TencentCloud
                     UploadCertificateResponse();
                     ~UploadCertificateResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Certificate ID.
-                     * @return CertificateId Certificate ID.
+                     * 获取Certificate ID
+                     * @return CertificateId Certificate ID
                      */
                     std::string GetCertificateId() const;
 
@@ -57,7 +58,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Certificate ID.
+                     * Certificate ID
                      */
                     std::string m_certificateId;
                     bool m_certificateIdHasBeenSet;

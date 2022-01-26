@@ -60,6 +60,42 @@ namespace TencentCloud
                      */
                     bool InstanceIdHasBeenSet() const;
 
+                    /**
+                     * 获取The number of records that will be returned. Default value: 10,000.
+                     * @return Limit The number of records that will be returned. Default value: 10,000.
+                     */
+                    uint64_t GetLimit() const;
+
+                    /**
+                     * 设置The number of records that will be returned. Default value: 10,000.
+                     * @param Limit The number of records that will be returned. Default value: 10,000.
+                     */
+                    void SetLimit(const uint64_t& _limit);
+
+                    /**
+                     * 判断参数 Limit 是否已赋值
+                     * @return Limit 是否已赋值
+                     */
+                    bool LimitHasBeenSet() const;
+
+                    /**
+                     * 获取Offset. Default value: 0.
+                     * @return Offset Offset. Default value: 0.
+                     */
+                    uint64_t GetOffset() const;
+
+                    /**
+                     * 设置Offset. Default value: 0.
+                     * @param Offset Offset. Default value: 0.
+                     */
+                    void SetOffset(const uint64_t& _offset);
+
+                    /**
+                     * 判断参数 Offset 是否已赋值
+                     * @return Offset 是否已赋值
+                     */
+                    bool OffsetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -67,6 +103,18 @@ namespace TencentCloud
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * The number of records that will be returned. Default value: 10,000.
+                     */
+                    uint64_t m_limit;
+                    bool m_limitHasBeenSet;
+
+                    /**
+                     * Offset. Default value: 0.
+                     */
+                    uint64_t m_offset;
+                    bool m_offsetHasBeenSet;
 
                 };
             }

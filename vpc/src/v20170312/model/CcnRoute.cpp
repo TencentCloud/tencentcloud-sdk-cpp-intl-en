@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 CcnRoute::CcnRoute() :
@@ -30,11 +29,15 @@ CcnRoute::CcnRoute() :
     m_instanceRegionHasBeenSet(false),
     m_updateTimeHasBeenSet(false),
     m_enabledHasBeenSet(false),
-    m_instanceUinHasBeenSet(false)
+    m_instanceUinHasBeenSet(false),
+    m_extraStateHasBeenSet(false),
+    m_isBgpHasBeenSet(false),
+    m_routePriorityHasBeenSet(false),
+    m_instanceExtraNameHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome CcnRoute::Deserialize(const Value &value)
+CoreInternalOutcome CcnRoute::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -43,7 +46,7 @@ CoreInternalOutcome CcnRoute::Deserialize(const Value &value)
     {
         if (!value["RouteId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CcnRoute.RouteId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CcnRoute.RouteId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_routeId = string(value["RouteId"].GetString());
         m_routeIdHasBeenSet = true;
@@ -53,7 +56,7 @@ CoreInternalOutcome CcnRoute::Deserialize(const Value &value)
     {
         if (!value["DestinationCidrBlock"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CcnRoute.DestinationCidrBlock` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CcnRoute.DestinationCidrBlock` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_destinationCidrBlock = string(value["DestinationCidrBlock"].GetString());
         m_destinationCidrBlockHasBeenSet = true;
@@ -63,7 +66,7 @@ CoreInternalOutcome CcnRoute::Deserialize(const Value &value)
     {
         if (!value["InstanceType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CcnRoute.InstanceType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CcnRoute.InstanceType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceType = string(value["InstanceType"].GetString());
         m_instanceTypeHasBeenSet = true;
@@ -73,7 +76,7 @@ CoreInternalOutcome CcnRoute::Deserialize(const Value &value)
     {
         if (!value["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CcnRoute.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CcnRoute.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(value["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -83,7 +86,7 @@ CoreInternalOutcome CcnRoute::Deserialize(const Value &value)
     {
         if (!value["InstanceName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CcnRoute.InstanceName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CcnRoute.InstanceName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceName = string(value["InstanceName"].GetString());
         m_instanceNameHasBeenSet = true;
@@ -93,7 +96,7 @@ CoreInternalOutcome CcnRoute::Deserialize(const Value &value)
     {
         if (!value["InstanceRegion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CcnRoute.InstanceRegion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CcnRoute.InstanceRegion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceRegion = string(value["InstanceRegion"].GetString());
         m_instanceRegionHasBeenSet = true;
@@ -103,7 +106,7 @@ CoreInternalOutcome CcnRoute::Deserialize(const Value &value)
     {
         if (!value["UpdateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CcnRoute.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CcnRoute.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_updateTime = string(value["UpdateTime"].GetString());
         m_updateTimeHasBeenSet = true;
@@ -113,7 +116,7 @@ CoreInternalOutcome CcnRoute::Deserialize(const Value &value)
     {
         if (!value["Enabled"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `CcnRoute.Enabled` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CcnRoute.Enabled` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_enabled = value["Enabled"].GetBool();
         m_enabledHasBeenSet = true;
@@ -123,78 +126,118 @@ CoreInternalOutcome CcnRoute::Deserialize(const Value &value)
     {
         if (!value["InstanceUin"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CcnRoute.InstanceUin` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CcnRoute.InstanceUin` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceUin = string(value["InstanceUin"].GetString());
         m_instanceUinHasBeenSet = true;
+    }
+
+    if (value.HasMember("ExtraState") && !value["ExtraState"].IsNull())
+    {
+        if (!value["ExtraState"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CcnRoute.ExtraState` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_extraState = string(value["ExtraState"].GetString());
+        m_extraStateHasBeenSet = true;
+    }
+
+    if (value.HasMember("IsBgp") && !value["IsBgp"].IsNull())
+    {
+        if (!value["IsBgp"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `CcnRoute.IsBgp` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_isBgp = value["IsBgp"].GetBool();
+        m_isBgpHasBeenSet = true;
+    }
+
+    if (value.HasMember("RoutePriority") && !value["RoutePriority"].IsNull())
+    {
+        if (!value["RoutePriority"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `CcnRoute.RoutePriority` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_routePriority = value["RoutePriority"].GetUint64();
+        m_routePriorityHasBeenSet = true;
+    }
+
+    if (value.HasMember("InstanceExtraName") && !value["InstanceExtraName"].IsNull())
+    {
+        if (!value["InstanceExtraName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CcnRoute.InstanceExtraName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_instanceExtraName = string(value["InstanceExtraName"].GetString());
+        m_instanceExtraNameHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void CcnRoute::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void CcnRoute::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_routeIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RouteId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_routeId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_routeId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_destinationCidrBlockHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DestinationCidrBlock";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_destinationCidrBlock.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_destinationCidrBlock.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceRegionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceRegion";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceRegion.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceRegion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_updateTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UpdateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_updateTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_updateTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_enabledHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Enabled";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_enabled, allocator);
@@ -202,10 +245,42 @@ void CcnRoute::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_instanceUinHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceUin";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceUin.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceUin.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_extraStateHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExtraState";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_extraState.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_isBgpHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsBgp";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isBgp, allocator);
+    }
+
+    if (m_routePriorityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RoutePriority";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_routePriority, allocator);
+    }
+
+    if (m_instanceExtraNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceExtraName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceExtraName.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -353,5 +428,69 @@ void CcnRoute::SetInstanceUin(const string& _instanceUin)
 bool CcnRoute::InstanceUinHasBeenSet() const
 {
     return m_instanceUinHasBeenSet;
+}
+
+string CcnRoute::GetExtraState() const
+{
+    return m_extraState;
+}
+
+void CcnRoute::SetExtraState(const string& _extraState)
+{
+    m_extraState = _extraState;
+    m_extraStateHasBeenSet = true;
+}
+
+bool CcnRoute::ExtraStateHasBeenSet() const
+{
+    return m_extraStateHasBeenSet;
+}
+
+bool CcnRoute::GetIsBgp() const
+{
+    return m_isBgp;
+}
+
+void CcnRoute::SetIsBgp(const bool& _isBgp)
+{
+    m_isBgp = _isBgp;
+    m_isBgpHasBeenSet = true;
+}
+
+bool CcnRoute::IsBgpHasBeenSet() const
+{
+    return m_isBgpHasBeenSet;
+}
+
+uint64_t CcnRoute::GetRoutePriority() const
+{
+    return m_routePriority;
+}
+
+void CcnRoute::SetRoutePriority(const uint64_t& _routePriority)
+{
+    m_routePriority = _routePriority;
+    m_routePriorityHasBeenSet = true;
+}
+
+bool CcnRoute::RoutePriorityHasBeenSet() const
+{
+    return m_routePriorityHasBeenSet;
+}
+
+string CcnRoute::GetInstanceExtraName() const
+{
+    return m_instanceExtraName;
+}
+
+void CcnRoute::SetInstanceExtraName(const string& _instanceExtraName)
+{
+    m_instanceExtraName = _instanceExtraName;
+    m_instanceExtraNameHasBeenSet = true;
+}
+
+bool CcnRoute::InstanceExtraNameHasBeenSet() const
+{
+    return m_instanceExtraNameHasBeenSet;
 }
 

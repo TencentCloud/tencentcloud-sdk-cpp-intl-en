@@ -21,30 +21,30 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Kms::V20190118::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeWhiteBoxKeyDetailsResponse::DescribeWhiteBoxKeyDetailsResponse() :
-    m_keyInfosHasBeenSet(false)
+    m_keyInfosHasBeenSet(false),
+    m_totalCountHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome DescribeWhiteBoxKeyDetailsResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -55,21 +55,21 @@ CoreInternalOutcome DescribeWhiteBoxKeyDetailsResponse::Deserialize(const string
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
     if (rsp.HasMember("KeyInfos") && !rsp["KeyInfos"].IsNull())
     {
         if (!rsp["KeyInfos"].IsArray())
-            return CoreInternalOutcome(Error("response `KeyInfos` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `KeyInfos` is not array type"));
 
-        const Value &tmpValue = rsp["KeyInfos"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["KeyInfos"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             WhiteboxKeyInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -83,8 +83,58 @@ CoreInternalOutcome DescribeWhiteBoxKeyDetailsResponse::Deserialize(const string
         m_keyInfosHasBeenSet = true;
     }
 
+    if (rsp.HasMember("TotalCount") && !rsp["TotalCount"].IsNull())
+    {
+        if (!rsp["TotalCount"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `TotalCount` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_totalCount = rsp["TotalCount"].GetUint64();
+        m_totalCountHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeWhiteBoxKeyDetailsResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_keyInfosHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "KeyInfos";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_keyInfos.begin(); itr != m_keyInfos.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_totalCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalCount, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 
@@ -96,6 +146,16 @@ vector<WhiteboxKeyInfo> DescribeWhiteBoxKeyDetailsResponse::GetKeyInfos() const
 bool DescribeWhiteBoxKeyDetailsResponse::KeyInfosHasBeenSet() const
 {
     return m_keyInfosHasBeenSet;
+}
+
+uint64_t DescribeWhiteBoxKeyDetailsResponse::GetTotalCount() const
+{
+    return m_totalCount;
+}
+
+bool DescribeWhiteBoxKeyDetailsResponse::TotalCountHasBeenSet() const
+{
+    return m_totalCountHasBeenSet;
 }
 
 

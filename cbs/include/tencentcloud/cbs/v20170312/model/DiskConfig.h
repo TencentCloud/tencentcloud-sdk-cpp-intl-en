@@ -155,14 +155,14 @@ namespace TencentCloud
                     bool MinDiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取The [Availability Region](/document/product/213/15753#ZoneInfo) of the cloud drive.
-                     * @return Zone The [Availability Region](/document/product/213/15753#ZoneInfo) of the cloud drive.
+                     * 获取The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive.
+                     * @return Zone The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive.
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置The [Availability Region](/document/product/213/15753#ZoneInfo) of the cloud drive.
-                     * @param Zone The [Availability Region](/document/product/213/15753#ZoneInfo) of the cloud drive.
+                     * 设置The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive.
+                     * @param Zone The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive.
                      */
                     void SetZone(const std::string& _zone);
 
@@ -195,17 +195,17 @@ Note: This field may return null, indicating that no valid value was found.
                     bool DeviceClassHasBeenSet() const;
 
                     /**
-                     * 获取Instance model series. For more information, please see [Instance Models](https://cloud.tencent.com/document/product/213/11518)
+                     * 获取Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
 Note: This field may return null, indicating that no valid value was found.
-                     * @return InstanceFamily Instance model series. For more information, please see [Instance Models](https://cloud.tencent.com/document/product/213/11518)
+                     * @return InstanceFamily Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
 Note: This field may return null, indicating that no valid value was found.
                      */
                     std::string GetInstanceFamily() const;
 
                     /**
-                     * 设置Instance model series. For more information, please see [Instance Models](https://cloud.tencent.com/document/product/213/11518)
+                     * 设置Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
 Note: This field may return null, indicating that no valid value was found.
-                     * @param InstanceFamily Instance model series. For more information, please see [Instance Models](https://cloud.tencent.com/document/product/213/11518)
+                     * @param InstanceFamily Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
 Note: This field may return null, indicating that no valid value was found.
                      */
                     void SetInstanceFamily(const std::string& _instanceFamily);
@@ -255,7 +255,7 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_minDiskSizeHasBeenSet;
 
                     /**
-                     * The [Availability Region](/document/product/213/15753#ZoneInfo) of the cloud drive.
+                     * The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
@@ -268,7 +268,7 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_deviceClassHasBeenSet;
 
                     /**
-                     * Instance model series. For more information, please see [Instance Models](https://cloud.tencent.com/document/product/213/11518)
+                     * Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
 Note: This field may return null, indicating that no valid value was found.
                      */
                     std::string m_instanceFamily;

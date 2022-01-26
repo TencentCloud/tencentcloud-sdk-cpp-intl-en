@@ -46,14 +46,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of stream mix session (from applying for stream mix to canceling stream mix).
-                     * @return MixStreamSessionId ID of stream mix session (from applying for stream mix to canceling stream mix).
+                     * 获取ID of a stream mix session (from applying for the stream mix to cancelling it). This parameter can contain up to 80 bytes of letters, digits, and underscores.
+                     * @return MixStreamSessionId ID of a stream mix session (from applying for the stream mix to cancelling it). This parameter can contain up to 80 bytes of letters, digits, and underscores.
                      */
                     std::string GetMixStreamSessionId() const;
 
                     /**
-                     * 设置ID of stream mix session (from applying for stream mix to canceling stream mix).
-                     * @param MixStreamSessionId ID of stream mix session (from applying for stream mix to canceling stream mix).
+                     * 设置ID of a stream mix session (from applying for the stream mix to cancelling it). This parameter can contain up to 80 bytes of letters, digits, and underscores.
+                     * @param MixStreamSessionId ID of a stream mix session (from applying for the stream mix to cancelling it). This parameter can contain up to 80 bytes of letters, digits, and underscores.
                      */
                     void SetMixStreamSessionId(const std::string& _mixStreamSessionId);
 
@@ -162,7 +162,7 @@ For six input sources, 610 is supported.
                 private:
 
                     /**
-                     * ID of stream mix session (from applying for stream mix to canceling stream mix).
+                     * ID of a stream mix session (from applying for the stream mix to cancelling it). This parameter can contain up to 80 bytes of letters, digits, and underscores.
                      */
                     std::string m_mixStreamSessionId;
                     bool m_mixStreamSessionIdHasBeenSet;

@@ -18,17 +18,17 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ckafka::V20190819::Model;
-using namespace rapidjson;
 using namespace std;
 
 SubscribedInfo::SubscribedInfo() :
     m_topicNameHasBeenSet(false),
     m_partitionHasBeenSet(false),
-    m_partitionOffsetHasBeenSet(false)
+    m_partitionOffsetHasBeenSet(false),
+    m_topicIdHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome SubscribedInfo::Deserialize(const Value &value)
+CoreInternalOutcome SubscribedInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +37,7 @@ CoreInternalOutcome SubscribedInfo::Deserialize(const Value &value)
     {
         if (!value["TopicName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SubscribedInfo.TopicName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SubscribedInfo.TopicName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_topicName = string(value["TopicName"].GetString());
         m_topicNameHasBeenSet = true;
@@ -46,10 +46,10 @@ CoreInternalOutcome SubscribedInfo::Deserialize(const Value &value)
     if (value.HasMember("Partition") && !value["Partition"].IsNull())
     {
         if (!value["Partition"].IsArray())
-            return CoreInternalOutcome(Error("response `SubscribedInfo.Partition` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `SubscribedInfo.Partition` is not array type"));
 
-        const Value &tmpValue = value["Partition"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Partition"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_partition.push_back((*itr).GetInt64());
         }
@@ -59,10 +59,10 @@ CoreInternalOutcome SubscribedInfo::Deserialize(const Value &value)
     if (value.HasMember("PartitionOffset") && !value["PartitionOffset"].IsNull())
     {
         if (!value["PartitionOffset"].IsArray())
-            return CoreInternalOutcome(Error("response `SubscribedInfo.PartitionOffset` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `SubscribedInfo.PartitionOffset` is not array type"));
 
-        const Value &tmpValue = value["PartitionOffset"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["PartitionOffset"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             PartitionOffset item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -76,47 +76,65 @@ CoreInternalOutcome SubscribedInfo::Deserialize(const Value &value)
         m_partitionOffsetHasBeenSet = true;
     }
 
+    if (value.HasMember("TopicId") && !value["TopicId"].IsNull())
+    {
+        if (!value["TopicId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SubscribedInfo.TopicId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_topicId = string(value["TopicId"].GetString());
+        m_topicIdHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void SubscribedInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SubscribedInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_topicNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TopicName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_topicName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_topicName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_partitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Partition";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_partition.begin(); itr != m_partition.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 
     if (m_partitionOffsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PartitionOffset";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_partitionOffset.begin(); itr != m_partitionOffset.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_topicIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TopicId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_topicId.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -168,5 +186,21 @@ void SubscribedInfo::SetPartitionOffset(const vector<PartitionOffset>& _partitio
 bool SubscribedInfo::PartitionOffsetHasBeenSet() const
 {
     return m_partitionOffsetHasBeenSet;
+}
+
+string SubscribedInfo::GetTopicId() const
+{
+    return m_topicId;
+}
+
+void SubscribedInfo::SetTopicId(const string& _topicId)
+{
+    m_topicId = _topicId;
+    m_topicIdHasBeenSet = true;
+}
+
+bool SubscribedInfo::TopicIdHasBeenSet() const
+{
+    return m_topicIdHasBeenSet;
 }
 

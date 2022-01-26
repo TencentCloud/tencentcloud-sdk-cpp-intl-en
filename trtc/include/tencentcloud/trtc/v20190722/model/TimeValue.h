@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Time
-                     * @return Time Time
+                     * 获取Time in the format of UNIX timestamp, such as 1590065877s.
+                     * @return Time Time in the format of UNIX timestamp, such as 1590065877s.
                      */
                     uint64_t GetTime() const;
 
                     /**
-                     * 设置Time
-                     * @param Time Time
+                     * 设置Time in the format of UNIX timestamp, such as 1590065877s.
+                     * @param Time Time in the format of UNIX timestamp, such as 1590065877s.
                      */
                     void SetTime(const uint64_t& _time);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool TimeHasBeenSet() const;
 
                     /**
-                     * 获取Current time value in the format of UNIX timestamp
-                     * @return Value Current time value in the format of UNIX timestamp
+                     * 获取Parameter value returned in the current time. For example, if `bigvCapFps` is set to 0 when the current time is 1590065877s (UNIX timestamp), the value of this parameter is 0.
+                     * @return Value Parameter value returned in the current time. For example, if `bigvCapFps` is set to 0 when the current time is 1590065877s (UNIX timestamp), the value of this parameter is 0.
                      */
                     double GetValue() const;
 
                     /**
-                     * 设置Current time value in the format of UNIX timestamp
-                     * @param Value Current time value in the format of UNIX timestamp
+                     * 设置Parameter value returned in the current time. For example, if `bigvCapFps` is set to 0 when the current time is 1590065877s (UNIX timestamp), the value of this parameter is 0.
+                     * @param Value Parameter value returned in the current time. For example, if `bigvCapFps` is set to 0 when the current time is 1590065877s (UNIX timestamp), the value of this parameter is 0.
                      */
                     void SetValue(const double& _value);
 
@@ -85,13 +85,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Time
+                     * Time in the format of UNIX timestamp, such as 1590065877s.
                      */
                     uint64_t m_time;
                     bool m_timeHasBeenSet;
 
                     /**
-                     * Current time value in the format of UNIX timestamp
+                     * Parameter value returned in the current time. For example, if `bigvCapFps` is set to 0 when the current time is 1590065877s (UNIX timestamp), the value of this parameter is 0.
                      */
                     double m_value;
                     bool m_valueHasBeenSet;

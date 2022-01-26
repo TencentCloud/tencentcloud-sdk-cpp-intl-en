@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Clb::V20180317::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateLoadBalancerRequest::CreateLoadBalancerRequest() :
@@ -36,28 +35,39 @@ CreateLoadBalancerRequest::CreateLoadBalancerRequest() :
     m_zoneIdHasBeenSet(false),
     m_internetAccessibleHasBeenSet(false),
     m_vipIspHasBeenSet(false),
-    m_tagsHasBeenSet(false)
+    m_tagsHasBeenSet(false),
+    m_vipHasBeenSet(false),
+    m_bandwidthPackageIdHasBeenSet(false),
+    m_exclusiveClusterHasBeenSet(false),
+    m_slaTypeHasBeenSet(false),
+    m_clientTokenHasBeenSet(false),
+    m_snatProHasBeenSet(false),
+    m_snatIpsHasBeenSet(false),
+    m_clusterTagHasBeenSet(false),
+    m_slaveZoneIdHasBeenSet(false),
+    m_eipAddressIdHasBeenSet(false),
+    m_loadBalancerPassToTargetHasBeenSet(false)
 {
 }
 
 string CreateLoadBalancerRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_loadBalancerTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LoadBalancerType";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_loadBalancerType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_loadBalancerType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_forwardHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Forward";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_forward, allocator);
@@ -65,31 +75,31 @@ string CreateLoadBalancerRequest::ToJsonString() const
 
     if (m_loadBalancerNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LoadBalancerName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_loadBalancerName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_loadBalancerName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_vpcId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_vpcId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_subnetIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubnetId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_subnetId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_subnetId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_projectIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProjectId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_projectId, allocator);
@@ -97,15 +107,15 @@ string CreateLoadBalancerRequest::ToJsonString() const
 
     if (m_addressIPVersionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AddressIPVersion";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_addressIPVersion.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_addressIPVersion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_numberHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Number";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_number, allocator);
@@ -113,55 +123,151 @@ string CreateLoadBalancerRequest::ToJsonString() const
 
     if (m_masterZoneIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MasterZoneId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_masterZoneId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_masterZoneId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_zoneIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ZoneId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_zoneId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_zoneId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_internetAccessibleHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InternetAccessible";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_internetAccessible.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_vipIspHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VipIsp";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_vipIsp.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_vipIsp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tagsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Tags";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
         {
-            d[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
     }
 
+    if (m_vipHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Vip";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_vip.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    if (m_bandwidthPackageIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BandwidthPackageId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_bandwidthPackageId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_exclusiveClusterHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExclusiveCluster";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_exclusiveCluster.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_slaTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SlaType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_slaType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_clientTokenHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClientToken";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_clientToken.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_snatProHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SnatPro";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_snatPro, allocator);
+    }
+
+    if (m_snatIpsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SnatIps";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_snatIps.begin(); itr != m_snatIps.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_clusterTagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClusterTag";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_clusterTag.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_slaveZoneIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SlaveZoneId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_slaveZoneId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_eipAddressIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EipAddressId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_eipAddressId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_loadBalancerPassToTargetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LoadBalancerPassToTarget";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_loadBalancerPassToTarget, allocator);
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -373,6 +479,182 @@ void CreateLoadBalancerRequest::SetTags(const vector<TagInfo>& _tags)
 bool CreateLoadBalancerRequest::TagsHasBeenSet() const
 {
     return m_tagsHasBeenSet;
+}
+
+string CreateLoadBalancerRequest::GetVip() const
+{
+    return m_vip;
+}
+
+void CreateLoadBalancerRequest::SetVip(const string& _vip)
+{
+    m_vip = _vip;
+    m_vipHasBeenSet = true;
+}
+
+bool CreateLoadBalancerRequest::VipHasBeenSet() const
+{
+    return m_vipHasBeenSet;
+}
+
+string CreateLoadBalancerRequest::GetBandwidthPackageId() const
+{
+    return m_bandwidthPackageId;
+}
+
+void CreateLoadBalancerRequest::SetBandwidthPackageId(const string& _bandwidthPackageId)
+{
+    m_bandwidthPackageId = _bandwidthPackageId;
+    m_bandwidthPackageIdHasBeenSet = true;
+}
+
+bool CreateLoadBalancerRequest::BandwidthPackageIdHasBeenSet() const
+{
+    return m_bandwidthPackageIdHasBeenSet;
+}
+
+ExclusiveCluster CreateLoadBalancerRequest::GetExclusiveCluster() const
+{
+    return m_exclusiveCluster;
+}
+
+void CreateLoadBalancerRequest::SetExclusiveCluster(const ExclusiveCluster& _exclusiveCluster)
+{
+    m_exclusiveCluster = _exclusiveCluster;
+    m_exclusiveClusterHasBeenSet = true;
+}
+
+bool CreateLoadBalancerRequest::ExclusiveClusterHasBeenSet() const
+{
+    return m_exclusiveClusterHasBeenSet;
+}
+
+string CreateLoadBalancerRequest::GetSlaType() const
+{
+    return m_slaType;
+}
+
+void CreateLoadBalancerRequest::SetSlaType(const string& _slaType)
+{
+    m_slaType = _slaType;
+    m_slaTypeHasBeenSet = true;
+}
+
+bool CreateLoadBalancerRequest::SlaTypeHasBeenSet() const
+{
+    return m_slaTypeHasBeenSet;
+}
+
+string CreateLoadBalancerRequest::GetClientToken() const
+{
+    return m_clientToken;
+}
+
+void CreateLoadBalancerRequest::SetClientToken(const string& _clientToken)
+{
+    m_clientToken = _clientToken;
+    m_clientTokenHasBeenSet = true;
+}
+
+bool CreateLoadBalancerRequest::ClientTokenHasBeenSet() const
+{
+    return m_clientTokenHasBeenSet;
+}
+
+bool CreateLoadBalancerRequest::GetSnatPro() const
+{
+    return m_snatPro;
+}
+
+void CreateLoadBalancerRequest::SetSnatPro(const bool& _snatPro)
+{
+    m_snatPro = _snatPro;
+    m_snatProHasBeenSet = true;
+}
+
+bool CreateLoadBalancerRequest::SnatProHasBeenSet() const
+{
+    return m_snatProHasBeenSet;
+}
+
+vector<SnatIp> CreateLoadBalancerRequest::GetSnatIps() const
+{
+    return m_snatIps;
+}
+
+void CreateLoadBalancerRequest::SetSnatIps(const vector<SnatIp>& _snatIps)
+{
+    m_snatIps = _snatIps;
+    m_snatIpsHasBeenSet = true;
+}
+
+bool CreateLoadBalancerRequest::SnatIpsHasBeenSet() const
+{
+    return m_snatIpsHasBeenSet;
+}
+
+string CreateLoadBalancerRequest::GetClusterTag() const
+{
+    return m_clusterTag;
+}
+
+void CreateLoadBalancerRequest::SetClusterTag(const string& _clusterTag)
+{
+    m_clusterTag = _clusterTag;
+    m_clusterTagHasBeenSet = true;
+}
+
+bool CreateLoadBalancerRequest::ClusterTagHasBeenSet() const
+{
+    return m_clusterTagHasBeenSet;
+}
+
+string CreateLoadBalancerRequest::GetSlaveZoneId() const
+{
+    return m_slaveZoneId;
+}
+
+void CreateLoadBalancerRequest::SetSlaveZoneId(const string& _slaveZoneId)
+{
+    m_slaveZoneId = _slaveZoneId;
+    m_slaveZoneIdHasBeenSet = true;
+}
+
+bool CreateLoadBalancerRequest::SlaveZoneIdHasBeenSet() const
+{
+    return m_slaveZoneIdHasBeenSet;
+}
+
+string CreateLoadBalancerRequest::GetEipAddressId() const
+{
+    return m_eipAddressId;
+}
+
+void CreateLoadBalancerRequest::SetEipAddressId(const string& _eipAddressId)
+{
+    m_eipAddressId = _eipAddressId;
+    m_eipAddressIdHasBeenSet = true;
+}
+
+bool CreateLoadBalancerRequest::EipAddressIdHasBeenSet() const
+{
+    return m_eipAddressIdHasBeenSet;
+}
+
+bool CreateLoadBalancerRequest::GetLoadBalancerPassToTarget() const
+{
+    return m_loadBalancerPassToTarget;
+}
+
+void CreateLoadBalancerRequest::SetLoadBalancerPassToTarget(const bool& _loadBalancerPassToTarget)
+{
+    m_loadBalancerPassToTarget = _loadBalancerPassToTarget;
+    m_loadBalancerPassToTargetHasBeenSet = true;
+}
+
+bool CreateLoadBalancerRequest::LoadBalancerPassToTargetHasBeenSet() const
+{
+    return m_loadBalancerPassToTargetHasBeenSet;
 }
 
 

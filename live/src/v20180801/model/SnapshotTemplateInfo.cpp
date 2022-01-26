@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Live::V20180801::Model;
-using namespace rapidjson;
 using namespace std;
 
 SnapshotTemplateInfo::SnapshotTemplateInfo() :
@@ -37,7 +36,7 @@ SnapshotTemplateInfo::SnapshotTemplateInfo() :
 {
 }
 
-CoreInternalOutcome SnapshotTemplateInfo::Deserialize(const Value &value)
+CoreInternalOutcome SnapshotTemplateInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -46,7 +45,7 @@ CoreInternalOutcome SnapshotTemplateInfo::Deserialize(const Value &value)
     {
         if (!value["TemplateId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SnapshotTemplateInfo.TemplateId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotTemplateInfo.TemplateId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_templateId = value["TemplateId"].GetInt64();
         m_templateIdHasBeenSet = true;
@@ -56,7 +55,7 @@ CoreInternalOutcome SnapshotTemplateInfo::Deserialize(const Value &value)
     {
         if (!value["TemplateName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SnapshotTemplateInfo.TemplateName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotTemplateInfo.TemplateName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_templateName = string(value["TemplateName"].GetString());
         m_templateNameHasBeenSet = true;
@@ -66,7 +65,7 @@ CoreInternalOutcome SnapshotTemplateInfo::Deserialize(const Value &value)
     {
         if (!value["SnapshotInterval"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SnapshotTemplateInfo.SnapshotInterval` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotTemplateInfo.SnapshotInterval` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_snapshotInterval = value["SnapshotInterval"].GetInt64();
         m_snapshotIntervalHasBeenSet = true;
@@ -76,7 +75,7 @@ CoreInternalOutcome SnapshotTemplateInfo::Deserialize(const Value &value)
     {
         if (!value["Width"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SnapshotTemplateInfo.Width` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotTemplateInfo.Width` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_width = value["Width"].GetInt64();
         m_widthHasBeenSet = true;
@@ -86,7 +85,7 @@ CoreInternalOutcome SnapshotTemplateInfo::Deserialize(const Value &value)
     {
         if (!value["Height"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SnapshotTemplateInfo.Height` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotTemplateInfo.Height` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_height = value["Height"].GetInt64();
         m_heightHasBeenSet = true;
@@ -96,7 +95,7 @@ CoreInternalOutcome SnapshotTemplateInfo::Deserialize(const Value &value)
     {
         if (!value["PornFlag"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SnapshotTemplateInfo.PornFlag` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotTemplateInfo.PornFlag` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_pornFlag = value["PornFlag"].GetInt64();
         m_pornFlagHasBeenSet = true;
@@ -106,7 +105,7 @@ CoreInternalOutcome SnapshotTemplateInfo::Deserialize(const Value &value)
     {
         if (!value["CosAppId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SnapshotTemplateInfo.CosAppId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotTemplateInfo.CosAppId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_cosAppId = value["CosAppId"].GetInt64();
         m_cosAppIdHasBeenSet = true;
@@ -116,7 +115,7 @@ CoreInternalOutcome SnapshotTemplateInfo::Deserialize(const Value &value)
     {
         if (!value["CosBucket"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SnapshotTemplateInfo.CosBucket` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotTemplateInfo.CosBucket` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cosBucket = string(value["CosBucket"].GetString());
         m_cosBucketHasBeenSet = true;
@@ -126,7 +125,7 @@ CoreInternalOutcome SnapshotTemplateInfo::Deserialize(const Value &value)
     {
         if (!value["CosRegion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SnapshotTemplateInfo.CosRegion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotTemplateInfo.CosRegion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cosRegion = string(value["CosRegion"].GetString());
         m_cosRegionHasBeenSet = true;
@@ -136,7 +135,7 @@ CoreInternalOutcome SnapshotTemplateInfo::Deserialize(const Value &value)
     {
         if (!value["Description"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SnapshotTemplateInfo.Description` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotTemplateInfo.Description` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_description = string(value["Description"].GetString());
         m_descriptionHasBeenSet = true;
@@ -146,7 +145,7 @@ CoreInternalOutcome SnapshotTemplateInfo::Deserialize(const Value &value)
     {
         if (!value["CosPrefix"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SnapshotTemplateInfo.CosPrefix` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotTemplateInfo.CosPrefix` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cosPrefix = string(value["CosPrefix"].GetString());
         m_cosPrefixHasBeenSet = true;
@@ -156,7 +155,7 @@ CoreInternalOutcome SnapshotTemplateInfo::Deserialize(const Value &value)
     {
         if (!value["CosFileName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SnapshotTemplateInfo.CosFileName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotTemplateInfo.CosFileName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cosFileName = string(value["CosFileName"].GetString());
         m_cosFileNameHasBeenSet = true;
@@ -166,12 +165,12 @@ CoreInternalOutcome SnapshotTemplateInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void SnapshotTemplateInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SnapshotTemplateInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_templateIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TemplateId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_templateId, allocator);
@@ -179,15 +178,15 @@ void SnapshotTemplateInfo::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_templateNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TemplateName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_templateName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_templateName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_snapshotIntervalHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SnapshotInterval";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_snapshotInterval, allocator);
@@ -195,7 +194,7 @@ void SnapshotTemplateInfo::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_widthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Width";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_width, allocator);
@@ -203,7 +202,7 @@ void SnapshotTemplateInfo::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_heightHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Height";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_height, allocator);
@@ -211,7 +210,7 @@ void SnapshotTemplateInfo::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_pornFlagHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PornFlag";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_pornFlag, allocator);
@@ -219,7 +218,7 @@ void SnapshotTemplateInfo::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_cosAppIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CosAppId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cosAppId, allocator);
@@ -227,42 +226,42 @@ void SnapshotTemplateInfo::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_cosBucketHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CosBucket";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cosBucket.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cosBucket.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cosRegionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CosRegion";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cosRegion.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cosRegion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_descriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Description";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_description.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cosPrefixHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CosPrefix";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cosPrefix.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cosPrefix.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cosFileNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CosFileName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cosFileName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cosFileName.c_str(), allocator).Move(), allocator);
     }
 
 }

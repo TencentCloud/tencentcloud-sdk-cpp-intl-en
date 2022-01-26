@@ -31,6 +31,7 @@ set(yunjing_public_header_model
   include/tencentcloud/yunjing/v20180228/model/DescribeWeeklyReportBruteAttacksRequest.h
   include/tencentcloud/yunjing/v20180228/model/CreateUsualLoginPlacesRequest.h
   include/tencentcloud/yunjing/v20180228/model/DescribeProcessTaskStatusRequest.h
+  include/tencentcloud/yunjing/v20180228/model/RegionInfo.h
   include/tencentcloud/yunjing/v20180228/model/ModifyAlarmAttributeRequest.h
   include/tencentcloud/yunjing/v20180228/model/ComponentStatistics.h
   include/tencentcloud/yunjing/v20180228/model/ExportMalwaresRequest.h
@@ -209,6 +210,7 @@ set(yunjing_src
   src/v20180228/model/DescribeWeeklyReportBruteAttacksRequest.cpp
   src/v20180228/model/CreateUsualLoginPlacesRequest.cpp
   src/v20180228/model/DescribeProcessTaskStatusRequest.cpp
+  src/v20180228/model/RegionInfo.cpp
   src/v20180228/model/ModifyAlarmAttributeRequest.cpp
   src/v20180228/model/ComponentStatistics.cpp
   src/v20180228/model/ExportMalwaresRequest.cpp

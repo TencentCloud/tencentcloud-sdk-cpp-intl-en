@@ -43,14 +43,26 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Query start time in the format of `yyyy-MM-dd`
-                     * @return StartTime Query start time in the format of `yyyy-MM-dd`
+                     * 获取Query the start time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+                     * @return StartTime Query the start time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Query start time in the format of `yyyy-MM-dd`
-                     * @param StartTime Query start time in the format of `yyyy-MM-dd`
+                     * 设置Query the start time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+                     * @param StartTime Query the start time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
                      */
                     void SetStartTime(const std::string& _startTime);
 
@@ -61,14 +73,26 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Query end time in the format of `yyyy-MM-dd`
-                     * @return EndTime Query end time in the format of `yyyy-MM-dd`
+                     * 获取Query the end time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be of the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+                     * @return EndTime Query the end time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be of the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Query end time in the format of `yyyy-MM-dd`
-                     * @param EndTime Query end time in the format of `yyyy-MM-dd`
+                     * 设置Query the end time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be of the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+                     * @param EndTime Query the end time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be of the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
                      */
                     void SetEndTime(const std::string& _endTime);
 
@@ -191,13 +215,19 @@ overseas: outside Mainland China
                 private:
 
                     /**
-                     * Query start time in the format of `yyyy-MM-dd`
+                     * Query the start time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Query end time in the format of `yyyy-MM-dd`
+                     * Query the end time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be of the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

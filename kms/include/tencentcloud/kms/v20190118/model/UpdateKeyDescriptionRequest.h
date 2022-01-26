@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Description 
+                     * 获取New description of up to 1,024 bytes in length
+                     * @return Description New description of up to 1,024 bytes in length
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置
-                     * @param Description 
+                     * 设置New description of up to 1,024 bytes in length
+                     * @param Description New description of up to 1,024 bytes in length
                      */
                     void SetDescription(const std::string& _description);
 
@@ -81,7 +81,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * New description of up to 1,024 bytes in length
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;

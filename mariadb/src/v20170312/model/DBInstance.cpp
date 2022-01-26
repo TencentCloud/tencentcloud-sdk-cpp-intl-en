@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mariadb::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 DBInstance::DBInstance() :
@@ -60,11 +59,22 @@ DBInstance::DBInstance() :
     m_isAuditSupportedHasBeenSet(false),
     m_machineHasBeenSet(false),
     m_isEncryptSupportedHasBeenSet(false),
-    m_cpuHasBeenSet(false)
+    m_cpuHasBeenSet(false),
+    m_ipv6FlagHasBeenSet(false),
+    m_vipv6HasBeenSet(false),
+    m_wanVipv6HasBeenSet(false),
+    m_wanPortIpv6HasBeenSet(false),
+    m_wanStatusIpv6HasBeenSet(false),
+    m_dbEngineHasBeenSet(false),
+    m_dbVersionHasBeenSet(false),
+    m_dcnFlagHasBeenSet(false),
+    m_dcnStatusHasBeenSet(false),
+    m_dcnDstNumHasBeenSet(false),
+    m_instanceTypeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DBInstance::Deserialize(const Value &value)
+CoreInternalOutcome DBInstance::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -73,7 +83,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(value["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -83,7 +93,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["InstanceName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.InstanceName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.InstanceName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceName = string(value["InstanceName"].GetString());
         m_instanceNameHasBeenSet = true;
@@ -93,7 +103,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["AppId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.AppId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.AppId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_appId = value["AppId"].GetInt64();
         m_appIdHasBeenSet = true;
@@ -103,7 +113,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["ProjectId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.ProjectId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.ProjectId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_projectId = value["ProjectId"].GetInt64();
         m_projectIdHasBeenSet = true;
@@ -113,7 +123,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["Region"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.Region` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.Region` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_region = string(value["Region"].GetString());
         m_regionHasBeenSet = true;
@@ -123,7 +133,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["Zone"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.Zone` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.Zone` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_zone = string(value["Zone"].GetString());
         m_zoneHasBeenSet = true;
@@ -133,7 +143,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["VpcId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.VpcId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.VpcId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_vpcId = value["VpcId"].GetInt64();
         m_vpcIdHasBeenSet = true;
@@ -143,7 +153,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["SubnetId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.SubnetId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.SubnetId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_subnetId = value["SubnetId"].GetInt64();
         m_subnetIdHasBeenSet = true;
@@ -153,7 +163,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["Status"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.Status` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.Status` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_status = value["Status"].GetInt64();
         m_statusHasBeenSet = true;
@@ -163,7 +173,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["Vip"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.Vip` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.Vip` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vip = string(value["Vip"].GetString());
         m_vipHasBeenSet = true;
@@ -173,7 +183,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["Vport"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.Vport` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.Vport` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_vport = value["Vport"].GetInt64();
         m_vportHasBeenSet = true;
@@ -183,7 +193,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["WanDomain"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.WanDomain` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.WanDomain` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_wanDomain = string(value["WanDomain"].GetString());
         m_wanDomainHasBeenSet = true;
@@ -193,7 +203,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["WanVip"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.WanVip` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.WanVip` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_wanVip = string(value["WanVip"].GetString());
         m_wanVipHasBeenSet = true;
@@ -203,7 +213,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["WanPort"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.WanPort` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.WanPort` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_wanPort = value["WanPort"].GetInt64();
         m_wanPortHasBeenSet = true;
@@ -213,7 +223,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -223,7 +233,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["UpdateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_updateTime = string(value["UpdateTime"].GetString());
         m_updateTimeHasBeenSet = true;
@@ -233,7 +243,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["AutoRenewFlag"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.AutoRenewFlag` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.AutoRenewFlag` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_autoRenewFlag = value["AutoRenewFlag"].GetInt64();
         m_autoRenewFlagHasBeenSet = true;
@@ -243,7 +253,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["PeriodEndTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.PeriodEndTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.PeriodEndTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_periodEndTime = string(value["PeriodEndTime"].GetString());
         m_periodEndTimeHasBeenSet = true;
@@ -253,7 +263,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["Uin"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.Uin` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.Uin` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_uin = string(value["Uin"].GetString());
         m_uinHasBeenSet = true;
@@ -263,7 +273,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["TdsqlVersion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.TdsqlVersion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.TdsqlVersion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tdsqlVersion = string(value["TdsqlVersion"].GetString());
         m_tdsqlVersionHasBeenSet = true;
@@ -273,7 +283,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["Memory"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.Memory` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.Memory` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_memory = value["Memory"].GetInt64();
         m_memoryHasBeenSet = true;
@@ -283,7 +293,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["Storage"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.Storage` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.Storage` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_storage = value["Storage"].GetInt64();
         m_storageHasBeenSet = true;
@@ -293,7 +303,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["UniqueVpcId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.UniqueVpcId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.UniqueVpcId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_uniqueVpcId = string(value["UniqueVpcId"].GetString());
         m_uniqueVpcIdHasBeenSet = true;
@@ -303,7 +313,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["UniqueSubnetId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.UniqueSubnetId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.UniqueSubnetId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_uniqueSubnetId = string(value["UniqueSubnetId"].GetString());
         m_uniqueSubnetIdHasBeenSet = true;
@@ -313,7 +323,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["OriginSerialId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.OriginSerialId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.OriginSerialId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_originSerialId = string(value["OriginSerialId"].GetString());
         m_originSerialIdHasBeenSet = true;
@@ -323,7 +333,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["NodeCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.NodeCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.NodeCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_nodeCount = value["NodeCount"].GetUint64();
         m_nodeCountHasBeenSet = true;
@@ -333,7 +343,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["IsTmp"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.IsTmp` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.IsTmp` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_isTmp = value["IsTmp"].GetUint64();
         m_isTmpHasBeenSet = true;
@@ -343,7 +353,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["ExclusterId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.ExclusterId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.ExclusterId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_exclusterId = string(value["ExclusterId"].GetString());
         m_exclusterIdHasBeenSet = true;
@@ -353,7 +363,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["Id"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.Id` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.Id` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_id = value["Id"].GetUint64();
         m_idHasBeenSet = true;
@@ -363,7 +373,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["Pid"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.Pid` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.Pid` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_pid = value["Pid"].GetInt64();
         m_pidHasBeenSet = true;
@@ -373,7 +383,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["Qps"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.Qps` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.Qps` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_qps = value["Qps"].GetInt64();
         m_qpsHasBeenSet = true;
@@ -383,7 +393,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["Paymode"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.Paymode` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.Paymode` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_paymode = string(value["Paymode"].GetString());
         m_paymodeHasBeenSet = true;
@@ -393,7 +403,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["Locker"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.Locker` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.Locker` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_locker = value["Locker"].GetInt64();
         m_lockerHasBeenSet = true;
@@ -403,7 +413,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["StatusDesc"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.StatusDesc` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.StatusDesc` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_statusDesc = string(value["StatusDesc"].GetString());
         m_statusDescHasBeenSet = true;
@@ -413,7 +423,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["WanStatus"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.WanStatus` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.WanStatus` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_wanStatus = value["WanStatus"].GetInt64();
         m_wanStatusHasBeenSet = true;
@@ -423,7 +433,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["IsAuditSupported"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.IsAuditSupported` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.IsAuditSupported` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_isAuditSupported = value["IsAuditSupported"].GetUint64();
         m_isAuditSupportedHasBeenSet = true;
@@ -433,7 +443,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["Machine"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.Machine` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.Machine` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_machine = string(value["Machine"].GetString());
         m_machineHasBeenSet = true;
@@ -443,7 +453,7 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["IsEncryptSupported"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.IsEncryptSupported` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.IsEncryptSupported` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_isEncryptSupported = value["IsEncryptSupported"].GetInt64();
         m_isEncryptSupportedHasBeenSet = true;
@@ -453,38 +463,148 @@ CoreInternalOutcome DBInstance::Deserialize(const Value &value)
     {
         if (!value["Cpu"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DBInstance.Cpu` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstance.Cpu` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_cpu = value["Cpu"].GetInt64();
         m_cpuHasBeenSet = true;
+    }
+
+    if (value.HasMember("Ipv6Flag") && !value["Ipv6Flag"].IsNull())
+    {
+        if (!value["Ipv6Flag"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `DBInstance.Ipv6Flag` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_ipv6Flag = value["Ipv6Flag"].GetUint64();
+        m_ipv6FlagHasBeenSet = true;
+    }
+
+    if (value.HasMember("Vipv6") && !value["Vipv6"].IsNull())
+    {
+        if (!value["Vipv6"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DBInstance.Vipv6` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_vipv6 = string(value["Vipv6"].GetString());
+        m_vipv6HasBeenSet = true;
+    }
+
+    if (value.HasMember("WanVipv6") && !value["WanVipv6"].IsNull())
+    {
+        if (!value["WanVipv6"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DBInstance.WanVipv6` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_wanVipv6 = string(value["WanVipv6"].GetString());
+        m_wanVipv6HasBeenSet = true;
+    }
+
+    if (value.HasMember("WanPortIpv6") && !value["WanPortIpv6"].IsNull())
+    {
+        if (!value["WanPortIpv6"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `DBInstance.WanPortIpv6` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_wanPortIpv6 = value["WanPortIpv6"].GetUint64();
+        m_wanPortIpv6HasBeenSet = true;
+    }
+
+    if (value.HasMember("WanStatusIpv6") && !value["WanStatusIpv6"].IsNull())
+    {
+        if (!value["WanStatusIpv6"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `DBInstance.WanStatusIpv6` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_wanStatusIpv6 = value["WanStatusIpv6"].GetUint64();
+        m_wanStatusIpv6HasBeenSet = true;
+    }
+
+    if (value.HasMember("DbEngine") && !value["DbEngine"].IsNull())
+    {
+        if (!value["DbEngine"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DBInstance.DbEngine` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_dbEngine = string(value["DbEngine"].GetString());
+        m_dbEngineHasBeenSet = true;
+    }
+
+    if (value.HasMember("DbVersion") && !value["DbVersion"].IsNull())
+    {
+        if (!value["DbVersion"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DBInstance.DbVersion` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_dbVersion = string(value["DbVersion"].GetString());
+        m_dbVersionHasBeenSet = true;
+    }
+
+    if (value.HasMember("DcnFlag") && !value["DcnFlag"].IsNull())
+    {
+        if (!value["DcnFlag"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `DBInstance.DcnFlag` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_dcnFlag = value["DcnFlag"].GetInt64();
+        m_dcnFlagHasBeenSet = true;
+    }
+
+    if (value.HasMember("DcnStatus") && !value["DcnStatus"].IsNull())
+    {
+        if (!value["DcnStatus"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `DBInstance.DcnStatus` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_dcnStatus = value["DcnStatus"].GetInt64();
+        m_dcnStatusHasBeenSet = true;
+    }
+
+    if (value.HasMember("DcnDstNum") && !value["DcnDstNum"].IsNull())
+    {
+        if (!value["DcnDstNum"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `DBInstance.DcnDstNum` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_dcnDstNum = value["DcnDstNum"].GetInt64();
+        m_dcnDstNumHasBeenSet = true;
+    }
+
+    if (value.HasMember("InstanceType") && !value["InstanceType"].IsNull())
+    {
+        if (!value["InstanceType"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `DBInstance.InstanceType` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_instanceType = value["InstanceType"].GetInt64();
+        m_instanceTypeHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void DBInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DBInstance::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_appIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AppId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_appId, allocator);
@@ -492,7 +612,7 @@ void DBInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_projectIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProjectId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_projectId, allocator);
@@ -500,23 +620,23 @@ void DBInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_regionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Region";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_region.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_region.c_str(), allocator).Move(), allocator);
     }
 
     if (m_zoneHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Zone";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_zone.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_zone.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_vpcId, allocator);
@@ -524,7 +644,7 @@ void DBInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_subnetIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubnetId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_subnetId, allocator);
@@ -532,7 +652,7 @@ void DBInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);
@@ -540,15 +660,15 @@ void DBInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_vipHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Vip";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vip.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vip.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vportHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Vport";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_vport, allocator);
@@ -556,23 +676,23 @@ void DBInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_wanDomainHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "WanDomain";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_wanDomain.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_wanDomain.c_str(), allocator).Move(), allocator);
     }
 
     if (m_wanVipHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "WanVip";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_wanVip.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_wanVip.c_str(), allocator).Move(), allocator);
     }
 
     if (m_wanPortHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "WanPort";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_wanPort, allocator);
@@ -580,23 +700,23 @@ void DBInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_updateTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UpdateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_updateTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_updateTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_autoRenewFlagHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AutoRenewFlag";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_autoRenewFlag, allocator);
@@ -604,31 +724,31 @@ void DBInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_periodEndTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PeriodEndTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_periodEndTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_periodEndTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_uinHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Uin";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_uin.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_uin.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tdsqlVersionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TdsqlVersion";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_tdsqlVersion.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tdsqlVersion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_memoryHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Memory";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_memory, allocator);
@@ -636,7 +756,7 @@ void DBInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_storageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Storage";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_storage, allocator);
@@ -644,31 +764,31 @@ void DBInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_uniqueVpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UniqueVpcId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_uniqueVpcId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_uniqueVpcId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_uniqueSubnetIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UniqueSubnetId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_uniqueSubnetId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_uniqueSubnetId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_originSerialIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OriginSerialId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_originSerialId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_originSerialId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_nodeCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NodeCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_nodeCount, allocator);
@@ -676,7 +796,7 @@ void DBInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_isTmpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsTmp";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isTmp, allocator);
@@ -684,15 +804,15 @@ void DBInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_exclusterIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ExclusterId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_exclusterId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_exclusterId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_idHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Id";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_id, allocator);
@@ -700,7 +820,7 @@ void DBInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_pidHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Pid";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_pid, allocator);
@@ -708,7 +828,7 @@ void DBInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_qpsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Qps";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_qps, allocator);
@@ -716,15 +836,15 @@ void DBInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_paymodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Paymode";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_paymode.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_paymode.c_str(), allocator).Move(), allocator);
     }
 
     if (m_lockerHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Locker";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_locker, allocator);
@@ -732,15 +852,15 @@ void DBInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_statusDescHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StatusDesc";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_statusDesc.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_statusDesc.c_str(), allocator).Move(), allocator);
     }
 
     if (m_wanStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "WanStatus";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_wanStatus, allocator);
@@ -748,7 +868,7 @@ void DBInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_isAuditSupportedHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsAuditSupported";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isAuditSupported, allocator);
@@ -756,15 +876,15 @@ void DBInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_machineHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Machine";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_machine.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_machine.c_str(), allocator).Move(), allocator);
     }
 
     if (m_isEncryptSupportedHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsEncryptSupported";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isEncryptSupported, allocator);
@@ -772,10 +892,98 @@ void DBInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_cpuHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Cpu";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cpu, allocator);
+    }
+
+    if (m_ipv6FlagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Ipv6Flag";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_ipv6Flag, allocator);
+    }
+
+    if (m_vipv6HasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Vipv6";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vipv6.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_wanVipv6HasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WanVipv6";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_wanVipv6.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_wanPortIpv6HasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WanPortIpv6";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_wanPortIpv6, allocator);
+    }
+
+    if (m_wanStatusIpv6HasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WanStatusIpv6";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_wanStatusIpv6, allocator);
+    }
+
+    if (m_dbEngineHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DbEngine";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_dbEngine.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_dbVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DbVersion";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_dbVersion.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_dcnFlagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DcnFlag";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_dcnFlag, allocator);
+    }
+
+    if (m_dcnStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DcnStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_dcnStatus, allocator);
+    }
+
+    if (m_dcnDstNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DcnDstNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_dcnDstNum, allocator);
+    }
+
+    if (m_instanceTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_instanceType, allocator);
     }
 
 }
@@ -1403,5 +1611,181 @@ void DBInstance::SetCpu(const int64_t& _cpu)
 bool DBInstance::CpuHasBeenSet() const
 {
     return m_cpuHasBeenSet;
+}
+
+uint64_t DBInstance::GetIpv6Flag() const
+{
+    return m_ipv6Flag;
+}
+
+void DBInstance::SetIpv6Flag(const uint64_t& _ipv6Flag)
+{
+    m_ipv6Flag = _ipv6Flag;
+    m_ipv6FlagHasBeenSet = true;
+}
+
+bool DBInstance::Ipv6FlagHasBeenSet() const
+{
+    return m_ipv6FlagHasBeenSet;
+}
+
+string DBInstance::GetVipv6() const
+{
+    return m_vipv6;
+}
+
+void DBInstance::SetVipv6(const string& _vipv6)
+{
+    m_vipv6 = _vipv6;
+    m_vipv6HasBeenSet = true;
+}
+
+bool DBInstance::Vipv6HasBeenSet() const
+{
+    return m_vipv6HasBeenSet;
+}
+
+string DBInstance::GetWanVipv6() const
+{
+    return m_wanVipv6;
+}
+
+void DBInstance::SetWanVipv6(const string& _wanVipv6)
+{
+    m_wanVipv6 = _wanVipv6;
+    m_wanVipv6HasBeenSet = true;
+}
+
+bool DBInstance::WanVipv6HasBeenSet() const
+{
+    return m_wanVipv6HasBeenSet;
+}
+
+uint64_t DBInstance::GetWanPortIpv6() const
+{
+    return m_wanPortIpv6;
+}
+
+void DBInstance::SetWanPortIpv6(const uint64_t& _wanPortIpv6)
+{
+    m_wanPortIpv6 = _wanPortIpv6;
+    m_wanPortIpv6HasBeenSet = true;
+}
+
+bool DBInstance::WanPortIpv6HasBeenSet() const
+{
+    return m_wanPortIpv6HasBeenSet;
+}
+
+uint64_t DBInstance::GetWanStatusIpv6() const
+{
+    return m_wanStatusIpv6;
+}
+
+void DBInstance::SetWanStatusIpv6(const uint64_t& _wanStatusIpv6)
+{
+    m_wanStatusIpv6 = _wanStatusIpv6;
+    m_wanStatusIpv6HasBeenSet = true;
+}
+
+bool DBInstance::WanStatusIpv6HasBeenSet() const
+{
+    return m_wanStatusIpv6HasBeenSet;
+}
+
+string DBInstance::GetDbEngine() const
+{
+    return m_dbEngine;
+}
+
+void DBInstance::SetDbEngine(const string& _dbEngine)
+{
+    m_dbEngine = _dbEngine;
+    m_dbEngineHasBeenSet = true;
+}
+
+bool DBInstance::DbEngineHasBeenSet() const
+{
+    return m_dbEngineHasBeenSet;
+}
+
+string DBInstance::GetDbVersion() const
+{
+    return m_dbVersion;
+}
+
+void DBInstance::SetDbVersion(const string& _dbVersion)
+{
+    m_dbVersion = _dbVersion;
+    m_dbVersionHasBeenSet = true;
+}
+
+bool DBInstance::DbVersionHasBeenSet() const
+{
+    return m_dbVersionHasBeenSet;
+}
+
+int64_t DBInstance::GetDcnFlag() const
+{
+    return m_dcnFlag;
+}
+
+void DBInstance::SetDcnFlag(const int64_t& _dcnFlag)
+{
+    m_dcnFlag = _dcnFlag;
+    m_dcnFlagHasBeenSet = true;
+}
+
+bool DBInstance::DcnFlagHasBeenSet() const
+{
+    return m_dcnFlagHasBeenSet;
+}
+
+int64_t DBInstance::GetDcnStatus() const
+{
+    return m_dcnStatus;
+}
+
+void DBInstance::SetDcnStatus(const int64_t& _dcnStatus)
+{
+    m_dcnStatus = _dcnStatus;
+    m_dcnStatusHasBeenSet = true;
+}
+
+bool DBInstance::DcnStatusHasBeenSet() const
+{
+    return m_dcnStatusHasBeenSet;
+}
+
+int64_t DBInstance::GetDcnDstNum() const
+{
+    return m_dcnDstNum;
+}
+
+void DBInstance::SetDcnDstNum(const int64_t& _dcnDstNum)
+{
+    m_dcnDstNum = _dcnDstNum;
+    m_dcnDstNumHasBeenSet = true;
+}
+
+bool DBInstance::DcnDstNumHasBeenSet() const
+{
+    return m_dcnDstNumHasBeenSet;
+}
+
+int64_t DBInstance::GetInstanceType() const
+{
+    return m_instanceType;
+}
+
+void DBInstance::SetInstanceType(const int64_t& _instanceType)
+{
+    m_instanceType = _instanceType;
+    m_instanceTypeHasBeenSet = true;
+}
+
+bool DBInstance::InstanceTypeHasBeenSet() const
+{
+    return m_instanceTypeHasBeenSet;
 }
 

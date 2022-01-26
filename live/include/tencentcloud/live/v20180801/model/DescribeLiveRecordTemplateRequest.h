@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Template ID obtained through the `DescribeRecordTemplates` API.
-                     * @return TemplateId Template ID obtained through the `DescribeRecordTemplates` API.
+                     * 获取Template ID obtained by [DescribeLiveRecordTemplates](https://intl.cloud.tencent.com/document/product/267/32609?from_cn_redirect=1).
+                     * @return TemplateId Template ID obtained by [DescribeLiveRecordTemplates](https://intl.cloud.tencent.com/document/product/267/32609?from_cn_redirect=1).
                      */
                     int64_t GetTemplateId() const;
 
                     /**
-                     * 设置Template ID obtained through the `DescribeRecordTemplates` API.
-                     * @param TemplateId Template ID obtained through the `DescribeRecordTemplates` API.
+                     * 设置Template ID obtained by [DescribeLiveRecordTemplates](https://intl.cloud.tencent.com/document/product/267/32609?from_cn_redirect=1).
+                     * @param TemplateId Template ID obtained by [DescribeLiveRecordTemplates](https://intl.cloud.tencent.com/document/product/267/32609?from_cn_redirect=1).
                      */
                     void SetTemplateId(const int64_t& _templateId);
 
@@ -63,7 +63,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Template ID obtained through the `DescribeRecordTemplates` API.
+                     * Template ID obtained by [DescribeLiveRecordTemplates](https://intl.cloud.tencent.com/document/product/267/32609?from_cn_redirect=1).
                      */
                     int64_t m_templateId;
                     bool m_templateIdHasBeenSet;

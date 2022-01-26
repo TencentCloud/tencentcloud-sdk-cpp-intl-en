@@ -48,14 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of a content audit template.
-                     * @return Definition Unique ID of a content audit template.
+                     * 获取Unique ID of an intelligent content recognition template
+                     * @return Definition Unique ID of an intelligent content recognition template
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Unique ID of a content audit template.
-                     * @param Definition Unique ID of a content audit template.
+                     * 设置Unique ID of an intelligent content recognition template
+                     * @param Definition Unique ID of an intelligent content recognition template
                      */
                     void SetDefinition(const int64_t& _definition);
 
@@ -66,14 +66,14 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Name of a content audit template. Length limit: 64 characters.
-                     * @return Name Name of a content audit template. Length limit: 64 characters.
+                     * 获取Name of an intelligent content recognition template. Length limit: 64 characters
+                     * @return Name Name of an intelligent content recognition template. Length limit: 64 characters
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name of a content audit template. Length limit: 64 characters.
-                     * @param Name Name of a content audit template. Length limit: 64 characters.
+                     * 设置Name of an intelligent content recognition template. Length limit: 64 characters
+                     * @param Name Name of an intelligent content recognition template. Length limit: 64 characters
                      */
                     void SetName(const std::string& _name);
 
@@ -84,14 +84,14 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Description of a content audit template. Length limit: 256 characters.
-                     * @return Comment Description of a content audit template. Length limit: 256 characters.
+                     * 获取Description of an intelligent content recognition template. Length limit: 256 characters
+                     * @return Comment Description of an intelligent content recognition template. Length limit: 256 characters
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Description of a content audit template. Length limit: 256 characters.
-                     * @param Comment Description of a content audit template. Length limit: 256 characters.
+                     * 设置Description of an intelligent content recognition template. Length limit: 256 characters
+                     * @param Comment Description of an intelligent content recognition template. Length limit: 256 characters
                      */
                     void SetComment(const std::string& _comment);
 
@@ -102,14 +102,14 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Porn information detection control parameter.
-                     * @return PornConfigure Porn information detection control parameter.
+                     * 获取Control parameter for porn information
+                     * @return PornConfigure Control parameter for porn information
                      */
                     PornConfigureInfoForUpdate GetPornConfigure() const;
 
                     /**
-                     * 设置Porn information detection control parameter.
-                     * @param PornConfigure Porn information detection control parameter.
+                     * 设置Control parameter for porn information
+                     * @param PornConfigure Control parameter for porn information
                      */
                     void SetPornConfigure(const PornConfigureInfoForUpdate& _pornConfigure);
 
@@ -120,14 +120,14 @@ namespace TencentCloud
                     bool PornConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Terrorism information detection control parameter.
-                     * @return TerrorismConfigure Terrorism information detection control parameter.
+                     * 获取Control parameter for terrorism information
+                     * @return TerrorismConfigure Control parameter for terrorism information
                      */
                     TerrorismConfigureInfoForUpdate GetTerrorismConfigure() const;
 
                     /**
-                     * 设置Terrorism information detection control parameter.
-                     * @param TerrorismConfigure Terrorism information detection control parameter.
+                     * 设置Control parameter for terrorism information
+                     * @param TerrorismConfigure Control parameter for terrorism information
                      */
                     void SetTerrorismConfigure(const TerrorismConfigureInfoForUpdate& _terrorismConfigure);
 
@@ -138,14 +138,14 @@ namespace TencentCloud
                     bool TerrorismConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Politically sensitive information detection control parameter.
-                     * @return PoliticalConfigure Politically sensitive information detection control parameter.
+                     * 获取Control parameter for politically sensitive information
+                     * @return PoliticalConfigure Control parameter for politically sensitive information
                      */
                     PoliticalConfigureInfoForUpdate GetPoliticalConfigure() const;
 
                     /**
-                     * 设置Politically sensitive information detection control parameter.
-                     * @param PoliticalConfigure Politically sensitive information detection control parameter.
+                     * 设置Control parameter for politically sensitive information
+                     * @param PoliticalConfigure Control parameter for politically sensitive information
                      */
                     void SetPoliticalConfigure(const PoliticalConfigureInfoForUpdate& _politicalConfigure);
 
@@ -156,14 +156,26 @@ namespace TencentCloud
                     bool PoliticalConfigureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ProhibitedConfigure 
+                     * 获取Control parameter of prohibited information detection. Prohibited information includes:
+<li>Abusive;</li>
+<li>Drug-related.</li>
+Note: this parameter is not supported yet.
+                     * @return ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
+<li>Abusive;</li>
+<li>Drug-related.</li>
+Note: this parameter is not supported yet.
                      */
                     ProhibitedConfigureInfoForUpdate GetProhibitedConfigure() const;
 
                     /**
-                     * 设置
-                     * @param ProhibitedConfigure 
+                     * 设置Control parameter of prohibited information detection. Prohibited information includes:
+<li>Abusive;</li>
+<li>Drug-related.</li>
+Note: this parameter is not supported yet.
+                     * @param ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
+<li>Abusive;</li>
+<li>Drug-related.</li>
+Note: this parameter is not supported yet.
                      */
                     void SetProhibitedConfigure(const ProhibitedConfigureInfoForUpdate& _prohibitedConfigure);
 
@@ -174,14 +186,14 @@ namespace TencentCloud
                     bool ProhibitedConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Custom content audit control parameter.
-                     * @return UserDefineConfigure Custom content audit control parameter.
+                     * 获取Control parameter for custom intelligent content recognition tasks
+                     * @return UserDefineConfigure Control parameter for custom intelligent content recognition tasks
                      */
                     UserDefineConfigureInfoForUpdate GetUserDefineConfigure() const;
 
                     /**
-                     * 设置Custom content audit control parameter.
-                     * @param UserDefineConfigure Custom content audit control parameter.
+                     * 设置Control parameter for custom intelligent content recognition tasks
+                     * @param UserDefineConfigure Control parameter for custom intelligent content recognition tasks
                      */
                     void SetUserDefineConfigure(const UserDefineConfigureInfoForUpdate& _userDefineConfigure);
 
@@ -194,49 +206,52 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique ID of a content audit template.
+                     * Unique ID of an intelligent content recognition template
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Name of a content audit template. Length limit: 64 characters.
+                     * Name of an intelligent content recognition template. Length limit: 64 characters
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Description of a content audit template. Length limit: 256 characters.
+                     * Description of an intelligent content recognition template. Length limit: 256 characters
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Porn information detection control parameter.
+                     * Control parameter for porn information
                      */
                     PornConfigureInfoForUpdate m_pornConfigure;
                     bool m_pornConfigureHasBeenSet;
 
                     /**
-                     * Terrorism information detection control parameter.
+                     * Control parameter for terrorism information
                      */
                     TerrorismConfigureInfoForUpdate m_terrorismConfigure;
                     bool m_terrorismConfigureHasBeenSet;
 
                     /**
-                     * Politically sensitive information detection control parameter.
+                     * Control parameter for politically sensitive information
                      */
                     PoliticalConfigureInfoForUpdate m_politicalConfigure;
                     bool m_politicalConfigureHasBeenSet;
 
                     /**
-                     * 
+                     * Control parameter of prohibited information detection. Prohibited information includes:
+<li>Abusive;</li>
+<li>Drug-related.</li>
+Note: this parameter is not supported yet.
                      */
                     ProhibitedConfigureInfoForUpdate m_prohibitedConfigure;
                     bool m_prohibitedConfigureHasBeenSet;
 
                     /**
-                     * Custom content audit control parameter.
+                     * Control parameter for custom intelligent content recognition tasks
                      */
                     UserDefineConfigureInfoForUpdate m_userDefineConfigure;
                     bool m_userDefineConfigureHasBeenSet;

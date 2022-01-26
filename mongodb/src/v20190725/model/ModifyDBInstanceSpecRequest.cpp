@@ -20,35 +20,37 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Mongodb::V20190725::Model;
-using namespace rapidjson;
 using namespace std;
 
 ModifyDBInstanceSpecRequest::ModifyDBInstanceSpecRequest() :
     m_instanceIdHasBeenSet(false),
     m_memoryHasBeenSet(false),
     m_volumeHasBeenSet(false),
-    m_oplogSizeHasBeenSet(false)
+    m_oplogSizeHasBeenSet(false),
+    m_nodeNumHasBeenSet(false),
+    m_replicateSetNumHasBeenSet(false),
+    m_inMaintenanceHasBeenSet(false)
 {
 }
 
 string ModifyDBInstanceSpecRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_memoryHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Memory";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_memory, allocator);
@@ -56,7 +58,7 @@ string ModifyDBInstanceSpecRequest::ToJsonString() const
 
     if (m_volumeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Volume";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_volume, allocator);
@@ -64,15 +66,39 @@ string ModifyDBInstanceSpecRequest::ToJsonString() const
 
     if (m_oplogSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OplogSize";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_oplogSize, allocator);
     }
 
+    if (m_nodeNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NodeNum";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_nodeNum, allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    if (m_replicateSetNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ReplicateSetNum";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_replicateSetNum, allocator);
+    }
+
+    if (m_inMaintenanceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InMaintenance";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_inMaintenance, allocator);
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -140,6 +166,54 @@ void ModifyDBInstanceSpecRequest::SetOplogSize(const uint64_t& _oplogSize)
 bool ModifyDBInstanceSpecRequest::OplogSizeHasBeenSet() const
 {
     return m_oplogSizeHasBeenSet;
+}
+
+uint64_t ModifyDBInstanceSpecRequest::GetNodeNum() const
+{
+    return m_nodeNum;
+}
+
+void ModifyDBInstanceSpecRequest::SetNodeNum(const uint64_t& _nodeNum)
+{
+    m_nodeNum = _nodeNum;
+    m_nodeNumHasBeenSet = true;
+}
+
+bool ModifyDBInstanceSpecRequest::NodeNumHasBeenSet() const
+{
+    return m_nodeNumHasBeenSet;
+}
+
+uint64_t ModifyDBInstanceSpecRequest::GetReplicateSetNum() const
+{
+    return m_replicateSetNum;
+}
+
+void ModifyDBInstanceSpecRequest::SetReplicateSetNum(const uint64_t& _replicateSetNum)
+{
+    m_replicateSetNum = _replicateSetNum;
+    m_replicateSetNumHasBeenSet = true;
+}
+
+bool ModifyDBInstanceSpecRequest::ReplicateSetNumHasBeenSet() const
+{
+    return m_replicateSetNumHasBeenSet;
+}
+
+uint64_t ModifyDBInstanceSpecRequest::GetInMaintenance() const
+{
+    return m_inMaintenance;
+}
+
+void ModifyDBInstanceSpecRequest::SetInMaintenance(const uint64_t& _inMaintenance)
+{
+    m_inMaintenance = _inMaintenance;
+    m_inMaintenanceHasBeenSet = true;
+}
+
+bool ModifyDBInstanceSpecRequest::InMaintenanceHasBeenSet() const
+{
+    return m_inMaintenanceHasBeenSet;
 }
 
 

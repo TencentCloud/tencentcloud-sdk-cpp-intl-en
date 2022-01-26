@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * RealServerBindSetReq
+                * Information of the bound origin server
                 */
                 class RealServerBindSetReq : public AbstractModel
                 {
@@ -118,6 +118,24 @@ namespace TencentCloud
                      */
                     bool RealServerWeightHasBeenSet() const;
 
+                    /**
+                     * 获取Origin server role: master (primary origin server); slave (secondary origin server). This parameter is applicable when the primary/secondary origin server mode is enabled for a TCP listener.
+                     * @return RealServerFailoverRole Origin server role: master (primary origin server); slave (secondary origin server). This parameter is applicable when the primary/secondary origin server mode is enabled for a TCP listener.
+                     */
+                    std::string GetRealServerFailoverRole() const;
+
+                    /**
+                     * 设置Origin server role: master (primary origin server); slave (secondary origin server). This parameter is applicable when the primary/secondary origin server mode is enabled for a TCP listener.
+                     * @param RealServerFailoverRole Origin server role: master (primary origin server); slave (secondary origin server). This parameter is applicable when the primary/secondary origin server mode is enabled for a TCP listener.
+                     */
+                    void SetRealServerFailoverRole(const std::string& _realServerFailoverRole);
+
+                    /**
+                     * 判断参数 RealServerFailoverRole 是否已赋值
+                     * @return RealServerFailoverRole 是否已赋值
+                     */
+                    bool RealServerFailoverRoleHasBeenSet() const;
+
                 private:
 
                     /**
@@ -143,6 +161,12 @@ namespace TencentCloud
                      */
                     uint64_t m_realServerWeight;
                     bool m_realServerWeightHasBeenSet;
+
+                    /**
+                     * Origin server role: master (primary origin server); slave (secondary origin server). This parameter is applicable when the primary/secondary origin server mode is enabled for a TCP listener.
+                     */
+                    std::string m_realServerFailoverRole;
+                    bool m_realServerFailoverRoleHasBeenSet;
 
                 };
             }

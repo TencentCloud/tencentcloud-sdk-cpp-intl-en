@@ -33,8 +33,12 @@
 #include <tencentcloud/cdb/v20170320/model/CloseWanServiceResponse.h>
 #include <tencentcloud/cdb/v20170320/model/CreateAccountsRequest.h>
 #include <tencentcloud/cdb/v20170320/model/CreateAccountsResponse.h>
+#include <tencentcloud/cdb/v20170320/model/CreateAuditPolicyRequest.h>
+#include <tencentcloud/cdb/v20170320/model/CreateAuditPolicyResponse.h>
 #include <tencentcloud/cdb/v20170320/model/CreateBackupRequest.h>
 #include <tencentcloud/cdb/v20170320/model/CreateBackupResponse.h>
+#include <tencentcloud/cdb/v20170320/model/CreateCloneInstanceRequest.h>
+#include <tencentcloud/cdb/v20170320/model/CreateCloneInstanceResponse.h>
 #include <tencentcloud/cdb/v20170320/model/CreateDBImportJobRequest.h>
 #include <tencentcloud/cdb/v20170320/model/CreateDBImportJobResponse.h>
 #include <tencentcloud/cdb/v20170320/model/CreateDBInstanceHourRequest.h>
@@ -43,6 +47,8 @@
 #include <tencentcloud/cdb/v20170320/model/CreateDeployGroupResponse.h>
 #include <tencentcloud/cdb/v20170320/model/CreateParamTemplateRequest.h>
 #include <tencentcloud/cdb/v20170320/model/CreateParamTemplateResponse.h>
+#include <tencentcloud/cdb/v20170320/model/CreateRoInstanceIpRequest.h>
+#include <tencentcloud/cdb/v20170320/model/CreateRoInstanceIpResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DeleteAccountsRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DeleteAccountsResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DeleteBackupRequest.h>
@@ -61,20 +67,20 @@
 #include <tencentcloud/cdb/v20170320/model/DescribeAsyncRequestInfoResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeBackupConfigRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeBackupConfigResponse.h>
-#include <tencentcloud/cdb/v20170320/model/DescribeBackupDatabasesRequest.h>
-#include <tencentcloud/cdb/v20170320/model/DescribeBackupDatabasesResponse.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeBackupDownloadRestrictionRequest.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeBackupDownloadRestrictionResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeBackupOverviewRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeBackupOverviewResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeBackupSummariesRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeBackupSummariesResponse.h>
-#include <tencentcloud/cdb/v20170320/model/DescribeBackupTablesRequest.h>
-#include <tencentcloud/cdb/v20170320/model/DescribeBackupTablesResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeBackupsRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeBackupsResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeBinlogBackupOverviewRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeBinlogBackupOverviewResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeBinlogsRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeBinlogsResponse.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeCloneListRequest.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeCloneListResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeDBImportRecordsRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeDBImportRecordsResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeDBInstanceCharsetRequest.h>
@@ -119,6 +125,8 @@
 #include <tencentcloud/cdb/v20170320/model/DescribeProjectSecurityGroupsResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeRoGroupsRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeRoGroupsResponse.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeRoMinScaleRequest.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeRoMinScaleResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeRollbackRangeTimeRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeRollbackRangeTimeResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeRollbackTaskDetailRequest.h>
@@ -147,6 +155,8 @@
 #include <tencentcloud/cdb/v20170320/model/IsolateDBInstanceResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyAccountDescriptionRequest.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyAccountDescriptionResponse.h>
+#include <tencentcloud/cdb/v20170320/model/ModifyAccountMaxUserConnectionsRequest.h>
+#include <tencentcloud/cdb/v20170320/model/ModifyAccountMaxUserConnectionsResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyAccountPasswordRequest.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyAccountPasswordResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyAccountPrivilegesRequest.h>
@@ -155,6 +165,8 @@
 #include <tencentcloud/cdb/v20170320/model/ModifyAutoRenewFlagResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyBackupConfigRequest.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyBackupConfigResponse.h>
+#include <tencentcloud/cdb/v20170320/model/ModifyBackupDownloadRestrictionRequest.h>
+#include <tencentcloud/cdb/v20170320/model/ModifyBackupDownloadRestrictionResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyDBInstanceNameRequest.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyDBInstanceNameResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyDBInstanceProjectRequest.h>
@@ -187,8 +199,18 @@
 #include <tencentcloud/cdb/v20170320/model/RestartDBInstancesResponse.h>
 #include <tencentcloud/cdb/v20170320/model/StartBatchRollbackRequest.h>
 #include <tencentcloud/cdb/v20170320/model/StartBatchRollbackResponse.h>
+#include <tencentcloud/cdb/v20170320/model/StartReplicationRequest.h>
+#include <tencentcloud/cdb/v20170320/model/StartReplicationResponse.h>
 #include <tencentcloud/cdb/v20170320/model/StopDBImportJobRequest.h>
 #include <tencentcloud/cdb/v20170320/model/StopDBImportJobResponse.h>
+#include <tencentcloud/cdb/v20170320/model/StopReplicationRequest.h>
+#include <tencentcloud/cdb/v20170320/model/StopReplicationResponse.h>
+#include <tencentcloud/cdb/v20170320/model/StopRollbackRequest.h>
+#include <tencentcloud/cdb/v20170320/model/StopRollbackResponse.h>
+#include <tencentcloud/cdb/v20170320/model/SwitchDBInstanceMasterSlaveRequest.h>
+#include <tencentcloud/cdb/v20170320/model/SwitchDBInstanceMasterSlaveResponse.h>
+#include <tencentcloud/cdb/v20170320/model/SwitchDrInstanceToMasterRequest.h>
+#include <tencentcloud/cdb/v20170320/model/SwitchDrInstanceToMasterResponse.h>
 #include <tencentcloud/cdb/v20170320/model/SwitchForUpgradeRequest.h>
 #include <tencentcloud/cdb/v20170320/model/SwitchForUpgradeResponse.h>
 #include <tencentcloud/cdb/v20170320/model/UpgradeDBInstanceRequest.h>
@@ -209,262 +231,295 @@ namespace TencentCloud
                 CdbClient(const Credential &credential, const std::string &region);
                 CdbClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::AddTimeWindowResponse> AddTimeWindowOutcome;
+                typedef Outcome<Core::Error, Model::AddTimeWindowResponse> AddTimeWindowOutcome;
                 typedef std::future<AddTimeWindowOutcome> AddTimeWindowOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::AddTimeWindowRequest&, AddTimeWindowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddTimeWindowAsyncHandler;
-                typedef Outcome<Error, Model::AssociateSecurityGroupsResponse> AssociateSecurityGroupsOutcome;
+                typedef Outcome<Core::Error, Model::AssociateSecurityGroupsResponse> AssociateSecurityGroupsOutcome;
                 typedef std::future<AssociateSecurityGroupsOutcome> AssociateSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::AssociateSecurityGroupsRequest&, AssociateSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssociateSecurityGroupsAsyncHandler;
-                typedef Outcome<Error, Model::BalanceRoGroupLoadResponse> BalanceRoGroupLoadOutcome;
+                typedef Outcome<Core::Error, Model::BalanceRoGroupLoadResponse> BalanceRoGroupLoadOutcome;
                 typedef std::future<BalanceRoGroupLoadOutcome> BalanceRoGroupLoadOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::BalanceRoGroupLoadRequest&, BalanceRoGroupLoadOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BalanceRoGroupLoadAsyncHandler;
-                typedef Outcome<Error, Model::CloseWanServiceResponse> CloseWanServiceOutcome;
+                typedef Outcome<Core::Error, Model::CloseWanServiceResponse> CloseWanServiceOutcome;
                 typedef std::future<CloseWanServiceOutcome> CloseWanServiceOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::CloseWanServiceRequest&, CloseWanServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloseWanServiceAsyncHandler;
-                typedef Outcome<Error, Model::CreateAccountsResponse> CreateAccountsOutcome;
+                typedef Outcome<Core::Error, Model::CreateAccountsResponse> CreateAccountsOutcome;
                 typedef std::future<CreateAccountsOutcome> CreateAccountsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::CreateAccountsRequest&, CreateAccountsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAccountsAsyncHandler;
-                typedef Outcome<Error, Model::CreateBackupResponse> CreateBackupOutcome;
+                typedef Outcome<Core::Error, Model::CreateAuditPolicyResponse> CreateAuditPolicyOutcome;
+                typedef std::future<CreateAuditPolicyOutcome> CreateAuditPolicyOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::CreateAuditPolicyRequest&, CreateAuditPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAuditPolicyAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateBackupResponse> CreateBackupOutcome;
                 typedef std::future<CreateBackupOutcome> CreateBackupOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::CreateBackupRequest&, CreateBackupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateBackupAsyncHandler;
-                typedef Outcome<Error, Model::CreateDBImportJobResponse> CreateDBImportJobOutcome;
+                typedef Outcome<Core::Error, Model::CreateCloneInstanceResponse> CreateCloneInstanceOutcome;
+                typedef std::future<CreateCloneInstanceOutcome> CreateCloneInstanceOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::CreateCloneInstanceRequest&, CreateCloneInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCloneInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateDBImportJobResponse> CreateDBImportJobOutcome;
                 typedef std::future<CreateDBImportJobOutcome> CreateDBImportJobOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::CreateDBImportJobRequest&, CreateDBImportJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDBImportJobAsyncHandler;
-                typedef Outcome<Error, Model::CreateDBInstanceHourResponse> CreateDBInstanceHourOutcome;
+                typedef Outcome<Core::Error, Model::CreateDBInstanceHourResponse> CreateDBInstanceHourOutcome;
                 typedef std::future<CreateDBInstanceHourOutcome> CreateDBInstanceHourOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::CreateDBInstanceHourRequest&, CreateDBInstanceHourOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDBInstanceHourAsyncHandler;
-                typedef Outcome<Error, Model::CreateDeployGroupResponse> CreateDeployGroupOutcome;
+                typedef Outcome<Core::Error, Model::CreateDeployGroupResponse> CreateDeployGroupOutcome;
                 typedef std::future<CreateDeployGroupOutcome> CreateDeployGroupOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::CreateDeployGroupRequest&, CreateDeployGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDeployGroupAsyncHandler;
-                typedef Outcome<Error, Model::CreateParamTemplateResponse> CreateParamTemplateOutcome;
+                typedef Outcome<Core::Error, Model::CreateParamTemplateResponse> CreateParamTemplateOutcome;
                 typedef std::future<CreateParamTemplateOutcome> CreateParamTemplateOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::CreateParamTemplateRequest&, CreateParamTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateParamTemplateAsyncHandler;
-                typedef Outcome<Error, Model::DeleteAccountsResponse> DeleteAccountsOutcome;
+                typedef Outcome<Core::Error, Model::CreateRoInstanceIpResponse> CreateRoInstanceIpOutcome;
+                typedef std::future<CreateRoInstanceIpOutcome> CreateRoInstanceIpOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::CreateRoInstanceIpRequest&, CreateRoInstanceIpOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRoInstanceIpAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteAccountsResponse> DeleteAccountsOutcome;
                 typedef std::future<DeleteAccountsOutcome> DeleteAccountsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DeleteAccountsRequest&, DeleteAccountsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAccountsAsyncHandler;
-                typedef Outcome<Error, Model::DeleteBackupResponse> DeleteBackupOutcome;
+                typedef Outcome<Core::Error, Model::DeleteBackupResponse> DeleteBackupOutcome;
                 typedef std::future<DeleteBackupOutcome> DeleteBackupOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DeleteBackupRequest&, DeleteBackupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteBackupAsyncHandler;
-                typedef Outcome<Error, Model::DeleteDeployGroupsResponse> DeleteDeployGroupsOutcome;
+                typedef Outcome<Core::Error, Model::DeleteDeployGroupsResponse> DeleteDeployGroupsOutcome;
                 typedef std::future<DeleteDeployGroupsOutcome> DeleteDeployGroupsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DeleteDeployGroupsRequest&, DeleteDeployGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteDeployGroupsAsyncHandler;
-                typedef Outcome<Error, Model::DeleteParamTemplateResponse> DeleteParamTemplateOutcome;
+                typedef Outcome<Core::Error, Model::DeleteParamTemplateResponse> DeleteParamTemplateOutcome;
                 typedef std::future<DeleteParamTemplateOutcome> DeleteParamTemplateOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DeleteParamTemplateRequest&, DeleteParamTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteParamTemplateAsyncHandler;
-                typedef Outcome<Error, Model::DeleteTimeWindowResponse> DeleteTimeWindowOutcome;
+                typedef Outcome<Core::Error, Model::DeleteTimeWindowResponse> DeleteTimeWindowOutcome;
                 typedef std::future<DeleteTimeWindowOutcome> DeleteTimeWindowOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DeleteTimeWindowRequest&, DeleteTimeWindowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTimeWindowAsyncHandler;
-                typedef Outcome<Error, Model::DescribeAccountPrivilegesResponse> DescribeAccountPrivilegesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAccountPrivilegesResponse> DescribeAccountPrivilegesOutcome;
                 typedef std::future<DescribeAccountPrivilegesOutcome> DescribeAccountPrivilegesOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeAccountPrivilegesRequest&, DescribeAccountPrivilegesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccountPrivilegesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeAccountsResponse> DescribeAccountsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAccountsResponse> DescribeAccountsOutcome;
                 typedef std::future<DescribeAccountsOutcome> DescribeAccountsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeAccountsRequest&, DescribeAccountsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccountsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeAsyncRequestInfoResponse> DescribeAsyncRequestInfoOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAsyncRequestInfoResponse> DescribeAsyncRequestInfoOutcome;
                 typedef std::future<DescribeAsyncRequestInfoOutcome> DescribeAsyncRequestInfoOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeAsyncRequestInfoRequest&, DescribeAsyncRequestInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAsyncRequestInfoAsyncHandler;
-                typedef Outcome<Error, Model::DescribeBackupConfigResponse> DescribeBackupConfigOutcome;
+                typedef Outcome<Core::Error, Model::DescribeBackupConfigResponse> DescribeBackupConfigOutcome;
                 typedef std::future<DescribeBackupConfigOutcome> DescribeBackupConfigOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeBackupConfigRequest&, DescribeBackupConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBackupConfigAsyncHandler;
-                typedef Outcome<Error, Model::DescribeBackupDatabasesResponse> DescribeBackupDatabasesOutcome;
-                typedef std::future<DescribeBackupDatabasesOutcome> DescribeBackupDatabasesOutcomeCallable;
-                typedef std::function<void(const CdbClient*, const Model::DescribeBackupDatabasesRequest&, DescribeBackupDatabasesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBackupDatabasesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeBackupOverviewResponse> DescribeBackupOverviewOutcome;
+                typedef Outcome<Core::Error, Model::DescribeBackupDownloadRestrictionResponse> DescribeBackupDownloadRestrictionOutcome;
+                typedef std::future<DescribeBackupDownloadRestrictionOutcome> DescribeBackupDownloadRestrictionOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::DescribeBackupDownloadRestrictionRequest&, DescribeBackupDownloadRestrictionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBackupDownloadRestrictionAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBackupOverviewResponse> DescribeBackupOverviewOutcome;
                 typedef std::future<DescribeBackupOverviewOutcome> DescribeBackupOverviewOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeBackupOverviewRequest&, DescribeBackupOverviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBackupOverviewAsyncHandler;
-                typedef Outcome<Error, Model::DescribeBackupSummariesResponse> DescribeBackupSummariesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeBackupSummariesResponse> DescribeBackupSummariesOutcome;
                 typedef std::future<DescribeBackupSummariesOutcome> DescribeBackupSummariesOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeBackupSummariesRequest&, DescribeBackupSummariesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBackupSummariesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeBackupTablesResponse> DescribeBackupTablesOutcome;
-                typedef std::future<DescribeBackupTablesOutcome> DescribeBackupTablesOutcomeCallable;
-                typedef std::function<void(const CdbClient*, const Model::DescribeBackupTablesRequest&, DescribeBackupTablesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBackupTablesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeBackupsResponse> DescribeBackupsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeBackupsResponse> DescribeBackupsOutcome;
                 typedef std::future<DescribeBackupsOutcome> DescribeBackupsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeBackupsRequest&, DescribeBackupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBackupsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeBinlogBackupOverviewResponse> DescribeBinlogBackupOverviewOutcome;
+                typedef Outcome<Core::Error, Model::DescribeBinlogBackupOverviewResponse> DescribeBinlogBackupOverviewOutcome;
                 typedef std::future<DescribeBinlogBackupOverviewOutcome> DescribeBinlogBackupOverviewOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeBinlogBackupOverviewRequest&, DescribeBinlogBackupOverviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBinlogBackupOverviewAsyncHandler;
-                typedef Outcome<Error, Model::DescribeBinlogsResponse> DescribeBinlogsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeBinlogsResponse> DescribeBinlogsOutcome;
                 typedef std::future<DescribeBinlogsOutcome> DescribeBinlogsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeBinlogsRequest&, DescribeBinlogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBinlogsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDBImportRecordsResponse> DescribeDBImportRecordsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeCloneListResponse> DescribeCloneListOutcome;
+                typedef std::future<DescribeCloneListOutcome> DescribeCloneListOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::DescribeCloneListRequest&, DescribeCloneListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloneListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDBImportRecordsResponse> DescribeDBImportRecordsOutcome;
                 typedef std::future<DescribeDBImportRecordsOutcome> DescribeDBImportRecordsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeDBImportRecordsRequest&, DescribeDBImportRecordsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBImportRecordsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDBInstanceCharsetResponse> DescribeDBInstanceCharsetOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDBInstanceCharsetResponse> DescribeDBInstanceCharsetOutcome;
                 typedef std::future<DescribeDBInstanceCharsetOutcome> DescribeDBInstanceCharsetOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeDBInstanceCharsetRequest&, DescribeDBInstanceCharsetOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstanceCharsetAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDBInstanceConfigResponse> DescribeDBInstanceConfigOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDBInstanceConfigResponse> DescribeDBInstanceConfigOutcome;
                 typedef std::future<DescribeDBInstanceConfigOutcome> DescribeDBInstanceConfigOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeDBInstanceConfigRequest&, DescribeDBInstanceConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstanceConfigAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDBInstanceGTIDResponse> DescribeDBInstanceGTIDOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDBInstanceGTIDResponse> DescribeDBInstanceGTIDOutcome;
                 typedef std::future<DescribeDBInstanceGTIDOutcome> DescribeDBInstanceGTIDOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeDBInstanceGTIDRequest&, DescribeDBInstanceGTIDOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstanceGTIDAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDBInstanceInfoResponse> DescribeDBInstanceInfoOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDBInstanceInfoResponse> DescribeDBInstanceInfoOutcome;
                 typedef std::future<DescribeDBInstanceInfoOutcome> DescribeDBInstanceInfoOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeDBInstanceInfoRequest&, DescribeDBInstanceInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstanceInfoAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDBInstanceRebootTimeResponse> DescribeDBInstanceRebootTimeOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDBInstanceRebootTimeResponse> DescribeDBInstanceRebootTimeOutcome;
                 typedef std::future<DescribeDBInstanceRebootTimeOutcome> DescribeDBInstanceRebootTimeOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeDBInstanceRebootTimeRequest&, DescribeDBInstanceRebootTimeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstanceRebootTimeAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDBInstancesResponse> DescribeDBInstancesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDBInstancesResponse> DescribeDBInstancesOutcome;
                 typedef std::future<DescribeDBInstancesOutcome> DescribeDBInstancesOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeDBInstancesRequest&, DescribeDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstancesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDBSecurityGroupsResponse> DescribeDBSecurityGroupsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDBSecurityGroupsResponse> DescribeDBSecurityGroupsOutcome;
                 typedef std::future<DescribeDBSecurityGroupsOutcome> DescribeDBSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeDBSecurityGroupsRequest&, DescribeDBSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBSecurityGroupsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDBSwitchRecordsResponse> DescribeDBSwitchRecordsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDBSwitchRecordsResponse> DescribeDBSwitchRecordsOutcome;
                 typedef std::future<DescribeDBSwitchRecordsOutcome> DescribeDBSwitchRecordsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeDBSwitchRecordsRequest&, DescribeDBSwitchRecordsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBSwitchRecordsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDBZoneConfigResponse> DescribeDBZoneConfigOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDBZoneConfigResponse> DescribeDBZoneConfigOutcome;
                 typedef std::future<DescribeDBZoneConfigOutcome> DescribeDBZoneConfigOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeDBZoneConfigRequest&, DescribeDBZoneConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBZoneConfigAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDataBackupOverviewResponse> DescribeDataBackupOverviewOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDataBackupOverviewResponse> DescribeDataBackupOverviewOutcome;
                 typedef std::future<DescribeDataBackupOverviewOutcome> DescribeDataBackupOverviewOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeDataBackupOverviewRequest&, DescribeDataBackupOverviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDataBackupOverviewAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDatabasesResponse> DescribeDatabasesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDatabasesResponse> DescribeDatabasesOutcome;
                 typedef std::future<DescribeDatabasesOutcome> DescribeDatabasesOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeDatabasesRequest&, DescribeDatabasesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDatabasesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDefaultParamsResponse> DescribeDefaultParamsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDefaultParamsResponse> DescribeDefaultParamsOutcome;
                 typedef std::future<DescribeDefaultParamsOutcome> DescribeDefaultParamsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeDefaultParamsRequest&, DescribeDefaultParamsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDefaultParamsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDeployGroupListResponse> DescribeDeployGroupListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDeployGroupListResponse> DescribeDeployGroupListOutcome;
                 typedef std::future<DescribeDeployGroupListOutcome> DescribeDeployGroupListOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeDeployGroupListRequest&, DescribeDeployGroupListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDeployGroupListAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDeviceMonitorInfoResponse> DescribeDeviceMonitorInfoOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDeviceMonitorInfoResponse> DescribeDeviceMonitorInfoOutcome;
                 typedef std::future<DescribeDeviceMonitorInfoOutcome> DescribeDeviceMonitorInfoOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeDeviceMonitorInfoRequest&, DescribeDeviceMonitorInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDeviceMonitorInfoAsyncHandler;
-                typedef Outcome<Error, Model::DescribeErrorLogDataResponse> DescribeErrorLogDataOutcome;
+                typedef Outcome<Core::Error, Model::DescribeErrorLogDataResponse> DescribeErrorLogDataOutcome;
                 typedef std::future<DescribeErrorLogDataOutcome> DescribeErrorLogDataOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeErrorLogDataRequest&, DescribeErrorLogDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeErrorLogDataAsyncHandler;
-                typedef Outcome<Error, Model::DescribeInstanceParamRecordsResponse> DescribeInstanceParamRecordsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeInstanceParamRecordsResponse> DescribeInstanceParamRecordsOutcome;
                 typedef std::future<DescribeInstanceParamRecordsOutcome> DescribeInstanceParamRecordsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeInstanceParamRecordsRequest&, DescribeInstanceParamRecordsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceParamRecordsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeInstanceParamsResponse> DescribeInstanceParamsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeInstanceParamsResponse> DescribeInstanceParamsOutcome;
                 typedef std::future<DescribeInstanceParamsOutcome> DescribeInstanceParamsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeInstanceParamsRequest&, DescribeInstanceParamsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceParamsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeParamTemplateInfoResponse> DescribeParamTemplateInfoOutcome;
+                typedef Outcome<Core::Error, Model::DescribeParamTemplateInfoResponse> DescribeParamTemplateInfoOutcome;
                 typedef std::future<DescribeParamTemplateInfoOutcome> DescribeParamTemplateInfoOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeParamTemplateInfoRequest&, DescribeParamTemplateInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeParamTemplateInfoAsyncHandler;
-                typedef Outcome<Error, Model::DescribeParamTemplatesResponse> DescribeParamTemplatesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeParamTemplatesResponse> DescribeParamTemplatesOutcome;
                 typedef std::future<DescribeParamTemplatesOutcome> DescribeParamTemplatesOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeParamTemplatesRequest&, DescribeParamTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeParamTemplatesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeProjectSecurityGroupsResponse> DescribeProjectSecurityGroupsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeProjectSecurityGroupsResponse> DescribeProjectSecurityGroupsOutcome;
                 typedef std::future<DescribeProjectSecurityGroupsOutcome> DescribeProjectSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeProjectSecurityGroupsRequest&, DescribeProjectSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProjectSecurityGroupsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeRoGroupsResponse> DescribeRoGroupsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeRoGroupsResponse> DescribeRoGroupsOutcome;
                 typedef std::future<DescribeRoGroupsOutcome> DescribeRoGroupsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeRoGroupsRequest&, DescribeRoGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRoGroupsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeRollbackRangeTimeResponse> DescribeRollbackRangeTimeOutcome;
+                typedef Outcome<Core::Error, Model::DescribeRoMinScaleResponse> DescribeRoMinScaleOutcome;
+                typedef std::future<DescribeRoMinScaleOutcome> DescribeRoMinScaleOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::DescribeRoMinScaleRequest&, DescribeRoMinScaleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRoMinScaleAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRollbackRangeTimeResponse> DescribeRollbackRangeTimeOutcome;
                 typedef std::future<DescribeRollbackRangeTimeOutcome> DescribeRollbackRangeTimeOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeRollbackRangeTimeRequest&, DescribeRollbackRangeTimeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRollbackRangeTimeAsyncHandler;
-                typedef Outcome<Error, Model::DescribeRollbackTaskDetailResponse> DescribeRollbackTaskDetailOutcome;
+                typedef Outcome<Core::Error, Model::DescribeRollbackTaskDetailResponse> DescribeRollbackTaskDetailOutcome;
                 typedef std::future<DescribeRollbackTaskDetailOutcome> DescribeRollbackTaskDetailOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeRollbackTaskDetailRequest&, DescribeRollbackTaskDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRollbackTaskDetailAsyncHandler;
-                typedef Outcome<Error, Model::DescribeSlowLogDataResponse> DescribeSlowLogDataOutcome;
+                typedef Outcome<Core::Error, Model::DescribeSlowLogDataResponse> DescribeSlowLogDataOutcome;
                 typedef std::future<DescribeSlowLogDataOutcome> DescribeSlowLogDataOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeSlowLogDataRequest&, DescribeSlowLogDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSlowLogDataAsyncHandler;
-                typedef Outcome<Error, Model::DescribeSlowLogsResponse> DescribeSlowLogsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeSlowLogsResponse> DescribeSlowLogsOutcome;
                 typedef std::future<DescribeSlowLogsOutcome> DescribeSlowLogsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeSlowLogsRequest&, DescribeSlowLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSlowLogsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeSupportedPrivilegesResponse> DescribeSupportedPrivilegesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeSupportedPrivilegesResponse> DescribeSupportedPrivilegesOutcome;
                 typedef std::future<DescribeSupportedPrivilegesOutcome> DescribeSupportedPrivilegesOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeSupportedPrivilegesRequest&, DescribeSupportedPrivilegesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSupportedPrivilegesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTablesResponse> DescribeTablesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTablesResponse> DescribeTablesOutcome;
                 typedef std::future<DescribeTablesOutcome> DescribeTablesOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeTablesRequest&, DescribeTablesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTablesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTagsOfInstanceIdsResponse> DescribeTagsOfInstanceIdsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTagsOfInstanceIdsResponse> DescribeTagsOfInstanceIdsOutcome;
                 typedef std::future<DescribeTagsOfInstanceIdsOutcome> DescribeTagsOfInstanceIdsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeTagsOfInstanceIdsRequest&, DescribeTagsOfInstanceIdsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTagsOfInstanceIdsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTasksResponse> DescribeTasksOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTasksResponse> DescribeTasksOutcome;
                 typedef std::future<DescribeTasksOutcome> DescribeTasksOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeTasksRequest&, DescribeTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTasksAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTimeWindowResponse> DescribeTimeWindowOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTimeWindowResponse> DescribeTimeWindowOutcome;
                 typedef std::future<DescribeTimeWindowOutcome> DescribeTimeWindowOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeTimeWindowRequest&, DescribeTimeWindowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTimeWindowAsyncHandler;
-                typedef Outcome<Error, Model::DescribeUploadedFilesResponse> DescribeUploadedFilesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeUploadedFilesResponse> DescribeUploadedFilesOutcome;
                 typedef std::future<DescribeUploadedFilesOutcome> DescribeUploadedFilesOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeUploadedFilesRequest&, DescribeUploadedFilesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUploadedFilesAsyncHandler;
-                typedef Outcome<Error, Model::DisassociateSecurityGroupsResponse> DisassociateSecurityGroupsOutcome;
+                typedef Outcome<Core::Error, Model::DisassociateSecurityGroupsResponse> DisassociateSecurityGroupsOutcome;
                 typedef std::future<DisassociateSecurityGroupsOutcome> DisassociateSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DisassociateSecurityGroupsRequest&, DisassociateSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisassociateSecurityGroupsAsyncHandler;
-                typedef Outcome<Error, Model::InitDBInstancesResponse> InitDBInstancesOutcome;
+                typedef Outcome<Core::Error, Model::InitDBInstancesResponse> InitDBInstancesOutcome;
                 typedef std::future<InitDBInstancesOutcome> InitDBInstancesOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::InitDBInstancesRequest&, InitDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InitDBInstancesAsyncHandler;
-                typedef Outcome<Error, Model::IsolateDBInstanceResponse> IsolateDBInstanceOutcome;
+                typedef Outcome<Core::Error, Model::IsolateDBInstanceResponse> IsolateDBInstanceOutcome;
                 typedef std::future<IsolateDBInstanceOutcome> IsolateDBInstanceOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::IsolateDBInstanceRequest&, IsolateDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IsolateDBInstanceAsyncHandler;
-                typedef Outcome<Error, Model::ModifyAccountDescriptionResponse> ModifyAccountDescriptionOutcome;
+                typedef Outcome<Core::Error, Model::ModifyAccountDescriptionResponse> ModifyAccountDescriptionOutcome;
                 typedef std::future<ModifyAccountDescriptionOutcome> ModifyAccountDescriptionOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyAccountDescriptionRequest&, ModifyAccountDescriptionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAccountDescriptionAsyncHandler;
-                typedef Outcome<Error, Model::ModifyAccountPasswordResponse> ModifyAccountPasswordOutcome;
+                typedef Outcome<Core::Error, Model::ModifyAccountMaxUserConnectionsResponse> ModifyAccountMaxUserConnectionsOutcome;
+                typedef std::future<ModifyAccountMaxUserConnectionsOutcome> ModifyAccountMaxUserConnectionsOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::ModifyAccountMaxUserConnectionsRequest&, ModifyAccountMaxUserConnectionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAccountMaxUserConnectionsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyAccountPasswordResponse> ModifyAccountPasswordOutcome;
                 typedef std::future<ModifyAccountPasswordOutcome> ModifyAccountPasswordOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyAccountPasswordRequest&, ModifyAccountPasswordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAccountPasswordAsyncHandler;
-                typedef Outcome<Error, Model::ModifyAccountPrivilegesResponse> ModifyAccountPrivilegesOutcome;
+                typedef Outcome<Core::Error, Model::ModifyAccountPrivilegesResponse> ModifyAccountPrivilegesOutcome;
                 typedef std::future<ModifyAccountPrivilegesOutcome> ModifyAccountPrivilegesOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyAccountPrivilegesRequest&, ModifyAccountPrivilegesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAccountPrivilegesAsyncHandler;
-                typedef Outcome<Error, Model::ModifyAutoRenewFlagResponse> ModifyAutoRenewFlagOutcome;
+                typedef Outcome<Core::Error, Model::ModifyAutoRenewFlagResponse> ModifyAutoRenewFlagOutcome;
                 typedef std::future<ModifyAutoRenewFlagOutcome> ModifyAutoRenewFlagOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyAutoRenewFlagRequest&, ModifyAutoRenewFlagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAutoRenewFlagAsyncHandler;
-                typedef Outcome<Error, Model::ModifyBackupConfigResponse> ModifyBackupConfigOutcome;
+                typedef Outcome<Core::Error, Model::ModifyBackupConfigResponse> ModifyBackupConfigOutcome;
                 typedef std::future<ModifyBackupConfigOutcome> ModifyBackupConfigOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyBackupConfigRequest&, ModifyBackupConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBackupConfigAsyncHandler;
-                typedef Outcome<Error, Model::ModifyDBInstanceNameResponse> ModifyDBInstanceNameOutcome;
+                typedef Outcome<Core::Error, Model::ModifyBackupDownloadRestrictionResponse> ModifyBackupDownloadRestrictionOutcome;
+                typedef std::future<ModifyBackupDownloadRestrictionOutcome> ModifyBackupDownloadRestrictionOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::ModifyBackupDownloadRestrictionRequest&, ModifyBackupDownloadRestrictionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBackupDownloadRestrictionAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDBInstanceNameResponse> ModifyDBInstanceNameOutcome;
                 typedef std::future<ModifyDBInstanceNameOutcome> ModifyDBInstanceNameOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyDBInstanceNameRequest&, ModifyDBInstanceNameOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceNameAsyncHandler;
-                typedef Outcome<Error, Model::ModifyDBInstanceProjectResponse> ModifyDBInstanceProjectOutcome;
+                typedef Outcome<Core::Error, Model::ModifyDBInstanceProjectResponse> ModifyDBInstanceProjectOutcome;
                 typedef std::future<ModifyDBInstanceProjectOutcome> ModifyDBInstanceProjectOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyDBInstanceProjectRequest&, ModifyDBInstanceProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceProjectAsyncHandler;
-                typedef Outcome<Error, Model::ModifyDBInstanceSecurityGroupsResponse> ModifyDBInstanceSecurityGroupsOutcome;
+                typedef Outcome<Core::Error, Model::ModifyDBInstanceSecurityGroupsResponse> ModifyDBInstanceSecurityGroupsOutcome;
                 typedef std::future<ModifyDBInstanceSecurityGroupsOutcome> ModifyDBInstanceSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyDBInstanceSecurityGroupsRequest&, ModifyDBInstanceSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceSecurityGroupsAsyncHandler;
-                typedef Outcome<Error, Model::ModifyDBInstanceVipVportResponse> ModifyDBInstanceVipVportOutcome;
+                typedef Outcome<Core::Error, Model::ModifyDBInstanceVipVportResponse> ModifyDBInstanceVipVportOutcome;
                 typedef std::future<ModifyDBInstanceVipVportOutcome> ModifyDBInstanceVipVportOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyDBInstanceVipVportRequest&, ModifyDBInstanceVipVportOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceVipVportAsyncHandler;
-                typedef Outcome<Error, Model::ModifyInstanceParamResponse> ModifyInstanceParamOutcome;
+                typedef Outcome<Core::Error, Model::ModifyInstanceParamResponse> ModifyInstanceParamOutcome;
                 typedef std::future<ModifyInstanceParamOutcome> ModifyInstanceParamOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyInstanceParamRequest&, ModifyInstanceParamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceParamAsyncHandler;
-                typedef Outcome<Error, Model::ModifyInstanceTagResponse> ModifyInstanceTagOutcome;
+                typedef Outcome<Core::Error, Model::ModifyInstanceTagResponse> ModifyInstanceTagOutcome;
                 typedef std::future<ModifyInstanceTagOutcome> ModifyInstanceTagOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyInstanceTagRequest&, ModifyInstanceTagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceTagAsyncHandler;
-                typedef Outcome<Error, Model::ModifyNameOrDescByDpIdResponse> ModifyNameOrDescByDpIdOutcome;
+                typedef Outcome<Core::Error, Model::ModifyNameOrDescByDpIdResponse> ModifyNameOrDescByDpIdOutcome;
                 typedef std::future<ModifyNameOrDescByDpIdOutcome> ModifyNameOrDescByDpIdOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyNameOrDescByDpIdRequest&, ModifyNameOrDescByDpIdOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyNameOrDescByDpIdAsyncHandler;
-                typedef Outcome<Error, Model::ModifyParamTemplateResponse> ModifyParamTemplateOutcome;
+                typedef Outcome<Core::Error, Model::ModifyParamTemplateResponse> ModifyParamTemplateOutcome;
                 typedef std::future<ModifyParamTemplateOutcome> ModifyParamTemplateOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyParamTemplateRequest&, ModifyParamTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyParamTemplateAsyncHandler;
-                typedef Outcome<Error, Model::ModifyRoGroupInfoResponse> ModifyRoGroupInfoOutcome;
+                typedef Outcome<Core::Error, Model::ModifyRoGroupInfoResponse> ModifyRoGroupInfoOutcome;
                 typedef std::future<ModifyRoGroupInfoOutcome> ModifyRoGroupInfoOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyRoGroupInfoRequest&, ModifyRoGroupInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRoGroupInfoAsyncHandler;
-                typedef Outcome<Error, Model::ModifyTimeWindowResponse> ModifyTimeWindowOutcome;
+                typedef Outcome<Core::Error, Model::ModifyTimeWindowResponse> ModifyTimeWindowOutcome;
                 typedef std::future<ModifyTimeWindowOutcome> ModifyTimeWindowOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyTimeWindowRequest&, ModifyTimeWindowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyTimeWindowAsyncHandler;
-                typedef Outcome<Error, Model::OfflineIsolatedInstancesResponse> OfflineIsolatedInstancesOutcome;
+                typedef Outcome<Core::Error, Model::OfflineIsolatedInstancesResponse> OfflineIsolatedInstancesOutcome;
                 typedef std::future<OfflineIsolatedInstancesOutcome> OfflineIsolatedInstancesOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::OfflineIsolatedInstancesRequest&, OfflineIsolatedInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OfflineIsolatedInstancesAsyncHandler;
-                typedef Outcome<Error, Model::OpenDBInstanceGTIDResponse> OpenDBInstanceGTIDOutcome;
+                typedef Outcome<Core::Error, Model::OpenDBInstanceGTIDResponse> OpenDBInstanceGTIDOutcome;
                 typedef std::future<OpenDBInstanceGTIDOutcome> OpenDBInstanceGTIDOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::OpenDBInstanceGTIDRequest&, OpenDBInstanceGTIDOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenDBInstanceGTIDAsyncHandler;
-                typedef Outcome<Error, Model::OpenWanServiceResponse> OpenWanServiceOutcome;
+                typedef Outcome<Core::Error, Model::OpenWanServiceResponse> OpenWanServiceOutcome;
                 typedef std::future<OpenWanServiceOutcome> OpenWanServiceOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::OpenWanServiceRequest&, OpenWanServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenWanServiceAsyncHandler;
-                typedef Outcome<Error, Model::ReleaseIsolatedDBInstancesResponse> ReleaseIsolatedDBInstancesOutcome;
+                typedef Outcome<Core::Error, Model::ReleaseIsolatedDBInstancesResponse> ReleaseIsolatedDBInstancesOutcome;
                 typedef std::future<ReleaseIsolatedDBInstancesOutcome> ReleaseIsolatedDBInstancesOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ReleaseIsolatedDBInstancesRequest&, ReleaseIsolatedDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReleaseIsolatedDBInstancesAsyncHandler;
-                typedef Outcome<Error, Model::RestartDBInstancesResponse> RestartDBInstancesOutcome;
+                typedef Outcome<Core::Error, Model::RestartDBInstancesResponse> RestartDBInstancesOutcome;
                 typedef std::future<RestartDBInstancesOutcome> RestartDBInstancesOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::RestartDBInstancesRequest&, RestartDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RestartDBInstancesAsyncHandler;
-                typedef Outcome<Error, Model::StartBatchRollbackResponse> StartBatchRollbackOutcome;
+                typedef Outcome<Core::Error, Model::StartBatchRollbackResponse> StartBatchRollbackOutcome;
                 typedef std::future<StartBatchRollbackOutcome> StartBatchRollbackOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::StartBatchRollbackRequest&, StartBatchRollbackOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartBatchRollbackAsyncHandler;
-                typedef Outcome<Error, Model::StopDBImportJobResponse> StopDBImportJobOutcome;
+                typedef Outcome<Core::Error, Model::StartReplicationResponse> StartReplicationOutcome;
+                typedef std::future<StartReplicationOutcome> StartReplicationOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::StartReplicationRequest&, StartReplicationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartReplicationAsyncHandler;
+                typedef Outcome<Core::Error, Model::StopDBImportJobResponse> StopDBImportJobOutcome;
                 typedef std::future<StopDBImportJobOutcome> StopDBImportJobOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::StopDBImportJobRequest&, StopDBImportJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopDBImportJobAsyncHandler;
-                typedef Outcome<Error, Model::SwitchForUpgradeResponse> SwitchForUpgradeOutcome;
+                typedef Outcome<Core::Error, Model::StopReplicationResponse> StopReplicationOutcome;
+                typedef std::future<StopReplicationOutcome> StopReplicationOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::StopReplicationRequest&, StopReplicationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopReplicationAsyncHandler;
+                typedef Outcome<Core::Error, Model::StopRollbackResponse> StopRollbackOutcome;
+                typedef std::future<StopRollbackOutcome> StopRollbackOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::StopRollbackRequest&, StopRollbackOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopRollbackAsyncHandler;
+                typedef Outcome<Core::Error, Model::SwitchDBInstanceMasterSlaveResponse> SwitchDBInstanceMasterSlaveOutcome;
+                typedef std::future<SwitchDBInstanceMasterSlaveOutcome> SwitchDBInstanceMasterSlaveOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::SwitchDBInstanceMasterSlaveRequest&, SwitchDBInstanceMasterSlaveOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SwitchDBInstanceMasterSlaveAsyncHandler;
+                typedef Outcome<Core::Error, Model::SwitchDrInstanceToMasterResponse> SwitchDrInstanceToMasterOutcome;
+                typedef std::future<SwitchDrInstanceToMasterOutcome> SwitchDrInstanceToMasterOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::SwitchDrInstanceToMasterRequest&, SwitchDrInstanceToMasterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SwitchDrInstanceToMasterAsyncHandler;
+                typedef Outcome<Core::Error, Model::SwitchForUpgradeResponse> SwitchForUpgradeOutcome;
                 typedef std::future<SwitchForUpgradeOutcome> SwitchForUpgradeOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::SwitchForUpgradeRequest&, SwitchForUpgradeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SwitchForUpgradeAsyncHandler;
-                typedef Outcome<Error, Model::UpgradeDBInstanceResponse> UpgradeDBInstanceOutcome;
+                typedef Outcome<Core::Error, Model::UpgradeDBInstanceResponse> UpgradeDBInstanceOutcome;
                 typedef std::future<UpgradeDBInstanceOutcome> UpgradeDBInstanceOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::UpgradeDBInstanceRequest&, UpgradeDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeDBInstanceAsyncHandler;
-                typedef Outcome<Error, Model::UpgradeDBInstanceEngineVersionResponse> UpgradeDBInstanceEngineVersionOutcome;
+                typedef Outcome<Core::Error, Model::UpgradeDBInstanceEngineVersionResponse> UpgradeDBInstanceEngineVersionOutcome;
                 typedef std::future<UpgradeDBInstanceEngineVersionOutcome> UpgradeDBInstanceEngineVersionOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::UpgradeDBInstanceEngineVersionRequest&, UpgradeDBInstanceEngineVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeDBInstanceEngineVersionAsyncHandler;
 
@@ -507,13 +562,22 @@ namespace TencentCloud
                 CloseWanServiceOutcomeCallable CloseWanServiceCallable(const Model::CloseWanServiceRequest& request);
 
                 /**
-                 *This API (CreateAccounts) is used to create TencentDB accounts. The new account names, domain names, and passwords need to be specified, and account remarks can also be added.
+                 *This API is used to create one or more TencentDB instance accounts. The account names, host addresses, and passwords are required, and account remarks and the maximum connections are optional.
                  * @param req CreateAccountsRequest
                  * @return CreateAccountsOutcome
                  */
                 CreateAccountsOutcome CreateAccounts(const Model::CreateAccountsRequest &request);
                 void CreateAccountsAsync(const Model::CreateAccountsRequest& request, const CreateAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateAccountsOutcomeCallable CreateAccountsCallable(const Model::CreateAccountsRequest& request);
+
+                /**
+                 *This API is used to create an audit policy for a TencentDB instance by associating an audit rule with the TencentDB instance.
+                 * @param req CreateAuditPolicyRequest
+                 * @return CreateAuditPolicyOutcome
+                 */
+                CreateAuditPolicyOutcome CreateAuditPolicy(const Model::CreateAuditPolicyRequest &request);
+                void CreateAuditPolicyAsync(const Model::CreateAuditPolicyRequest& request, const CreateAuditPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateAuditPolicyOutcomeCallable CreateAuditPolicyCallable(const Model::CreateAuditPolicyRequest& request);
 
                 /**
                  *This API (CreateBackup) is used to create a TencentDB instance backup.
@@ -523,6 +587,15 @@ namespace TencentCloud
                 CreateBackupOutcome CreateBackup(const Model::CreateBackupRequest &request);
                 void CreateBackupAsync(const Model::CreateBackupRequest& request, const CreateBackupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateBackupOutcomeCallable CreateBackupCallable(const Model::CreateBackupRequest& request);
+
+                /**
+                 *This API is used to create a clone of a specific instance, and roll back the clone by using a physical backup file of the instance or roll back the clone to a point in time.
+                 * @param req CreateCloneInstanceRequest
+                 * @return CreateCloneInstanceOutcome
+                 */
+                CreateCloneInstanceOutcome CreateCloneInstance(const Model::CreateCloneInstanceRequest &request);
+                void CreateCloneInstanceAsync(const Model::CreateCloneInstanceRequest& request, const CreateCloneInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCloneInstanceOutcomeCallable CreateCloneInstanceCallable(const Model::CreateCloneInstanceRequest& request);
 
                 /**
                  *This API (CreateDBImportJob) is used to create a data import task for a TencentDB instance.
@@ -536,15 +609,15 @@ Note that the files for a data import task must be uploaded to Tencent Cloud in 
                 CreateDBImportJobOutcomeCallable CreateDBImportJobCallable(const Model::CreateDBImportJobRequest& request);
 
                 /**
-                 *This API is used to create a pay-as-you-go TencentDB instance (which can be a master, disaster recovery, or read-only instance) by passing in information such as instance specifications, MySQL version number, and quantity.
+                 *This API is used to create pay-as-you-go TencentDB instances (which can be source instances, disaster recovery instances, or read-only replicas) by passing in information such as instance specifications, MySQL version number, and instance quantity.
 
-This is an async API. You can also use the [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) API to query the instance details. If the `Status` value of an instance is 1 and `TaskStatus` is 0, the instance has been successfully delivered.
+This is an asynchronous API. You can also use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query instance details. If the output parameter `Status` is `1` and the output parameter `TaskStatus` is `0`, the instances have been successfully delivered.
 
-1. Please use the [DescribeDBZoneConfig](https://cloud.tencent.com/document/api/236/17229) API to query the supported instance specifications first and then use the [DescribeDBPrice](https://cloud.tencent.com/document/api/236/18566) API to query the prices of the supported instances;
+1. Use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the purchasable instance specifications, and then use the [DescribeDBPrice](https://intl.cloud.tencent.com/document/api/236/18566?from_cn_redirect=1) API to query the prices of the purchasable instances;
 2. You can create up to 100 instances at a time, with an instance validity period of up to 36 months;
-3. MySQL v5.5, v5.6, and v5.7 are supported;
-4. Master instances, read-only instances, and disaster recovery instances can be created;
-5. If `Port`, `ParamList`, or `Password` is set in the input parameters, the instance will be initialized.
+3. MySQL v5.5, v5.6, v5.7, and v8.0 are supported;
+4. Source instances, disaster recovery instances, and read-only replicas can be created;
+5. If `Port`, `ParamList`, or `Password` is specified in the input parameters, the instance (excluding basic instances) will be initialized.
                  * @param req CreateDBInstanceHourRequest
                  * @return CreateDBInstanceHourOutcome
                  */
@@ -562,13 +635,22 @@ This is an async API. You can also use the [DescribeDBInstances](https://cloud.t
                 CreateDeployGroupOutcomeCallable CreateDeployGroupCallable(const Model::CreateDeployGroupRequest& request);
 
                 /**
-                 *This API (CreateParamTemplate) is used to create a parameter template.
+                 *This API is used to create a parameter template. The common request parameter `Region` can only be set to `ap-guangzhou`.
                  * @param req CreateParamTemplateRequest
                  * @return CreateParamTemplateOutcome
                  */
                 CreateParamTemplateOutcome CreateParamTemplate(const Model::CreateParamTemplateRequest &request);
                 void CreateParamTemplateAsync(const Model::CreateParamTemplateRequest& request, const CreateParamTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateParamTemplateOutcomeCallable CreateParamTemplateCallable(const Model::CreateParamTemplateRequest& request);
+
+                /**
+                 *This API is used to create a VIP exclusive to a TencentDB read-only instance.
+                 * @param req CreateRoInstanceIpRequest
+                 * @return CreateRoInstanceIpOutcome
+                 */
+                CreateRoInstanceIpOutcome CreateRoInstanceIp(const Model::CreateRoInstanceIpRequest &request);
+                void CreateRoInstanceIpAsync(const Model::CreateRoInstanceIpRequest& request, const CreateRoInstanceIpAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateRoInstanceIpOutcomeCallable CreateRoInstanceIpCallable(const Model::CreateRoInstanceIpRequest& request);
 
                 /**
                  *This API (DeleteAccounts) is used to delete TencentDB accounts.
@@ -598,7 +680,7 @@ This is an async API. You can also use the [DescribeDBInstances](https://cloud.t
                 DeleteDeployGroupsOutcomeCallable DeleteDeployGroupsCallable(const Model::DeleteDeployGroupsRequest& request);
 
                 /**
-                 *This API (DeleteParamTemplate) is used to delete a parameter template.
+                 *This API is used to delete a parameter template. The common request parameter `Region` can only be set to `ap-guangzhou`.
                  * @param req DeleteParamTemplateRequest
                  * @return DeleteParamTemplateOutcome
                  */
@@ -652,15 +734,13 @@ This is an async API. You can also use the [DescribeDBInstances](https://cloud.t
                 DescribeBackupConfigOutcomeCallable DescribeBackupConfigCallable(const Model::DescribeBackupConfigRequest& request);
 
                 /**
-                 *This API is used to query the databases contained in a backup file. It has been disused.
-After the legacy version becomes capable of full backup, if you want to download logical backup files by table, you need to use this API.
-The new API (CreateBackup) can specify the table to be backed up when a logical backup file is created, which can be downloaded directly.
-                 * @param req DescribeBackupDatabasesRequest
-                 * @return DescribeBackupDatabasesOutcome
+                 *This API is used to query the restrictions of downloading backups in a region.
+                 * @param req DescribeBackupDownloadRestrictionRequest
+                 * @return DescribeBackupDownloadRestrictionOutcome
                  */
-                DescribeBackupDatabasesOutcome DescribeBackupDatabases(const Model::DescribeBackupDatabasesRequest &request);
-                void DescribeBackupDatabasesAsync(const Model::DescribeBackupDatabasesRequest& request, const DescribeBackupDatabasesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeBackupDatabasesOutcomeCallable DescribeBackupDatabasesCallable(const Model::DescribeBackupDatabasesRequest& request);
+                DescribeBackupDownloadRestrictionOutcome DescribeBackupDownloadRestriction(const Model::DescribeBackupDownloadRestrictionRequest &request);
+                void DescribeBackupDownloadRestrictionAsync(const Model::DescribeBackupDownloadRestrictionRequest& request, const DescribeBackupDownloadRestrictionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBackupDownloadRestrictionOutcomeCallable DescribeBackupDownloadRestrictionCallable(const Model::DescribeBackupDownloadRestrictionRequest& request);
 
                 /**
                  *This API is used to query the backup overview of a user. It will return the user's current total number of backups, total capacity used by backups, capacity in the free tier, and paid capacity (all capacity values are in bytes).
@@ -679,17 +759,6 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
                 DescribeBackupSummariesOutcome DescribeBackupSummaries(const Model::DescribeBackupSummariesRequest &request);
                 void DescribeBackupSummariesAsync(const Model::DescribeBackupSummariesRequest& request, const DescribeBackupSummariesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeBackupSummariesOutcomeCallable DescribeBackupSummariesCallable(const Model::DescribeBackupSummariesRequest& request);
-
-                /**
-                 *This API is used to query the backup tables of the specified database. It has been disused.
-After the legacy version becomes capable of full backup, if you want to download logical backup files by table, you need to use this API.
-The new API (CreateBackup) can specify the table to be backed up when a logical backup file is created, which can be downloaded directly.
-                 * @param req DescribeBackupTablesRequest
-                 * @return DescribeBackupTablesOutcome
-                 */
-                DescribeBackupTablesOutcome DescribeBackupTables(const Model::DescribeBackupTablesRequest &request);
-                void DescribeBackupTablesAsync(const Model::DescribeBackupTablesRequest& request, const DescribeBackupTablesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeBackupTablesOutcomeCallable DescribeBackupTablesCallable(const Model::DescribeBackupTablesRequest& request);
 
                 /**
                  *This API (DescribeBackups) is used to query the backups of a TencentDB instance.
@@ -717,6 +786,15 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
                 DescribeBinlogsOutcome DescribeBinlogs(const Model::DescribeBinlogsRequest &request);
                 void DescribeBinlogsAsync(const Model::DescribeBinlogsRequest& request, const DescribeBinlogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeBinlogsOutcomeCallable DescribeBinlogsCallable(const Model::DescribeBinlogsRequest& request);
+
+                /**
+                 *This API is used to query the clone task list of an instance.
+                 * @param req DescribeCloneListRequest
+                 * @return DescribeCloneListOutcome
+                 */
+                DescribeCloneListOutcome DescribeCloneList(const Model::DescribeCloneListRequest &request);
+                void DescribeCloneListAsync(const Model::DescribeCloneListRequest& request, const DescribeCloneListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCloneListOutcomeCallable DescribeCloneListCallable(const Model::DescribeCloneListRequest& request);
 
                 /**
                  *This API (DescribeDBImportRecords) is used to query the records of import tasks in a TencentDB instance.
@@ -773,7 +851,7 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
                 DescribeDBInstanceRebootTimeOutcomeCallable DescribeDBInstanceRebootTimeCallable(const Model::DescribeDBInstanceRebootTimeRequest& request);
 
                 /**
-                 *This API (DescribeDBInstances) is used to query the list of TencentDB instances (which can be master, disaster recovery, or read-only instances). It supports filtering instances by project ID, instance ID, access address, and instance status.
+                 *This API (DescribeDBInstances) is used to query the list of TencentDB instances (which can be primary, disaster recovery, or read-only instances). It supports filtering instances by project ID, instance ID, access address, and instance status.
                  * @param req DescribeDBInstancesRequest
                  * @return DescribeDBInstancesOutcome
                  */
@@ -818,7 +896,7 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
                 DescribeDataBackupOverviewOutcomeCallable DescribeDataBackupOverviewCallable(const Model::DescribeDataBackupOverviewRequest& request);
 
                 /**
-                 *This API (DescribeDatabases) is used to query the information of databases of a TencentDB instance.
+                 *This API is used to query the information of databases in a TencentDB instance which must be a source or disaster recovery instance.
                  * @param req DescribeDatabasesRequest
                  * @return DescribeDatabasesOutcome
                  */
@@ -854,7 +932,8 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
                 DescribeDeviceMonitorInfoOutcomeCallable DescribeDeviceMonitorInfoCallable(const Model::DescribeDeviceMonitorInfoRequest& request);
 
                 /**
-                 *This API is used to query the details of instance error logs by search criteria. You can only query error logs within a month.
+                 *This API is used to query the error logs of an instance over the past month by search criteria.
+Note: the HTTP response packet will be very large if it contain a single large error log, which causes the API call to time out. If this happens, we recommend you lower the value of the input parameter `Limit` to reduce the packet size so that the API can respond timely.
                  * @param req DescribeErrorLogDataRequest
                  * @return DescribeErrorLogDataOutcome
                  */
@@ -881,7 +960,7 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
                 DescribeInstanceParamsOutcomeCallable DescribeInstanceParamsCallable(const Model::DescribeInstanceParamsRequest& request);
 
                 /**
-                 *This API (DescribeParamTemplateInfo) is used to query parameter template details.
+                 *This API is used to query parameter template details. The common request parameter `Region` can only be set to `ap-guangzhou`.
                  * @param req DescribeParamTemplateInfoRequest
                  * @return DescribeParamTemplateInfoOutcome
                  */
@@ -917,6 +996,15 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
                 DescribeRoGroupsOutcomeCallable DescribeRoGroupsCallable(const Model::DescribeRoGroupsRequest& request);
 
                 /**
+                 *This API is used to query the minimum specification of a read-only instance that can be purchased or upgraded to.
+                 * @param req DescribeRoMinScaleRequest
+                 * @return DescribeRoMinScaleOutcome
+                 */
+                DescribeRoMinScaleOutcome DescribeRoMinScale(const Model::DescribeRoMinScaleRequest &request);
+                void DescribeRoMinScaleAsync(const Model::DescribeRoMinScaleRequest& request, const DescribeRoMinScaleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRoMinScaleOutcomeCallable DescribeRoMinScaleCallable(const Model::DescribeRoMinScaleRequest& request);
+
+                /**
                  *This API (DescribeRollbackRangeTime) is used to query the time range available for instance rollback.
                  * @param req DescribeRollbackRangeTimeRequest
                  * @return DescribeRollbackRangeTimeOutcome
@@ -935,7 +1023,8 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
                 DescribeRollbackTaskDetailOutcomeCallable DescribeRollbackTaskDetailCallable(const Model::DescribeRollbackTaskDetailRequest& request);
 
                 /**
-                 *This API is used to search for slow logs of an instance by criteria. You can only view slow logs within a month.
+                 *This API is used to query the slow logs of an instance over the past month by search criteria.
+Note: the HTTP response packet will be very large if it contain a single large slow log, which causes the API call to time out. If this happens, we recommend you lower the value of the input parameter `Limit` to reduce the packet size so that the API can respond timely.
                  * @param req DescribeSlowLogDataRequest
                  * @return DescribeSlowLogDataOutcome
                  */
@@ -962,7 +1051,7 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
                 DescribeSupportedPrivilegesOutcomeCallable DescribeSupportedPrivilegesCallable(const Model::DescribeSupportedPrivilegesRequest& request);
 
                 /**
-                 *This API (DescribeTables) is used to query the database tables of a TencentDB instance.
+                 *This API is used to query the information of database tables in a TencentDB instance. It only supports source or disaster recovery instances.
                  * @param req DescribeTablesRequest
                  * @return DescribeTablesOutcome
                  */
@@ -998,7 +1087,7 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
                 DescribeTimeWindowOutcomeCallable DescribeTimeWindowCallable(const Model::DescribeTimeWindowRequest& request);
 
                 /**
-                 *This API is used to query the list of user-imported SQL files.
+                 *This API is used to query the list of SQL files imported by users. The common request parameter `Region` must be `ap-shanghai`.
                  * @param req DescribeUploadedFilesRequest
                  * @return DescribeUploadedFilesOutcome
                  */
@@ -1043,6 +1132,15 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
                 ModifyAccountDescriptionOutcomeCallable ModifyAccountDescriptionCallable(const Model::ModifyAccountDescriptionRequest& request);
 
                 /**
+                 *This API is used to modify the maximum connections of one or more TencentDB instance accounts.
+                 * @param req ModifyAccountMaxUserConnectionsRequest
+                 * @return ModifyAccountMaxUserConnectionsOutcome
+                 */
+                ModifyAccountMaxUserConnectionsOutcome ModifyAccountMaxUserConnections(const Model::ModifyAccountMaxUserConnectionsRequest &request);
+                void ModifyAccountMaxUserConnectionsAsync(const Model::ModifyAccountMaxUserConnectionsRequest& request, const ModifyAccountMaxUserConnectionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyAccountMaxUserConnectionsOutcomeCallable ModifyAccountMaxUserConnectionsCallable(const Model::ModifyAccountMaxUserConnectionsRequest& request);
+
+                /**
                  *This API (ModifyAccountPassword) is used to modify the password of a TencentDB instance account.
                  * @param req ModifyAccountPasswordRequest
                  * @return ModifyAccountPasswordOutcome
@@ -1055,7 +1153,7 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
                  *This API is used to modify the permissions of a TencentDB instance account.
 
 Note that when modifying account permissions, you need to pass in the full permission information of the account. You can [query the account permission information
-](https://cloud.tencent.com/document/api/236/17500) first before modifying permissions.
+](https://intl.cloud.tencent.com/document/api/236/17500?from_cn_redirect=1) first before modifying permissions.
                  * @param req ModifyAccountPrivilegesRequest
                  * @return ModifyAccountPrivilegesOutcome
                  */
@@ -1080,6 +1178,15 @@ Note that when modifying account permissions, you need to pass in the full permi
                 ModifyBackupConfigOutcome ModifyBackupConfig(const Model::ModifyBackupConfigRequest &request);
                 void ModifyBackupConfigAsync(const Model::ModifyBackupConfigRequest& request, const ModifyBackupConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyBackupConfigOutcomeCallable ModifyBackupConfigCallable(const Model::ModifyBackupConfigRequest& request);
+
+                /**
+                 *This API is used to modify the restrictions of downloading backups in a region. You can specify which types of networks (private, or both private and public), VPCs, and IPs to download backups.
+                 * @param req ModifyBackupDownloadRestrictionRequest
+                 * @return ModifyBackupDownloadRestrictionOutcome
+                 */
+                ModifyBackupDownloadRestrictionOutcome ModifyBackupDownloadRestriction(const Model::ModifyBackupDownloadRestrictionRequest &request);
+                void ModifyBackupDownloadRestrictionAsync(const Model::ModifyBackupDownloadRestrictionRequest& request, const ModifyBackupDownloadRestrictionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyBackupDownloadRestrictionOutcomeCallable ModifyBackupDownloadRestrictionCallable(const Model::ModifyBackupDownloadRestrictionRequest& request);
 
                 /**
                  *This API (ModifyDBInstanceName) is used to rename a TencentDB instance.
@@ -1145,7 +1252,7 @@ Note that when modifying account permissions, you need to pass in the full permi
                 ModifyNameOrDescByDpIdOutcomeCallable ModifyNameOrDescByDpIdCallable(const Model::ModifyNameOrDescByDpIdRequest& request);
 
                 /**
-                 *This API (ModifyParamTemplate) is used to modify a parameter template.
+                 *This API is used to modify a parameter template. The common request parameter `Region` can only be set to `ap-guangzhou`.
                  * @param req ModifyParamTemplateRequest
                  * @return ModifyParamTemplateOutcome
                  */
@@ -1154,7 +1261,7 @@ Note that when modifying account permissions, you need to pass in the full permi
                 ModifyParamTemplateOutcomeCallable ModifyParamTemplateCallable(const Model::ModifyParamTemplateRequest& request);
 
                 /**
-                 *This API is used to update the information of a TencentDB RO group, such as configuring an instance removal policy in case of excessive delay and setting read weights of RO instances.
+                 *This API is used to update the information of a TencentDB RO group, such as configuring a read-only instance removal policy in case of excessive delay, setting read weights of read-only instances, and setting the replication delay.
                  * @param req ModifyRoGroupInfoRequest
                  * @return ModifyRoGroupInfoOutcome
                  */
@@ -1172,9 +1279,9 @@ Note that when modifying account permissions, you need to pass in the full permi
                 ModifyTimeWindowOutcomeCallable ModifyTimeWindowCallable(const Model::ModifyTimeWindowRequest& request);
 
                 /**
-                 *This API (OfflineIsolatedInstances) is used to deactivate isolated TencentDB instances immediately. The instances must be in isolated status, i.e., their `Status` value is 5 in the return of the [instance list querying API](https://cloud.tencent.com/document/api/236/15872).
+                 *This API (OfflineIsolatedInstances) is used to deactivate isolated TencentDB instances immediately. The instances must be in isolated status, i.e., their `Status` value is 5 in the return of the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1).
 
-This is an asynchronous API. There may be a delay in repossessing some resources. You can query the details by using the [instance list querying API](https://cloud.tencent.com/document/api/236/15872) and specifying the InstanceId and the `Status` value as [5, 6, 7]. If the returned instance is empty, then all its resources have been released.
+This is an asynchronous API. There may be a delay in repossessing some resources. You can query the details by using the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) and specifying the InstanceId and the `Status` value as [5, 6, 7]. If the returned instance is empty, then all its resources have been released.
 
 Note that once an instance is deactivated, its resources and data will not be recoverable. Please do so with caution.
                  * @param req OfflineIsolatedInstancesRequest
@@ -1196,7 +1303,7 @@ Note that once an instance is deactivated, its resources and data will not be re
                 /**
                  *This API (OpenWanService) is used to enable public network access for an instance.
 
-Note that before enabling public network access, you need to first [initialize the instance](https://cloud.tencent.com/document/api/236/15873).
+Note that before enabling public network access, you need to first [initialize the instance](https://intl.cloud.tencent.com/document/api/236/15873?from_cn_redirect=1).
                  * @param req OpenWanServiceRequest
                  * @return OpenWanServiceOutcome
                  */
@@ -1217,7 +1324,7 @@ Note that before enabling public network access, you need to first [initialize t
                  *This API (RestartDBInstances) is used to restart TencentDB instances.
 
 Note:
-1. This API only supports restarting master instances.
+1. This API only supports restarting primary instances.
 2. The instance status must be normal, and no other async tasks are in progress.
                  * @param req RestartDBInstancesRequest
                  * @return RestartDBInstancesOutcome
@@ -1236,6 +1343,15 @@ Note:
                 StartBatchRollbackOutcomeCallable StartBatchRollbackCallable(const Model::StartBatchRollbackRequest& request);
 
                 /**
+                 *This API is used to start the data replication from the source instance to the read-only instance.
+                 * @param req StartReplicationRequest
+                 * @return StartReplicationOutcome
+                 */
+                StartReplicationOutcome StartReplication(const Model::StartReplicationRequest &request);
+                void StartReplicationAsync(const Model::StartReplicationRequest& request, const StartReplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StartReplicationOutcomeCallable StartReplicationCallable(const Model::StartReplicationRequest& request);
+
+                /**
                  *This API (StopDBImportJob) is used to stop a data import task.
                  * @param req StopDBImportJobRequest
                  * @return StopDBImportJobOutcome
@@ -1245,7 +1361,43 @@ Note:
                 StopDBImportJobOutcomeCallable StopDBImportJobCallable(const Model::StopDBImportJobRequest& request);
 
                 /**
-                 *This API (SwitchForUpgrade) is used to switch to a new instance. You can initiate this process when the master instance being upgraded is pending switch.
+                 *This API is used to stop the data replication from the source instance to the read-only instance.
+                 * @param req StopReplicationRequest
+                 * @return StopReplicationOutcome
+                 */
+                StopReplicationOutcome StopReplication(const Model::StopReplicationRequest &request);
+                void StopReplicationAsync(const Model::StopReplicationRequest& request, const StopReplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StopReplicationOutcomeCallable StopReplicationCallable(const Model::StopReplicationRequest& request);
+
+                /**
+                 *This API is used to cancel a rollback task in progress, and returns an async task ID. You can use the `DescribeAsyncRequestInfo` API to query the result of cancellation.
+                 * @param req StopRollbackRequest
+                 * @return StopRollbackOutcome
+                 */
+                StopRollbackOutcome StopRollback(const Model::StopRollbackRequest &request);
+                void StopRollbackAsync(const Model::StopRollbackRequest& request, const StopRollbackAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StopRollbackOutcomeCallable StopRollbackCallable(const Model::StopRollbackRequest& request);
+
+                /**
+                 *This API is used for source-to-replica switch.
+                 * @param req SwitchDBInstanceMasterSlaveRequest
+                 * @return SwitchDBInstanceMasterSlaveOutcome
+                 */
+                SwitchDBInstanceMasterSlaveOutcome SwitchDBInstanceMasterSlave(const Model::SwitchDBInstanceMasterSlaveRequest &request);
+                void SwitchDBInstanceMasterSlaveAsync(const Model::SwitchDBInstanceMasterSlaveRequest& request, const SwitchDBInstanceMasterSlaveAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SwitchDBInstanceMasterSlaveOutcomeCallable SwitchDBInstanceMasterSlaveCallable(const Model::SwitchDBInstanceMasterSlaveRequest& request);
+
+                /**
+                 *This API is used to promote a disaster recovery instance to source instance. The request parameter `Region` must be the region of the disaster recovery instance.
+                 * @param req SwitchDrInstanceToMasterRequest
+                 * @return SwitchDrInstanceToMasterOutcome
+                 */
+                SwitchDrInstanceToMasterOutcome SwitchDrInstanceToMaster(const Model::SwitchDrInstanceToMasterRequest &request);
+                void SwitchDrInstanceToMasterAsync(const Model::SwitchDrInstanceToMasterRequest& request, const SwitchDrInstanceToMasterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SwitchDrInstanceToMasterOutcomeCallable SwitchDrInstanceToMasterCallable(const Model::SwitchDrInstanceToMasterRequest& request);
+
+                /**
+                 *This API (SwitchForUpgrade) is used to switch to a new instance. You can initiate this process when the primary instance being upgraded is pending switch.
                  * @param req SwitchForUpgradeRequest
                  * @return SwitchForUpgradeOutcome
                  */
@@ -1254,7 +1406,7 @@ Note:
                 SwitchForUpgradeOutcomeCallable SwitchForUpgradeCallable(const Model::SwitchForUpgradeRequest& request);
 
                 /**
-                 *This API is used to upgrade or downgrade a TencentDB instance, which can be a master instance, disaster recovery instance, or read-only instance.
+                 *This API is used to upgrade or downgrade a TencentDB instance, which can be a primary instance, disaster recovery instance, or read-only instance.
                  * @param req UpgradeDBInstanceRequest
                  * @return UpgradeDBInstanceOutcome
                  */
@@ -1263,7 +1415,7 @@ Note:
                 UpgradeDBInstanceOutcomeCallable UpgradeDBInstanceCallable(const Model::UpgradeDBInstanceRequest& request);
 
                 /**
-                 *This API (UpgradeDBInstanceEngineVersion) is used to upgrade the version of a TencentDB instance, which can be a master instance, disaster recovery instance, or read-only instance.
+                 *This API (UpgradeDBInstanceEngineVersion) is used to upgrade the version of a TencentDB instance, which can be a primary instance, disaster recovery instance, or read-only instance.
                  * @param req UpgradeDBInstanceEngineVersionRequest
                  * @return UpgradeDBInstanceEngineVersionOutcome
                  */

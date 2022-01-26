@@ -118,6 +118,28 @@ namespace TencentCloud
                      */
                     bool RegionStateHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return SupportInternational Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetSupportInternational() const;
+
+                    /**
+                     * 设置Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param SupportInternational Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetSupportInternational(const uint64_t& _supportInternational);
+
+                    /**
+                     * 判断参数 SupportInternational 是否已赋值
+                     * @return SupportInternational 是否已赋值
+                     */
+                    bool SupportInternationalHasBeenSet() const;
+
                 private:
 
                     /**
@@ -143,6 +165,13 @@ namespace TencentCloud
                      */
                     std::string m_regionState;
                     bool m_regionStateHasBeenSet;
+
+                    /**
+                     * Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_supportInternational;
+                    bool m_supportInternationalHasBeenSet;
 
                 };
             }

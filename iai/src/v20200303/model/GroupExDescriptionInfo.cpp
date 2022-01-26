@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Iai::V20200303::Model;
-using namespace rapidjson;
 using namespace std;
 
 GroupExDescriptionInfo::GroupExDescriptionInfo() :
@@ -27,7 +26,7 @@ GroupExDescriptionInfo::GroupExDescriptionInfo() :
 {
 }
 
-CoreInternalOutcome GroupExDescriptionInfo::Deserialize(const Value &value)
+CoreInternalOutcome GroupExDescriptionInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome GroupExDescriptionInfo::Deserialize(const Value &value)
     {
         if (!value["GroupExDescriptionIndex"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `GroupExDescriptionInfo.GroupExDescriptionIndex` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupExDescriptionInfo.GroupExDescriptionIndex` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_groupExDescriptionIndex = value["GroupExDescriptionIndex"].GetUint64();
         m_groupExDescriptionIndexHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome GroupExDescriptionInfo::Deserialize(const Value &value)
     {
         if (!value["GroupExDescription"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GroupExDescriptionInfo.GroupExDescription` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupExDescriptionInfo.GroupExDescription` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_groupExDescription = string(value["GroupExDescription"].GetString());
         m_groupExDescriptionHasBeenSet = true;
@@ -56,12 +55,12 @@ CoreInternalOutcome GroupExDescriptionInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void GroupExDescriptionInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void GroupExDescriptionInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_groupExDescriptionIndexHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "GroupExDescriptionIndex";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_groupExDescriptionIndex, allocator);
@@ -69,10 +68,10 @@ void GroupExDescriptionInfo::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_groupExDescriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "GroupExDescription";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_groupExDescription.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_groupExDescription.c_str(), allocator).Move(), allocator);
     }
 
 }

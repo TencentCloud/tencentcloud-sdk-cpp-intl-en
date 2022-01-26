@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Redis::V20180412::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeInstanceDealDetailResponse::DescribeInstanceDealDetailResponse() :
@@ -31,20 +30,20 @@ DescribeInstanceDealDetailResponse::DescribeInstanceDealDetailResponse() :
 
 CoreInternalOutcome DescribeInstanceDealDetailResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -55,21 +54,21 @@ CoreInternalOutcome DescribeInstanceDealDetailResponse::Deserialize(const string
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
     if (rsp.HasMember("DealDetails") && !rsp["DealDetails"].IsNull())
     {
         if (!rsp["DealDetails"].IsArray())
-            return CoreInternalOutcome(Error("response `DealDetails` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DealDetails` is not array type"));
 
-        const Value &tmpValue = rsp["DealDetails"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["DealDetails"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             TradeDealDetail item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -85,6 +84,38 @@ CoreInternalOutcome DescribeInstanceDealDetailResponse::Deserialize(const string
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeInstanceDealDetailResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_dealDetailsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DealDetails";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_dealDetails.begin(); itr != m_dealDetails.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

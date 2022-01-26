@@ -319,6 +319,78 @@ namespace TencentCloud
                      */
                     bool IPSECOptionsSpecificationHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the health check is supported.
+                     * @return EnableHealthCheck Whether the health check is supported.
+                     */
+                    bool GetEnableHealthCheck() const;
+
+                    /**
+                     * 设置Whether the health check is supported.
+                     * @param EnableHealthCheck Whether the health check is supported.
+                     */
+                    void SetEnableHealthCheck(const bool& _enableHealthCheck);
+
+                    /**
+                     * 判断参数 EnableHealthCheck 是否已赋值
+                     * @return EnableHealthCheck 是否已赋值
+                     */
+                    bool EnableHealthCheckHasBeenSet() const;
+
+                    /**
+                     * 获取Local IP address for the health check
+                     * @return HealthCheckLocalIp Local IP address for the health check
+                     */
+                    std::string GetHealthCheckLocalIp() const;
+
+                    /**
+                     * 设置Local IP address for the health check
+                     * @param HealthCheckLocalIp Local IP address for the health check
+                     */
+                    void SetHealthCheckLocalIp(const std::string& _healthCheckLocalIp);
+
+                    /**
+                     * 判断参数 HealthCheckLocalIp 是否已赋值
+                     * @return HealthCheckLocalIp 是否已赋值
+                     */
+                    bool HealthCheckLocalIpHasBeenSet() const;
+
+                    /**
+                     * 获取Peer IP address for the health check
+                     * @return HealthCheckRemoteIp Peer IP address for the health check
+                     */
+                    std::string GetHealthCheckRemoteIp() const;
+
+                    /**
+                     * 设置Peer IP address for the health check
+                     * @param HealthCheckRemoteIp Peer IP address for the health check
+                     */
+                    void SetHealthCheckRemoteIp(const std::string& _healthCheckRemoteIp);
+
+                    /**
+                     * 判断参数 HealthCheckRemoteIp 是否已赋值
+                     * @return HealthCheckRemoteIp 是否已赋值
+                     */
+                    bool HealthCheckRemoteIpHasBeenSet() const;
+
+                    /**
+                     * 获取Tunnel health check status. Valid values: AVAILABLE: healthy; UNAVAILABLE: unhealthy. This parameter will be returned only after health check is enabled.
+                     * @return HealthCheckStatus Tunnel health check status. Valid values: AVAILABLE: healthy; UNAVAILABLE: unhealthy. This parameter will be returned only after health check is enabled.
+                     */
+                    std::string GetHealthCheckStatus() const;
+
+                    /**
+                     * 设置Tunnel health check status. Valid values: AVAILABLE: healthy; UNAVAILABLE: unhealthy. This parameter will be returned only after health check is enabled.
+                     * @param HealthCheckStatus Tunnel health check status. Valid values: AVAILABLE: healthy; UNAVAILABLE: unhealthy. This parameter will be returned only after health check is enabled.
+                     */
+                    void SetHealthCheckStatus(const std::string& _healthCheckStatus);
+
+                    /**
+                     * 判断参数 HealthCheckStatus 是否已赋值
+                     * @return HealthCheckStatus 是否已赋值
+                     */
+                    bool HealthCheckStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -410,6 +482,30 @@ namespace TencentCloud
                      */
                     IPSECOptionsSpecification m_iPSECOptionsSpecification;
                     bool m_iPSECOptionsSpecificationHasBeenSet;
+
+                    /**
+                     * Whether the health check is supported.
+                     */
+                    bool m_enableHealthCheck;
+                    bool m_enableHealthCheckHasBeenSet;
+
+                    /**
+                     * Local IP address for the health check
+                     */
+                    std::string m_healthCheckLocalIp;
+                    bool m_healthCheckLocalIpHasBeenSet;
+
+                    /**
+                     * Peer IP address for the health check
+                     */
+                    std::string m_healthCheckRemoteIp;
+                    bool m_healthCheckRemoteIpHasBeenSet;
+
+                    /**
+                     * Tunnel health check status. Valid values: AVAILABLE: healthy; UNAVAILABLE: unhealthy. This parameter will be returned only after health check is enabled.
+                     */
+                    std::string m_healthCheckStatus;
+                    bool m_healthCheckStatusHasBeenSet;
 
                 };
             }

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 MosaicInput::MosaicInput() :
@@ -32,7 +31,7 @@ MosaicInput::MosaicInput() :
 {
 }
 
-CoreInternalOutcome MosaicInput::Deserialize(const Value &value)
+CoreInternalOutcome MosaicInput::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +40,7 @@ CoreInternalOutcome MosaicInput::Deserialize(const Value &value)
     {
         if (!value["CoordinateOrigin"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MosaicInput.CoordinateOrigin` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MosaicInput.CoordinateOrigin` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_coordinateOrigin = string(value["CoordinateOrigin"].GetString());
         m_coordinateOriginHasBeenSet = true;
@@ -51,7 +50,7 @@ CoreInternalOutcome MosaicInput::Deserialize(const Value &value)
     {
         if (!value["XPos"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MosaicInput.XPos` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MosaicInput.XPos` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_xPos = string(value["XPos"].GetString());
         m_xPosHasBeenSet = true;
@@ -61,7 +60,7 @@ CoreInternalOutcome MosaicInput::Deserialize(const Value &value)
     {
         if (!value["YPos"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MosaicInput.YPos` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MosaicInput.YPos` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_yPos = string(value["YPos"].GetString());
         m_yPosHasBeenSet = true;
@@ -71,7 +70,7 @@ CoreInternalOutcome MosaicInput::Deserialize(const Value &value)
     {
         if (!value["Width"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MosaicInput.Width` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MosaicInput.Width` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_width = string(value["Width"].GetString());
         m_widthHasBeenSet = true;
@@ -81,7 +80,7 @@ CoreInternalOutcome MosaicInput::Deserialize(const Value &value)
     {
         if (!value["Height"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MosaicInput.Height` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MosaicInput.Height` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_height = string(value["Height"].GetString());
         m_heightHasBeenSet = true;
@@ -89,9 +88,9 @@ CoreInternalOutcome MosaicInput::Deserialize(const Value &value)
 
     if (value.HasMember("StartTimeOffset") && !value["StartTimeOffset"].IsNull())
     {
-        if (!value["StartTimeOffset"].IsDouble())
+        if (!value["StartTimeOffset"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `MosaicInput.StartTimeOffset` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MosaicInput.StartTimeOffset` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_startTimeOffset = value["StartTimeOffset"].GetDouble();
         m_startTimeOffsetHasBeenSet = true;
@@ -99,9 +98,9 @@ CoreInternalOutcome MosaicInput::Deserialize(const Value &value)
 
     if (value.HasMember("EndTimeOffset") && !value["EndTimeOffset"].IsNull())
     {
-        if (!value["EndTimeOffset"].IsDouble())
+        if (!value["EndTimeOffset"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `MosaicInput.EndTimeOffset` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MosaicInput.EndTimeOffset` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_endTimeOffset = value["EndTimeOffset"].GetDouble();
         m_endTimeOffsetHasBeenSet = true;
@@ -111,52 +110,52 @@ CoreInternalOutcome MosaicInput::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void MosaicInput::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MosaicInput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_coordinateOriginHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CoordinateOrigin";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_coordinateOrigin.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_coordinateOrigin.c_str(), allocator).Move(), allocator);
     }
 
     if (m_xPosHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "XPos";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_xPos.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_xPos.c_str(), allocator).Move(), allocator);
     }
 
     if (m_yPosHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "YPos";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_yPos.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_yPos.c_str(), allocator).Move(), allocator);
     }
 
     if (m_widthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Width";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_width.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_width.c_str(), allocator).Move(), allocator);
     }
 
     if (m_heightHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Height";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_height.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_height.c_str(), allocator).Move(), allocator);
     }
 
     if (m_startTimeOffsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTimeOffset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_startTimeOffset, allocator);
@@ -164,7 +163,7 @@ void MosaicInput::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_endTimeOffsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndTimeOffset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_endTimeOffset, allocator);

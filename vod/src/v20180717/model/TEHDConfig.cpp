@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 TEHDConfig::TEHDConfig() :
@@ -27,7 +26,7 @@ TEHDConfig::TEHDConfig() :
 {
 }
 
-CoreInternalOutcome TEHDConfig::Deserialize(const Value &value)
+CoreInternalOutcome TEHDConfig::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome TEHDConfig::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TEHDConfig.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TEHDConfig.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome TEHDConfig::Deserialize(const Value &value)
     {
         if (!value["MaxVideoBitrate"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TEHDConfig.MaxVideoBitrate` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TEHDConfig.MaxVideoBitrate` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_maxVideoBitrate = value["MaxVideoBitrate"].GetUint64();
         m_maxVideoBitrateHasBeenSet = true;
@@ -56,20 +55,20 @@ CoreInternalOutcome TEHDConfig::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void TEHDConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TEHDConfig::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_maxVideoBitrateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaxVideoBitrate";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_maxVideoBitrate, allocator);

@@ -50,22 +50,18 @@ Note: when uploading certificates of PEM format, the Base64 encoding is required
 
 
                     /**
-                     * 获取Server certificate ID
-This is auto-generated when the certificate is being hosted by the SSL Certificate Service
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CertId Server certificate ID
-This is auto-generated when the certificate is being hosted by the SSL Certificate Service
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Server certificate ID, which is auto-generated when the certificate is added to Tencent Cloud SSL Certificates
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return CertId Server certificate ID, which is auto-generated when the certificate is added to Tencent Cloud SSL Certificates
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetCertId() const;
 
                     /**
-                     * 设置Server certificate ID
-This is auto-generated when the certificate is being hosted by the SSL Certificate Service
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CertId Server certificate ID
-This is auto-generated when the certificate is being hosted by the SSL Certificate Service
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Server certificate ID, which is auto-generated when the certificate is added to Tencent Cloud SSL Certificates
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param CertId Server certificate ID, which is auto-generated when the certificate is added to Tencent Cloud SSL Certificates
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetCertId(const std::string& _certId);
 
@@ -230,9 +226,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Server certificate ID
-This is auto-generated when the certificate is being hosted by the SSL Certificate Service
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Server certificate ID, which is auto-generated when the certificate is added to Tencent Cloud SSL Certificates
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_certId;
                     bool m_certIdHasBeenSet;

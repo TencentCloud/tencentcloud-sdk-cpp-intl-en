@@ -20,32 +20,58 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Mongodb::V20190725::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeDBBackupsRequest::DescribeDBBackupsRequest() :
-    m_instanceIdHasBeenSet(false)
+    m_instanceIdHasBeenSet(false),
+    m_backupMethodHasBeenSet(false),
+    m_limitHasBeenSet(false),
+    m_offsetHasBeenSet(false)
 {
 }
 
 string DescribeDBBackupsRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_backupMethodHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BackupMethod";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_backupMethod, allocator);
+    }
+
+    if (m_limitHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Limit";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_limit, allocator);
+    }
+
+    if (m_offsetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Offset";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_offset, allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -65,6 +91,54 @@ void DescribeDBBackupsRequest::SetInstanceId(const string& _instanceId)
 bool DescribeDBBackupsRequest::InstanceIdHasBeenSet() const
 {
     return m_instanceIdHasBeenSet;
+}
+
+int64_t DescribeDBBackupsRequest::GetBackupMethod() const
+{
+    return m_backupMethod;
+}
+
+void DescribeDBBackupsRequest::SetBackupMethod(const int64_t& _backupMethod)
+{
+    m_backupMethod = _backupMethod;
+    m_backupMethodHasBeenSet = true;
+}
+
+bool DescribeDBBackupsRequest::BackupMethodHasBeenSet() const
+{
+    return m_backupMethodHasBeenSet;
+}
+
+uint64_t DescribeDBBackupsRequest::GetLimit() const
+{
+    return m_limit;
+}
+
+void DescribeDBBackupsRequest::SetLimit(const uint64_t& _limit)
+{
+    m_limit = _limit;
+    m_limitHasBeenSet = true;
+}
+
+bool DescribeDBBackupsRequest::LimitHasBeenSet() const
+{
+    return m_limitHasBeenSet;
+}
+
+uint64_t DescribeDBBackupsRequest::GetOffset() const
+{
+    return m_offset;
+}
+
+void DescribeDBBackupsRequest::SetOffset(const uint64_t& _offset)
+{
+    m_offset = _offset;
+    m_offsetHasBeenSet = true;
+}
+
+bool DescribeDBBackupsRequest::OffsetHasBeenSet() const
+{
+    return m_offsetHasBeenSet;
 }
 
 

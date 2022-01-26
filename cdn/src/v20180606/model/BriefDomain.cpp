@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 BriefDomain::BriefDomain() :
@@ -34,11 +33,12 @@ BriefDomain::BriefDomain() :
     m_originHasBeenSet(false),
     m_disableHasBeenSet(false),
     m_areaHasBeenSet(false),
-    m_readonlyHasBeenSet(false)
+    m_readonlyHasBeenSet(false),
+    m_productHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome BriefDomain::Deserialize(const Value &value)
+CoreInternalOutcome BriefDomain::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -47,7 +47,7 @@ CoreInternalOutcome BriefDomain::Deserialize(const Value &value)
     {
         if (!value["ResourceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BriefDomain.ResourceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BriefDomain.ResourceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_resourceId = string(value["ResourceId"].GetString());
         m_resourceIdHasBeenSet = true;
@@ -57,7 +57,7 @@ CoreInternalOutcome BriefDomain::Deserialize(const Value &value)
     {
         if (!value["AppId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `BriefDomain.AppId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BriefDomain.AppId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_appId = value["AppId"].GetInt64();
         m_appIdHasBeenSet = true;
@@ -67,7 +67,7 @@ CoreInternalOutcome BriefDomain::Deserialize(const Value &value)
     {
         if (!value["Domain"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BriefDomain.Domain` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BriefDomain.Domain` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_domain = string(value["Domain"].GetString());
         m_domainHasBeenSet = true;
@@ -77,7 +77,7 @@ CoreInternalOutcome BriefDomain::Deserialize(const Value &value)
     {
         if (!value["Cname"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BriefDomain.Cname` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BriefDomain.Cname` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cname = string(value["Cname"].GetString());
         m_cnameHasBeenSet = true;
@@ -87,7 +87,7 @@ CoreInternalOutcome BriefDomain::Deserialize(const Value &value)
     {
         if (!value["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BriefDomain.Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BriefDomain.Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(value["Status"].GetString());
         m_statusHasBeenSet = true;
@@ -97,7 +97,7 @@ CoreInternalOutcome BriefDomain::Deserialize(const Value &value)
     {
         if (!value["ProjectId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `BriefDomain.ProjectId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BriefDomain.ProjectId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_projectId = value["ProjectId"].GetInt64();
         m_projectIdHasBeenSet = true;
@@ -107,7 +107,7 @@ CoreInternalOutcome BriefDomain::Deserialize(const Value &value)
     {
         if (!value["ServiceType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BriefDomain.ServiceType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BriefDomain.ServiceType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_serviceType = string(value["ServiceType"].GetString());
         m_serviceTypeHasBeenSet = true;
@@ -117,7 +117,7 @@ CoreInternalOutcome BriefDomain::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BriefDomain.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BriefDomain.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -127,7 +127,7 @@ CoreInternalOutcome BriefDomain::Deserialize(const Value &value)
     {
         if (!value["UpdateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BriefDomain.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BriefDomain.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_updateTime = string(value["UpdateTime"].GetString());
         m_updateTimeHasBeenSet = true;
@@ -137,7 +137,7 @@ CoreInternalOutcome BriefDomain::Deserialize(const Value &value)
     {
         if (!value["Origin"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `BriefDomain.Origin` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BriefDomain.Origin` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_origin.Deserialize(value["Origin"]);
@@ -154,7 +154,7 @@ CoreInternalOutcome BriefDomain::Deserialize(const Value &value)
     {
         if (!value["Disable"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BriefDomain.Disable` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BriefDomain.Disable` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_disable = string(value["Disable"].GetString());
         m_disableHasBeenSet = true;
@@ -164,7 +164,7 @@ CoreInternalOutcome BriefDomain::Deserialize(const Value &value)
     {
         if (!value["Area"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BriefDomain.Area` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BriefDomain.Area` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_area = string(value["Area"].GetString());
         m_areaHasBeenSet = true;
@@ -174,30 +174,40 @@ CoreInternalOutcome BriefDomain::Deserialize(const Value &value)
     {
         if (!value["Readonly"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BriefDomain.Readonly` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BriefDomain.Readonly` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_readonly = string(value["Readonly"].GetString());
         m_readonlyHasBeenSet = true;
+    }
+
+    if (value.HasMember("Product") && !value["Product"].IsNull())
+    {
+        if (!value["Product"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `BriefDomain.Product` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_product = string(value["Product"].GetString());
+        m_productHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void BriefDomain::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void BriefDomain::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_resourceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResourceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_resourceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resourceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_appIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AppId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_appId, allocator);
@@ -205,31 +215,31 @@ void BriefDomain::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_domainHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Domain";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_domain.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_domain.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cnameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Cname";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cname.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cname.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_status.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
     }
 
     if (m_projectIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProjectId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_projectId, allocator);
@@ -237,59 +247,67 @@ void BriefDomain::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_serviceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_serviceType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_serviceType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_updateTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UpdateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_updateTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_updateTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_originHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Origin";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_origin.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_disableHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Disable";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_disable.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_disable.c_str(), allocator).Move(), allocator);
     }
 
     if (m_areaHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Area";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_area.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_area.c_str(), allocator).Move(), allocator);
     }
 
     if (m_readonlyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Readonly";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_readonly.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_readonly.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_productHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Product";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_product.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -501,5 +519,21 @@ void BriefDomain::SetReadonly(const string& _readonly)
 bool BriefDomain::ReadonlyHasBeenSet() const
 {
     return m_readonlyHasBeenSet;
+}
+
+string BriefDomain::GetProduct() const
+{
+    return m_product;
+}
+
+void BriefDomain::SetProduct(const string& _product)
+{
+    m_product = _product;
+    m_productHasBeenSet = true;
+}
+
+bool BriefDomain::ProductHasBeenSet() const
+{
+    return m_productHasBeenSet;
 }
 

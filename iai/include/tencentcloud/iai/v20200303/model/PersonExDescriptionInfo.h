@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Custom description field of the person to be modified, which is a `key-value`
+                * Custom description field of the person to be modified, which is a `key-value` pair.
                 */
                 class PersonExDescriptionInfo : public AbstractModel
                 {
@@ -47,17 +47,17 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Person description field index, whose value starts from 0
+                     * 获取Person description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PersonExDescriptionIndex Person description field index, whose value starts from 0
+                     * @return PersonExDescriptionIndex Person description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetPersonExDescriptionIndex() const;
 
                     /**
-                     * 设置Person description field index, whose value starts from 0
+                     * 设置Person description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PersonExDescriptionIndex Person description field index, whose value starts from 0
+                     * @param PersonExDescriptionIndex Person description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetPersonExDescriptionIndex(const uint64_t& _personExDescriptionIndex);
@@ -89,7 +89,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Person description field index, whose value starts from 0
+                     * Person description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_personExDescriptionIndex;

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 RawWatermarkParameter::RawWatermarkParameter() :
@@ -30,7 +29,7 @@ RawWatermarkParameter::RawWatermarkParameter() :
 {
 }
 
-CoreInternalOutcome RawWatermarkParameter::Deserialize(const Value &value)
+CoreInternalOutcome RawWatermarkParameter::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome RawWatermarkParameter::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RawWatermarkParameter.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RawWatermarkParameter.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome RawWatermarkParameter::Deserialize(const Value &value)
     {
         if (!value["CoordinateOrigin"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RawWatermarkParameter.CoordinateOrigin` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RawWatermarkParameter.CoordinateOrigin` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_coordinateOrigin = string(value["CoordinateOrigin"].GetString());
         m_coordinateOriginHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome RawWatermarkParameter::Deserialize(const Value &value)
     {
         if (!value["XPos"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RawWatermarkParameter.XPos` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RawWatermarkParameter.XPos` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_xPos = string(value["XPos"].GetString());
         m_xPosHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome RawWatermarkParameter::Deserialize(const Value &value)
     {
         if (!value["YPos"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RawWatermarkParameter.YPos` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RawWatermarkParameter.YPos` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_yPos = string(value["YPos"].GetString());
         m_yPosHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome RawWatermarkParameter::Deserialize(const Value &value)
     {
         if (!value["ImageTemplate"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `RawWatermarkParameter.ImageTemplate` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RawWatermarkParameter.ImageTemplate` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_imageTemplate.Deserialize(value["ImageTemplate"]);
@@ -96,47 +95,47 @@ CoreInternalOutcome RawWatermarkParameter::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void RawWatermarkParameter::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void RawWatermarkParameter::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_coordinateOriginHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CoordinateOrigin";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_coordinateOrigin.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_coordinateOrigin.c_str(), allocator).Move(), allocator);
     }
 
     if (m_xPosHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "XPos";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_xPos.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_xPos.c_str(), allocator).Move(), allocator);
     }
 
     if (m_yPosHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "YPos";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_yPos.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_yPos.c_str(), allocator).Move(), allocator);
     }
 
     if (m_imageTemplateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ImageTemplate";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_imageTemplate.ToJsonObject(value[key.c_str()], allocator);
     }
 

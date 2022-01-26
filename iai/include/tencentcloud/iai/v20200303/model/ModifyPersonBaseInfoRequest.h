@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Person ID
-                     * @return PersonId Person ID
+                     * 获取Person ID, which is the `PersonId` in the `CreatePerson` API.
+                     * @return PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
                      */
                     std::string GetPersonId() const;
 
                     /**
-                     * 设置Person ID
-                     * @param PersonId Person ID
+                     * 设置Person ID, which is the `PersonId` in the `CreatePerson` API.
+                     * @param PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
                      */
                     void SetPersonId(const std::string& _personId);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool PersonNameHasBeenSet() const;
 
                     /**
-                     * 获取Gender of the person to be modified
-                     * @return Gender Gender of the person to be modified
+                     * 获取Gender of the person to be modified. 1: male; 2: female.
+                     * @return Gender Gender of the person to be modified. 1: male; 2: female.
                      */
                     int64_t GetGender() const;
 
                     /**
-                     * 设置Gender of the person to be modified
-                     * @param Gender Gender of the person to be modified
+                     * 设置Gender of the person to be modified. 1: male; 2: female.
+                     * @param Gender Gender of the person to be modified. 1: male; 2: female.
                      */
                     void SetGender(const int64_t& _gender);
 
@@ -99,7 +99,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Person ID
+                     * Person ID, which is the `PersonId` in the `CreatePerson` API.
                      */
                     std::string m_personId;
                     bool m_personIdHasBeenSet;
@@ -111,7 +111,7 @@ namespace TencentCloud
                     bool m_personNameHasBeenSet;
 
                     /**
-                     * Gender of the person to be modified
+                     * Gender of the person to be modified. 1: male; 2: female.
                      */
                     int64_t m_gender;
                     bool m_genderHasBeenSet;

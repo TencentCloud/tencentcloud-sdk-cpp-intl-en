@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 TranscodePlayInfo2017::TranscodePlayInfo2017() :
@@ -30,7 +29,7 @@ TranscodePlayInfo2017::TranscodePlayInfo2017() :
 {
 }
 
-CoreInternalOutcome TranscodePlayInfo2017::Deserialize(const Value &value)
+CoreInternalOutcome TranscodePlayInfo2017::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome TranscodePlayInfo2017::Deserialize(const Value &value)
     {
         if (!value["Url"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TranscodePlayInfo2017.Url` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TranscodePlayInfo2017.Url` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_url = string(value["Url"].GetString());
         m_urlHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome TranscodePlayInfo2017::Deserialize(const Value &value)
     {
         if (!value["Definition"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TranscodePlayInfo2017.Definition` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TranscodePlayInfo2017.Definition` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_definition = value["Definition"].GetInt64();
         m_definitionHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome TranscodePlayInfo2017::Deserialize(const Value &value)
     {
         if (!value["Bitrate"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TranscodePlayInfo2017.Bitrate` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TranscodePlayInfo2017.Bitrate` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_bitrate = value["Bitrate"].GetInt64();
         m_bitrateHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome TranscodePlayInfo2017::Deserialize(const Value &value)
     {
         if (!value["Height"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TranscodePlayInfo2017.Height` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TranscodePlayInfo2017.Height` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_height = value["Height"].GetInt64();
         m_heightHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome TranscodePlayInfo2017::Deserialize(const Value &value)
     {
         if (!value["Width"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TranscodePlayInfo2017.Width` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TranscodePlayInfo2017.Width` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_width = value["Width"].GetInt64();
         m_widthHasBeenSet = true;
@@ -89,20 +88,20 @@ CoreInternalOutcome TranscodePlayInfo2017::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void TranscodePlayInfo2017::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TranscodePlayInfo2017::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_urlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Url";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_url.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_url.c_str(), allocator).Move(), allocator);
     }
 
     if (m_definitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Definition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_definition, allocator);
@@ -110,7 +109,7 @@ void TranscodePlayInfo2017::ToJsonObject(Value &value, Document::AllocatorType& 
 
     if (m_bitrateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Bitrate";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_bitrate, allocator);
@@ -118,7 +117,7 @@ void TranscodePlayInfo2017::ToJsonObject(Value &value, Document::AllocatorType& 
 
     if (m_heightHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Height";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_height, allocator);
@@ -126,7 +125,7 @@ void TranscodePlayInfo2017::ToJsonObject(Value &value, Document::AllocatorType& 
 
     if (m_widthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Width";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_width, allocator);

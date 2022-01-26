@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ssl::V20191205::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeCertificateDetailResponse::DescribeCertificateDetailResponse() :
@@ -57,26 +56,27 @@ DescribeCertificateDetailResponse::DescribeCertificateDetailResponse() :
     m_isVulnerabilityHasBeenSet(false),
     m_submittedDataHasBeenSet(false),
     m_renewAbleHasBeenSet(false),
-    m_deployableHasBeenSet(false)
+    m_deployableHasBeenSet(false),
+    m_tagsHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -87,11 +87,11 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -99,7 +99,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["OwnerUin"].IsString())
         {
-            return CoreInternalOutcome(Error("response `OwnerUin` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OwnerUin` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ownerUin = string(rsp["OwnerUin"].GetString());
         m_ownerUinHasBeenSet = true;
@@ -109,7 +109,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["ProjectId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ProjectId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProjectId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_projectId = string(rsp["ProjectId"].GetString());
         m_projectIdHasBeenSet = true;
@@ -119,7 +119,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["From"].IsString())
         {
-            return CoreInternalOutcome(Error("response `From` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `From` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_from = string(rsp["From"].GetString());
         m_fromHasBeenSet = true;
@@ -129,7 +129,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["CertificateType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CertificateType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CertificateType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_certificateType = string(rsp["CertificateType"].GetString());
         m_certificateTypeHasBeenSet = true;
@@ -139,7 +139,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["PackageType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PackageType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PackageType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_packageType = string(rsp["PackageType"].GetString());
         m_packageTypeHasBeenSet = true;
@@ -149,7 +149,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["ProductZhName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ProductZhName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProductZhName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_productZhName = string(rsp["ProductZhName"].GetString());
         m_productZhNameHasBeenSet = true;
@@ -159,7 +159,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["Domain"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Domain` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Domain` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_domain = string(rsp["Domain"].GetString());
         m_domainHasBeenSet = true;
@@ -169,7 +169,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["Alias"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Alias` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Alias` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_alias = string(rsp["Alias"].GetString());
         m_aliasHasBeenSet = true;
@@ -179,7 +179,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["Status"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Status` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Status` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_status = rsp["Status"].GetUint64();
         m_statusHasBeenSet = true;
@@ -189,7 +189,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["StatusMsg"].IsString())
         {
-            return CoreInternalOutcome(Error("response `StatusMsg` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `StatusMsg` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_statusMsg = string(rsp["StatusMsg"].GetString());
         m_statusMsgHasBeenSet = true;
@@ -199,7 +199,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["VerifyType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VerifyType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VerifyType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_verifyType = string(rsp["VerifyType"].GetString());
         m_verifyTypeHasBeenSet = true;
@@ -209,7 +209,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["VulnerabilityStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VulnerabilityStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VulnerabilityStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vulnerabilityStatus = string(rsp["VulnerabilityStatus"].GetString());
         m_vulnerabilityStatusHasBeenSet = true;
@@ -219,7 +219,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["CertBeginTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CertBeginTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CertBeginTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_certBeginTime = string(rsp["CertBeginTime"].GetString());
         m_certBeginTimeHasBeenSet = true;
@@ -229,7 +229,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["CertEndTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CertEndTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CertEndTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_certEndTime = string(rsp["CertEndTime"].GetString());
         m_certEndTimeHasBeenSet = true;
@@ -239,7 +239,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["ValidityPeriod"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ValidityPeriod` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ValidityPeriod` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_validityPeriod = string(rsp["ValidityPeriod"].GetString());
         m_validityPeriodHasBeenSet = true;
@@ -249,7 +249,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["InsertTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InsertTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InsertTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_insertTime = string(rsp["InsertTime"].GetString());
         m_insertTimeHasBeenSet = true;
@@ -259,7 +259,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["OrderId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `OrderId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OrderId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_orderId = string(rsp["OrderId"].GetString());
         m_orderIdHasBeenSet = true;
@@ -269,7 +269,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["CertificateExtra"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `CertificateExtra` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CertificateExtra` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_certificateExtra.Deserialize(rsp["CertificateExtra"]);
@@ -286,7 +286,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["CertificatePrivateKey"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CertificatePrivateKey` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CertificatePrivateKey` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_certificatePrivateKey = string(rsp["CertificatePrivateKey"].GetString());
         m_certificatePrivateKeyHasBeenSet = true;
@@ -296,7 +296,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["CertificatePublicKey"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CertificatePublicKey` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CertificatePublicKey` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_certificatePublicKey = string(rsp["CertificatePublicKey"].GetString());
         m_certificatePublicKeyHasBeenSet = true;
@@ -306,7 +306,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["DvAuthDetail"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DvAuthDetail` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DvAuthDetail` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_dvAuthDetail.Deserialize(rsp["DvAuthDetail"]);
@@ -323,7 +323,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["VulnerabilityReport"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VulnerabilityReport` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VulnerabilityReport` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vulnerabilityReport = string(rsp["VulnerabilityReport"].GetString());
         m_vulnerabilityReportHasBeenSet = true;
@@ -333,7 +333,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["CertificateId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CertificateId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CertificateId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_certificateId = string(rsp["CertificateId"].GetString());
         m_certificateIdHasBeenSet = true;
@@ -343,7 +343,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["TypeName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TypeName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TypeName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_typeName = string(rsp["TypeName"].GetString());
         m_typeNameHasBeenSet = true;
@@ -353,7 +353,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["StatusName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `StatusName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `StatusName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_statusName = string(rsp["StatusName"].GetString());
         m_statusNameHasBeenSet = true;
@@ -362,10 +362,10 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     if (rsp.HasMember("SubjectAltName") && !rsp["SubjectAltName"].IsNull())
     {
         if (!rsp["SubjectAltName"].IsArray())
-            return CoreInternalOutcome(Error("response `SubjectAltName` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `SubjectAltName` is not array type"));
 
-        const Value &tmpValue = rsp["SubjectAltName"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["SubjectAltName"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_subjectAltName.push_back((*itr).GetString());
         }
@@ -376,7 +376,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["IsVip"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `IsVip` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IsVip` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_isVip = rsp["IsVip"].GetBool();
         m_isVipHasBeenSet = true;
@@ -386,7 +386,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["IsWildcard"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `IsWildcard` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IsWildcard` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_isWildcard = rsp["IsWildcard"].GetBool();
         m_isWildcardHasBeenSet = true;
@@ -396,7 +396,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["IsDv"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `IsDv` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IsDv` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_isDv = rsp["IsDv"].GetBool();
         m_isDvHasBeenSet = true;
@@ -406,7 +406,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["IsVulnerability"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `IsVulnerability` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IsVulnerability` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_isVulnerability = rsp["IsVulnerability"].GetBool();
         m_isVulnerabilityHasBeenSet = true;
@@ -416,7 +416,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["SubmittedData"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `SubmittedData` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SubmittedData` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_submittedData.Deserialize(rsp["SubmittedData"]);
@@ -433,7 +433,7 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["RenewAble"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `RenewAble` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RenewAble` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_renewAble = rsp["RenewAble"].GetBool();
         m_renewAbleHasBeenSet = true;
@@ -443,14 +443,338 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
     {
         if (!rsp["Deployable"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `Deployable` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Deployable` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_deployable = rsp["Deployable"].GetBool();
         m_deployableHasBeenSet = true;
     }
 
+    if (rsp.HasMember("Tags") && !rsp["Tags"].IsNull())
+    {
+        if (!rsp["Tags"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Tags` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["Tags"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            Tags item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_tags.push_back(item);
+        }
+        m_tagsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeCertificateDetailResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_ownerUinHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OwnerUin";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ownerUin.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_projectIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProjectId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_projectId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_fromHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "From";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_from.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_certificateTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CertificateType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_certificateType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_packageTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PackageType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_packageType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_productZhNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProductZhName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_productZhName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_domainHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Domain";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_domain.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_aliasHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Alias";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_alias.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_statusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Status";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_status, allocator);
+    }
+
+    if (m_statusMsgHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StatusMsg";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_statusMsg.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_verifyTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VerifyType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_verifyType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_vulnerabilityStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VulnerabilityStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vulnerabilityStatus.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_certBeginTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CertBeginTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_certBeginTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_certEndTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CertEndTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_certEndTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_validityPeriodHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ValidityPeriod";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_validityPeriod.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_insertTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InsertTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_insertTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_orderIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OrderId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_orderId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_certificateExtraHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CertificateExtra";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_certificateExtra.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_certificatePrivateKeyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CertificatePrivateKey";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_certificatePrivateKey.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_certificatePublicKeyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CertificatePublicKey";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_certificatePublicKey.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_dvAuthDetailHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DvAuthDetail";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_dvAuthDetail.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_vulnerabilityReportHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VulnerabilityReport";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vulnerabilityReport.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_certificateIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CertificateId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_certificateId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_typeNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TypeName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_typeName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_statusNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StatusName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_statusName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_subjectAltNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubjectAltName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_subjectAltName.begin(); itr != m_subjectAltName.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_isVipHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsVip";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isVip, allocator);
+    }
+
+    if (m_isWildcardHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsWildcard";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isWildcard, allocator);
+    }
+
+    if (m_isDvHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsDv";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isDv, allocator);
+    }
+
+    if (m_isVulnerabilityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsVulnerability";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isVulnerability, allocator);
+    }
+
+    if (m_submittedDataHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubmittedData";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_submittedData.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_renewAbleHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RenewAble";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_renewAble, allocator);
+    }
+
+    if (m_deployableHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Deployable";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_deployable, allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 
@@ -782,6 +1106,16 @@ bool DescribeCertificateDetailResponse::GetDeployable() const
 bool DescribeCertificateDetailResponse::DeployableHasBeenSet() const
 {
     return m_deployableHasBeenSet;
+}
+
+vector<Tags> DescribeCertificateDetailResponse::GetTags() const
+{
+    return m_tags;
+}
+
+bool DescribeCertificateDetailResponse::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
 }
 
 

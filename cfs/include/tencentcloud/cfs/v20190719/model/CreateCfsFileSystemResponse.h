@@ -40,6 +40,7 @@ namespace TencentCloud
                     CreateCfsFileSystemResponse();
                     ~CreateCfsFileSystemResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -79,8 +80,8 @@ namespace TencentCloud
                     bool FileSystemIdHasBeenSet() const;
 
                     /**
-                     * 获取File system status
-                     * @return LifeCycleState File system status
+                     * 获取File system status. Valid values: `creating`, `create_failed`, `available`, `unserviced`, `upgrading`, `deleting`
+                     * @return LifeCycleState File system status. Valid values: `creating`, `create_failed`, `available`, `unserviced`, `upgrading`, `deleting`
                      */
                     std::string GetLifeCycleState() const;
 
@@ -91,8 +92,8 @@ namespace TencentCloud
                     bool LifeCycleStateHasBeenSet() const;
 
                     /**
-                     * 获取Used file system capacity
-                     * @return SizeByte Used file system capacity
+                     * 获取Storage used by the file system, in bytes
+                     * @return SizeByte Storage used by the file system, in bytes
                      */
                     uint64_t GetSizeByte() const;
 
@@ -159,13 +160,13 @@ namespace TencentCloud
                     bool m_fileSystemIdHasBeenSet;
 
                     /**
-                     * File system status
+                     * File system status. Valid values: `creating`, `create_failed`, `available`, `unserviced`, `upgrading`, `deleting`
                      */
                     std::string m_lifeCycleState;
                     bool m_lifeCycleStateHasBeenSet;
 
                     /**
-                     * Used file system capacity
+                     * Storage used by the file system, in bytes
                      */
                     uint64_t m_sizeByte;
                     bool m_sizeByteHasBeenSet;

@@ -27,6 +27,8 @@
 #include <tencentcloud/gme/v20180711/model/CreateAppResponse.h>
 #include <tencentcloud/gme/v20180711/model/DescribeAppStatisticsRequest.h>
 #include <tencentcloud/gme/v20180711/model/DescribeAppStatisticsResponse.h>
+#include <tencentcloud/gme/v20180711/model/DescribeApplicationDataRequest.h>
+#include <tencentcloud/gme/v20180711/model/DescribeApplicationDataResponse.h>
 #include <tencentcloud/gme/v20180711/model/DescribeScanResultListRequest.h>
 #include <tencentcloud/gme/v20180711/model/DescribeScanResultListResponse.h>
 #include <tencentcloud/gme/v20180711/model/ModifyAppStatusRequest.h>
@@ -47,19 +49,22 @@ namespace TencentCloud
                 GmeClient(const Credential &credential, const std::string &region);
                 GmeClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::CreateAppResponse> CreateAppOutcome;
+                typedef Outcome<Core::Error, Model::CreateAppResponse> CreateAppOutcome;
                 typedef std::future<CreateAppOutcome> CreateAppOutcomeCallable;
                 typedef std::function<void(const GmeClient*, const Model::CreateAppRequest&, CreateAppOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAppAsyncHandler;
-                typedef Outcome<Error, Model::DescribeAppStatisticsResponse> DescribeAppStatisticsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAppStatisticsResponse> DescribeAppStatisticsOutcome;
                 typedef std::future<DescribeAppStatisticsOutcome> DescribeAppStatisticsOutcomeCallable;
                 typedef std::function<void(const GmeClient*, const Model::DescribeAppStatisticsRequest&, DescribeAppStatisticsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAppStatisticsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeScanResultListResponse> DescribeScanResultListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeApplicationDataResponse> DescribeApplicationDataOutcome;
+                typedef std::future<DescribeApplicationDataOutcome> DescribeApplicationDataOutcomeCallable;
+                typedef std::function<void(const GmeClient*, const Model::DescribeApplicationDataRequest&, DescribeApplicationDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApplicationDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeScanResultListResponse> DescribeScanResultListOutcome;
                 typedef std::future<DescribeScanResultListOutcome> DescribeScanResultListOutcomeCallable;
                 typedef std::function<void(const GmeClient*, const Model::DescribeScanResultListRequest&, DescribeScanResultListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeScanResultListAsyncHandler;
-                typedef Outcome<Error, Model::ModifyAppStatusResponse> ModifyAppStatusOutcome;
+                typedef Outcome<Core::Error, Model::ModifyAppStatusResponse> ModifyAppStatusOutcome;
                 typedef std::future<ModifyAppStatusOutcome> ModifyAppStatusOutcomeCallable;
                 typedef std::function<void(const GmeClient*, const Model::ModifyAppStatusRequest&, ModifyAppStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAppStatusAsyncHandler;
-                typedef Outcome<Error, Model::ScanVoiceResponse> ScanVoiceOutcome;
+                typedef Outcome<Core::Error, Model::ScanVoiceResponse> ScanVoiceOutcome;
                 typedef std::future<ScanVoiceOutcome> ScanVoiceOutcomeCallable;
                 typedef std::function<void(const GmeClient*, const Model::ScanVoiceRequest&, ScanVoiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ScanVoiceAsyncHandler;
 
@@ -84,6 +89,15 @@ namespace TencentCloud
                 DescribeAppStatisticsOutcomeCallable DescribeAppStatisticsCallable(const Model::DescribeAppStatisticsRequest& request);
 
                 /**
+                 *This API (DescribeApplicationData) is used to query usage data details within 90 days.
+                 * @param req DescribeApplicationDataRequest
+                 * @return DescribeApplicationDataOutcome
+                 */
+                DescribeApplicationDataOutcome DescribeApplicationData(const Model::DescribeApplicationDataRequest &request);
+                void DescribeApplicationDataAsync(const Model::DescribeApplicationDataRequest& request, const DescribeApplicationDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeApplicationDataOutcomeCallable DescribeApplicationDataCallable(const Model::DescribeApplicationDataRequest& request);
+
+                /**
                  *This API is used to query the speech detection result. Up to 100 tasks can be added in the task query list.
 <p style="color:red">If the `Callback` field is not set when a speech detection task is submitted, this API will be needed to get the detection result.</p>
                  * @param req DescribeScanResultListRequest
@@ -94,7 +108,7 @@ namespace TencentCloud
                 DescribeScanResultListOutcomeCallable DescribeScanResultListCallable(const Model::DescribeScanResultListRequest& request);
 
                 /**
-                 *This API is used to change the status of an application's master switch.
+                 *This API is used to change the status of an application's primary switch.
                  * @param req ModifyAppStatusRequest
                  * @return ModifyAppStatusOutcome
                  */
@@ -149,7 +163,7 @@ namespace TencentCloud
 <p>ad: advertising</p>
 <p>terrorism: terrorism</p>
 <p>contraband: prohibited</p>
-<p>customized: custom keyword library. This feature is only available to whitelisted users. To try it out, please <a href="https://cloud.tencent.com/apply/p/8809fjcik56">contact us</a>.</p>
+<p>customized: custom keyword library. This feature is only available to allowlisted users. To try it out, please <a href="https://intl.cloud.tencent.com/apply/p/8809fjcik56?from_cn_redirect=1">contact us</a>.</p>
 </td>
 </tr>
 </tbody>
@@ -187,7 +201,7 @@ namespace TencentCloud
 </ul>
 
 <li>Below is a sample callback <font color="red">(for more information on the fields, please see the structure:
-<a href="https://cloud.tencent.com/document/api/607/35375#DescribeScanResult" target="_blank">DescribeScanResult</a>)</font>:</li>
+<a href="https://intl.cloud.tencent.com/document/api/607/35375?from_cn_redirect=1#DescribeScanResult" target="_blank">DescribeScanResult</a>)</font>:</li>
 <pre><code>{
 	"Code": 0,
 	"DataId": "1400000000_test_data_id",

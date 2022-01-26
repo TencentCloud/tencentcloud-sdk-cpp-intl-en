@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 Authentication::Authentication() :
@@ -30,7 +29,7 @@ Authentication::Authentication() :
 {
 }
 
-CoreInternalOutcome Authentication::Deserialize(const Value &value)
+CoreInternalOutcome Authentication::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome Authentication::Deserialize(const Value &value)
     {
         if (!value["Switch"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Authentication.Switch` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Authentication.Switch` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_switch = string(value["Switch"].GetString());
         m_switchHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome Authentication::Deserialize(const Value &value)
     {
         if (!value["TypeA"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `Authentication.TypeA` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Authentication.TypeA` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_typeA.Deserialize(value["TypeA"]);
@@ -66,7 +65,7 @@ CoreInternalOutcome Authentication::Deserialize(const Value &value)
     {
         if (!value["TypeB"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `Authentication.TypeB` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Authentication.TypeB` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_typeB.Deserialize(value["TypeB"]);
@@ -83,7 +82,7 @@ CoreInternalOutcome Authentication::Deserialize(const Value &value)
     {
         if (!value["TypeC"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `Authentication.TypeC` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Authentication.TypeC` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_typeC.Deserialize(value["TypeC"]);
@@ -100,7 +99,7 @@ CoreInternalOutcome Authentication::Deserialize(const Value &value)
     {
         if (!value["TypeD"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `Authentication.TypeD` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Authentication.TypeD` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_typeD.Deserialize(value["TypeD"]);
@@ -117,50 +116,50 @@ CoreInternalOutcome Authentication::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Authentication::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Authentication::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_switchHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Switch";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_switch.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_switch.c_str(), allocator).Move(), allocator);
     }
 
     if (m_typeAHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TypeA";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_typeA.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_typeBHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TypeB";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_typeB.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_typeCHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TypeC";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_typeC.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_typeDHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TypeD";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_typeD.ToJsonObject(value[key.c_str()], allocator);
     }
 

@@ -20,37 +20,45 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Cbs::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 DeleteSnapshotsRequest::DeleteSnapshotsRequest() :
-    m_snapshotIdsHasBeenSet(false)
+    m_snapshotIdsHasBeenSet(false),
+    m_deleteBindImagesHasBeenSet(false)
 {
 }
 
 string DeleteSnapshotsRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_snapshotIdsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SnapshotIds";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_snapshotIds.begin(); itr != m_snapshotIds.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
+    if (m_deleteBindImagesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DeleteBindImages";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_deleteBindImages, allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -70,6 +78,22 @@ void DeleteSnapshotsRequest::SetSnapshotIds(const vector<string>& _snapshotIds)
 bool DeleteSnapshotsRequest::SnapshotIdsHasBeenSet() const
 {
     return m_snapshotIdsHasBeenSet;
+}
+
+bool DeleteSnapshotsRequest::GetDeleteBindImages() const
+{
+    return m_deleteBindImages;
+}
+
+void DeleteSnapshotsRequest::SetDeleteBindImages(const bool& _deleteBindImages)
+{
+    m_deleteBindImages = _deleteBindImages;
+    m_deleteBindImagesHasBeenSet = true;
+}
+
+bool DeleteSnapshotsRequest::DeleteBindImagesHasBeenSet() const
+{
+    return m_deleteBindImagesHasBeenSet;
 }
 
 

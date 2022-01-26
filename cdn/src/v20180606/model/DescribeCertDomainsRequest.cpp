@@ -20,32 +20,49 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeCertDomainsRequest::DescribeCertDomainsRequest() :
-    m_certHasBeenSet(false)
+    m_certHasBeenSet(false),
+    m_certIdHasBeenSet(false),
+    m_productHasBeenSet(false)
 {
 }
 
 string DescribeCertDomainsRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_certHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Cert";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_cert.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_cert.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_certIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CertId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_certId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_productHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Product";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_product.c_str(), allocator).Move(), allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -65,6 +82,38 @@ void DescribeCertDomainsRequest::SetCert(const string& _cert)
 bool DescribeCertDomainsRequest::CertHasBeenSet() const
 {
     return m_certHasBeenSet;
+}
+
+string DescribeCertDomainsRequest::GetCertId() const
+{
+    return m_certId;
+}
+
+void DescribeCertDomainsRequest::SetCertId(const string& _certId)
+{
+    m_certId = _certId;
+    m_certIdHasBeenSet = true;
+}
+
+bool DescribeCertDomainsRequest::CertIdHasBeenSet() const
+{
+    return m_certIdHasBeenSet;
+}
+
+string DescribeCertDomainsRequest::GetProduct() const
+{
+    return m_product;
+}
+
+void DescribeCertDomainsRequest::SetProduct(const string& _product)
+{
+    m_product = _product;
+    m_productHasBeenSet = true;
+}
+
+bool DescribeCertDomainsRequest::ProductHasBeenSet() const
+{
+    return m_productHasBeenSet;
 }
 
 

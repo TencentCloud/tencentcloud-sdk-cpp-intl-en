@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Sqlserver::V20180328::Model;
-using namespace rapidjson;
 using namespace std;
 
 SpecInfo::SpecInfo() :
@@ -35,11 +34,13 @@ SpecInfo::SpecInfo() :
     m_suitInfoHasBeenSet(false),
     m_pidHasBeenSet(false),
     m_postPidHasBeenSet(false),
-    m_payModeStatusHasBeenSet(false)
+    m_payModeStatusHasBeenSet(false),
+    m_instanceTypeHasBeenSet(false),
+    m_multiZonesStatusHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome SpecInfo::Deserialize(const Value &value)
+CoreInternalOutcome SpecInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -48,7 +49,7 @@ CoreInternalOutcome SpecInfo::Deserialize(const Value &value)
     {
         if (!value["SpecId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SpecInfo.SpecId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SpecInfo.SpecId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_specId = value["SpecId"].GetInt64();
         m_specIdHasBeenSet = true;
@@ -58,7 +59,7 @@ CoreInternalOutcome SpecInfo::Deserialize(const Value &value)
     {
         if (!value["MachineType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SpecInfo.MachineType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SpecInfo.MachineType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_machineType = string(value["MachineType"].GetString());
         m_machineTypeHasBeenSet = true;
@@ -68,7 +69,7 @@ CoreInternalOutcome SpecInfo::Deserialize(const Value &value)
     {
         if (!value["MachineTypeName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SpecInfo.MachineTypeName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SpecInfo.MachineTypeName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_machineTypeName = string(value["MachineTypeName"].GetString());
         m_machineTypeNameHasBeenSet = true;
@@ -78,7 +79,7 @@ CoreInternalOutcome SpecInfo::Deserialize(const Value &value)
     {
         if (!value["Version"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SpecInfo.Version` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SpecInfo.Version` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_version = string(value["Version"].GetString());
         m_versionHasBeenSet = true;
@@ -88,7 +89,7 @@ CoreInternalOutcome SpecInfo::Deserialize(const Value &value)
     {
         if (!value["VersionName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SpecInfo.VersionName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SpecInfo.VersionName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_versionName = string(value["VersionName"].GetString());
         m_versionNameHasBeenSet = true;
@@ -98,7 +99,7 @@ CoreInternalOutcome SpecInfo::Deserialize(const Value &value)
     {
         if (!value["Memory"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SpecInfo.Memory` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SpecInfo.Memory` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_memory = value["Memory"].GetInt64();
         m_memoryHasBeenSet = true;
@@ -108,7 +109,7 @@ CoreInternalOutcome SpecInfo::Deserialize(const Value &value)
     {
         if (!value["CPU"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SpecInfo.CPU` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SpecInfo.CPU` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_cPU = value["CPU"].GetInt64();
         m_cPUHasBeenSet = true;
@@ -118,7 +119,7 @@ CoreInternalOutcome SpecInfo::Deserialize(const Value &value)
     {
         if (!value["MinStorage"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SpecInfo.MinStorage` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SpecInfo.MinStorage` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_minStorage = value["MinStorage"].GetInt64();
         m_minStorageHasBeenSet = true;
@@ -128,7 +129,7 @@ CoreInternalOutcome SpecInfo::Deserialize(const Value &value)
     {
         if (!value["MaxStorage"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SpecInfo.MaxStorage` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SpecInfo.MaxStorage` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_maxStorage = value["MaxStorage"].GetInt64();
         m_maxStorageHasBeenSet = true;
@@ -138,7 +139,7 @@ CoreInternalOutcome SpecInfo::Deserialize(const Value &value)
     {
         if (!value["QPS"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SpecInfo.QPS` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SpecInfo.QPS` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_qPS = value["QPS"].GetInt64();
         m_qPSHasBeenSet = true;
@@ -148,7 +149,7 @@ CoreInternalOutcome SpecInfo::Deserialize(const Value &value)
     {
         if (!value["SuitInfo"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SpecInfo.SuitInfo` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SpecInfo.SuitInfo` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_suitInfo = string(value["SuitInfo"].GetString());
         m_suitInfoHasBeenSet = true;
@@ -158,7 +159,7 @@ CoreInternalOutcome SpecInfo::Deserialize(const Value &value)
     {
         if (!value["Pid"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SpecInfo.Pid` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SpecInfo.Pid` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_pid = value["Pid"].GetInt64();
         m_pidHasBeenSet = true;
@@ -167,10 +168,10 @@ CoreInternalOutcome SpecInfo::Deserialize(const Value &value)
     if (value.HasMember("PostPid") && !value["PostPid"].IsNull())
     {
         if (!value["PostPid"].IsArray())
-            return CoreInternalOutcome(Error("response `SpecInfo.PostPid` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `SpecInfo.PostPid` is not array type"));
 
-        const Value &tmpValue = value["PostPid"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["PostPid"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_postPid.push_back((*itr).GetInt64());
         }
@@ -181,22 +182,42 @@ CoreInternalOutcome SpecInfo::Deserialize(const Value &value)
     {
         if (!value["PayModeStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SpecInfo.PayModeStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SpecInfo.PayModeStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_payModeStatus = string(value["PayModeStatus"].GetString());
         m_payModeStatusHasBeenSet = true;
+    }
+
+    if (value.HasMember("InstanceType") && !value["InstanceType"].IsNull())
+    {
+        if (!value["InstanceType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SpecInfo.InstanceType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_instanceType = string(value["InstanceType"].GetString());
+        m_instanceTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("MultiZonesStatus") && !value["MultiZonesStatus"].IsNull())
+    {
+        if (!value["MultiZonesStatus"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SpecInfo.MultiZonesStatus` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_multiZonesStatus = string(value["MultiZonesStatus"].GetString());
+        m_multiZonesStatusHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void SpecInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SpecInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_specIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SpecId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_specId, allocator);
@@ -204,39 +225,39 @@ void SpecInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_machineTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MachineType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_machineType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_machineType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_machineTypeNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MachineTypeName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_machineTypeName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_machineTypeName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_versionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Version";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_version.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_version.c_str(), allocator).Move(), allocator);
     }
 
     if (m_versionNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VersionName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_versionName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_versionName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_memoryHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Memory";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_memory, allocator);
@@ -244,7 +265,7 @@ void SpecInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_cPUHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CPU";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cPU, allocator);
@@ -252,7 +273,7 @@ void SpecInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_minStorageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MinStorage";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_minStorage, allocator);
@@ -260,7 +281,7 @@ void SpecInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_maxStorageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaxStorage";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_maxStorage, allocator);
@@ -268,7 +289,7 @@ void SpecInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_qPSHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "QPS";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_qPS, allocator);
@@ -276,15 +297,15 @@ void SpecInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_suitInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SuitInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_suitInfo.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_suitInfo.c_str(), allocator).Move(), allocator);
     }
 
     if (m_pidHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Pid";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_pid, allocator);
@@ -292,23 +313,39 @@ void SpecInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_postPidHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PostPid";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_postPid.begin(); itr != m_postPid.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 
     if (m_payModeStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PayModeStatus";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_payModeStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_payModeStatus.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_instanceTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_multiZonesStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MultiZonesStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_multiZonesStatus.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -536,5 +573,37 @@ void SpecInfo::SetPayModeStatus(const string& _payModeStatus)
 bool SpecInfo::PayModeStatusHasBeenSet() const
 {
     return m_payModeStatusHasBeenSet;
+}
+
+string SpecInfo::GetInstanceType() const
+{
+    return m_instanceType;
+}
+
+void SpecInfo::SetInstanceType(const string& _instanceType)
+{
+    m_instanceType = _instanceType;
+    m_instanceTypeHasBeenSet = true;
+}
+
+bool SpecInfo::InstanceTypeHasBeenSet() const
+{
+    return m_instanceTypeHasBeenSet;
+}
+
+string SpecInfo::GetMultiZonesStatus() const
+{
+    return m_multiZonesStatus;
+}
+
+void SpecInfo::SetMultiZonesStatus(const string& _multiZonesStatus)
+{
+    m_multiZonesStatus = _multiZonesStatus;
+    m_multiZonesStatusHasBeenSet = true;
+}
+
+bool SpecInfo::MultiZonesStatusHasBeenSet() const
+{
+    return m_multiZonesStatusHasBeenSet;
 }
 

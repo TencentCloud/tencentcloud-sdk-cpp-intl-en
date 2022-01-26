@@ -31,6 +31,8 @@
 #include <tencentcloud/tcaplusdb/v20190823/model/CreateBackupResponse.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/CreateClusterRequest.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/CreateClusterResponse.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/CreateSnapshotsRequest.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/CreateSnapshotsResponse.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/CreateTableGroupRequest.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/CreateTableGroupResponse.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/CreateTablesRequest.h>
@@ -39,18 +41,30 @@
 #include <tencentcloud/tcaplusdb/v20190823/model/DeleteClusterResponse.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/DeleteIdlFilesRequest.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/DeleteIdlFilesResponse.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/DeleteSnapshotsRequest.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/DeleteSnapshotsResponse.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/DeleteTableDataFlowRequest.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/DeleteTableDataFlowResponse.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/DeleteTableGroupRequest.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/DeleteTableGroupResponse.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/DeleteTableIndexRequest.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/DeleteTableIndexResponse.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/DeleteTablesRequest.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/DeleteTablesResponse.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/DescribeApplicationsRequest.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/DescribeApplicationsResponse.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/DescribeClusterTagsRequest.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/DescribeClusterTagsResponse.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/DescribeClustersRequest.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/DescribeClustersResponse.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/DescribeIdlFileInfosRequest.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/DescribeIdlFileInfosResponse.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/DescribeMachineRequest.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/DescribeMachineResponse.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/DescribeRegionsRequest.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/DescribeRegionsResponse.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/DescribeSnapshotsRequest.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/DescribeSnapshotsResponse.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/DescribeTableGroupTagsRequest.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/DescribeTableGroupTagsResponse.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/DescribeTableGroupsRequest.h>
@@ -65,12 +79,26 @@
 #include <tencentcloud/tcaplusdb/v20190823/model/DescribeTasksResponse.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/DescribeUinInWhitelistRequest.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/DescribeUinInWhitelistResponse.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/DisableRestProxyRequest.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/DisableRestProxyResponse.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/EnableRestProxyRequest.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/EnableRestProxyResponse.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/ImportSnapshotsRequest.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/ImportSnapshotsResponse.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/MergeTablesDataRequest.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/MergeTablesDataResponse.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/ModifyCensorshipRequest.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/ModifyCensorshipResponse.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/ModifyClusterMachineRequest.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/ModifyClusterMachineResponse.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/ModifyClusterNameRequest.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/ModifyClusterNameResponse.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/ModifyClusterPasswordRequest.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/ModifyClusterPasswordResponse.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/ModifyClusterTagsRequest.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/ModifyClusterTagsResponse.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/ModifySnapshotsRequest.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/ModifySnapshotsResponse.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/ModifyTableGroupNameRequest.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/ModifyTableGroupNameResponse.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/ModifyTableGroupTagsRequest.h>
@@ -87,6 +115,12 @@
 #include <tencentcloud/tcaplusdb/v20190823/model/RecoverRecycleTablesResponse.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/RollbackTablesRequest.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/RollbackTablesResponse.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/SetTableDataFlowRequest.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/SetTableDataFlowResponse.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/SetTableIndexRequest.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/SetTableIndexResponse.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/UpdateApplyRequest.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/UpdateApplyResponse.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/VerifyIdlFilesRequest.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/VerifyIdlFilesResponse.h>
 
@@ -103,103 +137,154 @@ namespace TencentCloud
                 TcaplusdbClient(const Credential &credential, const std::string &region);
                 TcaplusdbClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::ClearTablesResponse> ClearTablesOutcome;
+                typedef Outcome<Core::Error, Model::ClearTablesResponse> ClearTablesOutcome;
                 typedef std::future<ClearTablesOutcome> ClearTablesOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::ClearTablesRequest&, ClearTablesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ClearTablesAsyncHandler;
-                typedef Outcome<Error, Model::CompareIdlFilesResponse> CompareIdlFilesOutcome;
+                typedef Outcome<Core::Error, Model::CompareIdlFilesResponse> CompareIdlFilesOutcome;
                 typedef std::future<CompareIdlFilesOutcome> CompareIdlFilesOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::CompareIdlFilesRequest&, CompareIdlFilesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CompareIdlFilesAsyncHandler;
-                typedef Outcome<Error, Model::CreateBackupResponse> CreateBackupOutcome;
+                typedef Outcome<Core::Error, Model::CreateBackupResponse> CreateBackupOutcome;
                 typedef std::future<CreateBackupOutcome> CreateBackupOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::CreateBackupRequest&, CreateBackupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateBackupAsyncHandler;
-                typedef Outcome<Error, Model::CreateClusterResponse> CreateClusterOutcome;
+                typedef Outcome<Core::Error, Model::CreateClusterResponse> CreateClusterOutcome;
                 typedef std::future<CreateClusterOutcome> CreateClusterOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::CreateClusterRequest&, CreateClusterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateClusterAsyncHandler;
-                typedef Outcome<Error, Model::CreateTableGroupResponse> CreateTableGroupOutcome;
+                typedef Outcome<Core::Error, Model::CreateSnapshotsResponse> CreateSnapshotsOutcome;
+                typedef std::future<CreateSnapshotsOutcome> CreateSnapshotsOutcomeCallable;
+                typedef std::function<void(const TcaplusdbClient*, const Model::CreateSnapshotsRequest&, CreateSnapshotsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSnapshotsAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateTableGroupResponse> CreateTableGroupOutcome;
                 typedef std::future<CreateTableGroupOutcome> CreateTableGroupOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::CreateTableGroupRequest&, CreateTableGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateTableGroupAsyncHandler;
-                typedef Outcome<Error, Model::CreateTablesResponse> CreateTablesOutcome;
+                typedef Outcome<Core::Error, Model::CreateTablesResponse> CreateTablesOutcome;
                 typedef std::future<CreateTablesOutcome> CreateTablesOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::CreateTablesRequest&, CreateTablesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateTablesAsyncHandler;
-                typedef Outcome<Error, Model::DeleteClusterResponse> DeleteClusterOutcome;
+                typedef Outcome<Core::Error, Model::DeleteClusterResponse> DeleteClusterOutcome;
                 typedef std::future<DeleteClusterOutcome> DeleteClusterOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::DeleteClusterRequest&, DeleteClusterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteClusterAsyncHandler;
-                typedef Outcome<Error, Model::DeleteIdlFilesResponse> DeleteIdlFilesOutcome;
+                typedef Outcome<Core::Error, Model::DeleteIdlFilesResponse> DeleteIdlFilesOutcome;
                 typedef std::future<DeleteIdlFilesOutcome> DeleteIdlFilesOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::DeleteIdlFilesRequest&, DeleteIdlFilesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteIdlFilesAsyncHandler;
-                typedef Outcome<Error, Model::DeleteTableGroupResponse> DeleteTableGroupOutcome;
+                typedef Outcome<Core::Error, Model::DeleteSnapshotsResponse> DeleteSnapshotsOutcome;
+                typedef std::future<DeleteSnapshotsOutcome> DeleteSnapshotsOutcomeCallable;
+                typedef std::function<void(const TcaplusdbClient*, const Model::DeleteSnapshotsRequest&, DeleteSnapshotsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteSnapshotsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteTableDataFlowResponse> DeleteTableDataFlowOutcome;
+                typedef std::future<DeleteTableDataFlowOutcome> DeleteTableDataFlowOutcomeCallable;
+                typedef std::function<void(const TcaplusdbClient*, const Model::DeleteTableDataFlowRequest&, DeleteTableDataFlowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTableDataFlowAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteTableGroupResponse> DeleteTableGroupOutcome;
                 typedef std::future<DeleteTableGroupOutcome> DeleteTableGroupOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::DeleteTableGroupRequest&, DeleteTableGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTableGroupAsyncHandler;
-                typedef Outcome<Error, Model::DeleteTablesResponse> DeleteTablesOutcome;
+                typedef Outcome<Core::Error, Model::DeleteTableIndexResponse> DeleteTableIndexOutcome;
+                typedef std::future<DeleteTableIndexOutcome> DeleteTableIndexOutcomeCallable;
+                typedef std::function<void(const TcaplusdbClient*, const Model::DeleteTableIndexRequest&, DeleteTableIndexOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTableIndexAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteTablesResponse> DeleteTablesOutcome;
                 typedef std::future<DeleteTablesOutcome> DeleteTablesOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::DeleteTablesRequest&, DeleteTablesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTablesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeClusterTagsResponse> DescribeClusterTagsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeApplicationsResponse> DescribeApplicationsOutcome;
+                typedef std::future<DescribeApplicationsOutcome> DescribeApplicationsOutcomeCallable;
+                typedef std::function<void(const TcaplusdbClient*, const Model::DescribeApplicationsRequest&, DescribeApplicationsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApplicationsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeClusterTagsResponse> DescribeClusterTagsOutcome;
                 typedef std::future<DescribeClusterTagsOutcome> DescribeClusterTagsOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::DescribeClusterTagsRequest&, DescribeClusterTagsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterTagsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeClustersResponse> DescribeClustersOutcome;
+                typedef Outcome<Core::Error, Model::DescribeClustersResponse> DescribeClustersOutcome;
                 typedef std::future<DescribeClustersOutcome> DescribeClustersOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::DescribeClustersRequest&, DescribeClustersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClustersAsyncHandler;
-                typedef Outcome<Error, Model::DescribeIdlFileInfosResponse> DescribeIdlFileInfosOutcome;
+                typedef Outcome<Core::Error, Model::DescribeIdlFileInfosResponse> DescribeIdlFileInfosOutcome;
                 typedef std::future<DescribeIdlFileInfosOutcome> DescribeIdlFileInfosOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::DescribeIdlFileInfosRequest&, DescribeIdlFileInfosOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIdlFileInfosAsyncHandler;
-                typedef Outcome<Error, Model::DescribeRegionsResponse> DescribeRegionsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeMachineResponse> DescribeMachineOutcome;
+                typedef std::future<DescribeMachineOutcome> DescribeMachineOutcomeCallable;
+                typedef std::function<void(const TcaplusdbClient*, const Model::DescribeMachineRequest&, DescribeMachineOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMachineAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRegionsResponse> DescribeRegionsOutcome;
                 typedef std::future<DescribeRegionsOutcome> DescribeRegionsOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::DescribeRegionsRequest&, DescribeRegionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRegionsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTableGroupTagsResponse> DescribeTableGroupTagsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeSnapshotsResponse> DescribeSnapshotsOutcome;
+                typedef std::future<DescribeSnapshotsOutcome> DescribeSnapshotsOutcomeCallable;
+                typedef std::function<void(const TcaplusdbClient*, const Model::DescribeSnapshotsRequest&, DescribeSnapshotsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSnapshotsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTableGroupTagsResponse> DescribeTableGroupTagsOutcome;
                 typedef std::future<DescribeTableGroupTagsOutcome> DescribeTableGroupTagsOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::DescribeTableGroupTagsRequest&, DescribeTableGroupTagsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTableGroupTagsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTableGroupsResponse> DescribeTableGroupsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTableGroupsResponse> DescribeTableGroupsOutcome;
                 typedef std::future<DescribeTableGroupsOutcome> DescribeTableGroupsOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::DescribeTableGroupsRequest&, DescribeTableGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTableGroupsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTableTagsResponse> DescribeTableTagsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTableTagsResponse> DescribeTableTagsOutcome;
                 typedef std::future<DescribeTableTagsOutcome> DescribeTableTagsOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::DescribeTableTagsRequest&, DescribeTableTagsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTableTagsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTablesResponse> DescribeTablesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTablesResponse> DescribeTablesOutcome;
                 typedef std::future<DescribeTablesOutcome> DescribeTablesOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::DescribeTablesRequest&, DescribeTablesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTablesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTablesInRecycleResponse> DescribeTablesInRecycleOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTablesInRecycleResponse> DescribeTablesInRecycleOutcome;
                 typedef std::future<DescribeTablesInRecycleOutcome> DescribeTablesInRecycleOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::DescribeTablesInRecycleRequest&, DescribeTablesInRecycleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTablesInRecycleAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTasksResponse> DescribeTasksOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTasksResponse> DescribeTasksOutcome;
                 typedef std::future<DescribeTasksOutcome> DescribeTasksOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::DescribeTasksRequest&, DescribeTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTasksAsyncHandler;
-                typedef Outcome<Error, Model::DescribeUinInWhitelistResponse> DescribeUinInWhitelistOutcome;
+                typedef Outcome<Core::Error, Model::DescribeUinInWhitelistResponse> DescribeUinInWhitelistOutcome;
                 typedef std::future<DescribeUinInWhitelistOutcome> DescribeUinInWhitelistOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::DescribeUinInWhitelistRequest&, DescribeUinInWhitelistOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUinInWhitelistAsyncHandler;
-                typedef Outcome<Error, Model::ModifyClusterNameResponse> ModifyClusterNameOutcome;
+                typedef Outcome<Core::Error, Model::DisableRestProxyResponse> DisableRestProxyOutcome;
+                typedef std::future<DisableRestProxyOutcome> DisableRestProxyOutcomeCallable;
+                typedef std::function<void(const TcaplusdbClient*, const Model::DisableRestProxyRequest&, DisableRestProxyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableRestProxyAsyncHandler;
+                typedef Outcome<Core::Error, Model::EnableRestProxyResponse> EnableRestProxyOutcome;
+                typedef std::future<EnableRestProxyOutcome> EnableRestProxyOutcomeCallable;
+                typedef std::function<void(const TcaplusdbClient*, const Model::EnableRestProxyRequest&, EnableRestProxyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableRestProxyAsyncHandler;
+                typedef Outcome<Core::Error, Model::ImportSnapshotsResponse> ImportSnapshotsOutcome;
+                typedef std::future<ImportSnapshotsOutcome> ImportSnapshotsOutcomeCallable;
+                typedef std::function<void(const TcaplusdbClient*, const Model::ImportSnapshotsRequest&, ImportSnapshotsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ImportSnapshotsAsyncHandler;
+                typedef Outcome<Core::Error, Model::MergeTablesDataResponse> MergeTablesDataOutcome;
+                typedef std::future<MergeTablesDataOutcome> MergeTablesDataOutcomeCallable;
+                typedef std::function<void(const TcaplusdbClient*, const Model::MergeTablesDataRequest&, MergeTablesDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> MergeTablesDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyCensorshipResponse> ModifyCensorshipOutcome;
+                typedef std::future<ModifyCensorshipOutcome> ModifyCensorshipOutcomeCallable;
+                typedef std::function<void(const TcaplusdbClient*, const Model::ModifyCensorshipRequest&, ModifyCensorshipOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCensorshipAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyClusterMachineResponse> ModifyClusterMachineOutcome;
+                typedef std::future<ModifyClusterMachineOutcome> ModifyClusterMachineOutcomeCallable;
+                typedef std::function<void(const TcaplusdbClient*, const Model::ModifyClusterMachineRequest&, ModifyClusterMachineOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyClusterMachineAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyClusterNameResponse> ModifyClusterNameOutcome;
                 typedef std::future<ModifyClusterNameOutcome> ModifyClusterNameOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::ModifyClusterNameRequest&, ModifyClusterNameOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyClusterNameAsyncHandler;
-                typedef Outcome<Error, Model::ModifyClusterPasswordResponse> ModifyClusterPasswordOutcome;
+                typedef Outcome<Core::Error, Model::ModifyClusterPasswordResponse> ModifyClusterPasswordOutcome;
                 typedef std::future<ModifyClusterPasswordOutcome> ModifyClusterPasswordOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::ModifyClusterPasswordRequest&, ModifyClusterPasswordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyClusterPasswordAsyncHandler;
-                typedef Outcome<Error, Model::ModifyClusterTagsResponse> ModifyClusterTagsOutcome;
+                typedef Outcome<Core::Error, Model::ModifyClusterTagsResponse> ModifyClusterTagsOutcome;
                 typedef std::future<ModifyClusterTagsOutcome> ModifyClusterTagsOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::ModifyClusterTagsRequest&, ModifyClusterTagsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyClusterTagsAsyncHandler;
-                typedef Outcome<Error, Model::ModifyTableGroupNameResponse> ModifyTableGroupNameOutcome;
+                typedef Outcome<Core::Error, Model::ModifySnapshotsResponse> ModifySnapshotsOutcome;
+                typedef std::future<ModifySnapshotsOutcome> ModifySnapshotsOutcomeCallable;
+                typedef std::function<void(const TcaplusdbClient*, const Model::ModifySnapshotsRequest&, ModifySnapshotsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySnapshotsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyTableGroupNameResponse> ModifyTableGroupNameOutcome;
                 typedef std::future<ModifyTableGroupNameOutcome> ModifyTableGroupNameOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::ModifyTableGroupNameRequest&, ModifyTableGroupNameOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyTableGroupNameAsyncHandler;
-                typedef Outcome<Error, Model::ModifyTableGroupTagsResponse> ModifyTableGroupTagsOutcome;
+                typedef Outcome<Core::Error, Model::ModifyTableGroupTagsResponse> ModifyTableGroupTagsOutcome;
                 typedef std::future<ModifyTableGroupTagsOutcome> ModifyTableGroupTagsOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::ModifyTableGroupTagsRequest&, ModifyTableGroupTagsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyTableGroupTagsAsyncHandler;
-                typedef Outcome<Error, Model::ModifyTableMemosResponse> ModifyTableMemosOutcome;
+                typedef Outcome<Core::Error, Model::ModifyTableMemosResponse> ModifyTableMemosOutcome;
                 typedef std::future<ModifyTableMemosOutcome> ModifyTableMemosOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::ModifyTableMemosRequest&, ModifyTableMemosOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyTableMemosAsyncHandler;
-                typedef Outcome<Error, Model::ModifyTableQuotasResponse> ModifyTableQuotasOutcome;
+                typedef Outcome<Core::Error, Model::ModifyTableQuotasResponse> ModifyTableQuotasOutcome;
                 typedef std::future<ModifyTableQuotasOutcome> ModifyTableQuotasOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::ModifyTableQuotasRequest&, ModifyTableQuotasOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyTableQuotasAsyncHandler;
-                typedef Outcome<Error, Model::ModifyTableTagsResponse> ModifyTableTagsOutcome;
+                typedef Outcome<Core::Error, Model::ModifyTableTagsResponse> ModifyTableTagsOutcome;
                 typedef std::future<ModifyTableTagsOutcome> ModifyTableTagsOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::ModifyTableTagsRequest&, ModifyTableTagsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyTableTagsAsyncHandler;
-                typedef Outcome<Error, Model::ModifyTablesResponse> ModifyTablesOutcome;
+                typedef Outcome<Core::Error, Model::ModifyTablesResponse> ModifyTablesOutcome;
                 typedef std::future<ModifyTablesOutcome> ModifyTablesOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::ModifyTablesRequest&, ModifyTablesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyTablesAsyncHandler;
-                typedef Outcome<Error, Model::RecoverRecycleTablesResponse> RecoverRecycleTablesOutcome;
+                typedef Outcome<Core::Error, Model::RecoverRecycleTablesResponse> RecoverRecycleTablesOutcome;
                 typedef std::future<RecoverRecycleTablesOutcome> RecoverRecycleTablesOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::RecoverRecycleTablesRequest&, RecoverRecycleTablesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecoverRecycleTablesAsyncHandler;
-                typedef Outcome<Error, Model::RollbackTablesResponse> RollbackTablesOutcome;
+                typedef Outcome<Core::Error, Model::RollbackTablesResponse> RollbackTablesOutcome;
                 typedef std::future<RollbackTablesOutcome> RollbackTablesOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::RollbackTablesRequest&, RollbackTablesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RollbackTablesAsyncHandler;
-                typedef Outcome<Error, Model::VerifyIdlFilesResponse> VerifyIdlFilesOutcome;
+                typedef Outcome<Core::Error, Model::SetTableDataFlowResponse> SetTableDataFlowOutcome;
+                typedef std::future<SetTableDataFlowOutcome> SetTableDataFlowOutcomeCallable;
+                typedef std::function<void(const TcaplusdbClient*, const Model::SetTableDataFlowRequest&, SetTableDataFlowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetTableDataFlowAsyncHandler;
+                typedef Outcome<Core::Error, Model::SetTableIndexResponse> SetTableIndexOutcome;
+                typedef std::future<SetTableIndexOutcome> SetTableIndexOutcomeCallable;
+                typedef std::function<void(const TcaplusdbClient*, const Model::SetTableIndexRequest&, SetTableIndexOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetTableIndexAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateApplyResponse> UpdateApplyOutcome;
+                typedef std::future<UpdateApplyOutcome> UpdateApplyOutcomeCallable;
+                typedef std::function<void(const TcaplusdbClient*, const Model::UpdateApplyRequest&, UpdateApplyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateApplyAsyncHandler;
+                typedef Outcome<Core::Error, Model::VerifyIdlFilesResponse> VerifyIdlFilesOutcome;
                 typedef std::future<VerifyIdlFilesOutcome> VerifyIdlFilesOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::VerifyIdlFilesRequest&, VerifyIdlFilesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> VerifyIdlFilesAsyncHandler;
 
@@ -242,6 +327,15 @@ namespace TencentCloud
                 CreateClusterOutcomeCallable CreateClusterCallable(const Model::CreateClusterRequest& request);
 
                 /**
+                 *This API is used to create one or more table snapshots at a specified past time point.
+                 * @param req CreateSnapshotsRequest
+                 * @return CreateSnapshotsOutcome
+                 */
+                CreateSnapshotsOutcome CreateSnapshots(const Model::CreateSnapshotsRequest &request);
+                void CreateSnapshotsAsync(const Model::CreateSnapshotsRequest& request, const CreateSnapshotsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateSnapshotsOutcomeCallable CreateSnapshotsCallable(const Model::CreateSnapshotsRequest& request);
+
+                /**
                  *This API is used to create a table group in a TcaplusDB cluster.
                  * @param req CreateTableGroupRequest
                  * @return CreateTableGroupOutcome
@@ -278,6 +372,24 @@ namespace TencentCloud
                 DeleteIdlFilesOutcomeCallable DeleteIdlFilesCallable(const Model::DeleteIdlFilesRequest& request);
 
                 /**
+                 *This API is used to delete one or more table snapshots.
+                 * @param req DeleteSnapshotsRequest
+                 * @return DeleteSnapshotsOutcome
+                 */
+                DeleteSnapshotsOutcome DeleteSnapshots(const Model::DeleteSnapshotsRequest &request);
+                void DeleteSnapshotsAsync(const Model::DeleteSnapshotsRequest& request, const DeleteSnapshotsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteSnapshotsOutcomeCallable DeleteSnapshotsCallable(const Model::DeleteSnapshotsRequest& request);
+
+                /**
+                 *This API is used to disable data subscription for tables.
+                 * @param req DeleteTableDataFlowRequest
+                 * @return DeleteTableDataFlowOutcome
+                 */
+                DeleteTableDataFlowOutcome DeleteTableDataFlow(const Model::DeleteTableDataFlowRequest &request);
+                void DeleteTableDataFlowAsync(const Model::DeleteTableDataFlowRequest& request, const DeleteTableDataFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteTableDataFlowOutcomeCallable DeleteTableDataFlowCallable(const Model::DeleteTableDataFlowRequest& request);
+
+                /**
                  *This API is used to delete a table group.
                  * @param req DeleteTableGroupRequest
                  * @return DeleteTableGroupOutcome
@@ -287,6 +399,15 @@ namespace TencentCloud
                 DeleteTableGroupOutcomeCallable DeleteTableGroupCallable(const Model::DeleteTableGroupRequest& request);
 
                 /**
+                 *This API is used to delete the global index from a table.
+                 * @param req DeleteTableIndexRequest
+                 * @return DeleteTableIndexOutcome
+                 */
+                DeleteTableIndexOutcome DeleteTableIndex(const Model::DeleteTableIndexRequest &request);
+                void DeleteTableIndexAsync(const Model::DeleteTableIndexRequest& request, const DeleteTableIndexAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteTableIndexOutcomeCallable DeleteTableIndexCallable(const Model::DeleteTableIndexRequest& request);
+
+                /**
                  *This API is used to drop a specified table. Calling this API for the first time means to move the table to the recycle bin, while calling it again means to drop the table completely from the recycle bin.
                  * @param req DeleteTablesRequest
                  * @return DeleteTablesOutcome
@@ -294,6 +415,15 @@ namespace TencentCloud
                 DeleteTablesOutcome DeleteTables(const Model::DeleteTablesRequest &request);
                 void DeleteTablesAsync(const Model::DeleteTablesRequest& request, const DeleteTablesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteTablesOutcomeCallable DeleteTablesCallable(const Model::DeleteTablesRequest& request);
+
+                /**
+                 *This API is used to query the list of cluster operation applications.
+                 * @param req DescribeApplicationsRequest
+                 * @return DescribeApplicationsOutcome
+                 */
+                DescribeApplicationsOutcome DescribeApplications(const Model::DescribeApplicationsRequest &request);
+                void DescribeApplicationsAsync(const Model::DescribeApplicationsRequest& request, const DescribeApplicationsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeApplicationsOutcomeCallable DescribeApplicationsCallable(const Model::DescribeApplicationsRequest& request);
 
                 /**
                  *This API is used to get the associated tag list of a cluster.
@@ -323,6 +453,15 @@ namespace TencentCloud
                 DescribeIdlFileInfosOutcomeCallable DescribeIdlFileInfosCallable(const Model::DescribeIdlFileInfosRequest& request);
 
                 /**
+                 *This API is used to query the available machines in a dedicated cluster.
+                 * @param req DescribeMachineRequest
+                 * @return DescribeMachineOutcome
+                 */
+                DescribeMachineOutcome DescribeMachine(const Model::DescribeMachineRequest &request);
+                void DescribeMachineAsync(const Model::DescribeMachineRequest& request, const DescribeMachineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMachineOutcomeCallable DescribeMachineCallable(const Model::DescribeMachineRequest& request);
+
+                /**
                  *This API is used to query the list of regions supported by the TcaplusDB service.
                  * @param req DescribeRegionsRequest
                  * @return DescribeRegionsOutcome
@@ -330,6 +469,15 @@ namespace TencentCloud
                 DescribeRegionsOutcome DescribeRegions(const Model::DescribeRegionsRequest &request);
                 void DescribeRegionsAsync(const Model::DescribeRegionsRequest& request, const DescribeRegionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeRegionsOutcomeCallable DescribeRegionsCallable(const Model::DescribeRegionsRequest& request);
+
+                /**
+                 *This API is used to query the list of table snapshots.
+                 * @param req DescribeSnapshotsRequest
+                 * @return DescribeSnapshotsOutcome
+                 */
+                DescribeSnapshotsOutcome DescribeSnapshots(const Model::DescribeSnapshotsRequest &request);
+                void DescribeSnapshotsAsync(const Model::DescribeSnapshotsRequest& request, const DescribeSnapshotsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSnapshotsOutcomeCallable DescribeSnapshotsCallable(const Model::DescribeSnapshotsRequest& request);
 
                 /**
                  *This API is used to get the associated tag list of a table group.
@@ -386,13 +534,67 @@ namespace TencentCloud
                 DescribeTasksOutcomeCallable DescribeTasksCallable(const Model::DescribeTasksRequest& request);
 
                 /**
-                 *This API is used to query whether the current user is in the whitelist and control whether the user can create TDR-type apps or tables.
+                 *This API is used to query whether the current user is in the allowlist and control whether the user can create TDR-type apps or tables.
                  * @param req DescribeUinInWhitelistRequest
                  * @return DescribeUinInWhitelistOutcome
                  */
                 DescribeUinInWhitelistOutcome DescribeUinInWhitelist(const Model::DescribeUinInWhitelistRequest &request);
                 void DescribeUinInWhitelistAsync(const Model::DescribeUinInWhitelistRequest& request, const DescribeUinInWhitelistAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeUinInWhitelistOutcomeCallable DescribeUinInWhitelistCallable(const Model::DescribeUinInWhitelistRequest& request);
+
+                /**
+                 *This API is used to disable the RESTful API.
+                 * @param req DisableRestProxyRequest
+                 * @return DisableRestProxyOutcome
+                 */
+                DisableRestProxyOutcome DisableRestProxy(const Model::DisableRestProxyRequest &request);
+                void DisableRestProxyAsync(const Model::DisableRestProxyRequest& request, const DisableRestProxyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DisableRestProxyOutcomeCallable DisableRestProxyCallable(const Model::DisableRestProxyRequest& request);
+
+                /**
+                 *This API is used to enable the RESTful API.
+                 * @param req EnableRestProxyRequest
+                 * @return EnableRestProxyOutcome
+                 */
+                EnableRestProxyOutcome EnableRestProxy(const Model::EnableRestProxyRequest &request);
+                void EnableRestProxyAsync(const Model::EnableRestProxyRequest& request, const EnableRestProxyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                EnableRestProxyOutcomeCallable EnableRestProxyCallable(const Model::EnableRestProxyRequest& request);
+
+                /**
+                 *This API is used to import a snapshot into a new table or the original table from which the snapshot was created.
+                 * @param req ImportSnapshotsRequest
+                 * @return ImportSnapshotsOutcome
+                 */
+                ImportSnapshotsOutcome ImportSnapshots(const Model::ImportSnapshotsRequest &request);
+                void ImportSnapshotsAsync(const Model::ImportSnapshotsRequest& request, const ImportSnapshotsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ImportSnapshotsOutcomeCallable ImportSnapshotsCallable(const Model::ImportSnapshotsRequest& request);
+
+                /**
+                 *This API is used to merge tables.
+                 * @param req MergeTablesDataRequest
+                 * @return MergeTablesDataOutcome
+                 */
+                MergeTablesDataOutcome MergeTablesData(const Model::MergeTablesDataRequest &request);
+                void MergeTablesDataAsync(const Model::MergeTablesDataRequest& request, const MergeTablesDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                MergeTablesDataOutcomeCallable MergeTablesDataCallable(const Model::MergeTablesDataRequest& request);
+
+                /**
+                 *This API is used to enable or disable the cluster operation approval feature.
+                 * @param req ModifyCensorshipRequest
+                 * @return ModifyCensorshipOutcome
+                 */
+                ModifyCensorshipOutcome ModifyCensorship(const Model::ModifyCensorshipRequest &request);
+                void ModifyCensorshipAsync(const Model::ModifyCensorshipRequest& request, const ModifyCensorshipAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyCensorshipOutcomeCallable ModifyCensorshipCallable(const Model::ModifyCensorshipRequest& request);
+
+                /**
+                 *This API is used to modify the machines of a dedicated cluster.
+                 * @param req ModifyClusterMachineRequest
+                 * @return ModifyClusterMachineOutcome
+                 */
+                ModifyClusterMachineOutcome ModifyClusterMachine(const Model::ModifyClusterMachineRequest &request);
+                void ModifyClusterMachineAsync(const Model::ModifyClusterMachineRequest& request, const ModifyClusterMachineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyClusterMachineOutcomeCallable ModifyClusterMachineCallable(const Model::ModifyClusterMachineRequest& request);
 
                 /**
                  *This API is used to rename a specified cluster.
@@ -420,6 +622,15 @@ namespace TencentCloud
                 ModifyClusterTagsOutcome ModifyClusterTags(const Model::ModifyClusterTagsRequest &request);
                 void ModifyClusterTagsAsync(const Model::ModifyClusterTagsRequest& request, const ModifyClusterTagsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyClusterTagsOutcomeCallable ModifyClusterTagsCallable(const Model::ModifyClusterTagsRequest& request);
+
+                /**
+                 *This API is used to modify the expiration time of one or more table snapshots.
+                 * @param req ModifySnapshotsRequest
+                 * @return ModifySnapshotsOutcome
+                 */
+                ModifySnapshotsOutcome ModifySnapshots(const Model::ModifySnapshotsRequest &request);
+                void ModifySnapshotsAsync(const Model::ModifySnapshotsRequest& request, const ModifySnapshotsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifySnapshotsOutcomeCallable ModifySnapshotsCallable(const Model::ModifySnapshotsRequest& request);
 
                 /**
                  *This API is used to rename a TcaplusDB table group.
@@ -492,6 +703,33 @@ namespace TencentCloud
                 RollbackTablesOutcome RollbackTables(const Model::RollbackTablesRequest &request);
                 void RollbackTablesAsync(const Model::RollbackTablesRequest& request, const RollbackTablesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RollbackTablesOutcomeCallable RollbackTablesCallable(const Model::RollbackTablesRequest& request);
+
+                /**
+                 *This API is used to enable data subscription for tables or modify the feature's configurations.
+                 * @param req SetTableDataFlowRequest
+                 * @return SetTableDataFlowOutcome
+                 */
+                SetTableDataFlowOutcome SetTableDataFlow(const Model::SetTableDataFlowRequest &request);
+                void SetTableDataFlowAsync(const Model::SetTableDataFlowRequest& request, const SetTableDataFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SetTableDataFlowOutcomeCallable SetTableDataFlowCallable(const Model::SetTableDataFlowRequest& request);
+
+                /**
+                 *This API is used to create a global index for a table.
+                 * @param req SetTableIndexRequest
+                 * @return SetTableIndexOutcome
+                 */
+                SetTableIndexOutcome SetTableIndex(const Model::SetTableIndexRequest &request);
+                void SetTableIndexAsync(const Model::SetTableIndexRequest& request, const SetTableIndexAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SetTableIndexOutcomeCallable SetTableIndexCallable(const Model::SetTableIndexRequest& request);
+
+                /**
+                 *This API is used to update the application status.
+                 * @param req UpdateApplyRequest
+                 * @return UpdateApplyOutcome
+                 */
+                UpdateApplyOutcome UpdateApply(const Model::UpdateApplyRequest &request);
+                void UpdateApplyAsync(const Model::UpdateApplyRequest& request, const UpdateApplyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateApplyOutcomeCallable UpdateApplyCallable(const Model::UpdateApplyRequest& request);
 
                 /**
                  *This API is used to upload and verify a table creation file and return the definition of tables that are verified to be valid.

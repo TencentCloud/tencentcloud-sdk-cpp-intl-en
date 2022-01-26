@@ -73,7 +73,7 @@ namespace TencentCloud
 <li>address-ip - String - (Filter condition) Private IPv4 address.</li>
 <li>tag-key - String - Required: no - (Filter condition) Filters by tag key. For more information, see Example 2.</li>
 <li> `tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see Example 3.</li>
-<li>is-primary - Boolean - Required: no - (Filter condition) Filters based on whether it is a primary ENI. If the value is 'true', filter only the primary ENI. If the value is 'false', filter only the secondary ENI. If the secondary filter parameter is provided, filter the both.</li>
+<li>is-primary - Boolean - Required: no - (Filter condition) Filters based on whether it is a primary ENI. If the value is ‘true’, filter only the primary ENI. If the value is ‘false’, filter only the secondary ENI. If the secondary filter parameter is provided, filter the both.</li>
                      * @return Filters Filter condition. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
 <li>subnet-id - String - (Filter condition) Subnet instance ID, such as `subnet-f49l6u0z`.</li>
@@ -85,7 +85,7 @@ namespace TencentCloud
 <li>address-ip - String - (Filter condition) Private IPv4 address.</li>
 <li>tag-key - String - Required: no - (Filter condition) Filters by tag key. For more information, see Example 2.</li>
 <li> `tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see Example 3.</li>
-<li>is-primary - Boolean - Required: no - (Filter condition) Filters based on whether it is a primary ENI. If the value is 'true', filter only the primary ENI. If the value is 'false', filter only the secondary ENI. If the secondary filter parameter is provided, filter the both.</li>
+<li>is-primary - Boolean - Required: no - (Filter condition) Filters based on whether it is a primary ENI. If the value is ‘true’, filter only the primary ENI. If the value is ‘false’, filter only the secondary ENI. If the secondary filter parameter is provided, filter the both.</li>
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -101,7 +101,7 @@ namespace TencentCloud
 <li>address-ip - String - (Filter condition) Private IPv4 address.</li>
 <li>tag-key - String - Required: no - (Filter condition) Filters by tag key. For more information, see Example 2.</li>
 <li> `tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see Example 3.</li>
-<li>is-primary - Boolean - Required: no - (Filter condition) Filters based on whether it is a primary ENI. If the value is 'true', filter only the primary ENI. If the value is 'false', filter only the secondary ENI. If the secondary filter parameter is provided, filter the both.</li>
+<li>is-primary - Boolean - Required: no - (Filter condition) Filters based on whether it is a primary ENI. If the value is ‘true’, filter only the primary ENI. If the value is ‘false’, filter only the secondary ENI. If the secondary filter parameter is provided, filter the both.</li>
                      * @param Filters Filter condition. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
 <li>subnet-id - String - (Filter condition) Subnet instance ID, such as `subnet-f49l6u0z`.</li>
@@ -113,7 +113,7 @@ namespace TencentCloud
 <li>address-ip - String - (Filter condition) Private IPv4 address.</li>
 <li>tag-key - String - Required: no - (Filter condition) Filters by tag key. For more information, see Example 2.</li>
 <li> `tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see Example 3.</li>
-<li>is-primary - Boolean - Required: no - (Filter condition) Filters based on whether it is a primary ENI. If the value is 'true', filter only the primary ENI. If the value is 'false', filter only the secondary ENI. If the secondary filter parameter is provided, filter the both.</li>
+<li>is-primary - Boolean - Required: no - (Filter condition) Filters based on whether it is a primary ENI. If the value is ‘true’, filter only the primary ENI. If the value is ‘false’, filter only the secondary ENI. If the secondary filter parameter is provided, filter the both.</li>
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -179,7 +179,7 @@ namespace TencentCloud
 <li>address-ip - String - (Filter condition) Private IPv4 address.</li>
 <li>tag-key - String - Required: no - (Filter condition) Filters by tag key. For more information, see Example 2.</li>
 <li> `tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see Example 3.</li>
-<li>is-primary - Boolean - Required: no - (Filter condition) Filters based on whether it is a primary ENI. If the value is 'true', filter only the primary ENI. If the value is 'false', filter only the secondary ENI. If the secondary filter parameter is provided, filter the both.</li>
+<li>is-primary - Boolean - Required: no - (Filter condition) Filters based on whether it is a primary ENI. If the value is ‘true’, filter only the primary ENI. If the value is ‘false’, filter only the secondary ENI. If the secondary filter parameter is provided, filter the both.</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

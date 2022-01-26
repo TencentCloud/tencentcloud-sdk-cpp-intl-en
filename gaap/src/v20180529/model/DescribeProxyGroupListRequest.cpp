@@ -20,28 +20,27 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeProxyGroupListRequest::DescribeProxyGroupListRequest() :
     m_offsetHasBeenSet(false),
     m_limitHasBeenSet(false),
     m_projectIdHasBeenSet(false),
-    m_tagSetHasBeenSet(false),
-    m_filtersHasBeenSet(false)
+    m_filtersHasBeenSet(false),
+    m_tagSetHasBeenSet(false)
 {
 }
 
 string DescribeProxyGroupListRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_offsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Offset";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_offset, allocator);
@@ -49,7 +48,7 @@ string DescribeProxyGroupListRequest::ToJsonString() const
 
     if (m_limitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Limit";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_limit, allocator);
@@ -57,45 +56,45 @@ string DescribeProxyGroupListRequest::ToJsonString() const
 
     if (m_projectIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProjectId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_projectId, allocator);
     }
 
-    if (m_tagSetHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "TagSet";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
-
-        int i=0;
-        for (auto itr = m_tagSet.begin(); itr != m_tagSet.end(); ++itr, ++i)
-        {
-            d[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
-            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
-        }
-    }
-
     if (m_filtersHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Filters";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_filters.begin(); itr != m_filters.end(); ++itr, ++i)
         {
-            d[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_tagSetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TagSet";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tagSet.begin(); itr != m_tagSet.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -149,22 +148,6 @@ bool DescribeProxyGroupListRequest::ProjectIdHasBeenSet() const
     return m_projectIdHasBeenSet;
 }
 
-vector<TagPair> DescribeProxyGroupListRequest::GetTagSet() const
-{
-    return m_tagSet;
-}
-
-void DescribeProxyGroupListRequest::SetTagSet(const vector<TagPair>& _tagSet)
-{
-    m_tagSet = _tagSet;
-    m_tagSetHasBeenSet = true;
-}
-
-bool DescribeProxyGroupListRequest::TagSetHasBeenSet() const
-{
-    return m_tagSetHasBeenSet;
-}
-
 vector<Filter> DescribeProxyGroupListRequest::GetFilters() const
 {
     return m_filters;
@@ -179,6 +162,22 @@ void DescribeProxyGroupListRequest::SetFilters(const vector<Filter>& _filters)
 bool DescribeProxyGroupListRequest::FiltersHasBeenSet() const
 {
     return m_filtersHasBeenSet;
+}
+
+vector<TagPair> DescribeProxyGroupListRequest::GetTagSet() const
+{
+    return m_tagSet;
+}
+
+void DescribeProxyGroupListRequest::SetTagSet(const vector<TagPair>& _tagSet)
+{
+    m_tagSet = _tagSet;
+    m_tagSetHasBeenSet = true;
+}
+
+bool DescribeProxyGroupListRequest::TagSetHasBeenSet() const
+{
+    return m_tagSetHasBeenSet;
 }
 
 

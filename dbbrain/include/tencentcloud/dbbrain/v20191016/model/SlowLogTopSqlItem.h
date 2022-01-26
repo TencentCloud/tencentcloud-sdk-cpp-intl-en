@@ -317,14 +317,14 @@ namespace TencentCloud
                     bool SqlTextHasBeenSet() const;
 
                     /**
-                     * 获取Schema
-                     * @return Schema Schema
+                     * 获取Database name
+                     * @return Schema Database name
                      */
                     std::string GetSchema() const;
 
                     /**
-                     * 设置Schema
-                     * @param Schema Schema
+                     * 设置Database name
+                     * @param Schema Database name
                      */
                     void SetSchema(const std::string& _schema);
 
@@ -405,6 +405,78 @@ namespace TencentCloud
                      * @return RowsSentRatio 是否已赋值
                      */
                     bool RowsSentRatioHasBeenSet() const;
+
+                    /**
+                     * 获取Average execution time
+                     * @return QueryTimeAvg Average execution time
+                     */
+                    double GetQueryTimeAvg() const;
+
+                    /**
+                     * 设置Average execution time
+                     * @param QueryTimeAvg Average execution time
+                     */
+                    void SetQueryTimeAvg(const double& _queryTimeAvg);
+
+                    /**
+                     * 判断参数 QueryTimeAvg 是否已赋值
+                     * @return QueryTimeAvg 是否已赋值
+                     */
+                    bool QueryTimeAvgHasBeenSet() const;
+
+                    /**
+                     * 获取Average number of rows returned
+                     * @return RowsSentAvg Average number of rows returned
+                     */
+                    double GetRowsSentAvg() const;
+
+                    /**
+                     * 设置Average number of rows returned
+                     * @param RowsSentAvg Average number of rows returned
+                     */
+                    void SetRowsSentAvg(const double& _rowsSentAvg);
+
+                    /**
+                     * 判断参数 RowsSentAvg 是否已赋值
+                     * @return RowsSentAvg 是否已赋值
+                     */
+                    bool RowsSentAvgHasBeenSet() const;
+
+                    /**
+                     * 获取Average lock wait time
+                     * @return LockTimeAvg Average lock wait time
+                     */
+                    double GetLockTimeAvg() const;
+
+                    /**
+                     * 设置Average lock wait time
+                     * @param LockTimeAvg Average lock wait time
+                     */
+                    void SetLockTimeAvg(const double& _lockTimeAvg);
+
+                    /**
+                     * 判断参数 LockTimeAvg 是否已赋值
+                     * @return LockTimeAvg 是否已赋值
+                     */
+                    bool LockTimeAvgHasBeenSet() const;
+
+                    /**
+                     * 获取Average number of rows scanned
+                     * @return RowsExaminedAvg Average number of rows scanned
+                     */
+                    double GetRowsExaminedAvg() const;
+
+                    /**
+                     * 设置Average number of rows scanned
+                     * @param RowsExaminedAvg Average number of rows scanned
+                     */
+                    void SetRowsExaminedAvg(const double& _rowsExaminedAvg);
+
+                    /**
+                     * 判断参数 RowsExaminedAvg 是否已赋值
+                     * @return RowsExaminedAvg 是否已赋值
+                     */
+                    bool RowsExaminedAvgHasBeenSet() const;
 
                 private:
 
@@ -499,7 +571,7 @@ namespace TencentCloud
                     bool m_sqlTextHasBeenSet;
 
                     /**
-                     * Schema
+                     * Database name
                      */
                     std::string m_schema;
                     bool m_schemaHasBeenSet;
@@ -527,6 +599,30 @@ namespace TencentCloud
                      */
                     double m_rowsSentRatio;
                     bool m_rowsSentRatioHasBeenSet;
+
+                    /**
+                     * Average execution time
+                     */
+                    double m_queryTimeAvg;
+                    bool m_queryTimeAvgHasBeenSet;
+
+                    /**
+                     * Average number of rows returned
+                     */
+                    double m_rowsSentAvg;
+                    bool m_rowsSentAvgHasBeenSet;
+
+                    /**
+                     * Average lock wait time
+                     */
+                    double m_lockTimeAvg;
+                    bool m_lockTimeAvgHasBeenSet;
+
+                    /**
+                     * Average number of rows scanned
+                     */
+                    double m_rowsExaminedAvg;
+                    bool m_rowsExaminedAvgHasBeenSet;
 
                 };
             }

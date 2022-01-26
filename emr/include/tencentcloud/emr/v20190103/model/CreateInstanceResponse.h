@@ -40,9 +40,31 @@ namespace TencentCloud
                     CreateInstanceResponse();
                     ~CreateInstanceResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
+
+                    /**
+                     * 获取Instance ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return InstanceId Instance ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     */
+                    bool InstanceIdHasBeenSet() const;
 
                 private:
+
+                    /**
+                     * Instance ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
 
                 };
             }

@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/scf/v20180416/model/SearchKey.h>
 
 
 namespace TencentCloud
@@ -114,6 +115,24 @@ namespace TencentCloud
                      */
                     bool OrderHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the range and keyword for search. The value of `Key` can be `Namespace` or `Description`. Multiple AND conditions can be specified.
+                     * @return SearchKey Specifies the range and keyword for search. The value of `Key` can be `Namespace` or `Description`. Multiple AND conditions can be specified.
+                     */
+                    std::vector<SearchKey> GetSearchKey() const;
+
+                    /**
+                     * 设置Specifies the range and keyword for search. The value of `Key` can be `Namespace` or `Description`. Multiple AND conditions can be specified.
+                     * @param SearchKey Specifies the range and keyword for search. The value of `Key` can be `Namespace` or `Description`. Multiple AND conditions can be specified.
+                     */
+                    void SetSearchKey(const std::vector<SearchKey>& _searchKey);
+
+                    /**
+                     * 判断参数 SearchKey 是否已赋值
+                     * @return SearchKey 是否已赋值
+                     */
+                    bool SearchKeyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -139,6 +158,12 @@ namespace TencentCloud
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;
+
+                    /**
+                     * Specifies the range and keyword for search. The value of `Key` can be `Namespace` or `Description`. Multiple AND conditions can be specified.
+                     */
+                    std::vector<SearchKey> m_searchKey;
+                    bool m_searchKeyHasBeenSet;
 
                 };
             }

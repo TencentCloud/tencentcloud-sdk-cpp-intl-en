@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ckafka::V20190819::Model;
-using namespace rapidjson;
 using namespace std;
 
 TopicDetail::TopicDetail() :
@@ -33,11 +32,13 @@ TopicDetail::TopicDetail() :
     m_forwardCosBucketHasBeenSet(false),
     m_forwardStatusHasBeenSet(false),
     m_forwardIntervalHasBeenSet(false),
-    m_configHasBeenSet(false)
+    m_configHasBeenSet(false),
+    m_retentionTimeConfigHasBeenSet(false),
+    m_statusHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome TopicDetail::Deserialize(const Value &value)
+CoreInternalOutcome TopicDetail::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -46,7 +47,7 @@ CoreInternalOutcome TopicDetail::Deserialize(const Value &value)
     {
         if (!value["TopicName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TopicDetail.TopicName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicDetail.TopicName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_topicName = string(value["TopicName"].GetString());
         m_topicNameHasBeenSet = true;
@@ -56,7 +57,7 @@ CoreInternalOutcome TopicDetail::Deserialize(const Value &value)
     {
         if (!value["TopicId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TopicDetail.TopicId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicDetail.TopicId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_topicId = string(value["TopicId"].GetString());
         m_topicIdHasBeenSet = true;
@@ -66,7 +67,7 @@ CoreInternalOutcome TopicDetail::Deserialize(const Value &value)
     {
         if (!value["PartitionNum"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TopicDetail.PartitionNum` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicDetail.PartitionNum` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_partitionNum = value["PartitionNum"].GetInt64();
         m_partitionNumHasBeenSet = true;
@@ -76,7 +77,7 @@ CoreInternalOutcome TopicDetail::Deserialize(const Value &value)
     {
         if (!value["ReplicaNum"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TopicDetail.ReplicaNum` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicDetail.ReplicaNum` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_replicaNum = value["ReplicaNum"].GetInt64();
         m_replicaNumHasBeenSet = true;
@@ -86,7 +87,7 @@ CoreInternalOutcome TopicDetail::Deserialize(const Value &value)
     {
         if (!value["Note"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TopicDetail.Note` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicDetail.Note` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_note = string(value["Note"].GetString());
         m_noteHasBeenSet = true;
@@ -96,7 +97,7 @@ CoreInternalOutcome TopicDetail::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TopicDetail.CreateTime` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicDetail.CreateTime` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = value["CreateTime"].GetInt64();
         m_createTimeHasBeenSet = true;
@@ -106,7 +107,7 @@ CoreInternalOutcome TopicDetail::Deserialize(const Value &value)
     {
         if (!value["EnableWhiteList"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `TopicDetail.EnableWhiteList` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicDetail.EnableWhiteList` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_enableWhiteList = value["EnableWhiteList"].GetBool();
         m_enableWhiteListHasBeenSet = true;
@@ -116,7 +117,7 @@ CoreInternalOutcome TopicDetail::Deserialize(const Value &value)
     {
         if (!value["IpWhiteListCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TopicDetail.IpWhiteListCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicDetail.IpWhiteListCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_ipWhiteListCount = value["IpWhiteListCount"].GetInt64();
         m_ipWhiteListCountHasBeenSet = true;
@@ -126,7 +127,7 @@ CoreInternalOutcome TopicDetail::Deserialize(const Value &value)
     {
         if (!value["ForwardCosBucket"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TopicDetail.ForwardCosBucket` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicDetail.ForwardCosBucket` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_forwardCosBucket = string(value["ForwardCosBucket"].GetString());
         m_forwardCosBucketHasBeenSet = true;
@@ -136,7 +137,7 @@ CoreInternalOutcome TopicDetail::Deserialize(const Value &value)
     {
         if (!value["ForwardStatus"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TopicDetail.ForwardStatus` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicDetail.ForwardStatus` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_forwardStatus = value["ForwardStatus"].GetInt64();
         m_forwardStatusHasBeenSet = true;
@@ -146,7 +147,7 @@ CoreInternalOutcome TopicDetail::Deserialize(const Value &value)
     {
         if (!value["ForwardInterval"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TopicDetail.ForwardInterval` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicDetail.ForwardInterval` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_forwardInterval = value["ForwardInterval"].GetInt64();
         m_forwardIntervalHasBeenSet = true;
@@ -156,7 +157,7 @@ CoreInternalOutcome TopicDetail::Deserialize(const Value &value)
     {
         if (!value["Config"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `TopicDetail.Config` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicDetail.Config` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_config.Deserialize(value["Config"]);
@@ -169,32 +170,59 @@ CoreInternalOutcome TopicDetail::Deserialize(const Value &value)
         m_configHasBeenSet = true;
     }
 
+    if (value.HasMember("RetentionTimeConfig") && !value["RetentionTimeConfig"].IsNull())
+    {
+        if (!value["RetentionTimeConfig"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `TopicDetail.RetentionTimeConfig` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_retentionTimeConfig.Deserialize(value["RetentionTimeConfig"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_retentionTimeConfigHasBeenSet = true;
+    }
+
+    if (value.HasMember("Status") && !value["Status"].IsNull())
+    {
+        if (!value["Status"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `TopicDetail.Status` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_status = value["Status"].GetInt64();
+        m_statusHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void TopicDetail::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TopicDetail::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_topicNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TopicName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_topicName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_topicName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_topicIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TopicId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_topicId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_topicId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_partitionNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PartitionNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_partitionNum, allocator);
@@ -202,7 +230,7 @@ void TopicDetail::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_replicaNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReplicaNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_replicaNum, allocator);
@@ -210,15 +238,15 @@ void TopicDetail::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_noteHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Note";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_note.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_note.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_createTime, allocator);
@@ -226,7 +254,7 @@ void TopicDetail::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_enableWhiteListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EnableWhiteList";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_enableWhiteList, allocator);
@@ -234,7 +262,7 @@ void TopicDetail::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_ipWhiteListCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IpWhiteListCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_ipWhiteListCount, allocator);
@@ -242,15 +270,15 @@ void TopicDetail::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_forwardCosBucketHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ForwardCosBucket";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_forwardCosBucket.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_forwardCosBucket.c_str(), allocator).Move(), allocator);
     }
 
     if (m_forwardStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ForwardStatus";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_forwardStatus, allocator);
@@ -258,7 +286,7 @@ void TopicDetail::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_forwardIntervalHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ForwardInterval";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_forwardInterval, allocator);
@@ -266,11 +294,28 @@ void TopicDetail::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_configHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Config";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_config.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_retentionTimeConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RetentionTimeConfig";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_retentionTimeConfig.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_statusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Status";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_status, allocator);
     }
 
 }
@@ -466,5 +511,37 @@ void TopicDetail::SetConfig(const Config& _config)
 bool TopicDetail::ConfigHasBeenSet() const
 {
     return m_configHasBeenSet;
+}
+
+TopicRetentionTimeConfigRsp TopicDetail::GetRetentionTimeConfig() const
+{
+    return m_retentionTimeConfig;
+}
+
+void TopicDetail::SetRetentionTimeConfig(const TopicRetentionTimeConfigRsp& _retentionTimeConfig)
+{
+    m_retentionTimeConfig = _retentionTimeConfig;
+    m_retentionTimeConfigHasBeenSet = true;
+}
+
+bool TopicDetail::RetentionTimeConfigHasBeenSet() const
+{
+    return m_retentionTimeConfigHasBeenSet;
+}
+
+int64_t TopicDetail::GetStatus() const
+{
+    return m_status;
+}
+
+void TopicDetail::SetStatus(const int64_t& _status)
+{
+    m_status = _status;
+    m_statusHasBeenSet = true;
+}
+
+bool TopicDetail::StatusHasBeenSet() const
+{
+    return m_statusHasBeenSet;
 }
 

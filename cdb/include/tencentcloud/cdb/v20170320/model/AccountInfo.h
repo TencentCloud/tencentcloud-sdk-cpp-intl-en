@@ -137,14 +137,14 @@ namespace TencentCloud
                     bool ModifyPasswordTimeHasBeenSet() const;
 
                     /**
-                     * 获取Account creation time
-                     * @return CreateTime Account creation time
+                     * 获取This parameter is no longer supported.
+                     * @return CreateTime This parameter is no longer supported.
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Account creation time
-                     * @param CreateTime Account creation time
+                     * 设置This parameter is no longer supported.
+                     * @param CreateTime This parameter is no longer supported.
                      */
                     void SetCreateTime(const std::string& _createTime);
 
@@ -153,6 +153,24 @@ namespace TencentCloud
                      * @return CreateTime 是否已赋值
                      */
                     bool CreateTimeHasBeenSet() const;
+
+                    /**
+                     * 获取The maximum number of instance connections supported by an account
+                     * @return MaxUserConnections The maximum number of instance connections supported by an account
+                     */
+                    int64_t GetMaxUserConnections() const;
+
+                    /**
+                     * 设置The maximum number of instance connections supported by an account
+                     * @param MaxUserConnections The maximum number of instance connections supported by an account
+                     */
+                    void SetMaxUserConnections(const int64_t& _maxUserConnections);
+
+                    /**
+                     * 判断参数 MaxUserConnections 是否已赋值
+                     * @return MaxUserConnections 是否已赋值
+                     */
+                    bool MaxUserConnectionsHasBeenSet() const;
 
                 private:
 
@@ -187,10 +205,16 @@ namespace TencentCloud
                     bool m_modifyPasswordTimeHasBeenSet;
 
                     /**
-                     * Account creation time
+                     * This parameter is no longer supported.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
+
+                    /**
+                     * The maximum number of instance connections supported by an account
+                     */
+                    int64_t m_maxUserConnections;
+                    bool m_maxUserConnectionsHasBeenSet;
 
                 };
             }

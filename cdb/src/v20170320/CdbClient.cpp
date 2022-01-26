@@ -255,6 +255,49 @@ CdbClient::CreateAccountsOutcomeCallable CdbClient::CreateAccountsCallable(const
     return task->get_future();
 }
 
+CdbClient::CreateAuditPolicyOutcome CdbClient::CreateAuditPolicy(const CreateAuditPolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateAuditPolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateAuditPolicyResponse rsp = CreateAuditPolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateAuditPolicyOutcome(rsp);
+        else
+            return CreateAuditPolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateAuditPolicyOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::CreateAuditPolicyAsync(const CreateAuditPolicyRequest& request, const CreateAuditPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateAuditPolicy(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdbClient::CreateAuditPolicyOutcomeCallable CdbClient::CreateAuditPolicyCallable(const CreateAuditPolicyRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateAuditPolicyOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateAuditPolicy(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CdbClient::CreateBackupOutcome CdbClient::CreateBackup(const CreateBackupRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateBackup");
@@ -291,6 +334,49 @@ CdbClient::CreateBackupOutcomeCallable CdbClient::CreateBackupCallable(const Cre
         [this, request]()
         {
             return this->CreateBackup(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdbClient::CreateCloneInstanceOutcome CdbClient::CreateCloneInstance(const CreateCloneInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateCloneInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateCloneInstanceResponse rsp = CreateCloneInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateCloneInstanceOutcome(rsp);
+        else
+            return CreateCloneInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateCloneInstanceOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::CreateCloneInstanceAsync(const CreateCloneInstanceRequest& request, const CreateCloneInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateCloneInstance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdbClient::CreateCloneInstanceOutcomeCallable CdbClient::CreateCloneInstanceCallable(const CreateCloneInstanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateCloneInstanceOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateCloneInstance(request);
         }
     );
 
@@ -463,6 +549,49 @@ CdbClient::CreateParamTemplateOutcomeCallable CdbClient::CreateParamTemplateCall
         [this, request]()
         {
             return this->CreateParamTemplate(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdbClient::CreateRoInstanceIpOutcome CdbClient::CreateRoInstanceIp(const CreateRoInstanceIpRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateRoInstanceIp");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateRoInstanceIpResponse rsp = CreateRoInstanceIpResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateRoInstanceIpOutcome(rsp);
+        else
+            return CreateRoInstanceIpOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateRoInstanceIpOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::CreateRoInstanceIpAsync(const CreateRoInstanceIpRequest& request, const CreateRoInstanceIpAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateRoInstanceIp(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdbClient::CreateRoInstanceIpOutcomeCallable CdbClient::CreateRoInstanceIpCallable(const CreateRoInstanceIpRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateRoInstanceIpOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateRoInstanceIp(request);
         }
     );
 
@@ -857,42 +986,42 @@ CdbClient::DescribeBackupConfigOutcomeCallable CdbClient::DescribeBackupConfigCa
     return task->get_future();
 }
 
-CdbClient::DescribeBackupDatabasesOutcome CdbClient::DescribeBackupDatabases(const DescribeBackupDatabasesRequest &request)
+CdbClient::DescribeBackupDownloadRestrictionOutcome CdbClient::DescribeBackupDownloadRestriction(const DescribeBackupDownloadRestrictionRequest &request)
 {
-    auto outcome = MakeRequest(request, "DescribeBackupDatabases");
+    auto outcome = MakeRequest(request, "DescribeBackupDownloadRestriction");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        DescribeBackupDatabasesResponse rsp = DescribeBackupDatabasesResponse();
+        DescribeBackupDownloadRestrictionResponse rsp = DescribeBackupDownloadRestrictionResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return DescribeBackupDatabasesOutcome(rsp);
+            return DescribeBackupDownloadRestrictionOutcome(rsp);
         else
-            return DescribeBackupDatabasesOutcome(o.GetError());
+            return DescribeBackupDownloadRestrictionOutcome(o.GetError());
     }
     else
     {
-        return DescribeBackupDatabasesOutcome(outcome.GetError());
+        return DescribeBackupDownloadRestrictionOutcome(outcome.GetError());
     }
 }
 
-void CdbClient::DescribeBackupDatabasesAsync(const DescribeBackupDatabasesRequest& request, const DescribeBackupDatabasesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void CdbClient::DescribeBackupDownloadRestrictionAsync(const DescribeBackupDownloadRestrictionRequest& request, const DescribeBackupDownloadRestrictionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->DescribeBackupDatabases(request), context);
+        handler(this, request, this->DescribeBackupDownloadRestriction(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-CdbClient::DescribeBackupDatabasesOutcomeCallable CdbClient::DescribeBackupDatabasesCallable(const DescribeBackupDatabasesRequest &request)
+CdbClient::DescribeBackupDownloadRestrictionOutcomeCallable CdbClient::DescribeBackupDownloadRestrictionCallable(const DescribeBackupDownloadRestrictionRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeBackupDatabasesOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<DescribeBackupDownloadRestrictionOutcome()>>(
         [this, request]()
         {
-            return this->DescribeBackupDatabases(request);
+            return this->DescribeBackupDownloadRestriction(request);
         }
     );
 
@@ -979,49 +1108,6 @@ CdbClient::DescribeBackupSummariesOutcomeCallable CdbClient::DescribeBackupSumma
         [this, request]()
         {
             return this->DescribeBackupSummaries(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-CdbClient::DescribeBackupTablesOutcome CdbClient::DescribeBackupTables(const DescribeBackupTablesRequest &request)
-{
-    auto outcome = MakeRequest(request, "DescribeBackupTables");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DescribeBackupTablesResponse rsp = DescribeBackupTablesResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DescribeBackupTablesOutcome(rsp);
-        else
-            return DescribeBackupTablesOutcome(o.GetError());
-    }
-    else
-    {
-        return DescribeBackupTablesOutcome(outcome.GetError());
-    }
-}
-
-void CdbClient::DescribeBackupTablesAsync(const DescribeBackupTablesRequest& request, const DescribeBackupTablesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeBackupTables(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-CdbClient::DescribeBackupTablesOutcomeCallable CdbClient::DescribeBackupTablesCallable(const DescribeBackupTablesRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<DescribeBackupTablesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeBackupTables(request);
         }
     );
 
@@ -1151,6 +1237,49 @@ CdbClient::DescribeBinlogsOutcomeCallable CdbClient::DescribeBinlogsCallable(con
         [this, request]()
         {
             return this->DescribeBinlogs(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdbClient::DescribeCloneListOutcome CdbClient::DescribeCloneList(const DescribeCloneListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCloneList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCloneListResponse rsp = DescribeCloneListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCloneListOutcome(rsp);
+        else
+            return DescribeCloneListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCloneListOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::DescribeCloneListAsync(const DescribeCloneListRequest& request, const DescribeCloneListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCloneList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdbClient::DescribeCloneListOutcomeCallable CdbClient::DescribeCloneListCallable(const DescribeCloneListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCloneListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCloneList(request);
         }
     );
 
@@ -2104,6 +2233,49 @@ CdbClient::DescribeRoGroupsOutcomeCallable CdbClient::DescribeRoGroupsCallable(c
     return task->get_future();
 }
 
+CdbClient::DescribeRoMinScaleOutcome CdbClient::DescribeRoMinScale(const DescribeRoMinScaleRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRoMinScale");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRoMinScaleResponse rsp = DescribeRoMinScaleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRoMinScaleOutcome(rsp);
+        else
+            return DescribeRoMinScaleOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRoMinScaleOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::DescribeRoMinScaleAsync(const DescribeRoMinScaleRequest& request, const DescribeRoMinScaleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeRoMinScale(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdbClient::DescribeRoMinScaleOutcomeCallable CdbClient::DescribeRoMinScaleCallable(const DescribeRoMinScaleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeRoMinScaleOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeRoMinScale(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CdbClient::DescribeRollbackRangeTimeOutcome CdbClient::DescribeRollbackRangeTime(const DescribeRollbackRangeTimeRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeRollbackRangeTime");
@@ -2706,6 +2878,49 @@ CdbClient::ModifyAccountDescriptionOutcomeCallable CdbClient::ModifyAccountDescr
     return task->get_future();
 }
 
+CdbClient::ModifyAccountMaxUserConnectionsOutcome CdbClient::ModifyAccountMaxUserConnections(const ModifyAccountMaxUserConnectionsRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyAccountMaxUserConnections");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyAccountMaxUserConnectionsResponse rsp = ModifyAccountMaxUserConnectionsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyAccountMaxUserConnectionsOutcome(rsp);
+        else
+            return ModifyAccountMaxUserConnectionsOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyAccountMaxUserConnectionsOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::ModifyAccountMaxUserConnectionsAsync(const ModifyAccountMaxUserConnectionsRequest& request, const ModifyAccountMaxUserConnectionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyAccountMaxUserConnections(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdbClient::ModifyAccountMaxUserConnectionsOutcomeCallable CdbClient::ModifyAccountMaxUserConnectionsCallable(const ModifyAccountMaxUserConnectionsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyAccountMaxUserConnectionsOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyAccountMaxUserConnections(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CdbClient::ModifyAccountPasswordOutcome CdbClient::ModifyAccountPassword(const ModifyAccountPasswordRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyAccountPassword");
@@ -2871,6 +3086,49 @@ CdbClient::ModifyBackupConfigOutcomeCallable CdbClient::ModifyBackupConfigCallab
         [this, request]()
         {
             return this->ModifyBackupConfig(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdbClient::ModifyBackupDownloadRestrictionOutcome CdbClient::ModifyBackupDownloadRestriction(const ModifyBackupDownloadRestrictionRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyBackupDownloadRestriction");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyBackupDownloadRestrictionResponse rsp = ModifyBackupDownloadRestrictionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyBackupDownloadRestrictionOutcome(rsp);
+        else
+            return ModifyBackupDownloadRestrictionOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyBackupDownloadRestrictionOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::ModifyBackupDownloadRestrictionAsync(const ModifyBackupDownloadRestrictionRequest& request, const ModifyBackupDownloadRestrictionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyBackupDownloadRestriction(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdbClient::ModifyBackupDownloadRestrictionOutcomeCallable CdbClient::ModifyBackupDownloadRestrictionCallable(const ModifyBackupDownloadRestrictionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyBackupDownloadRestrictionOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyBackupDownloadRestriction(request);
         }
     );
 
@@ -3566,6 +3824,49 @@ CdbClient::StartBatchRollbackOutcomeCallable CdbClient::StartBatchRollbackCallab
     return task->get_future();
 }
 
+CdbClient::StartReplicationOutcome CdbClient::StartReplication(const StartReplicationRequest &request)
+{
+    auto outcome = MakeRequest(request, "StartReplication");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        StartReplicationResponse rsp = StartReplicationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return StartReplicationOutcome(rsp);
+        else
+            return StartReplicationOutcome(o.GetError());
+    }
+    else
+    {
+        return StartReplicationOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::StartReplicationAsync(const StartReplicationRequest& request, const StartReplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->StartReplication(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdbClient::StartReplicationOutcomeCallable CdbClient::StartReplicationCallable(const StartReplicationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<StartReplicationOutcome()>>(
+        [this, request]()
+        {
+            return this->StartReplication(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CdbClient::StopDBImportJobOutcome CdbClient::StopDBImportJob(const StopDBImportJobRequest &request)
 {
     auto outcome = MakeRequest(request, "StopDBImportJob");
@@ -3602,6 +3903,178 @@ CdbClient::StopDBImportJobOutcomeCallable CdbClient::StopDBImportJobCallable(con
         [this, request]()
         {
             return this->StopDBImportJob(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdbClient::StopReplicationOutcome CdbClient::StopReplication(const StopReplicationRequest &request)
+{
+    auto outcome = MakeRequest(request, "StopReplication");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        StopReplicationResponse rsp = StopReplicationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return StopReplicationOutcome(rsp);
+        else
+            return StopReplicationOutcome(o.GetError());
+    }
+    else
+    {
+        return StopReplicationOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::StopReplicationAsync(const StopReplicationRequest& request, const StopReplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->StopReplication(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdbClient::StopReplicationOutcomeCallable CdbClient::StopReplicationCallable(const StopReplicationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<StopReplicationOutcome()>>(
+        [this, request]()
+        {
+            return this->StopReplication(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdbClient::StopRollbackOutcome CdbClient::StopRollback(const StopRollbackRequest &request)
+{
+    auto outcome = MakeRequest(request, "StopRollback");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        StopRollbackResponse rsp = StopRollbackResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return StopRollbackOutcome(rsp);
+        else
+            return StopRollbackOutcome(o.GetError());
+    }
+    else
+    {
+        return StopRollbackOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::StopRollbackAsync(const StopRollbackRequest& request, const StopRollbackAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->StopRollback(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdbClient::StopRollbackOutcomeCallable CdbClient::StopRollbackCallable(const StopRollbackRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<StopRollbackOutcome()>>(
+        [this, request]()
+        {
+            return this->StopRollback(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdbClient::SwitchDBInstanceMasterSlaveOutcome CdbClient::SwitchDBInstanceMasterSlave(const SwitchDBInstanceMasterSlaveRequest &request)
+{
+    auto outcome = MakeRequest(request, "SwitchDBInstanceMasterSlave");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SwitchDBInstanceMasterSlaveResponse rsp = SwitchDBInstanceMasterSlaveResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SwitchDBInstanceMasterSlaveOutcome(rsp);
+        else
+            return SwitchDBInstanceMasterSlaveOutcome(o.GetError());
+    }
+    else
+    {
+        return SwitchDBInstanceMasterSlaveOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::SwitchDBInstanceMasterSlaveAsync(const SwitchDBInstanceMasterSlaveRequest& request, const SwitchDBInstanceMasterSlaveAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->SwitchDBInstanceMasterSlave(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdbClient::SwitchDBInstanceMasterSlaveOutcomeCallable CdbClient::SwitchDBInstanceMasterSlaveCallable(const SwitchDBInstanceMasterSlaveRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<SwitchDBInstanceMasterSlaveOutcome()>>(
+        [this, request]()
+        {
+            return this->SwitchDBInstanceMasterSlave(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdbClient::SwitchDrInstanceToMasterOutcome CdbClient::SwitchDrInstanceToMaster(const SwitchDrInstanceToMasterRequest &request)
+{
+    auto outcome = MakeRequest(request, "SwitchDrInstanceToMaster");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SwitchDrInstanceToMasterResponse rsp = SwitchDrInstanceToMasterResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SwitchDrInstanceToMasterOutcome(rsp);
+        else
+            return SwitchDrInstanceToMasterOutcome(o.GetError());
+    }
+    else
+    {
+        return SwitchDrInstanceToMasterOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::SwitchDrInstanceToMasterAsync(const SwitchDrInstanceToMasterRequest& request, const SwitchDrInstanceToMasterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->SwitchDrInstanceToMaster(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdbClient::SwitchDrInstanceToMasterOutcomeCallable CdbClient::SwitchDrInstanceToMasterCallable(const SwitchDrInstanceToMasterRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<SwitchDrInstanceToMasterOutcome()>>(
+        [this, request]()
+        {
+            return this->SwitchDrInstanceToMaster(request);
         }
     );
 

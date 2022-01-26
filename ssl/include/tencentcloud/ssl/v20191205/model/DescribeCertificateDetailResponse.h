@@ -24,6 +24,7 @@
 #include <tencentcloud/ssl/v20191205/model/CertificateExtra.h>
 #include <tencentcloud/ssl/v20191205/model/DvAuthDetail.h>
 #include <tencentcloud/ssl/v20191205/model/SubmittedData.h>
+#include <tencentcloud/ssl/v20191205/model/Tags.h>
 
 
 namespace TencentCloud
@@ -43,12 +44,13 @@ namespace TencentCloud
                     DescribeCertificateDetailResponse();
                     ~DescribeCertificateDetailResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取User UIN.
+                     * 获取User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return OwnerUin User UIN.
+                     * @return OwnerUin User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetOwnerUin() const;
@@ -60,9 +62,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool OwnerUinHasBeenSet() const;
 
                     /**
-                     * 获取Project ID.
+                     * 获取Project ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ProjectId Project ID.
+                     * @return ProjectId Project ID
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetProjectId() const;
@@ -74,9 +76,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Certificate source. trustasia: TrustAsia; upload: certificate uploaded by users.
+                     * 获取Certificate source. `trustasia`: TrustAsia; `upload`: certificate uploaded by users
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return From Certificate source. trustasia: TrustAsia; upload: certificate uploaded by users.
+                     * @return From Certificate source. `trustasia`: TrustAsia; `upload`: certificate uploaded by users
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetFrom() const;
@@ -88,9 +90,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool FromHasBeenSet() const;
 
                     /**
-                     * 获取Certificate type. CA: client certificate; SVR: server certificate.
+                     * 获取Certificate type. `CA`: client certificate; `SVR`: server certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CertificateType Certificate type. CA: client certificate; SVR: server certificate.
+                     * @return CertificateType Certificate type. `CA`: client certificate; `SVR`: server certificate
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetCertificateType() const;
@@ -102,9 +104,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CertificateTypeHasBeenSet() const;
 
                     /**
-                     * 获取Certificate package type. 1: GeoTrust DV SSL CA - G3; 2: TrustAsia TLS RSA CA; 3: Secure Site EV Pro; 4: Secure Site EV; 5: Secure Site OV Pro; 6: Secure Site OV; 7: Secure Site OV wildcard SSL certificate; 8: GeoTrust EV; 9: GeoTrust OV; 10: GeoTrust OV wildcard SSL certificate; 11: TrustAsia DV multi-domain SSL certificate; 12: TrustAsia DV wildcard SSL certificate; 13: TrustAsia OV wildcard SSL certificate (D3); 14: TrustAsia OV SSL certificate (D3); 15: TrustAsia OV multi-domain SSL certificate (D3); 16: TrustAsia EV SSL certificate (D3); 17: TrustAsia EV multi-domain SSL certificate (D3); 18: GlobalSign OV SSL certificate; 19: GlobalSign OV wildcard SSL certificate; 20: GlobalSign EV SSL certificate; 21: TrustAsia OV multi-domain wildcard SSL certificate (D3); 22: GlobalSign OV multi-domain SSL certificate; 23: GlobalSign OV multi-domain wildcard SSL certificate; 24: GlobalSign EV multi-domain SSL certificate.
+                     * 获取Certificate plan type. `1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PackageType Certificate package type. 1: GeoTrust DV SSL CA - G3; 2: TrustAsia TLS RSA CA; 3: Secure Site EV Pro; 4: Secure Site EV; 5: Secure Site OV Pro; 6: Secure Site OV; 7: Secure Site OV wildcard SSL certificate; 8: GeoTrust EV; 9: GeoTrust OV; 10: GeoTrust OV wildcard SSL certificate; 11: TrustAsia DV multi-domain SSL certificate; 12: TrustAsia DV wildcard SSL certificate; 13: TrustAsia OV wildcard SSL certificate (D3); 14: TrustAsia OV SSL certificate (D3); 15: TrustAsia OV multi-domain SSL certificate (D3); 16: TrustAsia EV SSL certificate (D3); 17: TrustAsia EV multi-domain SSL certificate (D3); 18: GlobalSign OV SSL certificate; 19: GlobalSign OV wildcard SSL certificate; 20: GlobalSign EV SSL certificate; 21: TrustAsia OV multi-domain wildcard SSL certificate (D3); 22: GlobalSign OV multi-domain SSL certificate; 23: GlobalSign OV multi-domain wildcard SSL certificate; 24: GlobalSign EV multi-domain SSL certificate.
+                     * @return PackageType Certificate plan type. `1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetPackageType() const;
@@ -116,9 +118,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PackageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Issuer.
+                     * 获取Issuer
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ProductZhName Issuer.
+                     * @return ProductZhName Issuer
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetProductZhName() const;
@@ -130,9 +132,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ProductZhNameHasBeenSet() const;
 
                     /**
-                     * 获取Domain name.
+                     * 获取Domain name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Domain Domain name.
+                     * @return Domain Domain name
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetDomain() const;
@@ -144,9 +146,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Alias.
+                     * 获取Alias
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Alias Alias.
+                     * @return Alias Alias
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetAlias() const;
@@ -158,9 +160,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AliasHasBeenSet() const;
 
                     /**
-                     * 获取Certificate status. 0: being reviewed; 1: approved; 2: not approved; 3: expired; 4: DNS record added; 5: OV certificate, to be submitted; 6: order being canceled; 7: cancelled; 8: information submitted, confirmation letter to be uploaded; 9: certificate being revoked; 10: revoked; 11: reissuing; 12: revocation confirmation letter to be uploaded.
+                     * 获取Certificate status. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: enterprise-grade certificate, pending submission; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload; `9`: revoking certificate; `10`: revoked; `11`: reissuing; `12`: pending revocation confirmation letter upload
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Status Certificate status. 0: being reviewed; 1: approved; 2: not approved; 3: expired; 4: DNS record added; 5: OV certificate, to be submitted; 6: order being canceled; 7: cancelled; 8: information submitted, confirmation letter to be uploaded; 9: certificate being revoked; 10: revoked; 11: reissuing; 12: revocation confirmation letter to be uploaded.
+                     * @return Status Certificate status. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: enterprise-grade certificate, pending submission; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload; `9`: revoking certificate; `10`: revoked; `11`: reissuing; `12`: pending revocation confirmation letter upload
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetStatus() const;
@@ -172,9 +174,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Status information.
+                     * 获取Status information
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return StatusMsg Status information.
+                     * @return StatusMsg Status information
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetStatusMsg() const;
@@ -186,9 +188,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool StatusMsgHasBeenSet() const;
 
                     /**
-                     * 获取Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file; EMAIL: verification by email.
+                     * 获取Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return VerifyType Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file; EMAIL: verification by email.
+                     * @return VerifyType Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetVerifyType() const;
@@ -200,9 +202,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool VerifyTypeHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability scanning status.
+                     * 获取Vulnerability scanning status
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return VulnerabilityStatus Vulnerability scanning status.
+                     * @return VulnerabilityStatus Vulnerability scanning status
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetVulnerabilityStatus() const;
@@ -214,9 +216,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool VulnerabilityStatusHasBeenSet() const;
 
                     /**
-                     * 获取Time when the certificate takes effect.
+                     * 获取Time when the certificate takes effect
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CertBeginTime Time when the certificate takes effect.
+                     * @return CertBeginTime Time when the certificate takes effect
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetCertBeginTime() const;
@@ -228,9 +230,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CertBeginTimeHasBeenSet() const;
 
                     /**
-                     * 获取Time when the certificate expires.
+                     * 获取Time when the certificate expires
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CertEndTime Time when the certificate expires.
+                     * @return CertEndTime Time when the certificate expires
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetCertEndTime() const;
@@ -242,9 +244,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CertEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Validity period of the certificate (unit: month).
+                     * 获取Validity period of the certificate, in months
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ValidityPeriod Validity period of the certificate (unit: month).
+                     * @return ValidityPeriod Validity period of the certificate, in months
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetValidityPeriod() const;
@@ -256,9 +258,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ValidityPeriodHasBeenSet() const;
 
                     /**
-                     * 获取Application time.
+                     * 获取Application time
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return InsertTime Application time.
+                     * @return InsertTime Application time
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetInsertTime() const;
@@ -270,9 +272,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool InsertTimeHasBeenSet() const;
 
                     /**
-                     * 获取Order ID.
+                     * 获取Order ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return OrderId Order ID.
+                     * @return OrderId Order ID
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetOrderId() const;
@@ -284,9 +286,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool OrderIdHasBeenSet() const;
 
                     /**
-                     * 获取Extended information of the certificate.
+                     * 获取Extended information of the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CertificateExtra Extended information of the certificate.
+                     * @return CertificateExtra Extended information of the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     CertificateExtra GetCertificateExtra() const;
@@ -298,9 +300,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CertificateExtraHasBeenSet() const;
 
                     /**
-                     * 获取Private key of the certificate.
+                     * 获取Private key of the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CertificatePrivateKey Private key of the certificate.
+                     * @return CertificatePrivateKey Private key of the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetCertificatePrivateKey() const;
@@ -312,9 +314,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CertificatePrivateKeyHasBeenSet() const;
 
                     /**
-                     * 获取Public key of the certificate.
+                     * 获取Public key of the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CertificatePublicKey Public key of the certificate.
+                     * @return CertificatePublicKey Public key of the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetCertificatePublicKey() const;
@@ -326,9 +328,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CertificatePublicKeyHasBeenSet() const;
 
                     /**
-                     * 获取DV authentication information.
+                     * 获取DV authentication information
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DvAuthDetail DV authentication information.
+                     * @return DvAuthDetail DV authentication information
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     DvAuthDetail GetDvAuthDetail() const;
@@ -340,9 +342,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DvAuthDetailHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability scanning assessment report.
+                     * 获取Vulnerability scanning assessment report
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return VulnerabilityReport Vulnerability scanning assessment report.
+                     * @return VulnerabilityReport Vulnerability scanning assessment report
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetVulnerabilityReport() const;
@@ -354,9 +356,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool VulnerabilityReportHasBeenSet() const;
 
                     /**
-                     * 获取Certificate ID.
+                     * 获取Certificate ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CertificateId Certificate ID.
+                     * @return CertificateId Certificate ID
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetCertificateId() const;
@@ -368,9 +370,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CertificateIdHasBeenSet() const;
 
                     /**
-                     * 获取Certificate type name.
+                     * 获取Certificate type name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TypeName Certificate type name.
+                     * @return TypeName Certificate type name
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetTypeName() const;
@@ -382,9 +384,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TypeNameHasBeenSet() const;
 
                     /**
-                     * 获取Status description.
+                     * 获取Status description
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return StatusName Status description.
+                     * @return StatusName Status description
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetStatusName() const;
@@ -396,9 +398,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool StatusNameHasBeenSet() const;
 
                     /**
-                     * 获取Domain names associated with the certificate (including the primary domain name).
+                     * 获取Domain names associated with the certificate (including the primary domain name)
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SubjectAltName Domain names associated with the certificate (including the primary domain name).
+                     * @return SubjectAltName Domain names associated with the certificate (including the primary domain name)
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetSubjectAltName() const;
@@ -410,9 +412,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SubjectAltNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether the customer is a VIP customer.
+                     * 获取Whether the customer is a VIP customer
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return IsVip Whether the customer is a VIP customer.
+                     * @return IsVip Whether the customer is a VIP customer
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     bool GetIsVip() const;
@@ -424,9 +426,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IsVipHasBeenSet() const;
 
                     /**
-                     * 获取Whether the certificate is a wildcard certificate.
+                     * 获取Whether the certificate is a wildcard certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return IsWildcard Whether the certificate is a wildcard certificate.
+                     * @return IsWildcard Whether the certificate is a wildcard certificate
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     bool GetIsWildcard() const;
@@ -438,9 +440,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IsWildcardHasBeenSet() const;
 
                     /**
-                     * 获取Whether the certificate is a DV certificate.
+                     * 获取Whether the certificate is a DV certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return IsDv Whether the certificate is a DV certificate.
+                     * @return IsDv Whether the certificate is a DV certificate
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     bool GetIsDv() const;
@@ -452,9 +454,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IsDvHasBeenSet() const;
 
                     /**
-                     * 获取Whether the vulnerability scanning feature is enabled.
+                     * 获取Whether the vulnerability scanning feature is enabled
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return IsVulnerability Whether the vulnerability scanning feature is enabled.
+                     * @return IsVulnerability Whether the vulnerability scanning feature is enabled
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     bool GetIsVulnerability() const;
@@ -466,9 +468,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IsVulnerabilityHasBeenSet() const;
 
                     /**
-                     * 获取Submitted data.
+                     * 获取Submitted data
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SubmittedData Submitted data.
+                     * @return SubmittedData Submitted data
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     SubmittedData GetSubmittedData() const;
@@ -480,9 +482,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SubmittedDataHasBeenSet() const;
 
                     /**
-                     * 获取Whether the certificate can be reissued.
+                     * 获取Whether the certificate can be reissued
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return RenewAble Whether the certificate can be reissued.
+                     * @return RenewAble Whether the certificate can be reissued
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     bool GetRenewAble() const;
@@ -494,9 +496,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool RenewAbleHasBeenSet() const;
 
                     /**
-                     * 获取Whether the certificate can be deployed.
+                     * 获取Whether the certificate can be deployed
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Deployable Whether the certificate can be deployed.
+                     * @return Deployable Whether the certificate can be deployed
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     bool GetDeployable() const;
@@ -507,238 +509,259 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool DeployableHasBeenSet() const;
 
+                    /**
+                     * 获取List of associated tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Tags List of associated tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Tags> GetTags() const;
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * User UIN.
+                     * User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_ownerUin;
                     bool m_ownerUinHasBeenSet;
 
                     /**
-                     * Project ID.
+                     * Project ID
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Certificate source. trustasia: TrustAsia; upload: certificate uploaded by users.
+                     * Certificate source. `trustasia`: TrustAsia; `upload`: certificate uploaded by users
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_from;
                     bool m_fromHasBeenSet;
 
                     /**
-                     * Certificate type. CA: client certificate; SVR: server certificate.
+                     * Certificate type. `CA`: client certificate; `SVR`: server certificate
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_certificateType;
                     bool m_certificateTypeHasBeenSet;
 
                     /**
-                     * Certificate package type. 1: GeoTrust DV SSL CA - G3; 2: TrustAsia TLS RSA CA; 3: Secure Site EV Pro; 4: Secure Site EV; 5: Secure Site OV Pro; 6: Secure Site OV; 7: Secure Site OV wildcard SSL certificate; 8: GeoTrust EV; 9: GeoTrust OV; 10: GeoTrust OV wildcard SSL certificate; 11: TrustAsia DV multi-domain SSL certificate; 12: TrustAsia DV wildcard SSL certificate; 13: TrustAsia OV wildcard SSL certificate (D3); 14: TrustAsia OV SSL certificate (D3); 15: TrustAsia OV multi-domain SSL certificate (D3); 16: TrustAsia EV SSL certificate (D3); 17: TrustAsia EV multi-domain SSL certificate (D3); 18: GlobalSign OV SSL certificate; 19: GlobalSign OV wildcard SSL certificate; 20: GlobalSign EV SSL certificate; 21: TrustAsia OV multi-domain wildcard SSL certificate (D3); 22: GlobalSign OV multi-domain SSL certificate; 23: GlobalSign OV multi-domain wildcard SSL certificate; 24: GlobalSign EV multi-domain SSL certificate.
+                     * Certificate plan type. `1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_packageType;
                     bool m_packageTypeHasBeenSet;
 
                     /**
-                     * Issuer.
+                     * Issuer
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_productZhName;
                     bool m_productZhNameHasBeenSet;
 
                     /**
-                     * Domain name.
+                     * Domain name
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Alias.
+                     * Alias
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_alias;
                     bool m_aliasHasBeenSet;
 
                     /**
-                     * Certificate status. 0: being reviewed; 1: approved; 2: not approved; 3: expired; 4: DNS record added; 5: OV certificate, to be submitted; 6: order being canceled; 7: cancelled; 8: information submitted, confirmation letter to be uploaded; 9: certificate being revoked; 10: revoked; 11: reissuing; 12: revocation confirmation letter to be uploaded.
+                     * Certificate status. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: enterprise-grade certificate, pending submission; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload; `9`: revoking certificate; `10`: revoked; `11`: reissuing; `12`: pending revocation confirmation letter upload
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Status information.
+                     * Status information
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_statusMsg;
                     bool m_statusMsgHasBeenSet;
 
                     /**
-                     * Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file; EMAIL: verification by email.
+                     * Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_verifyType;
                     bool m_verifyTypeHasBeenSet;
 
                     /**
-                     * Vulnerability scanning status.
+                     * Vulnerability scanning status
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vulnerabilityStatus;
                     bool m_vulnerabilityStatusHasBeenSet;
 
                     /**
-                     * Time when the certificate takes effect.
+                     * Time when the certificate takes effect
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_certBeginTime;
                     bool m_certBeginTimeHasBeenSet;
 
                     /**
-                     * Time when the certificate expires.
+                     * Time when the certificate expires
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_certEndTime;
                     bool m_certEndTimeHasBeenSet;
 
                     /**
-                     * Validity period of the certificate (unit: month).
+                     * Validity period of the certificate, in months
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_validityPeriod;
                     bool m_validityPeriodHasBeenSet;
 
                     /**
-                     * Application time.
+                     * Application time
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_insertTime;
                     bool m_insertTimeHasBeenSet;
 
                     /**
-                     * Order ID.
+                     * Order ID
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_orderId;
                     bool m_orderIdHasBeenSet;
 
                     /**
-                     * Extended information of the certificate.
+                     * Extended information of the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     CertificateExtra m_certificateExtra;
                     bool m_certificateExtraHasBeenSet;
 
                     /**
-                     * Private key of the certificate.
+                     * Private key of the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_certificatePrivateKey;
                     bool m_certificatePrivateKeyHasBeenSet;
 
                     /**
-                     * Public key of the certificate.
+                     * Public key of the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_certificatePublicKey;
                     bool m_certificatePublicKeyHasBeenSet;
 
                     /**
-                     * DV authentication information.
+                     * DV authentication information
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     DvAuthDetail m_dvAuthDetail;
                     bool m_dvAuthDetailHasBeenSet;
 
                     /**
-                     * Vulnerability scanning assessment report.
+                     * Vulnerability scanning assessment report
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vulnerabilityReport;
                     bool m_vulnerabilityReportHasBeenSet;
 
                     /**
-                     * Certificate ID.
+                     * Certificate ID
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_certificateId;
                     bool m_certificateIdHasBeenSet;
 
                     /**
-                     * Certificate type name.
+                     * Certificate type name
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_typeName;
                     bool m_typeNameHasBeenSet;
 
                     /**
-                     * Status description.
+                     * Status description
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_statusName;
                     bool m_statusNameHasBeenSet;
 
                     /**
-                     * Domain names associated with the certificate (including the primary domain name).
+                     * Domain names associated with the certificate (including the primary domain name)
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_subjectAltName;
                     bool m_subjectAltNameHasBeenSet;
 
                     /**
-                     * Whether the customer is a VIP customer.
+                     * Whether the customer is a VIP customer
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_isVip;
                     bool m_isVipHasBeenSet;
 
                     /**
-                     * Whether the certificate is a wildcard certificate.
+                     * Whether the certificate is a wildcard certificate
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_isWildcard;
                     bool m_isWildcardHasBeenSet;
 
                     /**
-                     * Whether the certificate is a DV certificate.
+                     * Whether the certificate is a DV certificate
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_isDv;
                     bool m_isDvHasBeenSet;
 
                     /**
-                     * Whether the vulnerability scanning feature is enabled.
+                     * Whether the vulnerability scanning feature is enabled
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_isVulnerability;
                     bool m_isVulnerabilityHasBeenSet;
 
                     /**
-                     * Submitted data.
+                     * Submitted data
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     SubmittedData m_submittedData;
                     bool m_submittedDataHasBeenSet;
 
                     /**
-                     * Whether the certificate can be reissued.
+                     * Whether the certificate can be reissued
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_renewAble;
                     bool m_renewAbleHasBeenSet;
 
                     /**
-                     * Whether the certificate can be deployed.
+                     * Whether the certificate can be deployed
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_deployable;
                     bool m_deployableHasBeenSet;
+
+                    /**
+                     * List of associated tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Tags> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

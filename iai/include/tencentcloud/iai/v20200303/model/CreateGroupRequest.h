@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Group name, which is modifiable, must be unique, and can contain 1–60 characters.
-                     * @return GroupName Group name, which is modifiable, must be unique, and can contain 1–60 characters.
+                     * 获取Group name, which is modifiable, must be unique, and can contain 1 to 60 characters.
+                     * @return GroupName Group name, which is modifiable, must be unique, and can contain 1 to 60 characters.
                      */
                     std::string GetGroupName() const;
 
                     /**
-                     * 设置Group name, which is modifiable, must be unique, and can contain 1–60 characters.
-                     * @param GroupName Group name, which is modifiable, must be unique, and can contain 1–60 characters.
+                     * 设置Group name, which is modifiable, must be unique, and can contain 1 to 60 characters.
+                     * @param GroupName Group name, which is modifiable, must be unique, and can contain 1 to 60 characters.
                      */
                     void SetGroupName(const std::string& _groupName);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool GroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
-                     * @return GroupId Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
+                     * 获取Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
+                     * @return GroupId Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
-                     * @param GroupId Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
+                     * 设置Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
+                     * @param GroupId Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
                      */
                     void SetGroupId(const std::string& _groupId);
 
@@ -81,14 +81,14 @@ namespace TencentCloud
                     /**
                      * 获取Custom group description field that describes the person attributes in the group, which will be applied to all persons in the group. 
 Up to 5 ones can be created. 
-Each custom description field can contain 1–30 characters. 
+Each custom description field can contain 1 to 30 characters. 
 The custom description field must be unique in the group. 
 Example: if you set the "custom description field" of a group to ["student ID","employee ID","mobile number"], 
 then all the persons in the group will have description fields named "student ID", "employee ID", and "mobile number". 
 You can enter content in the corresponding field to register a person's student ID, employee ID, and mobile number.
                      * @return GroupExDescriptions Custom group description field that describes the person attributes in the group, which will be applied to all persons in the group. 
 Up to 5 ones can be created. 
-Each custom description field can contain 1–30 characters. 
+Each custom description field can contain 1 to 30 characters. 
 The custom description field must be unique in the group. 
 Example: if you set the "custom description field" of a group to ["student ID","employee ID","mobile number"], 
 then all the persons in the group will have description fields named "student ID", "employee ID", and "mobile number". 
@@ -99,14 +99,14 @@ You can enter content in the corresponding field to register a person's student 
                     /**
                      * 设置Custom group description field that describes the person attributes in the group, which will be applied to all persons in the group. 
 Up to 5 ones can be created. 
-Each custom description field can contain 1–30 characters. 
+Each custom description field can contain 1 to 30 characters. 
 The custom description field must be unique in the group. 
 Example: if you set the "custom description field" of a group to ["student ID","employee ID","mobile number"], 
 then all the persons in the group will have description fields named "student ID", "employee ID", and "mobile number". 
 You can enter content in the corresponding field to register a person's student ID, employee ID, and mobile number.
                      * @param GroupExDescriptions Custom group description field that describes the person attributes in the group, which will be applied to all persons in the group. 
 Up to 5 ones can be created. 
-Each custom description field can contain 1–30 characters. 
+Each custom description field can contain 1 to 30 characters. 
 The custom description field must be unique in the group. 
 Example: if you set the "custom description field" of a group to ["student ID","employee ID","mobile number"], 
 then all the persons in the group will have description fields named "student ID", "employee ID", and "mobile number". 
@@ -121,14 +121,14 @@ You can enter content in the corresponding field to register a person's student 
                     bool GroupExDescriptionsHasBeenSet() const;
 
                     /**
-                     * 获取Group remarks, which can contain 0–40 characters.
-                     * @return Tag Group remarks, which can contain 0–40 characters.
+                     * 获取Group remarks, which can contain 0 to 40 characters.
+                     * @return Tag Group remarks, which can contain 0 to 40 characters.
                      */
                     std::string GetTag() const;
 
                     /**
-                     * 设置Group remarks, which can contain 0–40 characters.
-                     * @param Tag Group remarks, which can contain 0–40 characters.
+                     * 设置Group remarks, which can contain 0 to 40 characters.
+                     * @param Tag Group remarks, which can contain 0 to 40 characters.
                      */
                     void SetTag(const std::string& _tag);
 
@@ -167,13 +167,13 @@ Different algorithm model versions correspond to different face recognition algo
                 private:
 
                     /**
-                     * Group name, which is modifiable, must be unique, and can contain 1–60 characters.
+                     * Group name, which is modifiable, must be unique, and can contain 1 to 60 characters.
                      */
                     std::string m_groupName;
                     bool m_groupNameHasBeenSet;
 
                     /**
-                     * Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
+                     * Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
@@ -181,7 +181,7 @@ Different algorithm model versions correspond to different face recognition algo
                     /**
                      * Custom group description field that describes the person attributes in the group, which will be applied to all persons in the group. 
 Up to 5 ones can be created. 
-Each custom description field can contain 1–30 characters. 
+Each custom description field can contain 1 to 30 characters. 
 The custom description field must be unique in the group. 
 Example: if you set the "custom description field" of a group to ["student ID","employee ID","mobile number"], 
 then all the persons in the group will have description fields named "student ID", "employee ID", and "mobile number". 
@@ -191,7 +191,7 @@ You can enter content in the corresponding field to register a person's student 
                     bool m_groupExDescriptionsHasBeenSet;
 
                     /**
-                     * Group remarks, which can contain 0–40 characters.
+                     * Group remarks, which can contain 0 to 40 characters.
                      */
                     std::string m_tag;
                     bool m_tagHasBeenSet;

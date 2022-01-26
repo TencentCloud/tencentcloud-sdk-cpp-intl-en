@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Yunjing::V20180228::Model;
-using namespace rapidjson;
 using namespace std;
 
 Machine::Machine() :
@@ -33,11 +32,16 @@ Machine::Machine() :
     m_machineWanIpHasBeenSet(false),
     m_payModeHasBeenSet(false),
     m_malwareNumHasBeenSet(false),
-    m_tagHasBeenSet(false)
+    m_tagHasBeenSet(false),
+    m_baselineNumHasBeenSet(false),
+    m_cyberAttackNumHasBeenSet(false),
+    m_securityStatusHasBeenSet(false),
+    m_invasionNumHasBeenSet(false),
+    m_regionInfoHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome Machine::Deserialize(const Value &value)
+CoreInternalOutcome Machine::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -46,7 +50,7 @@ CoreInternalOutcome Machine::Deserialize(const Value &value)
     {
         if (!value["MachineName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Machine.MachineName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Machine.MachineName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_machineName = string(value["MachineName"].GetString());
         m_machineNameHasBeenSet = true;
@@ -56,7 +60,7 @@ CoreInternalOutcome Machine::Deserialize(const Value &value)
     {
         if (!value["MachineOs"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Machine.MachineOs` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Machine.MachineOs` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_machineOs = string(value["MachineOs"].GetString());
         m_machineOsHasBeenSet = true;
@@ -66,7 +70,7 @@ CoreInternalOutcome Machine::Deserialize(const Value &value)
     {
         if (!value["MachineStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Machine.MachineStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Machine.MachineStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_machineStatus = string(value["MachineStatus"].GetString());
         m_machineStatusHasBeenSet = true;
@@ -76,7 +80,7 @@ CoreInternalOutcome Machine::Deserialize(const Value &value)
     {
         if (!value["Uuid"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Machine.Uuid` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Machine.Uuid` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_uuid = string(value["Uuid"].GetString());
         m_uuidHasBeenSet = true;
@@ -86,7 +90,7 @@ CoreInternalOutcome Machine::Deserialize(const Value &value)
     {
         if (!value["Quuid"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Machine.Quuid` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Machine.Quuid` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_quuid = string(value["Quuid"].GetString());
         m_quuidHasBeenSet = true;
@@ -96,7 +100,7 @@ CoreInternalOutcome Machine::Deserialize(const Value &value)
     {
         if (!value["VulNum"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Machine.VulNum` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Machine.VulNum` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_vulNum = value["VulNum"].GetInt64();
         m_vulNumHasBeenSet = true;
@@ -106,7 +110,7 @@ CoreInternalOutcome Machine::Deserialize(const Value &value)
     {
         if (!value["MachineIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Machine.MachineIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Machine.MachineIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_machineIp = string(value["MachineIp"].GetString());
         m_machineIpHasBeenSet = true;
@@ -116,7 +120,7 @@ CoreInternalOutcome Machine::Deserialize(const Value &value)
     {
         if (!value["IsProVersion"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `Machine.IsProVersion` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Machine.IsProVersion` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_isProVersion = value["IsProVersion"].GetBool();
         m_isProVersionHasBeenSet = true;
@@ -126,7 +130,7 @@ CoreInternalOutcome Machine::Deserialize(const Value &value)
     {
         if (!value["MachineWanIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Machine.MachineWanIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Machine.MachineWanIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_machineWanIp = string(value["MachineWanIp"].GetString());
         m_machineWanIpHasBeenSet = true;
@@ -136,7 +140,7 @@ CoreInternalOutcome Machine::Deserialize(const Value &value)
     {
         if (!value["PayMode"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Machine.PayMode` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Machine.PayMode` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_payMode = string(value["PayMode"].GetString());
         m_payModeHasBeenSet = true;
@@ -146,7 +150,7 @@ CoreInternalOutcome Machine::Deserialize(const Value &value)
     {
         if (!value["MalwareNum"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Machine.MalwareNum` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Machine.MalwareNum` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_malwareNum = value["MalwareNum"].GetInt64();
         m_malwareNumHasBeenSet = true;
@@ -155,10 +159,10 @@ CoreInternalOutcome Machine::Deserialize(const Value &value)
     if (value.HasMember("Tag") && !value["Tag"].IsNull())
     {
         if (!value["Tag"].IsArray())
-            return CoreInternalOutcome(Error("response `Machine.Tag` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Machine.Tag` is not array type"));
 
-        const Value &tmpValue = value["Tag"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Tag"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             MachineTag item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -172,56 +176,113 @@ CoreInternalOutcome Machine::Deserialize(const Value &value)
         m_tagHasBeenSet = true;
     }
 
+    if (value.HasMember("BaselineNum") && !value["BaselineNum"].IsNull())
+    {
+        if (!value["BaselineNum"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `Machine.BaselineNum` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_baselineNum = value["BaselineNum"].GetInt64();
+        m_baselineNumHasBeenSet = true;
+    }
+
+    if (value.HasMember("CyberAttackNum") && !value["CyberAttackNum"].IsNull())
+    {
+        if (!value["CyberAttackNum"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `Machine.CyberAttackNum` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_cyberAttackNum = value["CyberAttackNum"].GetInt64();
+        m_cyberAttackNumHasBeenSet = true;
+    }
+
+    if (value.HasMember("SecurityStatus") && !value["SecurityStatus"].IsNull())
+    {
+        if (!value["SecurityStatus"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Machine.SecurityStatus` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_securityStatus = string(value["SecurityStatus"].GetString());
+        m_securityStatusHasBeenSet = true;
+    }
+
+    if (value.HasMember("InvasionNum") && !value["InvasionNum"].IsNull())
+    {
+        if (!value["InvasionNum"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `Machine.InvasionNum` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_invasionNum = value["InvasionNum"].GetInt64();
+        m_invasionNumHasBeenSet = true;
+    }
+
+    if (value.HasMember("RegionInfo") && !value["RegionInfo"].IsNull())
+    {
+        if (!value["RegionInfo"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `Machine.RegionInfo` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_regionInfo.Deserialize(value["RegionInfo"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_regionInfoHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void Machine::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Machine::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_machineNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MachineName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_machineName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_machineName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_machineOsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MachineOs";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_machineOs.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_machineOs.c_str(), allocator).Move(), allocator);
     }
 
     if (m_machineStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MachineStatus";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_machineStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_machineStatus.c_str(), allocator).Move(), allocator);
     }
 
     if (m_uuidHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Uuid";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_uuid.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_uuid.c_str(), allocator).Move(), allocator);
     }
 
     if (m_quuidHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Quuid";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_quuid.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_quuid.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vulNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VulNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_vulNum, allocator);
@@ -229,15 +290,15 @@ void Machine::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_machineIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MachineIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_machineIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_machineIp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_isProVersionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsProVersion";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isProVersion, allocator);
@@ -245,23 +306,23 @@ void Machine::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_machineWanIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MachineWanIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_machineWanIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_machineWanIp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_payModeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PayMode";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_payMode.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_payMode.c_str(), allocator).Move(), allocator);
     }
 
     if (m_malwareNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MalwareNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_malwareNum, allocator);
@@ -269,17 +330,58 @@ void Machine::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_tagHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Tag";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_tag.begin(); itr != m_tag.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_baselineNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BaselineNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_baselineNum, allocator);
+    }
+
+    if (m_cyberAttackNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CyberAttackNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_cyberAttackNum, allocator);
+    }
+
+    if (m_securityStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SecurityStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_securityStatus.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_invasionNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InvasionNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_invasionNum, allocator);
+    }
+
+    if (m_regionInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RegionInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_regionInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -475,5 +577,85 @@ void Machine::SetTag(const vector<MachineTag>& _tag)
 bool Machine::TagHasBeenSet() const
 {
     return m_tagHasBeenSet;
+}
+
+int64_t Machine::GetBaselineNum() const
+{
+    return m_baselineNum;
+}
+
+void Machine::SetBaselineNum(const int64_t& _baselineNum)
+{
+    m_baselineNum = _baselineNum;
+    m_baselineNumHasBeenSet = true;
+}
+
+bool Machine::BaselineNumHasBeenSet() const
+{
+    return m_baselineNumHasBeenSet;
+}
+
+int64_t Machine::GetCyberAttackNum() const
+{
+    return m_cyberAttackNum;
+}
+
+void Machine::SetCyberAttackNum(const int64_t& _cyberAttackNum)
+{
+    m_cyberAttackNum = _cyberAttackNum;
+    m_cyberAttackNumHasBeenSet = true;
+}
+
+bool Machine::CyberAttackNumHasBeenSet() const
+{
+    return m_cyberAttackNumHasBeenSet;
+}
+
+string Machine::GetSecurityStatus() const
+{
+    return m_securityStatus;
+}
+
+void Machine::SetSecurityStatus(const string& _securityStatus)
+{
+    m_securityStatus = _securityStatus;
+    m_securityStatusHasBeenSet = true;
+}
+
+bool Machine::SecurityStatusHasBeenSet() const
+{
+    return m_securityStatusHasBeenSet;
+}
+
+int64_t Machine::GetInvasionNum() const
+{
+    return m_invasionNum;
+}
+
+void Machine::SetInvasionNum(const int64_t& _invasionNum)
+{
+    m_invasionNum = _invasionNum;
+    m_invasionNumHasBeenSet = true;
+}
+
+bool Machine::InvasionNumHasBeenSet() const
+{
+    return m_invasionNumHasBeenSet;
+}
+
+RegionInfo Machine::GetRegionInfo() const
+{
+    return m_regionInfo;
+}
+
+void Machine::SetRegionInfo(const RegionInfo& _regionInfo)
+{
+    m_regionInfo = _regionInfo;
+    m_regionInfoHasBeenSet = true;
+}
+
+bool Machine::RegionInfoHasBeenSet() const
+{
+    return m_regionInfoHasBeenSet;
 }
 

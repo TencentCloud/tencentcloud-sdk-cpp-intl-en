@@ -79,6 +79,24 @@ namespace TencentCloud
                      */
                     bool SecurityGroupPolicySetHasBeenSet() const;
 
+                    /**
+                     * 获取(Optional) The old policy set of the security group, which is used for log records.
+                     * @return OriginalSecurityGroupPolicySet (Optional) The old policy set of the security group, which is used for log records.
+                     */
+                    SecurityGroupPolicySet GetOriginalSecurityGroupPolicySet() const;
+
+                    /**
+                     * 设置(Optional) The old policy set of the security group, which is used for log records.
+                     * @param OriginalSecurityGroupPolicySet (Optional) The old policy set of the security group, which is used for log records.
+                     */
+                    void SetOriginalSecurityGroupPolicySet(const SecurityGroupPolicySet& _originalSecurityGroupPolicySet);
+
+                    /**
+                     * 判断参数 OriginalSecurityGroupPolicySet 是否已赋值
+                     * @return OriginalSecurityGroupPolicySet 是否已赋值
+                     */
+                    bool OriginalSecurityGroupPolicySetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -92,6 +110,12 @@ namespace TencentCloud
                      */
                     SecurityGroupPolicySet m_securityGroupPolicySet;
                     bool m_securityGroupPolicySetHasBeenSet;
+
+                    /**
+                     * (Optional) The old policy set of the security group, which is used for log records.
+                     */
+                    SecurityGroupPolicySet m_originalSecurityGroupPolicySet;
+                    bool m_originalSecurityGroupPolicySetHasBeenSet;
 
                 };
             }

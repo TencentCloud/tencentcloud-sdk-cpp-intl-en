@@ -95,54 +95,82 @@ The gap between the start time and end time should be less than or equal to 90 d
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the query metric, which can be:
-flux: traffic (in bytes)
-bandwidth: bandwidth (in bps)
-request: number of requests
-fluxHitRate: traffic hit rate (in %)
-statusCode: status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
-2xx: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
-3xx: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
-4xx: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
-5xx: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
-It is supported to specify a status code for query. The return will be empty if the status code has never been generated.
-                     * @return Metric Specifies the query metric, which can be:
-flux: traffic (in bytes)
-bandwidth: bandwidth (in bps)
-request: number of requests
-fluxHitRate: traffic hit rate (in %)
-statusCode: status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
-2xx: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
-3xx: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
-4xx: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
-5xx: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
-It is supported to specify a status code for query. The return will be empty if the status code has never been generated.
+                     * 获取Specifies the metric to query, which can be:
+`flux`: traffic (in bytes)
+`fluxIn`: upstream traffic (in bytes), only used for the `ecdn` product
+`fluxOut`: downstream traffic (in bytes), only used for the `ecdn` product
+`bandwidth`: bandwidth (in bps)
+`bandwidthIn`: upstream bandwidth (in bps), only used for the `ecdn` product
+`bandwidthOut`: downstream bandwidth (in bps), only used for the `ecdn` product
+`request`: number of requests
+`hitRequest`: number of hit requests
+`requestHitRate`: request hit rate (in % with two decimal digits)
+`hitFlux`: hit traffic (in bytes)
+`fluxHitRate`: traffic hit rate (in % with two decimal digits)
+`statusCode`: status code. Number of 2xx, 3xx, 4xx, and 5xx status codes returned during the queried period.
+`2xx`: lists the number of all status codes starting with **2** returned during the queried period based on the specified interval (if any)
+`3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
+`4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
+`5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
+Specifies the status code to query. The return will be empty if the status code has never been generated.
+                     * @return Metric Specifies the metric to query, which can be:
+`flux`: traffic (in bytes)
+`fluxIn`: upstream traffic (in bytes), only used for the `ecdn` product
+`fluxOut`: downstream traffic (in bytes), only used for the `ecdn` product
+`bandwidth`: bandwidth (in bps)
+`bandwidthIn`: upstream bandwidth (in bps), only used for the `ecdn` product
+`bandwidthOut`: downstream bandwidth (in bps), only used for the `ecdn` product
+`request`: number of requests
+`hitRequest`: number of hit requests
+`requestHitRate`: request hit rate (in % with two decimal digits)
+`hitFlux`: hit traffic (in bytes)
+`fluxHitRate`: traffic hit rate (in % with two decimal digits)
+`statusCode`: status code. Number of 2xx, 3xx, 4xx, and 5xx status codes returned during the queried period.
+`2xx`: lists the number of all status codes starting with **2** returned during the queried period based on the specified interval (if any)
+`3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
+`4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
+`5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
+Specifies the status code to query. The return will be empty if the status code has never been generated.
                      */
                     std::string GetMetric() const;
 
                     /**
-                     * 设置Specifies the query metric, which can be:
-flux: traffic (in bytes)
-bandwidth: bandwidth (in bps)
-request: number of requests
-fluxHitRate: traffic hit rate (in %)
-statusCode: status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
-2xx: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
-3xx: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
-4xx: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
-5xx: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
-It is supported to specify a status code for query. The return will be empty if the status code has never been generated.
-                     * @param Metric Specifies the query metric, which can be:
-flux: traffic (in bytes)
-bandwidth: bandwidth (in bps)
-request: number of requests
-fluxHitRate: traffic hit rate (in %)
-statusCode: status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
-2xx: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
-3xx: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
-4xx: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
-5xx: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
-It is supported to specify a status code for query. The return will be empty if the status code has never been generated.
+                     * 设置Specifies the metric to query, which can be:
+`flux`: traffic (in bytes)
+`fluxIn`: upstream traffic (in bytes), only used for the `ecdn` product
+`fluxOut`: downstream traffic (in bytes), only used for the `ecdn` product
+`bandwidth`: bandwidth (in bps)
+`bandwidthIn`: upstream bandwidth (in bps), only used for the `ecdn` product
+`bandwidthOut`: downstream bandwidth (in bps), only used for the `ecdn` product
+`request`: number of requests
+`hitRequest`: number of hit requests
+`requestHitRate`: request hit rate (in % with two decimal digits)
+`hitFlux`: hit traffic (in bytes)
+`fluxHitRate`: traffic hit rate (in % with two decimal digits)
+`statusCode`: status code. Number of 2xx, 3xx, 4xx, and 5xx status codes returned during the queried period.
+`2xx`: lists the number of all status codes starting with **2** returned during the queried period based on the specified interval (if any)
+`3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
+`4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
+`5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
+Specifies the status code to query. The return will be empty if the status code has never been generated.
+                     * @param Metric Specifies the metric to query, which can be:
+`flux`: traffic (in bytes)
+`fluxIn`: upstream traffic (in bytes), only used for the `ecdn` product
+`fluxOut`: downstream traffic (in bytes), only used for the `ecdn` product
+`bandwidth`: bandwidth (in bps)
+`bandwidthIn`: upstream bandwidth (in bps), only used for the `ecdn` product
+`bandwidthOut`: downstream bandwidth (in bps), only used for the `ecdn` product
+`request`: number of requests
+`hitRequest`: number of hit requests
+`requestHitRate`: request hit rate (in % with two decimal digits)
+`hitFlux`: hit traffic (in bytes)
+`fluxHitRate`: traffic hit rate (in % with two decimal digits)
+`statusCode`: status code. Number of 2xx, 3xx, 4xx, and 5xx status codes returned during the queried period.
+`2xx`: lists the number of all status codes starting with **2** returned during the queried period based on the specified interval (if any)
+`3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
+`4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
+`5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
+Specifies the status code to query. The return will be empty if the status code has never been generated.
                      */
                     void SetMetric(const std::string& _metric);
 
@@ -153,18 +181,26 @@ It is supported to specify a status code for query. The return will be empty if 
                     bool MetricHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the list of domain names to be queried
-Up to 30 domain names can be queried at a time
-                     * @return Domains Specifies the list of domain names to be queried
-Up to 30 domain names can be queried at a time
+                     * 获取Queries the information of specified domain names
+Specifies a domain name to query
+Specifies multiple domain names to query (30 at most at a time)
+Queries all Specifies an account to query all domain names
+                     * @return Domains Queries the information of specified domain names
+Specifies a domain name to query
+Specifies multiple domain names to query (30 at most at a time)
+Queries all Specifies an account to query all domain names
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
-                     * 设置Specifies the list of domain names to be queried
-Up to 30 domain names can be queried at a time
-                     * @param Domains Specifies the list of domain names to be queried
-Up to 30 domain names can be queried at a time
+                     * 设置Queries the information of specified domain names
+Specifies a domain name to query
+Specifies multiple domain names to query (30 at most at a time)
+Queries all Specifies an account to query all domain names
+                     * @param Domains Queries the information of specified domain names
+Specifies a domain name to query
+Specifies multiple domain names to query (30 at most at a time)
+Queries all Specifies an account to query all domain names
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
 
@@ -254,20 +290,20 @@ You can set it to true to return the details for each Domain (the statusCode met
 
                     /**
                      * 获取Specifies an ISP when you query the CDN data within Mainland China. If this is left blank, all ISPs will be queried.
-To view ISP codes, see [ISP Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+To view ISP codes, see [ISP Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified an ISP, you cannot specify a province or an IP protocol for the same query.
                      * @return Isp Specifies an ISP when you query the CDN data within Mainland China. If this is left blank, all ISPs will be queried.
-To view ISP codes, see [ISP Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+To view ISP codes, see [ISP Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified an ISP, you cannot specify a province or an IP protocol for the same query.
                      */
                     int64_t GetIsp() const;
 
                     /**
                      * 设置Specifies an ISP when you query the CDN data within Mainland China. If this is left blank, all ISPs will be queried.
-To view ISP codes, see [ISP Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+To view ISP codes, see [ISP Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified an ISP, you cannot specify a province or an IP protocol for the same query.
                      * @param Isp Specifies an ISP when you query the CDN data within Mainland China. If this is left blank, all ISPs will be queried.
-To view ISP codes, see [ISP Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+To view ISP codes, see [ISP Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified an ISP, you cannot specify a province or an IP protocol for the same query.
                      */
                     void SetIsp(const int64_t& _isp);
@@ -281,11 +317,11 @@ If you have specified an ISP, you cannot specify a province or an IP protocol fo
                     /**
                      * 获取Specifies a province when you query the CDN data within Mainland China. If this is left blank, all provinces will be queried.
 Specifies a country/region when you query the CDN data outside Mainland China. If this is left blank, all countries/regions will be queried.
-To view codes of provinces or countries/regions, see [Province Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified a province for your query on CDN data within mainland China, you cannot specify an ISP or an IP protocol for the same query.
                      * @return District Specifies a province when you query the CDN data within Mainland China. If this is left blank, all provinces will be queried.
 Specifies a country/region when you query the CDN data outside Mainland China. If this is left blank, all countries/regions will be queried.
-To view codes of provinces or countries/regions, see [Province Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified a province for your query on CDN data within mainland China, you cannot specify an ISP or an IP protocol for the same query.
                      */
                     int64_t GetDistrict() const;
@@ -293,11 +329,11 @@ If you have specified a province for your query on CDN data within mainland Chin
                     /**
                      * 设置Specifies a province when you query the CDN data within Mainland China. If this is left blank, all provinces will be queried.
 Specifies a country/region when you query the CDN data outside Mainland China. If this is left blank, all countries/regions will be queried.
-To view codes of provinces or countries/regions, see [Province Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified a province for your query on CDN data within mainland China, you cannot specify an ISP or an IP protocol for the same query.
                      * @param District Specifies a province when you query the CDN data within Mainland China. If this is left blank, all provinces will be queried.
 Specifies a country/region when you query the CDN data outside Mainland China. If this is left blank, all countries/regions will be queried.
-To view codes of provinces or countries/regions, see [Province Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified a province for your query on CDN data within mainland China, you cannot specify an ISP or an IP protocol for the same query.
                      */
                     void SetDistrict(const int64_t& _district);
@@ -339,14 +375,14 @@ https: specifies the HTTPS metric to be queried
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the data source to be queried, which can be seen as the whitelist function.
-                     * @return DataSource Specifies the data source to be queried, which can be seen as the whitelist function.
+                     * 获取Specifies the data source to be queried, which can be seen as the allowlist function.
+                     * @return DataSource Specifies the data source to be queried, which can be seen as the allowlist function.
                      */
                     std::string GetDataSource() const;
 
                     /**
-                     * 设置Specifies the data source to be queried, which can be seen as the whitelist function.
-                     * @param DataSource Specifies the data source to be queried, which can be seen as the whitelist function.
+                     * 设置Specifies the data source to be queried, which can be seen as the allowlist function.
+                     * @param DataSource Specifies the data source to be queried, which can be seen as the allowlist function.
                      */
                     void SetDataSource(const std::string& _dataSource);
 
@@ -362,13 +398,13 @@ all: all protocols
 ipv4: specifies to query IPv4 metrics
 ipv6: specifies to query IPv6 metrics
 If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
-Note: non-IPv6 whitelisted users cannot specify `ipv4` and `ipv6` for query
+Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
                      * @return IpProtocol Specified IP protocol to be queried. If this parameter is left empty, all protocols will be queried
 all: all protocols
 ipv4: specifies to query IPv4 metrics
 ipv6: specifies to query IPv6 metrics
 If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
-Note: non-IPv6 whitelisted users cannot specify `ipv4` and `ipv6` for query
+Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
                      */
                     std::string GetIpProtocol() const;
 
@@ -378,13 +414,13 @@ all: all protocols
 ipv4: specifies to query IPv4 metrics
 ipv6: specifies to query IPv6 metrics
 If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
-Note: non-IPv6 whitelisted users cannot specify `ipv4` and `ipv6` for query
+Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
                      * @param IpProtocol Specified IP protocol to be queried. If this parameter is left empty, all protocols will be queried
 all: all protocols
 ipv4: specifies to query IPv4 metrics
 ipv6: specifies to query IPv6 metrics
 If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
-Note: non-IPv6 whitelisted users cannot specify `ipv4` and `ipv6` for query
+Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
                      */
                     void SetIpProtocol(const std::string& _ipProtocol);
 
@@ -446,6 +482,24 @@ Note: non-IPv6 whitelisted users cannot specify `ipv4` and `ipv6` for query
                      */
                     bool AreaTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     * @return Product Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     */
+                    std::string GetProduct() const;
+
+                    /**
+                     * 设置Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     * @param Product Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     */
+                    void SetProduct(const std::string& _product);
+
+                    /**
+                     * 判断参数 Product 是否已赋值
+                     * @return Product 是否已赋值
+                     */
+                    bool ProductHasBeenSet() const;
+
                 private:
 
                     /**
@@ -465,24 +519,33 @@ The gap between the start time and end time should be less than or equal to 90 d
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Specifies the query metric, which can be:
-flux: traffic (in bytes)
-bandwidth: bandwidth (in bps)
-request: number of requests
-fluxHitRate: traffic hit rate (in %)
-statusCode: status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
-2xx: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
-3xx: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
-4xx: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
-5xx: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
-It is supported to specify a status code for query. The return will be empty if the status code has never been generated.
+                     * Specifies the metric to query, which can be:
+`flux`: traffic (in bytes)
+`fluxIn`: upstream traffic (in bytes), only used for the `ecdn` product
+`fluxOut`: downstream traffic (in bytes), only used for the `ecdn` product
+`bandwidth`: bandwidth (in bps)
+`bandwidthIn`: upstream bandwidth (in bps), only used for the `ecdn` product
+`bandwidthOut`: downstream bandwidth (in bps), only used for the `ecdn` product
+`request`: number of requests
+`hitRequest`: number of hit requests
+`requestHitRate`: request hit rate (in % with two decimal digits)
+`hitFlux`: hit traffic (in bytes)
+`fluxHitRate`: traffic hit rate (in % with two decimal digits)
+`statusCode`: status code. Number of 2xx, 3xx, 4xx, and 5xx status codes returned during the queried period.
+`2xx`: lists the number of all status codes starting with **2** returned during the queried period based on the specified interval (if any)
+`3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
+`4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
+`5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
+Specifies the status code to query. The return will be empty if the status code has never been generated.
                      */
                     std::string m_metric;
                     bool m_metricHasBeenSet;
 
                     /**
-                     * Specifies the list of domain names to be queried
-Up to 30 domain names can be queried at a time
+                     * Queries the information of specified domain names
+Specifies a domain name to query
+Specifies multiple domain names to query (30 at most at a time)
+Queries all Specifies an account to query all domain names
                      */
                     std::vector<std::string> m_domains;
                     bool m_domainsHasBeenSet;
@@ -513,7 +576,7 @@ You can set it to true to return the details for each Domain (the statusCode met
 
                     /**
                      * Specifies an ISP when you query the CDN data within Mainland China. If this is left blank, all ISPs will be queried.
-To view ISP codes, see [ISP Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+To view ISP codes, see [ISP Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified an ISP, you cannot specify a province or an IP protocol for the same query.
                      */
                     int64_t m_isp;
@@ -522,7 +585,7 @@ If you have specified an ISP, you cannot specify a province or an IP protocol fo
                     /**
                      * Specifies a province when you query the CDN data within Mainland China. If this is left blank, all provinces will be queried.
 Specifies a country/region when you query the CDN data outside Mainland China. If this is left blank, all countries/regions will be queried.
-To view codes of provinces or countries/regions, see [Province Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified a province for your query on CDN data within mainland China, you cannot specify an ISP or an IP protocol for the same query.
                      */
                     int64_t m_district;
@@ -538,7 +601,7 @@ https: specifies the HTTPS metric to be queried
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Specifies the data source to be queried, which can be seen as the whitelist function.
+                     * Specifies the data source to be queried, which can be seen as the allowlist function.
                      */
                     std::string m_dataSource;
                     bool m_dataSourceHasBeenSet;
@@ -549,7 +612,7 @@ all: all protocols
 ipv4: specifies to query IPv4 metrics
 ipv6: specifies to query IPv6 metrics
 If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
-Note: non-IPv6 whitelisted users cannot specify `ipv4` and `ipv6` for query
+Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
                      */
                     std::string m_ipProtocol;
                     bool m_ipProtocolHasBeenSet;
@@ -569,6 +632,12 @@ Note: non-IPv6 whitelisted users cannot specify `ipv4` and `ipv6` for query
                      */
                     std::string m_areaType;
                     bool m_areaTypeHasBeenSet;
+
+                    /**
+                     * Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     */
+                    std::string m_product;
+                    bool m_productHasBeenSet;
 
                 };
             }

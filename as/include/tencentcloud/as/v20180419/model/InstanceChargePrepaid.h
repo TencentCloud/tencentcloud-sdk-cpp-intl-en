@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * This describes the billing method of an instance
+                * This API is used to describe the billing mode of an instance.
                 */
                 class InstanceChargePrepaid : public AbstractModel
                 {

@@ -41,6 +41,7 @@ namespace TencentCloud
                     SimpleHlsClipResponse();
                     ~SimpleHlsClipResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -67,6 +68,18 @@ namespace TencentCloud
                      */
                     bool MetaDataHasBeenSet() const;
 
+                    /**
+                     * 获取Unique ID of a video clip for persistent storage.
+                     * @return FileId Unique ID of a video clip for persistent storage.
+                     */
+                    std::string GetFileId() const;
+
+                    /**
+                     * 判断参数 FileId 是否已赋值
+                     * @return FileId 是否已赋值
+                     */
+                    bool FileIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -80,6 +93,12 @@ namespace TencentCloud
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;
+
+                    /**
+                     * Unique ID of a video clip for persistent storage.
+                     */
+                    std::string m_fileId;
+                    bool m_fileIdHasBeenSet;
 
                 };
             }

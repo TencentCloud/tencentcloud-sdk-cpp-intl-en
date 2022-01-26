@@ -22,6 +22,8 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyInstanceAttributesConfig.h>
+#include <tencentcloud/ckafka/v20190819/model/DynamicRetentionTime.h>
+#include <tencentcloud/ckafka/v20190819/model/DynamicDiskConfig.h>
 
 
 namespace TencentCloud
@@ -115,6 +117,78 @@ namespace TencentCloud
                      */
                     bool ConfigHasBeenSet() const;
 
+                    /**
+                     * 获取Dynamic message retention policy configuration
+                     * @return DynamicRetentionConfig Dynamic message retention policy configuration
+                     */
+                    DynamicRetentionTime GetDynamicRetentionConfig() const;
+
+                    /**
+                     * 设置Dynamic message retention policy configuration
+                     * @param DynamicRetentionConfig Dynamic message retention policy configuration
+                     */
+                    void SetDynamicRetentionConfig(const DynamicRetentionTime& _dynamicRetentionConfig);
+
+                    /**
+                     * 判断参数 DynamicRetentionConfig 是否已赋值
+                     * @return DynamicRetentionConfig 是否已赋值
+                     */
+                    bool DynamicRetentionConfigHasBeenSet() const;
+
+                    /**
+                     * 获取Modification of the rebalancing time after upgrade
+                     * @return RebalanceTime Modification of the rebalancing time after upgrade
+                     */
+                    int64_t GetRebalanceTime() const;
+
+                    /**
+                     * 设置Modification of the rebalancing time after upgrade
+                     * @param RebalanceTime Modification of the rebalancing time after upgrade
+                     */
+                    void SetRebalanceTime(const int64_t& _rebalanceTime);
+
+                    /**
+                     * 判断参数 RebalanceTime 是否已赋值
+                     * @return RebalanceTime 是否已赋值
+                     */
+                    bool RebalanceTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Timestamp
+                     * @return PublicNetwork Timestamp
+                     */
+                    int64_t GetPublicNetwork() const;
+
+                    /**
+                     * 设置Timestamp
+                     * @param PublicNetwork Timestamp
+                     */
+                    void SetPublicNetwork(const int64_t& _publicNetwork);
+
+                    /**
+                     * 判断参数 PublicNetwork 是否已赋值
+                     * @return PublicNetwork 是否已赋值
+                     */
+                    bool PublicNetworkHasBeenSet() const;
+
+                    /**
+                     * 获取Dynamic disk expansion policy configuration.
+                     * @return DynamicDiskConfig Dynamic disk expansion policy configuration.
+                     */
+                    DynamicDiskConfig GetDynamicDiskConfig() const;
+
+                    /**
+                     * 设置Dynamic disk expansion policy configuration.
+                     * @param DynamicDiskConfig Dynamic disk expansion policy configuration.
+                     */
+                    void SetDynamicDiskConfig(const DynamicDiskConfig& _dynamicDiskConfig);
+
+                    /**
+                     * 判断参数 DynamicDiskConfig 是否已赋值
+                     * @return DynamicDiskConfig 是否已赋值
+                     */
+                    bool DynamicDiskConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -140,6 +214,30 @@ namespace TencentCloud
                      */
                     ModifyInstanceAttributesConfig m_config;
                     bool m_configHasBeenSet;
+
+                    /**
+                     * Dynamic message retention policy configuration
+                     */
+                    DynamicRetentionTime m_dynamicRetentionConfig;
+                    bool m_dynamicRetentionConfigHasBeenSet;
+
+                    /**
+                     * Modification of the rebalancing time after upgrade
+                     */
+                    int64_t m_rebalanceTime;
+                    bool m_rebalanceTimeHasBeenSet;
+
+                    /**
+                     * Timestamp
+                     */
+                    int64_t m_publicNetwork;
+                    bool m_publicNetworkHasBeenSet;
+
+                    /**
+                     * Dynamic disk expansion policy configuration.
+                     */
+                    DynamicDiskConfig m_dynamicDiskConfig;
+                    bool m_dynamicDiskConfigHasBeenSet;
 
                 };
             }

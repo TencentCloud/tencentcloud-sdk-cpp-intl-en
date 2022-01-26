@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 AiRecognitionTaskHeadTailResultOutput::AiRecognitionTaskHeadTailResultOutput() :
@@ -29,16 +28,16 @@ AiRecognitionTaskHeadTailResultOutput::AiRecognitionTaskHeadTailResultOutput() :
 {
 }
 
-CoreInternalOutcome AiRecognitionTaskHeadTailResultOutput::Deserialize(const Value &value)
+CoreInternalOutcome AiRecognitionTaskHeadTailResultOutput::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
 
     if (value.HasMember("HeadConfidence") && !value["HeadConfidence"].IsNull())
     {
-        if (!value["HeadConfidence"].IsDouble())
+        if (!value["HeadConfidence"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `AiRecognitionTaskHeadTailResultOutput.HeadConfidence` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionTaskHeadTailResultOutput.HeadConfidence` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_headConfidence = value["HeadConfidence"].GetDouble();
         m_headConfidenceHasBeenSet = true;
@@ -46,9 +45,9 @@ CoreInternalOutcome AiRecognitionTaskHeadTailResultOutput::Deserialize(const Val
 
     if (value.HasMember("HeadTimeOffset") && !value["HeadTimeOffset"].IsNull())
     {
-        if (!value["HeadTimeOffset"].IsDouble())
+        if (!value["HeadTimeOffset"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `AiRecognitionTaskHeadTailResultOutput.HeadTimeOffset` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionTaskHeadTailResultOutput.HeadTimeOffset` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_headTimeOffset = value["HeadTimeOffset"].GetDouble();
         m_headTimeOffsetHasBeenSet = true;
@@ -56,9 +55,9 @@ CoreInternalOutcome AiRecognitionTaskHeadTailResultOutput::Deserialize(const Val
 
     if (value.HasMember("TailConfidence") && !value["TailConfidence"].IsNull())
     {
-        if (!value["TailConfidence"].IsDouble())
+        if (!value["TailConfidence"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `AiRecognitionTaskHeadTailResultOutput.TailConfidence` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionTaskHeadTailResultOutput.TailConfidence` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_tailConfidence = value["TailConfidence"].GetDouble();
         m_tailConfidenceHasBeenSet = true;
@@ -66,9 +65,9 @@ CoreInternalOutcome AiRecognitionTaskHeadTailResultOutput::Deserialize(const Val
 
     if (value.HasMember("TailTimeOffset") && !value["TailTimeOffset"].IsNull())
     {
-        if (!value["TailTimeOffset"].IsDouble())
+        if (!value["TailTimeOffset"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `AiRecognitionTaskHeadTailResultOutput.TailTimeOffset` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionTaskHeadTailResultOutput.TailTimeOffset` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_tailTimeOffset = value["TailTimeOffset"].GetDouble();
         m_tailTimeOffsetHasBeenSet = true;
@@ -78,12 +77,12 @@ CoreInternalOutcome AiRecognitionTaskHeadTailResultOutput::Deserialize(const Val
     return CoreInternalOutcome(true);
 }
 
-void AiRecognitionTaskHeadTailResultOutput::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AiRecognitionTaskHeadTailResultOutput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_headConfidenceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HeadConfidence";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_headConfidence, allocator);
@@ -91,7 +90,7 @@ void AiRecognitionTaskHeadTailResultOutput::ToJsonObject(Value &value, Document:
 
     if (m_headTimeOffsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HeadTimeOffset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_headTimeOffset, allocator);
@@ -99,7 +98,7 @@ void AiRecognitionTaskHeadTailResultOutput::ToJsonObject(Value &value, Document:
 
     if (m_tailConfidenceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TailConfidence";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_tailConfidence, allocator);
@@ -107,7 +106,7 @@ void AiRecognitionTaskHeadTailResultOutput::ToJsonObject(Value &value, Document:
 
     if (m_tailTimeOffsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TailTimeOffset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_tailTimeOffset, allocator);

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 CoverConfigureInfoForUpdate::CoverConfigureInfoForUpdate() :
@@ -26,7 +25,7 @@ CoverConfigureInfoForUpdate::CoverConfigureInfoForUpdate() :
 {
 }
 
-CoreInternalOutcome CoverConfigureInfoForUpdate::Deserialize(const Value &value)
+CoreInternalOutcome CoverConfigureInfoForUpdate::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -35,7 +34,7 @@ CoreInternalOutcome CoverConfigureInfoForUpdate::Deserialize(const Value &value)
     {
         if (!value["Switch"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CoverConfigureInfoForUpdate.Switch` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CoverConfigureInfoForUpdate.Switch` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_switch = string(value["Switch"].GetString());
         m_switchHasBeenSet = true;
@@ -45,15 +44,15 @@ CoreInternalOutcome CoverConfigureInfoForUpdate::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void CoverConfigureInfoForUpdate::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void CoverConfigureInfoForUpdate::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_switchHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Switch";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_switch.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_switch.c_str(), allocator).Move(), allocator);
     }
 
 }

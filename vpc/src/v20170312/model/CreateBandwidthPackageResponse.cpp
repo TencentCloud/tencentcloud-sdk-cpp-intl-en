@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateBandwidthPackageResponse::CreateBandwidthPackageResponse() :
@@ -32,20 +31,20 @@ CreateBandwidthPackageResponse::CreateBandwidthPackageResponse() :
 
 CoreInternalOutcome CreateBandwidthPackageResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -56,11 +55,11 @@ CoreInternalOutcome CreateBandwidthPackageResponse::Deserialize(const string &pa
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -68,7 +67,7 @@ CoreInternalOutcome CreateBandwidthPackageResponse::Deserialize(const string &pa
     {
         if (!rsp["BandwidthPackageId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BandwidthPackageId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BandwidthPackageId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_bandwidthPackageId = string(rsp["BandwidthPackageId"].GetString());
         m_bandwidthPackageIdHasBeenSet = true;
@@ -77,10 +76,10 @@ CoreInternalOutcome CreateBandwidthPackageResponse::Deserialize(const string &pa
     if (rsp.HasMember("BandwidthPackageIds") && !rsp["BandwidthPackageIds"].IsNull())
     {
         if (!rsp["BandwidthPackageIds"].IsArray())
-            return CoreInternalOutcome(Error("response `BandwidthPackageIds` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `BandwidthPackageIds` is not array type"));
 
-        const Value &tmpValue = rsp["BandwidthPackageIds"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["BandwidthPackageIds"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_bandwidthPackageIds.push_back((*itr).GetString());
         }
@@ -89,6 +88,44 @@ CoreInternalOutcome CreateBandwidthPackageResponse::Deserialize(const string &pa
 
 
     return CoreInternalOutcome(true);
+}
+
+string CreateBandwidthPackageResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_bandwidthPackageIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BandwidthPackageId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_bandwidthPackageId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_bandwidthPackageIdsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BandwidthPackageIds";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_bandwidthPackageIds.begin(); itr != m_bandwidthPackageIds.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

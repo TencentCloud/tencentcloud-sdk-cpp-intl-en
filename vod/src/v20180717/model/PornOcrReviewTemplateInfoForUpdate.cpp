@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 PornOcrReviewTemplateInfoForUpdate::PornOcrReviewTemplateInfoForUpdate() :
@@ -28,7 +27,7 @@ PornOcrReviewTemplateInfoForUpdate::PornOcrReviewTemplateInfoForUpdate() :
 {
 }
 
-CoreInternalOutcome PornOcrReviewTemplateInfoForUpdate::Deserialize(const Value &value)
+CoreInternalOutcome PornOcrReviewTemplateInfoForUpdate::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome PornOcrReviewTemplateInfoForUpdate::Deserialize(const Value 
     {
         if (!value["Switch"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PornOcrReviewTemplateInfoForUpdate.Switch` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PornOcrReviewTemplateInfoForUpdate.Switch` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_switch = string(value["Switch"].GetString());
         m_switchHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome PornOcrReviewTemplateInfoForUpdate::Deserialize(const Value 
     {
         if (!value["BlockConfidence"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `PornOcrReviewTemplateInfoForUpdate.BlockConfidence` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PornOcrReviewTemplateInfoForUpdate.BlockConfidence` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_blockConfidence = value["BlockConfidence"].GetInt64();
         m_blockConfidenceHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome PornOcrReviewTemplateInfoForUpdate::Deserialize(const Value 
     {
         if (!value["ReviewConfidence"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `PornOcrReviewTemplateInfoForUpdate.ReviewConfidence` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PornOcrReviewTemplateInfoForUpdate.ReviewConfidence` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_reviewConfidence = value["ReviewConfidence"].GetInt64();
         m_reviewConfidenceHasBeenSet = true;
@@ -67,20 +66,20 @@ CoreInternalOutcome PornOcrReviewTemplateInfoForUpdate::Deserialize(const Value 
     return CoreInternalOutcome(true);
 }
 
-void PornOcrReviewTemplateInfoForUpdate::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void PornOcrReviewTemplateInfoForUpdate::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_switchHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Switch";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_switch.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_switch.c_str(), allocator).Move(), allocator);
     }
 
     if (m_blockConfidenceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BlockConfidence";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_blockConfidence, allocator);
@@ -88,7 +87,7 @@ void PornOcrReviewTemplateInfoForUpdate::ToJsonObject(Value &value, Document::Al
 
     if (m_reviewConfidenceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReviewConfidence";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_reviewConfidence, allocator);

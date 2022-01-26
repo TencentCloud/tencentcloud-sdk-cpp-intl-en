@@ -208,6 +208,28 @@ namespace TencentCloud
                      */
                     bool StatusHasBeenSet() const;
 
+                    /**
+                     * 获取Parameter unit
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Unit Parameter unit
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetUnit() const;
+
+                    /**
+                     * 设置Parameter unit
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param Unit Parameter unit
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetUnit(const std::string& _unit);
+
+                    /**
+                     * 判断参数 Unit 是否已赋值
+                     * @return Unit 是否已赋值
+                     */
+                    bool UnitHasBeenSet() const;
+
                 private:
 
                     /**
@@ -263,6 +285,13 @@ namespace TencentCloud
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
+
+                    /**
+                     * Parameter unit
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_unit;
+                    bool m_unitHasBeenSet;
 
                 };
             }

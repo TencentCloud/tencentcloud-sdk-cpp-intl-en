@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取Unbound targets
-                     * @return Targets Unbound targets
+                     * 获取Unbinding targets
+                     * @return Targets Unbinding targets
                      */
                     std::vector<BatchTarget> GetTargets() const;
 
                     /**
-                     * 设置Unbound targets
-                     * @param Targets Unbound targets
+                     * 设置Unbinding targets
+                     * @param Targets Unbinding targets
                      */
                     void SetTargets(const std::vector<BatchTarget>& _targets);
 
@@ -88,7 +88,7 @@ namespace TencentCloud
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * Unbound targets
+                     * Unbinding targets
                      */
                     std::vector<BatchTarget> m_targets;
                     bool m_targetsHasBeenSet;

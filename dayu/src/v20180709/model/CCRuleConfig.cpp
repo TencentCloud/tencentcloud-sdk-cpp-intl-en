@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dayu::V20180709::Model;
-using namespace rapidjson;
 using namespace std;
 
 CCRuleConfig::CCRuleConfig() :
@@ -29,7 +28,7 @@ CCRuleConfig::CCRuleConfig() :
 {
 }
 
-CoreInternalOutcome CCRuleConfig::Deserialize(const Value &value)
+CoreInternalOutcome CCRuleConfig::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome CCRuleConfig::Deserialize(const Value &value)
     {
         if (!value["Period"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CCRuleConfig.Period` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CCRuleConfig.Period` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_period = value["Period"].GetUint64();
         m_periodHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome CCRuleConfig::Deserialize(const Value &value)
     {
         if (!value["ReqNumber"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CCRuleConfig.ReqNumber` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CCRuleConfig.ReqNumber` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_reqNumber = value["ReqNumber"].GetUint64();
         m_reqNumberHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome CCRuleConfig::Deserialize(const Value &value)
     {
         if (!value["Action"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CCRuleConfig.Action` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CCRuleConfig.Action` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_action = string(value["Action"].GetString());
         m_actionHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome CCRuleConfig::Deserialize(const Value &value)
     {
         if (!value["ExeDuration"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CCRuleConfig.ExeDuration` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CCRuleConfig.ExeDuration` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_exeDuration = value["ExeDuration"].GetUint64();
         m_exeDurationHasBeenSet = true;
@@ -78,12 +77,12 @@ CoreInternalOutcome CCRuleConfig::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void CCRuleConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void CCRuleConfig::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_periodHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Period";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_period, allocator);
@@ -91,7 +90,7 @@ void CCRuleConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_reqNumberHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReqNumber";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_reqNumber, allocator);
@@ -99,15 +98,15 @@ void CCRuleConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_actionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Action";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_action.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_action.c_str(), allocator).Move(), allocator);
     }
 
     if (m_exeDurationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ExeDuration";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_exeDuration, allocator);

@@ -18,22 +18,25 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 TranscodeTaskInput::TranscodeTaskInput() :
     m_definitionHasBeenSet(false),
     m_rawParameterHasBeenSet(false),
+    m_overrideParameterHasBeenSet(false),
     m_watermarkSetHasBeenSet(false),
     m_mosaicSetHasBeenSet(false),
+    m_startTimeOffsetHasBeenSet(false),
+    m_endTimeOffsetHasBeenSet(false),
     m_outputStorageHasBeenSet(false),
     m_outputObjectPathHasBeenSet(false),
     m_segmentObjectNameHasBeenSet(false),
-    m_objectNumberFormatHasBeenSet(false)
+    m_objectNumberFormatHasBeenSet(false),
+    m_headTailParameterHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome TranscodeTaskInput::Deserialize(const Value &value)
+CoreInternalOutcome TranscodeTaskInput::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +45,7 @@ CoreInternalOutcome TranscodeTaskInput::Deserialize(const Value &value)
     {
         if (!value["Definition"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TranscodeTaskInput.Definition` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TranscodeTaskInput.Definition` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_definition = value["Definition"].GetUint64();
         m_definitionHasBeenSet = true;
@@ -52,7 +55,7 @@ CoreInternalOutcome TranscodeTaskInput::Deserialize(const Value &value)
     {
         if (!value["RawParameter"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `TranscodeTaskInput.RawParameter` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TranscodeTaskInput.RawParameter` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_rawParameter.Deserialize(value["RawParameter"]);
@@ -65,13 +68,30 @@ CoreInternalOutcome TranscodeTaskInput::Deserialize(const Value &value)
         m_rawParameterHasBeenSet = true;
     }
 
+    if (value.HasMember("OverrideParameter") && !value["OverrideParameter"].IsNull())
+    {
+        if (!value["OverrideParameter"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `TranscodeTaskInput.OverrideParameter` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_overrideParameter.Deserialize(value["OverrideParameter"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_overrideParameterHasBeenSet = true;
+    }
+
     if (value.HasMember("WatermarkSet") && !value["WatermarkSet"].IsNull())
     {
         if (!value["WatermarkSet"].IsArray())
-            return CoreInternalOutcome(Error("response `TranscodeTaskInput.WatermarkSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `TranscodeTaskInput.WatermarkSet` is not array type"));
 
-        const Value &tmpValue = value["WatermarkSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["WatermarkSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             WatermarkInput item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -88,10 +108,10 @@ CoreInternalOutcome TranscodeTaskInput::Deserialize(const Value &value)
     if (value.HasMember("MosaicSet") && !value["MosaicSet"].IsNull())
     {
         if (!value["MosaicSet"].IsArray())
-            return CoreInternalOutcome(Error("response `TranscodeTaskInput.MosaicSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `TranscodeTaskInput.MosaicSet` is not array type"));
 
-        const Value &tmpValue = value["MosaicSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["MosaicSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             MosaicInput item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -105,11 +125,31 @@ CoreInternalOutcome TranscodeTaskInput::Deserialize(const Value &value)
         m_mosaicSetHasBeenSet = true;
     }
 
+    if (value.HasMember("StartTimeOffset") && !value["StartTimeOffset"].IsNull())
+    {
+        if (!value["StartTimeOffset"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `TranscodeTaskInput.StartTimeOffset` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_startTimeOffset = value["StartTimeOffset"].GetDouble();
+        m_startTimeOffsetHasBeenSet = true;
+    }
+
+    if (value.HasMember("EndTimeOffset") && !value["EndTimeOffset"].IsNull())
+    {
+        if (!value["EndTimeOffset"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `TranscodeTaskInput.EndTimeOffset` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_endTimeOffset = value["EndTimeOffset"].GetDouble();
+        m_endTimeOffsetHasBeenSet = true;
+    }
+
     if (value.HasMember("OutputStorage") && !value["OutputStorage"].IsNull())
     {
         if (!value["OutputStorage"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `TranscodeTaskInput.OutputStorage` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TranscodeTaskInput.OutputStorage` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_outputStorage.Deserialize(value["OutputStorage"]);
@@ -126,7 +166,7 @@ CoreInternalOutcome TranscodeTaskInput::Deserialize(const Value &value)
     {
         if (!value["OutputObjectPath"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TranscodeTaskInput.OutputObjectPath` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TranscodeTaskInput.OutputObjectPath` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_outputObjectPath = string(value["OutputObjectPath"].GetString());
         m_outputObjectPathHasBeenSet = true;
@@ -136,7 +176,7 @@ CoreInternalOutcome TranscodeTaskInput::Deserialize(const Value &value)
     {
         if (!value["SegmentObjectName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TranscodeTaskInput.SegmentObjectName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TranscodeTaskInput.SegmentObjectName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_segmentObjectName = string(value["SegmentObjectName"].GetString());
         m_segmentObjectNameHasBeenSet = true;
@@ -146,7 +186,7 @@ CoreInternalOutcome TranscodeTaskInput::Deserialize(const Value &value)
     {
         if (!value["ObjectNumberFormat"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `TranscodeTaskInput.ObjectNumberFormat` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TranscodeTaskInput.ObjectNumberFormat` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_objectNumberFormat.Deserialize(value["ObjectNumberFormat"]);
@@ -159,16 +199,33 @@ CoreInternalOutcome TranscodeTaskInput::Deserialize(const Value &value)
         m_objectNumberFormatHasBeenSet = true;
     }
 
+    if (value.HasMember("HeadTailParameter") && !value["HeadTailParameter"].IsNull())
+    {
+        if (!value["HeadTailParameter"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `TranscodeTaskInput.HeadTailParameter` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_headTailParameter.Deserialize(value["HeadTailParameter"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_headTailParameterHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void TranscodeTaskInput::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TranscodeTaskInput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_definitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Definition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_definition, allocator);
@@ -176,75 +233,109 @@ void TranscodeTaskInput::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_rawParameterHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RawParameter";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_rawParameter.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_overrideParameterHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OverrideParameter";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_overrideParameter.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_watermarkSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "WatermarkSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_watermarkSet.begin(); itr != m_watermarkSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_mosaicSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MosaicSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_mosaicSet.begin(); itr != m_mosaicSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
+    if (m_startTimeOffsetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StartTimeOffset";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_startTimeOffset, allocator);
+    }
+
+    if (m_endTimeOffsetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EndTimeOffset";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_endTimeOffset, allocator);
+    }
+
     if (m_outputStorageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OutputStorage";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_outputStorage.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_outputObjectPathHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OutputObjectPath";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_outputObjectPath.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_outputObjectPath.c_str(), allocator).Move(), allocator);
     }
 
     if (m_segmentObjectNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SegmentObjectName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_segmentObjectName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_segmentObjectName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_objectNumberFormatHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ObjectNumberFormat";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_objectNumberFormat.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_headTailParameterHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HeadTailParameter";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_headTailParameter.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -282,6 +373,22 @@ bool TranscodeTaskInput::RawParameterHasBeenSet() const
     return m_rawParameterHasBeenSet;
 }
 
+OverrideTranscodeParameter TranscodeTaskInput::GetOverrideParameter() const
+{
+    return m_overrideParameter;
+}
+
+void TranscodeTaskInput::SetOverrideParameter(const OverrideTranscodeParameter& _overrideParameter)
+{
+    m_overrideParameter = _overrideParameter;
+    m_overrideParameterHasBeenSet = true;
+}
+
+bool TranscodeTaskInput::OverrideParameterHasBeenSet() const
+{
+    return m_overrideParameterHasBeenSet;
+}
+
 vector<WatermarkInput> TranscodeTaskInput::GetWatermarkSet() const
 {
     return m_watermarkSet;
@@ -312,6 +419,38 @@ void TranscodeTaskInput::SetMosaicSet(const vector<MosaicInput>& _mosaicSet)
 bool TranscodeTaskInput::MosaicSetHasBeenSet() const
 {
     return m_mosaicSetHasBeenSet;
+}
+
+double TranscodeTaskInput::GetStartTimeOffset() const
+{
+    return m_startTimeOffset;
+}
+
+void TranscodeTaskInput::SetStartTimeOffset(const double& _startTimeOffset)
+{
+    m_startTimeOffset = _startTimeOffset;
+    m_startTimeOffsetHasBeenSet = true;
+}
+
+bool TranscodeTaskInput::StartTimeOffsetHasBeenSet() const
+{
+    return m_startTimeOffsetHasBeenSet;
+}
+
+double TranscodeTaskInput::GetEndTimeOffset() const
+{
+    return m_endTimeOffset;
+}
+
+void TranscodeTaskInput::SetEndTimeOffset(const double& _endTimeOffset)
+{
+    m_endTimeOffset = _endTimeOffset;
+    m_endTimeOffsetHasBeenSet = true;
+}
+
+bool TranscodeTaskInput::EndTimeOffsetHasBeenSet() const
+{
+    return m_endTimeOffsetHasBeenSet;
 }
 
 TaskOutputStorage TranscodeTaskInput::GetOutputStorage() const
@@ -376,5 +515,21 @@ void TranscodeTaskInput::SetObjectNumberFormat(const NumberFormat& _objectNumber
 bool TranscodeTaskInput::ObjectNumberFormatHasBeenSet() const
 {
     return m_objectNumberFormatHasBeenSet;
+}
+
+HeadTailParameter TranscodeTaskInput::GetHeadTailParameter() const
+{
+    return m_headTailParameter;
+}
+
+void TranscodeTaskInput::SetHeadTailParameter(const HeadTailParameter& _headTailParameter)
+{
+    m_headTailParameter = _headTailParameter;
+    m_headTailParameterHasBeenSet = true;
+}
+
+bool TranscodeTaskInput::HeadTailParameterHasBeenSet() const
+{
+    return m_headTailParameterHasBeenSet;
 }
 

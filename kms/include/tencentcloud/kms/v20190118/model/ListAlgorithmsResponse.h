@@ -41,6 +41,7 @@ namespace TencentCloud
                     ListAlgorithmsResponse();
                     ~ListAlgorithmsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -67,6 +68,18 @@ namespace TencentCloud
                      */
                     bool AsymmetricAlgorithmsHasBeenSet() const;
 
+                    /**
+                     * 获取Asymmetric signature verification algorithms supported in the current region
+                     * @return AsymmetricSignVerifyAlgorithms Asymmetric signature verification algorithms supported in the current region
+                     */
+                    std::vector<AlgorithmInfo> GetAsymmetricSignVerifyAlgorithms() const;
+
+                    /**
+                     * 判断参数 AsymmetricSignVerifyAlgorithms 是否已赋值
+                     * @return AsymmetricSignVerifyAlgorithms 是否已赋值
+                     */
+                    bool AsymmetricSignVerifyAlgorithmsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -80,6 +93,12 @@ namespace TencentCloud
                      */
                     std::vector<AlgorithmInfo> m_asymmetricAlgorithms;
                     bool m_asymmetricAlgorithmsHasBeenSet;
+
+                    /**
+                     * Asymmetric signature verification algorithms supported in the current region
+                     */
+                    std::vector<AlgorithmInfo> m_asymmetricSignVerifyAlgorithms;
+                    bool m_asymmetricSignVerifyAlgorithmsHasBeenSet;
 
                 };
             }

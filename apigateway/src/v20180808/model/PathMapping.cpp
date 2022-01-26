@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 PathMapping::PathMapping() :
@@ -27,7 +26,7 @@ PathMapping::PathMapping() :
 {
 }
 
-CoreInternalOutcome PathMapping::Deserialize(const Value &value)
+CoreInternalOutcome PathMapping::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome PathMapping::Deserialize(const Value &value)
     {
         if (!value["Path"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PathMapping.Path` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PathMapping.Path` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_path = string(value["Path"].GetString());
         m_pathHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome PathMapping::Deserialize(const Value &value)
     {
         if (!value["Environment"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PathMapping.Environment` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PathMapping.Environment` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_environment = string(value["Environment"].GetString());
         m_environmentHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome PathMapping::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void PathMapping::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void PathMapping::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_pathHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Path";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_path.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_path.c_str(), allocator).Move(), allocator);
     }
 
     if (m_environmentHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Environment";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_environment.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_environment.c_str(), allocator).Move(), allocator);
     }
 
 }

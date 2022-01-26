@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ecdn::V20191012::Model;
-using namespace rapidjson;
 using namespace std;
 
 CacheKey::CacheKey() :
@@ -26,7 +25,7 @@ CacheKey::CacheKey() :
 {
 }
 
-CoreInternalOutcome CacheKey::Deserialize(const Value &value)
+CoreInternalOutcome CacheKey::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -35,7 +34,7 @@ CoreInternalOutcome CacheKey::Deserialize(const Value &value)
     {
         if (!value["FullUrlCache"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CacheKey.FullUrlCache` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CacheKey.FullUrlCache` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fullUrlCache = string(value["FullUrlCache"].GetString());
         m_fullUrlCacheHasBeenSet = true;
@@ -45,15 +44,15 @@ CoreInternalOutcome CacheKey::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void CacheKey::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void CacheKey::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_fullUrlCacheHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FullUrlCache";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fullUrlCache.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fullUrlCache.c_str(), allocator).Move(), allocator);
     }
 
 }

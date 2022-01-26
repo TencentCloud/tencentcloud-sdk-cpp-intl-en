@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Whether the instance needs to be protected from scale-in.
-                     * @return ProtectedFromScaleIn Whether the instance needs to be protected from scale-in.
+                     * 获取Whether to enable scale-in protection for this instance
+                     * @return ProtectedFromScaleIn Whether to enable scale-in protection for this instance
                      */
                     bool GetProtectedFromScaleIn() const;
 
                     /**
-                     * 设置Whether the instance needs to be protected from scale-in.
-                     * @param ProtectedFromScaleIn Whether the instance needs to be protected from scale-in.
+                     * 设置Whether to enable scale-in protection for this instance
+                     * @param ProtectedFromScaleIn Whether to enable scale-in protection for this instance
                      */
                     void SetProtectedFromScaleIn(const bool& _protectedFromScaleIn);
 
@@ -111,7 +111,7 @@ namespace TencentCloud
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Whether the instance needs to be protected from scale-in.
+                     * Whether to enable scale-in protection for this instance
                      */
                     bool m_protectedFromScaleIn;
                     bool m_protectedFromScaleInHasBeenSet;

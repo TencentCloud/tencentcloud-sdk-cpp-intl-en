@@ -102,14 +102,14 @@ namespace TencentCloud
                     bool ContainerRuntimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NodeNameType 
+                     * 获取NodeName type for a node in a cluster (This includes the two forms of **hostname** and **lan-ip**, with the default as **lan-ip**. If **hostname** is used, you need to set the HostName parameter when creating a node, and the InstanceName needs to be the same as the HostName.)
+                     * @return NodeNameType NodeName type for a node in a cluster (This includes the two forms of **hostname** and **lan-ip**, with the default as **lan-ip**. If **hostname** is used, you need to set the HostName parameter when creating a node, and the InstanceName needs to be the same as the HostName.)
                      */
                     std::string GetNodeNameType() const;
 
                     /**
-                     * 设置
-                     * @param NodeNameType 
+                     * 设置NodeName type for a node in a cluster (This includes the two forms of **hostname** and **lan-ip**, with the default as **lan-ip**. If **hostname** is used, you need to set the HostName parameter when creating a node, and the InstanceName needs to be the same as the HostName.)
+                     * @param NodeNameType NodeName type for a node in a cluster (This includes the two forms of **hostname** and **lan-ip**, with the default as **lan-ip**. If **hostname** is used, you need to set the HostName parameter when creating a node, and the InstanceName needs to be the same as the HostName.)
                      */
                     void SetNodeNameType(const std::string& _nodeNameType);
 
@@ -174,14 +174,14 @@ namespace TencentCloud
                     bool IsNonStaticIpModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DeletionProtection 
+                     * 获取Indicates whether to enable cluster deletion protection.
+                     * @return DeletionProtection Indicates whether to enable cluster deletion protection.
                      */
                     bool GetDeletionProtection() const;
 
                     /**
-                     * 设置
-                     * @param DeletionProtection 
+                     * 设置Indicates whether to enable cluster deletion protection.
+                     * @param DeletionProtection Indicates whether to enable cluster deletion protection.
                      */
                     void SetDeletionProtection(const bool& _deletionProtection);
 
@@ -192,14 +192,38 @@ namespace TencentCloud
                     bool DeletionProtectionHasBeenSet() const;
 
                     /**
-                     * 获取Cluster network proxy model
-                     * @return KubeProxyMode Cluster network proxy model
+                     * 获取Cluster network proxy model, which is only used when ipvs-bpf mode is used. At present, TKE cluster supports three network proxy modes including `iptables`, `ipvs` and `ipvs-bpf` and their parameter setting relationships are as follows:
+`iptables`: do not set IPVS and KubeProxyMode.
+`ipvs`: set IPVS to `true` and do not set KubeProxyMode.
+`ipvs-bpf`: set KubeProxyMode to `kube-proxy-bpf`.
+The following conditions are required to use ipvs-bpf network mode:
+1. The cluster version must be v1.14 or later.
+2. The system image must be Tencent Linux 2.4.
+                     * @return KubeProxyMode Cluster network proxy model, which is only used when ipvs-bpf mode is used. At present, TKE cluster supports three network proxy modes including `iptables`, `ipvs` and `ipvs-bpf` and their parameter setting relationships are as follows:
+`iptables`: do not set IPVS and KubeProxyMode.
+`ipvs`: set IPVS to `true` and do not set KubeProxyMode.
+`ipvs-bpf`: set KubeProxyMode to `kube-proxy-bpf`.
+The following conditions are required to use ipvs-bpf network mode:
+1. The cluster version must be v1.14 or later.
+2. The system image must be Tencent Linux 2.4.
                      */
                     std::string GetKubeProxyMode() const;
 
                     /**
-                     * 设置Cluster network proxy model
-                     * @param KubeProxyMode Cluster network proxy model
+                     * 设置Cluster network proxy model, which is only used when ipvs-bpf mode is used. At present, TKE cluster supports three network proxy modes including `iptables`, `ipvs` and `ipvs-bpf` and their parameter setting relationships are as follows:
+`iptables`: do not set IPVS and KubeProxyMode.
+`ipvs`: set IPVS to `true` and do not set KubeProxyMode.
+`ipvs-bpf`: set KubeProxyMode to `kube-proxy-bpf`.
+The following conditions are required to use ipvs-bpf network mode:
+1. The cluster version must be v1.14 or later.
+2. The system image must be Tencent Linux 2.4.
+                     * @param KubeProxyMode Cluster network proxy model, which is only used when ipvs-bpf mode is used. At present, TKE cluster supports three network proxy modes including `iptables`, `ipvs` and `ipvs-bpf` and their parameter setting relationships are as follows:
+`iptables`: do not set IPVS and KubeProxyMode.
+`ipvs`: set IPVS to `true` and do not set KubeProxyMode.
+`ipvs-bpf`: set KubeProxyMode to `kube-proxy-bpf`.
+The following conditions are required to use ipvs-bpf network mode:
+1. The cluster version must be v1.14 or later.
+2. The system image must be Tencent Linux 2.4.
                      */
                     void SetKubeProxyMode(const std::string& _kubeProxyMode);
 
@@ -208,6 +232,150 @@ namespace TencentCloud
                      * @return KubeProxyMode 是否已赋值
                      */
                     bool KubeProxyModeHasBeenSet() const;
+
+                    /**
+                     * 获取Indicates whether to enable auditing
+                     * @return AuditEnabled Indicates whether to enable auditing
+                     */
+                    bool GetAuditEnabled() const;
+
+                    /**
+                     * 设置Indicates whether to enable auditing
+                     * @param AuditEnabled Indicates whether to enable auditing
+                     */
+                    void SetAuditEnabled(const bool& _auditEnabled);
+
+                    /**
+                     * 判断参数 AuditEnabled 是否已赋值
+                     * @return AuditEnabled 是否已赋值
+                     */
+                    bool AuditEnabledHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the ID of logset to which the audit logs are uploaded.
+                     * @return AuditLogsetId Specifies the ID of logset to which the audit logs are uploaded.
+                     */
+                    std::string GetAuditLogsetId() const;
+
+                    /**
+                     * 设置Specifies the ID of logset to which the audit logs are uploaded.
+                     * @param AuditLogsetId Specifies the ID of logset to which the audit logs are uploaded.
+                     */
+                    void SetAuditLogsetId(const std::string& _auditLogsetId);
+
+                    /**
+                     * 判断参数 AuditLogsetId 是否已赋值
+                     * @return AuditLogsetId 是否已赋值
+                     */
+                    bool AuditLogsetIdHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the ID of topic to which the audit logs are uploaded.
+                     * @return AuditLogTopicId Specifies the ID of topic to which the audit logs are uploaded.
+                     */
+                    std::string GetAuditLogTopicId() const;
+
+                    /**
+                     * 设置Specifies the ID of topic to which the audit logs are uploaded.
+                     * @param AuditLogTopicId Specifies the ID of topic to which the audit logs are uploaded.
+                     */
+                    void SetAuditLogTopicId(const std::string& _auditLogTopicId);
+
+                    /**
+                     * 判断参数 AuditLogTopicId 是否已赋值
+                     * @return AuditLogTopicId 是否已赋值
+                     */
+                    bool AuditLogTopicIdHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the ENI type. Values: `tke-route-eni` (multi-IP shared ENI); `tke-direct-eni` (independent ENI). It defaults to `tke-route-eni`.
+                     * @return VpcCniType Specifies the ENI type. Values: `tke-route-eni` (multi-IP shared ENI); `tke-direct-eni` (independent ENI). It defaults to `tke-route-eni`.
+                     */
+                    std::string GetVpcCniType() const;
+
+                    /**
+                     * 设置Specifies the ENI type. Values: `tke-route-eni` (multi-IP shared ENI); `tke-direct-eni` (independent ENI). It defaults to `tke-route-eni`.
+                     * @param VpcCniType Specifies the ENI type. Values: `tke-route-eni` (multi-IP shared ENI); `tke-direct-eni` (independent ENI). It defaults to `tke-route-eni`.
+                     */
+                    void SetVpcCniType(const std::string& _vpcCniType);
+
+                    /**
+                     * 判断参数 VpcCniType 是否已赋值
+                     * @return VpcCniType 是否已赋值
+                     */
+                    bool VpcCniTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Runtime version
+                     * @return RuntimeVersion Runtime version
+                     */
+                    std::string GetRuntimeVersion() const;
+
+                    /**
+                     * 设置Runtime version
+                     * @param RuntimeVersion Runtime version
+                     */
+                    void SetRuntimeVersion(const std::string& _runtimeVersion);
+
+                    /**
+                     * 判断参数 RuntimeVersion 是否已赋值
+                     * @return RuntimeVersion 是否已赋值
+                     */
+                    bool RuntimeVersionHasBeenSet() const;
+
+                    /**
+                     * 获取Indicates whether to enable the custom mode for the node’s pod CIDR range
+                     * @return EnableCustomizedPodCIDR Indicates whether to enable the custom mode for the node’s pod CIDR range
+                     */
+                    bool GetEnableCustomizedPodCIDR() const;
+
+                    /**
+                     * 设置Indicates whether to enable the custom mode for the node’s pod CIDR range
+                     * @param EnableCustomizedPodCIDR Indicates whether to enable the custom mode for the node’s pod CIDR range
+                     */
+                    void SetEnableCustomizedPodCIDR(const bool& _enableCustomizedPodCIDR);
+
+                    /**
+                     * 判断参数 EnableCustomizedPodCIDR 是否已赋值
+                     * @return EnableCustomizedPodCIDR 是否已赋值
+                     */
+                    bool EnableCustomizedPodCIDRHasBeenSet() const;
+
+                    /**
+                     * 获取The basic number of Pods in custom mode
+                     * @return BasePodNumber The basic number of Pods in custom mode
+                     */
+                    int64_t GetBasePodNumber() const;
+
+                    /**
+                     * 设置The basic number of Pods in custom mode
+                     * @param BasePodNumber The basic number of Pods in custom mode
+                     */
+                    void SetBasePodNumber(const int64_t& _basePodNumber);
+
+                    /**
+                     * 判断参数 BasePodNumber 是否已赋值
+                     * @return BasePodNumber 是否已赋值
+                     */
+                    bool BasePodNumberHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies whether to enable Cilium. If it’s left empty, Cilium is not enabled. If `clusterIP` is passed in, it means to enable Cilium to support the clusterIP service type.
+                     * @return CiliumMode Specifies whether to enable Cilium. If it’s left empty, Cilium is not enabled. If `clusterIP` is passed in, it means to enable Cilium to support the clusterIP service type.
+                     */
+                    std::string GetCiliumMode() const;
+
+                    /**
+                     * 设置Specifies whether to enable Cilium. If it’s left empty, Cilium is not enabled. If `clusterIP` is passed in, it means to enable Cilium to support the clusterIP service type.
+                     * @param CiliumMode Specifies whether to enable Cilium. If it’s left empty, Cilium is not enabled. If `clusterIP` is passed in, it means to enable Cilium to support the clusterIP service type.
+                     */
+                    void SetCiliumMode(const std::string& _ciliumMode);
+
+                    /**
+                     * 判断参数 CiliumMode 是否已赋值
+                     * @return CiliumMode 是否已赋值
+                     */
+                    bool CiliumModeHasBeenSet() const;
 
                 private:
 
@@ -230,7 +398,7 @@ namespace TencentCloud
                     bool m_containerRuntimeHasBeenSet;
 
                     /**
-                     * 
+                     * NodeName type for a node in a cluster (This includes the two forms of **hostname** and **lan-ip**, with the default as **lan-ip**. If **hostname** is used, you need to set the HostName parameter when creating a node, and the InstanceName needs to be the same as the HostName.)
                      */
                     std::string m_nodeNameType;
                     bool m_nodeNameTypeHasBeenSet;
@@ -254,16 +422,70 @@ namespace TencentCloud
                     bool m_isNonStaticIpModeHasBeenSet;
 
                     /**
-                     * 
+                     * Indicates whether to enable cluster deletion protection.
                      */
                     bool m_deletionProtection;
                     bool m_deletionProtectionHasBeenSet;
 
                     /**
-                     * Cluster network proxy model
+                     * Cluster network proxy model, which is only used when ipvs-bpf mode is used. At present, TKE cluster supports three network proxy modes including `iptables`, `ipvs` and `ipvs-bpf` and their parameter setting relationships are as follows:
+`iptables`: do not set IPVS and KubeProxyMode.
+`ipvs`: set IPVS to `true` and do not set KubeProxyMode.
+`ipvs-bpf`: set KubeProxyMode to `kube-proxy-bpf`.
+The following conditions are required to use ipvs-bpf network mode:
+1. The cluster version must be v1.14 or later.
+2. The system image must be Tencent Linux 2.4.
                      */
                     std::string m_kubeProxyMode;
                     bool m_kubeProxyModeHasBeenSet;
+
+                    /**
+                     * Indicates whether to enable auditing
+                     */
+                    bool m_auditEnabled;
+                    bool m_auditEnabledHasBeenSet;
+
+                    /**
+                     * Specifies the ID of logset to which the audit logs are uploaded.
+                     */
+                    std::string m_auditLogsetId;
+                    bool m_auditLogsetIdHasBeenSet;
+
+                    /**
+                     * Specifies the ID of topic to which the audit logs are uploaded.
+                     */
+                    std::string m_auditLogTopicId;
+                    bool m_auditLogTopicIdHasBeenSet;
+
+                    /**
+                     * Specifies the ENI type. Values: `tke-route-eni` (multi-IP shared ENI); `tke-direct-eni` (independent ENI). It defaults to `tke-route-eni`.
+                     */
+                    std::string m_vpcCniType;
+                    bool m_vpcCniTypeHasBeenSet;
+
+                    /**
+                     * Runtime version
+                     */
+                    std::string m_runtimeVersion;
+                    bool m_runtimeVersionHasBeenSet;
+
+                    /**
+                     * Indicates whether to enable the custom mode for the node’s pod CIDR range
+                     */
+                    bool m_enableCustomizedPodCIDR;
+                    bool m_enableCustomizedPodCIDRHasBeenSet;
+
+                    /**
+                     * The basic number of Pods in custom mode
+                     */
+                    int64_t m_basePodNumber;
+                    bool m_basePodNumberHasBeenSet;
+
+                    /**
+                     * Specifies whether to enable Cilium. If it’s left empty, Cilium is not enabled. If `clusterIP` is passed in, it means to enable Cilium to support the clusterIP service type.
+                     */
+                    std::string m_ciliumMode;
+                    bool m_ciliumModeHasBeenSet;
 
                 };
             }

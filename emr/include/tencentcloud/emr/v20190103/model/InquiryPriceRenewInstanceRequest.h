@@ -151,6 +151,24 @@ namespace TencentCloud
                      */
                     bool CurrencyHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
+                     * @return ModifyPayMode Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
+                     */
+                    int64_t GetModifyPayMode() const;
+
+                    /**
+                     * 设置Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
+                     * @param ModifyPayMode Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
+                     */
+                    void SetModifyPayMode(const int64_t& _modifyPayMode);
+
+                    /**
+                     * 判断参数 ModifyPayMode 是否已赋值
+                     * @return ModifyPayMode 是否已赋值
+                     */
+                    bool ModifyPayModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -188,6 +206,12 @@ namespace TencentCloud
                      */
                     std::string m_currency;
                     bool m_currencyHasBeenSet;
+
+                    /**
+                     * Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
+                     */
+                    int64_t m_modifyPayMode;
+                    bool m_modifyPayModeHasBeenSet;
 
                 };
             }

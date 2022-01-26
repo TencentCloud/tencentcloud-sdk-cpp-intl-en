@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Clb::V20180317::Model;
-using namespace rapidjson;
 using namespace std;
 
 ClassicalTarget::ClassicalTarget() :
@@ -32,7 +31,7 @@ ClassicalTarget::ClassicalTarget() :
 {
 }
 
-CoreInternalOutcome ClassicalTarget::Deserialize(const Value &value)
+CoreInternalOutcome ClassicalTarget::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +40,7 @@ CoreInternalOutcome ClassicalTarget::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClassicalTarget.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalTarget.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -51,7 +50,7 @@ CoreInternalOutcome ClassicalTarget::Deserialize(const Value &value)
     {
         if (!value["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClassicalTarget.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalTarget.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(value["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -61,7 +60,7 @@ CoreInternalOutcome ClassicalTarget::Deserialize(const Value &value)
     {
         if (!value["Weight"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ClassicalTarget.Weight` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalTarget.Weight` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_weight = value["Weight"].GetInt64();
         m_weightHasBeenSet = true;
@@ -70,10 +69,10 @@ CoreInternalOutcome ClassicalTarget::Deserialize(const Value &value)
     if (value.HasMember("PublicIpAddresses") && !value["PublicIpAddresses"].IsNull())
     {
         if (!value["PublicIpAddresses"].IsArray())
-            return CoreInternalOutcome(Error("response `ClassicalTarget.PublicIpAddresses` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ClassicalTarget.PublicIpAddresses` is not array type"));
 
-        const Value &tmpValue = value["PublicIpAddresses"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["PublicIpAddresses"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_publicIpAddresses.push_back((*itr).GetString());
         }
@@ -83,10 +82,10 @@ CoreInternalOutcome ClassicalTarget::Deserialize(const Value &value)
     if (value.HasMember("PrivateIpAddresses") && !value["PrivateIpAddresses"].IsNull())
     {
         if (!value["PrivateIpAddresses"].IsArray())
-            return CoreInternalOutcome(Error("response `ClassicalTarget.PrivateIpAddresses` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ClassicalTarget.PrivateIpAddresses` is not array type"));
 
-        const Value &tmpValue = value["PrivateIpAddresses"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["PrivateIpAddresses"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_privateIpAddresses.push_back((*itr).GetString());
         }
@@ -97,7 +96,7 @@ CoreInternalOutcome ClassicalTarget::Deserialize(const Value &value)
     {
         if (!value["InstanceName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClassicalTarget.InstanceName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalTarget.InstanceName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceName = string(value["InstanceName"].GetString());
         m_instanceNameHasBeenSet = true;
@@ -107,7 +106,7 @@ CoreInternalOutcome ClassicalTarget::Deserialize(const Value &value)
     {
         if (!value["RunFlag"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ClassicalTarget.RunFlag` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalTarget.RunFlag` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_runFlag = value["RunFlag"].GetInt64();
         m_runFlagHasBeenSet = true;
@@ -117,28 +116,28 @@ CoreInternalOutcome ClassicalTarget::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ClassicalTarget::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ClassicalTarget::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_weightHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Weight";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_weight, allocator);
@@ -146,41 +145,41 @@ void ClassicalTarget::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_publicIpAddressesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PublicIpAddresses";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_publicIpAddresses.begin(); itr != m_publicIpAddresses.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_privateIpAddressesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PrivateIpAddresses";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_privateIpAddresses.begin(); itr != m_privateIpAddresses.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_instanceNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_runFlagHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RunFlag";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_runFlag, allocator);

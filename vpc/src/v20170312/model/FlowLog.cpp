@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 FlowLog::FlowLog() :
@@ -31,11 +30,12 @@ FlowLog::FlowLog() :
     m_cloudLogIdHasBeenSet(false),
     m_cloudLogStateHasBeenSet(false),
     m_flowLogDescriptionHasBeenSet(false),
-    m_createdTimeHasBeenSet(false)
+    m_createdTimeHasBeenSet(false),
+    m_tagSetHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome FlowLog::Deserialize(const Value &value)
+CoreInternalOutcome FlowLog::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -44,7 +44,7 @@ CoreInternalOutcome FlowLog::Deserialize(const Value &value)
     {
         if (!value["VpcId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FlowLog.VpcId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FlowLog.VpcId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpcId = string(value["VpcId"].GetString());
         m_vpcIdHasBeenSet = true;
@@ -54,7 +54,7 @@ CoreInternalOutcome FlowLog::Deserialize(const Value &value)
     {
         if (!value["FlowLogId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FlowLog.FlowLogId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FlowLog.FlowLogId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_flowLogId = string(value["FlowLogId"].GetString());
         m_flowLogIdHasBeenSet = true;
@@ -64,7 +64,7 @@ CoreInternalOutcome FlowLog::Deserialize(const Value &value)
     {
         if (!value["FlowLogName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FlowLog.FlowLogName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FlowLog.FlowLogName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_flowLogName = string(value["FlowLogName"].GetString());
         m_flowLogNameHasBeenSet = true;
@@ -74,7 +74,7 @@ CoreInternalOutcome FlowLog::Deserialize(const Value &value)
     {
         if (!value["ResourceType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FlowLog.ResourceType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FlowLog.ResourceType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_resourceType = string(value["ResourceType"].GetString());
         m_resourceTypeHasBeenSet = true;
@@ -84,7 +84,7 @@ CoreInternalOutcome FlowLog::Deserialize(const Value &value)
     {
         if (!value["ResourceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FlowLog.ResourceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FlowLog.ResourceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_resourceId = string(value["ResourceId"].GetString());
         m_resourceIdHasBeenSet = true;
@@ -94,7 +94,7 @@ CoreInternalOutcome FlowLog::Deserialize(const Value &value)
     {
         if (!value["TrafficType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FlowLog.TrafficType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FlowLog.TrafficType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_trafficType = string(value["TrafficType"].GetString());
         m_trafficTypeHasBeenSet = true;
@@ -104,7 +104,7 @@ CoreInternalOutcome FlowLog::Deserialize(const Value &value)
     {
         if (!value["CloudLogId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FlowLog.CloudLogId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FlowLog.CloudLogId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cloudLogId = string(value["CloudLogId"].GetString());
         m_cloudLogIdHasBeenSet = true;
@@ -114,7 +114,7 @@ CoreInternalOutcome FlowLog::Deserialize(const Value &value)
     {
         if (!value["CloudLogState"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FlowLog.CloudLogState` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FlowLog.CloudLogState` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cloudLogState = string(value["CloudLogState"].GetString());
         m_cloudLogStateHasBeenSet = true;
@@ -124,7 +124,7 @@ CoreInternalOutcome FlowLog::Deserialize(const Value &value)
     {
         if (!value["FlowLogDescription"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FlowLog.FlowLogDescription` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FlowLog.FlowLogDescription` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_flowLogDescription = string(value["FlowLogDescription"].GetString());
         m_flowLogDescriptionHasBeenSet = true;
@@ -134,97 +134,132 @@ CoreInternalOutcome FlowLog::Deserialize(const Value &value)
     {
         if (!value["CreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FlowLog.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FlowLog.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createdTime = string(value["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("TagSet") && !value["TagSet"].IsNull())
+    {
+        if (!value["TagSet"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `FlowLog.TagSet` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["TagSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            Tag item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_tagSet.push_back(item);
+        }
+        m_tagSetHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void FlowLog::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void FlowLog::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_vpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vpcId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpcId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_flowLogIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FlowLogId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_flowLogId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_flowLogId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_flowLogNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FlowLogName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_flowLogName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_flowLogName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_resourceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResourceType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_resourceType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resourceType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_resourceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResourceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_resourceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resourceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_trafficTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TrafficType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_trafficType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_trafficType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cloudLogIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CloudLogId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cloudLogId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cloudLogId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cloudLogStateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CloudLogState";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cloudLogState.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cloudLogState.c_str(), allocator).Move(), allocator);
     }
 
     if (m_flowLogDescriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FlowLogDescription";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_flowLogDescription.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_flowLogDescription.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createdTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createdTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_tagSetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TagSet";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tagSet.begin(); itr != m_tagSet.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
 }
@@ -388,5 +423,21 @@ void FlowLog::SetCreatedTime(const string& _createdTime)
 bool FlowLog::CreatedTimeHasBeenSet() const
 {
     return m_createdTimeHasBeenSet;
+}
+
+vector<Tag> FlowLog::GetTagSet() const
+{
+    return m_tagSet;
+}
+
+void FlowLog::SetTagSet(const vector<Tag>& _tagSet)
+{
+    m_tagSet = _tagSet;
+    m_tagSetHasBeenSet = true;
+}
+
+bool FlowLog::TagSetHasBeenSet() const
+{
+    return m_tagSetHasBeenSet;
 }
 

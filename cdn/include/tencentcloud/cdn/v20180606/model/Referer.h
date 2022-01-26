@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Referer blacklist/whitelist configuration. This is disabled by default.
+                * Referer blocklist/allowlist configuration. This is disabled by default.
                 */
                 class Referer : public AbstractModel
                 {
@@ -48,20 +48,20 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Referer blacklist/whitelist configuration switch
+                     * 获取Referer blocklist/allowlist configuration switch
 on: enabled
 off: disabled
-                     * @return Switch Referer blacklist/whitelist configuration switch
+                     * @return Switch Referer blocklist/allowlist configuration switch
 on: enabled
 off: disabled
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Referer blacklist/whitelist configuration switch
+                     * 设置Referer blocklist/allowlist configuration switch
 on: enabled
 off: disabled
-                     * @param Switch Referer blacklist/whitelist configuration switch
+                     * @param Switch Referer blocklist/allowlist configuration switch
 on: enabled
 off: disabled
                      */
@@ -74,17 +74,17 @@ off: disabled
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Referer blacklist/whitelist configuration rule
+                     * 获取Referer blocklist/allowlist configuration rule
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return RefererRules Referer blacklist/whitelist configuration rule
+                     * @return RefererRules Referer blocklist/allowlist configuration rule
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<RefererRule> GetRefererRules() const;
 
                     /**
-                     * 设置Referer blacklist/whitelist configuration rule
+                     * 设置Referer blocklist/allowlist configuration rule
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RefererRules Referer blacklist/whitelist configuration rule
+                     * @param RefererRules Referer blocklist/allowlist configuration rule
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetRefererRules(const std::vector<RefererRule>& _refererRules);
@@ -98,7 +98,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Referer blacklist/whitelist configuration switch
+                     * Referer blocklist/allowlist configuration switch
 on: enabled
 off: disabled
                      */
@@ -106,7 +106,7 @@ off: disabled
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Referer blacklist/whitelist configuration rule
+                     * Referer blocklist/allowlist configuration rule
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<RefererRule> m_refererRules;

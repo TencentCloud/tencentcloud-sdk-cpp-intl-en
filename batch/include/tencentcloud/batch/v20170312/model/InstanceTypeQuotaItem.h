@@ -86,14 +86,14 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://cloud.tencent.com/document/product/416) billing plan. Applicable to `CDH` only, not the instances on the host.
-                     * @return InstanceChargeType Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://cloud.tencent.com/document/product/416) billing plan. Applicable to `CDH` only, not the instances on the host.
+                     * 获取Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) billing plan. Applicable to `CDH` only, not the instances on the host.
+                     * @return InstanceChargeType Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) billing plan. Applicable to `CDH` only, not the instances on the host.
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
-                     * 设置Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://cloud.tencent.com/document/product/416) billing plan. Applicable to `CDH` only, not the instances on the host.
-                     * @param InstanceChargeType Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://cloud.tencent.com/document/product/416) billing plan. Applicable to `CDH` only, not the instances on the host.
+                     * 设置Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) billing plan. Applicable to `CDH` only, not the instances on the host.
+                     * @param InstanceChargeType Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) billing plan. Applicable to `CDH` only, not the instances on the host.
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
 
@@ -291,6 +291,132 @@ Note: this field may return null, indicating that no valid value is obtained.
                      */
                     bool SoldOutReasonHasBeenSet() const;
 
+                    /**
+                     * 获取Private network bandwidth, in Gbps.
+                     * @return InstanceBandwidth Private network bandwidth, in Gbps.
+                     */
+                    double GetInstanceBandwidth() const;
+
+                    /**
+                     * 设置Private network bandwidth, in Gbps.
+                     * @param InstanceBandwidth Private network bandwidth, in Gbps.
+                     */
+                    void SetInstanceBandwidth(const double& _instanceBandwidth);
+
+                    /**
+                     * 判断参数 InstanceBandwidth 是否已赋值
+                     * @return InstanceBandwidth 是否已赋值
+                     */
+                    bool InstanceBandwidthHasBeenSet() const;
+
+                    /**
+                     * 获取The max packet sending and receiving capability (in 10k PPS).
+                     * @return InstancePps The max packet sending and receiving capability (in 10k PPS).
+                     */
+                    int64_t GetInstancePps() const;
+
+                    /**
+                     * 设置The max packet sending and receiving capability (in 10k PPS).
+                     * @param InstancePps The max packet sending and receiving capability (in 10k PPS).
+                     */
+                    void SetInstancePps(const int64_t& _instancePps);
+
+                    /**
+                     * 判断参数 InstancePps 是否已赋值
+                     * @return InstancePps 是否已赋值
+                     */
+                    bool InstancePpsHasBeenSet() const;
+
+                    /**
+                     * 获取Number of local storage blocks.
+                     * @return StorageBlockAmount Number of local storage blocks.
+                     */
+                    int64_t GetStorageBlockAmount() const;
+
+                    /**
+                     * 设置Number of local storage blocks.
+                     * @param StorageBlockAmount Number of local storage blocks.
+                     */
+                    void SetStorageBlockAmount(const int64_t& _storageBlockAmount);
+
+                    /**
+                     * 判断参数 StorageBlockAmount 是否已赋值
+                     * @return StorageBlockAmount 是否已赋值
+                     */
+                    bool StorageBlockAmountHasBeenSet() const;
+
+                    /**
+                     * 获取CPU type.
+                     * @return CpuType CPU type.
+                     */
+                    std::string GetCpuType() const;
+
+                    /**
+                     * 设置CPU type.
+                     * @param CpuType CPU type.
+                     */
+                    void SetCpuType(const std::string& _cpuType);
+
+                    /**
+                     * 判断参数 CpuType 是否已赋值
+                     * @return CpuType 是否已赋值
+                     */
+                    bool CpuTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Number of GPUs of the instance.
+                     * @return Gpu Number of GPUs of the instance.
+                     */
+                    int64_t GetGpu() const;
+
+                    /**
+                     * 设置Number of GPUs of the instance.
+                     * @param Gpu Number of GPUs of the instance.
+                     */
+                    void SetGpu(const int64_t& _gpu);
+
+                    /**
+                     * 判断参数 Gpu 是否已赋值
+                     * @return Gpu 是否已赋值
+                     */
+                    bool GpuHasBeenSet() const;
+
+                    /**
+                     * 获取Number of FPGAs of the instance.
+                     * @return Fpga Number of FPGAs of the instance.
+                     */
+                    int64_t GetFpga() const;
+
+                    /**
+                     * 设置Number of FPGAs of the instance.
+                     * @param Fpga Number of FPGAs of the instance.
+                     */
+                    void SetFpga(const int64_t& _fpga);
+
+                    /**
+                     * 判断参数 Fpga 是否已赋值
+                     * @return Fpga 是否已赋值
+                     */
+                    bool FpgaHasBeenSet() const;
+
+                    /**
+                     * 获取Descriptive information of the instance.
+                     * @return Remark Descriptive information of the instance.
+                     */
+                    std::string GetRemark() const;
+
+                    /**
+                     * 设置Descriptive information of the instance.
+                     * @param Remark Descriptive information of the instance.
+                     */
+                    void SetRemark(const std::string& _remark);
+
+                    /**
+                     * 判断参数 Remark 是否已赋值
+                     * @return Remark 是否已赋值
+                     */
+                    bool RemarkHasBeenSet() const;
+
                 private:
 
                     /**
@@ -306,7 +432,7 @@ Note: this field may return null, indicating that no valid value is obtained.
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://cloud.tencent.com/document/product/416) billing plan. Applicable to `CDH` only, not the instances on the host.
+                     * Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) billing plan. Applicable to `CDH` only, not the instances on the host.
                      */
                     std::string m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;
@@ -372,6 +498,48 @@ Note: this field may return null, indicating that no valid value is obtained.
                      */
                     std::string m_soldOutReason;
                     bool m_soldOutReasonHasBeenSet;
+
+                    /**
+                     * Private network bandwidth, in Gbps.
+                     */
+                    double m_instanceBandwidth;
+                    bool m_instanceBandwidthHasBeenSet;
+
+                    /**
+                     * The max packet sending and receiving capability (in 10k PPS).
+                     */
+                    int64_t m_instancePps;
+                    bool m_instancePpsHasBeenSet;
+
+                    /**
+                     * Number of local storage blocks.
+                     */
+                    int64_t m_storageBlockAmount;
+                    bool m_storageBlockAmountHasBeenSet;
+
+                    /**
+                     * CPU type.
+                     */
+                    std::string m_cpuType;
+                    bool m_cpuTypeHasBeenSet;
+
+                    /**
+                     * Number of GPUs of the instance.
+                     */
+                    int64_t m_gpu;
+                    bool m_gpuHasBeenSet;
+
+                    /**
+                     * Number of FPGAs of the instance.
+                     */
+                    int64_t m_fpga;
+                    bool m_fpgaHasBeenSet;
+
+                    /**
+                     * Descriptive information of the instance.
+                     */
+                    std::string m_remark;
+                    bool m_remarkHasBeenSet;
 
                 };
             }

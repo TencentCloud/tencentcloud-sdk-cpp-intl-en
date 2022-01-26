@@ -21,7 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/gme/v20180711/model/AppStatisticsItem.h>
+#include <tencentcloud/gme/v20180711/model/DescribeAppStatisticsResp.h>
 
 
 namespace TencentCloud
@@ -33,7 +33,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Gets application usage statistics output parameters
+                * DescribeAppStatistics response structure.
                 */
                 class DescribeAppStatisticsResponse : public AbstractModel
                 {
@@ -41,27 +41,28 @@ namespace TencentCloud
                     DescribeAppStatisticsResponse();
                     ~DescribeAppStatisticsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Application usage statistics
-                     * @return AppStatistics Application usage statistics
+                     * 获取App usage statistics
+                     * @return Data App usage statistics
                      */
-                    std::vector<AppStatisticsItem> GetAppStatistics() const;
+                    DescribeAppStatisticsResp GetData() const;
 
                     /**
-                     * 判断参数 AppStatistics 是否已赋值
-                     * @return AppStatistics 是否已赋值
+                     * 判断参数 Data 是否已赋值
+                     * @return Data 是否已赋值
                      */
-                    bool AppStatisticsHasBeenSet() const;
+                    bool DataHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Application usage statistics
+                     * App usage statistics
                      */
-                    std::vector<AppStatisticsItem> m_appStatistics;
-                    bool m_appStatisticsHasBeenSet;
+                    DescribeAppStatisticsResp m_data;
+                    bool m_dataHasBeenSet;
 
                 };
             }

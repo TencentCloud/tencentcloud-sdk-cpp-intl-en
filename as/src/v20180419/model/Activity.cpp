@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::As::V20180419::Model;
-using namespace rapidjson;
 using namespace std;
 
 Activity::Activity() :
@@ -34,11 +33,12 @@ Activity::Activity() :
     m_createdTimeHasBeenSet(false),
     m_activityRelatedInstanceSetHasBeenSet(false),
     m_statusMessageSimplifiedHasBeenSet(false),
-    m_lifecycleActionResultSetHasBeenSet(false)
+    m_lifecycleActionResultSetHasBeenSet(false),
+    m_detailedStatusMessageSetHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome Activity::Deserialize(const Value &value)
+CoreInternalOutcome Activity::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -47,7 +47,7 @@ CoreInternalOutcome Activity::Deserialize(const Value &value)
     {
         if (!value["AutoScalingGroupId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Activity.AutoScalingGroupId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Activity.AutoScalingGroupId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_autoScalingGroupId = string(value["AutoScalingGroupId"].GetString());
         m_autoScalingGroupIdHasBeenSet = true;
@@ -57,7 +57,7 @@ CoreInternalOutcome Activity::Deserialize(const Value &value)
     {
         if (!value["ActivityId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Activity.ActivityId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Activity.ActivityId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_activityId = string(value["ActivityId"].GetString());
         m_activityIdHasBeenSet = true;
@@ -67,7 +67,7 @@ CoreInternalOutcome Activity::Deserialize(const Value &value)
     {
         if (!value["ActivityType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Activity.ActivityType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Activity.ActivityType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_activityType = string(value["ActivityType"].GetString());
         m_activityTypeHasBeenSet = true;
@@ -77,7 +77,7 @@ CoreInternalOutcome Activity::Deserialize(const Value &value)
     {
         if (!value["StatusCode"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Activity.StatusCode` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Activity.StatusCode` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_statusCode = string(value["StatusCode"].GetString());
         m_statusCodeHasBeenSet = true;
@@ -87,7 +87,7 @@ CoreInternalOutcome Activity::Deserialize(const Value &value)
     {
         if (!value["StatusMessage"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Activity.StatusMessage` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Activity.StatusMessage` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_statusMessage = string(value["StatusMessage"].GetString());
         m_statusMessageHasBeenSet = true;
@@ -97,7 +97,7 @@ CoreInternalOutcome Activity::Deserialize(const Value &value)
     {
         if (!value["Cause"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Activity.Cause` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Activity.Cause` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cause = string(value["Cause"].GetString());
         m_causeHasBeenSet = true;
@@ -107,7 +107,7 @@ CoreInternalOutcome Activity::Deserialize(const Value &value)
     {
         if (!value["Description"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Activity.Description` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Activity.Description` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_description = string(value["Description"].GetString());
         m_descriptionHasBeenSet = true;
@@ -117,7 +117,7 @@ CoreInternalOutcome Activity::Deserialize(const Value &value)
     {
         if (!value["StartTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Activity.StartTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Activity.StartTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_startTime = string(value["StartTime"].GetString());
         m_startTimeHasBeenSet = true;
@@ -127,7 +127,7 @@ CoreInternalOutcome Activity::Deserialize(const Value &value)
     {
         if (!value["EndTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Activity.EndTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Activity.EndTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_endTime = string(value["EndTime"].GetString());
         m_endTimeHasBeenSet = true;
@@ -137,7 +137,7 @@ CoreInternalOutcome Activity::Deserialize(const Value &value)
     {
         if (!value["CreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Activity.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Activity.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createdTime = string(value["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
@@ -146,10 +146,10 @@ CoreInternalOutcome Activity::Deserialize(const Value &value)
     if (value.HasMember("ActivityRelatedInstanceSet") && !value["ActivityRelatedInstanceSet"].IsNull())
     {
         if (!value["ActivityRelatedInstanceSet"].IsArray())
-            return CoreInternalOutcome(Error("response `Activity.ActivityRelatedInstanceSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Activity.ActivityRelatedInstanceSet` is not array type"));
 
-        const Value &tmpValue = value["ActivityRelatedInstanceSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["ActivityRelatedInstanceSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             ActivtyRelatedInstance item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -167,7 +167,7 @@ CoreInternalOutcome Activity::Deserialize(const Value &value)
     {
         if (!value["StatusMessageSimplified"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Activity.StatusMessageSimplified` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Activity.StatusMessageSimplified` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_statusMessageSimplified = string(value["StatusMessageSimplified"].GetString());
         m_statusMessageSimplifiedHasBeenSet = true;
@@ -176,10 +176,10 @@ CoreInternalOutcome Activity::Deserialize(const Value &value)
     if (value.HasMember("LifecycleActionResultSet") && !value["LifecycleActionResultSet"].IsNull())
     {
         if (!value["LifecycleActionResultSet"].IsArray())
-            return CoreInternalOutcome(Error("response `Activity.LifecycleActionResultSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Activity.LifecycleActionResultSet` is not array type"));
 
-        const Value &tmpValue = value["LifecycleActionResultSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["LifecycleActionResultSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             LifecycleActionResultInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -193,127 +193,162 @@ CoreInternalOutcome Activity::Deserialize(const Value &value)
         m_lifecycleActionResultSetHasBeenSet = true;
     }
 
+    if (value.HasMember("DetailedStatusMessageSet") && !value["DetailedStatusMessageSet"].IsNull())
+    {
+        if (!value["DetailedStatusMessageSet"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Activity.DetailedStatusMessageSet` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["DetailedStatusMessageSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            DetailedStatusMessage item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_detailedStatusMessageSet.push_back(item);
+        }
+        m_detailedStatusMessageSetHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void Activity::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Activity::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_autoScalingGroupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AutoScalingGroupId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_autoScalingGroupId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_autoScalingGroupId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_activityIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ActivityId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_activityId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_activityId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_activityTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ActivityType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_activityType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_activityType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StatusCode";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_statusCode.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_statusCode.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusMessageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StatusMessage";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_statusMessage.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_statusMessage.c_str(), allocator).Move(), allocator);
     }
 
     if (m_causeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Cause";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cause.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cause.c_str(), allocator).Move(), allocator);
     }
 
     if (m_descriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Description";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_description.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
     }
 
     if (m_startTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_startTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_startTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_endTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_endTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_endTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createdTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createdTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_activityRelatedInstanceSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ActivityRelatedInstanceSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_activityRelatedInstanceSet.begin(); itr != m_activityRelatedInstanceSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_statusMessageSimplifiedHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StatusMessageSimplified";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_statusMessageSimplified.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_statusMessageSimplified.c_str(), allocator).Move(), allocator);
     }
 
     if (m_lifecycleActionResultSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LifecycleActionResultSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_lifecycleActionResultSet.begin(); itr != m_lifecycleActionResultSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_detailedStatusMessageSetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DetailedStatusMessageSet";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_detailedStatusMessageSet.begin(); itr != m_detailedStatusMessageSet.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
@@ -527,5 +562,21 @@ void Activity::SetLifecycleActionResultSet(const vector<LifecycleActionResultInf
 bool Activity::LifecycleActionResultSetHasBeenSet() const
 {
     return m_lifecycleActionResultSetHasBeenSet;
+}
+
+vector<DetailedStatusMessage> Activity::GetDetailedStatusMessageSet() const
+{
+    return m_detailedStatusMessageSet;
+}
+
+void Activity::SetDetailedStatusMessageSet(const vector<DetailedStatusMessage>& _detailedStatusMessageSet)
+{
+    m_detailedStatusMessageSet = _detailedStatusMessageSet;
+    m_detailedStatusMessageSetHasBeenSet = true;
+}
+
+bool Activity::DetailedStatusMessageSetHasBeenSet() const
+{
+    return m_detailedStatusMessageSetHasBeenSet;
 }
 

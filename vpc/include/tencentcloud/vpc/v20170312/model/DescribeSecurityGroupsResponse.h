@@ -41,11 +41,14 @@ namespace TencentCloud
                     DescribeSecurityGroupsResponse();
                     ~DescribeSecurityGroupsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
                      * 获取Security group object.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return SecurityGroupSet Security group object.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<SecurityGroup> GetSecurityGroupSet() const;
 
@@ -71,6 +74,7 @@ namespace TencentCloud
 
                     /**
                      * Security group object.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<SecurityGroup> m_securityGroupSet;
                     bool m_securityGroupSetHasBeenSet;

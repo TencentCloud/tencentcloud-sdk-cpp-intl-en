@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 NatGatewayDestinationIpPortTranslationNatRule::NatGatewayDestinationIpPortTranslationNatRule() :
@@ -34,7 +33,7 @@ NatGatewayDestinationIpPortTranslationNatRule::NatGatewayDestinationIpPortTransl
 {
 }
 
-CoreInternalOutcome NatGatewayDestinationIpPortTranslationNatRule::Deserialize(const Value &value)
+CoreInternalOutcome NatGatewayDestinationIpPortTranslationNatRule::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -43,7 +42,7 @@ CoreInternalOutcome NatGatewayDestinationIpPortTranslationNatRule::Deserialize(c
     {
         if (!value["IpProtocol"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NatGatewayDestinationIpPortTranslationNatRule.IpProtocol` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NatGatewayDestinationIpPortTranslationNatRule.IpProtocol` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ipProtocol = string(value["IpProtocol"].GetString());
         m_ipProtocolHasBeenSet = true;
@@ -53,7 +52,7 @@ CoreInternalOutcome NatGatewayDestinationIpPortTranslationNatRule::Deserialize(c
     {
         if (!value["PublicIpAddress"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NatGatewayDestinationIpPortTranslationNatRule.PublicIpAddress` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NatGatewayDestinationIpPortTranslationNatRule.PublicIpAddress` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_publicIpAddress = string(value["PublicIpAddress"].GetString());
         m_publicIpAddressHasBeenSet = true;
@@ -63,7 +62,7 @@ CoreInternalOutcome NatGatewayDestinationIpPortTranslationNatRule::Deserialize(c
     {
         if (!value["PublicPort"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `NatGatewayDestinationIpPortTranslationNatRule.PublicPort` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NatGatewayDestinationIpPortTranslationNatRule.PublicPort` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_publicPort = value["PublicPort"].GetUint64();
         m_publicPortHasBeenSet = true;
@@ -73,7 +72,7 @@ CoreInternalOutcome NatGatewayDestinationIpPortTranslationNatRule::Deserialize(c
     {
         if (!value["PrivateIpAddress"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NatGatewayDestinationIpPortTranslationNatRule.PrivateIpAddress` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NatGatewayDestinationIpPortTranslationNatRule.PrivateIpAddress` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_privateIpAddress = string(value["PrivateIpAddress"].GetString());
         m_privateIpAddressHasBeenSet = true;
@@ -83,7 +82,7 @@ CoreInternalOutcome NatGatewayDestinationIpPortTranslationNatRule::Deserialize(c
     {
         if (!value["PrivatePort"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `NatGatewayDestinationIpPortTranslationNatRule.PrivatePort` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NatGatewayDestinationIpPortTranslationNatRule.PrivatePort` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_privatePort = value["PrivatePort"].GetUint64();
         m_privatePortHasBeenSet = true;
@@ -93,7 +92,7 @@ CoreInternalOutcome NatGatewayDestinationIpPortTranslationNatRule::Deserialize(c
     {
         if (!value["Description"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NatGatewayDestinationIpPortTranslationNatRule.Description` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NatGatewayDestinationIpPortTranslationNatRule.Description` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_description = string(value["Description"].GetString());
         m_descriptionHasBeenSet = true;
@@ -103,7 +102,7 @@ CoreInternalOutcome NatGatewayDestinationIpPortTranslationNatRule::Deserialize(c
     {
         if (!value["NatGatewayId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NatGatewayDestinationIpPortTranslationNatRule.NatGatewayId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NatGatewayDestinationIpPortTranslationNatRule.NatGatewayId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_natGatewayId = string(value["NatGatewayId"].GetString());
         m_natGatewayIdHasBeenSet = true;
@@ -113,7 +112,7 @@ CoreInternalOutcome NatGatewayDestinationIpPortTranslationNatRule::Deserialize(c
     {
         if (!value["VpcId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NatGatewayDestinationIpPortTranslationNatRule.VpcId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NatGatewayDestinationIpPortTranslationNatRule.VpcId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpcId = string(value["VpcId"].GetString());
         m_vpcIdHasBeenSet = true;
@@ -123,7 +122,7 @@ CoreInternalOutcome NatGatewayDestinationIpPortTranslationNatRule::Deserialize(c
     {
         if (!value["CreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NatGatewayDestinationIpPortTranslationNatRule.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NatGatewayDestinationIpPortTranslationNatRule.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createdTime = string(value["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
@@ -133,28 +132,28 @@ CoreInternalOutcome NatGatewayDestinationIpPortTranslationNatRule::Deserialize(c
     return CoreInternalOutcome(true);
 }
 
-void NatGatewayDestinationIpPortTranslationNatRule::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void NatGatewayDestinationIpPortTranslationNatRule::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_ipProtocolHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IpProtocol";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ipProtocol.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ipProtocol.c_str(), allocator).Move(), allocator);
     }
 
     if (m_publicIpAddressHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PublicIpAddress";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_publicIpAddress.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_publicIpAddress.c_str(), allocator).Move(), allocator);
     }
 
     if (m_publicPortHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PublicPort";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_publicPort, allocator);
@@ -162,15 +161,15 @@ void NatGatewayDestinationIpPortTranslationNatRule::ToJsonObject(Value &value, D
 
     if (m_privateIpAddressHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PrivateIpAddress";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_privateIpAddress.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_privateIpAddress.c_str(), allocator).Move(), allocator);
     }
 
     if (m_privatePortHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PrivatePort";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_privatePort, allocator);
@@ -178,34 +177,34 @@ void NatGatewayDestinationIpPortTranslationNatRule::ToJsonObject(Value &value, D
 
     if (m_descriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Description";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_description.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
     }
 
     if (m_natGatewayIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NatGatewayId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_natGatewayId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_natGatewayId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vpcId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpcId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createdTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createdTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
     }
 
 }

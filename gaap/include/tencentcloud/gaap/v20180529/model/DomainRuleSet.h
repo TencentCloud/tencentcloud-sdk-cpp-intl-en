@@ -460,6 +460,62 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool PolyRealServerCertificateAliasInfoHasBeenSet() const;
 
+                    /**
+                     * 获取Domain name status.
+0: running;
+1: changing;
+2: deleting.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return DomainStatus Domain name status.
+0: running;
+1: changing;
+2: deleting.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetDomainStatus() const;
+
+                    /**
+                     * 设置Domain name status.
+0: running;
+1: changing;
+2: deleting.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param DomainStatus Domain name status.
+0: running;
+1: changing;
+2: deleting.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetDomainStatus(const uint64_t& _domainStatus);
+
+                    /**
+                     * 判断参数 DomainStatus 是否已赋值
+                     * @return DomainStatus 是否已赋值
+                     */
+                    bool DomainStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return BanStatus Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetBanStatus() const;
+
+                    /**
+                     * 设置Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param BanStatus Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetBanStatus(const std::string& _banStatus);
+
+                    /**
+                     * 判断参数 BanStatus 是否已赋值
+                     * @return BanStatus 是否已赋值
+                     */
+                    bool BanStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -591,6 +647,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<CertificateAliasInfo> m_polyRealServerCertificateAliasInfo;
                     bool m_polyRealServerCertificateAliasInfoHasBeenSet;
+
+                    /**
+                     * Domain name status.
+0: running;
+1: changing;
+2: deleting.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_domainStatus;
+                    bool m_domainStatusHasBeenSet;
+
+                    /**
+                     * Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_banStatus;
+                    bool m_banStatusHasBeenSet;
 
                 };
             }

@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of a content audit template.
-                     * @return Definition Unique ID of a content audit template.
+                     * 获取Unique ID of an intelligent content recognition template
+                     * @return Definition Unique ID of an intelligent content recognition template
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Unique ID of a content audit template.
-                     * @param Definition Unique ID of a content audit template.
+                     * 设置Unique ID of an intelligent content recognition template
+                     * @param Definition Unique ID of an intelligent content recognition template
                      */
                     void SetDefinition(const int64_t& _definition);
 
@@ -63,7 +63,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique ID of a content audit template.
+                     * Unique ID of an intelligent content recognition template
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

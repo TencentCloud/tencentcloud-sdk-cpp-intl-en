@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 DomainSetList::DomainSetList() :
@@ -27,11 +26,13 @@ DomainSetList::DomainSetList() :
     m_certificateIdHasBeenSet(false),
     m_isDefaultMappingHasBeenSet(false),
     m_protocolHasBeenSet(false),
-    m_netTypeHasBeenSet(false)
+    m_netTypeHasBeenSet(false),
+    m_isForcedHttpsHasBeenSet(false),
+    m_registrationStatusHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DomainSetList::Deserialize(const Value &value)
+CoreInternalOutcome DomainSetList::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +41,7 @@ CoreInternalOutcome DomainSetList::Deserialize(const Value &value)
     {
         if (!value["DomainName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DomainSetList.DomainName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainSetList.DomainName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_domainName = string(value["DomainName"].GetString());
         m_domainNameHasBeenSet = true;
@@ -50,7 +51,7 @@ CoreInternalOutcome DomainSetList::Deserialize(const Value &value)
     {
         if (!value["Status"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DomainSetList.Status` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainSetList.Status` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_status = value["Status"].GetInt64();
         m_statusHasBeenSet = true;
@@ -60,7 +61,7 @@ CoreInternalOutcome DomainSetList::Deserialize(const Value &value)
     {
         if (!value["CertificateId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DomainSetList.CertificateId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainSetList.CertificateId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_certificateId = string(value["CertificateId"].GetString());
         m_certificateIdHasBeenSet = true;
@@ -70,7 +71,7 @@ CoreInternalOutcome DomainSetList::Deserialize(const Value &value)
     {
         if (!value["IsDefaultMapping"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `DomainSetList.IsDefaultMapping` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainSetList.IsDefaultMapping` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_isDefaultMapping = value["IsDefaultMapping"].GetBool();
         m_isDefaultMappingHasBeenSet = true;
@@ -80,7 +81,7 @@ CoreInternalOutcome DomainSetList::Deserialize(const Value &value)
     {
         if (!value["Protocol"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DomainSetList.Protocol` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainSetList.Protocol` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_protocol = string(value["Protocol"].GetString());
         m_protocolHasBeenSet = true;
@@ -90,30 +91,50 @@ CoreInternalOutcome DomainSetList::Deserialize(const Value &value)
     {
         if (!value["NetType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DomainSetList.NetType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainSetList.NetType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_netType = string(value["NetType"].GetString());
         m_netTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("IsForcedHttps") && !value["IsForcedHttps"].IsNull())
+    {
+        if (!value["IsForcedHttps"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `DomainSetList.IsForcedHttps` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_isForcedHttps = value["IsForcedHttps"].GetBool();
+        m_isForcedHttpsHasBeenSet = true;
+    }
+
+    if (value.HasMember("RegistrationStatus") && !value["RegistrationStatus"].IsNull())
+    {
+        if (!value["RegistrationStatus"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `DomainSetList.RegistrationStatus` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_registrationStatus = value["RegistrationStatus"].GetBool();
+        m_registrationStatusHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void DomainSetList::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DomainSetList::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_domainNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DomainName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_domainName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_domainName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);
@@ -121,15 +142,15 @@ void DomainSetList::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_certificateIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CertificateId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_certificateId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_certificateId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_isDefaultMappingHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsDefaultMapping";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isDefaultMapping, allocator);
@@ -137,18 +158,34 @@ void DomainSetList::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_protocolHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Protocol";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_protocol.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
     }
 
     if (m_netTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_netType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_netType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_isForcedHttpsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsForcedHttps";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isForcedHttps, allocator);
+    }
+
+    if (m_registrationStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RegistrationStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_registrationStatus, allocator);
     }
 
 }
@@ -248,5 +285,37 @@ void DomainSetList::SetNetType(const string& _netType)
 bool DomainSetList::NetTypeHasBeenSet() const
 {
     return m_netTypeHasBeenSet;
+}
+
+bool DomainSetList::GetIsForcedHttps() const
+{
+    return m_isForcedHttps;
+}
+
+void DomainSetList::SetIsForcedHttps(const bool& _isForcedHttps)
+{
+    m_isForcedHttps = _isForcedHttps;
+    m_isForcedHttpsHasBeenSet = true;
+}
+
+bool DomainSetList::IsForcedHttpsHasBeenSet() const
+{
+    return m_isForcedHttpsHasBeenSet;
+}
+
+bool DomainSetList::GetRegistrationStatus() const
+{
+    return m_registrationStatus;
+}
+
+void DomainSetList::SetRegistrationStatus(const bool& _registrationStatus)
+{
+    m_registrationStatus = _registrationStatus;
+    m_registrationStatusHasBeenSet = true;
+}
+
+bool DomainSetList::RegistrationStatusHasBeenSet() const
+{
+    return m_registrationStatusHasBeenSet;
 }
 

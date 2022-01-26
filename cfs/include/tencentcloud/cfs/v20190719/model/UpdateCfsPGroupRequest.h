@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool PGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Permission group name, which can contain 1–64 Chinese characters, letters, numbers, underscores, or dashes
-                     * @return Name Permission group name, which can contain 1–64 Chinese characters, letters, numbers, underscores, or dashes
+                     * 获取Permission group name, which can contain 1-64 Chinese characters, letters, numbers, underscores, or dashes
+                     * @return Name Permission group name, which can contain 1-64 Chinese characters, letters, numbers, underscores, or dashes
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Permission group name, which can contain 1–64 Chinese characters, letters, numbers, underscores, or dashes
-                     * @param Name Permission group name, which can contain 1–64 Chinese characters, letters, numbers, underscores, or dashes
+                     * 设置Permission group name, which can contain 1-64 Chinese characters, letters, numbers, underscores, or dashes
+                     * @param Name Permission group name, which can contain 1-64 Chinese characters, letters, numbers, underscores, or dashes
                      */
                     void SetName(const std::string& _name);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Permission group description, which can contain 1–255 characters
-                     * @return DescInfo Permission group description, which can contain 1–255 characters
+                     * 获取Permission group description, which can contain 1-255 characters
+                     * @return DescInfo Permission group description, which can contain 1-255 characters
                      */
                     std::string GetDescInfo() const;
 
                     /**
-                     * 设置Permission group description, which can contain 1–255 characters
-                     * @param DescInfo Permission group description, which can contain 1–255 characters
+                     * 设置Permission group description, which can contain 1-255 characters
+                     * @param DescInfo Permission group description, which can contain 1-255 characters
                      */
                     void SetDescInfo(const std::string& _descInfo);
 
@@ -105,13 +105,13 @@ namespace TencentCloud
                     bool m_pGroupIdHasBeenSet;
 
                     /**
-                     * Permission group name, which can contain 1–64 Chinese characters, letters, numbers, underscores, or dashes
+                     * Permission group name, which can contain 1-64 Chinese characters, letters, numbers, underscores, or dashes
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Permission group description, which can contain 1–255 characters
+                     * Permission group description, which can contain 1-255 characters
                      */
                     std::string m_descInfo;
                     bool m_descInfoHasBeenSet;

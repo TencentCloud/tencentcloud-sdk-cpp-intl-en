@@ -73,46 +73,50 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Filter tag for terrorism information detection in video image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-<li>guns: weapons and guns;</li>
-<li>crowd: crowd;</li>
-<li>bloody: bloody scenes;</li>
-<li>police: police force;</li>
-<li>banners: terrorism flags;</li>
-<li>militant: militants;</li>
-<li>explosion: explosions and fires;</li>
-<li>terrorists: terrorists.</li>
-                     * @return LabelSet Filter tag for terrorism information detection in video image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-<li>guns: weapons and guns;</li>
-<li>crowd: crowd;</li>
-<li>bloody: bloody scenes;</li>
-<li>police: police force;</li>
-<li>banners: terrorism flags;</li>
-<li>militant: militants;</li>
-<li>explosion: explosions and fires;</li>
-<li>terrorists: terrorists.</li>
+                     * 获取Filter tags for terrorism information detection in images. If a moderation result contains a selected tag, it will be returned. If no filter tag is specified, all moderation results will be returned. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`bloody`: bloody images</li>
+<li>`police`: police forces</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
+                     * @return LabelSet Filter tags for terrorism information detection in images. If a moderation result contains a selected tag, it will be returned. If no filter tag is specified, all moderation results will be returned. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`bloody`: bloody images</li>
+<li>`police`: police forces</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
                      */
                     std::vector<std::string> GetLabelSet() const;
 
                     /**
-                     * 设置Filter tag for terrorism information detection in video image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-<li>guns: weapons and guns;</li>
-<li>crowd: crowd;</li>
-<li>bloody: bloody scenes;</li>
-<li>police: police force;</li>
-<li>banners: terrorism flags;</li>
-<li>militant: militants;</li>
-<li>explosion: explosions and fires;</li>
-<li>terrorists: terrorists.</li>
-                     * @param LabelSet Filter tag for terrorism information detection in video image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-<li>guns: weapons and guns;</li>
-<li>crowd: crowd;</li>
-<li>bloody: bloody scenes;</li>
-<li>police: police force;</li>
-<li>banners: terrorism flags;</li>
-<li>militant: militants;</li>
-<li>explosion: explosions and fires;</li>
-<li>terrorists: terrorists.</li>
+                     * 设置Filter tags for terrorism information detection in images. If a moderation result contains a selected tag, it will be returned. If no filter tag is specified, all moderation results will be returned. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`bloody`: bloody images</li>
+<li>`police`: police forces</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
+                     * @param LabelSet Filter tags for terrorism information detection in images. If a moderation result contains a selected tag, it will be returned. If no filter tag is specified, all moderation results will be returned. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`bloody`: bloody images</li>
+<li>`police`: police forces</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
                      */
                     void SetLabelSet(const std::vector<std::string>& _labelSet);
 
@@ -169,15 +173,16 @@ namespace TencentCloud
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Filter tag for terrorism information detection in video image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-<li>guns: weapons and guns;</li>
-<li>crowd: crowd;</li>
-<li>bloody: bloody scenes;</li>
-<li>police: police force;</li>
-<li>banners: terrorism flags;</li>
-<li>militant: militants;</li>
-<li>explosion: explosions and fires;</li>
-<li>terrorists: terrorists.</li>
+                     * Filter tags for terrorism information detection in images. If a moderation result contains a selected tag, it will be returned. If no filter tag is specified, all moderation results will be returned. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`bloody`: bloody images</li>
+<li>`police`: police forces</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
                      */
                     std::vector<std::string> m_labelSet;
                     bool m_labelSetHasBeenSet;

@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dbbrain::V20191016::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeSlowLogTimeSeriesStatsResponse::DescribeSlowLogTimeSeriesStatsResponse() :
@@ -33,20 +32,20 @@ DescribeSlowLogTimeSeriesStatsResponse::DescribeSlowLogTimeSeriesStatsResponse()
 
 CoreInternalOutcome DescribeSlowLogTimeSeriesStatsResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -57,11 +56,11 @@ CoreInternalOutcome DescribeSlowLogTimeSeriesStatsResponse::Deserialize(const st
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -69,7 +68,7 @@ CoreInternalOutcome DescribeSlowLogTimeSeriesStatsResponse::Deserialize(const st
     {
         if (!rsp["Period"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Period` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Period` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_period = rsp["Period"].GetInt64();
         m_periodHasBeenSet = true;
@@ -78,10 +77,10 @@ CoreInternalOutcome DescribeSlowLogTimeSeriesStatsResponse::Deserialize(const st
     if (rsp.HasMember("TimeSeries") && !rsp["TimeSeries"].IsNull())
     {
         if (!rsp["TimeSeries"].IsArray())
-            return CoreInternalOutcome(Error("response `TimeSeries` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `TimeSeries` is not array type"));
 
-        const Value &tmpValue = rsp["TimeSeries"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["TimeSeries"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             TimeSlice item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -99,7 +98,7 @@ CoreInternalOutcome DescribeSlowLogTimeSeriesStatsResponse::Deserialize(const st
     {
         if (!rsp["SeriesData"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `SeriesData` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SeriesData` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_seriesData.Deserialize(rsp["SeriesData"]);
@@ -114,6 +113,55 @@ CoreInternalOutcome DescribeSlowLogTimeSeriesStatsResponse::Deserialize(const st
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeSlowLogTimeSeriesStatsResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_periodHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Period";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_period, allocator);
+    }
+
+    if (m_timeSeriesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TimeSeries";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_timeSeries.begin(); itr != m_timeSeries.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_seriesDataHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SeriesData";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_seriesData.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

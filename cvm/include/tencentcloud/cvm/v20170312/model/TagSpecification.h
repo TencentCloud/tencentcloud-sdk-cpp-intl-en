@@ -48,14 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Type of the resources associated with the tags. Currently only "instance" and "host" are supported.
-                     * @return ResourceType Type of the resources associated with the tags. Currently only "instance" and "host" are supported.
+                     * 获取The type of resource that bound with the tag. Valid values: `instance` (for CVM) and `host` (for CDH).
+                     * @return ResourceType The type of resource that bound with the tag. Valid values: `instance` (for CVM) and `host` (for CDH).
                      */
                     std::string GetResourceType() const;
 
                     /**
-                     * 设置Type of the resources associated with the tags. Currently only "instance" and "host" are supported.
-                     * @param ResourceType Type of the resources associated with the tags. Currently only "instance" and "host" are supported.
+                     * 设置The type of resource that bound with the tag. Valid values: `instance` (for CVM) and `host` (for CDH).
+                     * @param ResourceType The type of resource that bound with the tag. Valid values: `instance` (for CVM) and `host` (for CDH).
                      */
                     void SetResourceType(const std::string& _resourceType);
 
@@ -86,7 +86,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Type of the resources associated with the tags. Currently only "instance" and "host" are supported.
+                     * The type of resource that bound with the tag. Valid values: `instance` (for CVM) and `host` (for CDH).
                      */
                     std::string m_resourceType;
                     bool m_resourceTypeHasBeenSet;

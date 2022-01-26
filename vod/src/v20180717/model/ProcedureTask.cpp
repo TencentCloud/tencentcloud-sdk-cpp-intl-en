@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 ProcedureTask::ProcedureTask() :
@@ -41,7 +40,7 @@ ProcedureTask::ProcedureTask() :
 {
 }
 
-CoreInternalOutcome ProcedureTask::Deserialize(const Value &value)
+CoreInternalOutcome ProcedureTask::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -50,7 +49,7 @@ CoreInternalOutcome ProcedureTask::Deserialize(const Value &value)
     {
         if (!value["TaskId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ProcedureTask.TaskId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTask.TaskId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_taskId = string(value["TaskId"].GetString());
         m_taskIdHasBeenSet = true;
@@ -60,7 +59,7 @@ CoreInternalOutcome ProcedureTask::Deserialize(const Value &value)
     {
         if (!value["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ProcedureTask.Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTask.Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(value["Status"].GetString());
         m_statusHasBeenSet = true;
@@ -70,7 +69,7 @@ CoreInternalOutcome ProcedureTask::Deserialize(const Value &value)
     {
         if (!value["ErrCode"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ProcedureTask.ErrCode` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTask.ErrCode` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_errCode = value["ErrCode"].GetInt64();
         m_errCodeHasBeenSet = true;
@@ -80,7 +79,7 @@ CoreInternalOutcome ProcedureTask::Deserialize(const Value &value)
     {
         if (!value["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ProcedureTask.Message` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTask.Message` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_message = string(value["Message"].GetString());
         m_messageHasBeenSet = true;
@@ -90,7 +89,7 @@ CoreInternalOutcome ProcedureTask::Deserialize(const Value &value)
     {
         if (!value["FileId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ProcedureTask.FileId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTask.FileId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fileId = string(value["FileId"].GetString());
         m_fileIdHasBeenSet = true;
@@ -100,7 +99,7 @@ CoreInternalOutcome ProcedureTask::Deserialize(const Value &value)
     {
         if (!value["FileName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ProcedureTask.FileName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTask.FileName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fileName = string(value["FileName"].GetString());
         m_fileNameHasBeenSet = true;
@@ -110,7 +109,7 @@ CoreInternalOutcome ProcedureTask::Deserialize(const Value &value)
     {
         if (!value["FileUrl"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ProcedureTask.FileUrl` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTask.FileUrl` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fileUrl = string(value["FileUrl"].GetString());
         m_fileUrlHasBeenSet = true;
@@ -120,7 +119,7 @@ CoreInternalOutcome ProcedureTask::Deserialize(const Value &value)
     {
         if (!value["MetaData"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `ProcedureTask.MetaData` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTask.MetaData` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_metaData.Deserialize(value["MetaData"]);
@@ -136,10 +135,10 @@ CoreInternalOutcome ProcedureTask::Deserialize(const Value &value)
     if (value.HasMember("MediaProcessResultSet") && !value["MediaProcessResultSet"].IsNull())
     {
         if (!value["MediaProcessResultSet"].IsArray())
-            return CoreInternalOutcome(Error("response `ProcedureTask.MediaProcessResultSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTask.MediaProcessResultSet` is not array type"));
 
-        const Value &tmpValue = value["MediaProcessResultSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["MediaProcessResultSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             MediaProcessTaskResult item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -156,10 +155,10 @@ CoreInternalOutcome ProcedureTask::Deserialize(const Value &value)
     if (value.HasMember("AiContentReviewResultSet") && !value["AiContentReviewResultSet"].IsNull())
     {
         if (!value["AiContentReviewResultSet"].IsArray())
-            return CoreInternalOutcome(Error("response `ProcedureTask.AiContentReviewResultSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTask.AiContentReviewResultSet` is not array type"));
 
-        const Value &tmpValue = value["AiContentReviewResultSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["AiContentReviewResultSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             AiContentReviewResult item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -176,10 +175,10 @@ CoreInternalOutcome ProcedureTask::Deserialize(const Value &value)
     if (value.HasMember("AiAnalysisResultSet") && !value["AiAnalysisResultSet"].IsNull())
     {
         if (!value["AiAnalysisResultSet"].IsArray())
-            return CoreInternalOutcome(Error("response `ProcedureTask.AiAnalysisResultSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTask.AiAnalysisResultSet` is not array type"));
 
-        const Value &tmpValue = value["AiAnalysisResultSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["AiAnalysisResultSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             AiAnalysisResult item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -196,10 +195,10 @@ CoreInternalOutcome ProcedureTask::Deserialize(const Value &value)
     if (value.HasMember("AiRecognitionResultSet") && !value["AiRecognitionResultSet"].IsNull())
     {
         if (!value["AiRecognitionResultSet"].IsArray())
-            return CoreInternalOutcome(Error("response `ProcedureTask.AiRecognitionResultSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTask.AiRecognitionResultSet` is not array type"));
 
-        const Value &tmpValue = value["AiRecognitionResultSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["AiRecognitionResultSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             AiRecognitionResult item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -217,7 +216,7 @@ CoreInternalOutcome ProcedureTask::Deserialize(const Value &value)
     {
         if (!value["TasksPriority"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ProcedureTask.TasksPriority` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTask.TasksPriority` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_tasksPriority = value["TasksPriority"].GetInt64();
         m_tasksPriorityHasBeenSet = true;
@@ -227,7 +226,7 @@ CoreInternalOutcome ProcedureTask::Deserialize(const Value &value)
     {
         if (!value["TasksNotifyMode"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ProcedureTask.TasksNotifyMode` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTask.TasksNotifyMode` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tasksNotifyMode = string(value["TasksNotifyMode"].GetString());
         m_tasksNotifyModeHasBeenSet = true;
@@ -237,7 +236,7 @@ CoreInternalOutcome ProcedureTask::Deserialize(const Value &value)
     {
         if (!value["SessionContext"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ProcedureTask.SessionContext` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTask.SessionContext` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_sessionContext = string(value["SessionContext"].GetString());
         m_sessionContextHasBeenSet = true;
@@ -247,7 +246,7 @@ CoreInternalOutcome ProcedureTask::Deserialize(const Value &value)
     {
         if (!value["SessionId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ProcedureTask.SessionId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTask.SessionId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_sessionId = string(value["SessionId"].GetString());
         m_sessionIdHasBeenSet = true;
@@ -257,28 +256,28 @@ CoreInternalOutcome ProcedureTask::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ProcedureTask::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ProcedureTask::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_taskIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TaskId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_taskId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_taskId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_status.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
     }
 
     if (m_errCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ErrCode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_errCode, allocator);
@@ -286,108 +285,108 @@ void ProcedureTask::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_messageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Message";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_message.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_message.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fileIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fileId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fileId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fileNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fileName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fileName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fileUrlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileUrl";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fileUrl.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fileUrl.c_str(), allocator).Move(), allocator);
     }
 
     if (m_metaDataHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MetaData";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_metaData.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_mediaProcessResultSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MediaProcessResultSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_mediaProcessResultSet.begin(); itr != m_mediaProcessResultSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_aiContentReviewResultSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AiContentReviewResultSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_aiContentReviewResultSet.begin(); itr != m_aiContentReviewResultSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_aiAnalysisResultSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AiAnalysisResultSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_aiAnalysisResultSet.begin(); itr != m_aiAnalysisResultSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_aiRecognitionResultSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AiRecognitionResultSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_aiRecognitionResultSet.begin(); itr != m_aiRecognitionResultSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_tasksPriorityHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TasksPriority";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_tasksPriority, allocator);
@@ -395,26 +394,26 @@ void ProcedureTask::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_tasksNotifyModeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TasksNotifyMode";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_tasksNotifyMode.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tasksNotifyMode.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sessionContextHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SessionContext";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_sessionContext.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sessionContext.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sessionIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SessionId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_sessionId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sessionId.c_str(), allocator).Move(), allocator);
     }
 
 }

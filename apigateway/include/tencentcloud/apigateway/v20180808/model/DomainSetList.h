@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool DomainNameHasBeenSet() const;
 
                     /**
-                     * 获取Domain name resolution status. True: success; False: failure.
-                     * @return Status Domain name resolution status. True: success; False: failure.
+                     * 获取Domain name resolution status. `1`: normal, `0`: failed
+                     * @return Status Domain name resolution status. `1`: normal, `0`: failed
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Domain name resolution status. True: success; False: failure.
-                     * @param Status Domain name resolution status. True: success; False: failure.
+                     * 设置Domain name resolution status. `1`: normal, `0`: failed
+                     * @param Status Domain name resolution status. `1`: normal, `0`: failed
                      */
                     void SetStatus(const int64_t& _status);
 
@@ -154,6 +154,42 @@ namespace TencentCloud
                      */
                     bool NetTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+                     * @return IsForcedHttps Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+                     */
+                    bool GetIsForcedHttps() const;
+
+                    /**
+                     * 设置Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+                     * @param IsForcedHttps Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+                     */
+                    void SetIsForcedHttps(const bool& _isForcedHttps);
+
+                    /**
+                     * 判断参数 IsForcedHttps 是否已赋值
+                     * @return IsForcedHttps 是否已赋值
+                     */
+                    bool IsForcedHttpsHasBeenSet() const;
+
+                    /**
+                     * 获取ICP filing status
+                     * @return RegistrationStatus ICP filing status
+                     */
+                    bool GetRegistrationStatus() const;
+
+                    /**
+                     * 设置ICP filing status
+                     * @param RegistrationStatus ICP filing status
+                     */
+                    void SetRegistrationStatus(const bool& _registrationStatus);
+
+                    /**
+                     * 判断参数 RegistrationStatus 是否已赋值
+                     * @return RegistrationStatus 是否已赋值
+                     */
+                    bool RegistrationStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -163,7 +199,7 @@ namespace TencentCloud
                     bool m_domainNameHasBeenSet;
 
                     /**
-                     * Domain name resolution status. True: success; False: failure.
+                     * Domain name resolution status. `1`: normal, `0`: failed
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
@@ -191,6 +227,18 @@ namespace TencentCloud
                      */
                     std::string m_netType;
                     bool m_netTypeHasBeenSet;
+
+                    /**
+                     * Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+                     */
+                    bool m_isForcedHttps;
+                    bool m_isForcedHttpsHasBeenSet;
+
+                    /**
+                     * ICP filing status
+                     */
+                    bool m_registrationStatus;
+                    bool m_registrationStatusHasBeenSet;
 
                 };
             }

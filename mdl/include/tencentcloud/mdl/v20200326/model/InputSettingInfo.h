@@ -47,17 +47,17 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+                     * 获取Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AppName Application name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+                     * @return AppName Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetAppName() const;
 
                     /**
-                     * 设置Application name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+                     * 设置Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AppName Application name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+                     * @param AppName Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetAppName(const std::string& _appName);
@@ -69,17 +69,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AppNameHasBeenSet() const;
 
                     /**
-                     * 获取Stream name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+                     * 获取Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return StreamName Stream name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+                     * @return StreamName Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetStreamName() const;
 
                     /**
-                     * 设置Stream name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+                     * 设置Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param StreamName Stream name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+                     * @param StreamName Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetStreamName(const std::string& _streamName);
@@ -134,17 +134,39 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool InputAddressHasBeenSet() const;
 
+                    /**
+                     * 获取Source type for stream pulling and relaying. To pull content from private-read COS buckets under the current account, set this parameter to `TencentCOS`; otherwise, leave it empty.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @return SourceType Source type for stream pulling and relaying. To pull content from private-read COS buckets under the current account, set this parameter to `TencentCOS`; otherwise, leave it empty.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetSourceType() const;
+
+                    /**
+                     * 设置Source type for stream pulling and relaying. To pull content from private-read COS buckets under the current account, set this parameter to `TencentCOS`; otherwise, leave it empty.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @param SourceType Source type for stream pulling and relaying. To pull content from private-read COS buckets under the current account, set this parameter to `TencentCOS`; otherwise, leave it empty.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetSourceType(const std::string& _sourceType);
+
+                    /**
+                     * 判断参数 SourceType 是否已赋值
+                     * @return SourceType 是否已赋值
+                     */
+                    bool SourceTypeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Application name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+                     * Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_appName;
                     bool m_appNameHasBeenSet;
 
                     /**
-                     * Stream name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+                     * Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_streamName;
@@ -163,6 +185,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_inputAddress;
                     bool m_inputAddressHasBeenSet;
+
+                    /**
+                     * Source type for stream pulling and relaying. To pull content from private-read COS buckets under the current account, set this parameter to `TencentCOS`; otherwise, leave it empty.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_sourceType;
+                    bool m_sourceTypeHasBeenSet;
 
                 };
             }

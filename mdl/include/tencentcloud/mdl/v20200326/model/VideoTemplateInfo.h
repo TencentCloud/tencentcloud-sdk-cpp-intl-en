@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video transcoding template name, which can contain 1–20 letters and digits.
-                     * @return Name Video transcoding template name, which can contain 1–20 letters and digits.
+                     * 获取Video transcoding template name, which can contain 1-20 letters and digits.
+                     * @return Name Video transcoding template name, which can contain 1-20 letters and digits.
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Video transcoding template name, which can contain 1–20 letters and digits.
-                     * @param Name Video transcoding template name, which can contain 1–20 letters and digits.
+                     * 设置Video transcoding template name, which can contain 1-20 letters and digits.
+                     * @param Name Video transcoding template name, which can contain 1-20 letters and digits.
                      */
                     void SetName(const std::string& _name);
 
@@ -190,10 +190,28 @@ namespace TencentCloud
                      */
                     bool BitrateCompressionRatioHasBeenSet() const;
 
+                    /**
+                     * 获取Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+                     * @return RateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+                     */
+                    std::string GetRateControlMode() const;
+
+                    /**
+                     * 设置Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+                     * @param RateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+                     */
+                    void SetRateControlMode(const std::string& _rateControlMode);
+
+                    /**
+                     * 判断参数 RateControlMode 是否已赋值
+                     * @return RateControlMode 是否已赋值
+                     */
+                    bool RateControlModeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Video transcoding template name, which can contain 1–20 letters and digits.
+                     * Video transcoding template name, which can contain 1-20 letters and digits.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -239,6 +257,12 @@ namespace TencentCloud
                      */
                     uint64_t m_bitrateCompressionRatio;
                     bool m_bitrateCompressionRatioHasBeenSet;
+
+                    /**
+                     * Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+                     */
+                    std::string m_rateControlMode;
+                    bool m_rateControlModeHasBeenSet;
 
                 };
             }

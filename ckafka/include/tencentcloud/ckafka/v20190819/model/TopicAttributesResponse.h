@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/ckafka/v20190819/model/Config.h>
 #include <tencentcloud/ckafka/v20190819/model/TopicPartitionDO.h>
+#include <tencentcloud/ckafka/v20190819/model/AclRule.h>
 
 
 namespace TencentCloud
@@ -125,14 +126,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PartitionNumHasBeenSet() const;
 
                     /**
-                     * 获取IP whitelist switch. 1: enabled, 0: disabled
-                     * @return EnableWhiteList IP whitelist switch. 1: enabled, 0: disabled
+                     * 获取IP allowlist switch. 1: enabled, 0: disabled
+                     * @return EnableWhiteList IP allowlist switch. 1: enabled, 0: disabled
                      */
                     int64_t GetEnableWhiteList() const;
 
                     /**
-                     * 设置IP whitelist switch. 1: enabled, 0: disabled
-                     * @param EnableWhiteList IP whitelist switch. 1: enabled, 0: disabled
+                     * 设置IP allowlist switch. 1: enabled, 0: disabled
+                     * @param EnableWhiteList IP allowlist switch. 1: enabled, 0: disabled
                      */
                     void SetEnableWhiteList(const int64_t& _enableWhiteList);
 
@@ -143,14 +144,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool EnableWhiteListHasBeenSet() const;
 
                     /**
-                     * 获取IP whitelist list
-                     * @return IpWhiteList IP whitelist list
+                     * 获取IP allowlist list
+                     * @return IpWhiteList IP allowlist list
                      */
                     std::vector<std::string> GetIpWhiteList() const;
 
                     /**
-                     * 设置IP whitelist list
-                     * @param IpWhiteList IP whitelist list
+                     * 设置IP allowlist list
+                     * @param IpWhiteList IP allowlist list
                      */
                     void SetIpWhiteList(const std::vector<std::string>& _ipWhiteList);
 
@@ -196,6 +197,50 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool PartitionsHasBeenSet() const;
 
+                    /**
+                     * 获取Switch of the preset ACL rule. `1`: enable, `0`: disable.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @return EnableAclRule Switch of the preset ACL rule. `1`: enable, `0`: disable.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetEnableAclRule() const;
+
+                    /**
+                     * 设置Switch of the preset ACL rule. `1`: enable, `0`: disable.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @param EnableAclRule Switch of the preset ACL rule. `1`: enable, `0`: disable.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    void SetEnableAclRule(const int64_t& _enableAclRule);
+
+                    /**
+                     * 判断参数 EnableAclRule 是否已赋值
+                     * @return EnableAclRule 是否已赋值
+                     */
+                    bool EnableAclRuleHasBeenSet() const;
+
+                    /**
+                     * 获取Preset ACL rule list.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @return AclRuleList Preset ACL rule list.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    std::vector<AclRule> GetAclRuleList() const;
+
+                    /**
+                     * 设置Preset ACL rule list.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @param AclRuleList Preset ACL rule list.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    void SetAclRuleList(const std::vector<AclRule>& _aclRuleList);
+
+                    /**
+                     * 判断参数 AclRuleList 是否已赋值
+                     * @return AclRuleList 是否已赋值
+                     */
+                    bool AclRuleListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -224,13 +269,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_partitionNumHasBeenSet;
 
                     /**
-                     * IP whitelist switch. 1: enabled, 0: disabled
+                     * IP allowlist switch. 1: enabled, 0: disabled
                      */
                     int64_t m_enableWhiteList;
                     bool m_enableWhiteListHasBeenSet;
 
                     /**
-                     * IP whitelist list
+                     * IP allowlist list
                      */
                     std::vector<std::string> m_ipWhiteList;
                     bool m_ipWhiteListHasBeenSet;
@@ -246,6 +291,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<TopicPartitionDO> m_partitions;
                     bool m_partitionsHasBeenSet;
+
+                    /**
+                     * Switch of the preset ACL rule. `1`: enable, `0`: disable.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_enableAclRule;
+                    bool m_enableAclRuleHasBeenSet;
+
+                    /**
+                     * Preset ACL rule list.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    std::vector<AclRule> m_aclRuleList;
+                    bool m_aclRuleListHasBeenSet;
 
                 };
             }

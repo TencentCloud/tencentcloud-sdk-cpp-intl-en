@@ -29,6 +29,7 @@
 #include <tencentcloud/batch/v20170312/model/InputMapping.h>
 #include <tencentcloud/batch/v20170312/model/Authentication.h>
 #include <tencentcloud/batch/v20170312/model/Notification.h>
+#include <tencentcloud/batch/v20170312/model/Tag.h>
 
 
 namespace TencentCloud
@@ -255,6 +256,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool DesiredComputeNodeCountHasBeenSet() const;
 
+                    /**
+                     * 获取Tag list of the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return Tags Tag list of the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Tag list of the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param Tags Tag list of the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -322,6 +345,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_desiredComputeNodeCount;
                     bool m_desiredComputeNodeCountHasBeenSet;
+
+                    /**
+                     * Tag list of the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

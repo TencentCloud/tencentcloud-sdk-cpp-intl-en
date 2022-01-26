@@ -62,17 +62,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Base64-encoded image data, which cannot exceed 5 MB.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      * @return Image Base64-encoded image data, which cannot exceed 5 MB.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     std::string GetImage() const;
 
                     /**
                      * 设置Base64-encoded image data, which cannot exceed 5 MB.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      * @param Image Base64-encoded image data, which cannot exceed 5 MB.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     void SetImage(const std::string& _image);
 
@@ -84,29 +88,33 @@ namespace TencentCloud
 
                     /**
                      * 获取Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      * @return Url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      * @param Url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     void SetUrl(const std::string& _url);
 
@@ -170,17 +178,19 @@ Different algorithm model versions correspond to different face recognition algo
 
                     /**
                      * Base64-encoded image data, which cannot exceed 5 MB.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     std::string m_image;
                     bool m_imageHasBeenSet;
 
                     /**
                      * Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

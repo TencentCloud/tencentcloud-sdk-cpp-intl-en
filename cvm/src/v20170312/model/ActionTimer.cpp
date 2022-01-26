@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cvm::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 ActionTimer::ActionTimer() :
@@ -28,7 +27,7 @@ ActionTimer::ActionTimer() :
 {
 }
 
-CoreInternalOutcome ActionTimer::Deserialize(const Value &value)
+CoreInternalOutcome ActionTimer::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome ActionTimer::Deserialize(const Value &value)
     {
         if (!value["Externals"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `ActionTimer.Externals` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ActionTimer.Externals` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_externals.Deserialize(value["Externals"]);
@@ -54,7 +53,7 @@ CoreInternalOutcome ActionTimer::Deserialize(const Value &value)
     {
         if (!value["TimerAction"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ActionTimer.TimerAction` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ActionTimer.TimerAction` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_timerAction = string(value["TimerAction"].GetString());
         m_timerActionHasBeenSet = true;
@@ -64,7 +63,7 @@ CoreInternalOutcome ActionTimer::Deserialize(const Value &value)
     {
         if (!value["ActionTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ActionTimer.ActionTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ActionTimer.ActionTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_actionTime = string(value["ActionTime"].GetString());
         m_actionTimeHasBeenSet = true;
@@ -74,32 +73,32 @@ CoreInternalOutcome ActionTimer::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ActionTimer::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ActionTimer::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_externalsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Externals";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_externals.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_timerActionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TimerAction";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_timerAction.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_timerAction.c_str(), allocator).Move(), allocator);
     }
 
     if (m_actionTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ActionTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_actionTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_actionTime.c_str(), allocator).Move(), allocator);
     }
 
 }

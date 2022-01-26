@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::As::V20180419::Model;
-using namespace rapidjson;
 using namespace std;
 
 ModifyLaunchConfigurationAttributesRequest::ModifyLaunchConfigurationAttributesRequest() :
@@ -29,73 +28,200 @@ ModifyLaunchConfigurationAttributesRequest::ModifyLaunchConfigurationAttributesR
     m_instanceTypesHasBeenSet(false),
     m_instanceTypesCheckPolicyHasBeenSet(false),
     m_launchConfigurationNameHasBeenSet(false),
-    m_userDataHasBeenSet(false)
+    m_userDataHasBeenSet(false),
+    m_securityGroupIdsHasBeenSet(false),
+    m_internetAccessibleHasBeenSet(false),
+    m_instanceChargeTypeHasBeenSet(false),
+    m_instanceChargePrepaidHasBeenSet(false),
+    m_instanceMarketOptionsHasBeenSet(false),
+    m_diskTypePolicyHasBeenSet(false),
+    m_systemDiskHasBeenSet(false),
+    m_dataDisksHasBeenSet(false),
+    m_hostNameSettingsHasBeenSet(false),
+    m_instanceNameSettingsHasBeenSet(false),
+    m_enhancedServiceHasBeenSet(false),
+    m_camRoleNameHasBeenSet(false)
 {
 }
 
 string ModifyLaunchConfigurationAttributesRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_launchConfigurationIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LaunchConfigurationId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_launchConfigurationId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_launchConfigurationId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_imageIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ImageId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_imageId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_imageId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceTypesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceTypes";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_instanceTypes.begin(); itr != m_instanceTypes.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_instanceTypesCheckPolicyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceTypesCheckPolicy";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceTypesCheckPolicy.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceTypesCheckPolicy.c_str(), allocator).Move(), allocator);
     }
 
     if (m_launchConfigurationNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LaunchConfigurationName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_launchConfigurationName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_launchConfigurationName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_userDataHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UserData";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_userData.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_userData.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_securityGroupIdsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SecurityGroupIds";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_securityGroupIds.begin(); itr != m_securityGroupIds.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_internetAccessibleHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InternetAccessible";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_internetAccessible.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_instanceChargeTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceChargeType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceChargeType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_instanceChargePrepaidHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceChargePrepaid";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_instanceChargePrepaid.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_instanceMarketOptionsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceMarketOptions";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_instanceMarketOptions.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_diskTypePolicyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DiskTypePolicy";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_diskTypePolicy.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_systemDiskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SystemDisk";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_systemDisk.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_dataDisksHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DataDisks";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_dataDisks.begin(); itr != m_dataDisks.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_hostNameSettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HostNameSettings";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_hostNameSettings.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_instanceNameSettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceNameSettings";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_instanceNameSettings.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_enhancedServiceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnhancedService";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_enhancedService.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_camRoleNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CamRoleName";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_camRoleName.c_str(), allocator).Move(), allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -195,6 +321,198 @@ void ModifyLaunchConfigurationAttributesRequest::SetUserData(const string& _user
 bool ModifyLaunchConfigurationAttributesRequest::UserDataHasBeenSet() const
 {
     return m_userDataHasBeenSet;
+}
+
+vector<string> ModifyLaunchConfigurationAttributesRequest::GetSecurityGroupIds() const
+{
+    return m_securityGroupIds;
+}
+
+void ModifyLaunchConfigurationAttributesRequest::SetSecurityGroupIds(const vector<string>& _securityGroupIds)
+{
+    m_securityGroupIds = _securityGroupIds;
+    m_securityGroupIdsHasBeenSet = true;
+}
+
+bool ModifyLaunchConfigurationAttributesRequest::SecurityGroupIdsHasBeenSet() const
+{
+    return m_securityGroupIdsHasBeenSet;
+}
+
+InternetAccessible ModifyLaunchConfigurationAttributesRequest::GetInternetAccessible() const
+{
+    return m_internetAccessible;
+}
+
+void ModifyLaunchConfigurationAttributesRequest::SetInternetAccessible(const InternetAccessible& _internetAccessible)
+{
+    m_internetAccessible = _internetAccessible;
+    m_internetAccessibleHasBeenSet = true;
+}
+
+bool ModifyLaunchConfigurationAttributesRequest::InternetAccessibleHasBeenSet() const
+{
+    return m_internetAccessibleHasBeenSet;
+}
+
+string ModifyLaunchConfigurationAttributesRequest::GetInstanceChargeType() const
+{
+    return m_instanceChargeType;
+}
+
+void ModifyLaunchConfigurationAttributesRequest::SetInstanceChargeType(const string& _instanceChargeType)
+{
+    m_instanceChargeType = _instanceChargeType;
+    m_instanceChargeTypeHasBeenSet = true;
+}
+
+bool ModifyLaunchConfigurationAttributesRequest::InstanceChargeTypeHasBeenSet() const
+{
+    return m_instanceChargeTypeHasBeenSet;
+}
+
+InstanceChargePrepaid ModifyLaunchConfigurationAttributesRequest::GetInstanceChargePrepaid() const
+{
+    return m_instanceChargePrepaid;
+}
+
+void ModifyLaunchConfigurationAttributesRequest::SetInstanceChargePrepaid(const InstanceChargePrepaid& _instanceChargePrepaid)
+{
+    m_instanceChargePrepaid = _instanceChargePrepaid;
+    m_instanceChargePrepaidHasBeenSet = true;
+}
+
+bool ModifyLaunchConfigurationAttributesRequest::InstanceChargePrepaidHasBeenSet() const
+{
+    return m_instanceChargePrepaidHasBeenSet;
+}
+
+InstanceMarketOptionsRequest ModifyLaunchConfigurationAttributesRequest::GetInstanceMarketOptions() const
+{
+    return m_instanceMarketOptions;
+}
+
+void ModifyLaunchConfigurationAttributesRequest::SetInstanceMarketOptions(const InstanceMarketOptionsRequest& _instanceMarketOptions)
+{
+    m_instanceMarketOptions = _instanceMarketOptions;
+    m_instanceMarketOptionsHasBeenSet = true;
+}
+
+bool ModifyLaunchConfigurationAttributesRequest::InstanceMarketOptionsHasBeenSet() const
+{
+    return m_instanceMarketOptionsHasBeenSet;
+}
+
+string ModifyLaunchConfigurationAttributesRequest::GetDiskTypePolicy() const
+{
+    return m_diskTypePolicy;
+}
+
+void ModifyLaunchConfigurationAttributesRequest::SetDiskTypePolicy(const string& _diskTypePolicy)
+{
+    m_diskTypePolicy = _diskTypePolicy;
+    m_diskTypePolicyHasBeenSet = true;
+}
+
+bool ModifyLaunchConfigurationAttributesRequest::DiskTypePolicyHasBeenSet() const
+{
+    return m_diskTypePolicyHasBeenSet;
+}
+
+SystemDisk ModifyLaunchConfigurationAttributesRequest::GetSystemDisk() const
+{
+    return m_systemDisk;
+}
+
+void ModifyLaunchConfigurationAttributesRequest::SetSystemDisk(const SystemDisk& _systemDisk)
+{
+    m_systemDisk = _systemDisk;
+    m_systemDiskHasBeenSet = true;
+}
+
+bool ModifyLaunchConfigurationAttributesRequest::SystemDiskHasBeenSet() const
+{
+    return m_systemDiskHasBeenSet;
+}
+
+vector<DataDisk> ModifyLaunchConfigurationAttributesRequest::GetDataDisks() const
+{
+    return m_dataDisks;
+}
+
+void ModifyLaunchConfigurationAttributesRequest::SetDataDisks(const vector<DataDisk>& _dataDisks)
+{
+    m_dataDisks = _dataDisks;
+    m_dataDisksHasBeenSet = true;
+}
+
+bool ModifyLaunchConfigurationAttributesRequest::DataDisksHasBeenSet() const
+{
+    return m_dataDisksHasBeenSet;
+}
+
+HostNameSettings ModifyLaunchConfigurationAttributesRequest::GetHostNameSettings() const
+{
+    return m_hostNameSettings;
+}
+
+void ModifyLaunchConfigurationAttributesRequest::SetHostNameSettings(const HostNameSettings& _hostNameSettings)
+{
+    m_hostNameSettings = _hostNameSettings;
+    m_hostNameSettingsHasBeenSet = true;
+}
+
+bool ModifyLaunchConfigurationAttributesRequest::HostNameSettingsHasBeenSet() const
+{
+    return m_hostNameSettingsHasBeenSet;
+}
+
+InstanceNameSettings ModifyLaunchConfigurationAttributesRequest::GetInstanceNameSettings() const
+{
+    return m_instanceNameSettings;
+}
+
+void ModifyLaunchConfigurationAttributesRequest::SetInstanceNameSettings(const InstanceNameSettings& _instanceNameSettings)
+{
+    m_instanceNameSettings = _instanceNameSettings;
+    m_instanceNameSettingsHasBeenSet = true;
+}
+
+bool ModifyLaunchConfigurationAttributesRequest::InstanceNameSettingsHasBeenSet() const
+{
+    return m_instanceNameSettingsHasBeenSet;
+}
+
+EnhancedService ModifyLaunchConfigurationAttributesRequest::GetEnhancedService() const
+{
+    return m_enhancedService;
+}
+
+void ModifyLaunchConfigurationAttributesRequest::SetEnhancedService(const EnhancedService& _enhancedService)
+{
+    m_enhancedService = _enhancedService;
+    m_enhancedServiceHasBeenSet = true;
+}
+
+bool ModifyLaunchConfigurationAttributesRequest::EnhancedServiceHasBeenSet() const
+{
+    return m_enhancedServiceHasBeenSet;
+}
+
+string ModifyLaunchConfigurationAttributesRequest::GetCamRoleName() const
+{
+    return m_camRoleName;
+}
+
+void ModifyLaunchConfigurationAttributesRequest::SetCamRoleName(const string& _camRoleName)
+{
+    m_camRoleName = _camRoleName;
+    m_camRoleNameHasBeenSet = true;
+}
+
+bool ModifyLaunchConfigurationAttributesRequest::CamRoleNameHasBeenSet() const
+{
+    return m_camRoleNameHasBeenSet;
 }
 
 

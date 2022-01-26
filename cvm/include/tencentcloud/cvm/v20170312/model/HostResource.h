@@ -155,14 +155,14 @@ namespace TencentCloud
                     bool DiskAvailableHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DiskType 
+                     * 获取CDH instance disk type.
+                     * @return DiskType CDH instance disk type.
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置
-                     * @param DiskType 
+                     * 设置CDH instance disk type.
+                     * @param DiskType CDH instance disk type.
                      */
                     void SetDiskType(const std::string& _diskType);
 
@@ -211,7 +211,7 @@ namespace TencentCloud
                     bool m_diskAvailableHasBeenSet;
 
                     /**
-                     * 
+                     * CDH instance disk type.
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;

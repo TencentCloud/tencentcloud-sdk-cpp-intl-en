@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dayu::V20180709::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeTransmitStatisResponse::DescribeTransmitStatisResponse() :
@@ -33,20 +32,20 @@ DescribeTransmitStatisResponse::DescribeTransmitStatisResponse() :
 
 CoreInternalOutcome DescribeTransmitStatisResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -57,21 +56,21 @@ CoreInternalOutcome DescribeTransmitStatisResponse::Deserialize(const string &pa
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
     if (rsp.HasMember("InDataList") && !rsp["InDataList"].IsNull())
     {
         if (!rsp["InDataList"].IsArray())
-            return CoreInternalOutcome(Error("response `InDataList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `InDataList` is not array type"));
 
-        const Value &tmpValue = rsp["InDataList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["InDataList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_inDataList.push_back((*itr).GetDouble());
         }
@@ -81,10 +80,10 @@ CoreInternalOutcome DescribeTransmitStatisResponse::Deserialize(const string &pa
     if (rsp.HasMember("OutDataList") && !rsp["OutDataList"].IsNull())
     {
         if (!rsp["OutDataList"].IsArray())
-            return CoreInternalOutcome(Error("response `OutDataList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `OutDataList` is not array type"));
 
-        const Value &tmpValue = rsp["OutDataList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["OutDataList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_outDataList.push_back((*itr).GetDouble());
         }
@@ -95,7 +94,7 @@ CoreInternalOutcome DescribeTransmitStatisResponse::Deserialize(const string &pa
     {
         if (!rsp["MetricName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MetricName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MetricName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_metricName = string(rsp["MetricName"].GetString());
         m_metricNameHasBeenSet = true;
@@ -103,6 +102,57 @@ CoreInternalOutcome DescribeTransmitStatisResponse::Deserialize(const string &pa
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeTransmitStatisResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_inDataListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InDataList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_inDataList.begin(); itr != m_inDataList.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetDouble(*itr), allocator);
+        }
+    }
+
+    if (m_outDataListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OutDataList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_outDataList.begin(); itr != m_outDataList.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetDouble(*itr), allocator);
+        }
+    }
+
+    if (m_metricNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MetricName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_metricName.c_str(), allocator).Move(), allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

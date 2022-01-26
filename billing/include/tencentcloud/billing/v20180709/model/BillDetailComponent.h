@@ -335,14 +335,18 @@ namespace TencentCloud
                     bool IncentivePayAmountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ItemCode 
+                     * 获取Component type code
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return ItemCode Component type code
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetItemCode() const;
 
                     /**
-                     * 设置
-                     * @param ItemCode 
+                     * 设置Component type code
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param ItemCode Component type code
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetItemCode(const std::string& _itemCode);
 
@@ -353,14 +357,18 @@ namespace TencentCloud
                     bool ItemCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ComponentCode 
+                     * 获取Component code
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return ComponentCode Component code
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetComponentCode() const;
 
                     /**
-                     * 设置
-                     * @param ComponentCode 
+                     * 设置Component code
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param ComponentCode Component code
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetComponentCode(const std::string& _componentCode);
 
@@ -371,14 +379,14 @@ namespace TencentCloud
                     bool ComponentCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ContractPrice 
+                     * 获取Contract price
+                     * @return ContractPrice Contract price
                      */
                     std::string GetContractPrice() const;
 
                     /**
-                     * 设置
-                     * @param ContractPrice 
+                     * 设置Contract price
+                     * @param ContractPrice Contract price
                      */
                     void SetContractPrice(const std::string& _contractPrice);
 
@@ -487,19 +495,21 @@ namespace TencentCloud
                     bool m_incentivePayAmountHasBeenSet;
 
                     /**
-                     * 
+                     * Component type code
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_itemCode;
                     bool m_itemCodeHasBeenSet;
 
                     /**
-                     * 
+                     * Component code
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_componentCode;
                     bool m_componentCodeHasBeenSet;
 
                     /**
-                     * 
+                     * Contract price
                      */
                     std::string m_contractPrice;
                     bool m_contractPriceHasBeenSet;

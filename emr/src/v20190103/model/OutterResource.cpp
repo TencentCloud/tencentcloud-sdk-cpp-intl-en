@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Emr::V20190103::Model;
-using namespace rapidjson;
 using namespace std;
 
 OutterResource::OutterResource() :
@@ -34,7 +33,7 @@ OutterResource::OutterResource() :
 {
 }
 
-CoreInternalOutcome OutterResource::Deserialize(const Value &value)
+CoreInternalOutcome OutterResource::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -43,7 +42,7 @@ CoreInternalOutcome OutterResource::Deserialize(const Value &value)
     {
         if (!value["Spec"].IsString())
         {
-            return CoreInternalOutcome(Error("response `OutterResource.Spec` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OutterResource.Spec` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_spec = string(value["Spec"].GetString());
         m_specHasBeenSet = true;
@@ -53,7 +52,7 @@ CoreInternalOutcome OutterResource::Deserialize(const Value &value)
     {
         if (!value["SpecName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `OutterResource.SpecName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OutterResource.SpecName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_specName = string(value["SpecName"].GetString());
         m_specNameHasBeenSet = true;
@@ -63,7 +62,7 @@ CoreInternalOutcome OutterResource::Deserialize(const Value &value)
     {
         if (!value["StorageType"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `OutterResource.StorageType` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OutterResource.StorageType` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_storageType = value["StorageType"].GetInt64();
         m_storageTypeHasBeenSet = true;
@@ -73,7 +72,7 @@ CoreInternalOutcome OutterResource::Deserialize(const Value &value)
     {
         if (!value["DiskType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `OutterResource.DiskType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OutterResource.DiskType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_diskType = string(value["DiskType"].GetString());
         m_diskTypeHasBeenSet = true;
@@ -83,7 +82,7 @@ CoreInternalOutcome OutterResource::Deserialize(const Value &value)
     {
         if (!value["RootSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `OutterResource.RootSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OutterResource.RootSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_rootSize = value["RootSize"].GetInt64();
         m_rootSizeHasBeenSet = true;
@@ -93,7 +92,7 @@ CoreInternalOutcome OutterResource::Deserialize(const Value &value)
     {
         if (!value["MemSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `OutterResource.MemSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OutterResource.MemSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_memSize = value["MemSize"].GetInt64();
         m_memSizeHasBeenSet = true;
@@ -103,7 +102,7 @@ CoreInternalOutcome OutterResource::Deserialize(const Value &value)
     {
         if (!value["Cpu"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `OutterResource.Cpu` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OutterResource.Cpu` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_cpu = value["Cpu"].GetInt64();
         m_cpuHasBeenSet = true;
@@ -113,7 +112,7 @@ CoreInternalOutcome OutterResource::Deserialize(const Value &value)
     {
         if (!value["DiskSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `OutterResource.DiskSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OutterResource.DiskSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_diskSize = value["DiskSize"].GetInt64();
         m_diskSizeHasBeenSet = true;
@@ -123,7 +122,7 @@ CoreInternalOutcome OutterResource::Deserialize(const Value &value)
     {
         if (!value["InstanceType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `OutterResource.InstanceType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OutterResource.InstanceType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceType = string(value["InstanceType"].GetString());
         m_instanceTypeHasBeenSet = true;
@@ -133,28 +132,28 @@ CoreInternalOutcome OutterResource::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void OutterResource::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void OutterResource::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_specHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Spec";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_spec.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_spec.c_str(), allocator).Move(), allocator);
     }
 
     if (m_specNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SpecName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_specName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_specName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_storageTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StorageType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_storageType, allocator);
@@ -162,15 +161,15 @@ void OutterResource::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_diskTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_diskType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_diskType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_rootSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RootSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_rootSize, allocator);
@@ -178,7 +177,7 @@ void OutterResource::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_memSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MemSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_memSize, allocator);
@@ -186,7 +185,7 @@ void OutterResource::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_cpuHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Cpu";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cpu, allocator);
@@ -194,7 +193,7 @@ void OutterResource::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_diskSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_diskSize, allocator);
@@ -202,10 +201,10 @@ void OutterResource::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_instanceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceType.c_str(), allocator).Move(), allocator);
     }
 
 }

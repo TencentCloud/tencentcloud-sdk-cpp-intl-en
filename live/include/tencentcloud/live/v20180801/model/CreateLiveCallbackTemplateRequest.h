@@ -96,17 +96,17 @@ Only letters, digits, underscores, and hyphens can be contained.
 
                     /**
                      * 获取Stream starting callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      * @return StreamBeginNotifyUrl Stream starting callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      */
                     std::string GetStreamBeginNotifyUrl() const;
 
                     /**
                      * 设置Stream starting callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      * @param StreamBeginNotifyUrl Stream starting callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      */
                     void SetStreamBeginNotifyUrl(const std::string& _streamBeginNotifyUrl);
 
@@ -118,17 +118,17 @@ Protocol document: [Event Message Notification](/document/product/267/32744).
 
                     /**
                      * 获取Interruption callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      * @return StreamEndNotifyUrl Interruption callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      */
                     std::string GetStreamEndNotifyUrl() const;
 
                     /**
                      * 设置Interruption callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      * @param StreamEndNotifyUrl Interruption callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      */
                     void SetStreamEndNotifyUrl(const std::string& _streamEndNotifyUrl);
 
@@ -140,17 +140,17 @@ Protocol document: [Event Message Notification](/document/product/267/32744).
 
                     /**
                      * 获取Recording callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      * @return RecordNotifyUrl Recording callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      */
                     std::string GetRecordNotifyUrl() const;
 
                     /**
                      * 设置Recording callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      * @param RecordNotifyUrl Recording callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      */
                     void SetRecordNotifyUrl(const std::string& _recordNotifyUrl);
 
@@ -162,17 +162,17 @@ Protocol document: [Event Message Notification](/document/product/267/32744).
 
                     /**
                      * 获取Screencapturing callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      * @return SnapshotNotifyUrl Screencapturing callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      */
                     std::string GetSnapshotNotifyUrl() const;
 
                     /**
                      * 设置Screencapturing callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      * @param SnapshotNotifyUrl Screencapturing callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      */
                     void SetSnapshotNotifyUrl(const std::string& _snapshotNotifyUrl);
 
@@ -184,17 +184,17 @@ Protocol document: [Event Message Notification](/document/product/267/32744).
 
                     /**
                      * 获取Porn detection callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32741).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32741?from_cn_redirect=1).
                      * @return PornCensorshipNotifyUrl Porn detection callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32741).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32741?from_cn_redirect=1).
                      */
                     std::string GetPornCensorshipNotifyUrl() const;
 
                     /**
                      * 设置Porn detection callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32741).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32741?from_cn_redirect=1).
                      * @param PornCensorshipNotifyUrl Porn detection callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32741).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32741?from_cn_redirect=1).
                      */
                     void SetPornCensorshipNotifyUrl(const std::string& _pornCensorshipNotifyUrl);
 
@@ -206,17 +206,17 @@ Protocol document: [Event Message Notification](/document/product/267/32741).
 
                     /**
                      * 获取Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      * @return CallbackKey Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      */
                     std::string GetCallbackKey() const;
 
                     /**
                      * 设置Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      * @param CallbackKey Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      */
                     void SetCallbackKey(const std::string& _callbackKey);
 
@@ -225,6 +225,24 @@ Protocol document: [Event Message Notification](/document/product/267/32741).
                      * @return CallbackKey 是否已赋值
                      */
                     bool CallbackKeyHasBeenSet() const;
+
+                    /**
+                     * 获取Disused
+                     * @return StreamMixNotifyUrl Disused
+                     */
+                    std::string GetStreamMixNotifyUrl() const;
+
+                    /**
+                     * 设置Disused
+                     * @param StreamMixNotifyUrl Disused
+                     */
+                    void SetStreamMixNotifyUrl(const std::string& _streamMixNotifyUrl);
+
+                    /**
+                     * 判断参数 StreamMixNotifyUrl 是否已赋值
+                     * @return StreamMixNotifyUrl 是否已赋值
+                     */
+                    bool StreamMixNotifyUrlHasBeenSet() const;
 
                 private:
 
@@ -246,45 +264,51 @@ Only letters, digits, underscores, and hyphens can be contained.
 
                     /**
                      * Stream starting callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      */
                     std::string m_streamBeginNotifyUrl;
                     bool m_streamBeginNotifyUrlHasBeenSet;
 
                     /**
                      * Interruption callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      */
                     std::string m_streamEndNotifyUrl;
                     bool m_streamEndNotifyUrlHasBeenSet;
 
                     /**
                      * Recording callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      */
                     std::string m_recordNotifyUrl;
                     bool m_recordNotifyUrlHasBeenSet;
 
                     /**
                      * Screencapturing callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      */
                     std::string m_snapshotNotifyUrl;
                     bool m_snapshotNotifyUrlHasBeenSet;
 
                     /**
                      * Porn detection callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32741).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32741?from_cn_redirect=1).
                      */
                     std::string m_pornCensorshipNotifyUrl;
                     bool m_pornCensorshipNotifyUrlHasBeenSet;
 
                     /**
                      * Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      */
                     std::string m_callbackKey;
                     bool m_callbackKeyHasBeenSet;
+
+                    /**
+                     * Disused
+                     */
+                    std::string m_streamMixNotifyUrl;
+                    bool m_streamMixNotifyUrlHasBeenSet;
 
                 };
             }

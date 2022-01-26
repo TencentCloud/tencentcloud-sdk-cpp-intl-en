@@ -18,26 +18,27 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 AiReviewProhibitedOcrTaskOutput::AiReviewProhibitedOcrTaskOutput() :
     m_confidenceHasBeenSet(false),
     m_suggestionHasBeenSet(false),
-    m_segmentSetHasBeenSet(false)
+    m_segmentSetHasBeenSet(false),
+    m_segmentSetFileUrlHasBeenSet(false),
+    m_segmentSetFileUrlExpireTimeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome AiReviewProhibitedOcrTaskOutput::Deserialize(const Value &value)
+CoreInternalOutcome AiReviewProhibitedOcrTaskOutput::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
 
     if (value.HasMember("Confidence") && !value["Confidence"].IsNull())
     {
-        if (!value["Confidence"].IsDouble())
+        if (!value["Confidence"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `AiReviewProhibitedOcrTaskOutput.Confidence` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiReviewProhibitedOcrTaskOutput.Confidence` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_confidence = value["Confidence"].GetDouble();
         m_confidenceHasBeenSet = true;
@@ -47,7 +48,7 @@ CoreInternalOutcome AiReviewProhibitedOcrTaskOutput::Deserialize(const Value &va
     {
         if (!value["Suggestion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AiReviewProhibitedOcrTaskOutput.Suggestion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiReviewProhibitedOcrTaskOutput.Suggestion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_suggestion = string(value["Suggestion"].GetString());
         m_suggestionHasBeenSet = true;
@@ -56,10 +57,10 @@ CoreInternalOutcome AiReviewProhibitedOcrTaskOutput::Deserialize(const Value &va
     if (value.HasMember("SegmentSet") && !value["SegmentSet"].IsNull())
     {
         if (!value["SegmentSet"].IsArray())
-            return CoreInternalOutcome(Error("response `AiReviewProhibitedOcrTaskOutput.SegmentSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `AiReviewProhibitedOcrTaskOutput.SegmentSet` is not array type"));
 
-        const Value &tmpValue = value["SegmentSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["SegmentSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             MediaContentReviewOcrTextSegmentItem item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -73,16 +74,36 @@ CoreInternalOutcome AiReviewProhibitedOcrTaskOutput::Deserialize(const Value &va
         m_segmentSetHasBeenSet = true;
     }
 
+    if (value.HasMember("SegmentSetFileUrl") && !value["SegmentSetFileUrl"].IsNull())
+    {
+        if (!value["SegmentSetFileUrl"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AiReviewProhibitedOcrTaskOutput.SegmentSetFileUrl` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_segmentSetFileUrl = string(value["SegmentSetFileUrl"].GetString());
+        m_segmentSetFileUrlHasBeenSet = true;
+    }
+
+    if (value.HasMember("SegmentSetFileUrlExpireTime") && !value["SegmentSetFileUrlExpireTime"].IsNull())
+    {
+        if (!value["SegmentSetFileUrlExpireTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AiReviewProhibitedOcrTaskOutput.SegmentSetFileUrlExpireTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_segmentSetFileUrlExpireTime = string(value["SegmentSetFileUrlExpireTime"].GetString());
+        m_segmentSetFileUrlExpireTimeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void AiReviewProhibitedOcrTaskOutput::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AiReviewProhibitedOcrTaskOutput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_confidenceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Confidence";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_confidence, allocator);
@@ -90,25 +111,41 @@ void AiReviewProhibitedOcrTaskOutput::ToJsonObject(Value &value, Document::Alloc
 
     if (m_suggestionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Suggestion";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_suggestion.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_suggestion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_segmentSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SegmentSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_segmentSet.begin(); itr != m_segmentSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_segmentSetFileUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SegmentSetFileUrl";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_segmentSetFileUrl.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_segmentSetFileUrlExpireTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SegmentSetFileUrlExpireTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_segmentSetFileUrlExpireTime.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -160,5 +197,37 @@ void AiReviewProhibitedOcrTaskOutput::SetSegmentSet(const vector<MediaContentRev
 bool AiReviewProhibitedOcrTaskOutput::SegmentSetHasBeenSet() const
 {
     return m_segmentSetHasBeenSet;
+}
+
+string AiReviewProhibitedOcrTaskOutput::GetSegmentSetFileUrl() const
+{
+    return m_segmentSetFileUrl;
+}
+
+void AiReviewProhibitedOcrTaskOutput::SetSegmentSetFileUrl(const string& _segmentSetFileUrl)
+{
+    m_segmentSetFileUrl = _segmentSetFileUrl;
+    m_segmentSetFileUrlHasBeenSet = true;
+}
+
+bool AiReviewProhibitedOcrTaskOutput::SegmentSetFileUrlHasBeenSet() const
+{
+    return m_segmentSetFileUrlHasBeenSet;
+}
+
+string AiReviewProhibitedOcrTaskOutput::GetSegmentSetFileUrlExpireTime() const
+{
+    return m_segmentSetFileUrlExpireTime;
+}
+
+void AiReviewProhibitedOcrTaskOutput::SetSegmentSetFileUrlExpireTime(const string& _segmentSetFileUrlExpireTime)
+{
+    m_segmentSetFileUrlExpireTime = _segmentSetFileUrlExpireTime;
+    m_segmentSetFileUrlExpireTimeHasBeenSet = true;
+}
+
+bool AiReviewProhibitedOcrTaskOutput::SegmentSetFileUrlExpireTimeHasBeenSet() const
+{
+    return m_segmentSetFileUrlExpireTimeHasBeenSet;
 }
 

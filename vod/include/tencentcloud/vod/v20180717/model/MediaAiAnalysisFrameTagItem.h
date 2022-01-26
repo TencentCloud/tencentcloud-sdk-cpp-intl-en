@@ -65,6 +65,28 @@ namespace TencentCloud
                     bool TagHasBeenSet() const;
 
                     /**
+                     * 获取Category list of frame-specific tag names. `CategorySet.N` indicates the N+1-level category.
+For example, if the `Tag` is "tower", and `CategorySet` contains two elements (`CategorySet.0` is "scene", and `CategorySet.1` is "architecture"), then the frame-specific tag is "tower", the first-level category is "scene", and the second-level category is "architecture".
+                     * @return CategorySet Category list of frame-specific tag names. `CategorySet.N` indicates the N+1-level category.
+For example, if the `Tag` is "tower", and `CategorySet` contains two elements (`CategorySet.0` is "scene", and `CategorySet.1` is "architecture"), then the frame-specific tag is "tower", the first-level category is "scene", and the second-level category is "architecture".
+                     */
+                    std::vector<std::string> GetCategorySet() const;
+
+                    /**
+                     * 设置Category list of frame-specific tag names. `CategorySet.N` indicates the N+1-level category.
+For example, if the `Tag` is "tower", and `CategorySet` contains two elements (`CategorySet.0` is "scene", and `CategorySet.1` is "architecture"), then the frame-specific tag is "tower", the first-level category is "scene", and the second-level category is "architecture".
+                     * @param CategorySet Category list of frame-specific tag names. `CategorySet.N` indicates the N+1-level category.
+For example, if the `Tag` is "tower", and `CategorySet` contains two elements (`CategorySet.0` is "scene", and `CategorySet.1` is "architecture"), then the frame-specific tag is "tower", the first-level category is "scene", and the second-level category is "architecture".
+                     */
+                    void SetCategorySet(const std::vector<std::string>& _categorySet);
+
+                    /**
+                     * 判断参数 CategorySet 是否已赋值
+                     * @return CategorySet 是否已赋值
+                     */
+                    bool CategorySetHasBeenSet() const;
+
+                    /**
                      * 获取Confidence of intelligently generated frame-specific tag between 0 and 100.
                      * @return Confidence Confidence of intelligently generated frame-specific tag between 0 and 100.
                      */
@@ -89,6 +111,13 @@ namespace TencentCloud
                      */
                     std::string m_tag;
                     bool m_tagHasBeenSet;
+
+                    /**
+                     * Category list of frame-specific tag names. `CategorySet.N` indicates the N+1-level category.
+For example, if the `Tag` is "tower", and `CategorySet` contains two elements (`CategorySet.0` is "scene", and `CategorySet.1` is "architecture"), then the frame-specific tag is "tower", the first-level category is "scene", and the second-level category is "architecture".
+                     */
+                    std::vector<std::string> m_categorySet;
+                    bool m_categorySetHasBeenSet;
 
                     /**
                      * Confidence of intelligently generated frame-specific tag between 0 and 100.

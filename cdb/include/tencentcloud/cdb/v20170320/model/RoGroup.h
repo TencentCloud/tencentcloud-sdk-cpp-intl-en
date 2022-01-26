@@ -102,14 +102,14 @@ namespace TencentCloud
                     bool RoGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the function of isolating an instance that exceeds the latency threshold. If it is enabled, when the latency between the read-only instance and the master instance exceeds the latency threshold, the read-only instance will be isolated. Valid values: 1 (enabled), 0 (not enabled)
-                     * @return RoOfflineDelay Whether to enable the function of isolating an instance that exceeds the latency threshold. If it is enabled, when the latency between the read-only instance and the master instance exceeds the latency threshold, the read-only instance will be isolated. Valid values: 1 (enabled), 0 (not enabled)
+                     * 获取Whether to enable the function of isolating an instance that exceeds the latency threshold. If it is enabled, when the latency between the read-only instance and the primary instance exceeds the latency threshold, the read-only instance will be isolated. Valid values: 1 (enabled), 0 (not enabled)
+                     * @return RoOfflineDelay Whether to enable the function of isolating an instance that exceeds the latency threshold. If it is enabled, when the latency between the read-only instance and the primary instance exceeds the latency threshold, the read-only instance will be isolated. Valid values: 1 (enabled), 0 (not enabled)
                      */
                     int64_t GetRoOfflineDelay() const;
 
                     /**
-                     * 设置Whether to enable the function of isolating an instance that exceeds the latency threshold. If it is enabled, when the latency between the read-only instance and the master instance exceeds the latency threshold, the read-only instance will be isolated. Valid values: 1 (enabled), 0 (not enabled)
-                     * @param RoOfflineDelay Whether to enable the function of isolating an instance that exceeds the latency threshold. If it is enabled, when the latency between the read-only instance and the master instance exceeds the latency threshold, the read-only instance will be isolated. Valid values: 1 (enabled), 0 (not enabled)
+                     * 设置Whether to enable the function of isolating an instance that exceeds the latency threshold. If it is enabled, when the latency between the read-only instance and the primary instance exceeds the latency threshold, the read-only instance will be isolated. Valid values: 1 (enabled), 0 (not enabled)
+                     * @param RoOfflineDelay Whether to enable the function of isolating an instance that exceeds the latency threshold. If it is enabled, when the latency between the read-only instance and the primary instance exceeds the latency threshold, the read-only instance will be isolated. Valid values: 1 (enabled), 0 (not enabled)
                      */
                     void SetRoOfflineDelay(const int64_t& _roOfflineDelay);
 
@@ -333,6 +333,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool RoGroupZoneHasBeenSet() const;
 
+                    /**
+                     * 获取Replication delay.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return DelayReplicationTime Replication delay.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetDelayReplicationTime() const;
+
+                    /**
+                     * 设置Replication delay.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param DelayReplicationTime Replication delay.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetDelayReplicationTime(const int64_t& _delayReplicationTime);
+
+                    /**
+                     * 判断参数 DelayReplicationTime 是否已赋值
+                     * @return DelayReplicationTime 是否已赋值
+                     */
+                    bool DelayReplicationTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -354,7 +376,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_roGroupNameHasBeenSet;
 
                     /**
-                     * Whether to enable the function of isolating an instance that exceeds the latency threshold. If it is enabled, when the latency between the read-only instance and the master instance exceeds the latency threshold, the read-only instance will be isolated. Valid values: 1 (enabled), 0 (not enabled)
+                     * Whether to enable the function of isolating an instance that exceeds the latency threshold. If it is enabled, when the latency between the read-only instance and the primary instance exceeds the latency threshold, the read-only instance will be isolated. Valid values: 1 (enabled), 0 (not enabled)
                      */
                     int64_t m_roOfflineDelay;
                     bool m_roOfflineDelayHasBeenSet;
@@ -428,6 +450,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_roGroupZone;
                     bool m_roGroupZoneHasBeenSet;
+
+                    /**
+                     * Replication delay.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_delayReplicationTime;
+                    bool m_delayReplicationTimeHasBeenSet;
 
                 };
             }

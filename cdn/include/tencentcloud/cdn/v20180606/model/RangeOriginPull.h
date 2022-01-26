@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cdn/v20180606/model/RangeOriginPullRule.h>
 
 
 namespace TencentCloud
@@ -72,6 +73,28 @@ off: disabled
                      */
                     bool SwitchHasBeenSet() const;
 
+                    /**
+                     * 获取Range GETs configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return RangeRules Range GETs configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<RangeOriginPullRule> GetRangeRules() const;
+
+                    /**
+                     * 设置Range GETs configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param RangeRules Range GETs configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetRangeRules(const std::vector<RangeOriginPullRule>& _rangeRules);
+
+                    /**
+                     * 判断参数 RangeRules 是否已赋值
+                     * @return RangeRules 是否已赋值
+                     */
+                    bool RangeRulesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -81,6 +104,13 @@ off: disabled
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
+
+                    /**
+                     * Range GETs configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<RangeOriginPullRule> m_rangeRules;
+                    bool m_rangeRulesHasBeenSet;
 
                 };
             }

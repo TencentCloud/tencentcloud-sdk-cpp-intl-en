@@ -107,14 +107,14 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SampleRate 
+                     * 获取Sample rate, which indicates the number of video frames captured per second for audit
+                     * @return SampleRate Sample rate, which indicates the number of video frames captured per second for audit
                      */
                     double GetSampleRate() const;
 
                     /**
-                     * 设置
-                     * @param SampleRate 
+                     * 设置Sample rate, which indicates the number of video frames captured per second for audit
+                     * @param SampleRate Sample rate, which indicates the number of video frames captured per second for audit
                      */
                     void SetSampleRate(const double& _sampleRate);
 
@@ -125,14 +125,14 @@ namespace TencentCloud
                     bool SampleRateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Duration 
+                     * 获取Audited video duration in seconds.
+                     * @return Duration Audited video duration in seconds.
                      */
                     double GetDuration() const;
 
                     /**
-                     * 设置
-                     * @param Duration 
+                     * 设置Audited video duration in seconds.
+                     * @param Duration Audited video duration in seconds.
                      */
                     void SetDuration(const double& _duration);
 
@@ -297,14 +297,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PoliticalOcrTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TerrorismOcrTask 
+                     * 获取Query result of OCR-based terrorism information detection in text task in video content audit, which is valid if task type is `Terrorism.Ocr`.
+                     * @return TerrorismOcrTask Query result of OCR-based terrorism information detection in text task in video content audit, which is valid if task type is `Terrorism.Ocr`.
                      */
                     AiReviewTaskTerrorismOcrResult GetTerrorismOcrTask() const;
 
                     /**
-                     * 设置
-                     * @param TerrorismOcrTask 
+                     * 设置Query result of OCR-based terrorism information detection in text task in video content audit, which is valid if task type is `Terrorism.Ocr`.
+                     * @param TerrorismOcrTask Query result of OCR-based terrorism information detection in text task in video content audit, which is valid if task type is `Terrorism.Ocr`.
                      */
                     void SetTerrorismOcrTask(const AiReviewTaskTerrorismOcrResult& _terrorismOcrTask);
 
@@ -315,14 +315,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TerrorismOcrTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ProhibitedAsrTask 
+                     * 获取Query result of ASR-based prohibited information detection in speech task in video content audit, which is valid if task type is `Prohibited.Asr`.
+                     * @return ProhibitedAsrTask Query result of ASR-based prohibited information detection in speech task in video content audit, which is valid if task type is `Prohibited.Asr`.
                      */
                     AiReviewTaskProhibitedAsrResult GetProhibitedAsrTask() const;
 
                     /**
-                     * 设置
-                     * @param ProhibitedAsrTask 
+                     * 设置Query result of ASR-based prohibited information detection in speech task in video content audit, which is valid if task type is `Prohibited.Asr`.
+                     * @param ProhibitedAsrTask Query result of ASR-based prohibited information detection in speech task in video content audit, which is valid if task type is `Prohibited.Asr`.
                      */
                     void SetProhibitedAsrTask(const AiReviewTaskProhibitedAsrResult& _prohibitedAsrTask);
 
@@ -333,14 +333,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProhibitedAsrTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ProhibitedOcrTask 
+                     * 获取Query result of OCR-based prohibited information detection in text task in video content audit, which is valid if task type is `Prohibited.Ocr`.
+                     * @return ProhibitedOcrTask Query result of OCR-based prohibited information detection in text task in video content audit, which is valid if task type is `Prohibited.Ocr`.
                      */
                     AiReviewTaskProhibitedOcrResult GetProhibitedOcrTask() const;
 
                     /**
-                     * 设置
-                     * @param ProhibitedOcrTask 
+                     * 设置Query result of OCR-based prohibited information detection in text task in video content audit, which is valid if task type is `Prohibited.Ocr`.
+                     * @param ProhibitedOcrTask Query result of OCR-based prohibited information detection in text task in video content audit, which is valid if task type is `Prohibited.Ocr`.
                      */
                     void SetProhibitedOcrTask(const AiReviewTaskProhibitedOcrResult& _prohibitedOcrTask);
 
@@ -367,13 +367,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Sample rate, which indicates the number of video frames captured per second for audit
                      */
                     double m_sampleRate;
                     bool m_sampleRateHasBeenSet;
 
                     /**
-                     * 
+                     * Audited video duration in seconds.
                      */
                     double m_duration;
                     bool m_durationHasBeenSet;
@@ -428,19 +428,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_politicalOcrTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of OCR-based terrorism information detection in text task in video content audit, which is valid if task type is `Terrorism.Ocr`.
                      */
                     AiReviewTaskTerrorismOcrResult m_terrorismOcrTask;
                     bool m_terrorismOcrTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of ASR-based prohibited information detection in speech task in video content audit, which is valid if task type is `Prohibited.Asr`.
                      */
                     AiReviewTaskProhibitedAsrResult m_prohibitedAsrTask;
                     bool m_prohibitedAsrTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of OCR-based prohibited information detection in text task in video content audit, which is valid if task type is `Prohibited.Ocr`.
                      */
                     AiReviewTaskProhibitedOcrResult m_prohibitedOcrTask;
                     bool m_prohibitedOcrTaskHasBeenSet;

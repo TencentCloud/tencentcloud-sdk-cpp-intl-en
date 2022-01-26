@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Ecdn::V20191012::Model;
-using namespace rapidjson;
 using namespace std;
 
 AddEcdnDomainRequest::AddEcdnDomainRequest() :
@@ -34,45 +33,47 @@ AddEcdnDomainRequest::AddEcdnDomainRequest() :
     m_cacheKeyHasBeenSet(false),
     m_cacheHasBeenSet(false),
     m_httpsHasBeenSet(false),
-    m_forceRedirectHasBeenSet(false)
+    m_forceRedirectHasBeenSet(false),
+    m_tagHasBeenSet(false),
+    m_webSocketHasBeenSet(false)
 {
 }
 
 string AddEcdnDomainRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_domainHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Domain";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_domain.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_domain.c_str(), allocator).Move(), allocator);
     }
 
     if (m_originHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Origin";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_origin.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_areaHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Area";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_area.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_area.c_str(), allocator).Move(), allocator);
     }
 
     if (m_projectIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProjectId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_projectId, allocator);
@@ -80,70 +81,94 @@ string AddEcdnDomainRequest::ToJsonString() const
 
     if (m_ipFilterHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IpFilter";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_ipFilter.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_ipFreqLimitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IpFreqLimit";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_ipFreqLimit.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_responseHeaderHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResponseHeader";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_responseHeader.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_cacheKeyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CacheKey";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_cacheKey.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_cacheHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Cache";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_cache.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_httpsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Https";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_https.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_forceRedirectHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ForceRedirect";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_forceRedirect.ToJsonObject(d[key.c_str()], allocator);
     }
 
+    if (m_tagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tag";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+        int i=0;
+        for (auto itr = m_tag.begin(); itr != m_tag.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_webSocketHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WebSocket";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_webSocket.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -323,6 +348,38 @@ void AddEcdnDomainRequest::SetForceRedirect(const ForceRedirect& _forceRedirect)
 bool AddEcdnDomainRequest::ForceRedirectHasBeenSet() const
 {
     return m_forceRedirectHasBeenSet;
+}
+
+vector<Tag> AddEcdnDomainRequest::GetTag() const
+{
+    return m_tag;
+}
+
+void AddEcdnDomainRequest::SetTag(const vector<Tag>& _tag)
+{
+    m_tag = _tag;
+    m_tagHasBeenSet = true;
+}
+
+bool AddEcdnDomainRequest::TagHasBeenSet() const
+{
+    return m_tagHasBeenSet;
+}
+
+WebSocket AddEcdnDomainRequest::GetWebSocket() const
+{
+    return m_webSocket;
+}
+
+void AddEcdnDomainRequest::SetWebSocket(const WebSocket& _webSocket)
+{
+    m_webSocket = _webSocket;
+    m_webSocketHasBeenSet = true;
+}
+
+bool AddEcdnDomainRequest::WebSocketHasBeenSet() const
+{
+    return m_webSocketHasBeenSet;
 }
 
 

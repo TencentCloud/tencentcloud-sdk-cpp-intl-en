@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool HostHasBeenSet() const;
 
                     /**
-                     * 获取Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
-                     * @return Password Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+                     * 获取Account password. It must contain 8-32 characters in all of the following four types: lowercase letters, uppercase letters, digits, and symbols (()~!@#$%^&*-+=_|{}[]:<>,.?/), and cannot start with a slash (/).
+                     * @return Password Account password. It must contain 8-32 characters in all of the following four types: lowercase letters, uppercase letters, digits, and symbols (()~!@#$%^&*-+=_|{}[]:<>,.?/), and cannot start with a slash (/).
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
-                     * @param Password Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+                     * 设置Account password. It must contain 8-32 characters in all of the following four types: lowercase letters, uppercase letters, digits, and symbols (()~!@#$%^&*-+=_|{}[]:<>,.?/), and cannot start with a slash (/).
+                     * @param Password Account password. It must contain 8-32 characters in all of the following four types: lowercase letters, uppercase letters, digits, and symbols (()~!@#$%^&*-+=_|{}[]:<>,.?/), and cannot start with a slash (/).
                      */
                     void SetPassword(const std::string& _password);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail; 3: only the slave will be read from.
-                     * @return ReadOnly Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail; 3: only the slave will be read from.
+                     * 获取Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail; 3: only the secondary will be read from.
+                     * @return ReadOnly Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail; 3: only the secondary will be read from.
                      */
                     int64_t GetReadOnly() const;
 
                     /**
-                     * 设置Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail; 3: only the slave will be read from.
-                     * @param ReadOnly Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail; 3: only the slave will be read from.
+                     * 设置Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail; 3: only the secondary will be read from.
+                     * @param ReadOnly Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail; 3: only the secondary will be read from.
                      */
                     void SetReadOnly(const int64_t& _readOnly);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool ReadOnlyHasBeenSet() const;
 
                     /**
-                     * 获取Account remarks, which can contain 0–256 letters, digits, and common symbols.
-                     * @return Description Account remarks, which can contain 0–256 letters, digits, and common symbols.
+                     * 获取Account remarks, which can contain 0-256 letters, digits, and common symbols.
+                     * @return Description Account remarks, which can contain 0-256 letters, digits, and common symbols.
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Account remarks, which can contain 0–256 letters, digits, and common symbols.
-                     * @param Description Account remarks, which can contain 0–256 letters, digits, and common symbols.
+                     * 设置Account remarks, which can contain 0-256 letters, digits, and common symbols.
+                     * @param Description Account remarks, which can contain 0-256 letters, digits, and common symbols.
                      */
                     void SetDescription(const std::string& _description);
 
@@ -151,17 +151,17 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
+                     * 获取If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
-                     * @return DelayThresh If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
+                     * @return DelayThresh If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
                      */
                     int64_t GetDelayThresh() const;
 
                     /**
-                     * 设置If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
+                     * 设置If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
-                     * @param DelayThresh If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
+                     * @param DelayThresh If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
                      */
                     void SetDelayThresh(const int64_t& _delayThresh);
@@ -193,25 +193,25 @@ It is recommended that this parameter be set to a value greater than 10. This pa
                     bool m_hostHasBeenSet;
 
                     /**
-                     * Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+                     * Account password. It must contain 8-32 characters in all of the following four types: lowercase letters, uppercase letters, digits, and symbols (()~!@#$%^&*-+=_|{}[]:<>,.?/), and cannot start with a slash (/).
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail; 3: only the slave will be read from.
+                     * Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail; 3: only the secondary will be read from.
                      */
                     int64_t m_readOnly;
                     bool m_readOnlyHasBeenSet;
 
                     /**
-                     * Account remarks, which can contain 0–256 letters, digits, and common symbols.
+                     * Account remarks, which can contain 0-256 letters, digits, and common symbols.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
+                     * If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
                      */
                     int64_t m_delayThresh;

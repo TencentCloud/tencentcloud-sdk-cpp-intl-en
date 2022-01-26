@@ -49,18 +49,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Node specification description
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Spec Node specification description
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Node specification description, such as CVM.SA2
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Spec Node specification description, such as CVM.SA2
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetSpec() const;
 
                     /**
-                     * 设置Node specification description
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Spec Node specification description
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Node specification description, such as CVM.SA2
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param Spec Node specification description, such as CVM.SA2
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetSpec(const std::string& _spec);
 
@@ -71,18 +71,42 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SpecHasBeenSet() const;
 
                     /**
-                     * 获取Storage class
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return StorageType Storage class
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Storage type
+Valid values:
+<li>4: SSD</li>
+<li>5: Premium Cloud Storage</li>
+<li>6: Enhanced SSD</li>
+<li>11: High-Throughput cloud disk</li>
+<li>12: Tremendous SSD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return StorageType Storage type
+Valid values:
+<li>4: SSD</li>
+<li>5: Premium Cloud Storage</li>
+<li>6: Enhanced SSD</li>
+<li>11: High-Throughput cloud disk</li>
+<li>12: Tremendous SSD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     int64_t GetStorageType() const;
 
                     /**
-                     * 设置Storage class
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param StorageType Storage class
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Storage type
+Valid values:
+<li>4: SSD</li>
+<li>5: Premium Cloud Storage</li>
+<li>6: Enhanced SSD</li>
+<li>11: High-Throughput cloud disk</li>
+<li>12: Tremendous SSD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param StorageType Storage type
+Valid values:
+<li>4: SSD</li>
+<li>5: Premium Cloud Storage</li>
+<li>6: Enhanced SSD</li>
+<li>11: High-Throughput cloud disk</li>
+<li>12: Tremendous SSD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetStorageType(const int64_t& _storageType);
 
@@ -94,17 +118,33 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+Valid values:
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_BASIC`: HDD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return DiskType Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+Valid values:
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_BASIC`: HDD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetDiskType() const;
 
                     /**
                      * 设置Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+Valid values:
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_BASIC`: HDD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @param DiskType Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+Valid values:
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_BASIC`: HDD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetDiskType(const std::string& _diskType);
 
@@ -247,18 +287,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Specification type
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceType Specification type
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Specification type, such as S2.MEDIUM8
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return InstanceType Specification type, such as S2.MEDIUM8
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Specification type
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceType Specification type
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Specification type, such as S2.MEDIUM8
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param InstanceType Specification type, such as S2.MEDIUM8
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
@@ -269,18 +309,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Number of local disks
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return LocalDiskNum Number of local disks
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of local disks. This field has been disused.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return LocalDiskNum Number of local disks. This field has been disused.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     uint64_t GetLocalDiskNum() const;
 
                     /**
-                     * 设置Number of local disks
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param LocalDiskNum Number of local disks
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of local disks. This field has been disused.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param LocalDiskNum Number of local disks. This field has been disused.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetLocalDiskNum(const uint64_t& _localDiskNum);
 
@@ -291,18 +331,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool LocalDiskNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of disks
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DiskNum Number of disks
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of local disks, such as 2
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return DiskNum Number of local disks, such as 2
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     uint64_t GetDiskNum() const;
 
                     /**
-                     * 设置Number of disks
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DiskNum Number of disks
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of local disks, such as 2
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param DiskNum Number of local disks, such as 2
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetDiskNum(const uint64_t& _diskNum);
 
@@ -315,22 +355,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Node specification description
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Node specification description, such as CVM.SA2
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_spec;
                     bool m_specHasBeenSet;
 
                     /**
-                     * Storage class
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Storage type
+Valid values:
+<li>4: SSD</li>
+<li>5: Premium Cloud Storage</li>
+<li>6: Enhanced SSD</li>
+<li>11: High-Throughput cloud disk</li>
+<li>12: Tremendous SSD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     int64_t m_storageType;
                     bool m_storageTypeHasBeenSet;
 
                     /**
                      * Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+Valid values:
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_BASIC`: HDD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
@@ -378,22 +428,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Specification type
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Specification type, such as S2.MEDIUM8
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Number of local disks
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Number of local disks. This field has been disused.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     uint64_t m_localDiskNum;
                     bool m_localDiskNumHasBeenSet;
 
                     /**
-                     * Number of disks
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Number of local disks, such as 2
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     uint64_t m_diskNum;
                     bool m_diskNumHasBeenSet;

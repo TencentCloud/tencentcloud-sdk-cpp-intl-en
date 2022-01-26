@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 MediaContentReviewPoliticalSegmentItem::MediaContentReviewPoliticalSegmentItem() :
@@ -35,16 +34,16 @@ MediaContentReviewPoliticalSegmentItem::MediaContentReviewPoliticalSegmentItem()
 {
 }
 
-CoreInternalOutcome MediaContentReviewPoliticalSegmentItem::Deserialize(const Value &value)
+CoreInternalOutcome MediaContentReviewPoliticalSegmentItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
 
     if (value.HasMember("StartTimeOffset") && !value["StartTimeOffset"].IsNull())
     {
-        if (!value["StartTimeOffset"].IsDouble())
+        if (!value["StartTimeOffset"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `MediaContentReviewPoliticalSegmentItem.StartTimeOffset` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaContentReviewPoliticalSegmentItem.StartTimeOffset` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_startTimeOffset = value["StartTimeOffset"].GetDouble();
         m_startTimeOffsetHasBeenSet = true;
@@ -52,9 +51,9 @@ CoreInternalOutcome MediaContentReviewPoliticalSegmentItem::Deserialize(const Va
 
     if (value.HasMember("EndTimeOffset") && !value["EndTimeOffset"].IsNull())
     {
-        if (!value["EndTimeOffset"].IsDouble())
+        if (!value["EndTimeOffset"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `MediaContentReviewPoliticalSegmentItem.EndTimeOffset` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaContentReviewPoliticalSegmentItem.EndTimeOffset` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_endTimeOffset = value["EndTimeOffset"].GetDouble();
         m_endTimeOffsetHasBeenSet = true;
@@ -62,9 +61,9 @@ CoreInternalOutcome MediaContentReviewPoliticalSegmentItem::Deserialize(const Va
 
     if (value.HasMember("Confidence") && !value["Confidence"].IsNull())
     {
-        if (!value["Confidence"].IsDouble())
+        if (!value["Confidence"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `MediaContentReviewPoliticalSegmentItem.Confidence` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaContentReviewPoliticalSegmentItem.Confidence` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_confidence = value["Confidence"].GetDouble();
         m_confidenceHasBeenSet = true;
@@ -74,7 +73,7 @@ CoreInternalOutcome MediaContentReviewPoliticalSegmentItem::Deserialize(const Va
     {
         if (!value["Suggestion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaContentReviewPoliticalSegmentItem.Suggestion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaContentReviewPoliticalSegmentItem.Suggestion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_suggestion = string(value["Suggestion"].GetString());
         m_suggestionHasBeenSet = true;
@@ -84,7 +83,7 @@ CoreInternalOutcome MediaContentReviewPoliticalSegmentItem::Deserialize(const Va
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaContentReviewPoliticalSegmentItem.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaContentReviewPoliticalSegmentItem.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -94,7 +93,7 @@ CoreInternalOutcome MediaContentReviewPoliticalSegmentItem::Deserialize(const Va
     {
         if (!value["Label"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaContentReviewPoliticalSegmentItem.Label` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaContentReviewPoliticalSegmentItem.Label` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_label = string(value["Label"].GetString());
         m_labelHasBeenSet = true;
@@ -104,7 +103,7 @@ CoreInternalOutcome MediaContentReviewPoliticalSegmentItem::Deserialize(const Va
     {
         if (!value["Url"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaContentReviewPoliticalSegmentItem.Url` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaContentReviewPoliticalSegmentItem.Url` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_url = string(value["Url"].GetString());
         m_urlHasBeenSet = true;
@@ -113,10 +112,10 @@ CoreInternalOutcome MediaContentReviewPoliticalSegmentItem::Deserialize(const Va
     if (value.HasMember("AreaCoordSet") && !value["AreaCoordSet"].IsNull())
     {
         if (!value["AreaCoordSet"].IsArray())
-            return CoreInternalOutcome(Error("response `MediaContentReviewPoliticalSegmentItem.AreaCoordSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `MediaContentReviewPoliticalSegmentItem.AreaCoordSet` is not array type"));
 
-        const Value &tmpValue = value["AreaCoordSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["AreaCoordSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_areaCoordSet.push_back((*itr).GetInt64());
         }
@@ -127,7 +126,7 @@ CoreInternalOutcome MediaContentReviewPoliticalSegmentItem::Deserialize(const Va
     {
         if (!value["PicUrlExpireTimeStamp"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaContentReviewPoliticalSegmentItem.PicUrlExpireTimeStamp` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaContentReviewPoliticalSegmentItem.PicUrlExpireTimeStamp` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_picUrlExpireTimeStamp = value["PicUrlExpireTimeStamp"].GetInt64();
         m_picUrlExpireTimeStampHasBeenSet = true;
@@ -137,7 +136,7 @@ CoreInternalOutcome MediaContentReviewPoliticalSegmentItem::Deserialize(const Va
     {
         if (!value["PicUrlExpireTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaContentReviewPoliticalSegmentItem.PicUrlExpireTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaContentReviewPoliticalSegmentItem.PicUrlExpireTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_picUrlExpireTime = string(value["PicUrlExpireTime"].GetString());
         m_picUrlExpireTimeHasBeenSet = true;
@@ -147,12 +146,12 @@ CoreInternalOutcome MediaContentReviewPoliticalSegmentItem::Deserialize(const Va
     return CoreInternalOutcome(true);
 }
 
-void MediaContentReviewPoliticalSegmentItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MediaContentReviewPoliticalSegmentItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_startTimeOffsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTimeOffset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_startTimeOffset, allocator);
@@ -160,7 +159,7 @@ void MediaContentReviewPoliticalSegmentItem::ToJsonObject(Value &value, Document
 
     if (m_endTimeOffsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndTimeOffset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_endTimeOffset, allocator);
@@ -168,7 +167,7 @@ void MediaContentReviewPoliticalSegmentItem::ToJsonObject(Value &value, Document
 
     if (m_confidenceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Confidence";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_confidence, allocator);
@@ -176,52 +175,52 @@ void MediaContentReviewPoliticalSegmentItem::ToJsonObject(Value &value, Document
 
     if (m_suggestionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Suggestion";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_suggestion.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_suggestion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_labelHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Label";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_label.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_label.c_str(), allocator).Move(), allocator);
     }
 
     if (m_urlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Url";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_url.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_url.c_str(), allocator).Move(), allocator);
     }
 
     if (m_areaCoordSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AreaCoordSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_areaCoordSet.begin(); itr != m_areaCoordSet.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 
     if (m_picUrlExpireTimeStampHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PicUrlExpireTimeStamp";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_picUrlExpireTimeStamp, allocator);
@@ -229,10 +228,10 @@ void MediaContentReviewPoliticalSegmentItem::ToJsonObject(Value &value, Document
 
     if (m_picUrlExpireTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PicUrlExpireTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_picUrlExpireTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_picUrlExpireTime.c_str(), allocator).Move(), allocator);
     }
 
 }

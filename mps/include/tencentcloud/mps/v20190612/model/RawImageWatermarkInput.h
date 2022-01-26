@@ -125,6 +125,36 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
                      */
                     bool HeightHasBeenSet() const;
 
+                    /**
+                     * 获取Repeat type of an animated watermark. Valid values:
+<li>`once`: no longer appears after watermark playback ends.</li>
+<li>`repeat_last_frame`: stays on the last frame after watermark playback ends.</li>
+<li>`repeat` (default): repeats the playback until the video ends.</li>
+                     * @return RepeatType Repeat type of an animated watermark. Valid values:
+<li>`once`: no longer appears after watermark playback ends.</li>
+<li>`repeat_last_frame`: stays on the last frame after watermark playback ends.</li>
+<li>`repeat` (default): repeats the playback until the video ends.</li>
+                     */
+                    std::string GetRepeatType() const;
+
+                    /**
+                     * 设置Repeat type of an animated watermark. Valid values:
+<li>`once`: no longer appears after watermark playback ends.</li>
+<li>`repeat_last_frame`: stays on the last frame after watermark playback ends.</li>
+<li>`repeat` (default): repeats the playback until the video ends.</li>
+                     * @param RepeatType Repeat type of an animated watermark. Valid values:
+<li>`once`: no longer appears after watermark playback ends.</li>
+<li>`repeat_last_frame`: stays on the last frame after watermark playback ends.</li>
+<li>`repeat` (default): repeats the playback until the video ends.</li>
+                     */
+                    void SetRepeatType(const std::string& _repeatType);
+
+                    /**
+                     * 判断参数 RepeatType 是否已赋值
+                     * @return RepeatType 是否已赋值
+                     */
+                    bool RepeatTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -150,6 +180,15 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
                      */
                     std::string m_height;
                     bool m_heightHasBeenSet;
+
+                    /**
+                     * Repeat type of an animated watermark. Valid values:
+<li>`once`: no longer appears after watermark playback ends.</li>
+<li>`repeat_last_frame`: stays on the last frame after watermark playback ends.</li>
+<li>`repeat` (default): repeats the playback until the video ends.</li>
+                     */
+                    std::string m_repeatType;
+                    bool m_repeatTypeHasBeenSet;
 
                 };
             }

@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool StrategyNameHasBeenSet() const;
 
                     /**
-                     * 获取Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
-                     * @return StrategyType Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
+                     * 获取Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
+                     * @return StrategyType Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
                      */
                     std::string GetStrategyType() const;
 
                     /**
-                     * 设置Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
-                     * @param StrategyType Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
+                     * 设置Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
+                     * @param StrategyType Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
                      */
                     void SetStrategyType(const std::string& _strategyType);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool StrategyTypeHasBeenSet() const;
 
                     /**
-                     * 获取Policy details.
-                     * @return StrategyData Policy details.
+                     * 获取Policy details. Multiple IPs are separated with \n.
+                     * @return StrategyData Policy details. Multiple IPs are separated with \n.
                      */
                     std::string GetStrategyData() const;
 
                     /**
-                     * 设置Policy details.
-                     * @param StrategyData Policy details.
+                     * 设置Policy details. Multiple IPs are separated with \n.
+                     * @param StrategyData Policy details. Multiple IPs are separated with \n.
                      */
                     void SetStrategyData(const std::string& _strategyData);
 
@@ -129,13 +129,13 @@ namespace TencentCloud
                     bool m_strategyNameHasBeenSet;
 
                     /**
-                     * Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
+                     * Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
                      */
                     std::string m_strategyType;
                     bool m_strategyTypeHasBeenSet;
 
                     /**
-                     * Policy details.
+                     * Policy details. Multiple IPs are separated with \n.
                      */
                     std::string m_strategyData;
                     bool m_strategyDataHasBeenSet;

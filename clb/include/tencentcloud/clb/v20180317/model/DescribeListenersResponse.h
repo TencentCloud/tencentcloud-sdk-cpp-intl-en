@@ -41,11 +41,12 @@ namespace TencentCloud
                     DescribeListenersResponse();
                     ~DescribeListenersResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取List of listeners
-                     * @return Listeners List of listeners
+                     * 获取Listener list
+                     * @return Listeners Listener list
                      */
                     std::vector<Listener> GetListeners() const;
 
@@ -56,10 +57,10 @@ namespace TencentCloud
                     bool ListenersHasBeenSet() const;
 
                     /**
-                     * 获取Total number of listeners
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCount Total number of listeners
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Total number of listeners (with filters of port, protocol, and listener ID applied).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return TotalCount Total number of listeners (with filters of port, protocol, and listener ID applied).
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     uint64_t GetTotalCount() const;
 
@@ -72,14 +73,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * List of listeners
+                     * Listener list
                      */
                     std::vector<Listener> m_listeners;
                     bool m_listenersHasBeenSet;
 
                     /**
-                     * Total number of listeners
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Total number of listeners (with filters of port, protocol, and listener ID applied).
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

@@ -20,41 +20,58 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Kms::V20190118::Model;
-using namespace rapidjson;
 using namespace std;
 
 DecryptRequest::DecryptRequest() :
     m_ciphertextBlobHasBeenSet(false),
-    m_encryptionContextHasBeenSet(false)
+    m_encryptionContextHasBeenSet(false),
+    m_encryptionPublicKeyHasBeenSet(false),
+    m_encryptionAlgorithmHasBeenSet(false)
 {
 }
 
 string DecryptRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_ciphertextBlobHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CiphertextBlob";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_ciphertextBlob.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_ciphertextBlob.c_str(), allocator).Move(), allocator);
     }
 
     if (m_encryptionContextHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EncryptionContext";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_encryptionContext.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_encryptionContext.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_encryptionPublicKeyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EncryptionPublicKey";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_encryptionPublicKey.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_encryptionAlgorithmHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EncryptionAlgorithm";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_encryptionAlgorithm.c_str(), allocator).Move(), allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -90,6 +107,38 @@ void DecryptRequest::SetEncryptionContext(const string& _encryptionContext)
 bool DecryptRequest::EncryptionContextHasBeenSet() const
 {
     return m_encryptionContextHasBeenSet;
+}
+
+string DecryptRequest::GetEncryptionPublicKey() const
+{
+    return m_encryptionPublicKey;
+}
+
+void DecryptRequest::SetEncryptionPublicKey(const string& _encryptionPublicKey)
+{
+    m_encryptionPublicKey = _encryptionPublicKey;
+    m_encryptionPublicKeyHasBeenSet = true;
+}
+
+bool DecryptRequest::EncryptionPublicKeyHasBeenSet() const
+{
+    return m_encryptionPublicKeyHasBeenSet;
+}
+
+string DecryptRequest::GetEncryptionAlgorithm() const
+{
+    return m_encryptionAlgorithm;
+}
+
+void DecryptRequest::SetEncryptionAlgorithm(const string& _encryptionAlgorithm)
+{
+    m_encryptionAlgorithm = _encryptionAlgorithm;
+    m_encryptionAlgorithmHasBeenSet = true;
+}
+
+bool DecryptRequest::EncryptionAlgorithmHasBeenSet() const
+{
+    return m_encryptionAlgorithmHasBeenSet;
 }
 
 

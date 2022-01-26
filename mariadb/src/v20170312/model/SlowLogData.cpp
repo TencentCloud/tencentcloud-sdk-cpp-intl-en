@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mariadb::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 SlowLogData::SlowLogData() :
@@ -39,11 +38,12 @@ SlowLogData::SlowLogData() :
     m_tsMaxHasBeenSet(false),
     m_tsMinHasBeenSet(false),
     m_userHasBeenSet(false),
-    m_exampleSqlHasBeenSet(false)
+    m_exampleSqlHasBeenSet(false),
+    m_hostHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome SlowLogData::Deserialize(const Value &value)
+CoreInternalOutcome SlowLogData::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -52,7 +52,7 @@ CoreInternalOutcome SlowLogData::Deserialize(const Value &value)
     {
         if (!value["CheckSum"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SlowLogData.CheckSum` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogData.CheckSum` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_checkSum = string(value["CheckSum"].GetString());
         m_checkSumHasBeenSet = true;
@@ -62,7 +62,7 @@ CoreInternalOutcome SlowLogData::Deserialize(const Value &value)
     {
         if (!value["Db"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SlowLogData.Db` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogData.Db` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_db = string(value["Db"].GetString());
         m_dbHasBeenSet = true;
@@ -72,7 +72,7 @@ CoreInternalOutcome SlowLogData::Deserialize(const Value &value)
     {
         if (!value["FingerPrint"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SlowLogData.FingerPrint` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogData.FingerPrint` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fingerPrint = string(value["FingerPrint"].GetString());
         m_fingerPrintHasBeenSet = true;
@@ -82,7 +82,7 @@ CoreInternalOutcome SlowLogData::Deserialize(const Value &value)
     {
         if (!value["LockTimeAvg"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SlowLogData.LockTimeAvg` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogData.LockTimeAvg` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_lockTimeAvg = string(value["LockTimeAvg"].GetString());
         m_lockTimeAvgHasBeenSet = true;
@@ -92,7 +92,7 @@ CoreInternalOutcome SlowLogData::Deserialize(const Value &value)
     {
         if (!value["LockTimeMax"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SlowLogData.LockTimeMax` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogData.LockTimeMax` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_lockTimeMax = string(value["LockTimeMax"].GetString());
         m_lockTimeMaxHasBeenSet = true;
@@ -102,7 +102,7 @@ CoreInternalOutcome SlowLogData::Deserialize(const Value &value)
     {
         if (!value["LockTimeMin"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SlowLogData.LockTimeMin` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogData.LockTimeMin` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_lockTimeMin = string(value["LockTimeMin"].GetString());
         m_lockTimeMinHasBeenSet = true;
@@ -112,7 +112,7 @@ CoreInternalOutcome SlowLogData::Deserialize(const Value &value)
     {
         if (!value["LockTimeSum"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SlowLogData.LockTimeSum` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogData.LockTimeSum` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_lockTimeSum = string(value["LockTimeSum"].GetString());
         m_lockTimeSumHasBeenSet = true;
@@ -122,7 +122,7 @@ CoreInternalOutcome SlowLogData::Deserialize(const Value &value)
     {
         if (!value["QueryCount"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SlowLogData.QueryCount` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogData.QueryCount` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_queryCount = string(value["QueryCount"].GetString());
         m_queryCountHasBeenSet = true;
@@ -132,7 +132,7 @@ CoreInternalOutcome SlowLogData::Deserialize(const Value &value)
     {
         if (!value["QueryTimeAvg"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SlowLogData.QueryTimeAvg` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogData.QueryTimeAvg` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_queryTimeAvg = string(value["QueryTimeAvg"].GetString());
         m_queryTimeAvgHasBeenSet = true;
@@ -142,7 +142,7 @@ CoreInternalOutcome SlowLogData::Deserialize(const Value &value)
     {
         if (!value["QueryTimeMax"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SlowLogData.QueryTimeMax` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogData.QueryTimeMax` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_queryTimeMax = string(value["QueryTimeMax"].GetString());
         m_queryTimeMaxHasBeenSet = true;
@@ -152,7 +152,7 @@ CoreInternalOutcome SlowLogData::Deserialize(const Value &value)
     {
         if (!value["QueryTimeMin"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SlowLogData.QueryTimeMin` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogData.QueryTimeMin` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_queryTimeMin = string(value["QueryTimeMin"].GetString());
         m_queryTimeMinHasBeenSet = true;
@@ -162,7 +162,7 @@ CoreInternalOutcome SlowLogData::Deserialize(const Value &value)
     {
         if (!value["QueryTimeSum"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SlowLogData.QueryTimeSum` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogData.QueryTimeSum` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_queryTimeSum = string(value["QueryTimeSum"].GetString());
         m_queryTimeSumHasBeenSet = true;
@@ -172,7 +172,7 @@ CoreInternalOutcome SlowLogData::Deserialize(const Value &value)
     {
         if (!value["RowsExaminedSum"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SlowLogData.RowsExaminedSum` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogData.RowsExaminedSum` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_rowsExaminedSum = string(value["RowsExaminedSum"].GetString());
         m_rowsExaminedSumHasBeenSet = true;
@@ -182,7 +182,7 @@ CoreInternalOutcome SlowLogData::Deserialize(const Value &value)
     {
         if (!value["RowsSentSum"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SlowLogData.RowsSentSum` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogData.RowsSentSum` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_rowsSentSum = string(value["RowsSentSum"].GetString());
         m_rowsSentSumHasBeenSet = true;
@@ -192,7 +192,7 @@ CoreInternalOutcome SlowLogData::Deserialize(const Value &value)
     {
         if (!value["TsMax"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SlowLogData.TsMax` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogData.TsMax` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tsMax = string(value["TsMax"].GetString());
         m_tsMaxHasBeenSet = true;
@@ -202,7 +202,7 @@ CoreInternalOutcome SlowLogData::Deserialize(const Value &value)
     {
         if (!value["TsMin"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SlowLogData.TsMin` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogData.TsMin` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tsMin = string(value["TsMin"].GetString());
         m_tsMinHasBeenSet = true;
@@ -212,7 +212,7 @@ CoreInternalOutcome SlowLogData::Deserialize(const Value &value)
     {
         if (!value["User"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SlowLogData.User` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogData.User` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_user = string(value["User"].GetString());
         m_userHasBeenSet = true;
@@ -222,161 +222,179 @@ CoreInternalOutcome SlowLogData::Deserialize(const Value &value)
     {
         if (!value["ExampleSql"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SlowLogData.ExampleSql` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogData.ExampleSql` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_exampleSql = string(value["ExampleSql"].GetString());
         m_exampleSqlHasBeenSet = true;
+    }
+
+    if (value.HasMember("Host") && !value["Host"].IsNull())
+    {
+        if (!value["Host"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SlowLogData.Host` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_host = string(value["Host"].GetString());
+        m_hostHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void SlowLogData::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SlowLogData::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_checkSumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CheckSum";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_checkSum.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_checkSum.c_str(), allocator).Move(), allocator);
     }
 
     if (m_dbHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Db";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_db.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_db.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fingerPrintHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FingerPrint";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fingerPrint.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fingerPrint.c_str(), allocator).Move(), allocator);
     }
 
     if (m_lockTimeAvgHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LockTimeAvg";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_lockTimeAvg.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_lockTimeAvg.c_str(), allocator).Move(), allocator);
     }
 
     if (m_lockTimeMaxHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LockTimeMax";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_lockTimeMax.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_lockTimeMax.c_str(), allocator).Move(), allocator);
     }
 
     if (m_lockTimeMinHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LockTimeMin";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_lockTimeMin.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_lockTimeMin.c_str(), allocator).Move(), allocator);
     }
 
     if (m_lockTimeSumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LockTimeSum";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_lockTimeSum.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_lockTimeSum.c_str(), allocator).Move(), allocator);
     }
 
     if (m_queryCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "QueryCount";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_queryCount.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_queryCount.c_str(), allocator).Move(), allocator);
     }
 
     if (m_queryTimeAvgHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "QueryTimeAvg";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_queryTimeAvg.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_queryTimeAvg.c_str(), allocator).Move(), allocator);
     }
 
     if (m_queryTimeMaxHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "QueryTimeMax";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_queryTimeMax.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_queryTimeMax.c_str(), allocator).Move(), allocator);
     }
 
     if (m_queryTimeMinHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "QueryTimeMin";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_queryTimeMin.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_queryTimeMin.c_str(), allocator).Move(), allocator);
     }
 
     if (m_queryTimeSumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "QueryTimeSum";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_queryTimeSum.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_queryTimeSum.c_str(), allocator).Move(), allocator);
     }
 
     if (m_rowsExaminedSumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RowsExaminedSum";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_rowsExaminedSum.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_rowsExaminedSum.c_str(), allocator).Move(), allocator);
     }
 
     if (m_rowsSentSumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RowsSentSum";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_rowsSentSum.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_rowsSentSum.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tsMaxHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TsMax";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_tsMax.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tsMax.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tsMinHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TsMin";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_tsMin.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tsMin.c_str(), allocator).Move(), allocator);
     }
 
     if (m_userHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "User";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_user.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_user.c_str(), allocator).Move(), allocator);
     }
 
     if (m_exampleSqlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ExampleSql";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_exampleSql.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_exampleSql.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_hostHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Host";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_host.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -668,5 +686,21 @@ void SlowLogData::SetExampleSql(const string& _exampleSql)
 bool SlowLogData::ExampleSqlHasBeenSet() const
 {
     return m_exampleSqlHasBeenSet;
+}
+
+string SlowLogData::GetHost() const
+{
+    return m_host;
+}
+
+void SlowLogData::SetHost(const string& _host)
+{
+    m_host = _host;
+    m_hostHasBeenSet = true;
+}
+
+bool SlowLogData::HostHasBeenSet() const
+{
+    return m_hostHasBeenSet;
 }
 

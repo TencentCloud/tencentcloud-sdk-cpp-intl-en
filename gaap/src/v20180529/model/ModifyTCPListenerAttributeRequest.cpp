@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 ModifyTCPListenerAttributeRequest::ModifyTCPListenerAttributeRequest() :
@@ -31,60 +30,63 @@ ModifyTCPListenerAttributeRequest::ModifyTCPListenerAttributeRequest() :
     m_schedulerHasBeenSet(false),
     m_delayLoopHasBeenSet(false),
     m_connectTimeoutHasBeenSet(false),
-    m_healthCheckHasBeenSet(false)
+    m_healthCheckHasBeenSet(false),
+    m_failoverSwitchHasBeenSet(false),
+    m_healthyThresholdHasBeenSet(false),
+    m_unhealthyThresholdHasBeenSet(false)
 {
 }
 
 string ModifyTCPListenerAttributeRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_listenerIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ListenerId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_listenerId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_listenerId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_groupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "GroupId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_groupId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_groupId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_proxyIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProxyId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_proxyId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_proxyId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_listenerNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ListenerName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_listenerName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_listenerName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_schedulerHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Scheduler";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_scheduler.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_scheduler.c_str(), allocator).Move(), allocator);
     }
 
     if (m_delayLoopHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DelayLoop";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_delayLoop, allocator);
@@ -92,7 +94,7 @@ string ModifyTCPListenerAttributeRequest::ToJsonString() const
 
     if (m_connectTimeoutHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ConnectTimeout";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_connectTimeout, allocator);
@@ -100,15 +102,39 @@ string ModifyTCPListenerAttributeRequest::ToJsonString() const
 
     if (m_healthCheckHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HealthCheck";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_healthCheck, allocator);
     }
 
+    if (m_failoverSwitchHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FailoverSwitch";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_failoverSwitch, allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    if (m_healthyThresholdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HealthyThreshold";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_healthyThreshold, allocator);
+    }
+
+    if (m_unhealthyThresholdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UnhealthyThreshold";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_unhealthyThreshold, allocator);
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -240,6 +266,54 @@ void ModifyTCPListenerAttributeRequest::SetHealthCheck(const uint64_t& _healthCh
 bool ModifyTCPListenerAttributeRequest::HealthCheckHasBeenSet() const
 {
     return m_healthCheckHasBeenSet;
+}
+
+uint64_t ModifyTCPListenerAttributeRequest::GetFailoverSwitch() const
+{
+    return m_failoverSwitch;
+}
+
+void ModifyTCPListenerAttributeRequest::SetFailoverSwitch(const uint64_t& _failoverSwitch)
+{
+    m_failoverSwitch = _failoverSwitch;
+    m_failoverSwitchHasBeenSet = true;
+}
+
+bool ModifyTCPListenerAttributeRequest::FailoverSwitchHasBeenSet() const
+{
+    return m_failoverSwitchHasBeenSet;
+}
+
+uint64_t ModifyTCPListenerAttributeRequest::GetHealthyThreshold() const
+{
+    return m_healthyThreshold;
+}
+
+void ModifyTCPListenerAttributeRequest::SetHealthyThreshold(const uint64_t& _healthyThreshold)
+{
+    m_healthyThreshold = _healthyThreshold;
+    m_healthyThresholdHasBeenSet = true;
+}
+
+bool ModifyTCPListenerAttributeRequest::HealthyThresholdHasBeenSet() const
+{
+    return m_healthyThresholdHasBeenSet;
+}
+
+uint64_t ModifyTCPListenerAttributeRequest::GetUnhealthyThreshold() const
+{
+    return m_unhealthyThreshold;
+}
+
+void ModifyTCPListenerAttributeRequest::SetUnhealthyThreshold(const uint64_t& _unhealthyThreshold)
+{
+    m_unhealthyThreshold = _unhealthyThreshold;
+    m_unhealthyThresholdHasBeenSet = true;
+}
+
+bool ModifyTCPListenerAttributeRequest::UnhealthyThresholdHasBeenSet() const
+{
+    return m_unhealthyThresholdHasBeenSet;
 }
 
 

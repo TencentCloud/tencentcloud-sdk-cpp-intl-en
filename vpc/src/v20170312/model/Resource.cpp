@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 Resource::Resource() :
@@ -28,7 +27,7 @@ Resource::Resource() :
 {
 }
 
-CoreInternalOutcome Resource::Deserialize(const Value &value)
+CoreInternalOutcome Resource::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome Resource::Deserialize(const Value &value)
     {
         if (!value["ResourceType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Resource.ResourceType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Resource.ResourceType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_resourceType = string(value["ResourceType"].GetString());
         m_resourceTypeHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome Resource::Deserialize(const Value &value)
     {
         if (!value["ResourceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Resource.ResourceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Resource.ResourceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_resourceId = string(value["ResourceId"].GetString());
         m_resourceIdHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome Resource::Deserialize(const Value &value)
     {
         if (!value["AddressIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Resource.AddressIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Resource.AddressIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_addressIp = string(value["AddressIp"].GetString());
         m_addressIpHasBeenSet = true;
@@ -67,31 +66,31 @@ CoreInternalOutcome Resource::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Resource::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Resource::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_resourceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResourceType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_resourceType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resourceType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_resourceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResourceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_resourceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resourceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_addressIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AddressIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_addressIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_addressIp.c_str(), allocator).Move(), allocator);
     }
 
 }

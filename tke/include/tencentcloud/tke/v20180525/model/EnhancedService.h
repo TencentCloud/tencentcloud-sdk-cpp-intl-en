@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/tke/v20180525/model/RunSecurityServiceEnabled.h>
 #include <tencentcloud/tke/v20180525/model/RunMonitorServiceEnabled.h>
+#include <tencentcloud/tke/v20180525/model/RunAutomationServiceEnabled.h>
 
 
 namespace TencentCloud
@@ -84,6 +85,24 @@ namespace TencentCloud
                      */
                     bool MonitorServiceHasBeenSet() const;
 
+                    /**
+                     * 获取Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
+                     * @return AutomationService Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
+                     */
+                    RunAutomationServiceEnabled GetAutomationService() const;
+
+                    /**
+                     * 设置Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
+                     * @param AutomationService Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
+                     */
+                    void SetAutomationService(const RunAutomationServiceEnabled& _automationService);
+
+                    /**
+                     * 判断参数 AutomationService 是否已赋值
+                     * @return AutomationService 是否已赋值
+                     */
+                    bool AutomationServiceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -97,6 +116,12 @@ namespace TencentCloud
                      */
                     RunMonitorServiceEnabled m_monitorService;
                     bool m_monitorServiceHasBeenSet;
+
+                    /**
+                     * Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
+                     */
+                    RunAutomationServiceEnabled m_automationService;
+                    bool m_automationServiceHasBeenSet;
 
                 };
             }

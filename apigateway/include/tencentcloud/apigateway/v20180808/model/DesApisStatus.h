@@ -282,18 +282,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IsDebugAfterChargeHasBeenSet() const;
 
                     /**
-                     * 获取API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AuthType API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取API authentication type. Valid values: `SECRET` (key pair authentication), `NONE` (no authentication), `OAUTH`, and `EIAM`
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return AuthType API authentication type. Valid values: `SECRET` (key pair authentication), `NONE` (no authentication), `OAUTH`, and `EIAM`
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetAuthType() const;
 
                     /**
-                     * 设置API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AuthType API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置API authentication type. Valid values: `SECRET` (key pair authentication), `NONE` (no authentication), `OAUTH`, and `EIAM`
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param AuthType API authentication type. Valid values: `SECRET` (key pair authentication), `NONE` (no authentication), `OAUTH`, and `EIAM`
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetAuthType(const std::string& _authType);
 
@@ -535,8 +535,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_isDebugAfterChargeHasBeenSet;
 
                     /**
-                     * API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * API authentication type. Valid values: `SECRET` (key pair authentication), `NONE` (no authentication), `OAUTH`, and `EIAM`
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_authType;
                     bool m_authTypeHasBeenSet;

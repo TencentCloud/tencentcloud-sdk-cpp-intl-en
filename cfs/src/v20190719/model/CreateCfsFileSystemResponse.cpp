@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cfs::V20190719::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateCfsFileSystemResponse::CreateCfsFileSystemResponse() :
@@ -38,20 +37,20 @@ CreateCfsFileSystemResponse::CreateCfsFileSystemResponse() :
 
 CoreInternalOutcome CreateCfsFileSystemResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -62,11 +61,11 @@ CoreInternalOutcome CreateCfsFileSystemResponse::Deserialize(const string &paylo
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -74,7 +73,7 @@ CoreInternalOutcome CreateCfsFileSystemResponse::Deserialize(const string &paylo
     {
         if (!rsp["CreationTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CreationTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CreationTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_creationTime = string(rsp["CreationTime"].GetString());
         m_creationTimeHasBeenSet = true;
@@ -84,7 +83,7 @@ CoreInternalOutcome CreateCfsFileSystemResponse::Deserialize(const string &paylo
     {
         if (!rsp["CreationToken"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CreationToken` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CreationToken` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_creationToken = string(rsp["CreationToken"].GetString());
         m_creationTokenHasBeenSet = true;
@@ -94,7 +93,7 @@ CoreInternalOutcome CreateCfsFileSystemResponse::Deserialize(const string &paylo
     {
         if (!rsp["FileSystemId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FileSystemId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FileSystemId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fileSystemId = string(rsp["FileSystemId"].GetString());
         m_fileSystemIdHasBeenSet = true;
@@ -104,7 +103,7 @@ CoreInternalOutcome CreateCfsFileSystemResponse::Deserialize(const string &paylo
     {
         if (!rsp["LifeCycleState"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LifeCycleState` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LifeCycleState` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_lifeCycleState = string(rsp["LifeCycleState"].GetString());
         m_lifeCycleStateHasBeenSet = true;
@@ -114,7 +113,7 @@ CoreInternalOutcome CreateCfsFileSystemResponse::Deserialize(const string &paylo
     {
         if (!rsp["SizeByte"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `SizeByte` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SizeByte` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_sizeByte = rsp["SizeByte"].GetUint64();
         m_sizeByteHasBeenSet = true;
@@ -124,7 +123,7 @@ CoreInternalOutcome CreateCfsFileSystemResponse::Deserialize(const string &paylo
     {
         if (!rsp["ZoneId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ZoneId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ZoneId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_zoneId = rsp["ZoneId"].GetUint64();
         m_zoneIdHasBeenSet = true;
@@ -134,7 +133,7 @@ CoreInternalOutcome CreateCfsFileSystemResponse::Deserialize(const string &paylo
     {
         if (!rsp["FsName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FsName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FsName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fsName = string(rsp["FsName"].GetString());
         m_fsNameHasBeenSet = true;
@@ -144,7 +143,7 @@ CoreInternalOutcome CreateCfsFileSystemResponse::Deserialize(const string &paylo
     {
         if (!rsp["Encrypted"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `Encrypted` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Encrypted` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_encrypted = rsp["Encrypted"].GetBool();
         m_encryptedHasBeenSet = true;
@@ -152,6 +151,87 @@ CoreInternalOutcome CreateCfsFileSystemResponse::Deserialize(const string &paylo
 
 
     return CoreInternalOutcome(true);
+}
+
+string CreateCfsFileSystemResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_creationTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CreationTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_creationTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_creationTokenHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CreationToken";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_creationToken.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_fileSystemIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FileSystemId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fileSystemId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_lifeCycleStateHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LifeCycleState";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_lifeCycleState.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_sizeByteHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SizeByte";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_sizeByte, allocator);
+    }
+
+    if (m_zoneIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ZoneId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_zoneId, allocator);
+    }
+
+    if (m_fsNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FsName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fsName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_encryptedHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Encrypted";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_encrypted, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

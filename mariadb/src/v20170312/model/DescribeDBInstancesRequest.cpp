@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Mariadb::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeDBInstancesRequest::DescribeDBInstancesRequest() :
@@ -38,62 +37,66 @@ DescribeDBInstancesRequest::DescribeDBInstancesRequest() :
     m_originSerialIdsHasBeenSet(false),
     m_isFilterExclusterHasBeenSet(false),
     m_exclusterTypeHasBeenSet(false),
-    m_exclusterIdsHasBeenSet(false)
+    m_exclusterIdsHasBeenSet(false),
+    m_tagKeysHasBeenSet(false),
+    m_filterInstanceTypeHasBeenSet(false),
+    m_statusHasBeenSet(false),
+    m_excludeStatusHasBeenSet(false)
 {
 }
 
 string DescribeDBInstancesRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_instanceIdsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceIds";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_instanceIds.begin(); itr != m_instanceIds.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_searchNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SearchName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_searchName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_searchName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_searchKeyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SearchKey";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_searchKey.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_searchKey.c_str(), allocator).Move(), allocator);
     }
 
     if (m_projectIdsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProjectIds";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_projectIds.begin(); itr != m_projectIds.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 
     if (m_isFilterVpcHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsFilterVpc";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_isFilterVpc, allocator);
@@ -101,39 +104,39 @@ string DescribeDBInstancesRequest::ToJsonString() const
 
     if (m_vpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_vpcId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_vpcId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_subnetIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubnetId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_subnetId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_subnetId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_orderByHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OrderBy";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_orderBy.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_orderBy.c_str(), allocator).Move(), allocator);
     }
 
     if (m_orderByTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OrderByType";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_orderByType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_orderByType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_offsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Offset";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_offset, allocator);
@@ -141,7 +144,7 @@ string DescribeDBInstancesRequest::ToJsonString() const
 
     if (m_limitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Limit";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_limit, allocator);
@@ -149,20 +152,20 @@ string DescribeDBInstancesRequest::ToJsonString() const
 
     if (m_originSerialIdsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OriginSerialIds";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_originSerialIds.begin(); itr != m_originSerialIds.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_isFilterExclusterHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsFilterExcluster";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_isFilterExcluster, allocator);
@@ -170,7 +173,7 @@ string DescribeDBInstancesRequest::ToJsonString() const
 
     if (m_exclusterTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ExclusterType";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_exclusterType, allocator);
@@ -178,20 +181,67 @@ string DescribeDBInstancesRequest::ToJsonString() const
 
     if (m_exclusterIdsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ExclusterIds";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_exclusterIds.begin(); itr != m_exclusterIds.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_tagKeysHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TagKeys";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_tagKeys.begin(); itr != m_tagKeys.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_filterInstanceTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FilterInstanceType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_filterInstanceType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_statusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Status";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_status.begin(); itr != m_status.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
+        }
+    }
+
+    if (m_excludeStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExcludeStatus";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_excludeStatus.begin(); itr != m_excludeStatus.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -435,6 +485,70 @@ void DescribeDBInstancesRequest::SetExclusterIds(const vector<string>& _excluste
 bool DescribeDBInstancesRequest::ExclusterIdsHasBeenSet() const
 {
     return m_exclusterIdsHasBeenSet;
+}
+
+vector<string> DescribeDBInstancesRequest::GetTagKeys() const
+{
+    return m_tagKeys;
+}
+
+void DescribeDBInstancesRequest::SetTagKeys(const vector<string>& _tagKeys)
+{
+    m_tagKeys = _tagKeys;
+    m_tagKeysHasBeenSet = true;
+}
+
+bool DescribeDBInstancesRequest::TagKeysHasBeenSet() const
+{
+    return m_tagKeysHasBeenSet;
+}
+
+string DescribeDBInstancesRequest::GetFilterInstanceType() const
+{
+    return m_filterInstanceType;
+}
+
+void DescribeDBInstancesRequest::SetFilterInstanceType(const string& _filterInstanceType)
+{
+    m_filterInstanceType = _filterInstanceType;
+    m_filterInstanceTypeHasBeenSet = true;
+}
+
+bool DescribeDBInstancesRequest::FilterInstanceTypeHasBeenSet() const
+{
+    return m_filterInstanceTypeHasBeenSet;
+}
+
+vector<int64_t> DescribeDBInstancesRequest::GetStatus() const
+{
+    return m_status;
+}
+
+void DescribeDBInstancesRequest::SetStatus(const vector<int64_t>& _status)
+{
+    m_status = _status;
+    m_statusHasBeenSet = true;
+}
+
+bool DescribeDBInstancesRequest::StatusHasBeenSet() const
+{
+    return m_statusHasBeenSet;
+}
+
+vector<int64_t> DescribeDBInstancesRequest::GetExcludeStatus() const
+{
+    return m_excludeStatus;
+}
+
+void DescribeDBInstancesRequest::SetExcludeStatus(const vector<int64_t>& _excludeStatus)
+{
+    m_excludeStatus = _excludeStatus;
+    m_excludeStatusHasBeenSet = true;
+}
+
+bool DescribeDBInstancesRequest::ExcludeStatusHasBeenSet() const
+{
+    return m_excludeStatusHasBeenSet;
 }
 
 

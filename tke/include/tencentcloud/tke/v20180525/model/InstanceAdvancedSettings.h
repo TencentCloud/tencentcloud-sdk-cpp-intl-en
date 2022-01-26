@@ -50,18 +50,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
-Note: This field may return null, indicating that no valid value was found.
-                     * @return MountTarget Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
-Note: This field may return null, indicating that no valid value was found.
+                     * 获取Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 (xfs for tlinux system) and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
+Note: in multi-disk scenarios, use the DataDisks data structure below to set the corresponding information, such as cloud disk type, cloud disk size, mount path, and whether to perform formatting.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return MountTarget Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 (xfs for tlinux system) and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
+Note: in multi-disk scenarios, use the DataDisks data structure below to set the corresponding information, such as cloud disk type, cloud disk size, mount path, and whether to perform formatting.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetMountTarget() const;
 
                     /**
-                     * 设置Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
-Note: This field may return null, indicating that no valid value was found.
-                     * @param MountTarget Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
-Note: This field may return null, indicating that no valid value was found.
+                     * 设置Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 (xfs for tlinux system) and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
+Note: in multi-disk scenarios, use the DataDisks data structure below to set the corresponding information, such as cloud disk type, cloud disk size, mount path, and whether to perform formatting.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param MountTarget Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 (xfs for tlinux system) and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
+Note: in multi-disk scenarios, use the DataDisks data structure below to set the corresponding information, such as cloud disk type, cloud disk size, mount path, and whether to perform formatting.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetMountTarget(const std::string& _mountTarget);
 
@@ -156,18 +160,18 @@ Note: This field may return null, indicating that no valid value was found.
                     bool LabelsHasBeenSet() const;
 
                     /**
-                     * 获取Data disk information
-Note: This field may return null, indicating that no valid value was found.
-                     * @return DataDisks Data disk information
-Note: This field may return null, indicating that no valid value was found.
+                     * 获取Mounting information of multiple data disks. When you create a node, ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. For example, the `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API should be configured accordingly (Referto document of CreateClusterInstances API). When you add an existing node, ensure that the specified partition exists in the node.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return DataDisks Mounting information of multiple data disks. When you create a node, ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. For example, the `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API should be configured accordingly (Referto document of CreateClusterInstances API). When you add an existing node, ensure that the specified partition exists in the node.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<DataDisk> GetDataDisks() const;
 
                     /**
-                     * 设置Data disk information
-Note: This field may return null, indicating that no valid value was found.
-                     * @param DataDisks Data disk information
-Note: This field may return null, indicating that no valid value was found.
+                     * 设置Mounting information of multiple data disks. When you create a node, ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. For example, the `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API should be configured accordingly (Referto document of CreateClusterInstances API). When you add an existing node, ensure that the specified partition exists in the node.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param DataDisks Mounting information of multiple data disks. When you create a node, ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. For example, the `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API should be configured accordingly (Referto document of CreateClusterInstances API). When you add an existing node, ensure that the specified partition exists in the node.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetDataDisks(const std::vector<DataDisk>& _dataDisks);
 
@@ -199,11 +203,56 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     bool ExtraArgsHasBeenSet() const;
 
+                    /**
+                     * 获取When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return DesiredPodNumber When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetDesiredPodNumber() const;
+
+                    /**
+                     * 设置When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param DesiredPodNumber When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetDesiredPodNumber(const int64_t& _desiredPodNumber);
+
+                    /**
+                     * 判断参数 DesiredPodNumber 是否已赋值
+                     * @return DesiredPodNumber 是否已赋值
+                     */
+                    bool DesiredPodNumberHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return PreStartUserScript Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetPreStartUserScript() const;
+
+                    /**
+                     * 设置Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param PreStartUserScript Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetPreStartUserScript(const std::string& _preStartUserScript);
+
+                    /**
+                     * 判断参数 PreStartUserScript 是否已赋值
+                     * @return PreStartUserScript 是否已赋值
+                     */
+                    bool PreStartUserScriptHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
-Note: This field may return null, indicating that no valid value was found.
+                     * Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 (xfs for tlinux system) and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
+Note: in multi-disk scenarios, use the DataDisks data structure below to set the corresponding information, such as cloud disk type, cloud disk size, mount path, and whether to perform formatting.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_mountTarget;
                     bool m_mountTargetHasBeenSet;
@@ -236,8 +285,8 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_labelsHasBeenSet;
 
                     /**
-                     * Data disk information
-Note: This field may return null, indicating that no valid value was found.
+                     * Mounting information of multiple data disks. When you create a node, ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. For example, the `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API should be configured accordingly (Referto document of CreateClusterInstances API). When you add an existing node, ensure that the specified partition exists in the node.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<DataDisk> m_dataDisks;
                     bool m_dataDisksHasBeenSet;
@@ -248,6 +297,20 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     InstanceExtraArgs m_extraArgs;
                     bool m_extraArgsHasBeenSet;
+
+                    /**
+                     * When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_desiredPodNumber;
+                    bool m_desiredPodNumberHasBeenSet;
+
+                    /**
+                     * Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_preStartUserScript;
+                    bool m_preStartUserScriptHasBeenSet;
 
                 };
             }

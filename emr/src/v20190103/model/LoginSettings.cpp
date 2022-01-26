@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Emr::V20190103::Model;
-using namespace rapidjson;
 using namespace std;
 
 LoginSettings::LoginSettings() :
@@ -27,7 +26,7 @@ LoginSettings::LoginSettings() :
 {
 }
 
-CoreInternalOutcome LoginSettings::Deserialize(const Value &value)
+CoreInternalOutcome LoginSettings::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome LoginSettings::Deserialize(const Value &value)
     {
         if (!value["Password"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LoginSettings.Password` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LoginSettings.Password` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_password = string(value["Password"].GetString());
         m_passwordHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome LoginSettings::Deserialize(const Value &value)
     {
         if (!value["PublicKeyId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LoginSettings.PublicKeyId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LoginSettings.PublicKeyId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_publicKeyId = string(value["PublicKeyId"].GetString());
         m_publicKeyIdHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome LoginSettings::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void LoginSettings::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void LoginSettings::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_passwordHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Password";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_password.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_password.c_str(), allocator).Move(), allocator);
     }
 
     if (m_publicKeyIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PublicKeyId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_publicKeyId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_publicKeyId.c_str(), allocator).Move(), allocator);
     }
 
 }

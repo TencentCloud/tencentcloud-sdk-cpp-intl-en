@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Emr::V20190103::Model;
-using namespace rapidjson;
 using namespace std;
 
 NewResourceSpec::NewResourceSpec() :
@@ -33,7 +32,7 @@ NewResourceSpec::NewResourceSpec() :
 {
 }
 
-CoreInternalOutcome NewResourceSpec::Deserialize(const Value &value)
+CoreInternalOutcome NewResourceSpec::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +41,7 @@ CoreInternalOutcome NewResourceSpec::Deserialize(const Value &value)
     {
         if (!value["MasterResourceSpec"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `NewResourceSpec.MasterResourceSpec` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NewResourceSpec.MasterResourceSpec` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_masterResourceSpec.Deserialize(value["MasterResourceSpec"]);
@@ -59,7 +58,7 @@ CoreInternalOutcome NewResourceSpec::Deserialize(const Value &value)
     {
         if (!value["CoreResourceSpec"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `NewResourceSpec.CoreResourceSpec` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NewResourceSpec.CoreResourceSpec` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_coreResourceSpec.Deserialize(value["CoreResourceSpec"]);
@@ -76,7 +75,7 @@ CoreInternalOutcome NewResourceSpec::Deserialize(const Value &value)
     {
         if (!value["TaskResourceSpec"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `NewResourceSpec.TaskResourceSpec` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NewResourceSpec.TaskResourceSpec` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_taskResourceSpec.Deserialize(value["TaskResourceSpec"]);
@@ -93,7 +92,7 @@ CoreInternalOutcome NewResourceSpec::Deserialize(const Value &value)
     {
         if (!value["MasterCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `NewResourceSpec.MasterCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NewResourceSpec.MasterCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_masterCount = value["MasterCount"].GetInt64();
         m_masterCountHasBeenSet = true;
@@ -103,7 +102,7 @@ CoreInternalOutcome NewResourceSpec::Deserialize(const Value &value)
     {
         if (!value["CoreCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `NewResourceSpec.CoreCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NewResourceSpec.CoreCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_coreCount = value["CoreCount"].GetInt64();
         m_coreCountHasBeenSet = true;
@@ -113,7 +112,7 @@ CoreInternalOutcome NewResourceSpec::Deserialize(const Value &value)
     {
         if (!value["TaskCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `NewResourceSpec.TaskCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NewResourceSpec.TaskCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_taskCount = value["TaskCount"].GetInt64();
         m_taskCountHasBeenSet = true;
@@ -123,7 +122,7 @@ CoreInternalOutcome NewResourceSpec::Deserialize(const Value &value)
     {
         if (!value["CommonResourceSpec"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `NewResourceSpec.CommonResourceSpec` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NewResourceSpec.CommonResourceSpec` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_commonResourceSpec.Deserialize(value["CommonResourceSpec"]);
@@ -140,7 +139,7 @@ CoreInternalOutcome NewResourceSpec::Deserialize(const Value &value)
     {
         if (!value["CommonCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `NewResourceSpec.CommonCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NewResourceSpec.CommonCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_commonCount = value["CommonCount"].GetInt64();
         m_commonCountHasBeenSet = true;
@@ -150,39 +149,39 @@ CoreInternalOutcome NewResourceSpec::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void NewResourceSpec::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void NewResourceSpec::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_masterResourceSpecHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MasterResourceSpec";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_masterResourceSpec.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_coreResourceSpecHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CoreResourceSpec";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_coreResourceSpec.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_taskResourceSpecHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TaskResourceSpec";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_taskResourceSpec.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_masterCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MasterCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_masterCount, allocator);
@@ -190,7 +189,7 @@ void NewResourceSpec::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_coreCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CoreCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_coreCount, allocator);
@@ -198,7 +197,7 @@ void NewResourceSpec::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_taskCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TaskCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_taskCount, allocator);
@@ -206,16 +205,16 @@ void NewResourceSpec::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_commonResourceSpecHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CommonResourceSpec";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_commonResourceSpec.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_commonCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CommonCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_commonCount, allocator);

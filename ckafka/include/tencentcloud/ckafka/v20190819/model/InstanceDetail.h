@@ -456,6 +456,182 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool CvmHasBeenSet() const;
 
+                    /**
+                     * 获取CKafka instance type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @return InstanceType CKafka instance type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    std::string GetInstanceType() const;
+
+                    /**
+                     * 设置CKafka instance type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @param InstanceType CKafka instance type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    void SetInstanceType(const std::string& _instanceType);
+
+                    /**
+                     * 判断参数 InstanceType 是否已赋值
+                     * @return InstanceType 是否已赋值
+                     */
+                    bool InstanceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Disk type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @return DiskType Disk type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDiskType() const;
+
+                    /**
+                     * 设置Disk type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @param DiskType Disk type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    void SetDiskType(const std::string& _diskType);
+
+                    /**
+                     * 判断参数 DiskType 是否已赋值
+                     * @return DiskType 是否已赋值
+                     */
+                    bool DiskTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum number of topics for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @return MaxTopicNumber Maximum number of topics for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetMaxTopicNumber() const;
+
+                    /**
+                     * 设置Maximum number of topics for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @param MaxTopicNumber Maximum number of topics for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    void SetMaxTopicNumber(const int64_t& _maxTopicNumber);
+
+                    /**
+                     * 判断参数 MaxTopicNumber 是否已赋值
+                     * @return MaxTopicNumber 是否已赋值
+                     */
+                    bool MaxTopicNumberHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum number of partitions for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @return MaxPartitionNumber Maximum number of partitions for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetMaxPartitionNumber() const;
+
+                    /**
+                     * 设置Maximum number of partitions for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @param MaxPartitionNumber Maximum number of partitions for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    void SetMaxPartitionNumber(const int64_t& _maxPartitionNumber);
+
+                    /**
+                     * 判断参数 MaxPartitionNumber 是否已赋值
+                     * @return MaxPartitionNumber 是否已赋值
+                     */
+                    bool MaxPartitionNumberHasBeenSet() const;
+
+                    /**
+                     * 获取Time of scheduled upgrade
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @return RebalanceTime Time of scheduled upgrade
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    std::string GetRebalanceTime() const;
+
+                    /**
+                     * 设置Time of scheduled upgrade
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @param RebalanceTime Time of scheduled upgrade
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    void SetRebalanceTime(const std::string& _rebalanceTime);
+
+                    /**
+                     * 判断参数 RebalanceTime 是否已赋值
+                     * @return RebalanceTime 是否已赋值
+                     */
+                    bool RebalanceTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Number of partitions in the current instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return PartitionNumber Number of partitions in the current instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetPartitionNumber() const;
+
+                    /**
+                     * 设置Number of partitions in the current instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param PartitionNumber Number of partitions in the current instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetPartitionNumber(const uint64_t& _partitionNumber);
+
+                    /**
+                     * 判断参数 PartitionNumber 是否已赋值
+                     * @return PartitionNumber 是否已赋值
+                     */
+                    bool PartitionNumberHasBeenSet() const;
+
+                    /**
+                     * 获取Public network bandwidth type.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return PublicNetworkChargeType Public network bandwidth type.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetPublicNetworkChargeType() const;
+
+                    /**
+                     * 设置Public network bandwidth type.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param PublicNetworkChargeType Public network bandwidth type.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetPublicNetworkChargeType(const std::string& _publicNetworkChargeType);
+
+                    /**
+                     * 判断参数 PublicNetworkChargeType 是否已赋值
+                     * @return PublicNetworkChargeType 是否已赋值
+                     */
+                    bool PublicNetworkChargeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Public network bandwidth.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return PublicNetwork Public network bandwidth.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetPublicNetwork() const;
+
+                    /**
+                     * 设置Public network bandwidth.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param PublicNetwork Public network bandwidth.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetPublicNetwork(const int64_t& _publicNetwork);
+
+                    /**
+                     * 判断参数 PublicNetwork 是否已赋值
+                     * @return PublicNetwork 是否已赋值
+                     */
+                    bool PublicNetworkHasBeenSet() const;
+
                 private:
 
                     /**
@@ -592,6 +768,62 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_cvm;
                     bool m_cvmHasBeenSet;
+
+                    /**
+                     * CKafka instance type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    std::string m_instanceType;
+                    bool m_instanceTypeHasBeenSet;
+
+                    /**
+                     * Disk type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    std::string m_diskType;
+                    bool m_diskTypeHasBeenSet;
+
+                    /**
+                     * Maximum number of topics for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_maxTopicNumber;
+                    bool m_maxTopicNumberHasBeenSet;
+
+                    /**
+                     * Maximum number of partitions for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_maxPartitionNumber;
+                    bool m_maxPartitionNumberHasBeenSet;
+
+                    /**
+                     * Time of scheduled upgrade
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    std::string m_rebalanceTime;
+                    bool m_rebalanceTimeHasBeenSet;
+
+                    /**
+                     * Number of partitions in the current instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_partitionNumber;
+                    bool m_partitionNumberHasBeenSet;
+
+                    /**
+                     * Public network bandwidth type.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_publicNetworkChargeType;
+                    bool m_publicNetworkChargeTypeHasBeenSet;
+
+                    /**
+                     * Public network bandwidth.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_publicNetwork;
+                    bool m_publicNetworkHasBeenSet;
 
                 };
             }

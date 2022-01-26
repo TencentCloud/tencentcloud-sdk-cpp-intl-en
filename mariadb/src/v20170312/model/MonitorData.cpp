@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mariadb::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 MonitorData::MonitorData() :
@@ -28,7 +27,7 @@ MonitorData::MonitorData() :
 {
 }
 
-CoreInternalOutcome MonitorData::Deserialize(const Value &value)
+CoreInternalOutcome MonitorData::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome MonitorData::Deserialize(const Value &value)
     {
         if (!value["StartTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MonitorData.StartTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MonitorData.StartTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_startTime = string(value["StartTime"].GetString());
         m_startTimeHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome MonitorData::Deserialize(const Value &value)
     {
         if (!value["EndTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MonitorData.EndTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MonitorData.EndTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_endTime = string(value["EndTime"].GetString());
         m_endTimeHasBeenSet = true;
@@ -56,10 +55,10 @@ CoreInternalOutcome MonitorData::Deserialize(const Value &value)
     if (value.HasMember("Data") && !value["Data"].IsNull())
     {
         if (!value["Data"].IsArray())
-            return CoreInternalOutcome(Error("response `MonitorData.Data` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `MonitorData.Data` is not array type"));
 
-        const Value &tmpValue = value["Data"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Data"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_data.push_back((*itr).GetDouble());
         }
@@ -70,35 +69,35 @@ CoreInternalOutcome MonitorData::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void MonitorData::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MonitorData::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_startTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_startTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_startTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_endTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_endTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_endTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_dataHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Data";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_data.begin(); itr != m_data.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetDouble(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetDouble(*itr), allocator);
         }
     }
 

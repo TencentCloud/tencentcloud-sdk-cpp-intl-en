@@ -213,14 +213,14 @@ and will be deleted after `PicUrlExpireTime`).
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-                     * @return PicUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * 获取Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return PicUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string GetPicUrlExpireTime() const;
 
                     /**
-                     * 设置Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-                     * @param PicUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * 设置Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param PicUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     void SetPicUrlExpireTime(const std::string& _picUrlExpireTime);
 
@@ -285,7 +285,7 @@ and will be deleted after `PicUrlExpireTime`).
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_picUrlExpireTime;
                     bool m_picUrlExpireTimeHasBeenSet;

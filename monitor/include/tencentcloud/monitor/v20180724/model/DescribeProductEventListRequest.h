@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool ModuleHasBeenSet() const;
 
                     /**
-                     * 获取Filter by product type. For example, “cvm” indicates Cloud Virtual Machine.
-                     * @return ProductName Filter by product type. For example, “cvm” indicates Cloud Virtual Machine.
+                     * 获取Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
+                     * @return ProductName Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
                      */
                     std::vector<std::string> GetProductName() const;
 
                     /**
-                     * 设置Filter by product type. For example, “cvm” indicates Cloud Virtual Machine.
-                     * @param ProductName Filter by product type. For example, “cvm” indicates Cloud Virtual Machine.
+                     * 设置Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
+                     * @param ProductName Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
                      */
                     void SetProductName(const std::vector<std::string>& _productName);
 
@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool EventNameHasBeenSet() const;
 
                     /**
-                     * 获取Affected object, such as ins-19708ino.
-                     * @return InstanceId Affected object, such as ins-19708ino.
+                     * 获取Affected object, such as "ins-19708ino"
+                     * @return InstanceId Affected object, such as "ins-19708ino"
                      */
                     std::vector<std::string> GetInstanceId() const;
 
                     /**
-                     * 设置Affected object, such as ins-19708ino.
-                     * @param InstanceId Affected object, such as ins-19708ino.
+                     * 设置Affected object, such as "ins-19708ino"
+                     * @param InstanceId Affected object, such as "ins-19708ino"
                      */
                     void SetInstanceId(const std::vector<std::string>& _instanceId);
 
@@ -134,14 +134,14 @@ namespace TencentCloud
                     bool DimensionsHasBeenSet() const;
 
                     /**
-                     * 获取Filter by region, such as by gz.
-                     * @return RegionList Filter by region, such as by gz.
+                     * 获取Region filter parameter for service events.
+                     * @return RegionList Region filter parameter for service events.
                      */
                     std::vector<std::string> GetRegionList() const;
 
                     /**
-                     * 设置Filter by region, such as by gz.
-                     * @param RegionList Filter by region, such as by gz.
+                     * 设置Region filter parameter for service events.
+                     * @param RegionList Region filter parameter for service events.
                      */
                     void SetRegionList(const std::vector<std::string>& _regionList);
 
@@ -322,7 +322,7 @@ namespace TencentCloud
                     bool m_moduleHasBeenSet;
 
                     /**
-                     * Filter by product type. For example, “cvm” indicates Cloud Virtual Machine.
+                     * Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
                      */
                     std::vector<std::string> m_productName;
                     bool m_productNameHasBeenSet;
@@ -334,7 +334,7 @@ namespace TencentCloud
                     bool m_eventNameHasBeenSet;
 
                     /**
-                     * Affected object, such as ins-19708ino.
+                     * Affected object, such as "ins-19708ino"
                      */
                     std::vector<std::string> m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -346,7 +346,7 @@ namespace TencentCloud
                     bool m_dimensionsHasBeenSet;
 
                     /**
-                     * Filter by region, such as by gz.
+                     * Region filter parameter for service events.
                      */
                     std::vector<std::string> m_regionList;
                     bool m_regionListHasBeenSet;

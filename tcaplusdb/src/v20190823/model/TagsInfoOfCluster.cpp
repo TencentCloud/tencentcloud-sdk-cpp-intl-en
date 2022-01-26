@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Tcaplusdb::V20190823::Model;
-using namespace rapidjson;
 using namespace std;
 
 TagsInfoOfCluster::TagsInfoOfCluster() :
@@ -28,7 +27,7 @@ TagsInfoOfCluster::TagsInfoOfCluster() :
 {
 }
 
-CoreInternalOutcome TagsInfoOfCluster::Deserialize(const Value &value)
+CoreInternalOutcome TagsInfoOfCluster::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome TagsInfoOfCluster::Deserialize(const Value &value)
     {
         if (!value["ClusterId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TagsInfoOfCluster.ClusterId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TagsInfoOfCluster.ClusterId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_clusterId = string(value["ClusterId"].GetString());
         m_clusterIdHasBeenSet = true;
@@ -46,10 +45,10 @@ CoreInternalOutcome TagsInfoOfCluster::Deserialize(const Value &value)
     if (value.HasMember("Tags") && !value["Tags"].IsNull())
     {
         if (!value["Tags"].IsArray())
-            return CoreInternalOutcome(Error("response `TagsInfoOfCluster.Tags` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `TagsInfoOfCluster.Tags` is not array type"));
 
-        const Value &tmpValue = value["Tags"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Tags"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             TagInfoUnit item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -67,7 +66,7 @@ CoreInternalOutcome TagsInfoOfCluster::Deserialize(const Value &value)
     {
         if (!value["Error"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `TagsInfoOfCluster.Error` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TagsInfoOfCluster.Error` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_error.Deserialize(value["Error"]);
@@ -84,38 +83,38 @@ CoreInternalOutcome TagsInfoOfCluster::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void TagsInfoOfCluster::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TagsInfoOfCluster::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_clusterIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClusterId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_clusterId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clusterId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tagsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Tags";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_errorHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Error";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_error.ToJsonObject(value[key.c_str()], allocator);
     }
 

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mdp::V20200527::Model;
-using namespace rapidjson;
 using namespace std;
 
 InputAuthInfo::InputAuthInfo() :
@@ -27,7 +26,7 @@ InputAuthInfo::InputAuthInfo() :
 {
 }
 
-CoreInternalOutcome InputAuthInfo::Deserialize(const Value &value)
+CoreInternalOutcome InputAuthInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome InputAuthInfo::Deserialize(const Value &value)
     {
         if (!value["Username"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InputAuthInfo.Username` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InputAuthInfo.Username` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_username = string(value["Username"].GetString());
         m_usernameHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome InputAuthInfo::Deserialize(const Value &value)
     {
         if (!value["Password"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InputAuthInfo.Password` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InputAuthInfo.Password` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_password = string(value["Password"].GetString());
         m_passwordHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome InputAuthInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void InputAuthInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void InputAuthInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_usernameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Username";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_username.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_username.c_str(), allocator).Move(), allocator);
     }
 
     if (m_passwordHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Password";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_password.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_password.c_str(), allocator).Move(), allocator);
     }
 
 }

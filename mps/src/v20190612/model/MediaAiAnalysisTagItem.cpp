@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 MediaAiAnalysisTagItem::MediaAiAnalysisTagItem() :
@@ -27,7 +26,7 @@ MediaAiAnalysisTagItem::MediaAiAnalysisTagItem() :
 {
 }
 
-CoreInternalOutcome MediaAiAnalysisTagItem::Deserialize(const Value &value)
+CoreInternalOutcome MediaAiAnalysisTagItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome MediaAiAnalysisTagItem::Deserialize(const Value &value)
     {
         if (!value["Tag"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaAiAnalysisTagItem.Tag` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaAiAnalysisTagItem.Tag` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tag = string(value["Tag"].GetString());
         m_tagHasBeenSet = true;
@@ -44,9 +43,9 @@ CoreInternalOutcome MediaAiAnalysisTagItem::Deserialize(const Value &value)
 
     if (value.HasMember("Confidence") && !value["Confidence"].IsNull())
     {
-        if (!value["Confidence"].IsDouble())
+        if (!value["Confidence"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `MediaAiAnalysisTagItem.Confidence` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaAiAnalysisTagItem.Confidence` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_confidence = value["Confidence"].GetDouble();
         m_confidenceHasBeenSet = true;
@@ -56,20 +55,20 @@ CoreInternalOutcome MediaAiAnalysisTagItem::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void MediaAiAnalysisTagItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MediaAiAnalysisTagItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_tagHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Tag";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_tag.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tag.c_str(), allocator).Move(), allocator);
     }
 
     if (m_confidenceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Confidence";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_confidence, allocator);

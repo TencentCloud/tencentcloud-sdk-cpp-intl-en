@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The UID of the user to be deleted and an array corresponding to the User Group IDs
-                     * @return Info The UID of the user to be deleted and an array corresponding to the User Group IDs
+                     * 获取The user’s UIN/UID to be deleted and the array corresponding to the user group ID.
+                     * @return Info The user’s UIN/UID to be deleted and the array corresponding to the user group ID.
                      */
                     std::vector<GroupIdOfUidInfo> GetInfo() const;
 
                     /**
-                     * 设置The UID of the user to be deleted and an array corresponding to the User Group IDs
-                     * @param Info The UID of the user to be deleted and an array corresponding to the User Group IDs
+                     * 设置The user’s UIN/UID to be deleted and the array corresponding to the user group ID.
+                     * @param Info The user’s UIN/UID to be deleted and the array corresponding to the user group ID.
                      */
                     void SetInfo(const std::vector<GroupIdOfUidInfo>& _info);
 
@@ -64,7 +64,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The UID of the user to be deleted and an array corresponding to the User Group IDs
+                     * The user’s UIN/UID to be deleted and the array corresponding to the user group ID.
                      */
                     std::vector<GroupIdOfUidInfo> m_info;
                     bool m_infoHasBeenSet;

@@ -100,6 +100,42 @@ namespace TencentCloud
                      */
                     bool ASPathHasBeenSet() const;
 
+                    /**
+                     * 获取Remarks
+                     * @return Description Remarks
+                     */
+                    std::string GetDescription() const;
+
+                    /**
+                     * 设置Remarks
+                     * @param Description Remarks
+                     */
+                    void SetDescription(const std::string& _description);
+
+                    /**
+                     * 判断参数 Description 是否已赋值
+                     * @return Description 是否已赋值
+                     */
+                    bool DescriptionHasBeenSet() const;
+
+                    /**
+                     * 获取Last updated time
+                     * @return UpdateTime Last updated time
+                     */
+                    std::string GetUpdateTime() const;
+
+                    /**
+                     * 设置Last updated time
+                     * @param UpdateTime Last updated time
+                     */
+                    void SetUpdateTime(const std::string& _updateTime);
+
+                    /**
+                     * 判断参数 UpdateTime 是否已赋值
+                     * @return UpdateTime 是否已赋值
+                     */
+                    bool UpdateTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -119,6 +155,18 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_aSPath;
                     bool m_aSPathHasBeenSet;
+
+                    /**
+                     * Remarks
+                     */
+                    std::string m_description;
+                    bool m_descriptionHasBeenSet;
+
+                    /**
+                     * Last updated time
+                     */
+                    std::string m_updateTime;
+                    bool m_updateTimeHasBeenSet;
 
                 };
             }

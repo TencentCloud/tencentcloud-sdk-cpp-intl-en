@@ -137,14 +137,14 @@ namespace TencentCloud
                     bool VideoFpsHasBeenSet() const;
 
                     /**
-                     * 获取Pushed video bitrate in bps.
-                     * @return VideoSpeed Pushed video bitrate in bps.
+                     * 获取Video bitrate (Kbps) for publishing
+                     * @return VideoSpeed Video bitrate (Kbps) for publishing
                      */
                     uint64_t GetVideoSpeed() const;
 
                     /**
-                     * 设置Pushed video bitrate in bps.
-                     * @param VideoSpeed Pushed video bitrate in bps.
+                     * 设置Video bitrate (Kbps) for publishing
+                     * @param VideoSpeed Video bitrate (Kbps) for publishing
                      */
                     void SetVideoSpeed(const uint64_t& _videoSpeed);
 
@@ -173,14 +173,14 @@ namespace TencentCloud
                     bool AudioFpsHasBeenSet() const;
 
                     /**
-                     * 获取Pushed audio bitrate in bps.
-                     * @return AudioSpeed Pushed audio bitrate in bps.
+                     * 获取Audio bitrate (Kbps) for publishing
+                     * @return AudioSpeed Audio bitrate (Kbps) for publishing
                      */
                     uint64_t GetAudioSpeed() const;
 
                     /**
-                     * 设置Pushed audio bitrate in bps.
-                     * @param AudioSpeed Pushed audio bitrate in bps.
+                     * 设置Audio bitrate (Kbps) for publishing
+                     * @param AudioSpeed Audio bitrate (Kbps) for publishing
                      */
                     void SetAudioSpeed(const uint64_t& _audioSpeed);
 
@@ -393,7 +393,7 @@ Example: H.264.
                     bool m_videoFpsHasBeenSet;
 
                     /**
-                     * Pushed video bitrate in bps.
+                     * Video bitrate (Kbps) for publishing
                      */
                     uint64_t m_videoSpeed;
                     bool m_videoSpeedHasBeenSet;
@@ -405,7 +405,7 @@ Example: H.264.
                     bool m_audioFpsHasBeenSet;
 
                     /**
-                     * Pushed audio bitrate in bps.
+                     * Audio bitrate (Kbps) for publishing
                      */
                     uint64_t m_audioSpeed;
                     bool m_audioSpeedHasBeenSet;

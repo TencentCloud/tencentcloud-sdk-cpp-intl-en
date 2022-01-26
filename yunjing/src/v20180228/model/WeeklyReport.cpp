@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Yunjing::V20180228::Model;
-using namespace rapidjson;
 using namespace std;
 
 WeeklyReport::WeeklyReport() :
@@ -27,7 +26,7 @@ WeeklyReport::WeeklyReport() :
 {
 }
 
-CoreInternalOutcome WeeklyReport::Deserialize(const Value &value)
+CoreInternalOutcome WeeklyReport::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome WeeklyReport::Deserialize(const Value &value)
     {
         if (!value["BeginDate"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WeeklyReport.BeginDate` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WeeklyReport.BeginDate` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_beginDate = string(value["BeginDate"].GetString());
         m_beginDateHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome WeeklyReport::Deserialize(const Value &value)
     {
         if (!value["EndDate"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WeeklyReport.EndDate` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WeeklyReport.EndDate` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_endDate = string(value["EndDate"].GetString());
         m_endDateHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome WeeklyReport::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void WeeklyReport::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void WeeklyReport::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_beginDateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BeginDate";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_beginDate.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_beginDate.c_str(), allocator).Move(), allocator);
     }
 
     if (m_endDateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndDate";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_endDate.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_endDate.c_str(), allocator).Move(), allocator);
     }
 
 }

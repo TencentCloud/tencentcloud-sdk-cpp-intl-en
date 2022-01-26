@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::As::V20180419::Model;
-using namespace rapidjson;
 using namespace std;
 
 AutoScalingGroupAbstract::AutoScalingGroupAbstract() :
@@ -27,7 +26,7 @@ AutoScalingGroupAbstract::AutoScalingGroupAbstract() :
 {
 }
 
-CoreInternalOutcome AutoScalingGroupAbstract::Deserialize(const Value &value)
+CoreInternalOutcome AutoScalingGroupAbstract::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome AutoScalingGroupAbstract::Deserialize(const Value &value)
     {
         if (!value["AutoScalingGroupId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AutoScalingGroupAbstract.AutoScalingGroupId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroupAbstract.AutoScalingGroupId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_autoScalingGroupId = string(value["AutoScalingGroupId"].GetString());
         m_autoScalingGroupIdHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome AutoScalingGroupAbstract::Deserialize(const Value &value)
     {
         if (!value["AutoScalingGroupName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AutoScalingGroupAbstract.AutoScalingGroupName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroupAbstract.AutoScalingGroupName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_autoScalingGroupName = string(value["AutoScalingGroupName"].GetString());
         m_autoScalingGroupNameHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome AutoScalingGroupAbstract::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void AutoScalingGroupAbstract::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AutoScalingGroupAbstract::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_autoScalingGroupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AutoScalingGroupId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_autoScalingGroupId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_autoScalingGroupId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_autoScalingGroupNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AutoScalingGroupName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_autoScalingGroupName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_autoScalingGroupName.c_str(), allocator).Move(), allocator);
     }
 
 }

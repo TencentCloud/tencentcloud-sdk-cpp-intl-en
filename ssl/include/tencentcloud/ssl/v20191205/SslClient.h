@@ -65,46 +65,46 @@ namespace TencentCloud
                 SslClient(const Credential &credential, const std::string &region);
                 SslClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::ApplyCertificateResponse> ApplyCertificateOutcome;
+                typedef Outcome<Core::Error, Model::ApplyCertificateResponse> ApplyCertificateOutcome;
                 typedef std::future<ApplyCertificateOutcome> ApplyCertificateOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::ApplyCertificateRequest&, ApplyCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApplyCertificateAsyncHandler;
-                typedef Outcome<Error, Model::CancelCertificateOrderResponse> CancelCertificateOrderOutcome;
+                typedef Outcome<Core::Error, Model::CancelCertificateOrderResponse> CancelCertificateOrderOutcome;
                 typedef std::future<CancelCertificateOrderOutcome> CancelCertificateOrderOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::CancelCertificateOrderRequest&, CancelCertificateOrderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CancelCertificateOrderAsyncHandler;
-                typedef Outcome<Error, Model::CommitCertificateInformationResponse> CommitCertificateInformationOutcome;
+                typedef Outcome<Core::Error, Model::CommitCertificateInformationResponse> CommitCertificateInformationOutcome;
                 typedef std::future<CommitCertificateInformationOutcome> CommitCertificateInformationOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::CommitCertificateInformationRequest&, CommitCertificateInformationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CommitCertificateInformationAsyncHandler;
-                typedef Outcome<Error, Model::DeleteCertificateResponse> DeleteCertificateOutcome;
+                typedef Outcome<Core::Error, Model::DeleteCertificateResponse> DeleteCertificateOutcome;
                 typedef std::future<DeleteCertificateOutcome> DeleteCertificateOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::DeleteCertificateRequest&, DeleteCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCertificateAsyncHandler;
-                typedef Outcome<Error, Model::DescribeCertificateResponse> DescribeCertificateOutcome;
+                typedef Outcome<Core::Error, Model::DescribeCertificateResponse> DescribeCertificateOutcome;
                 typedef std::future<DescribeCertificateOutcome> DescribeCertificateOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::DescribeCertificateRequest&, DescribeCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCertificateAsyncHandler;
-                typedef Outcome<Error, Model::DescribeCertificateDetailResponse> DescribeCertificateDetailOutcome;
+                typedef Outcome<Core::Error, Model::DescribeCertificateDetailResponse> DescribeCertificateDetailOutcome;
                 typedef std::future<DescribeCertificateDetailOutcome> DescribeCertificateDetailOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::DescribeCertificateDetailRequest&, DescribeCertificateDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCertificateDetailAsyncHandler;
-                typedef Outcome<Error, Model::DescribeCertificateOperateLogsResponse> DescribeCertificateOperateLogsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeCertificateOperateLogsResponse> DescribeCertificateOperateLogsOutcome;
                 typedef std::future<DescribeCertificateOperateLogsOutcome> DescribeCertificateOperateLogsOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::DescribeCertificateOperateLogsRequest&, DescribeCertificateOperateLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCertificateOperateLogsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeCertificatesResponse> DescribeCertificatesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeCertificatesResponse> DescribeCertificatesOutcome;
                 typedef std::future<DescribeCertificatesOutcome> DescribeCertificatesOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::DescribeCertificatesRequest&, DescribeCertificatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCertificatesAsyncHandler;
-                typedef Outcome<Error, Model::DownloadCertificateResponse> DownloadCertificateOutcome;
+                typedef Outcome<Core::Error, Model::DownloadCertificateResponse> DownloadCertificateOutcome;
                 typedef std::future<DownloadCertificateOutcome> DownloadCertificateOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::DownloadCertificateRequest&, DownloadCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DownloadCertificateAsyncHandler;
-                typedef Outcome<Error, Model::ModifyCertificateAliasResponse> ModifyCertificateAliasOutcome;
+                typedef Outcome<Core::Error, Model::ModifyCertificateAliasResponse> ModifyCertificateAliasOutcome;
                 typedef std::future<ModifyCertificateAliasOutcome> ModifyCertificateAliasOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::ModifyCertificateAliasRequest&, ModifyCertificateAliasOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCertificateAliasAsyncHandler;
-                typedef Outcome<Error, Model::ModifyCertificateProjectResponse> ModifyCertificateProjectOutcome;
+                typedef Outcome<Core::Error, Model::ModifyCertificateProjectResponse> ModifyCertificateProjectOutcome;
                 typedef std::future<ModifyCertificateProjectOutcome> ModifyCertificateProjectOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::ModifyCertificateProjectRequest&, ModifyCertificateProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCertificateProjectAsyncHandler;
-                typedef Outcome<Error, Model::ReplaceCertificateResponse> ReplaceCertificateOutcome;
+                typedef Outcome<Core::Error, Model::ReplaceCertificateResponse> ReplaceCertificateOutcome;
                 typedef std::future<ReplaceCertificateOutcome> ReplaceCertificateOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::ReplaceCertificateRequest&, ReplaceCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReplaceCertificateAsyncHandler;
-                typedef Outcome<Error, Model::SubmitCertificateInformationResponse> SubmitCertificateInformationOutcome;
+                typedef Outcome<Core::Error, Model::SubmitCertificateInformationResponse> SubmitCertificateInformationOutcome;
                 typedef std::future<SubmitCertificateInformationOutcome> SubmitCertificateInformationOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::SubmitCertificateInformationRequest&, SubmitCertificateInformationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SubmitCertificateInformationAsyncHandler;
-                typedef Outcome<Error, Model::UploadCertificateResponse> UploadCertificateOutcome;
+                typedef Outcome<Core::Error, Model::UploadCertificateResponse> UploadCertificateOutcome;
                 typedef std::future<UploadCertificateOutcome> UploadCertificateOutcomeCallable;
                 typedef std::function<void(const SslClient*, const Model::UploadCertificateRequest&, UploadCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UploadCertificateAsyncHandler;
 
@@ -147,7 +147,7 @@ namespace TencentCloud
                 DeleteCertificateOutcomeCallable DeleteCertificateCallable(const Model::DeleteCertificateRequest& request);
 
                 /**
-                 *This API is used to obtain certificate information.
+                 *This API is used to get certificate information.
                  * @param req DescribeCertificateRequest
                  * @return DescribeCertificateOutcome
                  */
@@ -156,7 +156,7 @@ namespace TencentCloud
                 DescribeCertificateOutcomeCallable DescribeCertificateCallable(const Model::DescribeCertificateRequest& request);
 
                 /**
-                 *This API is used to obtain certificate details.
+                 *This API is used to get certificate details.
                  * @param req DescribeCertificateDetailRequest
                  * @return DescribeCertificateDetailOutcome
                  */
@@ -165,7 +165,7 @@ namespace TencentCloud
                 DescribeCertificateDetailOutcomeCallable DescribeCertificateDetailCallable(const Model::DescribeCertificateDetailRequest& request);
 
                 /**
-                 *This API is used to obtain certificate operation logs in the current account.
+                 *This API is used to get certificate operation logs in the current account.
                  * @param req DescribeCertificateOperateLogsRequest
                  * @return DescribeCertificateOperateLogsOutcome
                  */
@@ -174,7 +174,7 @@ namespace TencentCloud
                 DescribeCertificateOperateLogsOutcomeCallable DescribeCertificateOperateLogsCallable(const Model::DescribeCertificateOperateLogsRequest& request);
 
                 /**
-                 *This API is used to obtain the certificate list.
+                 *This API is used to get the certificate list.
                  * @param req DescribeCertificatesRequest
                  * @return DescribeCertificatesOutcome
                  */
@@ -192,7 +192,7 @@ namespace TencentCloud
                 DownloadCertificateOutcomeCallable DownloadCertificateCallable(const Model::DownloadCertificateRequest& request);
 
                 /**
-                 *This API is used to modify certificate alias by inputting the certificate ID and new alias.
+                 *This API is used to modify a certificate alias by passing in the certificate ID and new alias.
                  * @param req ModifyCertificateAliasRequest
                  * @return ModifyCertificateAliasOutcome
                  */

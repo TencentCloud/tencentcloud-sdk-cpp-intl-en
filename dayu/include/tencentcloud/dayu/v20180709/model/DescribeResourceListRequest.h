@@ -134,14 +134,14 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取IP search list, which is optional. If this field is not empty, it means to search for resources by IP;
-                     * @return IpList IP search list, which is optional. If this field is not empty, it means to search for resources by IP;
+                     * 获取IP query list, which is optional. Resources will be queried by IP if the list is not empty.
+                     * @return IpList IP query list, which is optional. Resources will be queried by IP if the list is not empty.
                      */
                     std::vector<std::string> GetIpList() const;
 
                     /**
-                     * 设置IP search list, which is optional. If this field is not empty, it means to search for resources by IP;
-                     * @param IpList IP search list, which is optional. If this field is not empty, it means to search for resources by IP;
+                     * 设置IP query list, which is optional. Resources will be queried by IP if the list is not empty.
+                     * @param IpList IP query list, which is optional. Resources will be queried by IP if the list is not empty.
                      */
                     void SetIpList(const std::vector<std::string>& _ipList);
 
@@ -310,7 +310,7 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * IP search list, which is optional. If this field is not empty, it means to search for resources by IP;
+                     * IP query list, which is optional. Resources will be queried by IP if the list is not empty.
                      */
                     std::vector<std::string> m_ipList;
                     bool m_ipListHasBeenSet;

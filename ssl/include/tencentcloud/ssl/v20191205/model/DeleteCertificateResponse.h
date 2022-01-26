@@ -40,11 +40,12 @@ namespace TencentCloud
                     DeleteCertificateResponse();
                     ~DeleteCertificateResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Deletion result.
-                     * @return DeleteResult Deletion result.
+                     * 获取Deletion result
+                     * @return DeleteResult Deletion result
                      */
                     bool GetDeleteResult() const;
 
@@ -57,7 +58,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Deletion result.
+                     * Deletion result
                      */
                     bool m_deleteResult;
                     bool m_deleteResultHasBeenSet;

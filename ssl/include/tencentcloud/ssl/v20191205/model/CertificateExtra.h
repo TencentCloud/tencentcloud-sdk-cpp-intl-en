@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Content of the CertificateExtra parameter. CertificateExtra is an element of Certificates array which is returned by DescribeCertificates.
+                * Content of the `CertificateExtra` parameter. `CertificateExtra` is an element of `Certificates` array which is returned by `DescribeCertificates`.
                 */
                 class CertificateExtra : public AbstractModel
                 {
@@ -47,17 +47,17 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of domain names which can be associated with the certificate.
+                     * 获取Number of domain names which can be associated with the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DomainNumber Number of domain names which can be associated with the certificate.
+                     * @return DomainNumber Number of domain names which can be associated with the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetDomainNumber() const;
 
                     /**
-                     * 设置Number of domain names which can be associated with the certificate.
+                     * 设置Number of domain names which can be associated with the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DomainNumber Number of domain names which can be associated with the certificate.
+                     * @param DomainNumber Number of domain names which can be associated with the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetDomainNumber(const std::string& _domainNumber);
@@ -69,17 +69,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DomainNumberHasBeenSet() const;
 
                     /**
-                     * 获取Original certificate ID.
+                     * 获取Original certificate ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return OriginCertificateId Original certificate ID.
+                     * @return OriginCertificateId Original certificate ID
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetOriginCertificateId() const;
 
                     /**
-                     * 设置Original certificate ID.
+                     * 设置Original certificate ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OriginCertificateId Original certificate ID.
+                     * @param OriginCertificateId Original certificate ID
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetOriginCertificateId(const std::string& _originCertificateId);
@@ -91,17 +91,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool OriginCertificateIdHasBeenSet() const;
 
                     /**
-                     * 获取Original ID of the new certificate.
+                     * 获取Original ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ReplacedBy Original ID of the new certificate.
+                     * @return ReplacedBy Original ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetReplacedBy() const;
 
                     /**
-                     * 设置Original ID of the new certificate.
+                     * 设置Original ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ReplacedBy Original ID of the new certificate.
+                     * @param ReplacedBy Original ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetReplacedBy(const std::string& _replacedBy);
@@ -113,17 +113,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ReplacedByHasBeenSet() const;
 
                     /**
-                     * 获取New ID of the new certificate.
+                     * 获取New ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ReplacedFor New ID of the new certificate.
+                     * @return ReplacedFor New ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetReplacedFor() const;
 
                     /**
-                     * 设置New ID of the new certificate.
+                     * 设置New ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ReplacedFor New ID of the new certificate.
+                     * @param ReplacedFor New ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetReplacedFor(const std::string& _replacedFor);
@@ -135,17 +135,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ReplacedForHasBeenSet() const;
 
                     /**
-                     * 获取Certificate ID of the new order.
+                     * 获取Certificate ID of the new order
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return RenewOrder Certificate ID of the new order.
+                     * @return RenewOrder Certificate ID of the new order
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetRenewOrder() const;
 
                     /**
-                     * 设置Certificate ID of the new order.
+                     * 设置Certificate ID of the new order
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RenewOrder Certificate ID of the new order.
+                     * @param RenewOrder Certificate ID of the new order
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetRenewOrder(const std::string& _renewOrder);
@@ -159,35 +159,35 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Number of domain names which can be associated with the certificate.
+                     * Number of domain names which can be associated with the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_domainNumber;
                     bool m_domainNumberHasBeenSet;
 
                     /**
-                     * Original certificate ID.
+                     * Original certificate ID
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_originCertificateId;
                     bool m_originCertificateIdHasBeenSet;
 
                     /**
-                     * Original ID of the new certificate.
+                     * Original ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_replacedBy;
                     bool m_replacedByHasBeenSet;
 
                     /**
-                     * New ID of the new certificate.
+                     * New ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_replacedFor;
                     bool m_replacedForHasBeenSet;
 
                     /**
-                     * Certificate ID of the new order.
+                     * Certificate ID of the new order
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_renewOrder;

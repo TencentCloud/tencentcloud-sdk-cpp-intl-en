@@ -40,6 +40,7 @@ namespace TencentCloud
                     DecryptResponse();
                     ~DecryptResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -55,8 +56,10 @@ namespace TencentCloud
                     bool KeyIdHasBeenSet() const;
 
                     /**
-                     * 获取Decrypted plaintext. This field is Base64-encoded. In order to get the original plaintext, the Base64-decoding is needed
-                     * @return Plaintext Decrypted plaintext. This field is Base64-encoded. In order to get the original plaintext, the Base64-decoding is needed
+                     * 获取If `EncryptionPublicKey` is left empty, a Base64-encoded ciphertext will be returned. To get the plaintext, you need to decode the ciphertext first.
+If `EncryptionPublicKey` is specified, this field will return the Base64-encoded ciphertext encrypted with the specified public key. To get the plaintext, you need to decode the ciphertext and upload the corresponding private key.
+                     * @return Plaintext If `EncryptionPublicKey` is left empty, a Base64-encoded ciphertext will be returned. To get the plaintext, you need to decode the ciphertext first.
+If `EncryptionPublicKey` is specified, this field will return the Base64-encoded ciphertext encrypted with the specified public key. To get the plaintext, you need to decode the ciphertext and upload the corresponding private key.
                      */
                     std::string GetPlaintext() const;
 
@@ -75,7 +78,8 @@ namespace TencentCloud
                     bool m_keyIdHasBeenSet;
 
                     /**
-                     * Decrypted plaintext. This field is Base64-encoded. In order to get the original plaintext, the Base64-decoding is needed
+                     * If `EncryptionPublicKey` is left empty, a Base64-encoded ciphertext will be returned. To get the plaintext, you need to decode the ciphertext first.
+If `EncryptionPublicKey` is specified, this field will return the Base64-encoded ciphertext encrypted with the specified public key. To get the plaintext, you need to decode the ciphertext and upload the corresponding private key.
                      */
                     std::string m_plaintext;
                     bool m_plaintextHasBeenSet;

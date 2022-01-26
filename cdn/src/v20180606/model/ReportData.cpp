@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 ReportData::ReportData() :
@@ -31,7 +30,7 @@ ReportData::ReportData() :
 {
 }
 
-CoreInternalOutcome ReportData::Deserialize(const Value &value)
+CoreInternalOutcome ReportData::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome ReportData::Deserialize(const Value &value)
     {
         if (!value["ResourceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ReportData.ResourceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ReportData.ResourceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_resourceId = string(value["ResourceId"].GetString());
         m_resourceIdHasBeenSet = true;
@@ -50,7 +49,7 @@ CoreInternalOutcome ReportData::Deserialize(const Value &value)
     {
         if (!value["Resource"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ReportData.Resource` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ReportData.Resource` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_resource = string(value["Resource"].GetString());
         m_resourceHasBeenSet = true;
@@ -60,7 +59,7 @@ CoreInternalOutcome ReportData::Deserialize(const Value &value)
     {
         if (!value["Value"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ReportData.Value` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ReportData.Value` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_value = value["Value"].GetInt64();
         m_valueHasBeenSet = true;
@@ -68,9 +67,9 @@ CoreInternalOutcome ReportData::Deserialize(const Value &value)
 
     if (value.HasMember("Percentage") && !value["Percentage"].IsNull())
     {
-        if (!value["Percentage"].IsDouble())
+        if (!value["Percentage"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `ReportData.Percentage` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ReportData.Percentage` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_percentage = value["Percentage"].GetDouble();
         m_percentageHasBeenSet = true;
@@ -80,7 +79,7 @@ CoreInternalOutcome ReportData::Deserialize(const Value &value)
     {
         if (!value["BillingValue"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ReportData.BillingValue` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ReportData.BillingValue` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_billingValue = value["BillingValue"].GetInt64();
         m_billingValueHasBeenSet = true;
@@ -88,9 +87,9 @@ CoreInternalOutcome ReportData::Deserialize(const Value &value)
 
     if (value.HasMember("BillingPercentage") && !value["BillingPercentage"].IsNull())
     {
-        if (!value["BillingPercentage"].IsDouble())
+        if (!value["BillingPercentage"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `ReportData.BillingPercentage` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ReportData.BillingPercentage` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_billingPercentage = value["BillingPercentage"].GetDouble();
         m_billingPercentageHasBeenSet = true;
@@ -100,28 +99,28 @@ CoreInternalOutcome ReportData::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ReportData::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ReportData::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_resourceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResourceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_resourceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resourceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_resourceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Resource";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_resource.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resource.c_str(), allocator).Move(), allocator);
     }
 
     if (m_valueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Value";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_value, allocator);
@@ -129,7 +128,7 @@ void ReportData::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_percentageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Percentage";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_percentage, allocator);
@@ -137,7 +136,7 @@ void ReportData::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_billingValueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BillingValue";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_billingValue, allocator);
@@ -145,7 +144,7 @@ void ReportData::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_billingPercentageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BillingPercentage";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_billingPercentage, allocator);

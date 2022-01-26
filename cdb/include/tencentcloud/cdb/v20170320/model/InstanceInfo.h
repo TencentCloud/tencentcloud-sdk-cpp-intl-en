@@ -29,6 +29,7 @@
 #include <tencentcloud/cdb/v20170320/model/RoGroup.h>
 #include <tencentcloud/cdb/v20170320/model/MasterInfo.h>
 #include <tencentcloud/cdb/v20170320/model/DrInfo.h>
+#include <tencentcloud/cdb/v20170320/model/TagInfoItem.h>
 
 
 namespace TencentCloud
@@ -182,17 +183,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Information of a slave server
+                     * 获取Information of a secondary server
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SlaveInfo Information of a slave server
+                     * @return SlaveInfo Information of a secondary server
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     SlaveInfo GetSlaveInfo() const;
 
                     /**
-                     * 设置Information of a slave server
+                     * 设置Information of a secondary server
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SlaveInfo Information of a slave server
+                     * @param SlaveInfo Information of a secondary server
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetSlaveInfo(const SlaveInfo& _slaveInfo);
@@ -316,14 +317,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
-                     * @return InstanceType Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
+                     * 获取Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
+                     * @return InstanceType Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
                      */
                     int64_t GetInstanceType() const;
 
                     /**
-                     * 设置Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
-                     * @param InstanceType Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
+                     * 设置Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
+                     * @param InstanceType Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
                      */
                     void SetInstanceType(const int64_t& _instanceType);
 
@@ -406,14 +407,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DeployModeHasBeenSet() const;
 
                     /**
-                     * 获取Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating slave; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
-                     * @return TaskStatus Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating slave; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
+                     * 获取Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
+                     * @return TaskStatus Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
                      */
                     int64_t GetTaskStatus() const;
 
                     /**
-                     * 设置Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating slave; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
-                     * @param TaskStatus Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating slave; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
+                     * 设置Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
+                     * @param TaskStatus Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
                      */
                     void SetTaskStatus(const int64_t& _taskStatus);
 
@@ -424,17 +425,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TaskStatusHasBeenSet() const;
 
                     /**
-                     * 获取Details of a master instance
+                     * 获取Details of a primary instance
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MasterInfo Details of a master instance
+                     * @return MasterInfo Details of a primary instance
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MasterInfo GetMasterInfo() const;
 
                     /**
-                     * 设置Details of a master instance
+                     * 设置Details of a primary instance
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MasterInfo Details of a master instance
+                     * @param MasterInfo Details of a primary instance
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetMasterInfo(const MasterInfo& _masterInfo);
@@ -446,14 +447,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MasterInfoHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. Value range: HA (High-Availability Edition), FE (Finance Edition), BASIC (Basic Edition)
-                     * @return DeviceType Instance type. Value range: HA (High-Availability Edition), FE (Finance Edition), BASIC (Basic Edition)
+                     * 获取Instance type
+                     * @return DeviceType Instance type
                      */
                     std::string GetDeviceType() const;
 
                     /**
-                     * 设置Instance type. Value range: HA (High-Availability Edition), FE (Finance Edition), BASIC (Basic Edition)
-                     * @param DeviceType Instance type. Value range: HA (High-Availability Edition), FE (Finance Edition), BASIC (Basic Edition)
+                     * 设置Instance type
+                     * @param DeviceType Instance type
                      */
                     void SetDeviceType(const std::string& _deviceType);
 
@@ -821,6 +822,46 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool ZoneIdHasBeenSet() const;
 
+                    /**
+                     * 获取Number of nodes
+                     * @return InstanceNodes Number of nodes
+                     */
+                    int64_t GetInstanceNodes() const;
+
+                    /**
+                     * 设置Number of nodes
+                     * @param InstanceNodes Number of nodes
+                     */
+                    void SetInstanceNodes(const int64_t& _instanceNodes);
+
+                    /**
+                     * 判断参数 InstanceNodes 是否已赋值
+                     * @return InstanceNodes 是否已赋值
+                     */
+                    bool InstanceNodesHasBeenSet() const;
+
+                    /**
+                     * 获取List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return TagList List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<TagInfoItem> GetTagList() const;
+
+                    /**
+                     * 设置List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param TagList List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetTagList(const std::vector<TagInfoItem>& _tagList);
+
+                    /**
+                     * 判断参数 TagList 是否已赋值
+                     * @return TagList 是否已赋值
+                     */
+                    bool TagListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -867,7 +908,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Information of a slave server
+                     * Information of a secondary server
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     SlaveInfo m_slaveInfo;
@@ -911,7 +952,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
+                     * Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
                      */
                     int64_t m_instanceType;
                     bool m_instanceTypeHasBeenSet;
@@ -941,20 +982,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_deployModeHasBeenSet;
 
                     /**
-                     * Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating slave; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
+                     * Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
                      */
                     int64_t m_taskStatus;
                     bool m_taskStatusHasBeenSet;
 
                     /**
-                     * Details of a master instance
+                     * Details of a primary instance
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MasterInfo m_masterInfo;
                     bool m_masterInfoHasBeenSet;
 
                     /**
-                     * Instance type. Value range: HA (High-Availability Edition), FE (Finance Edition), BASIC (Basic Edition)
+                     * Instance type
                      */
                     std::string m_deviceType;
                     bool m_deviceTypeHasBeenSet;
@@ -1076,6 +1117,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_zoneId;
                     bool m_zoneIdHasBeenSet;
+
+                    /**
+                     * Number of nodes
+                     */
+                    int64_t m_instanceNodes;
+                    bool m_instanceNodesHasBeenSet;
+
+                    /**
+                     * List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<TagInfoItem> m_tagList;
+                    bool m_tagListHasBeenSet;
 
                 };
             }

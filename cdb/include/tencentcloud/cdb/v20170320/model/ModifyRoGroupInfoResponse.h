@@ -40,9 +40,31 @@ namespace TencentCloud
                     ModifyRoGroupInfoResponse();
                     ~ModifyRoGroupInfoResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
+
+                    /**
+                     * 获取Async task ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return AsyncRequestId Async task ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetAsyncRequestId() const;
+
+                    /**
+                     * 判断参数 AsyncRequestId 是否已赋值
+                     * @return AsyncRequestId 是否已赋值
+                     */
+                    bool AsyncRequestIdHasBeenSet() const;
 
                 private:
+
+                    /**
+                     * Async task ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_asyncRequestId;
+                    bool m_asyncRequestIdHasBeenSet;
 
                 };
             }

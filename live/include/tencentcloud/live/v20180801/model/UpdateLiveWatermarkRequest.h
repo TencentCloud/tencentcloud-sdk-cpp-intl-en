@@ -44,17 +44,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Watermark ID.
-Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Get the watermark ID in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
                      * @return WatermarkId Watermark ID.
-Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Get the watermark ID in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
                      */
                     int64_t GetWatermarkId() const;
 
                     /**
                      * 设置Watermark ID.
-Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Get the watermark ID in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
                      * @param WatermarkId Watermark ID.
-Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Get the watermark ID in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
                      */
                     void SetWatermarkId(const int64_t& _watermarkId);
 
@@ -66,13 +66,21 @@ Get the watermark ID in the returned value of the [AddLiveWatermark](/document/p
 
                     /**
                      * 获取Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
                      * @return PictureUrl Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
                      */
                     std::string GetPictureUrl() const;
 
                     /**
                      * 设置Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
                      * @param PictureUrl Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
                      */
                     void SetPictureUrl(const std::string& _pictureUrl);
 
@@ -180,13 +188,15 @@ Up to 16 bytes.
 
                     /**
                      * Watermark ID.
-Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Get the watermark ID in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
                      */
                     int64_t m_watermarkId;
                     bool m_watermarkIdHasBeenSet;
 
                     /**
                      * Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
                      */
                     std::string m_pictureUrl;
                     bool m_pictureUrlHasBeenSet;

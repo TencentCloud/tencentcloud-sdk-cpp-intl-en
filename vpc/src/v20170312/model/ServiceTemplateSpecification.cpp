@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 ServiceTemplateSpecification::ServiceTemplateSpecification() :
@@ -27,7 +26,7 @@ ServiceTemplateSpecification::ServiceTemplateSpecification() :
 {
 }
 
-CoreInternalOutcome ServiceTemplateSpecification::Deserialize(const Value &value)
+CoreInternalOutcome ServiceTemplateSpecification::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome ServiceTemplateSpecification::Deserialize(const Value &value
     {
         if (!value["ServiceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ServiceTemplateSpecification.ServiceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceTemplateSpecification.ServiceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_serviceId = string(value["ServiceId"].GetString());
         m_serviceIdHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome ServiceTemplateSpecification::Deserialize(const Value &value
     {
         if (!value["ServiceGroupId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ServiceTemplateSpecification.ServiceGroupId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceTemplateSpecification.ServiceGroupId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_serviceGroupId = string(value["ServiceGroupId"].GetString());
         m_serviceGroupIdHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome ServiceTemplateSpecification::Deserialize(const Value &value
     return CoreInternalOutcome(true);
 }
 
-void ServiceTemplateSpecification::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ServiceTemplateSpecification::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_serviceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_serviceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_serviceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_serviceGroupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceGroupId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_serviceGroupId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_serviceGroupId.c_str(), allocator).Move(), allocator);
     }
 
 }

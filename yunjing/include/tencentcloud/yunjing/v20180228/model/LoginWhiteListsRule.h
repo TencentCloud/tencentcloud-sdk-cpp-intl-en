@@ -120,14 +120,14 @@ namespace TencentCloud
                     bool IsGlobalHasBeenSet() const;
 
                     /**
-                     * 获取Server for which the whitelist takes effect
-                     * @return HostIp Server for which the whitelist takes effect
+                     * 获取Server for which the allowlist takes effect
+                     * @return HostIp Server for which the allowlist takes effect
                      */
                     std::string GetHostIp() const;
 
                     /**
-                     * 设置Server for which the whitelist takes effect
-                     * @param HostIp Server for which the whitelist takes effect
+                     * 设置Server for which the allowlist takes effect
+                     * @param HostIp Server for which the allowlist takes effect
                      */
                     void SetHostIp(const std::string& _hostIp);
 
@@ -154,6 +154,42 @@ namespace TencentCloud
                      * @return Id 是否已赋值
                      */
                     bool IdHasBeenSet() const;
+
+                    /**
+                     * 获取Start time
+                     * @return StartTime Start time
+                     */
+                    std::string GetStartTime() const;
+
+                    /**
+                     * 设置Start time
+                     * @param StartTime Start time
+                     */
+                    void SetStartTime(const std::string& _startTime);
+
+                    /**
+                     * 判断参数 StartTime 是否已赋值
+                     * @return StartTime 是否已赋值
+                     */
+                    bool StartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取End time
+                     * @return EndTime End time
+                     */
+                    std::string GetEndTime() const;
+
+                    /**
+                     * 设置End time
+                     * @param EndTime End time
+                     */
+                    void SetEndTime(const std::string& _endTime);
+
+                    /**
+                     * 判断参数 EndTime 是否已赋值
+                     * @return EndTime 是否已赋值
+                     */
+                    bool EndTimeHasBeenSet() const;
 
                 private:
 
@@ -182,7 +218,7 @@ namespace TencentCloud
                     bool m_isGlobalHasBeenSet;
 
                     /**
-                     * Server for which the whitelist takes effect
+                     * Server for which the allowlist takes effect
                      */
                     std::string m_hostIp;
                     bool m_hostIpHasBeenSet;
@@ -192,6 +228,18 @@ namespace TencentCloud
                      */
                     uint64_t m_id;
                     bool m_idHasBeenSet;
+
+                    /**
+                     * Start time
+                     */
+                    std::string m_startTime;
+                    bool m_startTimeHasBeenSet;
+
+                    /**
+                     * End time
+                     */
+                    std::string m_endTime;
+                    bool m_endTimeHasBeenSet;
 
                 };
             }

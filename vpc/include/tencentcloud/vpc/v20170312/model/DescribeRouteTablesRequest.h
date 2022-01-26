@@ -44,6 +44,48 @@ namespace TencentCloud
 
 
                     /**
+                     * 获取Filter condition. `RouteTableIds` and `Filters` cannot be specified at the same time.
+<li>route-table-id - String - (Filter condition) Route table instance ID.</li>
+<li>route-table-name - String - (Filter condition) Route table name.</li>
+<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
+<li>association.main - String - (Filter condition) Whether it is the main route table.</li>
+<li>tag-key - String - Required: no - (Filter condition) Filter by tag key.</li>
+<li>tag:tag-key - String - Required: no - (Filter condition) Filter by tag key-value pair. Use a specific tag key to replace `tag-key`. See Example 2 for the detailed usage.</li>
+                     * @return Filters Filter condition. `RouteTableIds` and `Filters` cannot be specified at the same time.
+<li>route-table-id - String - (Filter condition) Route table instance ID.</li>
+<li>route-table-name - String - (Filter condition) Route table name.</li>
+<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
+<li>association.main - String - (Filter condition) Whether it is the main route table.</li>
+<li>tag-key - String - Required: no - (Filter condition) Filter by tag key.</li>
+<li>tag:tag-key - String - Required: no - (Filter condition) Filter by tag key-value pair. Use a specific tag key to replace `tag-key`. See Example 2 for the detailed usage.</li>
+                     */
+                    std::vector<Filter> GetFilters() const;
+
+                    /**
+                     * 设置Filter condition. `RouteTableIds` and `Filters` cannot be specified at the same time.
+<li>route-table-id - String - (Filter condition) Route table instance ID.</li>
+<li>route-table-name - String - (Filter condition) Route table name.</li>
+<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
+<li>association.main - String - (Filter condition) Whether it is the main route table.</li>
+<li>tag-key - String - Required: no - (Filter condition) Filter by tag key.</li>
+<li>tag:tag-key - String - Required: no - (Filter condition) Filter by tag key-value pair. Use a specific tag key to replace `tag-key`. See Example 2 for the detailed usage.</li>
+                     * @param Filters Filter condition. `RouteTableIds` and `Filters` cannot be specified at the same time.
+<li>route-table-id - String - (Filter condition) Route table instance ID.</li>
+<li>route-table-name - String - (Filter condition) Route table name.</li>
+<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
+<li>association.main - String - (Filter condition) Whether it is the main route table.</li>
+<li>tag-key - String - Required: no - (Filter condition) Filter by tag key.</li>
+<li>tag:tag-key - String - Required: no - (Filter condition) Filter by tag key-value pair. Use a specific tag key to replace `tag-key`. See Example 2 for the detailed usage.</li>
+                     */
+                    void SetFilters(const std::vector<Filter>& _filters);
+
+                    /**
+                     * 判断参数 Filters 是否已赋值
+                     * @return Filters 是否已赋值
+                     */
+                    bool FiltersHasBeenSet() const;
+
+                    /**
                      * 获取The route table instance ID, such as `rtb-azd4dt1c`.
                      * @return RouteTableIds The route table instance ID, such as `rtb-azd4dt1c`.
                      */
@@ -60,48 +102,6 @@ namespace TencentCloud
                      * @return RouteTableIds 是否已赋值
                      */
                     bool RouteTableIdsHasBeenSet() const;
-
-                    /**
-                     * 获取Filter condition. `RouteTableIds` and `Filters` cannot be speified at the same time.
-<li>route-table-id - String - (Filter condition) Route table instance ID.</li>
-<li>route-table-name - String - (Filter condition) Route table name.</li>
-<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
-<li>association.main - String - (Filter condition) Whether it is the main route table.</li>
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
-                     * @return Filters Filter condition. `RouteTableIds` and `Filters` cannot be speified at the same time.
-<li>route-table-id - String - (Filter condition) Route table instance ID.</li>
-<li>route-table-name - String - (Filter condition) Route table name.</li>
-<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
-<li>association.main - String - (Filter condition) Whether it is the main route table.</li>
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
-                     */
-                    std::vector<Filter> GetFilters() const;
-
-                    /**
-                     * 设置Filter condition. `RouteTableIds` and `Filters` cannot be speified at the same time.
-<li>route-table-id - String - (Filter condition) Route table instance ID.</li>
-<li>route-table-name - String - (Filter condition) Route table name.</li>
-<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
-<li>association.main - String - (Filter condition) Whether it is the main route table.</li>
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
-                     * @param Filters Filter condition. `RouteTableIds` and `Filters` cannot be speified at the same time.
-<li>route-table-id - String - (Filter condition) Route table instance ID.</li>
-<li>route-table-name - String - (Filter condition) Route table name.</li>
-<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
-<li>association.main - String - (Filter condition) Whether it is the main route table.</li>
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
-                     */
-                    void SetFilters(const std::vector<Filter>& _filters);
-
-                    /**
-                     * 判断参数 Filters 是否已赋值
-                     * @return Filters 是否已赋值
-                     */
-                    bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset.
@@ -142,22 +142,22 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The route table instance ID, such as `rtb-azd4dt1c`.
-                     */
-                    std::vector<std::string> m_routeTableIds;
-                    bool m_routeTableIdsHasBeenSet;
-
-                    /**
-                     * Filter condition. `RouteTableIds` and `Filters` cannot be speified at the same time.
+                     * Filter condition. `RouteTableIds` and `Filters` cannot be specified at the same time.
 <li>route-table-id - String - (Filter condition) Route table instance ID.</li>
 <li>route-table-name - String - (Filter condition) Route table name.</li>
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
 <li>association.main - String - (Filter condition) Whether it is the main route table.</li>
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
+<li>tag-key - String - Required: no - (Filter condition) Filter by tag key.</li>
+<li>tag:tag-key - String - Required: no - (Filter condition) Filter by tag key-value pair. Use a specific tag key to replace `tag-key`. See Example 2 for the detailed usage.</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
+
+                    /**
+                     * The route table instance ID, such as `rtb-azd4dt1c`.
+                     */
+                    std::vector<std::string> m_routeTableIds;
+                    bool m_routeTableIdsHasBeenSet;
 
                     /**
                      * Offset.

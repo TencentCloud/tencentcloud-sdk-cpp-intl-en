@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dayu::V20180709::Model;
-using namespace rapidjson;
 using namespace std;
 
 BoundIpInfo::BoundIpInfo() :
@@ -29,7 +28,7 @@ BoundIpInfo::BoundIpInfo() :
 {
 }
 
-CoreInternalOutcome BoundIpInfo::Deserialize(const Value &value)
+CoreInternalOutcome BoundIpInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome BoundIpInfo::Deserialize(const Value &value)
     {
         if (!value["Ip"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BoundIpInfo.Ip` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BoundIpInfo.Ip` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ip = string(value["Ip"].GetString());
         m_ipHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome BoundIpInfo::Deserialize(const Value &value)
     {
         if (!value["BizType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BoundIpInfo.BizType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BoundIpInfo.BizType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_bizType = string(value["BizType"].GetString());
         m_bizTypeHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome BoundIpInfo::Deserialize(const Value &value)
     {
         if (!value["DeviceType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BoundIpInfo.DeviceType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BoundIpInfo.DeviceType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_deviceType = string(value["DeviceType"].GetString());
         m_deviceTypeHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome BoundIpInfo::Deserialize(const Value &value)
     {
         if (!value["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BoundIpInfo.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BoundIpInfo.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(value["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -78,39 +77,39 @@ CoreInternalOutcome BoundIpInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void BoundIpInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void BoundIpInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_ipHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Ip";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ip.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ip.c_str(), allocator).Move(), allocator);
     }
 
     if (m_bizTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BizType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_bizType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_bizType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_deviceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DeviceType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_deviceType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_deviceType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
 }

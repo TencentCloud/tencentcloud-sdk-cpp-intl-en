@@ -194,6 +194,50 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool RegionHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the logset has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Deleted Whether the logset has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDeleted() const;
+
+                    /**
+                     * 设置Whether the logset has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param Deleted Whether the logset has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetDeleted(const std::string& _deleted);
+
+                    /**
+                     * 判断参数 Deleted 是否已赋值
+                     * @return Deleted 是否已赋值
+                     */
+                    bool DeletedHasBeenSet() const;
+
+                    /**
+                     * 获取Whether English is used in this region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return RegionEn Whether English is used in this region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetRegionEn() const;
+
+                    /**
+                     * 设置Whether English is used in this region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param RegionEn Whether English is used in this region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetRegionEn(const std::string& _regionEn);
+
+                    /**
+                     * 判断参数 RegionEn 是否已赋值
+                     * @return RegionEn 是否已赋值
+                     */
+                    bool RegionEnHasBeenSet() const;
+
                 private:
 
                     /**
@@ -244,6 +288,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
+
+                    /**
+                     * Whether the logset has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_deleted;
+                    bool m_deletedHasBeenSet;
+
+                    /**
+                     * Whether English is used in this region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_regionEn;
+                    bool m_regionEnHasBeenSet;
 
                 };
             }

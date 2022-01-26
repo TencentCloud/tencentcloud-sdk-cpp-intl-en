@@ -41,6 +41,7 @@ namespace TencentCloud
                     SearchMediaResponse();
                     ~SearchMediaResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -58,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of media file information, only including the basic information (BasicInfo).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MediaInfoSet List of media file information, only including the basic information (BasicInfo).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Media file information list
+                     * @return MediaInfoSet Media file information list
                      */
                     std::vector<MediaInfo> GetMediaInfoSet() const;
 
@@ -81,8 +80,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of media file information, only including the basic information (BasicInfo).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Media file information list
                      */
                     std::vector<MediaInfo> m_mediaInfoSet;
                     bool m_mediaInfoSetHasBeenSet;

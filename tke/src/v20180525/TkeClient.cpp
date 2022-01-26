@@ -40,6 +40,49 @@ TkeClient::TkeClient(const Credential &credential, const string &region, const C
 }
 
 
+TkeClient::AcquireClusterAdminRoleOutcome TkeClient::AcquireClusterAdminRole(const AcquireClusterAdminRoleRequest &request)
+{
+    auto outcome = MakeRequest(request, "AcquireClusterAdminRole");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AcquireClusterAdminRoleResponse rsp = AcquireClusterAdminRoleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AcquireClusterAdminRoleOutcome(rsp);
+        else
+            return AcquireClusterAdminRoleOutcome(o.GetError());
+    }
+    else
+    {
+        return AcquireClusterAdminRoleOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::AcquireClusterAdminRoleAsync(const AcquireClusterAdminRoleRequest& request, const AcquireClusterAdminRoleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->AcquireClusterAdminRole(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::AcquireClusterAdminRoleOutcomeCallable TkeClient::AcquireClusterAdminRoleCallable(const AcquireClusterAdminRoleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<AcquireClusterAdminRoleOutcome()>>(
+        [this, request]()
+        {
+            return this->AcquireClusterAdminRole(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TkeClient::AddExistedInstancesOutcome TkeClient::AddExistedInstances(const AddExistedInstancesRequest &request)
 {
     auto outcome = MakeRequest(request, "AddExistedInstances");
@@ -76,6 +119,135 @@ TkeClient::AddExistedInstancesOutcomeCallable TkeClient::AddExistedInstancesCall
         [this, request]()
         {
             return this->AddExistedInstances(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::AddNodeToNodePoolOutcome TkeClient::AddNodeToNodePool(const AddNodeToNodePoolRequest &request)
+{
+    auto outcome = MakeRequest(request, "AddNodeToNodePool");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AddNodeToNodePoolResponse rsp = AddNodeToNodePoolResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AddNodeToNodePoolOutcome(rsp);
+        else
+            return AddNodeToNodePoolOutcome(o.GetError());
+    }
+    else
+    {
+        return AddNodeToNodePoolOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::AddNodeToNodePoolAsync(const AddNodeToNodePoolRequest& request, const AddNodeToNodePoolAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->AddNodeToNodePool(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::AddNodeToNodePoolOutcomeCallable TkeClient::AddNodeToNodePoolCallable(const AddNodeToNodePoolRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<AddNodeToNodePoolOutcome()>>(
+        [this, request]()
+        {
+            return this->AddNodeToNodePool(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::AddVpcCniSubnetsOutcome TkeClient::AddVpcCniSubnets(const AddVpcCniSubnetsRequest &request)
+{
+    auto outcome = MakeRequest(request, "AddVpcCniSubnets");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AddVpcCniSubnetsResponse rsp = AddVpcCniSubnetsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AddVpcCniSubnetsOutcome(rsp);
+        else
+            return AddVpcCniSubnetsOutcome(o.GetError());
+    }
+    else
+    {
+        return AddVpcCniSubnetsOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::AddVpcCniSubnetsAsync(const AddVpcCniSubnetsRequest& request, const AddVpcCniSubnetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->AddVpcCniSubnets(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::AddVpcCniSubnetsOutcomeCallable TkeClient::AddVpcCniSubnetsCallable(const AddVpcCniSubnetsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<AddVpcCniSubnetsOutcome()>>(
+        [this, request]()
+        {
+            return this->AddVpcCniSubnets(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::CheckInstancesUpgradeAbleOutcome TkeClient::CheckInstancesUpgradeAble(const CheckInstancesUpgradeAbleRequest &request)
+{
+    auto outcome = MakeRequest(request, "CheckInstancesUpgradeAble");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CheckInstancesUpgradeAbleResponse rsp = CheckInstancesUpgradeAbleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CheckInstancesUpgradeAbleOutcome(rsp);
+        else
+            return CheckInstancesUpgradeAbleOutcome(o.GetError());
+    }
+    else
+    {
+        return CheckInstancesUpgradeAbleOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::CheckInstancesUpgradeAbleAsync(const CheckInstancesUpgradeAbleRequest& request, const CheckInstancesUpgradeAbleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CheckInstancesUpgradeAble(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::CheckInstancesUpgradeAbleOutcomeCallable TkeClient::CheckInstancesUpgradeAbleCallable(const CheckInstancesUpgradeAbleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CheckInstancesUpgradeAbleOutcome()>>(
+        [this, request]()
+        {
+            return this->CheckInstancesUpgradeAble(request);
         }
     );
 
@@ -298,6 +470,92 @@ TkeClient::CreateClusterInstancesOutcomeCallable TkeClient::CreateClusterInstanc
     return task->get_future();
 }
 
+TkeClient::CreateClusterNodePoolOutcome TkeClient::CreateClusterNodePool(const CreateClusterNodePoolRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateClusterNodePool");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateClusterNodePoolResponse rsp = CreateClusterNodePoolResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateClusterNodePoolOutcome(rsp);
+        else
+            return CreateClusterNodePoolOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateClusterNodePoolOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::CreateClusterNodePoolAsync(const CreateClusterNodePoolRequest& request, const CreateClusterNodePoolAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateClusterNodePool(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::CreateClusterNodePoolOutcomeCallable TkeClient::CreateClusterNodePoolCallable(const CreateClusterNodePoolRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateClusterNodePoolOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateClusterNodePool(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::CreateClusterNodePoolFromExistingAsgOutcome TkeClient::CreateClusterNodePoolFromExistingAsg(const CreateClusterNodePoolFromExistingAsgRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateClusterNodePoolFromExistingAsg");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateClusterNodePoolFromExistingAsgResponse rsp = CreateClusterNodePoolFromExistingAsgResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateClusterNodePoolFromExistingAsgOutcome(rsp);
+        else
+            return CreateClusterNodePoolFromExistingAsgOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateClusterNodePoolFromExistingAsgOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::CreateClusterNodePoolFromExistingAsgAsync(const CreateClusterNodePoolFromExistingAsgRequest& request, const CreateClusterNodePoolFromExistingAsgAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateClusterNodePoolFromExistingAsg(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::CreateClusterNodePoolFromExistingAsgOutcomeCallable TkeClient::CreateClusterNodePoolFromExistingAsgCallable(const CreateClusterNodePoolFromExistingAsgRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateClusterNodePoolFromExistingAsgOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateClusterNodePoolFromExistingAsg(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TkeClient::CreateClusterRouteTableOutcome TkeClient::CreateClusterRouteTable(const CreateClusterRouteTableRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateClusterRouteTable");
@@ -334,6 +592,49 @@ TkeClient::CreateClusterRouteTableOutcomeCallable TkeClient::CreateClusterRouteT
         [this, request]()
         {
             return this->CreateClusterRouteTable(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::CreatePrometheusAlertRuleOutcome TkeClient::CreatePrometheusAlertRule(const CreatePrometheusAlertRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreatePrometheusAlertRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreatePrometheusAlertRuleResponse rsp = CreatePrometheusAlertRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreatePrometheusAlertRuleOutcome(rsp);
+        else
+            return CreatePrometheusAlertRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return CreatePrometheusAlertRuleOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::CreatePrometheusAlertRuleAsync(const CreatePrometheusAlertRuleRequest& request, const CreatePrometheusAlertRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreatePrometheusAlertRule(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::CreatePrometheusAlertRuleOutcomeCallable TkeClient::CreatePrometheusAlertRuleCallable(const CreatePrometheusAlertRuleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreatePrometheusAlertRuleOutcome()>>(
+        [this, request]()
+        {
+            return this->CreatePrometheusAlertRule(request);
         }
     );
 
@@ -556,6 +857,49 @@ TkeClient::DeleteClusterInstancesOutcomeCallable TkeClient::DeleteClusterInstanc
     return task->get_future();
 }
 
+TkeClient::DeleteClusterNodePoolOutcome TkeClient::DeleteClusterNodePool(const DeleteClusterNodePoolRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteClusterNodePool");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteClusterNodePoolResponse rsp = DeleteClusterNodePoolResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteClusterNodePoolOutcome(rsp);
+        else
+            return DeleteClusterNodePoolOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteClusterNodePoolOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::DeleteClusterNodePoolAsync(const DeleteClusterNodePoolRequest& request, const DeleteClusterNodePoolAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteClusterNodePool(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::DeleteClusterNodePoolOutcomeCallable TkeClient::DeleteClusterNodePoolCallable(const DeleteClusterNodePoolRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteClusterNodePoolOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteClusterNodePool(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TkeClient::DeleteClusterRouteOutcome TkeClient::DeleteClusterRoute(const DeleteClusterRouteRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteClusterRoute");
@@ -642,6 +986,92 @@ TkeClient::DeleteClusterRouteTableOutcomeCallable TkeClient::DeleteClusterRouteT
     return task->get_future();
 }
 
+TkeClient::DeletePrometheusAlertRuleOutcome TkeClient::DeletePrometheusAlertRule(const DeletePrometheusAlertRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeletePrometheusAlertRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeletePrometheusAlertRuleResponse rsp = DeletePrometheusAlertRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeletePrometheusAlertRuleOutcome(rsp);
+        else
+            return DeletePrometheusAlertRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return DeletePrometheusAlertRuleOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::DeletePrometheusAlertRuleAsync(const DeletePrometheusAlertRuleRequest& request, const DeletePrometheusAlertRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeletePrometheusAlertRule(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::DeletePrometheusAlertRuleOutcomeCallable TkeClient::DeletePrometheusAlertRuleCallable(const DeletePrometheusAlertRuleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeletePrometheusAlertRuleOutcome()>>(
+        [this, request]()
+        {
+            return this->DeletePrometheusAlertRule(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::DescribeAvailableClusterVersionOutcome TkeClient::DescribeAvailableClusterVersion(const DescribeAvailableClusterVersionRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAvailableClusterVersion");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAvailableClusterVersionResponse rsp = DescribeAvailableClusterVersionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAvailableClusterVersionOutcome(rsp);
+        else
+            return DescribeAvailableClusterVersionOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAvailableClusterVersionOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::DescribeAvailableClusterVersionAsync(const DescribeAvailableClusterVersionRequest& request, const DescribeAvailableClusterVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeAvailableClusterVersion(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::DescribeAvailableClusterVersionOutcomeCallable TkeClient::DescribeAvailableClusterVersionCallable(const DescribeAvailableClusterVersionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeAvailableClusterVersionOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeAvailableClusterVersion(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TkeClient::DescribeClusterAsGroupOptionOutcome TkeClient::DescribeClusterAsGroupOption(const DescribeClusterAsGroupOptionRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeClusterAsGroupOption");
@@ -721,6 +1151,92 @@ TkeClient::DescribeClusterAsGroupsOutcomeCallable TkeClient::DescribeClusterAsGr
         [this, request]()
         {
             return this->DescribeClusterAsGroups(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::DescribeClusterAuthenticationOptionsOutcome TkeClient::DescribeClusterAuthenticationOptions(const DescribeClusterAuthenticationOptionsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeClusterAuthenticationOptions");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeClusterAuthenticationOptionsResponse rsp = DescribeClusterAuthenticationOptionsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeClusterAuthenticationOptionsOutcome(rsp);
+        else
+            return DescribeClusterAuthenticationOptionsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeClusterAuthenticationOptionsOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::DescribeClusterAuthenticationOptionsAsync(const DescribeClusterAuthenticationOptionsRequest& request, const DescribeClusterAuthenticationOptionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeClusterAuthenticationOptions(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::DescribeClusterAuthenticationOptionsOutcomeCallable TkeClient::DescribeClusterAuthenticationOptionsCallable(const DescribeClusterAuthenticationOptionsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeClusterAuthenticationOptionsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeClusterAuthenticationOptions(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::DescribeClusterCommonNamesOutcome TkeClient::DescribeClusterCommonNames(const DescribeClusterCommonNamesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeClusterCommonNames");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeClusterCommonNamesResponse rsp = DescribeClusterCommonNamesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeClusterCommonNamesOutcome(rsp);
+        else
+            return DescribeClusterCommonNamesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeClusterCommonNamesOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::DescribeClusterCommonNamesAsync(const DescribeClusterCommonNamesRequest& request, const DescribeClusterCommonNamesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeClusterCommonNames(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::DescribeClusterCommonNamesOutcomeCallable TkeClient::DescribeClusterCommonNamesCallable(const DescribeClusterCommonNamesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeClusterCommonNamesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeClusterCommonNames(request);
         }
     );
 
@@ -850,6 +1366,135 @@ TkeClient::DescribeClusterInstancesOutcomeCallable TkeClient::DescribeClusterIns
         [this, request]()
         {
             return this->DescribeClusterInstances(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::DescribeClusterKubeconfigOutcome TkeClient::DescribeClusterKubeconfig(const DescribeClusterKubeconfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeClusterKubeconfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeClusterKubeconfigResponse rsp = DescribeClusterKubeconfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeClusterKubeconfigOutcome(rsp);
+        else
+            return DescribeClusterKubeconfigOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeClusterKubeconfigOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::DescribeClusterKubeconfigAsync(const DescribeClusterKubeconfigRequest& request, const DescribeClusterKubeconfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeClusterKubeconfig(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::DescribeClusterKubeconfigOutcomeCallable TkeClient::DescribeClusterKubeconfigCallable(const DescribeClusterKubeconfigRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeClusterKubeconfigOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeClusterKubeconfig(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::DescribeClusterNodePoolDetailOutcome TkeClient::DescribeClusterNodePoolDetail(const DescribeClusterNodePoolDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeClusterNodePoolDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeClusterNodePoolDetailResponse rsp = DescribeClusterNodePoolDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeClusterNodePoolDetailOutcome(rsp);
+        else
+            return DescribeClusterNodePoolDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeClusterNodePoolDetailOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::DescribeClusterNodePoolDetailAsync(const DescribeClusterNodePoolDetailRequest& request, const DescribeClusterNodePoolDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeClusterNodePoolDetail(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::DescribeClusterNodePoolDetailOutcomeCallable TkeClient::DescribeClusterNodePoolDetailCallable(const DescribeClusterNodePoolDetailRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeClusterNodePoolDetailOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeClusterNodePoolDetail(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::DescribeClusterNodePoolsOutcome TkeClient::DescribeClusterNodePools(const DescribeClusterNodePoolsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeClusterNodePools");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeClusterNodePoolsResponse rsp = DescribeClusterNodePoolsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeClusterNodePoolsOutcome(rsp);
+        else
+            return DescribeClusterNodePoolsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeClusterNodePoolsOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::DescribeClusterNodePoolsAsync(const DescribeClusterNodePoolsRequest& request, const DescribeClusterNodePoolsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeClusterNodePools(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::DescribeClusterNodePoolsOutcomeCallable TkeClient::DescribeClusterNodePoolsCallable(const DescribeClusterNodePoolsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeClusterNodePoolsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeClusterNodePools(request);
         }
     );
 
@@ -1029,6 +1674,49 @@ TkeClient::DescribeClustersOutcomeCallable TkeClient::DescribeClustersCallable(c
     return task->get_future();
 }
 
+TkeClient::DescribeEnableVpcCniProgressOutcome TkeClient::DescribeEnableVpcCniProgress(const DescribeEnableVpcCniProgressRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeEnableVpcCniProgress");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeEnableVpcCniProgressResponse rsp = DescribeEnableVpcCniProgressResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeEnableVpcCniProgressOutcome(rsp);
+        else
+            return DescribeEnableVpcCniProgressOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeEnableVpcCniProgressOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::DescribeEnableVpcCniProgressAsync(const DescribeEnableVpcCniProgressRequest& request, const DescribeEnableVpcCniProgressAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeEnableVpcCniProgress(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::DescribeEnableVpcCniProgressOutcomeCallable TkeClient::DescribeEnableVpcCniProgressCallable(const DescribeEnableVpcCniProgressRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeEnableVpcCniProgressOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeEnableVpcCniProgress(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TkeClient::DescribeExistedInstancesOutcome TkeClient::DescribeExistedInstances(const DescribeExistedInstancesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeExistedInstances");
@@ -1108,6 +1796,49 @@ TkeClient::DescribeImagesOutcomeCallable TkeClient::DescribeImagesCallable(const
         [this, request]()
         {
             return this->DescribeImages(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::DescribePrometheusInstanceOutcome TkeClient::DescribePrometheusInstance(const DescribePrometheusInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribePrometheusInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribePrometheusInstanceResponse rsp = DescribePrometheusInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribePrometheusInstanceOutcome(rsp);
+        else
+            return DescribePrometheusInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribePrometheusInstanceOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::DescribePrometheusInstanceAsync(const DescribePrometheusInstanceRequest& request, const DescribePrometheusInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribePrometheusInstance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::DescribePrometheusInstanceOutcomeCallable TkeClient::DescribePrometheusInstanceCallable(const DescribePrometheusInstanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribePrometheusInstanceOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribePrometheusInstance(request);
         }
     );
 
@@ -1201,6 +1932,264 @@ TkeClient::DescribeRouteTableConflictsOutcomeCallable TkeClient::DescribeRouteTa
     return task->get_future();
 }
 
+TkeClient::DescribeVersionsOutcome TkeClient::DescribeVersions(const DescribeVersionsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVersions");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVersionsResponse rsp = DescribeVersionsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVersionsOutcome(rsp);
+        else
+            return DescribeVersionsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVersionsOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::DescribeVersionsAsync(const DescribeVersionsRequest& request, const DescribeVersionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeVersions(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::DescribeVersionsOutcomeCallable TkeClient::DescribeVersionsCallable(const DescribeVersionsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeVersionsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeVersions(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::DescribeVpcCniPodLimitsOutcome TkeClient::DescribeVpcCniPodLimits(const DescribeVpcCniPodLimitsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVpcCniPodLimits");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVpcCniPodLimitsResponse rsp = DescribeVpcCniPodLimitsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVpcCniPodLimitsOutcome(rsp);
+        else
+            return DescribeVpcCniPodLimitsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVpcCniPodLimitsOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::DescribeVpcCniPodLimitsAsync(const DescribeVpcCniPodLimitsRequest& request, const DescribeVpcCniPodLimitsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeVpcCniPodLimits(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::DescribeVpcCniPodLimitsOutcomeCallable TkeClient::DescribeVpcCniPodLimitsCallable(const DescribeVpcCniPodLimitsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeVpcCniPodLimitsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeVpcCniPodLimits(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::DisableClusterDeletionProtectionOutcome TkeClient::DisableClusterDeletionProtection(const DisableClusterDeletionProtectionRequest &request)
+{
+    auto outcome = MakeRequest(request, "DisableClusterDeletionProtection");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DisableClusterDeletionProtectionResponse rsp = DisableClusterDeletionProtectionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DisableClusterDeletionProtectionOutcome(rsp);
+        else
+            return DisableClusterDeletionProtectionOutcome(o.GetError());
+    }
+    else
+    {
+        return DisableClusterDeletionProtectionOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::DisableClusterDeletionProtectionAsync(const DisableClusterDeletionProtectionRequest& request, const DisableClusterDeletionProtectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DisableClusterDeletionProtection(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::DisableClusterDeletionProtectionOutcomeCallable TkeClient::DisableClusterDeletionProtectionCallable(const DisableClusterDeletionProtectionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DisableClusterDeletionProtectionOutcome()>>(
+        [this, request]()
+        {
+            return this->DisableClusterDeletionProtection(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::EnableClusterDeletionProtectionOutcome TkeClient::EnableClusterDeletionProtection(const EnableClusterDeletionProtectionRequest &request)
+{
+    auto outcome = MakeRequest(request, "EnableClusterDeletionProtection");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        EnableClusterDeletionProtectionResponse rsp = EnableClusterDeletionProtectionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return EnableClusterDeletionProtectionOutcome(rsp);
+        else
+            return EnableClusterDeletionProtectionOutcome(o.GetError());
+    }
+    else
+    {
+        return EnableClusterDeletionProtectionOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::EnableClusterDeletionProtectionAsync(const EnableClusterDeletionProtectionRequest& request, const EnableClusterDeletionProtectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->EnableClusterDeletionProtection(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::EnableClusterDeletionProtectionOutcomeCallable TkeClient::EnableClusterDeletionProtectionCallable(const EnableClusterDeletionProtectionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<EnableClusterDeletionProtectionOutcome()>>(
+        [this, request]()
+        {
+            return this->EnableClusterDeletionProtection(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::EnableVpcCniNetworkTypeOutcome TkeClient::EnableVpcCniNetworkType(const EnableVpcCniNetworkTypeRequest &request)
+{
+    auto outcome = MakeRequest(request, "EnableVpcCniNetworkType");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        EnableVpcCniNetworkTypeResponse rsp = EnableVpcCniNetworkTypeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return EnableVpcCniNetworkTypeOutcome(rsp);
+        else
+            return EnableVpcCniNetworkTypeOutcome(o.GetError());
+    }
+    else
+    {
+        return EnableVpcCniNetworkTypeOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::EnableVpcCniNetworkTypeAsync(const EnableVpcCniNetworkTypeRequest& request, const EnableVpcCniNetworkTypeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->EnableVpcCniNetworkType(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::EnableVpcCniNetworkTypeOutcomeCallable TkeClient::EnableVpcCniNetworkTypeCallable(const EnableVpcCniNetworkTypeRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<EnableVpcCniNetworkTypeOutcome()>>(
+        [this, request]()
+        {
+            return this->EnableVpcCniNetworkType(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::GetUpgradeInstanceProgressOutcome TkeClient::GetUpgradeInstanceProgress(const GetUpgradeInstanceProgressRequest &request)
+{
+    auto outcome = MakeRequest(request, "GetUpgradeInstanceProgress");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GetUpgradeInstanceProgressResponse rsp = GetUpgradeInstanceProgressResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GetUpgradeInstanceProgressOutcome(rsp);
+        else
+            return GetUpgradeInstanceProgressOutcome(o.GetError());
+    }
+    else
+    {
+        return GetUpgradeInstanceProgressOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::GetUpgradeInstanceProgressAsync(const GetUpgradeInstanceProgressRequest& request, const GetUpgradeInstanceProgressAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->GetUpgradeInstanceProgress(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::GetUpgradeInstanceProgressOutcomeCallable TkeClient::GetUpgradeInstanceProgressCallable(const GetUpgradeInstanceProgressRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<GetUpgradeInstanceProgressOutcome()>>(
+        [this, request]()
+        {
+            return this->GetUpgradeInstanceProgress(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TkeClient::ModifyClusterAsGroupAttributeOutcome TkeClient::ModifyClusterAsGroupAttribute(const ModifyClusterAsGroupAttributeRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyClusterAsGroupAttribute");
@@ -1237,6 +2226,49 @@ TkeClient::ModifyClusterAsGroupAttributeOutcomeCallable TkeClient::ModifyCluster
         [this, request]()
         {
             return this->ModifyClusterAsGroupAttribute(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::ModifyClusterAsGroupOptionAttributeOutcome TkeClient::ModifyClusterAsGroupOptionAttribute(const ModifyClusterAsGroupOptionAttributeRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyClusterAsGroupOptionAttribute");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyClusterAsGroupOptionAttributeResponse rsp = ModifyClusterAsGroupOptionAttributeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyClusterAsGroupOptionAttributeOutcome(rsp);
+        else
+            return ModifyClusterAsGroupOptionAttributeOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyClusterAsGroupOptionAttributeOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::ModifyClusterAsGroupOptionAttributeAsync(const ModifyClusterAsGroupOptionAttributeRequest& request, const ModifyClusterAsGroupOptionAttributeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyClusterAsGroupOptionAttribute(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::ModifyClusterAsGroupOptionAttributeOutcomeCallable TkeClient::ModifyClusterAsGroupOptionAttributeCallable(const ModifyClusterAsGroupOptionAttributeRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyClusterAsGroupOptionAttributeOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyClusterAsGroupOptionAttribute(request);
         }
     );
 
@@ -1287,6 +2319,49 @@ TkeClient::ModifyClusterAttributeOutcomeCallable TkeClient::ModifyClusterAttribu
     return task->get_future();
 }
 
+TkeClient::ModifyClusterAuthenticationOptionsOutcome TkeClient::ModifyClusterAuthenticationOptions(const ModifyClusterAuthenticationOptionsRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyClusterAuthenticationOptions");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyClusterAuthenticationOptionsResponse rsp = ModifyClusterAuthenticationOptionsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyClusterAuthenticationOptionsOutcome(rsp);
+        else
+            return ModifyClusterAuthenticationOptionsOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyClusterAuthenticationOptionsOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::ModifyClusterAuthenticationOptionsAsync(const ModifyClusterAuthenticationOptionsRequest& request, const ModifyClusterAuthenticationOptionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyClusterAuthenticationOptions(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::ModifyClusterAuthenticationOptionsOutcomeCallable TkeClient::ModifyClusterAuthenticationOptionsCallable(const ModifyClusterAuthenticationOptionsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyClusterAuthenticationOptionsOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyClusterAuthenticationOptions(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TkeClient::ModifyClusterEndpointSPOutcome TkeClient::ModifyClusterEndpointSP(const ModifyClusterEndpointSPRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyClusterEndpointSP");
@@ -1323,6 +2398,307 @@ TkeClient::ModifyClusterEndpointSPOutcomeCallable TkeClient::ModifyClusterEndpoi
         [this, request]()
         {
             return this->ModifyClusterEndpointSP(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::ModifyClusterNodePoolOutcome TkeClient::ModifyClusterNodePool(const ModifyClusterNodePoolRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyClusterNodePool");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyClusterNodePoolResponse rsp = ModifyClusterNodePoolResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyClusterNodePoolOutcome(rsp);
+        else
+            return ModifyClusterNodePoolOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyClusterNodePoolOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::ModifyClusterNodePoolAsync(const ModifyClusterNodePoolRequest& request, const ModifyClusterNodePoolAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyClusterNodePool(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::ModifyClusterNodePoolOutcomeCallable TkeClient::ModifyClusterNodePoolCallable(const ModifyClusterNodePoolRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyClusterNodePoolOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyClusterNodePool(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::ModifyNodePoolInstanceTypesOutcome TkeClient::ModifyNodePoolInstanceTypes(const ModifyNodePoolInstanceTypesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyNodePoolInstanceTypes");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyNodePoolInstanceTypesResponse rsp = ModifyNodePoolInstanceTypesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyNodePoolInstanceTypesOutcome(rsp);
+        else
+            return ModifyNodePoolInstanceTypesOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyNodePoolInstanceTypesOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::ModifyNodePoolInstanceTypesAsync(const ModifyNodePoolInstanceTypesRequest& request, const ModifyNodePoolInstanceTypesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyNodePoolInstanceTypes(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::ModifyNodePoolInstanceTypesOutcomeCallable TkeClient::ModifyNodePoolInstanceTypesCallable(const ModifyNodePoolInstanceTypesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyNodePoolInstanceTypesOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyNodePoolInstanceTypes(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::ModifyPrometheusAlertRuleOutcome TkeClient::ModifyPrometheusAlertRule(const ModifyPrometheusAlertRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyPrometheusAlertRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyPrometheusAlertRuleResponse rsp = ModifyPrometheusAlertRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyPrometheusAlertRuleOutcome(rsp);
+        else
+            return ModifyPrometheusAlertRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyPrometheusAlertRuleOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::ModifyPrometheusAlertRuleAsync(const ModifyPrometheusAlertRuleRequest& request, const ModifyPrometheusAlertRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyPrometheusAlertRule(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::ModifyPrometheusAlertRuleOutcomeCallable TkeClient::ModifyPrometheusAlertRuleCallable(const ModifyPrometheusAlertRuleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyPrometheusAlertRuleOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyPrometheusAlertRule(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::RemoveNodeFromNodePoolOutcome TkeClient::RemoveNodeFromNodePool(const RemoveNodeFromNodePoolRequest &request)
+{
+    auto outcome = MakeRequest(request, "RemoveNodeFromNodePool");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RemoveNodeFromNodePoolResponse rsp = RemoveNodeFromNodePoolResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RemoveNodeFromNodePoolOutcome(rsp);
+        else
+            return RemoveNodeFromNodePoolOutcome(o.GetError());
+    }
+    else
+    {
+        return RemoveNodeFromNodePoolOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::RemoveNodeFromNodePoolAsync(const RemoveNodeFromNodePoolRequest& request, const RemoveNodeFromNodePoolAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RemoveNodeFromNodePool(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::RemoveNodeFromNodePoolOutcomeCallable TkeClient::RemoveNodeFromNodePoolCallable(const RemoveNodeFromNodePoolRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RemoveNodeFromNodePoolOutcome()>>(
+        [this, request]()
+        {
+            return this->RemoveNodeFromNodePool(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::SetNodePoolNodeProtectionOutcome TkeClient::SetNodePoolNodeProtection(const SetNodePoolNodeProtectionRequest &request)
+{
+    auto outcome = MakeRequest(request, "SetNodePoolNodeProtection");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SetNodePoolNodeProtectionResponse rsp = SetNodePoolNodeProtectionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SetNodePoolNodeProtectionOutcome(rsp);
+        else
+            return SetNodePoolNodeProtectionOutcome(o.GetError());
+    }
+    else
+    {
+        return SetNodePoolNodeProtectionOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::SetNodePoolNodeProtectionAsync(const SetNodePoolNodeProtectionRequest& request, const SetNodePoolNodeProtectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->SetNodePoolNodeProtection(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::SetNodePoolNodeProtectionOutcomeCallable TkeClient::SetNodePoolNodeProtectionCallable(const SetNodePoolNodeProtectionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<SetNodePoolNodeProtectionOutcome()>>(
+        [this, request]()
+        {
+            return this->SetNodePoolNodeProtection(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::UpdateClusterVersionOutcome TkeClient::UpdateClusterVersion(const UpdateClusterVersionRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateClusterVersion");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateClusterVersionResponse rsp = UpdateClusterVersionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateClusterVersionOutcome(rsp);
+        else
+            return UpdateClusterVersionOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateClusterVersionOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::UpdateClusterVersionAsync(const UpdateClusterVersionRequest& request, const UpdateClusterVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpdateClusterVersion(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::UpdateClusterVersionOutcomeCallable TkeClient::UpdateClusterVersionCallable(const UpdateClusterVersionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpdateClusterVersionOutcome()>>(
+        [this, request]()
+        {
+            return this->UpdateClusterVersion(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::UpgradeClusterInstancesOutcome TkeClient::UpgradeClusterInstances(const UpgradeClusterInstancesRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpgradeClusterInstances");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpgradeClusterInstancesResponse rsp = UpgradeClusterInstancesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpgradeClusterInstancesOutcome(rsp);
+        else
+            return UpgradeClusterInstancesOutcome(o.GetError());
+    }
+    else
+    {
+        return UpgradeClusterInstancesOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::UpgradeClusterInstancesAsync(const UpgradeClusterInstancesRequest& request, const UpgradeClusterInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpgradeClusterInstances(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::UpgradeClusterInstancesOutcomeCallable TkeClient::UpgradeClusterInstancesCallable(const UpgradeClusterInstancesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpgradeClusterInstancesOutcome()>>(
+        [this, request]()
+        {
+            return this->UpgradeClusterInstances(request);
         }
     );
 

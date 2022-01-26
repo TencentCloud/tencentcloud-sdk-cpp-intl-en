@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 MicroServiceReq::MicroServiceReq() :
@@ -28,7 +27,7 @@ MicroServiceReq::MicroServiceReq() :
 {
 }
 
-CoreInternalOutcome MicroServiceReq::Deserialize(const Value &value)
+CoreInternalOutcome MicroServiceReq::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome MicroServiceReq::Deserialize(const Value &value)
     {
         if (!value["ClusterId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MicroServiceReq.ClusterId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MicroServiceReq.ClusterId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_clusterId = string(value["ClusterId"].GetString());
         m_clusterIdHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome MicroServiceReq::Deserialize(const Value &value)
     {
         if (!value["NamespaceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MicroServiceReq.NamespaceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MicroServiceReq.NamespaceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_namespaceId = string(value["NamespaceId"].GetString());
         m_namespaceIdHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome MicroServiceReq::Deserialize(const Value &value)
     {
         if (!value["MicroServiceName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MicroServiceReq.MicroServiceName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MicroServiceReq.MicroServiceName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_microServiceName = string(value["MicroServiceName"].GetString());
         m_microServiceNameHasBeenSet = true;
@@ -67,31 +66,31 @@ CoreInternalOutcome MicroServiceReq::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void MicroServiceReq::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MicroServiceReq::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_clusterIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClusterId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_clusterId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clusterId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_namespaceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NamespaceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_namespaceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_namespaceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_microServiceNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MicroServiceName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_microServiceName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_microServiceName.c_str(), allocator).Move(), allocator);
     }
 
 }

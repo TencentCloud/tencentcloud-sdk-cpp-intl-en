@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/redis/v20180412/model/RedisNodeInfo.h>
 
 
 namespace TencentCloud
@@ -61,14 +62,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Shard size in MB
-                     * @return MemSize Shard size in MB
+                     * 获取Shard size in MB. This parameter cannot be passed in at the same time as `RedisShardNum`/`RedisReplicasNum`.
+                     * @return MemSize Shard size in MB. This parameter cannot be passed in at the same time as `RedisShardNum`/`RedisReplicasNum`.
                      */
                     uint64_t GetMemSize() const;
 
                     /**
-                     * 设置Shard size in MB
-                     * @param MemSize Shard size in MB
+                     * 设置Shard size in MB. This parameter cannot be passed in at the same time as `RedisShardNum`/`RedisReplicasNum`.
+                     * @param MemSize Shard size in MB. This parameter cannot be passed in at the same time as `RedisShardNum`/`RedisReplicasNum`.
                      */
                     void SetMemSize(const uint64_t& _memSize);
 
@@ -79,14 +80,14 @@ namespace TencentCloud
                     bool MemSizeHasBeenSet() const;
 
                     /**
-                     * 获取Number of shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
-                     * @return RedisShardNum Number of shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
+                     * 获取Shard quantity. This parameter is not required by standard architecture instances and cannot be passed in at the same time as `RedisReplicasNum`/`MemSize`.
+                     * @return RedisShardNum Shard quantity. This parameter is not required by standard architecture instances and cannot be passed in at the same time as `RedisReplicasNum`/`MemSize`.
                      */
                     uint64_t GetRedisShardNum() const;
 
                     /**
-                     * 设置Number of shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
-                     * @param RedisShardNum Number of shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
+                     * 设置Shard quantity. This parameter is not required by standard architecture instances and cannot be passed in at the same time as `RedisReplicasNum`/`MemSize`.
+                     * @param RedisShardNum Shard quantity. This parameter is not required by standard architecture instances and cannot be passed in at the same time as `RedisReplicasNum`/`MemSize`.
                      */
                     void SetRedisShardNum(const uint64_t& _redisShardNum);
 
@@ -97,14 +98,14 @@ namespace TencentCloud
                     bool RedisShardNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
-                     * @return RedisReplicasNum Number of replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
+                     * 获取Replica quantity. This parameter cannot be passed in at the same time as `RedisShardNum`/`MemSize`. To modify the number of replicas in a multi-AZ instance, `NodeSet` must be passed in.
+                     * @return RedisReplicasNum Replica quantity. This parameter cannot be passed in at the same time as `RedisShardNum`/`MemSize`. To modify the number of replicas in a multi-AZ instance, `NodeSet` must be passed in.
                      */
                     uint64_t GetRedisReplicasNum() const;
 
                     /**
-                     * 设置Number of replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
-                     * @param RedisReplicasNum Number of replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
+                     * 设置Replica quantity. This parameter cannot be passed in at the same time as `RedisShardNum`/`MemSize`. To modify the number of replicas in a multi-AZ instance, `NodeSet` must be passed in.
+                     * @param RedisReplicasNum Replica quantity. This parameter cannot be passed in at the same time as `RedisShardNum`/`MemSize`. To modify the number of replicas in a multi-AZ instance, `NodeSet` must be passed in.
                      */
                     void SetRedisReplicasNum(const uint64_t& _redisReplicasNum);
 
@@ -113,6 +114,24 @@ namespace TencentCloud
                      * @return RedisReplicasNum 是否已赋值
                      */
                     bool RedisReplicasNumHasBeenSet() const;
+
+                    /**
+                     * 获取The information of the replica to be added to a multi-AZ instance, such as replica availability zone and replica type (`NodeType` should be `1`). This parameter is required only when multi-AZ instances add replicas.
+                     * @return NodeSet The information of the replica to be added to a multi-AZ instance, such as replica availability zone and replica type (`NodeType` should be `1`). This parameter is required only when multi-AZ instances add replicas.
+                     */
+                    std::vector<RedisNodeInfo> GetNodeSet() const;
+
+                    /**
+                     * 设置The information of the replica to be added to a multi-AZ instance, such as replica availability zone and replica type (`NodeType` should be `1`). This parameter is required only when multi-AZ instances add replicas.
+                     * @param NodeSet The information of the replica to be added to a multi-AZ instance, such as replica availability zone and replica type (`NodeType` should be `1`). This parameter is required only when multi-AZ instances add replicas.
+                     */
+                    void SetNodeSet(const std::vector<RedisNodeInfo>& _nodeSet);
+
+                    /**
+                     * 判断参数 NodeSet 是否已赋值
+                     * @return NodeSet 是否已赋值
+                     */
+                    bool NodeSetHasBeenSet() const;
 
                 private:
 
@@ -123,22 +142,28 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Shard size in MB
+                     * Shard size in MB. This parameter cannot be passed in at the same time as `RedisShardNum`/`RedisReplicasNum`.
                      */
                     uint64_t m_memSize;
                     bool m_memSizeHasBeenSet;
 
                     /**
-                     * Number of shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
+                     * Shard quantity. This parameter is not required by standard architecture instances and cannot be passed in at the same time as `RedisReplicasNum`/`MemSize`.
                      */
                     uint64_t m_redisShardNum;
                     bool m_redisShardNumHasBeenSet;
 
                     /**
-                     * Number of replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
+                     * Replica quantity. This parameter cannot be passed in at the same time as `RedisShardNum`/`MemSize`. To modify the number of replicas in a multi-AZ instance, `NodeSet` must be passed in.
                      */
                     uint64_t m_redisReplicasNum;
                     bool m_redisReplicasNumHasBeenSet;
+
+                    /**
+                     * The information of the replica to be added to a multi-AZ instance, such as replica availability zone and replica type (`NodeType` should be `1`). This parameter is required only when multi-AZ instances add replicas.
+                     */
+                    std::vector<RedisNodeInfo> m_nodeSet;
+                    bool m_nodeSetHasBeenSet;
 
                 };
             }

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ocr::V20181119::Model;
-using namespace rapidjson;
 using namespace std;
 
 ItemCoord::ItemCoord() :
@@ -29,7 +28,7 @@ ItemCoord::ItemCoord() :
 {
 }
 
-CoreInternalOutcome ItemCoord::Deserialize(const Value &value)
+CoreInternalOutcome ItemCoord::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome ItemCoord::Deserialize(const Value &value)
     {
         if (!value["X"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ItemCoord.X` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ItemCoord.X` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_x = value["X"].GetInt64();
         m_xHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome ItemCoord::Deserialize(const Value &value)
     {
         if (!value["Y"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ItemCoord.Y` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ItemCoord.Y` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_y = value["Y"].GetInt64();
         m_yHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome ItemCoord::Deserialize(const Value &value)
     {
         if (!value["Width"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ItemCoord.Width` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ItemCoord.Width` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_width = value["Width"].GetInt64();
         m_widthHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome ItemCoord::Deserialize(const Value &value)
     {
         if (!value["Height"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ItemCoord.Height` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ItemCoord.Height` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_height = value["Height"].GetInt64();
         m_heightHasBeenSet = true;
@@ -78,12 +77,12 @@ CoreInternalOutcome ItemCoord::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ItemCoord::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ItemCoord::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_xHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "X";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_x, allocator);
@@ -91,7 +90,7 @@ void ItemCoord::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_yHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Y";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_y, allocator);
@@ -99,7 +98,7 @@ void ItemCoord::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_widthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Width";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_width, allocator);
@@ -107,7 +106,7 @@ void ItemCoord::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_heightHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Height";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_height, allocator);

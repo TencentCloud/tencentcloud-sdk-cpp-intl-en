@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filename
-                     * @return FileName Filename
+                     * 获取File name. The name of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+                     * @return FileName File name. The name of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
                      */
                     std::string GetFileName() const;
 
                     /**
-                     * 设置Filename
-                     * @param FileName Filename
+                     * 设置File name. The name of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+                     * @param FileName File name. The name of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
                      */
                     void SetFileName(const std::string& _fileName);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool FileNameHasBeenSet() const;
 
                     /**
-                     * 获取File size in KB
-                     * @return Size File size in KB
+                     * 获取File size in KB. The size of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+                     * @return Size File size in KB. The size of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
                      */
                     int64_t GetSize() const;
 
                     /**
-                     * 设置File size in KB
-                     * @param Size File size in KB
+                     * 设置File size in KB. The size of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+                     * @param Size File size in KB. The size of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
                      */
                     void SetSize(const int64_t& _size);
 
@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Download address for private network
-                     * @return InternalAddr Download address for private network
+                     * 获取Private network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+                     * @return InternalAddr Private network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
                      */
                     std::string GetInternalAddr() const;
 
                     /**
-                     * 设置Download address for private network
-                     * @param InternalAddr Download address for private network
+                     * 设置Private network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+                     * @param InternalAddr Private network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
                      */
                     void SetInternalAddr(const std::string& _internalAddr);
 
@@ -137,14 +137,14 @@ namespace TencentCloud
                     bool InternalAddrHasBeenSet() const;
 
                     /**
-                     * 获取Download address for public network
-                     * @return ExternalAddr Download address for public network
+                     * 获取Public network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+                     * @return ExternalAddr Public network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
                      */
                     std::string GetExternalAddr() const;
 
                     /**
-                     * 设置Download address for public network
-                     * @param ExternalAddr Download address for public network
+                     * 设置Public network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+                     * @param ExternalAddr Public network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
                      */
                     void SetExternalAddr(const std::string& _externalAddr);
 
@@ -155,14 +155,14 @@ namespace TencentCloud
                     bool ExternalAddrHasBeenSet() const;
 
                     /**
-                     * 获取Unique ID of backup file, which will be used by the `RestoreInstance` API
-                     * @return Id Unique ID of backup file, which will be used by the `RestoreInstance` API
+                     * 获取Unique ID of a backup file, which is used by the `RestoreInstance` API. The unique ID of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+                     * @return Id Unique ID of a backup file, which is used by the `RestoreInstance` API. The unique ID of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
                      */
                     uint64_t GetId() const;
 
                     /**
-                     * 设置Unique ID of backup file, which will be used by the `RestoreInstance` API
-                     * @param Id Unique ID of backup file, which will be used by the `RestoreInstance` API
+                     * 设置Unique ID of a backup file, which is used by the `RestoreInstance` API. The unique ID of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+                     * @param Id Unique ID of a backup file, which is used by the `RestoreInstance` API. The unique ID of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
                      */
                     void SetId(const uint64_t& _id);
 
@@ -244,16 +244,52 @@ namespace TencentCloud
                      */
                     bool BackupWayHasBeenSet() const;
 
+                    /**
+                     * 获取Backup task name (customizable)
+                     * @return BackupName Backup task name (customizable)
+                     */
+                    std::string GetBackupName() const;
+
+                    /**
+                     * 设置Backup task name (customizable)
+                     * @param BackupName Backup task name (customizable)
+                     */
+                    void SetBackupName(const std::string& _backupName);
+
+                    /**
+                     * 判断参数 BackupName 是否已赋值
+                     * @return BackupName 是否已赋值
+                     */
+                    bool BackupNameHasBeenSet() const;
+
+                    /**
+                     * 获取Group ID of unarchived backup files, which can be used as a request parameter in the `DescribeBackupFiles` API to get details of unarchived backup files in the specified group. This parameter is invalid for archived backup files.
+                     * @return GroupId Group ID of unarchived backup files, which can be used as a request parameter in the `DescribeBackupFiles` API to get details of unarchived backup files in the specified group. This parameter is invalid for archived backup files.
+                     */
+                    std::string GetGroupId() const;
+
+                    /**
+                     * 设置Group ID of unarchived backup files, which can be used as a request parameter in the `DescribeBackupFiles` API to get details of unarchived backup files in the specified group. This parameter is invalid for archived backup files.
+                     * @param GroupId Group ID of unarchived backup files, which can be used as a request parameter in the `DescribeBackupFiles` API to get details of unarchived backup files in the specified group. This parameter is invalid for archived backup files.
+                     */
+                    void SetGroupId(const std::string& _groupId);
+
+                    /**
+                     * 判断参数 GroupId 是否已赋值
+                     * @return GroupId 是否已赋值
+                     */
+                    bool GroupIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Filename
+                     * File name. The name of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
                      */
                     std::string m_fileName;
                     bool m_fileNameHasBeenSet;
 
                     /**
-                     * File size in KB
+                     * File size in KB. The size of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
                      */
                     int64_t m_size;
                     bool m_sizeHasBeenSet;
@@ -271,19 +307,19 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Download address for private network
+                     * Private network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
                      */
                     std::string m_internalAddr;
                     bool m_internalAddrHasBeenSet;
 
                     /**
-                     * Download address for public network
+                     * Public network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
                      */
                     std::string m_externalAddr;
                     bool m_externalAddrHasBeenSet;
 
                     /**
-                     * Unique ID of backup file, which will be used by the `RestoreInstance` API
+                     * Unique ID of a backup file, which is used by the `RestoreInstance` API. The unique ID of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
                      */
                     uint64_t m_id;
                     bool m_idHasBeenSet;
@@ -311,6 +347,18 @@ namespace TencentCloud
                      */
                     int64_t m_backupWay;
                     bool m_backupWayHasBeenSet;
+
+                    /**
+                     * Backup task name (customizable)
+                     */
+                    std::string m_backupName;
+                    bool m_backupNameHasBeenSet;
+
+                    /**
+                     * Group ID of unarchived backup files, which can be used as a request parameter in the `DescribeBackupFiles` API to get details of unarchived backup files in the specified group. This parameter is invalid for archived backup files.
+                     */
+                    std::string m_groupId;
+                    bool m_groupIdHasBeenSet;
 
                 };
             }

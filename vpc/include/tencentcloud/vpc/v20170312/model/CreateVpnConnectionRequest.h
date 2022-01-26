@@ -24,6 +24,7 @@
 #include <tencentcloud/vpc/v20170312/model/SecurityPolicyDatabase.h>
 #include <tencentcloud/vpc/v20170312/model/IKEOptionsSpecification.h>
 #include <tencentcloud/vpc/v20170312/model/IPSECOptionsSpecification.h>
+#include <tencentcloud/vpc/v20170312/model/Tag.h>
 
 
 namespace TencentCloud
@@ -44,24 +45,6 @@ namespace TencentCloud
                     ~CreateVpnConnectionRequest() = default;
                     std::string ToJsonString() const;
 
-
-                    /**
-                     * 获取The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
-                     * @return VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
-                     */
-                    std::string GetVpcId() const;
-
-                    /**
-                     * 设置The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
-                     * @param VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
-                     */
-                    void SetVpcId(const std::string& _vpcId);
-
-                    /**
-                     * 判断参数 VpcId 是否已赋值
-                     * @return VpcId 是否已赋值
-                     */
-                    bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取The ID of the VPN gateway instance.
@@ -136,6 +119,28 @@ namespace TencentCloud
                     bool PreShareKeyHasBeenSet() const;
 
                     /**
+                     * 获取VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
+This parameter is optional for a CCN-based VPN tunnel.
+                     * @return VpcId VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
+This parameter is optional for a CCN-based VPN tunnel.
+                     */
+                    std::string GetVpcId() const;
+
+                    /**
+                     * 设置VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
+This parameter is optional for a CCN-based VPN tunnel.
+                     * @param VpcId VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
+This parameter is optional for a CCN-based VPN tunnel.
+                     */
+                    void SetVpcId(const std::string& _vpcId);
+
+                    /**
+                     * 判断参数 VpcId 是否已赋值
+                     * @return VpcId 是否已赋值
+                     */
+                    bool VpcIdHasBeenSet() const;
+
+                    /**
                      * 获取The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
                      * @return SecurityPolicyDatabases The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
                      */
@@ -189,13 +194,169 @@ namespace TencentCloud
                      */
                     bool IPSECOptionsSpecificationHasBeenSet() const;
 
-                private:
+                    /**
+                     * 获取Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     */
+                    std::vector<Tag> GetTags() const;
 
                     /**
-                     * The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+                     * 设置Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
                      */
-                    std::string m_vpcId;
-                    bool m_vpcIdHasBeenSet;
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the tunnel health check is supported.
+                     * @return EnableHealthCheck Whether the tunnel health check is supported.
+                     */
+                    bool GetEnableHealthCheck() const;
+
+                    /**
+                     * 设置Whether the tunnel health check is supported.
+                     * @param EnableHealthCheck Whether the tunnel health check is supported.
+                     */
+                    void SetEnableHealthCheck(const bool& _enableHealthCheck);
+
+                    /**
+                     * 判断参数 EnableHealthCheck 是否已赋值
+                     * @return EnableHealthCheck 是否已赋值
+                     */
+                    bool EnableHealthCheckHasBeenSet() const;
+
+                    /**
+                     * 获取Local IP address for the health check
+                     * @return HealthCheckLocalIp Local IP address for the health check
+                     */
+                    std::string GetHealthCheckLocalIp() const;
+
+                    /**
+                     * 设置Local IP address for the health check
+                     * @param HealthCheckLocalIp Local IP address for the health check
+                     */
+                    void SetHealthCheckLocalIp(const std::string& _healthCheckLocalIp);
+
+                    /**
+                     * 判断参数 HealthCheckLocalIp 是否已赋值
+                     * @return HealthCheckLocalIp 是否已赋值
+                     */
+                    bool HealthCheckLocalIpHasBeenSet() const;
+
+                    /**
+                     * 获取Peer IP address for the health check
+                     * @return HealthCheckRemoteIp Peer IP address for the health check
+                     */
+                    std::string GetHealthCheckRemoteIp() const;
+
+                    /**
+                     * 设置Peer IP address for the health check
+                     * @param HealthCheckRemoteIp Peer IP address for the health check
+                     */
+                    void SetHealthCheckRemoteIp(const std::string& _healthCheckRemoteIp);
+
+                    /**
+                     * 判断参数 HealthCheckRemoteIp 是否已赋值
+                     * @return HealthCheckRemoteIp 是否已赋值
+                     */
+                    bool HealthCheckRemoteIpHasBeenSet() const;
+
+                    /**
+                     * 获取Tunnel type. Valid values: `STATIC`, `StaticRoute`, and `Policy`.
+                     * @return RouteType Tunnel type. Valid values: `STATIC`, `StaticRoute`, and `Policy`.
+                     */
+                    std::string GetRouteType() const;
+
+                    /**
+                     * 设置Tunnel type. Valid values: `STATIC`, `StaticRoute`, and `Policy`.
+                     * @param RouteType Tunnel type. Valid values: `STATIC`, `StaticRoute`, and `Policy`.
+                     */
+                    void SetRouteType(const std::string& _routeType);
+
+                    /**
+                     * 判断参数 RouteType 是否已赋值
+                     * @return RouteType 是否已赋值
+                     */
+                    bool RouteTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`.
+                     * @return NegotiationType Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`.
+                     */
+                    std::string GetNegotiationType() const;
+
+                    /**
+                     * 设置Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`.
+                     * @param NegotiationType Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`.
+                     */
+                    void SetNegotiationType(const std::string& _negotiationType);
+
+                    /**
+                     * 判断参数 NegotiationType 是否已赋值
+                     * @return NegotiationType 是否已赋值
+                     */
+                    bool NegotiationTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies whether to enable DPD. Valid values: `0` (disable) and `1` (enable)
+                     * @return DpdEnable Specifies whether to enable DPD. Valid values: `0` (disable) and `1` (enable)
+                     */
+                    int64_t GetDpdEnable() const;
+
+                    /**
+                     * 设置Specifies whether to enable DPD. Valid values: `0` (disable) and `1` (enable)
+                     * @param DpdEnable Specifies whether to enable DPD. Valid values: `0` (disable) and `1` (enable)
+                     */
+                    void SetDpdEnable(const int64_t& _dpdEnable);
+
+                    /**
+                     * 判断参数 DpdEnable 是否已赋值
+                     * @return DpdEnable 是否已赋值
+                     */
+                    bool DpdEnableHasBeenSet() const;
+
+                    /**
+                     * 获取DPD timeout period. Default: 30; unit: second. If the request is not responded within this period, the peer end is considered not exists. This parameter is valid when the value of `DpdEnable` is 1. 
+                     * @return DpdTimeout DPD timeout period. Default: 30; unit: second. If the request is not responded within this period, the peer end is considered not exists. This parameter is valid when the value of `DpdEnable` is 1. 
+                     */
+                    std::string GetDpdTimeout() const;
+
+                    /**
+                     * 设置DPD timeout period. Default: 30; unit: second. If the request is not responded within this period, the peer end is considered not exists. This parameter is valid when the value of `DpdEnable` is 1. 
+                     * @param DpdTimeout DPD timeout period. Default: 30; unit: second. If the request is not responded within this period, the peer end is considered not exists. This parameter is valid when the value of `DpdEnable` is 1. 
+                     */
+                    void SetDpdTimeout(const std::string& _dpdTimeout);
+
+                    /**
+                     * 判断参数 DpdTimeout 是否已赋值
+                     * @return DpdTimeout 是否已赋值
+                     */
+                    bool DpdTimeoutHasBeenSet() const;
+
+                    /**
+                     * 获取The action after DPD timeout. Valid values: `clear` (disconnect) and `restart` (try again). It’s valid when `DpdEnable` is `1`. 
+                     * @return DpdAction The action after DPD timeout. Valid values: `clear` (disconnect) and `restart` (try again). It’s valid when `DpdEnable` is `1`. 
+                     */
+                    std::string GetDpdAction() const;
+
+                    /**
+                     * 设置The action after DPD timeout. Valid values: `clear` (disconnect) and `restart` (try again). It’s valid when `DpdEnable` is `1`. 
+                     * @param DpdAction The action after DPD timeout. Valid values: `clear` (disconnect) and `restart` (try again). It’s valid when `DpdEnable` is `1`. 
+                     */
+                    void SetDpdAction(const std::string& _dpdAction);
+
+                    /**
+                     * 判断参数 DpdAction 是否已赋值
+                     * @return DpdAction 是否已赋值
+                     */
+                    bool DpdActionHasBeenSet() const;
+
+                private:
 
                     /**
                      * The ID of the VPN gateway instance.
@@ -222,6 +383,13 @@ namespace TencentCloud
                     bool m_preShareKeyHasBeenSet;
 
                     /**
+                     * VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
+This parameter is optional for a CCN-based VPN tunnel.
+                     */
+                    std::string m_vpcId;
+                    bool m_vpcIdHasBeenSet;
+
+                    /**
                      * The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
                      */
                     std::vector<SecurityPolicyDatabase> m_securityPolicyDatabases;
@@ -238,6 +406,60 @@ namespace TencentCloud
                      */
                     IPSECOptionsSpecification m_iPSECOptionsSpecification;
                     bool m_iPSECOptionsSpecificationHasBeenSet;
+
+                    /**
+                     * Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * Whether the tunnel health check is supported.
+                     */
+                    bool m_enableHealthCheck;
+                    bool m_enableHealthCheckHasBeenSet;
+
+                    /**
+                     * Local IP address for the health check
+                     */
+                    std::string m_healthCheckLocalIp;
+                    bool m_healthCheckLocalIpHasBeenSet;
+
+                    /**
+                     * Peer IP address for the health check
+                     */
+                    std::string m_healthCheckRemoteIp;
+                    bool m_healthCheckRemoteIpHasBeenSet;
+
+                    /**
+                     * Tunnel type. Valid values: `STATIC`, `StaticRoute`, and `Policy`.
+                     */
+                    std::string m_routeType;
+                    bool m_routeTypeHasBeenSet;
+
+                    /**
+                     * Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`.
+                     */
+                    std::string m_negotiationType;
+                    bool m_negotiationTypeHasBeenSet;
+
+                    /**
+                     * Specifies whether to enable DPD. Valid values: `0` (disable) and `1` (enable)
+                     */
+                    int64_t m_dpdEnable;
+                    bool m_dpdEnableHasBeenSet;
+
+                    /**
+                     * DPD timeout period. Default: 30; unit: second. If the request is not responded within this period, the peer end is considered not exists. This parameter is valid when the value of `DpdEnable` is 1. 
+                     */
+                    std::string m_dpdTimeout;
+                    bool m_dpdTimeoutHasBeenSet;
+
+                    /**
+                     * The action after DPD timeout. Valid values: `clear` (disconnect) and `restart` (try again). It’s valid when `DpdEnable` is `1`. 
+                     */
+                    std::string m_dpdAction;
+                    bool m_dpdActionHasBeenSet;
 
                 };
             }

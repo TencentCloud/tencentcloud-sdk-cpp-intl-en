@@ -20,41 +20,74 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Sqlserver::V20180328::Model;
-using namespace rapidjson;
 using namespace std;
 
 RestoreInstanceRequest::RestoreInstanceRequest() :
     m_instanceIdHasBeenSet(false),
-    m_backupIdHasBeenSet(false)
+    m_backupIdHasBeenSet(false),
+    m_targetInstanceIdHasBeenSet(false),
+    m_renameRestoreHasBeenSet(false),
+    m_groupIdHasBeenSet(false)
 {
 }
 
 string RestoreInstanceRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_backupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BackupId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_backupId, allocator);
     }
 
+    if (m_targetInstanceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TargetInstanceId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_targetInstanceId.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    if (m_renameRestoreHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RenameRestore";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_renameRestore.begin(); itr != m_renameRestore.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_groupIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GroupId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_groupId.c_str(), allocator).Move(), allocator);
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -90,6 +123,54 @@ void RestoreInstanceRequest::SetBackupId(const int64_t& _backupId)
 bool RestoreInstanceRequest::BackupIdHasBeenSet() const
 {
     return m_backupIdHasBeenSet;
+}
+
+string RestoreInstanceRequest::GetTargetInstanceId() const
+{
+    return m_targetInstanceId;
+}
+
+void RestoreInstanceRequest::SetTargetInstanceId(const string& _targetInstanceId)
+{
+    m_targetInstanceId = _targetInstanceId;
+    m_targetInstanceIdHasBeenSet = true;
+}
+
+bool RestoreInstanceRequest::TargetInstanceIdHasBeenSet() const
+{
+    return m_targetInstanceIdHasBeenSet;
+}
+
+vector<RenameRestoreDatabase> RestoreInstanceRequest::GetRenameRestore() const
+{
+    return m_renameRestore;
+}
+
+void RestoreInstanceRequest::SetRenameRestore(const vector<RenameRestoreDatabase>& _renameRestore)
+{
+    m_renameRestore = _renameRestore;
+    m_renameRestoreHasBeenSet = true;
+}
+
+bool RestoreInstanceRequest::RenameRestoreHasBeenSet() const
+{
+    return m_renameRestoreHasBeenSet;
+}
+
+string RestoreInstanceRequest::GetGroupId() const
+{
+    return m_groupId;
+}
+
+void RestoreInstanceRequest::SetGroupId(const string& _groupId)
+{
+    m_groupId = _groupId;
+    m_groupIdHasBeenSet = true;
+}
+
+bool RestoreInstanceRequest::GroupIdHasBeenSet() const
+{
+    return m_groupIdHasBeenSet;
 }
 
 

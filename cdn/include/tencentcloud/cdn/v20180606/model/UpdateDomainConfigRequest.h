@@ -48,6 +48,18 @@
 #include <tencentcloud/cdn/v20180606/model/OriginPullTimeout.h>
 #include <tencentcloud/cdn/v20180606/model/AwsPrivateAccess.h>
 #include <tencentcloud/cdn/v20180606/model/UserAgentFilter.h>
+#include <tencentcloud/cdn/v20180606/model/AccessControl.h>
+#include <tencentcloud/cdn/v20180606/model/UrlRedirect.h>
+#include <tencentcloud/cdn/v20180606/model/AdvancedAuthentication.h>
+#include <tencentcloud/cdn/v20180606/model/OriginAuthentication.h>
+#include <tencentcloud/cdn/v20180606/model/Ipv6Access.h>
+#include <tencentcloud/cdn/v20180606/model/OfflineCache.h>
+#include <tencentcloud/cdn/v20180606/model/OriginCombine.h>
+#include <tencentcloud/cdn/v20180606/model/Quic.h>
+#include <tencentcloud/cdn/v20180606/model/OssPrivateAccess.h>
+#include <tencentcloud/cdn/v20180606/model/WebSocket.h>
+#include <tencentcloud/cdn/v20180606/model/RemoteAuthentication.h>
+#include <tencentcloud/cdn/v20180606/model/ShareCname.h>
 
 
 namespace TencentCloud
@@ -124,14 +136,14 @@ namespace TencentCloud
                     bool OriginHasBeenSet() const;
 
                     /**
-                     * 获取IP blacklist/whitelist configuration
-                     * @return IpFilter IP blacklist/whitelist configuration
+                     * 获取IP blocklist/allowlist configuration
+                     * @return IpFilter IP blocklist/allowlist configuration
                      */
                     IpFilter GetIpFilter() const;
 
                     /**
-                     * 设置IP blacklist/whitelist configuration
-                     * @param IpFilter IP blacklist/whitelist configuration
+                     * 设置IP blocklist/allowlist configuration
+                     * @param IpFilter IP blocklist/allowlist configuration
                      */
                     void SetIpFilter(const IpFilter& _ipFilter);
 
@@ -573,25 +585,29 @@ Applicable to cases where the acceleration domain name configuration differs for
 
                     /**
                      * 获取Domain name acceleration region
-mainland: acceleration inside mainland China
-overseas: acceleration outside mainland China
-global: global acceleration
+`mainland`: acceleration inside the Chinese mainland
+`overseas`: acceleration outside the Chinese mainland
+`global`: global acceleration
+When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
                      * @return Area Domain name acceleration region
-mainland: acceleration inside mainland China
-overseas: acceleration outside mainland China
-global: global acceleration
+`mainland`: acceleration inside the Chinese mainland
+`overseas`: acceleration outside the Chinese mainland
+`global`: global acceleration
+When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
                      */
                     std::string GetArea() const;
 
                     /**
                      * 设置Domain name acceleration region
-mainland: acceleration inside mainland China
-overseas: acceleration outside mainland China
-global: global acceleration
+`mainland`: acceleration inside the Chinese mainland
+`overseas`: acceleration outside the Chinese mainland
+`global`: global acceleration
+When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
                      * @param Area Domain name acceleration region
-mainland: acceleration inside mainland China
-overseas: acceleration outside mainland China
-global: global acceleration
+`mainland`: acceleration inside the Chinese mainland
+`overseas`: acceleration outside the Chinese mainland
+`global`: global acceleration
+When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
                      */
                     void SetArea(const std::string& _area);
 
@@ -638,14 +654,14 @@ global: global acceleration
                     bool AwsPrivateAccessHasBeenSet() const;
 
                     /**
-                     * 获取UA blacklist/whitelist Configuration
-                     * @return UserAgentFilter UA blacklist/whitelist Configuration
+                     * 获取UA blocklist/allowlist Configuration
+                     * @return UserAgentFilter UA blocklist/allowlist Configuration
                      */
                     UserAgentFilter GetUserAgentFilter() const;
 
                     /**
-                     * 设置UA blacklist/whitelist Configuration
-                     * @param UserAgentFilter UA blacklist/whitelist Configuration
+                     * 设置UA blocklist/allowlist Configuration
+                     * @param UserAgentFilter UA blocklist/allowlist Configuration
                      */
                     void SetUserAgentFilter(const UserAgentFilter& _userAgentFilter);
 
@@ -654,6 +670,240 @@ global: global acceleration
                      * @return UserAgentFilter 是否已赋值
                      */
                     bool UserAgentFilterHasBeenSet() const;
+
+                    /**
+                     * 获取Access control
+                     * @return AccessControl Access control
+                     */
+                    AccessControl GetAccessControl() const;
+
+                    /**
+                     * 设置Access control
+                     * @param AccessControl Access control
+                     */
+                    void SetAccessControl(const AccessControl& _accessControl);
+
+                    /**
+                     * 判断参数 AccessControl 是否已赋值
+                     * @return AccessControl 是否已赋值
+                     */
+                    bool AccessControlHasBeenSet() const;
+
+                    /**
+                     * 获取Configuration of URL rewriting
+                     * @return UrlRedirect Configuration of URL rewriting
+                     */
+                    UrlRedirect GetUrlRedirect() const;
+
+                    /**
+                     * 设置Configuration of URL rewriting
+                     * @param UrlRedirect Configuration of URL rewriting
+                     */
+                    void SetUrlRedirect(const UrlRedirect& _urlRedirect);
+
+                    /**
+                     * 判断参数 UrlRedirect 是否已赋值
+                     * @return UrlRedirect 是否已赋值
+                     */
+                    bool UrlRedirectHasBeenSet() const;
+
+                    /**
+                     * 获取Access port configuration
+                     * @return AccessPort Access port configuration
+                     */
+                    std::vector<int64_t> GetAccessPort() const;
+
+                    /**
+                     * 设置Access port configuration
+                     * @param AccessPort Access port configuration
+                     */
+                    void SetAccessPort(const std::vector<int64_t>& _accessPort);
+
+                    /**
+                     * 判断参数 AccessPort 是否已赋值
+                     * @return AccessPort 是否已赋值
+                     */
+                    bool AccessPortHasBeenSet() const;
+
+                    /**
+                     * 获取Timestamp hotlink protection advanced configuration (allowlist feature)
+                     * @return AdvancedAuthentication Timestamp hotlink protection advanced configuration (allowlist feature)
+                     */
+                    AdvancedAuthentication GetAdvancedAuthentication() const;
+
+                    /**
+                     * 设置Timestamp hotlink protection advanced configuration (allowlist feature)
+                     * @param AdvancedAuthentication Timestamp hotlink protection advanced configuration (allowlist feature)
+                     */
+                    void SetAdvancedAuthentication(const AdvancedAuthentication& _advancedAuthentication);
+
+                    /**
+                     * 判断参数 AdvancedAuthentication 是否已赋值
+                     * @return AdvancedAuthentication 是否已赋值
+                     */
+                    bool AdvancedAuthenticationHasBeenSet() const;
+
+                    /**
+                     * 获取Origin-pull authentication advanced configuration (allowlist feature)
+                     * @return OriginAuthentication Origin-pull authentication advanced configuration (allowlist feature)
+                     */
+                    OriginAuthentication GetOriginAuthentication() const;
+
+                    /**
+                     * 设置Origin-pull authentication advanced configuration (allowlist feature)
+                     * @param OriginAuthentication Origin-pull authentication advanced configuration (allowlist feature)
+                     */
+                    void SetOriginAuthentication(const OriginAuthentication& _originAuthentication);
+
+                    /**
+                     * 判断参数 OriginAuthentication 是否已赋值
+                     * @return OriginAuthentication 是否已赋值
+                     */
+                    bool OriginAuthenticationHasBeenSet() const;
+
+                    /**
+                     * 获取IPv6 access configuration
+                     * @return Ipv6Access IPv6 access configuration
+                     */
+                    Ipv6Access GetIpv6Access() const;
+
+                    /**
+                     * 设置IPv6 access configuration
+                     * @param Ipv6Access IPv6 access configuration
+                     */
+                    void SetIpv6Access(const Ipv6Access& _ipv6Access);
+
+                    /**
+                     * 判断参数 Ipv6Access 是否已赋值
+                     * @return Ipv6Access 是否已赋值
+                     */
+                    bool Ipv6AccessHasBeenSet() const;
+
+                    /**
+                     * 获取Offline cache
+                     * @return OfflineCache Offline cache
+                     */
+                    OfflineCache GetOfflineCache() const;
+
+                    /**
+                     * 设置Offline cache
+                     * @param OfflineCache Offline cache
+                     */
+                    void SetOfflineCache(const OfflineCache& _offlineCache);
+
+                    /**
+                     * 判断参数 OfflineCache 是否已赋值
+                     * @return OfflineCache 是否已赋值
+                     */
+                    bool OfflineCacheHasBeenSet() const;
+
+                    /**
+                     * 获取Merging pull requests
+                     * @return OriginCombine Merging pull requests
+                     */
+                    OriginCombine GetOriginCombine() const;
+
+                    /**
+                     * 设置Merging pull requests
+                     * @param OriginCombine Merging pull requests
+                     */
+                    void SetOriginCombine(const OriginCombine& _originCombine);
+
+                    /**
+                     * 判断参数 OriginCombine 是否已赋值
+                     * @return OriginCombine 是否已赋值
+                     */
+                    bool OriginCombineHasBeenSet() const;
+
+                    /**
+                     * 获取QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+                     * @return Quic QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+                     */
+                    Quic GetQuic() const;
+
+                    /**
+                     * 设置QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+                     * @param Quic QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+                     */
+                    void SetQuic(const Quic& _quic);
+
+                    /**
+                     * 判断参数 Quic 是否已赋值
+                     * @return Quic 是否已赋值
+                     */
+                    bool QuicHasBeenSet() const;
+
+                    /**
+                     * 获取Access authentication for OSS origin
+                     * @return OssPrivateAccess Access authentication for OSS origin
+                     */
+                    OssPrivateAccess GetOssPrivateAccess() const;
+
+                    /**
+                     * 设置Access authentication for OSS origin
+                     * @param OssPrivateAccess Access authentication for OSS origin
+                     */
+                    void SetOssPrivateAccess(const OssPrivateAccess& _ossPrivateAccess);
+
+                    /**
+                     * 判断参数 OssPrivateAccess 是否已赋值
+                     * @return OssPrivateAccess 是否已赋值
+                     */
+                    bool OssPrivateAccessHasBeenSet() const;
+
+                    /**
+                     * 获取WebSocket configuration.
+                     * @return WebSocket WebSocket configuration.
+                     */
+                    WebSocket GetWebSocket() const;
+
+                    /**
+                     * 设置WebSocket configuration.
+                     * @param WebSocket WebSocket configuration.
+                     */
+                    void SetWebSocket(const WebSocket& _webSocket);
+
+                    /**
+                     * 判断参数 WebSocket 是否已赋值
+                     * @return WebSocket 是否已赋值
+                     */
+                    bool WebSocketHasBeenSet() const;
+
+                    /**
+                     * 获取Configuration of remote authentication
+                     * @return RemoteAuthentication Configuration of remote authentication
+                     */
+                    RemoteAuthentication GetRemoteAuthentication() const;
+
+                    /**
+                     * 设置Configuration of remote authentication
+                     * @param RemoteAuthentication Configuration of remote authentication
+                     */
+                    void SetRemoteAuthentication(const RemoteAuthentication& _remoteAuthentication);
+
+                    /**
+                     * 判断参数 RemoteAuthentication 是否已赋值
+                     * @return RemoteAuthentication 是否已赋值
+                     */
+                    bool RemoteAuthenticationHasBeenSet() const;
+
+                    /**
+                     * 获取Shared CNAME configuration (only available to beta users)
+                     * @return ShareCname Shared CNAME configuration (only available to beta users)
+                     */
+                    ShareCname GetShareCname() const;
+
+                    /**
+                     * 设置Shared CNAME configuration (only available to beta users)
+                     * @param ShareCname Shared CNAME configuration (only available to beta users)
+                     */
+                    void SetShareCname(const ShareCname& _shareCname);
+
+                    /**
+                     * 判断参数 ShareCname 是否已赋值
+                     * @return ShareCname 是否已赋值
+                     */
+                    bool ShareCnameHasBeenSet() const;
 
                 private:
 
@@ -676,7 +926,7 @@ global: global acceleration
                     bool m_originHasBeenSet;
 
                     /**
-                     * IP blacklist/whitelist configuration
+                     * IP blocklist/allowlist configuration
                      */
                     IpFilter m_ipFilter;
                     bool m_ipFilterHasBeenSet;
@@ -825,9 +1075,10 @@ Applicable to cases where the acceleration domain name configuration differs for
 
                     /**
                      * Domain name acceleration region
-mainland: acceleration inside mainland China
-overseas: acceleration outside mainland China
-global: global acceleration
+`mainland`: acceleration inside the Chinese mainland
+`overseas`: acceleration outside the Chinese mainland
+`global`: global acceleration
+When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
@@ -845,10 +1096,88 @@ global: global acceleration
                     bool m_awsPrivateAccessHasBeenSet;
 
                     /**
-                     * UA blacklist/whitelist Configuration
+                     * UA blocklist/allowlist Configuration
                      */
                     UserAgentFilter m_userAgentFilter;
                     bool m_userAgentFilterHasBeenSet;
+
+                    /**
+                     * Access control
+                     */
+                    AccessControl m_accessControl;
+                    bool m_accessControlHasBeenSet;
+
+                    /**
+                     * Configuration of URL rewriting
+                     */
+                    UrlRedirect m_urlRedirect;
+                    bool m_urlRedirectHasBeenSet;
+
+                    /**
+                     * Access port configuration
+                     */
+                    std::vector<int64_t> m_accessPort;
+                    bool m_accessPortHasBeenSet;
+
+                    /**
+                     * Timestamp hotlink protection advanced configuration (allowlist feature)
+                     */
+                    AdvancedAuthentication m_advancedAuthentication;
+                    bool m_advancedAuthenticationHasBeenSet;
+
+                    /**
+                     * Origin-pull authentication advanced configuration (allowlist feature)
+                     */
+                    OriginAuthentication m_originAuthentication;
+                    bool m_originAuthenticationHasBeenSet;
+
+                    /**
+                     * IPv6 access configuration
+                     */
+                    Ipv6Access m_ipv6Access;
+                    bool m_ipv6AccessHasBeenSet;
+
+                    /**
+                     * Offline cache
+                     */
+                    OfflineCache m_offlineCache;
+                    bool m_offlineCacheHasBeenSet;
+
+                    /**
+                     * Merging pull requests
+                     */
+                    OriginCombine m_originCombine;
+                    bool m_originCombineHasBeenSet;
+
+                    /**
+                     * QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+                     */
+                    Quic m_quic;
+                    bool m_quicHasBeenSet;
+
+                    /**
+                     * Access authentication for OSS origin
+                     */
+                    OssPrivateAccess m_ossPrivateAccess;
+                    bool m_ossPrivateAccessHasBeenSet;
+
+                    /**
+                     * WebSocket configuration.
+                     */
+                    WebSocket m_webSocket;
+                    bool m_webSocketHasBeenSet;
+
+                    /**
+                     * Configuration of remote authentication
+                     */
+                    RemoteAuthentication m_remoteAuthentication;
+                    bool m_remoteAuthenticationHasBeenSet;
+
+                    /**
+                     * Shared CNAME configuration (only available to beta users)
+                     */
+                    ShareCname m_shareCname;
+                    bool m_shareCnameHasBeenSet;
 
                 };
             }

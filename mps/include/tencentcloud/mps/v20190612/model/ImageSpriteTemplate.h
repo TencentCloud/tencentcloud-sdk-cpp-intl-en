@@ -145,14 +145,26 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResolutionAdaptive 
+                     * 获取Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
+                     * @return ResolutionAdaptive Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
                      */
                     std::string GetResolutionAdaptive() const;
 
                     /**
-                     * 设置
-                     * @param ResolutionAdaptive 
+                     * 设置Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
+                     * @param ResolutionAdaptive Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
                      */
                     void SetResolutionAdaptive(const std::string& _resolutionAdaptive);
 
@@ -235,14 +247,14 @@ namespace TencentCloud
                     bool ColumnCountHasBeenSet() const;
 
                     /**
-                     * 获取Creation time of a template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-                     * @return CreateTime Creation time of a template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * 获取Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * @return CreateTime Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time of a template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-                     * @param CreateTime Creation time of a template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * 设置Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * @param CreateTime Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
                      */
                     void SetCreateTime(const std::string& _createTime);
 
@@ -253,14 +265,14 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Last modified time of a template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-                     * @return UpdateTime Last modified time of a template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * 获取Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * @return UpdateTime Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Last modified time of a template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-                     * @param UpdateTime Last modified time of a template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * 设置Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * @param UpdateTime Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
@@ -301,14 +313,14 @@ Default value: black.
                     bool FillTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Comment 
+                     * 获取Template description.
+                     * @return Comment Template description.
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置
-                     * @param Comment 
+                     * 设置Template description.
+                     * @param Comment Template description.
                      */
                     void SetComment(const std::string& _comment);
 
@@ -353,7 +365,10 @@ Default value: black.
                     bool m_heightHasBeenSet;
 
                     /**
-                     * 
+                     * Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
                      */
                     std::string m_resolutionAdaptive;
                     bool m_resolutionAdaptiveHasBeenSet;
@@ -383,13 +398,13 @@ Default value: black.
                     bool m_columnCountHasBeenSet;
 
                     /**
-                     * Creation time of a template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Last modified time of a template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
@@ -404,7 +419,7 @@ Default value: black.
                     bool m_fillTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Template description.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;

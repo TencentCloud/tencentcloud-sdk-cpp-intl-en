@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Sqlserver::V20180328::Model;
-using namespace rapidjson;
 using namespace std;
 
 UpgradeDBInstanceRequest::UpgradeDBInstanceRequest() :
@@ -28,28 +27,32 @@ UpgradeDBInstanceRequest::UpgradeDBInstanceRequest() :
     m_memoryHasBeenSet(false),
     m_storageHasBeenSet(false),
     m_autoVoucherHasBeenSet(false),
-    m_voucherIdsHasBeenSet(false)
+    m_voucherIdsHasBeenSet(false),
+    m_cpuHasBeenSet(false),
+    m_dBVersionHasBeenSet(false),
+    m_hATypeHasBeenSet(false),
+    m_multiZonesHasBeenSet(false)
 {
 }
 
 string UpgradeDBInstanceRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_memoryHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Memory";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_memory, allocator);
@@ -57,7 +60,7 @@ string UpgradeDBInstanceRequest::ToJsonString() const
 
     if (m_storageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Storage";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_storage, allocator);
@@ -65,7 +68,7 @@ string UpgradeDBInstanceRequest::ToJsonString() const
 
     if (m_autoVoucherHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AutoVoucher";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_autoVoucher, allocator);
@@ -73,20 +76,52 @@ string UpgradeDBInstanceRequest::ToJsonString() const
 
     if (m_voucherIdsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VoucherIds";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_voucherIds.begin(); itr != m_voucherIds.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
+    if (m_cpuHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Cpu";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_cpu, allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    if (m_dBVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DBVersion";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_dBVersion.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_hATypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HAType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_hAType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_multiZonesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MultiZones";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_multiZones.c_str(), allocator).Move(), allocator);
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -170,6 +205,70 @@ void UpgradeDBInstanceRequest::SetVoucherIds(const vector<string>& _voucherIds)
 bool UpgradeDBInstanceRequest::VoucherIdsHasBeenSet() const
 {
     return m_voucherIdsHasBeenSet;
+}
+
+int64_t UpgradeDBInstanceRequest::GetCpu() const
+{
+    return m_cpu;
+}
+
+void UpgradeDBInstanceRequest::SetCpu(const int64_t& _cpu)
+{
+    m_cpu = _cpu;
+    m_cpuHasBeenSet = true;
+}
+
+bool UpgradeDBInstanceRequest::CpuHasBeenSet() const
+{
+    return m_cpuHasBeenSet;
+}
+
+string UpgradeDBInstanceRequest::GetDBVersion() const
+{
+    return m_dBVersion;
+}
+
+void UpgradeDBInstanceRequest::SetDBVersion(const string& _dBVersion)
+{
+    m_dBVersion = _dBVersion;
+    m_dBVersionHasBeenSet = true;
+}
+
+bool UpgradeDBInstanceRequest::DBVersionHasBeenSet() const
+{
+    return m_dBVersionHasBeenSet;
+}
+
+string UpgradeDBInstanceRequest::GetHAType() const
+{
+    return m_hAType;
+}
+
+void UpgradeDBInstanceRequest::SetHAType(const string& _hAType)
+{
+    m_hAType = _hAType;
+    m_hATypeHasBeenSet = true;
+}
+
+bool UpgradeDBInstanceRequest::HATypeHasBeenSet() const
+{
+    return m_hATypeHasBeenSet;
+}
+
+string UpgradeDBInstanceRequest::GetMultiZones() const
+{
+    return m_multiZones;
+}
+
+void UpgradeDBInstanceRequest::SetMultiZones(const string& _multiZones)
+{
+    m_multiZones = _multiZones;
+    m_multiZonesHasBeenSet = true;
+}
+
+bool UpgradeDBInstanceRequest::MultiZonesHasBeenSet() const
+{
+    return m_multiZonesHasBeenSet;
 }
 
 

@@ -20,61 +20,44 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 DeleteFlowLogRequest::DeleteFlowLogRequest() :
-    m_vpcIdHasBeenSet(false),
-    m_flowLogIdHasBeenSet(false)
+    m_flowLogIdHasBeenSet(false),
+    m_vpcIdHasBeenSet(false)
 {
 }
 
 string DeleteFlowLogRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
-
-    if (m_vpcIdHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "VpcId";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_vpcId.c_str(), allocator).Move(), allocator);
-    }
 
     if (m_flowLogIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FlowLogId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_flowLogId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_flowLogId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_vpcIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VpcId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_vpcId.c_str(), allocator).Move(), allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
 
-
-string DeleteFlowLogRequest::GetVpcId() const
-{
-    return m_vpcId;
-}
-
-void DeleteFlowLogRequest::SetVpcId(const string& _vpcId)
-{
-    m_vpcId = _vpcId;
-    m_vpcIdHasBeenSet = true;
-}
-
-bool DeleteFlowLogRequest::VpcIdHasBeenSet() const
-{
-    return m_vpcIdHasBeenSet;
-}
 
 string DeleteFlowLogRequest::GetFlowLogId() const
 {
@@ -90,6 +73,22 @@ void DeleteFlowLogRequest::SetFlowLogId(const string& _flowLogId)
 bool DeleteFlowLogRequest::FlowLogIdHasBeenSet() const
 {
     return m_flowLogIdHasBeenSet;
+}
+
+string DeleteFlowLogRequest::GetVpcId() const
+{
+    return m_vpcId;
+}
+
+void DeleteFlowLogRequest::SetVpcId(const string& _vpcId)
+{
+    m_vpcId = _vpcId;
+    m_vpcIdHasBeenSet = true;
+}
+
+bool DeleteFlowLogRequest::VpcIdHasBeenSet() const
+{
+    return m_vpcIdHasBeenSet;
 }
 
 

@@ -20,41 +20,56 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateCustomerGatewayRequest::CreateCustomerGatewayRequest() :
     m_customerGatewayNameHasBeenSet(false),
-    m_ipAddressHasBeenSet(false)
+    m_ipAddressHasBeenSet(false),
+    m_tagsHasBeenSet(false)
 {
 }
 
 string CreateCustomerGatewayRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_customerGatewayNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CustomerGatewayName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_customerGatewayName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_customerGatewayName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ipAddressHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IpAddress";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_ipAddress.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_ipAddress.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -90,6 +105,22 @@ void CreateCustomerGatewayRequest::SetIpAddress(const string& _ipAddress)
 bool CreateCustomerGatewayRequest::IpAddressHasBeenSet() const
 {
     return m_ipAddressHasBeenSet;
+}
+
+vector<Tag> CreateCustomerGatewayRequest::GetTags() const
+{
+    return m_tags;
+}
+
+void CreateCustomerGatewayRequest::SetTags(const vector<Tag>& _tags)
+{
+    m_tags = _tags;
+    m_tagsHasBeenSet = true;
+}
+
+bool CreateCustomerGatewayRequest::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
 }
 
 

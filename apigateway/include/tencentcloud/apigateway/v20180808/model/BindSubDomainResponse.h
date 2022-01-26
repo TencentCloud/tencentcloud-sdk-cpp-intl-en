@@ -40,9 +40,31 @@ namespace TencentCloud
                     BindSubDomainResponse();
                     ~BindSubDomainResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
+
+                    /**
+                     * 获取Whether binding succeeded.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return Result Whether binding succeeded.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool GetResult() const;
+
+                    /**
+                     * 判断参数 Result 是否已赋值
+                     * @return Result 是否已赋值
+                     */
+                    bool ResultHasBeenSet() const;
 
                 private:
+
+                    /**
+                     * Whether binding succeeded.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool m_result;
+                    bool m_resultHasBeenSet;
 
                 };
             }

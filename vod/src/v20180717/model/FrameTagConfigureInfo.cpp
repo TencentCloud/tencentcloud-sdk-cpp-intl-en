@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 FrameTagConfigureInfo::FrameTagConfigureInfo() :
@@ -27,7 +26,7 @@ FrameTagConfigureInfo::FrameTagConfigureInfo() :
 {
 }
 
-CoreInternalOutcome FrameTagConfigureInfo::Deserialize(const Value &value)
+CoreInternalOutcome FrameTagConfigureInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome FrameTagConfigureInfo::Deserialize(const Value &value)
     {
         if (!value["Switch"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FrameTagConfigureInfo.Switch` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FrameTagConfigureInfo.Switch` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_switch = string(value["Switch"].GetString());
         m_switchHasBeenSet = true;
@@ -44,9 +43,9 @@ CoreInternalOutcome FrameTagConfigureInfo::Deserialize(const Value &value)
 
     if (value.HasMember("ScreenshotInterval") && !value["ScreenshotInterval"].IsNull())
     {
-        if (!value["ScreenshotInterval"].IsDouble())
+        if (!value["ScreenshotInterval"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `FrameTagConfigureInfo.ScreenshotInterval` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FrameTagConfigureInfo.ScreenshotInterval` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_screenshotInterval = value["ScreenshotInterval"].GetDouble();
         m_screenshotIntervalHasBeenSet = true;
@@ -56,20 +55,20 @@ CoreInternalOutcome FrameTagConfigureInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void FrameTagConfigureInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void FrameTagConfigureInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_switchHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Switch";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_switch.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_switch.c_str(), allocator).Move(), allocator);
     }
 
     if (m_screenshotIntervalHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ScreenshotInterval";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_screenshotInterval, allocator);

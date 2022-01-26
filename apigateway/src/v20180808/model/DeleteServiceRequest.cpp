@@ -20,32 +20,40 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 DeleteServiceRequest::DeleteServiceRequest() :
-    m_serviceIdHasBeenSet(false)
+    m_serviceIdHasBeenSet(false),
+    m_skipVerificationHasBeenSet(false)
 {
 }
 
 string DeleteServiceRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_serviceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_serviceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_serviceId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_skipVerificationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SkipVerification";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_skipVerification, allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -65,6 +73,22 @@ void DeleteServiceRequest::SetServiceId(const string& _serviceId)
 bool DeleteServiceRequest::ServiceIdHasBeenSet() const
 {
     return m_serviceIdHasBeenSet;
+}
+
+int64_t DeleteServiceRequest::GetSkipVerification() const
+{
+    return m_skipVerification;
+}
+
+void DeleteServiceRequest::SetSkipVerification(const int64_t& _skipVerification)
+{
+    m_skipVerification = _skipVerification;
+    m_skipVerificationHasBeenSet = true;
+}
+
+bool DeleteServiceRequest::SkipVerificationHasBeenSet() const
+{
+    return m_skipVerificationHasBeenSet;
 }
 
 

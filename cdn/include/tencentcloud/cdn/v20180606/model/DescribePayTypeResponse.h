@@ -40,17 +40,20 @@ namespace TencentCloud
                     DescribePayTypeResponse();
                     ~DescribePayTypeResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
                      * 获取Billing modes:
 `flux`: bill-by-traffic
 `bandwidth`: bill-by-bandwidth
-When you switch the billing mode for a daily-billing-cycle account, if there is bandwidth usage on the day, this field indicates the billing mode that will take effect on the next day; otherwise, it indicates the billing mode that has already taken effect
+`request`: bill-by-request
+In case the billing mode is changed in the day, if there is bandwidth consumption occurred in the current day, the billing mode returned is the new billing mode for the next day. If no bandwidth consumption occurs, it indicates the current billing mode.
                      * @return PayType Billing modes:
 `flux`: bill-by-traffic
 `bandwidth`: bill-by-bandwidth
-When you switch the billing mode for a daily-billing-cycle account, if there is bandwidth usage on the day, this field indicates the billing mode that will take effect on the next day; otherwise, it indicates the billing mode that has already taken effect
+`request`: bill-by-request
+In case the billing mode is changed in the day, if there is bandwidth consumption occurred in the current day, the billing mode returned is the new billing mode for the next day. If no bandwidth consumption occurs, it indicates the current billing mode.
                      */
                     std::string GetPayType() const;
 
@@ -77,18 +80,16 @@ month: monthly settlement
                     bool BillingCycleHasBeenSet() const;
 
                     /**
-                     * 获取Billing method:
-monthMax: billed by the monthly average of daily peak traffic (monthly settlement)
-day95: billed by the daily 95th percentile bandwidth (monthly settlement)
-month95: billed by the monthly 95th percentile bandwidth (monthly settlement)
-sum: billed by the total traffic (daily or monthly settlement)
-max: billed by the peak bandwidth (daily settlement)
-                     * @return StatType Billing method:
-monthMax: billed by the monthly average of daily peak traffic (monthly settlement)
-day95: billed by the daily 95th percentile bandwidth (monthly settlement)
-month95: billed by the monthly 95th percentile bandwidth (monthly settlement)
-sum: billed by the total traffic (daily or monthly settlement)
-max: billed by the peak bandwidth (daily settlement)
+                     * 获取`monthMax`: billed by the monthly average of daily peak traffic (monthly settlement)
+`day95`: billed by the daily 95th percentile bandwidth (monthly settlement)
+`month95`: billed by the monthly 95th percentile bandwidth (monthly settlement)
+`sum`: billed by the total traffic/total requests (daily or monthly settlement)
+`max`: billed by the peak bandwidth (daily settlement)
+                     * @return StatType `monthMax`: billed by the monthly average of daily peak traffic (monthly settlement)
+`day95`: billed by the daily 95th percentile bandwidth (monthly settlement)
+`month95`: billed by the monthly 95th percentile bandwidth (monthly settlement)
+`sum`: billed by the total traffic/total requests (daily or monthly settlement)
+`max`: billed by the peak bandwidth (daily settlement)
                      */
                     std::string GetStatType() const;
 
@@ -115,12 +116,14 @@ max: billed by the peak bandwidth (daily settlement)
                     bool RegionTypeHasBeenSet() const;
 
                     /**
-                     * 获取Currently billing mode in effect:
+                     * 获取The current billing mode in effect:
 `flux`: bill-by-traffic
 `bandwidth`: bill-by-bandwidth
-                     * @return CurrentPayType Currently billing mode in effect:
+`request`: bill-by-request
+                     * @return CurrentPayType The current billing mode in effect:
 `flux`: bill-by-traffic
 `bandwidth`: bill-by-bandwidth
+`request`: bill-by-request
                      */
                     std::string GetCurrentPayType() const;
 
@@ -136,7 +139,8 @@ max: billed by the peak bandwidth (daily settlement)
                      * Billing modes:
 `flux`: bill-by-traffic
 `bandwidth`: bill-by-bandwidth
-When you switch the billing mode for a daily-billing-cycle account, if there is bandwidth usage on the day, this field indicates the billing mode that will take effect on the next day; otherwise, it indicates the billing mode that has already taken effect
+`request`: bill-by-request
+In case the billing mode is changed in the day, if there is bandwidth consumption occurred in the current day, the billing mode returned is the new billing mode for the next day. If no bandwidth consumption occurs, it indicates the current billing mode.
                      */
                     std::string m_payType;
                     bool m_payTypeHasBeenSet;
@@ -150,12 +154,11 @@ month: monthly settlement
                     bool m_billingCycleHasBeenSet;
 
                     /**
-                     * Billing method:
-monthMax: billed by the monthly average of daily peak traffic (monthly settlement)
-day95: billed by the daily 95th percentile bandwidth (monthly settlement)
-month95: billed by the monthly 95th percentile bandwidth (monthly settlement)
-sum: billed by the total traffic (daily or monthly settlement)
-max: billed by the peak bandwidth (daily settlement)
+                     * `monthMax`: billed by the monthly average of daily peak traffic (monthly settlement)
+`day95`: billed by the daily 95th percentile bandwidth (monthly settlement)
+`month95`: billed by the monthly 95th percentile bandwidth (monthly settlement)
+`sum`: billed by the total traffic/total requests (daily or monthly settlement)
+`max`: billed by the peak bandwidth (daily settlement)
                      */
                     std::string m_statType;
                     bool m_statTypeHasBeenSet;
@@ -169,9 +172,10 @@ max: billed by the peak bandwidth (daily settlement)
                     bool m_regionTypeHasBeenSet;
 
                     /**
-                     * Currently billing mode in effect:
+                     * The current billing mode in effect:
 `flux`: bill-by-traffic
 `bandwidth`: bill-by-bandwidth
+`request`: bill-by-request
                      */
                     std::string m_currentPayType;
                     bool m_currentPayTypeHasBeenSet;

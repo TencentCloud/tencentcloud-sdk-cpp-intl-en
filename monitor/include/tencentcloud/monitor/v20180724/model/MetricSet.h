@@ -193,6 +193,50 @@ namespace TencentCloud
                      */
                     bool DimensionsHasBeenSet() const;
 
+                    /**
+                     * 获取Metric name (in Chinese).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return MetricCName Metric name (in Chinese).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetMetricCName() const;
+
+                    /**
+                     * 设置Metric name (in Chinese).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param MetricCName Metric name (in Chinese).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetMetricCName(const std::string& _metricCName);
+
+                    /**
+                     * 判断参数 MetricCName 是否已赋值
+                     * @return MetricCName 是否已赋值
+                     */
+                    bool MetricCNameHasBeenSet() const;
+
+                    /**
+                     * 获取Metric name (in English).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return MetricEName Metric name (in English).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetMetricEName() const;
+
+                    /**
+                     * 设置Metric name (in English).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param MetricEName Metric name (in English).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetMetricEName(const std::string& _metricEName);
+
+                    /**
+                     * 判断参数 MetricEName 是否已赋值
+                     * @return MetricEName 是否已赋值
+                     */
+                    bool MetricENameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -242,6 +286,20 @@ namespace TencentCloud
                      */
                     std::vector<DimensionsDesc> m_dimensions;
                     bool m_dimensionsHasBeenSet;
+
+                    /**
+                     * Metric name (in Chinese).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_metricCName;
+                    bool m_metricCNameHasBeenSet;
+
+                    /**
+                     * Metric name (in English).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_metricEName;
+                    bool m_metricENameHasBeenSet;
 
                 };
             }

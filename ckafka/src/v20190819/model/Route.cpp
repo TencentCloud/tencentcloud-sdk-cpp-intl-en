@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ckafka::V20190819::Model;
-using namespace rapidjson;
 using namespace std;
 
 Route::Route() :
@@ -27,11 +26,12 @@ Route::Route() :
     m_vipTypeHasBeenSet(false),
     m_vipListHasBeenSet(false),
     m_domainHasBeenSet(false),
-    m_domainPortHasBeenSet(false)
+    m_domainPortHasBeenSet(false),
+    m_deleteTimestampHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome Route::Deserialize(const Value &value)
+CoreInternalOutcome Route::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +40,7 @@ CoreInternalOutcome Route::Deserialize(const Value &value)
     {
         if (!value["AccessType"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Route.AccessType` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Route.AccessType` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_accessType = value["AccessType"].GetInt64();
         m_accessTypeHasBeenSet = true;
@@ -50,7 +50,7 @@ CoreInternalOutcome Route::Deserialize(const Value &value)
     {
         if (!value["RouteId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Route.RouteId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Route.RouteId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_routeId = value["RouteId"].GetInt64();
         m_routeIdHasBeenSet = true;
@@ -60,7 +60,7 @@ CoreInternalOutcome Route::Deserialize(const Value &value)
     {
         if (!value["VipType"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Route.VipType` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Route.VipType` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_vipType = value["VipType"].GetInt64();
         m_vipTypeHasBeenSet = true;
@@ -69,10 +69,10 @@ CoreInternalOutcome Route::Deserialize(const Value &value)
     if (value.HasMember("VipList") && !value["VipList"].IsNull())
     {
         if (!value["VipList"].IsArray())
-            return CoreInternalOutcome(Error("response `Route.VipList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Route.VipList` is not array type"));
 
-        const Value &tmpValue = value["VipList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["VipList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             VipEntity item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -90,7 +90,7 @@ CoreInternalOutcome Route::Deserialize(const Value &value)
     {
         if (!value["Domain"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Route.Domain` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Route.Domain` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_domain = string(value["Domain"].GetString());
         m_domainHasBeenSet = true;
@@ -100,22 +100,32 @@ CoreInternalOutcome Route::Deserialize(const Value &value)
     {
         if (!value["DomainPort"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Route.DomainPort` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Route.DomainPort` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_domainPort = value["DomainPort"].GetInt64();
         m_domainPortHasBeenSet = true;
+    }
+
+    if (value.HasMember("DeleteTimestamp") && !value["DeleteTimestamp"].IsNull())
+    {
+        if (!value["DeleteTimestamp"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Route.DeleteTimestamp` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_deleteTimestamp = string(value["DeleteTimestamp"].GetString());
+        m_deleteTimestampHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void Route::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Route::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_accessTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AccessType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_accessType, allocator);
@@ -123,7 +133,7 @@ void Route::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
 
     if (m_routeIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RouteId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_routeId, allocator);
@@ -131,7 +141,7 @@ void Route::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
 
     if (m_vipTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VipType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_vipType, allocator);
@@ -139,33 +149,41 @@ void Route::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
 
     if (m_vipListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VipList";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_vipList.begin(); itr != m_vipList.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_domainHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Domain";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_domain.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_domain.c_str(), allocator).Move(), allocator);
     }
 
     if (m_domainPortHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DomainPort";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_domainPort, allocator);
+    }
+
+    if (m_deleteTimestampHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DeleteTimestamp";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_deleteTimestamp.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -265,5 +283,21 @@ void Route::SetDomainPort(const int64_t& _domainPort)
 bool Route::DomainPortHasBeenSet() const
 {
     return m_domainPortHasBeenSet;
+}
+
+string Route::GetDeleteTimestamp() const
+{
+    return m_deleteTimestamp;
+}
+
+void Route::SetDeleteTimestamp(const string& _deleteTimestamp)
+{
+    m_deleteTimestamp = _deleteTimestamp;
+    m_deleteTimestampHasBeenSet = true;
+}
+
+bool Route::DeleteTimestampHasBeenSet() const
+{
+    return m_deleteTimestampHasBeenSet;
 }
 

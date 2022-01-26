@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vpc/v20170312/model/ServicesInfo.h>
 
 
 namespace TencentCloud
@@ -61,14 +62,14 @@ namespace TencentCloud
                     bool ServiceTemplateNameHasBeenSet() const;
 
                     /**
-                     * 获取It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
-                     * @return Services It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
+                     * 获取Supported ports inlcude single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
+                     * @return Services Supported ports inlcude single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
                      */
                     std::vector<std::string> GetServices() const;
 
                     /**
-                     * 设置It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
-                     * @param Services It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
+                     * 设置Supported ports inlcude single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
+                     * @param Services Supported ports inlcude single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
                      */
                     void SetServices(const std::vector<std::string>& _services);
 
@@ -77,6 +78,24 @@ namespace TencentCloud
                      * @return Services 是否已赋值
                      */
                     bool ServicesHasBeenSet() const;
+
+                    /**
+                     * 获取You can add remarks. Supported ports include single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
+                     * @return ServicesExtra You can add remarks. Supported ports include single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
+                     */
+                    std::vector<ServicesInfo> GetServicesExtra() const;
+
+                    /**
+                     * 设置You can add remarks. Supported ports include single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
+                     * @param ServicesExtra You can add remarks. Supported ports include single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
+                     */
+                    void SetServicesExtra(const std::vector<ServicesInfo>& _servicesExtra);
+
+                    /**
+                     * 判断参数 ServicesExtra 是否已赋值
+                     * @return ServicesExtra 是否已赋值
+                     */
+                    bool ServicesExtraHasBeenSet() const;
 
                 private:
 
@@ -87,10 +106,16 @@ namespace TencentCloud
                     bool m_serviceTemplateNameHasBeenSet;
 
                     /**
-                     * It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
+                     * Supported ports inlcude single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
                      */
                     std::vector<std::string> m_services;
                     bool m_servicesHasBeenSet;
+
+                    /**
+                     * You can add remarks. Supported ports include single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
+                     */
+                    std::vector<ServicesInfo> m_servicesExtra;
+                    bool m_servicesExtraHasBeenSet;
 
                 };
             }

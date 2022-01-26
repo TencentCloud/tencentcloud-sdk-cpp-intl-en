@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC’s CIDR or the CIDRs of other clusters in the same VPC.
-                     * @return ClusterCIDR CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC’s CIDR or the CIDRs of other clusters in the same VPC.
+                     * 获取CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC.
+                     * @return ClusterCIDR CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC.
                      */
                     std::string GetClusterCIDR() const;
 
                     /**
-                     * 设置CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC’s CIDR or the CIDRs of other clusters in the same VPC.
-                     * @param ClusterCIDR CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC’s CIDR or the CIDRs of other clusters in the same VPC.
+                     * 设置CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC.
+                     * @param ClusterCIDR CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC.
                      */
                     void SetClusterCIDR(const std::string& _clusterCIDR);
 
@@ -172,10 +172,76 @@ namespace TencentCloud
                      */
                     bool CniHasBeenSet() const;
 
+                    /**
+                     * 获取The network mode of service. This parameter is only applicable to ipvs+bpf mode.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @return KubeProxyMode The network mode of service. This parameter is only applicable to ipvs+bpf mode.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetKubeProxyMode() const;
+
+                    /**
+                     * 设置The network mode of service. This parameter is only applicable to ipvs+bpf mode.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @param KubeProxyMode The network mode of service. This parameter is only applicable to ipvs+bpf mode.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetKubeProxyMode(const std::string& _kubeProxyMode);
+
+                    /**
+                     * 判断参数 KubeProxyMode 是否已赋值
+                     * @return KubeProxyMode 是否已赋值
+                     */
+                    bool KubeProxyModeHasBeenSet() const;
+
+                    /**
+                     * 获取The IP range for service assignment. It cannot conflict with the VPC’s CIDR block nor the CIDR blocks of other clusters in the same VPC.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @return ServiceCIDR The IP range for service assignment. It cannot conflict with the VPC’s CIDR block nor the CIDR blocks of other clusters in the same VPC.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetServiceCIDR() const;
+
+                    /**
+                     * 设置The IP range for service assignment. It cannot conflict with the VPC’s CIDR block nor the CIDR blocks of other clusters in the same VPC.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @param ServiceCIDR The IP range for service assignment. It cannot conflict with the VPC’s CIDR block nor the CIDR blocks of other clusters in the same VPC.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetServiceCIDR(const std::string& _serviceCIDR);
+
+                    /**
+                     * 判断参数 ServiceCIDR 是否已赋值
+                     * @return ServiceCIDR 是否已赋值
+                     */
+                    bool ServiceCIDRHasBeenSet() const;
+
+                    /**
+                     * 获取The container subnet associated with the cluster
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @return Subnets The container subnet associated with the cluster
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<std::string> GetSubnets() const;
+
+                    /**
+                     * 设置The container subnet associated with the cluster
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @param Subnets The container subnet associated with the cluster
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetSubnets(const std::vector<std::string>& _subnets);
+
+                    /**
+                     * 判断参数 Subnets 是否已赋值
+                     * @return Subnets 是否已赋值
+                     */
+                    bool SubnetsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC’s CIDR or the CIDRs of other clusters in the same VPC.
+                     * CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC.
                      */
                     std::string m_clusterCIDR;
                     bool m_clusterCIDRHasBeenSet;
@@ -215,6 +281,27 @@ namespace TencentCloud
                      */
                     bool m_cni;
                     bool m_cniHasBeenSet;
+
+                    /**
+                     * The network mode of service. This parameter is only applicable to ipvs+bpf mode.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_kubeProxyMode;
+                    bool m_kubeProxyModeHasBeenSet;
+
+                    /**
+                     * The IP range for service assignment. It cannot conflict with the VPC’s CIDR block nor the CIDR blocks of other clusters in the same VPC.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_serviceCIDR;
+                    bool m_serviceCIDRHasBeenSet;
+
+                    /**
+                     * The container subnet associated with the cluster
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<std::string> m_subnets;
+                    bool m_subnetsHasBeenSet;
 
                 };
             }

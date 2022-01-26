@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-                     * @return StartTime Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * 获取Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return StartTime Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-                     * @param StartTime Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * 设置Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param StartTime Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     void SetStartTime(const std::string& _startTime);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
-                     * @return EndTime End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
+                     * 获取End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
+                     * @return EndTime End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
-                     * @param EndTime End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
+                     * 设置End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
+                     * @param EndTime End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
                      */
                     void SetEndTime(const std::string& _endTime);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取[Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     * @return SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * 获取[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置[Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     * @param SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * 设置[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
@@ -99,19 +99,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
+                     * End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;

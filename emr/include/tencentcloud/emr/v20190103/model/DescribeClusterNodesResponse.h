@@ -41,6 +41,7 @@ namespace TencentCloud
                     DescribeClusterNodesResponse();
                     ~DescribeClusterNodesResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -83,6 +84,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool TagKeysHasBeenSet() const;
 
+                    /**
+                     * 获取Resource type list
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return HardwareResourceTypeList Resource type list
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetHardwareResourceTypeList() const;
+
+                    /**
+                     * 判断参数 HardwareResourceTypeList 是否已赋值
+                     * @return HardwareResourceTypeList 是否已赋值
+                     */
+                    bool HardwareResourceTypeListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -104,6 +119,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<std::string> m_tagKeys;
                     bool m_tagKeysHasBeenSet;
+
+                    /**
+                     * Resource type list
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_hardwareResourceTypeList;
+                    bool m_hardwareResourceTypeListHasBeenSet;
 
                 };
             }

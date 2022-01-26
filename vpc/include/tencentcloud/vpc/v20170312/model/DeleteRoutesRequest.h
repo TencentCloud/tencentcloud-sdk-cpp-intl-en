@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool RouteTableIdHasBeenSet() const;
 
                     /**
-                     * 获取Routing policy object.
-                     * @return Routes Routing policy object.
+                     * 获取Routing policy object. Only the `RouteId` field is required when deleting a routing policy.
+                     * @return Routes Routing policy object. Only the `RouteId` field is required when deleting a routing policy.
                      */
                     std::vector<Route> GetRoutes() const;
 
                     /**
-                     * 设置Routing policy object.
-                     * @param Routes Routing policy object.
+                     * 设置Routing policy object. Only the `RouteId` field is required when deleting a routing policy.
+                     * @param Routes Routing policy object. Only the `RouteId` field is required when deleting a routing policy.
                      */
                     void SetRoutes(const std::vector<Route>& _routes);
 
@@ -88,7 +88,7 @@ namespace TencentCloud
                     bool m_routeTableIdHasBeenSet;
 
                     /**
-                     * Routing policy object.
+                     * Routing policy object. Only the `RouteId` field is required when deleting a routing policy.
                      */
                     std::vector<Route> m_routes;
                     bool m_routesHasBeenSet;

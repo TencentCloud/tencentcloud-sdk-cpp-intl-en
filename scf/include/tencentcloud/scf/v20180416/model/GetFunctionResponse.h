@@ -30,6 +30,9 @@
 #include <tencentcloud/scf/v20180416/model/LayerVersionInfo.h>
 #include <tencentcloud/scf/v20180416/model/DeadLetterConfig.h>
 #include <tencentcloud/scf/v20180416/model/PublicNetConfigOut.h>
+#include <tencentcloud/scf/v20180416/model/CfsConfig.h>
+#include <tencentcloud/scf/v20180416/model/StatusReason.h>
+#include <tencentcloud/scf/v20180416/model/ProtocolParams.h>
 
 
 namespace TencentCloud
@@ -49,6 +52,7 @@ namespace TencentCloud
                     GetFunctionResponse();
                     ~GetFunctionResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -292,8 +296,8 @@ namespace TencentCloud
                     bool InstallDependencyHasBeenSet() const;
 
                     /**
-                     * 获取Function status
-                     * @return Status Function status
+                     * 获取Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
+                     * @return Status Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
                      */
                     std::string GetStatus() const;
 
@@ -475,6 +479,130 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     bool OnsEnableHasBeenSet() const;
 
+                    /**
+                     * 获取File system configuration parameter, which is used for the function to mount the file system
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return CfsConfig File system configuration parameter, which is used for the function to mount the file system
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    CfsConfig GetCfsConfig() const;
+
+                    /**
+                     * 判断参数 CfsConfig 是否已赋值
+                     * @return CfsConfig 是否已赋值
+                     */
+                    bool CfsConfigHasBeenSet() const;
+
+                    /**
+                     * 获取Function billing status. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return AvailableStatus Function billing status. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetAvailableStatus() const;
+
+                    /**
+                     * 判断参数 AvailableStatus 是否已赋值
+                     * @return AvailableStatus 是否已赋值
+                     */
+                    bool AvailableStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Function version
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return Qualifier Function version
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetQualifier() const;
+
+                    /**
+                     * 判断参数 Qualifier 是否已赋值
+                     * @return Qualifier 是否已赋值
+                     */
+                    bool QualifierHasBeenSet() const;
+
+                    /**
+                     * 获取Timeout period for function initialization
+                     * @return InitTimeout Timeout period for function initialization
+                     */
+                    int64_t GetInitTimeout() const;
+
+                    /**
+                     * 判断参数 InitTimeout 是否已赋值
+                     * @return InitTimeout 是否已赋值
+                     */
+                    bool InitTimeoutHasBeenSet() const;
+
+                    /**
+                     * 获取Cause of function failure
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return StatusReasons Cause of function failure
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<StatusReason> GetStatusReasons() const;
+
+                    /**
+                     * 判断参数 StatusReasons 是否已赋值
+                     * @return StatusReasons 是否已赋值
+                     */
+                    bool StatusReasonsHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies whether to enable asynchronization 
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return AsyncRunEnable Specifies whether to enable asynchronization 
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetAsyncRunEnable() const;
+
+                    /**
+                     * 判断参数 AsyncRunEnable 是否已赋值
+                     * @return AsyncRunEnable 是否已赋值
+                     */
+                    bool AsyncRunEnableHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies whether to enable event tracking
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return TraceEnable Specifies whether to enable event tracking
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetTraceEnable() const;
+
+                    /**
+                     * 判断参数 TraceEnable 是否已赋值
+                     * @return TraceEnable 是否已赋值
+                     */
+                    bool TraceEnableHasBeenSet() const;
+
+                    /**
+                     * 获取Protocols supported by HTTP-triggered functions. It supports WebSockets for now.
+Note: This field may return null, indicating that no valid value was found.
+                     * @return ProtocolType Protocols supported by HTTP-triggered functions. It supports WebSockets for now.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    std::string GetProtocolType() const;
+
+                    /**
+                     * 判断参数 ProtocolType 是否已赋值
+                     * @return ProtocolType 是否已赋值
+                     */
+                    bool ProtocolTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Parameters of the specified protocol
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return ProtocolParams Parameters of the specified protocol
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    ProtocolParams GetProtocolParams() const;
+
+                    /**
+                     * 判断参数 ProtocolParams 是否已赋值
+                     * @return ProtocolParams 是否已赋值
+                     */
+                    bool ProtocolParamsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -598,7 +726,7 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_installDependencyHasBeenSet;
 
                     /**
-                     * Function status
+                     * Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -688,6 +816,68 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     std::string m_onsEnable;
                     bool m_onsEnableHasBeenSet;
+
+                    /**
+                     * File system configuration parameter, which is used for the function to mount the file system
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    CfsConfig m_cfsConfig;
+                    bool m_cfsConfigHasBeenSet;
+
+                    /**
+                     * Function billing status. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_availableStatus;
+                    bool m_availableStatusHasBeenSet;
+
+                    /**
+                     * Function version
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_qualifier;
+                    bool m_qualifierHasBeenSet;
+
+                    /**
+                     * Timeout period for function initialization
+                     */
+                    int64_t m_initTimeout;
+                    bool m_initTimeoutHasBeenSet;
+
+                    /**
+                     * Cause of function failure
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<StatusReason> m_statusReasons;
+                    bool m_statusReasonsHasBeenSet;
+
+                    /**
+                     * Specifies whether to enable asynchronization 
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_asyncRunEnable;
+                    bool m_asyncRunEnableHasBeenSet;
+
+                    /**
+                     * Specifies whether to enable event tracking
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_traceEnable;
+                    bool m_traceEnableHasBeenSet;
+
+                    /**
+                     * Protocols supported by HTTP-triggered functions. It supports WebSockets for now.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    std::string m_protocolType;
+                    bool m_protocolTypeHasBeenSet;
+
+                    /**
+                     * Parameters of the specified protocol
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    ProtocolParams m_protocolParams;
+                    bool m_protocolParamsHasBeenSet;
 
                 };
             }

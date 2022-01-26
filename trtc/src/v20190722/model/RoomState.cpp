@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Trtc::V20190722::Model;
-using namespace rapidjson;
 using namespace std;
 
 RoomState::RoomState() :
@@ -31,7 +30,7 @@ RoomState::RoomState() :
 {
 }
 
-CoreInternalOutcome RoomState::Deserialize(const Value &value)
+CoreInternalOutcome RoomState::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome RoomState::Deserialize(const Value &value)
     {
         if (!value["CommId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RoomState.CommId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RoomState.CommId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_commId = string(value["CommId"].GetString());
         m_commIdHasBeenSet = true;
@@ -50,7 +49,7 @@ CoreInternalOutcome RoomState::Deserialize(const Value &value)
     {
         if (!value["RoomString"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RoomState.RoomString` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RoomState.RoomString` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_roomString = string(value["RoomString"].GetString());
         m_roomStringHasBeenSet = true;
@@ -60,7 +59,7 @@ CoreInternalOutcome RoomState::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `RoomState.CreateTime` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RoomState.CreateTime` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = value["CreateTime"].GetUint64();
         m_createTimeHasBeenSet = true;
@@ -70,7 +69,7 @@ CoreInternalOutcome RoomState::Deserialize(const Value &value)
     {
         if (!value["DestroyTime"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `RoomState.DestroyTime` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RoomState.DestroyTime` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_destroyTime = value["DestroyTime"].GetUint64();
         m_destroyTimeHasBeenSet = true;
@@ -80,7 +79,7 @@ CoreInternalOutcome RoomState::Deserialize(const Value &value)
     {
         if (!value["IsFinished"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `RoomState.IsFinished` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RoomState.IsFinished` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_isFinished = value["IsFinished"].GetBool();
         m_isFinishedHasBeenSet = true;
@@ -90,7 +89,7 @@ CoreInternalOutcome RoomState::Deserialize(const Value &value)
     {
         if (!value["UserId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RoomState.UserId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RoomState.UserId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_userId = string(value["UserId"].GetString());
         m_userIdHasBeenSet = true;
@@ -100,28 +99,28 @@ CoreInternalOutcome RoomState::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void RoomState::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void RoomState::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_commIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CommId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_commId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_commId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_roomStringHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RoomString";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_roomString.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_roomString.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_createTime, allocator);
@@ -129,7 +128,7 @@ void RoomState::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_destroyTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DestroyTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_destroyTime, allocator);
@@ -137,7 +136,7 @@ void RoomState::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_isFinishedHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsFinished";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isFinished, allocator);
@@ -145,10 +144,10 @@ void RoomState::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_userIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UserId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_userId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_userId.c_str(), allocator).Move(), allocator);
     }
 
 }

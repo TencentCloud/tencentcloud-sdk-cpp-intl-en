@@ -116,14 +116,14 @@ namespace TencentCloud
                     bool DefaultResultHasBeenSet() const;
 
                     /**
-                     * 获取The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-3,600. Default value: 300
-                     * @return HeartbeatTimeout The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-3,600. Default value: 300
+                     * 获取The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300
+                     * @return HeartbeatTimeout The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300
                      */
                     int64_t GetHeartbeatTimeout() const;
 
                     /**
-                     * 设置The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-3,600. Default value: 300
-                     * @param HeartbeatTimeout The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-3,600. Default value: 300
+                     * 设置The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300
+                     * @param HeartbeatTimeout The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300
                      */
                     void SetHeartbeatTimeout(const int64_t& _heartbeatTimeout);
 
@@ -134,14 +134,14 @@ namespace TencentCloud
                     bool HeartbeatTimeoutHasBeenSet() const;
 
                     /**
-                     * 获取Additional information sent by Auto Scaling to the notification target. Default value is ''. Maximum length is 1024 characters.
-                     * @return NotificationMetadata Additional information sent by Auto Scaling to the notification target. Default value is ''. Maximum length is 1024 characters.
+                     * 获取Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default. Up to 1024 characters are allowed.
+                     * @return NotificationMetadata Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default. Up to 1024 characters are allowed.
                      */
                     std::string GetNotificationMetadata() const;
 
                     /**
-                     * 设置Additional information sent by Auto Scaling to the notification target. Default value is ''. Maximum length is 1024 characters.
-                     * @param NotificationMetadata Additional information sent by Auto Scaling to the notification target. Default value is ''. Maximum length is 1024 characters.
+                     * 设置Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default. Up to 1024 characters are allowed.
+                     * @param NotificationMetadata Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default. Up to 1024 characters are allowed.
                      */
                     void SetNotificationMetadata(const std::string& _notificationMetadata);
 
@@ -214,13 +214,13 @@ namespace TencentCloud
                     bool m_defaultResultHasBeenSet;
 
                     /**
-                     * The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-3,600. Default value: 300
+                     * The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300
                      */
                     int64_t m_heartbeatTimeout;
                     bool m_heartbeatTimeoutHasBeenSet;
 
                     /**
-                     * Additional information sent by Auto Scaling to the notification target. Default value is ''. Maximum length is 1024 characters.
+                     * Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default. Up to 1024 characters are allowed.
                      */
                     std::string m_notificationMetadata;
                     bool m_notificationMetadataHasBeenSet;

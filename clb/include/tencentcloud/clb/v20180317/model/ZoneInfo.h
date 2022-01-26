@@ -112,6 +112,50 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ZoneNameHasBeenSet() const;
 
+                    /**
+                     * 获取AZ region, e.g., ap-guangzhou.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ZoneRegion AZ region, e.g., ap-guangzhou.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetZoneRegion() const;
+
+                    /**
+                     * 设置AZ region, e.g., ap-guangzhou.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param ZoneRegion AZ region, e.g., ap-guangzhou.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetZoneRegion(const std::string& _zoneRegion);
+
+                    /**
+                     * 判断参数 ZoneRegion 是否已赋值
+                     * @return ZoneRegion 是否已赋值
+                     */
+                    bool ZoneRegionHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the AZ is the `LocalZone`, e.g., false.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return LocalZone Whether the AZ is the `LocalZone`, e.g., false.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool GetLocalZone() const;
+
+                    /**
+                     * 设置Whether the AZ is the `LocalZone`, e.g., false.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param LocalZone Whether the AZ is the `LocalZone`, e.g., false.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetLocalZone(const bool& _localZone);
+
+                    /**
+                     * 判断参数 LocalZone 是否已赋值
+                     * @return LocalZone 是否已赋值
+                     */
+                    bool LocalZoneHasBeenSet() const;
+
                 private:
 
                     /**
@@ -134,6 +178,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_zoneName;
                     bool m_zoneNameHasBeenSet;
+
+                    /**
+                     * AZ region, e.g., ap-guangzhou.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_zoneRegion;
+                    bool m_zoneRegionHasBeenSet;
+
+                    /**
+                     * Whether the AZ is the `LocalZone`, e.g., false.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool m_localZone;
+                    bool m_localZoneHasBeenSet;
 
                 };
             }

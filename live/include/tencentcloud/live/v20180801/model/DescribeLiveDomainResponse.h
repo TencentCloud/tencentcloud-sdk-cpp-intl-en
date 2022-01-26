@@ -41,11 +41,14 @@ namespace TencentCloud
                     DescribeLiveDomainResponse();
                     ~DescribeLiveDomainResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
                      * 获取Domain name information.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return DomainInfo Domain name information.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     DomainInfo GetDomainInfo() const;
 
@@ -59,6 +62,7 @@ namespace TencentCloud
 
                     /**
                      * Domain name information.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     DomainInfo m_domainInfo;
                     bool m_domainInfoHasBeenSet;

@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool DomainTypeHasBeenSet() const;
 
                     /**
-                     * 获取Number of entries per page. Value range: 10–100. Default value: 10.
-                     * @return PageSize Number of entries per page. Value range: 10–100. Default value: 10.
+                     * 获取Number of entries per page. Value range: 10-100. Default value: 10.
+                     * @return PageSize Number of entries per page. Value range: 10-100. Default value: 10.
                      */
                     uint64_t GetPageSize() const;
 
                     /**
-                     * 设置Number of entries per page. Value range: 10–100. Default value: 10.
-                     * @param PageSize Number of entries per page. Value range: 10–100. Default value: 10.
+                     * 设置Number of entries per page. Value range: 10-100. Default value: 10.
+                     * @param PageSize Number of entries per page. Value range: 10-100. Default value: 10.
                      */
                     void SetPageSize(const uint64_t& _pageSize);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool PageSizeHasBeenSet() const;
 
                     /**
-                     * 获取Page number to get. Value range: 1–100000. Default value: 1.
-                     * @return PageNum Page number to get. Value range: 1–100000. Default value: 1.
+                     * 获取Page number to get. Value range: 1-100000. Default value: 1.
+                     * @return PageNum Page number to get. Value range: 1-100000. Default value: 1.
                      */
                     uint64_t GetPageNum() const;
 
                     /**
-                     * 设置Page number to get. Value range: 1–100000. Default value: 1.
-                     * @param PageNum Page number to get. Value range: 1–100000. Default value: 1.
+                     * 设置Page number to get. Value range: 1-100000. Default value: 1.
+                     * @param PageNum Page number to get. Value range: 1-100000. Default value: 1.
                      */
                     void SetPageNum(const uint64_t& _pageNum);
 
@@ -150,6 +150,36 @@ namespace TencentCloud
                      */
                     bool DomainPrefixHasBeenSet() const;
 
+                    /**
+                     * 获取Playback region. This parameter is valid only when `DomainType` is set to `1`.
+`1`: Chinese mainland
+`2`: global
+`3`: outside Chinese mainland
+                     * @return PlayType Playback region. This parameter is valid only when `DomainType` is set to `1`.
+`1`: Chinese mainland
+`2`: global
+`3`: outside Chinese mainland
+                     */
+                    uint64_t GetPlayType() const;
+
+                    /**
+                     * 设置Playback region. This parameter is valid only when `DomainType` is set to `1`.
+`1`: Chinese mainland
+`2`: global
+`3`: outside Chinese mainland
+                     * @param PlayType Playback region. This parameter is valid only when `DomainType` is set to `1`.
+`1`: Chinese mainland
+`2`: global
+`3`: outside Chinese mainland
+                     */
+                    void SetPlayType(const uint64_t& _playType);
+
+                    /**
+                     * 判断参数 PlayType 是否已赋值
+                     * @return PlayType 是否已赋值
+                     */
+                    bool PlayTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -165,13 +195,13 @@ namespace TencentCloud
                     bool m_domainTypeHasBeenSet;
 
                     /**
-                     * Number of entries per page. Value range: 10–100. Default value: 10.
+                     * Number of entries per page. Value range: 10-100. Default value: 10.
                      */
                     uint64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;
 
                     /**
-                     * Page number to get. Value range: 1–100000. Default value: 1.
+                     * Page number to get. Value range: 1-100000. Default value: 1.
                      */
                     uint64_t m_pageNum;
                     bool m_pageNumHasBeenSet;
@@ -187,6 +217,15 @@ namespace TencentCloud
                      */
                     std::string m_domainPrefix;
                     bool m_domainPrefixHasBeenSet;
+
+                    /**
+                     * Playback region. This parameter is valid only when `DomainType` is set to `1`.
+`1`: Chinese mainland
+`2`: global
+`3`: outside Chinese mainland
+                     */
+                    uint64_t m_playType;
+                    bool m_playTypeHasBeenSet;
 
                 };
             }

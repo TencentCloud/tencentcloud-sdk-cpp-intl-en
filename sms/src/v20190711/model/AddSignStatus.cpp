@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Sms::V20190711::Model;
-using namespace rapidjson;
 using namespace std;
 
 AddSignStatus::AddSignStatus() :
@@ -27,7 +26,7 @@ AddSignStatus::AddSignStatus() :
 {
 }
 
-CoreInternalOutcome AddSignStatus::Deserialize(const Value &value)
+CoreInternalOutcome AddSignStatus::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome AddSignStatus::Deserialize(const Value &value)
     {
         if (!value["SignId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AddSignStatus.SignId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AddSignStatus.SignId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_signId = value["SignId"].GetUint64();
         m_signIdHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome AddSignStatus::Deserialize(const Value &value)
     {
         if (!value["SignApplyId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AddSignStatus.SignApplyId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AddSignStatus.SignApplyId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_signApplyId = value["SignApplyId"].GetUint64();
         m_signApplyIdHasBeenSet = true;
@@ -56,12 +55,12 @@ CoreInternalOutcome AddSignStatus::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void AddSignStatus::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AddSignStatus::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_signIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SignId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_signId, allocator);
@@ -69,7 +68,7 @@ void AddSignStatus::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_signApplyIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SignApplyId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_signApplyId, allocator);

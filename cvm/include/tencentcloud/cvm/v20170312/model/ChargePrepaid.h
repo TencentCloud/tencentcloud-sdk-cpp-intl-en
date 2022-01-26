@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Period 
+                     * 获取Purchased usage period, in month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
+                     * @return Period Purchased usage period, in month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
                      */
                     uint64_t GetPeriod() const;
 
                     /**
-                     * 设置
-                     * @param Period 
+                     * 设置Purchased usage period, in month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
+                     * @param Period Purchased usage period, in month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
                      */
                     void SetPeriod(const uint64_t& _period);
 
@@ -85,7 +85,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Purchased usage period, in month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
                      */
                     uint64_t m_period;
                     bool m_periodHasBeenSet;

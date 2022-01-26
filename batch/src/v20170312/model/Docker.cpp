@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Batch::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 Docker::Docker() :
@@ -29,7 +28,7 @@ Docker::Docker() :
 {
 }
 
-CoreInternalOutcome Docker::Deserialize(const Value &value)
+CoreInternalOutcome Docker::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome Docker::Deserialize(const Value &value)
     {
         if (!value["User"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Docker.User` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Docker.User` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_user = string(value["User"].GetString());
         m_userHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome Docker::Deserialize(const Value &value)
     {
         if (!value["Password"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Docker.Password` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Docker.Password` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_password = string(value["Password"].GetString());
         m_passwordHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome Docker::Deserialize(const Value &value)
     {
         if (!value["Image"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Docker.Image` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Docker.Image` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_image = string(value["Image"].GetString());
         m_imageHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome Docker::Deserialize(const Value &value)
     {
         if (!value["Server"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Docker.Server` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Docker.Server` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_server = string(value["Server"].GetString());
         m_serverHasBeenSet = true;
@@ -78,39 +77,39 @@ CoreInternalOutcome Docker::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Docker::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Docker::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_userHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "User";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_user.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_user.c_str(), allocator).Move(), allocator);
     }
 
     if (m_passwordHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Password";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_password.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_password.c_str(), allocator).Move(), allocator);
     }
 
     if (m_imageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Image";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_image.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_image.c_str(), allocator).Move(), allocator);
     }
 
     if (m_serverHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Server";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_server.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_server.c_str(), allocator).Move(), allocator);
     }
 
 }

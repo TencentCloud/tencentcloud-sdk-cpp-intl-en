@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 ClipTask2017::ClipTask2017() :
@@ -28,7 +27,7 @@ ClipTask2017::ClipTask2017() :
 {
 }
 
-CoreInternalOutcome ClipTask2017::Deserialize(const Value &value)
+CoreInternalOutcome ClipTask2017::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome ClipTask2017::Deserialize(const Value &value)
     {
         if (!value["TaskId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClipTask2017.TaskId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClipTask2017.TaskId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_taskId = string(value["TaskId"].GetString());
         m_taskIdHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome ClipTask2017::Deserialize(const Value &value)
     {
         if (!value["SrcFileId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClipTask2017.SrcFileId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClipTask2017.SrcFileId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_srcFileId = string(value["SrcFileId"].GetString());
         m_srcFileIdHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome ClipTask2017::Deserialize(const Value &value)
     {
         if (!value["FileInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `ClipTask2017.FileInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClipTask2017.FileInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_fileInfo.Deserialize(value["FileInfo"]);
@@ -74,31 +73,31 @@ CoreInternalOutcome ClipTask2017::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ClipTask2017::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ClipTask2017::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_taskIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TaskId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_taskId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_taskId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_srcFileIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SrcFileId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_srcFileId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_srcFileId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fileInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_fileInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 

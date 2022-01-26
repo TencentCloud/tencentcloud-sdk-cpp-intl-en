@@ -23,24 +23,31 @@ set(gme_public_header_model
   include/tencentcloud/gme/v20180711/model/AppStatisticsItem.h
   include/tencentcloud/gme/v20180711/model/ModifyAppStatusRequest.h
   include/tencentcloud/gme/v20180711/model/DescribeScanResultListResponse.h
+  include/tencentcloud/gme/v20180711/model/DescribeApplicationDataRequest.h
   include/tencentcloud/gme/v20180711/model/VoiceMessageStatisticsItem.h
   include/tencentcloud/gme/v20180711/model/DescribeScanResultListRequest.h
   include/tencentcloud/gme/v20180711/model/RealTimeSpeechStatisticsItem.h
-  include/tencentcloud/gme/v20180711/model/ModifyAppStatusResponse.h
+  include/tencentcloud/gme/v20180711/model/Tag.h
   include/tencentcloud/gme/v20180711/model/VoiceMessageConf.h
+  include/tencentcloud/gme/v20180711/model/ApplicationDataStatistics.h
+  include/tencentcloud/gme/v20180711/model/ModifyAppStatusResp.h
   include/tencentcloud/gme/v20180711/model/DescribeAppStatisticsResponse.h
+  include/tencentcloud/gme/v20180711/model/DescribeApplicationDataResponse.h
   include/tencentcloud/gme/v20180711/model/Task.h
   include/tencentcloud/gme/v20180711/model/VoiceFilterStatisticsItem.h
+  include/tencentcloud/gme/v20180711/model/CreateAppResp.h
   include/tencentcloud/gme/v20180711/model/DescribeScanResult.h
   include/tencentcloud/gme/v20180711/model/ScanDetail.h
   include/tencentcloud/gme/v20180711/model/CreateAppRequest.h
   include/tencentcloud/gme/v20180711/model/RealtimeSpeechConf.h
+  include/tencentcloud/gme/v20180711/model/DescribeAppStatisticsResp.h
   include/tencentcloud/gme/v20180711/model/ScanVoiceResult.h
   include/tencentcloud/gme/v20180711/model/CreateAppResponse.h
   include/tencentcloud/gme/v20180711/model/DescribeAppStatisticsRequest.h
   include/tencentcloud/gme/v20180711/model/ScanPiece.h
-  include/tencentcloud/gme/v20180711/model/Tag.h
+  include/tencentcloud/gme/v20180711/model/ModifyAppStatusResponse.h
   include/tencentcloud/gme/v20180711/model/VoiceFilterConf.h
+  include/tencentcloud/gme/v20180711/model/StatisticsItem.h
   include/tencentcloud/gme/v20180711/model/ScanVoiceRequest.h
   )
 
@@ -50,24 +57,31 @@ set(gme_src
   src/v20180711/model/AppStatisticsItem.cpp
   src/v20180711/model/ModifyAppStatusRequest.cpp
   src/v20180711/model/DescribeScanResultListResponse.cpp
+  src/v20180711/model/DescribeApplicationDataRequest.cpp
   src/v20180711/model/VoiceMessageStatisticsItem.cpp
   src/v20180711/model/DescribeScanResultListRequest.cpp
   src/v20180711/model/RealTimeSpeechStatisticsItem.cpp
-  src/v20180711/model/ModifyAppStatusResponse.cpp
+  src/v20180711/model/Tag.cpp
   src/v20180711/model/VoiceMessageConf.cpp
+  src/v20180711/model/ApplicationDataStatistics.cpp
+  src/v20180711/model/ModifyAppStatusResp.cpp
   src/v20180711/model/DescribeAppStatisticsResponse.cpp
+  src/v20180711/model/DescribeApplicationDataResponse.cpp
   src/v20180711/model/Task.cpp
   src/v20180711/model/VoiceFilterStatisticsItem.cpp
+  src/v20180711/model/CreateAppResp.cpp
   src/v20180711/model/DescribeScanResult.cpp
   src/v20180711/model/ScanDetail.cpp
   src/v20180711/model/CreateAppRequest.cpp
   src/v20180711/model/RealtimeSpeechConf.cpp
+  src/v20180711/model/DescribeAppStatisticsResp.cpp
   src/v20180711/model/ScanVoiceResult.cpp
   src/v20180711/model/CreateAppResponse.cpp
   src/v20180711/model/DescribeAppStatisticsRequest.cpp
   src/v20180711/model/ScanPiece.cpp
-  src/v20180711/model/Tag.cpp
+  src/v20180711/model/ModifyAppStatusResponse.cpp
   src/v20180711/model/VoiceFilterConf.cpp
+  src/v20180711/model/StatisticsItem.cpp
   src/v20180711/model/ScanVoiceRequest.cpp
   )
 

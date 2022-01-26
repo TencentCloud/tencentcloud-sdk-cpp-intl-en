@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Offset. If this parameter is left empty, 0 will be used by default
-                     * @return Offset Offset. If this parameter is left empty, 0 will be used by default
+                     * 获取Offset. If this parameter is left empty, `0` will be used by default.
+                     * @return Offset Offset. If this parameter is left empty, `0` will be used by default.
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. If this parameter is left empty, 0 will be used by default
-                     * @param Offset Offset. If this parameter is left empty, 0 will be used by default
+                     * 设置Offset. If this parameter is left empty, `0` will be used by default.
+                     * @param Offset Offset. If this parameter is left empty, `0` will be used by default.
                      */
                     void SetOffset(const int64_t& _offset);
 
@@ -116,14 +116,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
-                     * @return Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
+                     * 获取Number of returned results. If this parameter is left empty, `10` will be used by default. The maximum value is `20`.
+                     * @return Limit Number of returned results. If this parameter is left empty, `10` will be used by default. The maximum value is `20`.
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
-                     * @param Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
+                     * 设置Number of returned results. If this parameter is left empty, `10` will be used by default. The maximum value is `20`.
+                     * @param Limit Number of returned results. If this parameter is left empty, `10` will be used by default. The maximum value is `20`.
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -152,14 +152,14 @@ namespace TencentCloud
                     bool TagKeyHasBeenSet() const;
 
                     /**
-                     * 获取Filter
-                     * @return Filters Filter
+                     * 获取Filter.
+                     * @return Filters Filter.
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter
-                     * @param Filters Filter
+                     * 设置Filter.
+                     * @param Filters Filter.
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -168,6 +168,24 @@ namespace TencentCloud
                      * @return Filters 是否已赋值
                      */
                     bool FiltersHasBeenSet() const;
+
+                    /**
+                     * 获取This parameter has been deprecated and replaced with `InstanceIdList`.
+                     * @return InstanceIds This parameter has been deprecated and replaced with `InstanceIdList`.
+                     */
+                    std::string GetInstanceIds() const;
+
+                    /**
+                     * 设置This parameter has been deprecated and replaced with `InstanceIdList`.
+                     * @param InstanceIds This parameter has been deprecated and replaced with `InstanceIdList`.
+                     */
+                    void SetInstanceIds(const std::string& _instanceIds);
+
+                    /**
+                     * 判断参数 InstanceIds 是否已赋值
+                     * @return InstanceIds 是否已赋值
+                     */
+                    bool InstanceIdsHasBeenSet() const;
 
                 private:
 
@@ -190,13 +208,13 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Offset. If this parameter is left empty, 0 will be used by default
+                     * Offset. If this parameter is left empty, `0` will be used by default.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
+                     * Number of returned results. If this parameter is left empty, `10` will be used by default. The maximum value is `20`.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -208,10 +226,16 @@ namespace TencentCloud
                     bool m_tagKeyHasBeenSet;
 
                     /**
-                     * Filter
+                     * Filter.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
+
+                    /**
+                     * This parameter has been deprecated and replaced with `InstanceIdList`.
+                     */
+                    std::string m_instanceIds;
+                    bool m_instanceIdsHasBeenSet;
 
                 };
             }

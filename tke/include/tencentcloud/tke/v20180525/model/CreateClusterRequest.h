@@ -28,6 +28,7 @@
 #include <tencentcloud/tke/v20180525/model/InstanceAdvancedSettings.h>
 #include <tencentcloud/tke/v20180525/model/ExistedInstancesForNode.h>
 #include <tencentcloud/tke/v20180525/model/InstanceDataDiskMountSetting.h>
+#include <tencentcloud/tke/v20180525/model/ExtensionAddon.h>
 
 
 namespace TencentCloud
@@ -86,14 +87,14 @@ namespace TencentCloud
                     bool ClusterTypeHasBeenSet() const;
 
                     /**
-                     * 获取Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://cloud.tencent.com/document/product/213/15730).
-                     * @return RunInstancesForNode Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://cloud.tencent.com/document/product/213/15730).
+                     * 获取Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1).
+                     * @return RunInstancesForNode Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1).
                      */
                     std::vector<RunInstancesForNode> GetRunInstancesForNode() const;
 
                     /**
-                     * 设置Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://cloud.tencent.com/document/product/213/15730).
-                     * @param RunInstancesForNode Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://cloud.tencent.com/document/product/213/15730).
+                     * 设置Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1).
+                     * @param RunInstancesForNode Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1).
                      */
                     void SetRunInstancesForNode(const std::vector<RunInstancesForNode>& _runInstancesForNode);
 
@@ -158,14 +159,14 @@ namespace TencentCloud
                     bool InstanceAdvancedSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Configuration information of an existing instance
-                     * @return ExistedInstancesForNode Configuration information of an existing instance
+                     * 获取The configuration information for existing instances. All instances must be in the same VPC. Up to 100 instances are allowed in one VPC. Spot instances are not supported.
+                     * @return ExistedInstancesForNode The configuration information for existing instances. All instances must be in the same VPC. Up to 100 instances are allowed in one VPC. Spot instances are not supported.
                      */
                     std::vector<ExistedInstancesForNode> GetExistedInstancesForNode() const;
 
                     /**
-                     * 设置Configuration information of an existing instance
-                     * @param ExistedInstancesForNode Configuration information of an existing instance
+                     * 设置The configuration information for existing instances. All instances must be in the same VPC. Up to 100 instances are allowed in one VPC. Spot instances are not supported.
+                     * @param ExistedInstancesForNode The configuration information for existing instances. All instances must be in the same VPC. Up to 100 instances are allowed in one VPC. Spot instances are not supported.
                      */
                     void SetExistedInstancesForNode(const std::vector<ExistedInstancesForNode>& _existedInstancesForNode);
 
@@ -193,6 +194,24 @@ namespace TencentCloud
                      */
                     bool InstanceDataDiskMountSettingsHasBeenSet() const;
 
+                    /**
+                     * 获取Information of the add-on to be installed
+                     * @return ExtensionAddons Information of the add-on to be installed
+                     */
+                    std::vector<ExtensionAddon> GetExtensionAddons() const;
+
+                    /**
+                     * 设置Information of the add-on to be installed
+                     * @param ExtensionAddons Information of the add-on to be installed
+                     */
+                    void SetExtensionAddons(const std::vector<ExtensionAddon>& _extensionAddons);
+
+                    /**
+                     * 判断参数 ExtensionAddons 是否已赋值
+                     * @return ExtensionAddons 是否已赋值
+                     */
+                    bool ExtensionAddonsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -208,7 +227,7 @@ namespace TencentCloud
                     bool m_clusterTypeHasBeenSet;
 
                     /**
-                     * Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://cloud.tencent.com/document/product/213/15730).
+                     * Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1).
                      */
                     std::vector<RunInstancesForNode> m_runInstancesForNode;
                     bool m_runInstancesForNodeHasBeenSet;
@@ -232,7 +251,7 @@ namespace TencentCloud
                     bool m_instanceAdvancedSettingsHasBeenSet;
 
                     /**
-                     * Configuration information of an existing instance
+                     * The configuration information for existing instances. All instances must be in the same VPC. Up to 100 instances are allowed in one VPC. Spot instances are not supported.
                      */
                     std::vector<ExistedInstancesForNode> m_existedInstancesForNode;
                     bool m_existedInstancesForNodeHasBeenSet;
@@ -242,6 +261,12 @@ namespace TencentCloud
                      */
                     std::vector<InstanceDataDiskMountSetting> m_instanceDataDiskMountSettings;
                     bool m_instanceDataDiskMountSettingsHasBeenSet;
+
+                    /**
+                     * Information of the add-on to be installed
+                     */
+                    std::vector<ExtensionAddon> m_extensionAddons;
+                    bool m_extensionAddonsHasBeenSet;
 
                 };
             }

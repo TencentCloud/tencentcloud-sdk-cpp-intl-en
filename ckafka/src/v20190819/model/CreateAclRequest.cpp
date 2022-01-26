@@ -20,54 +20,46 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Ckafka::V20190819::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateAclRequest::CreateAclRequest() :
     m_instanceIdHasBeenSet(false),
     m_resourceTypeHasBeenSet(false),
-    m_resourceNameHasBeenSet(false),
     m_operationHasBeenSet(false),
     m_permissionTypeHasBeenSet(false),
+    m_resourceNameHasBeenSet(false),
     m_hostHasBeenSet(false),
-    m_principalHasBeenSet(false)
+    m_principalHasBeenSet(false),
+    m_resourceNameListHasBeenSet(false)
 {
 }
 
 string CreateAclRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_resourceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResourceType";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_resourceType, allocator);
     }
 
-    if (m_resourceNameHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "ResourceName";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_resourceName.c_str(), allocator).Move(), allocator);
-    }
-
     if (m_operationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Operation";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_operation, allocator);
@@ -75,31 +67,47 @@ string CreateAclRequest::ToJsonString() const
 
     if (m_permissionTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PermissionType";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_permissionType, allocator);
     }
 
+    if (m_resourceNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ResourceName";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_resourceName.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_hostHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Host";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_host.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_host.c_str(), allocator).Move(), allocator);
     }
 
     if (m_principalHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Principal";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_principal.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_principal.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_resourceNameListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ResourceNameList";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_resourceNameList.c_str(), allocator).Move(), allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -137,22 +145,6 @@ bool CreateAclRequest::ResourceTypeHasBeenSet() const
     return m_resourceTypeHasBeenSet;
 }
 
-string CreateAclRequest::GetResourceName() const
-{
-    return m_resourceName;
-}
-
-void CreateAclRequest::SetResourceName(const string& _resourceName)
-{
-    m_resourceName = _resourceName;
-    m_resourceNameHasBeenSet = true;
-}
-
-bool CreateAclRequest::ResourceNameHasBeenSet() const
-{
-    return m_resourceNameHasBeenSet;
-}
-
 int64_t CreateAclRequest::GetOperation() const
 {
     return m_operation;
@@ -185,6 +177,22 @@ bool CreateAclRequest::PermissionTypeHasBeenSet() const
     return m_permissionTypeHasBeenSet;
 }
 
+string CreateAclRequest::GetResourceName() const
+{
+    return m_resourceName;
+}
+
+void CreateAclRequest::SetResourceName(const string& _resourceName)
+{
+    m_resourceName = _resourceName;
+    m_resourceNameHasBeenSet = true;
+}
+
+bool CreateAclRequest::ResourceNameHasBeenSet() const
+{
+    return m_resourceNameHasBeenSet;
+}
+
 string CreateAclRequest::GetHost() const
 {
     return m_host;
@@ -215,6 +223,22 @@ void CreateAclRequest::SetPrincipal(const string& _principal)
 bool CreateAclRequest::PrincipalHasBeenSet() const
 {
     return m_principalHasBeenSet;
+}
+
+string CreateAclRequest::GetResourceNameList() const
+{
+    return m_resourceNameList;
+}
+
+void CreateAclRequest::SetResourceNameList(const string& _resourceNameList)
+{
+    m_resourceNameList = _resourceNameList;
+    m_resourceNameListHasBeenSet = true;
+}
+
+bool CreateAclRequest::ResourceNameListHasBeenSet() const
+{
+    return m_resourceNameListHasBeenSet;
 }
 
 

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ckafka::V20190819::Model;
-using namespace rapidjson;
 using namespace std;
 
 GroupOffsetResponse::GroupOffsetResponse() :
@@ -27,7 +26,7 @@ GroupOffsetResponse::GroupOffsetResponse() :
 {
 }
 
-CoreInternalOutcome GroupOffsetResponse::Deserialize(const Value &value)
+CoreInternalOutcome GroupOffsetResponse::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome GroupOffsetResponse::Deserialize(const Value &value)
     {
         if (!value["TotalCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `GroupOffsetResponse.TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupOffsetResponse.TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_totalCount = value["TotalCount"].GetInt64();
         m_totalCountHasBeenSet = true;
@@ -45,10 +44,10 @@ CoreInternalOutcome GroupOffsetResponse::Deserialize(const Value &value)
     if (value.HasMember("TopicList") && !value["TopicList"].IsNull())
     {
         if (!value["TopicList"].IsArray())
-            return CoreInternalOutcome(Error("response `GroupOffsetResponse.TopicList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `GroupOffsetResponse.TopicList` is not array type"));
 
-        const Value &tmpValue = value["TopicList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["TopicList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             GroupOffsetTopic item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -66,12 +65,12 @@ CoreInternalOutcome GroupOffsetResponse::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void GroupOffsetResponse::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void GroupOffsetResponse::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_totalCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TotalCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_totalCount, allocator);
@@ -79,15 +78,15 @@ void GroupOffsetResponse::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_topicListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TopicList";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_topicList.begin(); itr != m_topicList.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }

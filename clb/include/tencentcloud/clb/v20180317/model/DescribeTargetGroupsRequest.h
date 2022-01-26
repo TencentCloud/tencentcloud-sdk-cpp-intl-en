@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool TargetGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取Limit of the number of displayed results. Default value: 20
-                     * @return Limit Limit of the number of displayed results. Default value: 20
+                     * 获取Limit of the number of displayed results. Default value: 20.
+                     * @return Limit Limit of the number of displayed results. Default value: 20.
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Limit of the number of displayed results. Default value: 20
-                     * @param Limit Limit of the number of displayed results. Default value: 20
+                     * 设置Limit of the number of displayed results. Default value: 20.
+                     * @param Limit Limit of the number of displayed results. Default value: 20.
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName
-                     * @return Filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName
+                     * 获取Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
+                     * @return Filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName
-                     * @param Filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName
+                     * 设置Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
+                     * @param Filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -124,7 +124,7 @@ namespace TencentCloud
                     bool m_targetGroupIdsHasBeenSet;
 
                     /**
-                     * Limit of the number of displayed results. Default value: 20
+                     * Limit of the number of displayed results. Default value: 20.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -136,7 +136,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName
+                     * Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

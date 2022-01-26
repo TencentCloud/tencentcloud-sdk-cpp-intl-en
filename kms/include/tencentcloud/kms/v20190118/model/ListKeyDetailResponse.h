@@ -41,11 +41,12 @@ namespace TencentCloud
                     ListKeyDetailResponse();
                     ~ListKeyDetailResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取
-                     * @return TotalCount 
+                     * 获取Total number of CMKs
+                     * @return TotalCount Total number of CMKs
                      */
                     uint64_t GetTotalCount() const;
 
@@ -72,7 +73,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * 
+                     * Total number of CMKs
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

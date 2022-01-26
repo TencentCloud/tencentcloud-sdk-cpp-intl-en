@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/ckafka/v20190819/model/Tag.h>
 
 
 namespace TencentCloud
@@ -97,14 +98,14 @@ namespace TencentCloud
                     bool NoteHasBeenSet() const;
 
                     /**
-                     * 获取IP whitelist switch. 1: enabled, 0: disabled.
-                     * @return EnableWhiteList IP whitelist switch. 1: enabled, 0: disabled.
+                     * 获取IP allowlist switch. 1: enabled, 0: disabled.
+                     * @return EnableWhiteList IP allowlist switch. 1: enabled, 0: disabled.
                      */
                     int64_t GetEnableWhiteList() const;
 
                     /**
-                     * 设置IP whitelist switch. 1: enabled, 0: disabled.
-                     * @param EnableWhiteList IP whitelist switch. 1: enabled, 0: disabled.
+                     * 设置IP allowlist switch. 1: enabled, 0: disabled.
+                     * @param EnableWhiteList IP allowlist switch. 1: enabled, 0: disabled.
                      */
                     void SetEnableWhiteList(const int64_t& _enableWhiteList);
 
@@ -222,6 +223,96 @@ namespace TencentCloud
                      */
                     bool CleanUpPolicyHasBeenSet() const;
 
+                    /**
+                     * 获取IP allowlist, which is required if the value of `enableWhileList` is 1.
+                     * @return IpWhiteList IP allowlist, which is required if the value of `enableWhileList` is 1.
+                     */
+                    std::vector<std::string> GetIpWhiteList() const;
+
+                    /**
+                     * 设置IP allowlist, which is required if the value of `enableWhileList` is 1.
+                     * @param IpWhiteList IP allowlist, which is required if the value of `enableWhileList` is 1.
+                     */
+                    void SetIpWhiteList(const std::vector<std::string>& _ipWhiteList);
+
+                    /**
+                     * 判断参数 IpWhiteList 是否已赋值
+                     * @return IpWhiteList 是否已赋值
+                     */
+                    bool IpWhiteListHasBeenSet() const;
+
+                    /**
+                     * 获取Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+                     * @return EnableAclRule Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+                     */
+                    int64_t GetEnableAclRule() const;
+
+                    /**
+                     * 设置Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+                     * @param EnableAclRule Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+                     */
+                    void SetEnableAclRule(const int64_t& _enableAclRule);
+
+                    /**
+                     * 判断参数 EnableAclRule 是否已赋值
+                     * @return EnableAclRule 是否已赋值
+                     */
+                    bool EnableAclRuleHasBeenSet() const;
+
+                    /**
+                     * 获取Name of the preset ACL rule.
+                     * @return AclRuleName Name of the preset ACL rule.
+                     */
+                    std::string GetAclRuleName() const;
+
+                    /**
+                     * 设置Name of the preset ACL rule.
+                     * @param AclRuleName Name of the preset ACL rule.
+                     */
+                    void SetAclRuleName(const std::string& _aclRuleName);
+
+                    /**
+                     * 判断参数 AclRuleName 是否已赋值
+                     * @return AclRuleName 是否已赋值
+                     */
+                    bool AclRuleNameHasBeenSet() const;
+
+                    /**
+                     * 获取Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+                     * @return RetentionBytes Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+                     */
+                    int64_t GetRetentionBytes() const;
+
+                    /**
+                     * 设置Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+                     * @param RetentionBytes Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+                     */
+                    void SetRetentionBytes(const int64_t& _retentionBytes);
+
+                    /**
+                     * 判断参数 RetentionBytes 是否已赋值
+                     * @return RetentionBytes 是否已赋值
+                     */
+                    bool RetentionBytesHasBeenSet() const;
+
+                    /**
+                     * 获取Tag list.
+                     * @return Tags Tag list.
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Tag list.
+                     * @param Tags Tag list.
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -243,7 +334,7 @@ namespace TencentCloud
                     bool m_noteHasBeenSet;
 
                     /**
-                     * IP whitelist switch. 1: enabled, 0: disabled.
+                     * IP allowlist switch. 1: enabled, 0: disabled.
                      */
                     int64_t m_enableWhiteList;
                     bool m_enableWhiteListHasBeenSet;
@@ -283,6 +374,36 @@ namespace TencentCloud
                      */
                     std::string m_cleanUpPolicy;
                     bool m_cleanUpPolicyHasBeenSet;
+
+                    /**
+                     * IP allowlist, which is required if the value of `enableWhileList` is 1.
+                     */
+                    std::vector<std::string> m_ipWhiteList;
+                    bool m_ipWhiteListHasBeenSet;
+
+                    /**
+                     * Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+                     */
+                    int64_t m_enableAclRule;
+                    bool m_enableAclRuleHasBeenSet;
+
+                    /**
+                     * Name of the preset ACL rule.
+                     */
+                    std::string m_aclRuleName;
+                    bool m_aclRuleNameHasBeenSet;
+
+                    /**
+                     * Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+                     */
+                    int64_t m_retentionBytes;
+                    bool m_retentionBytesHasBeenSet;
+
+                    /**
+                     * Tag list.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

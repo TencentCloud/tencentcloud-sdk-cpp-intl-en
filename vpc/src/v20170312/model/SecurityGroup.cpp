@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 SecurityGroup::SecurityGroup() :
@@ -28,11 +27,12 @@ SecurityGroup::SecurityGroup() :
     m_projectIdHasBeenSet(false),
     m_isDefaultHasBeenSet(false),
     m_createdTimeHasBeenSet(false),
-    m_tagSetHasBeenSet(false)
+    m_tagSetHasBeenSet(false),
+    m_updateTimeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome SecurityGroup::Deserialize(const Value &value)
+CoreInternalOutcome SecurityGroup::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +41,7 @@ CoreInternalOutcome SecurityGroup::Deserialize(const Value &value)
     {
         if (!value["SecurityGroupId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityGroup.SecurityGroupId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityGroup.SecurityGroupId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_securityGroupId = string(value["SecurityGroupId"].GetString());
         m_securityGroupIdHasBeenSet = true;
@@ -51,7 +51,7 @@ CoreInternalOutcome SecurityGroup::Deserialize(const Value &value)
     {
         if (!value["SecurityGroupName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityGroup.SecurityGroupName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityGroup.SecurityGroupName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_securityGroupName = string(value["SecurityGroupName"].GetString());
         m_securityGroupNameHasBeenSet = true;
@@ -61,7 +61,7 @@ CoreInternalOutcome SecurityGroup::Deserialize(const Value &value)
     {
         if (!value["SecurityGroupDesc"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityGroup.SecurityGroupDesc` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityGroup.SecurityGroupDesc` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_securityGroupDesc = string(value["SecurityGroupDesc"].GetString());
         m_securityGroupDescHasBeenSet = true;
@@ -71,7 +71,7 @@ CoreInternalOutcome SecurityGroup::Deserialize(const Value &value)
     {
         if (!value["ProjectId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityGroup.ProjectId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityGroup.ProjectId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_projectId = string(value["ProjectId"].GetString());
         m_projectIdHasBeenSet = true;
@@ -81,7 +81,7 @@ CoreInternalOutcome SecurityGroup::Deserialize(const Value &value)
     {
         if (!value["IsDefault"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `SecurityGroup.IsDefault` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityGroup.IsDefault` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_isDefault = value["IsDefault"].GetBool();
         m_isDefaultHasBeenSet = true;
@@ -91,7 +91,7 @@ CoreInternalOutcome SecurityGroup::Deserialize(const Value &value)
     {
         if (!value["CreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityGroup.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityGroup.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createdTime = string(value["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
@@ -100,10 +100,10 @@ CoreInternalOutcome SecurityGroup::Deserialize(const Value &value)
     if (value.HasMember("TagSet") && !value["TagSet"].IsNull())
     {
         if (!value["TagSet"].IsArray())
-            return CoreInternalOutcome(Error("response `SecurityGroup.TagSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `SecurityGroup.TagSet` is not array type"));
 
-        const Value &tmpValue = value["TagSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["TagSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             Tag item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -117,48 +117,58 @@ CoreInternalOutcome SecurityGroup::Deserialize(const Value &value)
         m_tagSetHasBeenSet = true;
     }
 
+    if (value.HasMember("UpdateTime") && !value["UpdateTime"].IsNull())
+    {
+        if (!value["UpdateTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SecurityGroup.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_updateTime = string(value["UpdateTime"].GetString());
+        m_updateTimeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void SecurityGroup::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SecurityGroup::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_securityGroupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SecurityGroupId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_securityGroupId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_securityGroupId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_securityGroupNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SecurityGroupName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_securityGroupName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_securityGroupName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_securityGroupDescHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SecurityGroupDesc";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_securityGroupDesc.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_securityGroupDesc.c_str(), allocator).Move(), allocator);
     }
 
     if (m_projectIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProjectId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_projectId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_projectId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_isDefaultHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsDefault";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isDefault, allocator);
@@ -166,25 +176,33 @@ void SecurityGroup::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_createdTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createdTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tagSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TagSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_tagSet.begin(); itr != m_tagSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_updateTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UpdateTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_updateTime.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -300,5 +318,21 @@ void SecurityGroup::SetTagSet(const vector<Tag>& _tagSet)
 bool SecurityGroup::TagSetHasBeenSet() const
 {
     return m_tagSetHasBeenSet;
+}
+
+string SecurityGroup::GetUpdateTime() const
+{
+    return m_updateTime;
+}
+
+void SecurityGroup::SetUpdateTime(const string& _updateTime)
+{
+    m_updateTime = _updateTime;
+    m_updateTimeHasBeenSet = true;
+}
+
+bool SecurityGroup::UpdateTimeHasBeenSet() const
+{
+    return m_updateTimeHasBeenSet;
 }
 

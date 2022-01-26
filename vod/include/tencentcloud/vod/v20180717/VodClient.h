@@ -25,6 +25,8 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/vod/v20180717/model/ApplyUploadRequest.h>
 #include <tencentcloud/vod/v20180717/model/ApplyUploadResponse.h>
+#include <tencentcloud/vod/v20180717/model/AttachMediaSubtitlesRequest.h>
+#include <tencentcloud/vod/v20180717/model/AttachMediaSubtitlesResponse.h>
 #include <tencentcloud/vod/v20180717/model/CommitUploadRequest.h>
 #include <tencentcloud/vod/v20180717/model/CommitUploadResponse.h>
 #include <tencentcloud/vod/v20180717/model/ComposeMediaRequest.h>
@@ -59,6 +61,8 @@
 #include <tencentcloud/vod/v20180717/model/CreateSuperPlayerConfigResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateTranscodeTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/CreateTranscodeTemplateResponse.h>
+#include <tencentcloud/vod/v20180717/model/CreateVodDomainRequest.h>
+#include <tencentcloud/vod/v20180717/model/CreateVodDomainResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateWatermarkTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/CreateWatermarkTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateWordSamplesRequest.h>
@@ -91,6 +95,8 @@
 #include <tencentcloud/vod/v20180717/model/DeleteSuperPlayerConfigResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteTranscodeTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/DeleteTranscodeTemplateResponse.h>
+#include <tencentcloud/vod/v20180717/model/DeleteVodDomainRequest.h>
+#include <tencentcloud/vod/v20180717/model/DeleteVodDomainResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteWatermarkTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/DeleteWatermarkTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteWordSamplesRequest.h>
@@ -105,10 +111,16 @@
 #include <tencentcloud/vod/v20180717/model/DescribeAllClassResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeAnimatedGraphicsTemplatesRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeAnimatedGraphicsTemplatesResponse.h>
+#include <tencentcloud/vod/v20180717/model/DescribeCDNStatDetailsRequest.h>
+#include <tencentcloud/vod/v20180717/model/DescribeCDNStatDetailsResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeCDNUsageDataRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeCDNUsageDataResponse.h>
+#include <tencentcloud/vod/v20180717/model/DescribeCdnLogsRequest.h>
+#include <tencentcloud/vod/v20180717/model/DescribeCdnLogsResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeContentReviewTemplatesRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeContentReviewTemplatesResponse.h>
+#include <tencentcloud/vod/v20180717/model/DescribeDailyPlayStatFileListRequest.h>
+#include <tencentcloud/vod/v20180717/model/DescribeDailyPlayStatFileListResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeImageSpriteTemplatesRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeImageSpriteTemplatesResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeMediaInfosRequest.h>
@@ -139,6 +151,8 @@
 #include <tencentcloud/vod/v20180717/model/DescribeTasksResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeTranscodeTemplatesRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeTranscodeTemplatesResponse.h>
+#include <tencentcloud/vod/v20180717/model/DescribeVodDomainsRequest.h>
+#include <tencentcloud/vod/v20180717/model/DescribeVodDomainsResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeWatermarkTemplatesRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeWatermarkTemplatesResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeWordSamplesRequest.h>
@@ -151,6 +165,8 @@
 #include <tencentcloud/vod/v20180717/model/ForbidMediaDistributionResponse.h>
 #include <tencentcloud/vod/v20180717/model/LiveRealTimeClipRequest.h>
 #include <tencentcloud/vod/v20180717/model/LiveRealTimeClipResponse.h>
+#include <tencentcloud/vod/v20180717/model/ManageTaskRequest.h>
+#include <tencentcloud/vod/v20180717/model/ManageTaskResponse.h>
 #include <tencentcloud/vod/v20180717/model/ModifyAIAnalysisTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/ModifyAIAnalysisTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/ModifyAIRecognitionTemplateRequest.h>
@@ -181,6 +197,10 @@
 #include <tencentcloud/vod/v20180717/model/ModifySuperPlayerConfigResponse.h>
 #include <tencentcloud/vod/v20180717/model/ModifyTranscodeTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/ModifyTranscodeTemplateResponse.h>
+#include <tencentcloud/vod/v20180717/model/ModifyVodDomainAccelerateConfigRequest.h>
+#include <tencentcloud/vod/v20180717/model/ModifyVodDomainAccelerateConfigResponse.h>
+#include <tencentcloud/vod/v20180717/model/ModifyVodDomainConfigRequest.h>
+#include <tencentcloud/vod/v20180717/model/ModifyVodDomainConfigResponse.h>
 #include <tencentcloud/vod/v20180717/model/ModifyWatermarkTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/ModifyWatermarkTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/ModifyWordSampleRequest.h>
@@ -221,280 +241,310 @@ namespace TencentCloud
                 VodClient(const Credential &credential, const std::string &region);
                 VodClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::ApplyUploadResponse> ApplyUploadOutcome;
+                typedef Outcome<Core::Error, Model::ApplyUploadResponse> ApplyUploadOutcome;
                 typedef std::future<ApplyUploadOutcome> ApplyUploadOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ApplyUploadRequest&, ApplyUploadOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApplyUploadAsyncHandler;
-                typedef Outcome<Error, Model::CommitUploadResponse> CommitUploadOutcome;
+                typedef Outcome<Core::Error, Model::AttachMediaSubtitlesResponse> AttachMediaSubtitlesOutcome;
+                typedef std::future<AttachMediaSubtitlesOutcome> AttachMediaSubtitlesOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::AttachMediaSubtitlesRequest&, AttachMediaSubtitlesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AttachMediaSubtitlesAsyncHandler;
+                typedef Outcome<Core::Error, Model::CommitUploadResponse> CommitUploadOutcome;
                 typedef std::future<CommitUploadOutcome> CommitUploadOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CommitUploadRequest&, CommitUploadOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CommitUploadAsyncHandler;
-                typedef Outcome<Error, Model::ComposeMediaResponse> ComposeMediaOutcome;
+                typedef Outcome<Core::Error, Model::ComposeMediaResponse> ComposeMediaOutcome;
                 typedef std::future<ComposeMediaOutcome> ComposeMediaOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ComposeMediaRequest&, ComposeMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ComposeMediaAsyncHandler;
-                typedef Outcome<Error, Model::ConfirmEventsResponse> ConfirmEventsOutcome;
+                typedef Outcome<Core::Error, Model::ConfirmEventsResponse> ConfirmEventsOutcome;
                 typedef std::future<ConfirmEventsOutcome> ConfirmEventsOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ConfirmEventsRequest&, ConfirmEventsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ConfirmEventsAsyncHandler;
-                typedef Outcome<Error, Model::CreateAIAnalysisTemplateResponse> CreateAIAnalysisTemplateOutcome;
+                typedef Outcome<Core::Error, Model::CreateAIAnalysisTemplateResponse> CreateAIAnalysisTemplateOutcome;
                 typedef std::future<CreateAIAnalysisTemplateOutcome> CreateAIAnalysisTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateAIAnalysisTemplateRequest&, CreateAIAnalysisTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAIAnalysisTemplateAsyncHandler;
-                typedef Outcome<Error, Model::CreateAIRecognitionTemplateResponse> CreateAIRecognitionTemplateOutcome;
+                typedef Outcome<Core::Error, Model::CreateAIRecognitionTemplateResponse> CreateAIRecognitionTemplateOutcome;
                 typedef std::future<CreateAIRecognitionTemplateOutcome> CreateAIRecognitionTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateAIRecognitionTemplateRequest&, CreateAIRecognitionTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAIRecognitionTemplateAsyncHandler;
-                typedef Outcome<Error, Model::CreateAdaptiveDynamicStreamingTemplateResponse> CreateAdaptiveDynamicStreamingTemplateOutcome;
+                typedef Outcome<Core::Error, Model::CreateAdaptiveDynamicStreamingTemplateResponse> CreateAdaptiveDynamicStreamingTemplateOutcome;
                 typedef std::future<CreateAdaptiveDynamicStreamingTemplateOutcome> CreateAdaptiveDynamicStreamingTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateAdaptiveDynamicStreamingTemplateRequest&, CreateAdaptiveDynamicStreamingTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAdaptiveDynamicStreamingTemplateAsyncHandler;
-                typedef Outcome<Error, Model::CreateAnimatedGraphicsTemplateResponse> CreateAnimatedGraphicsTemplateOutcome;
+                typedef Outcome<Core::Error, Model::CreateAnimatedGraphicsTemplateResponse> CreateAnimatedGraphicsTemplateOutcome;
                 typedef std::future<CreateAnimatedGraphicsTemplateOutcome> CreateAnimatedGraphicsTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateAnimatedGraphicsTemplateRequest&, CreateAnimatedGraphicsTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAnimatedGraphicsTemplateAsyncHandler;
-                typedef Outcome<Error, Model::CreateClassResponse> CreateClassOutcome;
+                typedef Outcome<Core::Error, Model::CreateClassResponse> CreateClassOutcome;
                 typedef std::future<CreateClassOutcome> CreateClassOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateClassRequest&, CreateClassOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateClassAsyncHandler;
-                typedef Outcome<Error, Model::CreateContentReviewTemplateResponse> CreateContentReviewTemplateOutcome;
+                typedef Outcome<Core::Error, Model::CreateContentReviewTemplateResponse> CreateContentReviewTemplateOutcome;
                 typedef std::future<CreateContentReviewTemplateOutcome> CreateContentReviewTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateContentReviewTemplateRequest&, CreateContentReviewTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateContentReviewTemplateAsyncHandler;
-                typedef Outcome<Error, Model::CreateImageSpriteTemplateResponse> CreateImageSpriteTemplateOutcome;
+                typedef Outcome<Core::Error, Model::CreateImageSpriteTemplateResponse> CreateImageSpriteTemplateOutcome;
                 typedef std::future<CreateImageSpriteTemplateOutcome> CreateImageSpriteTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateImageSpriteTemplateRequest&, CreateImageSpriteTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateImageSpriteTemplateAsyncHandler;
-                typedef Outcome<Error, Model::CreatePersonSampleResponse> CreatePersonSampleOutcome;
+                typedef Outcome<Core::Error, Model::CreatePersonSampleResponse> CreatePersonSampleOutcome;
                 typedef std::future<CreatePersonSampleOutcome> CreatePersonSampleOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreatePersonSampleRequest&, CreatePersonSampleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePersonSampleAsyncHandler;
-                typedef Outcome<Error, Model::CreateProcedureTemplateResponse> CreateProcedureTemplateOutcome;
+                typedef Outcome<Core::Error, Model::CreateProcedureTemplateResponse> CreateProcedureTemplateOutcome;
                 typedef std::future<CreateProcedureTemplateOutcome> CreateProcedureTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateProcedureTemplateRequest&, CreateProcedureTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateProcedureTemplateAsyncHandler;
-                typedef Outcome<Error, Model::CreateSampleSnapshotTemplateResponse> CreateSampleSnapshotTemplateOutcome;
+                typedef Outcome<Core::Error, Model::CreateSampleSnapshotTemplateResponse> CreateSampleSnapshotTemplateOutcome;
                 typedef std::future<CreateSampleSnapshotTemplateOutcome> CreateSampleSnapshotTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateSampleSnapshotTemplateRequest&, CreateSampleSnapshotTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSampleSnapshotTemplateAsyncHandler;
-                typedef Outcome<Error, Model::CreateSnapshotByTimeOffsetTemplateResponse> CreateSnapshotByTimeOffsetTemplateOutcome;
+                typedef Outcome<Core::Error, Model::CreateSnapshotByTimeOffsetTemplateResponse> CreateSnapshotByTimeOffsetTemplateOutcome;
                 typedef std::future<CreateSnapshotByTimeOffsetTemplateOutcome> CreateSnapshotByTimeOffsetTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateSnapshotByTimeOffsetTemplateRequest&, CreateSnapshotByTimeOffsetTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSnapshotByTimeOffsetTemplateAsyncHandler;
-                typedef Outcome<Error, Model::CreateSubAppIdResponse> CreateSubAppIdOutcome;
+                typedef Outcome<Core::Error, Model::CreateSubAppIdResponse> CreateSubAppIdOutcome;
                 typedef std::future<CreateSubAppIdOutcome> CreateSubAppIdOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateSubAppIdRequest&, CreateSubAppIdOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSubAppIdAsyncHandler;
-                typedef Outcome<Error, Model::CreateSuperPlayerConfigResponse> CreateSuperPlayerConfigOutcome;
+                typedef Outcome<Core::Error, Model::CreateSuperPlayerConfigResponse> CreateSuperPlayerConfigOutcome;
                 typedef std::future<CreateSuperPlayerConfigOutcome> CreateSuperPlayerConfigOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateSuperPlayerConfigRequest&, CreateSuperPlayerConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSuperPlayerConfigAsyncHandler;
-                typedef Outcome<Error, Model::CreateTranscodeTemplateResponse> CreateTranscodeTemplateOutcome;
+                typedef Outcome<Core::Error, Model::CreateTranscodeTemplateResponse> CreateTranscodeTemplateOutcome;
                 typedef std::future<CreateTranscodeTemplateOutcome> CreateTranscodeTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateTranscodeTemplateRequest&, CreateTranscodeTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateTranscodeTemplateAsyncHandler;
-                typedef Outcome<Error, Model::CreateWatermarkTemplateResponse> CreateWatermarkTemplateOutcome;
+                typedef Outcome<Core::Error, Model::CreateVodDomainResponse> CreateVodDomainOutcome;
+                typedef std::future<CreateVodDomainOutcome> CreateVodDomainOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::CreateVodDomainRequest&, CreateVodDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateVodDomainAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateWatermarkTemplateResponse> CreateWatermarkTemplateOutcome;
                 typedef std::future<CreateWatermarkTemplateOutcome> CreateWatermarkTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateWatermarkTemplateRequest&, CreateWatermarkTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateWatermarkTemplateAsyncHandler;
-                typedef Outcome<Error, Model::CreateWordSamplesResponse> CreateWordSamplesOutcome;
+                typedef Outcome<Core::Error, Model::CreateWordSamplesResponse> CreateWordSamplesOutcome;
                 typedef std::future<CreateWordSamplesOutcome> CreateWordSamplesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateWordSamplesRequest&, CreateWordSamplesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateWordSamplesAsyncHandler;
-                typedef Outcome<Error, Model::DeleteAIAnalysisTemplateResponse> DeleteAIAnalysisTemplateOutcome;
+                typedef Outcome<Core::Error, Model::DeleteAIAnalysisTemplateResponse> DeleteAIAnalysisTemplateOutcome;
                 typedef std::future<DeleteAIAnalysisTemplateOutcome> DeleteAIAnalysisTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteAIAnalysisTemplateRequest&, DeleteAIAnalysisTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAIAnalysisTemplateAsyncHandler;
-                typedef Outcome<Error, Model::DeleteAIRecognitionTemplateResponse> DeleteAIRecognitionTemplateOutcome;
+                typedef Outcome<Core::Error, Model::DeleteAIRecognitionTemplateResponse> DeleteAIRecognitionTemplateOutcome;
                 typedef std::future<DeleteAIRecognitionTemplateOutcome> DeleteAIRecognitionTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteAIRecognitionTemplateRequest&, DeleteAIRecognitionTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAIRecognitionTemplateAsyncHandler;
-                typedef Outcome<Error, Model::DeleteAdaptiveDynamicStreamingTemplateResponse> DeleteAdaptiveDynamicStreamingTemplateOutcome;
+                typedef Outcome<Core::Error, Model::DeleteAdaptiveDynamicStreamingTemplateResponse> DeleteAdaptiveDynamicStreamingTemplateOutcome;
                 typedef std::future<DeleteAdaptiveDynamicStreamingTemplateOutcome> DeleteAdaptiveDynamicStreamingTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteAdaptiveDynamicStreamingTemplateRequest&, DeleteAdaptiveDynamicStreamingTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAdaptiveDynamicStreamingTemplateAsyncHandler;
-                typedef Outcome<Error, Model::DeleteAnimatedGraphicsTemplateResponse> DeleteAnimatedGraphicsTemplateOutcome;
+                typedef Outcome<Core::Error, Model::DeleteAnimatedGraphicsTemplateResponse> DeleteAnimatedGraphicsTemplateOutcome;
                 typedef std::future<DeleteAnimatedGraphicsTemplateOutcome> DeleteAnimatedGraphicsTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteAnimatedGraphicsTemplateRequest&, DeleteAnimatedGraphicsTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAnimatedGraphicsTemplateAsyncHandler;
-                typedef Outcome<Error, Model::DeleteClassResponse> DeleteClassOutcome;
+                typedef Outcome<Core::Error, Model::DeleteClassResponse> DeleteClassOutcome;
                 typedef std::future<DeleteClassOutcome> DeleteClassOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteClassRequest&, DeleteClassOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteClassAsyncHandler;
-                typedef Outcome<Error, Model::DeleteContentReviewTemplateResponse> DeleteContentReviewTemplateOutcome;
+                typedef Outcome<Core::Error, Model::DeleteContentReviewTemplateResponse> DeleteContentReviewTemplateOutcome;
                 typedef std::future<DeleteContentReviewTemplateOutcome> DeleteContentReviewTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteContentReviewTemplateRequest&, DeleteContentReviewTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteContentReviewTemplateAsyncHandler;
-                typedef Outcome<Error, Model::DeleteImageSpriteTemplateResponse> DeleteImageSpriteTemplateOutcome;
+                typedef Outcome<Core::Error, Model::DeleteImageSpriteTemplateResponse> DeleteImageSpriteTemplateOutcome;
                 typedef std::future<DeleteImageSpriteTemplateOutcome> DeleteImageSpriteTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteImageSpriteTemplateRequest&, DeleteImageSpriteTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteImageSpriteTemplateAsyncHandler;
-                typedef Outcome<Error, Model::DeleteMediaResponse> DeleteMediaOutcome;
+                typedef Outcome<Core::Error, Model::DeleteMediaResponse> DeleteMediaOutcome;
                 typedef std::future<DeleteMediaOutcome> DeleteMediaOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteMediaRequest&, DeleteMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteMediaAsyncHandler;
-                typedef Outcome<Error, Model::DeletePersonSampleResponse> DeletePersonSampleOutcome;
+                typedef Outcome<Core::Error, Model::DeletePersonSampleResponse> DeletePersonSampleOutcome;
                 typedef std::future<DeletePersonSampleOutcome> DeletePersonSampleOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeletePersonSampleRequest&, DeletePersonSampleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeletePersonSampleAsyncHandler;
-                typedef Outcome<Error, Model::DeleteProcedureTemplateResponse> DeleteProcedureTemplateOutcome;
+                typedef Outcome<Core::Error, Model::DeleteProcedureTemplateResponse> DeleteProcedureTemplateOutcome;
                 typedef std::future<DeleteProcedureTemplateOutcome> DeleteProcedureTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteProcedureTemplateRequest&, DeleteProcedureTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteProcedureTemplateAsyncHandler;
-                typedef Outcome<Error, Model::DeleteSampleSnapshotTemplateResponse> DeleteSampleSnapshotTemplateOutcome;
+                typedef Outcome<Core::Error, Model::DeleteSampleSnapshotTemplateResponse> DeleteSampleSnapshotTemplateOutcome;
                 typedef std::future<DeleteSampleSnapshotTemplateOutcome> DeleteSampleSnapshotTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteSampleSnapshotTemplateRequest&, DeleteSampleSnapshotTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteSampleSnapshotTemplateAsyncHandler;
-                typedef Outcome<Error, Model::DeleteSnapshotByTimeOffsetTemplateResponse> DeleteSnapshotByTimeOffsetTemplateOutcome;
+                typedef Outcome<Core::Error, Model::DeleteSnapshotByTimeOffsetTemplateResponse> DeleteSnapshotByTimeOffsetTemplateOutcome;
                 typedef std::future<DeleteSnapshotByTimeOffsetTemplateOutcome> DeleteSnapshotByTimeOffsetTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteSnapshotByTimeOffsetTemplateRequest&, DeleteSnapshotByTimeOffsetTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteSnapshotByTimeOffsetTemplateAsyncHandler;
-                typedef Outcome<Error, Model::DeleteSuperPlayerConfigResponse> DeleteSuperPlayerConfigOutcome;
+                typedef Outcome<Core::Error, Model::DeleteSuperPlayerConfigResponse> DeleteSuperPlayerConfigOutcome;
                 typedef std::future<DeleteSuperPlayerConfigOutcome> DeleteSuperPlayerConfigOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteSuperPlayerConfigRequest&, DeleteSuperPlayerConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteSuperPlayerConfigAsyncHandler;
-                typedef Outcome<Error, Model::DeleteTranscodeTemplateResponse> DeleteTranscodeTemplateOutcome;
+                typedef Outcome<Core::Error, Model::DeleteTranscodeTemplateResponse> DeleteTranscodeTemplateOutcome;
                 typedef std::future<DeleteTranscodeTemplateOutcome> DeleteTranscodeTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteTranscodeTemplateRequest&, DeleteTranscodeTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTranscodeTemplateAsyncHandler;
-                typedef Outcome<Error, Model::DeleteWatermarkTemplateResponse> DeleteWatermarkTemplateOutcome;
+                typedef Outcome<Core::Error, Model::DeleteVodDomainResponse> DeleteVodDomainOutcome;
+                typedef std::future<DeleteVodDomainOutcome> DeleteVodDomainOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DeleteVodDomainRequest&, DeleteVodDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteVodDomainAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteWatermarkTemplateResponse> DeleteWatermarkTemplateOutcome;
                 typedef std::future<DeleteWatermarkTemplateOutcome> DeleteWatermarkTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteWatermarkTemplateRequest&, DeleteWatermarkTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteWatermarkTemplateAsyncHandler;
-                typedef Outcome<Error, Model::DeleteWordSamplesResponse> DeleteWordSamplesOutcome;
+                typedef Outcome<Core::Error, Model::DeleteWordSamplesResponse> DeleteWordSamplesOutcome;
                 typedef std::future<DeleteWordSamplesOutcome> DeleteWordSamplesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteWordSamplesRequest&, DeleteWordSamplesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteWordSamplesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeAIAnalysisTemplatesResponse> DescribeAIAnalysisTemplatesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAIAnalysisTemplatesResponse> DescribeAIAnalysisTemplatesOutcome;
                 typedef std::future<DescribeAIAnalysisTemplatesOutcome> DescribeAIAnalysisTemplatesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeAIAnalysisTemplatesRequest&, DescribeAIAnalysisTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAIAnalysisTemplatesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeAIRecognitionTemplatesResponse> DescribeAIRecognitionTemplatesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAIRecognitionTemplatesResponse> DescribeAIRecognitionTemplatesOutcome;
                 typedef std::future<DescribeAIRecognitionTemplatesOutcome> DescribeAIRecognitionTemplatesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeAIRecognitionTemplatesRequest&, DescribeAIRecognitionTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAIRecognitionTemplatesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeAdaptiveDynamicStreamingTemplatesResponse> DescribeAdaptiveDynamicStreamingTemplatesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAdaptiveDynamicStreamingTemplatesResponse> DescribeAdaptiveDynamicStreamingTemplatesOutcome;
                 typedef std::future<DescribeAdaptiveDynamicStreamingTemplatesOutcome> DescribeAdaptiveDynamicStreamingTemplatesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeAdaptiveDynamicStreamingTemplatesRequest&, DescribeAdaptiveDynamicStreamingTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAdaptiveDynamicStreamingTemplatesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeAllClassResponse> DescribeAllClassOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAllClassResponse> DescribeAllClassOutcome;
                 typedef std::future<DescribeAllClassOutcome> DescribeAllClassOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeAllClassRequest&, DescribeAllClassOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAllClassAsyncHandler;
-                typedef Outcome<Error, Model::DescribeAnimatedGraphicsTemplatesResponse> DescribeAnimatedGraphicsTemplatesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAnimatedGraphicsTemplatesResponse> DescribeAnimatedGraphicsTemplatesOutcome;
                 typedef std::future<DescribeAnimatedGraphicsTemplatesOutcome> DescribeAnimatedGraphicsTemplatesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeAnimatedGraphicsTemplatesRequest&, DescribeAnimatedGraphicsTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAnimatedGraphicsTemplatesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeCDNUsageDataResponse> DescribeCDNUsageDataOutcome;
+                typedef Outcome<Core::Error, Model::DescribeCDNStatDetailsResponse> DescribeCDNStatDetailsOutcome;
+                typedef std::future<DescribeCDNStatDetailsOutcome> DescribeCDNStatDetailsOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DescribeCDNStatDetailsRequest&, DescribeCDNStatDetailsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCDNStatDetailsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCDNUsageDataResponse> DescribeCDNUsageDataOutcome;
                 typedef std::future<DescribeCDNUsageDataOutcome> DescribeCDNUsageDataOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeCDNUsageDataRequest&, DescribeCDNUsageDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCDNUsageDataAsyncHandler;
-                typedef Outcome<Error, Model::DescribeContentReviewTemplatesResponse> DescribeContentReviewTemplatesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeCdnLogsResponse> DescribeCdnLogsOutcome;
+                typedef std::future<DescribeCdnLogsOutcome> DescribeCdnLogsOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DescribeCdnLogsRequest&, DescribeCdnLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCdnLogsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeContentReviewTemplatesResponse> DescribeContentReviewTemplatesOutcome;
                 typedef std::future<DescribeContentReviewTemplatesOutcome> DescribeContentReviewTemplatesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeContentReviewTemplatesRequest&, DescribeContentReviewTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeContentReviewTemplatesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeImageSpriteTemplatesResponse> DescribeImageSpriteTemplatesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDailyPlayStatFileListResponse> DescribeDailyPlayStatFileListOutcome;
+                typedef std::future<DescribeDailyPlayStatFileListOutcome> DescribeDailyPlayStatFileListOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DescribeDailyPlayStatFileListRequest&, DescribeDailyPlayStatFileListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDailyPlayStatFileListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeImageSpriteTemplatesResponse> DescribeImageSpriteTemplatesOutcome;
                 typedef std::future<DescribeImageSpriteTemplatesOutcome> DescribeImageSpriteTemplatesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeImageSpriteTemplatesRequest&, DescribeImageSpriteTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeImageSpriteTemplatesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeMediaInfosResponse> DescribeMediaInfosOutcome;
+                typedef Outcome<Core::Error, Model::DescribeMediaInfosResponse> DescribeMediaInfosOutcome;
                 typedef std::future<DescribeMediaInfosOutcome> DescribeMediaInfosOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeMediaInfosRequest&, DescribeMediaInfosOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMediaInfosAsyncHandler;
-                typedef Outcome<Error, Model::DescribeMediaProcessUsageDataResponse> DescribeMediaProcessUsageDataOutcome;
+                typedef Outcome<Core::Error, Model::DescribeMediaProcessUsageDataResponse> DescribeMediaProcessUsageDataOutcome;
                 typedef std::future<DescribeMediaProcessUsageDataOutcome> DescribeMediaProcessUsageDataOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeMediaProcessUsageDataRequest&, DescribeMediaProcessUsageDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMediaProcessUsageDataAsyncHandler;
-                typedef Outcome<Error, Model::DescribePersonSamplesResponse> DescribePersonSamplesOutcome;
+                typedef Outcome<Core::Error, Model::DescribePersonSamplesResponse> DescribePersonSamplesOutcome;
                 typedef std::future<DescribePersonSamplesOutcome> DescribePersonSamplesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribePersonSamplesRequest&, DescribePersonSamplesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePersonSamplesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeProcedureTemplatesResponse> DescribeProcedureTemplatesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeProcedureTemplatesResponse> DescribeProcedureTemplatesOutcome;
                 typedef std::future<DescribeProcedureTemplatesOutcome> DescribeProcedureTemplatesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeProcedureTemplatesRequest&, DescribeProcedureTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProcedureTemplatesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeReviewDetailsResponse> DescribeReviewDetailsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeReviewDetailsResponse> DescribeReviewDetailsOutcome;
                 typedef std::future<DescribeReviewDetailsOutcome> DescribeReviewDetailsOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeReviewDetailsRequest&, DescribeReviewDetailsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeReviewDetailsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeSampleSnapshotTemplatesResponse> DescribeSampleSnapshotTemplatesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeSampleSnapshotTemplatesResponse> DescribeSampleSnapshotTemplatesOutcome;
                 typedef std::future<DescribeSampleSnapshotTemplatesOutcome> DescribeSampleSnapshotTemplatesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeSampleSnapshotTemplatesRequest&, DescribeSampleSnapshotTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSampleSnapshotTemplatesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeSnapshotByTimeOffsetTemplatesResponse> DescribeSnapshotByTimeOffsetTemplatesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeSnapshotByTimeOffsetTemplatesResponse> DescribeSnapshotByTimeOffsetTemplatesOutcome;
                 typedef std::future<DescribeSnapshotByTimeOffsetTemplatesOutcome> DescribeSnapshotByTimeOffsetTemplatesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeSnapshotByTimeOffsetTemplatesRequest&, DescribeSnapshotByTimeOffsetTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSnapshotByTimeOffsetTemplatesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeStorageDataResponse> DescribeStorageDataOutcome;
+                typedef Outcome<Core::Error, Model::DescribeStorageDataResponse> DescribeStorageDataOutcome;
                 typedef std::future<DescribeStorageDataOutcome> DescribeStorageDataOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeStorageDataRequest&, DescribeStorageDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStorageDataAsyncHandler;
-                typedef Outcome<Error, Model::DescribeStorageDetailsResponse> DescribeStorageDetailsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeStorageDetailsResponse> DescribeStorageDetailsOutcome;
                 typedef std::future<DescribeStorageDetailsOutcome> DescribeStorageDetailsOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeStorageDetailsRequest&, DescribeStorageDetailsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStorageDetailsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeSubAppIdsResponse> DescribeSubAppIdsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeSubAppIdsResponse> DescribeSubAppIdsOutcome;
                 typedef std::future<DescribeSubAppIdsOutcome> DescribeSubAppIdsOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeSubAppIdsRequest&, DescribeSubAppIdsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSubAppIdsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeSuperPlayerConfigsResponse> DescribeSuperPlayerConfigsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeSuperPlayerConfigsResponse> DescribeSuperPlayerConfigsOutcome;
                 typedef std::future<DescribeSuperPlayerConfigsOutcome> DescribeSuperPlayerConfigsOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeSuperPlayerConfigsRequest&, DescribeSuperPlayerConfigsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSuperPlayerConfigsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTaskDetailResponse> DescribeTaskDetailOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTaskDetailResponse> DescribeTaskDetailOutcome;
                 typedef std::future<DescribeTaskDetailOutcome> DescribeTaskDetailOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeTaskDetailRequest&, DescribeTaskDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTaskDetailAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTasksResponse> DescribeTasksOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTasksResponse> DescribeTasksOutcome;
                 typedef std::future<DescribeTasksOutcome> DescribeTasksOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeTasksRequest&, DescribeTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTasksAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTranscodeTemplatesResponse> DescribeTranscodeTemplatesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTranscodeTemplatesResponse> DescribeTranscodeTemplatesOutcome;
                 typedef std::future<DescribeTranscodeTemplatesOutcome> DescribeTranscodeTemplatesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeTranscodeTemplatesRequest&, DescribeTranscodeTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTranscodeTemplatesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeWatermarkTemplatesResponse> DescribeWatermarkTemplatesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeVodDomainsResponse> DescribeVodDomainsOutcome;
+                typedef std::future<DescribeVodDomainsOutcome> DescribeVodDomainsOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DescribeVodDomainsRequest&, DescribeVodDomainsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVodDomainsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeWatermarkTemplatesResponse> DescribeWatermarkTemplatesOutcome;
                 typedef std::future<DescribeWatermarkTemplatesOutcome> DescribeWatermarkTemplatesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeWatermarkTemplatesRequest&, DescribeWatermarkTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWatermarkTemplatesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeWordSamplesResponse> DescribeWordSamplesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeWordSamplesResponse> DescribeWordSamplesOutcome;
                 typedef std::future<DescribeWordSamplesOutcome> DescribeWordSamplesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeWordSamplesRequest&, DescribeWordSamplesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWordSamplesAsyncHandler;
-                typedef Outcome<Error, Model::EditMediaResponse> EditMediaOutcome;
+                typedef Outcome<Core::Error, Model::EditMediaResponse> EditMediaOutcome;
                 typedef std::future<EditMediaOutcome> EditMediaOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::EditMediaRequest&, EditMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EditMediaAsyncHandler;
-                typedef Outcome<Error, Model::ExecuteFunctionResponse> ExecuteFunctionOutcome;
+                typedef Outcome<Core::Error, Model::ExecuteFunctionResponse> ExecuteFunctionOutcome;
                 typedef std::future<ExecuteFunctionOutcome> ExecuteFunctionOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ExecuteFunctionRequest&, ExecuteFunctionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExecuteFunctionAsyncHandler;
-                typedef Outcome<Error, Model::ForbidMediaDistributionResponse> ForbidMediaDistributionOutcome;
+                typedef Outcome<Core::Error, Model::ForbidMediaDistributionResponse> ForbidMediaDistributionOutcome;
                 typedef std::future<ForbidMediaDistributionOutcome> ForbidMediaDistributionOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ForbidMediaDistributionRequest&, ForbidMediaDistributionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ForbidMediaDistributionAsyncHandler;
-                typedef Outcome<Error, Model::LiveRealTimeClipResponse> LiveRealTimeClipOutcome;
+                typedef Outcome<Core::Error, Model::LiveRealTimeClipResponse> LiveRealTimeClipOutcome;
                 typedef std::future<LiveRealTimeClipOutcome> LiveRealTimeClipOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::LiveRealTimeClipRequest&, LiveRealTimeClipOutcome, const std::shared_ptr<const AsyncCallerContext>&)> LiveRealTimeClipAsyncHandler;
-                typedef Outcome<Error, Model::ModifyAIAnalysisTemplateResponse> ModifyAIAnalysisTemplateOutcome;
+                typedef Outcome<Core::Error, Model::ManageTaskResponse> ManageTaskOutcome;
+                typedef std::future<ManageTaskOutcome> ManageTaskOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::ManageTaskRequest&, ManageTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ManageTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyAIAnalysisTemplateResponse> ModifyAIAnalysisTemplateOutcome;
                 typedef std::future<ModifyAIAnalysisTemplateOutcome> ModifyAIAnalysisTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifyAIAnalysisTemplateRequest&, ModifyAIAnalysisTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAIAnalysisTemplateAsyncHandler;
-                typedef Outcome<Error, Model::ModifyAIRecognitionTemplateResponse> ModifyAIRecognitionTemplateOutcome;
+                typedef Outcome<Core::Error, Model::ModifyAIRecognitionTemplateResponse> ModifyAIRecognitionTemplateOutcome;
                 typedef std::future<ModifyAIRecognitionTemplateOutcome> ModifyAIRecognitionTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifyAIRecognitionTemplateRequest&, ModifyAIRecognitionTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAIRecognitionTemplateAsyncHandler;
-                typedef Outcome<Error, Model::ModifyAdaptiveDynamicStreamingTemplateResponse> ModifyAdaptiveDynamicStreamingTemplateOutcome;
+                typedef Outcome<Core::Error, Model::ModifyAdaptiveDynamicStreamingTemplateResponse> ModifyAdaptiveDynamicStreamingTemplateOutcome;
                 typedef std::future<ModifyAdaptiveDynamicStreamingTemplateOutcome> ModifyAdaptiveDynamicStreamingTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifyAdaptiveDynamicStreamingTemplateRequest&, ModifyAdaptiveDynamicStreamingTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAdaptiveDynamicStreamingTemplateAsyncHandler;
-                typedef Outcome<Error, Model::ModifyAnimatedGraphicsTemplateResponse> ModifyAnimatedGraphicsTemplateOutcome;
+                typedef Outcome<Core::Error, Model::ModifyAnimatedGraphicsTemplateResponse> ModifyAnimatedGraphicsTemplateOutcome;
                 typedef std::future<ModifyAnimatedGraphicsTemplateOutcome> ModifyAnimatedGraphicsTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifyAnimatedGraphicsTemplateRequest&, ModifyAnimatedGraphicsTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAnimatedGraphicsTemplateAsyncHandler;
-                typedef Outcome<Error, Model::ModifyClassResponse> ModifyClassOutcome;
+                typedef Outcome<Core::Error, Model::ModifyClassResponse> ModifyClassOutcome;
                 typedef std::future<ModifyClassOutcome> ModifyClassOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifyClassRequest&, ModifyClassOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyClassAsyncHandler;
-                typedef Outcome<Error, Model::ModifyContentReviewTemplateResponse> ModifyContentReviewTemplateOutcome;
+                typedef Outcome<Core::Error, Model::ModifyContentReviewTemplateResponse> ModifyContentReviewTemplateOutcome;
                 typedef std::future<ModifyContentReviewTemplateOutcome> ModifyContentReviewTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifyContentReviewTemplateRequest&, ModifyContentReviewTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyContentReviewTemplateAsyncHandler;
-                typedef Outcome<Error, Model::ModifyImageSpriteTemplateResponse> ModifyImageSpriteTemplateOutcome;
+                typedef Outcome<Core::Error, Model::ModifyImageSpriteTemplateResponse> ModifyImageSpriteTemplateOutcome;
                 typedef std::future<ModifyImageSpriteTemplateOutcome> ModifyImageSpriteTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifyImageSpriteTemplateRequest&, ModifyImageSpriteTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyImageSpriteTemplateAsyncHandler;
-                typedef Outcome<Error, Model::ModifyMediaInfoResponse> ModifyMediaInfoOutcome;
+                typedef Outcome<Core::Error, Model::ModifyMediaInfoResponse> ModifyMediaInfoOutcome;
                 typedef std::future<ModifyMediaInfoOutcome> ModifyMediaInfoOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifyMediaInfoRequest&, ModifyMediaInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyMediaInfoAsyncHandler;
-                typedef Outcome<Error, Model::ModifyPersonSampleResponse> ModifyPersonSampleOutcome;
+                typedef Outcome<Core::Error, Model::ModifyPersonSampleResponse> ModifyPersonSampleOutcome;
                 typedef std::future<ModifyPersonSampleOutcome> ModifyPersonSampleOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifyPersonSampleRequest&, ModifyPersonSampleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyPersonSampleAsyncHandler;
-                typedef Outcome<Error, Model::ModifySampleSnapshotTemplateResponse> ModifySampleSnapshotTemplateOutcome;
+                typedef Outcome<Core::Error, Model::ModifySampleSnapshotTemplateResponse> ModifySampleSnapshotTemplateOutcome;
                 typedef std::future<ModifySampleSnapshotTemplateOutcome> ModifySampleSnapshotTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifySampleSnapshotTemplateRequest&, ModifySampleSnapshotTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySampleSnapshotTemplateAsyncHandler;
-                typedef Outcome<Error, Model::ModifySnapshotByTimeOffsetTemplateResponse> ModifySnapshotByTimeOffsetTemplateOutcome;
+                typedef Outcome<Core::Error, Model::ModifySnapshotByTimeOffsetTemplateResponse> ModifySnapshotByTimeOffsetTemplateOutcome;
                 typedef std::future<ModifySnapshotByTimeOffsetTemplateOutcome> ModifySnapshotByTimeOffsetTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifySnapshotByTimeOffsetTemplateRequest&, ModifySnapshotByTimeOffsetTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySnapshotByTimeOffsetTemplateAsyncHandler;
-                typedef Outcome<Error, Model::ModifySubAppIdInfoResponse> ModifySubAppIdInfoOutcome;
+                typedef Outcome<Core::Error, Model::ModifySubAppIdInfoResponse> ModifySubAppIdInfoOutcome;
                 typedef std::future<ModifySubAppIdInfoOutcome> ModifySubAppIdInfoOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifySubAppIdInfoRequest&, ModifySubAppIdInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySubAppIdInfoAsyncHandler;
-                typedef Outcome<Error, Model::ModifySubAppIdStatusResponse> ModifySubAppIdStatusOutcome;
+                typedef Outcome<Core::Error, Model::ModifySubAppIdStatusResponse> ModifySubAppIdStatusOutcome;
                 typedef std::future<ModifySubAppIdStatusOutcome> ModifySubAppIdStatusOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifySubAppIdStatusRequest&, ModifySubAppIdStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySubAppIdStatusAsyncHandler;
-                typedef Outcome<Error, Model::ModifySuperPlayerConfigResponse> ModifySuperPlayerConfigOutcome;
+                typedef Outcome<Core::Error, Model::ModifySuperPlayerConfigResponse> ModifySuperPlayerConfigOutcome;
                 typedef std::future<ModifySuperPlayerConfigOutcome> ModifySuperPlayerConfigOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifySuperPlayerConfigRequest&, ModifySuperPlayerConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySuperPlayerConfigAsyncHandler;
-                typedef Outcome<Error, Model::ModifyTranscodeTemplateResponse> ModifyTranscodeTemplateOutcome;
+                typedef Outcome<Core::Error, Model::ModifyTranscodeTemplateResponse> ModifyTranscodeTemplateOutcome;
                 typedef std::future<ModifyTranscodeTemplateOutcome> ModifyTranscodeTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifyTranscodeTemplateRequest&, ModifyTranscodeTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyTranscodeTemplateAsyncHandler;
-                typedef Outcome<Error, Model::ModifyWatermarkTemplateResponse> ModifyWatermarkTemplateOutcome;
+                typedef Outcome<Core::Error, Model::ModifyVodDomainAccelerateConfigResponse> ModifyVodDomainAccelerateConfigOutcome;
+                typedef std::future<ModifyVodDomainAccelerateConfigOutcome> ModifyVodDomainAccelerateConfigOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::ModifyVodDomainAccelerateConfigRequest&, ModifyVodDomainAccelerateConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyVodDomainAccelerateConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyVodDomainConfigResponse> ModifyVodDomainConfigOutcome;
+                typedef std::future<ModifyVodDomainConfigOutcome> ModifyVodDomainConfigOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::ModifyVodDomainConfigRequest&, ModifyVodDomainConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyVodDomainConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyWatermarkTemplateResponse> ModifyWatermarkTemplateOutcome;
                 typedef std::future<ModifyWatermarkTemplateOutcome> ModifyWatermarkTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifyWatermarkTemplateRequest&, ModifyWatermarkTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyWatermarkTemplateAsyncHandler;
-                typedef Outcome<Error, Model::ModifyWordSampleResponse> ModifyWordSampleOutcome;
+                typedef Outcome<Core::Error, Model::ModifyWordSampleResponse> ModifyWordSampleOutcome;
                 typedef std::future<ModifyWordSampleOutcome> ModifyWordSampleOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifyWordSampleRequest&, ModifyWordSampleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyWordSampleAsyncHandler;
-                typedef Outcome<Error, Model::ParseStreamingManifestResponse> ParseStreamingManifestOutcome;
+                typedef Outcome<Core::Error, Model::ParseStreamingManifestResponse> ParseStreamingManifestOutcome;
                 typedef std::future<ParseStreamingManifestOutcome> ParseStreamingManifestOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ParseStreamingManifestRequest&, ParseStreamingManifestOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ParseStreamingManifestAsyncHandler;
-                typedef Outcome<Error, Model::ProcessMediaResponse> ProcessMediaOutcome;
+                typedef Outcome<Core::Error, Model::ProcessMediaResponse> ProcessMediaOutcome;
                 typedef std::future<ProcessMediaOutcome> ProcessMediaOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ProcessMediaRequest&, ProcessMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ProcessMediaAsyncHandler;
-                typedef Outcome<Error, Model::ProcessMediaByProcedureResponse> ProcessMediaByProcedureOutcome;
+                typedef Outcome<Core::Error, Model::ProcessMediaByProcedureResponse> ProcessMediaByProcedureOutcome;
                 typedef std::future<ProcessMediaByProcedureOutcome> ProcessMediaByProcedureOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ProcessMediaByProcedureRequest&, ProcessMediaByProcedureOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ProcessMediaByProcedureAsyncHandler;
-                typedef Outcome<Error, Model::ProcessMediaByUrlResponse> ProcessMediaByUrlOutcome;
+                typedef Outcome<Core::Error, Model::ProcessMediaByUrlResponse> ProcessMediaByUrlOutcome;
                 typedef std::future<ProcessMediaByUrlOutcome> ProcessMediaByUrlOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ProcessMediaByUrlRequest&, ProcessMediaByUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ProcessMediaByUrlAsyncHandler;
-                typedef Outcome<Error, Model::PullEventsResponse> PullEventsOutcome;
+                typedef Outcome<Core::Error, Model::PullEventsResponse> PullEventsOutcome;
                 typedef std::future<PullEventsOutcome> PullEventsOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::PullEventsRequest&, PullEventsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PullEventsAsyncHandler;
-                typedef Outcome<Error, Model::PullUploadResponse> PullUploadOutcome;
+                typedef Outcome<Core::Error, Model::PullUploadResponse> PullUploadOutcome;
                 typedef std::future<PullUploadOutcome> PullUploadOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::PullUploadRequest&, PullUploadOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PullUploadAsyncHandler;
-                typedef Outcome<Error, Model::PushUrlCacheResponse> PushUrlCacheOutcome;
+                typedef Outcome<Core::Error, Model::PushUrlCacheResponse> PushUrlCacheOutcome;
                 typedef std::future<PushUrlCacheOutcome> PushUrlCacheOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::PushUrlCacheRequest&, PushUrlCacheOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PushUrlCacheAsyncHandler;
-                typedef Outcome<Error, Model::ResetProcedureTemplateResponse> ResetProcedureTemplateOutcome;
+                typedef Outcome<Core::Error, Model::ResetProcedureTemplateResponse> ResetProcedureTemplateOutcome;
                 typedef std::future<ResetProcedureTemplateOutcome> ResetProcedureTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ResetProcedureTemplateRequest&, ResetProcedureTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetProcedureTemplateAsyncHandler;
-                typedef Outcome<Error, Model::SearchMediaResponse> SearchMediaOutcome;
+                typedef Outcome<Core::Error, Model::SearchMediaResponse> SearchMediaOutcome;
                 typedef std::future<SearchMediaOutcome> SearchMediaOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::SearchMediaRequest&, SearchMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SearchMediaAsyncHandler;
-                typedef Outcome<Error, Model::SimpleHlsClipResponse> SimpleHlsClipOutcome;
+                typedef Outcome<Core::Error, Model::SimpleHlsClipResponse> SimpleHlsClipOutcome;
                 typedef std::future<SimpleHlsClipOutcome> SimpleHlsClipOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::SimpleHlsClipRequest&, SimpleHlsClipOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SimpleHlsClipAsyncHandler;
-                typedef Outcome<Error, Model::WeChatMiniProgramPublishResponse> WeChatMiniProgramPublishOutcome;
+                typedef Outcome<Core::Error, Model::WeChatMiniProgramPublishResponse> WeChatMiniProgramPublishOutcome;
                 typedef std::future<WeChatMiniProgramPublishOutcome> WeChatMiniProgramPublishOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::WeChatMiniProgramPublishRequest&, WeChatMiniProgramPublishOutcome, const std::shared_ptr<const AsyncCallerContext>&)> WeChatMiniProgramPublishAsyncHandler;
 
@@ -502,13 +552,22 @@ namespace TencentCloud
 
                 /**
                  ** This API is used to apply for uploading a media file (and cover file) to VOD and obtain the metadata of file storage (including upload path and upload signature) for subsequent use by the uploading API.
-* For the detailed upload process, please see [Overview of Upload from Client](/document/product/266/9759).
+* For the detailed upload process, please see [Overview of Upload from Client](https://intl.cloud.tencent.com/document/product/266/9759?from_cn_redirect=1).
                  * @param req ApplyUploadRequest
                  * @return ApplyUploadOutcome
                  */
                 ApplyUploadOutcome ApplyUpload(const Model::ApplyUploadRequest &request);
                 void ApplyUploadAsync(const Model::ApplyUploadRequest& request, const ApplyUploadAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ApplyUploadOutcomeCallable ApplyUploadCallable(const Model::ApplyUploadRequest& request);
+
+                /**
+                 *This API is used to associate/disassociate subtitles with/from a media file of a specific adaptive bitrate streaming template ID.
+                 * @param req AttachMediaSubtitlesRequest
+                 * @return AttachMediaSubtitlesOutcome
+                 */
+                AttachMediaSubtitlesOutcome AttachMediaSubtitles(const Model::AttachMediaSubtitlesRequest &request);
+                void AttachMediaSubtitlesAsync(const Model::AttachMediaSubtitlesRequest& request, const AttachMediaSubtitlesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AttachMediaSubtitlesOutcomeCallable AttachMediaSubtitlesCallable(const Model::AttachMediaSubtitlesRequest& request);
 
                 /**
                  *This API is used to confirm the result of uploading a media file (and cover file) to VOD, store the media information, and return the playback address and ID of the file.
@@ -535,7 +594,7 @@ namespace TencentCloud
                 /**
                  ** After the `PullEvents` API is called to get an event, this API must be called to confirm that the message has been received;
 * After the event handler is obtained, the validity period of waiting for confirmation is 30 seconds. If the wait exceeds 30 seconds, a parameter error will be reported (4000);
-* For more information, please see the [reliable callback](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83) of event notification.
+* For more information, please see the [reliable callback](https://intl.cloud.tencent.com/document/product/266/33779?from_cn_redirect=1#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83) of event notification.
                  * @param req ConfirmEventsRequest
                  * @return ConfirmEventsOutcome
                  */
@@ -581,7 +640,7 @@ namespace TencentCloud
 
                 /**
                  ** This API is used to categorize media assets for management;
-* It does not affect the categories of existing media assets. If you want to modify the category of a media asset, call the [ModifyMediaInfo](/document/product/266/31762) API.
+* It does not affect the categories of existing media assets. If you want to modify the category of a media asset, call the [ModifyMediaInfo](https://intl.cloud.tencent.com/document/product/266/31762?from_cn_redirect=1) API.
 * There can be up to 4 levels of categories.
 * One category can have up to 500 subcategories under it.
                  * @param req CreateClassRequest
@@ -592,7 +651,7 @@ namespace TencentCloud
                 CreateClassOutcomeCallable CreateClassCallable(const Model::CreateClassRequest& request);
 
                 /**
-                 *This API is used to create a custom video content audit template. Up to 50 templates can be created.
+                 *This API is used to create custom intelligent video content recognition templates. Up to 50 templates can be created.
                  * @param req CreateContentReviewTemplateRequest
                  * @return CreateContentReviewTemplateOutcome
                  */
@@ -610,7 +669,7 @@ namespace TencentCloud
                 CreateImageSpriteTemplateOutcomeCallable CreateImageSpriteTemplateCallable(const Model::CreateImageSpriteTemplateRequest& request);
 
                 /**
-                 *This API is used to create a figure sample for video processing operations such as content recognition and audit using the face recognition technology.
+                 *This API is used to create samples for using facial features positioning and other technologies to perform video processing operations such as content recognition and inappropriate information recognition.
                  * @param req CreatePersonSampleRequest
                  * @return CreatePersonSampleOutcome
                  */
@@ -673,6 +732,16 @@ namespace TencentCloud
                 CreateTranscodeTemplateOutcomeCallable CreateTranscodeTemplateCallable(const Model::CreateTranscodeTemplateRequest& request);
 
                 /**
+                 *This API is used to add an acceleration domain name to VOD. One user can add up to 20 domain names.
+1. After a domain name is added, VOD will deploy it, and it takes about 2 minutes for the domain name status to change from `Deploying` to `Online`.
+                 * @param req CreateVodDomainRequest
+                 * @return CreateVodDomainOutcome
+                 */
+                CreateVodDomainOutcome CreateVodDomain(const Model::CreateVodDomainRequest &request);
+                void CreateVodDomainAsync(const Model::CreateVodDomainRequest& request, const CreateVodDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateVodDomainOutcomeCallable CreateVodDomainCallable(const Model::CreateVodDomainRequest& request);
+
+                /**
                  *This API is used to create a custom watermarking template. Up to 1,000 templates can be created.
                  * @param req CreateWatermarkTemplateRequest
                  * @return CreateWatermarkTemplateOutcome
@@ -682,7 +751,7 @@ namespace TencentCloud
                 CreateWatermarkTemplateOutcomeCallable CreateWatermarkTemplateCallable(const Model::CreateWatermarkTemplateRequest& request);
 
                 /**
-                 *This API is used to create keyword samples in batches for video processing operations such as content recognition and audit by using the OCR and ASR technologies.
+                 *This API is used to create keyword samples in batches for using OCR and ASR technologies to perform video processing operations such as content recognition and inappropriate information recognition.
                  * @param req CreateWordSamplesRequest
                  * @return CreateWordSamplesOutcome
                  */
@@ -730,7 +799,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
 
                 /**
                  ** A category can be deleted only if it has no subcategories and associated media files;
-* Otherwise, [delete the media files](/document/product/266/31764) and subcategories first before deleting the category.
+* Otherwise, [delete the media files](https://intl.cloud.tencent.com/document/product/266/31764?from_cn_redirect=1) and subcategories first before deleting the category.
                  * @param req DeleteClassRequest
                  * @return DeleteClassOutcome
                  */
@@ -739,7 +808,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DeleteClassOutcomeCallable DeleteClassCallable(const Model::DeleteClassRequest& request);
 
                 /**
-                 *This API is used to delete a custom video content audit template.
+                 *This API is used to delete custom intelligent video content recognition templates.
                  * @param req DeleteContentReviewTemplateRequest
                  * @return DeleteContentReviewTemplateOutcome
                  */
@@ -757,8 +826,9 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DeleteImageSpriteTemplateOutcomeCallable DeleteImageSpriteTemplateCallable(const Model::DeleteImageSpriteTemplateRequest& request);
 
                 /**
-                 ** This API is used to delete a media file and its corresponding files generated by video processing (such as transcoded videos, image sprites, screenshots, and videos published on WeChat);
-* The transcoded video files or video files published on WeChat can be deleted separately for a specified video ID.
+                 ** This API is used to delete a media file and its processed files, such as the transcoded video files, image sprites, screenshots, and videos for publishing on WeChat.
+* You can delete the original files, transcoded video files, and videos for publishing on WeChat, etc. of videos with specified IDs.
+* Note: after the original file of a video is deleted, you cannot transcode the video, publish it on WeChat, or perform other operations on it.
                  * @param req DeleteMediaRequest
                  * @return DeleteMediaOutcome
                  */
@@ -767,7 +837,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DeleteMediaOutcomeCallable DeleteMediaCallable(const Model::DeleteMediaRequest& request);
 
                 /**
-                 *This API is used to delete a figure sample based on figure ID.
+                 *This API is used to delete samples according to sample IDs.
                  * @param req DeletePersonSampleRequest
                  * @return DeletePersonSampleOutcome
                  */
@@ -822,6 +892,16 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DeleteTranscodeTemplateOutcomeCallable DeleteTranscodeTemplateCallable(const Model::DeleteTranscodeTemplateRequest& request);
 
                 /**
+                 *This API is used to delete an acceleration domain name from VOD.
+1. Before deleting a domain name, disable its acceleration in all regions.
+                 * @param req DeleteVodDomainRequest
+                 * @return DeleteVodDomainOutcome
+                 */
+                DeleteVodDomainOutcome DeleteVodDomain(const Model::DeleteVodDomainRequest &request);
+                void DeleteVodDomainAsync(const Model::DeleteVodDomainRequest& request, const DeleteVodDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteVodDomainOutcomeCallable DeleteVodDomainCallable(const Model::DeleteVodDomainRequest& request);
+
+                /**
                  *This API is used to delete a custom watermarking template.
                  * @param req DeleteWatermarkTemplateRequest
                  * @return DeleteWatermarkTemplateOutcome
@@ -840,7 +920,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DeleteWordSamplesOutcomeCallable DeleteWordSamplesCallable(const Model::DeleteWordSamplesRequest& request);
 
                 /**
-                 *This API is used to get the list of video content analysis templates based on unique template ID. The returned result includes all eligible custom and [preset video content analysis templates](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.88.86.E6.9E.90.E6.A8.A1.E6.9D.BF).
+                 *This API is used to get the list of video content analysis templates based on unique template ID. The returned result includes all eligible custom and [preset video content analysis templates](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.88.86.E6.9E.90.E6.A8.A1.E6.9D.BF).
                  * @param req DescribeAIAnalysisTemplatesRequest
                  * @return DescribeAIAnalysisTemplatesOutcome
                  */
@@ -849,7 +929,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeAIAnalysisTemplatesOutcomeCallable DescribeAIAnalysisTemplatesCallable(const Model::DescribeAIAnalysisTemplatesRequest& request);
 
                 /**
-                 *This API is used to get the list of video content recognition templates based on unique template ID. The return result includes all eligible custom and [preset video content recognition templates](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E8.AF.86.E5.88.AB.E6.A8.A1.E6.9D.BF).
+                 *This API is used to get the list of video content recognition templates based on unique template ID. The return result includes all eligible custom and [preset video content recognition templates](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E8.AF.86.E5.88.AB.E6.A8.A1.E6.9D.BF).
                  * @param req DescribeAIRecognitionTemplatesRequest
                  * @return DescribeAIRecognitionTemplatesOutcome
                  */
@@ -885,6 +965,18 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeAnimatedGraphicsTemplatesOutcomeCallable DescribeAnimatedGraphicsTemplatesCallable(const Model::DescribeAnimatedGraphicsTemplatesRequest& request);
 
                 /**
+                 *This API is used to query CDN bandwidth, traffic, and other data of VOD domain names.
+* The query period is up to 90 days.
+* You can query data of different service regions.
+* You can query data of Chinese mainland by region and ISP.
+                 * @param req DescribeCDNStatDetailsRequest
+                 * @return DescribeCDNStatDetailsOutcome
+                 */
+                DescribeCDNStatDetailsOutcome DescribeCDNStatDetails(const Model::DescribeCDNStatDetailsRequest &request);
+                void DescribeCDNStatDetailsAsync(const Model::DescribeCDNStatDetailsRequest& request, const DescribeCDNStatDetailsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCDNStatDetailsOutcomeCallable DescribeCDNStatDetailsCallable(const Model::DescribeCDNStatDetailsRequest& request);
+
+                /**
                  *This API is used to query the CDN statistics of VOD such as traffic and bandwidth.
    1. Only CDN usage data for the last 365 days can be queried.
    2. The query time range cannot be more than 90 days.
@@ -898,13 +990,41 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeCDNUsageDataOutcomeCallable DescribeCDNUsageDataCallable(const Model::DescribeCDNUsageDataRequest& request);
 
                 /**
-                 *This API is used to get the list of video content audit templates based on unique template ID. The return result includes all eligible custom and [preset video content audit templates](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF).
+                 *This API is used to query the download links of CDN access logs of a VOD domain name.
+    1. Only download links of CDN logs for the last 30 days can be queried.
+    2. By default, CDN generates a log file every hour. If there is no CDN access for a certain hour, no log file will be generated for the hour.    
+    3. A CDN log download link is valid for 24 hours.
+                 * @param req DescribeCdnLogsRequest
+                 * @return DescribeCdnLogsOutcome
+                 */
+                DescribeCdnLogsOutcome DescribeCdnLogs(const Model::DescribeCdnLogsRequest &request);
+                void DescribeCdnLogsAsync(const Model::DescribeCdnLogsRequest& request, const DescribeCdnLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCdnLogsOutcomeCallable DescribeCdnLogsCallable(const Model::DescribeCdnLogsRequest& request);
+
+                /**
+                 *This API is used to get the list of intelligent video content recognition template details according to unique template IDs. The return result includes all eligible custom and [preset intelligent video content recognition templates](https://intl.cloud.tencent.com/document/product/266/33932).
                  * @param req DescribeContentReviewTemplatesRequest
                  * @return DescribeContentReviewTemplatesOutcome
                  */
                 DescribeContentReviewTemplatesOutcome DescribeContentReviewTemplates(const Model::DescribeContentReviewTemplatesRequest &request);
                 void DescribeContentReviewTemplatesAsync(const Model::DescribeContentReviewTemplatesRequest& request, const DescribeContentReviewTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeContentReviewTemplatesOutcomeCallable DescribeContentReviewTemplatesCallable(const Model::DescribeContentReviewTemplatesRequest& request);
+
+                /**
+                 *This API is used to query the download links of playback statistics files.
+* You can query the download links of playback statistics files in the past year. The start and end dates for query cannot be more than 90 days apart.
+* Every day, VOD will analyze CDN request logs of the previous day and then generate a playback statistics file.
+* A playback statistics file includes playback times and traffic of media files.
+* Notes on playback times:
+    1. HLS file: VOD counts playback times when M3U8 files are accessed, but not when TS files are accessed.
+    2. Other files (MP4 files for example): VOD does not count playback times when the playback request carries the `range` parameter and the `start` parameter in `range` is not `0`. In other cases, VOD counts playback times.
+* Statistics on playback devices: VOD counts playback times on mobile clients when the playback request carries the `UserAgent` parameter which includes an identifier such as `Android` or `iPhone`. In other cases, VOD counts playback times on PC clients.
+                 * @param req DescribeDailyPlayStatFileListRequest
+                 * @return DescribeDailyPlayStatFileListOutcome
+                 */
+                DescribeDailyPlayStatFileListOutcome DescribeDailyPlayStatFileList(const Model::DescribeDailyPlayStatFileListRequest &request);
+                void DescribeDailyPlayStatFileListAsync(const Model::DescribeDailyPlayStatFileListRequest& request, const DescribeDailyPlayStatFileListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDailyPlayStatFileListOutcomeCallable DescribeDailyPlayStatFileListCallable(const Model::DescribeDailyPlayStatFileListRequest& request);
 
                 /**
                  *This API is used to query the list of image sprite generating templates and supports paged queries by filters.
@@ -946,7 +1066,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeMediaProcessUsageDataOutcomeCallable DescribeMediaProcessUsageDataCallable(const Model::DescribeMediaProcessUsageDataRequest& request);
 
                 /**
-                 *This API is used to query the information of figure samples and supports paginated queries by figure ID, name, and tag.
+                 *This API is used to query the information of samples and supports paginated queries by sample ID, name, and tag.
                  * @param req DescribePersonSamplesRequest
                  * @return DescribePersonSamplesOutcome
                  */
@@ -964,10 +1084,12 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeProcedureTemplatesOutcomeCallable DescribeProcedureTemplatesCallable(const Model::DescribeProcedureTemplatesRequest& request);
 
                 /**
-                 *This API is used to query the length of audited video content in seconds per day within the specified time range.
+                 *<b>This API is disused and replaced by [DescribeMediaProcessUsageData](https://intl.cloud.tencent.com/document/product/266/41464?from_cn_redirect=1).</b>
 
-1. Statistics on the length of audited video content for the last 365 days can be queried.
-2. The query time range cannot be more than 90 days.
+This API returns the video content duration for intelligent recognition in seconds per day within the queried period.
+
+1. The API is used to query statistics on the video content duration for intelligent recognition in the last 365 days.
+2. The query period is up to 90 days.
                  * @param req DescribeReviewDetailsRequest
                  * @return DescribeReviewDetailsOutcome
                  */
@@ -1003,11 +1125,10 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeStorageDataOutcomeCallable DescribeStorageDataCallable(const Model::DescribeStorageDataRequest& request);
 
                 /**
-                 *This API is used to query the used VOD storage capacity in bytes within the specified time range.
-   1. Only storage capacity usage data for the last 365 days can be queried.
-   2. The query time range cannot be more than 90 days;
-   3. The query time range at the minute granularity cannot be more than 5 days;
-   4. The query time range at the hour granularity cannot be more than 10 days.
+                 *This API is used to query VOD storage usage in bytes within the query period.
+    1. You can only query storage usage for the last 365 days.
+    2. The query period is up to 90 days.
+    3. The query period at minute-level granularity is up to 7 days.
                  * @param req DescribeStorageDetailsRequest
                  * @return DescribeStorageDetailsOutcome
                  */
@@ -1016,8 +1137,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeStorageDetailsOutcomeCallable DescribeStorageDetailsCallable(const Model::DescribeStorageDetailsRequest& request);
 
                 /**
-                 *This API is used to get the list of subapplications to which the current account has permissions, including primary applications. If the subapplication feature has not been enabled, this API will return. 
- `FailedOperation`.
+                 *This API is used to query the list of the primary application and subapplications of the current account.
                  * @param req DescribeSubAppIdsRequest
                  * @return DescribeSubAppIdsOutcome
                  */
@@ -1055,13 +1175,22 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeTasksOutcomeCallable DescribeTasksCallable(const Model::DescribeTasksRequest& request);
 
                 /**
-                 *This API is used to get the list of transcoding templates based on unique template ID. The return result includes all eligible custom and [preset transcoding templates](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
+                 *This API is used to get the list of transcoding templates based on unique template ID. The return result includes all eligible custom and [preset transcoding templates](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
                  * @param req DescribeTranscodeTemplatesRequest
                  * @return DescribeTranscodeTemplatesOutcome
                  */
                 DescribeTranscodeTemplatesOutcome DescribeTranscodeTemplates(const Model::DescribeTranscodeTemplatesRequest &request);
                 void DescribeTranscodeTemplatesAsync(const Model::DescribeTranscodeTemplatesRequest& request, const DescribeTranscodeTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeTranscodeTemplatesOutcomeCallable DescribeTranscodeTemplatesCallable(const Model::DescribeTranscodeTemplatesRequest& request);
+
+                /**
+                 *This API is used to query the list of VOD domain names.
+                 * @param req DescribeVodDomainsRequest
+                 * @return DescribeVodDomainsOutcome
+                 */
+                DescribeVodDomainsOutcome DescribeVodDomains(const Model::DescribeVodDomainsRequest &request);
+                void DescribeVodDomainsAsync(const Model::DescribeVodDomainsRequest& request, const DescribeVodDomainsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVodDomainsOutcomeCallable DescribeVodDomainsCallable(const Model::DescribeVodDomainsRequest& request);
 
                 /**
                  *This API is used to query custom watermarking templates and supports paged queries by filters.
@@ -1127,7 +1256,7 @@ VOD supports two live clipping modes:
 - Temporary clipping: in this mode, the clipped video is part of the LVB recording file with no `FileId`, which is suitable for **temporarily sharing** highlights;
 
 Note:
-- The live clipping feature can be used only when [time shifting](https://cloud.tencent.com/document/product/267/32742) has been enabled for the target live stream.
+- The live clipping feature can be used only when [time shifting](https://intl.cloud.tencent.com/document/product/267/32742?from_cn_redirect=1) has been enabled for the target live stream.
 - Live clipping is performed based on the m3u8 file generated by LVB recording, so its minimum clipping granularity is one ts segment rather than at or below the second level.
 
 
@@ -1150,6 +1279,15 @@ The advantage of temporary clipping is that the clipping operation is very "ligh
                 LiveRealTimeClipOutcome LiveRealTimeClip(const Model::LiveRealTimeClipRequest &request);
                 void LiveRealTimeClipAsync(const Model::LiveRealTimeClipRequest& request, const LiveRealTimeClipAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 LiveRealTimeClipOutcomeCallable LiveRealTimeClipCallable(const Model::LiveRealTimeClipRequest& request);
+
+                /**
+                 *This API is used to manage initiated tasks.
+                 * @param req ManageTaskRequest
+                 * @return ManageTaskOutcome
+                 */
+                ManageTaskOutcome ManageTask(const Model::ManageTaskRequest &request);
+                void ManageTaskAsync(const Model::ManageTaskRequest& request, const ManageTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ManageTaskOutcomeCallable ManageTaskCallable(const Model::ManageTaskRequest& request);
 
                 /**
                  *This API is used to modify a custom video content analysis template.
@@ -1199,7 +1337,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
                 ModifyClassOutcomeCallable ModifyClassCallable(const Model::ModifyClassRequest& request);
 
                 /**
-                 *This API is used to modify a custom video content audit template.
+                 *This API is used to modify custom intelligent video content recognition templates.
                  * @param req ModifyContentReviewTemplateRequest
                  * @return ModifyContentReviewTemplateOutcome
                  */
@@ -1217,7 +1355,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
                 ModifyImageSpriteTemplateOutcomeCallable ModifyImageSpriteTemplateCallable(const Model::ModifyImageSpriteTemplateRequest& request);
 
                 /**
-                 *This API is used to modify the attributes of a media file, including category, name, description, tag, expiration time, timestamp information, and video cover.
+                 *This API is used to modify the attributes of a media file, including category, name, description, tag, expiration time, timestamp information, video thumbnail, and subtitle information.
                  * @param req ModifyMediaInfoRequest
                  * @return ModifyMediaInfoOutcome
                  */
@@ -1226,7 +1364,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
                 ModifyMediaInfoOutcomeCallable ModifyMediaInfoCallable(const Model::ModifyMediaInfoRequest& request);
 
                 /**
-                 *This API is used to modify figure sample information based on figure ID, such as modifying the name and description and adding/deleting/resetting a face or tag. There should be at least one image left after the face deletion operation; otherwise, please use the reset operation.
+                 *This API is used to modify sample information according to the sample ID. You can modify the name and description, add, delete, and reset facial features or tags. Leave at least one image after deleting facial features. To leave no image, please use the reset operation.
                  * @param req ModifyPersonSampleRequest
                  * @return ModifyPersonSampleOutcome
                  */
@@ -1289,6 +1427,26 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
                 ModifyTranscodeTemplateOutcomeCallable ModifyTranscodeTemplateCallable(const Model::ModifyTranscodeTemplateRequest& request);
 
                 /**
+                 *This API is used to modify the acceleration region of a domain name on VOD.
+1. You can modify acceleration regions of only domain names whose status is `Online`.
+                 * @param req ModifyVodDomainAccelerateConfigRequest
+                 * @return ModifyVodDomainAccelerateConfigOutcome
+                 */
+                ModifyVodDomainAccelerateConfigOutcome ModifyVodDomainAccelerateConfig(const Model::ModifyVodDomainAccelerateConfigRequest &request);
+                void ModifyVodDomainAccelerateConfigAsync(const Model::ModifyVodDomainAccelerateConfigRequest& request, const ModifyVodDomainAccelerateConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyVodDomainAccelerateConfigOutcomeCallable ModifyVodDomainAccelerateConfigCallable(const Model::ModifyVodDomainAccelerateConfigRequest& request);
+
+                /**
+                 *This API is used to modify domain name settings, such as the hotlink protection configuration.
+1. You can modify settings of only domain names whose status is `Online`.
+                 * @param req ModifyVodDomainConfigRequest
+                 * @return ModifyVodDomainConfigOutcome
+                 */
+                ModifyVodDomainConfigOutcome ModifyVodDomainConfig(const Model::ModifyVodDomainConfigRequest &request);
+                void ModifyVodDomainConfigAsync(const Model::ModifyVodDomainConfigRequest& request, const ModifyVodDomainConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyVodDomainConfigOutcomeCallable ModifyVodDomainConfigCallable(const Model::ModifyVodDomainConfigRequest& request);
+
+                /**
                  *This API is used to modify a custom watermarking template. The watermark type cannot be modified.
                  * @param req ModifyWatermarkTemplateRequest
                  * @return ModifyWatermarkTemplateOutcome
@@ -1347,13 +1505,7 @@ There are two ways to create a task flow template:
                 ProcessMediaByProcedureOutcomeCallable ProcessMediaByProcedureCallable(const Model::ProcessMediaByProcedureRequest& request);
 
                 /**
-                 *This API is used to initiate a processing task for an audio/video media file from a URL, including:
-
-1. Intelligent content audit (detection of porn, terrorism, and politically sensitive information);
-2. Intelligent content analysis (tag, category, cover, and frame-specific tag);
-3. Intelligent content recognition (opening and closing credits, face, full text, text keyword, full speech, speech keyword, and object).
-
-If the event notification is used, its type is [Task Flow Status Change](https://cloud.tencent.com/document/product/266/9636).
+                 *This API is <font color='red'>disused</font>, please use [ProcessMedia](https://intl.cloud.tencent.com/document/product/862/37578?from_cn_redirect=1) API of MPS, with the input parameter `InputInfo.UrlInputInfo.Url` set to a video URL.
                  * @param req ProcessMediaByUrlRequest
                  * @return ProcessMediaByUrlOutcome
                  */
@@ -1362,10 +1514,12 @@ If the event notification is used, its type is [Task Flow Status Change](https:/
                 ProcessMediaByUrlOutcomeCallable ProcessMediaByUrlCallable(const Model::ProcessMediaByUrlRequest& request);
 
                 /**
-                 ** This API is used to get event notifications from the business server through [reliable callback](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83);
-* The API is in long polling mode, i.e., if there is an unconsumed event on the server, it will be immediately returned to the requester; otherwise, the backend will suspend the request until a new event is generated;
-* The request can be suspended for 5 seconds at most. It is recommended that the requester set the timeout period to 10 seconds.
-* If the API returns an event, the caller must call the [ConfirmEvents](https://cloud.tencent.com/document/product/266/33434) API within <font color="red">30 seconds</font> to confirm that the event notification has been processed; otherwise, the event notification will be pulled again after <font color="red">30 seconds</font>.
+                 ** This API is used to get event notifications from the business server through [reliable callback](https://intl.cloud.tencent.com/document/product/266/33948).
+* The API gets event data through long polling. That is, if there is any unconsumed event on the server, the event notification will be returned to the requester immediately. If there is no unconsumed event on the server, the request will be suspended in the backend until a new event is generated.
+* The request can be suspended for up to 5 seconds. It’s recommended to set the request timeout period to 10 seconds.
+* Event notifications not pulled will be retained for up to 4 days and may be cleared after this period.
+* After the API returns an event, the caller must call the [ConfirmEvents](https://intl.cloud.tencent.com/document/product/266/34184) API within <font color="red">30 seconds</font> to confirm that the event notification has been processed. Otherwise, the event notification will be pulled again after <font color="red">30 seconds</font>.
+* This API can get up to 16 event notifications at a time.
                  * @param req PullEventsRequest
                  * @return PullEventsOutcome
                  */
@@ -1403,20 +1557,40 @@ If the event notification is used, its type is [Task Flow Status Change](https:/
                 ResetProcedureTemplateOutcomeCallable ResetProcedureTemplateCallable(const Model::ResetProcedureTemplateRequest& request);
 
                 /**
-                 *This API is used to search for media information and supports filtering and sorting the returned results in many ways. It can:
-- Fuzzily search by media file name or description.
-- Retrieve media files by category and tag.
-    - Specify the `ClassIds` category set (please see the input parameters) and return the media files in any category in the set. For example, assuming that there are categories of Movies, TV Series, and Variety Shows, and there are subcategories of History, Action, and Romance in the category of Movies, if Movies and TV Series are specified in `ClassIds`, then all the subcategories under Movies and TV Series will be returned; however, if History and Action are specified in `ClassIds`, only the media files in those two subcategories will be returned.
-    - Specify the `Tags` tag set (please see the input parameters) and return the media files with any tag in the set. For example, assuming that there are tags of ACG, Drama, and YTPMV, if ACG and YTPMV are specified in Tags, then any media files with either tag will be retrieved.
-- Filter media files from a specified source (`Source`) (please see the input parameters).
-- Filter LVB recording media files by LVB push code and `Vid` (please see the input parameters).
-- Filter media files by the creation time range.
-- Mix and match any filters above to retrieve the media files that meet all the specified criteria. For example, you can filter the media files with the tag of "Drama" in the category of "Movies" created between December 1, 2018 and December 8, 2018.
-- Sort the results and return them in multiple pages by specifying `Offset` and `Limit` (please see the input parameters).
+                 *This API is used to search for media information and supports filtering and sorting the returned results in many ways. You can:
+- Specify the file ID set `FileIds` to return the media files with any ID in the set.
+- Fuzzily search by multiple media filenames `Names` or multiple descriptions `Descriptions`.
+- Search by multiple filename prefixes `NamePrefixes`.
+- Specify the category set `ClassIds` (please see the input parameters) to return the media files in any category in the set. For example, assuming that there are categories of `Movies`, `TV Series`, and `Variety Shows`, and there are subcategories of `History`, `Action`, and `Romance` in the category of `Movies`, if `Movies` and `TV Series` are specified in `ClassIds`, then all the subcategories under `Movies` and `TV Series` will be returned. However, if `History` and `Action` are specified in `ClassIds`, only the media files in these two subcategories will be returned.
+- Specify the tag set `Tags` (please see the input parameters) to return the media files with any tag in the set. For example, assuming that there are tags of `ACG`, `Drama`, and `YTPMV`, if `ACG` and `YTPMV` are specified in `Tags`, then any media files with either tag will be retrieved.
+- Specify the file type set `Categories` (please see the input parameters) to return the media files of any type in the set. For example, assuming that there are `Video`, `Audio`, and `Image` file types, if `Video` and `Audio` are specified in `Categories`, then all media files of these two types will be retrieved.
+- Specify the source set `SourceTypes` (please see the input parameters) to return the media files from any source in the set. For example, assuming that there are `Record` (live recording) and `Upload` (upload) sources, if `Record` and `Upload` are specified in `SourceTypes`, then all media files from these two sources will be retrieved.
+- Specify the live stream code set `StreamIds` (please see the input parameters) to filter live recording media files.
+- Specify the video ID set `Vids` (please see the input parameters) to filter live recording media files.
+- Specify the creation time range to filter media files.
+- Specify a text string `Text` for fuzzy search by media filenames or descriptions. (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead.)
+- Specify a media file source `SourceType` for search. (This is not recommended. `SourceTypes` should be used instead.)
+- Specify a live stream code `StreamId` for search. (This is not recommended. `StreamIds` should be used instead.)
+- Specify a video ID `Vid` for search. (This is not recommended. `Vids` should be used instead.)
+- Specify a creation start time `StartTime` for search. (This is not recommended. `CreateTime` should be used instead.)
+- Specify a creation end time `EndTime` for search. (This is not recommended. `CreateTime` should be used instead.)
+- Search by any combination of the parameters above. For example, you can search for the media files with the tags of "Drama" and "Suspense" in the category of "Movies" or "TV Series" created between 12:00:00, December 1, 2018 and 12:00:00, December 8, 2018. Please note that for any parameter that supports array input, the search logic between its elements is "OR", and the logical relationship between parameters is "AND".
+
+- Sort the results by creation time and return them in multiple pages by specifying `Offset` and `Limit` (please see the input parameters).
+- Specify `Filters` to return specified types of media information (all types will be returned by default). Valid values:
+    1. Basic information `basicInfo`: media name, category, playback address, cover image, etc.
+    2. Metadata `metaData`: size, duration, video stream information, audio stream information, etc.
+    3. Information of the transcoding result `transcodeInfo`: addresses, video stream parameters, and audio stream parameters of various specifications generated by the file transcoding.
+    4. Information of the animated image generating result `animatedGraphicsInfo`: information of an animated image (such as .gif) generated from a video.
+    5. Information of a sampled screenshot `sampleSnapshotInfo`: information of a sampled screenshot of a video.
+    6. Information of an image sprite `imageSpriteInfo`: information of an image sprite generated from a video.
+    7. Information of a point-in-time screenshot `snapshotByTimeOffsetInfo`: information of a point-in-time screenshot of a video.
+    8. Information of a timestamp `keyFrameDescInfo`: information of a timestamp configured for a video.
+    9. Information of transcoding to adaptive bitrate streaming `adaptiveDynamicStreamingInfo`: specification, encryption type, muxing format, etc.
 
 <div id="maxResultsDesc">Upper limit of returned results:</div>
 - The <b><a href="#p_offset">Offset</a> and <a href="#p_limit">Limit</a> parameters determine the number of search results on one single page. Note: if both of them use the default value, this API will return up to 10 results.</b>
-- <b>Up to 5,000 search results can be returned, and excessive ones will not be displayed. If there are too many search results, you are recommended to use more specified filters to narrow down the search results.</b>
+- <b>Up to 5,000 search results can be returned, and excessive ones will not be displayed. If there are too many search results, you are recommended to use more filters to narrow down the search results.</b>
                  * @param req SearchMediaRequest
                  * @return SearchMediaOutcome
                  */
@@ -1425,9 +1599,29 @@ If the event notification is used, its type is [Task Flow Status Change](https:/
                 SearchMediaOutcomeCallable SearchMediaCallable(const Model::SearchMediaRequest& request);
 
                 /**
-                 *This API is used to clip an HLS video by time period.
+                 *This API is used to clip an HLS video by time period and then generate a new HLS video which developers can share right away or store persistently.
 
-Note: the clipped video shares the same ts segments with the source video, and only a new m3u8 file will be generated. Deleting the source video will also delete the clipped video.
+VOD supports two types of clipping:
+- Clipping for persistent storage: the video clip is saved as an independent video file with a `FileId`.
+- Clipping for temporary sharing: the video clip is affiliated to the input file and has no `FileId`.
+
+Notes:
+- Clipping is based on the input M3U8 file that contains the list of TS segments, so the smallest clipping unit is one TS segment instead of in seconds or less.
+
+
+### Clipping for Persistent Storage
+In this mode, a video clip is saved as an independent video file with a `FileId`, and its lifecycle is not subject to the input video. Even if the source video is deleted, the video clip still exists. Moreover, the video clip can be transcoded, published on WeChat, and processed in other ways.
+
+Take the video of a two-hour long football match for example. The customer may only want to store the original two-hour video for two months to save costs, but want to store clipped highlights for a specified longer time and also to transcode and publish such highlights on WeChat. Clipping for persistent storage is suitable for this customer.
+
+The advantage of clipping for persistent storage is that the video clip has a lifecycle independent of the input video and can be managed independently and stored persistently.
+
+### Clipping for Temporary Sharing
+The video clip (an M3U8 file) shares the same TS segments with the input video instead of being an independent video. It only has a playback URL but has no `FileId`, and its validity period is the same as that of the input video. Once the input video is deleted, the video clip cannot be played back.
+
+As the video clip is not an independent video, it will not be managed as a VOD media asset. For example, it will not be counted in the total videos displayed on the VOD console, and also cannot be transcoded or published on WeChat.
+
+Clipping for temporary sharing is lightweight and incurs no additional storage fees. However, the video clip has the same lifecycle as the source recording video and cannot be transcoded or processed in other ways.
                  * @param req SimpleHlsClipRequest
                  * @return SimpleHlsClipOutcome
                  */

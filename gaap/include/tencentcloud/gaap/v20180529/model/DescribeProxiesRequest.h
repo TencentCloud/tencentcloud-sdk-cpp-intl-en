@@ -99,34 +99,42 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filter conditions.   
-The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
-ProjectId - String - Required: No - Filter by a project ID.    
-AccessRegion - String - Required: No - Filter by an access region.    
-RealServerRegion - String - Required: No - Filter by an origin server region.
-GroupId - String - Required: No - Filter by a connection group ID.
-                     * @return Filters Filter conditions.   
-The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
-ProjectId - String - Required: No - Filter by a project ID.    
-AccessRegion - String - Required: No - Filter by an access region.    
-RealServerRegion - String - Required: No - Filter by an origin server region.
-GroupId - String - Required: No - Filter by a connection group ID.
+                     * 获取Filter condition   
+The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
+ProjectId - String - Required: No - Filter by project ID.   
+AccessRegion - String - Required: No - Filter by access region.    
+RealServerRegion - String - Required: No - Filter by origin server region.
+GroupId - String - Required: No - Filter by connection group ID.
+IPAddressVersion - String - Required: No - Filter by IP version.
+PackageType - String - Required: No - Filter by package type of connection groups.
+                     * @return Filters Filter condition   
+The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
+ProjectId - String - Required: No - Filter by project ID.   
+AccessRegion - String - Required: No - Filter by access region.    
+RealServerRegion - String - Required: No - Filter by origin server region.
+GroupId - String - Required: No - Filter by connection group ID.
+IPAddressVersion - String - Required: No - Filter by IP version.
+PackageType - String - Required: No - Filter by package type of connection groups.
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter conditions.   
-The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
-ProjectId - String - Required: No - Filter by a project ID.    
-AccessRegion - String - Required: No - Filter by an access region.    
-RealServerRegion - String - Required: No - Filter by an origin server region.
-GroupId - String - Required: No - Filter by a connection group ID.
-                     * @param Filters Filter conditions.   
-The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
-ProjectId - String - Required: No - Filter by a project ID.    
-AccessRegion - String - Required: No - Filter by an access region.    
-RealServerRegion - String - Required: No - Filter by an origin server region.
-GroupId - String - Required: No - Filter by a connection group ID.
+                     * 设置Filter condition   
+The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
+ProjectId - String - Required: No - Filter by project ID.   
+AccessRegion - String - Required: No - Filter by access region.    
+RealServerRegion - String - Required: No - Filter by origin server region.
+GroupId - String - Required: No - Filter by connection group ID.
+IPAddressVersion - String - Required: No - Filter by IP version.
+PackageType - String - Required: No - Filter by package type of connection groups.
+                     * @param Filters Filter condition   
+The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
+ProjectId - String - Required: No - Filter by project ID.   
+AccessRegion - String - Required: No - Filter by access region.    
+RealServerRegion - String - Required: No - Filter by origin server region.
+GroupId - String - Required: No - Filter by connection group ID.
+IPAddressVersion - String - Required: No - Filter by IP version.
+PackageType - String - Required: No - Filter by package type of connection groups.
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -202,6 +210,74 @@ When this field does not exist, all connections are pulled, including both not-g
                      */
                     bool IndependentHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies how connections are listed. Valid values:
+`asc`: ascending order
+`desc`: descending order
+Default: `desc`
+                     * @return Order Specifies how connections are listed. Valid values:
+`asc`: ascending order
+`desc`: descending order
+Default: `desc`
+                     */
+                    std::string GetOrder() const;
+
+                    /**
+                     * 设置Specifies how connections are listed. Valid values:
+`asc`: ascending order
+`desc`: descending order
+Default: `desc`
+                     * @param Order Specifies how connections are listed. Valid values:
+`asc`: ascending order
+`desc`: descending order
+Default: `desc`
+                     */
+                    void SetOrder(const std::string& _order);
+
+                    /**
+                     * 判断参数 Order 是否已赋值
+                     * @return Order 是否已赋值
+                     */
+                    bool OrderHasBeenSet() const;
+
+                    /**
+                     * 获取Sorting field. Valid values:
+`create_time`: sort by the creation time
+`proxy_id`: sort by the connection ID
+`bandwidth`:sort by the bandwidth limit
+`concurrent_connections`: sort by the number of concurrent connections
+Default: `create_time`
+                     * @return OrderField Sorting field. Valid values:
+`create_time`: sort by the creation time
+`proxy_id`: sort by the connection ID
+`bandwidth`:sort by the bandwidth limit
+`concurrent_connections`: sort by the number of concurrent connections
+Default: `create_time`
+                     */
+                    std::string GetOrderField() const;
+
+                    /**
+                     * 设置Sorting field. Valid values:
+`create_time`: sort by the creation time
+`proxy_id`: sort by the connection ID
+`bandwidth`:sort by the bandwidth limit
+`concurrent_connections`: sort by the number of concurrent connections
+Default: `create_time`
+                     * @param OrderField Sorting field. Valid values:
+`create_time`: sort by the creation time
+`proxy_id`: sort by the connection ID
+`bandwidth`:sort by the bandwidth limit
+`concurrent_connections`: sort by the number of concurrent connections
+Default: `create_time`
+                     */
+                    void SetOrderField(const std::string& _orderField);
+
+                    /**
+                     * 判断参数 OrderField 是否已赋值
+                     * @return OrderField 是否已赋值
+                     */
+                    bool OrderFieldHasBeenSet() const;
+
                 private:
 
                     /**
@@ -223,12 +299,14 @@ When this field does not exist, all connections are pulled, including both not-g
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filter conditions.   
-The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
-ProjectId - String - Required: No - Filter by a project ID.    
-AccessRegion - String - Required: No - Filter by an access region.    
-RealServerRegion - String - Required: No - Filter by an origin server region.
-GroupId - String - Required: No - Filter by a connection group ID.
+                     * Filter condition   
+The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
+ProjectId - String - Required: No - Filter by project ID.   
+AccessRegion - String - Required: No - Filter by access region.    
+RealServerRegion - String - Required: No - Filter by origin server region.
+GroupId - String - Required: No - Filter by connection group ID.
+IPAddressVersion - String - Required: No - Filter by IP version.
+PackageType - String - Required: No - Filter by package type of connection groups.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
@@ -253,6 +331,26 @@ When this field does not exist, all connections are pulled, including both not-g
                      */
                     int64_t m_independent;
                     bool m_independentHasBeenSet;
+
+                    /**
+                     * Specifies how connections are listed. Valid values:
+`asc`: ascending order
+`desc`: descending order
+Default: `desc`
+                     */
+                    std::string m_order;
+                    bool m_orderHasBeenSet;
+
+                    /**
+                     * Sorting field. Valid values:
+`create_time`: sort by the creation time
+`proxy_id`: sort by the connection ID
+`bandwidth`:sort by the bandwidth limit
+`concurrent_connections`: sort by the number of concurrent connections
+Default: `create_time`
+                     */
+                    std::string m_orderField;
+                    bool m_orderFieldHasBeenSet;
 
                 };
             }

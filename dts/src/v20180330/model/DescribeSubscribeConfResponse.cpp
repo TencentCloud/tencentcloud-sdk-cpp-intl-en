@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dts::V20180330::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeSubscribeConfResponse::DescribeSubscribeConfResponse() :
@@ -48,26 +47,28 @@ DescribeSubscribeConfResponse::DescribeSubscribeConfResponse() :
     m_subscribeObjectTypeHasBeenSet(false),
     m_subscribeObjectsHasBeenSet(false),
     m_modifyTimeHasBeenSet(false),
-    m_regionHasBeenSet(false)
+    m_regionHasBeenSet(false),
+    m_tagsHasBeenSet(false),
+    m_autoRenewFlagHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -78,11 +79,11 @@ CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &pay
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -90,7 +91,7 @@ CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &pay
     {
         if (!rsp["SubscribeId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SubscribeId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SubscribeId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_subscribeId = string(rsp["SubscribeId"].GetString());
         m_subscribeIdHasBeenSet = true;
@@ -100,7 +101,7 @@ CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &pay
     {
         if (!rsp["SubscribeName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SubscribeName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SubscribeName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_subscribeName = string(rsp["SubscribeName"].GetString());
         m_subscribeNameHasBeenSet = true;
@@ -110,7 +111,7 @@ CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &pay
     {
         if (!rsp["ChannelId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ChannelId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ChannelId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_channelId = string(rsp["ChannelId"].GetString());
         m_channelIdHasBeenSet = true;
@@ -120,7 +121,7 @@ CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &pay
     {
         if (!rsp["Product"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Product` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Product` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_product = string(rsp["Product"].GetString());
         m_productHasBeenSet = true;
@@ -130,7 +131,7 @@ CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &pay
     {
         if (!rsp["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(rsp["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -140,7 +141,7 @@ CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &pay
     {
         if (!rsp["InstanceStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceStatus = string(rsp["InstanceStatus"].GetString());
         m_instanceStatusHasBeenSet = true;
@@ -150,7 +151,7 @@ CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &pay
     {
         if (!rsp["SubsStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SubsStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SubsStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_subsStatus = string(rsp["SubsStatus"].GetString());
         m_subsStatusHasBeenSet = true;
@@ -160,7 +161,7 @@ CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &pay
     {
         if (!rsp["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(rsp["Status"].GetString());
         m_statusHasBeenSet = true;
@@ -170,7 +171,7 @@ CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &pay
     {
         if (!rsp["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(rsp["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -180,7 +181,7 @@ CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &pay
     {
         if (!rsp["IsolateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IsolateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IsolateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_isolateTime = string(rsp["IsolateTime"].GetString());
         m_isolateTimeHasBeenSet = true;
@@ -190,7 +191,7 @@ CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &pay
     {
         if (!rsp["ExpireTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ExpireTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ExpireTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_expireTime = string(rsp["ExpireTime"].GetString());
         m_expireTimeHasBeenSet = true;
@@ -200,7 +201,7 @@ CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &pay
     {
         if (!rsp["OfflineTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `OfflineTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OfflineTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_offlineTime = string(rsp["OfflineTime"].GetString());
         m_offlineTimeHasBeenSet = true;
@@ -210,7 +211,7 @@ CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &pay
     {
         if (!rsp["ConsumeStartTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ConsumeStartTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ConsumeStartTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_consumeStartTime = string(rsp["ConsumeStartTime"].GetString());
         m_consumeStartTimeHasBeenSet = true;
@@ -220,7 +221,7 @@ CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &pay
     {
         if (!rsp["PayType"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `PayType` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PayType` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_payType = rsp["PayType"].GetInt64();
         m_payTypeHasBeenSet = true;
@@ -230,7 +231,7 @@ CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &pay
     {
         if (!rsp["Vip"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Vip` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Vip` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vip = string(rsp["Vip"].GetString());
         m_vipHasBeenSet = true;
@@ -240,7 +241,7 @@ CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &pay
     {
         if (!rsp["Vport"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Vport` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Vport` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_vport = rsp["Vport"].GetInt64();
         m_vportHasBeenSet = true;
@@ -250,7 +251,7 @@ CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &pay
     {
         if (!rsp["UniqVpcId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UniqVpcId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UniqVpcId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_uniqVpcId = string(rsp["UniqVpcId"].GetString());
         m_uniqVpcIdHasBeenSet = true;
@@ -260,7 +261,7 @@ CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &pay
     {
         if (!rsp["UniqSubnetId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UniqSubnetId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UniqSubnetId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_uniqSubnetId = string(rsp["UniqSubnetId"].GetString());
         m_uniqSubnetIdHasBeenSet = true;
@@ -270,7 +271,7 @@ CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &pay
     {
         if (!rsp["SdkConsumedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SdkConsumedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SdkConsumedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_sdkConsumedTime = string(rsp["SdkConsumedTime"].GetString());
         m_sdkConsumedTimeHasBeenSet = true;
@@ -280,7 +281,7 @@ CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &pay
     {
         if (!rsp["SdkHost"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SdkHost` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SdkHost` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_sdkHost = string(rsp["SdkHost"].GetString());
         m_sdkHostHasBeenSet = true;
@@ -290,7 +291,7 @@ CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &pay
     {
         if (!rsp["SubscribeObjectType"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SubscribeObjectType` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SubscribeObjectType` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_subscribeObjectType = rsp["SubscribeObjectType"].GetInt64();
         m_subscribeObjectTypeHasBeenSet = true;
@@ -299,10 +300,10 @@ CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &pay
     if (rsp.HasMember("SubscribeObjects") && !rsp["SubscribeObjects"].IsNull())
     {
         if (!rsp["SubscribeObjects"].IsArray())
-            return CoreInternalOutcome(Error("response `SubscribeObjects` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `SubscribeObjects` is not array type"));
 
-        const Value &tmpValue = rsp["SubscribeObjects"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["SubscribeObjects"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             SubscribeObject item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -320,7 +321,7 @@ CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &pay
     {
         if (!rsp["ModifyTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ModifyTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ModifyTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_modifyTime = string(rsp["ModifyTime"].GetString());
         m_modifyTimeHasBeenSet = true;
@@ -330,14 +331,283 @@ CoreInternalOutcome DescribeSubscribeConfResponse::Deserialize(const string &pay
     {
         if (!rsp["Region"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Region` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Region` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_region = string(rsp["Region"].GetString());
         m_regionHasBeenSet = true;
     }
 
+    if (rsp.HasMember("Tags") && !rsp["Tags"].IsNull())
+    {
+        if (!rsp["Tags"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Tags` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["Tags"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            TagItem item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_tags.push_back(item);
+        }
+        m_tagsHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("AutoRenewFlag") && !rsp["AutoRenewFlag"].IsNull())
+    {
+        if (!rsp["AutoRenewFlag"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AutoRenewFlag` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_autoRenewFlag = rsp["AutoRenewFlag"].GetInt64();
+        m_autoRenewFlagHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeSubscribeConfResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_subscribeIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubscribeId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_subscribeId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_subscribeNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubscribeName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_subscribeName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_channelIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ChannelId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_channelId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_productHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Product";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_product.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_instanceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_instanceStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceStatus.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_subsStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubsStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_subsStatus.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_statusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Status";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_createTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CreateTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_isolateTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsolateTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_isolateTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_expireTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExpireTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_expireTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_offlineTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OfflineTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_offlineTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_consumeStartTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ConsumeStartTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_consumeStartTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_payTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PayType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_payType, allocator);
+    }
+
+    if (m_vipHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Vip";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vip.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_vportHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Vport";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_vport, allocator);
+    }
+
+    if (m_uniqVpcIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UniqVpcId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_uniqVpcId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_uniqSubnetIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UniqSubnetId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_uniqSubnetId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_sdkConsumedTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SdkConsumedTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sdkConsumedTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_sdkHostHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SdkHost";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sdkHost.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_subscribeObjectTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubscribeObjectType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_subscribeObjectType, allocator);
+    }
+
+    if (m_subscribeObjectsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubscribeObjects";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_subscribeObjects.begin(); itr != m_subscribeObjects.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_modifyTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ModifyTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_modifyTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_regionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Region";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_region.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_autoRenewFlagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutoRenewFlag";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_autoRenewFlag, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 
@@ -579,6 +849,26 @@ string DescribeSubscribeConfResponse::GetRegion() const
 bool DescribeSubscribeConfResponse::RegionHasBeenSet() const
 {
     return m_regionHasBeenSet;
+}
+
+vector<TagItem> DescribeSubscribeConfResponse::GetTags() const
+{
+    return m_tags;
+}
+
+bool DescribeSubscribeConfResponse::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
+}
+
+int64_t DescribeSubscribeConfResponse::GetAutoRenewFlag() const
+{
+    return m_autoRenewFlag;
+}
+
+bool DescribeSubscribeConfResponse::AutoRenewFlagHasBeenSet() const
+{
+    return m_autoRenewFlagHasBeenSet;
 }
 
 

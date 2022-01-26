@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Postgres::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 UpgradeDBInstanceRequest::UpgradeDBInstanceRequest() :
@@ -29,20 +28,23 @@ UpgradeDBInstanceRequest::UpgradeDBInstanceRequest() :
     m_dBInstanceIdHasBeenSet(false),
     m_autoVoucherHasBeenSet(false),
     m_voucherIdsHasBeenSet(false),
-    m_activityIdHasBeenSet(false)
+    m_activityIdHasBeenSet(false),
+    m_switchTagHasBeenSet(false),
+    m_switchStartTimeHasBeenSet(false),
+    m_switchEndTimeHasBeenSet(false)
 {
 }
 
 string UpgradeDBInstanceRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_memoryHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Memory";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_memory, allocator);
@@ -50,7 +52,7 @@ string UpgradeDBInstanceRequest::ToJsonString() const
 
     if (m_storageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Storage";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_storage, allocator);
@@ -58,15 +60,15 @@ string UpgradeDBInstanceRequest::ToJsonString() const
 
     if (m_dBInstanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DBInstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_dBInstanceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_dBInstanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_autoVoucherHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AutoVoucher";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_autoVoucher, allocator);
@@ -74,28 +76,52 @@ string UpgradeDBInstanceRequest::ToJsonString() const
 
     if (m_voucherIdsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VoucherIds";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_voucherIds.begin(); itr != m_voucherIds.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_activityIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ActivityId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_activityId, allocator);
     }
 
+    if (m_switchTagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SwitchTag";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_switchTag, allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    if (m_switchStartTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SwitchStartTime";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_switchStartTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_switchEndTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SwitchEndTime";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_switchEndTime.c_str(), allocator).Move(), allocator);
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -195,6 +221,54 @@ void UpgradeDBInstanceRequest::SetActivityId(const int64_t& _activityId)
 bool UpgradeDBInstanceRequest::ActivityIdHasBeenSet() const
 {
     return m_activityIdHasBeenSet;
+}
+
+int64_t UpgradeDBInstanceRequest::GetSwitchTag() const
+{
+    return m_switchTag;
+}
+
+void UpgradeDBInstanceRequest::SetSwitchTag(const int64_t& _switchTag)
+{
+    m_switchTag = _switchTag;
+    m_switchTagHasBeenSet = true;
+}
+
+bool UpgradeDBInstanceRequest::SwitchTagHasBeenSet() const
+{
+    return m_switchTagHasBeenSet;
+}
+
+string UpgradeDBInstanceRequest::GetSwitchStartTime() const
+{
+    return m_switchStartTime;
+}
+
+void UpgradeDBInstanceRequest::SetSwitchStartTime(const string& _switchStartTime)
+{
+    m_switchStartTime = _switchStartTime;
+    m_switchStartTimeHasBeenSet = true;
+}
+
+bool UpgradeDBInstanceRequest::SwitchStartTimeHasBeenSet() const
+{
+    return m_switchStartTimeHasBeenSet;
+}
+
+string UpgradeDBInstanceRequest::GetSwitchEndTime() const
+{
+    return m_switchEndTime;
+}
+
+void UpgradeDBInstanceRequest::SetSwitchEndTime(const string& _switchEndTime)
+{
+    m_switchEndTime = _switchEndTime;
+    m_switchEndTimeHasBeenSet = true;
+}
+
+bool UpgradeDBInstanceRequest::SwitchEndTimeHasBeenSet() const
+{
+    return m_switchEndTimeHasBeenSet;
 }
 
 

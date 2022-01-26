@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Figure ID.
-                     * @return PersonId Figure ID.
+                     * 获取Image ID
+                     * @return PersonId Image ID
                      */
                     std::string GetPersonId() const;
 
                     /**
-                     * 设置Figure ID.
-                     * @param PersonId Figure ID.
+                     * 设置Image ID
+                     * @param PersonId Image ID
                      */
                     void SetPersonId(const std::string& _personId);
 
@@ -63,7 +63,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Figure ID.
+                     * Image ID
                      */
                     std::string m_personId;
                     bool m_personIdHasBeenSet;

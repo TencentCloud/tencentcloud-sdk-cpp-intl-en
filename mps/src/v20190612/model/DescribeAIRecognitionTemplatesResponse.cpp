@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeAIRecognitionTemplatesResponse::DescribeAIRecognitionTemplatesResponse() :
@@ -32,20 +31,20 @@ DescribeAIRecognitionTemplatesResponse::DescribeAIRecognitionTemplatesResponse()
 
 CoreInternalOutcome DescribeAIRecognitionTemplatesResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -56,11 +55,11 @@ CoreInternalOutcome DescribeAIRecognitionTemplatesResponse::Deserialize(const st
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -68,7 +67,7 @@ CoreInternalOutcome DescribeAIRecognitionTemplatesResponse::Deserialize(const st
     {
         if (!rsp["TotalCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TotalCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TotalCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_totalCount = rsp["TotalCount"].GetUint64();
         m_totalCountHasBeenSet = true;
@@ -77,10 +76,10 @@ CoreInternalOutcome DescribeAIRecognitionTemplatesResponse::Deserialize(const st
     if (rsp.HasMember("AIRecognitionTemplateSet") && !rsp["AIRecognitionTemplateSet"].IsNull())
     {
         if (!rsp["AIRecognitionTemplateSet"].IsArray())
-            return CoreInternalOutcome(Error("response `AIRecognitionTemplateSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `AIRecognitionTemplateSet` is not array type"));
 
-        const Value &tmpValue = rsp["AIRecognitionTemplateSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["AIRecognitionTemplateSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             AIRecognitionTemplateItem item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -96,6 +95,46 @@ CoreInternalOutcome DescribeAIRecognitionTemplatesResponse::Deserialize(const st
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeAIRecognitionTemplatesResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_totalCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalCount, allocator);
+    }
+
+    if (m_aIRecognitionTemplateSetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AIRecognitionTemplateSet";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_aIRecognitionTemplateSet.begin(); itr != m_aIRecognitionTemplateSet.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

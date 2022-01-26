@@ -89,10 +89,14 @@
 #include <tencentcloud/live/v20180801/model/DeleteRecordTaskResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeAllStreamPlayInfoListRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeAllStreamPlayInfoListResponse.h>
+#include <tencentcloud/live/v20180801/model/DescribeAreaBillBandwidthAndFluxListRequest.h>
+#include <tencentcloud/live/v20180801/model/DescribeAreaBillBandwidthAndFluxListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeBillBandwidthAndFluxListRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeBillBandwidthAndFluxListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeConcurrentRecordStreamNumRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeConcurrentRecordStreamNumResponse.h>
+#include <tencentcloud/live/v20180801/model/DescribeDeliverBandwidthListRequest.h>
+#include <tencentcloud/live/v20180801/model/DescribeDeliverBandwidthListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeGroupProIspPlayInfoListRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeGroupProIspPlayInfoListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeHttpStatusInfoListRequest.h>
@@ -115,6 +119,8 @@
 #include <tencentcloud/live/v20180801/model/DescribeLiveDomainCertResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeLiveDomainPlayInfoListRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeLiveDomainPlayInfoListResponse.h>
+#include <tencentcloud/live/v20180801/model/DescribeLiveDomainRefererRequest.h>
+#include <tencentcloud/live/v20180801/model/DescribeLiveDomainRefererResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeLiveDomainsRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeLiveDomainsResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeLiveForbidStreamListRequest.h>
@@ -153,6 +159,8 @@
 #include <tencentcloud/live/v20180801/model/DescribeLiveTranscodeTemplateResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeLiveTranscodeTemplatesRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeLiveTranscodeTemplatesResponse.h>
+#include <tencentcloud/live/v20180801/model/DescribeLiveTranscodeTotalInfoRequest.h>
+#include <tencentcloud/live/v20180801/model/DescribeLiveTranscodeTotalInfoResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeLiveWatermarkRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeLiveWatermarkResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeLiveWatermarkRulesRequest.h>
@@ -177,6 +185,8 @@
 #include <tencentcloud/live/v20180801/model/DescribeStreamPushInfoListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeTopClientIpSumInfoListRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeTopClientIpSumInfoListResponse.h>
+#include <tencentcloud/live/v20180801/model/DescribeUploadStreamNumsRequest.h>
+#include <tencentcloud/live/v20180801/model/DescribeUploadStreamNumsResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeVisitTopSumInfoListRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeVisitTopSumInfoListResponse.h>
 #include <tencentcloud/live/v20180801/model/DropLiveStreamRequest.h>
@@ -193,6 +203,8 @@
 #include <tencentcloud/live/v20180801/model/ModifyLiveCertResponse.h>
 #include <tencentcloud/live/v20180801/model/ModifyLiveDomainCertRequest.h>
 #include <tencentcloud/live/v20180801/model/ModifyLiveDomainCertResponse.h>
+#include <tencentcloud/live/v20180801/model/ModifyLiveDomainRefererRequest.h>
+#include <tencentcloud/live/v20180801/model/ModifyLiveDomainRefererResponse.h>
 #include <tencentcloud/live/v20180801/model/ModifyLivePlayAuthKeyRequest.h>
 #include <tencentcloud/live/v20180801/model/ModifyLivePlayAuthKeyResponse.h>
 #include <tencentcloud/live/v20180801/model/ModifyLivePlayDomainRequest.h>
@@ -231,306 +243,322 @@ namespace TencentCloud
                 LiveClient(const Credential &credential, const std::string &region);
                 LiveClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::AddDelayLiveStreamResponse> AddDelayLiveStreamOutcome;
+                typedef Outcome<Core::Error, Model::AddDelayLiveStreamResponse> AddDelayLiveStreamOutcome;
                 typedef std::future<AddDelayLiveStreamOutcome> AddDelayLiveStreamOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::AddDelayLiveStreamRequest&, AddDelayLiveStreamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddDelayLiveStreamAsyncHandler;
-                typedef Outcome<Error, Model::AddLiveDomainResponse> AddLiveDomainOutcome;
+                typedef Outcome<Core::Error, Model::AddLiveDomainResponse> AddLiveDomainOutcome;
                 typedef std::future<AddLiveDomainOutcome> AddLiveDomainOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::AddLiveDomainRequest&, AddLiveDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddLiveDomainAsyncHandler;
-                typedef Outcome<Error, Model::AddLiveWatermarkResponse> AddLiveWatermarkOutcome;
+                typedef Outcome<Core::Error, Model::AddLiveWatermarkResponse> AddLiveWatermarkOutcome;
                 typedef std::future<AddLiveWatermarkOutcome> AddLiveWatermarkOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::AddLiveWatermarkRequest&, AddLiveWatermarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddLiveWatermarkAsyncHandler;
-                typedef Outcome<Error, Model::BindLiveDomainCertResponse> BindLiveDomainCertOutcome;
+                typedef Outcome<Core::Error, Model::BindLiveDomainCertResponse> BindLiveDomainCertOutcome;
                 typedef std::future<BindLiveDomainCertOutcome> BindLiveDomainCertOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::BindLiveDomainCertRequest&, BindLiveDomainCertOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BindLiveDomainCertAsyncHandler;
-                typedef Outcome<Error, Model::CancelCommonMixStreamResponse> CancelCommonMixStreamOutcome;
+                typedef Outcome<Core::Error, Model::CancelCommonMixStreamResponse> CancelCommonMixStreamOutcome;
                 typedef std::future<CancelCommonMixStreamOutcome> CancelCommonMixStreamOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::CancelCommonMixStreamRequest&, CancelCommonMixStreamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CancelCommonMixStreamAsyncHandler;
-                typedef Outcome<Error, Model::CreateCommonMixStreamResponse> CreateCommonMixStreamOutcome;
+                typedef Outcome<Core::Error, Model::CreateCommonMixStreamResponse> CreateCommonMixStreamOutcome;
                 typedef std::future<CreateCommonMixStreamOutcome> CreateCommonMixStreamOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::CreateCommonMixStreamRequest&, CreateCommonMixStreamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCommonMixStreamAsyncHandler;
-                typedef Outcome<Error, Model::CreateLiveCallbackRuleResponse> CreateLiveCallbackRuleOutcome;
+                typedef Outcome<Core::Error, Model::CreateLiveCallbackRuleResponse> CreateLiveCallbackRuleOutcome;
                 typedef std::future<CreateLiveCallbackRuleOutcome> CreateLiveCallbackRuleOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::CreateLiveCallbackRuleRequest&, CreateLiveCallbackRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLiveCallbackRuleAsyncHandler;
-                typedef Outcome<Error, Model::CreateLiveCallbackTemplateResponse> CreateLiveCallbackTemplateOutcome;
+                typedef Outcome<Core::Error, Model::CreateLiveCallbackTemplateResponse> CreateLiveCallbackTemplateOutcome;
                 typedef std::future<CreateLiveCallbackTemplateOutcome> CreateLiveCallbackTemplateOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::CreateLiveCallbackTemplateRequest&, CreateLiveCallbackTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLiveCallbackTemplateAsyncHandler;
-                typedef Outcome<Error, Model::CreateLiveCertResponse> CreateLiveCertOutcome;
+                typedef Outcome<Core::Error, Model::CreateLiveCertResponse> CreateLiveCertOutcome;
                 typedef std::future<CreateLiveCertOutcome> CreateLiveCertOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::CreateLiveCertRequest&, CreateLiveCertOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLiveCertAsyncHandler;
-                typedef Outcome<Error, Model::CreateLiveRecordResponse> CreateLiveRecordOutcome;
+                typedef Outcome<Core::Error, Model::CreateLiveRecordResponse> CreateLiveRecordOutcome;
                 typedef std::future<CreateLiveRecordOutcome> CreateLiveRecordOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::CreateLiveRecordRequest&, CreateLiveRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLiveRecordAsyncHandler;
-                typedef Outcome<Error, Model::CreateLiveRecordRuleResponse> CreateLiveRecordRuleOutcome;
+                typedef Outcome<Core::Error, Model::CreateLiveRecordRuleResponse> CreateLiveRecordRuleOutcome;
                 typedef std::future<CreateLiveRecordRuleOutcome> CreateLiveRecordRuleOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::CreateLiveRecordRuleRequest&, CreateLiveRecordRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLiveRecordRuleAsyncHandler;
-                typedef Outcome<Error, Model::CreateLiveRecordTemplateResponse> CreateLiveRecordTemplateOutcome;
+                typedef Outcome<Core::Error, Model::CreateLiveRecordTemplateResponse> CreateLiveRecordTemplateOutcome;
                 typedef std::future<CreateLiveRecordTemplateOutcome> CreateLiveRecordTemplateOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::CreateLiveRecordTemplateRequest&, CreateLiveRecordTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLiveRecordTemplateAsyncHandler;
-                typedef Outcome<Error, Model::CreateLiveSnapshotRuleResponse> CreateLiveSnapshotRuleOutcome;
+                typedef Outcome<Core::Error, Model::CreateLiveSnapshotRuleResponse> CreateLiveSnapshotRuleOutcome;
                 typedef std::future<CreateLiveSnapshotRuleOutcome> CreateLiveSnapshotRuleOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::CreateLiveSnapshotRuleRequest&, CreateLiveSnapshotRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLiveSnapshotRuleAsyncHandler;
-                typedef Outcome<Error, Model::CreateLiveSnapshotTemplateResponse> CreateLiveSnapshotTemplateOutcome;
+                typedef Outcome<Core::Error, Model::CreateLiveSnapshotTemplateResponse> CreateLiveSnapshotTemplateOutcome;
                 typedef std::future<CreateLiveSnapshotTemplateOutcome> CreateLiveSnapshotTemplateOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::CreateLiveSnapshotTemplateRequest&, CreateLiveSnapshotTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLiveSnapshotTemplateAsyncHandler;
-                typedef Outcome<Error, Model::CreateLiveTranscodeRuleResponse> CreateLiveTranscodeRuleOutcome;
+                typedef Outcome<Core::Error, Model::CreateLiveTranscodeRuleResponse> CreateLiveTranscodeRuleOutcome;
                 typedef std::future<CreateLiveTranscodeRuleOutcome> CreateLiveTranscodeRuleOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::CreateLiveTranscodeRuleRequest&, CreateLiveTranscodeRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLiveTranscodeRuleAsyncHandler;
-                typedef Outcome<Error, Model::CreateLiveTranscodeTemplateResponse> CreateLiveTranscodeTemplateOutcome;
+                typedef Outcome<Core::Error, Model::CreateLiveTranscodeTemplateResponse> CreateLiveTranscodeTemplateOutcome;
                 typedef std::future<CreateLiveTranscodeTemplateOutcome> CreateLiveTranscodeTemplateOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::CreateLiveTranscodeTemplateRequest&, CreateLiveTranscodeTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLiveTranscodeTemplateAsyncHandler;
-                typedef Outcome<Error, Model::CreateLiveWatermarkRuleResponse> CreateLiveWatermarkRuleOutcome;
+                typedef Outcome<Core::Error, Model::CreateLiveWatermarkRuleResponse> CreateLiveWatermarkRuleOutcome;
                 typedef std::future<CreateLiveWatermarkRuleOutcome> CreateLiveWatermarkRuleOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::CreateLiveWatermarkRuleRequest&, CreateLiveWatermarkRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLiveWatermarkRuleAsyncHandler;
-                typedef Outcome<Error, Model::CreateRecordTaskResponse> CreateRecordTaskOutcome;
+                typedef Outcome<Core::Error, Model::CreateRecordTaskResponse> CreateRecordTaskOutcome;
                 typedef std::future<CreateRecordTaskOutcome> CreateRecordTaskOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::CreateRecordTaskRequest&, CreateRecordTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRecordTaskAsyncHandler;
-                typedef Outcome<Error, Model::DeleteLiveCallbackRuleResponse> DeleteLiveCallbackRuleOutcome;
+                typedef Outcome<Core::Error, Model::DeleteLiveCallbackRuleResponse> DeleteLiveCallbackRuleOutcome;
                 typedef std::future<DeleteLiveCallbackRuleOutcome> DeleteLiveCallbackRuleOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DeleteLiveCallbackRuleRequest&, DeleteLiveCallbackRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLiveCallbackRuleAsyncHandler;
-                typedef Outcome<Error, Model::DeleteLiveCallbackTemplateResponse> DeleteLiveCallbackTemplateOutcome;
+                typedef Outcome<Core::Error, Model::DeleteLiveCallbackTemplateResponse> DeleteLiveCallbackTemplateOutcome;
                 typedef std::future<DeleteLiveCallbackTemplateOutcome> DeleteLiveCallbackTemplateOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DeleteLiveCallbackTemplateRequest&, DeleteLiveCallbackTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLiveCallbackTemplateAsyncHandler;
-                typedef Outcome<Error, Model::DeleteLiveCertResponse> DeleteLiveCertOutcome;
+                typedef Outcome<Core::Error, Model::DeleteLiveCertResponse> DeleteLiveCertOutcome;
                 typedef std::future<DeleteLiveCertOutcome> DeleteLiveCertOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DeleteLiveCertRequest&, DeleteLiveCertOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLiveCertAsyncHandler;
-                typedef Outcome<Error, Model::DeleteLiveDomainResponse> DeleteLiveDomainOutcome;
+                typedef Outcome<Core::Error, Model::DeleteLiveDomainResponse> DeleteLiveDomainOutcome;
                 typedef std::future<DeleteLiveDomainOutcome> DeleteLiveDomainOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DeleteLiveDomainRequest&, DeleteLiveDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLiveDomainAsyncHandler;
-                typedef Outcome<Error, Model::DeleteLiveRecordResponse> DeleteLiveRecordOutcome;
+                typedef Outcome<Core::Error, Model::DeleteLiveRecordResponse> DeleteLiveRecordOutcome;
                 typedef std::future<DeleteLiveRecordOutcome> DeleteLiveRecordOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DeleteLiveRecordRequest&, DeleteLiveRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLiveRecordAsyncHandler;
-                typedef Outcome<Error, Model::DeleteLiveRecordRuleResponse> DeleteLiveRecordRuleOutcome;
+                typedef Outcome<Core::Error, Model::DeleteLiveRecordRuleResponse> DeleteLiveRecordRuleOutcome;
                 typedef std::future<DeleteLiveRecordRuleOutcome> DeleteLiveRecordRuleOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DeleteLiveRecordRuleRequest&, DeleteLiveRecordRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLiveRecordRuleAsyncHandler;
-                typedef Outcome<Error, Model::DeleteLiveRecordTemplateResponse> DeleteLiveRecordTemplateOutcome;
+                typedef Outcome<Core::Error, Model::DeleteLiveRecordTemplateResponse> DeleteLiveRecordTemplateOutcome;
                 typedef std::future<DeleteLiveRecordTemplateOutcome> DeleteLiveRecordTemplateOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DeleteLiveRecordTemplateRequest&, DeleteLiveRecordTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLiveRecordTemplateAsyncHandler;
-                typedef Outcome<Error, Model::DeleteLiveSnapshotRuleResponse> DeleteLiveSnapshotRuleOutcome;
+                typedef Outcome<Core::Error, Model::DeleteLiveSnapshotRuleResponse> DeleteLiveSnapshotRuleOutcome;
                 typedef std::future<DeleteLiveSnapshotRuleOutcome> DeleteLiveSnapshotRuleOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DeleteLiveSnapshotRuleRequest&, DeleteLiveSnapshotRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLiveSnapshotRuleAsyncHandler;
-                typedef Outcome<Error, Model::DeleteLiveSnapshotTemplateResponse> DeleteLiveSnapshotTemplateOutcome;
+                typedef Outcome<Core::Error, Model::DeleteLiveSnapshotTemplateResponse> DeleteLiveSnapshotTemplateOutcome;
                 typedef std::future<DeleteLiveSnapshotTemplateOutcome> DeleteLiveSnapshotTemplateOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DeleteLiveSnapshotTemplateRequest&, DeleteLiveSnapshotTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLiveSnapshotTemplateAsyncHandler;
-                typedef Outcome<Error, Model::DeleteLiveTranscodeRuleResponse> DeleteLiveTranscodeRuleOutcome;
+                typedef Outcome<Core::Error, Model::DeleteLiveTranscodeRuleResponse> DeleteLiveTranscodeRuleOutcome;
                 typedef std::future<DeleteLiveTranscodeRuleOutcome> DeleteLiveTranscodeRuleOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DeleteLiveTranscodeRuleRequest&, DeleteLiveTranscodeRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLiveTranscodeRuleAsyncHandler;
-                typedef Outcome<Error, Model::DeleteLiveTranscodeTemplateResponse> DeleteLiveTranscodeTemplateOutcome;
+                typedef Outcome<Core::Error, Model::DeleteLiveTranscodeTemplateResponse> DeleteLiveTranscodeTemplateOutcome;
                 typedef std::future<DeleteLiveTranscodeTemplateOutcome> DeleteLiveTranscodeTemplateOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DeleteLiveTranscodeTemplateRequest&, DeleteLiveTranscodeTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLiveTranscodeTemplateAsyncHandler;
-                typedef Outcome<Error, Model::DeleteLiveWatermarkResponse> DeleteLiveWatermarkOutcome;
+                typedef Outcome<Core::Error, Model::DeleteLiveWatermarkResponse> DeleteLiveWatermarkOutcome;
                 typedef std::future<DeleteLiveWatermarkOutcome> DeleteLiveWatermarkOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DeleteLiveWatermarkRequest&, DeleteLiveWatermarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLiveWatermarkAsyncHandler;
-                typedef Outcome<Error, Model::DeleteLiveWatermarkRuleResponse> DeleteLiveWatermarkRuleOutcome;
+                typedef Outcome<Core::Error, Model::DeleteLiveWatermarkRuleResponse> DeleteLiveWatermarkRuleOutcome;
                 typedef std::future<DeleteLiveWatermarkRuleOutcome> DeleteLiveWatermarkRuleOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DeleteLiveWatermarkRuleRequest&, DeleteLiveWatermarkRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLiveWatermarkRuleAsyncHandler;
-                typedef Outcome<Error, Model::DeleteRecordTaskResponse> DeleteRecordTaskOutcome;
+                typedef Outcome<Core::Error, Model::DeleteRecordTaskResponse> DeleteRecordTaskOutcome;
                 typedef std::future<DeleteRecordTaskOutcome> DeleteRecordTaskOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DeleteRecordTaskRequest&, DeleteRecordTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRecordTaskAsyncHandler;
-                typedef Outcome<Error, Model::DescribeAllStreamPlayInfoListResponse> DescribeAllStreamPlayInfoListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAllStreamPlayInfoListResponse> DescribeAllStreamPlayInfoListOutcome;
                 typedef std::future<DescribeAllStreamPlayInfoListOutcome> DescribeAllStreamPlayInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeAllStreamPlayInfoListRequest&, DescribeAllStreamPlayInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAllStreamPlayInfoListAsyncHandler;
-                typedef Outcome<Error, Model::DescribeBillBandwidthAndFluxListResponse> DescribeBillBandwidthAndFluxListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAreaBillBandwidthAndFluxListResponse> DescribeAreaBillBandwidthAndFluxListOutcome;
+                typedef std::future<DescribeAreaBillBandwidthAndFluxListOutcome> DescribeAreaBillBandwidthAndFluxListOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::DescribeAreaBillBandwidthAndFluxListRequest&, DescribeAreaBillBandwidthAndFluxListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAreaBillBandwidthAndFluxListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBillBandwidthAndFluxListResponse> DescribeBillBandwidthAndFluxListOutcome;
                 typedef std::future<DescribeBillBandwidthAndFluxListOutcome> DescribeBillBandwidthAndFluxListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeBillBandwidthAndFluxListRequest&, DescribeBillBandwidthAndFluxListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillBandwidthAndFluxListAsyncHandler;
-                typedef Outcome<Error, Model::DescribeConcurrentRecordStreamNumResponse> DescribeConcurrentRecordStreamNumOutcome;
+                typedef Outcome<Core::Error, Model::DescribeConcurrentRecordStreamNumResponse> DescribeConcurrentRecordStreamNumOutcome;
                 typedef std::future<DescribeConcurrentRecordStreamNumOutcome> DescribeConcurrentRecordStreamNumOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeConcurrentRecordStreamNumRequest&, DescribeConcurrentRecordStreamNumOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeConcurrentRecordStreamNumAsyncHandler;
-                typedef Outcome<Error, Model::DescribeGroupProIspPlayInfoListResponse> DescribeGroupProIspPlayInfoListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDeliverBandwidthListResponse> DescribeDeliverBandwidthListOutcome;
+                typedef std::future<DescribeDeliverBandwidthListOutcome> DescribeDeliverBandwidthListOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::DescribeDeliverBandwidthListRequest&, DescribeDeliverBandwidthListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDeliverBandwidthListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeGroupProIspPlayInfoListResponse> DescribeGroupProIspPlayInfoListOutcome;
                 typedef std::future<DescribeGroupProIspPlayInfoListOutcome> DescribeGroupProIspPlayInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeGroupProIspPlayInfoListRequest&, DescribeGroupProIspPlayInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGroupProIspPlayInfoListAsyncHandler;
-                typedef Outcome<Error, Model::DescribeHttpStatusInfoListResponse> DescribeHttpStatusInfoListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeHttpStatusInfoListResponse> DescribeHttpStatusInfoListOutcome;
                 typedef std::future<DescribeHttpStatusInfoListOutcome> DescribeHttpStatusInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeHttpStatusInfoListRequest&, DescribeHttpStatusInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHttpStatusInfoListAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveCallbackRulesResponse> DescribeLiveCallbackRulesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveCallbackRulesResponse> DescribeLiveCallbackRulesOutcome;
                 typedef std::future<DescribeLiveCallbackRulesOutcome> DescribeLiveCallbackRulesOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveCallbackRulesRequest&, DescribeLiveCallbackRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveCallbackRulesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveCallbackTemplateResponse> DescribeLiveCallbackTemplateOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveCallbackTemplateResponse> DescribeLiveCallbackTemplateOutcome;
                 typedef std::future<DescribeLiveCallbackTemplateOutcome> DescribeLiveCallbackTemplateOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveCallbackTemplateRequest&, DescribeLiveCallbackTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveCallbackTemplateAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveCallbackTemplatesResponse> DescribeLiveCallbackTemplatesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveCallbackTemplatesResponse> DescribeLiveCallbackTemplatesOutcome;
                 typedef std::future<DescribeLiveCallbackTemplatesOutcome> DescribeLiveCallbackTemplatesOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveCallbackTemplatesRequest&, DescribeLiveCallbackTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveCallbackTemplatesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveCertResponse> DescribeLiveCertOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveCertResponse> DescribeLiveCertOutcome;
                 typedef std::future<DescribeLiveCertOutcome> DescribeLiveCertOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveCertRequest&, DescribeLiveCertOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveCertAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveCertsResponse> DescribeLiveCertsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveCertsResponse> DescribeLiveCertsOutcome;
                 typedef std::future<DescribeLiveCertsOutcome> DescribeLiveCertsOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveCertsRequest&, DescribeLiveCertsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveCertsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveDelayInfoListResponse> DescribeLiveDelayInfoListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveDelayInfoListResponse> DescribeLiveDelayInfoListOutcome;
                 typedef std::future<DescribeLiveDelayInfoListOutcome> DescribeLiveDelayInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveDelayInfoListRequest&, DescribeLiveDelayInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveDelayInfoListAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveDomainResponse> DescribeLiveDomainOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveDomainResponse> DescribeLiveDomainOutcome;
                 typedef std::future<DescribeLiveDomainOutcome> DescribeLiveDomainOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveDomainRequest&, DescribeLiveDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveDomainAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveDomainCertResponse> DescribeLiveDomainCertOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveDomainCertResponse> DescribeLiveDomainCertOutcome;
                 typedef std::future<DescribeLiveDomainCertOutcome> DescribeLiveDomainCertOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveDomainCertRequest&, DescribeLiveDomainCertOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveDomainCertAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveDomainPlayInfoListResponse> DescribeLiveDomainPlayInfoListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveDomainPlayInfoListResponse> DescribeLiveDomainPlayInfoListOutcome;
                 typedef std::future<DescribeLiveDomainPlayInfoListOutcome> DescribeLiveDomainPlayInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveDomainPlayInfoListRequest&, DescribeLiveDomainPlayInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveDomainPlayInfoListAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveDomainsResponse> DescribeLiveDomainsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveDomainRefererResponse> DescribeLiveDomainRefererOutcome;
+                typedef std::future<DescribeLiveDomainRefererOutcome> DescribeLiveDomainRefererOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::DescribeLiveDomainRefererRequest&, DescribeLiveDomainRefererOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveDomainRefererAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLiveDomainsResponse> DescribeLiveDomainsOutcome;
                 typedef std::future<DescribeLiveDomainsOutcome> DescribeLiveDomainsOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveDomainsRequest&, DescribeLiveDomainsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveDomainsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveForbidStreamListResponse> DescribeLiveForbidStreamListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveForbidStreamListResponse> DescribeLiveForbidStreamListOutcome;
                 typedef std::future<DescribeLiveForbidStreamListOutcome> DescribeLiveForbidStreamListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveForbidStreamListRequest&, DescribeLiveForbidStreamListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveForbidStreamListAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLivePlayAuthKeyResponse> DescribeLivePlayAuthKeyOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLivePlayAuthKeyResponse> DescribeLivePlayAuthKeyOutcome;
                 typedef std::future<DescribeLivePlayAuthKeyOutcome> DescribeLivePlayAuthKeyOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLivePlayAuthKeyRequest&, DescribeLivePlayAuthKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLivePlayAuthKeyAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLivePushAuthKeyResponse> DescribeLivePushAuthKeyOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLivePushAuthKeyResponse> DescribeLivePushAuthKeyOutcome;
                 typedef std::future<DescribeLivePushAuthKeyOutcome> DescribeLivePushAuthKeyOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLivePushAuthKeyRequest&, DescribeLivePushAuthKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLivePushAuthKeyAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveRecordRulesResponse> DescribeLiveRecordRulesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveRecordRulesResponse> DescribeLiveRecordRulesOutcome;
                 typedef std::future<DescribeLiveRecordRulesOutcome> DescribeLiveRecordRulesOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveRecordRulesRequest&, DescribeLiveRecordRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveRecordRulesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveRecordTemplateResponse> DescribeLiveRecordTemplateOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveRecordTemplateResponse> DescribeLiveRecordTemplateOutcome;
                 typedef std::future<DescribeLiveRecordTemplateOutcome> DescribeLiveRecordTemplateOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveRecordTemplateRequest&, DescribeLiveRecordTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveRecordTemplateAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveRecordTemplatesResponse> DescribeLiveRecordTemplatesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveRecordTemplatesResponse> DescribeLiveRecordTemplatesOutcome;
                 typedef std::future<DescribeLiveRecordTemplatesOutcome> DescribeLiveRecordTemplatesOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveRecordTemplatesRequest&, DescribeLiveRecordTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveRecordTemplatesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveSnapshotRulesResponse> DescribeLiveSnapshotRulesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveSnapshotRulesResponse> DescribeLiveSnapshotRulesOutcome;
                 typedef std::future<DescribeLiveSnapshotRulesOutcome> DescribeLiveSnapshotRulesOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveSnapshotRulesRequest&, DescribeLiveSnapshotRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveSnapshotRulesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveSnapshotTemplateResponse> DescribeLiveSnapshotTemplateOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveSnapshotTemplateResponse> DescribeLiveSnapshotTemplateOutcome;
                 typedef std::future<DescribeLiveSnapshotTemplateOutcome> DescribeLiveSnapshotTemplateOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveSnapshotTemplateRequest&, DescribeLiveSnapshotTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveSnapshotTemplateAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveSnapshotTemplatesResponse> DescribeLiveSnapshotTemplatesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveSnapshotTemplatesResponse> DescribeLiveSnapshotTemplatesOutcome;
                 typedef std::future<DescribeLiveSnapshotTemplatesOutcome> DescribeLiveSnapshotTemplatesOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveSnapshotTemplatesRequest&, DescribeLiveSnapshotTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveSnapshotTemplatesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveStreamEventListResponse> DescribeLiveStreamEventListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveStreamEventListResponse> DescribeLiveStreamEventListOutcome;
                 typedef std::future<DescribeLiveStreamEventListOutcome> DescribeLiveStreamEventListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveStreamEventListRequest&, DescribeLiveStreamEventListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveStreamEventListAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveStreamOnlineListResponse> DescribeLiveStreamOnlineListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveStreamOnlineListResponse> DescribeLiveStreamOnlineListOutcome;
                 typedef std::future<DescribeLiveStreamOnlineListOutcome> DescribeLiveStreamOnlineListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveStreamOnlineListRequest&, DescribeLiveStreamOnlineListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveStreamOnlineListAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveStreamPublishedListResponse> DescribeLiveStreamPublishedListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveStreamPublishedListResponse> DescribeLiveStreamPublishedListOutcome;
                 typedef std::future<DescribeLiveStreamPublishedListOutcome> DescribeLiveStreamPublishedListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveStreamPublishedListRequest&, DescribeLiveStreamPublishedListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveStreamPublishedListAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveStreamPushInfoListResponse> DescribeLiveStreamPushInfoListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveStreamPushInfoListResponse> DescribeLiveStreamPushInfoListOutcome;
                 typedef std::future<DescribeLiveStreamPushInfoListOutcome> DescribeLiveStreamPushInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveStreamPushInfoListRequest&, DescribeLiveStreamPushInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveStreamPushInfoListAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveStreamStateResponse> DescribeLiveStreamStateOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveStreamStateResponse> DescribeLiveStreamStateOutcome;
                 typedef std::future<DescribeLiveStreamStateOutcome> DescribeLiveStreamStateOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveStreamStateRequest&, DescribeLiveStreamStateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveStreamStateAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveTranscodeDetailInfoResponse> DescribeLiveTranscodeDetailInfoOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveTranscodeDetailInfoResponse> DescribeLiveTranscodeDetailInfoOutcome;
                 typedef std::future<DescribeLiveTranscodeDetailInfoOutcome> DescribeLiveTranscodeDetailInfoOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveTranscodeDetailInfoRequest&, DescribeLiveTranscodeDetailInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveTranscodeDetailInfoAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveTranscodeRulesResponse> DescribeLiveTranscodeRulesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveTranscodeRulesResponse> DescribeLiveTranscodeRulesOutcome;
                 typedef std::future<DescribeLiveTranscodeRulesOutcome> DescribeLiveTranscodeRulesOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveTranscodeRulesRequest&, DescribeLiveTranscodeRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveTranscodeRulesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveTranscodeTemplateResponse> DescribeLiveTranscodeTemplateOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveTranscodeTemplateResponse> DescribeLiveTranscodeTemplateOutcome;
                 typedef std::future<DescribeLiveTranscodeTemplateOutcome> DescribeLiveTranscodeTemplateOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveTranscodeTemplateRequest&, DescribeLiveTranscodeTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveTranscodeTemplateAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveTranscodeTemplatesResponse> DescribeLiveTranscodeTemplatesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveTranscodeTemplatesResponse> DescribeLiveTranscodeTemplatesOutcome;
                 typedef std::future<DescribeLiveTranscodeTemplatesOutcome> DescribeLiveTranscodeTemplatesOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveTranscodeTemplatesRequest&, DescribeLiveTranscodeTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveTranscodeTemplatesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveWatermarkResponse> DescribeLiveWatermarkOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveTranscodeTotalInfoResponse> DescribeLiveTranscodeTotalInfoOutcome;
+                typedef std::future<DescribeLiveTranscodeTotalInfoOutcome> DescribeLiveTranscodeTotalInfoOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::DescribeLiveTranscodeTotalInfoRequest&, DescribeLiveTranscodeTotalInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveTranscodeTotalInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLiveWatermarkResponse> DescribeLiveWatermarkOutcome;
                 typedef std::future<DescribeLiveWatermarkOutcome> DescribeLiveWatermarkOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveWatermarkRequest&, DescribeLiveWatermarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveWatermarkAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveWatermarkRulesResponse> DescribeLiveWatermarkRulesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveWatermarkRulesResponse> DescribeLiveWatermarkRulesOutcome;
                 typedef std::future<DescribeLiveWatermarkRulesOutcome> DescribeLiveWatermarkRulesOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveWatermarkRulesRequest&, DescribeLiveWatermarkRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveWatermarkRulesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLiveWatermarksResponse> DescribeLiveWatermarksOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLiveWatermarksResponse> DescribeLiveWatermarksOutcome;
                 typedef std::future<DescribeLiveWatermarksOutcome> DescribeLiveWatermarksOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveWatermarksRequest&, DescribeLiveWatermarksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveWatermarksAsyncHandler;
-                typedef Outcome<Error, Model::DescribePlayErrorCodeDetailInfoListResponse> DescribePlayErrorCodeDetailInfoListOutcome;
+                typedef Outcome<Core::Error, Model::DescribePlayErrorCodeDetailInfoListResponse> DescribePlayErrorCodeDetailInfoListOutcome;
                 typedef std::future<DescribePlayErrorCodeDetailInfoListOutcome> DescribePlayErrorCodeDetailInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribePlayErrorCodeDetailInfoListRequest&, DescribePlayErrorCodeDetailInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePlayErrorCodeDetailInfoListAsyncHandler;
-                typedef Outcome<Error, Model::DescribePlayErrorCodeSumInfoListResponse> DescribePlayErrorCodeSumInfoListOutcome;
+                typedef Outcome<Core::Error, Model::DescribePlayErrorCodeSumInfoListResponse> DescribePlayErrorCodeSumInfoListOutcome;
                 typedef std::future<DescribePlayErrorCodeSumInfoListOutcome> DescribePlayErrorCodeSumInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribePlayErrorCodeSumInfoListRequest&, DescribePlayErrorCodeSumInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePlayErrorCodeSumInfoListAsyncHandler;
-                typedef Outcome<Error, Model::DescribeProIspPlaySumInfoListResponse> DescribeProIspPlaySumInfoListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeProIspPlaySumInfoListResponse> DescribeProIspPlaySumInfoListOutcome;
                 typedef std::future<DescribeProIspPlaySumInfoListOutcome> DescribeProIspPlaySumInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeProIspPlaySumInfoListRequest&, DescribeProIspPlaySumInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProIspPlaySumInfoListAsyncHandler;
-                typedef Outcome<Error, Model::DescribeProvinceIspPlayInfoListResponse> DescribeProvinceIspPlayInfoListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeProvinceIspPlayInfoListResponse> DescribeProvinceIspPlayInfoListOutcome;
                 typedef std::future<DescribeProvinceIspPlayInfoListOutcome> DescribeProvinceIspPlayInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeProvinceIspPlayInfoListRequest&, DescribeProvinceIspPlayInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProvinceIspPlayInfoListAsyncHandler;
-                typedef Outcome<Error, Model::DescribeScreenShotSheetNumListResponse> DescribeScreenShotSheetNumListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeScreenShotSheetNumListResponse> DescribeScreenShotSheetNumListOutcome;
                 typedef std::future<DescribeScreenShotSheetNumListOutcome> DescribeScreenShotSheetNumListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeScreenShotSheetNumListRequest&, DescribeScreenShotSheetNumListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeScreenShotSheetNumListAsyncHandler;
-                typedef Outcome<Error, Model::DescribeStreamDayPlayInfoListResponse> DescribeStreamDayPlayInfoListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeStreamDayPlayInfoListResponse> DescribeStreamDayPlayInfoListOutcome;
                 typedef std::future<DescribeStreamDayPlayInfoListOutcome> DescribeStreamDayPlayInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeStreamDayPlayInfoListRequest&, DescribeStreamDayPlayInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamDayPlayInfoListAsyncHandler;
-                typedef Outcome<Error, Model::DescribeStreamPlayInfoListResponse> DescribeStreamPlayInfoListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeStreamPlayInfoListResponse> DescribeStreamPlayInfoListOutcome;
                 typedef std::future<DescribeStreamPlayInfoListOutcome> DescribeStreamPlayInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeStreamPlayInfoListRequest&, DescribeStreamPlayInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamPlayInfoListAsyncHandler;
-                typedef Outcome<Error, Model::DescribeStreamPushInfoListResponse> DescribeStreamPushInfoListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeStreamPushInfoListResponse> DescribeStreamPushInfoListOutcome;
                 typedef std::future<DescribeStreamPushInfoListOutcome> DescribeStreamPushInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeStreamPushInfoListRequest&, DescribeStreamPushInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamPushInfoListAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTopClientIpSumInfoListResponse> DescribeTopClientIpSumInfoListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTopClientIpSumInfoListResponse> DescribeTopClientIpSumInfoListOutcome;
                 typedef std::future<DescribeTopClientIpSumInfoListOutcome> DescribeTopClientIpSumInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeTopClientIpSumInfoListRequest&, DescribeTopClientIpSumInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTopClientIpSumInfoListAsyncHandler;
-                typedef Outcome<Error, Model::DescribeVisitTopSumInfoListResponse> DescribeVisitTopSumInfoListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeUploadStreamNumsResponse> DescribeUploadStreamNumsOutcome;
+                typedef std::future<DescribeUploadStreamNumsOutcome> DescribeUploadStreamNumsOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::DescribeUploadStreamNumsRequest&, DescribeUploadStreamNumsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUploadStreamNumsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVisitTopSumInfoListResponse> DescribeVisitTopSumInfoListOutcome;
                 typedef std::future<DescribeVisitTopSumInfoListOutcome> DescribeVisitTopSumInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeVisitTopSumInfoListRequest&, DescribeVisitTopSumInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVisitTopSumInfoListAsyncHandler;
-                typedef Outcome<Error, Model::DropLiveStreamResponse> DropLiveStreamOutcome;
+                typedef Outcome<Core::Error, Model::DropLiveStreamResponse> DropLiveStreamOutcome;
                 typedef std::future<DropLiveStreamOutcome> DropLiveStreamOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DropLiveStreamRequest&, DropLiveStreamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DropLiveStreamAsyncHandler;
-                typedef Outcome<Error, Model::EnableLiveDomainResponse> EnableLiveDomainOutcome;
+                typedef Outcome<Core::Error, Model::EnableLiveDomainResponse> EnableLiveDomainOutcome;
                 typedef std::future<EnableLiveDomainOutcome> EnableLiveDomainOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::EnableLiveDomainRequest&, EnableLiveDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableLiveDomainAsyncHandler;
-                typedef Outcome<Error, Model::ForbidLiveDomainResponse> ForbidLiveDomainOutcome;
+                typedef Outcome<Core::Error, Model::ForbidLiveDomainResponse> ForbidLiveDomainOutcome;
                 typedef std::future<ForbidLiveDomainOutcome> ForbidLiveDomainOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::ForbidLiveDomainRequest&, ForbidLiveDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ForbidLiveDomainAsyncHandler;
-                typedef Outcome<Error, Model::ForbidLiveStreamResponse> ForbidLiveStreamOutcome;
+                typedef Outcome<Core::Error, Model::ForbidLiveStreamResponse> ForbidLiveStreamOutcome;
                 typedef std::future<ForbidLiveStreamOutcome> ForbidLiveStreamOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::ForbidLiveStreamRequest&, ForbidLiveStreamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ForbidLiveStreamAsyncHandler;
-                typedef Outcome<Error, Model::ModifyLiveCallbackTemplateResponse> ModifyLiveCallbackTemplateOutcome;
+                typedef Outcome<Core::Error, Model::ModifyLiveCallbackTemplateResponse> ModifyLiveCallbackTemplateOutcome;
                 typedef std::future<ModifyLiveCallbackTemplateOutcome> ModifyLiveCallbackTemplateOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::ModifyLiveCallbackTemplateRequest&, ModifyLiveCallbackTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLiveCallbackTemplateAsyncHandler;
-                typedef Outcome<Error, Model::ModifyLiveCertResponse> ModifyLiveCertOutcome;
+                typedef Outcome<Core::Error, Model::ModifyLiveCertResponse> ModifyLiveCertOutcome;
                 typedef std::future<ModifyLiveCertOutcome> ModifyLiveCertOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::ModifyLiveCertRequest&, ModifyLiveCertOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLiveCertAsyncHandler;
-                typedef Outcome<Error, Model::ModifyLiveDomainCertResponse> ModifyLiveDomainCertOutcome;
+                typedef Outcome<Core::Error, Model::ModifyLiveDomainCertResponse> ModifyLiveDomainCertOutcome;
                 typedef std::future<ModifyLiveDomainCertOutcome> ModifyLiveDomainCertOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::ModifyLiveDomainCertRequest&, ModifyLiveDomainCertOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLiveDomainCertAsyncHandler;
-                typedef Outcome<Error, Model::ModifyLivePlayAuthKeyResponse> ModifyLivePlayAuthKeyOutcome;
+                typedef Outcome<Core::Error, Model::ModifyLiveDomainRefererResponse> ModifyLiveDomainRefererOutcome;
+                typedef std::future<ModifyLiveDomainRefererOutcome> ModifyLiveDomainRefererOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::ModifyLiveDomainRefererRequest&, ModifyLiveDomainRefererOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLiveDomainRefererAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyLivePlayAuthKeyResponse> ModifyLivePlayAuthKeyOutcome;
                 typedef std::future<ModifyLivePlayAuthKeyOutcome> ModifyLivePlayAuthKeyOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::ModifyLivePlayAuthKeyRequest&, ModifyLivePlayAuthKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLivePlayAuthKeyAsyncHandler;
-                typedef Outcome<Error, Model::ModifyLivePlayDomainResponse> ModifyLivePlayDomainOutcome;
+                typedef Outcome<Core::Error, Model::ModifyLivePlayDomainResponse> ModifyLivePlayDomainOutcome;
                 typedef std::future<ModifyLivePlayDomainOutcome> ModifyLivePlayDomainOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::ModifyLivePlayDomainRequest&, ModifyLivePlayDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLivePlayDomainAsyncHandler;
-                typedef Outcome<Error, Model::ModifyLivePushAuthKeyResponse> ModifyLivePushAuthKeyOutcome;
+                typedef Outcome<Core::Error, Model::ModifyLivePushAuthKeyResponse> ModifyLivePushAuthKeyOutcome;
                 typedef std::future<ModifyLivePushAuthKeyOutcome> ModifyLivePushAuthKeyOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::ModifyLivePushAuthKeyRequest&, ModifyLivePushAuthKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLivePushAuthKeyAsyncHandler;
-                typedef Outcome<Error, Model::ModifyLiveRecordTemplateResponse> ModifyLiveRecordTemplateOutcome;
+                typedef Outcome<Core::Error, Model::ModifyLiveRecordTemplateResponse> ModifyLiveRecordTemplateOutcome;
                 typedef std::future<ModifyLiveRecordTemplateOutcome> ModifyLiveRecordTemplateOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::ModifyLiveRecordTemplateRequest&, ModifyLiveRecordTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLiveRecordTemplateAsyncHandler;
-                typedef Outcome<Error, Model::ModifyLiveSnapshotTemplateResponse> ModifyLiveSnapshotTemplateOutcome;
+                typedef Outcome<Core::Error, Model::ModifyLiveSnapshotTemplateResponse> ModifyLiveSnapshotTemplateOutcome;
                 typedef std::future<ModifyLiveSnapshotTemplateOutcome> ModifyLiveSnapshotTemplateOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::ModifyLiveSnapshotTemplateRequest&, ModifyLiveSnapshotTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLiveSnapshotTemplateAsyncHandler;
-                typedef Outcome<Error, Model::ModifyLiveTranscodeTemplateResponse> ModifyLiveTranscodeTemplateOutcome;
+                typedef Outcome<Core::Error, Model::ModifyLiveTranscodeTemplateResponse> ModifyLiveTranscodeTemplateOutcome;
                 typedef std::future<ModifyLiveTranscodeTemplateOutcome> ModifyLiveTranscodeTemplateOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::ModifyLiveTranscodeTemplateRequest&, ModifyLiveTranscodeTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLiveTranscodeTemplateAsyncHandler;
-                typedef Outcome<Error, Model::ResumeDelayLiveStreamResponse> ResumeDelayLiveStreamOutcome;
+                typedef Outcome<Core::Error, Model::ResumeDelayLiveStreamResponse> ResumeDelayLiveStreamOutcome;
                 typedef std::future<ResumeDelayLiveStreamOutcome> ResumeDelayLiveStreamOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::ResumeDelayLiveStreamRequest&, ResumeDelayLiveStreamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResumeDelayLiveStreamAsyncHandler;
-                typedef Outcome<Error, Model::ResumeLiveStreamResponse> ResumeLiveStreamOutcome;
+                typedef Outcome<Core::Error, Model::ResumeLiveStreamResponse> ResumeLiveStreamOutcome;
                 typedef std::future<ResumeLiveStreamOutcome> ResumeLiveStreamOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::ResumeLiveStreamRequest&, ResumeLiveStreamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResumeLiveStreamAsyncHandler;
-                typedef Outcome<Error, Model::StopLiveRecordResponse> StopLiveRecordOutcome;
+                typedef Outcome<Core::Error, Model::StopLiveRecordResponse> StopLiveRecordOutcome;
                 typedef std::future<StopLiveRecordOutcome> StopLiveRecordOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::StopLiveRecordRequest&, StopLiveRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopLiveRecordAsyncHandler;
-                typedef Outcome<Error, Model::StopRecordTaskResponse> StopRecordTaskOutcome;
+                typedef Outcome<Core::Error, Model::StopRecordTaskResponse> StopRecordTaskOutcome;
                 typedef std::future<StopRecordTaskOutcome> StopRecordTaskOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::StopRecordTaskRequest&, StopRecordTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopRecordTaskAsyncHandler;
-                typedef Outcome<Error, Model::UnBindLiveDomainCertResponse> UnBindLiveDomainCertOutcome;
+                typedef Outcome<Core::Error, Model::UnBindLiveDomainCertResponse> UnBindLiveDomainCertOutcome;
                 typedef std::future<UnBindLiveDomainCertOutcome> UnBindLiveDomainCertOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::UnBindLiveDomainCertRequest&, UnBindLiveDomainCertOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnBindLiveDomainCertAsyncHandler;
-                typedef Outcome<Error, Model::UpdateLiveWatermarkResponse> UpdateLiveWatermarkOutcome;
+                typedef Outcome<Core::Error, Model::UpdateLiveWatermarkResponse> UpdateLiveWatermarkOutcome;
                 typedef std::future<UpdateLiveWatermarkOutcome> UpdateLiveWatermarkOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::UpdateLiveWatermarkRequest&, UpdateLiveWatermarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateLiveWatermarkAsyncHandler;
 
 
 
                 /**
-                 *This API is used to set the delay time for a stream.
-Note: if you want to set delayed playback before pushing, you need to do so 5 minutes in advance.
-Currently, this API only supports stream granularity, and the feature supporting domain name and application granularities will be available in the future.
-Use case: for important live streams, you can set delayed playback in advance to avoid contingency issues.
+                 *This API is used to set a delay in playing the images of large live streaming events, in case of emergencies.
 
+Note: if you are to set the delay before stream push, set it at least 5 minutes before the push. This API supports configuration only by stream.
                  * @param req AddDelayLiveStreamRequest
                  * @return AddDelayLiveStreamOutcome
                  */
@@ -548,7 +576,8 @@ Use case: for important live streams, you can set delayed playback in advance to
                 AddLiveDomainOutcomeCallable AddLiveDomainCallable(const Model::AddLiveDomainRequest& request);
 
                 /**
-                 *After a watermark is added and a watermark ID is successfully returned, you need to call the [CreateLiveWatermarkRule](/document/product/267/32629) API and bind the watermark ID to the stream.
+                 *After a watermark is added and a watermark ID is successfully returned, you need to call the [CreateLiveWatermarkRule](https://intl.cloud.tencent.com/document/product/267/32629?from_cn_redirect=1) API to bind the watermark ID to a stream.
+After the number of watermarks exceeds the upper limit of 100, to add a new watermark, you must delete an old one first.
                  * @param req AddLiveWatermarkRequest
                  * @return AddLiveWatermarkOutcome
                  */
@@ -576,8 +605,9 @@ Note: you need to call the `CreateLiveCert` API first to add a certificate. Afte
                 CancelCommonMixStreamOutcomeCallable CancelCommonMixStreamCallable(const Model::CancelCommonMixStreamRequest& request);
 
                 /**
-                 *This API is used to create a general stream mix. It can be used basically in the same way as the legacy `mix_streamv2.cancel_mix_stream` API.
+                 *This API is used to create a general stream mix. It can be used basically in the same way as the legacy `mix_streamv2.start_mix_stream_advanced` API.
 Note: currently, up to 16 streams can be mixed.
+Best practice: https://intl.cloud.tencent.com/document/product/267/45566?from_cn_redirect=1
                  * @param req CreateCommonMixStreamRequest
                  * @return CreateCommonMixStreamOutcome
                  */
@@ -586,8 +616,8 @@ Note: currently, up to 16 streams can be mixed.
                 CreateCommonMixStreamOutcomeCallable CreateCommonMixStreamCallable(const Model::CreateCommonMixStreamRequest& request);
 
                 /**
-                 *To create a callback rule, you need to first call the [CreateLiveCallbackTemplate](/document/product/267/32637) API to create a callback template and bind the returned template ID to the domain name/path.
-<br>Callback protocol-related document: [Event Message Notification](/document/product/267/32744).
+                 *To create a callback rule, you need to first call the [CreateLiveCallbackTemplate](https://intl.cloud.tencent.com/document/product/267/32637?from_cn_redirect=1) API to create a callback template and bind the returned template ID to the domain name/path.
+<br>Callback protocol-related document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                  * @param req CreateLiveCallbackRuleRequest
                  * @return CreateLiveCallbackRuleOutcome
                  */
@@ -596,8 +626,9 @@ Note: currently, up to 16 streams can be mixed.
                 CreateLiveCallbackRuleOutcomeCallable CreateLiveCallbackRuleCallable(const Model::CreateLiveCallbackRuleRequest& request);
 
                 /**
-                 *This API is used to create a callback template. After a template ID is successfully returned, you need to call the [CreateLiveCallbackRule](/document/product/267/32638) API to bind the template ID to the domain name/path.
-<br>Callback protocol document: [Event Message Notification](/document/product/267/32744).
+                 *After a callback template is created and a template ID is successfully returned, you need to call the [CreateLiveCallbackRule](https://intl.cloud.tencent.com/document/product/267/32638?from_cn_redirect=1) API and bind the template ID to the domain name/path.
+<br>Callback protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+Note: at least enter one callback URL.
                  * @param req CreateLiveCallbackTemplateRequest
                  * @return CreateLiveCallbackTemplateOutcome
                  */
@@ -617,7 +648,7 @@ Note: currently, up to 16 streams can be mixed.
                 /**
                  *- Prerequisites
   1. Recording files are stored on the VOD platform, so if you need to use the recording feature, you must first activate the VOD service.
-  2. After the recording files are stored, applicable fees (including storage fees and downstream playback traffic fees) will be charged according to the VOD billing mode. For more information, please see the [corresponding document](https://cloud.tencent.com/document/product/266/2838).
+  2. After the recording files are stored, applicable fees (including storage fees and downstream playback traffic fees) will be charged according to the VOD billing mode. For more information, please see the [corresponding document](https://intl.cloud.tencent.com/document/product/266/2838?from_cn_redirect=1).
 
 - Mode description
   This API supports two recording modes:
@@ -639,8 +670,8 @@ Note: currently, up to 16 streams can be mixed.
                 CreateLiveRecordOutcomeCallable CreateLiveRecordCallable(const Model::CreateLiveRecordRequest& request);
 
                 /**
-                 *To create a recording rule, you need to first call the [CreateLiveRecordTemplate](/document/product/267/32614) API to create a recording template and bind the returned template ID to the stream.
-<br>Recording-related document: [LVB Recording](/document/product/267/32739).
+                 *To create a recording rule, you need to first call the [CreateLiveRecordTemplate](https://intl.cloud.tencent.com/document/product/267/32614?from_cn_redirect=1) API to create a recording template and bind the returned template ID to the stream.
+<br>Recording-related document: [LVB Recording](https://intl.cloud.tencent.com/document/product/267/32739?from_cn_redirect=1).
                  * @param req CreateLiveRecordRuleRequest
                  * @return CreateLiveRecordRuleOutcome
                  */
@@ -649,8 +680,8 @@ Note: currently, up to 16 streams can be mixed.
                 CreateLiveRecordRuleOutcomeCallable CreateLiveRecordRuleCallable(const Model::CreateLiveRecordRuleRequest& request);
 
                 /**
-                 *After a recording template is created and a template ID is successfully returned, you need to call the [CreateLiveRecordRule](/document/product/267/32615) API and bind the template ID to the stream.
-<br>Recording-related document: [LVB Recording](/document/product/267/32739).
+                 *This API is used to create a recording template. You can create up to 50 templates. To use a template, you need to call the [CreateLiveRecordRule](https://intl.cloud.tencent.com/document/product/267/32615?from_cn_redirect=1) API to bind the template ID returned by this API to a stream.
+<br>More on recording: [Live Recording](https://intl.cloud.tencent.com/document/product/267/32739?from_cn_redirect=1)
                  * @param req CreateLiveRecordTemplateRequest
                  * @return CreateLiveRecordTemplateOutcome
                  */
@@ -659,8 +690,8 @@ Note: currently, up to 16 streams can be mixed.
                 CreateLiveRecordTemplateOutcomeCallable CreateLiveRecordTemplateCallable(const Model::CreateLiveRecordTemplateRequest& request);
 
                 /**
-                 *This API is used to create a screencapturing rule. You need to first call the [CreateLiveSnapshotTemplate](/document/product/267/32624) API to create a screencapturing template to bind the returned template ID to the stream.
-<br>Screencapturing document: [LVB Screencapturing](/document/product/267/32737).
+                 *This API is used to create a screencapturing rule. You need to first call the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API to create a screencapturing template to bind the returned template ID to the stream.
+<br>Screencapturing document: [LVB Screencapturing](https://intl.cloud.tencent.com/document/product/267/32737?from_cn_redirect=1).
 Note: only one screencapturing template can be associated with one domain name.
                  * @param req CreateLiveSnapshotRuleRequest
                  * @return CreateLiveSnapshotRuleOutcome
@@ -670,8 +701,8 @@ Note: only one screencapturing template can be associated with one domain name.
                 CreateLiveSnapshotRuleOutcomeCallable CreateLiveSnapshotRuleCallable(const Model::CreateLiveSnapshotRuleRequest& request);
 
                 /**
-                 *After a screencapturing template is created and a template ID is successfully returned, you need to call the [CreateLiveSnapshotRule](/document/product/267/32625) API and bind the template ID to the stream.
-<br>Screencapturing-related document: [LVB Screencapturing](/document/product/267/32737).
+                 *After a screencapturing template is created and a template ID is successfully returned, you need to call the [CreateLiveSnapshotRule](https://intl.cloud.tencent.com/document/product/267/32625?from_cn_redirect=1) API and bind the template ID to the stream.
+<br>Screencapturing-related document: [LVB Screencapturing](https://intl.cloud.tencent.com/document/product/267/32737?from_cn_redirect=1).
                  * @param req CreateLiveSnapshotTemplateRequest
                  * @return CreateLiveSnapshotTemplateOutcome
                  */
@@ -680,8 +711,8 @@ Note: only one screencapturing template can be associated with one domain name.
                 CreateLiveSnapshotTemplateOutcomeCallable CreateLiveSnapshotTemplateCallable(const Model::CreateLiveSnapshotTemplateRequest& request);
 
                 /**
-                 *To create a transcoding rule, you need to first call the [CreateLiveTranscodeTemplate](/document/product/267/32646) API to create a transcoding template and bind the returned template ID to the stream.
-<br>Transcoding-related document: [LVB Remuxing and Transcoding](/document/product/267/32736).
+                 *To create a transcoding rule, you need to first call the [CreateLiveTranscodeTemplate](https://intl.cloud.tencent.com/document/product/267/32646?from_cn_redirect=1) API to create a transcoding template and bind the returned template ID to the stream.
+<br>Transcoding-related document: [LVB Remuxing and Transcoding](https://intl.cloud.tencent.com/document/product/267/32736?from_cn_redirect=1).
                  * @param req CreateLiveTranscodeRuleRequest
                  * @return CreateLiveTranscodeRuleOutcome
                  */
@@ -690,8 +721,8 @@ Note: only one screencapturing template can be associated with one domain name.
                 CreateLiveTranscodeRuleOutcomeCallable CreateLiveTranscodeRuleCallable(const Model::CreateLiveTranscodeRuleRequest& request);
 
                 /**
-                 *After a transcoding template is created and a template ID is successfully returned, you need to call the [CreateLiveTranscodeRule](/document/product/267/32647) API and bind the returned template ID to the stream.
-<br>Transcoding-related document: [LVB Remuxing and Transcoding](/document/product/267/32736).
+                 *After a transcoding template is created and a template ID is successfully returned, you need to call the [CreateLiveTranscodeRule](https://intl.cloud.tencent.com/document/product/267/32647?from_cn_redirect=1) API and bind the returned template ID to the stream.
+<br>Transcoding-related document: [LVB Remuxing and Transcoding](https://intl.cloud.tencent.com/document/product/267/32736?from_cn_redirect=1).
                  * @param req CreateLiveTranscodeTemplateRequest
                  * @return CreateLiveTranscodeTemplateOutcome
                  */
@@ -700,7 +731,7 @@ Note: only one screencapturing template can be associated with one domain name.
                 CreateLiveTranscodeTemplateOutcomeCallable CreateLiveTranscodeTemplateCallable(const Model::CreateLiveTranscodeTemplateRequest& request);
 
                 /**
-                 *To create a watermarking rule, you need to first call the [AddLiveWatermark](/document/product/267/30154) API to add a watermark and bind the returned watermark ID to the stream.
+                 *To create a watermarking rule, you need to first call the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API to add a watermark and bind the returned watermark ID to the stream.
                  * @param req CreateLiveWatermarkRuleRequest
                  * @return CreateLiveWatermarkRuleOutcome
                  */
@@ -712,12 +743,13 @@ Note: only one screencapturing template can be associated with one domain name.
                  *This API is used to create a recording task that starts and ends at specified times and records by using the configuration corresponding to a specified recording template ID.
 - Prerequisites
 1. Recording files are stored on the VOD platform, so if you need to use the recording feature, you must first activate the VOD service.
-2. After the recording files are stored, applicable fees (including storage fees and downstream playback traffic fees) will be charged according to the VOD billing mode. For more information, please see the corresponding document.
+2. After the recording files are stored, applicable fees (including storage fees and downstream playback traffic fees) are charged according to the VOD billing method. For details, see the [corresponding document](https://intl.cloud.tencent.com/document/product/266/2837?from_cn_redirect=1).
 - Precautions
-1. An interruption will end the current recording and generate a recording file. The task will still be valid before the end time expires, and as long as the stream is pushed normally during the period, it will record normally, regardless of whether the push is interrupted or restarted multiple times.
-2. Creating recording tasks with overlapping time periods must be avoided. If there are multiple tasks with overlapping time periods for the same stream, the system will start three recording tasks at most to avoid repeated recording.
+1. An interruption will end the current recording and generate a recording file. The task will still be valid before the end time expires, and the stream will be recorded within this period as long as it is pushed, regardless of whether the push is interrupted or restarted multiple times.
+2. Avoid creating recording tasks with overlapping time periods. If there are multiple tasks with overlapping time periods for the same stream, the system will start three recording tasks at most to avoid repeated recording.
 3. The record of a created recording task will be retained for 3 months on the platform.
-4. The current recording task management APIs (CreateRecordTask/StopRecordTask/DeleteRecordTask) are not compatible with the legacy APIs (CreateLiveRecord/StopLiveRecord/DeleteLiveRecord), and they cannot be mixed.
+4. The current recording task management APIs (CreateRecordTask/StopRecordTask/DeleteRecordTask) are not compatible with the legacy APIs (CreateLiveRecord/StopLiveRecord/DeleteLiveRecord), and they cannot be used together.
+5. Do not create recording tasks and push streams at the same time, or recording tasks might not take effect and be delayed. Wait at least 3 seconds between each action.
                  * @param req CreateRecordTaskRequest
                  * @return CreateRecordTaskOutcome
                  */
@@ -762,7 +794,7 @@ Note: only one screencapturing template can be associated with one domain name.
                 DeleteLiveDomainOutcomeCallable DeleteLiveDomainCallable(const Model::DeleteLiveDomainRequest& request);
 
                 /**
-                 *Note: The `DeleteLiveRecord` API is only used to delete the record of recording tasks but not stop recording or deleting an ongoing recording task. If you need to stop a recording task, please use the [StopLiveRecord](/document/product/267/30146) API.
+                 *Note: The `DeleteLiveRecord` API is only used to delete the record of recording tasks but not stop recording or deleting an ongoing recording task. If you need to stop a recording task, please use the [StopLiveRecord](https://intl.cloud.tencent.com/document/product/267/30146?from_cn_redirect=1) API.
                  * @param req DeleteLiveRecordRequest
                  * @return DeleteLiveRecordOutcome
                  */
@@ -862,6 +894,15 @@ Note: only one screencapturing template can be associated with one domain name.
                 DescribeAllStreamPlayInfoListOutcomeCallable DescribeAllStreamPlayInfoListCallable(const Model::DescribeAllStreamPlayInfoListRequest& request);
 
                 /**
+                 *This API is used to query the billable LVB bandwidth and traffic data outside Chinese mainland.
+                 * @param req DescribeAreaBillBandwidthAndFluxListRequest
+                 * @return DescribeAreaBillBandwidthAndFluxListOutcome
+                 */
+                DescribeAreaBillBandwidthAndFluxListOutcome DescribeAreaBillBandwidthAndFluxList(const Model::DescribeAreaBillBandwidthAndFluxListRequest &request);
+                void DescribeAreaBillBandwidthAndFluxListAsync(const Model::DescribeAreaBillBandwidthAndFluxListRequest& request, const DescribeAreaBillBandwidthAndFluxListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAreaBillBandwidthAndFluxListOutcomeCallable DescribeAreaBillBandwidthAndFluxListCallable(const Model::DescribeAreaBillBandwidthAndFluxListRequest& request);
+
+                /**
                  *This API is used to query the data of billable LVB bandwidth and traffic.
                  * @param req DescribeBillBandwidthAndFluxListRequest
                  * @return DescribeBillBandwidthAndFluxListOutcome
@@ -878,6 +919,15 @@ Note: only one screencapturing template can be associated with one domain name.
                 DescribeConcurrentRecordStreamNumOutcome DescribeConcurrentRecordStreamNum(const Model::DescribeConcurrentRecordStreamNumRequest &request);
                 void DescribeConcurrentRecordStreamNumAsync(const Model::DescribeConcurrentRecordStreamNumRequest& request, const DescribeConcurrentRecordStreamNumAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeConcurrentRecordStreamNumOutcomeCallable DescribeConcurrentRecordStreamNumCallable(const Model::DescribeConcurrentRecordStreamNumRequest& request);
+
+                /**
+                 *This API is used to query the billable bandwidth of live stream relaying in the last 3 months. The query period is up to 31 days.
+                 * @param req DescribeDeliverBandwidthListRequest
+                 * @return DescribeDeliverBandwidthListOutcome
+                 */
+                DescribeDeliverBandwidthListOutcome DescribeDeliverBandwidthList(const Model::DescribeDeliverBandwidthListRequest &request);
+                void DescribeDeliverBandwidthListAsync(const Model::DescribeDeliverBandwidthListRequest& request, const DescribeDeliverBandwidthListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDeliverBandwidthListOutcomeCallable DescribeDeliverBandwidthListCallable(const Model::DescribeDeliverBandwidthListRequest& request);
 
                 /**
                  *This API is used to query the downstream playback data by district and ISP.
@@ -980,6 +1030,16 @@ Note: data can be queried one hour after it is generated. For example, data betw
                 DescribeLiveDomainPlayInfoListOutcomeCallable DescribeLiveDomainPlayInfoListCallable(const Model::DescribeLiveDomainPlayInfoListRequest& request);
 
                 /**
+                 *This API is used to query referer allowlist/blocklist configuration of a live streaming domain name.
+Referer information is included in HTTP requests. After you enable referer configuration, live streams using RTMP or WebRTC for playback will not authenticate the referer and can be played back normally. To make the referer configuration effective, the HTTP-FLV or HLS protocol is recommended for playback.
+                 * @param req DescribeLiveDomainRefererRequest
+                 * @return DescribeLiveDomainRefererOutcome
+                 */
+                DescribeLiveDomainRefererOutcome DescribeLiveDomainReferer(const Model::DescribeLiveDomainRefererRequest &request);
+                void DescribeLiveDomainRefererAsync(const Model::DescribeLiveDomainRefererRequest& request, const DescribeLiveDomainRefererAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLiveDomainRefererOutcomeCallable DescribeLiveDomainRefererCallable(const Model::DescribeLiveDomainRefererRequest& request);
+
+                /**
                  *This API is used to query domain names by domain name status and type.
                  * @param req DescribeLiveDomainsRequest
                  * @return DescribeLiveDomainsOutcome
@@ -989,7 +1049,9 @@ Note: data can be queried one hour after it is generated. For example, data betw
                 DescribeLiveDomainsOutcomeCallable DescribeLiveDomainsCallable(const Model::DescribeLiveDomainsRequest& request);
 
                 /**
-                 *This API is used to get the forbidden stream list.
+                 *This API is used to get the list of disabled streams.
+
+Note: this API is used for query only and should not be relied too much upon in important business scenarios.
                  * @param req DescribeLiveForbidStreamListRequest
                  * @return DescribeLiveForbidStreamListOutcome
                  */
@@ -1070,9 +1132,11 @@ Note: data can be queried one hour after it is generated. For example, data betw
                 DescribeLiveSnapshotTemplatesOutcomeCallable DescribeLiveSnapshotTemplatesCallable(const Model::DescribeLiveSnapshotTemplatesRequest& request);
 
                 /**
-                 *This API is used to query streaming events.<br>
+                 *This API is used to query stream push/interruption events.<br>
 
-Note: This API can filter by IsFilter and return the push history.
+Notes:
+1. This API is used to query stream push/interruption records, and should not be relied too much upon in important business scenarios.
+2. You can use the `IsFilter` parameter of this API to filter and get required push records.
                  * @param req DescribeLiveStreamEventListRequest
                  * @return DescribeLiveStreamEventListOutcome
                  */
@@ -1081,7 +1145,12 @@ Note: This API can filter by IsFilter and return the push history.
                 DescribeLiveStreamEventListOutcomeCallable DescribeLiveStreamEventListCallable(const Model::DescribeLiveStreamEventListRequest& request);
 
                 /**
-                 *This API is used to return the live stream list.
+                 *This API is used to get the list of ongoing live streams. It queries the information of live streams after they are pushed successfully. 
+
+Notes:
+1. This API is used to query the list of active live streams only, and should not be relied too much upon in important business scenarios.
+2. This API can query up to 20,000 streams. To query more streams, please contact our after-sales service team.
+
                  * @param req DescribeLiveStreamOnlineListRequest
                  * @return DescribeLiveStreamOnlineListOutcome
                  */
@@ -1109,7 +1178,16 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
                 DescribeLiveStreamPushInfoListOutcomeCallable DescribeLiveStreamPushInfoListCallable(const Model::DescribeLiveStreamPushInfoListRequest& request);
 
                 /**
-                 *This API is used to return the stream status such as active, inactive, or forbidden.
+                 *This API is used to get the stream status, which may be active, inactive, or disabled.
+
+Notes:
+This API allows you to query the status of a stream in real time. Given external factors such as network jitter, note the following when you determine whether a host is online:
+1. If possible, use your own logic of stream starting/stopping in a room, such as streaming signaling on the client and the online heartbeat of a host, to determine whether the host is online.
+2. If your application does not provide the room management feature, use the following methods to determine whether a host is online:
+2.1 Use the [live stream callback](https://intl.cloud.tencent.com/document/product/267/20388?from_cn_redirect=1).
+2.2 Call [DescribeLiveStreamOnlineList](https://intl.cloud.tencent.com/document/api/267/20472?from_cn_redirect=1) on a regular basis (interval > 1 min).
+2.3 Call this API.
+2.4 A host is considered to be online if the result returned by any of the above methods indicates so. If an API call times out or a parsing error occurs, to minimize the impact on your business, CSS will also consider the host online.
                  * @param req DescribeLiveStreamStateRequest
                  * @return DescribeLiveStreamStateOutcome
                  */
@@ -1152,6 +1230,18 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
                 DescribeLiveTranscodeTemplatesOutcome DescribeLiveTranscodeTemplates(const Model::DescribeLiveTranscodeTemplatesRequest &request);
                 void DescribeLiveTranscodeTemplatesAsync(const Model::DescribeLiveTranscodeTemplatesRequest& request, const DescribeLiveTranscodeTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeLiveTranscodeTemplatesOutcomeCallable DescribeLiveTranscodeTemplatesCallable(const Model::DescribeLiveTranscodeTemplatesRequest& request);
+
+                /**
+                 *This API is used to query your total usage of the transcoding service in the last 30 days.
+Notes:
+If the start time and end time are on the same day, the data returned will be on a 5-minute basis.
+If not or if the data of specified domains is queried, the data returned will be on an hourly basis.
+                 * @param req DescribeLiveTranscodeTotalInfoRequest
+                 * @return DescribeLiveTranscodeTotalInfoOutcome
+                 */
+                DescribeLiveTranscodeTotalInfoOutcome DescribeLiveTranscodeTotalInfo(const Model::DescribeLiveTranscodeTotalInfoRequest &request);
+                void DescribeLiveTranscodeTotalInfoAsync(const Model::DescribeLiveTranscodeTotalInfoRequest& request, const DescribeLiveTranscodeTotalInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLiveTranscodeTotalInfoOutcomeCallable DescribeLiveTranscodeTotalInfoCallable(const Model::DescribeLiveTranscodeTotalInfoRequest& request);
 
                 /**
                  *This API is used to get the information of a single watermark.
@@ -1237,8 +1327,8 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
                 DescribeStreamDayPlayInfoListOutcomeCallable DescribeStreamDayPlayInfoListCallable(const Model::DescribeStreamDayPlayInfoListRequest& request);
 
                 /**
-                 *This API is used to query the playback data and supports querying playback details by stream name and aggregated data by playback domain name. The data has a delay of about 4 minutes.
-Note: to query by `AppName`, you need to submit a ticket for application.
+                 *This API is used to query the playback data. It supports querying the playback details by stream name and aggregated data by playback domain name. Data in the last 4 minutes or so cannot be queried due to delay.
+Note: to query by `AppName`, you need to submit a ticket first. After your application succeeds, it will take about 5 business days (subject to the time in the reply) for the configuration to take effect.
                  * @param req DescribeStreamPlayInfoListRequest
                  * @return DescribeStreamPlayInfoListOutcome
                  */
@@ -1263,6 +1353,15 @@ Note: to query by `AppName`, you need to submit a ticket for application.
                 DescribeTopClientIpSumInfoListOutcome DescribeTopClientIpSumInfoList(const Model::DescribeTopClientIpSumInfoListRequest &request);
                 void DescribeTopClientIpSumInfoListAsync(const Model::DescribeTopClientIpSumInfoListRequest& request, const DescribeTopClientIpSumInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeTopClientIpSumInfoListOutcomeCallable DescribeTopClientIpSumInfoListCallable(const Model::DescribeTopClientIpSumInfoListRequest& request);
+
+                /**
+                 *This API is used to query the number of LVB upstream channels.
+                 * @param req DescribeUploadStreamNumsRequest
+                 * @return DescribeUploadStreamNumsOutcome
+                 */
+                DescribeUploadStreamNumsOutcome DescribeUploadStreamNums(const Model::DescribeUploadStreamNumsRequest &request);
+                void DescribeUploadStreamNumsAsync(const Model::DescribeUploadStreamNumsRequest& request, const DescribeUploadStreamNumsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeUploadStreamNumsOutcomeCallable DescribeUploadStreamNumsCallable(const Model::DescribeUploadStreamNumsRequest& request);
 
                 /**
                  *This API is used to query the information of the top n domain names or stream IDs in a certain period of time (top 1,000 is supported currently).
@@ -1337,6 +1436,16 @@ Note: to query by `AppName`, you need to submit a ticket for application.
                 ModifyLiveDomainCertOutcomeCallable ModifyLiveDomainCertCallable(const Model::ModifyLiveDomainCertRequest& request);
 
                 /**
+                 *This API is used to configure referer allowlist/blocklist of a live streaming domain name.
+Referer information is included in HTTP requests. After you enable referer configuration, live streams using RTMP or WebRTC for playback will not authenticate the referer and can be played back normally. To make the referer configuration effective, the HTTP-FLV or HLS protocol is recommended for playback.
+                 * @param req ModifyLiveDomainRefererRequest
+                 * @return ModifyLiveDomainRefererOutcome
+                 */
+                ModifyLiveDomainRefererOutcome ModifyLiveDomainReferer(const Model::ModifyLiveDomainRefererRequest &request);
+                void ModifyLiveDomainRefererAsync(const Model::ModifyLiveDomainRefererRequest& request, const ModifyLiveDomainRefererAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyLiveDomainRefererOutcomeCallable ModifyLiveDomainRefererCallable(const Model::ModifyLiveDomainRefererRequest& request);
+
+                /**
                  *This API is used to modify the playback authentication key.
                  * @param req ModifyLivePlayAuthKeyRequest
                  * @return ModifyLivePlayAuthKeyOutcome
@@ -1391,7 +1500,7 @@ Note: to query by `AppName`, you need to submit a ticket for application.
                 ModifyLiveTranscodeTemplateOutcomeCallable ModifyLiveTranscodeTemplateCallable(const Model::ModifyLiveTranscodeTemplateRequest& request);
 
                 /**
-                 *This API is used to resume a delayed playback.
+                 *This API is used to cancel the delay setting and recover the real-time display of the live streaming image.
                  * @param req ResumeDelayLiveStreamRequest
                  * @return ResumeDelayLiveStreamOutcome
                  */
@@ -1418,7 +1527,7 @@ Note: to query by `AppName`, you need to submit a ticket for application.
                 StopLiveRecordOutcomeCallable StopLiveRecordCallable(const Model::StopLiveRecordRequest& request);
 
                 /**
-                 *This API is used to end a recording prematurely and terminate the running recording task. After the task is successfully terminated, it will no longer start.
+                 *This API is used to terminate an ongoing recording task and generate a recording file.
                  * @param req StopRecordTaskRequest
                  * @return StopRecordTaskOutcome
                  */

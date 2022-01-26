@@ -132,6 +132,78 @@ namespace TencentCloud
                      */
                     bool VoucherIdsHasBeenSet() const;
 
+                    /**
+                     * 获取The number of CUP cores after the instance is upgraded.
+                     * @return Cpu The number of CUP cores after the instance is upgraded.
+                     */
+                    int64_t GetCpu() const;
+
+                    /**
+                     * 设置The number of CUP cores after the instance is upgraded.
+                     * @param Cpu The number of CUP cores after the instance is upgraded.
+                     */
+                    void SetCpu(const int64_t& _cpu);
+
+                    /**
+                     * 判断参数 Cpu 是否已赋值
+                     * @return Cpu 是否已赋值
+                     */
+                    bool CpuHasBeenSet() const;
+
+                    /**
+                     * 获取Upgrade the SQL Server version. Supported versions include SQL Server 2008 Enterprise (`2008R2`), SQL Server 2012 Enterprise (`2012SP3`), etc. As the purchasable versions are region-specific, you can use the `DescribeProductConfig` API to query the information of purchasable versions in each region. Downgrading is unsupported. If this parameter is left empty, the SQL Server version will not be changed.
+                     * @return DBVersion Upgrade the SQL Server version. Supported versions include SQL Server 2008 Enterprise (`2008R2`), SQL Server 2012 Enterprise (`2012SP3`), etc. As the purchasable versions are region-specific, you can use the `DescribeProductConfig` API to query the information of purchasable versions in each region. Downgrading is unsupported. If this parameter is left empty, the SQL Server version will not be changed.
+                     */
+                    std::string GetDBVersion() const;
+
+                    /**
+                     * 设置Upgrade the SQL Server version. Supported versions include SQL Server 2008 Enterprise (`2008R2`), SQL Server 2012 Enterprise (`2012SP3`), etc. As the purchasable versions are region-specific, you can use the `DescribeProductConfig` API to query the information of purchasable versions in each region. Downgrading is unsupported. If this parameter is left empty, the SQL Server version will not be changed.
+                     * @param DBVersion Upgrade the SQL Server version. Supported versions include SQL Server 2008 Enterprise (`2008R2`), SQL Server 2012 Enterprise (`2012SP3`), etc. As the purchasable versions are region-specific, you can use the `DescribeProductConfig` API to query the information of purchasable versions in each region. Downgrading is unsupported. If this parameter is left empty, the SQL Server version will not be changed.
+                     */
+                    void SetDBVersion(const std::string& _dBVersion);
+
+                    /**
+                     * 判断参数 DBVersion 是否已赋值
+                     * @return DBVersion 是否已赋值
+                     */
+                    bool DBVersionHasBeenSet() const;
+
+                    /**
+                     * 获取Upgrade the high availability architecture from image-based disaster recovery to Always On cluster disaster recovery. This parameter is valid only for instances which support Always On high availability and run SQL Server 2017 or later. Neither downgrading to image-based disaster recovery nor upgrading from cluster disaster recovery to Always On disaster recovery is supported. If this parameter is left empty, the high availability architecture will not be changed.
+                     * @return HAType Upgrade the high availability architecture from image-based disaster recovery to Always On cluster disaster recovery. This parameter is valid only for instances which support Always On high availability and run SQL Server 2017 or later. Neither downgrading to image-based disaster recovery nor upgrading from cluster disaster recovery to Always On disaster recovery is supported. If this parameter is left empty, the high availability architecture will not be changed.
+                     */
+                    std::string GetHAType() const;
+
+                    /**
+                     * 设置Upgrade the high availability architecture from image-based disaster recovery to Always On cluster disaster recovery. This parameter is valid only for instances which support Always On high availability and run SQL Server 2017 or later. Neither downgrading to image-based disaster recovery nor upgrading from cluster disaster recovery to Always On disaster recovery is supported. If this parameter is left empty, the high availability architecture will not be changed.
+                     * @param HAType Upgrade the high availability architecture from image-based disaster recovery to Always On cluster disaster recovery. This parameter is valid only for instances which support Always On high availability and run SQL Server 2017 or later. Neither downgrading to image-based disaster recovery nor upgrading from cluster disaster recovery to Always On disaster recovery is supported. If this parameter is left empty, the high availability architecture will not be changed.
+                     */
+                    void SetHAType(const std::string& _hAType);
+
+                    /**
+                     * 判断参数 HAType 是否已赋值
+                     * @return HAType 是否已赋值
+                     */
+                    bool HATypeHasBeenSet() const;
+
+                    /**
+                     * 获取Change the instance deployment scheme. Valid values: `SameZones` (change to single-AZ deployment, which does not support cross-AZ disaster recovery), `MultiZones` (change to multi-AZ deployment, which supports cross-AZ disaster recovery).
+                     * @return MultiZones Change the instance deployment scheme. Valid values: `SameZones` (change to single-AZ deployment, which does not support cross-AZ disaster recovery), `MultiZones` (change to multi-AZ deployment, which supports cross-AZ disaster recovery).
+                     */
+                    std::string GetMultiZones() const;
+
+                    /**
+                     * 设置Change the instance deployment scheme. Valid values: `SameZones` (change to single-AZ deployment, which does not support cross-AZ disaster recovery), `MultiZones` (change to multi-AZ deployment, which supports cross-AZ disaster recovery).
+                     * @param MultiZones Change the instance deployment scheme. Valid values: `SameZones` (change to single-AZ deployment, which does not support cross-AZ disaster recovery), `MultiZones` (change to multi-AZ deployment, which supports cross-AZ disaster recovery).
+                     */
+                    void SetMultiZones(const std::string& _multiZones);
+
+                    /**
+                     * 判断参数 MultiZones 是否已赋值
+                     * @return MultiZones 是否已赋值
+                     */
+                    bool MultiZonesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -163,6 +235,30 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_voucherIds;
                     bool m_voucherIdsHasBeenSet;
+
+                    /**
+                     * The number of CUP cores after the instance is upgraded.
+                     */
+                    int64_t m_cpu;
+                    bool m_cpuHasBeenSet;
+
+                    /**
+                     * Upgrade the SQL Server version. Supported versions include SQL Server 2008 Enterprise (`2008R2`), SQL Server 2012 Enterprise (`2012SP3`), etc. As the purchasable versions are region-specific, you can use the `DescribeProductConfig` API to query the information of purchasable versions in each region. Downgrading is unsupported. If this parameter is left empty, the SQL Server version will not be changed.
+                     */
+                    std::string m_dBVersion;
+                    bool m_dBVersionHasBeenSet;
+
+                    /**
+                     * Upgrade the high availability architecture from image-based disaster recovery to Always On cluster disaster recovery. This parameter is valid only for instances which support Always On high availability and run SQL Server 2017 or later. Neither downgrading to image-based disaster recovery nor upgrading from cluster disaster recovery to Always On disaster recovery is supported. If this parameter is left empty, the high availability architecture will not be changed.
+                     */
+                    std::string m_hAType;
+                    bool m_hATypeHasBeenSet;
+
+                    /**
+                     * Change the instance deployment scheme. Valid values: `SameZones` (change to single-AZ deployment, which does not support cross-AZ disaster recovery), `MultiZones` (change to multi-AZ deployment, which supports cross-AZ disaster recovery).
+                     */
+                    std::string m_multiZones;
+                    bool m_multiZonesHasBeenSet;
 
                 };
             }

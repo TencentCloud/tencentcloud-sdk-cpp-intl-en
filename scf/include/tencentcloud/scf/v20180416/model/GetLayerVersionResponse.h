@@ -40,6 +40,7 @@ namespace TencentCloud
                     GetLayerVersionResponse();
                     ~GetLayerVersionResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -55,8 +56,8 @@ namespace TencentCloud
                     bool CompatibleRuntimesHasBeenSet() const;
 
                     /**
-                     * 获取SHA256 encoding of file on layer version
-                     * @return CodeSha256 SHA256 encoding of file on layer version
+                     * 获取SHA256 encoding of version file on the layer
+                     * @return CodeSha256 SHA256 encoding of version file on the layer
                      */
                     std::string GetCodeSha256() const;
 
@@ -67,8 +68,8 @@ namespace TencentCloud
                     bool CodeSha256HasBeenSet() const;
 
                     /**
-                     * 获取Download address of file on layer version
-                     * @return Location Download address of file on layer version
+                     * 获取Download address of version file on the layer
+                     * @return Location Download address of version file on the layer
                      */
                     std::string GetLocation() const;
 
@@ -167,13 +168,13 @@ Deleted: deleted
                     bool m_compatibleRuntimesHasBeenSet;
 
                     /**
-                     * SHA256 encoding of file on layer version
+                     * SHA256 encoding of version file on the layer
                      */
                     std::string m_codeSha256;
                     bool m_codeSha256HasBeenSet;
 
                     /**
-                     * Download address of file on layer version
+                     * Download address of version file on the layer
                      */
                     std::string m_location;
                     bool m_locationHasBeenSet;

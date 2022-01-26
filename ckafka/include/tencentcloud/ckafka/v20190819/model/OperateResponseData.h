@@ -47,17 +47,17 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取FlowId
+                     * 获取FlowId11
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return FlowId FlowId
+                     * @return FlowId FlowId11
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetFlowId() const;
 
                     /**
-                     * 设置FlowId
+                     * 设置FlowId11
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FlowId FlowId
+                     * @param FlowId FlowId11
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetFlowId(const int64_t& _flowId);
@@ -71,7 +71,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * FlowId
+                     * FlowId11
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_flowId;

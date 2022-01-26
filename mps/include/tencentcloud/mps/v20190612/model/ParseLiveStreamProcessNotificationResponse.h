@@ -43,6 +43,7 @@ namespace TencentCloud
                     ParseLiveStreamProcessNotificationResponse();
                     ~ParseLiveStreamProcessNotificationResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -102,8 +103,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AiReviewResultInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AiRecognitionResultInfo 
+                     * 获取Content recognition result, which is valid if `NotificationType` is `AiRecognitionResult`.
+                     * @return AiRecognitionResultInfo Content recognition result, which is valid if `NotificationType` is `AiRecognitionResult`.
                      */
                     LiveStreamAiRecognitionResultInfo GetAiRecognitionResultInfo() const;
 
@@ -168,7 +169,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_aiReviewResultInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Content recognition result, which is valid if `NotificationType` is `AiRecognitionResult`.
                      */
                     LiveStreamAiRecognitionResultInfo m_aiRecognitionResultInfo;
                     bool m_aiRecognitionResultInfoHasBeenSet;

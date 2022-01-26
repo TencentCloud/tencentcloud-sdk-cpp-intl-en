@@ -625,6 +625,116 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool StartTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the connection has the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return SignLaw Whether the connection has the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    bool GetSignLaw() const;
+
+                    /**
+                     * 设置Whether the connection has the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param SignLaw Whether the connection has the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    void SetSignLaw(const bool& _signLaw);
+
+                    /**
+                     * 判断参数 SignLaw 是否已赋值
+                     * @return SignLaw 是否已赋值
+                     */
+                    bool SignLawHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the connection is an edge zone.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return LocalZone Whether the connection is an edge zone.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    bool GetLocalZone() const;
+
+                    /**
+                     * 设置Whether the connection is an edge zone.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param LocalZone Whether the connection is an edge zone.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    void SetLocalZone(const bool& _localZone);
+
+                    /**
+                     * 判断参数 LocalZone 是否已赋值
+                     * @return LocalZone 是否已赋值
+                     */
+                    bool LocalZoneHasBeenSet() const;
+
+                    /**
+                     * 获取Number of dedicated tunnels with disabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid value can be found.
+                     * @return VlanZeroDirectConnectTunnelCount Number of dedicated tunnels with disabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid value can be found.
+                     */
+                    uint64_t GetVlanZeroDirectConnectTunnelCount() const;
+
+                    /**
+                     * 设置Number of dedicated tunnels with disabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid value can be found.
+                     * @param VlanZeroDirectConnectTunnelCount Number of dedicated tunnels with disabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid value can be found.
+                     */
+                    void SetVlanZeroDirectConnectTunnelCount(const uint64_t& _vlanZeroDirectConnectTunnelCount);
+
+                    /**
+                     * 判断参数 VlanZeroDirectConnectTunnelCount 是否已赋值
+                     * @return VlanZeroDirectConnectTunnelCount 是否已赋值
+                     */
+                    bool VlanZeroDirectConnectTunnelCountHasBeenSet() const;
+
+                    /**
+                     * 获取Number of dedicated tunnels with enabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return OtherVlanDirectConnectTunnelCount Number of dedicated tunnels with enabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetOtherVlanDirectConnectTunnelCount() const;
+
+                    /**
+                     * 设置Number of dedicated tunnels with enabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param OtherVlanDirectConnectTunnelCount Number of dedicated tunnels with enabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetOtherVlanDirectConnectTunnelCount(const uint64_t& _otherVlanDirectConnectTunnelCount);
+
+                    /**
+                     * 判断参数 OtherVlanDirectConnectTunnelCount 是否已赋值
+                     * @return OtherVlanDirectConnectTunnelCount 是否已赋值
+                     */
+                    bool OtherVlanDirectConnectTunnelCountHasBeenSet() const;
+
+                    /**
+                     * 获取Minimum bandwidth of the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return MinBandwidth Minimum bandwidth of the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetMinBandwidth() const;
+
+                    /**
+                     * 设置Minimum bandwidth of the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param MinBandwidth Minimum bandwidth of the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetMinBandwidth(const uint64_t& _minBandwidth);
+
+                    /**
+                     * 判断参数 MinBandwidth 是否已赋值
+                     * @return MinBandwidth 是否已赋值
+                     */
+                    bool MinBandwidthHasBeenSet() const;
+
                 private:
 
                     /**
@@ -811,6 +921,41 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
+
+                    /**
+                     * Whether the connection has the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    bool m_signLaw;
+                    bool m_signLawHasBeenSet;
+
+                    /**
+                     * Whether the connection is an edge zone.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    bool m_localZone;
+                    bool m_localZoneHasBeenSet;
+
+                    /**
+                     * Number of dedicated tunnels with disabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid value can be found.
+                     */
+                    uint64_t m_vlanZeroDirectConnectTunnelCount;
+                    bool m_vlanZeroDirectConnectTunnelCountHasBeenSet;
+
+                    /**
+                     * Number of dedicated tunnels with enabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_otherVlanDirectConnectTunnelCount;
+                    bool m_otherVlanDirectConnectTunnelCountHasBeenSet;
+
+                    /**
+                     * Minimum bandwidth of the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_minBandwidth;
+                    bool m_minBandwidthHasBeenSet;
 
                 };
             }

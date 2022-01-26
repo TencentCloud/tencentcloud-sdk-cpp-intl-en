@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Live::V20180801::Model;
-using namespace rapidjson;
 using namespace std;
 
 PlayStatInfo::PlayStatInfo() :
@@ -27,7 +26,7 @@ PlayStatInfo::PlayStatInfo() :
 {
 }
 
-CoreInternalOutcome PlayStatInfo::Deserialize(const Value &value)
+CoreInternalOutcome PlayStatInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome PlayStatInfo::Deserialize(const Value &value)
     {
         if (!value["Time"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PlayStatInfo.Time` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PlayStatInfo.Time` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_time = string(value["Time"].GetString());
         m_timeHasBeenSet = true;
@@ -44,9 +43,9 @@ CoreInternalOutcome PlayStatInfo::Deserialize(const Value &value)
 
     if (value.HasMember("Value") && !value["Value"].IsNull())
     {
-        if (!value["Value"].IsDouble())
+        if (!value["Value"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `PlayStatInfo.Value` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PlayStatInfo.Value` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_value = value["Value"].GetDouble();
         m_valueHasBeenSet = true;
@@ -56,20 +55,20 @@ CoreInternalOutcome PlayStatInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void PlayStatInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void PlayStatInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_timeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Time";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_time.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_time.c_str(), allocator).Move(), allocator);
     }
 
     if (m_valueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Value";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_value, allocator);

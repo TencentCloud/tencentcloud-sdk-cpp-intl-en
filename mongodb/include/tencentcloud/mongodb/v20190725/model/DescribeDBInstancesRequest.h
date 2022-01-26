@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/mongodb/v20190725/model/TagInfo.h>
 
 
 namespace TencentCloud
@@ -97,14 +98,14 @@ namespace TencentCloud
                     bool ClusterTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (valid), -2 (expired)
-                     * @return Status Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (valid), -2 (expired)
+                     * 获取Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
+                     * @return Status Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
                      */
                     std::vector<int64_t> GetStatus() const;
 
                     /**
-                     * 设置Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (valid), -2 (expired)
-                     * @param Status Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (valid), -2 (expired)
+                     * 设置Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
+                     * @param Status Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
                      */
                     void SetStatus(const std::vector<int64_t>& _status);
 
@@ -169,14 +170,14 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Number of results to be returned for a single request. Valid values: 1–100. Default value: 20
-                     * @return Limit Number of results to be returned for a single request. Valid values: 1–100. Default value: 20
+                     * 获取Number of results to be returned for a single request. Valid values: 1-100. Default value: 20
+                     * @return Limit Number of results to be returned for a single request. Valid values: 1-100. Default value: 20
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results to be returned for a single request. Valid values: 1–100. Default value: 20
-                     * @param Limit Number of results to be returned for a single request. Valid values: 1–100. Default value: 20
+                     * 设置Number of results to be returned for a single request. Valid values: 1-100. Default value: 20
+                     * @param Limit Number of results to be returned for a single request. Valid values: 1-100. Default value: 20
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -276,6 +277,24 @@ namespace TencentCloud
                      */
                     bool SearchKeyHasBeenSet() const;
 
+                    /**
+                     * 获取Tag information
+                     * @return Tags Tag information
+                     */
+                    TagInfo GetTags() const;
+
+                    /**
+                     * 设置Tag information
+                     * @param Tags Tag information
+                     */
+                    void SetTags(const TagInfo& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -297,7 +316,7 @@ namespace TencentCloud
                     bool m_clusterTypeHasBeenSet;
 
                     /**
-                     * Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (valid), -2 (expired)
+                     * Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
                      */
                     std::vector<int64_t> m_status;
                     bool m_statusHasBeenSet;
@@ -321,7 +340,7 @@ namespace TencentCloud
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Number of results to be returned for a single request. Valid values: 1–100. Default value: 20
+                     * Number of results to be returned for a single request. Valid values: 1-100. Default value: 20
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -355,6 +374,12 @@ namespace TencentCloud
                      */
                     std::string m_searchKey;
                     bool m_searchKeyHasBeenSet;
+
+                    /**
+                     * Tag information
+                     */
+                    TagInfo m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

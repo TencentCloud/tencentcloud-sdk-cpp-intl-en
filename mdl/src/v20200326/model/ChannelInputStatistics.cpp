@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mdl::V20200326::Model;
-using namespace rapidjson;
 using namespace std;
 
 ChannelInputStatistics::ChannelInputStatistics() :
@@ -27,7 +26,7 @@ ChannelInputStatistics::ChannelInputStatistics() :
 {
 }
 
-CoreInternalOutcome ChannelInputStatistics::Deserialize(const Value &value)
+CoreInternalOutcome ChannelInputStatistics::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome ChannelInputStatistics::Deserialize(const Value &value)
     {
         if (!value["InputId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ChannelInputStatistics.InputId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ChannelInputStatistics.InputId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_inputId = string(value["InputId"].GetString());
         m_inputIdHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome ChannelInputStatistics::Deserialize(const Value &value)
     {
         if (!value["Statistics"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `ChannelInputStatistics.Statistics` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ChannelInputStatistics.Statistics` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_statistics.Deserialize(value["Statistics"]);
@@ -63,23 +62,23 @@ CoreInternalOutcome ChannelInputStatistics::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ChannelInputStatistics::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ChannelInputStatistics::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_inputIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InputId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_inputId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_inputId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statisticsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Statistics";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_statistics.ToJsonObject(value[key.c_str()], allocator);
     }
 

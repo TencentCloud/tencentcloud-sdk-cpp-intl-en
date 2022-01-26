@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Person ID
-                     * @return PersonId Person ID
+                     * 获取Person ID, which is the `PersonId` in the `CreatePerson` API.
+                     * @return PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
                      */
                     std::string GetPersonId() const;
 
                     /**
-                     * 设置Person ID
-                     * @param PersonId Person ID
+                     * 设置Person ID, which is the `PersonId` in the `CreatePerson` API.
+                     * @param PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
                      */
                     void SetPersonId(const std::string& _personId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool PersonIdHasBeenSet() const;
 
                     /**
-                     * 获取List of IDs of the faces to be deleted
-                     * @return FaceIds List of IDs of the faces to be deleted
+                     * 获取List of IDs of the faces to be deleted. The array element value is the `FaceId` returned by the `CreateFace` API.
+                     * @return FaceIds List of IDs of the faces to be deleted. The array element value is the `FaceId` returned by the `CreateFace` API.
                      */
                     std::vector<std::string> GetFaceIds() const;
 
                     /**
-                     * 设置List of IDs of the faces to be deleted
-                     * @param FaceIds List of IDs of the faces to be deleted
+                     * 设置List of IDs of the faces to be deleted. The array element value is the `FaceId` returned by the `CreateFace` API.
+                     * @param FaceIds List of IDs of the faces to be deleted. The array element value is the `FaceId` returned by the `CreateFace` API.
                      */
                     void SetFaceIds(const std::vector<std::string>& _faceIds);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Person ID
+                     * Person ID, which is the `PersonId` in the `CreatePerson` API.
                      */
                     std::string m_personId;
                     bool m_personIdHasBeenSet;
 
                     /**
-                     * List of IDs of the faces to be deleted
+                     * List of IDs of the faces to be deleted. The array element value is the `FaceId` returned by the `CreateFace` API.
                      */
                     std::vector<std::string> m_faceIds;
                     bool m_faceIdsHasBeenSet;

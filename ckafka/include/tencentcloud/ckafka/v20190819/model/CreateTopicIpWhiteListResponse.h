@@ -41,11 +41,12 @@ namespace TencentCloud
                     CreateTopicIpWhiteListResponse();
                     ~CreateTopicIpWhiteListResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Result of deleting topic IP whitelist
-                     * @return Result Result of deleting topic IP whitelist
+                     * 获取Result of deleting topic IP allowlist
+                     * @return Result Result of deleting topic IP allowlist
                      */
                     JgwOperateResponse GetResult() const;
 
@@ -58,7 +59,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Result of deleting topic IP whitelist
+                     * Result of deleting topic IP allowlist
                      */
                     JgwOperateResponse m_result;
                     bool m_resultHasBeenSet;

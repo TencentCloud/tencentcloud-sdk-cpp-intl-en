@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dayu::V20180709::Model;
-using namespace rapidjson;
 using namespace std;
 
 DDosPolicy::DDosPolicy() :
@@ -37,7 +36,7 @@ DDosPolicy::DDosPolicy() :
 {
 }
 
-CoreInternalOutcome DDosPolicy::Deserialize(const Value &value)
+CoreInternalOutcome DDosPolicy::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -45,10 +44,10 @@ CoreInternalOutcome DDosPolicy::Deserialize(const Value &value)
     if (value.HasMember("Resources") && !value["Resources"].IsNull())
     {
         if (!value["Resources"].IsArray())
-            return CoreInternalOutcome(Error("response `DDosPolicy.Resources` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DDosPolicy.Resources` is not array type"));
 
-        const Value &tmpValue = value["Resources"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Resources"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             ResourceIp item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -66,7 +65,7 @@ CoreInternalOutcome DDosPolicy::Deserialize(const Value &value)
     {
         if (!value["DropOptions"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DDosPolicy.DropOptions` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDosPolicy.DropOptions` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_dropOptions.Deserialize(value["DropOptions"]);
@@ -82,10 +81,10 @@ CoreInternalOutcome DDosPolicy::Deserialize(const Value &value)
     if (value.HasMember("PortLimits") && !value["PortLimits"].IsNull())
     {
         if (!value["PortLimits"].IsArray())
-            return CoreInternalOutcome(Error("response `DDosPolicy.PortLimits` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DDosPolicy.PortLimits` is not array type"));
 
-        const Value &tmpValue = value["PortLimits"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["PortLimits"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             DDoSPolicyPortLimit item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -102,10 +101,10 @@ CoreInternalOutcome DDosPolicy::Deserialize(const Value &value)
     if (value.HasMember("PacketFilters") && !value["PacketFilters"].IsNull())
     {
         if (!value["PacketFilters"].IsArray())
-            return CoreInternalOutcome(Error("response `DDosPolicy.PacketFilters` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DDosPolicy.PacketFilters` is not array type"));
 
-        const Value &tmpValue = value["PacketFilters"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["PacketFilters"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             DDoSPolicyPacketFilter item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -122,10 +121,10 @@ CoreInternalOutcome DDosPolicy::Deserialize(const Value &value)
     if (value.HasMember("IpBlackWhiteLists") && !value["IpBlackWhiteLists"].IsNull())
     {
         if (!value["IpBlackWhiteLists"].IsArray())
-            return CoreInternalOutcome(Error("response `DDosPolicy.IpBlackWhiteLists` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DDosPolicy.IpBlackWhiteLists` is not array type"));
 
-        const Value &tmpValue = value["IpBlackWhiteLists"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["IpBlackWhiteLists"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             IpBlackWhite item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -143,7 +142,7 @@ CoreInternalOutcome DDosPolicy::Deserialize(const Value &value)
     {
         if (!value["PolicyId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DDosPolicy.PolicyId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDosPolicy.PolicyId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_policyId = string(value["PolicyId"].GetString());
         m_policyIdHasBeenSet = true;
@@ -153,7 +152,7 @@ CoreInternalOutcome DDosPolicy::Deserialize(const Value &value)
     {
         if (!value["PolicyName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DDosPolicy.PolicyName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDosPolicy.PolicyName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_policyName = string(value["PolicyName"].GetString());
         m_policyNameHasBeenSet = true;
@@ -163,7 +162,7 @@ CoreInternalOutcome DDosPolicy::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DDosPolicy.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDosPolicy.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -172,10 +171,10 @@ CoreInternalOutcome DDosPolicy::Deserialize(const Value &value)
     if (value.HasMember("WaterPrint") && !value["WaterPrint"].IsNull())
     {
         if (!value["WaterPrint"].IsArray())
-            return CoreInternalOutcome(Error("response `DDosPolicy.WaterPrint` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DDosPolicy.WaterPrint` is not array type"));
 
-        const Value &tmpValue = value["WaterPrint"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["WaterPrint"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             WaterPrintPolicy item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -192,10 +191,10 @@ CoreInternalOutcome DDosPolicy::Deserialize(const Value &value)
     if (value.HasMember("WaterKey") && !value["WaterKey"].IsNull())
     {
         if (!value["WaterKey"].IsArray())
-            return CoreInternalOutcome(Error("response `DDosPolicy.WaterKey` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DDosPolicy.WaterKey` is not array type"));
 
-        const Value &tmpValue = value["WaterKey"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["WaterKey"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             WaterPrintKey item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -212,10 +211,10 @@ CoreInternalOutcome DDosPolicy::Deserialize(const Value &value)
     if (value.HasMember("BoundResources") && !value["BoundResources"].IsNull())
     {
         if (!value["BoundResources"].IsArray())
-            return CoreInternalOutcome(Error("response `DDosPolicy.BoundResources` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DDosPolicy.BoundResources` is not array type"));
 
-        const Value &tmpValue = value["BoundResources"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["BoundResources"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_boundResources.push_back((*itr).GetString());
         }
@@ -226,7 +225,7 @@ CoreInternalOutcome DDosPolicy::Deserialize(const Value &value)
     {
         if (!value["SceneId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DDosPolicy.SceneId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDosPolicy.SceneId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_sceneId = string(value["SceneId"].GetString());
         m_sceneIdHasBeenSet = true;
@@ -236,151 +235,151 @@ CoreInternalOutcome DDosPolicy::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void DDosPolicy::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DDosPolicy::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_resourcesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Resources";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_resources.begin(); itr != m_resources.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_dropOptionsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DropOptions";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_dropOptions.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_portLimitsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PortLimits";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_portLimits.begin(); itr != m_portLimits.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_packetFiltersHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PacketFilters";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_packetFilters.begin(); itr != m_packetFilters.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_ipBlackWhiteListsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IpBlackWhiteLists";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_ipBlackWhiteLists.begin(); itr != m_ipBlackWhiteLists.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_policyIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PolicyId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_policyId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_policyId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_policyNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PolicyName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_policyName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_policyName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_waterPrintHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "WaterPrint";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_waterPrint.begin(); itr != m_waterPrint.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_waterKeyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "WaterKey";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_waterKey.begin(); itr != m_waterKey.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_boundResourcesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BoundResources";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_boundResources.begin(); itr != m_boundResources.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_sceneIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SceneId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_sceneId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sceneId.c_str(), allocator).Move(), allocator);
     }
 
 }

@@ -130,6 +130,28 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     bool ModTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Version status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Status Version status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetStatus() const;
+
+                    /**
+                     * 设置Version status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param Status Version status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetStatus(const std::string& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     */
+                    bool StatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -158,6 +180,13 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     std::string m_modTime;
                     bool m_modTimeHasBeenSet;
+
+                    /**
+                     * Version status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_status;
+                    bool m_statusHasBeenSet;
 
                 };
             }

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Custom description field of the group to be modified, which is a `key-value`
+                * Custom description field of the group to be modified, which is a `key-value` pair.
                 */
                 class GroupExDescriptionInfo : public AbstractModel
                 {
@@ -47,17 +47,17 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Custom group description field index, whose value starts from 0
+                     * 获取Custom group description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return GroupExDescriptionIndex Custom group description field index, whose value starts from 0
+                     * @return GroupExDescriptionIndex Custom group description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetGroupExDescriptionIndex() const;
 
                     /**
-                     * 设置Custom group description field index, whose value starts from 0
+                     * 设置Custom group description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param GroupExDescriptionIndex Custom group description field index, whose value starts from 0
+                     * @param GroupExDescriptionIndex Custom group description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetGroupExDescriptionIndex(const uint64_t& _groupExDescriptionIndex);
@@ -89,7 +89,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Custom group description field index, whose value starts from 0
+                     * Custom group description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_groupExDescriptionIndex;

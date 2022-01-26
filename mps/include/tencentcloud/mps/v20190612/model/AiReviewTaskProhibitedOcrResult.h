@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Result type of OCR-based prohibited information detection in text task in content audit
                 */
                 class AiReviewTaskProhibitedOcrResult : public AbstractModel
                 {
@@ -49,14 +49,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+                     * @return Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param Status 
+                     * 设置Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+                     * @param Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
                      */
                     void SetStatus(const std::string& _status);
 
@@ -67,14 +67,44 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ErrCode 
+                     * 获取Error code. An empty string indicates the task is successful; otherwise it is failed. For details about the values, see [Error Code List](https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * @return ErrCodeExt Error code. An empty string indicates the task is successful; otherwise it is failed. For details about the values, see [Error Code List](https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     */
+                    std::string GetErrCodeExt() const;
+
+                    /**
+                     * 设置Error code. An empty string indicates the task is successful; otherwise it is failed. For details about the values, see [Error Code List](https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * @param ErrCodeExt Error code. An empty string indicates the task is successful; otherwise it is failed. For details about the values, see [Error Code List](https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     */
+                    void SetErrCodeExt(const std::string& _errCodeExt);
+
+                    /**
+                     * 判断参数 ErrCodeExt 是否已赋值
+                     * @return ErrCodeExt 是否已赋值
+                     */
+                    bool ErrCodeExtHasBeenSet() const;
+
+                    /**
+                     * 获取Error code. 0: success; other values: failure.
+<li>40000: invalid input parameter. Please check it;</li>
+<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
+<li>70000: internal service error. Please try again.</li>
+                     * @return ErrCode Error code. 0: success; other values: failure.
+<li>40000: invalid input parameter. Please check it;</li>
+<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
+<li>70000: internal service error. Please try again.</li>
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置
-                     * @param ErrCode 
+                     * 设置Error code. 0: success; other values: failure.
+<li>40000: invalid input parameter. Please check it;</li>
+<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
+<li>70000: internal service error. Please try again.</li>
+                     * @param ErrCode Error code. 0: success; other values: failure.
+<li>40000: invalid input parameter. Please check it;</li>
+<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
+<li>70000: internal service error. Please try again.</li>
                      */
                     void SetErrCode(const int64_t& _errCode);
 
@@ -85,14 +115,14 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Message 
+                     * 获取Error message.
+                     * @return Message Error message.
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置
-                     * @param Message 
+                     * 设置Error message.
+                     * @param Message Error message.
                      */
                     void SetMessage(const std::string& _message);
 
@@ -103,14 +133,14 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Input 
+                     * 获取Input of OCR-based prohibited information detection in text task in content audit
+                     * @return Input Input of OCR-based prohibited information detection in text task in content audit
                      */
                     AiReviewProhibitedOcrTaskInput GetInput() const;
 
                     /**
-                     * 设置
-                     * @param Input 
+                     * 设置Input of OCR-based prohibited information detection in text task in content audit
+                     * @param Input Input of OCR-based prohibited information detection in text task in content audit
                      */
                     void SetInput(const AiReviewProhibitedOcrTaskInput& _input);
 
@@ -121,14 +151,14 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Output of OCR-based prohibited information detection in text task in content audit
+                     * @return Output Output of OCR-based prohibited information detection in text task in content audit
                      */
                     AiReviewProhibitedOcrTaskOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param Output 
+                     * 设置Output of OCR-based prohibited information detection in text task in content audit
+                     * @param Output Output of OCR-based prohibited information detection in text task in content audit
                      */
                     void SetOutput(const AiReviewProhibitedOcrTaskOutput& _output);
 
@@ -141,31 +171,40 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Task status. Valid values: PROCESSING, SUCCESS, FAIL.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * Error code. An empty string indicates the task is successful; otherwise it is failed. For details about the values, see [Error Code List](https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     */
+                    std::string m_errCodeExt;
+                    bool m_errCodeExtHasBeenSet;
+
+                    /**
+                     * Error code. 0: success; other values: failure.
+<li>40000: invalid input parameter. Please check it;</li>
+<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
+<li>70000: internal service error. Please try again.</li>
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * 
+                     * Error message.
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * 
+                     * Input of OCR-based prohibited information detection in text task in content audit
                      */
                     AiReviewProhibitedOcrTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Output of OCR-based prohibited information detection in text task in content audit
                      */
                     AiReviewProhibitedOcrTaskOutput m_output;
                     bool m_outputHasBeenSet;

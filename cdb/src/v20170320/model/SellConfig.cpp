@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 SellConfig::SellConfig() :
@@ -35,11 +34,13 @@ SellConfig::SellConfig() :
     m_iopsHasBeenSet(false),
     m_infoHasBeenSet(false),
     m_statusHasBeenSet(false),
-    m_tagHasBeenSet(false)
+    m_tagHasBeenSet(false),
+    m_deviceTypeHasBeenSet(false),
+    m_deviceTypeNameHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome SellConfig::Deserialize(const Value &value)
+CoreInternalOutcome SellConfig::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -48,7 +49,7 @@ CoreInternalOutcome SellConfig::Deserialize(const Value &value)
     {
         if (!value["Device"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SellConfig.Device` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SellConfig.Device` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_device = string(value["Device"].GetString());
         m_deviceHasBeenSet = true;
@@ -58,7 +59,7 @@ CoreInternalOutcome SellConfig::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SellConfig.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SellConfig.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -68,7 +69,7 @@ CoreInternalOutcome SellConfig::Deserialize(const Value &value)
     {
         if (!value["CdbType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SellConfig.CdbType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SellConfig.CdbType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cdbType = string(value["CdbType"].GetString());
         m_cdbTypeHasBeenSet = true;
@@ -78,7 +79,7 @@ CoreInternalOutcome SellConfig::Deserialize(const Value &value)
     {
         if (!value["Memory"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SellConfig.Memory` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SellConfig.Memory` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_memory = value["Memory"].GetInt64();
         m_memoryHasBeenSet = true;
@@ -88,7 +89,7 @@ CoreInternalOutcome SellConfig::Deserialize(const Value &value)
     {
         if (!value["Cpu"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SellConfig.Cpu` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SellConfig.Cpu` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_cpu = value["Cpu"].GetInt64();
         m_cpuHasBeenSet = true;
@@ -98,7 +99,7 @@ CoreInternalOutcome SellConfig::Deserialize(const Value &value)
     {
         if (!value["VolumeMin"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SellConfig.VolumeMin` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SellConfig.VolumeMin` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_volumeMin = value["VolumeMin"].GetInt64();
         m_volumeMinHasBeenSet = true;
@@ -108,7 +109,7 @@ CoreInternalOutcome SellConfig::Deserialize(const Value &value)
     {
         if (!value["VolumeMax"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SellConfig.VolumeMax` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SellConfig.VolumeMax` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_volumeMax = value["VolumeMax"].GetInt64();
         m_volumeMaxHasBeenSet = true;
@@ -118,7 +119,7 @@ CoreInternalOutcome SellConfig::Deserialize(const Value &value)
     {
         if (!value["VolumeStep"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SellConfig.VolumeStep` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SellConfig.VolumeStep` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_volumeStep = value["VolumeStep"].GetInt64();
         m_volumeStepHasBeenSet = true;
@@ -128,7 +129,7 @@ CoreInternalOutcome SellConfig::Deserialize(const Value &value)
     {
         if (!value["Connection"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SellConfig.Connection` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SellConfig.Connection` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_connection = value["Connection"].GetInt64();
         m_connectionHasBeenSet = true;
@@ -138,7 +139,7 @@ CoreInternalOutcome SellConfig::Deserialize(const Value &value)
     {
         if (!value["Qps"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SellConfig.Qps` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SellConfig.Qps` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_qps = value["Qps"].GetInt64();
         m_qpsHasBeenSet = true;
@@ -148,7 +149,7 @@ CoreInternalOutcome SellConfig::Deserialize(const Value &value)
     {
         if (!value["Iops"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SellConfig.Iops` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SellConfig.Iops` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_iops = value["Iops"].GetInt64();
         m_iopsHasBeenSet = true;
@@ -158,7 +159,7 @@ CoreInternalOutcome SellConfig::Deserialize(const Value &value)
     {
         if (!value["Info"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SellConfig.Info` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SellConfig.Info` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_info = string(value["Info"].GetString());
         m_infoHasBeenSet = true;
@@ -168,7 +169,7 @@ CoreInternalOutcome SellConfig::Deserialize(const Value &value)
     {
         if (!value["Status"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SellConfig.Status` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SellConfig.Status` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_status = value["Status"].GetInt64();
         m_statusHasBeenSet = true;
@@ -178,46 +179,66 @@ CoreInternalOutcome SellConfig::Deserialize(const Value &value)
     {
         if (!value["Tag"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SellConfig.Tag` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SellConfig.Tag` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_tag = value["Tag"].GetInt64();
         m_tagHasBeenSet = true;
+    }
+
+    if (value.HasMember("DeviceType") && !value["DeviceType"].IsNull())
+    {
+        if (!value["DeviceType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SellConfig.DeviceType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_deviceType = string(value["DeviceType"].GetString());
+        m_deviceTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("DeviceTypeName") && !value["DeviceTypeName"].IsNull())
+    {
+        if (!value["DeviceTypeName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SellConfig.DeviceTypeName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_deviceTypeName = string(value["DeviceTypeName"].GetString());
+        m_deviceTypeNameHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void SellConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SellConfig::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_deviceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Device";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_device.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_device.c_str(), allocator).Move(), allocator);
     }
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cdbTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CdbType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cdbType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cdbType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_memoryHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Memory";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_memory, allocator);
@@ -225,7 +246,7 @@ void SellConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_cpuHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Cpu";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cpu, allocator);
@@ -233,7 +254,7 @@ void SellConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_volumeMinHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VolumeMin";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_volumeMin, allocator);
@@ -241,7 +262,7 @@ void SellConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_volumeMaxHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VolumeMax";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_volumeMax, allocator);
@@ -249,7 +270,7 @@ void SellConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_volumeStepHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VolumeStep";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_volumeStep, allocator);
@@ -257,7 +278,7 @@ void SellConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_connectionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Connection";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_connection, allocator);
@@ -265,7 +286,7 @@ void SellConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_qpsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Qps";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_qps, allocator);
@@ -273,7 +294,7 @@ void SellConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_iopsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Iops";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_iops, allocator);
@@ -281,15 +302,15 @@ void SellConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_infoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Info";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_info.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_info.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);
@@ -297,10 +318,26 @@ void SellConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_tagHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Tag";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_tag, allocator);
+    }
+
+    if (m_deviceTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DeviceType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_deviceType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_deviceTypeNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DeviceTypeName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_deviceTypeName.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -528,5 +565,37 @@ void SellConfig::SetTag(const int64_t& _tag)
 bool SellConfig::TagHasBeenSet() const
 {
     return m_tagHasBeenSet;
+}
+
+string SellConfig::GetDeviceType() const
+{
+    return m_deviceType;
+}
+
+void SellConfig::SetDeviceType(const string& _deviceType)
+{
+    m_deviceType = _deviceType;
+    m_deviceTypeHasBeenSet = true;
+}
+
+bool SellConfig::DeviceTypeHasBeenSet() const
+{
+    return m_deviceTypeHasBeenSet;
+}
+
+string SellConfig::GetDeviceTypeName() const
+{
+    return m_deviceTypeName;
+}
+
+void SellConfig::SetDeviceTypeName(const string& _deviceTypeName)
+{
+    m_deviceTypeName = _deviceTypeName;
+    m_deviceTypeNameHasBeenSet = true;
+}
+
+bool SellConfig::DeviceTypeNameHasBeenSet() const
+{
+    return m_deviceTypeNameHasBeenSet;
 }
 

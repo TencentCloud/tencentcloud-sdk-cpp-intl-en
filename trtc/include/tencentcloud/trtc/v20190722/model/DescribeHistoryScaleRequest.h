@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取User `sdkappid`
-                     * @return SdkAppId User `sdkappid`
+                     * 获取`SDKAppID` of the users to query, e.g., 1400188366
+                     * @return SdkAppId `SDKAppID` of the users to query, e.g., 1400188366
                      */
                     std::string GetSdkAppId() const;
 
                     /**
-                     * 设置User `sdkappid`
-                     * @param SdkAppId User `sdkappid`
+                     * 设置`SDKAppID` of the users to query, e.g., 1400188366
+                     * @param SdkAppId `SDKAppID` of the users to query, e.g., 1400188366
                      */
                     void SetSdkAppId(const std::string& _sdkAppId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
-                     * @return StartTime Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
+                     * 获取Query start time (s) in the format of Unix timestamp (e.g., 1587571000), which must be a time point in the last 5 days
+                     * @return StartTime Query start time (s) in the format of Unix timestamp (e.g., 1587571000), which must be a time point in the last 5 days
                      */
                     uint64_t GetStartTime() const;
 
                     /**
-                     * 设置Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
-                     * @param StartTime Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
+                     * 设置Query start time (s) in the format of Unix timestamp (e.g., 1587571000), which must be a time point in the last 5 days
+                     * @param StartTime Query start time (s) in the format of Unix timestamp (e.g., 1587571000), which must be a time point in the last 5 days
                      */
                     void SetStartTime(const uint64_t& _startTime);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Query end time in the format of local UNIX timestamp, such as 1588031999s.
-                     * @return EndTime Query end time in the format of local UNIX timestamp, such as 1588031999s.
+                     * 获取Query end time (s) in the format of Unix timestamp, e.g., 1588034999
+                     * @return EndTime Query end time (s) in the format of Unix timestamp, e.g., 1588034999
                      */
                     uint64_t GetEndTime() const;
 
                     /**
-                     * 设置Query end time in the format of local UNIX timestamp, such as 1588031999s.
-                     * @param EndTime Query end time in the format of local UNIX timestamp, such as 1588031999s.
+                     * 设置Query end time (s) in the format of Unix timestamp, e.g., 1588034999
+                     * @param EndTime Query end time (s) in the format of Unix timestamp, e.g., 1588034999
                      */
                     void SetEndTime(const uint64_t& _endTime);
 
@@ -99,19 +99,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * User `sdkappid`
+                     * `SDKAppID` of the users to query, e.g., 1400188366
                      */
                     std::string m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
+                     * Query start time (s) in the format of Unix timestamp (e.g., 1587571000), which must be a time point in the last 5 days
                      */
                     uint64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Query end time in the format of local UNIX timestamp, such as 1588031999s.
+                     * Query end time (s) in the format of Unix timestamp, e.g., 1588034999
                      */
                     uint64_t m_endTime;
                     bool m_endTimeHasBeenSet;

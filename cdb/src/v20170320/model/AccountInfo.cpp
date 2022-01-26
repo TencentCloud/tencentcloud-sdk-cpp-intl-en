@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 AccountInfo::AccountInfo() :
@@ -27,11 +26,12 @@ AccountInfo::AccountInfo() :
     m_userHasBeenSet(false),
     m_modifyTimeHasBeenSet(false),
     m_modifyPasswordTimeHasBeenSet(false),
-    m_createTimeHasBeenSet(false)
+    m_createTimeHasBeenSet(false),
+    m_maxUserConnectionsHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome AccountInfo::Deserialize(const Value &value)
+CoreInternalOutcome AccountInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +40,7 @@ CoreInternalOutcome AccountInfo::Deserialize(const Value &value)
     {
         if (!value["Notes"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccountInfo.Notes` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccountInfo.Notes` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_notes = string(value["Notes"].GetString());
         m_notesHasBeenSet = true;
@@ -50,7 +50,7 @@ CoreInternalOutcome AccountInfo::Deserialize(const Value &value)
     {
         if (!value["Host"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccountInfo.Host` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccountInfo.Host` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_host = string(value["Host"].GetString());
         m_hostHasBeenSet = true;
@@ -60,7 +60,7 @@ CoreInternalOutcome AccountInfo::Deserialize(const Value &value)
     {
         if (!value["User"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccountInfo.User` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccountInfo.User` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_user = string(value["User"].GetString());
         m_userHasBeenSet = true;
@@ -70,7 +70,7 @@ CoreInternalOutcome AccountInfo::Deserialize(const Value &value)
     {
         if (!value["ModifyTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccountInfo.ModifyTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccountInfo.ModifyTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_modifyTime = string(value["ModifyTime"].GetString());
         m_modifyTimeHasBeenSet = true;
@@ -80,7 +80,7 @@ CoreInternalOutcome AccountInfo::Deserialize(const Value &value)
     {
         if (!value["ModifyPasswordTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccountInfo.ModifyPasswordTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccountInfo.ModifyPasswordTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_modifyPasswordTime = string(value["ModifyPasswordTime"].GetString());
         m_modifyPasswordTimeHasBeenSet = true;
@@ -90,65 +90,83 @@ CoreInternalOutcome AccountInfo::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccountInfo.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccountInfo.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("MaxUserConnections") && !value["MaxUserConnections"].IsNull())
+    {
+        if (!value["MaxUserConnections"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AccountInfo.MaxUserConnections` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_maxUserConnections = value["MaxUserConnections"].GetInt64();
+        m_maxUserConnectionsHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void AccountInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AccountInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_notesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Notes";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_notes.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_notes.c_str(), allocator).Move(), allocator);
     }
 
     if (m_hostHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Host";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_host.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_host.c_str(), allocator).Move(), allocator);
     }
 
     if (m_userHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "User";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_user.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_user.c_str(), allocator).Move(), allocator);
     }
 
     if (m_modifyTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ModifyTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_modifyTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_modifyTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_modifyPasswordTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ModifyPasswordTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_modifyPasswordTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_modifyPasswordTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_maxUserConnectionsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MaxUserConnections";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_maxUserConnections, allocator);
     }
 
 }
@@ -248,5 +266,21 @@ void AccountInfo::SetCreateTime(const string& _createTime)
 bool AccountInfo::CreateTimeHasBeenSet() const
 {
     return m_createTimeHasBeenSet;
+}
+
+int64_t AccountInfo::GetMaxUserConnections() const
+{
+    return m_maxUserConnections;
+}
+
+void AccountInfo::SetMaxUserConnections(const int64_t& _maxUserConnections)
+{
+    m_maxUserConnections = _maxUserConnections;
+    m_maxUserConnectionsHasBeenSet = true;
+}
+
+bool AccountInfo::MaxUserConnectionsHasBeenSet() const
+{
+    return m_maxUserConnectionsHasBeenSet;
 }
 

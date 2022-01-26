@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Redis::V20180412::Model;
-using namespace rapidjson;
 using namespace std;
 
 InstanceTextParam::InstanceTextParam() :
@@ -33,7 +32,7 @@ InstanceTextParam::InstanceTextParam() :
 {
 }
 
-CoreInternalOutcome InstanceTextParam::Deserialize(const Value &value)
+CoreInternalOutcome InstanceTextParam::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +41,7 @@ CoreInternalOutcome InstanceTextParam::Deserialize(const Value &value)
     {
         if (!value["ParamName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceTextParam.ParamName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceTextParam.ParamName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_paramName = string(value["ParamName"].GetString());
         m_paramNameHasBeenSet = true;
@@ -52,7 +51,7 @@ CoreInternalOutcome InstanceTextParam::Deserialize(const Value &value)
     {
         if (!value["ValueType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceTextParam.ValueType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceTextParam.ValueType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_valueType = string(value["ValueType"].GetString());
         m_valueTypeHasBeenSet = true;
@@ -62,7 +61,7 @@ CoreInternalOutcome InstanceTextParam::Deserialize(const Value &value)
     {
         if (!value["NeedRestart"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceTextParam.NeedRestart` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceTextParam.NeedRestart` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_needRestart = string(value["NeedRestart"].GetString());
         m_needRestartHasBeenSet = true;
@@ -72,7 +71,7 @@ CoreInternalOutcome InstanceTextParam::Deserialize(const Value &value)
     {
         if (!value["DefaultValue"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceTextParam.DefaultValue` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceTextParam.DefaultValue` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_defaultValue = string(value["DefaultValue"].GetString());
         m_defaultValueHasBeenSet = true;
@@ -82,7 +81,7 @@ CoreInternalOutcome InstanceTextParam::Deserialize(const Value &value)
     {
         if (!value["CurrentValue"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceTextParam.CurrentValue` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceTextParam.CurrentValue` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_currentValue = string(value["CurrentValue"].GetString());
         m_currentValueHasBeenSet = true;
@@ -92,7 +91,7 @@ CoreInternalOutcome InstanceTextParam::Deserialize(const Value &value)
     {
         if (!value["Tips"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceTextParam.Tips` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceTextParam.Tips` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tips = string(value["Tips"].GetString());
         m_tipsHasBeenSet = true;
@@ -101,10 +100,10 @@ CoreInternalOutcome InstanceTextParam::Deserialize(const Value &value)
     if (value.HasMember("TextValue") && !value["TextValue"].IsNull())
     {
         if (!value["TextValue"].IsArray())
-            return CoreInternalOutcome(Error("response `InstanceTextParam.TextValue` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `InstanceTextParam.TextValue` is not array type"));
 
-        const Value &tmpValue = value["TextValue"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["TextValue"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_textValue.push_back((*itr).GetString());
         }
@@ -115,7 +114,7 @@ CoreInternalOutcome InstanceTextParam::Deserialize(const Value &value)
     {
         if (!value["Status"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `InstanceTextParam.Status` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceTextParam.Status` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_status = value["Status"].GetInt64();
         m_statusHasBeenSet = true;
@@ -125,73 +124,73 @@ CoreInternalOutcome InstanceTextParam::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void InstanceTextParam::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void InstanceTextParam::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_paramNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ParamName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_paramName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_paramName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_valueTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ValueType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_valueType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_valueType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_needRestartHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NeedRestart";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_needRestart.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_needRestart.c_str(), allocator).Move(), allocator);
     }
 
     if (m_defaultValueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DefaultValue";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_defaultValue.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_defaultValue.c_str(), allocator).Move(), allocator);
     }
 
     if (m_currentValueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CurrentValue";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_currentValue.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_currentValue.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tipsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Tips";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_tips.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tips.c_str(), allocator).Move(), allocator);
     }
 
     if (m_textValueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TextValue";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_textValue.begin(); itr != m_textValue.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);

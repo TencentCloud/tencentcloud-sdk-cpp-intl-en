@@ -40,6 +40,7 @@ namespace TencentCloud
                     UpgradeDBInstanceResponse();
                     ~UpgradeDBInstanceResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -55,8 +56,8 @@ namespace TencentCloud
                     bool DealNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BillId 
+                     * 获取Bill ID of frozen fees
+                     * @return BillId Bill ID of frozen fees
                      */
                     std::string GetBillId() const;
 
@@ -75,7 +76,7 @@ namespace TencentCloud
                     bool m_dealNameHasBeenSet;
 
                     /**
-                     * 
+                     * Bill ID of frozen fees
                      */
                     std::string m_billId;
                     bool m_billIdHasBeenSet;

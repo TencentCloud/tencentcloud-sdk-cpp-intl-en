@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Tke::V20180525::Model;
-using namespace rapidjson;
 using namespace std;
 
 ClusterNetworkSettings::ClusterNetworkSettings() :
@@ -28,11 +27,14 @@ ClusterNetworkSettings::ClusterNetworkSettings() :
     m_maxClusterServiceNumHasBeenSet(false),
     m_ipvsHasBeenSet(false),
     m_vpcIdHasBeenSet(false),
-    m_cniHasBeenSet(false)
+    m_cniHasBeenSet(false),
+    m_kubeProxyModeHasBeenSet(false),
+    m_serviceCIDRHasBeenSet(false),
+    m_subnetsHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ClusterNetworkSettings::Deserialize(const Value &value)
+CoreInternalOutcome ClusterNetworkSettings::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +43,7 @@ CoreInternalOutcome ClusterNetworkSettings::Deserialize(const Value &value)
     {
         if (!value["ClusterCIDR"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClusterNetworkSettings.ClusterCIDR` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClusterNetworkSettings.ClusterCIDR` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_clusterCIDR = string(value["ClusterCIDR"].GetString());
         m_clusterCIDRHasBeenSet = true;
@@ -51,7 +53,7 @@ CoreInternalOutcome ClusterNetworkSettings::Deserialize(const Value &value)
     {
         if (!value["IgnoreClusterCIDRConflict"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `ClusterNetworkSettings.IgnoreClusterCIDRConflict` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClusterNetworkSettings.IgnoreClusterCIDRConflict` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_ignoreClusterCIDRConflict = value["IgnoreClusterCIDRConflict"].GetBool();
         m_ignoreClusterCIDRConflictHasBeenSet = true;
@@ -61,7 +63,7 @@ CoreInternalOutcome ClusterNetworkSettings::Deserialize(const Value &value)
     {
         if (!value["MaxNodePodNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ClusterNetworkSettings.MaxNodePodNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClusterNetworkSettings.MaxNodePodNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_maxNodePodNum = value["MaxNodePodNum"].GetUint64();
         m_maxNodePodNumHasBeenSet = true;
@@ -71,7 +73,7 @@ CoreInternalOutcome ClusterNetworkSettings::Deserialize(const Value &value)
     {
         if (!value["MaxClusterServiceNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ClusterNetworkSettings.MaxClusterServiceNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClusterNetworkSettings.MaxClusterServiceNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_maxClusterServiceNum = value["MaxClusterServiceNum"].GetUint64();
         m_maxClusterServiceNumHasBeenSet = true;
@@ -81,7 +83,7 @@ CoreInternalOutcome ClusterNetworkSettings::Deserialize(const Value &value)
     {
         if (!value["Ipvs"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `ClusterNetworkSettings.Ipvs` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClusterNetworkSettings.Ipvs` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_ipvs = value["Ipvs"].GetBool();
         m_ipvsHasBeenSet = true;
@@ -91,7 +93,7 @@ CoreInternalOutcome ClusterNetworkSettings::Deserialize(const Value &value)
     {
         if (!value["VpcId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClusterNetworkSettings.VpcId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClusterNetworkSettings.VpcId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpcId = string(value["VpcId"].GetString());
         m_vpcIdHasBeenSet = true;
@@ -101,30 +103,63 @@ CoreInternalOutcome ClusterNetworkSettings::Deserialize(const Value &value)
     {
         if (!value["Cni"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `ClusterNetworkSettings.Cni` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClusterNetworkSettings.Cni` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_cni = value["Cni"].GetBool();
         m_cniHasBeenSet = true;
+    }
+
+    if (value.HasMember("KubeProxyMode") && !value["KubeProxyMode"].IsNull())
+    {
+        if (!value["KubeProxyMode"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterNetworkSettings.KubeProxyMode` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_kubeProxyMode = string(value["KubeProxyMode"].GetString());
+        m_kubeProxyModeHasBeenSet = true;
+    }
+
+    if (value.HasMember("ServiceCIDR") && !value["ServiceCIDR"].IsNull())
+    {
+        if (!value["ServiceCIDR"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterNetworkSettings.ServiceCIDR` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_serviceCIDR = string(value["ServiceCIDR"].GetString());
+        m_serviceCIDRHasBeenSet = true;
+    }
+
+    if (value.HasMember("Subnets") && !value["Subnets"].IsNull())
+    {
+        if (!value["Subnets"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `ClusterNetworkSettings.Subnets` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["Subnets"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_subnets.push_back((*itr).GetString());
+        }
+        m_subnetsHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void ClusterNetworkSettings::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ClusterNetworkSettings::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_clusterCIDRHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClusterCIDR";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_clusterCIDR.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clusterCIDR.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ignoreClusterCIDRConflictHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IgnoreClusterCIDRConflict";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_ignoreClusterCIDRConflict, allocator);
@@ -132,7 +167,7 @@ void ClusterNetworkSettings::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_maxNodePodNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaxNodePodNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_maxNodePodNum, allocator);
@@ -140,7 +175,7 @@ void ClusterNetworkSettings::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_maxClusterServiceNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaxClusterServiceNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_maxClusterServiceNum, allocator);
@@ -148,7 +183,7 @@ void ClusterNetworkSettings::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_ipvsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Ipvs";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_ipvs, allocator);
@@ -156,18 +191,47 @@ void ClusterNetworkSettings::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_vpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vpcId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpcId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cniHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Cni";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cni, allocator);
+    }
+
+    if (m_kubeProxyModeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "KubeProxyMode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_kubeProxyMode.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_serviceCIDRHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ServiceCIDR";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_serviceCIDR.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_subnetsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Subnets";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_subnets.begin(); itr != m_subnets.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
 }
@@ -283,5 +347,53 @@ void ClusterNetworkSettings::SetCni(const bool& _cni)
 bool ClusterNetworkSettings::CniHasBeenSet() const
 {
     return m_cniHasBeenSet;
+}
+
+string ClusterNetworkSettings::GetKubeProxyMode() const
+{
+    return m_kubeProxyMode;
+}
+
+void ClusterNetworkSettings::SetKubeProxyMode(const string& _kubeProxyMode)
+{
+    m_kubeProxyMode = _kubeProxyMode;
+    m_kubeProxyModeHasBeenSet = true;
+}
+
+bool ClusterNetworkSettings::KubeProxyModeHasBeenSet() const
+{
+    return m_kubeProxyModeHasBeenSet;
+}
+
+string ClusterNetworkSettings::GetServiceCIDR() const
+{
+    return m_serviceCIDR;
+}
+
+void ClusterNetworkSettings::SetServiceCIDR(const string& _serviceCIDR)
+{
+    m_serviceCIDR = _serviceCIDR;
+    m_serviceCIDRHasBeenSet = true;
+}
+
+bool ClusterNetworkSettings::ServiceCIDRHasBeenSet() const
+{
+    return m_serviceCIDRHasBeenSet;
+}
+
+vector<string> ClusterNetworkSettings::GetSubnets() const
+{
+    return m_subnets;
+}
+
+void ClusterNetworkSettings::SetSubnets(const vector<string>& _subnets)
+{
+    m_subnets = _subnets;
+    m_subnetsHasBeenSet = true;
+}
+
+bool ClusterNetworkSettings::SubnetsHasBeenSet() const
+{
+    return m_subnetsHasBeenSet;
 }
 

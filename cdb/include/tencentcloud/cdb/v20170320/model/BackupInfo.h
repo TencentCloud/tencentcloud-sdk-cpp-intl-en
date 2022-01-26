@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool DateHasBeenSet() const;
 
                     /**
-                     * 获取Download address on the private network
-                     * @return IntranetUrl Download address on the private network
+                     * 获取Download address
+                     * @return IntranetUrl Download address
                      */
                     std::string GetIntranetUrl() const;
 
                     /**
-                     * 设置Download address on the private network
-                     * @param IntranetUrl Download address on the private network
+                     * 设置Download address
+                     * @param IntranetUrl Download address
                      */
                     void SetIntranetUrl(const std::string& _intranetUrl);
 
@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool IntranetUrlHasBeenSet() const;
 
                     /**
-                     * 获取Download address on the public network
-                     * @return InternetUrl Download address on the public network
+                     * 获取Download address
+                     * @return InternetUrl Download address
                      */
                     std::string GetInternetUrl() const;
 
                     /**
-                     * 设置Download address on the public network
-                     * @param InternetUrl Download address on the public network
+                     * 设置Download address
+                     * @param InternetUrl Download address
                      */
                     void SetInternetUrl(const std::string& _internetUrl);
 
@@ -280,6 +280,24 @@ namespace TencentCloud
                      */
                     bool WayHasBeenSet() const;
 
+                    /**
+                     * 获取Manual backup alias
+                     * @return ManualBackupName Manual backup alias
+                     */
+                    std::string GetManualBackupName() const;
+
+                    /**
+                     * 设置Manual backup alias
+                     * @param ManualBackupName Manual backup alias
+                     */
+                    void SetManualBackupName(const std::string& _manualBackupName);
+
+                    /**
+                     * 判断参数 ManualBackupName 是否已赋值
+                     * @return ManualBackupName 是否已赋值
+                     */
+                    bool ManualBackupNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -301,13 +319,13 @@ namespace TencentCloud
                     bool m_dateHasBeenSet;
 
                     /**
-                     * Download address on the private network
+                     * Download address
                      */
                     std::string m_intranetUrl;
                     bool m_intranetUrlHasBeenSet;
 
                     /**
-                     * Download address on the public network
+                     * Download address
                      */
                     std::string m_internetUrl;
                     bool m_internetUrlHasBeenSet;
@@ -359,6 +377,12 @@ namespace TencentCloud
                      */
                     std::string m_way;
                     bool m_wayHasBeenSet;
+
+                    /**
+                     * Manual backup alias
+                     */
+                    std::string m_manualBackupName;
+                    bool m_manualBackupNameHasBeenSet;
 
                 };
             }

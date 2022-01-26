@@ -319,14 +319,14 @@ namespace TencentCloud
                     bool ComponentSetHasBeenSet() const;
 
                     /**
-                     * 获取Payer’s UIN
-                     * @return PayerUin Payer’s UIN
+                     * 获取Payer's UIN
+                     * @return PayerUin Payer's UIN
                      */
                     std::string GetPayerUin() const;
 
                     /**
-                     * 设置Payer’s UIN
-                     * @param PayerUin Payer’s UIN
+                     * 设置Payer's UIN
+                     * @param PayerUin Payer's UIN
                      */
                     void SetPayerUin(const std::string& _payerUin);
 
@@ -337,14 +337,14 @@ namespace TencentCloud
                     bool PayerUinHasBeenSet() const;
 
                     /**
-                     * 获取User’s UIN
-                     * @return OwnerUin User’s UIN
+                     * 获取User's UIN
+                     * @return OwnerUin User's UIN
                      */
                     std::string GetOwnerUin() const;
 
                     /**
-                     * 设置User’s UIN
-                     * @param OwnerUin User’s UIN
+                     * 设置User's UIN
+                     * @param OwnerUin User's UIN
                      */
                     void SetOwnerUin(const std::string& _ownerUin);
 
@@ -395,14 +395,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BusinessCode 
+                     * 获取Product code
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @return BusinessCode Product code
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     std::string GetBusinessCode() const;
 
                     /**
-                     * 设置
-                     * @param BusinessCode 
+                     * 设置Product code
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @param BusinessCode Product code
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     void SetBusinessCode(const std::string& _businessCode);
 
@@ -413,14 +417,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BusinessCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ProductCode 
+                     * 获取Subproduct code
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @return ProductCode Subproduct code
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     std::string GetProductCode() const;
 
                     /**
-                     * 设置
-                     * @param ProductCode 
+                     * 设置Subproduct code
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @param ProductCode Subproduct code
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     void SetProductCode(const std::string& _productCode);
 
@@ -431,14 +439,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProductCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ActionType 
+                     * 获取Transaction type
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @return ActionType Transaction type
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     std::string GetActionType() const;
 
                     /**
-                     * 设置
-                     * @param ActionType 
+                     * 设置Transaction type
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @param ActionType Transaction type
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     void SetActionType(const std::string& _actionType);
 
@@ -447,6 +459,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return ActionType 是否已赋值
                      */
                     bool ActionTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return RegionId 
+                     */
+                    std::string GetRegionId() const;
+
+                    /**
+                     * 设置
+                     * @param RegionId 
+                     */
+                    void SetRegionId(const std::string& _regionId);
+
+                    /**
+                     * 判断参数 RegionId 是否已赋值
+                     * @return RegionId 是否已赋值
+                     */
+                    bool RegionIdHasBeenSet() const;
+
+                    /**
+                     * 获取Project ID: ID of the project to which the resource belongs
+                     * @return ProjectId Project ID: ID of the project to which the resource belongs
+                     */
+                    int64_t GetProjectId() const;
+
+                    /**
+                     * 设置Project ID: ID of the project to which the resource belongs
+                     * @param ProjectId Project ID: ID of the project to which the resource belongs
+                     */
+                    void SetProjectId(const int64_t& _projectId);
+
+                    /**
+                     * 判断参数 ProjectId 是否已赋值
+                     * @return ProjectId 是否已赋值
+                     */
+                    bool ProjectIdHasBeenSet() const;
 
                 private:
 
@@ -541,13 +589,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_componentSetHasBeenSet;
 
                     /**
-                     * Payer’s UIN
+                     * Payer's UIN
                      */
                     std::string m_payerUin;
                     bool m_payerUinHasBeenSet;
 
                     /**
-                     * User’s UIN
+                     * User's UIN
                      */
                     std::string m_ownerUin;
                     bool m_ownerUinHasBeenSet;
@@ -566,22 +614,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * 
+                     * Product code
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     std::string m_businessCode;
                     bool m_businessCodeHasBeenSet;
 
                     /**
-                     * 
+                     * Subproduct code
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     std::string m_productCode;
                     bool m_productCodeHasBeenSet;
 
                     /**
-                     * 
+                     * Transaction type
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     std::string m_actionType;
                     bool m_actionTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_regionId;
+                    bool m_regionIdHasBeenSet;
+
+                    /**
+                     * Project ID: ID of the project to which the resource belongs
+                     */
+                    int64_t m_projectId;
+                    bool m_projectIdHasBeenSet;
 
                 };
             }

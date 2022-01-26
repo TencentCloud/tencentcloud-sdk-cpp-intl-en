@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool ResourceIdsHasBeenSet() const;
 
                     /**
-                     * 获取The resource’s region.
-                     * @return ResourceRegion The resource’s region.
+                     * 获取The resource's region.
+                     * @return ResourceRegion The resource's region.
                      */
                     std::string GetResourceRegion() const;
 
                     /**
-                     * 设置The resource’s region.
-                     * @param ResourceRegion The resource’s region.
+                     * 设置The resource's region.
+                     * @param ResourceRegion The resource's region.
                      */
                     void SetResourceRegion(const std::string& _resourceRegion);
 
@@ -171,7 +171,7 @@ namespace TencentCloud
                     bool m_resourceIdsHasBeenSet;
 
                     /**
-                     * The resource’s region.
+                     * The resource's region.
                      */
                     std::string m_resourceRegion;
                     bool m_resourceRegionHasBeenSet;

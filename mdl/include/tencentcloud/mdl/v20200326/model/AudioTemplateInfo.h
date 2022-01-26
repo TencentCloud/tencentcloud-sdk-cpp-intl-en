@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool AudioSelectorNameHasBeenSet() const;
 
                     /**
-                     * 获取Audio transcoding template name, which can contain 1–20 letters and digits.
-                     * @return Name Audio transcoding template name, which can contain 1–20 letters and digits.
+                     * 获取Audio transcoding template name, which can contain 1-20 letters and digits.
+                     * @return Name Audio transcoding template name, which can contain 1-20 letters and digits.
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Audio transcoding template name, which can contain 1–20 letters and digits.
-                     * @param Name Audio transcoding template name, which can contain 1–20 letters and digits.
+                     * 设置Audio transcoding template name, which can contain 1-20 letters and digits.
+                     * @param Name Audio transcoding template name, which can contain 1-20 letters and digits.
                      */
                     void SetName(const std::string& _name);
 
@@ -149,7 +149,7 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
                     bool m_audioSelectorNameHasBeenSet;
 
                     /**
-                     * Audio transcoding template name, which can contain 1–20 letters and digits.
+                     * Audio transcoding template name, which can contain 1-20 letters and digits.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

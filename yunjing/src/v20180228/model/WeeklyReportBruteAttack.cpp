@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Yunjing::V20180228::Model;
-using namespace rapidjson;
 using namespace std;
 
 WeeklyReportBruteAttack::WeeklyReportBruteAttack() :
@@ -30,7 +29,7 @@ WeeklyReportBruteAttack::WeeklyReportBruteAttack() :
 {
 }
 
-CoreInternalOutcome WeeklyReportBruteAttack::Deserialize(const Value &value)
+CoreInternalOutcome WeeklyReportBruteAttack::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome WeeklyReportBruteAttack::Deserialize(const Value &value)
     {
         if (!value["MachineIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WeeklyReportBruteAttack.MachineIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WeeklyReportBruteAttack.MachineIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_machineIp = string(value["MachineIp"].GetString());
         m_machineIpHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome WeeklyReportBruteAttack::Deserialize(const Value &value)
     {
         if (!value["Username"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WeeklyReportBruteAttack.Username` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WeeklyReportBruteAttack.Username` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_username = string(value["Username"].GetString());
         m_usernameHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome WeeklyReportBruteAttack::Deserialize(const Value &value)
     {
         if (!value["SrcIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WeeklyReportBruteAttack.SrcIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WeeklyReportBruteAttack.SrcIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_srcIp = string(value["SrcIp"].GetString());
         m_srcIpHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome WeeklyReportBruteAttack::Deserialize(const Value &value)
     {
         if (!value["Count"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `WeeklyReportBruteAttack.Count` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WeeklyReportBruteAttack.Count` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_count = value["Count"].GetUint64();
         m_countHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome WeeklyReportBruteAttack::Deserialize(const Value &value)
     {
         if (!value["AttackTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WeeklyReportBruteAttack.AttackTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WeeklyReportBruteAttack.AttackTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_attackTime = string(value["AttackTime"].GetString());
         m_attackTimeHasBeenSet = true;
@@ -89,36 +88,36 @@ CoreInternalOutcome WeeklyReportBruteAttack::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void WeeklyReportBruteAttack::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void WeeklyReportBruteAttack::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_machineIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MachineIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_machineIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_machineIp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_usernameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Username";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_username.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_username.c_str(), allocator).Move(), allocator);
     }
 
     if (m_srcIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SrcIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_srcIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_srcIp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_countHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Count";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_count, allocator);
@@ -126,10 +125,10 @@ void WeeklyReportBruteAttack::ToJsonObject(Value &value, Document::AllocatorType
 
     if (m_attackTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AttackTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_attackTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_attackTime.c_str(), allocator).Move(), allocator);
     }
 
 }

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mongodb::V20190725::Model;
-using namespace rapidjson;
 using namespace std;
 
 ShardInfo::ShardInfo() :
@@ -33,16 +32,16 @@ ShardInfo::ShardInfo() :
 {
 }
 
-CoreInternalOutcome ShardInfo::Deserialize(const Value &value)
+CoreInternalOutcome ShardInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
 
     if (value.HasMember("UsedVolume") && !value["UsedVolume"].IsNull())
     {
-        if (!value["UsedVolume"].IsDouble())
+        if (!value["UsedVolume"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `ShardInfo.UsedVolume` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ShardInfo.UsedVolume` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_usedVolume = value["UsedVolume"].GetDouble();
         m_usedVolumeHasBeenSet = true;
@@ -52,7 +51,7 @@ CoreInternalOutcome ShardInfo::Deserialize(const Value &value)
     {
         if (!value["ReplicaSetId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ShardInfo.ReplicaSetId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ShardInfo.ReplicaSetId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_replicaSetId = string(value["ReplicaSetId"].GetString());
         m_replicaSetIdHasBeenSet = true;
@@ -62,7 +61,7 @@ CoreInternalOutcome ShardInfo::Deserialize(const Value &value)
     {
         if (!value["ReplicaSetName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ShardInfo.ReplicaSetName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ShardInfo.ReplicaSetName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_replicaSetName = string(value["ReplicaSetName"].GetString());
         m_replicaSetNameHasBeenSet = true;
@@ -72,7 +71,7 @@ CoreInternalOutcome ShardInfo::Deserialize(const Value &value)
     {
         if (!value["Memory"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ShardInfo.Memory` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ShardInfo.Memory` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_memory = value["Memory"].GetUint64();
         m_memoryHasBeenSet = true;
@@ -82,7 +81,7 @@ CoreInternalOutcome ShardInfo::Deserialize(const Value &value)
     {
         if (!value["Volume"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ShardInfo.Volume` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ShardInfo.Volume` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_volume = value["Volume"].GetUint64();
         m_volumeHasBeenSet = true;
@@ -92,7 +91,7 @@ CoreInternalOutcome ShardInfo::Deserialize(const Value &value)
     {
         if (!value["OplogSize"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ShardInfo.OplogSize` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ShardInfo.OplogSize` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_oplogSize = value["OplogSize"].GetUint64();
         m_oplogSizeHasBeenSet = true;
@@ -102,7 +101,7 @@ CoreInternalOutcome ShardInfo::Deserialize(const Value &value)
     {
         if (!value["SecondaryNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ShardInfo.SecondaryNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ShardInfo.SecondaryNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_secondaryNum = value["SecondaryNum"].GetUint64();
         m_secondaryNumHasBeenSet = true;
@@ -112,7 +111,7 @@ CoreInternalOutcome ShardInfo::Deserialize(const Value &value)
     {
         if (!value["RealReplicaSetId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ShardInfo.RealReplicaSetId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ShardInfo.RealReplicaSetId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_realReplicaSetId = string(value["RealReplicaSetId"].GetString());
         m_realReplicaSetIdHasBeenSet = true;
@@ -122,12 +121,12 @@ CoreInternalOutcome ShardInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ShardInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ShardInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_usedVolumeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UsedVolume";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_usedVolume, allocator);
@@ -135,23 +134,23 @@ void ShardInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_replicaSetIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReplicaSetId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_replicaSetId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_replicaSetId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_replicaSetNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReplicaSetName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_replicaSetName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_replicaSetName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_memoryHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Memory";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_memory, allocator);
@@ -159,7 +158,7 @@ void ShardInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_volumeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Volume";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_volume, allocator);
@@ -167,7 +166,7 @@ void ShardInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_oplogSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OplogSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_oplogSize, allocator);
@@ -175,7 +174,7 @@ void ShardInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_secondaryNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SecondaryNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_secondaryNum, allocator);
@@ -183,10 +182,10 @@ void ShardInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_realReplicaSetIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RealReplicaSetId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_realReplicaSetId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_realReplicaSetId.c_str(), allocator).Move(), allocator);
     }
 
 }

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 UserAgentFilterRule::UserAgentFilterRule() :
@@ -29,7 +28,7 @@ UserAgentFilterRule::UserAgentFilterRule() :
 {
 }
 
-CoreInternalOutcome UserAgentFilterRule::Deserialize(const Value &value)
+CoreInternalOutcome UserAgentFilterRule::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome UserAgentFilterRule::Deserialize(const Value &value)
     {
         if (!value["RuleType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UserAgentFilterRule.RuleType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UserAgentFilterRule.RuleType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ruleType = string(value["RuleType"].GetString());
         m_ruleTypeHasBeenSet = true;
@@ -47,10 +46,10 @@ CoreInternalOutcome UserAgentFilterRule::Deserialize(const Value &value)
     if (value.HasMember("RulePaths") && !value["RulePaths"].IsNull())
     {
         if (!value["RulePaths"].IsArray())
-            return CoreInternalOutcome(Error("response `UserAgentFilterRule.RulePaths` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `UserAgentFilterRule.RulePaths` is not array type"));
 
-        const Value &tmpValue = value["RulePaths"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["RulePaths"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_rulePaths.push_back((*itr).GetString());
         }
@@ -60,10 +59,10 @@ CoreInternalOutcome UserAgentFilterRule::Deserialize(const Value &value)
     if (value.HasMember("UserAgents") && !value["UserAgents"].IsNull())
     {
         if (!value["UserAgents"].IsArray())
-            return CoreInternalOutcome(Error("response `UserAgentFilterRule.UserAgents` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `UserAgentFilterRule.UserAgents` is not array type"));
 
-        const Value &tmpValue = value["UserAgents"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["UserAgents"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_userAgents.push_back((*itr).GetString());
         }
@@ -74,7 +73,7 @@ CoreInternalOutcome UserAgentFilterRule::Deserialize(const Value &value)
     {
         if (!value["FilterType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UserAgentFilterRule.FilterType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UserAgentFilterRule.FilterType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_filterType = string(value["FilterType"].GetString());
         m_filterTypeHasBeenSet = true;
@@ -84,49 +83,49 @@ CoreInternalOutcome UserAgentFilterRule::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void UserAgentFilterRule::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void UserAgentFilterRule::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_ruleTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RuleType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ruleType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ruleType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_rulePathsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RulePaths";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_rulePaths.begin(); itr != m_rulePaths.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_userAgentsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UserAgents";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_userAgents.begin(); itr != m_userAgents.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_filterTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FilterType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_filterType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_filterType.c_str(), allocator).Move(), allocator);
     }
 
 }

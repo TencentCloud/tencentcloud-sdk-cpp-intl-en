@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 ServicesStatus::ServicesStatus() :
@@ -27,7 +26,7 @@ ServicesStatus::ServicesStatus() :
 {
 }
 
-CoreInternalOutcome ServicesStatus::Deserialize(const Value &value)
+CoreInternalOutcome ServicesStatus::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome ServicesStatus::Deserialize(const Value &value)
     {
         if (!value["TotalCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ServicesStatus.TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServicesStatus.TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_totalCount = value["TotalCount"].GetInt64();
         m_totalCountHasBeenSet = true;
@@ -45,10 +44,10 @@ CoreInternalOutcome ServicesStatus::Deserialize(const Value &value)
     if (value.HasMember("ServiceSet") && !value["ServiceSet"].IsNull())
     {
         if (!value["ServiceSet"].IsArray())
-            return CoreInternalOutcome(Error("response `ServicesStatus.ServiceSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ServicesStatus.ServiceSet` is not array type"));
 
-        const Value &tmpValue = value["ServiceSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["ServiceSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             Service item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -66,12 +65,12 @@ CoreInternalOutcome ServicesStatus::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ServicesStatus::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ServicesStatus::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_totalCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TotalCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_totalCount, allocator);
@@ -79,15 +78,15 @@ void ServicesStatus::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_serviceSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_serviceSet.begin(); itr != m_serviceSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }

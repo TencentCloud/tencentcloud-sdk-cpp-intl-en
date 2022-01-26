@@ -621,14 +621,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SortRuleHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DbClusterInfoStruct 
+                     * 获取Information about global indexes, table caching, or data subscription
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return DbClusterInfoStruct Information about global indexes, table caching, or data subscription
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetDbClusterInfoStruct() const;
 
                     /**
-                     * 设置
-                     * @param DbClusterInfoStruct 
+                     * 设置Information about global indexes, table caching, or data subscription
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param DbClusterInfoStruct Information about global indexes, table caching, or data subscription
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetDbClusterInfoStruct(const std::string& _dbClusterInfoStruct);
 
@@ -823,7 +827,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_sortRuleHasBeenSet;
 
                     /**
-                     * 
+                     * Information about global indexes, table caching, or data subscription
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_dbClusterInfoStruct;
                     bool m_dbClusterInfoStructHasBeenSet;

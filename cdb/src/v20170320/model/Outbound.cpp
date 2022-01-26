@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 Outbound::Outbound() :
@@ -26,11 +25,12 @@ Outbound::Outbound() :
     m_cidrIpHasBeenSet(false),
     m_portRangeHasBeenSet(false),
     m_ipProtocolHasBeenSet(false),
-    m_dirHasBeenSet(false)
+    m_dirHasBeenSet(false),
+    m_descHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome Outbound::Deserialize(const Value &value)
+CoreInternalOutcome Outbound::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +39,7 @@ CoreInternalOutcome Outbound::Deserialize(const Value &value)
     {
         if (!value["Action"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Outbound.Action` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Outbound.Action` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_action = string(value["Action"].GetString());
         m_actionHasBeenSet = true;
@@ -49,7 +49,7 @@ CoreInternalOutcome Outbound::Deserialize(const Value &value)
     {
         if (!value["CidrIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Outbound.CidrIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Outbound.CidrIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cidrIp = string(value["CidrIp"].GetString());
         m_cidrIpHasBeenSet = true;
@@ -59,7 +59,7 @@ CoreInternalOutcome Outbound::Deserialize(const Value &value)
     {
         if (!value["PortRange"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Outbound.PortRange` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Outbound.PortRange` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_portRange = string(value["PortRange"].GetString());
         m_portRangeHasBeenSet = true;
@@ -69,7 +69,7 @@ CoreInternalOutcome Outbound::Deserialize(const Value &value)
     {
         if (!value["IpProtocol"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Outbound.IpProtocol` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Outbound.IpProtocol` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ipProtocol = string(value["IpProtocol"].GetString());
         m_ipProtocolHasBeenSet = true;
@@ -79,57 +79,75 @@ CoreInternalOutcome Outbound::Deserialize(const Value &value)
     {
         if (!value["Dir"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Outbound.Dir` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Outbound.Dir` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_dir = string(value["Dir"].GetString());
         m_dirHasBeenSet = true;
+    }
+
+    if (value.HasMember("Desc") && !value["Desc"].IsNull())
+    {
+        if (!value["Desc"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Outbound.Desc` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_desc = string(value["Desc"].GetString());
+        m_descHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void Outbound::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Outbound::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_actionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Action";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_action.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_action.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cidrIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CidrIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cidrIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cidrIp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_portRangeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PortRange";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_portRange.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_portRange.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ipProtocolHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IpProtocol";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ipProtocol.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ipProtocol.c_str(), allocator).Move(), allocator);
     }
 
     if (m_dirHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Dir";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_dir.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_dir.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_descHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Desc";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_desc.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -213,5 +231,21 @@ void Outbound::SetDir(const string& _dir)
 bool Outbound::DirHasBeenSet() const
 {
     return m_dirHasBeenSet;
+}
+
+string Outbound::GetDesc() const
+{
+    return m_desc;
+}
+
+void Outbound::SetDesc(const string& _desc)
+{
+    m_desc = _desc;
+    m_descHasBeenSet = true;
+}
+
+bool Outbound::DescHasBeenSet() const
+{
+    return m_descHasBeenSet;
 }
 

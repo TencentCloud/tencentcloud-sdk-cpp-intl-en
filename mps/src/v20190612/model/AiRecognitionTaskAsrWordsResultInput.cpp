@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 AiRecognitionTaskAsrWordsResultInput::AiRecognitionTaskAsrWordsResultInput() :
@@ -26,7 +25,7 @@ AiRecognitionTaskAsrWordsResultInput::AiRecognitionTaskAsrWordsResultInput() :
 {
 }
 
-CoreInternalOutcome AiRecognitionTaskAsrWordsResultInput::Deserialize(const Value &value)
+CoreInternalOutcome AiRecognitionTaskAsrWordsResultInput::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -35,7 +34,7 @@ CoreInternalOutcome AiRecognitionTaskAsrWordsResultInput::Deserialize(const Valu
     {
         if (!value["Definition"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `AiRecognitionTaskAsrWordsResultInput.Definition` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionTaskAsrWordsResultInput.Definition` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_definition = value["Definition"].GetInt64();
         m_definitionHasBeenSet = true;
@@ -45,12 +44,12 @@ CoreInternalOutcome AiRecognitionTaskAsrWordsResultInput::Deserialize(const Valu
     return CoreInternalOutcome(true);
 }
 
-void AiRecognitionTaskAsrWordsResultInput::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AiRecognitionTaskAsrWordsResultInput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_definitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Definition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_definition, allocator);

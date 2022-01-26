@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Monitor::V20180724::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribePolicyGroupListGroupInstanceGroup::DescribePolicyGroupListGroupInstanceGroup() :
@@ -32,7 +31,7 @@ DescribePolicyGroupListGroupInstanceGroup::DescribePolicyGroupListGroupInstanceG
 {
 }
 
-CoreInternalOutcome DescribePolicyGroupListGroupInstanceGroup::Deserialize(const Value &value)
+CoreInternalOutcome DescribePolicyGroupListGroupInstanceGroup::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +40,7 @@ CoreInternalOutcome DescribePolicyGroupListGroupInstanceGroup::Deserialize(const
     {
         if (!value["InstanceGroupId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupListGroupInstanceGroup.InstanceGroupId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupListGroupInstanceGroup.InstanceGroupId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_instanceGroupId = value["InstanceGroupId"].GetInt64();
         m_instanceGroupIdHasBeenSet = true;
@@ -51,7 +50,7 @@ CoreInternalOutcome DescribePolicyGroupListGroupInstanceGroup::Deserialize(const
     {
         if (!value["ViewName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupListGroupInstanceGroup.ViewName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupListGroupInstanceGroup.ViewName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_viewName = string(value["ViewName"].GetString());
         m_viewNameHasBeenSet = true;
@@ -61,7 +60,7 @@ CoreInternalOutcome DescribePolicyGroupListGroupInstanceGroup::Deserialize(const
     {
         if (!value["LastEditUin"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupListGroupInstanceGroup.LastEditUin` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupListGroupInstanceGroup.LastEditUin` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_lastEditUin = string(value["LastEditUin"].GetString());
         m_lastEditUinHasBeenSet = true;
@@ -71,7 +70,7 @@ CoreInternalOutcome DescribePolicyGroupListGroupInstanceGroup::Deserialize(const
     {
         if (!value["GroupName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupListGroupInstanceGroup.GroupName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupListGroupInstanceGroup.GroupName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_groupName = string(value["GroupName"].GetString());
         m_groupNameHasBeenSet = true;
@@ -81,7 +80,7 @@ CoreInternalOutcome DescribePolicyGroupListGroupInstanceGroup::Deserialize(const
     {
         if (!value["InstanceSum"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupListGroupInstanceGroup.InstanceSum` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupListGroupInstanceGroup.InstanceSum` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_instanceSum = value["InstanceSum"].GetInt64();
         m_instanceSumHasBeenSet = true;
@@ -91,7 +90,7 @@ CoreInternalOutcome DescribePolicyGroupListGroupInstanceGroup::Deserialize(const
     {
         if (!value["UpdateTime"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupListGroupInstanceGroup.UpdateTime` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupListGroupInstanceGroup.UpdateTime` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_updateTime = value["UpdateTime"].GetInt64();
         m_updateTimeHasBeenSet = true;
@@ -101,7 +100,7 @@ CoreInternalOutcome DescribePolicyGroupListGroupInstanceGroup::Deserialize(const
     {
         if (!value["InsertTime"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupListGroupInstanceGroup.InsertTime` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupListGroupInstanceGroup.InsertTime` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_insertTime = value["InsertTime"].GetInt64();
         m_insertTimeHasBeenSet = true;
@@ -111,12 +110,12 @@ CoreInternalOutcome DescribePolicyGroupListGroupInstanceGroup::Deserialize(const
     return CoreInternalOutcome(true);
 }
 
-void DescribePolicyGroupListGroupInstanceGroup::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DescribePolicyGroupListGroupInstanceGroup::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_instanceGroupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceGroupId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_instanceGroupId, allocator);
@@ -124,31 +123,31 @@ void DescribePolicyGroupListGroupInstanceGroup::ToJsonObject(Value &value, Docum
 
     if (m_viewNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ViewName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_viewName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_viewName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_lastEditUinHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LastEditUin";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_lastEditUin.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_lastEditUin.c_str(), allocator).Move(), allocator);
     }
 
     if (m_groupNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "GroupName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_groupName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_groupName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceSumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceSum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_instanceSum, allocator);
@@ -156,7 +155,7 @@ void DescribePolicyGroupListGroupInstanceGroup::ToJsonObject(Value &value, Docum
 
     if (m_updateTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UpdateTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_updateTime, allocator);
@@ -164,7 +163,7 @@ void DescribePolicyGroupListGroupInstanceGroup::ToJsonObject(Value &value, Docum
 
     if (m_insertTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InsertTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_insertTime, allocator);

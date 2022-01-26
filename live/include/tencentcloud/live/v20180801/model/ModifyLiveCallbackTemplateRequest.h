@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Template ID.
-                     * @return TemplateId Template ID.
+                     * 获取Template ID returned by the `DescribeLiveCallbackTemplates` API.
+                     * @return TemplateId Template ID returned by the `DescribeLiveCallbackTemplates` API.
                      */
                     int64_t GetTemplateId() const;
 
                     /**
-                     * 设置Template ID.
-                     * @param TemplateId Template ID.
+                     * 设置Template ID returned by the `DescribeLiveCallbackTemplates` API.
+                     * @param TemplateId Template ID returned by the `DescribeLiveCallbackTemplates` API.
                      */
                     void SetTemplateId(const int64_t& _templateId);
 
@@ -188,17 +188,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      * @return CallbackKey Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      */
                     std::string GetCallbackKey() const;
 
                     /**
                      * 设置Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      * @param CallbackKey Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      */
                     void SetCallbackKey(const std::string& _callbackKey);
 
@@ -211,7 +211,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Template ID.
+                     * Template ID returned by the `DescribeLiveCallbackTemplates` API.
                      */
                     int64_t m_templateId;
                     bool m_templateIdHasBeenSet;
@@ -260,7 +260,7 @@ namespace TencentCloud
 
                     /**
                      * Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      */
                     std::string m_callbackKey;
                     bool m_callbackKeyHasBeenSet;

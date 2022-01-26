@@ -20,41 +20,58 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeIpStatusRequest::DescribeIpStatusRequest() :
     m_domainHasBeenSet(false),
-    m_layerHasBeenSet(false)
+    m_layerHasBeenSet(false),
+    m_areaHasBeenSet(false),
+    m_segmentHasBeenSet(false)
 {
 }
 
 string DescribeIpStatusRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_domainHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Domain";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_domain.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_domain.c_str(), allocator).Move(), allocator);
     }
 
     if (m_layerHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Layer";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_layer.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_layer.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_areaHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Area";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_area.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_segmentHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Segment";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_segment, allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -90,6 +107,38 @@ void DescribeIpStatusRequest::SetLayer(const string& _layer)
 bool DescribeIpStatusRequest::LayerHasBeenSet() const
 {
     return m_layerHasBeenSet;
+}
+
+string DescribeIpStatusRequest::GetArea() const
+{
+    return m_area;
+}
+
+void DescribeIpStatusRequest::SetArea(const string& _area)
+{
+    m_area = _area;
+    m_areaHasBeenSet = true;
+}
+
+bool DescribeIpStatusRequest::AreaHasBeenSet() const
+{
+    return m_areaHasBeenSet;
+}
+
+bool DescribeIpStatusRequest::GetSegment() const
+{
+    return m_segment;
+}
+
+void DescribeIpStatusRequest::SetSegment(const bool& _segment)
+{
+    m_segment = _segment;
+    m_segmentHasBeenSet = true;
+}
+
+bool DescribeIpStatusRequest::SegmentHasBeenSet() const
+{
+    return m_segmentHasBeenSet;
 }
 
 

@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Kms::V20190118::Model;
-using namespace rapidjson;
 using namespace std;
 
 ListKeyDetailRequest::ListKeyDetailRequest() :
@@ -31,20 +30,21 @@ ListKeyDetailRequest::ListKeyDetailRequest() :
     m_keyStateHasBeenSet(false),
     m_searchKeyAliasHasBeenSet(false),
     m_originHasBeenSet(false),
-    m_keyUsageHasBeenSet(false)
+    m_keyUsageHasBeenSet(false),
+    m_tagFiltersHasBeenSet(false)
 {
 }
 
 string ListKeyDetailRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_offsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Offset";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_offset, allocator);
@@ -52,7 +52,7 @@ string ListKeyDetailRequest::ToJsonString() const
 
     if (m_limitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Limit";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_limit, allocator);
@@ -60,7 +60,7 @@ string ListKeyDetailRequest::ToJsonString() const
 
     if (m_roleHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Role";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_role, allocator);
@@ -68,7 +68,7 @@ string ListKeyDetailRequest::ToJsonString() const
 
     if (m_orderTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OrderType";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_orderType, allocator);
@@ -76,7 +76,7 @@ string ListKeyDetailRequest::ToJsonString() const
 
     if (m_keyStateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "KeyState";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_keyState, allocator);
@@ -84,31 +84,46 @@ string ListKeyDetailRequest::ToJsonString() const
 
     if (m_searchKeyAliasHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SearchKeyAlias";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_searchKeyAlias.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_searchKeyAlias.c_str(), allocator).Move(), allocator);
     }
 
     if (m_originHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Origin";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_origin.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_origin.c_str(), allocator).Move(), allocator);
     }
 
     if (m_keyUsageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "KeyUsage";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_keyUsage.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_keyUsage.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_tagFiltersHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TagFilters";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tagFilters.begin(); itr != m_tagFilters.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -240,6 +255,22 @@ void ListKeyDetailRequest::SetKeyUsage(const string& _keyUsage)
 bool ListKeyDetailRequest::KeyUsageHasBeenSet() const
 {
     return m_keyUsageHasBeenSet;
+}
+
+vector<TagFilter> ListKeyDetailRequest::GetTagFilters() const
+{
+    return m_tagFilters;
+}
+
+void ListKeyDetailRequest::SetTagFilters(const vector<TagFilter>& _tagFilters)
+{
+    m_tagFilters = _tagFilters;
+    m_tagFiltersHasBeenSet = true;
+}
+
+bool ListKeyDetailRequest::TagFiltersHasBeenSet() const
+{
+    return m_tagFiltersHasBeenSet;
 }
 
 

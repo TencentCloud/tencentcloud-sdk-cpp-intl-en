@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Redis::V20180412::Model;
-using namespace rapidjson;
 using namespace std;
 
 RedisBackupSet::RedisBackupSet() :
@@ -31,7 +30,7 @@ RedisBackupSet::RedisBackupSet() :
 {
 }
 
-CoreInternalOutcome RedisBackupSet::Deserialize(const Value &value)
+CoreInternalOutcome RedisBackupSet::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome RedisBackupSet::Deserialize(const Value &value)
     {
         if (!value["StartTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RedisBackupSet.StartTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RedisBackupSet.StartTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_startTime = string(value["StartTime"].GetString());
         m_startTimeHasBeenSet = true;
@@ -50,7 +49,7 @@ CoreInternalOutcome RedisBackupSet::Deserialize(const Value &value)
     {
         if (!value["BackupId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RedisBackupSet.BackupId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RedisBackupSet.BackupId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_backupId = string(value["BackupId"].GetString());
         m_backupIdHasBeenSet = true;
@@ -60,7 +59,7 @@ CoreInternalOutcome RedisBackupSet::Deserialize(const Value &value)
     {
         if (!value["BackupType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RedisBackupSet.BackupType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RedisBackupSet.BackupType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_backupType = string(value["BackupType"].GetString());
         m_backupTypeHasBeenSet = true;
@@ -70,7 +69,7 @@ CoreInternalOutcome RedisBackupSet::Deserialize(const Value &value)
     {
         if (!value["Status"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `RedisBackupSet.Status` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RedisBackupSet.Status` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_status = value["Status"].GetInt64();
         m_statusHasBeenSet = true;
@@ -80,7 +79,7 @@ CoreInternalOutcome RedisBackupSet::Deserialize(const Value &value)
     {
         if (!value["Remark"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RedisBackupSet.Remark` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RedisBackupSet.Remark` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_remark = string(value["Remark"].GetString());
         m_remarkHasBeenSet = true;
@@ -90,7 +89,7 @@ CoreInternalOutcome RedisBackupSet::Deserialize(const Value &value)
     {
         if (!value["Locked"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `RedisBackupSet.Locked` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RedisBackupSet.Locked` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_locked = value["Locked"].GetInt64();
         m_lockedHasBeenSet = true;
@@ -100,36 +99,36 @@ CoreInternalOutcome RedisBackupSet::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void RedisBackupSet::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void RedisBackupSet::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_startTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_startTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_startTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_backupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BackupId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_backupId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_backupId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_backupTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BackupType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_backupType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_backupType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);
@@ -137,15 +136,15 @@ void RedisBackupSet::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_remarkHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Remark";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_remark.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_remark.c_str(), allocator).Move(), allocator);
     }
 
     if (m_lockedHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Locked";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_locked, allocator);

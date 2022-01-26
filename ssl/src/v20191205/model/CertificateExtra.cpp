@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ssl::V20191205::Model;
-using namespace rapidjson;
 using namespace std;
 
 CertificateExtra::CertificateExtra() :
@@ -30,7 +29,7 @@ CertificateExtra::CertificateExtra() :
 {
 }
 
-CoreInternalOutcome CertificateExtra::Deserialize(const Value &value)
+CoreInternalOutcome CertificateExtra::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome CertificateExtra::Deserialize(const Value &value)
     {
         if (!value["DomainNumber"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CertificateExtra.DomainNumber` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CertificateExtra.DomainNumber` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_domainNumber = string(value["DomainNumber"].GetString());
         m_domainNumberHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome CertificateExtra::Deserialize(const Value &value)
     {
         if (!value["OriginCertificateId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CertificateExtra.OriginCertificateId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CertificateExtra.OriginCertificateId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_originCertificateId = string(value["OriginCertificateId"].GetString());
         m_originCertificateIdHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome CertificateExtra::Deserialize(const Value &value)
     {
         if (!value["ReplacedBy"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CertificateExtra.ReplacedBy` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CertificateExtra.ReplacedBy` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_replacedBy = string(value["ReplacedBy"].GetString());
         m_replacedByHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome CertificateExtra::Deserialize(const Value &value)
     {
         if (!value["ReplacedFor"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CertificateExtra.ReplacedFor` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CertificateExtra.ReplacedFor` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_replacedFor = string(value["ReplacedFor"].GetString());
         m_replacedForHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome CertificateExtra::Deserialize(const Value &value)
     {
         if (!value["RenewOrder"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CertificateExtra.RenewOrder` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CertificateExtra.RenewOrder` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_renewOrder = string(value["RenewOrder"].GetString());
         m_renewOrderHasBeenSet = true;
@@ -89,47 +88,47 @@ CoreInternalOutcome CertificateExtra::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void CertificateExtra::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void CertificateExtra::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_domainNumberHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DomainNumber";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_domainNumber.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_domainNumber.c_str(), allocator).Move(), allocator);
     }
 
     if (m_originCertificateIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OriginCertificateId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_originCertificateId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_originCertificateId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_replacedByHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReplacedBy";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_replacedBy.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_replacedBy.c_str(), allocator).Move(), allocator);
     }
 
     if (m_replacedForHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReplacedFor";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_replacedFor.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_replacedFor.c_str(), allocator).Move(), allocator);
     }
 
     if (m_renewOrderHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RenewOrder";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_renewOrder.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_renewOrder.c_str(), allocator).Move(), allocator);
     }
 
 }

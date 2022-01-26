@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Redis::V20180412::Model;
-using namespace rapidjson;
 using namespace std;
 
 Account::Account() :
@@ -31,7 +30,7 @@ Account::Account() :
 {
 }
 
-CoreInternalOutcome Account::Deserialize(const Value &value)
+CoreInternalOutcome Account::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome Account::Deserialize(const Value &value)
     {
         if (!value["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Account.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Account.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(value["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -50,7 +49,7 @@ CoreInternalOutcome Account::Deserialize(const Value &value)
     {
         if (!value["AccountName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Account.AccountName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Account.AccountName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_accountName = string(value["AccountName"].GetString());
         m_accountNameHasBeenSet = true;
@@ -60,7 +59,7 @@ CoreInternalOutcome Account::Deserialize(const Value &value)
     {
         if (!value["Remark"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Account.Remark` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Account.Remark` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_remark = string(value["Remark"].GetString());
         m_remarkHasBeenSet = true;
@@ -70,7 +69,7 @@ CoreInternalOutcome Account::Deserialize(const Value &value)
     {
         if (!value["Privilege"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Account.Privilege` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Account.Privilege` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_privilege = string(value["Privilege"].GetString());
         m_privilegeHasBeenSet = true;
@@ -79,10 +78,10 @@ CoreInternalOutcome Account::Deserialize(const Value &value)
     if (value.HasMember("ReadonlyPolicy") && !value["ReadonlyPolicy"].IsNull())
     {
         if (!value["ReadonlyPolicy"].IsArray())
-            return CoreInternalOutcome(Error("response `Account.ReadonlyPolicy` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Account.ReadonlyPolicy` is not array type"));
 
-        const Value &tmpValue = value["ReadonlyPolicy"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["ReadonlyPolicy"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_readonlyPolicy.push_back((*itr).GetString());
         }
@@ -93,7 +92,7 @@ CoreInternalOutcome Account::Deserialize(const Value &value)
     {
         if (!value["Status"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Account.Status` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Account.Status` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_status = value["Status"].GetInt64();
         m_statusHasBeenSet = true;
@@ -103,57 +102,57 @@ CoreInternalOutcome Account::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Account::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Account::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_accountNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AccountName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_accountName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_accountName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_remarkHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Remark";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_remark.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_remark.c_str(), allocator).Move(), allocator);
     }
 
     if (m_privilegeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Privilege";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_privilege.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_privilege.c_str(), allocator).Move(), allocator);
     }
 
     if (m_readonlyPolicyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReadonlyPolicy";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_readonlyPolicy.begin(); itr != m_readonlyPolicy.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mdl::V20200326::Model;
-using namespace rapidjson;
 using namespace std;
 
 AudioPipelineInputStatistics::AudioPipelineInputStatistics() :
@@ -28,7 +27,7 @@ AudioPipelineInputStatistics::AudioPipelineInputStatistics() :
 {
 }
 
-CoreInternalOutcome AudioPipelineInputStatistics::Deserialize(const Value &value)
+CoreInternalOutcome AudioPipelineInputStatistics::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome AudioPipelineInputStatistics::Deserialize(const Value &value
     {
         if (!value["Fps"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AudioPipelineInputStatistics.Fps` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AudioPipelineInputStatistics.Fps` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_fps = value["Fps"].GetUint64();
         m_fpsHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome AudioPipelineInputStatistics::Deserialize(const Value &value
     {
         if (!value["Rate"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AudioPipelineInputStatistics.Rate` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AudioPipelineInputStatistics.Rate` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_rate = value["Rate"].GetUint64();
         m_rateHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome AudioPipelineInputStatistics::Deserialize(const Value &value
     {
         if (!value["Pid"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `AudioPipelineInputStatistics.Pid` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AudioPipelineInputStatistics.Pid` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_pid = value["Pid"].GetInt64();
         m_pidHasBeenSet = true;
@@ -67,12 +66,12 @@ CoreInternalOutcome AudioPipelineInputStatistics::Deserialize(const Value &value
     return CoreInternalOutcome(true);
 }
 
-void AudioPipelineInputStatistics::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AudioPipelineInputStatistics::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_fpsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Fps";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_fps, allocator);
@@ -80,7 +79,7 @@ void AudioPipelineInputStatistics::ToJsonObject(Value &value, Document::Allocato
 
     if (m_rateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Rate";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_rate, allocator);
@@ -88,7 +87,7 @@ void AudioPipelineInputStatistics::ToJsonObject(Value &value, Document::Allocato
 
     if (m_pidHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Pid";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_pid, allocator);

@@ -44,22 +44,26 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filter conditions.
-<li>service-template-name - String - (Filter condition) Protocol port template name.</li>
-<li>service-template-id - String - (Filter condition) Protocol port template instance ID, such as `ppm-e6dy460g`.</li>
-                     * @return Filters Filter conditions.
-<li>service-template-name - String - (Filter condition) Protocol port template name.</li>
-<li>service-template-id - String - (Filter condition) Protocol port template instance ID, such as `ppm-e6dy460g`.</li>
+                     * 获取Filters
+<li>service-template-name - Protocol port template name.</li>
+<li>service-template-id - Protocol port template ID, such as `ppm-e6dy460g`.</li>
+<li>service-port-Protocol port.</li>
+                     * @return Filters Filters
+<li>service-template-name - Protocol port template name.</li>
+<li>service-template-id - Protocol port template ID, such as `ppm-e6dy460g`.</li>
+<li>service-port-Protocol port.</li>
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter conditions.
-<li>service-template-name - String - (Filter condition) Protocol port template name.</li>
-<li>service-template-id - String - (Filter condition) Protocol port template instance ID, such as `ppm-e6dy460g`.</li>
-                     * @param Filters Filter conditions.
-<li>service-template-name - String - (Filter condition) Protocol port template name.</li>
-<li>service-template-id - String - (Filter condition) Protocol port template instance ID, such as `ppm-e6dy460g`.</li>
+                     * 设置Filters
+<li>service-template-name - Protocol port template name.</li>
+<li>service-template-id - Protocol port template ID, such as `ppm-e6dy460g`.</li>
+<li>service-port-Protocol port.</li>
+                     * @param Filters Filters
+<li>service-template-name - Protocol port template name.</li>
+<li>service-template-id - Protocol port template ID, such as `ppm-e6dy460g`.</li>
+<li>service-port-Protocol port.</li>
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -108,9 +112,10 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Filter conditions.
-<li>service-template-name - String - (Filter condition) Protocol port template name.</li>
-<li>service-template-id - String - (Filter condition) Protocol port template instance ID, such as `ppm-e6dy460g`.</li>
+                     * Filters
+<li>service-template-name - Protocol port template name.</li>
+<li>service-template-id - Protocol port template ID, such as `ppm-e6dy460g`.</li>
+<li>service-port-Protocol port.</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

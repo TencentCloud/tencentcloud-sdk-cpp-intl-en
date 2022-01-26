@@ -20,46 +20,61 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateAddressTemplateRequest::CreateAddressTemplateRequest() :
     m_addressTemplateNameHasBeenSet(false),
-    m_addressesHasBeenSet(false)
+    m_addressesHasBeenSet(false),
+    m_addressesExtraHasBeenSet(false)
 {
 }
 
 string CreateAddressTemplateRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_addressTemplateNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AddressTemplateName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_addressTemplateName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_addressTemplateName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_addressesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Addresses";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_addresses.begin(); itr != m_addresses.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_addressesExtraHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AddressesExtra";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_addressesExtra.begin(); itr != m_addressesExtra.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -95,6 +110,22 @@ void CreateAddressTemplateRequest::SetAddresses(const vector<string>& _addresses
 bool CreateAddressTemplateRequest::AddressesHasBeenSet() const
 {
     return m_addressesHasBeenSet;
+}
+
+vector<AddressInfo> CreateAddressTemplateRequest::GetAddressesExtra() const
+{
+    return m_addressesExtra;
+}
+
+void CreateAddressTemplateRequest::SetAddressesExtra(const vector<AddressInfo>& _addressesExtra)
+{
+    m_addressesExtra = _addressesExtra;
+    m_addressesExtraHasBeenSet = true;
+}
+
+bool CreateAddressTemplateRequest::AddressesExtraHasBeenSet() const
+{
+    return m_addressesExtraHasBeenSet;
 }
 
 

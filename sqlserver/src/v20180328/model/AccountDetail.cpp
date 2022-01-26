@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Sqlserver::V20180328::Model;
-using namespace rapidjson;
 using namespace std;
 
 AccountDetail::AccountDetail() :
@@ -29,11 +28,12 @@ AccountDetail::AccountDetail() :
     m_updateTimeHasBeenSet(false),
     m_passTimeHasBeenSet(false),
     m_internalStatusHasBeenSet(false),
-    m_dbsHasBeenSet(false)
+    m_dbsHasBeenSet(false),
+    m_isAdminHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome AccountDetail::Deserialize(const Value &value)
+CoreInternalOutcome AccountDetail::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +42,7 @@ CoreInternalOutcome AccountDetail::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccountDetail.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccountDetail.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -52,7 +52,7 @@ CoreInternalOutcome AccountDetail::Deserialize(const Value &value)
     {
         if (!value["Remark"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccountDetail.Remark` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccountDetail.Remark` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_remark = string(value["Remark"].GetString());
         m_remarkHasBeenSet = true;
@@ -62,7 +62,7 @@ CoreInternalOutcome AccountDetail::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccountDetail.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccountDetail.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -72,7 +72,7 @@ CoreInternalOutcome AccountDetail::Deserialize(const Value &value)
     {
         if (!value["Status"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `AccountDetail.Status` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccountDetail.Status` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_status = value["Status"].GetInt64();
         m_statusHasBeenSet = true;
@@ -82,7 +82,7 @@ CoreInternalOutcome AccountDetail::Deserialize(const Value &value)
     {
         if (!value["UpdateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccountDetail.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccountDetail.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_updateTime = string(value["UpdateTime"].GetString());
         m_updateTimeHasBeenSet = true;
@@ -92,7 +92,7 @@ CoreInternalOutcome AccountDetail::Deserialize(const Value &value)
     {
         if (!value["PassTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccountDetail.PassTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccountDetail.PassTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_passTime = string(value["PassTime"].GetString());
         m_passTimeHasBeenSet = true;
@@ -102,7 +102,7 @@ CoreInternalOutcome AccountDetail::Deserialize(const Value &value)
     {
         if (!value["InternalStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccountDetail.InternalStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccountDetail.InternalStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_internalStatus = string(value["InternalStatus"].GetString());
         m_internalStatusHasBeenSet = true;
@@ -111,10 +111,10 @@ CoreInternalOutcome AccountDetail::Deserialize(const Value &value)
     if (value.HasMember("Dbs") && !value["Dbs"].IsNull())
     {
         if (!value["Dbs"].IsArray())
-            return CoreInternalOutcome(Error("response `AccountDetail.Dbs` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `AccountDetail.Dbs` is not array type"));
 
-        const Value &tmpValue = value["Dbs"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Dbs"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             DBPrivilege item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -128,40 +128,50 @@ CoreInternalOutcome AccountDetail::Deserialize(const Value &value)
         m_dbsHasBeenSet = true;
     }
 
+    if (value.HasMember("IsAdmin") && !value["IsAdmin"].IsNull())
+    {
+        if (!value["IsAdmin"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `AccountDetail.IsAdmin` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_isAdmin = value["IsAdmin"].GetBool();
+        m_isAdminHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void AccountDetail::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AccountDetail::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_remarkHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Remark";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_remark.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_remark.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);
@@ -169,41 +179,49 @@ void AccountDetail::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_updateTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UpdateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_updateTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_updateTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_passTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PassTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_passTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_passTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_internalStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InternalStatus";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_internalStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_internalStatus.c_str(), allocator).Move(), allocator);
     }
 
     if (m_dbsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Dbs";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_dbs.begin(); itr != m_dbs.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_isAdminHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsAdmin";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isAdmin, allocator);
     }
 
 }
@@ -335,5 +353,21 @@ void AccountDetail::SetDbs(const vector<DBPrivilege>& _dbs)
 bool AccountDetail::DbsHasBeenSet() const
 {
     return m_dbsHasBeenSet;
+}
+
+bool AccountDetail::GetIsAdmin() const
+{
+    return m_isAdmin;
+}
+
+void AccountDetail::SetIsAdmin(const bool& _isAdmin)
+{
+    m_isAdmin = _isAdmin;
+    m_isAdminHasBeenSet = true;
+}
+
+bool AccountDetail::IsAdminHasBeenSet() const
+{
+    return m_isAdminHasBeenSet;
 }
 

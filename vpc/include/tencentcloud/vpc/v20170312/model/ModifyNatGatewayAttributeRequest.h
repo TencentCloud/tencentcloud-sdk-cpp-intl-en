@@ -96,6 +96,42 @@ namespace TencentCloud
                      */
                     bool InternetMaxBandwidthOutHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to modify the security group bound to the NAT Gateway
+                     * @return ModifySecurityGroup Whether to modify the security group bound to the NAT Gateway
+                     */
+                    bool GetModifySecurityGroup() const;
+
+                    /**
+                     * 设置Whether to modify the security group bound to the NAT Gateway
+                     * @param ModifySecurityGroup Whether to modify the security group bound to the NAT Gateway
+                     */
+                    void SetModifySecurityGroup(const bool& _modifySecurityGroup);
+
+                    /**
+                     * 判断参数 ModifySecurityGroup 是否已赋值
+                     * @return ModifySecurityGroup 是否已赋值
+                     */
+                    bool ModifySecurityGroupHasBeenSet() const;
+
+                    /**
+                     * 获取The final security groups bound to the NAT Gateway, such as `['sg-1n232323', 'sg-o4242424']`. An empty list indicates that all the security groups have been deleted.
+                     * @return SecurityGroupIds The final security groups bound to the NAT Gateway, such as `['sg-1n232323', 'sg-o4242424']`. An empty list indicates that all the security groups have been deleted.
+                     */
+                    std::vector<std::string> GetSecurityGroupIds() const;
+
+                    /**
+                     * 设置The final security groups bound to the NAT Gateway, such as `['sg-1n232323', 'sg-o4242424']`. An empty list indicates that all the security groups have been deleted.
+                     * @param SecurityGroupIds The final security groups bound to the NAT Gateway, such as `['sg-1n232323', 'sg-o4242424']`. An empty list indicates that all the security groups have been deleted.
+                     */
+                    void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
+
+                    /**
+                     * 判断参数 SecurityGroupIds 是否已赋值
+                     * @return SecurityGroupIds 是否已赋值
+                     */
+                    bool SecurityGroupIdsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +151,18 @@ namespace TencentCloud
                      */
                     uint64_t m_internetMaxBandwidthOut;
                     bool m_internetMaxBandwidthOutHasBeenSet;
+
+                    /**
+                     * Whether to modify the security group bound to the NAT Gateway
+                     */
+                    bool m_modifySecurityGroup;
+                    bool m_modifySecurityGroupHasBeenSet;
+
+                    /**
+                     * The final security groups bound to the NAT Gateway, such as `['sg-1n232323', 'sg-o4242424']`. An empty list indicates that all the security groups have been deleted.
+                     */
+                    std::vector<std::string> m_securityGroupIds;
+                    bool m_securityGroupIdsHasBeenSet;
 
                 };
             }

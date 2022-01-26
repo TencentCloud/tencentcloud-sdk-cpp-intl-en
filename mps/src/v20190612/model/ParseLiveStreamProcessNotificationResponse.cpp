@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 ParseLiveStreamProcessNotificationResponse::ParseLiveStreamProcessNotificationResponse() :
@@ -37,20 +36,20 @@ ParseLiveStreamProcessNotificationResponse::ParseLiveStreamProcessNotificationRe
 
 CoreInternalOutcome ParseLiveStreamProcessNotificationResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -61,11 +60,11 @@ CoreInternalOutcome ParseLiveStreamProcessNotificationResponse::Deserialize(cons
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -73,7 +72,7 @@ CoreInternalOutcome ParseLiveStreamProcessNotificationResponse::Deserialize(cons
     {
         if (!rsp["NotificationType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NotificationType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NotificationType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_notificationType = string(rsp["NotificationType"].GetString());
         m_notificationTypeHasBeenSet = true;
@@ -83,7 +82,7 @@ CoreInternalOutcome ParseLiveStreamProcessNotificationResponse::Deserialize(cons
     {
         if (!rsp["TaskId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TaskId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_taskId = string(rsp["TaskId"].GetString());
         m_taskIdHasBeenSet = true;
@@ -93,7 +92,7 @@ CoreInternalOutcome ParseLiveStreamProcessNotificationResponse::Deserialize(cons
     {
         if (!rsp["ProcessEofInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `ProcessEofInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProcessEofInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_processEofInfo.Deserialize(rsp["ProcessEofInfo"]);
@@ -110,7 +109,7 @@ CoreInternalOutcome ParseLiveStreamProcessNotificationResponse::Deserialize(cons
     {
         if (!rsp["AiReviewResultInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AiReviewResultInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiReviewResultInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_aiReviewResultInfo.Deserialize(rsp["AiReviewResultInfo"]);
@@ -127,7 +126,7 @@ CoreInternalOutcome ParseLiveStreamProcessNotificationResponse::Deserialize(cons
     {
         if (!rsp["AiRecognitionResultInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AiRecognitionResultInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionResultInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_aiRecognitionResultInfo.Deserialize(rsp["AiRecognitionResultInfo"]);
@@ -144,7 +143,7 @@ CoreInternalOutcome ParseLiveStreamProcessNotificationResponse::Deserialize(cons
     {
         if (!rsp["SessionId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SessionId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SessionId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_sessionId = string(rsp["SessionId"].GetString());
         m_sessionIdHasBeenSet = true;
@@ -154,7 +153,7 @@ CoreInternalOutcome ParseLiveStreamProcessNotificationResponse::Deserialize(cons
     {
         if (!rsp["SessionContext"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SessionContext` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SessionContext` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_sessionContext = string(rsp["SessionContext"].GetString());
         m_sessionContextHasBeenSet = true;
@@ -162,6 +161,82 @@ CoreInternalOutcome ParseLiveStreamProcessNotificationResponse::Deserialize(cons
 
 
     return CoreInternalOutcome(true);
+}
+
+string ParseLiveStreamProcessNotificationResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_notificationTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NotificationType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_notificationType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_taskIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TaskId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_taskId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_processEofInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProcessEofInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_processEofInfo.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_aiReviewResultInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AiReviewResultInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_aiReviewResultInfo.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_aiRecognitionResultInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AiRecognitionResultInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_aiRecognitionResultInfo.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_sessionIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SessionId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sessionId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_sessionContextHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SessionContext";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sessionContext.c_str(), allocator).Move(), allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

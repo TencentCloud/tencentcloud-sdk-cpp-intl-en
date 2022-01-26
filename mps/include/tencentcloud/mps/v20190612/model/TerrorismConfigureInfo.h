@@ -71,14 +71,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ImgReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OcrReviewInfo 
+                     * 获取Control parameter of terrorism information detection in text task.
+                     * @return OcrReviewInfo Control parameter of terrorism information detection in text task.
                      */
                     TerrorismOcrReviewTemplateInfo GetOcrReviewInfo() const;
 
                     /**
-                     * 设置
-                     * @param OcrReviewInfo 
+                     * 设置Control parameter of terrorism information detection in text task.
+                     * @param OcrReviewInfo Control parameter of terrorism information detection in text task.
                      */
                     void SetOcrReviewInfo(const TerrorismOcrReviewTemplateInfo& _ocrReviewInfo);
 
@@ -98,7 +98,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_imgReviewInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Control parameter of terrorism information detection in text task.
                      */
                     TerrorismOcrReviewTemplateInfo m_ocrReviewInfo;
                     bool m_ocrReviewInfoHasBeenSet;

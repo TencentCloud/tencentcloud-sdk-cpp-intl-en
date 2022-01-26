@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 Ipv6Address::Ipv6Address() :
@@ -31,7 +30,7 @@ Ipv6Address::Ipv6Address() :
 {
 }
 
-CoreInternalOutcome Ipv6Address::Deserialize(const Value &value)
+CoreInternalOutcome Ipv6Address::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome Ipv6Address::Deserialize(const Value &value)
     {
         if (!value["Address"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Ipv6Address.Address` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Ipv6Address.Address` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_address = string(value["Address"].GetString());
         m_addressHasBeenSet = true;
@@ -50,7 +49,7 @@ CoreInternalOutcome Ipv6Address::Deserialize(const Value &value)
     {
         if (!value["Primary"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `Ipv6Address.Primary` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Ipv6Address.Primary` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_primary = value["Primary"].GetBool();
         m_primaryHasBeenSet = true;
@@ -60,7 +59,7 @@ CoreInternalOutcome Ipv6Address::Deserialize(const Value &value)
     {
         if (!value["AddressId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Ipv6Address.AddressId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Ipv6Address.AddressId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_addressId = string(value["AddressId"].GetString());
         m_addressIdHasBeenSet = true;
@@ -70,7 +69,7 @@ CoreInternalOutcome Ipv6Address::Deserialize(const Value &value)
     {
         if (!value["Description"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Ipv6Address.Description` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Ipv6Address.Description` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_description = string(value["Description"].GetString());
         m_descriptionHasBeenSet = true;
@@ -80,7 +79,7 @@ CoreInternalOutcome Ipv6Address::Deserialize(const Value &value)
     {
         if (!value["IsWanIpBlocked"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `Ipv6Address.IsWanIpBlocked` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Ipv6Address.IsWanIpBlocked` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_isWanIpBlocked = value["IsWanIpBlocked"].GetBool();
         m_isWanIpBlockedHasBeenSet = true;
@@ -90,7 +89,7 @@ CoreInternalOutcome Ipv6Address::Deserialize(const Value &value)
     {
         if (!value["State"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Ipv6Address.State` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Ipv6Address.State` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_state = string(value["State"].GetString());
         m_stateHasBeenSet = true;
@@ -100,20 +99,20 @@ CoreInternalOutcome Ipv6Address::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Ipv6Address::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Ipv6Address::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_addressHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Address";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_address.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_address.c_str(), allocator).Move(), allocator);
     }
 
     if (m_primaryHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Primary";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_primary, allocator);
@@ -121,23 +120,23 @@ void Ipv6Address::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_addressIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AddressId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_addressId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_addressId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_descriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Description";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_description.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
     }
 
     if (m_isWanIpBlockedHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsWanIpBlocked";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isWanIpBlocked, allocator);
@@ -145,10 +144,10 @@ void Ipv6Address::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_stateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "State";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_state.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_state.c_str(), allocator).Move(), allocator);
     }
 
 }

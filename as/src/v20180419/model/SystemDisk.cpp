@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::As::V20180419::Model;
-using namespace rapidjson;
 using namespace std;
 
 SystemDisk::SystemDisk() :
@@ -27,7 +26,7 @@ SystemDisk::SystemDisk() :
 {
 }
 
-CoreInternalOutcome SystemDisk::Deserialize(const Value &value)
+CoreInternalOutcome SystemDisk::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome SystemDisk::Deserialize(const Value &value)
     {
         if (!value["DiskType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SystemDisk.DiskType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SystemDisk.DiskType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_diskType = string(value["DiskType"].GetString());
         m_diskTypeHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome SystemDisk::Deserialize(const Value &value)
     {
         if (!value["DiskSize"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `SystemDisk.DiskSize` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SystemDisk.DiskSize` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_diskSize = value["DiskSize"].GetUint64();
         m_diskSizeHasBeenSet = true;
@@ -56,20 +55,20 @@ CoreInternalOutcome SystemDisk::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void SystemDisk::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SystemDisk::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_diskTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_diskType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_diskType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_diskSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_diskSize, allocator);

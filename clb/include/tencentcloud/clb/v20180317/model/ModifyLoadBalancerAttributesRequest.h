@@ -152,6 +152,24 @@ namespace TencentCloud
                      */
                     bool SnatProHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies whether to enable deletion protection.
+                     * @return DeleteProtect Specifies whether to enable deletion protection.
+                     */
+                    bool GetDeleteProtect() const;
+
+                    /**
+                     * 设置Specifies whether to enable deletion protection.
+                     * @param DeleteProtect Specifies whether to enable deletion protection.
+                     */
+                    void SetDeleteProtect(const bool& _deleteProtect);
+
+                    /**
+                     * 判断参数 DeleteProtect 是否已赋值
+                     * @return DeleteProtect 是否已赋值
+                     */
+                    bool DeleteProtectHasBeenSet() const;
+
                 private:
 
                     /**
@@ -189,6 +207,12 @@ namespace TencentCloud
                      */
                     bool m_snatPro;
                     bool m_snatProHasBeenSet;
+
+                    /**
+                     * Specifies whether to enable deletion protection.
+                     */
+                    bool m_deleteProtect;
+                    bool m_deleteProtectHasBeenSet;
 
                 };
             }

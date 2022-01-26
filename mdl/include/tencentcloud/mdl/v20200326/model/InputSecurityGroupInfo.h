@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取List of whitelist entries.
-                     * @return Whitelist List of whitelist entries.
+                     * 获取List of allowlist entries.
+                     * @return Whitelist List of allowlist entries.
                      */
                     std::vector<std::string> GetWhitelist() const;
 
                     /**
-                     * 设置List of whitelist entries.
-                     * @param Whitelist List of whitelist entries.
+                     * 设置List of allowlist entries.
+                     * @param Whitelist List of allowlist entries.
                      */
                     void SetWhitelist(const std::vector<std::string>& _whitelist);
 
@@ -155,7 +155,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_nameHasBeenSet;
 
                     /**
-                     * List of whitelist entries.
+                     * List of allowlist entries.
                      */
                     std::vector<std::string> m_whitelist;
                     bool m_whitelistHasBeenSet;

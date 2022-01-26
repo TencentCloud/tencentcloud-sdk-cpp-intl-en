@@ -98,6 +98,24 @@ namespace TencentCloud
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取ID of the CDC instance to which the subnets will be created
+                     * @return CdcId ID of the CDC instance to which the subnets will be created
+                     */
+                    std::string GetCdcId() const;
+
+                    /**
+                     * 设置ID of the CDC instance to which the subnets will be created
+                     * @param CdcId ID of the CDC instance to which the subnets will be created
+                     */
+                    void SetCdcId(const std::string& _cdcId);
+
+                    /**
+                     * 判断参数 CdcId 是否已赋值
+                     * @return CdcId 是否已赋值
+                     */
+                    bool CdcIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -117,6 +135,12 @@ namespace TencentCloud
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * ID of the CDC instance to which the subnets will be created
+                     */
+                    std::string m_cdcId;
+                    bool m_cdcIdHasBeenSet;
 
                 };
             }

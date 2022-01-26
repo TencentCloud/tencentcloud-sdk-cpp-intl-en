@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mdl::V20200326::Model;
-using namespace rapidjson;
 using namespace std;
 
 OutputsStatistics::OutputsStatistics() :
@@ -27,7 +26,7 @@ OutputsStatistics::OutputsStatistics() :
 {
 }
 
-CoreInternalOutcome OutputsStatistics::Deserialize(const Value &value)
+CoreInternalOutcome OutputsStatistics::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -35,10 +34,10 @@ CoreInternalOutcome OutputsStatistics::Deserialize(const Value &value)
     if (value.HasMember("Pipeline0") && !value["Pipeline0"].IsNull())
     {
         if (!value["Pipeline0"].IsArray())
-            return CoreInternalOutcome(Error("response `OutputsStatistics.Pipeline0` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `OutputsStatistics.Pipeline0` is not array type"));
 
-        const Value &tmpValue = value["Pipeline0"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Pipeline0"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             PipelineOutputStatistics item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -55,10 +54,10 @@ CoreInternalOutcome OutputsStatistics::Deserialize(const Value &value)
     if (value.HasMember("Pipeline1") && !value["Pipeline1"].IsNull())
     {
         if (!value["Pipeline1"].IsArray())
-            return CoreInternalOutcome(Error("response `OutputsStatistics.Pipeline1` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `OutputsStatistics.Pipeline1` is not array type"));
 
-        const Value &tmpValue = value["Pipeline1"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Pipeline1"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             PipelineOutputStatistics item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -76,35 +75,35 @@ CoreInternalOutcome OutputsStatistics::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void OutputsStatistics::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void OutputsStatistics::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_pipeline0HasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Pipeline0";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_pipeline0.begin(); itr != m_pipeline0.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_pipeline1HasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Pipeline1";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_pipeline1.begin(); itr != m_pipeline1.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }

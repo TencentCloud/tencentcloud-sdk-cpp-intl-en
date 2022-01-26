@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Ssl::V20191205::Model;
-using namespace rapidjson;
 using namespace std;
 
 ReplaceCertificateRequest::ReplaceCertificateRequest() :
@@ -28,60 +27,69 @@ ReplaceCertificateRequest::ReplaceCertificateRequest() :
     m_validTypeHasBeenSet(false),
     m_csrTypeHasBeenSet(false),
     m_csrContentHasBeenSet(false),
-    m_csrkeyPasswordHasBeenSet(false)
+    m_csrkeyPasswordHasBeenSet(false),
+    m_reasonHasBeenSet(false)
 {
 }
 
 string ReplaceCertificateRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_certificateIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CertificateId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_certificateId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_certificateId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_validTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ValidType";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_validType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_validType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_csrTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CsrType";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_csrType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_csrType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_csrContentHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CsrContent";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_csrContent.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_csrContent.c_str(), allocator).Move(), allocator);
     }
 
     if (m_csrkeyPasswordHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CsrkeyPassword";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_csrkeyPassword.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_csrkeyPassword.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_reasonHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Reason";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_reason.c_str(), allocator).Move(), allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -165,6 +173,22 @@ void ReplaceCertificateRequest::SetCsrkeyPassword(const string& _csrkeyPassword)
 bool ReplaceCertificateRequest::CsrkeyPasswordHasBeenSet() const
 {
     return m_csrkeyPasswordHasBeenSet;
+}
+
+string ReplaceCertificateRequest::GetReason() const
+{
+    return m_reason;
+}
+
+void ReplaceCertificateRequest::SetReason(const string& _reason)
+{
+    m_reason = _reason;
+    m_reasonHasBeenSet = true;
+}
+
+bool ReplaceCertificateRequest::ReasonHasBeenSet() const
+{
+    return m_reasonHasBeenSet;
 }
 
 

@@ -346,6 +346,94 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TargetGroupHasBeenSet() const;
 
+                    /**
+                     * 获取Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return SessionType Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetSessionType() const;
+
+                    /**
+                     * 设置Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param SessionType Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetSessionType(const std::string& _sessionType);
+
+                    /**
+                     * 判断参数 SessionType 是否已赋值
+                     * @return SessionType 是否已赋值
+                     */
+                    bool SessionTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether a persistent connection is enabled (1: enabled; 0: disabled). This parameter can only be configured in HTTP/HTTPS listeners.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return KeepaliveEnable Whether a persistent connection is enabled (1: enabled; 0: disabled). This parameter can only be configured in HTTP/HTTPS listeners.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetKeepaliveEnable() const;
+
+                    /**
+                     * 设置Whether a persistent connection is enabled (1: enabled; 0: disabled). This parameter can only be configured in HTTP/HTTPS listeners.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param KeepaliveEnable Whether a persistent connection is enabled (1: enabled; 0: disabled). This parameter can only be configured in HTTP/HTTPS listeners.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetKeepaliveEnable(const int64_t& _keepaliveEnable);
+
+                    /**
+                     * 判断参数 KeepaliveEnable 是否已赋值
+                     * @return KeepaliveEnable 是否已赋值
+                     */
+                    bool KeepaliveEnableHasBeenSet() const;
+
+                    /**
+                     * 获取Only the NAT64 CLB TCP listeners are supported.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Toa Only the NAT64 CLB TCP listeners are supported.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool GetToa() const;
+
+                    /**
+                     * 设置Only the NAT64 CLB TCP listeners are supported.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param Toa Only the NAT64 CLB TCP listeners are supported.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetToa(const bool& _toa);
+
+                    /**
+                     * 判断参数 Toa 是否已赋值
+                     * @return Toa 是否已赋值
+                     */
+                    bool ToaHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return DeregisterTargetRst Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool GetDeregisterTargetRst() const;
+
+                    /**
+                     * 设置Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param DeregisterTargetRst Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetDeregisterTargetRst(const bool& _deregisterTargetRst);
+
+                    /**
+                     * 判断参数 DeregisterTargetRst 是否已赋值
+                     * @return DeregisterTargetRst 是否已赋值
+                     */
+                    bool DeregisterTargetRstHasBeenSet() const;
+
                 private:
 
                     /**
@@ -442,6 +530,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     BasicTargetGroupInfo m_targetGroup;
                     bool m_targetGroupHasBeenSet;
+
+                    /**
+                     * Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_sessionType;
+                    bool m_sessionTypeHasBeenSet;
+
+                    /**
+                     * Whether a persistent connection is enabled (1: enabled; 0: disabled). This parameter can only be configured in HTTP/HTTPS listeners.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_keepaliveEnable;
+                    bool m_keepaliveEnableHasBeenSet;
+
+                    /**
+                     * Only the NAT64 CLB TCP listeners are supported.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool m_toa;
+                    bool m_toaHasBeenSet;
+
+                    /**
+                     * Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool m_deregisterTargetRst;
+                    bool m_deregisterTargetRstHasBeenSet;
 
                 };
             }

@@ -40,6 +40,7 @@ namespace TencentCloud
                     DescribeDDoSTrendResponse();
                     ~DescribeDDoSTrendResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -129,8 +130,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Value array
-                     * @return Data Value array
+                     * 获取Value array. The unit for attack traffic bandwidth is Mbps, and that for the packet rate is pps.
+                     * @return Data Value array. The unit for attack traffic bandwidth is Mbps, and that for the packet rate is pps.
                      */
                     std::vector<uint64_t> GetData() const;
 
@@ -198,7 +199,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Value array
+                     * Value array. The unit for attack traffic bandwidth is Mbps, and that for the packet rate is pps.
                      */
                     std::vector<uint64_t> m_data;
                     bool m_dataHasBeenSet;

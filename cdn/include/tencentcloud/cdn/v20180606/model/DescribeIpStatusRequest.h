@@ -90,6 +90,54 @@ If this parameter is left empty, edge server information will be returned by def
                      */
                     bool LayerHasBeenSet() const;
 
+                    /**
+                     * 获取Region to be queried.
+mainland: domestic nodes
+overseas: overseas nodes
+global: global nodes
+                     * @return Area Region to be queried.
+mainland: domestic nodes
+overseas: overseas nodes
+global: global nodes
+                     */
+                    std::string GetArea() const;
+
+                    /**
+                     * 设置Region to be queried.
+mainland: domestic nodes
+overseas: overseas nodes
+global: global nodes
+                     * @param Area Region to be queried.
+mainland: domestic nodes
+overseas: overseas nodes
+global: global nodes
+                     */
+                    void SetArea(const std::string& _area);
+
+                    /**
+                     * 判断参数 Area 是否已赋值
+                     * @return Area 是否已赋值
+                     */
+                    bool AreaHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to return a value as an IP range
+                     * @return Segment Whether to return a value as an IP range
+                     */
+                    bool GetSegment() const;
+
+                    /**
+                     * 设置Whether to return a value as an IP range
+                     * @param Segment Whether to return a value as an IP range
+                     */
+                    void SetSegment(const bool& _segment);
+
+                    /**
+                     * 判断参数 Segment 是否已赋值
+                     * @return Segment 是否已赋值
+                     */
+                    bool SegmentHasBeenSet() const;
+
                 private:
 
                     /**
@@ -106,6 +154,21 @@ If this parameter is left empty, edge server information will be returned by def
                      */
                     std::string m_layer;
                     bool m_layerHasBeenSet;
+
+                    /**
+                     * Region to be queried.
+mainland: domestic nodes
+overseas: overseas nodes
+global: global nodes
+                     */
+                    std::string m_area;
+                    bool m_areaHasBeenSet;
+
+                    /**
+                     * Whether to return a value as an IP range
+                     */
+                    bool m_segment;
+                    bool m_segmentHasBeenSet;
 
                 };
             }

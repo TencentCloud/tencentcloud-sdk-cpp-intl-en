@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Layer name, which can contain 1–64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
-                     * @return LayerName Layer name, which can contain 1–64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
+                     * 获取Layer name, which can contain 1-64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
+                     * @return LayerName Layer name, which can contain 1-64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
                      */
                     std::string GetLayerName() const;
 
                     /**
-                     * 设置Layer name, which can contain 1–64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
-                     * @param LayerName Layer name, which can contain 1–64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
+                     * 设置Layer name, which can contain 1-64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
+                     * @param LayerName Layer name, which can contain 1-64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
                      */
                     void SetLayerName(const std::string& _layerName);
 
@@ -136,7 +136,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Layer name, which can contain 1–64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
+                     * Layer name, which can contain 1-64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
                      */
                     std::string m_layerName;
                     bool m_layerNameHasBeenSet;

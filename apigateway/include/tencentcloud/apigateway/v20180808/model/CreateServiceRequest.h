@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/apigateway/v20180808/model/Tag.h>
 
 
 namespace TencentCloud
@@ -43,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Custom service name. If this parameter is left empty, the system will automatically generate a unique name.
-                     * @return ServiceName Custom service name. If this parameter is left empty, the system will automatically generate a unique name.
+                     * 获取Custom service name.
+                     * @return ServiceName Custom service name.
                      */
                     std::string GetServiceName() const;
 
                     /**
-                     * 设置Custom service name. If this parameter is left empty, the system will automatically generate a unique name.
-                     * @param ServiceName Custom service name. If this parameter is left empty, the system will automatically generate a unique name.
+                     * 设置Custom service name.
+                     * @param ServiceName Custom service name.
                      */
                     void SetServiceName(const std::string& _serviceName);
 
@@ -97,14 +98,14 @@ namespace TencentCloud
                     bool ServiceDescHasBeenSet() const;
 
                     /**
-                     * 获取Self-deployed cluster name, which is used to specify the self-deployed cluster where the service is to be created.
-                     * @return ExclusiveSetName Self-deployed cluster name, which is used to specify the self-deployed cluster where the service is to be created.
+                     * 获取Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
+                     * @return ExclusiveSetName Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
                      */
                     std::string GetExclusiveSetName() const;
 
                     /**
-                     * 设置Self-deployed cluster name, which is used to specify the self-deployed cluster where the service is to be created.
-                     * @param ExclusiveSetName Self-deployed cluster name, which is used to specify the self-deployed cluster where the service is to be created.
+                     * 设置Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
+                     * @param ExclusiveSetName Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
                      */
                     void SetExclusiveSetName(const std::string& _exclusiveSetName);
 
@@ -186,10 +187,46 @@ namespace TencentCloud
                      */
                     bool AppIdTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Tag information.
+                     * @return Tags Tag information.
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Tag information.
+                     * @param Tags Tag information.
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取Dedicated instance ID
+                     * @return InstanceId Dedicated instance ID
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置Dedicated instance ID
+                     * @param InstanceId Dedicated instance ID
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Custom service name. If this parameter is left empty, the system will automatically generate a unique name.
+                     * Custom service name.
                      */
                     std::string m_serviceName;
                     bool m_serviceNameHasBeenSet;
@@ -207,7 +244,7 @@ namespace TencentCloud
                     bool m_serviceDescHasBeenSet;
 
                     /**
-                     * Self-deployed cluster name, which is used to specify the self-deployed cluster where the service is to be created.
+                     * Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
                      */
                     std::string m_exclusiveSetName;
                     bool m_exclusiveSetNameHasBeenSet;
@@ -235,6 +272,18 @@ namespace TencentCloud
                      */
                     std::string m_appIdType;
                     bool m_appIdTypeHasBeenSet;
+
+                    /**
+                     * Tag information.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * Dedicated instance ID
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
 
                 };
             }

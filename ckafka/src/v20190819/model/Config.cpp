@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ckafka::V20190819::Model;
-using namespace rapidjson;
 using namespace std;
 
 Config::Config() :
@@ -28,11 +27,12 @@ Config::Config() :
     m_segmentMsHasBeenSet(false),
     m_uncleanLeaderElectionEnableHasBeenSet(false),
     m_segmentBytesHasBeenSet(false),
-    m_maxMessageBytesHasBeenSet(false)
+    m_maxMessageBytesHasBeenSet(false),
+    m_retentionBytesHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome Config::Deserialize(const Value &value)
+CoreInternalOutcome Config::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +41,7 @@ CoreInternalOutcome Config::Deserialize(const Value &value)
     {
         if (!value["Retention"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Config.Retention` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Config.Retention` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_retention = value["Retention"].GetInt64();
         m_retentionHasBeenSet = true;
@@ -51,7 +51,7 @@ CoreInternalOutcome Config::Deserialize(const Value &value)
     {
         if (!value["MinInsyncReplicas"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Config.MinInsyncReplicas` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Config.MinInsyncReplicas` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_minInsyncReplicas = value["MinInsyncReplicas"].GetInt64();
         m_minInsyncReplicasHasBeenSet = true;
@@ -61,7 +61,7 @@ CoreInternalOutcome Config::Deserialize(const Value &value)
     {
         if (!value["CleanUpPolicy"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Config.CleanUpPolicy` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Config.CleanUpPolicy` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cleanUpPolicy = string(value["CleanUpPolicy"].GetString());
         m_cleanUpPolicyHasBeenSet = true;
@@ -71,7 +71,7 @@ CoreInternalOutcome Config::Deserialize(const Value &value)
     {
         if (!value["SegmentMs"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Config.SegmentMs` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Config.SegmentMs` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_segmentMs = value["SegmentMs"].GetInt64();
         m_segmentMsHasBeenSet = true;
@@ -81,7 +81,7 @@ CoreInternalOutcome Config::Deserialize(const Value &value)
     {
         if (!value["UncleanLeaderElectionEnable"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Config.UncleanLeaderElectionEnable` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Config.UncleanLeaderElectionEnable` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_uncleanLeaderElectionEnable = value["UncleanLeaderElectionEnable"].GetInt64();
         m_uncleanLeaderElectionEnableHasBeenSet = true;
@@ -91,7 +91,7 @@ CoreInternalOutcome Config::Deserialize(const Value &value)
     {
         if (!value["SegmentBytes"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Config.SegmentBytes` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Config.SegmentBytes` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_segmentBytes = value["SegmentBytes"].GetInt64();
         m_segmentBytesHasBeenSet = true;
@@ -101,22 +101,32 @@ CoreInternalOutcome Config::Deserialize(const Value &value)
     {
         if (!value["MaxMessageBytes"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Config.MaxMessageBytes` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Config.MaxMessageBytes` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_maxMessageBytes = value["MaxMessageBytes"].GetInt64();
         m_maxMessageBytesHasBeenSet = true;
+    }
+
+    if (value.HasMember("RetentionBytes") && !value["RetentionBytes"].IsNull())
+    {
+        if (!value["RetentionBytes"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `Config.RetentionBytes` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_retentionBytes = value["RetentionBytes"].GetInt64();
+        m_retentionBytesHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void Config::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Config::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_retentionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Retention";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_retention, allocator);
@@ -124,7 +134,7 @@ void Config::ToJsonObject(Value &value, Document::AllocatorType& allocator) cons
 
     if (m_minInsyncReplicasHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MinInsyncReplicas";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_minInsyncReplicas, allocator);
@@ -132,15 +142,15 @@ void Config::ToJsonObject(Value &value, Document::AllocatorType& allocator) cons
 
     if (m_cleanUpPolicyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CleanUpPolicy";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cleanUpPolicy.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cleanUpPolicy.c_str(), allocator).Move(), allocator);
     }
 
     if (m_segmentMsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SegmentMs";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_segmentMs, allocator);
@@ -148,7 +158,7 @@ void Config::ToJsonObject(Value &value, Document::AllocatorType& allocator) cons
 
     if (m_uncleanLeaderElectionEnableHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UncleanLeaderElectionEnable";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_uncleanLeaderElectionEnable, allocator);
@@ -156,7 +166,7 @@ void Config::ToJsonObject(Value &value, Document::AllocatorType& allocator) cons
 
     if (m_segmentBytesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SegmentBytes";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_segmentBytes, allocator);
@@ -164,10 +174,18 @@ void Config::ToJsonObject(Value &value, Document::AllocatorType& allocator) cons
 
     if (m_maxMessageBytesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaxMessageBytes";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_maxMessageBytes, allocator);
+    }
+
+    if (m_retentionBytesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RetentionBytes";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_retentionBytes, allocator);
     }
 
 }
@@ -283,5 +301,21 @@ void Config::SetMaxMessageBytes(const int64_t& _maxMessageBytes)
 bool Config::MaxMessageBytesHasBeenSet() const
 {
     return m_maxMessageBytesHasBeenSet;
+}
+
+int64_t Config::GetRetentionBytes() const
+{
+    return m_retentionBytes;
+}
+
+void Config::SetRetentionBytes(const int64_t& _retentionBytes)
+{
+    m_retentionBytes = _retentionBytes;
+    m_retentionBytesHasBeenSet = true;
+}
+
+bool Config::RetentionBytesHasBeenSet() const
+{
+    return m_retentionBytesHasBeenSet;
 }
 

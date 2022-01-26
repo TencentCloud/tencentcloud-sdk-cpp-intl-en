@@ -226,6 +226,42 @@ namespace TencentCloud
                      */
                     bool SubnetNameHasBeenSet() const;
 
+                    /**
+                     * 获取CCN instance ID used by CFS Turbo
+                     * @return CcnID CCN instance ID used by CFS Turbo
+                     */
+                    std::string GetCcnID() const;
+
+                    /**
+                     * 设置CCN instance ID used by CFS Turbo
+                     * @param CcnID CCN instance ID used by CFS Turbo
+                     */
+                    void SetCcnID(const std::string& _ccnID);
+
+                    /**
+                     * 判断参数 CcnID 是否已赋值
+                     * @return CcnID 是否已赋值
+                     */
+                    bool CcnIDHasBeenSet() const;
+
+                    /**
+                     * 获取CCN IP range used by CFS Turbo
+                     * @return CidrBlock CCN IP range used by CFS Turbo
+                     */
+                    std::string GetCidrBlock() const;
+
+                    /**
+                     * 设置CCN IP range used by CFS Turbo
+                     * @param CidrBlock CCN IP range used by CFS Turbo
+                     */
+                    void SetCidrBlock(const std::string& _cidrBlock);
+
+                    /**
+                     * 判断参数 CidrBlock 是否已赋值
+                     * @return CidrBlock 是否已赋值
+                     */
+                    bool CidrBlockHasBeenSet() const;
+
                 private:
 
                     /**
@@ -287,6 +323,18 @@ namespace TencentCloud
                      */
                     std::string m_subnetName;
                     bool m_subnetNameHasBeenSet;
+
+                    /**
+                     * CCN instance ID used by CFS Turbo
+                     */
+                    std::string m_ccnID;
+                    bool m_ccnIDHasBeenSet;
+
+                    /**
+                     * CCN IP range used by CFS Turbo
+                     */
+                    std::string m_cidrBlock;
+                    bool m_cidrBlockHasBeenSet;
 
                 };
             }

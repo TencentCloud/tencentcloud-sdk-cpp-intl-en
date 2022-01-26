@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Clb::V20180317::Model;
-using namespace rapidjson;
 using namespace std;
 
 ModifyLoadBalancerAttributesRequest::ModifyLoadBalancerAttributesRequest() :
@@ -29,54 +28,55 @@ ModifyLoadBalancerAttributesRequest::ModifyLoadBalancerAttributesRequest() :
     m_targetRegionInfoHasBeenSet(false),
     m_internetChargeInfoHasBeenSet(false),
     m_loadBalancerPassToTargetHasBeenSet(false),
-    m_snatProHasBeenSet(false)
+    m_snatProHasBeenSet(false),
+    m_deleteProtectHasBeenSet(false)
 {
 }
 
 string ModifyLoadBalancerAttributesRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_loadBalancerIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LoadBalancerId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_loadBalancerId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_loadBalancerId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_loadBalancerNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LoadBalancerName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_loadBalancerName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_loadBalancerName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_targetRegionInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TargetRegionInfo";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_targetRegionInfo.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_internetChargeInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InternetChargeInfo";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_internetChargeInfo.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_loadBalancerPassToTargetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LoadBalancerPassToTarget";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_loadBalancerPassToTarget, allocator);
@@ -84,15 +84,23 @@ string ModifyLoadBalancerAttributesRequest::ToJsonString() const
 
     if (m_snatProHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SnatPro";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_snatPro, allocator);
     }
 
+    if (m_deleteProtectHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DeleteProtect";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_deleteProtect, allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -192,6 +200,22 @@ void ModifyLoadBalancerAttributesRequest::SetSnatPro(const bool& _snatPro)
 bool ModifyLoadBalancerAttributesRequest::SnatProHasBeenSet() const
 {
     return m_snatProHasBeenSet;
+}
+
+bool ModifyLoadBalancerAttributesRequest::GetDeleteProtect() const
+{
+    return m_deleteProtect;
+}
+
+void ModifyLoadBalancerAttributesRequest::SetDeleteProtect(const bool& _deleteProtect)
+{
+    m_deleteProtect = _deleteProtect;
+    m_deleteProtectHasBeenSet = true;
+}
+
+bool ModifyLoadBalancerAttributesRequest::DeleteProtectHasBeenSet() const
+{
+    return m_deleteProtectHasBeenSet;
 }
 
 

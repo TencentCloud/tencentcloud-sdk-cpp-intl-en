@@ -47,26 +47,26 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Recording interval.
-In seconds. Default value: 1800.
-Value range: 300–7200.
-This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
-                     * @return RecordInterval Recording interval.
-In seconds. Default value: 1800.
-Value range: 300–7200.
-This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
+                     * 获取Max recording time per file
+Default value: `1800` (seconds)
+Value range: 30-7200
+This parameter is invalid for HLS. Only one HLS file will be generated from push start to push end.
+                     * @return RecordInterval Max recording time per file
+Default value: `1800` (seconds)
+Value range: 30-7200
+This parameter is invalid for HLS. Only one HLS file will be generated from push start to push end.
                      */
                     int64_t GetRecordInterval() const;
 
                     /**
-                     * 设置Recording interval.
-In seconds. Default value: 1800.
-Value range: 300–7200.
-This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
-                     * @param RecordInterval Recording interval.
-In seconds. Default value: 1800.
-Value range: 300–7200.
-This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
+                     * 设置Max recording time per file
+Default value: `1800` (seconds)
+Value range: 30-7200
+This parameter is invalid for HLS. Only one HLS file will be generated from push start to push end.
+                     * @param RecordInterval Max recording time per file
+Default value: `1800` (seconds)
+Value range: 30-7200
+This parameter is invalid for HLS. Only one HLS file will be generated from push start to push end.
                      */
                     void SetRecordInterval(const int64_t& _recordInterval);
 
@@ -77,22 +77,22 @@ This parameter is not valid for HLS, and a file will be generated from push star
                     bool RecordIntervalHasBeenSet() const;
 
                     /**
-                     * 获取Recording storage period.
-In seconds. Value range: 0–93312000.
-0: permanent storage.
-                     * @return StorageTime Recording storage period.
-In seconds. Value range: 0–93312000.
-0: permanent storage.
+                     * 获取Storage duration of the recording file
+Value range: 0-129600000 seconds (0-1500 days)
+`0`: permanent
+                     * @return StorageTime Storage duration of the recording file
+Value range: 0-129600000 seconds (0-1500 days)
+`0`: permanent
                      */
                     int64_t GetStorageTime() const;
 
                     /**
-                     * 设置Recording storage period.
-In seconds. Value range: 0–93312000.
-0: permanent storage.
-                     * @param StorageTime Recording storage period.
-In seconds. Value range: 0–93312000.
-0: permanent storage.
+                     * 设置Storage duration of the recording file
+Value range: 0-129600000 seconds (0-1500 days)
+`0`: permanent
+                     * @param StorageTime Storage duration of the recording file
+Value range: 0-129600000 seconds (0-1500 days)
+`0`: permanent
                      */
                     void SetStorageTime(const int64_t& _storageTime);
 
@@ -228,21 +228,95 @@ If this parameter is not set, the recording filename will be `{StreamID}_{StartY
                      */
                     bool VodFileNameHasBeenSet() const;
 
+                    /**
+                     * 获取Task flow
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return Procedure Task flow
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    std::string GetProcedure() const;
+
+                    /**
+                     * 设置Task flow
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param Procedure Task flow
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    void SetProcedure(const std::string& _procedure);
+
+                    /**
+                     * 判断参数 Procedure 是否已赋值
+                     * @return Procedure 是否已赋值
+                     */
+                    bool ProcedureHasBeenSet() const;
+
+                    /**
+                     * 获取Video storage class. Valid values:
+`normal`: STANDARD
+`cold`: STANDARD_IA
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return StorageMode Video storage class. Valid values:
+`normal`: STANDARD
+`cold`: STANDARD_IA
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    std::string GetStorageMode() const;
+
+                    /**
+                     * 设置Video storage class. Valid values:
+`normal`: STANDARD
+`cold`: STANDARD_IA
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param StorageMode Video storage class. Valid values:
+`normal`: STANDARD
+`cold`: STANDARD_IA
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    void SetStorageMode(const std::string& _storageMode);
+
+                    /**
+                     * 判断参数 StorageMode 是否已赋值
+                     * @return StorageMode 是否已赋值
+                     */
+                    bool StorageModeHasBeenSet() const;
+
+                    /**
+                     * 获取VOD subapplication category
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return ClassId VOD subapplication category
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    int64_t GetClassId() const;
+
+                    /**
+                     * 设置VOD subapplication category
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param ClassId VOD subapplication category
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    void SetClassId(const int64_t& _classId);
+
+                    /**
+                     * 判断参数 ClassId 是否已赋值
+                     * @return ClassId 是否已赋值
+                     */
+                    bool ClassIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Recording interval.
-In seconds. Default value: 1800.
-Value range: 300–7200.
-This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
+                     * Max recording time per file
+Default value: `1800` (seconds)
+Value range: 30-7200
+This parameter is invalid for HLS. Only one HLS file will be generated from push start to push end.
                      */
                     int64_t m_recordInterval;
                     bool m_recordIntervalHasBeenSet;
 
                     /**
-                     * Recording storage period.
-In seconds. Value range: 0–93312000.
-0: permanent storage.
+                     * Storage duration of the recording file
+Value range: 0-129600000 seconds (0-1500 days)
+`0`: permanent
                      */
                     int64_t m_storageTime;
                     bool m_storageTimeHasBeenSet;
@@ -282,6 +356,29 @@ If this parameter is not set, the recording filename will be `{StreamID}_{StartY
                      */
                     std::string m_vodFileName;
                     bool m_vodFileNameHasBeenSet;
+
+                    /**
+                     * Task flow
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    std::string m_procedure;
+                    bool m_procedureHasBeenSet;
+
+                    /**
+                     * Video storage class. Valid values:
+`normal`: STANDARD
+`cold`: STANDARD_IA
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    std::string m_storageMode;
+                    bool m_storageModeHasBeenSet;
+
+                    /**
+                     * VOD subapplication category
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    int64_t m_classId;
+                    bool m_classIdHasBeenSet;
 
                 };
             }

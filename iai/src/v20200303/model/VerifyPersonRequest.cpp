@@ -20,13 +20,12 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Iai::V20200303::Model;
-using namespace rapidjson;
 using namespace std;
 
 VerifyPersonRequest::VerifyPersonRequest() :
+    m_personIdHasBeenSet(false),
     m_imageHasBeenSet(false),
     m_urlHasBeenSet(false),
-    m_personIdHasBeenSet(false),
     m_qualityControlHasBeenSet(false),
     m_needRotateDetectionHasBeenSet(false)
 {
@@ -34,38 +33,38 @@ VerifyPersonRequest::VerifyPersonRequest() :
 
 string VerifyPersonRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
+
+    if (m_personIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PersonId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_personId.c_str(), allocator).Move(), allocator);
+    }
 
     if (m_imageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Image";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_image.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_image.c_str(), allocator).Move(), allocator);
     }
 
     if (m_urlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Url";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_url.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_personIdHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "PersonId";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_personId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_url.c_str(), allocator).Move(), allocator);
     }
 
     if (m_qualityControlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "QualityControl";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_qualityControl, allocator);
@@ -73,19 +72,35 @@ string VerifyPersonRequest::ToJsonString() const
 
     if (m_needRotateDetectionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NeedRotateDetection";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_needRotateDetection, allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
 
+
+string VerifyPersonRequest::GetPersonId() const
+{
+    return m_personId;
+}
+
+void VerifyPersonRequest::SetPersonId(const string& _personId)
+{
+    m_personId = _personId;
+    m_personIdHasBeenSet = true;
+}
+
+bool VerifyPersonRequest::PersonIdHasBeenSet() const
+{
+    return m_personIdHasBeenSet;
+}
 
 string VerifyPersonRequest::GetImage() const
 {
@@ -117,22 +132,6 @@ void VerifyPersonRequest::SetUrl(const string& _url)
 bool VerifyPersonRequest::UrlHasBeenSet() const
 {
     return m_urlHasBeenSet;
-}
-
-string VerifyPersonRequest::GetPersonId() const
-{
-    return m_personId;
-}
-
-void VerifyPersonRequest::SetPersonId(const string& _personId)
-{
-    m_personId = _personId;
-    m_personIdHasBeenSet = true;
-}
-
-bool VerifyPersonRequest::PersonIdHasBeenSet() const
-{
-    return m_personIdHasBeenSet;
 }
 
 uint64_t VerifyPersonRequest::GetQualityControl() const

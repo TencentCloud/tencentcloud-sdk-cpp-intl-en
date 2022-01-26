@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 HttpHeaderParam::HttpHeaderParam() :
@@ -27,7 +26,7 @@ HttpHeaderParam::HttpHeaderParam() :
 {
 }
 
-CoreInternalOutcome HttpHeaderParam::Deserialize(const Value &value)
+CoreInternalOutcome HttpHeaderParam::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome HttpHeaderParam::Deserialize(const Value &value)
     {
         if (!value["HeaderName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HttpHeaderParam.HeaderName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HttpHeaderParam.HeaderName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_headerName = string(value["HeaderName"].GetString());
         m_headerNameHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome HttpHeaderParam::Deserialize(const Value &value)
     {
         if (!value["HeaderValue"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HttpHeaderParam.HeaderValue` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HttpHeaderParam.HeaderValue` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_headerValue = string(value["HeaderValue"].GetString());
         m_headerValueHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome HttpHeaderParam::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void HttpHeaderParam::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void HttpHeaderParam::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_headerNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HeaderName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_headerName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_headerName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_headerValueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HeaderValue";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_headerValue.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_headerValue.c_str(), allocator).Move(), allocator);
     }
 
 }

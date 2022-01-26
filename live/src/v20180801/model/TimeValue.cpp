@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Live::V20180801::Model;
-using namespace rapidjson;
 using namespace std;
 
 TimeValue::TimeValue() :
@@ -27,7 +26,7 @@ TimeValue::TimeValue() :
 {
 }
 
-CoreInternalOutcome TimeValue::Deserialize(const Value &value)
+CoreInternalOutcome TimeValue::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome TimeValue::Deserialize(const Value &value)
     {
         if (!value["Time"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TimeValue.Time` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TimeValue.Time` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_time = string(value["Time"].GetString());
         m_timeHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome TimeValue::Deserialize(const Value &value)
     {
         if (!value["Num"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TimeValue.Num` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TimeValue.Num` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_num = value["Num"].GetUint64();
         m_numHasBeenSet = true;
@@ -56,20 +55,20 @@ CoreInternalOutcome TimeValue::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void TimeValue::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TimeValue::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_timeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Time";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_time.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_time.c_str(), allocator).Move(), allocator);
     }
 
     if (m_numHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Num";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_num, allocator);

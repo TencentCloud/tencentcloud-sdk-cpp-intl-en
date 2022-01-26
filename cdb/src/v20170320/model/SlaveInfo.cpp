@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 SlaveInfo::SlaveInfo() :
@@ -27,7 +26,7 @@ SlaveInfo::SlaveInfo() :
 {
 }
 
-CoreInternalOutcome SlaveInfo::Deserialize(const Value &value)
+CoreInternalOutcome SlaveInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome SlaveInfo::Deserialize(const Value &value)
     {
         if (!value["First"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `SlaveInfo.First` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlaveInfo.First` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_first.Deserialize(value["First"]);
@@ -53,7 +52,7 @@ CoreInternalOutcome SlaveInfo::Deserialize(const Value &value)
     {
         if (!value["Second"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `SlaveInfo.Second` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlaveInfo.Second` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_second.Deserialize(value["Second"]);
@@ -70,24 +69,24 @@ CoreInternalOutcome SlaveInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void SlaveInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SlaveInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_firstHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "First";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_first.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_secondHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Second";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_second.ToJsonObject(value[key.c_str()], allocator);
     }
 

@@ -47,24 +47,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Resource name
-                     * @return ResourceName Resource name
-                     */
-                    std::string GetResourceName() const;
-
-                    /**
-                     * 设置Resource name
-                     * @param ResourceName Resource name
-                     */
-                    void SetResourceName(const std::string& _resourceName);
-
-                    /**
-                     * 判断参数 ResourceName 是否已赋值
-                     * @return ResourceName 是否已赋值
-                     */
-                    bool ResourceNameHasBeenSet() const;
-
-                    /**
                      * 获取Resource type
                      * @return ResourceType Resource type
                      */
@@ -82,19 +64,42 @@ namespace TencentCloud
                      */
                     bool ResourceTypeHasBeenSet() const;
 
-                private:
+                    /**
+                     * 获取Resource name
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @return ResourceName Resource name
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    std::string GetResourceName() const;
 
                     /**
-                     * Resource name
+                     * 设置Resource name
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @param ResourceName Resource name
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      */
-                    std::string m_resourceName;
-                    bool m_resourceNameHasBeenSet;
+                    void SetResourceName(const std::string& _resourceName);
+
+                    /**
+                     * 判断参数 ResourceName 是否已赋值
+                     * @return ResourceName 是否已赋值
+                     */
+                    bool ResourceNameHasBeenSet() const;
+
+                private:
 
                     /**
                      * Resource type
                      */
                     std::string m_resourceType;
                     bool m_resourceTypeHasBeenSet;
+
+                    /**
+                     * Resource name
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    std::string m_resourceName;
+                    bool m_resourceNameHasBeenSet;
 
                 };
             }

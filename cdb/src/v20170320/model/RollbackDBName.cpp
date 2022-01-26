@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 RollbackDBName::RollbackDBName() :
@@ -27,7 +26,7 @@ RollbackDBName::RollbackDBName() :
 {
 }
 
-CoreInternalOutcome RollbackDBName::Deserialize(const Value &value)
+CoreInternalOutcome RollbackDBName::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome RollbackDBName::Deserialize(const Value &value)
     {
         if (!value["DatabaseName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RollbackDBName.DatabaseName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RollbackDBName.DatabaseName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_databaseName = string(value["DatabaseName"].GetString());
         m_databaseNameHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome RollbackDBName::Deserialize(const Value &value)
     {
         if (!value["NewDatabaseName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RollbackDBName.NewDatabaseName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RollbackDBName.NewDatabaseName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_newDatabaseName = string(value["NewDatabaseName"].GetString());
         m_newDatabaseNameHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome RollbackDBName::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void RollbackDBName::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void RollbackDBName::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_databaseNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DatabaseName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_databaseName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_databaseName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_newDatabaseNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NewDatabaseName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_newDatabaseName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_newDatabaseName.c_str(), allocator).Move(), allocator);
     }
 
 }

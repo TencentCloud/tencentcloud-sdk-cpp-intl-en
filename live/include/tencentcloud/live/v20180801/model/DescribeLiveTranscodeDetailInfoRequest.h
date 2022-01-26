@@ -79,22 +79,22 @@ namespace TencentCloud
                     bool StreamNameHasBeenSet() const;
 
                     /**
-                     * 获取Start time (Beijing time).
-In the format of `yyyymmdd`.
-Note: details for a specified day in the last month can be queried.
-                     * @return DayTime Start time (Beijing time).
-In the format of `yyyymmdd`.
-Note: details for a specified day in the last month can be queried.
+                     * 获取Query date (UTC+8)
+Format: yyyymmdd
+Note: you can query the statistics for a day in the past month, with yesterday as the latest date allowed.
+                     * @return DayTime Query date (UTC+8)
+Format: yyyymmdd
+Note: you can query the statistics for a day in the past month, with yesterday as the latest date allowed.
                      */
                     std::string GetDayTime() const;
 
                     /**
-                     * 设置Start time (Beijing time).
-In the format of `yyyymmdd`.
-Note: details for a specified day in the last month can be queried.
-                     * @param DayTime Start time (Beijing time).
-In the format of `yyyymmdd`.
-Note: details for a specified day in the last month can be queried.
+                     * 设置Query date (UTC+8)
+Format: yyyymmdd
+Note: you can query the statistics for a day in the past month, with yesterday as the latest date allowed.
+                     * @param DayTime Query date (UTC+8)
+Format: yyyymmdd
+Note: you can query the statistics for a day in the past month, with yesterday as the latest date allowed.
                      */
                     void SetDayTime(const std::string& _dayTime);
 
@@ -175,22 +175,22 @@ Note: details for the last month can be queried.
                     bool StartDayTimeHasBeenSet() const;
 
                     /**
-                     * 获取End day time (Beijing time),
-In the format of `yyyymmdd`.
-Note: detailed data for the last month can be queried. Either `DayTime` or `(StartDayTime,EndDayTime)` must be passed in. If both are passed in, `DayTime` shall prevail.
-                     * @return EndDayTime End day time (Beijing time),
-In the format of `yyyymmdd`.
-Note: detailed data for the last month can be queried. Either `DayTime` or `(StartDayTime,EndDayTime)` must be passed in. If both are passed in, `DayTime` shall prevail.
+                     * 获取End date (UTC+8)
+Format: yyyymmdd
+Note: you can query the statistics for a period in the past month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
+                     * @return EndDayTime End date (UTC+8)
+Format: yyyymmdd
+Note: you can query the statistics for a period in the past month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
                      */
                     std::string GetEndDayTime() const;
 
                     /**
-                     * 设置End day time (Beijing time),
-In the format of `yyyymmdd`.
-Note: detailed data for the last month can be queried. Either `DayTime` or `(StartDayTime,EndDayTime)` must be passed in. If both are passed in, `DayTime` shall prevail.
-                     * @param EndDayTime End day time (Beijing time),
-In the format of `yyyymmdd`.
-Note: detailed data for the last month can be queried. Either `DayTime` or `(StartDayTime,EndDayTime)` must be passed in. If both are passed in, `DayTime` shall prevail.
+                     * 设置End date (UTC+8)
+Format: yyyymmdd
+Note: you can query the statistics for a period in the past month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
+                     * @param EndDayTime End date (UTC+8)
+Format: yyyymmdd
+Note: you can query the statistics for a period in the past month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
                      */
                     void SetEndDayTime(const std::string& _endDayTime);
 
@@ -215,9 +215,9 @@ Note: detailed data for the last month can be queried. Either `DayTime` or `(Sta
                     bool m_streamNameHasBeenSet;
 
                     /**
-                     * Start time (Beijing time).
-In the format of `yyyymmdd`.
-Note: details for a specified day in the last month can be queried.
+                     * Query date (UTC+8)
+Format: yyyymmdd
+Note: you can query the statistics for a day in the past month, with yesterday as the latest date allowed.
                      */
                     std::string m_dayTime;
                     bool m_dayTimeHasBeenSet;
@@ -245,9 +245,9 @@ Note: details for the last month can be queried.
                     bool m_startDayTimeHasBeenSet;
 
                     /**
-                     * End day time (Beijing time),
-In the format of `yyyymmdd`.
-Note: detailed data for the last month can be queried. Either `DayTime` or `(StartDayTime,EndDayTime)` must be passed in. If both are passed in, `DayTime` shall prevail.
+                     * End date (UTC+8)
+Format: yyyymmdd
+Note: you can query the statistics for a period in the past month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
                      */
                     std::string m_endDayTime;
                     bool m_endDayTimeHasBeenSet;

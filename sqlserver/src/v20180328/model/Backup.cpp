@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Sqlserver::V20180328::Model;
-using namespace rapidjson;
 using namespace std;
 
 Backup::Backup() :
@@ -32,11 +31,13 @@ Backup::Backup() :
     m_statusHasBeenSet(false),
     m_dBsHasBeenSet(false),
     m_strategyHasBeenSet(false),
-    m_backupWayHasBeenSet(false)
+    m_backupWayHasBeenSet(false),
+    m_backupNameHasBeenSet(false),
+    m_groupIdHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome Backup::Deserialize(const Value &value)
+CoreInternalOutcome Backup::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -45,7 +46,7 @@ CoreInternalOutcome Backup::Deserialize(const Value &value)
     {
         if (!value["FileName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Backup.FileName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Backup.FileName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fileName = string(value["FileName"].GetString());
         m_fileNameHasBeenSet = true;
@@ -55,7 +56,7 @@ CoreInternalOutcome Backup::Deserialize(const Value &value)
     {
         if (!value["Size"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Backup.Size` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Backup.Size` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_size = value["Size"].GetInt64();
         m_sizeHasBeenSet = true;
@@ -65,7 +66,7 @@ CoreInternalOutcome Backup::Deserialize(const Value &value)
     {
         if (!value["StartTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Backup.StartTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Backup.StartTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_startTime = string(value["StartTime"].GetString());
         m_startTimeHasBeenSet = true;
@@ -75,7 +76,7 @@ CoreInternalOutcome Backup::Deserialize(const Value &value)
     {
         if (!value["EndTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Backup.EndTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Backup.EndTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_endTime = string(value["EndTime"].GetString());
         m_endTimeHasBeenSet = true;
@@ -85,7 +86,7 @@ CoreInternalOutcome Backup::Deserialize(const Value &value)
     {
         if (!value["InternalAddr"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Backup.InternalAddr` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Backup.InternalAddr` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_internalAddr = string(value["InternalAddr"].GetString());
         m_internalAddrHasBeenSet = true;
@@ -95,7 +96,7 @@ CoreInternalOutcome Backup::Deserialize(const Value &value)
     {
         if (!value["ExternalAddr"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Backup.ExternalAddr` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Backup.ExternalAddr` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_externalAddr = string(value["ExternalAddr"].GetString());
         m_externalAddrHasBeenSet = true;
@@ -105,7 +106,7 @@ CoreInternalOutcome Backup::Deserialize(const Value &value)
     {
         if (!value["Id"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Backup.Id` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Backup.Id` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_id = value["Id"].GetUint64();
         m_idHasBeenSet = true;
@@ -115,7 +116,7 @@ CoreInternalOutcome Backup::Deserialize(const Value &value)
     {
         if (!value["Status"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Backup.Status` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Backup.Status` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_status = value["Status"].GetUint64();
         m_statusHasBeenSet = true;
@@ -124,10 +125,10 @@ CoreInternalOutcome Backup::Deserialize(const Value &value)
     if (value.HasMember("DBs") && !value["DBs"].IsNull())
     {
         if (!value["DBs"].IsArray())
-            return CoreInternalOutcome(Error("response `Backup.DBs` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Backup.DBs` is not array type"));
 
-        const Value &tmpValue = value["DBs"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["DBs"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_dBs.push_back((*itr).GetString());
         }
@@ -138,7 +139,7 @@ CoreInternalOutcome Backup::Deserialize(const Value &value)
     {
         if (!value["Strategy"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Backup.Strategy` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Backup.Strategy` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_strategy = value["Strategy"].GetInt64();
         m_strategyHasBeenSet = true;
@@ -148,30 +149,50 @@ CoreInternalOutcome Backup::Deserialize(const Value &value)
     {
         if (!value["BackupWay"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Backup.BackupWay` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Backup.BackupWay` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_backupWay = value["BackupWay"].GetInt64();
         m_backupWayHasBeenSet = true;
+    }
+
+    if (value.HasMember("BackupName") && !value["BackupName"].IsNull())
+    {
+        if (!value["BackupName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Backup.BackupName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_backupName = string(value["BackupName"].GetString());
+        m_backupNameHasBeenSet = true;
+    }
+
+    if (value.HasMember("GroupId") && !value["GroupId"].IsNull())
+    {
+        if (!value["GroupId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Backup.GroupId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_groupId = string(value["GroupId"].GetString());
+        m_groupIdHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void Backup::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Backup::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_fileNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fileName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fileName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Size";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_size, allocator);
@@ -179,39 +200,39 @@ void Backup::ToJsonObject(Value &value, Document::AllocatorType& allocator) cons
 
     if (m_startTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_startTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_startTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_endTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_endTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_endTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_internalAddrHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InternalAddr";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_internalAddr.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_internalAddr.c_str(), allocator).Move(), allocator);
     }
 
     if (m_externalAddrHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ExternalAddr";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_externalAddr.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_externalAddr.c_str(), allocator).Move(), allocator);
     }
 
     if (m_idHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Id";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_id, allocator);
@@ -219,7 +240,7 @@ void Backup::ToJsonObject(Value &value, Document::AllocatorType& allocator) cons
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);
@@ -227,20 +248,20 @@ void Backup::ToJsonObject(Value &value, Document::AllocatorType& allocator) cons
 
     if (m_dBsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DBs";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_dBs.begin(); itr != m_dBs.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_strategyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Strategy";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_strategy, allocator);
@@ -248,10 +269,26 @@ void Backup::ToJsonObject(Value &value, Document::AllocatorType& allocator) cons
 
     if (m_backupWayHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BackupWay";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_backupWay, allocator);
+    }
+
+    if (m_backupNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BackupName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_backupName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_groupIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GroupId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_groupId.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -431,5 +468,37 @@ void Backup::SetBackupWay(const int64_t& _backupWay)
 bool Backup::BackupWayHasBeenSet() const
 {
     return m_backupWayHasBeenSet;
+}
+
+string Backup::GetBackupName() const
+{
+    return m_backupName;
+}
+
+void Backup::SetBackupName(const string& _backupName)
+{
+    m_backupName = _backupName;
+    m_backupNameHasBeenSet = true;
+}
+
+bool Backup::BackupNameHasBeenSet() const
+{
+    return m_backupNameHasBeenSet;
+}
+
+string Backup::GetGroupId() const
+{
+    return m_groupId;
+}
+
+void Backup::SetGroupId(const string& _groupId)
+{
+    m_groupId = _groupId;
+    m_groupIdHasBeenSet = true;
+}
+
+bool Backup::GroupIdHasBeenSet() const
+{
+    return m_groupIdHasBeenSet;
 }
 

@@ -40,6 +40,7 @@ namespace TencentCloud
                     CreateServiceResponse();
                     ~CreateServiceResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -79,8 +80,8 @@ namespace TencentCloud
                     bool ServiceDescHasBeenSet() const;
 
                     /**
-                     * 获取Default public network domain name.
-                     * @return OuterSubDomain Default public network domain name.
+                     * 获取Default public domain name.
+                     * @return OuterSubDomain Default public domain name.
                      */
                     std::string GetOuterSubDomain() const;
 
@@ -91,8 +92,8 @@ namespace TencentCloud
                     bool OuterSubDomainHasBeenSet() const;
 
                     /**
-                     * 获取Default private network domain name of VPC
-                     * @return InnerSubDomain Default private network domain name of VPC
+                     * 获取Default VPC domain name.
+                     * @return InnerSubDomain Default VPC domain name.
                      */
                     std::string GetInnerSubDomain() const;
 
@@ -103,8 +104,8 @@ namespace TencentCloud
                     bool InnerSubDomainHasBeenSet() const;
 
                     /**
-                     * 获取Service creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
-                     * @return CreatedTime Service creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
+                     * 获取Service creation time in the format of `YYYY-MM-DDThh:mm:ssZ` according to ISO 8601 standard. UTC time is used.
+                     * @return CreatedTime Service creation time in the format of `YYYY-MM-DDThh:mm:ssZ` according to ISO 8601 standard. UTC time is used.
                      */
                     std::string GetCreatedTime() const;
 
@@ -161,19 +162,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_serviceDescHasBeenSet;
 
                     /**
-                     * Default public network domain name.
+                     * Default public domain name.
                      */
                     std::string m_outerSubDomain;
                     bool m_outerSubDomainHasBeenSet;
 
                     /**
-                     * Default private network domain name of VPC
+                     * Default VPC domain name.
                      */
                     std::string m_innerSubDomain;
                     bool m_innerSubDomainHasBeenSet;
 
                     /**
-                     * Service creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
+                     * Service creation time in the format of `YYYY-MM-DDThh:mm:ssZ` according to ISO 8601 standard. UTC time is used.
                      */
                     std::string m_createdTime;
                     bool m_createdTimeHasBeenSet;

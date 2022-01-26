@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 ReleaseService::ReleaseService() :
@@ -27,7 +26,7 @@ ReleaseService::ReleaseService() :
 {
 }
 
-CoreInternalOutcome ReleaseService::Deserialize(const Value &value)
+CoreInternalOutcome ReleaseService::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome ReleaseService::Deserialize(const Value &value)
     {
         if (!value["ReleaseDesc"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ReleaseService.ReleaseDesc` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ReleaseService.ReleaseDesc` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_releaseDesc = string(value["ReleaseDesc"].GetString());
         m_releaseDescHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome ReleaseService::Deserialize(const Value &value)
     {
         if (!value["ReleaseVersion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ReleaseService.ReleaseVersion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ReleaseService.ReleaseVersion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_releaseVersion = string(value["ReleaseVersion"].GetString());
         m_releaseVersionHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome ReleaseService::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ReleaseService::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ReleaseService::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_releaseDescHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReleaseDesc";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_releaseDesc.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_releaseDesc.c_str(), allocator).Move(), allocator);
     }
 
     if (m_releaseVersionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReleaseVersion";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_releaseVersion.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_releaseVersion.c_str(), allocator).Move(), allocator);
     }
 
 }

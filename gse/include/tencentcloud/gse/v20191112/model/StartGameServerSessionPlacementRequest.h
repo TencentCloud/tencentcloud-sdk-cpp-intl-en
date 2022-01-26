@@ -46,14 +46,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of starting game server session placement
-                     * @return PlacementId Unique ID of starting game server session placement
+                     * 获取The unique ID of the game server session placement. It should contain up to 48 ASCII characters, supporting [a-zA-Z0-9-]+.
+                     * @return PlacementId The unique ID of the game server session placement. It should contain up to 48 ASCII characters, supporting [a-zA-Z0-9-]+.
                      */
                     std::string GetPlacementId() const;
 
                     /**
-                     * 设置Unique ID of starting game server session placement
-                     * @param PlacementId Unique ID of starting game server session placement
+                     * 设置The unique ID of the game server session placement. It should contain up to 48 ASCII characters, supporting [a-zA-Z0-9-]+.
+                     * @param PlacementId The unique ID of the game server session placement. It should contain up to 48 ASCII characters, supporting [a-zA-Z0-9-]+.
                      */
                     void SetPlacementId(const std::string& _placementId);
 
@@ -82,14 +82,14 @@ namespace TencentCloud
                     bool GameServerSessionQueueNameHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of concurrent players allowed by the game server to connect to the game session
-                     * @return MaximumPlayerSessionCount Maximum number of concurrent players allowed by the game server to connect to the game session
+                     * 获取The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
+                     * @return MaximumPlayerSessionCount The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
                      */
                     uint64_t GetMaximumPlayerSessionCount() const;
 
                     /**
-                     * 设置Maximum number of concurrent players allowed by the game server to connect to the game session
-                     * @param MaximumPlayerSessionCount Maximum number of concurrent players allowed by the game server to connect to the game session
+                     * 设置The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
+                     * @param MaximumPlayerSessionCount The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
                      */
                     void SetMaximumPlayerSessionCount(const uint64_t& _maximumPlayerSessionCount);
 
@@ -136,14 +136,14 @@ namespace TencentCloud
                     bool GamePropertiesHasBeenSet() const;
 
                     /**
-                     * 获取Game server session data
-                     * @return GameServerSessionData Game server session data
+                     * 获取Data of game server sessions. Up to 4096 ASCII characters are allowed.
+                     * @return GameServerSessionData Data of game server sessions. Up to 4096 ASCII characters are allowed.
                      */
                     std::string GetGameServerSessionData() const;
 
                     /**
-                     * 设置Game server session data
-                     * @param GameServerSessionData Game server session data
+                     * 设置Data of game server sessions. Up to 4096 ASCII characters are allowed.
+                     * @param GameServerSessionData Data of game server sessions. Up to 4096 ASCII characters are allowed.
                      */
                     void SetGameServerSessionData(const std::string& _gameServerSessionData);
 
@@ -154,14 +154,14 @@ namespace TencentCloud
                     bool GameServerSessionDataHasBeenSet() const;
 
                     /**
-                     * 获取Game server session name
-                     * @return GameServerSessionName Game server session name
+                     * 获取Name of game server sessions. Up to 4096 ASCII characters are allowed.
+                     * @return GameServerSessionName Name of game server sessions. Up to 4096 ASCII characters are allowed.
                      */
                     std::string GetGameServerSessionName() const;
 
                     /**
-                     * 设置Game server session name
-                     * @param GameServerSessionName Game server session name
+                     * 设置Name of game server sessions. Up to 4096 ASCII characters are allowed.
+                     * @param GameServerSessionName Name of game server sessions. Up to 4096 ASCII characters are allowed.
                      */
                     void SetGameServerSessionName(const std::string& _gameServerSessionName);
 
@@ -192,7 +192,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique ID of starting game server session placement
+                     * The unique ID of the game server session placement. It should contain up to 48 ASCII characters, supporting [a-zA-Z0-9-]+.
                      */
                     std::string m_placementId;
                     bool m_placementIdHasBeenSet;
@@ -204,7 +204,7 @@ namespace TencentCloud
                     bool m_gameServerSessionQueueNameHasBeenSet;
 
                     /**
-                     * Maximum number of concurrent players allowed by the game server to connect to the game session
+                     * The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
                      */
                     uint64_t m_maximumPlayerSessionCount;
                     bool m_maximumPlayerSessionCountHasBeenSet;
@@ -222,13 +222,13 @@ namespace TencentCloud
                     bool m_gamePropertiesHasBeenSet;
 
                     /**
-                     * Game server session data
+                     * Data of game server sessions. Up to 4096 ASCII characters are allowed.
                      */
                     std::string m_gameServerSessionData;
                     bool m_gameServerSessionDataHasBeenSet;
 
                     /**
-                     * Game server session name
+                     * Name of game server sessions. Up to 4096 ASCII characters are allowed.
                      */
                     std::string m_gameServerSessionName;
                     bool m_gameServerSessionNameHasBeenSet;

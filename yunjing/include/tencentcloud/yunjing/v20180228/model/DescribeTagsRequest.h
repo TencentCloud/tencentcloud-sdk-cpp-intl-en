@@ -42,7 +42,65 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取CVM instance type.
+<li>CVM: CVM</li>
+<li>BM: CPM</li>
+                     * @return MachineType CVM instance type.
+<li>CVM: CVM</li>
+<li>BM: CPM</li>
+                     */
+                    std::string GetMachineType() const;
+
+                    /**
+                     * 设置CVM instance type.
+<li>CVM: CVM</li>
+<li>BM: CPM</li>
+                     * @param MachineType CVM instance type.
+<li>CVM: CVM</li>
+<li>BM: CPM</li>
+                     */
+                    void SetMachineType(const std::string& _machineType);
+
+                    /**
+                     * 判断参数 MachineType 是否已赋值
+                     * @return MachineType 是否已赋值
+                     */
+                    bool MachineTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Server region, such as `ap-guangzhou` and `ap-shanghai`
+                     * @return MachineRegion Server region, such as `ap-guangzhou` and `ap-shanghai`
+                     */
+                    std::string GetMachineRegion() const;
+
+                    /**
+                     * 设置Server region, such as `ap-guangzhou` and `ap-shanghai`
+                     * @param MachineRegion Server region, such as `ap-guangzhou` and `ap-shanghai`
+                     */
+                    void SetMachineRegion(const std::string& _machineRegion);
+
+                    /**
+                     * 判断参数 MachineRegion 是否已赋值
+                     * @return MachineRegion 是否已赋值
+                     */
+                    bool MachineRegionHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * CVM instance type.
+<li>CVM: CVM</li>
+<li>BM: CPM</li>
+                     */
+                    std::string m_machineType;
+                    bool m_machineTypeHasBeenSet;
+
+                    /**
+                     * Server region, such as `ap-guangzhou` and `ap-shanghai`
+                     */
+                    std::string m_machineRegion;
+                    bool m_machineRegionHasBeenSet;
 
                 };
             }

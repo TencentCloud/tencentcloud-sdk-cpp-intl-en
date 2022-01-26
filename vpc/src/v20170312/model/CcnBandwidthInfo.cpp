@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 CcnBandwidthInfo::CcnBandwidthInfo() :
@@ -31,7 +30,7 @@ CcnBandwidthInfo::CcnBandwidthInfo() :
 {
 }
 
-CoreInternalOutcome CcnBandwidthInfo::Deserialize(const Value &value)
+CoreInternalOutcome CcnBandwidthInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome CcnBandwidthInfo::Deserialize(const Value &value)
     {
         if (!value["CcnId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CcnBandwidthInfo.CcnId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CcnBandwidthInfo.CcnId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ccnId = string(value["CcnId"].GetString());
         m_ccnIdHasBeenSet = true;
@@ -50,7 +49,7 @@ CoreInternalOutcome CcnBandwidthInfo::Deserialize(const Value &value)
     {
         if (!value["CreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CcnBandwidthInfo.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CcnBandwidthInfo.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createdTime = string(value["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
@@ -60,7 +59,7 @@ CoreInternalOutcome CcnBandwidthInfo::Deserialize(const Value &value)
     {
         if (!value["ExpiredTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CcnBandwidthInfo.ExpiredTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CcnBandwidthInfo.ExpiredTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_expiredTime = string(value["ExpiredTime"].GetString());
         m_expiredTimeHasBeenSet = true;
@@ -70,7 +69,7 @@ CoreInternalOutcome CcnBandwidthInfo::Deserialize(const Value &value)
     {
         if (!value["RegionFlowControlId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CcnBandwidthInfo.RegionFlowControlId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CcnBandwidthInfo.RegionFlowControlId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_regionFlowControlId = string(value["RegionFlowControlId"].GetString());
         m_regionFlowControlIdHasBeenSet = true;
@@ -80,7 +79,7 @@ CoreInternalOutcome CcnBandwidthInfo::Deserialize(const Value &value)
     {
         if (!value["RenewFlag"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CcnBandwidthInfo.RenewFlag` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CcnBandwidthInfo.RenewFlag` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_renewFlag = string(value["RenewFlag"].GetString());
         m_renewFlagHasBeenSet = true;
@@ -90,7 +89,7 @@ CoreInternalOutcome CcnBandwidthInfo::Deserialize(const Value &value)
     {
         if (!value["CcnRegionBandwidthLimit"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `CcnBandwidthInfo.CcnRegionBandwidthLimit` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CcnBandwidthInfo.CcnRegionBandwidthLimit` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_ccnRegionBandwidthLimit.Deserialize(value["CcnRegionBandwidthLimit"]);
@@ -107,55 +106,55 @@ CoreInternalOutcome CcnBandwidthInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void CcnBandwidthInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void CcnBandwidthInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_ccnIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CcnId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ccnId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ccnId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createdTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createdTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_expiredTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ExpiredTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_expiredTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_expiredTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_regionFlowControlIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RegionFlowControlId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_regionFlowControlId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_regionFlowControlId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_renewFlagHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RenewFlag";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_renewFlag.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_renewFlag.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ccnRegionBandwidthLimitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CcnRegionBandwidthLimit";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_ccnRegionBandwidthLimit.ToJsonObject(value[key.c_str()], allocator);
     }
 

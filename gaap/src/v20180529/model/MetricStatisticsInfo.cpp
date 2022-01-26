@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 MetricStatisticsInfo::MetricStatisticsInfo() :
@@ -27,7 +26,7 @@ MetricStatisticsInfo::MetricStatisticsInfo() :
 {
 }
 
-CoreInternalOutcome MetricStatisticsInfo::Deserialize(const Value &value)
+CoreInternalOutcome MetricStatisticsInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome MetricStatisticsInfo::Deserialize(const Value &value)
     {
         if (!value["MetricName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MetricStatisticsInfo.MetricName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MetricStatisticsInfo.MetricName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_metricName = string(value["MetricName"].GetString());
         m_metricNameHasBeenSet = true;
@@ -45,10 +44,10 @@ CoreInternalOutcome MetricStatisticsInfo::Deserialize(const Value &value)
     if (value.HasMember("MetricData") && !value["MetricData"].IsNull())
     {
         if (!value["MetricData"].IsArray())
-            return CoreInternalOutcome(Error("response `MetricStatisticsInfo.MetricData` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `MetricStatisticsInfo.MetricData` is not array type"));
 
-        const Value &tmpValue = value["MetricData"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["MetricData"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             StatisticsDataInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -66,28 +65,28 @@ CoreInternalOutcome MetricStatisticsInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void MetricStatisticsInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MetricStatisticsInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_metricNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MetricName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_metricName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_metricName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_metricDataHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MetricData";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_metricData.begin(); itr != m_metricData.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }

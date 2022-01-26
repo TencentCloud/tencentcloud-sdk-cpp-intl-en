@@ -18,18 +18,18 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mdl::V20200326::Model;
-using namespace rapidjson;
 using namespace std;
 
 HlsRemuxSettingsInfo::HlsRemuxSettingsInfo() :
     m_segmentDurationHasBeenSet(false),
     m_segmentNumberHasBeenSet(false),
     m_pdtInsertionHasBeenSet(false),
-    m_pdtDurationHasBeenSet(false)
+    m_pdtDurationHasBeenSet(false),
+    m_schemeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome HlsRemuxSettingsInfo::Deserialize(const Value &value)
+CoreInternalOutcome HlsRemuxSettingsInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +38,7 @@ CoreInternalOutcome HlsRemuxSettingsInfo::Deserialize(const Value &value)
     {
         if (!value["SegmentDuration"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `HlsRemuxSettingsInfo.SegmentDuration` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HlsRemuxSettingsInfo.SegmentDuration` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_segmentDuration = value["SegmentDuration"].GetUint64();
         m_segmentDurationHasBeenSet = true;
@@ -48,7 +48,7 @@ CoreInternalOutcome HlsRemuxSettingsInfo::Deserialize(const Value &value)
     {
         if (!value["SegmentNumber"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `HlsRemuxSettingsInfo.SegmentNumber` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HlsRemuxSettingsInfo.SegmentNumber` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_segmentNumber = value["SegmentNumber"].GetUint64();
         m_segmentNumberHasBeenSet = true;
@@ -58,7 +58,7 @@ CoreInternalOutcome HlsRemuxSettingsInfo::Deserialize(const Value &value)
     {
         if (!value["PdtInsertion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HlsRemuxSettingsInfo.PdtInsertion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HlsRemuxSettingsInfo.PdtInsertion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_pdtInsertion = string(value["PdtInsertion"].GetString());
         m_pdtInsertionHasBeenSet = true;
@@ -68,22 +68,32 @@ CoreInternalOutcome HlsRemuxSettingsInfo::Deserialize(const Value &value)
     {
         if (!value["PdtDuration"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `HlsRemuxSettingsInfo.PdtDuration` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HlsRemuxSettingsInfo.PdtDuration` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_pdtDuration = value["PdtDuration"].GetUint64();
         m_pdtDurationHasBeenSet = true;
+    }
+
+    if (value.HasMember("Scheme") && !value["Scheme"].IsNull())
+    {
+        if (!value["Scheme"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `HlsRemuxSettingsInfo.Scheme` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_scheme = string(value["Scheme"].GetString());
+        m_schemeHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void HlsRemuxSettingsInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void HlsRemuxSettingsInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_segmentDurationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SegmentDuration";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_segmentDuration, allocator);
@@ -91,7 +101,7 @@ void HlsRemuxSettingsInfo::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_segmentNumberHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SegmentNumber";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_segmentNumber, allocator);
@@ -99,18 +109,26 @@ void HlsRemuxSettingsInfo::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_pdtInsertionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PdtInsertion";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_pdtInsertion.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_pdtInsertion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_pdtDurationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PdtDuration";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_pdtDuration, allocator);
+    }
+
+    if (m_schemeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Scheme";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_scheme.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -178,5 +196,21 @@ void HlsRemuxSettingsInfo::SetPdtDuration(const uint64_t& _pdtDuration)
 bool HlsRemuxSettingsInfo::PdtDurationHasBeenSet() const
 {
     return m_pdtDurationHasBeenSet;
+}
+
+string HlsRemuxSettingsInfo::GetScheme() const
+{
+    return m_scheme;
+}
+
+void HlsRemuxSettingsInfo::SetScheme(const string& _scheme)
+{
+    m_scheme = _scheme;
+    m_schemeHasBeenSet = true;
+}
+
+bool HlsRemuxSettingsInfo::SchemeHasBeenSet() const
+{
+    return m_schemeHasBeenSet;
 }
 

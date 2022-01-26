@@ -60,6 +60,60 @@ namespace TencentCloud
                      */
                     bool InstanceIdHasBeenSet() const;
 
+                    /**
+                     * 获取Backup mode. Valid values: `0` (logical backup), `1` (physical backup), `2` (both modes). Default value: `0`.
+                     * @return BackupMethod Backup mode. Valid values: `0` (logical backup), `1` (physical backup), `2` (both modes). Default value: `0`.
+                     */
+                    int64_t GetBackupMethod() const;
+
+                    /**
+                     * 设置Backup mode. Valid values: `0` (logical backup), `1` (physical backup), `2` (both modes). Default value: `0`.
+                     * @param BackupMethod Backup mode. Valid values: `0` (logical backup), `1` (physical backup), `2` (both modes). Default value: `0`.
+                     */
+                    void SetBackupMethod(const int64_t& _backupMethod);
+
+                    /**
+                     * 判断参数 BackupMethod 是否已赋值
+                     * @return BackupMethod 是否已赋值
+                     */
+                    bool BackupMethodHasBeenSet() const;
+
+                    /**
+                     * 获取Number of entries per page. Maximum value: `100`. If this parameter is left empty, all entries will be returned.
+                     * @return Limit Number of entries per page. Maximum value: `100`. If this parameter is left empty, all entries will be returned.
+                     */
+                    uint64_t GetLimit() const;
+
+                    /**
+                     * 设置Number of entries per page. Maximum value: `100`. If this parameter is left empty, all entries will be returned.
+                     * @param Limit Number of entries per page. Maximum value: `100`. If this parameter is left empty, all entries will be returned.
+                     */
+                    void SetLimit(const uint64_t& _limit);
+
+                    /**
+                     * 判断参数 Limit 是否已赋值
+                     * @return Limit 是否已赋值
+                     */
+                    bool LimitHasBeenSet() const;
+
+                    /**
+                     * 获取Pagination offset, starting from `0`. Default value: `0`.
+                     * @return Offset Pagination offset, starting from `0`. Default value: `0`.
+                     */
+                    uint64_t GetOffset() const;
+
+                    /**
+                     * 设置Pagination offset, starting from `0`. Default value: `0`.
+                     * @param Offset Pagination offset, starting from `0`. Default value: `0`.
+                     */
+                    void SetOffset(const uint64_t& _offset);
+
+                    /**
+                     * 判断参数 Offset 是否已赋值
+                     * @return Offset 是否已赋值
+                     */
+                    bool OffsetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -67,6 +121,24 @@ namespace TencentCloud
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Backup mode. Valid values: `0` (logical backup), `1` (physical backup), `2` (both modes). Default value: `0`.
+                     */
+                    int64_t m_backupMethod;
+                    bool m_backupMethodHasBeenSet;
+
+                    /**
+                     * Number of entries per page. Maximum value: `100`. If this parameter is left empty, all entries will be returned.
+                     */
+                    uint64_t m_limit;
+                    bool m_limitHasBeenSet;
+
+                    /**
+                     * Pagination offset, starting from `0`. Default value: `0`.
+                     */
+                    uint64_t m_offset;
+                    bool m_offsetHasBeenSet;
 
                 };
             }

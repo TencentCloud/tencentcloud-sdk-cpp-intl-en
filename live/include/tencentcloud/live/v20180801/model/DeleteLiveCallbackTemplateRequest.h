@@ -44,21 +44,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Template ID.
-1. Get the template ID in the returned value of the [CreateLiveCallbackTemplate](/document/product/267/32637) API call.
-2. You can query the list of created templates through the [DescribeLiveCallbackTemplates](/document/product/267/32632) API.
+1. Get the template ID in the returned value of the [CreateLiveCallbackTemplate](https://intl.cloud.tencent.com/document/product/267/32637?from_cn_redirect=1) API call.
+2. You can query the list of created templates through the [DescribeLiveCallbackTemplates](https://intl.cloud.tencent.com/document/product/267/32632?from_cn_redirect=1) API.
                      * @return TemplateId Template ID.
-1. Get the template ID in the returned value of the [CreateLiveCallbackTemplate](/document/product/267/32637) API call.
-2. You can query the list of created templates through the [DescribeLiveCallbackTemplates](/document/product/267/32632) API.
+1. Get the template ID in the returned value of the [CreateLiveCallbackTemplate](https://intl.cloud.tencent.com/document/product/267/32637?from_cn_redirect=1) API call.
+2. You can query the list of created templates through the [DescribeLiveCallbackTemplates](https://intl.cloud.tencent.com/document/product/267/32632?from_cn_redirect=1) API.
                      */
                     int64_t GetTemplateId() const;
 
                     /**
                      * 设置Template ID.
-1. Get the template ID in the returned value of the [CreateLiveCallbackTemplate](/document/product/267/32637) API call.
-2. You can query the list of created templates through the [DescribeLiveCallbackTemplates](/document/product/267/32632) API.
+1. Get the template ID in the returned value of the [CreateLiveCallbackTemplate](https://intl.cloud.tencent.com/document/product/267/32637?from_cn_redirect=1) API call.
+2. You can query the list of created templates through the [DescribeLiveCallbackTemplates](https://intl.cloud.tencent.com/document/product/267/32632?from_cn_redirect=1) API.
                      * @param TemplateId Template ID.
-1. Get the template ID in the returned value of the [CreateLiveCallbackTemplate](/document/product/267/32637) API call.
-2. You can query the list of created templates through the [DescribeLiveCallbackTemplates](/document/product/267/32632) API.
+1. Get the template ID in the returned value of the [CreateLiveCallbackTemplate](https://intl.cloud.tencent.com/document/product/267/32637?from_cn_redirect=1) API call.
+2. You can query the list of created templates through the [DescribeLiveCallbackTemplates](https://intl.cloud.tencent.com/document/product/267/32632?from_cn_redirect=1) API.
                      */
                     void SetTemplateId(const int64_t& _templateId);
 
@@ -72,8 +72,8 @@ namespace TencentCloud
 
                     /**
                      * Template ID.
-1. Get the template ID in the returned value of the [CreateLiveCallbackTemplate](/document/product/267/32637) API call.
-2. You can query the list of created templates through the [DescribeLiveCallbackTemplates](/document/product/267/32632) API.
+1. Get the template ID in the returned value of the [CreateLiveCallbackTemplate](https://intl.cloud.tencent.com/document/product/267/32637?from_cn_redirect=1) API call.
+2. You can query the list of created templates through the [DescribeLiveCallbackTemplates](https://intl.cloud.tencent.com/document/product/267/32632?from_cn_redirect=1) API.
                      */
                     int64_t m_templateId;
                     bool m_templateIdHasBeenSet;

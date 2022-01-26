@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dayu::V20180709::Model;
-using namespace rapidjson;
 using namespace std;
 
 L7RuleEntry::L7RuleEntry() :
@@ -40,11 +39,12 @@ L7RuleEntry::L7RuleEntry() :
     m_cCEnableHasBeenSet(false),
     m_cCThresholdHasBeenSet(false),
     m_cCLevelHasBeenSet(false),
-    m_httpsToHttpEnableHasBeenSet(false)
+    m_httpsToHttpEnableHasBeenSet(false),
+    m_virtualPortHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome L7RuleEntry::Deserialize(const Value &value)
+CoreInternalOutcome L7RuleEntry::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -53,7 +53,7 @@ CoreInternalOutcome L7RuleEntry::Deserialize(const Value &value)
     {
         if (!value["Protocol"].IsString())
         {
-            return CoreInternalOutcome(Error("response `L7RuleEntry.Protocol` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7RuleEntry.Protocol` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_protocol = string(value["Protocol"].GetString());
         m_protocolHasBeenSet = true;
@@ -63,7 +63,7 @@ CoreInternalOutcome L7RuleEntry::Deserialize(const Value &value)
     {
         if (!value["Domain"].IsString())
         {
-            return CoreInternalOutcome(Error("response `L7RuleEntry.Domain` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7RuleEntry.Domain` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_domain = string(value["Domain"].GetString());
         m_domainHasBeenSet = true;
@@ -73,7 +73,7 @@ CoreInternalOutcome L7RuleEntry::Deserialize(const Value &value)
     {
         if (!value["SourceType"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L7RuleEntry.SourceType` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7RuleEntry.SourceType` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_sourceType = value["SourceType"].GetUint64();
         m_sourceTypeHasBeenSet = true;
@@ -83,7 +83,7 @@ CoreInternalOutcome L7RuleEntry::Deserialize(const Value &value)
     {
         if (!value["KeepTime"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L7RuleEntry.KeepTime` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7RuleEntry.KeepTime` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_keepTime = value["KeepTime"].GetUint64();
         m_keepTimeHasBeenSet = true;
@@ -92,10 +92,10 @@ CoreInternalOutcome L7RuleEntry::Deserialize(const Value &value)
     if (value.HasMember("SourceList") && !value["SourceList"].IsNull())
     {
         if (!value["SourceList"].IsArray())
-            return CoreInternalOutcome(Error("response `L7RuleEntry.SourceList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `L7RuleEntry.SourceList` is not array type"));
 
-        const Value &tmpValue = value["SourceList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["SourceList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             L4RuleSource item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -113,7 +113,7 @@ CoreInternalOutcome L7RuleEntry::Deserialize(const Value &value)
     {
         if (!value["LbType"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L7RuleEntry.LbType` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7RuleEntry.LbType` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_lbType = value["LbType"].GetUint64();
         m_lbTypeHasBeenSet = true;
@@ -123,7 +123,7 @@ CoreInternalOutcome L7RuleEntry::Deserialize(const Value &value)
     {
         if (!value["KeepEnable"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L7RuleEntry.KeepEnable` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7RuleEntry.KeepEnable` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_keepEnable = value["KeepEnable"].GetUint64();
         m_keepEnableHasBeenSet = true;
@@ -133,7 +133,7 @@ CoreInternalOutcome L7RuleEntry::Deserialize(const Value &value)
     {
         if (!value["RuleId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `L7RuleEntry.RuleId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7RuleEntry.RuleId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ruleId = string(value["RuleId"].GetString());
         m_ruleIdHasBeenSet = true;
@@ -143,7 +143,7 @@ CoreInternalOutcome L7RuleEntry::Deserialize(const Value &value)
     {
         if (!value["CertType"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L7RuleEntry.CertType` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7RuleEntry.CertType` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_certType = value["CertType"].GetUint64();
         m_certTypeHasBeenSet = true;
@@ -153,7 +153,7 @@ CoreInternalOutcome L7RuleEntry::Deserialize(const Value &value)
     {
         if (!value["SSLId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `L7RuleEntry.SSLId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7RuleEntry.SSLId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_sSLId = string(value["SSLId"].GetString());
         m_sSLIdHasBeenSet = true;
@@ -163,7 +163,7 @@ CoreInternalOutcome L7RuleEntry::Deserialize(const Value &value)
     {
         if (!value["Cert"].IsString())
         {
-            return CoreInternalOutcome(Error("response `L7RuleEntry.Cert` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7RuleEntry.Cert` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cert = string(value["Cert"].GetString());
         m_certHasBeenSet = true;
@@ -173,7 +173,7 @@ CoreInternalOutcome L7RuleEntry::Deserialize(const Value &value)
     {
         if (!value["PrivateKey"].IsString())
         {
-            return CoreInternalOutcome(Error("response `L7RuleEntry.PrivateKey` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7RuleEntry.PrivateKey` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_privateKey = string(value["PrivateKey"].GetString());
         m_privateKeyHasBeenSet = true;
@@ -183,7 +183,7 @@ CoreInternalOutcome L7RuleEntry::Deserialize(const Value &value)
     {
         if (!value["RuleName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `L7RuleEntry.RuleName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7RuleEntry.RuleName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ruleName = string(value["RuleName"].GetString());
         m_ruleNameHasBeenSet = true;
@@ -193,7 +193,7 @@ CoreInternalOutcome L7RuleEntry::Deserialize(const Value &value)
     {
         if (!value["Status"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L7RuleEntry.Status` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7RuleEntry.Status` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_status = value["Status"].GetUint64();
         m_statusHasBeenSet = true;
@@ -203,7 +203,7 @@ CoreInternalOutcome L7RuleEntry::Deserialize(const Value &value)
     {
         if (!value["CCStatus"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L7RuleEntry.CCStatus` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7RuleEntry.CCStatus` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_cCStatus = value["CCStatus"].GetUint64();
         m_cCStatusHasBeenSet = true;
@@ -213,7 +213,7 @@ CoreInternalOutcome L7RuleEntry::Deserialize(const Value &value)
     {
         if (!value["CCEnable"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L7RuleEntry.CCEnable` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7RuleEntry.CCEnable` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_cCEnable = value["CCEnable"].GetUint64();
         m_cCEnableHasBeenSet = true;
@@ -223,7 +223,7 @@ CoreInternalOutcome L7RuleEntry::Deserialize(const Value &value)
     {
         if (!value["CCThreshold"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L7RuleEntry.CCThreshold` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7RuleEntry.CCThreshold` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_cCThreshold = value["CCThreshold"].GetUint64();
         m_cCThresholdHasBeenSet = true;
@@ -233,7 +233,7 @@ CoreInternalOutcome L7RuleEntry::Deserialize(const Value &value)
     {
         if (!value["CCLevel"].IsString())
         {
-            return CoreInternalOutcome(Error("response `L7RuleEntry.CCLevel` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7RuleEntry.CCLevel` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cCLevel = string(value["CCLevel"].GetString());
         m_cCLevelHasBeenSet = true;
@@ -243,38 +243,48 @@ CoreInternalOutcome L7RuleEntry::Deserialize(const Value &value)
     {
         if (!value["HttpsToHttpEnable"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L7RuleEntry.HttpsToHttpEnable` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7RuleEntry.HttpsToHttpEnable` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_httpsToHttpEnable = value["HttpsToHttpEnable"].GetUint64();
         m_httpsToHttpEnableHasBeenSet = true;
+    }
+
+    if (value.HasMember("VirtualPort") && !value["VirtualPort"].IsNull())
+    {
+        if (!value["VirtualPort"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `L7RuleEntry.VirtualPort` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_virtualPort = value["VirtualPort"].GetUint64();
+        m_virtualPortHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void L7RuleEntry::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void L7RuleEntry::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_protocolHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Protocol";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_protocol.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
     }
 
     if (m_domainHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Domain";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_domain.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_domain.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sourceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SourceType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_sourceType, allocator);
@@ -282,7 +292,7 @@ void L7RuleEntry::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_keepTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "KeepTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_keepTime, allocator);
@@ -290,22 +300,22 @@ void L7RuleEntry::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_sourceListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SourceList";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_sourceList.begin(); itr != m_sourceList.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_lbTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LbType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_lbType, allocator);
@@ -313,7 +323,7 @@ void L7RuleEntry::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_keepEnableHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "KeepEnable";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_keepEnable, allocator);
@@ -321,15 +331,15 @@ void L7RuleEntry::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_ruleIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RuleId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ruleId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ruleId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_certTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CertType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_certType, allocator);
@@ -337,39 +347,39 @@ void L7RuleEntry::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_sSLIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SSLId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_sSLId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sSLId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_certHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Cert";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cert.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cert.c_str(), allocator).Move(), allocator);
     }
 
     if (m_privateKeyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PrivateKey";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_privateKey.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_privateKey.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ruleNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RuleName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ruleName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ruleName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);
@@ -377,7 +387,7 @@ void L7RuleEntry::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_cCStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CCStatus";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cCStatus, allocator);
@@ -385,7 +395,7 @@ void L7RuleEntry::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_cCEnableHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CCEnable";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cCEnable, allocator);
@@ -393,7 +403,7 @@ void L7RuleEntry::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_cCThresholdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CCThreshold";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cCThreshold, allocator);
@@ -401,18 +411,26 @@ void L7RuleEntry::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_cCLevelHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CCLevel";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cCLevel.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cCLevel.c_str(), allocator).Move(), allocator);
     }
 
     if (m_httpsToHttpEnableHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HttpsToHttpEnable";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_httpsToHttpEnable, allocator);
+    }
+
+    if (m_virtualPortHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VirtualPort";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_virtualPort, allocator);
     }
 
 }
@@ -720,5 +738,21 @@ void L7RuleEntry::SetHttpsToHttpEnable(const uint64_t& _httpsToHttpEnable)
 bool L7RuleEntry::HttpsToHttpEnableHasBeenSet() const
 {
     return m_httpsToHttpEnableHasBeenSet;
+}
+
+uint64_t L7RuleEntry::GetVirtualPort() const
+{
+    return m_virtualPort;
+}
+
+void L7RuleEntry::SetVirtualPort(const uint64_t& _virtualPort)
+{
+    m_virtualPort = _virtualPort;
+    m_virtualPortHasBeenSet = true;
+}
+
+bool L7RuleEntry::VirtualPortHasBeenSet() const
+{
+    return m_virtualPortHasBeenSet;
 }
 

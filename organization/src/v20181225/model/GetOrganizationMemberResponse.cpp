@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Organization::V20181225::Model;
-using namespace rapidjson;
 using namespace std;
 
 GetOrganizationMemberResponse::GetOrganizationMemberResponse() :
@@ -37,20 +36,20 @@ GetOrganizationMemberResponse::GetOrganizationMemberResponse() :
 
 CoreInternalOutcome GetOrganizationMemberResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -61,11 +60,11 @@ CoreInternalOutcome GetOrganizationMemberResponse::Deserialize(const string &pay
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -73,7 +72,7 @@ CoreInternalOutcome GetOrganizationMemberResponse::Deserialize(const string &pay
     {
         if (!rsp["Uin"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Uin` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Uin` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_uin = rsp["Uin"].GetUint64();
         m_uinHasBeenSet = true;
@@ -83,7 +82,7 @@ CoreInternalOutcome GetOrganizationMemberResponse::Deserialize(const string &pay
     {
         if (!rsp["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(rsp["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -93,7 +92,7 @@ CoreInternalOutcome GetOrganizationMemberResponse::Deserialize(const string &pay
     {
         if (!rsp["Remark"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Remark` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Remark` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_remark = string(rsp["Remark"].GetString());
         m_remarkHasBeenSet = true;
@@ -103,7 +102,7 @@ CoreInternalOutcome GetOrganizationMemberResponse::Deserialize(const string &pay
     {
         if (!rsp["JoinTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `JoinTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `JoinTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_joinTime = string(rsp["JoinTime"].GetString());
         m_joinTimeHasBeenSet = true;
@@ -113,7 +112,7 @@ CoreInternalOutcome GetOrganizationMemberResponse::Deserialize(const string &pay
     {
         if (!rsp["NodeId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `NodeId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_nodeId = rsp["NodeId"].GetUint64();
         m_nodeIdHasBeenSet = true;
@@ -123,7 +122,7 @@ CoreInternalOutcome GetOrganizationMemberResponse::Deserialize(const string &pay
     {
         if (!rsp["NodeName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NodeName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_nodeName = string(rsp["NodeName"].GetString());
         m_nodeNameHasBeenSet = true;
@@ -133,7 +132,7 @@ CoreInternalOutcome GetOrganizationMemberResponse::Deserialize(const string &pay
     {
         if (!rsp["ParentNodeId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ParentNodeId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParentNodeId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_parentNodeId = rsp["ParentNodeId"].GetUint64();
         m_parentNodeIdHasBeenSet = true;
@@ -141,6 +140,79 @@ CoreInternalOutcome GetOrganizationMemberResponse::Deserialize(const string &pay
 
 
     return CoreInternalOutcome(true);
+}
+
+string GetOrganizationMemberResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_uinHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Uin";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_uin, allocator);
+    }
+
+    if (m_nameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Name";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_remarkHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Remark";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_remark.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_joinTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "JoinTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_joinTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_nodeIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NodeId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_nodeId, allocator);
+    }
+
+    if (m_nodeNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NodeName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_nodeName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_parentNodeIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ParentNodeId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_parentNodeId, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 Subnet::Subnet() :
@@ -36,11 +35,13 @@ Subnet::Subnet() :
     m_networkAclIdHasBeenSet(false),
     m_isRemoteVpcSnatHasBeenSet(false),
     m_totalIpAddressCountHasBeenSet(false),
-    m_tagSetHasBeenSet(false)
+    m_tagSetHasBeenSet(false),
+    m_cdcIdHasBeenSet(false),
+    m_isCdcSubnetHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome Subnet::Deserialize(const Value &value)
+CoreInternalOutcome Subnet::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -49,7 +50,7 @@ CoreInternalOutcome Subnet::Deserialize(const Value &value)
     {
         if (!value["VpcId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Subnet.VpcId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Subnet.VpcId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpcId = string(value["VpcId"].GetString());
         m_vpcIdHasBeenSet = true;
@@ -59,7 +60,7 @@ CoreInternalOutcome Subnet::Deserialize(const Value &value)
     {
         if (!value["SubnetId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Subnet.SubnetId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Subnet.SubnetId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_subnetId = string(value["SubnetId"].GetString());
         m_subnetIdHasBeenSet = true;
@@ -69,7 +70,7 @@ CoreInternalOutcome Subnet::Deserialize(const Value &value)
     {
         if (!value["SubnetName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Subnet.SubnetName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Subnet.SubnetName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_subnetName = string(value["SubnetName"].GetString());
         m_subnetNameHasBeenSet = true;
@@ -79,7 +80,7 @@ CoreInternalOutcome Subnet::Deserialize(const Value &value)
     {
         if (!value["CidrBlock"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Subnet.CidrBlock` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Subnet.CidrBlock` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cidrBlock = string(value["CidrBlock"].GetString());
         m_cidrBlockHasBeenSet = true;
@@ -89,7 +90,7 @@ CoreInternalOutcome Subnet::Deserialize(const Value &value)
     {
         if (!value["IsDefault"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `Subnet.IsDefault` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Subnet.IsDefault` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_isDefault = value["IsDefault"].GetBool();
         m_isDefaultHasBeenSet = true;
@@ -99,7 +100,7 @@ CoreInternalOutcome Subnet::Deserialize(const Value &value)
     {
         if (!value["EnableBroadcast"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `Subnet.EnableBroadcast` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Subnet.EnableBroadcast` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_enableBroadcast = value["EnableBroadcast"].GetBool();
         m_enableBroadcastHasBeenSet = true;
@@ -109,7 +110,7 @@ CoreInternalOutcome Subnet::Deserialize(const Value &value)
     {
         if (!value["Zone"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Subnet.Zone` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Subnet.Zone` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_zone = string(value["Zone"].GetString());
         m_zoneHasBeenSet = true;
@@ -119,7 +120,7 @@ CoreInternalOutcome Subnet::Deserialize(const Value &value)
     {
         if (!value["RouteTableId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Subnet.RouteTableId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Subnet.RouteTableId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_routeTableId = string(value["RouteTableId"].GetString());
         m_routeTableIdHasBeenSet = true;
@@ -129,7 +130,7 @@ CoreInternalOutcome Subnet::Deserialize(const Value &value)
     {
         if (!value["CreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Subnet.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Subnet.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createdTime = string(value["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
@@ -139,7 +140,7 @@ CoreInternalOutcome Subnet::Deserialize(const Value &value)
     {
         if (!value["AvailableIpAddressCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Subnet.AvailableIpAddressCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Subnet.AvailableIpAddressCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_availableIpAddressCount = value["AvailableIpAddressCount"].GetUint64();
         m_availableIpAddressCountHasBeenSet = true;
@@ -149,7 +150,7 @@ CoreInternalOutcome Subnet::Deserialize(const Value &value)
     {
         if (!value["Ipv6CidrBlock"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Subnet.Ipv6CidrBlock` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Subnet.Ipv6CidrBlock` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ipv6CidrBlock = string(value["Ipv6CidrBlock"].GetString());
         m_ipv6CidrBlockHasBeenSet = true;
@@ -159,7 +160,7 @@ CoreInternalOutcome Subnet::Deserialize(const Value &value)
     {
         if (!value["NetworkAclId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Subnet.NetworkAclId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Subnet.NetworkAclId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_networkAclId = string(value["NetworkAclId"].GetString());
         m_networkAclIdHasBeenSet = true;
@@ -169,7 +170,7 @@ CoreInternalOutcome Subnet::Deserialize(const Value &value)
     {
         if (!value["IsRemoteVpcSnat"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `Subnet.IsRemoteVpcSnat` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Subnet.IsRemoteVpcSnat` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_isRemoteVpcSnat = value["IsRemoteVpcSnat"].GetBool();
         m_isRemoteVpcSnatHasBeenSet = true;
@@ -179,7 +180,7 @@ CoreInternalOutcome Subnet::Deserialize(const Value &value)
     {
         if (!value["TotalIpAddressCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Subnet.TotalIpAddressCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Subnet.TotalIpAddressCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_totalIpAddressCount = value["TotalIpAddressCount"].GetUint64();
         m_totalIpAddressCountHasBeenSet = true;
@@ -188,10 +189,10 @@ CoreInternalOutcome Subnet::Deserialize(const Value &value)
     if (value.HasMember("TagSet") && !value["TagSet"].IsNull())
     {
         if (!value["TagSet"].IsArray())
-            return CoreInternalOutcome(Error("response `Subnet.TagSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Subnet.TagSet` is not array type"));
 
-        const Value &tmpValue = value["TagSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["TagSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             Tag item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -205,48 +206,68 @@ CoreInternalOutcome Subnet::Deserialize(const Value &value)
         m_tagSetHasBeenSet = true;
     }
 
+    if (value.HasMember("CdcId") && !value["CdcId"].IsNull())
+    {
+        if (!value["CdcId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Subnet.CdcId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_cdcId = string(value["CdcId"].GetString());
+        m_cdcIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("IsCdcSubnet") && !value["IsCdcSubnet"].IsNull())
+    {
+        if (!value["IsCdcSubnet"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `Subnet.IsCdcSubnet` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_isCdcSubnet = value["IsCdcSubnet"].GetInt64();
+        m_isCdcSubnetHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void Subnet::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Subnet::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_vpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vpcId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpcId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_subnetIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubnetId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_subnetId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_subnetId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_subnetNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubnetName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_subnetName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_subnetName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cidrBlockHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CidrBlock";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cidrBlock.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cidrBlock.c_str(), allocator).Move(), allocator);
     }
 
     if (m_isDefaultHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsDefault";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isDefault, allocator);
@@ -254,7 +275,7 @@ void Subnet::ToJsonObject(Value &value, Document::AllocatorType& allocator) cons
 
     if (m_enableBroadcastHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EnableBroadcast";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_enableBroadcast, allocator);
@@ -262,31 +283,31 @@ void Subnet::ToJsonObject(Value &value, Document::AllocatorType& allocator) cons
 
     if (m_zoneHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Zone";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_zone.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_zone.c_str(), allocator).Move(), allocator);
     }
 
     if (m_routeTableIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RouteTableId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_routeTableId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_routeTableId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createdTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createdTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_availableIpAddressCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AvailableIpAddressCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_availableIpAddressCount, allocator);
@@ -294,23 +315,23 @@ void Subnet::ToJsonObject(Value &value, Document::AllocatorType& allocator) cons
 
     if (m_ipv6CidrBlockHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Ipv6CidrBlock";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ipv6CidrBlock.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ipv6CidrBlock.c_str(), allocator).Move(), allocator);
     }
 
     if (m_networkAclIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetworkAclId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_networkAclId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_networkAclId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_isRemoteVpcSnatHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsRemoteVpcSnat";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isRemoteVpcSnat, allocator);
@@ -318,7 +339,7 @@ void Subnet::ToJsonObject(Value &value, Document::AllocatorType& allocator) cons
 
     if (m_totalIpAddressCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TotalIpAddressCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_totalIpAddressCount, allocator);
@@ -326,17 +347,33 @@ void Subnet::ToJsonObject(Value &value, Document::AllocatorType& allocator) cons
 
     if (m_tagSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TagSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_tagSet.begin(); itr != m_tagSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_cdcIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CdcId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cdcId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_isCdcSubnetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsCdcSubnet";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isCdcSubnet, allocator);
     }
 
 }
@@ -580,5 +617,37 @@ void Subnet::SetTagSet(const vector<Tag>& _tagSet)
 bool Subnet::TagSetHasBeenSet() const
 {
     return m_tagSetHasBeenSet;
+}
+
+string Subnet::GetCdcId() const
+{
+    return m_cdcId;
+}
+
+void Subnet::SetCdcId(const string& _cdcId)
+{
+    m_cdcId = _cdcId;
+    m_cdcIdHasBeenSet = true;
+}
+
+bool Subnet::CdcIdHasBeenSet() const
+{
+    return m_cdcIdHasBeenSet;
+}
+
+int64_t Subnet::GetIsCdcSubnet() const
+{
+    return m_isCdcSubnet;
+}
+
+void Subnet::SetIsCdcSubnet(const int64_t& _isCdcSubnet)
+{
+    m_isCdcSubnet = _isCdcSubnet;
+    m_isCdcSubnetHasBeenSet = true;
+}
+
+bool Subnet::IsCdcSubnetHasBeenSet() const
+{
+    return m_isCdcSubnetHasBeenSet;
 }
 

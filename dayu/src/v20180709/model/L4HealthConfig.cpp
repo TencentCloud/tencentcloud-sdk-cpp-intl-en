@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dayu::V20180709::Model;
-using namespace rapidjson;
 using namespace std;
 
 L4HealthConfig::L4HealthConfig() :
@@ -33,7 +32,7 @@ L4HealthConfig::L4HealthConfig() :
 {
 }
 
-CoreInternalOutcome L4HealthConfig::Deserialize(const Value &value)
+CoreInternalOutcome L4HealthConfig::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +41,7 @@ CoreInternalOutcome L4HealthConfig::Deserialize(const Value &value)
     {
         if (!value["Protocol"].IsString())
         {
-            return CoreInternalOutcome(Error("response `L4HealthConfig.Protocol` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L4HealthConfig.Protocol` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_protocol = string(value["Protocol"].GetString());
         m_protocolHasBeenSet = true;
@@ -52,7 +51,7 @@ CoreInternalOutcome L4HealthConfig::Deserialize(const Value &value)
     {
         if (!value["VirtualPort"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L4HealthConfig.VirtualPort` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L4HealthConfig.VirtualPort` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_virtualPort = value["VirtualPort"].GetUint64();
         m_virtualPortHasBeenSet = true;
@@ -62,7 +61,7 @@ CoreInternalOutcome L4HealthConfig::Deserialize(const Value &value)
     {
         if (!value["Enable"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L4HealthConfig.Enable` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L4HealthConfig.Enable` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_enable = value["Enable"].GetUint64();
         m_enableHasBeenSet = true;
@@ -72,7 +71,7 @@ CoreInternalOutcome L4HealthConfig::Deserialize(const Value &value)
     {
         if (!value["TimeOut"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L4HealthConfig.TimeOut` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L4HealthConfig.TimeOut` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_timeOut = value["TimeOut"].GetUint64();
         m_timeOutHasBeenSet = true;
@@ -82,7 +81,7 @@ CoreInternalOutcome L4HealthConfig::Deserialize(const Value &value)
     {
         if (!value["Interval"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L4HealthConfig.Interval` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L4HealthConfig.Interval` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_interval = value["Interval"].GetUint64();
         m_intervalHasBeenSet = true;
@@ -92,7 +91,7 @@ CoreInternalOutcome L4HealthConfig::Deserialize(const Value &value)
     {
         if (!value["KickNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L4HealthConfig.KickNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L4HealthConfig.KickNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_kickNum = value["KickNum"].GetUint64();
         m_kickNumHasBeenSet = true;
@@ -102,7 +101,7 @@ CoreInternalOutcome L4HealthConfig::Deserialize(const Value &value)
     {
         if (!value["AliveNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L4HealthConfig.AliveNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L4HealthConfig.AliveNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_aliveNum = value["AliveNum"].GetUint64();
         m_aliveNumHasBeenSet = true;
@@ -112,7 +111,7 @@ CoreInternalOutcome L4HealthConfig::Deserialize(const Value &value)
     {
         if (!value["KeepTime"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L4HealthConfig.KeepTime` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L4HealthConfig.KeepTime` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_keepTime = value["KeepTime"].GetUint64();
         m_keepTimeHasBeenSet = true;
@@ -122,20 +121,20 @@ CoreInternalOutcome L4HealthConfig::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void L4HealthConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void L4HealthConfig::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_protocolHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Protocol";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_protocol.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
     }
 
     if (m_virtualPortHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VirtualPort";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_virtualPort, allocator);
@@ -143,7 +142,7 @@ void L4HealthConfig::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_enableHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Enable";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_enable, allocator);
@@ -151,7 +150,7 @@ void L4HealthConfig::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_timeOutHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TimeOut";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_timeOut, allocator);
@@ -159,7 +158,7 @@ void L4HealthConfig::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_intervalHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Interval";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_interval, allocator);
@@ -167,7 +166,7 @@ void L4HealthConfig::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_kickNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "KickNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_kickNum, allocator);
@@ -175,7 +174,7 @@ void L4HealthConfig::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_aliveNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AliveNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_aliveNum, allocator);
@@ -183,7 +182,7 @@ void L4HealthConfig::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_keepTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "KeepTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_keepTime, allocator);

@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Mongodb::V20190725::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeSlowLogsRequest::DescribeSlowLogsRequest() :
@@ -29,44 +28,45 @@ DescribeSlowLogsRequest::DescribeSlowLogsRequest() :
     m_endTimeHasBeenSet(false),
     m_slowMSHasBeenSet(false),
     m_offsetHasBeenSet(false),
-    m_limitHasBeenSet(false)
+    m_limitHasBeenSet(false),
+    m_formatHasBeenSet(false)
 {
 }
 
 string DescribeSlowLogsRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_startTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTime";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_startTime.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_startTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_endTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndTime";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_endTime.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_endTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_slowMSHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SlowMS";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_slowMS, allocator);
@@ -74,7 +74,7 @@ string DescribeSlowLogsRequest::ToJsonString() const
 
     if (m_offsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Offset";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_offset, allocator);
@@ -82,15 +82,23 @@ string DescribeSlowLogsRequest::ToJsonString() const
 
     if (m_limitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Limit";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_limit, allocator);
     }
 
+    if (m_formatHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Format";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_format.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -190,6 +198,22 @@ void DescribeSlowLogsRequest::SetLimit(const uint64_t& _limit)
 bool DescribeSlowLogsRequest::LimitHasBeenSet() const
 {
     return m_limitHasBeenSet;
+}
+
+string DescribeSlowLogsRequest::GetFormat() const
+{
+    return m_format;
+}
+
+void DescribeSlowLogsRequest::SetFormat(const string& _format)
+{
+    m_format = _format;
+    m_formatHasBeenSet = true;
+}
+
+bool DescribeSlowLogsRequest::FormatHasBeenSet() const
+{
+    return m_formatHasBeenSet;
 }
 
 

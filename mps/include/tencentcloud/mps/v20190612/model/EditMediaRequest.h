@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/EditMediaFileInfo.h>
 #include <tencentcloud/mps/v20190612/model/TaskOutputStorage.h>
+#include <tencentcloud/mps/v20190612/model/EditMediaOutputConfig.h>
 #include <tencentcloud/mps/v20190612/model/TaskNotifyConfig.h>
 
 
@@ -100,6 +101,24 @@ namespace TencentCloud
                     bool OutputObjectPathHasBeenSet() const;
 
                     /**
+                     * 获取Configuration for output files of video editing
+                     * @return OutputConfig Configuration for output files of video editing
+                     */
+                    EditMediaOutputConfig GetOutputConfig() const;
+
+                    /**
+                     * 设置Configuration for output files of video editing
+                     * @param OutputConfig Configuration for output files of video editing
+                     */
+                    void SetOutputConfig(const EditMediaOutputConfig& _outputConfig);
+
+                    /**
+                     * 判断参数 OutputConfig 是否已赋值
+                     * @return OutputConfig 是否已赋值
+                     */
+                    bool OutputConfigHasBeenSet() const;
+
+                    /**
                      * 获取Event notification information of task. If this parameter is left empty, no event notifications will be obtained.
                      * @return TaskNotifyConfig Event notification information of task. If this parameter is left empty, no event notifications will be obtained.
                      */
@@ -118,14 +137,14 @@ namespace TencentCloud
                     bool TaskNotifyConfigHasBeenSet() const;
 
                     /**
-                     * 获取Task priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
-                     * @return TasksPriority Task priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
+                     * 获取Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
+                     * @return TasksPriority Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
                      */
                     int64_t GetTasksPriority() const;
 
                     /**
-                     * 设置Task priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
-                     * @param TasksPriority Task priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
+                     * 设置Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
+                     * @param TasksPriority Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
                      */
                     void SetTasksPriority(const int64_t& _tasksPriority);
 
@@ -136,14 +155,14 @@ namespace TencentCloud
                     bool TasksPriorityHasBeenSet() const;
 
                     /**
-                     * 获取The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
-                     * @return SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
+                     * 获取The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+                     * @return SessionId The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
-                     * @param SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
+                     * 设置The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+                     * @param SessionId The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
                      */
                     void SetSessionId(const std::string& _sessionId);
 
@@ -192,19 +211,25 @@ namespace TencentCloud
                     bool m_outputObjectPathHasBeenSet;
 
                     /**
+                     * Configuration for output files of video editing
+                     */
+                    EditMediaOutputConfig m_outputConfig;
+                    bool m_outputConfigHasBeenSet;
+
+                    /**
                      * Event notification information of task. If this parameter is left empty, no event notifications will be obtained.
                      */
                     TaskNotifyConfig m_taskNotifyConfig;
                     bool m_taskNotifyConfigHasBeenSet;
 
                     /**
-                     * Task priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
+                     * Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
                      */
                     int64_t m_tasksPriority;
                     bool m_tasksPriorityHasBeenSet;
 
                     /**
-                     * The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
+                     * The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;

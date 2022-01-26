@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mdp::V20200527::Model;
-using namespace rapidjson;
 using namespace std;
 
 InputInfo::InputInfo() :
@@ -27,7 +26,7 @@ InputInfo::InputInfo() :
 {
 }
 
-CoreInternalOutcome InputInfo::Deserialize(const Value &value)
+CoreInternalOutcome InputInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome InputInfo::Deserialize(const Value &value)
     {
         if (!value["Url"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InputInfo.Url` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InputInfo.Url` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_url = string(value["Url"].GetString());
         m_urlHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome InputInfo::Deserialize(const Value &value)
     {
         if (!value["AuthInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `InputInfo.AuthInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InputInfo.AuthInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_authInfo.Deserialize(value["AuthInfo"]);
@@ -63,23 +62,23 @@ CoreInternalOutcome InputInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void InputInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void InputInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_urlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Url";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_url.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_url.c_str(), allocator).Move(), allocator);
     }
 
     if (m_authInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AuthInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_authInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 

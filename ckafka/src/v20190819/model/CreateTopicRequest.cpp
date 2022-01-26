@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Ckafka::V20190819::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateTopicRequest::CreateTopicRequest() :
@@ -35,36 +34,40 @@ CreateTopicRequest::CreateTopicRequest() :
     m_minInsyncReplicasHasBeenSet(false),
     m_uncleanLeaderElectionEnableHasBeenSet(false),
     m_retentionMsHasBeenSet(false),
-    m_segmentMsHasBeenSet(false)
+    m_segmentMsHasBeenSet(false),
+    m_enableAclRuleHasBeenSet(false),
+    m_aclRuleNameHasBeenSet(false),
+    m_retentionBytesHasBeenSet(false),
+    m_tagsHasBeenSet(false)
 {
 }
 
 string CreateTopicRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_topicNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TopicName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_topicName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_topicName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_partitionNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PartitionNum";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_partitionNum, allocator);
@@ -72,7 +75,7 @@ string CreateTopicRequest::ToJsonString() const
 
     if (m_replicaNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReplicaNum";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_replicaNum, allocator);
@@ -80,7 +83,7 @@ string CreateTopicRequest::ToJsonString() const
 
     if (m_enableWhiteListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EnableWhiteList";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_enableWhiteList, allocator);
@@ -88,36 +91,36 @@ string CreateTopicRequest::ToJsonString() const
 
     if (m_ipWhiteListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IpWhiteList";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_ipWhiteList.begin(); itr != m_ipWhiteList.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_cleanUpPolicyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CleanUpPolicy";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_cleanUpPolicy.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_cleanUpPolicy.c_str(), allocator).Move(), allocator);
     }
 
     if (m_noteHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Note";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_note.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_note.c_str(), allocator).Move(), allocator);
     }
 
     if (m_minInsyncReplicasHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MinInsyncReplicas";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_minInsyncReplicas, allocator);
@@ -125,7 +128,7 @@ string CreateTopicRequest::ToJsonString() const
 
     if (m_uncleanLeaderElectionEnableHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UncleanLeaderElectionEnable";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_uncleanLeaderElectionEnable, allocator);
@@ -133,7 +136,7 @@ string CreateTopicRequest::ToJsonString() const
 
     if (m_retentionMsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RetentionMs";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_retentionMs, allocator);
@@ -141,15 +144,54 @@ string CreateTopicRequest::ToJsonString() const
 
     if (m_segmentMsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SegmentMs";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_segmentMs, allocator);
     }
 
+    if (m_enableAclRuleHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableAclRule";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_enableAclRule, allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    if (m_aclRuleNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AclRuleName";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_aclRuleName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_retentionBytesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RetentionBytes";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_retentionBytes, allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -345,6 +387,70 @@ void CreateTopicRequest::SetSegmentMs(const int64_t& _segmentMs)
 bool CreateTopicRequest::SegmentMsHasBeenSet() const
 {
     return m_segmentMsHasBeenSet;
+}
+
+int64_t CreateTopicRequest::GetEnableAclRule() const
+{
+    return m_enableAclRule;
+}
+
+void CreateTopicRequest::SetEnableAclRule(const int64_t& _enableAclRule)
+{
+    m_enableAclRule = _enableAclRule;
+    m_enableAclRuleHasBeenSet = true;
+}
+
+bool CreateTopicRequest::EnableAclRuleHasBeenSet() const
+{
+    return m_enableAclRuleHasBeenSet;
+}
+
+string CreateTopicRequest::GetAclRuleName() const
+{
+    return m_aclRuleName;
+}
+
+void CreateTopicRequest::SetAclRuleName(const string& _aclRuleName)
+{
+    m_aclRuleName = _aclRuleName;
+    m_aclRuleNameHasBeenSet = true;
+}
+
+bool CreateTopicRequest::AclRuleNameHasBeenSet() const
+{
+    return m_aclRuleNameHasBeenSet;
+}
+
+int64_t CreateTopicRequest::GetRetentionBytes() const
+{
+    return m_retentionBytes;
+}
+
+void CreateTopicRequest::SetRetentionBytes(const int64_t& _retentionBytes)
+{
+    m_retentionBytes = _retentionBytes;
+    m_retentionBytesHasBeenSet = true;
+}
+
+bool CreateTopicRequest::RetentionBytesHasBeenSet() const
+{
+    return m_retentionBytesHasBeenSet;
+}
+
+vector<Tag> CreateTopicRequest::GetTags() const
+{
+    return m_tags;
+}
+
+void CreateTopicRequest::SetTags(const vector<Tag>& _tags)
+{
+    m_tags = _tags;
+    m_tagsHasBeenSet = true;
+}
+
+bool CreateTopicRequest::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
 }
 
 

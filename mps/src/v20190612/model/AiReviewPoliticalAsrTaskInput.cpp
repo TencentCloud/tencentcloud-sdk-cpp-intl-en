@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 AiReviewPoliticalAsrTaskInput::AiReviewPoliticalAsrTaskInput() :
@@ -26,7 +25,7 @@ AiReviewPoliticalAsrTaskInput::AiReviewPoliticalAsrTaskInput() :
 {
 }
 
-CoreInternalOutcome AiReviewPoliticalAsrTaskInput::Deserialize(const Value &value)
+CoreInternalOutcome AiReviewPoliticalAsrTaskInput::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -35,7 +34,7 @@ CoreInternalOutcome AiReviewPoliticalAsrTaskInput::Deserialize(const Value &valu
     {
         if (!value["Definition"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AiReviewPoliticalAsrTaskInput.Definition` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiReviewPoliticalAsrTaskInput.Definition` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_definition = value["Definition"].GetUint64();
         m_definitionHasBeenSet = true;
@@ -45,12 +44,12 @@ CoreInternalOutcome AiReviewPoliticalAsrTaskInput::Deserialize(const Value &valu
     return CoreInternalOutcome(true);
 }
 
-void AiReviewPoliticalAsrTaskInput::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AiReviewPoliticalAsrTaskInput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_definitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Definition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_definition, allocator);

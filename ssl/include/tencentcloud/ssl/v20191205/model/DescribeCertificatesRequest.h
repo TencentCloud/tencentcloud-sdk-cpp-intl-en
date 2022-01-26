@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Pagination offset, starting from 0.
-                     * @return Offset Pagination offset, starting from 0.
+                     * 获取Pagination offset, starting from 0
+                     * @return Offset Pagination offset, starting from 0
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination offset, starting from 0.
-                     * @param Offset Pagination offset, starting from 0.
+                     * 设置Pagination offset, starting from 0
+                     * @param Offset Pagination offset, starting from 0
                      */
                     void SetOffset(const uint64_t& _offset);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Keyword for search, which can be a certificate ID, alias, or domain name. For example, a8xHcaIs.
-                     * @return SearchKey Keyword for search, which can be a certificate ID, alias, or domain name. For example, a8xHcaIs.
+                     * 获取Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs
+                     * @return SearchKey Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs
                      */
                     std::string GetSearchKey() const;
 
                     /**
-                     * 设置Keyword for search, which can be a certificate ID, alias, or domain name. For example, a8xHcaIs.
-                     * @param SearchKey Keyword for search, which can be a certificate ID, alias, or domain name. For example, a8xHcaIs.
+                     * 设置Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs
+                     * @param SearchKey Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs
                      */
                     void SetSearchKey(const std::string& _searchKey);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool SearchKeyHasBeenSet() const;
 
                     /**
-                     * 获取Certificate type. CA: client certificate; SVR: server certificate.
-                     * @return CertificateType Certificate type. CA: client certificate; SVR: server certificate.
+                     * 获取Certificate type. `CA`: client certificate; `SVR`: server certificate
+                     * @return CertificateType Certificate type. `CA`: client certificate; `SVR`: server certificate
                      */
                     std::string GetCertificateType() const;
 
                     /**
-                     * 设置Certificate type. CA: client certificate; SVR: server certificate.
-                     * @param CertificateType Certificate type. CA: client certificate; SVR: server certificate.
+                     * 设置Certificate type. `CA`: client certificate; `SVR`: server certificate
+                     * @param CertificateType Certificate type. `CA`: client certificate; `SVR`: server certificate
                      */
                     void SetCertificateType(const std::string& _certificateType);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool CertificateTypeHasBeenSet() const;
 
                     /**
-                     * 获取Project ID.
-                     * @return ProjectId Project ID.
+                     * 获取Project ID
+                     * @return ProjectId Project ID
                      */
                     uint64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID.
-                     * @param ProjectId Project ID.
+                     * 设置Project ID
+                     * @param ProjectId Project ID
                      */
                     void SetProjectId(const uint64_t& _projectId);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Sorting by expiration time. DESC: descending; ASC: ascending.
-                     * @return ExpirationSort Sorting by expiration time. DESC: descending; ASC: ascending.
+                     * 获取Sorting by expiration time. `DESC`: descending; `ASC`: ascending
+                     * @return ExpirationSort Sorting by expiration time. `DESC`: descending; `ASC`: ascending
                      */
                     std::string GetExpirationSort() const;
 
                     /**
-                     * 设置Sorting by expiration time. DESC: descending; ASC: ascending.
-                     * @param ExpirationSort Sorting by expiration time. DESC: descending; ASC: ascending.
+                     * 设置Sorting by expiration time. `DESC`: descending; `ASC`: ascending
+                     * @param ExpirationSort Sorting by expiration time. `DESC`: descending; `ASC`: ascending
                      */
                     void SetExpirationSort(const std::string& _expirationSort);
 
@@ -151,14 +151,14 @@ namespace TencentCloud
                     bool ExpirationSortHasBeenSet() const;
 
                     /**
-                     * 获取Certificate status.
-                     * @return CertificateStatus Certificate status.
+                     * 获取Certificate status
+                     * @return CertificateStatus Certificate status
                      */
                     std::vector<uint64_t> GetCertificateStatus() const;
 
                     /**
-                     * 设置Certificate status.
-                     * @param CertificateStatus Certificate status.
+                     * 设置Certificate status
+                     * @param CertificateStatus Certificate status
                      */
                     void SetCertificateStatus(const std::vector<uint64_t>& _certificateStatus);
 
@@ -169,14 +169,14 @@ namespace TencentCloud
                     bool CertificateStatusHasBeenSet() const;
 
                     /**
-                     * 获取Whether the certificate can be deployed. 1: yes; 0: no.
-                     * @return Deployable Whether the certificate can be deployed. 1: yes; 0: no.
+                     * 获取Whether the certificate can be deployed. `1`: yes; `0`: no
+                     * @return Deployable Whether the certificate can be deployed. `1`: yes; `0`: no
                      */
                     uint64_t GetDeployable() const;
 
                     /**
-                     * 设置Whether the certificate can be deployed. 1: yes; 0: no.
-                     * @param Deployable Whether the certificate can be deployed. 1: yes; 0: no.
+                     * 设置Whether the certificate can be deployed. `1`: yes; `0`: no
+                     * @param Deployable Whether the certificate can be deployed. `1`: yes; `0`: no
                      */
                     void SetDeployable(const uint64_t& _deployable);
 
@@ -189,7 +189,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Pagination offset, starting from 0.
+                     * Pagination offset, starting from 0
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
@@ -201,37 +201,37 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Keyword for search, which can be a certificate ID, alias, or domain name. For example, a8xHcaIs.
+                     * Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs
                      */
                     std::string m_searchKey;
                     bool m_searchKeyHasBeenSet;
 
                     /**
-                     * Certificate type. CA: client certificate; SVR: server certificate.
+                     * Certificate type. `CA`: client certificate; `SVR`: server certificate
                      */
                     std::string m_certificateType;
                     bool m_certificateTypeHasBeenSet;
 
                     /**
-                     * Project ID.
+                     * Project ID
                      */
                     uint64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Sorting by expiration time. DESC: descending; ASC: ascending.
+                     * Sorting by expiration time. `DESC`: descending; `ASC`: ascending
                      */
                     std::string m_expirationSort;
                     bool m_expirationSortHasBeenSet;
 
                     /**
-                     * Certificate status.
+                     * Certificate status
                      */
                     std::vector<uint64_t> m_certificateStatus;
                     bool m_certificateStatusHasBeenSet;
 
                     /**
-                     * Whether the certificate can be deployed. 1: yes; 0: no.
+                     * Whether the certificate can be deployed. `1`: yes; `0`: no
                      */
                     uint64_t m_deployable;
                     bool m_deployableHasBeenSet;

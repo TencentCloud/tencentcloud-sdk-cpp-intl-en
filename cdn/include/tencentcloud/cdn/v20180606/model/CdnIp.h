@@ -161,6 +161,28 @@ unknown: service region unknown
                      */
                     bool AreaHasBeenSet() const;
 
+                    /**
+                     * 获取City where the node resides
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return City City where the node resides
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    std::string GetCity() const;
+
+                    /**
+                     * 设置City where the node resides
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param City City where the node resides
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    void SetCity(const std::string& _city);
+
+                    /**
+                     * 判断参数 City 是否已赋值
+                     * @return City 是否已赋值
+                     */
+                    bool CityHasBeenSet() const;
+
                 private:
 
                     /**
@@ -198,6 +220,13 @@ unknown: service region unknown
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
+
+                    /**
+                     * City where the node resides
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    std::string m_city;
+                    bool m_cityHasBeenSet;
 
                 };
             }

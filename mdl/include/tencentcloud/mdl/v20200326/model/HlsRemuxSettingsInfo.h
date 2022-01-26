@@ -118,6 +118,24 @@ namespace TencentCloud
                      */
                     bool PdtDurationHasBeenSet() const;
 
+                    /**
+                     * 获取Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
+                     * @return Scheme Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
+                     */
+                    std::string GetScheme() const;
+
+                    /**
+                     * 设置Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
+                     * @param Scheme Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
+                     */
+                    void SetScheme(const std::string& _scheme);
+
+                    /**
+                     * 判断参数 Scheme 是否已赋值
+                     * @return Scheme 是否已赋值
+                     */
+                    bool SchemeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -143,6 +161,12 @@ namespace TencentCloud
                      */
                     uint64_t m_pdtDuration;
                     bool m_pdtDurationHasBeenSet;
+
+                    /**
+                     * Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
+                     */
+                    std::string m_scheme;
+                    bool m_schemeHasBeenSet;
 
                 };
             }

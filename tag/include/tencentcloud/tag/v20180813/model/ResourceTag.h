@@ -48,17 +48,17 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The resource’s region.
+                     * 获取The resource's region.
 Note: This field may return null, indicating that no valid value is found.
-                     * @return ResourceRegion The resource’s region.
+                     * @return ResourceRegion The resource's region.
 Note: This field may return null, indicating that no valid value is found.
                      */
                     std::string GetResourceRegion() const;
 
                     /**
-                     * 设置The resource’s region.
+                     * 设置The resource's region.
 Note: This field may return null, indicating that no valid value is found.
-                     * @param ResourceRegion The resource’s region.
+                     * @param ResourceRegion The resource's region.
 Note: This field may return null, indicating that no valid value is found.
                      */
                     void SetResourceRegion(const std::string& _resourceRegion);
@@ -160,7 +160,7 @@ Note: This field may return null, indicating that no valid value is found.
                 private:
 
                     /**
-                     * The resource’s region.
+                     * The resource's region.
 Note: This field may return null, indicating that no valid value is found.
                      */
                     std::string m_resourceRegion;

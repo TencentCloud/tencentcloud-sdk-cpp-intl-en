@@ -30,6 +30,7 @@
 #include <tencentcloud/batch/v20170312/model/InputMapping.h>
 #include <tencentcloud/batch/v20170312/model/AgentRunningMode.h>
 #include <tencentcloud/batch/v20170312/model/Notification.h>
+#include <tencentcloud/batch/v20170312/model/Tag.h>
 
 
 namespace TencentCloud
@@ -268,6 +269,24 @@ namespace TencentCloud
                      */
                     bool ResourceMaxRetryCountHasBeenSet() const;
 
+                    /**
+                     * 获取Tag list. By setting this parameter, you can bind tags to a compute environment. Each compute environment supports up to 10 tags.
+                     * @return Tags Tag list. By setting this parameter, you can bind tags to a compute environment. Each compute environment supports up to 10 tags.
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Tag list. By setting this parameter, you can bind tags to a compute environment. Each compute environment supports up to 10 tags.
+                     * @param Tags Tag list. By setting this parameter, you can bind tags to a compute environment. Each compute environment supports up to 10 tags.
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -341,6 +360,12 @@ namespace TencentCloud
                      */
                     int64_t m_resourceMaxRetryCount;
                     bool m_resourceMaxRetryCountHasBeenSet;
+
+                    /**
+                     * Tag list. By setting this parameter, you can bind tags to a compute environment. Each compute environment supports up to 10 tags.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Batch::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 JobView::JobView() :
@@ -29,11 +28,12 @@ JobView::JobView() :
     m_placementHasBeenSet(false),
     m_createTimeHasBeenSet(false),
     m_endTimeHasBeenSet(false),
-    m_taskMetricsHasBeenSet(false)
+    m_taskMetricsHasBeenSet(false),
+    m_tagsHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome JobView::Deserialize(const Value &value)
+CoreInternalOutcome JobView::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +42,7 @@ CoreInternalOutcome JobView::Deserialize(const Value &value)
     {
         if (!value["JobId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `JobView.JobId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `JobView.JobId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_jobId = string(value["JobId"].GetString());
         m_jobIdHasBeenSet = true;
@@ -52,7 +52,7 @@ CoreInternalOutcome JobView::Deserialize(const Value &value)
     {
         if (!value["JobName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `JobView.JobName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `JobView.JobName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_jobName = string(value["JobName"].GetString());
         m_jobNameHasBeenSet = true;
@@ -62,7 +62,7 @@ CoreInternalOutcome JobView::Deserialize(const Value &value)
     {
         if (!value["JobState"].IsString())
         {
-            return CoreInternalOutcome(Error("response `JobView.JobState` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `JobView.JobState` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_jobState = string(value["JobState"].GetString());
         m_jobStateHasBeenSet = true;
@@ -72,7 +72,7 @@ CoreInternalOutcome JobView::Deserialize(const Value &value)
     {
         if (!value["Priority"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `JobView.Priority` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `JobView.Priority` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_priority = value["Priority"].GetInt64();
         m_priorityHasBeenSet = true;
@@ -82,7 +82,7 @@ CoreInternalOutcome JobView::Deserialize(const Value &value)
     {
         if (!value["Placement"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `JobView.Placement` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `JobView.Placement` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_placement.Deserialize(value["Placement"]);
@@ -99,7 +99,7 @@ CoreInternalOutcome JobView::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `JobView.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `JobView.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -109,7 +109,7 @@ CoreInternalOutcome JobView::Deserialize(const Value &value)
     {
         if (!value["EndTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `JobView.EndTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `JobView.EndTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_endTime = string(value["EndTime"].GetString());
         m_endTimeHasBeenSet = true;
@@ -119,7 +119,7 @@ CoreInternalOutcome JobView::Deserialize(const Value &value)
     {
         if (!value["TaskMetrics"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `JobView.TaskMetrics` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `JobView.TaskMetrics` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_taskMetrics.Deserialize(value["TaskMetrics"]);
@@ -132,40 +132,60 @@ CoreInternalOutcome JobView::Deserialize(const Value &value)
         m_taskMetricsHasBeenSet = true;
     }
 
+    if (value.HasMember("Tags") && !value["Tags"].IsNull())
+    {
+        if (!value["Tags"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `JobView.Tags` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["Tags"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            Tag item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_tags.push_back(item);
+        }
+        m_tagsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void JobView::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void JobView::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_jobIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "JobId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_jobId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_jobId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_jobNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "JobName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_jobName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_jobName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_jobStateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "JobState";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_jobState.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_jobState.c_str(), allocator).Move(), allocator);
     }
 
     if (m_priorityHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Priority";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_priority, allocator);
@@ -173,36 +193,51 @@ void JobView::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_placementHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Placement";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_placement.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_endTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_endTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_endTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_taskMetricsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TaskMetrics";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_taskMetrics.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
 }
@@ -334,5 +369,21 @@ void JobView::SetTaskMetrics(const TaskMetrics& _taskMetrics)
 bool JobView::TaskMetricsHasBeenSet() const
 {
     return m_taskMetricsHasBeenSet;
+}
+
+vector<Tag> JobView::GetTags() const
+{
+    return m_tags;
+}
+
+void JobView::SetTags(const vector<Tag>& _tags)
+{
+    m_tags = _tags;
+    m_tagsHasBeenSet = true;
+}
+
+bool JobView::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
 }
 

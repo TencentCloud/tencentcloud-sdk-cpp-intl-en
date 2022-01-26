@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mariadb::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeDBSlowLogsResponse::DescribeDBSlowLogsResponse() :
@@ -35,20 +34,20 @@ DescribeDBSlowLogsResponse::DescribeDBSlowLogsResponse() :
 
 CoreInternalOutcome DescribeDBSlowLogsResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -59,21 +58,21 @@ CoreInternalOutcome DescribeDBSlowLogsResponse::Deserialize(const string &payloa
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
     if (rsp.HasMember("Data") && !rsp["Data"].IsNull())
     {
         if (!rsp["Data"].IsArray())
-            return CoreInternalOutcome(Error("response `Data` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Data` is not array type"));
 
-        const Value &tmpValue = rsp["Data"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["Data"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             SlowLogData item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -89,9 +88,9 @@ CoreInternalOutcome DescribeDBSlowLogsResponse::Deserialize(const string &payloa
 
     if (rsp.HasMember("LockTimeSum") && !rsp["LockTimeSum"].IsNull())
     {
-        if (!rsp["LockTimeSum"].IsDouble())
+        if (!rsp["LockTimeSum"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `LockTimeSum` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LockTimeSum` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_lockTimeSum = rsp["LockTimeSum"].GetDouble();
         m_lockTimeSumHasBeenSet = true;
@@ -101,7 +100,7 @@ CoreInternalOutcome DescribeDBSlowLogsResponse::Deserialize(const string &payloa
     {
         if (!rsp["QueryCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `QueryCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `QueryCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_queryCount = rsp["QueryCount"].GetInt64();
         m_queryCountHasBeenSet = true;
@@ -111,7 +110,7 @@ CoreInternalOutcome DescribeDBSlowLogsResponse::Deserialize(const string &payloa
     {
         if (!rsp["Total"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Total` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Total` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_total = rsp["Total"].GetInt64();
         m_totalHasBeenSet = true;
@@ -119,9 +118,9 @@ CoreInternalOutcome DescribeDBSlowLogsResponse::Deserialize(const string &payloa
 
     if (rsp.HasMember("QueryTimeSum") && !rsp["QueryTimeSum"].IsNull())
     {
-        if (!rsp["QueryTimeSum"].IsDouble())
+        if (!rsp["QueryTimeSum"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `QueryTimeSum` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `QueryTimeSum` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_queryTimeSum = rsp["QueryTimeSum"].GetDouble();
         m_queryTimeSumHasBeenSet = true;
@@ -129,6 +128,70 @@ CoreInternalOutcome DescribeDBSlowLogsResponse::Deserialize(const string &payloa
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeDBSlowLogsResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_dataHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Data";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_data.begin(); itr != m_data.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_lockTimeSumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LockTimeSum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_lockTimeSum, allocator);
+    }
+
+    if (m_queryCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "QueryCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_queryCount, allocator);
+    }
+
+    if (m_totalHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Total";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_total, allocator);
+    }
+
+    if (m_queryTimeSumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "QueryTimeSum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_queryTimeSum, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

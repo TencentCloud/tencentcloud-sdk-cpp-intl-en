@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Specification information of a node type in the cluster (such as hot data node, warm data node, or dedicated master node), including node type, number of nodes, node specification, disk type, and disk size. If `Type` is not specified, it will be a hot data node by default; if the node is a master node, then the `DiskType` and `DiskSize` parameters will be ignored (as a master node has no data disks)
+                * Specification information of a node type in the cluster (such as hot data node, warm data node, or dedicated primary node), including node type, number of nodes, node specification, disk type, and disk size. If `Type` is not specified, it will be a hot data node by default; if the node is a primary node, then the `DiskType` and `DiskSize` parameters will be ignored (as a primary node has no data disks)
                 */
                 class NodeInfo : public AbstractModel
                 {
@@ -84,26 +84,26 @@ namespace TencentCloud
                     bool NodeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Node type <li>hotData: hot data node</li>
-<li>warmData: warm data node</li>
-<li>dedicatedMaster: dedicated master node</li>
-Default value: hotData
-                     * @return Type Node type <li>hotData: hot data node</li>
-<li>warmData: warm data node</li>
-<li>dedicatedMaster: dedicated master node</li>
-Default value: hotData
+                     * 获取Node type<li>`hotData`: hot data node</li>
+<li>`warmData`: warm data node</li>
+<li>`dedicatedMaster`: dedicated master node</li>
+Default value: `hotData`
+                     * @return Type Node type<li>`hotData`: hot data node</li>
+<li>`warmData`: warm data node</li>
+<li>`dedicatedMaster`: dedicated master node</li>
+Default value: `hotData`
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Node type <li>hotData: hot data node</li>
-<li>warmData: warm data node</li>
-<li>dedicatedMaster: dedicated master node</li>
-Default value: hotData
-                     * @param Type Node type <li>hotData: hot data node</li>
-<li>warmData: warm data node</li>
-<li>dedicatedMaster: dedicated master node</li>
-Default value: hotData
+                     * 设置Node type<li>`hotData`: hot data node</li>
+<li>`warmData`: warm data node</li>
+<li>`dedicatedMaster`: dedicated master node</li>
+Default value: `hotData`
+                     * @param Type Node type<li>`hotData`: hot data node</li>
+<li>`warmData`: warm data node</li>
+<li>`dedicatedMaster`: dedicated master node</li>
+Default value: `hotData`
                      */
                     void SetType(const std::string& _type);
 
@@ -189,6 +189,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool DiskCountHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to encrypt node disk. 0: no (default); 1: yes.
+                     * @return DiskEncrypt Whether to encrypt node disk. 0: no (default); 1: yes.
+                     */
+                    uint64_t GetDiskEncrypt() const;
+
+                    /**
+                     * 设置Whether to encrypt node disk. 0: no (default); 1: yes.
+                     * @param DiskEncrypt Whether to encrypt node disk. 0: no (default); 1: yes.
+                     */
+                    void SetDiskEncrypt(const uint64_t& _diskEncrypt);
+
+                    /**
+                     * 判断参数 DiskEncrypt 是否已赋值
+                     * @return DiskEncrypt 是否已赋值
+                     */
+                    bool DiskEncryptHasBeenSet() const;
+
                 private:
 
                     /**
@@ -204,10 +222,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_nodeTypeHasBeenSet;
 
                     /**
-                     * Node type <li>hotData: hot data node</li>
-<li>warmData: warm data node</li>
-<li>dedicatedMaster: dedicated master node</li>
-Default value: hotData
+                     * Node type<li>`hotData`: hot data node</li>
+<li>`warmData`: warm data node</li>
+<li>`dedicatedMaster`: dedicated master node</li>
+Default value: `hotData`
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -236,6 +254,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_diskCount;
                     bool m_diskCountHasBeenSet;
+
+                    /**
+                     * Whether to encrypt node disk. 0: no (default); 1: yes.
+                     */
+                    uint64_t m_diskEncrypt;
+                    bool m_diskEncryptHasBeenSet;
 
                 };
             }

@@ -43,22 +43,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time (Beijing time),
-In the format of `yyyy-mm-dd HH:MM:SS`.
-`StartTime` cannot be more than 3 months ago.
-                     * @return StartTime Start time (Beijing time),
-In the format of `yyyy-mm-dd HH:MM:SS`.
-`StartTime` cannot be more than 3 months ago.
+                     * 获取Start time (Beijing time).
+Format: yyyy-mm-dd HH:MM:SS.
+                     * @return StartTime Start time (Beijing time).
+Format: yyyy-mm-dd HH:MM:SS.
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time (Beijing time),
-In the format of `yyyy-mm-dd HH:MM:SS`.
-`StartTime` cannot be more than 3 months ago.
-                     * @param StartTime Start time (Beijing time),
-In the format of `yyyy-mm-dd HH:MM:SS`.
-`StartTime` cannot be more than 3 months ago.
+                     * 设置Start time (Beijing time).
+Format: yyyy-mm-dd HH:MM:SS.
+                     * @param StartTime Start time (Beijing time).
+Format: yyyy-mm-dd HH:MM:SS.
                      */
                     void SetStartTime(const std::string& _startTime);
 
@@ -69,22 +65,22 @@ In the format of `yyyy-mm-dd HH:MM:SS`.
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time (Beijing time),
-In the format of `yyyy-mm-dd HH:MM:SS`.
-Note: `EndTime` and `StartTime` only support querying data for the last day.
-                     * @return EndTime End time (Beijing time),
-In the format of `yyyy-mm-dd HH:MM:SS`.
-Note: `EndTime` and `StartTime` only support querying data for the last day.
+                     * 获取End time (Beijing time).
+Format: yyyy-mm-dd HH:MM:SS.
+Note: data in the last 3 months can be queried and the query period is up to 1 day.
+                     * @return EndTime End time (Beijing time).
+Format: yyyy-mm-dd HH:MM:SS.
+Note: data in the last 3 months can be queried and the query period is up to 1 day.
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time (Beijing time),
-In the format of `yyyy-mm-dd HH:MM:SS`.
-Note: `EndTime` and `StartTime` only support querying data for the last day.
-                     * @param EndTime End time (Beijing time),
-In the format of `yyyy-mm-dd HH:MM:SS`.
-Note: `EndTime` and `StartTime` only support querying data for the last day.
+                     * 设置End time (Beijing time).
+Format: yyyy-mm-dd HH:MM:SS.
+Note: data in the last 3 months can be queried and the query period is up to 1 day.
+                     * @param EndTime End time (Beijing time).
+Format: yyyy-mm-dd HH:MM:SS.
+Note: data in the last 3 months can be queried and the query period is up to 1 day.
                      */
                     void SetEndTime(const std::string& _endTime);
 
@@ -115,17 +111,16 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
                 private:
 
                     /**
-                     * Start time (Beijing time),
-In the format of `yyyy-mm-dd HH:MM:SS`.
-`StartTime` cannot be more than 3 months ago.
+                     * Start time (Beijing time).
+Format: yyyy-mm-dd HH:MM:SS.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time (Beijing time),
-In the format of `yyyy-mm-dd HH:MM:SS`.
-Note: `EndTime` and `StartTime` only support querying data for the last day.
+                     * End time (Beijing time).
+Format: yyyy-mm-dd HH:MM:SS.
+Note: data in the last 3 months can be queried and the query period is up to 1 day.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

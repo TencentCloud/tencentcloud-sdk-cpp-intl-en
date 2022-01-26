@@ -18,15 +18,16 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Live::V20180801::Model;
-using namespace rapidjson;
 using namespace std;
 
 CommonMixControlParams::CommonMixControlParams() :
-    m_useMixCropCenterHasBeenSet(false)
+    m_useMixCropCenterHasBeenSet(false),
+    m_allowCopyHasBeenSet(false),
+    m_passInputSeiHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome CommonMixControlParams::Deserialize(const Value &value)
+CoreInternalOutcome CommonMixControlParams::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -35,25 +36,61 @@ CoreInternalOutcome CommonMixControlParams::Deserialize(const Value &value)
     {
         if (!value["UseMixCropCenter"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `CommonMixControlParams.UseMixCropCenter` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CommonMixControlParams.UseMixCropCenter` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_useMixCropCenter = value["UseMixCropCenter"].GetInt64();
         m_useMixCropCenterHasBeenSet = true;
+    }
+
+    if (value.HasMember("AllowCopy") && !value["AllowCopy"].IsNull())
+    {
+        if (!value["AllowCopy"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `CommonMixControlParams.AllowCopy` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_allowCopy = value["AllowCopy"].GetInt64();
+        m_allowCopyHasBeenSet = true;
+    }
+
+    if (value.HasMember("PassInputSei") && !value["PassInputSei"].IsNull())
+    {
+        if (!value["PassInputSei"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `CommonMixControlParams.PassInputSei` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_passInputSei = value["PassInputSei"].GetInt64();
+        m_passInputSeiHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void CommonMixControlParams::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void CommonMixControlParams::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_useMixCropCenterHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UseMixCropCenter";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_useMixCropCenter, allocator);
+    }
+
+    if (m_allowCopyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AllowCopy";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_allowCopy, allocator);
+    }
+
+    if (m_passInputSeiHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PassInputSei";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_passInputSei, allocator);
     }
 
 }
@@ -73,5 +110,37 @@ void CommonMixControlParams::SetUseMixCropCenter(const int64_t& _useMixCropCente
 bool CommonMixControlParams::UseMixCropCenterHasBeenSet() const
 {
     return m_useMixCropCenterHasBeenSet;
+}
+
+int64_t CommonMixControlParams::GetAllowCopy() const
+{
+    return m_allowCopy;
+}
+
+void CommonMixControlParams::SetAllowCopy(const int64_t& _allowCopy)
+{
+    m_allowCopy = _allowCopy;
+    m_allowCopyHasBeenSet = true;
+}
+
+bool CommonMixControlParams::AllowCopyHasBeenSet() const
+{
+    return m_allowCopyHasBeenSet;
+}
+
+int64_t CommonMixControlParams::GetPassInputSei() const
+{
+    return m_passInputSei;
+}
+
+void CommonMixControlParams::SetPassInputSei(const int64_t& _passInputSei)
+{
+    m_passInputSei = _passInputSei;
+    m_passInputSeiHasBeenSet = true;
+}
+
+bool CommonMixControlParams::PassInputSeiHasBeenSet() const
+{
+    return m_passInputSeiHasBeenSet;
 }
 

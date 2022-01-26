@@ -112,6 +112,46 @@ namespace TencentCloud
                      */
                     bool InstanceTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Description
+                     * @return Description Description
+                     */
+                    std::string GetDescription() const;
+
+                    /**
+                     * 设置Description
+                     * @param Description Description
+                     */
+                    void SetDescription(const std::string& _description);
+
+                    /**
+                     * 判断参数 Description 是否已赋值
+                     * @return Description 是否已赋值
+                     */
+                    bool DescriptionHasBeenSet() const;
+
+                    /**
+                     * 获取The ID of the route table associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return RouteTableId The ID of the route table associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetRouteTableId() const;
+
+                    /**
+                     * 设置The ID of the route table associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param RouteTableId The ID of the route table associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetRouteTableId(const std::string& _routeTableId);
+
+                    /**
+                     * 判断参数 RouteTableId 是否已赋值
+                     * @return RouteTableId 是否已赋值
+                     */
+                    bool RouteTableIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -134,6 +174,19 @@ namespace TencentCloud
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
+
+                    /**
+                     * Description
+                     */
+                    std::string m_description;
+                    bool m_descriptionHasBeenSet;
+
+                    /**
+                     * The ID of the route table associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_routeTableId;
+                    bool m_routeTableIdHasBeenSet;
 
                 };
             }

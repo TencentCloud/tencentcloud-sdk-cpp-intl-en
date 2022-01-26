@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ecdn::V20191012::Model;
-using namespace rapidjson;
 using namespace std;
 
 Https::Https() :
@@ -29,11 +28,12 @@ Https::Https() :
     m_certInfoHasBeenSet(false),
     m_clientCertInfoHasBeenSet(false),
     m_spdyHasBeenSet(false),
-    m_sslStatusHasBeenSet(false)
+    m_sslStatusHasBeenSet(false),
+    m_hstsHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome Https::Deserialize(const Value &value)
+CoreInternalOutcome Https::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +42,7 @@ CoreInternalOutcome Https::Deserialize(const Value &value)
     {
         if (!value["Switch"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Https.Switch` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Https.Switch` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_switch = string(value["Switch"].GetString());
         m_switchHasBeenSet = true;
@@ -52,7 +52,7 @@ CoreInternalOutcome Https::Deserialize(const Value &value)
     {
         if (!value["Http2"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Https.Http2` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Https.Http2` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_http2 = string(value["Http2"].GetString());
         m_http2HasBeenSet = true;
@@ -62,7 +62,7 @@ CoreInternalOutcome Https::Deserialize(const Value &value)
     {
         if (!value["OcspStapling"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Https.OcspStapling` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Https.OcspStapling` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ocspStapling = string(value["OcspStapling"].GetString());
         m_ocspStaplingHasBeenSet = true;
@@ -72,7 +72,7 @@ CoreInternalOutcome Https::Deserialize(const Value &value)
     {
         if (!value["VerifyClient"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Https.VerifyClient` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Https.VerifyClient` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_verifyClient = string(value["VerifyClient"].GetString());
         m_verifyClientHasBeenSet = true;
@@ -82,7 +82,7 @@ CoreInternalOutcome Https::Deserialize(const Value &value)
     {
         if (!value["CertInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `Https.CertInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Https.CertInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_certInfo.Deserialize(value["CertInfo"]);
@@ -99,7 +99,7 @@ CoreInternalOutcome Https::Deserialize(const Value &value)
     {
         if (!value["ClientCertInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `Https.ClientCertInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Https.ClientCertInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_clientCertInfo.Deserialize(value["ClientCertInfo"]);
@@ -116,7 +116,7 @@ CoreInternalOutcome Https::Deserialize(const Value &value)
     {
         if (!value["Spdy"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Https.Spdy` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Https.Spdy` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_spdy = string(value["Spdy"].GetString());
         m_spdyHasBeenSet = true;
@@ -126,83 +126,109 @@ CoreInternalOutcome Https::Deserialize(const Value &value)
     {
         if (!value["SslStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Https.SslStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Https.SslStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_sslStatus = string(value["SslStatus"].GetString());
         m_sslStatusHasBeenSet = true;
+    }
+
+    if (value.HasMember("Hsts") && !value["Hsts"].IsNull())
+    {
+        if (!value["Hsts"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `Https.Hsts` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_hsts.Deserialize(value["Hsts"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_hstsHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void Https::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Https::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_switchHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Switch";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_switch.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_switch.c_str(), allocator).Move(), allocator);
     }
 
     if (m_http2HasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Http2";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_http2.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_http2.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ocspStaplingHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OcspStapling";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ocspStapling.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ocspStapling.c_str(), allocator).Move(), allocator);
     }
 
     if (m_verifyClientHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VerifyClient";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_verifyClient.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_verifyClient.c_str(), allocator).Move(), allocator);
     }
 
     if (m_certInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CertInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_certInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_clientCertInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClientCertInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_clientCertInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_spdyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Spdy";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_spdy.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_spdy.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sslStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SslStatus";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_sslStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sslStatus.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_hstsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Hsts";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_hsts.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -334,5 +360,21 @@ void Https::SetSslStatus(const string& _sslStatus)
 bool Https::SslStatusHasBeenSet() const
 {
     return m_sslStatusHasBeenSet;
+}
+
+Hsts Https::GetHsts() const
+{
+    return m_hsts;
+}
+
+void Https::SetHsts(const Hsts& _hsts)
+{
+    m_hsts = _hsts;
+    m_hstsHasBeenSet = true;
+}
+
+bool Https::HstsHasBeenSet() const
+{
+    return m_hstsHasBeenSet;
 }
 

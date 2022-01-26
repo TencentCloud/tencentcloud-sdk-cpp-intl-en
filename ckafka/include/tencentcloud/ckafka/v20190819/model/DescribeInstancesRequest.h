@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
-                     * @return Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
+                     * 获取Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
+                     * @return Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
-                     * @param Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
+                     * 设置Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
+                     * @param Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Tag key match.
-                     * @return TagKey Tag key match.
+                     * 获取Tag key value (this field has been deprecated).
+                     * @return TagKey Tag key value (this field has been deprecated).
                      */
                     std::string GetTagKey() const;
 
                     /**
-                     * 设置Tag key match.
-                     * @param TagKey Tag key match.
+                     * 设置Tag key value (this field has been deprecated).
+                     * @param TagKey Tag key value (this field has been deprecated).
                      */
                     void SetTagKey(const std::string& _tagKey);
 
@@ -149,6 +149,24 @@ namespace TencentCloud
                      * @return TagKey 是否已赋值
                      */
                     bool TagKeyHasBeenSet() const;
+
+                    /**
+                     * 获取VPC ID.
+                     * @return VpcId VPC ID.
+                     */
+                    std::string GetVpcId() const;
+
+                    /**
+                     * 设置VPC ID.
+                     * @param VpcId VPC ID.
+                     */
+                    void SetVpcId(const std::string& _vpcId);
+
+                    /**
+                     * 判断参数 VpcId 是否已赋值
+                     * @return VpcId 是否已赋值
+                     */
+                    bool VpcIdHasBeenSet() const;
 
                 private:
 
@@ -177,16 +195,22 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
+                     * Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Tag key match.
+                     * Tag key value (this field has been deprecated).
                      */
                     std::string m_tagKey;
                     bool m_tagKeyHasBeenSet;
+
+                    /**
+                     * VPC ID.
+                     */
+                    std::string m_vpcId;
+                    bool m_vpcIdHasBeenSet;
 
                 };
             }

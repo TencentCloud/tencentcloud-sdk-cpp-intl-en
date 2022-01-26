@@ -87,50 +87,26 @@ The time span cannot exceed 90 days.
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Statistical metric name. flux: traffic in bytes
-bandwidth: bandwidth in bps
+                     * 获取Statistical metric names:
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
-                     * @return Metrics Statistical metric name. flux: traffic in bytes
-bandwidth: bandwidth in bps
+                     * @return Metrics Statistical metric names:
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
                      */
                     std::vector<std::string> GetMetrics() const;
 
                     /**
-                     * 设置Statistical metric name. flux: traffic in bytes
-bandwidth: bandwidth in bps
+                     * 设置Statistical metric names:
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
-                     * @param Metrics Statistical metric name. flux: traffic in bytes
-bandwidth: bandwidth in bps
+                     * @param Metrics Statistical metric names:
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
                      */
                     void SetMetrics(const std::vector<std::string>& _metrics);
 
@@ -216,6 +192,40 @@ If no domain name is entered, the specified project will be queried; otherwise, 
                      */
                     bool LimitHasBeenSet() const;
 
+                    /**
+                     * 获取Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
+                     * @return Area Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
+                     */
+                    std::string GetArea() const;
+
+                    /**
+                     * 设置Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
+                     * @param Area Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
+                     */
+                    void SetArea(const std::string& _area);
+
+                    /**
+                     * 判断参数 Area 是否已赋值
+                     * @return Area 是否已赋值
+                     */
+                    bool AreaHasBeenSet() const;
+
                 private:
 
                     /**
@@ -233,16 +243,10 @@ The time span cannot exceed 90 days.
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Statistical metric name. flux: traffic in bytes
-bandwidth: bandwidth in bps
+                     * Statistical metric names:
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
                      */
                     std::vector<std::string> m_metrics;
                     bool m_metricsHasBeenSet;
@@ -271,6 +275,16 @@ If no domain name is entered, the specified project will be queried; otherwise, 
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
+
+                    /**
+                     * Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
+                     */
+                    std::string m_area;
+                    bool m_areaHasBeenSet;
 
                 };
             }

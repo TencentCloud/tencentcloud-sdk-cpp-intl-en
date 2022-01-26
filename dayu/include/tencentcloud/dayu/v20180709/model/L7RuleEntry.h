@@ -372,14 +372,14 @@ namespace TencentCloud
                     bool CCLevelHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HttpsToHttpEnable 
+                     * 获取Whether to enable **Forward HTTPS requests via HTTP**. Valid values: `0` (disabled) and `1` (enabled). The default value is disabled.
+                     * @return HttpsToHttpEnable Whether to enable **Forward HTTPS requests via HTTP**. Valid values: `0` (disabled) and `1` (enabled). The default value is disabled.
                      */
                     uint64_t GetHttpsToHttpEnable() const;
 
                     /**
-                     * 设置
-                     * @param HttpsToHttpEnable 
+                     * 设置Whether to enable **Forward HTTPS requests via HTTP**. Valid values: `0` (disabled) and `1` (enabled). The default value is disabled.
+                     * @param HttpsToHttpEnable Whether to enable **Forward HTTPS requests via HTTP**. Valid values: `0` (disabled) and `1` (enabled). The default value is disabled.
                      */
                     void SetHttpsToHttpEnable(const uint64_t& _httpsToHttpEnable);
 
@@ -388,6 +388,28 @@ namespace TencentCloud
                      * @return HttpsToHttpEnable 是否已赋值
                      */
                     bool HttpsToHttpEnableHasBeenSet() const;
+
+                    /**
+                     * 获取Access port number.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return VirtualPort Access port number.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetVirtualPort() const;
+
+                    /**
+                     * 设置Access port number.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param VirtualPort Access port number.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetVirtualPort(const uint64_t& _virtualPort);
+
+                    /**
+                     * 判断参数 VirtualPort 是否已赋值
+                     * @return VirtualPort 是否已赋值
+                     */
+                    bool VirtualPortHasBeenSet() const;
 
                 private:
 
@@ -500,10 +522,17 @@ namespace TencentCloud
                     bool m_cCLevelHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to enable **Forward HTTPS requests via HTTP**. Valid values: `0` (disabled) and `1` (enabled). The default value is disabled.
                      */
                     uint64_t m_httpsToHttpEnable;
                     bool m_httpsToHttpEnableHasBeenSet;
+
+                    /**
+                     * Access port number.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_virtualPort;
+                    bool m_virtualPortHasBeenSet;
 
                 };
             }

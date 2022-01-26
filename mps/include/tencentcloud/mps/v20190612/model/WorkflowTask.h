@@ -213,14 +213,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AiContentReviewResultSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AiAnalysisResultSet 
+                     * 获取Execution status and result of video content analysis task.
+                     * @return AiAnalysisResultSet Execution status and result of video content analysis task.
                      */
                     std::vector<AiAnalysisResult> GetAiAnalysisResultSet() const;
 
                     /**
-                     * 设置
-                     * @param AiAnalysisResultSet 
+                     * 设置Execution status and result of video content analysis task.
+                     * @param AiAnalysisResultSet Execution status and result of video content analysis task.
                      */
                     void SetAiAnalysisResultSet(const std::vector<AiAnalysisResult>& _aiAnalysisResultSet);
 
@@ -303,7 +303,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_aiContentReviewResultSetHasBeenSet;
 
                     /**
-                     * 
+                     * Execution status and result of video content analysis task.
                      */
                     std::vector<AiAnalysisResult> m_aiAnalysisResultSet;
                     bool m_aiAnalysisResultSetHasBeenSet;

@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the cloud disk, which can be queried via the API [DescribeDisks](/document/product/362/16315).
-                     * @return DiskId ID of the cloud disk, which can be queried via the API [DescribeDisks](/document/product/362/16315).
+                     * 获取ID of the cloud disk, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
+                     * @return DiskId ID of the cloud disk, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
                      */
                     std::string GetDiskId() const;
 
                     /**
-                     * 设置ID of the cloud disk, which can be queried via the API [DescribeDisks](/document/product/362/16315).
-                     * @param DiskId ID of the cloud disk, which can be queried via the API [DescribeDisks](/document/product/362/16315).
+                     * 设置ID of the cloud disk, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
+                     * @param DiskId ID of the cloud disk, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
                      */
                     void SetDiskId(const std::string& _diskId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool DiskIdHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk size after scale out (in GB). This cannot be smaller than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
-                     * @return DiskSize Cloud disk size after scale out (in GB). This cannot be smaller than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
+                     * 获取Cloud disk size after scale out (in GB). This cannot be smaller than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+                     * @return DiskSize Cloud disk size after scale out (in GB). This cannot be smaller than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
                      */
                     uint64_t GetDiskSize() const;
 
                     /**
-                     * 设置Cloud disk size after scale out (in GB). This cannot be smaller than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
-                     * @param DiskSize Cloud disk size after scale out (in GB). This cannot be smaller than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
+                     * 设置Cloud disk size after scale out (in GB). This cannot be smaller than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+                     * @param DiskSize Cloud disk size after scale out (in GB). This cannot be smaller than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
                      */
                     void SetDiskSize(const uint64_t& _diskSize);
 
@@ -99,13 +99,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the cloud disk, which can be queried via the API [DescribeDisks](/document/product/362/16315).
+                     * ID of the cloud disk, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
                      */
                     std::string m_diskId;
                     bool m_diskIdHasBeenSet;
 
                     /**
-                     * Cloud disk size after scale out (in GB). This cannot be smaller than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](/document/product/362/2353).
+                     * Cloud disk size after scale out (in GB). This cannot be smaller than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
                      */
                     uint64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;

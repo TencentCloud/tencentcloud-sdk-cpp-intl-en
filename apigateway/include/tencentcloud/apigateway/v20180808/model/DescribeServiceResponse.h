@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/apigateway/v20180808/model/ApiIdStatus.h>
 #include <tencentcloud/apigateway/v20180808/model/UsagePlan.h>
+#include <tencentcloud/apigateway/v20180808/model/Tag.h>
 
 
 namespace TencentCloud
@@ -42,6 +43,7 @@ namespace TencentCloud
                     DescribeServiceResponse();
                     ~DescribeServiceResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -131,8 +133,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ModifiedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Self-deployed cluster name.
-                     * @return ExclusiveSetName Self-deployed cluster name.
+                     * 获取Dedicated cluster name.
+                     * @return ExclusiveSetName Dedicated cluster name.
                      */
                     std::string GetExclusiveSetName() const;
 
@@ -296,6 +298,90 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool SetIdHasBeenSet() const;
 
+                    /**
+                     * 获取Tags bound to a service.
+Note: this field may return null, indicating that no valid values found.
+                     * @return Tags Tags bound to a service.
+Note: this field may return null, indicating that no valid values found.
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取Dedicated instance ID
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return InstanceId Dedicated instance ID
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Dedicated instance name
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return InstanceName Dedicated instance name
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetInstanceName() const;
+
+                    /**
+                     * 判断参数 InstanceName 是否已赋值
+                     * @return InstanceName 是否已赋值
+                     */
+                    bool InstanceNameHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster type
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return SetType Cluster type
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetSetType() const;
+
+                    /**
+                     * 判断参数 SetType 是否已赋值
+                     * @return SetType 是否已赋值
+                     */
+                    bool SetTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster type for service deployment
+Note: this field may return null, indicating that no valid values found.
+                     * @return DeploymentType Cluster type for service deployment
+Note: this field may return null, indicating that no valid values found.
+                     */
+                    std::string GetDeploymentType() const;
+
+                    /**
+                     * 判断参数 DeploymentType 是否已赋值
+                     * @return DeploymentType 是否已赋值
+                     */
+                    bool DeploymentTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether it’s for special usage
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return SpecialUse Whether it’s for special usage
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetSpecialUse() const;
+
+                    /**
+                     * 判断参数 SpecialUse 是否已赋值
+                     * @return SpecialUse 是否已赋值
+                     */
+                    bool SpecialUseHasBeenSet() const;
+
                 private:
 
                     /**
@@ -342,7 +428,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_modifiedTimeHasBeenSet;
 
                     /**
-                     * Self-deployed cluster name.
+                     * Dedicated cluster name.
                      */
                     std::string m_exclusiveSetName;
                     bool m_exclusiveSetNameHasBeenSet;
@@ -423,6 +509,48 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_setId;
                     bool m_setIdHasBeenSet;
+
+                    /**
+                     * Tags bound to a service.
+Note: this field may return null, indicating that no valid values found.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * Dedicated instance ID
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Dedicated instance name
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_instanceName;
+                    bool m_instanceNameHasBeenSet;
+
+                    /**
+                     * Cluster type
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_setType;
+                    bool m_setTypeHasBeenSet;
+
+                    /**
+                     * Cluster type for service deployment
+Note: this field may return null, indicating that no valid values found.
+                     */
+                    std::string m_deploymentType;
+                    bool m_deploymentTypeHasBeenSet;
+
+                    /**
+                     * Whether it’s for special usage
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_specialUse;
+                    bool m_specialUseHasBeenSet;
 
                 };
             }

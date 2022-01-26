@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::As::V20180419::Model;
-using namespace rapidjson;
 using namespace std;
 
 LoginSettings::LoginSettings() :
@@ -28,7 +27,7 @@ LoginSettings::LoginSettings() :
 {
 }
 
-CoreInternalOutcome LoginSettings::Deserialize(const Value &value)
+CoreInternalOutcome LoginSettings::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome LoginSettings::Deserialize(const Value &value)
     {
         if (!value["Password"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LoginSettings.Password` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LoginSettings.Password` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_password = string(value["Password"].GetString());
         m_passwordHasBeenSet = true;
@@ -46,10 +45,10 @@ CoreInternalOutcome LoginSettings::Deserialize(const Value &value)
     if (value.HasMember("KeyIds") && !value["KeyIds"].IsNull())
     {
         if (!value["KeyIds"].IsArray())
-            return CoreInternalOutcome(Error("response `LoginSettings.KeyIds` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `LoginSettings.KeyIds` is not array type"));
 
-        const Value &tmpValue = value["KeyIds"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["KeyIds"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_keyIds.push_back((*itr).GetString());
         }
@@ -60,7 +59,7 @@ CoreInternalOutcome LoginSettings::Deserialize(const Value &value)
     {
         if (!value["KeepImageLogin"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `LoginSettings.KeepImageLogin` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LoginSettings.KeepImageLogin` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_keepImageLogin = value["KeepImageLogin"].GetBool();
         m_keepImageLoginHasBeenSet = true;
@@ -70,33 +69,33 @@ CoreInternalOutcome LoginSettings::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void LoginSettings::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void LoginSettings::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_passwordHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Password";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_password.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_password.c_str(), allocator).Move(), allocator);
     }
 
     if (m_keyIdsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "KeyIds";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_keyIds.begin(); itr != m_keyIds.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_keepImageLoginHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "KeepImageLogin";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_keepImageLogin, allocator);

@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Real server type. Value range: CVM, ENI (coming soon)
-                     * @return Type Real server type. Value range: CVM, ENI (coming soon)
+                     * 获取Real server type. Valid values: CVM, ENI.
+                     * @return Type Real server type. Valid values: CVM, ENI.
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Real server type. Value range: CVM, ENI (coming soon)
-                     * @param Type Real server type. Value range: CVM, ENI (coming soon)
+                     * 设置Real server type. Valid values: CVM, ENI.
+                     * @param Type Real server type. Valid values: CVM, ENI.
                      */
                     void SetType(const std::string& _type);
 
@@ -231,7 +231,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Real server type. Value range: CVM, ENI (coming soon)
+                     * Real server type. Valid values: CVM, ENI.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

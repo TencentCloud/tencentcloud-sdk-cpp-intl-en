@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 UDPListener::UDPListener() :
@@ -32,11 +31,12 @@ UDPListener::UDPListener() :
     m_schedulerHasBeenSet(false),
     m_bindStatusHasBeenSet(false),
     m_realServerSetHasBeenSet(false),
-    m_createTimeHasBeenSet(false)
+    m_createTimeHasBeenSet(false),
+    m_sessionPersistHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome UDPListener::Deserialize(const Value &value)
+CoreInternalOutcome UDPListener::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -45,7 +45,7 @@ CoreInternalOutcome UDPListener::Deserialize(const Value &value)
     {
         if (!value["ListenerId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UDPListener.ListenerId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UDPListener.ListenerId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_listenerId = string(value["ListenerId"].GetString());
         m_listenerIdHasBeenSet = true;
@@ -55,7 +55,7 @@ CoreInternalOutcome UDPListener::Deserialize(const Value &value)
     {
         if (!value["ListenerName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UDPListener.ListenerName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UDPListener.ListenerName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_listenerName = string(value["ListenerName"].GetString());
         m_listenerNameHasBeenSet = true;
@@ -65,7 +65,7 @@ CoreInternalOutcome UDPListener::Deserialize(const Value &value)
     {
         if (!value["Port"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `UDPListener.Port` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UDPListener.Port` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_port = value["Port"].GetUint64();
         m_portHasBeenSet = true;
@@ -75,7 +75,7 @@ CoreInternalOutcome UDPListener::Deserialize(const Value &value)
     {
         if (!value["RealServerPort"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `UDPListener.RealServerPort` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UDPListener.RealServerPort` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_realServerPort = value["RealServerPort"].GetUint64();
         m_realServerPortHasBeenSet = true;
@@ -85,7 +85,7 @@ CoreInternalOutcome UDPListener::Deserialize(const Value &value)
     {
         if (!value["RealServerType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UDPListener.RealServerType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UDPListener.RealServerType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_realServerType = string(value["RealServerType"].GetString());
         m_realServerTypeHasBeenSet = true;
@@ -95,7 +95,7 @@ CoreInternalOutcome UDPListener::Deserialize(const Value &value)
     {
         if (!value["Protocol"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UDPListener.Protocol` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UDPListener.Protocol` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_protocol = string(value["Protocol"].GetString());
         m_protocolHasBeenSet = true;
@@ -105,7 +105,7 @@ CoreInternalOutcome UDPListener::Deserialize(const Value &value)
     {
         if (!value["ListenerStatus"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `UDPListener.ListenerStatus` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UDPListener.ListenerStatus` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_listenerStatus = value["ListenerStatus"].GetUint64();
         m_listenerStatusHasBeenSet = true;
@@ -115,7 +115,7 @@ CoreInternalOutcome UDPListener::Deserialize(const Value &value)
     {
         if (!value["Scheduler"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UDPListener.Scheduler` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UDPListener.Scheduler` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_scheduler = string(value["Scheduler"].GetString());
         m_schedulerHasBeenSet = true;
@@ -125,7 +125,7 @@ CoreInternalOutcome UDPListener::Deserialize(const Value &value)
     {
         if (!value["BindStatus"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `UDPListener.BindStatus` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UDPListener.BindStatus` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_bindStatus = value["BindStatus"].GetUint64();
         m_bindStatusHasBeenSet = true;
@@ -134,10 +134,10 @@ CoreInternalOutcome UDPListener::Deserialize(const Value &value)
     if (value.HasMember("RealServerSet") && !value["RealServerSet"].IsNull())
     {
         if (!value["RealServerSet"].IsArray())
-            return CoreInternalOutcome(Error("response `UDPListener.RealServerSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `UDPListener.RealServerSet` is not array type"));
 
-        const Value &tmpValue = value["RealServerSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["RealServerSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             BindRealServer item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -155,38 +155,48 @@ CoreInternalOutcome UDPListener::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `UDPListener.CreateTime` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UDPListener.CreateTime` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = value["CreateTime"].GetUint64();
         m_createTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("SessionPersist") && !value["SessionPersist"].IsNull())
+    {
+        if (!value["SessionPersist"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `UDPListener.SessionPersist` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_sessionPersist = value["SessionPersist"].GetUint64();
+        m_sessionPersistHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void UDPListener::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void UDPListener::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_listenerIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ListenerId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_listenerId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_listenerId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_listenerNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ListenerName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_listenerName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_listenerName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_portHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Port";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_port, allocator);
@@ -194,7 +204,7 @@ void UDPListener::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_realServerPortHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RealServerPort";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_realServerPort, allocator);
@@ -202,23 +212,23 @@ void UDPListener::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_realServerTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RealServerType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_realServerType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_realServerType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_protocolHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Protocol";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_protocol.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
     }
 
     if (m_listenerStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ListenerStatus";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_listenerStatus, allocator);
@@ -226,15 +236,15 @@ void UDPListener::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_schedulerHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Scheduler";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_scheduler.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_scheduler.c_str(), allocator).Move(), allocator);
     }
 
     if (m_bindStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BindStatus";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_bindStatus, allocator);
@@ -242,25 +252,33 @@ void UDPListener::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_realServerSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RealServerSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_realServerSet.begin(); itr != m_realServerSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_createTime, allocator);
+    }
+
+    if (m_sessionPersistHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SessionPersist";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_sessionPersist, allocator);
     }
 
 }
@@ -440,5 +458,21 @@ void UDPListener::SetCreateTime(const uint64_t& _createTime)
 bool UDPListener::CreateTimeHasBeenSet() const
 {
     return m_createTimeHasBeenSet;
+}
+
+uint64_t UDPListener::GetSessionPersist() const
+{
+    return m_sessionPersist;
+}
+
+void UDPListener::SetSessionPersist(const uint64_t& _sessionPersist)
+{
+    m_sessionPersist = _sessionPersist;
+    m_sessionPersistHasBeenSet = true;
+}
+
+bool UDPListener::SessionPersistHasBeenSet() const
+{
+    return m_sessionPersistHasBeenSet;
 }
 

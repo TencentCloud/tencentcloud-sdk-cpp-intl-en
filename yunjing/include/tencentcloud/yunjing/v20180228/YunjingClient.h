@@ -179,224 +179,224 @@ namespace TencentCloud
                 YunjingClient(const Credential &credential, const std::string &region);
                 YunjingClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::AddLoginWhiteListResponse> AddLoginWhiteListOutcome;
+                typedef Outcome<Core::Error, Model::AddLoginWhiteListResponse> AddLoginWhiteListOutcome;
                 typedef std::future<AddLoginWhiteListOutcome> AddLoginWhiteListOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::AddLoginWhiteListRequest&, AddLoginWhiteListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddLoginWhiteListAsyncHandler;
-                typedef Outcome<Error, Model::AddMachineTagResponse> AddMachineTagOutcome;
+                typedef Outcome<Core::Error, Model::AddMachineTagResponse> AddMachineTagOutcome;
                 typedef std::future<AddMachineTagOutcome> AddMachineTagOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::AddMachineTagRequest&, AddMachineTagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddMachineTagAsyncHandler;
-                typedef Outcome<Error, Model::CloseProVersionResponse> CloseProVersionOutcome;
+                typedef Outcome<Core::Error, Model::CloseProVersionResponse> CloseProVersionOutcome;
                 typedef std::future<CloseProVersionOutcome> CloseProVersionOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::CloseProVersionRequest&, CloseProVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloseProVersionAsyncHandler;
-                typedef Outcome<Error, Model::CreateOpenPortTaskResponse> CreateOpenPortTaskOutcome;
+                typedef Outcome<Core::Error, Model::CreateOpenPortTaskResponse> CreateOpenPortTaskOutcome;
                 typedef std::future<CreateOpenPortTaskOutcome> CreateOpenPortTaskOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::CreateOpenPortTaskRequest&, CreateOpenPortTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateOpenPortTaskAsyncHandler;
-                typedef Outcome<Error, Model::CreateProcessTaskResponse> CreateProcessTaskOutcome;
+                typedef Outcome<Core::Error, Model::CreateProcessTaskResponse> CreateProcessTaskOutcome;
                 typedef std::future<CreateProcessTaskOutcome> CreateProcessTaskOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::CreateProcessTaskRequest&, CreateProcessTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateProcessTaskAsyncHandler;
-                typedef Outcome<Error, Model::CreateUsualLoginPlacesResponse> CreateUsualLoginPlacesOutcome;
+                typedef Outcome<Core::Error, Model::CreateUsualLoginPlacesResponse> CreateUsualLoginPlacesOutcome;
                 typedef std::future<CreateUsualLoginPlacesOutcome> CreateUsualLoginPlacesOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::CreateUsualLoginPlacesRequest&, CreateUsualLoginPlacesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateUsualLoginPlacesAsyncHandler;
-                typedef Outcome<Error, Model::DeleteBruteAttacksResponse> DeleteBruteAttacksOutcome;
+                typedef Outcome<Core::Error, Model::DeleteBruteAttacksResponse> DeleteBruteAttacksOutcome;
                 typedef std::future<DeleteBruteAttacksOutcome> DeleteBruteAttacksOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DeleteBruteAttacksRequest&, DeleteBruteAttacksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteBruteAttacksAsyncHandler;
-                typedef Outcome<Error, Model::DeleteLoginWhiteListResponse> DeleteLoginWhiteListOutcome;
+                typedef Outcome<Core::Error, Model::DeleteLoginWhiteListResponse> DeleteLoginWhiteListOutcome;
                 typedef std::future<DeleteLoginWhiteListOutcome> DeleteLoginWhiteListOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DeleteLoginWhiteListRequest&, DeleteLoginWhiteListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLoginWhiteListAsyncHandler;
-                typedef Outcome<Error, Model::DeleteMachineResponse> DeleteMachineOutcome;
+                typedef Outcome<Core::Error, Model::DeleteMachineResponse> DeleteMachineOutcome;
                 typedef std::future<DeleteMachineOutcome> DeleteMachineOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DeleteMachineRequest&, DeleteMachineOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteMachineAsyncHandler;
-                typedef Outcome<Error, Model::DeleteMachineTagResponse> DeleteMachineTagOutcome;
+                typedef Outcome<Core::Error, Model::DeleteMachineTagResponse> DeleteMachineTagOutcome;
                 typedef std::future<DeleteMachineTagOutcome> DeleteMachineTagOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DeleteMachineTagRequest&, DeleteMachineTagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteMachineTagAsyncHandler;
-                typedef Outcome<Error, Model::DeleteMaliciousRequestsResponse> DeleteMaliciousRequestsOutcome;
+                typedef Outcome<Core::Error, Model::DeleteMaliciousRequestsResponse> DeleteMaliciousRequestsOutcome;
                 typedef std::future<DeleteMaliciousRequestsOutcome> DeleteMaliciousRequestsOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DeleteMaliciousRequestsRequest&, DeleteMaliciousRequestsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteMaliciousRequestsAsyncHandler;
-                typedef Outcome<Error, Model::DeleteMalwaresResponse> DeleteMalwaresOutcome;
+                typedef Outcome<Core::Error, Model::DeleteMalwaresResponse> DeleteMalwaresOutcome;
                 typedef std::future<DeleteMalwaresOutcome> DeleteMalwaresOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DeleteMalwaresRequest&, DeleteMalwaresOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteMalwaresAsyncHandler;
-                typedef Outcome<Error, Model::DeleteNonlocalLoginPlacesResponse> DeleteNonlocalLoginPlacesOutcome;
+                typedef Outcome<Core::Error, Model::DeleteNonlocalLoginPlacesResponse> DeleteNonlocalLoginPlacesOutcome;
                 typedef std::future<DeleteNonlocalLoginPlacesOutcome> DeleteNonlocalLoginPlacesOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DeleteNonlocalLoginPlacesRequest&, DeleteNonlocalLoginPlacesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteNonlocalLoginPlacesAsyncHandler;
-                typedef Outcome<Error, Model::DeleteUsualLoginPlacesResponse> DeleteUsualLoginPlacesOutcome;
+                typedef Outcome<Core::Error, Model::DeleteUsualLoginPlacesResponse> DeleteUsualLoginPlacesOutcome;
                 typedef std::future<DeleteUsualLoginPlacesOutcome> DeleteUsualLoginPlacesOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DeleteUsualLoginPlacesRequest&, DeleteUsualLoginPlacesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteUsualLoginPlacesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeAccountStatisticsResponse> DescribeAccountStatisticsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAccountStatisticsResponse> DescribeAccountStatisticsOutcome;
                 typedef std::future<DescribeAccountStatisticsOutcome> DescribeAccountStatisticsOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeAccountStatisticsRequest&, DescribeAccountStatisticsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccountStatisticsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeAccountsResponse> DescribeAccountsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAccountsResponse> DescribeAccountsOutcome;
                 typedef std::future<DescribeAccountsOutcome> DescribeAccountsOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeAccountsRequest&, DescribeAccountsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccountsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeAgentVulsResponse> DescribeAgentVulsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAgentVulsResponse> DescribeAgentVulsOutcome;
                 typedef std::future<DescribeAgentVulsOutcome> DescribeAgentVulsOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeAgentVulsRequest&, DescribeAgentVulsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAgentVulsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeAlarmAttributeResponse> DescribeAlarmAttributeOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAlarmAttributeResponse> DescribeAlarmAttributeOutcome;
                 typedef std::future<DescribeAlarmAttributeOutcome> DescribeAlarmAttributeOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeAlarmAttributeRequest&, DescribeAlarmAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAlarmAttributeAsyncHandler;
-                typedef Outcome<Error, Model::DescribeBruteAttacksResponse> DescribeBruteAttacksOutcome;
+                typedef Outcome<Core::Error, Model::DescribeBruteAttacksResponse> DescribeBruteAttacksOutcome;
                 typedef std::future<DescribeBruteAttacksOutcome> DescribeBruteAttacksOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeBruteAttacksRequest&, DescribeBruteAttacksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBruteAttacksAsyncHandler;
-                typedef Outcome<Error, Model::DescribeComponentInfoResponse> DescribeComponentInfoOutcome;
+                typedef Outcome<Core::Error, Model::DescribeComponentInfoResponse> DescribeComponentInfoOutcome;
                 typedef std::future<DescribeComponentInfoOutcome> DescribeComponentInfoOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeComponentInfoRequest&, DescribeComponentInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeComponentInfoAsyncHandler;
-                typedef Outcome<Error, Model::DescribeComponentStatisticsResponse> DescribeComponentStatisticsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeComponentStatisticsResponse> DescribeComponentStatisticsOutcome;
                 typedef std::future<DescribeComponentStatisticsOutcome> DescribeComponentStatisticsOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeComponentStatisticsRequest&, DescribeComponentStatisticsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeComponentStatisticsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeComponentsResponse> DescribeComponentsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeComponentsResponse> DescribeComponentsOutcome;
                 typedef std::future<DescribeComponentsOutcome> DescribeComponentsOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeComponentsRequest&, DescribeComponentsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeComponentsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeHistoryAccountsResponse> DescribeHistoryAccountsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeHistoryAccountsResponse> DescribeHistoryAccountsOutcome;
                 typedef std::future<DescribeHistoryAccountsOutcome> DescribeHistoryAccountsOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeHistoryAccountsRequest&, DescribeHistoryAccountsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHistoryAccountsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeImpactedHostsResponse> DescribeImpactedHostsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeImpactedHostsResponse> DescribeImpactedHostsOutcome;
                 typedef std::future<DescribeImpactedHostsOutcome> DescribeImpactedHostsOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeImpactedHostsRequest&, DescribeImpactedHostsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeImpactedHostsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLoginWhiteListResponse> DescribeLoginWhiteListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLoginWhiteListResponse> DescribeLoginWhiteListOutcome;
                 typedef std::future<DescribeLoginWhiteListOutcome> DescribeLoginWhiteListOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeLoginWhiteListRequest&, DescribeLoginWhiteListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLoginWhiteListAsyncHandler;
-                typedef Outcome<Error, Model::DescribeMachineInfoResponse> DescribeMachineInfoOutcome;
+                typedef Outcome<Core::Error, Model::DescribeMachineInfoResponse> DescribeMachineInfoOutcome;
                 typedef std::future<DescribeMachineInfoOutcome> DescribeMachineInfoOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeMachineInfoRequest&, DescribeMachineInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMachineInfoAsyncHandler;
-                typedef Outcome<Error, Model::DescribeMachinesResponse> DescribeMachinesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeMachinesResponse> DescribeMachinesOutcome;
                 typedef std::future<DescribeMachinesOutcome> DescribeMachinesOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeMachinesRequest&, DescribeMachinesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMachinesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeMaliciousRequestsResponse> DescribeMaliciousRequestsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeMaliciousRequestsResponse> DescribeMaliciousRequestsOutcome;
                 typedef std::future<DescribeMaliciousRequestsOutcome> DescribeMaliciousRequestsOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeMaliciousRequestsRequest&, DescribeMaliciousRequestsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMaliciousRequestsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeMalwaresResponse> DescribeMalwaresOutcome;
+                typedef Outcome<Core::Error, Model::DescribeMalwaresResponse> DescribeMalwaresOutcome;
                 typedef std::future<DescribeMalwaresOutcome> DescribeMalwaresOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeMalwaresRequest&, DescribeMalwaresOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMalwaresAsyncHandler;
-                typedef Outcome<Error, Model::DescribeNonlocalLoginPlacesResponse> DescribeNonlocalLoginPlacesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeNonlocalLoginPlacesResponse> DescribeNonlocalLoginPlacesOutcome;
                 typedef std::future<DescribeNonlocalLoginPlacesOutcome> DescribeNonlocalLoginPlacesOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeNonlocalLoginPlacesRequest&, DescribeNonlocalLoginPlacesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNonlocalLoginPlacesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeOpenPortStatisticsResponse> DescribeOpenPortStatisticsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeOpenPortStatisticsResponse> DescribeOpenPortStatisticsOutcome;
                 typedef std::future<DescribeOpenPortStatisticsOutcome> DescribeOpenPortStatisticsOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeOpenPortStatisticsRequest&, DescribeOpenPortStatisticsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOpenPortStatisticsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeOpenPortTaskStatusResponse> DescribeOpenPortTaskStatusOutcome;
+                typedef Outcome<Core::Error, Model::DescribeOpenPortTaskStatusResponse> DescribeOpenPortTaskStatusOutcome;
                 typedef std::future<DescribeOpenPortTaskStatusOutcome> DescribeOpenPortTaskStatusOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeOpenPortTaskStatusRequest&, DescribeOpenPortTaskStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOpenPortTaskStatusAsyncHandler;
-                typedef Outcome<Error, Model::DescribeOpenPortsResponse> DescribeOpenPortsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeOpenPortsResponse> DescribeOpenPortsOutcome;
                 typedef std::future<DescribeOpenPortsOutcome> DescribeOpenPortsOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeOpenPortsRequest&, DescribeOpenPortsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOpenPortsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeOverviewStatisticsResponse> DescribeOverviewStatisticsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeOverviewStatisticsResponse> DescribeOverviewStatisticsOutcome;
                 typedef std::future<DescribeOverviewStatisticsOutcome> DescribeOverviewStatisticsOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeOverviewStatisticsRequest&, DescribeOverviewStatisticsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOverviewStatisticsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeProVersionInfoResponse> DescribeProVersionInfoOutcome;
+                typedef Outcome<Core::Error, Model::DescribeProVersionInfoResponse> DescribeProVersionInfoOutcome;
                 typedef std::future<DescribeProVersionInfoOutcome> DescribeProVersionInfoOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeProVersionInfoRequest&, DescribeProVersionInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProVersionInfoAsyncHandler;
-                typedef Outcome<Error, Model::DescribeProcessStatisticsResponse> DescribeProcessStatisticsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeProcessStatisticsResponse> DescribeProcessStatisticsOutcome;
                 typedef std::future<DescribeProcessStatisticsOutcome> DescribeProcessStatisticsOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeProcessStatisticsRequest&, DescribeProcessStatisticsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProcessStatisticsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeProcessTaskStatusResponse> DescribeProcessTaskStatusOutcome;
+                typedef Outcome<Core::Error, Model::DescribeProcessTaskStatusResponse> DescribeProcessTaskStatusOutcome;
                 typedef std::future<DescribeProcessTaskStatusOutcome> DescribeProcessTaskStatusOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeProcessTaskStatusRequest&, DescribeProcessTaskStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProcessTaskStatusAsyncHandler;
-                typedef Outcome<Error, Model::DescribeProcessesResponse> DescribeProcessesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeProcessesResponse> DescribeProcessesOutcome;
                 typedef std::future<DescribeProcessesOutcome> DescribeProcessesOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeProcessesRequest&, DescribeProcessesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProcessesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeSecurityDynamicsResponse> DescribeSecurityDynamicsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeSecurityDynamicsResponse> DescribeSecurityDynamicsOutcome;
                 typedef std::future<DescribeSecurityDynamicsOutcome> DescribeSecurityDynamicsOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeSecurityDynamicsRequest&, DescribeSecurityDynamicsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSecurityDynamicsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeSecurityTrendsResponse> DescribeSecurityTrendsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeSecurityTrendsResponse> DescribeSecurityTrendsOutcome;
                 typedef std::future<DescribeSecurityTrendsOutcome> DescribeSecurityTrendsOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeSecurityTrendsRequest&, DescribeSecurityTrendsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSecurityTrendsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTagMachinesResponse> DescribeTagMachinesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTagMachinesResponse> DescribeTagMachinesOutcome;
                 typedef std::future<DescribeTagMachinesOutcome> DescribeTagMachinesOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeTagMachinesRequest&, DescribeTagMachinesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTagMachinesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTagsResponse> DescribeTagsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTagsResponse> DescribeTagsOutcome;
                 typedef std::future<DescribeTagsOutcome> DescribeTagsOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeTagsRequest&, DescribeTagsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTagsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeUsualLoginPlacesResponse> DescribeUsualLoginPlacesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeUsualLoginPlacesResponse> DescribeUsualLoginPlacesOutcome;
                 typedef std::future<DescribeUsualLoginPlacesOutcome> DescribeUsualLoginPlacesOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeUsualLoginPlacesRequest&, DescribeUsualLoginPlacesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUsualLoginPlacesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeVulInfoResponse> DescribeVulInfoOutcome;
+                typedef Outcome<Core::Error, Model::DescribeVulInfoResponse> DescribeVulInfoOutcome;
                 typedef std::future<DescribeVulInfoOutcome> DescribeVulInfoOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeVulInfoRequest&, DescribeVulInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVulInfoAsyncHandler;
-                typedef Outcome<Error, Model::DescribeVulScanResultResponse> DescribeVulScanResultOutcome;
+                typedef Outcome<Core::Error, Model::DescribeVulScanResultResponse> DescribeVulScanResultOutcome;
                 typedef std::future<DescribeVulScanResultOutcome> DescribeVulScanResultOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeVulScanResultRequest&, DescribeVulScanResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVulScanResultAsyncHandler;
-                typedef Outcome<Error, Model::DescribeVulsResponse> DescribeVulsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeVulsResponse> DescribeVulsOutcome;
                 typedef std::future<DescribeVulsOutcome> DescribeVulsOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeVulsRequest&, DescribeVulsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVulsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeWeeklyReportBruteAttacksResponse> DescribeWeeklyReportBruteAttacksOutcome;
+                typedef Outcome<Core::Error, Model::DescribeWeeklyReportBruteAttacksResponse> DescribeWeeklyReportBruteAttacksOutcome;
                 typedef std::future<DescribeWeeklyReportBruteAttacksOutcome> DescribeWeeklyReportBruteAttacksOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeWeeklyReportBruteAttacksRequest&, DescribeWeeklyReportBruteAttacksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWeeklyReportBruteAttacksAsyncHandler;
-                typedef Outcome<Error, Model::DescribeWeeklyReportInfoResponse> DescribeWeeklyReportInfoOutcome;
+                typedef Outcome<Core::Error, Model::DescribeWeeklyReportInfoResponse> DescribeWeeklyReportInfoOutcome;
                 typedef std::future<DescribeWeeklyReportInfoOutcome> DescribeWeeklyReportInfoOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeWeeklyReportInfoRequest&, DescribeWeeklyReportInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWeeklyReportInfoAsyncHandler;
-                typedef Outcome<Error, Model::DescribeWeeklyReportMalwaresResponse> DescribeWeeklyReportMalwaresOutcome;
+                typedef Outcome<Core::Error, Model::DescribeWeeklyReportMalwaresResponse> DescribeWeeklyReportMalwaresOutcome;
                 typedef std::future<DescribeWeeklyReportMalwaresOutcome> DescribeWeeklyReportMalwaresOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeWeeklyReportMalwaresRequest&, DescribeWeeklyReportMalwaresOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWeeklyReportMalwaresAsyncHandler;
-                typedef Outcome<Error, Model::DescribeWeeklyReportNonlocalLoginPlacesResponse> DescribeWeeklyReportNonlocalLoginPlacesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeWeeklyReportNonlocalLoginPlacesResponse> DescribeWeeklyReportNonlocalLoginPlacesOutcome;
                 typedef std::future<DescribeWeeklyReportNonlocalLoginPlacesOutcome> DescribeWeeklyReportNonlocalLoginPlacesOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeWeeklyReportNonlocalLoginPlacesRequest&, DescribeWeeklyReportNonlocalLoginPlacesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWeeklyReportNonlocalLoginPlacesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeWeeklyReportVulsResponse> DescribeWeeklyReportVulsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeWeeklyReportVulsResponse> DescribeWeeklyReportVulsOutcome;
                 typedef std::future<DescribeWeeklyReportVulsOutcome> DescribeWeeklyReportVulsOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeWeeklyReportVulsRequest&, DescribeWeeklyReportVulsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWeeklyReportVulsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeWeeklyReportsResponse> DescribeWeeklyReportsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeWeeklyReportsResponse> DescribeWeeklyReportsOutcome;
                 typedef std::future<DescribeWeeklyReportsOutcome> DescribeWeeklyReportsOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::DescribeWeeklyReportsRequest&, DescribeWeeklyReportsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWeeklyReportsAsyncHandler;
-                typedef Outcome<Error, Model::EditTagsResponse> EditTagsOutcome;
+                typedef Outcome<Core::Error, Model::EditTagsResponse> EditTagsOutcome;
                 typedef std::future<EditTagsOutcome> EditTagsOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::EditTagsRequest&, EditTagsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EditTagsAsyncHandler;
-                typedef Outcome<Error, Model::ExportBruteAttacksResponse> ExportBruteAttacksOutcome;
+                typedef Outcome<Core::Error, Model::ExportBruteAttacksResponse> ExportBruteAttacksOutcome;
                 typedef std::future<ExportBruteAttacksOutcome> ExportBruteAttacksOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::ExportBruteAttacksRequest&, ExportBruteAttacksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportBruteAttacksAsyncHandler;
-                typedef Outcome<Error, Model::ExportMaliciousRequestsResponse> ExportMaliciousRequestsOutcome;
+                typedef Outcome<Core::Error, Model::ExportMaliciousRequestsResponse> ExportMaliciousRequestsOutcome;
                 typedef std::future<ExportMaliciousRequestsOutcome> ExportMaliciousRequestsOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::ExportMaliciousRequestsRequest&, ExportMaliciousRequestsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportMaliciousRequestsAsyncHandler;
-                typedef Outcome<Error, Model::ExportMalwaresResponse> ExportMalwaresOutcome;
+                typedef Outcome<Core::Error, Model::ExportMalwaresResponse> ExportMalwaresOutcome;
                 typedef std::future<ExportMalwaresOutcome> ExportMalwaresOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::ExportMalwaresRequest&, ExportMalwaresOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportMalwaresAsyncHandler;
-                typedef Outcome<Error, Model::ExportNonlocalLoginPlacesResponse> ExportNonlocalLoginPlacesOutcome;
+                typedef Outcome<Core::Error, Model::ExportNonlocalLoginPlacesResponse> ExportNonlocalLoginPlacesOutcome;
                 typedef std::future<ExportNonlocalLoginPlacesOutcome> ExportNonlocalLoginPlacesOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::ExportNonlocalLoginPlacesRequest&, ExportNonlocalLoginPlacesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportNonlocalLoginPlacesAsyncHandler;
-                typedef Outcome<Error, Model::IgnoreImpactedHostsResponse> IgnoreImpactedHostsOutcome;
+                typedef Outcome<Core::Error, Model::IgnoreImpactedHostsResponse> IgnoreImpactedHostsOutcome;
                 typedef std::future<IgnoreImpactedHostsOutcome> IgnoreImpactedHostsOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::IgnoreImpactedHostsRequest&, IgnoreImpactedHostsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IgnoreImpactedHostsAsyncHandler;
-                typedef Outcome<Error, Model::MisAlarmNonlocalLoginPlacesResponse> MisAlarmNonlocalLoginPlacesOutcome;
+                typedef Outcome<Core::Error, Model::MisAlarmNonlocalLoginPlacesResponse> MisAlarmNonlocalLoginPlacesOutcome;
                 typedef std::future<MisAlarmNonlocalLoginPlacesOutcome> MisAlarmNonlocalLoginPlacesOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::MisAlarmNonlocalLoginPlacesRequest&, MisAlarmNonlocalLoginPlacesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> MisAlarmNonlocalLoginPlacesAsyncHandler;
-                typedef Outcome<Error, Model::ModifyAlarmAttributeResponse> ModifyAlarmAttributeOutcome;
+                typedef Outcome<Core::Error, Model::ModifyAlarmAttributeResponse> ModifyAlarmAttributeOutcome;
                 typedef std::future<ModifyAlarmAttributeOutcome> ModifyAlarmAttributeOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::ModifyAlarmAttributeRequest&, ModifyAlarmAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAlarmAttributeAsyncHandler;
-                typedef Outcome<Error, Model::ModifyAutoOpenProVersionConfigResponse> ModifyAutoOpenProVersionConfigOutcome;
+                typedef Outcome<Core::Error, Model::ModifyAutoOpenProVersionConfigResponse> ModifyAutoOpenProVersionConfigOutcome;
                 typedef std::future<ModifyAutoOpenProVersionConfigOutcome> ModifyAutoOpenProVersionConfigOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::ModifyAutoOpenProVersionConfigRequest&, ModifyAutoOpenProVersionConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAutoOpenProVersionConfigAsyncHandler;
-                typedef Outcome<Error, Model::ModifyLoginWhiteListResponse> ModifyLoginWhiteListOutcome;
+                typedef Outcome<Core::Error, Model::ModifyLoginWhiteListResponse> ModifyLoginWhiteListOutcome;
                 typedef std::future<ModifyLoginWhiteListOutcome> ModifyLoginWhiteListOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::ModifyLoginWhiteListRequest&, ModifyLoginWhiteListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLoginWhiteListAsyncHandler;
-                typedef Outcome<Error, Model::ModifyProVersionRenewFlagResponse> ModifyProVersionRenewFlagOutcome;
+                typedef Outcome<Core::Error, Model::ModifyProVersionRenewFlagResponse> ModifyProVersionRenewFlagOutcome;
                 typedef std::future<ModifyProVersionRenewFlagOutcome> ModifyProVersionRenewFlagOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::ModifyProVersionRenewFlagRequest&, ModifyProVersionRenewFlagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyProVersionRenewFlagAsyncHandler;
-                typedef Outcome<Error, Model::OpenProVersionResponse> OpenProVersionOutcome;
+                typedef Outcome<Core::Error, Model::OpenProVersionResponse> OpenProVersionOutcome;
                 typedef std::future<OpenProVersionOutcome> OpenProVersionOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::OpenProVersionRequest&, OpenProVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenProVersionAsyncHandler;
-                typedef Outcome<Error, Model::RecoverMalwaresResponse> RecoverMalwaresOutcome;
+                typedef Outcome<Core::Error, Model::RecoverMalwaresResponse> RecoverMalwaresOutcome;
                 typedef std::future<RecoverMalwaresOutcome> RecoverMalwaresOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::RecoverMalwaresRequest&, RecoverMalwaresOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecoverMalwaresAsyncHandler;
-                typedef Outcome<Error, Model::RescanImpactedHostResponse> RescanImpactedHostOutcome;
+                typedef Outcome<Core::Error, Model::RescanImpactedHostResponse> RescanImpactedHostOutcome;
                 typedef std::future<RescanImpactedHostOutcome> RescanImpactedHostOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::RescanImpactedHostRequest&, RescanImpactedHostOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RescanImpactedHostAsyncHandler;
-                typedef Outcome<Error, Model::SeparateMalwaresResponse> SeparateMalwaresOutcome;
+                typedef Outcome<Core::Error, Model::SeparateMalwaresResponse> SeparateMalwaresOutcome;
                 typedef std::future<SeparateMalwaresOutcome> SeparateMalwaresOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::SeparateMalwaresRequest&, SeparateMalwaresOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SeparateMalwaresAsyncHandler;
-                typedef Outcome<Error, Model::TrustMaliciousRequestResponse> TrustMaliciousRequestOutcome;
+                typedef Outcome<Core::Error, Model::TrustMaliciousRequestResponse> TrustMaliciousRequestOutcome;
                 typedef std::future<TrustMaliciousRequestOutcome> TrustMaliciousRequestOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::TrustMaliciousRequestRequest&, TrustMaliciousRequestOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TrustMaliciousRequestAsyncHandler;
-                typedef Outcome<Error, Model::TrustMalwaresResponse> TrustMalwaresOutcome;
+                typedef Outcome<Core::Error, Model::TrustMalwaresResponse> TrustMalwaresOutcome;
                 typedef std::future<TrustMalwaresOutcome> TrustMalwaresOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::TrustMalwaresRequest&, TrustMalwaresOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TrustMalwaresAsyncHandler;
-                typedef Outcome<Error, Model::UntrustMaliciousRequestResponse> UntrustMaliciousRequestOutcome;
+                typedef Outcome<Core::Error, Model::UntrustMaliciousRequestResponse> UntrustMaliciousRequestOutcome;
                 typedef std::future<UntrustMaliciousRequestOutcome> UntrustMaliciousRequestOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::UntrustMaliciousRequestRequest&, UntrustMaliciousRequestOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UntrustMaliciousRequestAsyncHandler;
-                typedef Outcome<Error, Model::UntrustMalwaresResponse> UntrustMalwaresOutcome;
+                typedef Outcome<Core::Error, Model::UntrustMalwaresResponse> UntrustMalwaresOutcome;
                 typedef std::future<UntrustMalwaresOutcome> UntrustMalwaresOutcomeCallable;
                 typedef std::function<void(const YunjingClient*, const Model::UntrustMalwaresRequest&, UntrustMalwaresOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UntrustMalwaresAsyncHandler;
 
 
 
                 /**
-                 *This API is used to add a whitelist rule.
+                 *This API is used to add a allowlist rule.
                  * @param req AddLoginWhiteListRequest
                  * @return AddLoginWhiteListOutcome
                  */
@@ -459,7 +459,7 @@ namespace TencentCloud
                 DeleteBruteAttacksOutcomeCallable DeleteBruteAttacksCallable(const Model::DeleteBruteAttacksRequest& request);
 
                 /**
-                 *This API is used to delete a whitelist rule.
+                 *This API is used to delete a allowlist rule.
                  * @param req DeleteLoginWhiteListRequest
                  * @return DeleteLoginWhiteListOutcome
                  */
@@ -612,7 +612,7 @@ namespace TencentCloud
                 DescribeImpactedHostsOutcomeCallable DescribeImpactedHostsCallable(const Model::DescribeImpactedHostsRequest& request);
 
                 /**
-                 *This API is used to get the list of login whitelist entries.
+                 *This API is used to get the list of login allowlist entries.
                  * @param req DescribeLoginWhiteListRequest
                  * @return DescribeLoginWhiteListOutcome
                  */
@@ -948,7 +948,7 @@ namespace TencentCloud
                 ModifyAutoOpenProVersionConfigOutcomeCallable ModifyAutoOpenProVersionConfigCallable(const Model::ModifyAutoOpenProVersionConfigRequest& request);
 
                 /**
-                 *This API is used to edit a whitelist rule.
+                 *This API is used to edit a allowlist rule.
                  * @param req ModifyLoginWhiteListRequest
                  * @return ModifyLoginWhiteListOutcome
                  */

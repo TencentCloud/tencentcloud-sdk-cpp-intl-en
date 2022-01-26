@@ -47,6 +47,8 @@
 #include <tencentcloud/cdn/v20180606/model/Seo.h>
 #include <tencentcloud/cdn/v20180606/model/StatusCodeCache.h>
 #include <tencentcloud/cdn/v20180606/model/VideoSeek.h>
+#include <tencentcloud/cdn/v20180606/model/AwsPrivateAccess.h>
+#include <tencentcloud/cdn/v20180606/model/OssPrivateAccess.h>
 
 
 namespace TencentCloud
@@ -296,17 +298,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool HttpsHasBeenSet() const;
 
                     /**
-                     * 获取IP blacklist/whitelist configuration.
+                     * 获取IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return IpFilter IP blacklist/whitelist configuration.
+                     * @return IpFilter IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     IpFilter GetIpFilter() const;
 
                     /**
-                     * 设置IP blacklist/whitelist configuration.
+                     * 设置IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IpFilter IP blacklist/whitelist configuration.
+                     * @param IpFilter IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetIpFilter(const IpFilter& _ipFilter);
@@ -603,6 +605,50 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool VideoSeekHasBeenSet() const;
 
+                    /**
+                     * 获取Private access for S3 origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return AwsPrivateAccess Private access for S3 origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    AwsPrivateAccess GetAwsPrivateAccess() const;
+
+                    /**
+                     * 设置Private access for S3 origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param AwsPrivateAccess Private access for S3 origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetAwsPrivateAccess(const AwsPrivateAccess& _awsPrivateAccess);
+
+                    /**
+                     * 判断参数 AwsPrivateAccess 是否已赋值
+                     * @return AwsPrivateAccess 是否已赋值
+                     */
+                    bool AwsPrivateAccessHasBeenSet() const;
+
+                    /**
+                     * 获取Private access for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return OssPrivateAccess Private access for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    OssPrivateAccess GetOssPrivateAccess() const;
+
+                    /**
+                     * 设置Private access for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param OssPrivateAccess Private access for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetOssPrivateAccess(const OssPrivateAccess& _ossPrivateAccess);
+
+                    /**
+                     * 判断参数 OssPrivateAccess 是否已赋值
+                     * @return OssPrivateAccess 是否已赋值
+                     */
+                    bool OssPrivateAccessHasBeenSet() const;
+
                 private:
 
                     /**
@@ -676,7 +722,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_httpsHasBeenSet;
 
                     /**
-                     * IP blacklist/whitelist configuration.
+                     * IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     IpFilter m_ipFilter;
@@ -772,6 +818,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     VideoSeek m_videoSeek;
                     bool m_videoSeekHasBeenSet;
+
+                    /**
+                     * Private access for S3 origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    AwsPrivateAccess m_awsPrivateAccess;
+                    bool m_awsPrivateAccessHasBeenSet;
+
+                    /**
+                     * Private access for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    OssPrivateAccess m_ossPrivateAccess;
+                    bool m_ossPrivateAccessHasBeenSet;
 
                 };
             }

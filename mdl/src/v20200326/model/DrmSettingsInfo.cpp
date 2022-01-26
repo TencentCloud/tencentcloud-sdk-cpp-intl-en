@@ -18,18 +18,18 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mdl::V20200326::Model;
-using namespace rapidjson;
 using namespace std;
 
 DrmSettingsInfo::DrmSettingsInfo() :
     m_stateHasBeenSet(false),
-    m_contentIdHasBeenSet(false),
     m_schemeHasBeenSet(false),
-    m_keysHasBeenSet(false)
+    m_contentIdHasBeenSet(false),
+    m_keysHasBeenSet(false),
+    m_sDMCSettingsHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DrmSettingsInfo::Deserialize(const Value &value)
+CoreInternalOutcome DrmSettingsInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,39 +38,39 @@ CoreInternalOutcome DrmSettingsInfo::Deserialize(const Value &value)
     {
         if (!value["State"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DrmSettingsInfo.State` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DrmSettingsInfo.State` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_state = string(value["State"].GetString());
         m_stateHasBeenSet = true;
-    }
-
-    if (value.HasMember("ContentId") && !value["ContentId"].IsNull())
-    {
-        if (!value["ContentId"].IsString())
-        {
-            return CoreInternalOutcome(Error("response `DrmSettingsInfo.ContentId` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_contentId = string(value["ContentId"].GetString());
-        m_contentIdHasBeenSet = true;
     }
 
     if (value.HasMember("Scheme") && !value["Scheme"].IsNull())
     {
         if (!value["Scheme"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DrmSettingsInfo.Scheme` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DrmSettingsInfo.Scheme` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_scheme = string(value["Scheme"].GetString());
         m_schemeHasBeenSet = true;
     }
 
+    if (value.HasMember("ContentId") && !value["ContentId"].IsNull())
+    {
+        if (!value["ContentId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DrmSettingsInfo.ContentId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_contentId = string(value["ContentId"].GetString());
+        m_contentIdHasBeenSet = true;
+    }
+
     if (value.HasMember("Keys") && !value["Keys"].IsNull())
     {
         if (!value["Keys"].IsArray())
-            return CoreInternalOutcome(Error("response `DrmSettingsInfo.Keys` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DrmSettingsInfo.Keys` is not array type"));
 
-        const Value &tmpValue = value["Keys"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Keys"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             DrmKey item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -84,50 +84,76 @@ CoreInternalOutcome DrmSettingsInfo::Deserialize(const Value &value)
         m_keysHasBeenSet = true;
     }
 
+    if (value.HasMember("SDMCSettings") && !value["SDMCSettings"].IsNull())
+    {
+        if (!value["SDMCSettings"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DrmSettingsInfo.SDMCSettings` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_sDMCSettings.Deserialize(value["SDMCSettings"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_sDMCSettingsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void DrmSettingsInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DrmSettingsInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_stateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "State";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_state.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_contentIdHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "ContentId";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_contentId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_state.c_str(), allocator).Move(), allocator);
     }
 
     if (m_schemeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Scheme";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_scheme.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_scheme.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_contentIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ContentId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_contentId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_keysHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Keys";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_keys.begin(); itr != m_keys.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_sDMCSettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SDMCSettings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_sDMCSettings.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -149,22 +175,6 @@ bool DrmSettingsInfo::StateHasBeenSet() const
     return m_stateHasBeenSet;
 }
 
-string DrmSettingsInfo::GetContentId() const
-{
-    return m_contentId;
-}
-
-void DrmSettingsInfo::SetContentId(const string& _contentId)
-{
-    m_contentId = _contentId;
-    m_contentIdHasBeenSet = true;
-}
-
-bool DrmSettingsInfo::ContentIdHasBeenSet() const
-{
-    return m_contentIdHasBeenSet;
-}
-
 string DrmSettingsInfo::GetScheme() const
 {
     return m_scheme;
@@ -181,6 +191,22 @@ bool DrmSettingsInfo::SchemeHasBeenSet() const
     return m_schemeHasBeenSet;
 }
 
+string DrmSettingsInfo::GetContentId() const
+{
+    return m_contentId;
+}
+
+void DrmSettingsInfo::SetContentId(const string& _contentId)
+{
+    m_contentId = _contentId;
+    m_contentIdHasBeenSet = true;
+}
+
+bool DrmSettingsInfo::ContentIdHasBeenSet() const
+{
+    return m_contentIdHasBeenSet;
+}
+
 vector<DrmKey> DrmSettingsInfo::GetKeys() const
 {
     return m_keys;
@@ -195,5 +221,21 @@ void DrmSettingsInfo::SetKeys(const vector<DrmKey>& _keys)
 bool DrmSettingsInfo::KeysHasBeenSet() const
 {
     return m_keysHasBeenSet;
+}
+
+SDMCSettingsInfo DrmSettingsInfo::GetSDMCSettings() const
+{
+    return m_sDMCSettings;
+}
+
+void DrmSettingsInfo::SetSDMCSettings(const SDMCSettingsInfo& _sDMCSettings)
+{
+    m_sDMCSettings = _sDMCSettings;
+    m_sDMCSettingsHasBeenSet = true;
+}
+
+bool DrmSettingsInfo::SDMCSettingsHasBeenSet() const
+{
+    return m_sDMCSettingsHasBeenSet;
 }
 

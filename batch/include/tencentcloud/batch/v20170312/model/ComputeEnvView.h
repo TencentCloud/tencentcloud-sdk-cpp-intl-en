@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/batch/v20170312/model/Placement.h>
 #include <tencentcloud/batch/v20170312/model/ComputeNodeMetrics.h>
+#include <tencentcloud/batch/v20170312/model/Tag.h>
 
 
 namespace TencentCloud
@@ -174,6 +175,82 @@ namespace TencentCloud
                      */
                     bool DesiredComputeNodeCountHasBeenSet() const;
 
+                    /**
+                     * 获取Compute environment resource type. Valid values: `CVM`, `CPM` (Bare Metal)
+                     * @return ResourceType Compute environment resource type. Valid values: `CVM`, `CPM` (Bare Metal)
+                     */
+                    std::string GetResourceType() const;
+
+                    /**
+                     * 设置Compute environment resource type. Valid values: `CVM`, `CPM` (Bare Metal)
+                     * @param ResourceType Compute environment resource type. Valid values: `CVM`, `CPM` (Bare Metal)
+                     */
+                    void SetResourceType(const std::string& _resourceType);
+
+                    /**
+                     * 判断参数 ResourceType 是否已赋值
+                     * @return ResourceType 是否已赋值
+                     */
+                    bool ResourceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Next action
+                     * @return NextAction Next action
+                     */
+                    std::string GetNextAction() const;
+
+                    /**
+                     * 设置Next action
+                     * @param NextAction Next action
+                     */
+                    void SetNextAction(const std::string& _nextAction);
+
+                    /**
+                     * 判断参数 NextAction 是否已赋值
+                     * @return NextAction 是否已赋值
+                     */
+                    bool NextActionHasBeenSet() const;
+
+                    /**
+                     * 获取Number of compute nodes added to the compute environment by the user
+                     * @return AttachedComputeNodeCount Number of compute nodes added to the compute environment by the user
+                     */
+                    uint64_t GetAttachedComputeNodeCount() const;
+
+                    /**
+                     * 设置Number of compute nodes added to the compute environment by the user
+                     * @param AttachedComputeNodeCount Number of compute nodes added to the compute environment by the user
+                     */
+                    void SetAttachedComputeNodeCount(const uint64_t& _attachedComputeNodeCount);
+
+                    /**
+                     * 判断参数 AttachedComputeNodeCount 是否已赋值
+                     * @return AttachedComputeNodeCount 是否已赋值
+                     */
+                    bool AttachedComputeNodeCountHasBeenSet() const;
+
+                    /**
+                     * 获取Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return Tags Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param Tags Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -217,6 +294,31 @@ namespace TencentCloud
                      */
                     uint64_t m_desiredComputeNodeCount;
                     bool m_desiredComputeNodeCountHasBeenSet;
+
+                    /**
+                     * Compute environment resource type. Valid values: `CVM`, `CPM` (Bare Metal)
+                     */
+                    std::string m_resourceType;
+                    bool m_resourceTypeHasBeenSet;
+
+                    /**
+                     * Next action
+                     */
+                    std::string m_nextAction;
+                    bool m_nextActionHasBeenSet;
+
+                    /**
+                     * Number of compute nodes added to the compute environment by the user
+                     */
+                    uint64_t m_attachedComputeNodeCount;
+                    bool m_attachedComputeNodeCountHasBeenSet;
+
+                    /**
+                     * Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

@@ -137,14 +137,14 @@ namespace TencentCloud
                     bool AiContentReviewTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AiRecognitionTask 
+                     * 获取Type parameter of video content recognition task.
+                     * @return AiRecognitionTask Type parameter of video content recognition task.
                      */
                     AiRecognitionTaskInput GetAiRecognitionTask() const;
 
                     /**
-                     * 设置
-                     * @param AiRecognitionTask 
+                     * 设置Type parameter of video content recognition task.
+                     * @param AiRecognitionTask Type parameter of video content recognition task.
                      */
                     void SetAiRecognitionTask(const AiRecognitionTaskInput& _aiRecognitionTask);
 
@@ -223,7 +223,7 @@ namespace TencentCloud
                     bool m_aiContentReviewTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Type parameter of video content recognition task.
                      */
                     AiRecognitionTaskInput m_aiRecognitionTask;
                     bool m_aiRecognitionTaskHasBeenSet;

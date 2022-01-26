@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool NamespaceHasBeenSet() const;
 
                     /**
-                     * 获取If this parameter is provided, only aliases associated with this function version will be returned
-                     * @return FunctionVersion If this parameter is provided, only aliases associated with this function version will be returned
+                     * 获取If this parameter is provided, only aliases associated with this function version will be returned.
+                     * @return FunctionVersion If this parameter is provided, only aliases associated with this function version will be returned.
                      */
                     std::string GetFunctionVersion() const;
 
                     /**
-                     * 设置If this parameter is provided, only aliases associated with this function version will be returned
-                     * @param FunctionVersion If this parameter is provided, only aliases associated with this function version will be returned
+                     * 设置If this parameter is provided, only aliases associated with this function version will be returned.
+                     * @param FunctionVersion If this parameter is provided, only aliases associated with this function version will be returned.
                      */
                     void SetFunctionVersion(const std::string& _functionVersion);
 
@@ -147,7 +147,7 @@ namespace TencentCloud
                     bool m_namespaceHasBeenSet;
 
                     /**
-                     * If this parameter is provided, only aliases associated with this function version will be returned
+                     * If this parameter is provided, only aliases associated with this function version will be returned.
                      */
                     std::string m_functionVersion;
                     bool m_functionVersionHasBeenSet;

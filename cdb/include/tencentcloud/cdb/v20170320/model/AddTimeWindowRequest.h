@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Time period available for maintenance on Monday in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. The same rule applies below.
-                     * @return Monday Time period available for maintenance on Monday in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. The same rule applies below.
+                     * 获取Maintenance window on Monday. The format should be 10:00-12:00. You can set multiple time windows on a day. Each time window lasts from half an hour to three hours, and must start and end on the hour or half hour. At least one time window is required in a week. The same rule applies to the following parameters.
+                     * @return Monday Maintenance window on Monday. The format should be 10:00-12:00. You can set multiple time windows on a day. Each time window lasts from half an hour to three hours, and must start and end on the hour or half hour. At least one time window is required in a week. The same rule applies to the following parameters.
                      */
                     std::vector<std::string> GetMonday() const;
 
                     /**
-                     * 设置Time period available for maintenance on Monday in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. The same rule applies below.
-                     * @param Monday Time period available for maintenance on Monday in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. The same rule applies below.
+                     * 设置Maintenance window on Monday. The format should be 10:00-12:00. You can set multiple time windows on a day. Each time window lasts from half an hour to three hours, and must start and end on the hour or half hour. At least one time window is required in a week. The same rule applies to the following parameters.
+                     * @param Monday Maintenance window on Monday. The format should be 10:00-12:00. You can set multiple time windows on a day. Each time window lasts from half an hour to three hours, and must start and end on the hour or half hour. At least one time window is required in a week. The same rule applies to the following parameters.
                      */
                     void SetMonday(const std::vector<std::string>& _monday);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool MondayHasBeenSet() const;
 
                     /**
-                     * 获取Maintenance time window on Tuesday
-                     * @return Tuesday Maintenance time window on Tuesday
+                     * 获取Maintenance window on Tuesday. At least one time window is required in a week.
+                     * @return Tuesday Maintenance window on Tuesday. At least one time window is required in a week.
                      */
                     std::vector<std::string> GetTuesday() const;
 
                     /**
-                     * 设置Maintenance time window on Tuesday
-                     * @param Tuesday Maintenance time window on Tuesday
+                     * 设置Maintenance window on Tuesday. At least one time window is required in a week.
+                     * @param Tuesday Maintenance window on Tuesday. At least one time window is required in a week.
                      */
                     void SetTuesday(const std::vector<std::string>& _tuesday);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool TuesdayHasBeenSet() const;
 
                     /**
-                     * 获取Maintenance time window on Wednesday
-                     * @return Wednesday Maintenance time window on Wednesday
+                     * 获取Maintenance window on Wednesday. At least one time window is required in a week.
+                     * @return Wednesday Maintenance window on Wednesday. At least one time window is required in a week.
                      */
                     std::vector<std::string> GetWednesday() const;
 
                     /**
-                     * 设置Maintenance time window on Wednesday
-                     * @param Wednesday Maintenance time window on Wednesday
+                     * 设置Maintenance window on Wednesday. At least one time window is required in a week.
+                     * @param Wednesday Maintenance window on Wednesday. At least one time window is required in a week.
                      */
                     void SetWednesday(const std::vector<std::string>& _wednesday);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool WednesdayHasBeenSet() const;
 
                     /**
-                     * 获取Maintenance time window on Thursday
-                     * @return Thursday Maintenance time window on Thursday
+                     * 获取Maintenance window on Thursday. At least one time window is required in a week.
+                     * @return Thursday Maintenance window on Thursday. At least one time window is required in a week.
                      */
                     std::vector<std::string> GetThursday() const;
 
                     /**
-                     * 设置Maintenance time window on Thursday
-                     * @param Thursday Maintenance time window on Thursday
+                     * 设置Maintenance window on Thursday. At least one time window is required in a week.
+                     * @param Thursday Maintenance window on Thursday. At least one time window is required in a week.
                      */
                     void SetThursday(const std::vector<std::string>& _thursday);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool ThursdayHasBeenSet() const;
 
                     /**
-                     * 获取Maintenance time window on Friday
-                     * @return Friday Maintenance time window on Friday
+                     * 获取Maintenance window on Friday. At least one time window is required in a week.
+                     * @return Friday Maintenance window on Friday. At least one time window is required in a week.
                      */
                     std::vector<std::string> GetFriday() const;
 
                     /**
-                     * 设置Maintenance time window on Friday
-                     * @param Friday Maintenance time window on Friday
+                     * 设置Maintenance window on Friday. At least one time window is required in a week.
+                     * @param Friday Maintenance window on Friday. At least one time window is required in a week.
                      */
                     void SetFriday(const std::vector<std::string>& _friday);
 
@@ -151,14 +151,14 @@ namespace TencentCloud
                     bool FridayHasBeenSet() const;
 
                     /**
-                     * 获取Maintenance time window on Saturday
-                     * @return Saturday Maintenance time window on Saturday
+                     * 获取Maintenance window on Saturday. At least one time window is required in a week.
+                     * @return Saturday Maintenance window on Saturday. At least one time window is required in a week.
                      */
                     std::vector<std::string> GetSaturday() const;
 
                     /**
-                     * 设置Maintenance time window on Saturday
-                     * @param Saturday Maintenance time window on Saturday
+                     * 设置Maintenance window on Saturday. At least one time window is required in a week.
+                     * @param Saturday Maintenance window on Saturday. At least one time window is required in a week.
                      */
                     void SetSaturday(const std::vector<std::string>& _saturday);
 
@@ -169,14 +169,14 @@ namespace TencentCloud
                     bool SaturdayHasBeenSet() const;
 
                     /**
-                     * 获取Maintenance time window on Sunday
-                     * @return Sunday Maintenance time window on Sunday
+                     * 获取Maintenance window on Sunday. At least one time window is required in a week.
+                     * @return Sunday Maintenance window on Sunday. At least one time window is required in a week.
                      */
                     std::vector<std::string> GetSunday() const;
 
                     /**
-                     * 设置Maintenance time window on Sunday
-                     * @param Sunday Maintenance time window on Sunday
+                     * 设置Maintenance window on Sunday. At least one time window is required in a week.
+                     * @param Sunday Maintenance window on Sunday. At least one time window is required in a week.
                      */
                     void SetSunday(const std::vector<std::string>& _sunday);
 
@@ -195,43 +195,43 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Time period available for maintenance on Monday in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. The same rule applies below.
+                     * Maintenance window on Monday. The format should be 10:00-12:00. You can set multiple time windows on a day. Each time window lasts from half an hour to three hours, and must start and end on the hour or half hour. At least one time window is required in a week. The same rule applies to the following parameters.
                      */
                     std::vector<std::string> m_monday;
                     bool m_mondayHasBeenSet;
 
                     /**
-                     * Maintenance time window on Tuesday
+                     * Maintenance window on Tuesday. At least one time window is required in a week.
                      */
                     std::vector<std::string> m_tuesday;
                     bool m_tuesdayHasBeenSet;
 
                     /**
-                     * Maintenance time window on Wednesday
+                     * Maintenance window on Wednesday. At least one time window is required in a week.
                      */
                     std::vector<std::string> m_wednesday;
                     bool m_wednesdayHasBeenSet;
 
                     /**
-                     * Maintenance time window on Thursday
+                     * Maintenance window on Thursday. At least one time window is required in a week.
                      */
                     std::vector<std::string> m_thursday;
                     bool m_thursdayHasBeenSet;
 
                     /**
-                     * Maintenance time window on Friday
+                     * Maintenance window on Friday. At least one time window is required in a week.
                      */
                     std::vector<std::string> m_friday;
                     bool m_fridayHasBeenSet;
 
                     /**
-                     * Maintenance time window on Saturday
+                     * Maintenance window on Saturday. At least one time window is required in a week.
                      */
                     std::vector<std::string> m_saturday;
                     bool m_saturdayHasBeenSet;
 
                     /**
-                     * Maintenance time window on Sunday
+                     * Maintenance window on Sunday. At least one time window is required in a week.
                      */
                     std::vector<std::string> m_sunday;
                     bool m_sundayHasBeenSet;

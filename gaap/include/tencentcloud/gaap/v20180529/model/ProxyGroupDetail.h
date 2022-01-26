@@ -306,6 +306,116 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TagSetHasBeenSet() const;
 
+                    /**
+                     * 获取Security policy ID. This field exists if security policies are set.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return PolicyId Security policy ID. This field exists if security policies are set.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetPolicyId() const;
+
+                    /**
+                     * 设置Security policy ID. This field exists if security policies are set.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param PolicyId Security policy ID. This field exists if security policies are set.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetPolicyId(const std::string& _policyId);
+
+                    /**
+                     * 判断参数 PolicyId 是否已赋值
+                     * @return PolicyId 是否已赋值
+                     */
+                    bool PolicyIdHasBeenSet() const;
+
+                    /**
+                     * 获取Connection group version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Version Connection group version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetVersion() const;
+
+                    /**
+                     * 设置Connection group version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param Version Connection group version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetVersion(const std::string& _version);
+
+                    /**
+                     * 判断参数 Version 是否已赋值
+                     * @return Version 是否已赋值
+                     */
+                    bool VersionHasBeenSet() const;
+
+                    /**
+                     * 获取Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return ClientIPMethod Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<int64_t> GetClientIPMethod() const;
+
+                    /**
+                     * 设置Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param ClientIPMethod Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetClientIPMethod(const std::vector<int64_t>& _clientIPMethod);
+
+                    /**
+                     * 判断参数 ClientIPMethod 是否已赋值
+                     * @return ClientIPMethod 是否已赋值
+                     */
+                    bool ClientIPMethodHasBeenSet() const;
+
+                    /**
+                     * 获取IP version. Valid values: `IPv4` (default), `IPv6`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetIPAddressVersion() const;
+
+                    /**
+                     * 设置IP version. Valid values: `IPv4` (default), `IPv6`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetIPAddressVersion(const std::string& _iPAddressVersion);
+
+                    /**
+                     * 判断参数 IPAddressVersion 是否已赋值
+                     * @return IPAddressVersion 是否已赋值
+                     */
+                    bool IPAddressVersionHasBeenSet() const;
+
+                    /**
+                     * 获取Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetPackageType() const;
+
+                    /**
+                     * 设置Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetPackageType(const std::string& _packageType);
+
+                    /**
+                     * 判断参数 PackageType 是否已赋值
+                     * @return PackageType 是否已赋值
+                     */
+                    bool PackageTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -391,6 +501,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<TagPair> m_tagSet;
                     bool m_tagSetHasBeenSet;
+
+                    /**
+                     * Security policy ID. This field exists if security policies are set.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_policyId;
+                    bool m_policyIdHasBeenSet;
+
+                    /**
+                     * Connection group version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_version;
+                    bool m_versionHasBeenSet;
+
+                    /**
+                     * Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<int64_t> m_clientIPMethod;
+                    bool m_clientIPMethodHasBeenSet;
+
+                    /**
+                     * IP version. Valid values: `IPv4` (default), `IPv6`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_iPAddressVersion;
+                    bool m_iPAddressVersionHasBeenSet;
+
+                    /**
+                     * Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_packageType;
+                    bool m_packageTypeHasBeenSet;
 
                 };
             }

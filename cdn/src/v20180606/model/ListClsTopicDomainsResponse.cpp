@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 ListClsTopicDomainsResponse::ListClsTopicDomainsResponse() :
@@ -37,20 +36,20 @@ ListClsTopicDomainsResponse::ListClsTopicDomainsResponse() :
 
 CoreInternalOutcome ListClsTopicDomainsResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -61,11 +60,11 @@ CoreInternalOutcome ListClsTopicDomainsResponse::Deserialize(const string &paylo
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -73,7 +72,7 @@ CoreInternalOutcome ListClsTopicDomainsResponse::Deserialize(const string &paylo
     {
         if (!rsp["AppId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AppId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AppId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_appId = rsp["AppId"].GetUint64();
         m_appIdHasBeenSet = true;
@@ -83,7 +82,7 @@ CoreInternalOutcome ListClsTopicDomainsResponse::Deserialize(const string &paylo
     {
         if (!rsp["Channel"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Channel` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Channel` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_channel = string(rsp["Channel"].GetString());
         m_channelHasBeenSet = true;
@@ -93,7 +92,7 @@ CoreInternalOutcome ListClsTopicDomainsResponse::Deserialize(const string &paylo
     {
         if (!rsp["LogsetId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LogsetId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LogsetId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_logsetId = string(rsp["LogsetId"].GetString());
         m_logsetIdHasBeenSet = true;
@@ -103,7 +102,7 @@ CoreInternalOutcome ListClsTopicDomainsResponse::Deserialize(const string &paylo
     {
         if (!rsp["TopicId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TopicId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_topicId = string(rsp["TopicId"].GetString());
         m_topicIdHasBeenSet = true;
@@ -112,10 +111,10 @@ CoreInternalOutcome ListClsTopicDomainsResponse::Deserialize(const string &paylo
     if (rsp.HasMember("DomainAreaConfigs") && !rsp["DomainAreaConfigs"].IsNull())
     {
         if (!rsp["DomainAreaConfigs"].IsArray())
-            return CoreInternalOutcome(Error("response `DomainAreaConfigs` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DomainAreaConfigs` is not array type"));
 
-        const Value &tmpValue = rsp["DomainAreaConfigs"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["DomainAreaConfigs"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             DomainAreaConfig item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -133,7 +132,7 @@ CoreInternalOutcome ListClsTopicDomainsResponse::Deserialize(const string &paylo
     {
         if (!rsp["TopicName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TopicName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_topicName = string(rsp["TopicName"].GetString());
         m_topicNameHasBeenSet = true;
@@ -143,7 +142,7 @@ CoreInternalOutcome ListClsTopicDomainsResponse::Deserialize(const string &paylo
     {
         if (!rsp["UpdateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_updateTime = string(rsp["UpdateTime"].GetString());
         m_updateTimeHasBeenSet = true;
@@ -151,6 +150,86 @@ CoreInternalOutcome ListClsTopicDomainsResponse::Deserialize(const string &paylo
 
 
     return CoreInternalOutcome(true);
+}
+
+string ListClsTopicDomainsResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_appIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AppId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_appId, allocator);
+    }
+
+    if (m_channelHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Channel";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_channel.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_logsetIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LogsetId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_logsetId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_topicIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TopicId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_topicId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_domainAreaConfigsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DomainAreaConfigs";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_domainAreaConfigs.begin(); itr != m_domainAreaConfigs.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_topicNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TopicName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_topicName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_updateTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UpdateTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_updateTime.c_str(), allocator).Move(), allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 MediaVideoStreamItem::MediaVideoStreamItem() :
@@ -26,11 +25,15 @@ MediaVideoStreamItem::MediaVideoStreamItem() :
     m_heightHasBeenSet(false),
     m_widthHasBeenSet(false),
     m_codecHasBeenSet(false),
-    m_fpsHasBeenSet(false)
+    m_fpsHasBeenSet(false),
+    m_colorPrimariesHasBeenSet(false),
+    m_colorSpaceHasBeenSet(false),
+    m_colorTransferHasBeenSet(false),
+    m_hdrTypeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome MediaVideoStreamItem::Deserialize(const Value &value)
+CoreInternalOutcome MediaVideoStreamItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +42,7 @@ CoreInternalOutcome MediaVideoStreamItem::Deserialize(const Value &value)
     {
         if (!value["Bitrate"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaVideoStreamItem.Bitrate` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaVideoStreamItem.Bitrate` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_bitrate = value["Bitrate"].GetInt64();
         m_bitrateHasBeenSet = true;
@@ -49,7 +52,7 @@ CoreInternalOutcome MediaVideoStreamItem::Deserialize(const Value &value)
     {
         if (!value["Height"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaVideoStreamItem.Height` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaVideoStreamItem.Height` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_height = value["Height"].GetInt64();
         m_heightHasBeenSet = true;
@@ -59,7 +62,7 @@ CoreInternalOutcome MediaVideoStreamItem::Deserialize(const Value &value)
     {
         if (!value["Width"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaVideoStreamItem.Width` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaVideoStreamItem.Width` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_width = value["Width"].GetInt64();
         m_widthHasBeenSet = true;
@@ -69,7 +72,7 @@ CoreInternalOutcome MediaVideoStreamItem::Deserialize(const Value &value)
     {
         if (!value["Codec"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaVideoStreamItem.Codec` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaVideoStreamItem.Codec` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_codec = string(value["Codec"].GetString());
         m_codecHasBeenSet = true;
@@ -79,22 +82,62 @@ CoreInternalOutcome MediaVideoStreamItem::Deserialize(const Value &value)
     {
         if (!value["Fps"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaVideoStreamItem.Fps` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaVideoStreamItem.Fps` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_fps = value["Fps"].GetInt64();
         m_fpsHasBeenSet = true;
+    }
+
+    if (value.HasMember("ColorPrimaries") && !value["ColorPrimaries"].IsNull())
+    {
+        if (!value["ColorPrimaries"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `MediaVideoStreamItem.ColorPrimaries` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_colorPrimaries = string(value["ColorPrimaries"].GetString());
+        m_colorPrimariesHasBeenSet = true;
+    }
+
+    if (value.HasMember("ColorSpace") && !value["ColorSpace"].IsNull())
+    {
+        if (!value["ColorSpace"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `MediaVideoStreamItem.ColorSpace` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_colorSpace = string(value["ColorSpace"].GetString());
+        m_colorSpaceHasBeenSet = true;
+    }
+
+    if (value.HasMember("ColorTransfer") && !value["ColorTransfer"].IsNull())
+    {
+        if (!value["ColorTransfer"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `MediaVideoStreamItem.ColorTransfer` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_colorTransfer = string(value["ColorTransfer"].GetString());
+        m_colorTransferHasBeenSet = true;
+    }
+
+    if (value.HasMember("HdrType") && !value["HdrType"].IsNull())
+    {
+        if (!value["HdrType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `MediaVideoStreamItem.HdrType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_hdrType = string(value["HdrType"].GetString());
+        m_hdrTypeHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void MediaVideoStreamItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MediaVideoStreamItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_bitrateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Bitrate";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_bitrate, allocator);
@@ -102,7 +145,7 @@ void MediaVideoStreamItem::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_heightHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Height";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_height, allocator);
@@ -110,7 +153,7 @@ void MediaVideoStreamItem::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_widthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Width";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_width, allocator);
@@ -118,18 +161,50 @@ void MediaVideoStreamItem::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_codecHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Codec";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_codec.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_codec.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fpsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Fps";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_fps, allocator);
+    }
+
+    if (m_colorPrimariesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ColorPrimaries";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_colorPrimaries.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_colorSpaceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ColorSpace";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_colorSpace.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_colorTransferHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ColorTransfer";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_colorTransfer.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_hdrTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HdrType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_hdrType.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -213,5 +288,69 @@ void MediaVideoStreamItem::SetFps(const int64_t& _fps)
 bool MediaVideoStreamItem::FpsHasBeenSet() const
 {
     return m_fpsHasBeenSet;
+}
+
+string MediaVideoStreamItem::GetColorPrimaries() const
+{
+    return m_colorPrimaries;
+}
+
+void MediaVideoStreamItem::SetColorPrimaries(const string& _colorPrimaries)
+{
+    m_colorPrimaries = _colorPrimaries;
+    m_colorPrimariesHasBeenSet = true;
+}
+
+bool MediaVideoStreamItem::ColorPrimariesHasBeenSet() const
+{
+    return m_colorPrimariesHasBeenSet;
+}
+
+string MediaVideoStreamItem::GetColorSpace() const
+{
+    return m_colorSpace;
+}
+
+void MediaVideoStreamItem::SetColorSpace(const string& _colorSpace)
+{
+    m_colorSpace = _colorSpace;
+    m_colorSpaceHasBeenSet = true;
+}
+
+bool MediaVideoStreamItem::ColorSpaceHasBeenSet() const
+{
+    return m_colorSpaceHasBeenSet;
+}
+
+string MediaVideoStreamItem::GetColorTransfer() const
+{
+    return m_colorTransfer;
+}
+
+void MediaVideoStreamItem::SetColorTransfer(const string& _colorTransfer)
+{
+    m_colorTransfer = _colorTransfer;
+    m_colorTransferHasBeenSet = true;
+}
+
+bool MediaVideoStreamItem::ColorTransferHasBeenSet() const
+{
+    return m_colorTransferHasBeenSet;
+}
+
+string MediaVideoStreamItem::GetHdrType() const
+{
+    return m_hdrType;
+}
+
+void MediaVideoStreamItem::SetHdrType(const string& _hdrType)
+{
+    m_hdrType = _hdrType;
+    m_hdrTypeHasBeenSet = true;
+}
+
+bool MediaVideoStreamItem::HdrTypeHasBeenSet() const
+{
+    return m_hdrTypeHasBeenSet;
 }
 

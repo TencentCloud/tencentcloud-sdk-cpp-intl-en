@@ -18,16 +18,16 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 BandwidthPriceGradient::BandwidthPriceGradient() :
     m_bandwidthRangeHasBeenSet(false),
-    m_bandwidthUnitPriceHasBeenSet(false)
+    m_bandwidthUnitPriceHasBeenSet(false),
+    m_discountBandwidthUnitPriceHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome BandwidthPriceGradient::Deserialize(const Value &value)
+CoreInternalOutcome BandwidthPriceGradient::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -35,10 +35,10 @@ CoreInternalOutcome BandwidthPriceGradient::Deserialize(const Value &value)
     if (value.HasMember("BandwidthRange") && !value["BandwidthRange"].IsNull())
     {
         if (!value["BandwidthRange"].IsArray())
-            return CoreInternalOutcome(Error("response `BandwidthPriceGradient.BandwidthRange` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `BandwidthPriceGradient.BandwidthRange` is not array type"));
 
-        const Value &tmpValue = value["BandwidthRange"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["BandwidthRange"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_bandwidthRange.push_back((*itr).GetInt64());
         }
@@ -47,40 +47,58 @@ CoreInternalOutcome BandwidthPriceGradient::Deserialize(const Value &value)
 
     if (value.HasMember("BandwidthUnitPrice") && !value["BandwidthUnitPrice"].IsNull())
     {
-        if (!value["BandwidthUnitPrice"].IsDouble())
+        if (!value["BandwidthUnitPrice"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `BandwidthPriceGradient.BandwidthUnitPrice` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BandwidthPriceGradient.BandwidthUnitPrice` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_bandwidthUnitPrice = value["BandwidthUnitPrice"].GetDouble();
         m_bandwidthUnitPriceHasBeenSet = true;
+    }
+
+    if (value.HasMember("DiscountBandwidthUnitPrice") && !value["DiscountBandwidthUnitPrice"].IsNull())
+    {
+        if (!value["DiscountBandwidthUnitPrice"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `BandwidthPriceGradient.DiscountBandwidthUnitPrice` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_discountBandwidthUnitPrice = value["DiscountBandwidthUnitPrice"].GetDouble();
+        m_discountBandwidthUnitPriceHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void BandwidthPriceGradient::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void BandwidthPriceGradient::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_bandwidthRangeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BandwidthRange";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_bandwidthRange.begin(); itr != m_bandwidthRange.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 
     if (m_bandwidthUnitPriceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BandwidthUnitPrice";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_bandwidthUnitPrice, allocator);
+    }
+
+    if (m_discountBandwidthUnitPriceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DiscountBandwidthUnitPrice";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_discountBandwidthUnitPrice, allocator);
     }
 
 }
@@ -116,5 +134,21 @@ void BandwidthPriceGradient::SetBandwidthUnitPrice(const double& _bandwidthUnitP
 bool BandwidthPriceGradient::BandwidthUnitPriceHasBeenSet() const
 {
     return m_bandwidthUnitPriceHasBeenSet;
+}
+
+double BandwidthPriceGradient::GetDiscountBandwidthUnitPrice() const
+{
+    return m_discountBandwidthUnitPrice;
+}
+
+void BandwidthPriceGradient::SetDiscountBandwidthUnitPrice(const double& _discountBandwidthUnitPrice)
+{
+    m_discountBandwidthUnitPrice = _discountBandwidthUnitPrice;
+    m_discountBandwidthUnitPriceHasBeenSet = true;
+}
+
+bool BandwidthPriceGradient::DiscountBandwidthUnitPriceHasBeenSet() const
+{
+    return m_discountBandwidthUnitPriceHasBeenSet;
 }
 

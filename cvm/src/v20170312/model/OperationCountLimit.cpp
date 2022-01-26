@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cvm::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 OperationCountLimit::OperationCountLimit() :
@@ -29,7 +28,7 @@ OperationCountLimit::OperationCountLimit() :
 {
 }
 
-CoreInternalOutcome OperationCountLimit::Deserialize(const Value &value)
+CoreInternalOutcome OperationCountLimit::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome OperationCountLimit::Deserialize(const Value &value)
     {
         if (!value["Operation"].IsString())
         {
-            return CoreInternalOutcome(Error("response `OperationCountLimit.Operation` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OperationCountLimit.Operation` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_operation = string(value["Operation"].GetString());
         m_operationHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome OperationCountLimit::Deserialize(const Value &value)
     {
         if (!value["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `OperationCountLimit.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OperationCountLimit.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(value["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome OperationCountLimit::Deserialize(const Value &value)
     {
         if (!value["CurrentCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `OperationCountLimit.CurrentCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OperationCountLimit.CurrentCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_currentCount = value["CurrentCount"].GetInt64();
         m_currentCountHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome OperationCountLimit::Deserialize(const Value &value)
     {
         if (!value["LimitCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `OperationCountLimit.LimitCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OperationCountLimit.LimitCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_limitCount = value["LimitCount"].GetInt64();
         m_limitCountHasBeenSet = true;
@@ -78,28 +77,28 @@ CoreInternalOutcome OperationCountLimit::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void OperationCountLimit::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void OperationCountLimit::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_operationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Operation";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_operation.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_operation.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_currentCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CurrentCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_currentCount, allocator);
@@ -107,7 +106,7 @@ void OperationCountLimit::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_limitCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LimitCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_limitCount, allocator);

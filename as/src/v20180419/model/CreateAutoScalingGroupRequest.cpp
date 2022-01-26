@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::As::V20180419::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateAutoScalingGroupRequest::CreateAutoScalingGroupRequest() :
@@ -42,36 +41,41 @@ CreateAutoScalingGroupRequest::CreateAutoScalingGroupRequest() :
     m_tagsHasBeenSet(false),
     m_serviceSettingsHasBeenSet(false),
     m_ipv6AddressCountHasBeenSet(false),
-    m_multiZoneSubnetPolicyHasBeenSet(false)
+    m_multiZoneSubnetPolicyHasBeenSet(false),
+    m_healthCheckTypeHasBeenSet(false),
+    m_loadBalancerHealthCheckGracePeriodHasBeenSet(false),
+    m_instanceAllocationPolicyHasBeenSet(false),
+    m_spotMixedAllocationPolicyHasBeenSet(false),
+    m_capacityRebalanceHasBeenSet(false)
 {
 }
 
 string CreateAutoScalingGroupRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_autoScalingGroupNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AutoScalingGroupName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_autoScalingGroupName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_autoScalingGroupName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_launchConfigurationIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LaunchConfigurationId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_launchConfigurationId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_launchConfigurationId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_maxSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaxSize";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_maxSize, allocator);
@@ -79,7 +83,7 @@ string CreateAutoScalingGroupRequest::ToJsonString() const
 
     if (m_minSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MinSize";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_minSize, allocator);
@@ -87,15 +91,15 @@ string CreateAutoScalingGroupRequest::ToJsonString() const
 
     if (m_vpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_vpcId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_vpcId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_defaultCooldownHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DefaultCooldown";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_defaultCooldown, allocator);
@@ -103,7 +107,7 @@ string CreateAutoScalingGroupRequest::ToJsonString() const
 
     if (m_desiredCapacityHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DesiredCapacity";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_desiredCapacity, allocator);
@@ -111,20 +115,20 @@ string CreateAutoScalingGroupRequest::ToJsonString() const
 
     if (m_loadBalancerIdsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LoadBalancerIds";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_loadBalancerIds.begin(); itr != m_loadBalancerIds.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_projectIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProjectId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_projectId, allocator);
@@ -132,101 +136,101 @@ string CreateAutoScalingGroupRequest::ToJsonString() const
 
     if (m_forwardLoadBalancersHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ForwardLoadBalancers";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_forwardLoadBalancers.begin(); itr != m_forwardLoadBalancers.end(); ++itr, ++i)
         {
-            d[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
     }
 
     if (m_subnetIdsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubnetIds";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_subnetIds.begin(); itr != m_subnetIds.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_terminationPoliciesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TerminationPolicies";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_terminationPolicies.begin(); itr != m_terminationPolicies.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_zonesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Zones";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_zones.begin(); itr != m_zones.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_retryPolicyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RetryPolicy";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_retryPolicy.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_retryPolicy.c_str(), allocator).Move(), allocator);
     }
 
     if (m_zonesCheckPolicyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ZonesCheckPolicy";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_zonesCheckPolicy.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_zonesCheckPolicy.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tagsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Tags";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
         {
-            d[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
     }
 
     if (m_serviceSettingsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceSettings";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_serviceSettings.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_ipv6AddressCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Ipv6AddressCount";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_ipv6AddressCount, allocator);
@@ -234,15 +238,56 @@ string CreateAutoScalingGroupRequest::ToJsonString() const
 
     if (m_multiZoneSubnetPolicyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MultiZoneSubnetPolicy";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_multiZoneSubnetPolicy.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_multiZoneSubnetPolicy.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_healthCheckTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HealthCheckType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_healthCheckType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_loadBalancerHealthCheckGracePeriodHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LoadBalancerHealthCheckGracePeriod";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_loadBalancerHealthCheckGracePeriod, allocator);
+    }
+
+    if (m_instanceAllocationPolicyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceAllocationPolicy";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceAllocationPolicy.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_spotMixedAllocationPolicyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SpotMixedAllocationPolicy";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_spotMixedAllocationPolicy.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_capacityRebalanceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CapacityRebalance";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_capacityRebalance, allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -550,6 +595,86 @@ void CreateAutoScalingGroupRequest::SetMultiZoneSubnetPolicy(const string& _mult
 bool CreateAutoScalingGroupRequest::MultiZoneSubnetPolicyHasBeenSet() const
 {
     return m_multiZoneSubnetPolicyHasBeenSet;
+}
+
+string CreateAutoScalingGroupRequest::GetHealthCheckType() const
+{
+    return m_healthCheckType;
+}
+
+void CreateAutoScalingGroupRequest::SetHealthCheckType(const string& _healthCheckType)
+{
+    m_healthCheckType = _healthCheckType;
+    m_healthCheckTypeHasBeenSet = true;
+}
+
+bool CreateAutoScalingGroupRequest::HealthCheckTypeHasBeenSet() const
+{
+    return m_healthCheckTypeHasBeenSet;
+}
+
+uint64_t CreateAutoScalingGroupRequest::GetLoadBalancerHealthCheckGracePeriod() const
+{
+    return m_loadBalancerHealthCheckGracePeriod;
+}
+
+void CreateAutoScalingGroupRequest::SetLoadBalancerHealthCheckGracePeriod(const uint64_t& _loadBalancerHealthCheckGracePeriod)
+{
+    m_loadBalancerHealthCheckGracePeriod = _loadBalancerHealthCheckGracePeriod;
+    m_loadBalancerHealthCheckGracePeriodHasBeenSet = true;
+}
+
+bool CreateAutoScalingGroupRequest::LoadBalancerHealthCheckGracePeriodHasBeenSet() const
+{
+    return m_loadBalancerHealthCheckGracePeriodHasBeenSet;
+}
+
+string CreateAutoScalingGroupRequest::GetInstanceAllocationPolicy() const
+{
+    return m_instanceAllocationPolicy;
+}
+
+void CreateAutoScalingGroupRequest::SetInstanceAllocationPolicy(const string& _instanceAllocationPolicy)
+{
+    m_instanceAllocationPolicy = _instanceAllocationPolicy;
+    m_instanceAllocationPolicyHasBeenSet = true;
+}
+
+bool CreateAutoScalingGroupRequest::InstanceAllocationPolicyHasBeenSet() const
+{
+    return m_instanceAllocationPolicyHasBeenSet;
+}
+
+SpotMixedAllocationPolicy CreateAutoScalingGroupRequest::GetSpotMixedAllocationPolicy() const
+{
+    return m_spotMixedAllocationPolicy;
+}
+
+void CreateAutoScalingGroupRequest::SetSpotMixedAllocationPolicy(const SpotMixedAllocationPolicy& _spotMixedAllocationPolicy)
+{
+    m_spotMixedAllocationPolicy = _spotMixedAllocationPolicy;
+    m_spotMixedAllocationPolicyHasBeenSet = true;
+}
+
+bool CreateAutoScalingGroupRequest::SpotMixedAllocationPolicyHasBeenSet() const
+{
+    return m_spotMixedAllocationPolicyHasBeenSet;
+}
+
+bool CreateAutoScalingGroupRequest::GetCapacityRebalance() const
+{
+    return m_capacityRebalance;
+}
+
+void CreateAutoScalingGroupRequest::SetCapacityRebalance(const bool& _capacityRebalance)
+{
+    m_capacityRebalance = _capacityRebalance;
+    m_capacityRebalanceHasBeenSet = true;
+}
+
+bool CreateAutoScalingGroupRequest::CapacityRebalanceHasBeenSet() const
+{
+    return m_capacityRebalanceHasBeenSet;
 }
 
 

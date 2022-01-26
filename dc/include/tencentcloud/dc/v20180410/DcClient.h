@@ -25,6 +25,8 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/dc/v20180410/model/AcceptDirectConnectTunnelRequest.h>
 #include <tencentcloud/dc/v20180410/model/AcceptDirectConnectTunnelResponse.h>
+#include <tencentcloud/dc/v20180410/model/ApplyInternetAddressRequest.h>
+#include <tencentcloud/dc/v20180410/model/ApplyInternetAddressResponse.h>
 #include <tencentcloud/dc/v20180410/model/CreateDirectConnectRequest.h>
 #include <tencentcloud/dc/v20180410/model/CreateDirectConnectResponse.h>
 #include <tencentcloud/dc/v20180410/model/CreateDirectConnectTunnelRequest.h>
@@ -39,12 +41,24 @@
 #include <tencentcloud/dc/v20180410/model/DescribeDirectConnectTunnelsResponse.h>
 #include <tencentcloud/dc/v20180410/model/DescribeDirectConnectsRequest.h>
 #include <tencentcloud/dc/v20180410/model/DescribeDirectConnectsResponse.h>
+#include <tencentcloud/dc/v20180410/model/DescribeInternetAddressRequest.h>
+#include <tencentcloud/dc/v20180410/model/DescribeInternetAddressResponse.h>
+#include <tencentcloud/dc/v20180410/model/DescribeInternetAddressQuotaRequest.h>
+#include <tencentcloud/dc/v20180410/model/DescribeInternetAddressQuotaResponse.h>
+#include <tencentcloud/dc/v20180410/model/DescribeInternetAddressStatisticsRequest.h>
+#include <tencentcloud/dc/v20180410/model/DescribeInternetAddressStatisticsResponse.h>
+#include <tencentcloud/dc/v20180410/model/DisableInternetAddressRequest.h>
+#include <tencentcloud/dc/v20180410/model/DisableInternetAddressResponse.h>
+#include <tencentcloud/dc/v20180410/model/EnableInternetAddressRequest.h>
+#include <tencentcloud/dc/v20180410/model/EnableInternetAddressResponse.h>
 #include <tencentcloud/dc/v20180410/model/ModifyDirectConnectAttributeRequest.h>
 #include <tencentcloud/dc/v20180410/model/ModifyDirectConnectAttributeResponse.h>
 #include <tencentcloud/dc/v20180410/model/ModifyDirectConnectTunnelAttributeRequest.h>
 #include <tencentcloud/dc/v20180410/model/ModifyDirectConnectTunnelAttributeResponse.h>
 #include <tencentcloud/dc/v20180410/model/RejectDirectConnectTunnelRequest.h>
 #include <tencentcloud/dc/v20180410/model/RejectDirectConnectTunnelResponse.h>
+#include <tencentcloud/dc/v20180410/model/ReleaseInternetAddressRequest.h>
+#include <tencentcloud/dc/v20180410/model/ReleaseInternetAddressResponse.h>
 
 
 namespace TencentCloud
@@ -59,39 +73,60 @@ namespace TencentCloud
                 DcClient(const Credential &credential, const std::string &region);
                 DcClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::AcceptDirectConnectTunnelResponse> AcceptDirectConnectTunnelOutcome;
+                typedef Outcome<Core::Error, Model::AcceptDirectConnectTunnelResponse> AcceptDirectConnectTunnelOutcome;
                 typedef std::future<AcceptDirectConnectTunnelOutcome> AcceptDirectConnectTunnelOutcomeCallable;
                 typedef std::function<void(const DcClient*, const Model::AcceptDirectConnectTunnelRequest&, AcceptDirectConnectTunnelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AcceptDirectConnectTunnelAsyncHandler;
-                typedef Outcome<Error, Model::CreateDirectConnectResponse> CreateDirectConnectOutcome;
+                typedef Outcome<Core::Error, Model::ApplyInternetAddressResponse> ApplyInternetAddressOutcome;
+                typedef std::future<ApplyInternetAddressOutcome> ApplyInternetAddressOutcomeCallable;
+                typedef std::function<void(const DcClient*, const Model::ApplyInternetAddressRequest&, ApplyInternetAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApplyInternetAddressAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateDirectConnectResponse> CreateDirectConnectOutcome;
                 typedef std::future<CreateDirectConnectOutcome> CreateDirectConnectOutcomeCallable;
                 typedef std::function<void(const DcClient*, const Model::CreateDirectConnectRequest&, CreateDirectConnectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDirectConnectAsyncHandler;
-                typedef Outcome<Error, Model::CreateDirectConnectTunnelResponse> CreateDirectConnectTunnelOutcome;
+                typedef Outcome<Core::Error, Model::CreateDirectConnectTunnelResponse> CreateDirectConnectTunnelOutcome;
                 typedef std::future<CreateDirectConnectTunnelOutcome> CreateDirectConnectTunnelOutcomeCallable;
                 typedef std::function<void(const DcClient*, const Model::CreateDirectConnectTunnelRequest&, CreateDirectConnectTunnelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDirectConnectTunnelAsyncHandler;
-                typedef Outcome<Error, Model::DeleteDirectConnectResponse> DeleteDirectConnectOutcome;
+                typedef Outcome<Core::Error, Model::DeleteDirectConnectResponse> DeleteDirectConnectOutcome;
                 typedef std::future<DeleteDirectConnectOutcome> DeleteDirectConnectOutcomeCallable;
                 typedef std::function<void(const DcClient*, const Model::DeleteDirectConnectRequest&, DeleteDirectConnectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteDirectConnectAsyncHandler;
-                typedef Outcome<Error, Model::DeleteDirectConnectTunnelResponse> DeleteDirectConnectTunnelOutcome;
+                typedef Outcome<Core::Error, Model::DeleteDirectConnectTunnelResponse> DeleteDirectConnectTunnelOutcome;
                 typedef std::future<DeleteDirectConnectTunnelOutcome> DeleteDirectConnectTunnelOutcomeCallable;
                 typedef std::function<void(const DcClient*, const Model::DeleteDirectConnectTunnelRequest&, DeleteDirectConnectTunnelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteDirectConnectTunnelAsyncHandler;
-                typedef Outcome<Error, Model::DescribeAccessPointsResponse> DescribeAccessPointsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAccessPointsResponse> DescribeAccessPointsOutcome;
                 typedef std::future<DescribeAccessPointsOutcome> DescribeAccessPointsOutcomeCallable;
                 typedef std::function<void(const DcClient*, const Model::DescribeAccessPointsRequest&, DescribeAccessPointsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccessPointsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDirectConnectTunnelsResponse> DescribeDirectConnectTunnelsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDirectConnectTunnelsResponse> DescribeDirectConnectTunnelsOutcome;
                 typedef std::future<DescribeDirectConnectTunnelsOutcome> DescribeDirectConnectTunnelsOutcomeCallable;
                 typedef std::function<void(const DcClient*, const Model::DescribeDirectConnectTunnelsRequest&, DescribeDirectConnectTunnelsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDirectConnectTunnelsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDirectConnectsResponse> DescribeDirectConnectsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDirectConnectsResponse> DescribeDirectConnectsOutcome;
                 typedef std::future<DescribeDirectConnectsOutcome> DescribeDirectConnectsOutcomeCallable;
                 typedef std::function<void(const DcClient*, const Model::DescribeDirectConnectsRequest&, DescribeDirectConnectsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDirectConnectsAsyncHandler;
-                typedef Outcome<Error, Model::ModifyDirectConnectAttributeResponse> ModifyDirectConnectAttributeOutcome;
+                typedef Outcome<Core::Error, Model::DescribeInternetAddressResponse> DescribeInternetAddressOutcome;
+                typedef std::future<DescribeInternetAddressOutcome> DescribeInternetAddressOutcomeCallable;
+                typedef std::function<void(const DcClient*, const Model::DescribeInternetAddressRequest&, DescribeInternetAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInternetAddressAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeInternetAddressQuotaResponse> DescribeInternetAddressQuotaOutcome;
+                typedef std::future<DescribeInternetAddressQuotaOutcome> DescribeInternetAddressQuotaOutcomeCallable;
+                typedef std::function<void(const DcClient*, const Model::DescribeInternetAddressQuotaRequest&, DescribeInternetAddressQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInternetAddressQuotaAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeInternetAddressStatisticsResponse> DescribeInternetAddressStatisticsOutcome;
+                typedef std::future<DescribeInternetAddressStatisticsOutcome> DescribeInternetAddressStatisticsOutcomeCallable;
+                typedef std::function<void(const DcClient*, const Model::DescribeInternetAddressStatisticsRequest&, DescribeInternetAddressStatisticsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInternetAddressStatisticsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DisableInternetAddressResponse> DisableInternetAddressOutcome;
+                typedef std::future<DisableInternetAddressOutcome> DisableInternetAddressOutcomeCallable;
+                typedef std::function<void(const DcClient*, const Model::DisableInternetAddressRequest&, DisableInternetAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableInternetAddressAsyncHandler;
+                typedef Outcome<Core::Error, Model::EnableInternetAddressResponse> EnableInternetAddressOutcome;
+                typedef std::future<EnableInternetAddressOutcome> EnableInternetAddressOutcomeCallable;
+                typedef std::function<void(const DcClient*, const Model::EnableInternetAddressRequest&, EnableInternetAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableInternetAddressAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDirectConnectAttributeResponse> ModifyDirectConnectAttributeOutcome;
                 typedef std::future<ModifyDirectConnectAttributeOutcome> ModifyDirectConnectAttributeOutcomeCallable;
                 typedef std::function<void(const DcClient*, const Model::ModifyDirectConnectAttributeRequest&, ModifyDirectConnectAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDirectConnectAttributeAsyncHandler;
-                typedef Outcome<Error, Model::ModifyDirectConnectTunnelAttributeResponse> ModifyDirectConnectTunnelAttributeOutcome;
+                typedef Outcome<Core::Error, Model::ModifyDirectConnectTunnelAttributeResponse> ModifyDirectConnectTunnelAttributeOutcome;
                 typedef std::future<ModifyDirectConnectTunnelAttributeOutcome> ModifyDirectConnectTunnelAttributeOutcomeCallable;
                 typedef std::function<void(const DcClient*, const Model::ModifyDirectConnectTunnelAttributeRequest&, ModifyDirectConnectTunnelAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDirectConnectTunnelAttributeAsyncHandler;
-                typedef Outcome<Error, Model::RejectDirectConnectTunnelResponse> RejectDirectConnectTunnelOutcome;
+                typedef Outcome<Core::Error, Model::RejectDirectConnectTunnelResponse> RejectDirectConnectTunnelOutcome;
                 typedef std::future<RejectDirectConnectTunnelOutcome> RejectDirectConnectTunnelOutcomeCallable;
                 typedef std::function<void(const DcClient*, const Model::RejectDirectConnectTunnelRequest&, RejectDirectConnectTunnelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RejectDirectConnectTunnelAsyncHandler;
+                typedef Outcome<Core::Error, Model::ReleaseInternetAddressResponse> ReleaseInternetAddressOutcome;
+                typedef std::future<ReleaseInternetAddressOutcome> ReleaseInternetAddressOutcomeCallable;
+                typedef std::function<void(const DcClient*, const Model::ReleaseInternetAddressRequest&, ReleaseInternetAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReleaseInternetAddressAsyncHandler;
 
 
 
@@ -103,6 +138,15 @@ namespace TencentCloud
                 AcceptDirectConnectTunnelOutcome AcceptDirectConnectTunnel(const Model::AcceptDirectConnectTunnelRequest &request);
                 void AcceptDirectConnectTunnelAsync(const Model::AcceptDirectConnectTunnelRequest& request, const AcceptDirectConnectTunnelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AcceptDirectConnectTunnelOutcomeCallable AcceptDirectConnectTunnelCallable(const Model::AcceptDirectConnectTunnelRequest& request);
+
+                /**
+                 *This API is used to apply for an internet tunnel’s CIDR block.
+                 * @param req ApplyInternetAddressRequest
+                 * @return ApplyInternetAddressOutcome
+                 */
+                ApplyInternetAddressOutcome ApplyInternetAddress(const Model::ApplyInternetAddressRequest &request);
+                void ApplyInternetAddressAsync(const Model::ApplyInternetAddressRequest& request, const ApplyInternetAddressAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ApplyInternetAddressOutcomeCallable ApplyInternetAddressCallable(const Model::ApplyInternetAddressRequest& request);
 
                 /**
                  *This API is used to apply for a connection.
@@ -173,6 +217,51 @@ Only connected connections can be deleted.
                 DescribeDirectConnectsOutcomeCallable DescribeDirectConnectsCallable(const Model::DescribeDirectConnectsRequest& request);
 
                 /**
+                 *This API is used to obtain the public IP address of an internet tunnel.
+                 * @param req DescribeInternetAddressRequest
+                 * @return DescribeInternetAddressOutcome
+                 */
+                DescribeInternetAddressOutcome DescribeInternetAddress(const Model::DescribeInternetAddressRequest &request);
+                void DescribeInternetAddressAsync(const Model::DescribeInternetAddressRequest& request, const DescribeInternetAddressAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeInternetAddressOutcomeCallable DescribeInternetAddressCallable(const Model::DescribeInternetAddressRequest& request);
+
+                /**
+                 *This API is used to obtain the public IP quota of internet tunnels.
+                 * @param req DescribeInternetAddressQuotaRequest
+                 * @return DescribeInternetAddressQuotaOutcome
+                 */
+                DescribeInternetAddressQuotaOutcome DescribeInternetAddressQuota(const Model::DescribeInternetAddressQuotaRequest &request);
+                void DescribeInternetAddressQuotaAsync(const Model::DescribeInternetAddressQuotaRequest& request, const DescribeInternetAddressQuotaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeInternetAddressQuotaOutcomeCallable DescribeInternetAddressQuotaCallable(const Model::DescribeInternetAddressQuotaRequest& request);
+
+                /**
+                 *This API is used to obtain the public IP address assignment statistics of internet tunnels.
+                 * @param req DescribeInternetAddressStatisticsRequest
+                 * @return DescribeInternetAddressStatisticsOutcome
+                 */
+                DescribeInternetAddressStatisticsOutcome DescribeInternetAddressStatistics(const Model::DescribeInternetAddressStatisticsRequest &request);
+                void DescribeInternetAddressStatisticsAsync(const Model::DescribeInternetAddressStatisticsRequest& request, const DescribeInternetAddressStatisticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeInternetAddressStatisticsOutcomeCallable DescribeInternetAddressStatisticsCallable(const Model::DescribeInternetAddressStatisticsRequest& request);
+
+                /**
+                 *This API is used to disable a public IP address of internet tunnels.
+                 * @param req DisableInternetAddressRequest
+                 * @return DisableInternetAddressOutcome
+                 */
+                DisableInternetAddressOutcome DisableInternetAddress(const Model::DisableInternetAddressRequest &request);
+                void DisableInternetAddressAsync(const Model::DisableInternetAddressRequest& request, const DisableInternetAddressAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DisableInternetAddressOutcomeCallable DisableInternetAddressCallable(const Model::DisableInternetAddressRequest& request);
+
+                /**
+                 *This API is used to enable a public IP address for internet tunnels.
+                 * @param req EnableInternetAddressRequest
+                 * @return EnableInternetAddressOutcome
+                 */
+                EnableInternetAddressOutcome EnableInternetAddress(const Model::EnableInternetAddressRequest &request);
+                void EnableInternetAddressAsync(const Model::EnableInternetAddressRequest& request, const EnableInternetAddressAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                EnableInternetAddressOutcomeCallable EnableInternetAddressCallable(const Model::EnableInternetAddressRequest& request);
+
+                /**
                  *This API is used to modify connection attributes.
                  * @param req ModifyDirectConnectAttributeRequest
                  * @return ModifyDirectConnectAttributeOutcome
@@ -198,6 +287,15 @@ Only connected connections can be deleted.
                 RejectDirectConnectTunnelOutcome RejectDirectConnectTunnel(const Model::RejectDirectConnectTunnelRequest &request);
                 void RejectDirectConnectTunnelAsync(const Model::RejectDirectConnectTunnelRequest& request, const RejectDirectConnectTunnelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RejectDirectConnectTunnelOutcomeCallable RejectDirectConnectTunnelCallable(const Model::RejectDirectConnectTunnelRequest& request);
+
+                /**
+                 *This API is used to release an IP address of internet tunnels.
+                 * @param req ReleaseInternetAddressRequest
+                 * @return ReleaseInternetAddressOutcome
+                 */
+                ReleaseInternetAddressOutcome ReleaseInternetAddress(const Model::ReleaseInternetAddressRequest &request);
+                void ReleaseInternetAddressAsync(const Model::ReleaseInternetAddressRequest& request, const ReleaseInternetAddressAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ReleaseInternetAddressOutcomeCallable ReleaseInternetAddressCallable(const Model::ReleaseInternetAddressRequest& request);
 
             };
         }

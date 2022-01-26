@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Referer blacklist/whitelist configuration rules, which is effective for specific resources.
+                * Referer blocklist/allowlist configuration rules, which is effective for specific resources.
                 */
                 class RefererRule : public AbstractModel
                 {
@@ -116,21 +116,21 @@ For `path`, enter the corresponding absolute path, such as /xxx/test.html.
 
                     /**
                      * 获取Referer configuration types
-whitelist: whitelist
-blacklist: blacklist
+whitelist: allowlist
+blacklist: blocklist
                      * @return RefererType Referer configuration types
-whitelist: whitelist
-blacklist: blacklist
+whitelist: allowlist
+blacklist: blocklist
                      */
                     std::string GetRefererType() const;
 
                     /**
                      * 设置Referer configuration types
-whitelist: whitelist
-blacklist: blacklist
+whitelist: allowlist
+blacklist: blocklist
                      * @param RefererType Referer configuration types
-whitelist: whitelist
-blacklist: blacklist
+whitelist: allowlist
+blacklist: blocklist
                      */
                     void SetRefererType(const std::string& _refererType);
 
@@ -208,8 +208,8 @@ For `path`, enter the corresponding absolute path, such as /xxx/test.html.
 
                     /**
                      * Referer configuration types
-whitelist: whitelist
-blacklist: blacklist
+whitelist: allowlist
+blacklist: blocklist
                      */
                     std::string m_refererType;
                     bool m_refererTypeHasBeenSet;

@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Maximum number of players
-                     * @return MaximumPlayerSessionCount Maximum number of players
+                     * 获取The maximum number of players, which cannot be less than 0.
+                     * @return MaximumPlayerSessionCount The maximum number of players, which cannot be less than 0.
                      */
                     uint64_t GetMaximumPlayerSessionCount() const;
 
                     /**
-                     * 设置Maximum number of players
-                     * @param MaximumPlayerSessionCount Maximum number of players
+                     * 设置The maximum number of players, which cannot be less than 0.
+                     * @param MaximumPlayerSessionCount The maximum number of players, which cannot be less than 0.
                      */
                     void SetMaximumPlayerSessionCount(const uint64_t& _maximumPlayerSessionCount);
 
@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool MaximumPlayerSessionCountHasBeenSet() const;
 
                     /**
-                     * 获取Alias ID
-                     * @return AliasId Alias ID
+                     * 获取Alias ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
+                     * @return AliasId Alias ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
                      */
                     std::string GetAliasId() const;
 
                     /**
-                     * 设置Alias ID
-                     * @param AliasId Alias ID
+                     * 设置Alias ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
+                     * @param AliasId Alias ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
                      */
                     void SetAliasId(const std::string& _aliasId);
 
@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool AliasIdHasBeenSet() const;
 
                     /**
-                     * 获取Creator ID
-                     * @return CreatorId Creator ID
+                     * 获取Creator ID. Up to 1024 ASCII characters are allowed.
+                     * @return CreatorId Creator ID. Up to 1024 ASCII characters are allowed.
                      */
                     std::string GetCreatorId() const;
 
                     /**
-                     * 设置Creator ID
-                     * @param CreatorId Creator ID
+                     * 设置Creator ID. Up to 1024 ASCII characters are allowed.
+                     * @param CreatorId Creator ID. Up to 1024 ASCII characters are allowed.
                      */
                     void SetCreatorId(const std::string& _creatorId);
 
@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool CreatorIdHasBeenSet() const;
 
                     /**
-                     * 获取Fleet ID
-                     * @return FleetId Fleet ID
+                     * 获取Fleet ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
+                     * @return FleetId Fleet ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
                      */
                     std::string GetFleetId() const;
 
                     /**
-                     * 设置Fleet ID
-                     * @param FleetId Fleet ID
+                     * 设置Fleet ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
+                     * @param FleetId Fleet ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
                      */
                     void SetFleetId(const std::string& _fleetId);
 
@@ -116,14 +116,14 @@ namespace TencentCloud
                     bool FleetIdHasBeenSet() const;
 
                     /**
-                     * 获取Game attributes
-                     * @return GameProperties Game attributes
+                     * 获取Game attributes. Up to 16 groups of attributes are allowed.
+                     * @return GameProperties Game attributes. Up to 16 groups of attributes are allowed.
                      */
                     std::vector<GameProperty> GetGameProperties() const;
 
                     /**
-                     * 设置Game attributes
-                     * @param GameProperties Game attributes
+                     * 设置Game attributes. Up to 16 groups of attributes are allowed.
+                     * @param GameProperties Game attributes. Up to 16 groups of attributes are allowed.
                      */
                     void SetGameProperties(const std::vector<GameProperty>& _gameProperties);
 
@@ -134,14 +134,14 @@ namespace TencentCloud
                     bool GamePropertiesHasBeenSet() const;
 
                     /**
-                     * 获取Game server session attribute details
-                     * @return GameServerSessionData Game server session attribute details
+                     * 获取The attribute details of game server session. Up to 4096 ASCII characters are allowed.
+                     * @return GameServerSessionData The attribute details of game server session. Up to 4096 ASCII characters are allowed.
                      */
                     std::string GetGameServerSessionData() const;
 
                     /**
-                     * 设置Game server session attribute details
-                     * @param GameServerSessionData Game server session attribute details
+                     * 设置The attribute details of game server session. Up to 4096 ASCII characters are allowed.
+                     * @param GameServerSessionData The attribute details of game server session. Up to 4096 ASCII characters are allowed.
                      */
                     void SetGameServerSessionData(const std::string& _gameServerSessionData);
 
@@ -152,14 +152,14 @@ namespace TencentCloud
                     bool GameServerSessionDataHasBeenSet() const;
 
                     /**
-                     * 获取Custom ID of game server session
-                     * @return GameServerSessionId Custom ID of game server session
+                     * 获取The custom ID of game server session. Up to 4096 ASCII characters are allowed.
+                     * @return GameServerSessionId The custom ID of game server session. Up to 4096 ASCII characters are allowed.
                      */
                     std::string GetGameServerSessionId() const;
 
                     /**
-                     * 设置Custom ID of game server session
-                     * @param GameServerSessionId Custom ID of game server session
+                     * 设置The custom ID of game server session. Up to 4096 ASCII characters are allowed.
+                     * @param GameServerSessionId The custom ID of game server session. Up to 4096 ASCII characters are allowed.
                      */
                     void SetGameServerSessionId(const std::string& _gameServerSessionId);
 
@@ -170,14 +170,14 @@ namespace TencentCloud
                     bool GameServerSessionIdHasBeenSet() const;
 
                     /**
-                     * 获取Idempotency token
-                     * @return IdempotencyToken Idempotency token
+                     * 获取Idempotency token. Up to 48 ASCII characters are allowed.
+                     * @return IdempotencyToken Idempotency token. Up to 48 ASCII characters are allowed.
                      */
                     std::string GetIdempotencyToken() const;
 
                     /**
-                     * 设置Idempotency token
-                     * @param IdempotencyToken Idempotency token
+                     * 设置Idempotency token. Up to 48 ASCII characters are allowed.
+                     * @param IdempotencyToken Idempotency token. Up to 48 ASCII characters are allowed.
                      */
                     void SetIdempotencyToken(const std::string& _idempotencyToken);
 
@@ -188,14 +188,14 @@ namespace TencentCloud
                     bool IdempotencyTokenHasBeenSet() const;
 
                     /**
-                     * 获取Game server session name
-                     * @return Name Game server session name
+                     * 获取The name of game server session. Up to 1024 ASCII characters are allowed.
+                     * @return Name The name of game server session. Up to 1024 ASCII characters are allowed.
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Game server session name
-                     * @param Name Game server session name
+                     * 设置The name of game server session. Up to 1024 ASCII characters are allowed.
+                     * @param Name The name of game server session. Up to 1024 ASCII characters are allowed.
                      */
                     void SetName(const std::string& _name);
 
@@ -208,55 +208,55 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Maximum number of players
+                     * The maximum number of players, which cannot be less than 0.
                      */
                     uint64_t m_maximumPlayerSessionCount;
                     bool m_maximumPlayerSessionCountHasBeenSet;
 
                     /**
-                     * Alias ID
+                     * Alias ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
                      */
                     std::string m_aliasId;
                     bool m_aliasIdHasBeenSet;
 
                     /**
-                     * Creator ID
+                     * Creator ID. Up to 1024 ASCII characters are allowed.
                      */
                     std::string m_creatorId;
                     bool m_creatorIdHasBeenSet;
 
                     /**
-                     * Fleet ID
+                     * Fleet ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
                      */
                     std::string m_fleetId;
                     bool m_fleetIdHasBeenSet;
 
                     /**
-                     * Game attributes
+                     * Game attributes. Up to 16 groups of attributes are allowed.
                      */
                     std::vector<GameProperty> m_gameProperties;
                     bool m_gamePropertiesHasBeenSet;
 
                     /**
-                     * Game server session attribute details
+                     * The attribute details of game server session. Up to 4096 ASCII characters are allowed.
                      */
                     std::string m_gameServerSessionData;
                     bool m_gameServerSessionDataHasBeenSet;
 
                     /**
-                     * Custom ID of game server session
+                     * The custom ID of game server session. Up to 4096 ASCII characters are allowed.
                      */
                     std::string m_gameServerSessionId;
                     bool m_gameServerSessionIdHasBeenSet;
 
                     /**
-                     * Idempotency token
+                     * Idempotency token. Up to 48 ASCII characters are allowed.
                      */
                     std::string m_idempotencyToken;
                     bool m_idempotencyTokenHasBeenSet;
 
                     /**
-                     * Game server session name
+                     * The name of game server session. Up to 1024 ASCII characters are allowed.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

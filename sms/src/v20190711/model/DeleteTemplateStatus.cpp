@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Sms::V20190711::Model;
-using namespace rapidjson;
 using namespace std;
 
 DeleteTemplateStatus::DeleteTemplateStatus() :
@@ -27,7 +26,7 @@ DeleteTemplateStatus::DeleteTemplateStatus() :
 {
 }
 
-CoreInternalOutcome DeleteTemplateStatus::Deserialize(const Value &value)
+CoreInternalOutcome DeleteTemplateStatus::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome DeleteTemplateStatus::Deserialize(const Value &value)
     {
         if (!value["DeleteStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DeleteTemplateStatus.DeleteStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DeleteTemplateStatus.DeleteStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_deleteStatus = string(value["DeleteStatus"].GetString());
         m_deleteStatusHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome DeleteTemplateStatus::Deserialize(const Value &value)
     {
         if (!value["DeleteTime"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DeleteTemplateStatus.DeleteTime` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DeleteTemplateStatus.DeleteTime` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_deleteTime = value["DeleteTime"].GetUint64();
         m_deleteTimeHasBeenSet = true;
@@ -56,20 +55,20 @@ CoreInternalOutcome DeleteTemplateStatus::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void DeleteTemplateStatus::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DeleteTemplateStatus::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_deleteStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DeleteStatus";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_deleteStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_deleteStatus.c_str(), allocator).Move(), allocator);
     }
 
     if (m_deleteTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DeleteTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_deleteTime, allocator);

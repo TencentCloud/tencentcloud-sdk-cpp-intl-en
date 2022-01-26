@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vpc/v20170312/model/AddressInfo.h>
 
 
 namespace TencentCloud
@@ -96,6 +97,24 @@ namespace TencentCloud
                      */
                     bool AddressesHasBeenSet() const;
 
+                    /**
+                     * 获取Address information with remarks, including the IP, CIDR block or IP address range.
+                     * @return AddressesExtra Address information with remarks, including the IP, CIDR block or IP address range.
+                     */
+                    std::vector<AddressInfo> GetAddressesExtra() const;
+
+                    /**
+                     * 设置Address information with remarks, including the IP, CIDR block or IP address range.
+                     * @param AddressesExtra Address information with remarks, including the IP, CIDR block or IP address range.
+                     */
+                    void SetAddressesExtra(const std::vector<AddressInfo>& _addressesExtra);
+
+                    /**
+                     * 判断参数 AddressesExtra 是否已赋值
+                     * @return AddressesExtra 是否已赋值
+                     */
+                    bool AddressesExtraHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +134,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_addresses;
                     bool m_addressesHasBeenSet;
+
+                    /**
+                     * Address information with remarks, including the IP, CIDR block or IP address range.
+                     */
+                    std::vector<AddressInfo> m_addressesExtra;
+                    bool m_addressesExtraHasBeenSet;
 
                 };
             }

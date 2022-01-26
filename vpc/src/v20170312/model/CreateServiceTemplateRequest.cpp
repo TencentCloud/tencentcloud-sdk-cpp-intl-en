@@ -20,46 +20,61 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateServiceTemplateRequest::CreateServiceTemplateRequest() :
     m_serviceTemplateNameHasBeenSet(false),
-    m_servicesHasBeenSet(false)
+    m_servicesHasBeenSet(false),
+    m_servicesExtraHasBeenSet(false)
 {
 }
 
 string CreateServiceTemplateRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_serviceTemplateNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceTemplateName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_serviceTemplateName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_serviceTemplateName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_servicesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Services";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_services.begin(); itr != m_services.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_servicesExtraHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ServicesExtra";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_servicesExtra.begin(); itr != m_servicesExtra.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -95,6 +110,22 @@ void CreateServiceTemplateRequest::SetServices(const vector<string>& _services)
 bool CreateServiceTemplateRequest::ServicesHasBeenSet() const
 {
     return m_servicesHasBeenSet;
+}
+
+vector<ServicesInfo> CreateServiceTemplateRequest::GetServicesExtra() const
+{
+    return m_servicesExtra;
+}
+
+void CreateServiceTemplateRequest::SetServicesExtra(const vector<ServicesInfo>& _servicesExtra)
+{
+    m_servicesExtra = _servicesExtra;
+    m_servicesExtraHasBeenSet = true;
+}
+
+bool CreateServiceTemplateRequest::ServicesExtraHasBeenSet() const
+{
+    return m_servicesExtraHasBeenSet;
 }
 
 

@@ -43,18 +43,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Base64-encoded image data, which cannot exceed 5 MB. (The aspect ratio of the image should be close to 3:4 (width:height); otherwise, the score returned for the image will be meaningless.)
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
-                     * @return Image Base64-encoded image data, which cannot exceed 5 MB. (The aspect ratio of the image should be close to 3:4 (width:height); otherwise, the score returned for the image will be meaningless.)
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+                     * 获取Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats (the aspect ratio of the image should be close to 3:4 (width:height); otherwise, the score returned for the image will be meaningless).
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+                     * @return Image Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats (the aspect ratio of the image should be close to 3:4 (width:height); otherwise, the score returned for the image will be meaningless).
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     std::string GetImage() const;
 
                     /**
-                     * 设置Base64-encoded image data, which cannot exceed 5 MB. (The aspect ratio of the image should be close to 3:4 (width:height); otherwise, the score returned for the image will be meaningless.)
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
-                     * @param Image Base64-encoded image data, which cannot exceed 5 MB. (The aspect ratio of the image should be close to 3:4 (width:height); otherwise, the score returned for the image will be meaningless.)
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+                     * 设置Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats (the aspect ratio of the image should be close to 3:4 (width:height); otherwise, the score returned for the image will be meaningless).
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+                     * @param Image Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats (the aspect ratio of the image should be close to 3:4 (width:height); otherwise, the score returned for the image will be meaningless).
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     void SetImage(const std::string& _image);
 
@@ -66,33 +70,37 @@ namespace TencentCloud
 
                     /**
                      * 获取Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used. 
 (The aspect ratio of the image should be close to 3:4 (width:height); otherwise, the score returned for the image will be meaningless.) 
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      * @return Url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used. 
 (The aspect ratio of the image should be close to 3:4 (width:height); otherwise, the score returned for the image will be meaningless.) 
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used. 
 (The aspect ratio of the image should be close to 3:4 (width:height); otherwise, the score returned for the image will be meaningless.) 
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      * @param Url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used. 
 (The aspect ratio of the image should be close to 3:4 (width:height); otherwise, the score returned for the image will be meaningless.) 
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     void SetUrl(const std::string& _url);
 
@@ -131,19 +139,21 @@ Different algorithm model versions correspond to different face recognition algo
                 private:
 
                     /**
-                     * Base64-encoded image data, which cannot exceed 5 MB. (The aspect ratio of the image should be close to 3:4 (width:height); otherwise, the score returned for the image will be meaningless.)
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+                     * Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats (the aspect ratio of the image should be close to 3:4 (width:height); otherwise, the score returned for the image will be meaningless).
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     std::string m_image;
                     bool m_imageHasBeenSet;
 
                     /**
                      * Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used. 
 (The aspect ratio of the image should be close to 3:4 (width:height); otherwise, the score returned for the image will be meaningless.) 
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

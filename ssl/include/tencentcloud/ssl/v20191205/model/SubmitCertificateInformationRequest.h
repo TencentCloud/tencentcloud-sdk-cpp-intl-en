@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Certificate ID.
-                     * @return CertificateId Certificate ID.
+                     * 获取Certificate ID
+                     * @return CertificateId Certificate ID
                      */
                     std::string GetCertificateId() const;
 
                     /**
-                     * 设置Certificate ID.
-                     * @param CertificateId Certificate ID.
+                     * 设置Certificate ID
+                     * @param CertificateId Certificate ID
                      */
                     void SetCertificateId(const std::string& _certificateId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool CertificateIdHasBeenSet() const;
 
                     /**
-                     * 获取CSR generation mode. Online: generated online; parse: uploaded manually.
-                     * @return CsrType CSR generation mode. Online: generated online; parse: uploaded manually.
+                     * 获取CSR generation mode. `online`: generated online; `parse`: uploaded manually
+                     * @return CsrType CSR generation mode. `online`: generated online; `parse`: uploaded manually
                      */
                     std::string GetCsrType() const;
 
                     /**
-                     * 设置CSR generation mode. Online: generated online; parse: uploaded manually.
-                     * @param CsrType CSR generation mode. Online: generated online; parse: uploaded manually.
+                     * 设置CSR generation mode. `online`: generated online; `parse`: uploaded manually
+                     * @param CsrType CSR generation mode. `online`: generated online; `parse`: uploaded manually
                      */
                     void SetCsrType(const std::string& _csrType);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool CsrTypeHasBeenSet() const;
 
                     /**
-                     * 获取Uploaded CSR content.
-                     * @return CsrContent Uploaded CSR content.
+                     * 获取Uploaded CSR content
+                     * @return CsrContent Uploaded CSR content
                      */
                     std::string GetCsrContent() const;
 
                     /**
-                     * 设置Uploaded CSR content.
-                     * @param CsrContent Uploaded CSR content.
+                     * 设置Uploaded CSR content
+                     * @param CsrContent Uploaded CSR content
                      */
                     void SetCsrContent(const std::string& _csrContent);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool CsrContentHasBeenSet() const;
 
                     /**
-                     * 获取Domain name bound with the certificate.
-                     * @return CertificateDomain Domain name bound with the certificate.
+                     * 获取Domain name bound with the certificate
+                     * @return CertificateDomain Domain name bound with the certificate
                      */
                     std::string GetCertificateDomain() const;
 
                     /**
-                     * 设置Domain name bound with the certificate.
-                     * @param CertificateDomain Domain name bound with the certificate.
+                     * 设置Domain name bound with the certificate
+                     * @param CertificateDomain Domain name bound with the certificate
                      */
                     void SetCertificateDomain(const std::string& _certificateDomain);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool CertificateDomainHasBeenSet() const;
 
                     /**
-                     * 获取Uploaded domain name array (can be uploaded for a multi-domain certificate).
-                     * @return DomainList Uploaded domain name array (can be uploaded for a multi-domain certificate).
+                     * 获取Uploaded domain name array (can be uploaded for a multi-domain certificate)
+                     * @return DomainList Uploaded domain name array (can be uploaded for a multi-domain certificate)
                      */
                     std::vector<std::string> GetDomainList() const;
 
                     /**
-                     * 设置Uploaded domain name array (can be uploaded for a multi-domain certificate).
-                     * @param DomainList Uploaded domain name array (can be uploaded for a multi-domain certificate).
+                     * 设置Uploaded domain name array (can be uploaded for a multi-domain certificate)
+                     * @param DomainList Uploaded domain name array (can be uploaded for a multi-domain certificate)
                      */
                     void SetDomainList(const std::vector<std::string>& _domainList);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool DomainListHasBeenSet() const;
 
                     /**
-                     * 获取Password of the private key.
-                     * @return KeyPassword Password of the private key.
+                     * 获取Password of the private key
+                     * @return KeyPassword Password of the private key
                      */
                     std::string GetKeyPassword() const;
 
                     /**
-                     * 设置Password of the private key.
-                     * @param KeyPassword Password of the private key.
+                     * 设置Password of the private key
+                     * @param KeyPassword Password of the private key
                      */
                     void SetKeyPassword(const std::string& _keyPassword);
 
@@ -151,14 +151,14 @@ namespace TencentCloud
                     bool KeyPasswordHasBeenSet() const;
 
                     /**
-                     * 获取Organization name.
-                     * @return OrganizationName Organization name.
+                     * 获取Organization name
+                     * @return OrganizationName Organization name
                      */
                     std::string GetOrganizationName() const;
 
                     /**
-                     * 设置Organization name.
-                     * @param OrganizationName Organization name.
+                     * 设置Organization name
+                     * @param OrganizationName Organization name
                      */
                     void SetOrganizationName(const std::string& _organizationName);
 
@@ -169,14 +169,14 @@ namespace TencentCloud
                     bool OrganizationNameHasBeenSet() const;
 
                     /**
-                     * 获取Division name.
-                     * @return OrganizationDivision Division name.
+                     * 获取Division name
+                     * @return OrganizationDivision Division name
                      */
                     std::string GetOrganizationDivision() const;
 
                     /**
-                     * 设置Division name.
-                     * @param OrganizationDivision Division name.
+                     * 设置Division name
+                     * @param OrganizationDivision Division name
                      */
                     void SetOrganizationDivision(const std::string& _organizationDivision);
 
@@ -187,14 +187,14 @@ namespace TencentCloud
                     bool OrganizationDivisionHasBeenSet() const;
 
                     /**
-                     * 获取Detailed address of the organization.
-                     * @return OrganizationAddress Detailed address of the organization.
+                     * 获取Detailed address of the organization
+                     * @return OrganizationAddress Detailed address of the organization
                      */
                     std::string GetOrganizationAddress() const;
 
                     /**
-                     * 设置Detailed address of the organization.
-                     * @param OrganizationAddress Detailed address of the organization.
+                     * 设置Detailed address of the organization
+                     * @param OrganizationAddress Detailed address of the organization
                      */
                     void SetOrganizationAddress(const std::string& _organizationAddress);
 
@@ -205,14 +205,14 @@ namespace TencentCloud
                     bool OrganizationAddressHasBeenSet() const;
 
                     /**
-                     * 获取Country where the organization is located. For example, CN (China).
-                     * @return OrganizationCountry Country where the organization is located. For example, CN (China).
+                     * 获取Country where the organization is located, for example, CN (China)
+                     * @return OrganizationCountry Country where the organization is located, for example, CN (China)
                      */
                     std::string GetOrganizationCountry() const;
 
                     /**
-                     * 设置Country where the organization is located. For example, CN (China).
-                     * @param OrganizationCountry Country where the organization is located. For example, CN (China).
+                     * 设置Country where the organization is located, for example, CN (China)
+                     * @param OrganizationCountry Country where the organization is located, for example, CN (China)
                      */
                     void SetOrganizationCountry(const std::string& _organizationCountry);
 
@@ -223,14 +223,14 @@ namespace TencentCloud
                     bool OrganizationCountryHasBeenSet() const;
 
                     /**
-                     * 获取City where the organization is located.
-                     * @return OrganizationCity City where the organization is located.
+                     * 获取City where the organization is located
+                     * @return OrganizationCity City where the organization is located
                      */
                     std::string GetOrganizationCity() const;
 
                     /**
-                     * 设置City where the organization is located.
-                     * @param OrganizationCity City where the organization is located.
+                     * 设置City where the organization is located
+                     * @param OrganizationCity City where the organization is located
                      */
                     void SetOrganizationCity(const std::string& _organizationCity);
 
@@ -241,14 +241,14 @@ namespace TencentCloud
                     bool OrganizationCityHasBeenSet() const;
 
                     /**
-                     * 获取Province where the organization is located.
-                     * @return OrganizationRegion Province where the organization is located.
+                     * 获取Province where the organization is located
+                     * @return OrganizationRegion Province where the organization is located
                      */
                     std::string GetOrganizationRegion() const;
 
                     /**
-                     * 设置Province where the organization is located.
-                     * @param OrganizationRegion Province where the organization is located.
+                     * 设置Province where the organization is located
+                     * @param OrganizationRegion Province where the organization is located
                      */
                     void SetOrganizationRegion(const std::string& _organizationRegion);
 
@@ -259,14 +259,14 @@ namespace TencentCloud
                     bool OrganizationRegionHasBeenSet() const;
 
                     /**
-                     * 获取Postal code of the organization.
-                     * @return PostalCode Postal code of the organization.
+                     * 获取Postal code of the organization
+                     * @return PostalCode Postal code of the organization
                      */
                     std::string GetPostalCode() const;
 
                     /**
-                     * 设置Postal code of the organization.
-                     * @param PostalCode Postal code of the organization.
+                     * 设置Postal code of the organization
+                     * @param PostalCode Postal code of the organization
                      */
                     void SetPostalCode(const std::string& _postalCode);
 
@@ -277,14 +277,14 @@ namespace TencentCloud
                     bool PostalCodeHasBeenSet() const;
 
                     /**
-                     * 获取Area code of the fixed-line phone number of the organization.
-                     * @return PhoneAreaCode Area code of the fixed-line phone number of the organization.
+                     * 获取Area code of the fixed-line phone number of the organization
+                     * @return PhoneAreaCode Area code of the fixed-line phone number of the organization
                      */
                     std::string GetPhoneAreaCode() const;
 
                     /**
-                     * 设置Area code of the fixed-line phone number of the organization.
-                     * @param PhoneAreaCode Area code of the fixed-line phone number of the organization.
+                     * 设置Area code of the fixed-line phone number of the organization
+                     * @param PhoneAreaCode Area code of the fixed-line phone number of the organization
                      */
                     void SetPhoneAreaCode(const std::string& _phoneAreaCode);
 
@@ -295,14 +295,14 @@ namespace TencentCloud
                     bool PhoneAreaCodeHasBeenSet() const;
 
                     /**
-                     * 获取Fixed-line phone number of the organization.
-                     * @return PhoneNumber Fixed-line phone number of the organization.
+                     * 获取Fixed-line phone number of the organization
+                     * @return PhoneNumber Fixed-line phone number of the organization
                      */
                     std::string GetPhoneNumber() const;
 
                     /**
-                     * 设置Fixed-line phone number of the organization.
-                     * @param PhoneNumber Fixed-line phone number of the organization.
+                     * 设置Fixed-line phone number of the organization
+                     * @param PhoneNumber Fixed-line phone number of the organization
                      */
                     void SetPhoneNumber(const std::string& _phoneNumber);
 
@@ -313,14 +313,14 @@ namespace TencentCloud
                     bool PhoneNumberHasBeenSet() const;
 
                     /**
-                     * 获取Certificate verification method.
-                     * @return VerifyType Certificate verification method.
+                     * 获取Certificate validation method
+                     * @return VerifyType Certificate validation method
                      */
                     std::string GetVerifyType() const;
 
                     /**
-                     * 设置Certificate verification method.
-                     * @param VerifyType Certificate verification method.
+                     * 设置Certificate validation method
+                     * @param VerifyType Certificate validation method
                      */
                     void SetVerifyType(const std::string& _verifyType);
 
@@ -331,14 +331,14 @@ namespace TencentCloud
                     bool VerifyTypeHasBeenSet() const;
 
                     /**
-                     * 获取Last name of the admin.
-                     * @return AdminFirstName Last name of the admin.
+                     * 获取Last name of the administrator
+                     * @return AdminFirstName Last name of the administrator
                      */
                     std::string GetAdminFirstName() const;
 
                     /**
-                     * 设置Last name of the admin.
-                     * @param AdminFirstName Last name of the admin.
+                     * 设置Last name of the administrator
+                     * @param AdminFirstName Last name of the administrator
                      */
                     void SetAdminFirstName(const std::string& _adminFirstName);
 
@@ -349,14 +349,14 @@ namespace TencentCloud
                     bool AdminFirstNameHasBeenSet() const;
 
                     /**
-                     * 获取First name of the admin.
-                     * @return AdminLastName First name of the admin.
+                     * 获取First name of the administrator
+                     * @return AdminLastName First name of the administrator
                      */
                     std::string GetAdminLastName() const;
 
                     /**
-                     * 设置First name of the admin.
-                     * @param AdminLastName First name of the admin.
+                     * 设置First name of the administrator
+                     * @param AdminLastName First name of the administrator
                      */
                     void SetAdminLastName(const std::string& _adminLastName);
 
@@ -367,14 +367,14 @@ namespace TencentCloud
                     bool AdminLastNameHasBeenSet() const;
 
                     /**
-                     * 获取Mobile number of the admin.
-                     * @return AdminPhoneNum Mobile number of the admin.
+                     * 获取Mobile number of the administrator
+                     * @return AdminPhoneNum Mobile number of the administrator
                      */
                     std::string GetAdminPhoneNum() const;
 
                     /**
-                     * 设置Mobile number of the admin.
-                     * @param AdminPhoneNum Mobile number of the admin.
+                     * 设置Mobile number of the administrator
+                     * @param AdminPhoneNum Mobile number of the administrator
                      */
                     void SetAdminPhoneNum(const std::string& _adminPhoneNum);
 
@@ -385,14 +385,14 @@ namespace TencentCloud
                     bool AdminPhoneNumHasBeenSet() const;
 
                     /**
-                     * 获取Email of the admin.
-                     * @return AdminEmail Email of the admin.
+                     * 获取Email of the administrator
+                     * @return AdminEmail Email of the administrator
                      */
                     std::string GetAdminEmail() const;
 
                     /**
-                     * 设置Email of the admin.
-                     * @param AdminEmail Email of the admin.
+                     * 设置Email of the administrator
+                     * @param AdminEmail Email of the administrator
                      */
                     void SetAdminEmail(const std::string& _adminEmail);
 
@@ -403,14 +403,14 @@ namespace TencentCloud
                     bool AdminEmailHasBeenSet() const;
 
                     /**
-                     * 获取Position of the admin.
-                     * @return AdminPosition Position of the admin.
+                     * 获取Position of the administrator
+                     * @return AdminPosition Position of the administrator
                      */
                     std::string GetAdminPosition() const;
 
                     /**
-                     * 设置Position of the admin.
-                     * @param AdminPosition Position of the admin.
+                     * 设置Position of the administrator
+                     * @param AdminPosition Position of the administrator
                      */
                     void SetAdminPosition(const std::string& _adminPosition);
 
@@ -421,14 +421,14 @@ namespace TencentCloud
                     bool AdminPositionHasBeenSet() const;
 
                     /**
-                     * 获取Last name of the contact.
-                     * @return ContactFirstName Last name of the contact.
+                     * 获取Last name of the contact
+                     * @return ContactFirstName Last name of the contact
                      */
                     std::string GetContactFirstName() const;
 
                     /**
-                     * 设置Last name of the contact.
-                     * @param ContactFirstName Last name of the contact.
+                     * 设置Last name of the contact
+                     * @param ContactFirstName Last name of the contact
                      */
                     void SetContactFirstName(const std::string& _contactFirstName);
 
@@ -439,14 +439,14 @@ namespace TencentCloud
                     bool ContactFirstNameHasBeenSet() const;
 
                     /**
-                     * 获取First name of the contact.
-                     * @return ContactLastName First name of the contact.
+                     * 获取First name of the contact
+                     * @return ContactLastName First name of the contact
                      */
                     std::string GetContactLastName() const;
 
                     /**
-                     * 设置First name of the contact.
-                     * @param ContactLastName First name of the contact.
+                     * 设置First name of the contact
+                     * @param ContactLastName First name of the contact
                      */
                     void SetContactLastName(const std::string& _contactLastName);
 
@@ -457,14 +457,14 @@ namespace TencentCloud
                     bool ContactLastNameHasBeenSet() const;
 
                     /**
-                     * 获取Email of the contact.
-                     * @return ContactEmail Email of the contact.
+                     * 获取Email of the contact
+                     * @return ContactEmail Email of the contact
                      */
                     std::string GetContactEmail() const;
 
                     /**
-                     * 设置Email of the contact.
-                     * @param ContactEmail Email of the contact.
+                     * 设置Email of the contact
+                     * @param ContactEmail Email of the contact
                      */
                     void SetContactEmail(const std::string& _contactEmail);
 
@@ -475,14 +475,14 @@ namespace TencentCloud
                     bool ContactEmailHasBeenSet() const;
 
                     /**
-                     * 获取Mobile number of the contact.
-                     * @return ContactNumber Mobile number of the contact.
+                     * 获取Mobile number of the contact
+                     * @return ContactNumber Mobile number of the contact
                      */
                     std::string GetContactNumber() const;
 
                     /**
-                     * 设置Mobile number of the contact.
-                     * @param ContactNumber Mobile number of the contact.
+                     * 设置Mobile number of the contact
+                     * @param ContactNumber Mobile number of the contact
                      */
                     void SetContactNumber(const std::string& _contactNumber);
 
@@ -493,14 +493,14 @@ namespace TencentCloud
                     bool ContactNumberHasBeenSet() const;
 
                     /**
-                     * 获取Position of the contact.
-                     * @return ContactPosition Position of the contact.
+                     * 获取Position of the contact
+                     * @return ContactPosition Position of the contact
                      */
                     std::string GetContactPosition() const;
 
                     /**
-                     * 设置Position of the contact.
-                     * @param ContactPosition Position of the contact.
+                     * 设置Position of the contact
+                     * @param ContactPosition Position of the contact
                      */
                     void SetContactPosition(const std::string& _contactPosition);
 
@@ -513,157 +513,157 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Certificate ID.
+                     * Certificate ID
                      */
                     std::string m_certificateId;
                     bool m_certificateIdHasBeenSet;
 
                     /**
-                     * CSR generation mode. Online: generated online; parse: uploaded manually.
+                     * CSR generation mode. `online`: generated online; `parse`: uploaded manually
                      */
                     std::string m_csrType;
                     bool m_csrTypeHasBeenSet;
 
                     /**
-                     * Uploaded CSR content.
+                     * Uploaded CSR content
                      */
                     std::string m_csrContent;
                     bool m_csrContentHasBeenSet;
 
                     /**
-                     * Domain name bound with the certificate.
+                     * Domain name bound with the certificate
                      */
                     std::string m_certificateDomain;
                     bool m_certificateDomainHasBeenSet;
 
                     /**
-                     * Uploaded domain name array (can be uploaded for a multi-domain certificate).
+                     * Uploaded domain name array (can be uploaded for a multi-domain certificate)
                      */
                     std::vector<std::string> m_domainList;
                     bool m_domainListHasBeenSet;
 
                     /**
-                     * Password of the private key.
+                     * Password of the private key
                      */
                     std::string m_keyPassword;
                     bool m_keyPasswordHasBeenSet;
 
                     /**
-                     * Organization name.
+                     * Organization name
                      */
                     std::string m_organizationName;
                     bool m_organizationNameHasBeenSet;
 
                     /**
-                     * Division name.
+                     * Division name
                      */
                     std::string m_organizationDivision;
                     bool m_organizationDivisionHasBeenSet;
 
                     /**
-                     * Detailed address of the organization.
+                     * Detailed address of the organization
                      */
                     std::string m_organizationAddress;
                     bool m_organizationAddressHasBeenSet;
 
                     /**
-                     * Country where the organization is located. For example, CN (China).
+                     * Country where the organization is located, for example, CN (China)
                      */
                     std::string m_organizationCountry;
                     bool m_organizationCountryHasBeenSet;
 
                     /**
-                     * City where the organization is located.
+                     * City where the organization is located
                      */
                     std::string m_organizationCity;
                     bool m_organizationCityHasBeenSet;
 
                     /**
-                     * Province where the organization is located.
+                     * Province where the organization is located
                      */
                     std::string m_organizationRegion;
                     bool m_organizationRegionHasBeenSet;
 
                     /**
-                     * Postal code of the organization.
+                     * Postal code of the organization
                      */
                     std::string m_postalCode;
                     bool m_postalCodeHasBeenSet;
 
                     /**
-                     * Area code of the fixed-line phone number of the organization.
+                     * Area code of the fixed-line phone number of the organization
                      */
                     std::string m_phoneAreaCode;
                     bool m_phoneAreaCodeHasBeenSet;
 
                     /**
-                     * Fixed-line phone number of the organization.
+                     * Fixed-line phone number of the organization
                      */
                     std::string m_phoneNumber;
                     bool m_phoneNumberHasBeenSet;
 
                     /**
-                     * Certificate verification method.
+                     * Certificate validation method
                      */
                     std::string m_verifyType;
                     bool m_verifyTypeHasBeenSet;
 
                     /**
-                     * Last name of the admin.
+                     * Last name of the administrator
                      */
                     std::string m_adminFirstName;
                     bool m_adminFirstNameHasBeenSet;
 
                     /**
-                     * First name of the admin.
+                     * First name of the administrator
                      */
                     std::string m_adminLastName;
                     bool m_adminLastNameHasBeenSet;
 
                     /**
-                     * Mobile number of the admin.
+                     * Mobile number of the administrator
                      */
                     std::string m_adminPhoneNum;
                     bool m_adminPhoneNumHasBeenSet;
 
                     /**
-                     * Email of the admin.
+                     * Email of the administrator
                      */
                     std::string m_adminEmail;
                     bool m_adminEmailHasBeenSet;
 
                     /**
-                     * Position of the admin.
+                     * Position of the administrator
                      */
                     std::string m_adminPosition;
                     bool m_adminPositionHasBeenSet;
 
                     /**
-                     * Last name of the contact.
+                     * Last name of the contact
                      */
                     std::string m_contactFirstName;
                     bool m_contactFirstNameHasBeenSet;
 
                     /**
-                     * First name of the contact.
+                     * First name of the contact
                      */
                     std::string m_contactLastName;
                     bool m_contactLastNameHasBeenSet;
 
                     /**
-                     * Email of the contact.
+                     * Email of the contact
                      */
                     std::string m_contactEmail;
                     bool m_contactEmailHasBeenSet;
 
                     /**
-                     * Mobile number of the contact.
+                     * Mobile number of the contact
                      */
                     std::string m_contactNumber;
                     bool m_contactNumberHasBeenSet;
 
                     /**
-                     * Position of the contact.
+                     * Position of the contact
                      */
                     std::string m_contactPosition;
                     bool m_contactPositionHasBeenSet;

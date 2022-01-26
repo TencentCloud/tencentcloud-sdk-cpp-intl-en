@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/dts/v20180330/model/TagFilter.h>
 
 
 namespace TencentCloud
@@ -240,6 +241,42 @@ namespace TencentCloud
                      */
                     bool OrderDirectionHasBeenSet() const;
 
+                    /**
+                     * 获取Tag filtering condition
+                     * @return TagFilters Tag filtering condition
+                     */
+                    std::vector<TagFilter> GetTagFilters() const;
+
+                    /**
+                     * 设置Tag filtering condition
+                     * @param TagFilters Tag filtering condition
+                     */
+                    void SetTagFilters(const std::vector<TagFilter>& _tagFilters);
+
+                    /**
+                     * 判断参数 TagFilters 是否已赋值
+                     * @return TagFilters 是否已赋值
+                     */
+                    bool TagFiltersHasBeenSet() const;
+
+                    /**
+                     * 获取Subscription instance edition. `txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+                     * @return SubscribeVersion Subscription instance edition. `txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+                     */
+                    std::string GetSubscribeVersion() const;
+
+                    /**
+                     * 设置Subscription instance edition. `txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+                     * @param SubscribeVersion Subscription instance edition. `txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+                     */
+                    void SetSubscribeVersion(const std::string& _subscribeVersion);
+
+                    /**
+                     * 判断参数 SubscribeVersion 是否已赋值
+                     * @return SubscribeVersion 是否已赋值
+                     */
+                    bool SubscribeVersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -307,6 +344,18 @@ namespace TencentCloud
                      */
                     std::string m_orderDirection;
                     bool m_orderDirectionHasBeenSet;
+
+                    /**
+                     * Tag filtering condition
+                     */
+                    std::vector<TagFilter> m_tagFilters;
+                    bool m_tagFiltersHasBeenSet;
+
+                    /**
+                     * Subscription instance edition. `txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+                     */
+                    std::string m_subscribeVersion;
+                    bool m_subscribeVersionHasBeenSet;
 
                 };
             }

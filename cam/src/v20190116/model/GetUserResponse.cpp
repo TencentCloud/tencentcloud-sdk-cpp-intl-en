@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cam::V20190116::Model;
-using namespace rapidjson;
 using namespace std;
 
 GetUserResponse::GetUserResponse() :
@@ -38,20 +37,20 @@ GetUserResponse::GetUserResponse() :
 
 CoreInternalOutcome GetUserResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -62,11 +61,11 @@ CoreInternalOutcome GetUserResponse::Deserialize(const string &payload)
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -74,7 +73,7 @@ CoreInternalOutcome GetUserResponse::Deserialize(const string &payload)
     {
         if (!rsp["Uin"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Uin` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Uin` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_uin = rsp["Uin"].GetUint64();
         m_uinHasBeenSet = true;
@@ -84,7 +83,7 @@ CoreInternalOutcome GetUserResponse::Deserialize(const string &payload)
     {
         if (!rsp["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(rsp["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -94,7 +93,7 @@ CoreInternalOutcome GetUserResponse::Deserialize(const string &payload)
     {
         if (!rsp["Uid"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Uid` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Uid` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_uid = rsp["Uid"].GetUint64();
         m_uidHasBeenSet = true;
@@ -104,7 +103,7 @@ CoreInternalOutcome GetUserResponse::Deserialize(const string &payload)
     {
         if (!rsp["Remark"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Remark` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Remark` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_remark = string(rsp["Remark"].GetString());
         m_remarkHasBeenSet = true;
@@ -114,7 +113,7 @@ CoreInternalOutcome GetUserResponse::Deserialize(const string &payload)
     {
         if (!rsp["ConsoleLogin"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ConsoleLogin` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ConsoleLogin` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_consoleLogin = rsp["ConsoleLogin"].GetUint64();
         m_consoleLoginHasBeenSet = true;
@@ -124,7 +123,7 @@ CoreInternalOutcome GetUserResponse::Deserialize(const string &payload)
     {
         if (!rsp["PhoneNum"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PhoneNum` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PhoneNum` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_phoneNum = string(rsp["PhoneNum"].GetString());
         m_phoneNumHasBeenSet = true;
@@ -134,7 +133,7 @@ CoreInternalOutcome GetUserResponse::Deserialize(const string &payload)
     {
         if (!rsp["CountryCode"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CountryCode` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CountryCode` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_countryCode = string(rsp["CountryCode"].GetString());
         m_countryCodeHasBeenSet = true;
@@ -144,7 +143,7 @@ CoreInternalOutcome GetUserResponse::Deserialize(const string &payload)
     {
         if (!rsp["Email"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Email` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Email` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_email = string(rsp["Email"].GetString());
         m_emailHasBeenSet = true;
@@ -152,6 +151,87 @@ CoreInternalOutcome GetUserResponse::Deserialize(const string &payload)
 
 
     return CoreInternalOutcome(true);
+}
+
+string GetUserResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_uinHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Uin";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_uin, allocator);
+    }
+
+    if (m_nameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Name";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_uidHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Uid";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_uid, allocator);
+    }
+
+    if (m_remarkHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Remark";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_remark.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_consoleLoginHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ConsoleLogin";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_consoleLogin, allocator);
+    }
+
+    if (m_phoneNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PhoneNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_phoneNum.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_countryCodeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CountryCode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_countryCode.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_emailHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Email";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_email.c_str(), allocator).Move(), allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ecdn::V20191012::Model;
-using namespace rapidjson;
 using namespace std;
 
 Origin::Origin() :
@@ -31,7 +30,7 @@ Origin::Origin() :
 {
 }
 
-CoreInternalOutcome Origin::Deserialize(const Value &value)
+CoreInternalOutcome Origin::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,10 +38,10 @@ CoreInternalOutcome Origin::Deserialize(const Value &value)
     if (value.HasMember("Origins") && !value["Origins"].IsNull())
     {
         if (!value["Origins"].IsArray())
-            return CoreInternalOutcome(Error("response `Origin.Origins` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Origin.Origins` is not array type"));
 
-        const Value &tmpValue = value["Origins"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Origins"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_origins.push_back((*itr).GetString());
         }
@@ -53,7 +52,7 @@ CoreInternalOutcome Origin::Deserialize(const Value &value)
     {
         if (!value["OriginType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Origin.OriginType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Origin.OriginType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_originType = string(value["OriginType"].GetString());
         m_originTypeHasBeenSet = true;
@@ -63,7 +62,7 @@ CoreInternalOutcome Origin::Deserialize(const Value &value)
     {
         if (!value["ServerName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Origin.ServerName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Origin.ServerName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_serverName = string(value["ServerName"].GetString());
         m_serverNameHasBeenSet = true;
@@ -73,7 +72,7 @@ CoreInternalOutcome Origin::Deserialize(const Value &value)
     {
         if (!value["OriginPullProtocol"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Origin.OriginPullProtocol` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Origin.OriginPullProtocol` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_originPullProtocol = string(value["OriginPullProtocol"].GetString());
         m_originPullProtocolHasBeenSet = true;
@@ -82,10 +81,10 @@ CoreInternalOutcome Origin::Deserialize(const Value &value)
     if (value.HasMember("BackupOrigins") && !value["BackupOrigins"].IsNull())
     {
         if (!value["BackupOrigins"].IsArray())
-            return CoreInternalOutcome(Error("response `Origin.BackupOrigins` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Origin.BackupOrigins` is not array type"));
 
-        const Value &tmpValue = value["BackupOrigins"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["BackupOrigins"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_backupOrigins.push_back((*itr).GetString());
         }
@@ -96,7 +95,7 @@ CoreInternalOutcome Origin::Deserialize(const Value &value)
     {
         if (!value["BackupOriginType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Origin.BackupOriginType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Origin.BackupOriginType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_backupOriginType = string(value["BackupOriginType"].GetString());
         m_backupOriginTypeHasBeenSet = true;
@@ -106,65 +105,65 @@ CoreInternalOutcome Origin::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Origin::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Origin::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_originsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Origins";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_origins.begin(); itr != m_origins.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_originTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OriginType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_originType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_originType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_serverNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServerName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_serverName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_serverName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_originPullProtocolHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OriginPullProtocol";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_originPullProtocol.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_originPullProtocol.c_str(), allocator).Move(), allocator);
     }
 
     if (m_backupOriginsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BackupOrigins";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_backupOrigins.begin(); itr != m_backupOrigins.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_backupOriginTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BackupOriginType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_backupOriginType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_backupOriginType.c_str(), allocator).Move(), allocator);
     }
 
 }

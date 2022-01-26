@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Clb::V20180317::Model;
-using namespace rapidjson;
 using namespace std;
 
 TargetGroupBackend::TargetGroupBackend() :
@@ -31,11 +30,12 @@ TargetGroupBackend::TargetGroupBackend() :
     m_privateIpAddressesHasBeenSet(false),
     m_instanceNameHasBeenSet(false),
     m_registeredTimeHasBeenSet(false),
-    m_eniIdHasBeenSet(false)
+    m_eniIdHasBeenSet(false),
+    m_zoneIdHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome TargetGroupBackend::Deserialize(const Value &value)
+CoreInternalOutcome TargetGroupBackend::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -44,7 +44,7 @@ CoreInternalOutcome TargetGroupBackend::Deserialize(const Value &value)
     {
         if (!value["TargetGroupId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TargetGroupBackend.TargetGroupId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TargetGroupBackend.TargetGroupId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_targetGroupId = string(value["TargetGroupId"].GetString());
         m_targetGroupIdHasBeenSet = true;
@@ -54,7 +54,7 @@ CoreInternalOutcome TargetGroupBackend::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TargetGroupBackend.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TargetGroupBackend.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -64,7 +64,7 @@ CoreInternalOutcome TargetGroupBackend::Deserialize(const Value &value)
     {
         if (!value["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TargetGroupBackend.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TargetGroupBackend.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(value["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -74,7 +74,7 @@ CoreInternalOutcome TargetGroupBackend::Deserialize(const Value &value)
     {
         if (!value["Port"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TargetGroupBackend.Port` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TargetGroupBackend.Port` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_port = value["Port"].GetUint64();
         m_portHasBeenSet = true;
@@ -84,7 +84,7 @@ CoreInternalOutcome TargetGroupBackend::Deserialize(const Value &value)
     {
         if (!value["Weight"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TargetGroupBackend.Weight` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TargetGroupBackend.Weight` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_weight = value["Weight"].GetUint64();
         m_weightHasBeenSet = true;
@@ -93,10 +93,10 @@ CoreInternalOutcome TargetGroupBackend::Deserialize(const Value &value)
     if (value.HasMember("PublicIpAddresses") && !value["PublicIpAddresses"].IsNull())
     {
         if (!value["PublicIpAddresses"].IsArray())
-            return CoreInternalOutcome(Error("response `TargetGroupBackend.PublicIpAddresses` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `TargetGroupBackend.PublicIpAddresses` is not array type"));
 
-        const Value &tmpValue = value["PublicIpAddresses"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["PublicIpAddresses"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_publicIpAddresses.push_back((*itr).GetString());
         }
@@ -106,10 +106,10 @@ CoreInternalOutcome TargetGroupBackend::Deserialize(const Value &value)
     if (value.HasMember("PrivateIpAddresses") && !value["PrivateIpAddresses"].IsNull())
     {
         if (!value["PrivateIpAddresses"].IsArray())
-            return CoreInternalOutcome(Error("response `TargetGroupBackend.PrivateIpAddresses` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `TargetGroupBackend.PrivateIpAddresses` is not array type"));
 
-        const Value &tmpValue = value["PrivateIpAddresses"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["PrivateIpAddresses"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_privateIpAddresses.push_back((*itr).GetString());
         }
@@ -120,7 +120,7 @@ CoreInternalOutcome TargetGroupBackend::Deserialize(const Value &value)
     {
         if (!value["InstanceName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TargetGroupBackend.InstanceName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TargetGroupBackend.InstanceName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceName = string(value["InstanceName"].GetString());
         m_instanceNameHasBeenSet = true;
@@ -130,7 +130,7 @@ CoreInternalOutcome TargetGroupBackend::Deserialize(const Value &value)
     {
         if (!value["RegisteredTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TargetGroupBackend.RegisteredTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TargetGroupBackend.RegisteredTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_registeredTime = string(value["RegisteredTime"].GetString());
         m_registeredTimeHasBeenSet = true;
@@ -140,46 +140,56 @@ CoreInternalOutcome TargetGroupBackend::Deserialize(const Value &value)
     {
         if (!value["EniId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TargetGroupBackend.EniId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TargetGroupBackend.EniId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_eniId = string(value["EniId"].GetString());
         m_eniIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("ZoneId") && !value["ZoneId"].IsNull())
+    {
+        if (!value["ZoneId"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `TargetGroupBackend.ZoneId` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_zoneId = value["ZoneId"].GetUint64();
+        m_zoneIdHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void TargetGroupBackend::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TargetGroupBackend::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_targetGroupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TargetGroupId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_targetGroupId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_targetGroupId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_portHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Port";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_port, allocator);
@@ -187,7 +197,7 @@ void TargetGroupBackend::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_weightHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Weight";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_weight, allocator);
@@ -195,52 +205,60 @@ void TargetGroupBackend::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_publicIpAddressesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PublicIpAddresses";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_publicIpAddresses.begin(); itr != m_publicIpAddresses.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_privateIpAddressesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PrivateIpAddresses";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_privateIpAddresses.begin(); itr != m_privateIpAddresses.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_instanceNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_registeredTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RegisteredTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_registeredTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_registeredTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_eniIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EniId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_eniId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_eniId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_zoneIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ZoneId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_zoneId, allocator);
     }
 
 }
@@ -404,5 +422,21 @@ void TargetGroupBackend::SetEniId(const string& _eniId)
 bool TargetGroupBackend::EniIdHasBeenSet() const
 {
     return m_eniIdHasBeenSet;
+}
+
+uint64_t TargetGroupBackend::GetZoneId() const
+{
+    return m_zoneId;
+}
+
+void TargetGroupBackend::SetZoneId(const uint64_t& _zoneId)
+{
+    m_zoneId = _zoneId;
+    m_zoneIdHasBeenSet = true;
+}
+
+bool TargetGroupBackend::ZoneIdHasBeenSet() const
+{
+    return m_zoneIdHasBeenSet;
 }
 

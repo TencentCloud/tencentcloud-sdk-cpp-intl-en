@@ -66,14 +66,22 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExtTimeOffsetSet 
+                     * 获取The list of screenshot time points. “s” and “%” formats are supported:
+<li>When a time point string ends with “s”, its unit is second. For example, “3.5s” means the 3.5th second of the video.</li>
+<li>When a time point string ends with “%”, it represents the percentage of the video’s duration. For example, “10%” means that the time point is at the 10% of the video’s entire duration.</li>
+                     * @return ExtTimeOffsetSet The list of screenshot time points. “s” and “%” formats are supported:
+<li>When a time point string ends with “s”, its unit is second. For example, “3.5s” means the 3.5th second of the video.</li>
+<li>When a time point string ends with “%”, it represents the percentage of the video’s duration. For example, “10%” means that the time point is at the 10% of the video’s entire duration.</li>
                      */
                     std::vector<std::string> GetExtTimeOffsetSet() const;
 
                     /**
-                     * 设置
-                     * @param ExtTimeOffsetSet 
+                     * 设置The list of screenshot time points. “s” and “%” formats are supported:
+<li>When a time point string ends with “s”, its unit is second. For example, “3.5s” means the 3.5th second of the video.</li>
+<li>When a time point string ends with “%”, it represents the percentage of the video’s duration. For example, “10%” means that the time point is at the 10% of the video’s entire duration.</li>
+                     * @param ExtTimeOffsetSet The list of screenshot time points. “s” and “%” formats are supported:
+<li>When a time point string ends with “s”, its unit is second. For example, “3.5s” means the 3.5th second of the video.</li>
+<li>When a time point string ends with “%”, it represents the percentage of the video’s duration. For example, “10%” means that the time point is at the 10% of the video’s entire duration.</li>
                      */
                     void SetExtTimeOffsetSet(const std::vector<std::string>& _extTimeOffsetSet);
 
@@ -136,7 +144,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * The list of screenshot time points. “s” and “%” formats are supported:
+<li>When a time point string ends with “s”, its unit is second. For example, “3.5s” means the 3.5th second of the video.</li>
+<li>When a time point string ends with “%”, it represents the percentage of the video’s duration. For example, “10%” means that the time point is at the 10% of the video’s entire duration.</li>
                      */
                     std::vector<std::string> m_extTimeOffsetSet;
                     bool m_extTimeOffsetSetHasBeenSet;

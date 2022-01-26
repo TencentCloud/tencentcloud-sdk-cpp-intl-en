@@ -43,22 +43,26 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Base64-encoded image A data, which cannot exceed 5 MB.
+                     * 获取Base64-encoded data of image A, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
-                     * @return ImageA Base64-encoded image A data, which cannot exceed 5 MB.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+                     * @return ImageA Base64-encoded data of image A, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     std::string GetImageA() const;
 
                     /**
-                     * 设置Base64-encoded image A data, which cannot exceed 5 MB.
+                     * 设置Base64-encoded data of image A, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
-                     * @param ImageA Base64-encoded image A data, which cannot exceed 5 MB.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+                     * @param ImageA Base64-encoded data of image A, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     void SetImageA(const std::string& _imageA);
 
@@ -69,22 +73,26 @@ If there are multiple faces in the image, only the face with the largest size wi
                     bool ImageAHasBeenSet() const;
 
                     /**
-                     * 获取Base64-encoded image B data, which cannot exceed 5 MB.
+                     * 获取Base64-encoded data of image B, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
-                     * @return ImageB Base64-encoded image B data, which cannot exceed 5 MB.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+                     * @return ImageB Base64-encoded data of image B, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     std::string GetImageB() const;
 
                     /**
-                     * 设置Base64-encoded image B data, which cannot exceed 5 MB.
+                     * 设置Base64-encoded data of image B, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
-                     * @param ImageB Base64-encoded image B data, which cannot exceed 5 MB.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+                     * @param ImageB Base64-encoded data of image B, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     void SetImageB(const std::string& _imageB);
 
@@ -95,34 +103,38 @@ If there are multiple faces in the image, only the face with the largest size wi
                     bool ImageBHasBeenSet() const;
 
                     /**
-                     * 获取Image A URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+                     * 获取URL of image A. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` of image A must be provided; if both are provided, only `Url` will be used. 
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
 If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
-                     * @return UrlA Image A URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+                     * @return UrlA URL of image A. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` of image A must be provided; if both are provided, only `Url` will be used. 
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
 If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     std::string GetUrlA() const;
 
                     /**
-                     * 设置Image A URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+                     * 设置URL of image A. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` of image A must be provided; if both are provided, only `Url` will be used. 
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
 If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
-                     * @param UrlA Image A URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+                     * @param UrlA URL of image A. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` of image A must be provided; if both are provided, only `Url` will be used. 
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
 If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     void SetUrlA(const std::string& _urlA);
 
@@ -133,34 +145,38 @@ If there are multiple faces in the image, only the face with the largest size wi
                     bool UrlAHasBeenSet() const;
 
                     /**
-                     * 获取Image B URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+                     * 获取URL of image B. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` of image B must be provided; if both are provided, only `Url` will be used. 
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
 If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
-                     * @return UrlB Image B URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+                     * @return UrlB URL of image B. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` of image B must be provided; if both are provided, only `Url` will be used. 
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
 If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     std::string GetUrlB() const;
 
                     /**
-                     * 设置Image B URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+                     * 设置URL of image B. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` of image B must be provided; if both are provided, only `Url` will be used. 
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
 If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
-                     * @param UrlB Image B URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+                     * @param UrlB URL of image B. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` of image B must be provided; if both are provided, only `Url` will be used. 
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
 If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     void SetUrlB(const std::string& _urlB);
 
@@ -200,17 +216,17 @@ Different algorithm model versions correspond to different face recognition algo
                      * 获取Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
                      * @return QualityControl Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
                      */
@@ -220,17 +236,17 @@ If the image quality does not meet the requirement, the returned result will pro
                      * 设置Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
                      * @param QualityControl Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
                      */
@@ -263,39 +279,43 @@ If the image quality does not meet the requirement, the returned result will pro
                 private:
 
                     /**
-                     * Base64-encoded image A data, which cannot exceed 5 MB.
+                     * Base64-encoded data of image A, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     std::string m_imageA;
                     bool m_imageAHasBeenSet;
 
                     /**
-                     * Base64-encoded image B data, which cannot exceed 5 MB.
+                     * Base64-encoded data of image B, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     std::string m_imageB;
                     bool m_imageBHasBeenSet;
 
                     /**
-                     * Image A URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+                     * URL of image A. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` of image A must be provided; if both are provided, only `Url` will be used. 
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
 If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     std::string m_urlA;
                     bool m_urlAHasBeenSet;
 
                     /**
-                     * Image B URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+                     * URL of image B. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` of image B must be provided; if both are provided, only `Url` will be used. 
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
 If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     std::string m_urlB;
                     bool m_urlBHasBeenSet;
@@ -312,9 +332,9 @@ Different algorithm model versions correspond to different face recognition algo
                      * Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
                      */

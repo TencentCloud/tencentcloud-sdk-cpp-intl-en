@@ -100,14 +100,14 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Template description. Length limit: 256 bytes.
-                     * @return Comment Template description. Length limit: 256 bytes.
+                     * 获取Template description. Length limit: 256 characters.
+                     * @return Comment Template description. Length limit: 256 characters.
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Template description. Length limit: 256 bytes.
-                     * @param Comment Template description. Length limit: 256 bytes.
+                     * 设置Template description. Length limit: 256 characters.
+                     * @param Comment Template description. Length limit: 256 characters.
                      */
                     void SetComment(const std::string& _comment);
 
@@ -244,7 +244,7 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Template description. Length limit: 256 bytes.
+                     * Template description. Length limit: 256 characters.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;

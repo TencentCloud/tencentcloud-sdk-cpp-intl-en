@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dayu::V20180709::Model;
-using namespace rapidjson;
 using namespace std;
 
 SchedulingDomain::SchedulingDomain() :
@@ -36,7 +35,7 @@ SchedulingDomain::SchedulingDomain() :
 {
 }
 
-CoreInternalOutcome SchedulingDomain::Deserialize(const Value &value)
+CoreInternalOutcome SchedulingDomain::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -45,7 +44,7 @@ CoreInternalOutcome SchedulingDomain::Deserialize(const Value &value)
     {
         if (!value["Domain"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SchedulingDomain.Domain` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SchedulingDomain.Domain` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_domain = string(value["Domain"].GetString());
         m_domainHasBeenSet = true;
@@ -54,10 +53,10 @@ CoreInternalOutcome SchedulingDomain::Deserialize(const Value &value)
     if (value.HasMember("BGPIpList") && !value["BGPIpList"].IsNull())
     {
         if (!value["BGPIpList"].IsArray())
-            return CoreInternalOutcome(Error("response `SchedulingDomain.BGPIpList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `SchedulingDomain.BGPIpList` is not array type"));
 
-        const Value &tmpValue = value["BGPIpList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["BGPIpList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_bGPIpList.push_back((*itr).GetString());
         }
@@ -67,10 +66,10 @@ CoreInternalOutcome SchedulingDomain::Deserialize(const Value &value)
     if (value.HasMember("CTCCIpList") && !value["CTCCIpList"].IsNull())
     {
         if (!value["CTCCIpList"].IsArray())
-            return CoreInternalOutcome(Error("response `SchedulingDomain.CTCCIpList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `SchedulingDomain.CTCCIpList` is not array type"));
 
-        const Value &tmpValue = value["CTCCIpList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["CTCCIpList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_cTCCIpList.push_back((*itr).GetString());
         }
@@ -80,10 +79,10 @@ CoreInternalOutcome SchedulingDomain::Deserialize(const Value &value)
     if (value.HasMember("CUCCIpList") && !value["CUCCIpList"].IsNull())
     {
         if (!value["CUCCIpList"].IsArray())
-            return CoreInternalOutcome(Error("response `SchedulingDomain.CUCCIpList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `SchedulingDomain.CUCCIpList` is not array type"));
 
-        const Value &tmpValue = value["CUCCIpList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["CUCCIpList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_cUCCIpList.push_back((*itr).GetString());
         }
@@ -93,10 +92,10 @@ CoreInternalOutcome SchedulingDomain::Deserialize(const Value &value)
     if (value.HasMember("CMCCIpList") && !value["CMCCIpList"].IsNull())
     {
         if (!value["CMCCIpList"].IsArray())
-            return CoreInternalOutcome(Error("response `SchedulingDomain.CMCCIpList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `SchedulingDomain.CMCCIpList` is not array type"));
 
-        const Value &tmpValue = value["CMCCIpList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["CMCCIpList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_cMCCIpList.push_back((*itr).GetString());
         }
@@ -106,10 +105,10 @@ CoreInternalOutcome SchedulingDomain::Deserialize(const Value &value)
     if (value.HasMember("OverseaIpList") && !value["OverseaIpList"].IsNull())
     {
         if (!value["OverseaIpList"].IsArray())
-            return CoreInternalOutcome(Error("response `SchedulingDomain.OverseaIpList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `SchedulingDomain.OverseaIpList` is not array type"));
 
-        const Value &tmpValue = value["OverseaIpList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["OverseaIpList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_overseaIpList.push_back((*itr).GetString());
         }
@@ -120,7 +119,7 @@ CoreInternalOutcome SchedulingDomain::Deserialize(const Value &value)
     {
         if (!value["Method"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SchedulingDomain.Method` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SchedulingDomain.Method` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_method = string(value["Method"].GetString());
         m_methodHasBeenSet = true;
@@ -130,7 +129,7 @@ CoreInternalOutcome SchedulingDomain::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SchedulingDomain.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SchedulingDomain.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -140,7 +139,7 @@ CoreInternalOutcome SchedulingDomain::Deserialize(const Value &value)
     {
         if (!value["TTL"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `SchedulingDomain.TTL` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SchedulingDomain.TTL` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_tTL = value["TTL"].GetUint64();
         m_tTLHasBeenSet = true;
@@ -150,7 +149,7 @@ CoreInternalOutcome SchedulingDomain::Deserialize(const Value &value)
     {
         if (!value["Status"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `SchedulingDomain.Status` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SchedulingDomain.Status` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_status = value["Status"].GetUint64();
         m_statusHasBeenSet = true;
@@ -160,7 +159,7 @@ CoreInternalOutcome SchedulingDomain::Deserialize(const Value &value)
     {
         if (!value["ModifyTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SchedulingDomain.ModifyTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SchedulingDomain.ModifyTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_modifyTime = string(value["ModifyTime"].GetString());
         m_modifyTimeHasBeenSet = true;
@@ -170,101 +169,101 @@ CoreInternalOutcome SchedulingDomain::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void SchedulingDomain::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SchedulingDomain::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_domainHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Domain";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_domain.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_domain.c_str(), allocator).Move(), allocator);
     }
 
     if (m_bGPIpListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BGPIpList";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_bGPIpList.begin(); itr != m_bGPIpList.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_cTCCIpListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CTCCIpList";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_cTCCIpList.begin(); itr != m_cTCCIpList.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_cUCCIpListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CUCCIpList";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_cUCCIpList.begin(); itr != m_cUCCIpList.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_cMCCIpListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CMCCIpList";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_cMCCIpList.begin(); itr != m_cMCCIpList.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_overseaIpListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OverseaIpList";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_overseaIpList.begin(); itr != m_overseaIpList.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_methodHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Method";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_method.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_method.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tTLHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TTL";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_tTL, allocator);
@@ -272,7 +271,7 @@ void SchedulingDomain::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);
@@ -280,10 +279,10 @@ void SchedulingDomain::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_modifyTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ModifyTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_modifyTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_modifyTime.c_str(), allocator).Move(), allocator);
     }
 
 }

@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Start time.
-                     * @return StartTime Start time.
+                     * 获取Start time, such as "2019-09-10 12:13:14".
+                     * @return StartTime Start time, such as "2019-09-10 12:13:14".
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time.
-                     * @param StartTime Start time.
+                     * 设置Start time, such as "2019-09-10 12:13:14".
+                     * @param StartTime Start time, such as "2019-09-10 12:13:14".
                      */
                     void SetStartTime(const std::string& _startTime);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time.
-                     * @return EndTime End time.
+                     * 获取End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
+                     * @return EndTime End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time.
-                     * @param EndTime End time.
+                     * 设置End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
+                     * @param EndTime End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
                      */
                     void SetEndTime(const std::string& _endTime);
 
@@ -95,6 +95,24 @@ namespace TencentCloud
                      * @return EndTime 是否已赋值
                      */
                     bool EndTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+                     * @return Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+                     */
+                    std::string GetProduct() const;
+
+                    /**
+                     * 设置Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+                     * @param Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+                     */
+                    void SetProduct(const std::string& _product);
+
+                    /**
+                     * 判断参数 Product 是否已赋值
+                     * @return Product 是否已赋值
+                     */
+                    bool ProductHasBeenSet() const;
 
                 private:
 
@@ -105,16 +123,22 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Start time.
+                     * Start time, such as "2019-09-10 12:13:14".
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time.
+                     * End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
+
+                    /**
+                     * Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+                     */
+                    std::string m_product;
+                    bool m_productHasBeenSet;
 
                 };
             }

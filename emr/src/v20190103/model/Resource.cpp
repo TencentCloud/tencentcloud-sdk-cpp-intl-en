@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Emr::V20190103::Model;
-using namespace rapidjson;
 using namespace std;
 
 Resource::Resource() :
@@ -37,7 +36,7 @@ Resource::Resource() :
 {
 }
 
-CoreInternalOutcome Resource::Deserialize(const Value &value)
+CoreInternalOutcome Resource::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -46,7 +45,7 @@ CoreInternalOutcome Resource::Deserialize(const Value &value)
     {
         if (!value["Spec"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Resource.Spec` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Resource.Spec` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_spec = string(value["Spec"].GetString());
         m_specHasBeenSet = true;
@@ -56,7 +55,7 @@ CoreInternalOutcome Resource::Deserialize(const Value &value)
     {
         if (!value["StorageType"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Resource.StorageType` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Resource.StorageType` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_storageType = value["StorageType"].GetInt64();
         m_storageTypeHasBeenSet = true;
@@ -66,7 +65,7 @@ CoreInternalOutcome Resource::Deserialize(const Value &value)
     {
         if (!value["DiskType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Resource.DiskType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Resource.DiskType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_diskType = string(value["DiskType"].GetString());
         m_diskTypeHasBeenSet = true;
@@ -76,7 +75,7 @@ CoreInternalOutcome Resource::Deserialize(const Value &value)
     {
         if (!value["MemSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Resource.MemSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Resource.MemSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_memSize = value["MemSize"].GetInt64();
         m_memSizeHasBeenSet = true;
@@ -86,7 +85,7 @@ CoreInternalOutcome Resource::Deserialize(const Value &value)
     {
         if (!value["Cpu"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Resource.Cpu` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Resource.Cpu` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_cpu = value["Cpu"].GetInt64();
         m_cpuHasBeenSet = true;
@@ -96,7 +95,7 @@ CoreInternalOutcome Resource::Deserialize(const Value &value)
     {
         if (!value["DiskSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Resource.DiskSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Resource.DiskSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_diskSize = value["DiskSize"].GetInt64();
         m_diskSizeHasBeenSet = true;
@@ -106,7 +105,7 @@ CoreInternalOutcome Resource::Deserialize(const Value &value)
     {
         if (!value["RootSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Resource.RootSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Resource.RootSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_rootSize = value["RootSize"].GetInt64();
         m_rootSizeHasBeenSet = true;
@@ -115,10 +114,10 @@ CoreInternalOutcome Resource::Deserialize(const Value &value)
     if (value.HasMember("MultiDisks") && !value["MultiDisks"].IsNull())
     {
         if (!value["MultiDisks"].IsArray())
-            return CoreInternalOutcome(Error("response `Resource.MultiDisks` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Resource.MultiDisks` is not array type"));
 
-        const Value &tmpValue = value["MultiDisks"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["MultiDisks"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             MultiDisk item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -135,10 +134,10 @@ CoreInternalOutcome Resource::Deserialize(const Value &value)
     if (value.HasMember("Tags") && !value["Tags"].IsNull())
     {
         if (!value["Tags"].IsArray())
-            return CoreInternalOutcome(Error("response `Resource.Tags` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Resource.Tags` is not array type"));
 
-        const Value &tmpValue = value["Tags"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Tags"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             Tag item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -156,7 +155,7 @@ CoreInternalOutcome Resource::Deserialize(const Value &value)
     {
         if (!value["InstanceType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Resource.InstanceType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Resource.InstanceType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceType = string(value["InstanceType"].GetString());
         m_instanceTypeHasBeenSet = true;
@@ -166,7 +165,7 @@ CoreInternalOutcome Resource::Deserialize(const Value &value)
     {
         if (!value["LocalDiskNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Resource.LocalDiskNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Resource.LocalDiskNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_localDiskNum = value["LocalDiskNum"].GetUint64();
         m_localDiskNumHasBeenSet = true;
@@ -176,7 +175,7 @@ CoreInternalOutcome Resource::Deserialize(const Value &value)
     {
         if (!value["DiskNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Resource.DiskNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Resource.DiskNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_diskNum = value["DiskNum"].GetUint64();
         m_diskNumHasBeenSet = true;
@@ -186,20 +185,20 @@ CoreInternalOutcome Resource::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Resource::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Resource::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_specHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Spec";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_spec.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_spec.c_str(), allocator).Move(), allocator);
     }
 
     if (m_storageTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StorageType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_storageType, allocator);
@@ -207,15 +206,15 @@ void Resource::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_diskTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_diskType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_diskType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_memSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MemSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_memSize, allocator);
@@ -223,7 +222,7 @@ void Resource::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_cpuHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Cpu";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cpu, allocator);
@@ -231,7 +230,7 @@ void Resource::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_diskSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_diskSize, allocator);
@@ -239,7 +238,7 @@ void Resource::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_rootSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RootSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_rootSize, allocator);
@@ -247,45 +246,45 @@ void Resource::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_multiDisksHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MultiDisks";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_multiDisks.begin(); itr != m_multiDisks.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_tagsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Tags";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_instanceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_localDiskNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LocalDiskNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_localDiskNum, allocator);
@@ -293,7 +292,7 @@ void Resource::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_diskNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_diskNum, allocator);

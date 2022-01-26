@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Clb::V20180317::Model;
-using namespace rapidjson;
 using namespace std;
 
 TargetHealth::TargetHealth() :
@@ -30,7 +29,7 @@ TargetHealth::TargetHealth() :
 {
 }
 
-CoreInternalOutcome TargetHealth::Deserialize(const Value &value)
+CoreInternalOutcome TargetHealth::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome TargetHealth::Deserialize(const Value &value)
     {
         if (!value["IP"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TargetHealth.IP` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TargetHealth.IP` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_iP = string(value["IP"].GetString());
         m_iPHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome TargetHealth::Deserialize(const Value &value)
     {
         if (!value["Port"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TargetHealth.Port` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TargetHealth.Port` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_port = value["Port"].GetInt64();
         m_portHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome TargetHealth::Deserialize(const Value &value)
     {
         if (!value["HealthStatus"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `TargetHealth.HealthStatus` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TargetHealth.HealthStatus` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_healthStatus = value["HealthStatus"].GetBool();
         m_healthStatusHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome TargetHealth::Deserialize(const Value &value)
     {
         if (!value["TargetId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TargetHealth.TargetId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TargetHealth.TargetId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_targetId = string(value["TargetId"].GetString());
         m_targetIdHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome TargetHealth::Deserialize(const Value &value)
     {
         if (!value["HealthStatusDetial"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TargetHealth.HealthStatusDetial` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TargetHealth.HealthStatusDetial` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_healthStatusDetial = string(value["HealthStatusDetial"].GetString());
         m_healthStatusDetialHasBeenSet = true;
@@ -89,20 +88,20 @@ CoreInternalOutcome TargetHealth::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void TargetHealth::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TargetHealth::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_iPHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IP";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_iP.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_iP.c_str(), allocator).Move(), allocator);
     }
 
     if (m_portHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Port";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_port, allocator);
@@ -110,7 +109,7 @@ void TargetHealth::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_healthStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HealthStatus";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_healthStatus, allocator);
@@ -118,18 +117,18 @@ void TargetHealth::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_targetIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TargetId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_targetId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_targetId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_healthStatusDetialHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HealthStatusDetial";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_healthStatusDetial.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_healthStatusDetial.c_str(), allocator).Move(), allocator);
     }
 
 }

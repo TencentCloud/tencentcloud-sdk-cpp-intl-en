@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique CLB instance ID, such as lb-12345678
-                     * @return LoadBalancerId Unique CLB instance ID, such as lb-12345678
+                     * 获取Unique ID of a CLB instance, e.g., lb-12345678.
+                     * @return LoadBalancerId Unique ID of a CLB instance, e.g., lb-12345678.
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
-                     * 设置Unique CLB instance ID, such as lb-12345678
-                     * @param LoadBalancerId Unique CLB instance ID, such as lb-12345678
+                     * 设置Unique ID of a CLB instance, e.g., lb-12345678.
+                     * @param LoadBalancerId Unique ID of a CLB instance, e.g., lb-12345678.
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
@@ -81,7 +81,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique CLB instance ID, such as lb-12345678
+                     * Unique ID of a CLB instance, e.g., lb-12345678.
                      */
                     std::string m_loadBalancerId;
                     bool m_loadBalancerIdHasBeenSet;

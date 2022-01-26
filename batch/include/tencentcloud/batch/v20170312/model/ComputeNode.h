@@ -226,6 +226,46 @@ namespace TencentCloud
                      */
                     bool PublicIpAddressesHasBeenSet() const;
 
+                    /**
+                     * 获取Compute environment resource type. Valid values: `CVM`, `CPM` (Bare Metal)
+                     * @return ResourceType Compute environment resource type. Valid values: `CVM`, `CPM` (Bare Metal)
+                     */
+                    std::string GetResourceType() const;
+
+                    /**
+                     * 设置Compute environment resource type. Valid values: `CVM`, `CPM` (Bare Metal)
+                     * @param ResourceType Compute environment resource type. Valid values: `CVM`, `CPM` (Bare Metal)
+                     */
+                    void SetResourceType(const std::string& _resourceType);
+
+                    /**
+                     * 判断参数 ResourceType 是否已赋值
+                     * @return ResourceType 是否已赋值
+                     */
+                    bool ResourceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Source of compute environment resources. <br>BATCH_CREATED: instance resources created by BatchCompute.<br>
+USER_ATTACHED: instance resources added by users to the compute environment.
+                     * @return ResourceOrigin Source of compute environment resources. <br>BATCH_CREATED: instance resources created by BatchCompute.<br>
+USER_ATTACHED: instance resources added by users to the compute environment.
+                     */
+                    std::string GetResourceOrigin() const;
+
+                    /**
+                     * 设置Source of compute environment resources. <br>BATCH_CREATED: instance resources created by BatchCompute.<br>
+USER_ATTACHED: instance resources added by users to the compute environment.
+                     * @param ResourceOrigin Source of compute environment resources. <br>BATCH_CREATED: instance resources created by BatchCompute.<br>
+USER_ATTACHED: instance resources added by users to the compute environment.
+                     */
+                    void SetResourceOrigin(const std::string& _resourceOrigin);
+
+                    /**
+                     * 判断参数 ResourceOrigin 是否已赋值
+                     * @return ResourceOrigin 是否已赋值
+                     */
+                    bool ResourceOriginHasBeenSet() const;
+
                 private:
 
                     /**
@@ -287,6 +327,19 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_publicIpAddresses;
                     bool m_publicIpAddressesHasBeenSet;
+
+                    /**
+                     * Compute environment resource type. Valid values: `CVM`, `CPM` (Bare Metal)
+                     */
+                    std::string m_resourceType;
+                    bool m_resourceTypeHasBeenSet;
+
+                    /**
+                     * Source of compute environment resources. <br>BATCH_CREATED: instance resources created by BatchCompute.<br>
+USER_ATTACHED: instance resources added by users to the compute environment.
+                     */
+                    std::string m_resourceOrigin;
+                    bool m_resourceOriginHasBeenSet;
 
                 };
             }

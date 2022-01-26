@@ -42,6 +42,7 @@ namespace TencentCloud
                     DescribeCCUrlAllowResponse();
                     ~DescribeCCUrlAllowResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -69,15 +70,15 @@ namespace TencentCloud
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取Returned Blacklist/whitelist record,
+                     * 获取Returned Blocklist/allowlist record,
 If "Key":"url", "Value": URL;
 If "Key":"domain", "Value": domain name.
-If "Key":"type", "Value" can be `white` (whitelist) or `black` (blacklist).
+If "Key":"type", "Value" can be `white` (allowlist) or `black` (blocklist).
 If "Key":"protocol", "Value": CC protection type (HTTP protection or HTTPS domain name protection);
-                     * @return RecordList Returned Blacklist/whitelist record,
+                     * @return RecordList Returned Blocklist/allowlist record,
 If "Key":"url", "Value": URL;
 If "Key":"domain", "Value": domain name.
-If "Key":"type", "Value" can be `white` (whitelist) or `black` (blacklist).
+If "Key":"type", "Value" can be `white` (allowlist) or `black` (blocklist).
 If "Key":"protocol", "Value": CC protection type (HTTP protection or HTTPS domain name protection);
                      */
                     std::vector<KeyValueRecord> GetRecordList() const;
@@ -103,10 +104,10 @@ If "Key":"protocol", "Value": CC protection type (HTTP protection or HTTPS domai
                     bool m_totalHasBeenSet;
 
                     /**
-                     * Returned Blacklist/whitelist record,
+                     * Returned Blocklist/allowlist record,
 If "Key":"url", "Value": URL;
 If "Key":"domain", "Value": domain name.
-If "Key":"type", "Value" can be `white` (whitelist) or `black` (blacklist).
+If "Key":"type", "Value" can be `white` (allowlist) or `black` (blocklist).
 If "Key":"protocol", "Value": CC protection type (HTTP protection or HTTPS domain name protection);
                      */
                     std::vector<KeyValueRecord> m_recordList;

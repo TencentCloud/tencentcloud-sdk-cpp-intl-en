@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Yunjing::V20180228::Model;
-using namespace rapidjson;
 using namespace std;
 
 LoginWhiteLists::LoginWhiteLists() :
@@ -31,11 +30,13 @@ LoginWhiteLists::LoginWhiteLists() :
     m_createTimeHasBeenSet(false),
     m_modifyTimeHasBeenSet(false),
     m_machineNameHasBeenSet(false),
-    m_hostIpHasBeenSet(false)
+    m_hostIpHasBeenSet(false),
+    m_startTimeHasBeenSet(false),
+    m_endTimeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome LoginWhiteLists::Deserialize(const Value &value)
+CoreInternalOutcome LoginWhiteLists::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -44,7 +45,7 @@ CoreInternalOutcome LoginWhiteLists::Deserialize(const Value &value)
     {
         if (!value["Id"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `LoginWhiteLists.Id` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LoginWhiteLists.Id` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_id = value["Id"].GetUint64();
         m_idHasBeenSet = true;
@@ -54,7 +55,7 @@ CoreInternalOutcome LoginWhiteLists::Deserialize(const Value &value)
     {
         if (!value["Uuid"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LoginWhiteLists.Uuid` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LoginWhiteLists.Uuid` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_uuid = string(value["Uuid"].GetString());
         m_uuidHasBeenSet = true;
@@ -63,10 +64,10 @@ CoreInternalOutcome LoginWhiteLists::Deserialize(const Value &value)
     if (value.HasMember("Places") && !value["Places"].IsNull())
     {
         if (!value["Places"].IsArray())
-            return CoreInternalOutcome(Error("response `LoginWhiteLists.Places` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `LoginWhiteLists.Places` is not array type"));
 
-        const Value &tmpValue = value["Places"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Places"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             Place item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -84,7 +85,7 @@ CoreInternalOutcome LoginWhiteLists::Deserialize(const Value &value)
     {
         if (!value["UserName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LoginWhiteLists.UserName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LoginWhiteLists.UserName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_userName = string(value["UserName"].GetString());
         m_userNameHasBeenSet = true;
@@ -94,7 +95,7 @@ CoreInternalOutcome LoginWhiteLists::Deserialize(const Value &value)
     {
         if (!value["SrcIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LoginWhiteLists.SrcIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LoginWhiteLists.SrcIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_srcIp = string(value["SrcIp"].GetString());
         m_srcIpHasBeenSet = true;
@@ -104,7 +105,7 @@ CoreInternalOutcome LoginWhiteLists::Deserialize(const Value &value)
     {
         if (!value["IsGlobal"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `LoginWhiteLists.IsGlobal` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LoginWhiteLists.IsGlobal` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_isGlobal = value["IsGlobal"].GetBool();
         m_isGlobalHasBeenSet = true;
@@ -114,7 +115,7 @@ CoreInternalOutcome LoginWhiteLists::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LoginWhiteLists.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LoginWhiteLists.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -124,7 +125,7 @@ CoreInternalOutcome LoginWhiteLists::Deserialize(const Value &value)
     {
         if (!value["ModifyTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LoginWhiteLists.ModifyTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LoginWhiteLists.ModifyTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_modifyTime = string(value["ModifyTime"].GetString());
         m_modifyTimeHasBeenSet = true;
@@ -134,7 +135,7 @@ CoreInternalOutcome LoginWhiteLists::Deserialize(const Value &value)
     {
         if (!value["MachineName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LoginWhiteLists.MachineName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LoginWhiteLists.MachineName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_machineName = string(value["MachineName"].GetString());
         m_machineNameHasBeenSet = true;
@@ -144,22 +145,42 @@ CoreInternalOutcome LoginWhiteLists::Deserialize(const Value &value)
     {
         if (!value["HostIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LoginWhiteLists.HostIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LoginWhiteLists.HostIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_hostIp = string(value["HostIp"].GetString());
         m_hostIpHasBeenSet = true;
+    }
+
+    if (value.HasMember("StartTime") && !value["StartTime"].IsNull())
+    {
+        if (!value["StartTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `LoginWhiteLists.StartTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_startTime = string(value["StartTime"].GetString());
+        m_startTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("EndTime") && !value["EndTime"].IsNull())
+    {
+        if (!value["EndTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `LoginWhiteLists.EndTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_endTime = string(value["EndTime"].GetString());
+        m_endTimeHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void LoginWhiteLists::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void LoginWhiteLists::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_idHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Id";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_id, allocator);
@@ -167,46 +188,46 @@ void LoginWhiteLists::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_uuidHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Uuid";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_uuid.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_uuid.c_str(), allocator).Move(), allocator);
     }
 
     if (m_placesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Places";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_places.begin(); itr != m_places.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_userNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UserName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_userName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_userName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_srcIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SrcIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_srcIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_srcIp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_isGlobalHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsGlobal";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isGlobal, allocator);
@@ -214,34 +235,50 @@ void LoginWhiteLists::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_modifyTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ModifyTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_modifyTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_modifyTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_machineNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MachineName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_machineName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_machineName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_hostIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HostIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_hostIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_hostIp.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_startTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StartTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_startTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_endTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EndTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_endTime.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -405,5 +442,37 @@ void LoginWhiteLists::SetHostIp(const string& _hostIp)
 bool LoginWhiteLists::HostIpHasBeenSet() const
 {
     return m_hostIpHasBeenSet;
+}
+
+string LoginWhiteLists::GetStartTime() const
+{
+    return m_startTime;
+}
+
+void LoginWhiteLists::SetStartTime(const string& _startTime)
+{
+    m_startTime = _startTime;
+    m_startTimeHasBeenSet = true;
+}
+
+bool LoginWhiteLists::StartTimeHasBeenSet() const
+{
+    return m_startTimeHasBeenSet;
+}
+
+string LoginWhiteLists::GetEndTime() const
+{
+    return m_endTime;
+}
+
+void LoginWhiteLists::SetEndTime(const string& _endTime)
+{
+    m_endTime = _endTime;
+    m_endTimeHasBeenSet = true;
+}
+
+bool LoginWhiteLists::EndTimeHasBeenSet() const
+{
+    return m_endTimeHasBeenSet;
 }
 

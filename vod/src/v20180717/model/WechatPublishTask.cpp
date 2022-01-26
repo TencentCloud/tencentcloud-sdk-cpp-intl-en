@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 WechatPublishTask::WechatPublishTask() :
@@ -35,7 +34,7 @@ WechatPublishTask::WechatPublishTask() :
 {
 }
 
-CoreInternalOutcome WechatPublishTask::Deserialize(const Value &value)
+CoreInternalOutcome WechatPublishTask::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -44,7 +43,7 @@ CoreInternalOutcome WechatPublishTask::Deserialize(const Value &value)
     {
         if (!value["TaskId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WechatPublishTask.TaskId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WechatPublishTask.TaskId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_taskId = string(value["TaskId"].GetString());
         m_taskIdHasBeenSet = true;
@@ -54,7 +53,7 @@ CoreInternalOutcome WechatPublishTask::Deserialize(const Value &value)
     {
         if (!value["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WechatPublishTask.Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WechatPublishTask.Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(value["Status"].GetString());
         m_statusHasBeenSet = true;
@@ -64,7 +63,7 @@ CoreInternalOutcome WechatPublishTask::Deserialize(const Value &value)
     {
         if (!value["ErrCode"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `WechatPublishTask.ErrCode` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WechatPublishTask.ErrCode` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_errCode = value["ErrCode"].GetInt64();
         m_errCodeHasBeenSet = true;
@@ -74,7 +73,7 @@ CoreInternalOutcome WechatPublishTask::Deserialize(const Value &value)
     {
         if (!value["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WechatPublishTask.Message` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WechatPublishTask.Message` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_message = string(value["Message"].GetString());
         m_messageHasBeenSet = true;
@@ -84,7 +83,7 @@ CoreInternalOutcome WechatPublishTask::Deserialize(const Value &value)
     {
         if (!value["FileId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WechatPublishTask.FileId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WechatPublishTask.FileId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fileId = string(value["FileId"].GetString());
         m_fileIdHasBeenSet = true;
@@ -94,7 +93,7 @@ CoreInternalOutcome WechatPublishTask::Deserialize(const Value &value)
     {
         if (!value["Definition"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `WechatPublishTask.Definition` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WechatPublishTask.Definition` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_definition = value["Definition"].GetUint64();
         m_definitionHasBeenSet = true;
@@ -104,7 +103,7 @@ CoreInternalOutcome WechatPublishTask::Deserialize(const Value &value)
     {
         if (!value["SourceDefinition"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `WechatPublishTask.SourceDefinition` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WechatPublishTask.SourceDefinition` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_sourceDefinition = value["SourceDefinition"].GetUint64();
         m_sourceDefinitionHasBeenSet = true;
@@ -114,7 +113,7 @@ CoreInternalOutcome WechatPublishTask::Deserialize(const Value &value)
     {
         if (!value["WechatStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WechatPublishTask.WechatStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WechatPublishTask.WechatStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_wechatStatus = string(value["WechatStatus"].GetString());
         m_wechatStatusHasBeenSet = true;
@@ -124,7 +123,7 @@ CoreInternalOutcome WechatPublishTask::Deserialize(const Value &value)
     {
         if (!value["WechatVid"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WechatPublishTask.WechatVid` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WechatPublishTask.WechatVid` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_wechatVid = string(value["WechatVid"].GetString());
         m_wechatVidHasBeenSet = true;
@@ -134,7 +133,7 @@ CoreInternalOutcome WechatPublishTask::Deserialize(const Value &value)
     {
         if (!value["WechatUrl"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WechatPublishTask.WechatUrl` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WechatPublishTask.WechatUrl` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_wechatUrl = string(value["WechatUrl"].GetString());
         m_wechatUrlHasBeenSet = true;
@@ -144,28 +143,28 @@ CoreInternalOutcome WechatPublishTask::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void WechatPublishTask::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void WechatPublishTask::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_taskIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TaskId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_taskId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_taskId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_status.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
     }
 
     if (m_errCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ErrCode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_errCode, allocator);
@@ -173,23 +172,23 @@ void WechatPublishTask::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_messageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Message";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_message.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_message.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fileIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fileId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fileId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_definitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Definition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_definition, allocator);
@@ -197,7 +196,7 @@ void WechatPublishTask::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_sourceDefinitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SourceDefinition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_sourceDefinition, allocator);
@@ -205,26 +204,26 @@ void WechatPublishTask::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_wechatStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "WechatStatus";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_wechatStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_wechatStatus.c_str(), allocator).Move(), allocator);
     }
 
     if (m_wechatVidHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "WechatVid";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_wechatVid.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_wechatVid.c_str(), allocator).Move(), allocator);
     }
 
     if (m_wechatUrlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "WechatUrl";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_wechatUrl.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_wechatUrl.c_str(), allocator).Move(), allocator);
     }
 
 }

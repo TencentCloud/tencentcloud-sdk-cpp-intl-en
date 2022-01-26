@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Es::V20180416::Model;
-using namespace rapidjson;
 using namespace std;
 
 NodeInfo::NodeInfo() :
@@ -28,11 +27,12 @@ NodeInfo::NodeInfo() :
     m_diskTypeHasBeenSet(false),
     m_diskSizeHasBeenSet(false),
     m_localDiskInfoHasBeenSet(false),
-    m_diskCountHasBeenSet(false)
+    m_diskCountHasBeenSet(false),
+    m_diskEncryptHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome NodeInfo::Deserialize(const Value &value)
+CoreInternalOutcome NodeInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +41,7 @@ CoreInternalOutcome NodeInfo::Deserialize(const Value &value)
     {
         if (!value["NodeNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `NodeInfo.NodeNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeInfo.NodeNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_nodeNum = value["NodeNum"].GetUint64();
         m_nodeNumHasBeenSet = true;
@@ -51,7 +51,7 @@ CoreInternalOutcome NodeInfo::Deserialize(const Value &value)
     {
         if (!value["NodeType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NodeInfo.NodeType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeInfo.NodeType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_nodeType = string(value["NodeType"].GetString());
         m_nodeTypeHasBeenSet = true;
@@ -61,7 +61,7 @@ CoreInternalOutcome NodeInfo::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NodeInfo.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeInfo.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -71,7 +71,7 @@ CoreInternalOutcome NodeInfo::Deserialize(const Value &value)
     {
         if (!value["DiskType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NodeInfo.DiskType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeInfo.DiskType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_diskType = string(value["DiskType"].GetString());
         m_diskTypeHasBeenSet = true;
@@ -81,7 +81,7 @@ CoreInternalOutcome NodeInfo::Deserialize(const Value &value)
     {
         if (!value["DiskSize"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `NodeInfo.DiskSize` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeInfo.DiskSize` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_diskSize = value["DiskSize"].GetUint64();
         m_diskSizeHasBeenSet = true;
@@ -91,7 +91,7 @@ CoreInternalOutcome NodeInfo::Deserialize(const Value &value)
     {
         if (!value["LocalDiskInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `NodeInfo.LocalDiskInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeInfo.LocalDiskInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_localDiskInfo.Deserialize(value["LocalDiskInfo"]);
@@ -108,22 +108,32 @@ CoreInternalOutcome NodeInfo::Deserialize(const Value &value)
     {
         if (!value["DiskCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `NodeInfo.DiskCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeInfo.DiskCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_diskCount = value["DiskCount"].GetUint64();
         m_diskCountHasBeenSet = true;
+    }
+
+    if (value.HasMember("DiskEncrypt") && !value["DiskEncrypt"].IsNull())
+    {
+        if (!value["DiskEncrypt"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `NodeInfo.DiskEncrypt` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_diskEncrypt = value["DiskEncrypt"].GetUint64();
+        m_diskEncryptHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void NodeInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void NodeInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_nodeNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NodeNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_nodeNum, allocator);
@@ -131,31 +141,31 @@ void NodeInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_nodeTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NodeType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_nodeType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_nodeType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_diskTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_diskType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_diskType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_diskSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_diskSize, allocator);
@@ -163,19 +173,27 @@ void NodeInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_localDiskInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LocalDiskInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_localDiskInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_diskCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_diskCount, allocator);
+    }
+
+    if (m_diskEncryptHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DiskEncrypt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_diskEncrypt, allocator);
     }
 
 }
@@ -291,5 +309,21 @@ void NodeInfo::SetDiskCount(const uint64_t& _diskCount)
 bool NodeInfo::DiskCountHasBeenSet() const
 {
     return m_diskCountHasBeenSet;
+}
+
+uint64_t NodeInfo::GetDiskEncrypt() const
+{
+    return m_diskEncrypt;
+}
+
+void NodeInfo::SetDiskEncrypt(const uint64_t& _diskEncrypt)
+{
+    m_diskEncrypt = _diskEncrypt;
+    m_diskEncryptHasBeenSet = true;
+}
+
+bool NodeInfo::DiskEncryptHasBeenSet() const
+{
+    return m_diskEncryptHasBeenSet;
 }
 

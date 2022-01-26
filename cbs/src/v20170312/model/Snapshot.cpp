@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cbs::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 Snapshot::Snapshot() :
@@ -39,11 +38,12 @@ Snapshot::Snapshot() :
     m_imagesHasBeenSet(false),
     m_imageCountHasBeenSet(false),
     m_snapshotTypeHasBeenSet(false),
-    m_shareReferenceHasBeenSet(false)
+    m_shareReferenceHasBeenSet(false),
+    m_timeStartShareHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome Snapshot::Deserialize(const Value &value)
+CoreInternalOutcome Snapshot::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -52,7 +52,7 @@ CoreInternalOutcome Snapshot::Deserialize(const Value &value)
     {
         if (!value["SnapshotId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Snapshot.SnapshotId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Snapshot.SnapshotId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_snapshotId = string(value["SnapshotId"].GetString());
         m_snapshotIdHasBeenSet = true;
@@ -62,7 +62,7 @@ CoreInternalOutcome Snapshot::Deserialize(const Value &value)
     {
         if (!value["Placement"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `Snapshot.Placement` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Snapshot.Placement` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_placement.Deserialize(value["Placement"]);
@@ -79,7 +79,7 @@ CoreInternalOutcome Snapshot::Deserialize(const Value &value)
     {
         if (!value["DiskUsage"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Snapshot.DiskUsage` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Snapshot.DiskUsage` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_diskUsage = string(value["DiskUsage"].GetString());
         m_diskUsageHasBeenSet = true;
@@ -89,7 +89,7 @@ CoreInternalOutcome Snapshot::Deserialize(const Value &value)
     {
         if (!value["DiskId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Snapshot.DiskId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Snapshot.DiskId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_diskId = string(value["DiskId"].GetString());
         m_diskIdHasBeenSet = true;
@@ -99,7 +99,7 @@ CoreInternalOutcome Snapshot::Deserialize(const Value &value)
     {
         if (!value["DiskSize"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Snapshot.DiskSize` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Snapshot.DiskSize` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_diskSize = value["DiskSize"].GetUint64();
         m_diskSizeHasBeenSet = true;
@@ -109,7 +109,7 @@ CoreInternalOutcome Snapshot::Deserialize(const Value &value)
     {
         if (!value["SnapshotState"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Snapshot.SnapshotState` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Snapshot.SnapshotState` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_snapshotState = string(value["SnapshotState"].GetString());
         m_snapshotStateHasBeenSet = true;
@@ -119,7 +119,7 @@ CoreInternalOutcome Snapshot::Deserialize(const Value &value)
     {
         if (!value["SnapshotName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Snapshot.SnapshotName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Snapshot.SnapshotName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_snapshotName = string(value["SnapshotName"].GetString());
         m_snapshotNameHasBeenSet = true;
@@ -129,7 +129,7 @@ CoreInternalOutcome Snapshot::Deserialize(const Value &value)
     {
         if (!value["Percent"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Snapshot.Percent` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Snapshot.Percent` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_percent = value["Percent"].GetUint64();
         m_percentHasBeenSet = true;
@@ -139,7 +139,7 @@ CoreInternalOutcome Snapshot::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Snapshot.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Snapshot.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -149,7 +149,7 @@ CoreInternalOutcome Snapshot::Deserialize(const Value &value)
     {
         if (!value["DeadlineTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Snapshot.DeadlineTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Snapshot.DeadlineTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_deadlineTime = string(value["DeadlineTime"].GetString());
         m_deadlineTimeHasBeenSet = true;
@@ -159,7 +159,7 @@ CoreInternalOutcome Snapshot::Deserialize(const Value &value)
     {
         if (!value["Encrypt"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `Snapshot.Encrypt` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Snapshot.Encrypt` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_encrypt = value["Encrypt"].GetBool();
         m_encryptHasBeenSet = true;
@@ -169,7 +169,7 @@ CoreInternalOutcome Snapshot::Deserialize(const Value &value)
     {
         if (!value["IsPermanent"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `Snapshot.IsPermanent` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Snapshot.IsPermanent` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_isPermanent = value["IsPermanent"].GetBool();
         m_isPermanentHasBeenSet = true;
@@ -178,10 +178,10 @@ CoreInternalOutcome Snapshot::Deserialize(const Value &value)
     if (value.HasMember("CopyingToRegions") && !value["CopyingToRegions"].IsNull())
     {
         if (!value["CopyingToRegions"].IsArray())
-            return CoreInternalOutcome(Error("response `Snapshot.CopyingToRegions` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Snapshot.CopyingToRegions` is not array type"));
 
-        const Value &tmpValue = value["CopyingToRegions"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["CopyingToRegions"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_copyingToRegions.push_back((*itr).GetString());
         }
@@ -192,7 +192,7 @@ CoreInternalOutcome Snapshot::Deserialize(const Value &value)
     {
         if (!value["CopyFromRemote"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `Snapshot.CopyFromRemote` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Snapshot.CopyFromRemote` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_copyFromRemote = value["CopyFromRemote"].GetBool();
         m_copyFromRemoteHasBeenSet = true;
@@ -201,10 +201,10 @@ CoreInternalOutcome Snapshot::Deserialize(const Value &value)
     if (value.HasMember("Images") && !value["Images"].IsNull())
     {
         if (!value["Images"].IsArray())
-            return CoreInternalOutcome(Error("response `Snapshot.Images` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Snapshot.Images` is not array type"));
 
-        const Value &tmpValue = value["Images"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Images"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             Image item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -222,7 +222,7 @@ CoreInternalOutcome Snapshot::Deserialize(const Value &value)
     {
         if (!value["ImageCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Snapshot.ImageCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Snapshot.ImageCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_imageCount = value["ImageCount"].GetUint64();
         m_imageCountHasBeenSet = true;
@@ -232,7 +232,7 @@ CoreInternalOutcome Snapshot::Deserialize(const Value &value)
     {
         if (!value["SnapshotType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Snapshot.SnapshotType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Snapshot.SnapshotType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_snapshotType = string(value["SnapshotType"].GetString());
         m_snapshotTypeHasBeenSet = true;
@@ -242,55 +242,65 @@ CoreInternalOutcome Snapshot::Deserialize(const Value &value)
     {
         if (!value["ShareReference"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Snapshot.ShareReference` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Snapshot.ShareReference` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_shareReference = value["ShareReference"].GetUint64();
         m_shareReferenceHasBeenSet = true;
+    }
+
+    if (value.HasMember("TimeStartShare") && !value["TimeStartShare"].IsNull())
+    {
+        if (!value["TimeStartShare"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Snapshot.TimeStartShare` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_timeStartShare = string(value["TimeStartShare"].GetString());
+        m_timeStartShareHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void Snapshot::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Snapshot::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_snapshotIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SnapshotId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_snapshotId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_snapshotId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_placementHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Placement";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_placement.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_diskUsageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskUsage";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_diskUsage.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_diskUsage.c_str(), allocator).Move(), allocator);
     }
 
     if (m_diskIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_diskId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_diskId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_diskSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_diskSize, allocator);
@@ -298,23 +308,23 @@ void Snapshot::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_snapshotStateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SnapshotState";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_snapshotState.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_snapshotState.c_str(), allocator).Move(), allocator);
     }
 
     if (m_snapshotNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SnapshotName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_snapshotName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_snapshotName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_percentHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Percent";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_percent, allocator);
@@ -322,23 +332,23 @@ void Snapshot::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_deadlineTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DeadlineTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_deadlineTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_deadlineTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_encryptHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Encrypt";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_encrypt, allocator);
@@ -346,7 +356,7 @@ void Snapshot::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_isPermanentHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsPermanent";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isPermanent, allocator);
@@ -354,20 +364,20 @@ void Snapshot::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_copyingToRegionsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CopyingToRegions";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_copyingToRegions.begin(); itr != m_copyingToRegions.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_copyFromRemoteHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CopyFromRemote";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_copyFromRemote, allocator);
@@ -375,22 +385,22 @@ void Snapshot::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_imagesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Images";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_images.begin(); itr != m_images.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_imageCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ImageCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_imageCount, allocator);
@@ -398,18 +408,26 @@ void Snapshot::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_snapshotTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SnapshotType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_snapshotType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_snapshotType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_shareReferenceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ShareReference";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_shareReference, allocator);
+    }
+
+    if (m_timeStartShareHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TimeStartShare";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_timeStartShare.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -701,5 +719,21 @@ void Snapshot::SetShareReference(const uint64_t& _shareReference)
 bool Snapshot::ShareReferenceHasBeenSet() const
 {
     return m_shareReferenceHasBeenSet;
+}
+
+string Snapshot::GetTimeStartShare() const
+{
+    return m_timeStartShare;
+}
+
+void Snapshot::SetTimeStartShare(const string& _timeStartShare)
+{
+    m_timeStartShare = _timeStartShare;
+    m_timeStartShareHasBeenSet = true;
+}
+
+bool Snapshot::TimeStartShareHasBeenSet() const
+{
+    return m_timeStartShareHasBeenSet;
 }
 

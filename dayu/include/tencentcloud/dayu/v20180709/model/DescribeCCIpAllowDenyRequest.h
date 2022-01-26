@@ -79,18 +79,18 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Blacklist or whitelist. Valid values: [white (whitelist), black (blacklist)]
-Note: this array can only have one value. It cannot get the blacklist and whitelist at the same time
-                     * @return Type Blacklist or whitelist. Valid values: [white (whitelist), black (blacklist)]
-Note: this array can only have one value. It cannot get the blacklist and whitelist at the same time
+                     * 获取Blocklist or allowlist. Valid values: [white (allowlist), black (blocklist)]
+Note: this array can only have one value. It cannot get the blocklist and allowlist at the same time
+                     * @return Type Blocklist or allowlist. Valid values: [white (allowlist), black (blocklist)]
+Note: this array can only have one value. It cannot get the blocklist and allowlist at the same time
                      */
                     std::vector<std::string> GetType() const;
 
                     /**
-                     * 设置Blacklist or whitelist. Valid values: [white (whitelist), black (blacklist)]
-Note: this array can only have one value. It cannot get the blacklist and whitelist at the same time
-                     * @param Type Blacklist or whitelist. Valid values: [white (whitelist), black (blacklist)]
-Note: this array can only have one value. It cannot get the blacklist and whitelist at the same time
+                     * 设置Blocklist or allowlist. Valid values: [white (allowlist), black (blocklist)]
+Note: this array can only have one value. It cannot get the blocklist and allowlist at the same time
+                     * @param Type Blocklist or allowlist. Valid values: [white (allowlist), black (blocklist)]
+Note: this array can only have one value. It cannot get the blocklist and allowlist at the same time
                      */
                     void SetType(const std::vector<std::string>& _type);
 
@@ -169,8 +169,8 @@ Note: this array can only have one value. It cannot get the blacklist and whitel
                     bool m_idHasBeenSet;
 
                     /**
-                     * Blacklist or whitelist. Valid values: [white (whitelist), black (blacklist)]
-Note: this array can only have one value. It cannot get the blacklist and whitelist at the same time
+                     * Blocklist or allowlist. Valid values: [white (allowlist), black (blocklist)]
+Note: this array can only have one value. It cannot get the blocklist and allowlist at the same time
                      */
                     std::vector<std::string> m_type;
                     bool m_typeHasBeenSet;

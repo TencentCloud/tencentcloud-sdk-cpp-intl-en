@@ -73,14 +73,14 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100. Default value: 95.
-                     * @return Score Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100. Default value: 95.
+                     * 获取Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100. Default value: 95.
+                     * @return Score Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100. Default value: 95.
                      */
                     double GetScore() const;
 
                     /**
-                     * 设置Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100. Default value: 95.
-                     * @param Score Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100. Default value: 95.
+                     * 设置Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100. Default value: 95.
+                     * @param Score Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100. Default value: 95.
                      */
                     void SetScore(const double& _score);
 
@@ -121,18 +121,18 @@ namespace TencentCloud
                     bool DefaultLibraryLabelSetHasBeenSet() const;
 
                     /**
-                     * 获取Custom figure filter tag, which specifies the custom figure tag that needs to be returned. If this parameter is left empty or a blank value is entered, all results of the custom figures will be returned. Valid values:
-There can be up to 10 tags, each with a length limit of 16 characters.
-                     * @return UserDefineLibraryLabelSet Custom figure filter tag, which specifies the custom figure tag that needs to be returned. If this parameter is left empty or a blank value is entered, all results of the custom figures will be returned. Valid values:
-There can be up to 10 tags, each with a length limit of 16 characters.
+                     * 获取Custom face labels for filtering. After you specify a label, callbacks of face images without this label will be returned. If this parameter is not specified or left empty, callbacks of all face images will be returned.
+You can specify up to 100 labels, with each containing up to 16 characters.
+                     * @return UserDefineLibraryLabelSet Custom face labels for filtering. After you specify a label, callbacks of face images without this label will be returned. If this parameter is not specified or left empty, callbacks of all face images will be returned.
+You can specify up to 100 labels, with each containing up to 16 characters.
                      */
                     std::vector<std::string> GetUserDefineLibraryLabelSet() const;
 
                     /**
-                     * 设置Custom figure filter tag, which specifies the custom figure tag that needs to be returned. If this parameter is left empty or a blank value is entered, all results of the custom figures will be returned. Valid values:
-There can be up to 10 tags, each with a length limit of 16 characters.
-                     * @param UserDefineLibraryLabelSet Custom figure filter tag, which specifies the custom figure tag that needs to be returned. If this parameter is left empty or a blank value is entered, all results of the custom figures will be returned. Valid values:
-There can be up to 10 tags, each with a length limit of 16 characters.
+                     * 设置Custom face labels for filtering. After you specify a label, callbacks of face images without this label will be returned. If this parameter is not specified or left empty, callbacks of all face images will be returned.
+You can specify up to 100 labels, with each containing up to 16 characters.
+                     * @param UserDefineLibraryLabelSet Custom face labels for filtering. After you specify a label, callbacks of face images without this label will be returned. If this parameter is not specified or left empty, callbacks of all face images will be returned.
+You can specify up to 100 labels, with each containing up to 16 characters.
                      */
                     void SetUserDefineLibraryLabelSet(const std::vector<std::string>& _userDefineLibraryLabelSet);
 
@@ -187,7 +187,7 @@ Default value: All (both default and custom figure libraries will be used.)
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100. Default value: 95.
+                     * Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100. Default value: 95.
                      */
                     double m_score;
                     bool m_scoreHasBeenSet;
@@ -202,8 +202,8 @@ Default value: All (both default and custom figure libraries will be used.)
                     bool m_defaultLibraryLabelSetHasBeenSet;
 
                     /**
-                     * Custom figure filter tag, which specifies the custom figure tag that needs to be returned. If this parameter is left empty or a blank value is entered, all results of the custom figures will be returned. Valid values:
-There can be up to 10 tags, each with a length limit of 16 characters.
+                     * Custom face labels for filtering. After you specify a label, callbacks of face images without this label will be returned. If this parameter is not specified or left empty, callbacks of all face images will be returned.
+You can specify up to 100 labels, with each containing up to 16 characters.
                      */
                     std::vector<std::string> m_userDefineLibraryLabelSet;
                     bool m_userDefineLibraryLabelSetHasBeenSet;

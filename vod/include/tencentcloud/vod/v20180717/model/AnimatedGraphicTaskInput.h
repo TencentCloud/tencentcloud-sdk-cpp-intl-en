@@ -65,14 +65,26 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Start time of animated image in video in seconds.
-                     * @return StartTimeOffset Start time of animated image in video in seconds.
+                     * 获取Start time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will start at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will start at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will start at the nth second before the end of the video.</li>
+                     * @return StartTimeOffset Start time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will start at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will start at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will start at the nth second before the end of the video.</li>
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Start time of animated image in video in seconds.
-                     * @param StartTimeOffset Start time of animated image in video in seconds.
+                     * 设置Start time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will start at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will start at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will start at the nth second before the end of the video.</li>
+                     * @param StartTimeOffset Start time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will start at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will start at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will start at the nth second before the end of the video.</li>
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
 
@@ -83,14 +95,26 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取End time of animated image in video in seconds.
-                     * @return EndTimeOffset End time of animated image in video in seconds.
+                     * 获取End time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will end at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will end at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will end at the nth second before the end of the video.</li>
+                     * @return EndTimeOffset End time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will end at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will end at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will end at the nth second before the end of the video.</li>
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置End time of animated image in video in seconds.
-                     * @param EndTimeOffset End time of animated image in video in seconds.
+                     * 设置End time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will end at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will end at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will end at the nth second before the end of the video.</li>
+                     * @param EndTimeOffset End time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will end at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will end at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will end at the nth second before the end of the video.</li>
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
 
@@ -109,13 +133,19 @@ namespace TencentCloud
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Start time of animated image in video in seconds.
+                     * Start time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will start at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will start at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will start at the nth second before the end of the video.</li>
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * End time of animated image in video in seconds.
+                     * End time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will end at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will end at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will end at the nth second before the end of the video.</li>
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;

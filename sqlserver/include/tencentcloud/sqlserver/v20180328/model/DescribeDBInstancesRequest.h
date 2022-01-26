@@ -64,7 +64,7 @@ namespace TencentCloud
                      * 获取Instance status. Valid values:
 <li>1: applying</li>
 <li>2: running</li>
-<li>3: running restrictedly (master/slave switching)</li>
+<li>3: running restrictedly (primary/secondary switching)</li>
 <li>4: isolated</li>
 <li>5: repossessing</li>
 <li>6: repossessed</li>
@@ -77,7 +77,7 @@ namespace TencentCloud
                      * @return Status Instance status. Valid values:
 <li>1: applying</li>
 <li>2: running</li>
-<li>3: running restrictedly (master/slave switching)</li>
+<li>3: running restrictedly (primary/secondary switching)</li>
 <li>4: isolated</li>
 <li>5: repossessing</li>
 <li>6: repossessed</li>
@@ -94,7 +94,7 @@ namespace TencentCloud
                      * 设置Instance status. Valid values:
 <li>1: applying</li>
 <li>2: running</li>
-<li>3: running restrictedly (master/slave switching)</li>
+<li>3: running restrictedly (primary/secondary switching)</li>
 <li>4: isolated</li>
 <li>5: repossessing</li>
 <li>6: repossessed</li>
@@ -107,7 +107,7 @@ namespace TencentCloud
                      * @param Status Instance status. Valid values:
 <li>1: applying</li>
 <li>2: running</li>
-<li>3: running restrictedly (master/slave switching)</li>
+<li>3: running restrictedly (primary/secondary switching)</li>
 <li>4: isolated</li>
 <li>5: repossessing</li>
 <li>6: repossessed</li>
@@ -145,14 +145,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of results per page. Value range: 1–100. Default value: 100
-                     * @return Limit Number of results per page. Value range: 1–100. Default value: 100
+                     * 获取Number of results per page. Value range: 1-100. Default value: 100
+                     * @return Limit Number of results per page. Value range: 1-100. Default value: 100
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results per page. Value range: 1–100. Default value: 100
-                     * @param Limit Number of results per page. Value range: 1–100. Default value: 100
+                     * 设置Number of results per page. Value range: 1-100. Default value: 100
+                     * @param Limit Number of results per page. Value range: 1-100. Default value: 100
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -234,6 +234,132 @@ namespace TencentCloud
                      */
                     bool SubnetIdHasBeenSet() const;
 
+                    /**
+                     * 获取The list of instance private IPs, such as 172.1.0.12
+                     * @return VipSet The list of instance private IPs, such as 172.1.0.12
+                     */
+                    std::vector<std::string> GetVipSet() const;
+
+                    /**
+                     * 设置The list of instance private IPs, such as 172.1.0.12
+                     * @param VipSet The list of instance private IPs, such as 172.1.0.12
+                     */
+                    void SetVipSet(const std::vector<std::string>& _vipSet);
+
+                    /**
+                     * 判断参数 VipSet 是否已赋值
+                     * @return VipSet 是否已赋值
+                     */
+                    bool VipSetHasBeenSet() const;
+
+                    /**
+                     * 获取The list of instance names used for fuzzy match
+                     * @return InstanceNameSet The list of instance names used for fuzzy match
+                     */
+                    std::vector<std::string> GetInstanceNameSet() const;
+
+                    /**
+                     * 设置The list of instance names used for fuzzy match
+                     * @param InstanceNameSet The list of instance names used for fuzzy match
+                     */
+                    void SetInstanceNameSet(const std::vector<std::string>& _instanceNameSet);
+
+                    /**
+                     * 判断参数 InstanceNameSet 是否已赋值
+                     * @return InstanceNameSet 是否已赋值
+                     */
+                    bool InstanceNameSetHasBeenSet() const;
+
+                    /**
+                     * 获取The list of instance version numbers, such as 2008R2, 2012SP3
+                     * @return VersionSet The list of instance version numbers, such as 2008R2, 2012SP3
+                     */
+                    std::vector<std::string> GetVersionSet() const;
+
+                    /**
+                     * 设置The list of instance version numbers, such as 2008R2, 2012SP3
+                     * @param VersionSet The list of instance version numbers, such as 2008R2, 2012SP3
+                     */
+                    void SetVersionSet(const std::vector<std::string>& _versionSet);
+
+                    /**
+                     * 判断参数 VersionSet 是否已赋值
+                     * @return VersionSet 是否已赋值
+                     */
+                    bool VersionSetHasBeenSet() const;
+
+                    /**
+                     * 获取Instance availability zone, such as ap-guangzhou-2
+                     * @return Zone Instance availability zone, such as ap-guangzhou-2
+                     */
+                    std::string GetZone() const;
+
+                    /**
+                     * 设置Instance availability zone, such as ap-guangzhou-2
+                     * @param Zone Instance availability zone, such as ap-guangzhou-2
+                     */
+                    void SetZone(const std::string& _zone);
+
+                    /**
+                     * 判断参数 Zone 是否已赋值
+                     * @return Zone 是否已赋值
+                     */
+                    bool ZoneHasBeenSet() const;
+
+                    /**
+                     * 获取The list of instance tags
+                     * @return TagKeys The list of instance tags
+                     */
+                    std::vector<std::string> GetTagKeys() const;
+
+                    /**
+                     * 设置The list of instance tags
+                     * @param TagKeys The list of instance tags
+                     */
+                    void SetTagKeys(const std::vector<std::string>& _tagKeys);
+
+                    /**
+                     * 判断参数 TagKeys 是否已赋值
+                     * @return TagKeys 是否已赋值
+                     */
+                    bool TagKeysHasBeenSet() const;
+
+                    /**
+                     * 获取Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
+                     * @return SearchKey Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
+                     */
+                    std::string GetSearchKey() const;
+
+                    /**
+                     * 设置Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
+                     * @param SearchKey Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
+                     */
+                    void SetSearchKey(const std::string& _searchKey);
+
+                    /**
+                     * 判断参数 SearchKey 是否已赋值
+                     * @return SearchKey 是否已赋值
+                     */
+                    bool SearchKeyHasBeenSet() const;
+
+                    /**
+                     * 获取Unique Uid of an instance
+                     * @return UidSet Unique Uid of an instance
+                     */
+                    std::vector<std::string> GetUidSet() const;
+
+                    /**
+                     * 设置Unique Uid of an instance
+                     * @param UidSet Unique Uid of an instance
+                     */
+                    void SetUidSet(const std::vector<std::string>& _uidSet);
+
+                    /**
+                     * 判断参数 UidSet 是否已赋值
+                     * @return UidSet 是否已赋值
+                     */
+                    bool UidSetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -246,7 +372,7 @@ namespace TencentCloud
                      * Instance status. Valid values:
 <li>1: applying</li>
 <li>2: running</li>
-<li>3: running restrictedly (master/slave switching)</li>
+<li>3: running restrictedly (primary/secondary switching)</li>
 <li>4: isolated</li>
 <li>5: repossessing</li>
 <li>6: repossessed</li>
@@ -267,7 +393,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of results per page. Value range: 1–100. Default value: 100
+                     * Number of results per page. Value range: 1-100. Default value: 100
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -295,6 +421,48 @@ namespace TencentCloud
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
+
+                    /**
+                     * The list of instance private IPs, such as 172.1.0.12
+                     */
+                    std::vector<std::string> m_vipSet;
+                    bool m_vipSetHasBeenSet;
+
+                    /**
+                     * The list of instance names used for fuzzy match
+                     */
+                    std::vector<std::string> m_instanceNameSet;
+                    bool m_instanceNameSetHasBeenSet;
+
+                    /**
+                     * The list of instance version numbers, such as 2008R2, 2012SP3
+                     */
+                    std::vector<std::string> m_versionSet;
+                    bool m_versionSetHasBeenSet;
+
+                    /**
+                     * Instance availability zone, such as ap-guangzhou-2
+                     */
+                    std::string m_zone;
+                    bool m_zoneHasBeenSet;
+
+                    /**
+                     * The list of instance tags
+                     */
+                    std::vector<std::string> m_tagKeys;
+                    bool m_tagKeysHasBeenSet;
+
+                    /**
+                     * Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
+                     */
+                    std::string m_searchKey;
+                    bool m_searchKeyHasBeenSet;
+
+                    /**
+                     * Unique Uid of an instance
+                     */
+                    std::vector<std::string> m_uidSet;
+                    bool m_uidSetHasBeenSet;
 
                 };
             }

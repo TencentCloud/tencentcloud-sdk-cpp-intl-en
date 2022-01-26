@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dayu::V20180709::Model;
-using namespace rapidjson;
 using namespace std;
 
 Paging::Paging() :
@@ -27,7 +26,7 @@ Paging::Paging() :
 {
 }
 
-CoreInternalOutcome Paging::Deserialize(const Value &value)
+CoreInternalOutcome Paging::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome Paging::Deserialize(const Value &value)
     {
         if (!value["Offset"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Paging.Offset` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Paging.Offset` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_offset = value["Offset"].GetUint64();
         m_offsetHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome Paging::Deserialize(const Value &value)
     {
         if (!value["Limit"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Paging.Limit` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Paging.Limit` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_limit = value["Limit"].GetUint64();
         m_limitHasBeenSet = true;
@@ -56,12 +55,12 @@ CoreInternalOutcome Paging::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Paging::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Paging::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_offsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Offset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_offset, allocator);
@@ -69,7 +68,7 @@ void Paging::ToJsonObject(Value &value, Document::AllocatorType& allocator) cons
 
     if (m_limitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Limit";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_limit, allocator);

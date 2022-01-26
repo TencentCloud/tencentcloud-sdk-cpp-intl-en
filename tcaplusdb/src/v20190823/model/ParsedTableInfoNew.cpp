@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Tcaplusdb::V20190823::Model;
-using namespace rapidjson;
 using namespace std;
 
 ParsedTableInfoNew::ParsedTableInfoNew() :
@@ -43,7 +42,7 @@ ParsedTableInfoNew::ParsedTableInfoNew() :
 {
 }
 
-CoreInternalOutcome ParsedTableInfoNew::Deserialize(const Value &value)
+CoreInternalOutcome ParsedTableInfoNew::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -52,7 +51,7 @@ CoreInternalOutcome ParsedTableInfoNew::Deserialize(const Value &value)
     {
         if (!value["TableIdlType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ParsedTableInfoNew.TableIdlType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParsedTableInfoNew.TableIdlType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tableIdlType = string(value["TableIdlType"].GetString());
         m_tableIdlTypeHasBeenSet = true;
@@ -62,7 +61,7 @@ CoreInternalOutcome ParsedTableInfoNew::Deserialize(const Value &value)
     {
         if (!value["TableInstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ParsedTableInfoNew.TableInstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParsedTableInfoNew.TableInstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tableInstanceId = string(value["TableInstanceId"].GetString());
         m_tableInstanceIdHasBeenSet = true;
@@ -72,7 +71,7 @@ CoreInternalOutcome ParsedTableInfoNew::Deserialize(const Value &value)
     {
         if (!value["TableName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ParsedTableInfoNew.TableName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParsedTableInfoNew.TableName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tableName = string(value["TableName"].GetString());
         m_tableNameHasBeenSet = true;
@@ -82,7 +81,7 @@ CoreInternalOutcome ParsedTableInfoNew::Deserialize(const Value &value)
     {
         if (!value["TableType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ParsedTableInfoNew.TableType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParsedTableInfoNew.TableType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tableType = string(value["TableType"].GetString());
         m_tableTypeHasBeenSet = true;
@@ -92,7 +91,7 @@ CoreInternalOutcome ParsedTableInfoNew::Deserialize(const Value &value)
     {
         if (!value["KeyFields"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ParsedTableInfoNew.KeyFields` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParsedTableInfoNew.KeyFields` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_keyFields = string(value["KeyFields"].GetString());
         m_keyFieldsHasBeenSet = true;
@@ -102,7 +101,7 @@ CoreInternalOutcome ParsedTableInfoNew::Deserialize(const Value &value)
     {
         if (!value["OldKeyFields"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ParsedTableInfoNew.OldKeyFields` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParsedTableInfoNew.OldKeyFields` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_oldKeyFields = string(value["OldKeyFields"].GetString());
         m_oldKeyFieldsHasBeenSet = true;
@@ -112,7 +111,7 @@ CoreInternalOutcome ParsedTableInfoNew::Deserialize(const Value &value)
     {
         if (!value["ValueFields"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ParsedTableInfoNew.ValueFields` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParsedTableInfoNew.ValueFields` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_valueFields = string(value["ValueFields"].GetString());
         m_valueFieldsHasBeenSet = true;
@@ -122,7 +121,7 @@ CoreInternalOutcome ParsedTableInfoNew::Deserialize(const Value &value)
     {
         if (!value["OldValueFields"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ParsedTableInfoNew.OldValueFields` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParsedTableInfoNew.OldValueFields` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_oldValueFields = string(value["OldValueFields"].GetString());
         m_oldValueFieldsHasBeenSet = true;
@@ -132,7 +131,7 @@ CoreInternalOutcome ParsedTableInfoNew::Deserialize(const Value &value)
     {
         if (!value["TableGroupId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ParsedTableInfoNew.TableGroupId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParsedTableInfoNew.TableGroupId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tableGroupId = string(value["TableGroupId"].GetString());
         m_tableGroupIdHasBeenSet = true;
@@ -142,7 +141,7 @@ CoreInternalOutcome ParsedTableInfoNew::Deserialize(const Value &value)
     {
         if (!value["SumKeyFieldSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ParsedTableInfoNew.SumKeyFieldSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParsedTableInfoNew.SumKeyFieldSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_sumKeyFieldSize = value["SumKeyFieldSize"].GetInt64();
         m_sumKeyFieldSizeHasBeenSet = true;
@@ -152,7 +151,7 @@ CoreInternalOutcome ParsedTableInfoNew::Deserialize(const Value &value)
     {
         if (!value["SumValueFieldSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ParsedTableInfoNew.SumValueFieldSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParsedTableInfoNew.SumValueFieldSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_sumValueFieldSize = value["SumValueFieldSize"].GetInt64();
         m_sumValueFieldSizeHasBeenSet = true;
@@ -162,7 +161,7 @@ CoreInternalOutcome ParsedTableInfoNew::Deserialize(const Value &value)
     {
         if (!value["IndexKeySet"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ParsedTableInfoNew.IndexKeySet` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParsedTableInfoNew.IndexKeySet` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_indexKeySet = string(value["IndexKeySet"].GetString());
         m_indexKeySetHasBeenSet = true;
@@ -172,7 +171,7 @@ CoreInternalOutcome ParsedTableInfoNew::Deserialize(const Value &value)
     {
         if (!value["ShardingKeySet"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ParsedTableInfoNew.ShardingKeySet` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParsedTableInfoNew.ShardingKeySet` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_shardingKeySet = string(value["ShardingKeySet"].GetString());
         m_shardingKeySetHasBeenSet = true;
@@ -182,7 +181,7 @@ CoreInternalOutcome ParsedTableInfoNew::Deserialize(const Value &value)
     {
         if (!value["TdrVersion"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ParsedTableInfoNew.TdrVersion` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParsedTableInfoNew.TdrVersion` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_tdrVersion = value["TdrVersion"].GetInt64();
         m_tdrVersionHasBeenSet = true;
@@ -192,7 +191,7 @@ CoreInternalOutcome ParsedTableInfoNew::Deserialize(const Value &value)
     {
         if (!value["Error"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `ParsedTableInfoNew.Error` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParsedTableInfoNew.Error` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_error.Deserialize(value["Error"]);
@@ -209,7 +208,7 @@ CoreInternalOutcome ParsedTableInfoNew::Deserialize(const Value &value)
     {
         if (!value["ListElementNum"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ParsedTableInfoNew.ListElementNum` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParsedTableInfoNew.ListElementNum` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_listElementNum = value["ListElementNum"].GetInt64();
         m_listElementNumHasBeenSet = true;
@@ -219,7 +218,7 @@ CoreInternalOutcome ParsedTableInfoNew::Deserialize(const Value &value)
     {
         if (!value["SortFieldNum"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ParsedTableInfoNew.SortFieldNum` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParsedTableInfoNew.SortFieldNum` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_sortFieldNum = value["SortFieldNum"].GetInt64();
         m_sortFieldNumHasBeenSet = true;
@@ -229,7 +228,7 @@ CoreInternalOutcome ParsedTableInfoNew::Deserialize(const Value &value)
     {
         if (!value["SortRule"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ParsedTableInfoNew.SortRule` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParsedTableInfoNew.SortRule` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_sortRule = value["SortRule"].GetInt64();
         m_sortRuleHasBeenSet = true;
@@ -239,84 +238,84 @@ CoreInternalOutcome ParsedTableInfoNew::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ParsedTableInfoNew::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ParsedTableInfoNew::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_tableIdlTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TableIdlType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_tableIdlType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tableIdlType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tableInstanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TableInstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_tableInstanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tableInstanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tableNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TableName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_tableName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tableName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tableTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TableType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_tableType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tableType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_keyFieldsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "KeyFields";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_keyFields.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_keyFields.c_str(), allocator).Move(), allocator);
     }
 
     if (m_oldKeyFieldsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OldKeyFields";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_oldKeyFields.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_oldKeyFields.c_str(), allocator).Move(), allocator);
     }
 
     if (m_valueFieldsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ValueFields";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_valueFields.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_valueFields.c_str(), allocator).Move(), allocator);
     }
 
     if (m_oldValueFieldsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OldValueFields";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_oldValueFields.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_oldValueFields.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tableGroupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TableGroupId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_tableGroupId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tableGroupId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sumKeyFieldSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SumKeyFieldSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_sumKeyFieldSize, allocator);
@@ -324,7 +323,7 @@ void ParsedTableInfoNew::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_sumValueFieldSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SumValueFieldSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_sumValueFieldSize, allocator);
@@ -332,23 +331,23 @@ void ParsedTableInfoNew::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_indexKeySetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IndexKeySet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_indexKeySet.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_indexKeySet.c_str(), allocator).Move(), allocator);
     }
 
     if (m_shardingKeySetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ShardingKeySet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_shardingKeySet.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_shardingKeySet.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tdrVersionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TdrVersion";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_tdrVersion, allocator);
@@ -356,16 +355,16 @@ void ParsedTableInfoNew::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_errorHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Error";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_error.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_listElementNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ListElementNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_listElementNum, allocator);
@@ -373,7 +372,7 @@ void ParsedTableInfoNew::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_sortFieldNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SortFieldNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_sortFieldNum, allocator);
@@ -381,7 +380,7 @@ void ParsedTableInfoNew::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_sortRuleHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SortRule";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_sortRule, allocator);

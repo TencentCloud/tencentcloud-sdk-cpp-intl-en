@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Array of order IDs
-                     * @return DealIds Array of order IDs
+                     * 获取Array of order IDs. It is the same as the response parameter `DealId` in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+                     * @return DealIds Array of order IDs. It is the same as the response parameter `DealId` in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
                      */
                     std::vector<std::string> GetDealIds() const;
 
                     /**
-                     * 设置Array of order IDs
-                     * @param DealIds Array of order IDs
+                     * 设置Array of order IDs. It is the same as the response parameter `DealId` in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+                     * @param DealIds Array of order IDs. It is the same as the response parameter `DealId` in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
                      */
                     void SetDealIds(const std::vector<std::string>& _dealIds);
 
@@ -63,7 +63,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Array of order IDs
+                     * Array of order IDs. It is the same as the response parameter `DealId` in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
                      */
                     std::vector<std::string> m_dealIds;
                     bool m_dealIdsHasBeenSet;

@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeBackupOverviewResponse::DescribeBackupOverviewResponse() :
@@ -34,20 +33,20 @@ DescribeBackupOverviewResponse::DescribeBackupOverviewResponse() :
 
 CoreInternalOutcome DescribeBackupOverviewResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -58,11 +57,11 @@ CoreInternalOutcome DescribeBackupOverviewResponse::Deserialize(const string &pa
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -70,7 +69,7 @@ CoreInternalOutcome DescribeBackupOverviewResponse::Deserialize(const string &pa
     {
         if (!rsp["BackupCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `BackupCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_backupCount = rsp["BackupCount"].GetInt64();
         m_backupCountHasBeenSet = true;
@@ -80,7 +79,7 @@ CoreInternalOutcome DescribeBackupOverviewResponse::Deserialize(const string &pa
     {
         if (!rsp["BackupVolume"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `BackupVolume` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupVolume` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_backupVolume = rsp["BackupVolume"].GetInt64();
         m_backupVolumeHasBeenSet = true;
@@ -90,7 +89,7 @@ CoreInternalOutcome DescribeBackupOverviewResponse::Deserialize(const string &pa
     {
         if (!rsp["BillingVolume"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `BillingVolume` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BillingVolume` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_billingVolume = rsp["BillingVolume"].GetInt64();
         m_billingVolumeHasBeenSet = true;
@@ -100,7 +99,7 @@ CoreInternalOutcome DescribeBackupOverviewResponse::Deserialize(const string &pa
     {
         if (!rsp["FreeVolume"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `FreeVolume` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FreeVolume` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_freeVolume = rsp["FreeVolume"].GetInt64();
         m_freeVolumeHasBeenSet = true;
@@ -108,6 +107,55 @@ CoreInternalOutcome DescribeBackupOverviewResponse::Deserialize(const string &pa
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeBackupOverviewResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_backupCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BackupCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_backupCount, allocator);
+    }
+
+    if (m_backupVolumeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BackupVolume";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_backupVolume, allocator);
+    }
+
+    if (m_billingVolumeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BillingVolume";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_billingVolume, allocator);
+    }
+
+    if (m_freeVolumeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FreeVolume";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_freeVolume, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/dcdb/v20180411/model/ShardInfo.h>
+#include <tencentcloud/dcdb/v20180411/model/ResourceTag.h>
 
 
 namespace TencentCloud
@@ -84,14 +85,14 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取AppID
-                     * @return AppId AppID
+                     * 获取Application ID
+                     * @return AppId Application ID
                      */
                     int64_t GetAppId() const;
 
                     /**
-                     * 设置AppID
-                     * @param AppId AppID
+                     * 设置Application ID
+                     * @param AppId Application ID
                      */
                     void SetAppId(const int64_t& _appId);
 
@@ -210,14 +211,14 @@ namespace TencentCloud
                     bool StatusDescHasBeenSet() const;
 
                     /**
-                     * 获取Status
-                     * @return Status Status
+                     * 获取Instance status. Valid values: `0` (creating), `1` (running task), `2` (running), `3` (uninitialized), `-1` (isolated), `4` (initializing), `5` (eliminating), `6` (restarting), `7` (migrating data)
+                     * @return Status Instance status. Valid values: `0` (creating), `1` (running task), `2` (running), `3` (uninitialized), `-1` (isolated), `4` (initializing), `5` (eliminating), `6` (restarting), `7` (migrating data)
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Status
-                     * @param Status Status
+                     * 设置Instance status. Valid values: `0` (creating), `1` (running task), `2` (running), `3` (uninitialized), `-1` (isolated), `4` (initializing), `5` (eliminating), `6` (restarting), `7` (migrating data)
+                     * @param Status Instance status. Valid values: `0` (creating), `1` (running task), `2` (running), `3` (uninitialized), `-1` (isolated), `4` (initializing), `5` (eliminating), `6` (restarting), `7` (migrating data)
                      */
                     void SetStatus(const int64_t& _status);
 
@@ -390,14 +391,14 @@ namespace TencentCloud
                     bool IsolatedTimestampHasBeenSet() const;
 
                     /**
-                     * 获取UIN
-                     * @return Uin UIN
+                     * 获取Account ID
+                     * @return Uin Account ID
                      */
                     std::string GetUin() const;
 
                     /**
-                     * 设置UIN
-                     * @param Uin UIN
+                     * 设置Account ID
+                     * @param Uin Account ID
                      */
                     void SetUin(const std::string& _uin);
 
@@ -753,6 +754,226 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool CpuHasBeenSet() const;
 
+                    /**
+                     * 获取Indicates whether the instance uses IPv6
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return Ipv6Flag Indicates whether the instance uses IPv6
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetIpv6Flag() const;
+
+                    /**
+                     * 设置Indicates whether the instance uses IPv6
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param Ipv6Flag Indicates whether the instance uses IPv6
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetIpv6Flag(const uint64_t& _ipv6Flag);
+
+                    /**
+                     * 判断参数 Ipv6Flag 是否已赋值
+                     * @return Ipv6Flag 是否已赋值
+                     */
+                    bool Ipv6FlagHasBeenSet() const;
+
+                    /**
+                     * 获取Private network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return Vipv6 Private network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetVipv6() const;
+
+                    /**
+                     * 设置Private network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param Vipv6 Private network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetVipv6(const std::string& _vipv6);
+
+                    /**
+                     * 判断参数 Vipv6 是否已赋值
+                     * @return Vipv6 是否已赋值
+                     */
+                    bool Vipv6HasBeenSet() const;
+
+                    /**
+                     * 获取Public network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return WanVipv6 Public network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetWanVipv6() const;
+
+                    /**
+                     * 设置Public network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param WanVipv6 Public network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetWanVipv6(const std::string& _wanVipv6);
+
+                    /**
+                     * 判断参数 WanVipv6 是否已赋值
+                     * @return WanVipv6 是否已赋值
+                     */
+                    bool WanVipv6HasBeenSet() const;
+
+                    /**
+                     * 获取Public network IPv6 port
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return WanPortIpv6 Public network IPv6 port
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetWanPortIpv6() const;
+
+                    /**
+                     * 设置Public network IPv6 port
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param WanPortIpv6 Public network IPv6 port
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetWanPortIpv6(const uint64_t& _wanPortIpv6);
+
+                    /**
+                     * 判断参数 WanPortIpv6 是否已赋值
+                     * @return WanPortIpv6 是否已赋值
+                     */
+                    bool WanPortIpv6HasBeenSet() const;
+
+                    /**
+                     * 获取Public network IPv6 status
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return WanStatusIpv6 Public network IPv6 status
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetWanStatusIpv6() const;
+
+                    /**
+                     * 设置Public network IPv6 status
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param WanStatusIpv6 Public network IPv6 status
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetWanStatusIpv6(const uint64_t& _wanStatusIpv6);
+
+                    /**
+                     * 判断参数 WanStatusIpv6 是否已赋值
+                     * @return WanStatusIpv6 是否已赋值
+                     */
+                    bool WanStatusIpv6HasBeenSet() const;
+
+                    /**
+                     * 获取DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return DcnFlag DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetDcnFlag() const;
+
+                    /**
+                     * 设置DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param DcnFlag DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDcnFlag(const int64_t& _dcnFlag);
+
+                    /**
+                     * 判断参数 DcnFlag 是否已赋值
+                     * @return DcnFlag 是否已赋值
+                     */
+                    bool DcnFlagHasBeenSet() const;
+
+                    /**
+                     * 获取DCN status. Valid values: 0 (null), 1 (creating), 2 (syncing), 3 (disconnected)
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return DcnStatus DCN status. Valid values: 0 (null), 1 (creating), 2 (syncing), 3 (disconnected)
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetDcnStatus() const;
+
+                    /**
+                     * 设置DCN status. Valid values: 0 (null), 1 (creating), 2 (syncing), 3 (disconnected)
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param DcnStatus DCN status. Valid values: 0 (null), 1 (creating), 2 (syncing), 3 (disconnected)
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDcnStatus(const int64_t& _dcnStatus);
+
+                    /**
+                     * 判断参数 DcnStatus 是否已赋值
+                     * @return DcnStatus 是否已赋值
+                     */
+                    bool DcnStatusHasBeenSet() const;
+
+                    /**
+                     * 获取The number of DCN disaster recovery instances
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return DcnDstNum The number of DCN disaster recovery instances
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetDcnDstNum() const;
+
+                    /**
+                     * 设置The number of DCN disaster recovery instances
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param DcnDstNum The number of DCN disaster recovery instances
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDcnDstNum(const int64_t& _dcnDstNum);
+
+                    /**
+                     * 判断参数 DcnDstNum 是否已赋值
+                     * @return DcnDstNum 是否已赋值
+                     */
+                    bool DcnDstNumHasBeenSet() const;
+
+                    /**
+                     * 获取Instance type. Valid values: `1` (dedicated primary instance), `2` (standard primary instance), `3` (standard disaster recovery instance), `4` (dedicated disaster recovery instance)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return InstanceType Instance type. Valid values: `1` (dedicated primary instance), `2` (standard primary instance), `3` (standard disaster recovery instance), `4` (dedicated disaster recovery instance)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetInstanceType() const;
+
+                    /**
+                     * 设置Instance type. Valid values: `1` (dedicated primary instance), `2` (standard primary instance), `3` (standard disaster recovery instance), `4` (dedicated disaster recovery instance)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param InstanceType Instance type. Valid values: `1` (dedicated primary instance), `2` (standard primary instance), `3` (standard disaster recovery instance), `4` (dedicated disaster recovery instance)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetInstanceType(const int64_t& _instanceType);
+
+                    /**
+                     * 判断参数 InstanceType 是否已赋值
+                     * @return InstanceType 是否已赋值
+                     */
+                    bool InstanceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Instance tag information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return ResourceTags Instance tag information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ResourceTag> GetResourceTags() const;
+
+                    /**
+                     * 设置Instance tag information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param ResourceTags Instance tag information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetResourceTags(const std::vector<ResourceTag>& _resourceTags);
+
+                    /**
+                     * 判断参数 ResourceTags 是否已赋值
+                     * @return ResourceTags 是否已赋值
+                     */
+                    bool ResourceTagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -768,7 +989,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * AppID
+                     * Application ID
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
@@ -810,7 +1031,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_statusDescHasBeenSet;
 
                     /**
-                     * Status
+                     * Instance status. Valid values: `0` (creating), `1` (running task), `2` (running), `3` (uninitialized), `-1` (isolated), `4` (initializing), `5` (eliminating), `6` (restarting), `7` (migrating data)
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
@@ -870,7 +1091,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_isolatedTimestampHasBeenSet;
 
                     /**
-                     * UIN
+                     * Account ID
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
@@ -989,6 +1210,76 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_cpu;
                     bool m_cpuHasBeenSet;
+
+                    /**
+                     * Indicates whether the instance uses IPv6
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_ipv6Flag;
+                    bool m_ipv6FlagHasBeenSet;
+
+                    /**
+                     * Private network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_vipv6;
+                    bool m_vipv6HasBeenSet;
+
+                    /**
+                     * Public network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_wanVipv6;
+                    bool m_wanVipv6HasBeenSet;
+
+                    /**
+                     * Public network IPv6 port
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_wanPortIpv6;
+                    bool m_wanPortIpv6HasBeenSet;
+
+                    /**
+                     * Public network IPv6 status
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_wanStatusIpv6;
+                    bool m_wanStatusIpv6HasBeenSet;
+
+                    /**
+                     * DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_dcnFlag;
+                    bool m_dcnFlagHasBeenSet;
+
+                    /**
+                     * DCN status. Valid values: 0 (null), 1 (creating), 2 (syncing), 3 (disconnected)
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_dcnStatus;
+                    bool m_dcnStatusHasBeenSet;
+
+                    /**
+                     * The number of DCN disaster recovery instances
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_dcnDstNum;
+                    bool m_dcnDstNumHasBeenSet;
+
+                    /**
+                     * Instance type. Valid values: `1` (dedicated primary instance), `2` (standard primary instance), `3` (standard disaster recovery instance), `4` (dedicated disaster recovery instance)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_instanceType;
+                    bool m_instanceTypeHasBeenSet;
+
+                    /**
+                     * Instance tag information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ResourceTag> m_resourceTags;
+                    bool m_resourceTagsHasBeenSet;
 
                 };
             }

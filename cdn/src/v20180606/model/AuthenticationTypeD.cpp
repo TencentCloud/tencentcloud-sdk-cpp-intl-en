@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 AuthenticationTypeD::AuthenticationTypeD() :
@@ -28,11 +27,12 @@ AuthenticationTypeD::AuthenticationTypeD() :
     m_filterTypeHasBeenSet(false),
     m_signParamHasBeenSet(false),
     m_timeParamHasBeenSet(false),
-    m_timeFormatHasBeenSet(false)
+    m_timeFormatHasBeenSet(false),
+    m_backupSecretKeyHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome AuthenticationTypeD::Deserialize(const Value &value)
+CoreInternalOutcome AuthenticationTypeD::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +41,7 @@ CoreInternalOutcome AuthenticationTypeD::Deserialize(const Value &value)
     {
         if (!value["SecretKey"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AuthenticationTypeD.SecretKey` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AuthenticationTypeD.SecretKey` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_secretKey = string(value["SecretKey"].GetString());
         m_secretKeyHasBeenSet = true;
@@ -51,7 +51,7 @@ CoreInternalOutcome AuthenticationTypeD::Deserialize(const Value &value)
     {
         if (!value["ExpireTime"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `AuthenticationTypeD.ExpireTime` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AuthenticationTypeD.ExpireTime` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_expireTime = value["ExpireTime"].GetInt64();
         m_expireTimeHasBeenSet = true;
@@ -60,10 +60,10 @@ CoreInternalOutcome AuthenticationTypeD::Deserialize(const Value &value)
     if (value.HasMember("FileExtensions") && !value["FileExtensions"].IsNull())
     {
         if (!value["FileExtensions"].IsArray())
-            return CoreInternalOutcome(Error("response `AuthenticationTypeD.FileExtensions` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `AuthenticationTypeD.FileExtensions` is not array type"));
 
-        const Value &tmpValue = value["FileExtensions"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["FileExtensions"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_fileExtensions.push_back((*itr).GetString());
         }
@@ -74,7 +74,7 @@ CoreInternalOutcome AuthenticationTypeD::Deserialize(const Value &value)
     {
         if (!value["FilterType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AuthenticationTypeD.FilterType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AuthenticationTypeD.FilterType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_filterType = string(value["FilterType"].GetString());
         m_filterTypeHasBeenSet = true;
@@ -84,7 +84,7 @@ CoreInternalOutcome AuthenticationTypeD::Deserialize(const Value &value)
     {
         if (!value["SignParam"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AuthenticationTypeD.SignParam` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AuthenticationTypeD.SignParam` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_signParam = string(value["SignParam"].GetString());
         m_signParamHasBeenSet = true;
@@ -94,7 +94,7 @@ CoreInternalOutcome AuthenticationTypeD::Deserialize(const Value &value)
     {
         if (!value["TimeParam"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AuthenticationTypeD.TimeParam` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AuthenticationTypeD.TimeParam` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_timeParam = string(value["TimeParam"].GetString());
         m_timeParamHasBeenSet = true;
@@ -104,30 +104,40 @@ CoreInternalOutcome AuthenticationTypeD::Deserialize(const Value &value)
     {
         if (!value["TimeFormat"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AuthenticationTypeD.TimeFormat` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AuthenticationTypeD.TimeFormat` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_timeFormat = string(value["TimeFormat"].GetString());
         m_timeFormatHasBeenSet = true;
+    }
+
+    if (value.HasMember("BackupSecretKey") && !value["BackupSecretKey"].IsNull())
+    {
+        if (!value["BackupSecretKey"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AuthenticationTypeD.BackupSecretKey` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_backupSecretKey = string(value["BackupSecretKey"].GetString());
+        m_backupSecretKeyHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void AuthenticationTypeD::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AuthenticationTypeD::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_secretKeyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SecretKey";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_secretKey.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_secretKey.c_str(), allocator).Move(), allocator);
     }
 
     if (m_expireTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ExpireTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_expireTime, allocator);
@@ -135,47 +145,55 @@ void AuthenticationTypeD::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_fileExtensionsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileExtensions";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_fileExtensions.begin(); itr != m_fileExtensions.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_filterTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FilterType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_filterType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_filterType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_signParamHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SignParam";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_signParam.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_signParam.c_str(), allocator).Move(), allocator);
     }
 
     if (m_timeParamHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TimeParam";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_timeParam.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_timeParam.c_str(), allocator).Move(), allocator);
     }
 
     if (m_timeFormatHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TimeFormat";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_timeFormat.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_timeFormat.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_backupSecretKeyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BackupSecretKey";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_backupSecretKey.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -291,5 +309,21 @@ void AuthenticationTypeD::SetTimeFormat(const string& _timeFormat)
 bool AuthenticationTypeD::TimeFormatHasBeenSet() const
 {
     return m_timeFormatHasBeenSet;
+}
+
+string AuthenticationTypeD::GetBackupSecretKey() const
+{
+    return m_backupSecretKey;
+}
+
+void AuthenticationTypeD::SetBackupSecretKey(const string& _backupSecretKey)
+{
+    m_backupSecretKey = _backupSecretKey;
+    m_backupSecretKeyHasBeenSet = true;
+}
+
+bool AuthenticationTypeD::BackupSecretKeyHasBeenSet() const
+{
+    return m_backupSecretKeyHasBeenSet;
 }
 

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Batch::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 AgentRunningMode::AgentRunningMode() :
@@ -28,7 +27,7 @@ AgentRunningMode::AgentRunningMode() :
 {
 }
 
-CoreInternalOutcome AgentRunningMode::Deserialize(const Value &value)
+CoreInternalOutcome AgentRunningMode::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome AgentRunningMode::Deserialize(const Value &value)
     {
         if (!value["Scene"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AgentRunningMode.Scene` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AgentRunningMode.Scene` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_scene = string(value["Scene"].GetString());
         m_sceneHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome AgentRunningMode::Deserialize(const Value &value)
     {
         if (!value["User"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AgentRunningMode.User` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AgentRunningMode.User` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_user = string(value["User"].GetString());
         m_userHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome AgentRunningMode::Deserialize(const Value &value)
     {
         if (!value["Session"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AgentRunningMode.Session` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AgentRunningMode.Session` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_session = string(value["Session"].GetString());
         m_sessionHasBeenSet = true;
@@ -67,31 +66,31 @@ CoreInternalOutcome AgentRunningMode::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void AgentRunningMode::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AgentRunningMode::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_sceneHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Scene";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_scene.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_scene.c_str(), allocator).Move(), allocator);
     }
 
     if (m_userHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "User";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_user.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_user.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sessionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Session";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_session.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_session.c_str(), allocator).Move(), allocator);
     }
 
 }

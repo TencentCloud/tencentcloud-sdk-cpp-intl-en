@@ -44,24 +44,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
-                     * @return Handler Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
-                     */
-                    std::string GetHandler() const;
-
-                    /**
-                     * 设置Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
-                     * @param Handler Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
-                     */
-                    void SetHandler(const std::string& _handler);
-
-                    /**
-                     * 判断参数 Handler 是否已赋值
-                     * @return Handler 是否已赋值
-                     */
-                    bool HandlerHasBeenSet() const;
-
-                    /**
                      * 获取Name of the function to be modified
                      * @return FunctionName Name of the function to be modified
                      */
@@ -78,6 +60,24 @@ namespace TencentCloud
                      * @return FunctionName 是否已赋值
                      */
                     bool FunctionNameHasBeenSet() const;
+
+                    /**
+                     * 获取Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
+                     * @return Handler Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
+                     */
+                    std::string GetHandler() const;
+
+                    /**
+                     * 设置Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
+                     * @param Handler Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
+                     */
+                    void SetHandler(const std::string& _handler);
+
+                    /**
+                     * 判断参数 Handler 是否已赋值
+                     * @return Handler 是否已赋值
+                     */
+                    bool HandlerHasBeenSet() const;
 
                     /**
                      * 获取COS bucket name
@@ -170,6 +170,24 @@ namespace TencentCloud
                     bool CosBucketRegionHasBeenSet() const;
 
                     /**
+                     * 获取Whether to install dependencies automatically
+                     * @return InstallDependency Whether to install dependencies automatically
+                     */
+                    std::string GetInstallDependency() const;
+
+                    /**
+                     * 设置Whether to install dependencies automatically
+                     * @param InstallDependency Whether to install dependencies automatically
+                     */
+                    void SetInstallDependency(const std::string& _installDependency);
+
+                    /**
+                     * 判断参数 InstallDependency 是否已赋值
+                     * @return InstallDependency 是否已赋值
+                     */
+                    bool InstallDependencyHasBeenSet() const;
+
+                    /**
                      * 获取Function environment
                      * @return EnvId Function environment
                      */
@@ -224,14 +242,14 @@ namespace TencentCloud
                     bool CodeHasBeenSet() const;
 
                     /**
-                     * 获取Source mode of code. Valid values: `ZipFile`, `Cos`, `Inline`, `TempCos` and `Git`. This field must be specified if the source is Git
-                     * @return CodeSource Source mode of code. Valid values: `ZipFile`, `Cos`, `Inline`, `TempCos` and `Git`. This field must be specified if the source is Git
+                     * 获取Code source. Valid values: ZipFile, Cos, Inline
+                     * @return CodeSource Code source. Valid values: ZipFile, Cos, Inline
                      */
                     std::string GetCodeSource() const;
 
                     /**
-                     * 设置Source mode of code. Valid values: `ZipFile`, `Cos`, `Inline`, `TempCos` and `Git`. This field must be specified if the source is Git
-                     * @param CodeSource Source mode of code. Valid values: `ZipFile`, `Cos`, `Inline`, `TempCos` and `Git`. This field must be specified if the source is Git
+                     * 设置Code source. Valid values: ZipFile, Cos, Inline
+                     * @param CodeSource Code source. Valid values: ZipFile, Cos, Inline
                      */
                     void SetCodeSource(const std::string& _codeSource);
 
@@ -244,16 +262,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
-                     */
-                    std::string m_handler;
-                    bool m_handlerHasBeenSet;
-
-                    /**
                      * Name of the function to be modified
                      */
                     std::string m_functionName;
                     bool m_functionNameHasBeenSet;
+
+                    /**
+                     * Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
+                     */
+                    std::string m_handler;
+                    bool m_handlerHasBeenSet;
 
                     /**
                      * COS bucket name
@@ -286,6 +304,12 @@ namespace TencentCloud
                     bool m_cosBucketRegionHasBeenSet;
 
                     /**
+                     * Whether to install dependencies automatically
+                     */
+                    std::string m_installDependency;
+                    bool m_installDependencyHasBeenSet;
+
+                    /**
                      * Function environment
                      */
                     std::string m_envId;
@@ -304,7 +328,7 @@ namespace TencentCloud
                     bool m_codeHasBeenSet;
 
                     /**
-                     * Source mode of code. Valid values: `ZipFile`, `Cos`, `Inline`, `TempCos` and `Git`. This field must be specified if the source is Git
+                     * Code source. Valid values: ZipFile, Cos, Inline
                      */
                     std::string m_codeSource;
                     bool m_codeSourceHasBeenSet;

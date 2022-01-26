@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 UserAgentFilter::UserAgentFilter() :
@@ -27,7 +26,7 @@ UserAgentFilter::UserAgentFilter() :
 {
 }
 
-CoreInternalOutcome UserAgentFilter::Deserialize(const Value &value)
+CoreInternalOutcome UserAgentFilter::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome UserAgentFilter::Deserialize(const Value &value)
     {
         if (!value["Switch"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UserAgentFilter.Switch` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UserAgentFilter.Switch` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_switch = string(value["Switch"].GetString());
         m_switchHasBeenSet = true;
@@ -45,10 +44,10 @@ CoreInternalOutcome UserAgentFilter::Deserialize(const Value &value)
     if (value.HasMember("FilterRules") && !value["FilterRules"].IsNull())
     {
         if (!value["FilterRules"].IsArray())
-            return CoreInternalOutcome(Error("response `UserAgentFilter.FilterRules` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `UserAgentFilter.FilterRules` is not array type"));
 
-        const Value &tmpValue = value["FilterRules"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["FilterRules"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             UserAgentFilterRule item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -66,28 +65,28 @@ CoreInternalOutcome UserAgentFilter::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void UserAgentFilter::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void UserAgentFilter::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_switchHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Switch";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_switch.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_switch.c_str(), allocator).Move(), allocator);
     }
 
     if (m_filterRulesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FilterRules";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_filterRules.begin(); itr != m_filterRules.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }

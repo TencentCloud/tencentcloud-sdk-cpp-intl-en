@@ -33,14 +33,8 @@
 #include <tencentcloud/dts/v20180330/model/CreateMigrateJobResponse.h>
 #include <tencentcloud/dts/v20180330/model/CreateSubscribeRequest.h>
 #include <tencentcloud/dts/v20180330/model/CreateSubscribeResponse.h>
-#include <tencentcloud/dts/v20180330/model/CreateSyncCheckJobRequest.h>
-#include <tencentcloud/dts/v20180330/model/CreateSyncCheckJobResponse.h>
-#include <tencentcloud/dts/v20180330/model/CreateSyncJobRequest.h>
-#include <tencentcloud/dts/v20180330/model/CreateSyncJobResponse.h>
 #include <tencentcloud/dts/v20180330/model/DeleteMigrateJobRequest.h>
 #include <tencentcloud/dts/v20180330/model/DeleteMigrateJobResponse.h>
-#include <tencentcloud/dts/v20180330/model/DeleteSyncJobRequest.h>
-#include <tencentcloud/dts/v20180330/model/DeleteSyncJobResponse.h>
 #include <tencentcloud/dts/v20180330/model/DescribeAsyncRequestInfoRequest.h>
 #include <tencentcloud/dts/v20180330/model/DescribeAsyncRequestInfoResponse.h>
 #include <tencentcloud/dts/v20180330/model/DescribeMigrateCheckJobRequest.h>
@@ -53,10 +47,6 @@
 #include <tencentcloud/dts/v20180330/model/DescribeSubscribeConfResponse.h>
 #include <tencentcloud/dts/v20180330/model/DescribeSubscribesRequest.h>
 #include <tencentcloud/dts/v20180330/model/DescribeSubscribesResponse.h>
-#include <tencentcloud/dts/v20180330/model/DescribeSyncCheckJobRequest.h>
-#include <tencentcloud/dts/v20180330/model/DescribeSyncCheckJobResponse.h>
-#include <tencentcloud/dts/v20180330/model/DescribeSyncJobsRequest.h>
-#include <tencentcloud/dts/v20180330/model/DescribeSyncJobsResponse.h>
 #include <tencentcloud/dts/v20180330/model/IsolateSubscribeRequest.h>
 #include <tencentcloud/dts/v20180330/model/IsolateSubscribeResponse.h>
 #include <tencentcloud/dts/v20180330/model/ModifyMigrateJobRequest.h>
@@ -69,20 +59,14 @@
 #include <tencentcloud/dts/v20180330/model/ModifySubscribeObjectsResponse.h>
 #include <tencentcloud/dts/v20180330/model/ModifySubscribeVipVportRequest.h>
 #include <tencentcloud/dts/v20180330/model/ModifySubscribeVipVportResponse.h>
-#include <tencentcloud/dts/v20180330/model/ModifySyncJobRequest.h>
-#include <tencentcloud/dts/v20180330/model/ModifySyncJobResponse.h>
 #include <tencentcloud/dts/v20180330/model/OfflineIsolatedSubscribeRequest.h>
 #include <tencentcloud/dts/v20180330/model/OfflineIsolatedSubscribeResponse.h>
 #include <tencentcloud/dts/v20180330/model/ResetSubscribeRequest.h>
 #include <tencentcloud/dts/v20180330/model/ResetSubscribeResponse.h>
 #include <tencentcloud/dts/v20180330/model/StartMigrateJobRequest.h>
 #include <tencentcloud/dts/v20180330/model/StartMigrateJobResponse.h>
-#include <tencentcloud/dts/v20180330/model/StartSyncJobRequest.h>
-#include <tencentcloud/dts/v20180330/model/StartSyncJobResponse.h>
 #include <tencentcloud/dts/v20180330/model/StopMigrateJobRequest.h>
 #include <tencentcloud/dts/v20180330/model/StopMigrateJobResponse.h>
-#include <tencentcloud/dts/v20180330/model/SwitchDrToMasterRequest.h>
-#include <tencentcloud/dts/v20180330/model/SwitchDrToMasterResponse.h>
 
 
 namespace TencentCloud
@@ -97,96 +81,72 @@ namespace TencentCloud
                 DtsClient(const Credential &credential, const std::string &region);
                 DtsClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::ActivateSubscribeResponse> ActivateSubscribeOutcome;
+                typedef Outcome<Core::Error, Model::ActivateSubscribeResponse> ActivateSubscribeOutcome;
                 typedef std::future<ActivateSubscribeOutcome> ActivateSubscribeOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::ActivateSubscribeRequest&, ActivateSubscribeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ActivateSubscribeAsyncHandler;
-                typedef Outcome<Error, Model::CompleteMigrateJobResponse> CompleteMigrateJobOutcome;
+                typedef Outcome<Core::Error, Model::CompleteMigrateJobResponse> CompleteMigrateJobOutcome;
                 typedef std::future<CompleteMigrateJobOutcome> CompleteMigrateJobOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::CompleteMigrateJobRequest&, CompleteMigrateJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CompleteMigrateJobAsyncHandler;
-                typedef Outcome<Error, Model::CreateMigrateCheckJobResponse> CreateMigrateCheckJobOutcome;
+                typedef Outcome<Core::Error, Model::CreateMigrateCheckJobResponse> CreateMigrateCheckJobOutcome;
                 typedef std::future<CreateMigrateCheckJobOutcome> CreateMigrateCheckJobOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::CreateMigrateCheckJobRequest&, CreateMigrateCheckJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMigrateCheckJobAsyncHandler;
-                typedef Outcome<Error, Model::CreateMigrateJobResponse> CreateMigrateJobOutcome;
+                typedef Outcome<Core::Error, Model::CreateMigrateJobResponse> CreateMigrateJobOutcome;
                 typedef std::future<CreateMigrateJobOutcome> CreateMigrateJobOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::CreateMigrateJobRequest&, CreateMigrateJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMigrateJobAsyncHandler;
-                typedef Outcome<Error, Model::CreateSubscribeResponse> CreateSubscribeOutcome;
+                typedef Outcome<Core::Error, Model::CreateSubscribeResponse> CreateSubscribeOutcome;
                 typedef std::future<CreateSubscribeOutcome> CreateSubscribeOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::CreateSubscribeRequest&, CreateSubscribeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSubscribeAsyncHandler;
-                typedef Outcome<Error, Model::CreateSyncCheckJobResponse> CreateSyncCheckJobOutcome;
-                typedef std::future<CreateSyncCheckJobOutcome> CreateSyncCheckJobOutcomeCallable;
-                typedef std::function<void(const DtsClient*, const Model::CreateSyncCheckJobRequest&, CreateSyncCheckJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSyncCheckJobAsyncHandler;
-                typedef Outcome<Error, Model::CreateSyncJobResponse> CreateSyncJobOutcome;
-                typedef std::future<CreateSyncJobOutcome> CreateSyncJobOutcomeCallable;
-                typedef std::function<void(const DtsClient*, const Model::CreateSyncJobRequest&, CreateSyncJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSyncJobAsyncHandler;
-                typedef Outcome<Error, Model::DeleteMigrateJobResponse> DeleteMigrateJobOutcome;
+                typedef Outcome<Core::Error, Model::DeleteMigrateJobResponse> DeleteMigrateJobOutcome;
                 typedef std::future<DeleteMigrateJobOutcome> DeleteMigrateJobOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::DeleteMigrateJobRequest&, DeleteMigrateJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteMigrateJobAsyncHandler;
-                typedef Outcome<Error, Model::DeleteSyncJobResponse> DeleteSyncJobOutcome;
-                typedef std::future<DeleteSyncJobOutcome> DeleteSyncJobOutcomeCallable;
-                typedef std::function<void(const DtsClient*, const Model::DeleteSyncJobRequest&, DeleteSyncJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteSyncJobAsyncHandler;
-                typedef Outcome<Error, Model::DescribeAsyncRequestInfoResponse> DescribeAsyncRequestInfoOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAsyncRequestInfoResponse> DescribeAsyncRequestInfoOutcome;
                 typedef std::future<DescribeAsyncRequestInfoOutcome> DescribeAsyncRequestInfoOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::DescribeAsyncRequestInfoRequest&, DescribeAsyncRequestInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAsyncRequestInfoAsyncHandler;
-                typedef Outcome<Error, Model::DescribeMigrateCheckJobResponse> DescribeMigrateCheckJobOutcome;
+                typedef Outcome<Core::Error, Model::DescribeMigrateCheckJobResponse> DescribeMigrateCheckJobOutcome;
                 typedef std::future<DescribeMigrateCheckJobOutcome> DescribeMigrateCheckJobOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::DescribeMigrateCheckJobRequest&, DescribeMigrateCheckJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMigrateCheckJobAsyncHandler;
-                typedef Outcome<Error, Model::DescribeMigrateJobsResponse> DescribeMigrateJobsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeMigrateJobsResponse> DescribeMigrateJobsOutcome;
                 typedef std::future<DescribeMigrateJobsOutcome> DescribeMigrateJobsOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::DescribeMigrateJobsRequest&, DescribeMigrateJobsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMigrateJobsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeRegionConfResponse> DescribeRegionConfOutcome;
+                typedef Outcome<Core::Error, Model::DescribeRegionConfResponse> DescribeRegionConfOutcome;
                 typedef std::future<DescribeRegionConfOutcome> DescribeRegionConfOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::DescribeRegionConfRequest&, DescribeRegionConfOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRegionConfAsyncHandler;
-                typedef Outcome<Error, Model::DescribeSubscribeConfResponse> DescribeSubscribeConfOutcome;
+                typedef Outcome<Core::Error, Model::DescribeSubscribeConfResponse> DescribeSubscribeConfOutcome;
                 typedef std::future<DescribeSubscribeConfOutcome> DescribeSubscribeConfOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::DescribeSubscribeConfRequest&, DescribeSubscribeConfOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSubscribeConfAsyncHandler;
-                typedef Outcome<Error, Model::DescribeSubscribesResponse> DescribeSubscribesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeSubscribesResponse> DescribeSubscribesOutcome;
                 typedef std::future<DescribeSubscribesOutcome> DescribeSubscribesOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::DescribeSubscribesRequest&, DescribeSubscribesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSubscribesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeSyncCheckJobResponse> DescribeSyncCheckJobOutcome;
-                typedef std::future<DescribeSyncCheckJobOutcome> DescribeSyncCheckJobOutcomeCallable;
-                typedef std::function<void(const DtsClient*, const Model::DescribeSyncCheckJobRequest&, DescribeSyncCheckJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSyncCheckJobAsyncHandler;
-                typedef Outcome<Error, Model::DescribeSyncJobsResponse> DescribeSyncJobsOutcome;
-                typedef std::future<DescribeSyncJobsOutcome> DescribeSyncJobsOutcomeCallable;
-                typedef std::function<void(const DtsClient*, const Model::DescribeSyncJobsRequest&, DescribeSyncJobsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSyncJobsAsyncHandler;
-                typedef Outcome<Error, Model::IsolateSubscribeResponse> IsolateSubscribeOutcome;
+                typedef Outcome<Core::Error, Model::IsolateSubscribeResponse> IsolateSubscribeOutcome;
                 typedef std::future<IsolateSubscribeOutcome> IsolateSubscribeOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::IsolateSubscribeRequest&, IsolateSubscribeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IsolateSubscribeAsyncHandler;
-                typedef Outcome<Error, Model::ModifyMigrateJobResponse> ModifyMigrateJobOutcome;
+                typedef Outcome<Core::Error, Model::ModifyMigrateJobResponse> ModifyMigrateJobOutcome;
                 typedef std::future<ModifyMigrateJobOutcome> ModifyMigrateJobOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::ModifyMigrateJobRequest&, ModifyMigrateJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyMigrateJobAsyncHandler;
-                typedef Outcome<Error, Model::ModifySubscribeConsumeTimeResponse> ModifySubscribeConsumeTimeOutcome;
+                typedef Outcome<Core::Error, Model::ModifySubscribeConsumeTimeResponse> ModifySubscribeConsumeTimeOutcome;
                 typedef std::future<ModifySubscribeConsumeTimeOutcome> ModifySubscribeConsumeTimeOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::ModifySubscribeConsumeTimeRequest&, ModifySubscribeConsumeTimeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySubscribeConsumeTimeAsyncHandler;
-                typedef Outcome<Error, Model::ModifySubscribeNameResponse> ModifySubscribeNameOutcome;
+                typedef Outcome<Core::Error, Model::ModifySubscribeNameResponse> ModifySubscribeNameOutcome;
                 typedef std::future<ModifySubscribeNameOutcome> ModifySubscribeNameOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::ModifySubscribeNameRequest&, ModifySubscribeNameOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySubscribeNameAsyncHandler;
-                typedef Outcome<Error, Model::ModifySubscribeObjectsResponse> ModifySubscribeObjectsOutcome;
+                typedef Outcome<Core::Error, Model::ModifySubscribeObjectsResponse> ModifySubscribeObjectsOutcome;
                 typedef std::future<ModifySubscribeObjectsOutcome> ModifySubscribeObjectsOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::ModifySubscribeObjectsRequest&, ModifySubscribeObjectsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySubscribeObjectsAsyncHandler;
-                typedef Outcome<Error, Model::ModifySubscribeVipVportResponse> ModifySubscribeVipVportOutcome;
+                typedef Outcome<Core::Error, Model::ModifySubscribeVipVportResponse> ModifySubscribeVipVportOutcome;
                 typedef std::future<ModifySubscribeVipVportOutcome> ModifySubscribeVipVportOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::ModifySubscribeVipVportRequest&, ModifySubscribeVipVportOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySubscribeVipVportAsyncHandler;
-                typedef Outcome<Error, Model::ModifySyncJobResponse> ModifySyncJobOutcome;
-                typedef std::future<ModifySyncJobOutcome> ModifySyncJobOutcomeCallable;
-                typedef std::function<void(const DtsClient*, const Model::ModifySyncJobRequest&, ModifySyncJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySyncJobAsyncHandler;
-                typedef Outcome<Error, Model::OfflineIsolatedSubscribeResponse> OfflineIsolatedSubscribeOutcome;
+                typedef Outcome<Core::Error, Model::OfflineIsolatedSubscribeResponse> OfflineIsolatedSubscribeOutcome;
                 typedef std::future<OfflineIsolatedSubscribeOutcome> OfflineIsolatedSubscribeOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::OfflineIsolatedSubscribeRequest&, OfflineIsolatedSubscribeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OfflineIsolatedSubscribeAsyncHandler;
-                typedef Outcome<Error, Model::ResetSubscribeResponse> ResetSubscribeOutcome;
+                typedef Outcome<Core::Error, Model::ResetSubscribeResponse> ResetSubscribeOutcome;
                 typedef std::future<ResetSubscribeOutcome> ResetSubscribeOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::ResetSubscribeRequest&, ResetSubscribeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetSubscribeAsyncHandler;
-                typedef Outcome<Error, Model::StartMigrateJobResponse> StartMigrateJobOutcome;
+                typedef Outcome<Core::Error, Model::StartMigrateJobResponse> StartMigrateJobOutcome;
                 typedef std::future<StartMigrateJobOutcome> StartMigrateJobOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::StartMigrateJobRequest&, StartMigrateJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartMigrateJobAsyncHandler;
-                typedef Outcome<Error, Model::StartSyncJobResponse> StartSyncJobOutcome;
-                typedef std::future<StartSyncJobOutcome> StartSyncJobOutcomeCallable;
-                typedef std::function<void(const DtsClient*, const Model::StartSyncJobRequest&, StartSyncJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartSyncJobAsyncHandler;
-                typedef Outcome<Error, Model::StopMigrateJobResponse> StopMigrateJobOutcome;
+                typedef Outcome<Core::Error, Model::StopMigrateJobResponse> StopMigrateJobOutcome;
                 typedef std::future<StopMigrateJobOutcome> StopMigrateJobOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::StopMigrateJobRequest&, StopMigrateJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopMigrateJobAsyncHandler;
-                typedef Outcome<Error, Model::SwitchDrToMasterResponse> SwitchDrToMasterOutcome;
-                typedef std::future<SwitchDrToMasterOutcome> SwitchDrToMasterOutcomeCallable;
-                typedef std::function<void(const DtsClient*, const Model::SwitchDrToMasterRequest&, SwitchDrToMasterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SwitchDrToMasterAsyncHandler;
 
 
 
@@ -243,26 +203,6 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
                 CreateSubscribeOutcomeCallable CreateSubscribeCallable(const Model::CreateSubscribeRequest& request);
 
                 /**
-                 *Before the StartSyncJob API is called to start disaster recovery sync, this API should be called first to create a check. Data sync can start only if the check succeeds. You can view the check result through the DescribeSyncCheckJob API.
-Sync can begin only if the check succeeds.
-                 * @param req CreateSyncCheckJobRequest
-                 * @return CreateSyncCheckJobOutcome
-                 */
-                CreateSyncCheckJobOutcome CreateSyncCheckJob(const Model::CreateSyncCheckJobRequest &request);
-                void CreateSyncCheckJobAsync(const Model::CreateSyncCheckJobRequest& request, const CreateSyncCheckJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateSyncCheckJobOutcomeCallable CreateSyncCheckJobCallable(const Model::CreateSyncCheckJobRequest& request);
-
-                /**
-                 *This API (CreateSyncJob) is used to create a disaster recovery sync task.
-After successful creation, check can be initiated through the CreateSyncCheckJob API. The sync task can be started through the StartSyncJob API only if the check succeeds.
-                 * @param req CreateSyncJobRequest
-                 * @return CreateSyncJobOutcome
-                 */
-                CreateSyncJobOutcome CreateSyncJob(const Model::CreateSyncJobRequest &request);
-                void CreateSyncJobAsync(const Model::CreateSyncJobRequest& request, const CreateSyncJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateSyncJobOutcomeCallable CreateSyncJobCallable(const Model::CreateSyncJobRequest& request);
-
-                /**
                  *This API (DeleteMigrationJob) is used to delete a data migration task. If the task status queried through the DescribeMigrateJobs API is checking (status=3), running (status=7), ready (status=8), canceling (status=11), or completing (status=12), the task cannot be deleted.
                  * @param req DeleteMigrateJobRequest
                  * @return DeleteMigrateJobOutcome
@@ -270,15 +210,6 @@ After successful creation, check can be initiated through the CreateSyncCheckJob
                 DeleteMigrateJobOutcome DeleteMigrateJob(const Model::DeleteMigrateJobRequest &request);
                 void DeleteMigrateJobAsync(const Model::DeleteMigrateJobRequest& request, const DeleteMigrateJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteMigrateJobOutcomeCallable DeleteMigrateJobCallable(const Model::DeleteMigrateJobRequest& request);
-
-                /**
-                 *This API is used to delete a disaster recovery sync task. Sync tasks that are running cannot be deleted.
-                 * @param req DeleteSyncJobRequest
-                 * @return DeleteSyncJobOutcome
-                 */
-                DeleteSyncJobOutcome DeleteSyncJob(const Model::DeleteSyncJobRequest &request);
-                void DeleteSyncJobAsync(const Model::DeleteSyncJobRequest& request, const DeleteSyncJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DeleteSyncJobOutcomeCallable DeleteSyncJobCallable(const Model::DeleteSyncJobRequest& request);
 
                 /**
                  *This API is used to query the execution result of a task.
@@ -338,29 +269,6 @@ For a finance zone linkage, please use the domain name https://dts.ap-shenzhen-f
                 DescribeSubscribesOutcomeCallable DescribeSubscribesCallable(const Model::DescribeSubscribesRequest& request);
 
                 /**
-                 *This API is used to get the check result after a disaster recovery sync check task is created through the CreateSyncCheckJob API. Check status and progress can be queried.
-If the check succeeds, you can call the StartSyncJob API to start the sync task.
-If the check fails, the reason will be returned. You can modify the configuration through the ModifySyncJob API and initiate check again.
-It takes about 30 seconds to complete the check task. If the returned status is not "finished", the check has not been completed, and this API needs to be polled.
-If Status=finished and CheckFlag=1, the check succeeds.
-If Status=finished and CheckFlag !=1, the check fails.
-                 * @param req DescribeSyncCheckJobRequest
-                 * @return DescribeSyncCheckJobOutcome
-                 */
-                DescribeSyncCheckJobOutcome DescribeSyncCheckJob(const Model::DescribeSyncCheckJobRequest &request);
-                void DescribeSyncCheckJobAsync(const Model::DescribeSyncCheckJobRequest& request, const DescribeSyncCheckJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeSyncCheckJobOutcomeCallable DescribeSyncCheckJobCallable(const Model::DescribeSyncCheckJobRequest& request);
-
-                /**
-                 *This API is used to query disaster recovery sync tasks initiated on the DTS platform.
-                 * @param req DescribeSyncJobsRequest
-                 * @return DescribeSyncJobsOutcome
-                 */
-                DescribeSyncJobsOutcome DescribeSyncJobs(const Model::DescribeSyncJobsRequest &request);
-                void DescribeSyncJobsAsync(const Model::DescribeSyncJobsRequest& request, const DescribeSyncJobsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeSyncJobsOutcomeCallable DescribeSyncJobsCallable(const Model::DescribeSyncJobsRequest& request);
-
-                /**
                  *This API is used to isolate an hourly billed subscription instance. After this API is called, the instance will become unavailable and billing will stop for it.
                  * @param req IsolateSubscribeRequest
                  * @return IsolateSubscribeOutcome
@@ -418,17 +326,6 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
                 ModifySubscribeVipVportOutcomeCallable ModifySubscribeVipVportCallable(const Model::ModifySubscribeVipVportRequest& request);
 
                 /**
-                 *This API is used to modify a disaster recovery sync task. 
-If the status of a sync task is creating, created, check succeeded, or check failed, this API can be called to modify the task. 
-The information of the source and target instances cannot be modified, but the task name and the tables to be synced can.
-                 * @param req ModifySyncJobRequest
-                 * @return ModifySyncJobOutcome
-                 */
-                ModifySyncJobOutcome ModifySyncJob(const Model::ModifySyncJobRequest &request);
-                void ModifySyncJobAsync(const Model::ModifySyncJobRequest& request, const ModifySyncJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ModifySyncJobOutcomeCallable ModifySyncJobCallable(const Model::ModifySyncJobRequest& request);
-
-                /**
                  *This API is used to deactivate an isolated data subscription instance.
                  * @param req OfflineIsolatedSubscribeRequest
                  * @return OfflineIsolatedSubscribeOutcome
@@ -457,15 +354,6 @@ Before calling this API, be sure to use the CreateMigrateCheckJob API to check t
                 StartMigrateJobOutcomeCallable StartMigrateJobCallable(const Model::StartMigrateJobRequest& request);
 
                 /**
-                 *This API is used to start a disaster recovery sync task after it is successfully checked through the CreateSyncCheckJob and DescribeSyncCheckJob APIs.
-                 * @param req StartSyncJobRequest
-                 * @return StartSyncJobOutcome
-                 */
-                StartSyncJobOutcome StartSyncJob(const Model::StartSyncJobRequest &request);
-                void StartSyncJobAsync(const Model::StartSyncJobRequest& request, const StartSyncJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                StartSyncJobOutcomeCallable StartSyncJobCallable(const Model::StartSyncJobRequest& request);
-
-                /**
                  *This API (StopMigrateJob) is used to cancel a data migration task.
 During migration, this API can be used to cancel migration if the task status queried through the DescribeMigrateJobs API is running (status=7) or ready (status=8), and the migration task will fail.
                  * @param req StopMigrateJobRequest
@@ -474,15 +362,6 @@ During migration, this API can be used to cancel migration if the task status qu
                 StopMigrateJobOutcome StopMigrateJob(const Model::StopMigrateJobRequest &request);
                 void StopMigrateJobAsync(const Model::StopMigrateJobRequest& request, const StopMigrateJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 StopMigrateJobOutcomeCallable StopMigrateJobCallable(const Model::StopMigrateJobRequest& request);
-
-                /**
-                 *This API is used to promote a disaster recovery instance to a master instance, which will stop sync from the original master instance and end the master/slave relationship.
-                 * @param req SwitchDrToMasterRequest
-                 * @return SwitchDrToMasterOutcome
-                 */
-                SwitchDrToMasterOutcome SwitchDrToMaster(const Model::SwitchDrToMasterRequest &request);
-                void SwitchDrToMasterAsync(const Model::SwitchDrToMasterRequest& request, const SwitchDrToMasterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                SwitchDrToMasterOutcomeCallable SwitchDrToMasterCallable(const Model::SwitchDrToMasterRequest& request);
 
             };
         }

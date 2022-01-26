@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 SnapshotByTimeOffset2017::SnapshotByTimeOffset2017() :
@@ -28,7 +27,7 @@ SnapshotByTimeOffset2017::SnapshotByTimeOffset2017() :
 {
 }
 
-CoreInternalOutcome SnapshotByTimeOffset2017::Deserialize(const Value &value)
+CoreInternalOutcome SnapshotByTimeOffset2017::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome SnapshotByTimeOffset2017::Deserialize(const Value &value)
     {
         if (!value["ErrCode"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SnapshotByTimeOffset2017.ErrCode` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotByTimeOffset2017.ErrCode` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_errCode = value["ErrCode"].GetInt64();
         m_errCodeHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome SnapshotByTimeOffset2017::Deserialize(const Value &value)
     {
         if (!value["TimeOffset"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `SnapshotByTimeOffset2017.TimeOffset` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotByTimeOffset2017.TimeOffset` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_timeOffset = value["TimeOffset"].GetUint64();
         m_timeOffsetHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome SnapshotByTimeOffset2017::Deserialize(const Value &value)
     {
         if (!value["Url"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SnapshotByTimeOffset2017.Url` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotByTimeOffset2017.Url` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_url = string(value["Url"].GetString());
         m_urlHasBeenSet = true;
@@ -67,12 +66,12 @@ CoreInternalOutcome SnapshotByTimeOffset2017::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void SnapshotByTimeOffset2017::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SnapshotByTimeOffset2017::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_errCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ErrCode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_errCode, allocator);
@@ -80,7 +79,7 @@ void SnapshotByTimeOffset2017::ToJsonObject(Value &value, Document::AllocatorTyp
 
     if (m_timeOffsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TimeOffset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_timeOffset, allocator);
@@ -88,10 +87,10 @@ void SnapshotByTimeOffset2017::ToJsonObject(Value &value, Document::AllocatorTyp
 
     if (m_urlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Url";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_url.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_url.c_str(), allocator).Move(), allocator);
     }
 
 }

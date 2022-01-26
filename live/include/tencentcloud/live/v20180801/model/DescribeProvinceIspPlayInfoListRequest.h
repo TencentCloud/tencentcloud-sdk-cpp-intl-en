@@ -222,6 +222,32 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
                      */
                     bool MainlandOrOverseaHasBeenSet() const;
 
+                    /**
+                     * 获取IP type:
+"Ipv6": IPv6 data
+Data of all IPs will be returned if this parameter is left empty.
+                     * @return IpType IP type:
+"Ipv6": IPv6 data
+Data of all IPs will be returned if this parameter is left empty.
+                     */
+                    std::string GetIpType() const;
+
+                    /**
+                     * 设置IP type:
+"Ipv6": IPv6 data
+Data of all IPs will be returned if this parameter is left empty.
+                     * @param IpType IP type:
+"Ipv6": IPv6 data
+Data of all IPs will be returned if this parameter is left empty.
+                     */
+                    void SetIpType(const std::string& _ipType);
+
+                    /**
+                     * 判断参数 IpType 是否已赋值
+                     * @return IpType 是否已赋值
+                     */
+                    bool IpTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -280,6 +306,14 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
                      */
                     std::string m_mainlandOrOversea;
                     bool m_mainlandOrOverseaHasBeenSet;
+
+                    /**
+                     * IP type:
+"Ipv6": IPv6 data
+Data of all IPs will be returned if this parameter is left empty.
+                     */
+                    std::string m_ipType;
+                    bool m_ipTypeHasBeenSet;
 
                 };
             }

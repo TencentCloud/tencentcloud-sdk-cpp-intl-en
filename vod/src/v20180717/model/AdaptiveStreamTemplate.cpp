@@ -18,17 +18,17 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 AdaptiveStreamTemplate::AdaptiveStreamTemplate() :
     m_videoHasBeenSet(false),
     m_audioHasBeenSet(false),
-    m_removeAudioHasBeenSet(false)
+    m_removeAudioHasBeenSet(false),
+    m_removeVideoHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome AdaptiveStreamTemplate::Deserialize(const Value &value)
+CoreInternalOutcome AdaptiveStreamTemplate::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +37,7 @@ CoreInternalOutcome AdaptiveStreamTemplate::Deserialize(const Value &value)
     {
         if (!value["Video"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AdaptiveStreamTemplate.Video` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AdaptiveStreamTemplate.Video` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_video.Deserialize(value["Video"]);
@@ -54,7 +54,7 @@ CoreInternalOutcome AdaptiveStreamTemplate::Deserialize(const Value &value)
     {
         if (!value["Audio"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AdaptiveStreamTemplate.Audio` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AdaptiveStreamTemplate.Audio` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_audio.Deserialize(value["Audio"]);
@@ -71,43 +71,61 @@ CoreInternalOutcome AdaptiveStreamTemplate::Deserialize(const Value &value)
     {
         if (!value["RemoveAudio"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AdaptiveStreamTemplate.RemoveAudio` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AdaptiveStreamTemplate.RemoveAudio` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_removeAudio = value["RemoveAudio"].GetUint64();
         m_removeAudioHasBeenSet = true;
+    }
+
+    if (value.HasMember("RemoveVideo") && !value["RemoveVideo"].IsNull())
+    {
+        if (!value["RemoveVideo"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AdaptiveStreamTemplate.RemoveVideo` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_removeVideo = value["RemoveVideo"].GetUint64();
+        m_removeVideoHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void AdaptiveStreamTemplate::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AdaptiveStreamTemplate::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_videoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Video";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_video.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_audioHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Audio";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_audio.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_removeAudioHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RemoveAudio";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_removeAudio, allocator);
+    }
+
+    if (m_removeVideoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RemoveVideo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_removeVideo, allocator);
     }
 
 }
@@ -159,5 +177,21 @@ void AdaptiveStreamTemplate::SetRemoveAudio(const uint64_t& _removeAudio)
 bool AdaptiveStreamTemplate::RemoveAudioHasBeenSet() const
 {
     return m_removeAudioHasBeenSet;
+}
+
+uint64_t AdaptiveStreamTemplate::GetRemoveVideo() const
+{
+    return m_removeVideo;
+}
+
+void AdaptiveStreamTemplate::SetRemoveVideo(const uint64_t& _removeVideo)
+{
+    m_removeVideo = _removeVideo;
+    m_removeVideoHasBeenSet = true;
+}
+
+bool AdaptiveStreamTemplate::RemoveVideoHasBeenSet() const
+{
+    return m_removeVideoHasBeenSet;
 }
 

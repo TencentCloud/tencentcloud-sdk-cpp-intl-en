@@ -20,50 +20,58 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 ModifyBandwidthPackageAttributeRequest::ModifyBandwidthPackageAttributeRequest() :
     m_bandwidthPackageIdHasBeenSet(false),
     m_bandwidthPackageNameHasBeenSet(false),
-    m_chargeTypeHasBeenSet(false)
+    m_chargeTypeHasBeenSet(false),
+    m_migrateOnRefundHasBeenSet(false)
 {
 }
 
 string ModifyBandwidthPackageAttributeRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_bandwidthPackageIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BandwidthPackageId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_bandwidthPackageId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_bandwidthPackageId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_bandwidthPackageNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BandwidthPackageName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_bandwidthPackageName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_bandwidthPackageName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_chargeTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ChargeType";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_chargeType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_chargeType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_migrateOnRefundHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MigrateOnRefund";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_migrateOnRefund, allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -115,6 +123,22 @@ void ModifyBandwidthPackageAttributeRequest::SetChargeType(const string& _charge
 bool ModifyBandwidthPackageAttributeRequest::ChargeTypeHasBeenSet() const
 {
     return m_chargeTypeHasBeenSet;
+}
+
+bool ModifyBandwidthPackageAttributeRequest::GetMigrateOnRefund() const
+{
+    return m_migrateOnRefund;
+}
+
+void ModifyBandwidthPackageAttributeRequest::SetMigrateOnRefund(const bool& _migrateOnRefund)
+{
+    m_migrateOnRefund = _migrateOnRefund;
+    m_migrateOnRefundHasBeenSet = true;
+}
+
+bool ModifyBandwidthPackageAttributeRequest::MigrateOnRefundHasBeenSet() const
+{
+    return m_migrateOnRefundHasBeenSet;
 }
 
 

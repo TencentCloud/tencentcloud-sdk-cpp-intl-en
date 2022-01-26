@@ -283,6 +283,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool StatusHasBeenSet() const;
 
+                    /**
+                     * 获取ID of the application submitted for detection
+                     * @return BizId ID of the application submitted for detection
+                     */
+                    uint64_t GetBizId() const;
+
+                    /**
+                     * 设置ID of the application submitted for detection
+                     * @param BizId ID of the application submitted for detection
+                     */
+                    void SetBizId(const uint64_t& _bizId);
+
+                    /**
+                     * 判断参数 BizId 是否已赋值
+                     * @return BizId 是否已赋值
+                     */
+                    bool BizIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -361,6 +379,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
+
+                    /**
+                     * ID of the application submitted for detection
+                     */
+                    uint64_t m_bizId;
+                    bool m_bizIdHasBeenSet;
 
                 };
             }

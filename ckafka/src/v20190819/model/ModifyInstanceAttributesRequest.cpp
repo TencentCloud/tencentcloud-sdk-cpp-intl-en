@@ -20,35 +20,38 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Ckafka::V20190819::Model;
-using namespace rapidjson;
 using namespace std;
 
 ModifyInstanceAttributesRequest::ModifyInstanceAttributesRequest() :
     m_instanceIdHasBeenSet(false),
     m_msgRetentionTimeHasBeenSet(false),
     m_instanceNameHasBeenSet(false),
-    m_configHasBeenSet(false)
+    m_configHasBeenSet(false),
+    m_dynamicRetentionConfigHasBeenSet(false),
+    m_rebalanceTimeHasBeenSet(false),
+    m_publicNetworkHasBeenSet(false),
+    m_dynamicDiskConfigHasBeenSet(false)
 {
 }
 
 string ModifyInstanceAttributesRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_msgRetentionTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MsgRetentionTime";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_msgRetentionTime, allocator);
@@ -56,24 +59,58 @@ string ModifyInstanceAttributesRequest::ToJsonString() const
 
     if (m_instanceNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_configHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Config";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_config.ToJsonObject(d[key.c_str()], allocator);
     }
 
+    if (m_dynamicRetentionConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DynamicRetentionConfig";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_dynamicRetentionConfig.ToJsonObject(d[key.c_str()], allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    if (m_rebalanceTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RebalanceTime";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_rebalanceTime, allocator);
+    }
+
+    if (m_publicNetworkHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PublicNetwork";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_publicNetwork, allocator);
+    }
+
+    if (m_dynamicDiskConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DynamicDiskConfig";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_dynamicDiskConfig.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -141,6 +178,70 @@ void ModifyInstanceAttributesRequest::SetConfig(const ModifyInstanceAttributesCo
 bool ModifyInstanceAttributesRequest::ConfigHasBeenSet() const
 {
     return m_configHasBeenSet;
+}
+
+DynamicRetentionTime ModifyInstanceAttributesRequest::GetDynamicRetentionConfig() const
+{
+    return m_dynamicRetentionConfig;
+}
+
+void ModifyInstanceAttributesRequest::SetDynamicRetentionConfig(const DynamicRetentionTime& _dynamicRetentionConfig)
+{
+    m_dynamicRetentionConfig = _dynamicRetentionConfig;
+    m_dynamicRetentionConfigHasBeenSet = true;
+}
+
+bool ModifyInstanceAttributesRequest::DynamicRetentionConfigHasBeenSet() const
+{
+    return m_dynamicRetentionConfigHasBeenSet;
+}
+
+int64_t ModifyInstanceAttributesRequest::GetRebalanceTime() const
+{
+    return m_rebalanceTime;
+}
+
+void ModifyInstanceAttributesRequest::SetRebalanceTime(const int64_t& _rebalanceTime)
+{
+    m_rebalanceTime = _rebalanceTime;
+    m_rebalanceTimeHasBeenSet = true;
+}
+
+bool ModifyInstanceAttributesRequest::RebalanceTimeHasBeenSet() const
+{
+    return m_rebalanceTimeHasBeenSet;
+}
+
+int64_t ModifyInstanceAttributesRequest::GetPublicNetwork() const
+{
+    return m_publicNetwork;
+}
+
+void ModifyInstanceAttributesRequest::SetPublicNetwork(const int64_t& _publicNetwork)
+{
+    m_publicNetwork = _publicNetwork;
+    m_publicNetworkHasBeenSet = true;
+}
+
+bool ModifyInstanceAttributesRequest::PublicNetworkHasBeenSet() const
+{
+    return m_publicNetworkHasBeenSet;
+}
+
+DynamicDiskConfig ModifyInstanceAttributesRequest::GetDynamicDiskConfig() const
+{
+    return m_dynamicDiskConfig;
+}
+
+void ModifyInstanceAttributesRequest::SetDynamicDiskConfig(const DynamicDiskConfig& _dynamicDiskConfig)
+{
+    m_dynamicDiskConfig = _dynamicDiskConfig;
+    m_dynamicDiskConfigHasBeenSet = true;
+}
+
+bool ModifyInstanceAttributesRequest::DynamicDiskConfigHasBeenSet() const
+{
+    return m_dynamicDiskConfigHasBeenSet;
 }
 
 

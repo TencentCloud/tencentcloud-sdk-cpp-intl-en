@@ -42,6 +42,7 @@ namespace TencentCloud
                     ParseNotificationResponse();
                     ~ParseNotificationResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -73,8 +74,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WorkflowTaskEventHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EditMediaTaskEvent 
+                     * 获取Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
+                     * @return EditMediaTaskEvent Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
                      */
                     EditMediaTask GetEditMediaTaskEvent() const;
 
@@ -125,7 +126,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_workflowTaskEventHasBeenSet;
 
                     /**
-                     * 
+                     * Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
                      */
                     EditMediaTask m_editMediaTaskEvent;
                     bool m_editMediaTaskEventHasBeenSet;

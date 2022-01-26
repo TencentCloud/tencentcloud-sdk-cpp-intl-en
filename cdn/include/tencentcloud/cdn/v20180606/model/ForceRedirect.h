@@ -132,6 +132,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool RedirectStatusCodeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to return the added header in forced redirection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return CarryHeaders Whether to return the added header in forced redirection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetCarryHeaders() const;
+
+                    /**
+                     * 设置Whether to return the added header in forced redirection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param CarryHeaders Whether to return the added header in forced redirection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetCarryHeaders(const std::string& _carryHeaders);
+
+                    /**
+                     * 判断参数 CarryHeaders 是否已赋值
+                     * @return CarryHeaders 是否已赋值
+                     */
+                    bool CarryHeadersHasBeenSet() const;
+
                 private:
 
                     /**
@@ -159,6 +181,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_redirectStatusCode;
                     bool m_redirectStatusCodeHasBeenSet;
+
+                    /**
+                     * Whether to return the added header in forced redirection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_carryHeaders;
+                    bool m_carryHeadersHasBeenSet;
 
                 };
             }

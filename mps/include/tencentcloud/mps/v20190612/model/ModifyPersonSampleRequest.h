@@ -45,14 +45,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Figure ID.
-                     * @return PersonId Figure ID.
+                     * 获取Image ID
+                     * @return PersonId Image ID
                      */
                     std::string GetPersonId() const;
 
                     /**
-                     * 设置Figure ID.
-                     * @param PersonId Figure ID.
+                     * 设置Image ID
+                     * @param PersonId Image ID
                      */
                     void SetPersonId(const std::string& _personId);
 
@@ -99,26 +99,26 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Figure sample use case. Valid values:
-1. Recognition: It is used for content recognition, equivalent to `Recognition.Face`.
-2. Review: It is used for content audit, equivalent to `Review.Face`.
-3. All: It is used for content recognition and content audit, equivalent to 1+2 above.
-                     * @return Usages Figure sample use case. Valid values:
-1. Recognition: It is used for content recognition, equivalent to `Recognition.Face`.
-2. Review: It is used for content audit, equivalent to `Review.Face`.
-3. All: It is used for content recognition and content audit, equivalent to 1+2 above.
+                     * 获取Image usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
+                     * @return Usages Image usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
                      */
                     std::vector<std::string> GetUsages() const;
 
                     /**
-                     * 设置Figure sample use case. Valid values:
-1. Recognition: It is used for content recognition, equivalent to `Recognition.Face`.
-2. Review: It is used for content audit, equivalent to `Review.Face`.
-3. All: It is used for content recognition and content audit, equivalent to 1+2 above.
-                     * @param Usages Figure sample use case. Valid values:
-1. Recognition: It is used for content recognition, equivalent to `Recognition.Face`.
-2. Review: It is used for content audit, equivalent to `Review.Face`.
-3. All: It is used for content recognition and content audit, equivalent to 1+2 above.
+                     * 设置Image usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
+                     * @param Usages Image usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
                      */
                     void SetUsages(const std::vector<std::string>& _usages);
 
@@ -129,14 +129,14 @@ namespace TencentCloud
                     bool UsagesHasBeenSet() const;
 
                     /**
-                     * 获取Face operation information.
-                     * @return FaceOperationInfo Face operation information.
+                     * 获取Information of operations on facial features
+                     * @return FaceOperationInfo Information of operations on facial features
                      */
                     AiSampleFaceOperation GetFaceOperationInfo() const;
 
                     /**
-                     * 设置Face operation information.
-                     * @param FaceOperationInfo Face operation information.
+                     * 设置Information of operations on facial features
+                     * @param FaceOperationInfo Information of operations on facial features
                      */
                     void SetFaceOperationInfo(const AiSampleFaceOperation& _faceOperationInfo);
 
@@ -167,7 +167,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Figure ID.
+                     * Image ID
                      */
                     std::string m_personId;
                     bool m_personIdHasBeenSet;
@@ -185,16 +185,16 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Figure sample use case. Valid values:
-1. Recognition: It is used for content recognition, equivalent to `Recognition.Face`.
-2. Review: It is used for content audit, equivalent to `Review.Face`.
-3. All: It is used for content recognition and content audit, equivalent to 1+2 above.
+                     * Image usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
                      */
                     std::vector<std::string> m_usages;
                     bool m_usagesHasBeenSet;
 
                     /**
-                     * Face operation information.
+                     * Information of operations on facial features
                      */
                     AiSampleFaceOperation m_faceOperationInfo;
                     bool m_faceOperationInfoHasBeenSet;

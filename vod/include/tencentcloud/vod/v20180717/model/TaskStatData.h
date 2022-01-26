@@ -49,22 +49,38 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task type
-<li>Transcode: transcoding</li>
-<li>Snapshot: screencapturing</li>
-                     * @return TaskType Task type
-<li>Transcode: transcoding</li>
-<li>Snapshot: screencapturing</li>
+                     * 获取Task type.
+<li>Transcoding: basic transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: video editing</li>
+<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li>ContentAudit: content moderation</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
+                     * @return TaskType Task type.
+<li>Transcoding: basic transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: video editing</li>
+<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li>ContentAudit: content moderation</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
                      */
                     std::string GetTaskType() const;
 
                     /**
-                     * 设置Task type
-<li>Transcode: transcoding</li>
-<li>Snapshot: screencapturing</li>
-                     * @param TaskType Task type
-<li>Transcode: transcoding</li>
-<li>Snapshot: screencapturing</li>
+                     * 设置Task type.
+<li>Transcoding: basic transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: video editing</li>
+<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li>ContentAudit: content moderation</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
+                     * @param TaskType Task type.
+<li>Transcoding: basic transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: video editing</li>
+<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li>ContentAudit: content moderation</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
                      */
                     void SetTaskType(const std::string& _taskType);
 
@@ -75,18 +91,14 @@ namespace TencentCloud
                     bool TaskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Task statistics overview.
-<li>Transcode: usage in seconds</li>
-                     * @return Summary Task statistics overview.
-<li>Transcode: usage in seconds</li>
+                     * 获取Task statistics overview (usage unit: second).
+                     * @return Summary Task statistics overview (usage unit: second).
                      */
                     std::vector<TaskStatDataItem> GetSummary() const;
 
                     /**
-                     * 设置Task statistics overview.
-<li>Transcode: usage in seconds</li>
-                     * @param Summary Task statistics overview.
-<li>Transcode: usage in seconds</li>
+                     * 设置Task statistics overview (usage unit: second).
+                     * @param Summary Task statistics overview (usage unit: second).
                      */
                     void SetSummary(const std::vector<TaskStatDataItem>& _summary);
 
@@ -253,16 +265,19 @@ Transcoding specification:
                 private:
 
                     /**
-                     * Task type
-<li>Transcode: transcoding</li>
-<li>Snapshot: screencapturing</li>
+                     * Task type.
+<li>Transcoding: basic transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: video editing</li>
+<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li>ContentAudit: content moderation</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
 
                     /**
-                     * Task statistics overview.
-<li>Transcode: usage in seconds</li>
+                     * Task statistics overview (usage unit: second).
                      */
                     std::vector<TaskStatDataItem> m_summary;
                     bool m_summaryHasBeenSet;

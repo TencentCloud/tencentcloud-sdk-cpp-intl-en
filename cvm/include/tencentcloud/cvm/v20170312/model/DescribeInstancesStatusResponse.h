@@ -41,6 +41,7 @@ namespace TencentCloud
                     DescribeInstancesStatusResponse();
                     ~DescribeInstancesStatusResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -56,8 +57,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取[Instance status](https://cloud.tencent.com/document/api/213/15728) list.
-                     * @return InstanceStatusSet [Instance status](https://cloud.tencent.com/document/api/213/15728) list.
+                     * 获取[Instance status](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) list.
+                     * @return InstanceStatusSet [Instance status](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) list.
                      */
                     std::vector<InstanceStatus> GetInstanceStatusSet() const;
 
@@ -76,7 +77,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * [Instance status](https://cloud.tencent.com/document/api/213/15728) list.
+                     * [Instance status](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) list.
                      */
                     std::vector<InstanceStatus> m_instanceStatusSet;
                     bool m_instanceStatusSetHasBeenSet;

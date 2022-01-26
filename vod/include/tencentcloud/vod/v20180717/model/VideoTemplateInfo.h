@@ -81,17 +81,17 @@ Currently, a resolution within 640x480 must be specified for H.265. and the `av1
                     bool CodecHasBeenSet() const;
 
                     /**
-                     * 获取Video frame rate in Hz. Value range: [0, 60].
+                     * 获取Video frame rate in Hz. Value range: [0,100].
 If the value is 0, the frame rate will be the same as that of the source video.
-                     * @return Fps Video frame rate in Hz. Value range: [0, 60].
+                     * @return Fps Video frame rate in Hz. Value range: [0,100].
 If the value is 0, the frame rate will be the same as that of the source video.
                      */
                     uint64_t GetFps() const;
 
                     /**
-                     * 设置Video frame rate in Hz. Value range: [0, 60].
+                     * 设置Video frame rate in Hz. Value range: [0,100].
 If the value is 0, the frame rate will be the same as that of the source video.
-                     * @param Fps Video frame rate in Hz. Value range: [0, 60].
+                     * @param Fps Video frame rate in Hz. Value range: [0,100].
 If the value is 0, the frame rate will be the same as that of the source video.
                      */
                     void SetFps(const uint64_t& _fps);
@@ -243,30 +243,34 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Fill type, the way of processing a screenshot when the configured aspect ratio is different from that of the source video. Valid values:
+<li>stretch: stretches the video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: fills the uncovered area with black color, without changing the image's aspect ratio.</li>
+<li>white: fills the uncovered area with white color, without changing the image's aspect ratio.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
+Default value: black
+                     * @return FillType Fill type, the way of processing a screenshot when the configured aspect ratio is different from that of the source video. Valid values:
+<li>stretch: stretches the video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: fills the uncovered area with black color, without changing the image's aspect ratio.</li>
+<li>white: fills the uncovered area with white color, without changing the image's aspect ratio.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
+Default value: black
                      */
                     std::string GetFillType() const;
 
                     /**
-                     * 设置Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Fill type, the way of processing a screenshot when the configured aspect ratio is different from that of the source video. Valid values:
+<li>stretch: stretches the video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: fills the uncovered area with black color, without changing the image's aspect ratio.</li>
+<li>white: fills the uncovered area with white color, without changing the image's aspect ratio.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
+Default value: black
+                     * @param FillType Fill type, the way of processing a screenshot when the configured aspect ratio is different from that of the source video. Valid values:
+<li>stretch: stretches the video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: fills the uncovered area with black color, without changing the image's aspect ratio.</li>
+<li>white: fills the uncovered area with white color, without changing the image's aspect ratio.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
+Default value: black
                      */
                     void SetFillType(const std::string& _fillType);
 
@@ -275,6 +279,54 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return FillType 是否已赋值
                      */
                     bool FillTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Video Constant Rate Factor (CRF). Value range: 1-51.
+If this parameter is specified, CRF will be used to control video bitrate for transcoding and the original video bitrate will not be used.
+We don’t recommend specifying this parameter unless you have special requirements.
+                     * @return Vcrf Video Constant Rate Factor (CRF). Value range: 1-51.
+If this parameter is specified, CRF will be used to control video bitrate for transcoding and the original video bitrate will not be used.
+We don’t recommend specifying this parameter unless you have special requirements.
+                     */
+                    uint64_t GetVcrf() const;
+
+                    /**
+                     * 设置Video Constant Rate Factor (CRF). Value range: 1-51.
+If this parameter is specified, CRF will be used to control video bitrate for transcoding and the original video bitrate will not be used.
+We don’t recommend specifying this parameter unless you have special requirements.
+                     * @param Vcrf Video Constant Rate Factor (CRF). Value range: 1-51.
+If this parameter is specified, CRF will be used to control video bitrate for transcoding and the original video bitrate will not be used.
+We don’t recommend specifying this parameter unless you have special requirements.
+                     */
+                    void SetVcrf(const uint64_t& _vcrf);
+
+                    /**
+                     * 判断参数 Vcrf 是否已赋值
+                     * @return Vcrf 是否已赋值
+                     */
+                    bool VcrfHasBeenSet() const;
+
+                    /**
+                     * 获取I-frame interval in frames. Valid values: 0 and 1-100000.
+When this parameter is set to 0 or left empty, `Gop` will be automatically set.
+                     * @return Gop I-frame interval in frames. Valid values: 0 and 1-100000.
+When this parameter is set to 0 or left empty, `Gop` will be automatically set.
+                     */
+                    uint64_t GetGop() const;
+
+                    /**
+                     * 设置I-frame interval in frames. Valid values: 0 and 1-100000.
+When this parameter is set to 0 or left empty, `Gop` will be automatically set.
+                     * @param Gop I-frame interval in frames. Valid values: 0 and 1-100000.
+When this parameter is set to 0 or left empty, `Gop` will be automatically set.
+                     */
+                    void SetGop(const uint64_t& _gop);
+
+                    /**
+                     * 判断参数 Gop 是否已赋值
+                     * @return Gop 是否已赋值
+                     */
+                    bool GopHasBeenSet() const;
 
                 private:
 
@@ -289,7 +341,7 @@ Currently, a resolution within 640x480 must be specified for H.265. and the `av1
                     bool m_codecHasBeenSet;
 
                     /**
-                     * Video frame rate in Hz. Value range: [0, 60].
+                     * Video frame rate in Hz. Value range: [0,100].
 If the value is 0, the frame rate will be the same as that of the source video.
                      */
                     uint64_t m_fps;
@@ -337,14 +389,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Fill type, the way of processing a screenshot when the configured aspect ratio is different from that of the source video. Valid values:
+<li>stretch: stretches the video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: fills the uncovered area with black color, without changing the image's aspect ratio.</li>
+<li>white: fills the uncovered area with white color, without changing the image's aspect ratio.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
+Default value: black
                      */
                     std::string m_fillType;
                     bool m_fillTypeHasBeenSet;
+
+                    /**
+                     * Video Constant Rate Factor (CRF). Value range: 1-51.
+If this parameter is specified, CRF will be used to control video bitrate for transcoding and the original video bitrate will not be used.
+We don’t recommend specifying this parameter unless you have special requirements.
+                     */
+                    uint64_t m_vcrf;
+                    bool m_vcrfHasBeenSet;
+
+                    /**
+                     * I-frame interval in frames. Valid values: 0 and 1-100000.
+When this parameter is set to 0 or left empty, `Gop` will be automatically set.
+                     */
+                    uint64_t m_gop;
+                    bool m_gopHasBeenSet;
 
                 };
             }

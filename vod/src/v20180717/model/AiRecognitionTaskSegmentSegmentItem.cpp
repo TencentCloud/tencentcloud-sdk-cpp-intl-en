@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 AiRecognitionTaskSegmentSegmentItem::AiRecognitionTaskSegmentSegmentItem() :
@@ -32,7 +31,7 @@ AiRecognitionTaskSegmentSegmentItem::AiRecognitionTaskSegmentSegmentItem() :
 {
 }
 
-CoreInternalOutcome AiRecognitionTaskSegmentSegmentItem::Deserialize(const Value &value)
+CoreInternalOutcome AiRecognitionTaskSegmentSegmentItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +40,7 @@ CoreInternalOutcome AiRecognitionTaskSegmentSegmentItem::Deserialize(const Value
     {
         if (!value["FileId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AiRecognitionTaskSegmentSegmentItem.FileId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionTaskSegmentSegmentItem.FileId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fileId = string(value["FileId"].GetString());
         m_fileIdHasBeenSet = true;
@@ -51,7 +50,7 @@ CoreInternalOutcome AiRecognitionTaskSegmentSegmentItem::Deserialize(const Value
     {
         if (!value["SegmentUrl"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AiRecognitionTaskSegmentSegmentItem.SegmentUrl` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionTaskSegmentSegmentItem.SegmentUrl` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_segmentUrl = string(value["SegmentUrl"].GetString());
         m_segmentUrlHasBeenSet = true;
@@ -59,9 +58,9 @@ CoreInternalOutcome AiRecognitionTaskSegmentSegmentItem::Deserialize(const Value
 
     if (value.HasMember("Confidence") && !value["Confidence"].IsNull())
     {
-        if (!value["Confidence"].IsDouble())
+        if (!value["Confidence"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `AiRecognitionTaskSegmentSegmentItem.Confidence` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionTaskSegmentSegmentItem.Confidence` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_confidence = value["Confidence"].GetDouble();
         m_confidenceHasBeenSet = true;
@@ -69,9 +68,9 @@ CoreInternalOutcome AiRecognitionTaskSegmentSegmentItem::Deserialize(const Value
 
     if (value.HasMember("StartTimeOffset") && !value["StartTimeOffset"].IsNull())
     {
-        if (!value["StartTimeOffset"].IsDouble())
+        if (!value["StartTimeOffset"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `AiRecognitionTaskSegmentSegmentItem.StartTimeOffset` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionTaskSegmentSegmentItem.StartTimeOffset` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_startTimeOffset = value["StartTimeOffset"].GetDouble();
         m_startTimeOffsetHasBeenSet = true;
@@ -79,9 +78,9 @@ CoreInternalOutcome AiRecognitionTaskSegmentSegmentItem::Deserialize(const Value
 
     if (value.HasMember("EndTimeOffset") && !value["EndTimeOffset"].IsNull())
     {
-        if (!value["EndTimeOffset"].IsDouble())
+        if (!value["EndTimeOffset"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `AiRecognitionTaskSegmentSegmentItem.EndTimeOffset` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionTaskSegmentSegmentItem.EndTimeOffset` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_endTimeOffset = value["EndTimeOffset"].GetDouble();
         m_endTimeOffsetHasBeenSet = true;
@@ -91,7 +90,7 @@ CoreInternalOutcome AiRecognitionTaskSegmentSegmentItem::Deserialize(const Value
     {
         if (!value["CovImgUrl"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AiRecognitionTaskSegmentSegmentItem.CovImgUrl` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionTaskSegmentSegmentItem.CovImgUrl` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_covImgUrl = string(value["CovImgUrl"].GetString());
         m_covImgUrlHasBeenSet = true;
@@ -101,7 +100,7 @@ CoreInternalOutcome AiRecognitionTaskSegmentSegmentItem::Deserialize(const Value
     {
         if (!value["SpecialInfo"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AiRecognitionTaskSegmentSegmentItem.SpecialInfo` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionTaskSegmentSegmentItem.SpecialInfo` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_specialInfo = string(value["SpecialInfo"].GetString());
         m_specialInfoHasBeenSet = true;
@@ -111,28 +110,28 @@ CoreInternalOutcome AiRecognitionTaskSegmentSegmentItem::Deserialize(const Value
     return CoreInternalOutcome(true);
 }
 
-void AiRecognitionTaskSegmentSegmentItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AiRecognitionTaskSegmentSegmentItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_fileIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fileId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fileId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_segmentUrlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SegmentUrl";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_segmentUrl.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_segmentUrl.c_str(), allocator).Move(), allocator);
     }
 
     if (m_confidenceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Confidence";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_confidence, allocator);
@@ -140,7 +139,7 @@ void AiRecognitionTaskSegmentSegmentItem::ToJsonObject(Value &value, Document::A
 
     if (m_startTimeOffsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTimeOffset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_startTimeOffset, allocator);
@@ -148,7 +147,7 @@ void AiRecognitionTaskSegmentSegmentItem::ToJsonObject(Value &value, Document::A
 
     if (m_endTimeOffsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndTimeOffset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_endTimeOffset, allocator);
@@ -156,18 +155,18 @@ void AiRecognitionTaskSegmentSegmentItem::ToJsonObject(Value &value, Document::A
 
     if (m_covImgUrlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CovImgUrl";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_covImgUrl.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_covImgUrl.c_str(), allocator).Move(), allocator);
     }
 
     if (m_specialInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SpecialInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_specialInfo.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_specialInfo.c_str(), allocator).Move(), allocator);
     }
 
 }

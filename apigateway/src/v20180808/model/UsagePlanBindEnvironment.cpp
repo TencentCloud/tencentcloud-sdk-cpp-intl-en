@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 UsagePlanBindEnvironment::UsagePlanBindEnvironment() :
@@ -27,7 +26,7 @@ UsagePlanBindEnvironment::UsagePlanBindEnvironment() :
 {
 }
 
-CoreInternalOutcome UsagePlanBindEnvironment::Deserialize(const Value &value)
+CoreInternalOutcome UsagePlanBindEnvironment::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome UsagePlanBindEnvironment::Deserialize(const Value &value)
     {
         if (!value["EnvironmentName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UsagePlanBindEnvironment.EnvironmentName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UsagePlanBindEnvironment.EnvironmentName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_environmentName = string(value["EnvironmentName"].GetString());
         m_environmentNameHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome UsagePlanBindEnvironment::Deserialize(const Value &value)
     {
         if (!value["ServiceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UsagePlanBindEnvironment.ServiceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UsagePlanBindEnvironment.ServiceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_serviceId = string(value["ServiceId"].GetString());
         m_serviceIdHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome UsagePlanBindEnvironment::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void UsagePlanBindEnvironment::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void UsagePlanBindEnvironment::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_environmentNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EnvironmentName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_environmentName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_environmentName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_serviceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_serviceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_serviceId.c_str(), allocator).Move(), allocator);
     }
 
 }

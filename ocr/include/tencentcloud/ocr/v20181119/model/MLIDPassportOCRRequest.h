@@ -43,18 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Base64-encoded value of the image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution of 500x800 or above is recommended. Supported formats include PNG, JPG, JPEG, and BMP. It is recommended that the card part occupies more than 2/3 of the image.
-Either the `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
-                     * @return ImageBase64 Base64-encoded value of the image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution of 500x800 or above is recommended. Supported formats include PNG, JPG, JPEG, and BMP. It is recommended that the card part occupies more than 2/3 of the image.
-Either the `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+                     * 获取Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
+                     * @return ImageBase64 Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
                      */
                     std::string GetImageBase64() const;
 
                     /**
-                     * 设置Base64-encoded value of the image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution of 500x800 or above is recommended. Supported formats include PNG, JPG, JPEG, and BMP. It is recommended that the card part occupies more than 2/3 of the image.
-Either the `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
-                     * @param ImageBase64 Base64-encoded value of the image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution of 500x800 or above is recommended. Supported formats include PNG, JPG, JPEG, and BMP. It is recommended that the card part occupies more than 2/3 of the image.
-Either the `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+                     * 设置Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
+                     * @param ImageBase64 Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
                      */
                     void SetImageBase64(const std::string& _imageBase64);
 
@@ -65,14 +61,14 @@ Either the `ImageUrl` or `ImageBase64` of the image must be provided; if both ar
                     bool ImageBase64HasBeenSet() const;
 
                     /**
-                     * 获取Whether to return an image
-                     * @return RetImage Whether to return an image
+                     * 获取Whether to return an image. Default value: false.
+                     * @return RetImage Whether to return an image. Default value: false.
                      */
                     bool GetRetImage() const;
 
                     /**
-                     * 设置Whether to return an image
-                     * @param RetImage Whether to return an image
+                     * 设置Whether to return an image. Default value: false.
+                     * @param RetImage Whether to return an image. Default value: false.
                      */
                     void SetRetImage(const bool& _retImage);
 
@@ -85,14 +81,13 @@ Either the `ImageUrl` or `ImageBase64` of the image must be provided; if both ar
                 private:
 
                     /**
-                     * Base64-encoded value of the image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution of 500x800 or above is recommended. Supported formats include PNG, JPG, JPEG, and BMP. It is recommended that the card part occupies more than 2/3 of the image.
-Either the `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+                     * Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
                      */
                     std::string m_imageBase64;
                     bool m_imageBase64HasBeenSet;
 
                     /**
-                     * Whether to return an image
+                     * Whether to return an image. Default value: false.
                      */
                     bool m_retImage;
                     bool m_retImageHasBeenSet;

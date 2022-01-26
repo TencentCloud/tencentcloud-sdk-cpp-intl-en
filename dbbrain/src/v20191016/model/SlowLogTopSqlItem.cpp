@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dbbrain::V20191016::Model;
-using namespace rapidjson;
 using namespace std;
 
 SlowLogTopSqlItem::SlowLogTopSqlItem() :
@@ -41,20 +40,24 @@ SlowLogTopSqlItem::SlowLogTopSqlItem() :
     m_queryTimeRatioHasBeenSet(false),
     m_lockTimeRatioHasBeenSet(false),
     m_rowsExaminedRatioHasBeenSet(false),
-    m_rowsSentRatioHasBeenSet(false)
+    m_rowsSentRatioHasBeenSet(false),
+    m_queryTimeAvgHasBeenSet(false),
+    m_rowsSentAvgHasBeenSet(false),
+    m_lockTimeAvgHasBeenSet(false),
+    m_rowsExaminedAvgHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome SlowLogTopSqlItem::Deserialize(const Value &value)
+CoreInternalOutcome SlowLogTopSqlItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
 
     if (value.HasMember("LockTime") && !value["LockTime"].IsNull())
     {
-        if (!value["LockTime"].IsDouble())
+        if (!value["LockTime"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `SlowLogTopSqlItem.LockTime` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogTopSqlItem.LockTime` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_lockTime = value["LockTime"].GetDouble();
         m_lockTimeHasBeenSet = true;
@@ -62,9 +65,9 @@ CoreInternalOutcome SlowLogTopSqlItem::Deserialize(const Value &value)
 
     if (value.HasMember("LockTimeMax") && !value["LockTimeMax"].IsNull())
     {
-        if (!value["LockTimeMax"].IsDouble())
+        if (!value["LockTimeMax"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `SlowLogTopSqlItem.LockTimeMax` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogTopSqlItem.LockTimeMax` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_lockTimeMax = value["LockTimeMax"].GetDouble();
         m_lockTimeMaxHasBeenSet = true;
@@ -72,9 +75,9 @@ CoreInternalOutcome SlowLogTopSqlItem::Deserialize(const Value &value)
 
     if (value.HasMember("LockTimeMin") && !value["LockTimeMin"].IsNull())
     {
-        if (!value["LockTimeMin"].IsDouble())
+        if (!value["LockTimeMin"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `SlowLogTopSqlItem.LockTimeMin` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogTopSqlItem.LockTimeMin` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_lockTimeMin = value["LockTimeMin"].GetDouble();
         m_lockTimeMinHasBeenSet = true;
@@ -84,7 +87,7 @@ CoreInternalOutcome SlowLogTopSqlItem::Deserialize(const Value &value)
     {
         if (!value["RowsExamined"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SlowLogTopSqlItem.RowsExamined` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogTopSqlItem.RowsExamined` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_rowsExamined = value["RowsExamined"].GetInt64();
         m_rowsExaminedHasBeenSet = true;
@@ -94,7 +97,7 @@ CoreInternalOutcome SlowLogTopSqlItem::Deserialize(const Value &value)
     {
         if (!value["RowsExaminedMax"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SlowLogTopSqlItem.RowsExaminedMax` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogTopSqlItem.RowsExaminedMax` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_rowsExaminedMax = value["RowsExaminedMax"].GetInt64();
         m_rowsExaminedMaxHasBeenSet = true;
@@ -104,7 +107,7 @@ CoreInternalOutcome SlowLogTopSqlItem::Deserialize(const Value &value)
     {
         if (!value["RowsExaminedMin"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SlowLogTopSqlItem.RowsExaminedMin` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogTopSqlItem.RowsExaminedMin` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_rowsExaminedMin = value["RowsExaminedMin"].GetInt64();
         m_rowsExaminedMinHasBeenSet = true;
@@ -112,9 +115,9 @@ CoreInternalOutcome SlowLogTopSqlItem::Deserialize(const Value &value)
 
     if (value.HasMember("QueryTime") && !value["QueryTime"].IsNull())
     {
-        if (!value["QueryTime"].IsDouble())
+        if (!value["QueryTime"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `SlowLogTopSqlItem.QueryTime` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogTopSqlItem.QueryTime` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_queryTime = value["QueryTime"].GetDouble();
         m_queryTimeHasBeenSet = true;
@@ -122,9 +125,9 @@ CoreInternalOutcome SlowLogTopSqlItem::Deserialize(const Value &value)
 
     if (value.HasMember("QueryTimeMax") && !value["QueryTimeMax"].IsNull())
     {
-        if (!value["QueryTimeMax"].IsDouble())
+        if (!value["QueryTimeMax"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `SlowLogTopSqlItem.QueryTimeMax` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogTopSqlItem.QueryTimeMax` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_queryTimeMax = value["QueryTimeMax"].GetDouble();
         m_queryTimeMaxHasBeenSet = true;
@@ -132,9 +135,9 @@ CoreInternalOutcome SlowLogTopSqlItem::Deserialize(const Value &value)
 
     if (value.HasMember("QueryTimeMin") && !value["QueryTimeMin"].IsNull())
     {
-        if (!value["QueryTimeMin"].IsDouble())
+        if (!value["QueryTimeMin"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `SlowLogTopSqlItem.QueryTimeMin` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogTopSqlItem.QueryTimeMin` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_queryTimeMin = value["QueryTimeMin"].GetDouble();
         m_queryTimeMinHasBeenSet = true;
@@ -144,7 +147,7 @@ CoreInternalOutcome SlowLogTopSqlItem::Deserialize(const Value &value)
     {
         if (!value["RowsSent"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SlowLogTopSqlItem.RowsSent` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogTopSqlItem.RowsSent` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_rowsSent = value["RowsSent"].GetInt64();
         m_rowsSentHasBeenSet = true;
@@ -154,7 +157,7 @@ CoreInternalOutcome SlowLogTopSqlItem::Deserialize(const Value &value)
     {
         if (!value["RowsSentMax"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SlowLogTopSqlItem.RowsSentMax` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogTopSqlItem.RowsSentMax` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_rowsSentMax = value["RowsSentMax"].GetInt64();
         m_rowsSentMaxHasBeenSet = true;
@@ -164,7 +167,7 @@ CoreInternalOutcome SlowLogTopSqlItem::Deserialize(const Value &value)
     {
         if (!value["RowsSentMin"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SlowLogTopSqlItem.RowsSentMin` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogTopSqlItem.RowsSentMin` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_rowsSentMin = value["RowsSentMin"].GetInt64();
         m_rowsSentMinHasBeenSet = true;
@@ -174,7 +177,7 @@ CoreInternalOutcome SlowLogTopSqlItem::Deserialize(const Value &value)
     {
         if (!value["ExecTimes"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SlowLogTopSqlItem.ExecTimes` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogTopSqlItem.ExecTimes` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_execTimes = value["ExecTimes"].GetInt64();
         m_execTimesHasBeenSet = true;
@@ -184,7 +187,7 @@ CoreInternalOutcome SlowLogTopSqlItem::Deserialize(const Value &value)
     {
         if (!value["SqlTemplate"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SlowLogTopSqlItem.SqlTemplate` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogTopSqlItem.SqlTemplate` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_sqlTemplate = string(value["SqlTemplate"].GetString());
         m_sqlTemplateHasBeenSet = true;
@@ -194,7 +197,7 @@ CoreInternalOutcome SlowLogTopSqlItem::Deserialize(const Value &value)
     {
         if (!value["SqlText"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SlowLogTopSqlItem.SqlText` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogTopSqlItem.SqlText` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_sqlText = string(value["SqlText"].GetString());
         m_sqlTextHasBeenSet = true;
@@ -204,7 +207,7 @@ CoreInternalOutcome SlowLogTopSqlItem::Deserialize(const Value &value)
     {
         if (!value["Schema"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SlowLogTopSqlItem.Schema` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogTopSqlItem.Schema` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_schema = string(value["Schema"].GetString());
         m_schemaHasBeenSet = true;
@@ -212,9 +215,9 @@ CoreInternalOutcome SlowLogTopSqlItem::Deserialize(const Value &value)
 
     if (value.HasMember("QueryTimeRatio") && !value["QueryTimeRatio"].IsNull())
     {
-        if (!value["QueryTimeRatio"].IsDouble())
+        if (!value["QueryTimeRatio"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `SlowLogTopSqlItem.QueryTimeRatio` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogTopSqlItem.QueryTimeRatio` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_queryTimeRatio = value["QueryTimeRatio"].GetDouble();
         m_queryTimeRatioHasBeenSet = true;
@@ -222,9 +225,9 @@ CoreInternalOutcome SlowLogTopSqlItem::Deserialize(const Value &value)
 
     if (value.HasMember("LockTimeRatio") && !value["LockTimeRatio"].IsNull())
     {
-        if (!value["LockTimeRatio"].IsDouble())
+        if (!value["LockTimeRatio"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `SlowLogTopSqlItem.LockTimeRatio` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogTopSqlItem.LockTimeRatio` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_lockTimeRatio = value["LockTimeRatio"].GetDouble();
         m_lockTimeRatioHasBeenSet = true;
@@ -232,9 +235,9 @@ CoreInternalOutcome SlowLogTopSqlItem::Deserialize(const Value &value)
 
     if (value.HasMember("RowsExaminedRatio") && !value["RowsExaminedRatio"].IsNull())
     {
-        if (!value["RowsExaminedRatio"].IsDouble())
+        if (!value["RowsExaminedRatio"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `SlowLogTopSqlItem.RowsExaminedRatio` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogTopSqlItem.RowsExaminedRatio` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_rowsExaminedRatio = value["RowsExaminedRatio"].GetDouble();
         m_rowsExaminedRatioHasBeenSet = true;
@@ -242,24 +245,64 @@ CoreInternalOutcome SlowLogTopSqlItem::Deserialize(const Value &value)
 
     if (value.HasMember("RowsSentRatio") && !value["RowsSentRatio"].IsNull())
     {
-        if (!value["RowsSentRatio"].IsDouble())
+        if (!value["RowsSentRatio"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `SlowLogTopSqlItem.RowsSentRatio` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlowLogTopSqlItem.RowsSentRatio` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_rowsSentRatio = value["RowsSentRatio"].GetDouble();
         m_rowsSentRatioHasBeenSet = true;
+    }
+
+    if (value.HasMember("QueryTimeAvg") && !value["QueryTimeAvg"].IsNull())
+    {
+        if (!value["QueryTimeAvg"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `SlowLogTopSqlItem.QueryTimeAvg` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_queryTimeAvg = value["QueryTimeAvg"].GetDouble();
+        m_queryTimeAvgHasBeenSet = true;
+    }
+
+    if (value.HasMember("RowsSentAvg") && !value["RowsSentAvg"].IsNull())
+    {
+        if (!value["RowsSentAvg"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `SlowLogTopSqlItem.RowsSentAvg` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_rowsSentAvg = value["RowsSentAvg"].GetDouble();
+        m_rowsSentAvgHasBeenSet = true;
+    }
+
+    if (value.HasMember("LockTimeAvg") && !value["LockTimeAvg"].IsNull())
+    {
+        if (!value["LockTimeAvg"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `SlowLogTopSqlItem.LockTimeAvg` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_lockTimeAvg = value["LockTimeAvg"].GetDouble();
+        m_lockTimeAvgHasBeenSet = true;
+    }
+
+    if (value.HasMember("RowsExaminedAvg") && !value["RowsExaminedAvg"].IsNull())
+    {
+        if (!value["RowsExaminedAvg"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `SlowLogTopSqlItem.RowsExaminedAvg` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_rowsExaminedAvg = value["RowsExaminedAvg"].GetDouble();
+        m_rowsExaminedAvgHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void SlowLogTopSqlItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SlowLogTopSqlItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_lockTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LockTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_lockTime, allocator);
@@ -267,7 +310,7 @@ void SlowLogTopSqlItem::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_lockTimeMaxHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LockTimeMax";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_lockTimeMax, allocator);
@@ -275,7 +318,7 @@ void SlowLogTopSqlItem::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_lockTimeMinHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LockTimeMin";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_lockTimeMin, allocator);
@@ -283,7 +326,7 @@ void SlowLogTopSqlItem::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_rowsExaminedHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RowsExamined";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_rowsExamined, allocator);
@@ -291,7 +334,7 @@ void SlowLogTopSqlItem::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_rowsExaminedMaxHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RowsExaminedMax";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_rowsExaminedMax, allocator);
@@ -299,7 +342,7 @@ void SlowLogTopSqlItem::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_rowsExaminedMinHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RowsExaminedMin";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_rowsExaminedMin, allocator);
@@ -307,7 +350,7 @@ void SlowLogTopSqlItem::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_queryTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "QueryTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_queryTime, allocator);
@@ -315,7 +358,7 @@ void SlowLogTopSqlItem::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_queryTimeMaxHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "QueryTimeMax";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_queryTimeMax, allocator);
@@ -323,7 +366,7 @@ void SlowLogTopSqlItem::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_queryTimeMinHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "QueryTimeMin";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_queryTimeMin, allocator);
@@ -331,7 +374,7 @@ void SlowLogTopSqlItem::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_rowsSentHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RowsSent";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_rowsSent, allocator);
@@ -339,7 +382,7 @@ void SlowLogTopSqlItem::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_rowsSentMaxHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RowsSentMax";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_rowsSentMax, allocator);
@@ -347,7 +390,7 @@ void SlowLogTopSqlItem::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_rowsSentMinHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RowsSentMin";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_rowsSentMin, allocator);
@@ -355,7 +398,7 @@ void SlowLogTopSqlItem::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_execTimesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ExecTimes";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_execTimes, allocator);
@@ -363,31 +406,31 @@ void SlowLogTopSqlItem::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_sqlTemplateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SqlTemplate";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_sqlTemplate.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sqlTemplate.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sqlTextHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SqlText";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_sqlText.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sqlText.c_str(), allocator).Move(), allocator);
     }
 
     if (m_schemaHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Schema";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_schema.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_schema.c_str(), allocator).Move(), allocator);
     }
 
     if (m_queryTimeRatioHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "QueryTimeRatio";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_queryTimeRatio, allocator);
@@ -395,7 +438,7 @@ void SlowLogTopSqlItem::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_lockTimeRatioHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LockTimeRatio";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_lockTimeRatio, allocator);
@@ -403,7 +446,7 @@ void SlowLogTopSqlItem::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_rowsExaminedRatioHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RowsExaminedRatio";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_rowsExaminedRatio, allocator);
@@ -411,10 +454,42 @@ void SlowLogTopSqlItem::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_rowsSentRatioHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RowsSentRatio";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_rowsSentRatio, allocator);
+    }
+
+    if (m_queryTimeAvgHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "QueryTimeAvg";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_queryTimeAvg, allocator);
+    }
+
+    if (m_rowsSentAvgHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RowsSentAvg";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_rowsSentAvg, allocator);
+    }
+
+    if (m_lockTimeAvgHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LockTimeAvg";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_lockTimeAvg, allocator);
+    }
+
+    if (m_rowsExaminedAvgHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RowsExaminedAvg";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_rowsExaminedAvg, allocator);
     }
 
 }
@@ -738,5 +813,69 @@ void SlowLogTopSqlItem::SetRowsSentRatio(const double& _rowsSentRatio)
 bool SlowLogTopSqlItem::RowsSentRatioHasBeenSet() const
 {
     return m_rowsSentRatioHasBeenSet;
+}
+
+double SlowLogTopSqlItem::GetQueryTimeAvg() const
+{
+    return m_queryTimeAvg;
+}
+
+void SlowLogTopSqlItem::SetQueryTimeAvg(const double& _queryTimeAvg)
+{
+    m_queryTimeAvg = _queryTimeAvg;
+    m_queryTimeAvgHasBeenSet = true;
+}
+
+bool SlowLogTopSqlItem::QueryTimeAvgHasBeenSet() const
+{
+    return m_queryTimeAvgHasBeenSet;
+}
+
+double SlowLogTopSqlItem::GetRowsSentAvg() const
+{
+    return m_rowsSentAvg;
+}
+
+void SlowLogTopSqlItem::SetRowsSentAvg(const double& _rowsSentAvg)
+{
+    m_rowsSentAvg = _rowsSentAvg;
+    m_rowsSentAvgHasBeenSet = true;
+}
+
+bool SlowLogTopSqlItem::RowsSentAvgHasBeenSet() const
+{
+    return m_rowsSentAvgHasBeenSet;
+}
+
+double SlowLogTopSqlItem::GetLockTimeAvg() const
+{
+    return m_lockTimeAvg;
+}
+
+void SlowLogTopSqlItem::SetLockTimeAvg(const double& _lockTimeAvg)
+{
+    m_lockTimeAvg = _lockTimeAvg;
+    m_lockTimeAvgHasBeenSet = true;
+}
+
+bool SlowLogTopSqlItem::LockTimeAvgHasBeenSet() const
+{
+    return m_lockTimeAvgHasBeenSet;
+}
+
+double SlowLogTopSqlItem::GetRowsExaminedAvg() const
+{
+    return m_rowsExaminedAvg;
+}
+
+void SlowLogTopSqlItem::SetRowsExaminedAvg(const double& _rowsExaminedAvg)
+{
+    m_rowsExaminedAvg = _rowsExaminedAvg;
+    m_rowsExaminedAvgHasBeenSet = true;
+}
+
+bool SlowLogTopSqlItem::RowsExaminedAvgHasBeenSet() const
+{
+    return m_rowsExaminedAvgHasBeenSet;
 }
 

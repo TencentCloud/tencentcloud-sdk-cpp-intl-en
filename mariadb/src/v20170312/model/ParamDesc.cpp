@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mariadb::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 ParamDesc::ParamDesc() :
@@ -31,7 +30,7 @@ ParamDesc::ParamDesc() :
 {
 }
 
-CoreInternalOutcome ParamDesc::Deserialize(const Value &value)
+CoreInternalOutcome ParamDesc::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome ParamDesc::Deserialize(const Value &value)
     {
         if (!value["Param"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ParamDesc.Param` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParamDesc.Param` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_param = string(value["Param"].GetString());
         m_paramHasBeenSet = true;
@@ -50,7 +49,7 @@ CoreInternalOutcome ParamDesc::Deserialize(const Value &value)
     {
         if (!value["Value"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ParamDesc.Value` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParamDesc.Value` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_value = string(value["Value"].GetString());
         m_valueHasBeenSet = true;
@@ -60,7 +59,7 @@ CoreInternalOutcome ParamDesc::Deserialize(const Value &value)
     {
         if (!value["SetValue"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ParamDesc.SetValue` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParamDesc.SetValue` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_setValue = string(value["SetValue"].GetString());
         m_setValueHasBeenSet = true;
@@ -70,7 +69,7 @@ CoreInternalOutcome ParamDesc::Deserialize(const Value &value)
     {
         if (!value["Default"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ParamDesc.Default` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParamDesc.Default` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_default = string(value["Default"].GetString());
         m_defaultHasBeenSet = true;
@@ -80,7 +79,7 @@ CoreInternalOutcome ParamDesc::Deserialize(const Value &value)
     {
         if (!value["Constraint"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `ParamDesc.Constraint` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParamDesc.Constraint` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_constraint.Deserialize(value["Constraint"]);
@@ -97,7 +96,7 @@ CoreInternalOutcome ParamDesc::Deserialize(const Value &value)
     {
         if (!value["HaveSetValue"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `ParamDesc.HaveSetValue` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParamDesc.HaveSetValue` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_haveSetValue = value["HaveSetValue"].GetBool();
         m_haveSetValueHasBeenSet = true;
@@ -107,53 +106,53 @@ CoreInternalOutcome ParamDesc::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ParamDesc::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ParamDesc::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_paramHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Param";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_param.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_param.c_str(), allocator).Move(), allocator);
     }
 
     if (m_valueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Value";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_value.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_value.c_str(), allocator).Move(), allocator);
     }
 
     if (m_setValueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SetValue";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_setValue.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_setValue.c_str(), allocator).Move(), allocator);
     }
 
     if (m_defaultHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Default";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_default.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_default.c_str(), allocator).Move(), allocator);
     }
 
     if (m_constraintHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Constraint";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_constraint.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_haveSetValueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HaveSetValue";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_haveSetValue, allocator);

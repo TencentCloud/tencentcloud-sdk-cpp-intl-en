@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ckafka::V20190819::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeGroup::DescribeGroup() :
@@ -27,7 +26,7 @@ DescribeGroup::DescribeGroup() :
 {
 }
 
-CoreInternalOutcome DescribeGroup::Deserialize(const Value &value)
+CoreInternalOutcome DescribeGroup::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome DescribeGroup::Deserialize(const Value &value)
     {
         if (!value["Group"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeGroup.Group` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeGroup.Group` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_group = string(value["Group"].GetString());
         m_groupHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome DescribeGroup::Deserialize(const Value &value)
     {
         if (!value["Protocol"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeGroup.Protocol` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeGroup.Protocol` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_protocol = string(value["Protocol"].GetString());
         m_protocolHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome DescribeGroup::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void DescribeGroup::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DescribeGroup::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_groupHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Group";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_group.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_group.c_str(), allocator).Move(), allocator);
     }
 
     if (m_protocolHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Protocol";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_protocol.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
     }
 
 }

@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time, such as "2019-09-11 12:13:14".
-                     * @return EndTime End time, such as "2019-09-11 12:13:14".
+                     * 获取End time, such as "2019-09-11 12:13:14". The interval between the end time and the start time can be up to 2 days.
+                     * @return EndTime End time, such as "2019-09-11 12:13:14". The interval between the end time and the start time can be up to 2 days.
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time, such as "2019-09-11 12:13:14".
-                     * @param EndTime End time, such as "2019-09-11 12:13:14".
+                     * 设置End time, such as "2019-09-11 12:13:14". The interval between the end time and the start time can be up to 2 days.
+                     * @param EndTime End time, such as "2019-09-11 12:13:14". The interval between the end time and the start time can be up to 2 days.
                      */
                     void SetEndTime(const std::string& _endTime);
 
@@ -95,6 +95,24 @@ namespace TencentCloud
                      * @return EndTime 是否已赋值
                      */
                     bool EndTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+                     * @return Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+                     */
+                    std::string GetProduct() const;
+
+                    /**
+                     * 设置Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+                     * @param Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+                     */
+                    void SetProduct(const std::string& _product);
+
+                    /**
+                     * 判断参数 Product 是否已赋值
+                     * @return Product 是否已赋值
+                     */
+                    bool ProductHasBeenSet() const;
 
                 private:
 
@@ -111,10 +129,16 @@ namespace TencentCloud
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time, such as "2019-09-11 12:13:14".
+                     * End time, such as "2019-09-11 12:13:14". The interval between the end time and the start time can be up to 2 days.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
+
+                    /**
+                     * Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+                     */
+                    std::string m_product;
+                    bool m_productHasBeenSet;
 
                 };
             }

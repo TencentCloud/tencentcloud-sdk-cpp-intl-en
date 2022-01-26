@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 IPStrategy::IPStrategy() :
@@ -34,7 +33,7 @@ IPStrategy::IPStrategy() :
 {
 }
 
-CoreInternalOutcome IPStrategy::Deserialize(const Value &value)
+CoreInternalOutcome IPStrategy::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -43,7 +42,7 @@ CoreInternalOutcome IPStrategy::Deserialize(const Value &value)
     {
         if (!value["StrategyId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IPStrategy.StrategyId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IPStrategy.StrategyId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_strategyId = string(value["StrategyId"].GetString());
         m_strategyIdHasBeenSet = true;
@@ -53,7 +52,7 @@ CoreInternalOutcome IPStrategy::Deserialize(const Value &value)
     {
         if (!value["StrategyName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IPStrategy.StrategyName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IPStrategy.StrategyName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_strategyName = string(value["StrategyName"].GetString());
         m_strategyNameHasBeenSet = true;
@@ -63,7 +62,7 @@ CoreInternalOutcome IPStrategy::Deserialize(const Value &value)
     {
         if (!value["StrategyType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IPStrategy.StrategyType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IPStrategy.StrategyType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_strategyType = string(value["StrategyType"].GetString());
         m_strategyTypeHasBeenSet = true;
@@ -73,7 +72,7 @@ CoreInternalOutcome IPStrategy::Deserialize(const Value &value)
     {
         if (!value["StrategyData"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IPStrategy.StrategyData` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IPStrategy.StrategyData` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_strategyData = string(value["StrategyData"].GetString());
         m_strategyDataHasBeenSet = true;
@@ -83,7 +82,7 @@ CoreInternalOutcome IPStrategy::Deserialize(const Value &value)
     {
         if (!value["CreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IPStrategy.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IPStrategy.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createdTime = string(value["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
@@ -93,7 +92,7 @@ CoreInternalOutcome IPStrategy::Deserialize(const Value &value)
     {
         if (!value["ModifiedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IPStrategy.ModifiedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IPStrategy.ModifiedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_modifiedTime = string(value["ModifiedTime"].GetString());
         m_modifiedTimeHasBeenSet = true;
@@ -103,7 +102,7 @@ CoreInternalOutcome IPStrategy::Deserialize(const Value &value)
     {
         if (!value["ServiceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IPStrategy.ServiceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IPStrategy.ServiceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_serviceId = string(value["ServiceId"].GetString());
         m_serviceIdHasBeenSet = true;
@@ -113,7 +112,7 @@ CoreInternalOutcome IPStrategy::Deserialize(const Value &value)
     {
         if (!value["BindApiTotalCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `IPStrategy.BindApiTotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IPStrategy.BindApiTotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_bindApiTotalCount = value["BindApiTotalCount"].GetInt64();
         m_bindApiTotalCountHasBeenSet = true;
@@ -122,10 +121,10 @@ CoreInternalOutcome IPStrategy::Deserialize(const Value &value)
     if (value.HasMember("BindApis") && !value["BindApis"].IsNull())
     {
         if (!value["BindApis"].IsArray())
-            return CoreInternalOutcome(Error("response `IPStrategy.BindApis` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `IPStrategy.BindApis` is not array type"));
 
-        const Value &tmpValue = value["BindApis"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["BindApis"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             DesApisStatus item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -143,68 +142,68 @@ CoreInternalOutcome IPStrategy::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void IPStrategy::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void IPStrategy::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_strategyIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StrategyId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_strategyId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_strategyId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_strategyNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StrategyName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_strategyName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_strategyName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_strategyTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StrategyType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_strategyType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_strategyType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_strategyDataHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StrategyData";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_strategyData.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_strategyData.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createdTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createdTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_modifiedTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ModifiedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_modifiedTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_modifiedTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_serviceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_serviceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_serviceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_bindApiTotalCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BindApiTotalCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_bindApiTotalCount, allocator);
@@ -212,15 +211,15 @@ void IPStrategy::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_bindApisHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BindApis";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_bindApis.begin(); itr != m_bindApis.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }

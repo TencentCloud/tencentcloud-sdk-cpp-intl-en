@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dayu::V20180709::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeCCFrequencyRulesResponse::DescribeCCFrequencyRulesResponse() :
@@ -32,20 +31,20 @@ DescribeCCFrequencyRulesResponse::DescribeCCFrequencyRulesResponse() :
 
 CoreInternalOutcome DescribeCCFrequencyRulesResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -56,21 +55,21 @@ CoreInternalOutcome DescribeCCFrequencyRulesResponse::Deserialize(const string &
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
     if (rsp.HasMember("CCFrequencyRuleList") && !rsp["CCFrequencyRuleList"].IsNull())
     {
         if (!rsp["CCFrequencyRuleList"].IsArray())
-            return CoreInternalOutcome(Error("response `CCFrequencyRuleList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `CCFrequencyRuleList` is not array type"));
 
-        const Value &tmpValue = rsp["CCFrequencyRuleList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["CCFrequencyRuleList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             CCFrequencyRule item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -88,7 +87,7 @@ CoreInternalOutcome DescribeCCFrequencyRulesResponse::Deserialize(const string &
     {
         if (!rsp["CCFrequencyRuleStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CCFrequencyRuleStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CCFrequencyRuleStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cCFrequencyRuleStatus = string(rsp["CCFrequencyRuleStatus"].GetString());
         m_cCFrequencyRuleStatusHasBeenSet = true;
@@ -96,6 +95,46 @@ CoreInternalOutcome DescribeCCFrequencyRulesResponse::Deserialize(const string &
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeCCFrequencyRulesResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_cCFrequencyRuleListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CCFrequencyRuleList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_cCFrequencyRuleList.begin(); itr != m_cCFrequencyRuleList.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_cCFrequencyRuleStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CCFrequencyRuleStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cCFrequencyRuleStatus.c_str(), allocator).Move(), allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

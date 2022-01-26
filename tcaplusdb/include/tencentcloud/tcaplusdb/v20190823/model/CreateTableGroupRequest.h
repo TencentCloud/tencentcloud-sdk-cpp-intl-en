@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool TableGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResourceTags 
+                     * 获取Table group tag list
+                     * @return ResourceTags Table group tag list
                      */
                     std::vector<TagInfoUnit> GetResourceTags() const;
 
                     /**
-                     * 设置
-                     * @param ResourceTags 
+                     * 设置Table group tag list
+                     * @param ResourceTags Table group tag list
                      */
                     void SetResourceTags(const std::vector<TagInfoUnit>& _resourceTags);
 
@@ -136,7 +136,7 @@ namespace TencentCloud
                     bool m_tableGroupIdHasBeenSet;
 
                     /**
-                     * 
+                     * Table group tag list
                      */
                     std::vector<TagInfoUnit> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;

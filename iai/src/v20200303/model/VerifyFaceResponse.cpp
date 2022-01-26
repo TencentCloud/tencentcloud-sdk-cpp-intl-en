@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Iai::V20200303::Model;
-using namespace rapidjson;
 using namespace std;
 
 VerifyFaceResponse::VerifyFaceResponse() :
@@ -33,20 +32,20 @@ VerifyFaceResponse::VerifyFaceResponse() :
 
 CoreInternalOutcome VerifyFaceResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -57,19 +56,19 @@ CoreInternalOutcome VerifyFaceResponse::Deserialize(const string &payload)
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
     if (rsp.HasMember("Score") && !rsp["Score"].IsNull())
     {
-        if (!rsp["Score"].IsDouble())
+        if (!rsp["Score"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `Score` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Score` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_score = rsp["Score"].GetDouble();
         m_scoreHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome VerifyFaceResponse::Deserialize(const string &payload)
     {
         if (!rsp["IsMatch"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `IsMatch` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IsMatch` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_isMatch = rsp["IsMatch"].GetBool();
         m_isMatchHasBeenSet = true;
@@ -89,7 +88,7 @@ CoreInternalOutcome VerifyFaceResponse::Deserialize(const string &payload)
     {
         if (!rsp["FaceModelVersion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FaceModelVersion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FaceModelVersion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_faceModelVersion = string(rsp["FaceModelVersion"].GetString());
         m_faceModelVersionHasBeenSet = true;
@@ -97,6 +96,47 @@ CoreInternalOutcome VerifyFaceResponse::Deserialize(const string &payload)
 
 
     return CoreInternalOutcome(true);
+}
+
+string VerifyFaceResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_scoreHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Score";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_score, allocator);
+    }
+
+    if (m_isMatchHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsMatch";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isMatch, allocator);
+    }
+
+    if (m_faceModelVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FaceModelVersion";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_faceModelVersion.c_str(), allocator).Move(), allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

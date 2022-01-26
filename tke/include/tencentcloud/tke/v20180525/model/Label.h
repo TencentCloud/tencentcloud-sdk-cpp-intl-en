@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Name in map list
+                     * @return Name Name in map list
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param Name 
+                     * 设置Name in map list
+                     * @param Name Name in map list
                      */
                     void SetName(const std::string& _name);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Value 
+                     * 获取Value in map list
+                     * @return Value Value in map list
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置
-                     * @param Value 
+                     * 设置Value in map list
+                     * @param Value Value in map list
                      */
                     void SetValue(const std::string& _value);
 
@@ -85,13 +85,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Name in map list
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * Value in map list
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

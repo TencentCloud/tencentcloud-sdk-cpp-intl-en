@@ -34,6 +34,7 @@
 #include <tencentcloud/vod/v20180717/model/MediaKeyFrameDescInfo.h>
 #include <tencentcloud/vod/v20180717/model/MediaAdaptiveDynamicStreamingInfo.h>
 #include <tencentcloud/vod/v20180717/model/MediaMiniProgramReviewInfo.h>
+#include <tencentcloud/vod/v20180717/model/MediaSubtitleInfo.h>
 
 
 namespace TencentCloud
@@ -277,6 +278,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MiniProgramReviewInfoHasBeenSet() const;
 
                     /**
+                     * 获取Subtitle information
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return SubtitleInfo Subtitle information
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    MediaSubtitleInfo GetSubtitleInfo() const;
+
+                    /**
+                     * 设置Subtitle information
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param SubtitleInfo Subtitle information
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    void SetSubtitleInfo(const MediaSubtitleInfo& _subtitleInfo);
+
+                    /**
+                     * 判断参数 SubtitleInfo 是否已赋值
+                     * @return SubtitleInfo 是否已赋值
+                     */
+                    bool SubtitleInfoHasBeenSet() const;
+
+                    /**
                      * 获取Unique ID of media file.
                      * @return FileId Unique ID of media file.
                      */
@@ -365,6 +388,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     MediaMiniProgramReviewInfo m_miniProgramReviewInfo;
                     bool m_miniProgramReviewInfoHasBeenSet;
+
+                    /**
+                     * Subtitle information
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    MediaSubtitleInfo m_subtitleInfo;
+                    bool m_subtitleInfoHasBeenSet;
 
                     /**
                      * Unique ID of media file.

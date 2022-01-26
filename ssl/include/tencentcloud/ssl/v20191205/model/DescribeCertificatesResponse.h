@@ -41,12 +41,13 @@ namespace TencentCloud
                     DescribeCertificatesResponse();
                     ~DescribeCertificatesResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Total number.
+                     * 获取Total number
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCount Total number.
+                     * @return TotalCount Total number
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetTotalCount() const;
@@ -58,9 +59,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List.
+                     * 获取List
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Certificates List.
+                     * @return Certificates List
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Certificates> GetCertificates() const;
@@ -74,14 +75,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Total number.
+                     * Total number
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List.
+                     * List
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Certificates> m_certificates;

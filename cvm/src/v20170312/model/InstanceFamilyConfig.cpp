@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cvm::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 InstanceFamilyConfig::InstanceFamilyConfig() :
@@ -27,7 +26,7 @@ InstanceFamilyConfig::InstanceFamilyConfig() :
 {
 }
 
-CoreInternalOutcome InstanceFamilyConfig::Deserialize(const Value &value)
+CoreInternalOutcome InstanceFamilyConfig::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome InstanceFamilyConfig::Deserialize(const Value &value)
     {
         if (!value["InstanceFamilyName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceFamilyConfig.InstanceFamilyName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceFamilyConfig.InstanceFamilyName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceFamilyName = string(value["InstanceFamilyName"].GetString());
         m_instanceFamilyNameHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome InstanceFamilyConfig::Deserialize(const Value &value)
     {
         if (!value["InstanceFamily"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceFamilyConfig.InstanceFamily` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceFamilyConfig.InstanceFamily` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceFamily = string(value["InstanceFamily"].GetString());
         m_instanceFamilyHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome InstanceFamilyConfig::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void InstanceFamilyConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void InstanceFamilyConfig::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_instanceFamilyNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceFamilyName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceFamilyName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceFamilyName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceFamilyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceFamily";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceFamily.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceFamily.c_str(), allocator).Move(), allocator);
     }
 
 }

@@ -86,14 +86,14 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://cloud.tencent.com/document/product/416) billing plan. Applicable to `CDH` only, not the instances on the host.
-                     * @return InstanceChargeType Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://cloud.tencent.com/document/product/416) billing plan. Applicable to `CDH` only, not the instances on the host.
+                     * 获取Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) billing plan. Applicable to `CDH` only, not the instances on the host.
+                     * @return InstanceChargeType Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) billing plan. Applicable to `CDH` only, not the instances on the host.
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
-                     * 设置Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://cloud.tencent.com/document/product/416) billing plan. Applicable to `CDH` only, not the instances on the host.
-                     * @param InstanceChargeType Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://cloud.tencent.com/document/product/416) billing plan. Applicable to `CDH` only, not the instances on the host.
+                     * 设置Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) billing plan. Applicable to `CDH` only, not the instances on the host.
+                     * @param InstanceChargeType Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) billing plan. Applicable to `CDH` only, not the instances on the host.
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
 
@@ -292,14 +292,14 @@ Note: this field may return null, indicating that no valid value is obtained.
                     bool SoldOutReasonHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceBandwidth 
+                     * 获取Private network bandwidth, in Gbps.
+                     * @return InstanceBandwidth Private network bandwidth, in Gbps.
                      */
                     double GetInstanceBandwidth() const;
 
                     /**
-                     * 设置
-                     * @param InstanceBandwidth 
+                     * 设置Private network bandwidth, in Gbps.
+                     * @param InstanceBandwidth Private network bandwidth, in Gbps.
                      */
                     void SetInstanceBandwidth(const double& _instanceBandwidth);
 
@@ -310,14 +310,14 @@ Note: this field may return null, indicating that no valid value is obtained.
                     bool InstanceBandwidthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstancePps 
+                     * 获取The max packet sending and receiving capability (in 10k PPS).
+                     * @return InstancePps The max packet sending and receiving capability (in 10k PPS).
                      */
                     int64_t GetInstancePps() const;
 
                     /**
-                     * 设置
-                     * @param InstancePps 
+                     * 设置The max packet sending and receiving capability (in 10k PPS).
+                     * @param InstancePps The max packet sending and receiving capability (in 10k PPS).
                      */
                     void SetInstancePps(const int64_t& _instancePps);
 
@@ -328,14 +328,14 @@ Note: this field may return null, indicating that no valid value is obtained.
                     bool InstancePpsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StorageBlockAmount 
+                     * 获取Number of local storage blocks.
+                     * @return StorageBlockAmount Number of local storage blocks.
                      */
                     int64_t GetStorageBlockAmount() const;
 
                     /**
-                     * 设置
-                     * @param StorageBlockAmount 
+                     * 设置Number of local storage blocks.
+                     * @param StorageBlockAmount Number of local storage blocks.
                      */
                     void SetStorageBlockAmount(const int64_t& _storageBlockAmount);
 
@@ -346,14 +346,14 @@ Note: this field may return null, indicating that no valid value is obtained.
                     bool StorageBlockAmountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CpuType 
+                     * 获取CPU type.
+                     * @return CpuType CPU type.
                      */
                     std::string GetCpuType() const;
 
                     /**
-                     * 设置
-                     * @param CpuType 
+                     * 设置CPU type.
+                     * @param CpuType CPU type.
                      */
                     void SetCpuType(const std::string& _cpuType);
 
@@ -432,7 +432,7 @@ Note: this field may return null, indicating that no valid value is obtained.
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://cloud.tencent.com/document/product/416) billing plan. Applicable to `CDH` only, not the instances on the host.
+                     * Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) billing plan. Applicable to `CDH` only, not the instances on the host.
                      */
                     std::string m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;
@@ -500,25 +500,25 @@ Note: this field may return null, indicating that no valid value is obtained.
                     bool m_soldOutReasonHasBeenSet;
 
                     /**
-                     * 
+                     * Private network bandwidth, in Gbps.
                      */
                     double m_instanceBandwidth;
                     bool m_instanceBandwidthHasBeenSet;
 
                     /**
-                     * 
+                     * The max packet sending and receiving capability (in 10k PPS).
                      */
                     int64_t m_instancePps;
                     bool m_instancePpsHasBeenSet;
 
                     /**
-                     * 
+                     * Number of local storage blocks.
                      */
                     int64_t m_storageBlockAmount;
                     bool m_storageBlockAmountHasBeenSet;
 
                     /**
-                     * 
+                     * CPU type.
                      */
                     std::string m_cpuType;
                     bool m_cpuTypeHasBeenSet;

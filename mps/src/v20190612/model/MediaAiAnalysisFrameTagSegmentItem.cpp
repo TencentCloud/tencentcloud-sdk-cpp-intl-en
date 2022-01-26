@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 MediaAiAnalysisFrameTagSegmentItem::MediaAiAnalysisFrameTagSegmentItem() :
@@ -28,16 +27,16 @@ MediaAiAnalysisFrameTagSegmentItem::MediaAiAnalysisFrameTagSegmentItem() :
 {
 }
 
-CoreInternalOutcome MediaAiAnalysisFrameTagSegmentItem::Deserialize(const Value &value)
+CoreInternalOutcome MediaAiAnalysisFrameTagSegmentItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
 
     if (value.HasMember("StartTimeOffset") && !value["StartTimeOffset"].IsNull())
     {
-        if (!value["StartTimeOffset"].IsDouble())
+        if (!value["StartTimeOffset"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `MediaAiAnalysisFrameTagSegmentItem.StartTimeOffset` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaAiAnalysisFrameTagSegmentItem.StartTimeOffset` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_startTimeOffset = value["StartTimeOffset"].GetDouble();
         m_startTimeOffsetHasBeenSet = true;
@@ -45,9 +44,9 @@ CoreInternalOutcome MediaAiAnalysisFrameTagSegmentItem::Deserialize(const Value 
 
     if (value.HasMember("EndTimeOffset") && !value["EndTimeOffset"].IsNull())
     {
-        if (!value["EndTimeOffset"].IsDouble())
+        if (!value["EndTimeOffset"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `MediaAiAnalysisFrameTagSegmentItem.EndTimeOffset` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaAiAnalysisFrameTagSegmentItem.EndTimeOffset` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_endTimeOffset = value["EndTimeOffset"].GetDouble();
         m_endTimeOffsetHasBeenSet = true;
@@ -56,10 +55,10 @@ CoreInternalOutcome MediaAiAnalysisFrameTagSegmentItem::Deserialize(const Value 
     if (value.HasMember("TagSet") && !value["TagSet"].IsNull())
     {
         if (!value["TagSet"].IsArray())
-            return CoreInternalOutcome(Error("response `MediaAiAnalysisFrameTagSegmentItem.TagSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `MediaAiAnalysisFrameTagSegmentItem.TagSet` is not array type"));
 
-        const Value &tmpValue = value["TagSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["TagSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             MediaAiAnalysisFrameTagItem item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -77,12 +76,12 @@ CoreInternalOutcome MediaAiAnalysisFrameTagSegmentItem::Deserialize(const Value 
     return CoreInternalOutcome(true);
 }
 
-void MediaAiAnalysisFrameTagSegmentItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MediaAiAnalysisFrameTagSegmentItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_startTimeOffsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTimeOffset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_startTimeOffset, allocator);
@@ -90,7 +89,7 @@ void MediaAiAnalysisFrameTagSegmentItem::ToJsonObject(Value &value, Document::Al
 
     if (m_endTimeOffsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndTimeOffset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_endTimeOffset, allocator);
@@ -98,15 +97,15 @@ void MediaAiAnalysisFrameTagSegmentItem::ToJsonObject(Value &value, Document::Al
 
     if (m_tagSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TagSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_tagSet.begin(); itr != m_tagSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }

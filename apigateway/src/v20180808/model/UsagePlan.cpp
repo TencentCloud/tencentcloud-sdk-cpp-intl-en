@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 UsagePlan::UsagePlan() :
@@ -32,7 +31,7 @@ UsagePlan::UsagePlan() :
 {
 }
 
-CoreInternalOutcome UsagePlan::Deserialize(const Value &value)
+CoreInternalOutcome UsagePlan::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +40,7 @@ CoreInternalOutcome UsagePlan::Deserialize(const Value &value)
     {
         if (!value["Environment"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UsagePlan.Environment` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UsagePlan.Environment` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_environment = string(value["Environment"].GetString());
         m_environmentHasBeenSet = true;
@@ -51,7 +50,7 @@ CoreInternalOutcome UsagePlan::Deserialize(const Value &value)
     {
         if (!value["UsagePlanId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UsagePlan.UsagePlanId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UsagePlan.UsagePlanId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_usagePlanId = string(value["UsagePlanId"].GetString());
         m_usagePlanIdHasBeenSet = true;
@@ -61,7 +60,7 @@ CoreInternalOutcome UsagePlan::Deserialize(const Value &value)
     {
         if (!value["UsagePlanName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UsagePlan.UsagePlanName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UsagePlan.UsagePlanName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_usagePlanName = string(value["UsagePlanName"].GetString());
         m_usagePlanNameHasBeenSet = true;
@@ -71,7 +70,7 @@ CoreInternalOutcome UsagePlan::Deserialize(const Value &value)
     {
         if (!value["UsagePlanDesc"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UsagePlan.UsagePlanDesc` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UsagePlan.UsagePlanDesc` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_usagePlanDesc = string(value["UsagePlanDesc"].GetString());
         m_usagePlanDescHasBeenSet = true;
@@ -81,7 +80,7 @@ CoreInternalOutcome UsagePlan::Deserialize(const Value &value)
     {
         if (!value["MaxRequestNumPreSec"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `UsagePlan.MaxRequestNumPreSec` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UsagePlan.MaxRequestNumPreSec` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_maxRequestNumPreSec = value["MaxRequestNumPreSec"].GetInt64();
         m_maxRequestNumPreSecHasBeenSet = true;
@@ -91,7 +90,7 @@ CoreInternalOutcome UsagePlan::Deserialize(const Value &value)
     {
         if (!value["CreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UsagePlan.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UsagePlan.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createdTime = string(value["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
@@ -101,7 +100,7 @@ CoreInternalOutcome UsagePlan::Deserialize(const Value &value)
     {
         if (!value["ModifiedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UsagePlan.ModifiedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UsagePlan.ModifiedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_modifiedTime = string(value["ModifiedTime"].GetString());
         m_modifiedTimeHasBeenSet = true;
@@ -111,44 +110,44 @@ CoreInternalOutcome UsagePlan::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void UsagePlan::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void UsagePlan::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_environmentHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Environment";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_environment.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_environment.c_str(), allocator).Move(), allocator);
     }
 
     if (m_usagePlanIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UsagePlanId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_usagePlanId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_usagePlanId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_usagePlanNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UsagePlanName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_usagePlanName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_usagePlanName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_usagePlanDescHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UsagePlanDesc";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_usagePlanDesc.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_usagePlanDesc.c_str(), allocator).Move(), allocator);
     }
 
     if (m_maxRequestNumPreSecHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaxRequestNumPreSec";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_maxRequestNumPreSec, allocator);
@@ -156,18 +155,18 @@ void UsagePlan::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_createdTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createdTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_modifiedTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ModifiedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_modifiedTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_modifiedTime.c_str(), allocator).Move(), allocator);
     }
 
 }

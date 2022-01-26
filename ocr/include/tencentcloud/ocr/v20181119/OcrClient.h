@@ -25,12 +25,18 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/ocr/v20181119/model/BankCardOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/BankCardOCRResponse.h>
+#include <tencentcloud/ocr/v20181119/model/GeneralAccurateOCRRequest.h>
+#include <tencentcloud/ocr/v20181119/model/GeneralAccurateOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/GeneralBasicOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/GeneralBasicOCRResponse.h>
+#include <tencentcloud/ocr/v20181119/model/HKIDCardOCRRequest.h>
+#include <tencentcloud/ocr/v20181119/model/HKIDCardOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/MLIDCardOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/MLIDCardOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/MLIDPassportOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/MLIDPassportOCRResponse.h>
+#include <tencentcloud/ocr/v20181119/model/TableOCRRequest.h>
+#include <tencentcloud/ocr/v20181119/model/TableOCRResponse.h>
 
 
 namespace TencentCloud
@@ -45,23 +51,34 @@ namespace TencentCloud
                 OcrClient(const Credential &credential, const std::string &region);
                 OcrClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::BankCardOCRResponse> BankCardOCROutcome;
+                typedef Outcome<Core::Error, Model::BankCardOCRResponse> BankCardOCROutcome;
                 typedef std::future<BankCardOCROutcome> BankCardOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::BankCardOCRRequest&, BankCardOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> BankCardOCRAsyncHandler;
-                typedef Outcome<Error, Model::GeneralBasicOCRResponse> GeneralBasicOCROutcome;
+                typedef Outcome<Core::Error, Model::GeneralAccurateOCRResponse> GeneralAccurateOCROutcome;
+                typedef std::future<GeneralAccurateOCROutcome> GeneralAccurateOCROutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::GeneralAccurateOCRRequest&, GeneralAccurateOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> GeneralAccurateOCRAsyncHandler;
+                typedef Outcome<Core::Error, Model::GeneralBasicOCRResponse> GeneralBasicOCROutcome;
                 typedef std::future<GeneralBasicOCROutcome> GeneralBasicOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::GeneralBasicOCRRequest&, GeneralBasicOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> GeneralBasicOCRAsyncHandler;
-                typedef Outcome<Error, Model::MLIDCardOCRResponse> MLIDCardOCROutcome;
+                typedef Outcome<Core::Error, Model::HKIDCardOCRResponse> HKIDCardOCROutcome;
+                typedef std::future<HKIDCardOCROutcome> HKIDCardOCROutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::HKIDCardOCRRequest&, HKIDCardOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> HKIDCardOCRAsyncHandler;
+                typedef Outcome<Core::Error, Model::MLIDCardOCRResponse> MLIDCardOCROutcome;
                 typedef std::future<MLIDCardOCROutcome> MLIDCardOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::MLIDCardOCRRequest&, MLIDCardOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> MLIDCardOCRAsyncHandler;
-                typedef Outcome<Error, Model::MLIDPassportOCRResponse> MLIDPassportOCROutcome;
+                typedef Outcome<Core::Error, Model::MLIDPassportOCRResponse> MLIDPassportOCROutcome;
                 typedef std::future<MLIDPassportOCROutcome> MLIDPassportOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::MLIDPassportOCRRequest&, MLIDPassportOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> MLIDPassportOCRAsyncHandler;
+                typedef Outcome<Core::Error, Model::TableOCRResponse> TableOCROutcome;
+                typedef std::future<TableOCROutcome> TableOCROutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::TableOCRRequest&, TableOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> TableOCRAsyncHandler;
 
 
 
                 /**
                  *This API is used to detect and recognize key fields such as the card number, bank information, and expiration date on mainstream bank cards in Mainland China.
+
+This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
                  * @param req BankCardOCRRequest
                  * @return BankCardOCROutcome
                  */
@@ -70,67 +87,28 @@ namespace TencentCloud
                 BankCardOCROutcomeCallable BankCardOCRCallable(const Model::BankCardOCRRequest& request);
 
                 /**
-                 *This API is used to detect and recognize characters in an image in the following 19 languages: Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, and Thai. Mixed characters in English and each supported language can be recognized together.
+                 *This API is used to detect and recognize characters in an image. It can recognize Chinese, English, Chinese-English, digits, and special symbols and return the text box positions and characters.
+
+It is suitable for scenarios with a lot of characters in complex layouts and requiring high recognition accuracy, such as examination papers, online images, signboards, and legal documents.
+
+Strengths: compared with general print recognition, it provides higher-precision character recognition services. Its accuracy and recall rate are higher in difficult scenarios such as a large number of characters, long strings of digits, small characters, blurry characters, and tilted text.
+
+This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+                 * @param req GeneralAccurateOCRRequest
+                 * @return GeneralAccurateOCROutcome
+                 */
+                GeneralAccurateOCROutcome GeneralAccurateOCR(const Model::GeneralAccurateOCRRequest &request);
+                void GeneralAccurateOCRAsync(const Model::GeneralAccurateOCRRequest& request, const GeneralAccurateOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GeneralAccurateOCROutcomeCallable GeneralAccurateOCRCallable(const Model::GeneralAccurateOCRRequest& request);
+
+                /**
+                 *This API is used to detect and recognize characters in an image in the following 20 languages: Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, and Arabic. Mixed characters in English and each supported language can be recognized together.
 
 It can recognize printed text in paper documents, online images, ads, signboards, menus, video titles, profile photos, etc.
 
-Product strengths: it can automatically recognize the text language, return the text box coordinate information, and automatically rotate tilted text to the upright direction.
+Strengths: it can automatically recognize the text language, return the text box coordinate information, and automatically rotate tilted text to the upright direction.
 
-The differences between different editions of general print recognition are as detailed below:
-<table style="width:715px">
-      <thead>
-        <tr>
-          <th style="width:150px"></th>
-          <th style="width:200px">**(Recommended)** General Print Recognition</th>
-          <th ><a href="https://cloud.tencent.com/document/product/866/34937">**(Recommended)** General Print Recognition (High-Precision)</a></th>
-          <th><a href="https://cloud.tencent.com/document/product/866/37831">General Print Recognition (Simplified)</a></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Use case</td>
-          <td>It is suitable for recognition of printed text in all general scenarios</td>
-          <td>It is suitable for content with high recognition difficulty such as a large number of characters, long strings of digits, small characters, blurry characters, and tilted text</td>
-          <td>It is suitable for fast text recognition, which compromises the accuracy and recall rate but is more cost-effective</td>
-        </tr>
-        <tr>
-          <td>Recognition accuracy rate</td>
-          <td>96%</td>
-          <td>99%</td>
-          <td>91%</td>
-        </tr>
-        <tr>
-          <td>Price</td>
-          <td>Medium</td>
-          <td>High</td>
-          <td>Low</td>
-        </tr>
-        <tr>
-          <td>Supported languages</td>
-          <td>Chinese, English, Chinese-English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, and Thai</td>
-          <td>Chinese, English, and Chinese-English</td>
-          <td>Chinese, English, and Chinese-English</td>
-        </tr>
-        <tr>
-          <td>Automatic language detection</td>
-          <td>Supported</td>
-          <td>Supported</td>
-          <td>Supported</td>
-        </tr>
-        <tr>
-          <td>Return of text line coordinates</td>
-          <td>Supported</td>
-          <td>Supported</td>
-          <td>Supported</td>
-        </tr>
-        <tr>
-          <td>Automatic rotation correction</td>
-          <td>Rotation recognition is supported, and the angle information can be returned</td>
-          <td>Rotation recognition is supported, but no angle information can be returned</td>
-          <td>Rotation recognition is supported, and the angle information can be returned</td>
-        </tr>
-      </tbody>
-    </table>
+This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
                  * @param req GeneralBasicOCRRequest
                  * @return GeneralBasicOCROutcome
                  */
@@ -139,9 +117,21 @@ The differences between different editions of general print recognition are as d
                 GeneralBasicOCROutcomeCallable GeneralBasicOCRCallable(const Model::GeneralBasicOCRRequest& request);
 
                 /**
-                 *This API is used to recognize a Malaysian identity card. Recognizable fields include identity card number, name, gender, and address. It has the features of cropping identity photos and alarming for photographed or photocopied documents.
-This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://cloud.tencent.com/about/connect).
+                 *This API is used to recognize key fields on the photo side of a Hong Kong (China) identity card, including name in Chinese, name in English, telecode for name, date of birth, gender, document symbol, date of the first issue, date of the last receipt, identity card number, and permanent residency attribute. It can check for card authenticity and crop the identity photo.
 
+This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+
+                 * @param req HKIDCardOCRRequest
+                 * @return HKIDCardOCROutcome
+                 */
+                HKIDCardOCROutcome HKIDCardOCR(const Model::HKIDCardOCRRequest &request);
+                void HKIDCardOCRAsync(const Model::HKIDCardOCRRequest& request, const HKIDCardOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                HKIDCardOCROutcomeCallable HKIDCardOCRCallable(const Model::HKIDCardOCRRequest& request);
+
+                /**
+                 *This API is used to recognize a Malaysian identity card. Recognizable fields include identity card number, name, gender, and address. It has the features of cropping identity photos and alarming for photographed or photocopied documents.
+
+This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
                  * @param req MLIDCardOCRRequest
                  * @return MLIDCardOCROutcome
                  */
@@ -150,14 +140,26 @@ This API is not fully available for the time being. For more information, please
                 MLIDCardOCROutcomeCallable MLIDCardOCRCallable(const Model::MLIDCardOCRRequest& request);
 
                 /**
-                 *This API is used to recognize a passport issued outside Mainland China. Recognizable fields include passport ID, name, date of birth, gender, expiration date, issuing country/region, and nationality. It has the features of cropping identity photos and alarming for spoofed or photocopied documents.
-This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://cloud.tencent.com/about/connect).
+                 *This API is used to recognize a passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions. Recognizable fields include passport ID, name, date of birth, gender, expiration date, issuing country/region, and nationality. It has the features of cropping identity photos and alarming for photographed or photocopied documents.
+
+This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
                  * @param req MLIDPassportOCRRequest
                  * @return MLIDPassportOCROutcome
                  */
                 MLIDPassportOCROutcome MLIDPassportOCR(const Model::MLIDPassportOCRRequest &request);
                 void MLIDPassportOCRAsync(const Model::MLIDPassportOCRRequest& request, const MLIDPassportOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 MLIDPassportOCROutcomeCallable MLIDPassportOCRCallable(const Model::MLIDPassportOCRRequest& request);
+
+                /**
+                 *This API is used to detect and recognize Chinese and English forms in images. It can return the text content of each cell and save the recognition result as Excel.
+
+This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+                 * @param req TableOCRRequest
+                 * @return TableOCROutcome
+                 */
+                TableOCROutcome TableOCR(const Model::TableOCRRequest &request);
+                void TableOCRAsync(const Model::TableOCRRequest& request, const TableOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                TableOCROutcomeCallable TableOCRCallable(const Model::TableOCRRequest& request);
 
             };
         }

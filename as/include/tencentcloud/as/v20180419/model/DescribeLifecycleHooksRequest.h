@@ -62,46 +62,30 @@ namespace TencentCloud
                     bool LifecycleHookIdsHasBeenSet() const;
 
                     /**
-                     * 获取Filter.
-<li> lifecycle-hook-id - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
-<li> lifecycle-hook-name - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-Filter.
-<li> lifecycle-hook-id - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
-<li> lifecycle-hook-name - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `LifecycleHookIds` and `Filters` at the same time.
-                     * @return Filters Filter.
-<li> lifecycle-hook-id - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
-<li> lifecycle-hook-name - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-Filter.
-<li> lifecycle-hook-id - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
-<li> lifecycle-hook-name - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `LifecycleHookIds` and `Filters` at the same time.
+                     * 获取Filters.
+<li> `lifecycle-hook-id` - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
+<li> `lifecycle-hook-name` - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
+<li> `auto-scaling-group-id` - String - Required: No - (Filter) Filter by scaling group ID.</li>
+Up to 10 filters can be included in a request and up to 5 values for each filter. It cannot be specified with `LifecycleHookIds` at the same time.
+                     * @return Filters Filters.
+<li> `lifecycle-hook-id` - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
+<li> `lifecycle-hook-name` - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
+<li> `auto-scaling-group-id` - String - Required: No - (Filter) Filter by scaling group ID.</li>
+Up to 10 filters can be included in a request and up to 5 values for each filter. It cannot be specified with `LifecycleHookIds` at the same time.
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter.
-<li> lifecycle-hook-id - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
-<li> lifecycle-hook-name - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-Filter.
-<li> lifecycle-hook-id - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
-<li> lifecycle-hook-name - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `LifecycleHookIds` and `Filters` at the same time.
-                     * @param Filters Filter.
-<li> lifecycle-hook-id - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
-<li> lifecycle-hook-name - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-Filter.
-<li> lifecycle-hook-id - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
-<li> lifecycle-hook-name - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `LifecycleHookIds` and `Filters` at the same time.
+                     * 设置Filters.
+<li> `lifecycle-hook-id` - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
+<li> `lifecycle-hook-name` - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
+<li> `auto-scaling-group-id` - String - Required: No - (Filter) Filter by scaling group ID.</li>
+Up to 10 filters can be included in a request and up to 5 values for each filter. It cannot be specified with `LifecycleHookIds` at the same time.
+                     * @param Filters Filters.
+<li> `lifecycle-hook-id` - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
+<li> `lifecycle-hook-name` - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
+<li> `auto-scaling-group-id` - String - Required: No - (Filter) Filter by scaling group ID.</li>
+Up to 10 filters can be included in a request and up to 5 values for each filter. It cannot be specified with `LifecycleHookIds` at the same time.
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -112,14 +96,14 @@ The maximum number of `Filters` per request is 10. The upper limit for `Filter.V
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
-                     * @return Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
+                     * 获取Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+                     * @return Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
-                     * @param Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
+                     * 设置Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+                     * @param Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -130,14 +114,14 @@ The maximum number of `Filters` per request is 10. The upper limit for `Filter.V
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
-                     * @return Offset Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
+                     * 获取Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+                     * @return Offset Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
-                     * @param Offset Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
+                     * 设置Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+                     * @param Offset Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
                      */
                     void SetOffset(const uint64_t& _offset);
 
@@ -156,27 +140,23 @@ The maximum number of `Filters` per request is 10. The upper limit for `Filter.V
                     bool m_lifecycleHookIdsHasBeenSet;
 
                     /**
-                     * Filter.
-<li> lifecycle-hook-id - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
-<li> lifecycle-hook-name - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-Filter.
-<li> lifecycle-hook-id - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
-<li> lifecycle-hook-name - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `LifecycleHookIds` and `Filters` at the same time.
+                     * Filters.
+<li> `lifecycle-hook-id` - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
+<li> `lifecycle-hook-name` - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
+<li> `auto-scaling-group-id` - String - Required: No - (Filter) Filter by scaling group ID.</li>
+Up to 10 filters can be included in a request and up to 5 values for each filter. It cannot be specified with `LifecycleHookIds` at the same time.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
+                     * Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
+                     * Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;

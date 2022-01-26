@@ -18,18 +18,18 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 ServiceTemplate::ServiceTemplate() :
     m_serviceTemplateIdHasBeenSet(false),
     m_serviceTemplateNameHasBeenSet(false),
     m_serviceSetHasBeenSet(false),
-    m_createdTimeHasBeenSet(false)
+    m_createdTimeHasBeenSet(false),
+    m_serviceExtraSetHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ServiceTemplate::Deserialize(const Value &value)
+CoreInternalOutcome ServiceTemplate::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +38,7 @@ CoreInternalOutcome ServiceTemplate::Deserialize(const Value &value)
     {
         if (!value["ServiceTemplateId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ServiceTemplate.ServiceTemplateId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceTemplate.ServiceTemplateId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_serviceTemplateId = string(value["ServiceTemplateId"].GetString());
         m_serviceTemplateIdHasBeenSet = true;
@@ -48,7 +48,7 @@ CoreInternalOutcome ServiceTemplate::Deserialize(const Value &value)
     {
         if (!value["ServiceTemplateName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ServiceTemplate.ServiceTemplateName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceTemplate.ServiceTemplateName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_serviceTemplateName = string(value["ServiceTemplateName"].GetString());
         m_serviceTemplateNameHasBeenSet = true;
@@ -57,10 +57,10 @@ CoreInternalOutcome ServiceTemplate::Deserialize(const Value &value)
     if (value.HasMember("ServiceSet") && !value["ServiceSet"].IsNull())
     {
         if (!value["ServiceSet"].IsArray())
-            return CoreInternalOutcome(Error("response `ServiceTemplate.ServiceSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ServiceTemplate.ServiceSet` is not array type"));
 
-        const Value &tmpValue = value["ServiceSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["ServiceSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_serviceSet.push_back((*itr).GetString());
         }
@@ -71,54 +71,89 @@ CoreInternalOutcome ServiceTemplate::Deserialize(const Value &value)
     {
         if (!value["CreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ServiceTemplate.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceTemplate.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createdTime = string(value["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("ServiceExtraSet") && !value["ServiceExtraSet"].IsNull())
+    {
+        if (!value["ServiceExtraSet"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `ServiceTemplate.ServiceExtraSet` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["ServiceExtraSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            ServicesInfo item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_serviceExtraSet.push_back(item);
+        }
+        m_serviceExtraSetHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void ServiceTemplate::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ServiceTemplate::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_serviceTemplateIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceTemplateId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_serviceTemplateId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_serviceTemplateId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_serviceTemplateNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceTemplateName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_serviceTemplateName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_serviceTemplateName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_serviceSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_serviceSet.begin(); itr != m_serviceSet.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_createdTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createdTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_serviceExtraSetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ServiceExtraSet";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_serviceExtraSet.begin(); itr != m_serviceExtraSet.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
 }
@@ -186,5 +221,21 @@ void ServiceTemplate::SetCreatedTime(const string& _createdTime)
 bool ServiceTemplate::CreatedTimeHasBeenSet() const
 {
     return m_createdTimeHasBeenSet;
+}
+
+vector<ServicesInfo> ServiceTemplate::GetServiceExtraSet() const
+{
+    return m_serviceExtraSet;
+}
+
+void ServiceTemplate::SetServiceExtraSet(const vector<ServicesInfo>& _serviceExtraSet)
+{
+    m_serviceExtraSet = _serviceExtraSet;
+    m_serviceExtraSetHasBeenSet = true;
+}
+
+bool ServiceTemplate::ServiceExtraSetHasBeenSet() const
+{
+    return m_serviceExtraSetHasBeenSet;
 }
 

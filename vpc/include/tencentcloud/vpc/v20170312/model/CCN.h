@@ -156,14 +156,14 @@ namespace TencentCloud
                     bool StateHasBeenSet() const;
 
                     /**
-                     * 获取The instance service quality. 'PT': Platinum , 'AU': Gold, 'AG': Silver.
-                     * @return QosLevel The instance service quality. 'PT': Platinum , 'AU': Gold, 'AG': Silver.
+                     * 获取The instance service quality. ’PT’: Platinum , 'AU': Gold, 'AG': Silver.
+                     * @return QosLevel The instance service quality. ’PT’: Platinum , 'AU': Gold, 'AG': Silver.
                      */
                     std::string GetQosLevel() const;
 
                     /**
-                     * 设置The instance service quality. 'PT': Platinum , 'AU': Gold, 'AG': Silver.
-                     * @param QosLevel The instance service quality. 'PT': Platinum , 'AU': Gold, 'AG': Silver.
+                     * 设置The instance service quality. ’PT’: Platinum , 'AU': Gold, 'AG': Silver.
+                     * @param QosLevel The instance service quality. ’PT’: Platinum , 'AU': Gold, 'AG': Silver.
                      */
                     void SetQosLevel(const std::string& _qosLevel);
 
@@ -235,6 +235,68 @@ Note: This field may return null, indicating no valid value.
                      */
                     bool TagSetHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the CCN route priority feature is supported. Valid values: False: do not support; True: support.
+                     * @return RoutePriorityFlag Whether the CCN route priority feature is supported. Valid values: False: do not support; True: support.
+                     */
+                    bool GetRoutePriorityFlag() const;
+
+                    /**
+                     * 设置Whether the CCN route priority feature is supported. Valid values: False: do not support; True: support.
+                     * @param RoutePriorityFlag Whether the CCN route priority feature is supported. Valid values: False: do not support; True: support.
+                     */
+                    void SetRoutePriorityFlag(const bool& _routePriorityFlag);
+
+                    /**
+                     * 判断参数 RoutePriorityFlag 是否已赋值
+                     * @return RoutePriorityFlag 是否已赋值
+                     */
+                    bool RoutePriorityFlagHasBeenSet() const;
+
+                    /**
+                     * 获取Number of route tables associated with the instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return RouteTableCount Number of route tables associated with the instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetRouteTableCount() const;
+
+                    /**
+                     * 设置Number of route tables associated with the instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param RouteTableCount Number of route tables associated with the instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetRouteTableCount(const uint64_t& _routeTableCount);
+
+                    /**
+                     * 判断参数 RouteTableCount 是否已赋值
+                     * @return RouteTableCount 是否已赋值
+                     */
+                    bool RouteTableCountHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the multiple route tables feature is enabled for the CCN instance. Valid values: `False`: no; `True`: yes. Default value: `False`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return RouteTableFlag Whether the multiple route tables feature is enabled for the CCN instance. Valid values: `False`: no; `True`: yes. Default value: `False`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool GetRouteTableFlag() const;
+
+                    /**
+                     * 设置Whether the multiple route tables feature is enabled for the CCN instance. Valid values: `False`: no; `True`: yes. Default value: `False`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param RouteTableFlag Whether the multiple route tables feature is enabled for the CCN instance. Valid values: `False`: no; `True`: yes. Default value: `False`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetRouteTableFlag(const bool& _routeTableFlag);
+
+                    /**
+                     * 判断参数 RouteTableFlag 是否已赋值
+                     * @return RouteTableFlag 是否已赋值
+                     */
+                    bool RouteTableFlagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -274,7 +336,7 @@ Note: This field may return null, indicating no valid value.
                     bool m_stateHasBeenSet;
 
                     /**
-                     * The instance service quality. 'PT': Platinum , 'AU': Gold, 'AG': Silver.
+                     * The instance service quality. ’PT’: Platinum , 'AU': Gold, 'AG': Silver.
                      */
                     std::string m_qosLevel;
                     bool m_qosLevelHasBeenSet;
@@ -298,6 +360,26 @@ Note: This field may return null, indicating no valid value.
                      */
                     std::vector<Tag> m_tagSet;
                     bool m_tagSetHasBeenSet;
+
+                    /**
+                     * Whether the CCN route priority feature is supported. Valid values: False: do not support; True: support.
+                     */
+                    bool m_routePriorityFlag;
+                    bool m_routePriorityFlagHasBeenSet;
+
+                    /**
+                     * Number of route tables associated with the instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_routeTableCount;
+                    bool m_routeTableCountHasBeenSet;
+
+                    /**
+                     * Whether the multiple route tables feature is enabled for the CCN instance. Valid values: `False`: no; `True`: yes. Default value: `False`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool m_routeTableFlag;
+                    bool m_routeTableFlagHasBeenSet;
 
                 };
             }

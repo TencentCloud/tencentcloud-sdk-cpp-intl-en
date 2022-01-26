@@ -26,6 +26,8 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vpc/v20170312/model/NatGatewayAddress.h>
 #include <tencentcloud/vpc/v20170312/model/DestinationIpPortTranslationNatRule.h>
+#include <tencentcloud/vpc/v20170312/model/Tag.h>
+#include <tencentcloud/vpc/v20170312/model/SourceIpTranslationNatRule.h>
 
 
 namespace TencentCloud
@@ -105,20 +107,20 @@ namespace TencentCloud
                     /**
                      * 获取The status of the NAT gateway.
  'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
-'FAILED': Failed.
+‘FAILED’: Failed.
                      * @return State The status of the NAT gateway.
  'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
-'FAILED': Failed.
+‘FAILED’: Failed.
                      */
                     std::string GetState() const;
 
                     /**
                      * 设置The status of the NAT gateway.
  'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
-'FAILED': Failed.
+‘FAILED’: Failed.
                      * @param State The status of the NAT gateway.
  'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
-'FAILED': Failed.
+‘FAILED’: Failed.
                      */
                     void SetState(const std::string& _state);
 
@@ -254,6 +256,148 @@ namespace TencentCloud
                      */
                     bool ZoneHasBeenSet() const;
 
+                    /**
+                     * 获取IDs of direct connect gateway associated.
+                     * @return DirectConnectGatewayIds IDs of direct connect gateway associated.
+                     */
+                    std::vector<std::string> GetDirectConnectGatewayIds() const;
+
+                    /**
+                     * 设置IDs of direct connect gateway associated.
+                     * @param DirectConnectGatewayIds IDs of direct connect gateway associated.
+                     */
+                    void SetDirectConnectGatewayIds(const std::vector<std::string>& _directConnectGatewayIds);
+
+                    /**
+                     * 判断参数 DirectConnectGatewayIds 是否已赋值
+                     * @return DirectConnectGatewayIds 是否已赋值
+                     */
+                    bool DirectConnectGatewayIdsHasBeenSet() const;
+
+                    /**
+                     * 获取Subnet ID.
+                     * @return SubnetId Subnet ID.
+                     */
+                    std::string GetSubnetId() const;
+
+                    /**
+                     * 设置Subnet ID.
+                     * @param SubnetId Subnet ID.
+                     */
+                    void SetSubnetId(const std::string& _subnetId);
+
+                    /**
+                     * 判断参数 SubnetId 是否已赋值
+                     * @return SubnetId 是否已赋值
+                     */
+                    bool SubnetIdHasBeenSet() const;
+
+                    /**
+                     * 获取Tag key-value pair.
+                     * @return TagSet Tag key-value pair.
+                     */
+                    std::vector<Tag> GetTagSet() const;
+
+                    /**
+                     * 设置Tag key-value pair.
+                     * @param TagSet Tag key-value pair.
+                     */
+                    void SetTagSet(const std::vector<Tag>& _tagSet);
+
+                    /**
+                     * 判断参数 TagSet 是否已赋值
+                     * @return TagSet 是否已赋值
+                     */
+                    bool TagSetHasBeenSet() const;
+
+                    /**
+                     * 获取The list of the security groups bound to the NAT Gateway
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return SecurityGroupSet The list of the security groups bound to the NAT Gateway
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetSecurityGroupSet() const;
+
+                    /**
+                     * 设置The list of the security groups bound to the NAT Gateway
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param SecurityGroupSet The list of the security groups bound to the NAT Gateway
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetSecurityGroupSet(const std::vector<std::string>& _securityGroupSet);
+
+                    /**
+                     * 判断参数 SecurityGroupSet 是否已赋值
+                     * @return SecurityGroupSet 是否已赋值
+                     */
+                    bool SecurityGroupSetHasBeenSet() const;
+
+                    /**
+                     * 获取SNAT forwarding rule of the NAT Gateway.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @return SourceIpTranslationNatRuleSet SNAT forwarding rule of the NAT Gateway.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<SourceIpTranslationNatRule> GetSourceIpTranslationNatRuleSet() const;
+
+                    /**
+                     * 设置SNAT forwarding rule of the NAT Gateway.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @param SourceIpTranslationNatRuleSet SNAT forwarding rule of the NAT Gateway.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetSourceIpTranslationNatRuleSet(const std::vector<SourceIpTranslationNatRule>& _sourceIpTranslationNatRuleSet);
+
+                    /**
+                     * 判断参数 SourceIpTranslationNatRuleSet 是否已赋值
+                     * @return SourceIpTranslationNatRuleSet 是否已赋值
+                     */
+                    bool SourceIpTranslationNatRuleSetHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the NAT Gateway is dedicated.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @return IsExclusive Whether the NAT Gateway is dedicated.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    bool GetIsExclusive() const;
+
+                    /**
+                     * 设置Whether the NAT Gateway is dedicated.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @param IsExclusive Whether the NAT Gateway is dedicated.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetIsExclusive(const bool& _isExclusive);
+
+                    /**
+                     * 判断参数 IsExclusive 是否已赋值
+                     * @return IsExclusive 是否已赋值
+                     */
+                    bool IsExclusiveHasBeenSet() const;
+
+                    /**
+                     * 获取Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @return ExclusiveGatewayBandwidth Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    uint64_t GetExclusiveGatewayBandwidth() const;
+
+                    /**
+                     * 设置Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @param ExclusiveGatewayBandwidth Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetExclusiveGatewayBandwidth(const uint64_t& _exclusiveGatewayBandwidth);
+
+                    /**
+                     * 判断参数 ExclusiveGatewayBandwidth 是否已赋值
+                     * @return ExclusiveGatewayBandwidth 是否已赋值
+                     */
+                    bool ExclusiveGatewayBandwidthHasBeenSet() const;
+
                 private:
 
                     /**
@@ -277,7 +421,7 @@ namespace TencentCloud
                     /**
                      * The status of the NAT gateway.
  'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
-'FAILED': Failed.
+‘FAILED’: Failed.
                      */
                     std::string m_state;
                     bool m_stateHasBeenSet;
@@ -323,6 +467,52 @@ namespace TencentCloud
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
+
+                    /**
+                     * IDs of direct connect gateway associated.
+                     */
+                    std::vector<std::string> m_directConnectGatewayIds;
+                    bool m_directConnectGatewayIdsHasBeenSet;
+
+                    /**
+                     * Subnet ID.
+                     */
+                    std::string m_subnetId;
+                    bool m_subnetIdHasBeenSet;
+
+                    /**
+                     * Tag key-value pair.
+                     */
+                    std::vector<Tag> m_tagSet;
+                    bool m_tagSetHasBeenSet;
+
+                    /**
+                     * The list of the security groups bound to the NAT Gateway
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_securityGroupSet;
+                    bool m_securityGroupSetHasBeenSet;
+
+                    /**
+                     * SNAT forwarding rule of the NAT Gateway.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<SourceIpTranslationNatRule> m_sourceIpTranslationNatRuleSet;
+                    bool m_sourceIpTranslationNatRuleSetHasBeenSet;
+
+                    /**
+                     * Whether the NAT Gateway is dedicated.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    bool m_isExclusive;
+                    bool m_isExclusiveHasBeenSet;
+
+                    /**
+                     * Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    uint64_t m_exclusiveGatewayBandwidth;
+                    bool m_exclusiveGatewayBandwidthHasBeenSet;
 
                 };
             }

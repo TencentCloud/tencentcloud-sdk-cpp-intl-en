@@ -43,32 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Queries bill data user’s UIN
-                     * @return PayerUin Queries bill data user’s UIN
-                     */
-                    std::string GetPayerUin() const;
-
-                    /**
-                     * 设置Queries bill data user’s UIN
-                     * @param PayerUin Queries bill data user’s UIN
-                     */
-                    void SetPayerUin(const std::string& _payerUin);
-
-                    /**
-                     * 判断参数 PayerUin 是否已赋值
-                     * @return PayerUin 是否已赋值
-                     */
-                    bool PayerUinHasBeenSet() const;
-
-                    /**
-                     * 获取Only beginning in the current month is supported, and it must be the same month as the EndTime. For example, 2018-09-01 00:00:00.
-                     * @return BeginTime Only beginning in the current month is supported, and it must be the same month as the EndTime. For example, 2018-09-01 00:00:00.
+                     * 获取The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+                     * @return BeginTime The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
                      */
                     std::string GetBeginTime() const;
 
                     /**
-                     * 设置Only beginning in the current month is supported, and it must be the same month as the EndTime. For example, 2018-09-01 00:00:00.
-                     * @param BeginTime Only beginning in the current month is supported, and it must be the same month as the EndTime. For example, 2018-09-01 00:00:00.
+                     * 设置The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+                     * @param BeginTime The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
                      */
                     void SetBeginTime(const std::string& _beginTime);
 
@@ -79,14 +61,14 @@ namespace TencentCloud
                     bool BeginTimeHasBeenSet() const;
 
                     /**
-                     * 获取Only ending in the current month is supported, and it must be the same month as the BeginTime. For example, 2018-09-30 23:59:59.
-                     * @return EndTime Only ending in the current month is supported, and it must be the same month as the BeginTime. For example, 2018-09-30 23:59:59.
+                     * 获取The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+                     * @return EndTime The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Only ending in the current month is supported, and it must be the same month as the BeginTime. For example, 2018-09-30 23:59:59.
-                     * @param EndTime Only ending in the current month is supported, and it must be the same month as the BeginTime. For example, 2018-09-30 23:59:59.
+                     * 设置The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+                     * @param EndTime The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
                      */
                     void SetEndTime(const std::string& _endTime);
 
@@ -96,25 +78,43 @@ namespace TencentCloud
                      */
                     bool EndTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Queries bill data user's UIN
+                     * @return PayerUin Queries bill data user's UIN
+                     */
+                    std::string GetPayerUin() const;
+
+                    /**
+                     * 设置Queries bill data user's UIN
+                     * @param PayerUin Queries bill data user's UIN
+                     */
+                    void SetPayerUin(const std::string& _payerUin);
+
+                    /**
+                     * 判断参数 PayerUin 是否已赋值
+                     * @return PayerUin 是否已赋值
+                     */
+                    bool PayerUinHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Queries bill data user’s UIN
-                     */
-                    std::string m_payerUin;
-                    bool m_payerUinHasBeenSet;
-
-                    /**
-                     * Only beginning in the current month is supported, and it must be the same month as the EndTime. For example, 2018-09-01 00:00:00.
+                     * The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
                      */
                     std::string m_beginTime;
                     bool m_beginTimeHasBeenSet;
 
                     /**
-                     * Only ending in the current month is supported, and it must be the same month as the BeginTime. For example, 2018-09-30 23:59:59.
+                     * The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
+
+                    /**
+                     * Queries bill data user's UIN
+                     */
+                    std::string m_payerUin;
+                    bool m_payerUinHasBeenSet;
 
                 };
             }

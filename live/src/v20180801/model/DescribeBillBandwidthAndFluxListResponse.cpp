@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Live::V20180801::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeBillBandwidthAndFluxListResponse::DescribeBillBandwidthAndFluxListResponse() :
@@ -36,20 +35,20 @@ DescribeBillBandwidthAndFluxListResponse::DescribeBillBandwidthAndFluxListRespon
 
 CoreInternalOutcome DescribeBillBandwidthAndFluxListResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -60,11 +59,11 @@ CoreInternalOutcome DescribeBillBandwidthAndFluxListResponse::Deserialize(const 
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -72,7 +71,7 @@ CoreInternalOutcome DescribeBillBandwidthAndFluxListResponse::Deserialize(const 
     {
         if (!rsp["PeakBandwidthTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PeakBandwidthTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PeakBandwidthTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_peakBandwidthTime = string(rsp["PeakBandwidthTime"].GetString());
         m_peakBandwidthTimeHasBeenSet = true;
@@ -80,9 +79,9 @@ CoreInternalOutcome DescribeBillBandwidthAndFluxListResponse::Deserialize(const 
 
     if (rsp.HasMember("PeakBandwidth") && !rsp["PeakBandwidth"].IsNull())
     {
-        if (!rsp["PeakBandwidth"].IsDouble())
+        if (!rsp["PeakBandwidth"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `PeakBandwidth` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PeakBandwidth` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_peakBandwidth = rsp["PeakBandwidth"].GetDouble();
         m_peakBandwidthHasBeenSet = true;
@@ -92,7 +91,7 @@ CoreInternalOutcome DescribeBillBandwidthAndFluxListResponse::Deserialize(const 
     {
         if (!rsp["P95PeakBandwidthTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `P95PeakBandwidthTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `P95PeakBandwidthTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_p95PeakBandwidthTime = string(rsp["P95PeakBandwidthTime"].GetString());
         m_p95PeakBandwidthTimeHasBeenSet = true;
@@ -100,9 +99,9 @@ CoreInternalOutcome DescribeBillBandwidthAndFluxListResponse::Deserialize(const 
 
     if (rsp.HasMember("P95PeakBandwidth") && !rsp["P95PeakBandwidth"].IsNull())
     {
-        if (!rsp["P95PeakBandwidth"].IsDouble())
+        if (!rsp["P95PeakBandwidth"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `P95PeakBandwidth` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `P95PeakBandwidth` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_p95PeakBandwidth = rsp["P95PeakBandwidth"].GetDouble();
         m_p95PeakBandwidthHasBeenSet = true;
@@ -110,9 +109,9 @@ CoreInternalOutcome DescribeBillBandwidthAndFluxListResponse::Deserialize(const 
 
     if (rsp.HasMember("SumFlux") && !rsp["SumFlux"].IsNull())
     {
-        if (!rsp["SumFlux"].IsDouble())
+        if (!rsp["SumFlux"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `SumFlux` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SumFlux` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_sumFlux = rsp["SumFlux"].GetDouble();
         m_sumFluxHasBeenSet = true;
@@ -121,10 +120,10 @@ CoreInternalOutcome DescribeBillBandwidthAndFluxListResponse::Deserialize(const 
     if (rsp.HasMember("DataInfoList") && !rsp["DataInfoList"].IsNull())
     {
         if (!rsp["DataInfoList"].IsArray())
-            return CoreInternalOutcome(Error("response `DataInfoList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DataInfoList` is not array type"));
 
-        const Value &tmpValue = rsp["DataInfoList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["DataInfoList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             BillDataInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -140,6 +139,78 @@ CoreInternalOutcome DescribeBillBandwidthAndFluxListResponse::Deserialize(const 
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeBillBandwidthAndFluxListResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_peakBandwidthTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PeakBandwidthTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_peakBandwidthTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_peakBandwidthHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PeakBandwidth";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_peakBandwidth, allocator);
+    }
+
+    if (m_p95PeakBandwidthTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "P95PeakBandwidthTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_p95PeakBandwidthTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_p95PeakBandwidthHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "P95PeakBandwidth";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_p95PeakBandwidth, allocator);
+    }
+
+    if (m_sumFluxHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SumFlux";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_sumFlux, allocator);
+    }
+
+    if (m_dataInfoListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DataInfoList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_dataInfoList.begin(); itr != m_dataInfoList.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

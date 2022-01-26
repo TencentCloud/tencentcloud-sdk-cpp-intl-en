@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 AnimatedGraphicsTemplate::AnimatedGraphicsTemplate() :
@@ -37,7 +36,7 @@ AnimatedGraphicsTemplate::AnimatedGraphicsTemplate() :
 {
 }
 
-CoreInternalOutcome AnimatedGraphicsTemplate::Deserialize(const Value &value)
+CoreInternalOutcome AnimatedGraphicsTemplate::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -46,7 +45,7 @@ CoreInternalOutcome AnimatedGraphicsTemplate::Deserialize(const Value &value)
     {
         if (!value["Definition"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AnimatedGraphicsTemplate.Definition` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AnimatedGraphicsTemplate.Definition` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_definition = value["Definition"].GetUint64();
         m_definitionHasBeenSet = true;
@@ -56,7 +55,7 @@ CoreInternalOutcome AnimatedGraphicsTemplate::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AnimatedGraphicsTemplate.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AnimatedGraphicsTemplate.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -66,7 +65,7 @@ CoreInternalOutcome AnimatedGraphicsTemplate::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AnimatedGraphicsTemplate.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AnimatedGraphicsTemplate.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -76,7 +75,7 @@ CoreInternalOutcome AnimatedGraphicsTemplate::Deserialize(const Value &value)
     {
         if (!value["Comment"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AnimatedGraphicsTemplate.Comment` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AnimatedGraphicsTemplate.Comment` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_comment = string(value["Comment"].GetString());
         m_commentHasBeenSet = true;
@@ -86,7 +85,7 @@ CoreInternalOutcome AnimatedGraphicsTemplate::Deserialize(const Value &value)
     {
         if (!value["Width"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AnimatedGraphicsTemplate.Width` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AnimatedGraphicsTemplate.Width` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_width = value["Width"].GetUint64();
         m_widthHasBeenSet = true;
@@ -96,7 +95,7 @@ CoreInternalOutcome AnimatedGraphicsTemplate::Deserialize(const Value &value)
     {
         if (!value["Height"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AnimatedGraphicsTemplate.Height` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AnimatedGraphicsTemplate.Height` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_height = value["Height"].GetUint64();
         m_heightHasBeenSet = true;
@@ -106,7 +105,7 @@ CoreInternalOutcome AnimatedGraphicsTemplate::Deserialize(const Value &value)
     {
         if (!value["ResolutionAdaptive"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AnimatedGraphicsTemplate.ResolutionAdaptive` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AnimatedGraphicsTemplate.ResolutionAdaptive` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_resolutionAdaptive = string(value["ResolutionAdaptive"].GetString());
         m_resolutionAdaptiveHasBeenSet = true;
@@ -116,7 +115,7 @@ CoreInternalOutcome AnimatedGraphicsTemplate::Deserialize(const Value &value)
     {
         if (!value["Format"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AnimatedGraphicsTemplate.Format` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AnimatedGraphicsTemplate.Format` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_format = string(value["Format"].GetString());
         m_formatHasBeenSet = true;
@@ -126,7 +125,7 @@ CoreInternalOutcome AnimatedGraphicsTemplate::Deserialize(const Value &value)
     {
         if (!value["Fps"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AnimatedGraphicsTemplate.Fps` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AnimatedGraphicsTemplate.Fps` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_fps = value["Fps"].GetUint64();
         m_fpsHasBeenSet = true;
@@ -134,9 +133,9 @@ CoreInternalOutcome AnimatedGraphicsTemplate::Deserialize(const Value &value)
 
     if (value.HasMember("Quality") && !value["Quality"].IsNull())
     {
-        if (!value["Quality"].IsDouble())
+        if (!value["Quality"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `AnimatedGraphicsTemplate.Quality` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AnimatedGraphicsTemplate.Quality` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_quality = value["Quality"].GetDouble();
         m_qualityHasBeenSet = true;
@@ -146,7 +145,7 @@ CoreInternalOutcome AnimatedGraphicsTemplate::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AnimatedGraphicsTemplate.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AnimatedGraphicsTemplate.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -156,7 +155,7 @@ CoreInternalOutcome AnimatedGraphicsTemplate::Deserialize(const Value &value)
     {
         if (!value["UpdateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AnimatedGraphicsTemplate.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AnimatedGraphicsTemplate.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_updateTime = string(value["UpdateTime"].GetString());
         m_updateTimeHasBeenSet = true;
@@ -166,12 +165,12 @@ CoreInternalOutcome AnimatedGraphicsTemplate::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void AnimatedGraphicsTemplate::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AnimatedGraphicsTemplate::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_definitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Definition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_definition, allocator);
@@ -179,31 +178,31 @@ void AnimatedGraphicsTemplate::ToJsonObject(Value &value, Document::AllocatorTyp
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_commentHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Comment";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_comment.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_comment.c_str(), allocator).Move(), allocator);
     }
 
     if (m_widthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Width";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_width, allocator);
@@ -211,7 +210,7 @@ void AnimatedGraphicsTemplate::ToJsonObject(Value &value, Document::AllocatorTyp
 
     if (m_heightHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Height";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_height, allocator);
@@ -219,23 +218,23 @@ void AnimatedGraphicsTemplate::ToJsonObject(Value &value, Document::AllocatorTyp
 
     if (m_resolutionAdaptiveHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResolutionAdaptive";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_resolutionAdaptive.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resolutionAdaptive.c_str(), allocator).Move(), allocator);
     }
 
     if (m_formatHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Format";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_format.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_format.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fpsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Fps";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_fps, allocator);
@@ -243,7 +242,7 @@ void AnimatedGraphicsTemplate::ToJsonObject(Value &value, Document::AllocatorTyp
 
     if (m_qualityHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Quality";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_quality, allocator);
@@ -251,18 +250,18 @@ void AnimatedGraphicsTemplate::ToJsonObject(Value &value, Document::AllocatorTyp
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_updateTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UpdateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_updateTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_updateTime.c_str(), allocator).Move(), allocator);
     }
 
 }

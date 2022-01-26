@@ -40,11 +40,14 @@ namespace TencentCloud
                     CreateBackupResponse();
                     ~CreateBackupResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取List of IDs of created backup tasks
-                     * @return TaskIds List of IDs of created backup tasks
+                     * 获取List of backup creation task IDs
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @return TaskIds List of backup creation task IDs
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetTaskIds() const;
 
@@ -54,13 +57,35 @@ namespace TencentCloud
                      */
                     bool TaskIdsHasBeenSet() const;
 
+                    /**
+                     * 获取List of backup creation application IDs
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @return ApplicationIds List of backup creation application IDs
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetApplicationIds() const;
+
+                    /**
+                     * 判断参数 ApplicationIds 是否已赋值
+                     * @return ApplicationIds 是否已赋值
+                     */
+                    bool ApplicationIdsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * List of IDs of created backup tasks
+                     * List of backup creation task IDs
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_taskIds;
                     bool m_taskIdsHasBeenSet;
+
+                    /**
+                     * List of backup creation application IDs
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_applicationIds;
+                    bool m_applicationIdsHasBeenSet;
 
                 };
             }

@@ -18,15 +18,16 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 AiRecognitionTaskSegmentResultOutput::AiRecognitionTaskSegmentResultOutput() :
-    m_segmentSetHasBeenSet(false)
+    m_segmentSetHasBeenSet(false),
+    m_segmentSetFileUrlHasBeenSet(false),
+    m_segmentSetFileUrlExpireTimeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome AiRecognitionTaskSegmentResultOutput::Deserialize(const Value &value)
+CoreInternalOutcome AiRecognitionTaskSegmentResultOutput::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -34,10 +35,10 @@ CoreInternalOutcome AiRecognitionTaskSegmentResultOutput::Deserialize(const Valu
     if (value.HasMember("SegmentSet") && !value["SegmentSet"].IsNull())
     {
         if (!value["SegmentSet"].IsArray())
-            return CoreInternalOutcome(Error("response `AiRecognitionTaskSegmentResultOutput.SegmentSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionTaskSegmentResultOutput.SegmentSet` is not array type"));
 
-        const Value &tmpValue = value["SegmentSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["SegmentSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             AiRecognitionTaskSegmentSegmentItem item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -51,26 +52,62 @@ CoreInternalOutcome AiRecognitionTaskSegmentResultOutput::Deserialize(const Valu
         m_segmentSetHasBeenSet = true;
     }
 
+    if (value.HasMember("SegmentSetFileUrl") && !value["SegmentSetFileUrl"].IsNull())
+    {
+        if (!value["SegmentSetFileUrl"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionTaskSegmentResultOutput.SegmentSetFileUrl` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_segmentSetFileUrl = string(value["SegmentSetFileUrl"].GetString());
+        m_segmentSetFileUrlHasBeenSet = true;
+    }
+
+    if (value.HasMember("SegmentSetFileUrlExpireTime") && !value["SegmentSetFileUrlExpireTime"].IsNull())
+    {
+        if (!value["SegmentSetFileUrlExpireTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionTaskSegmentResultOutput.SegmentSetFileUrlExpireTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_segmentSetFileUrlExpireTime = string(value["SegmentSetFileUrlExpireTime"].GetString());
+        m_segmentSetFileUrlExpireTimeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void AiRecognitionTaskSegmentResultOutput::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AiRecognitionTaskSegmentResultOutput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_segmentSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SegmentSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_segmentSet.begin(); itr != m_segmentSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_segmentSetFileUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SegmentSetFileUrl";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_segmentSetFileUrl.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_segmentSetFileUrlExpireTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SegmentSetFileUrlExpireTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_segmentSetFileUrlExpireTime.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -90,5 +127,37 @@ void AiRecognitionTaskSegmentResultOutput::SetSegmentSet(const vector<AiRecognit
 bool AiRecognitionTaskSegmentResultOutput::SegmentSetHasBeenSet() const
 {
     return m_segmentSetHasBeenSet;
+}
+
+string AiRecognitionTaskSegmentResultOutput::GetSegmentSetFileUrl() const
+{
+    return m_segmentSetFileUrl;
+}
+
+void AiRecognitionTaskSegmentResultOutput::SetSegmentSetFileUrl(const string& _segmentSetFileUrl)
+{
+    m_segmentSetFileUrl = _segmentSetFileUrl;
+    m_segmentSetFileUrlHasBeenSet = true;
+}
+
+bool AiRecognitionTaskSegmentResultOutput::SegmentSetFileUrlHasBeenSet() const
+{
+    return m_segmentSetFileUrlHasBeenSet;
+}
+
+string AiRecognitionTaskSegmentResultOutput::GetSegmentSetFileUrlExpireTime() const
+{
+    return m_segmentSetFileUrlExpireTime;
+}
+
+void AiRecognitionTaskSegmentResultOutput::SetSegmentSetFileUrlExpireTime(const string& _segmentSetFileUrlExpireTime)
+{
+    m_segmentSetFileUrlExpireTime = _segmentSetFileUrlExpireTime;
+    m_segmentSetFileUrlExpireTimeHasBeenSet = true;
+}
+
+bool AiRecognitionTaskSegmentResultOutput::SegmentSetFileUrlExpireTimeHasBeenSet() const
+{
+    return m_segmentSetFileUrlExpireTimeHasBeenSet;
 }
 

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::As::V20180419::Model;
-using namespace rapidjson;
 using namespace std;
 
 SpotMarketOptions::SpotMarketOptions() :
@@ -27,7 +26,7 @@ SpotMarketOptions::SpotMarketOptions() :
 {
 }
 
-CoreInternalOutcome SpotMarketOptions::Deserialize(const Value &value)
+CoreInternalOutcome SpotMarketOptions::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome SpotMarketOptions::Deserialize(const Value &value)
     {
         if (!value["MaxPrice"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SpotMarketOptions.MaxPrice` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SpotMarketOptions.MaxPrice` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_maxPrice = string(value["MaxPrice"].GetString());
         m_maxPriceHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome SpotMarketOptions::Deserialize(const Value &value)
     {
         if (!value["SpotInstanceType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SpotMarketOptions.SpotInstanceType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SpotMarketOptions.SpotInstanceType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_spotInstanceType = string(value["SpotInstanceType"].GetString());
         m_spotInstanceTypeHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome SpotMarketOptions::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void SpotMarketOptions::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SpotMarketOptions::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_maxPriceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaxPrice";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_maxPrice.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_maxPrice.c_str(), allocator).Move(), allocator);
     }
 
     if (m_spotInstanceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SpotInstanceType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_spotInstanceType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_spotInstanceType.c_str(), allocator).Move(), allocator);
     }
 
 }

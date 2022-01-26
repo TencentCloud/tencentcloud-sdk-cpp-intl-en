@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Es::V20180416::Model;
-using namespace rapidjson;
 using namespace std;
 
 DictInfo::DictInfo() :
@@ -28,7 +27,7 @@ DictInfo::DictInfo() :
 {
 }
 
-CoreInternalOutcome DictInfo::Deserialize(const Value &value)
+CoreInternalOutcome DictInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome DictInfo::Deserialize(const Value &value)
     {
         if (!value["Key"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DictInfo.Key` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DictInfo.Key` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_key = string(value["Key"].GetString());
         m_keyHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome DictInfo::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DictInfo.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DictInfo.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome DictInfo::Deserialize(const Value &value)
     {
         if (!value["Size"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DictInfo.Size` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DictInfo.Size` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_size = value["Size"].GetUint64();
         m_sizeHasBeenSet = true;
@@ -67,28 +66,28 @@ CoreInternalOutcome DictInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void DictInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DictInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_keyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Key";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_key.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_key.c_str(), allocator).Move(), allocator);
     }
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Size";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_size, allocator);

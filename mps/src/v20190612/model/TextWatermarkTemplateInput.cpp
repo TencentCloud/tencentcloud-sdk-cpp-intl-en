@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 TextWatermarkTemplateInput::TextWatermarkTemplateInput() :
@@ -29,7 +28,7 @@ TextWatermarkTemplateInput::TextWatermarkTemplateInput() :
 {
 }
 
-CoreInternalOutcome TextWatermarkTemplateInput::Deserialize(const Value &value)
+CoreInternalOutcome TextWatermarkTemplateInput::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome TextWatermarkTemplateInput::Deserialize(const Value &value)
     {
         if (!value["FontType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TextWatermarkTemplateInput.FontType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TextWatermarkTemplateInput.FontType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fontType = string(value["FontType"].GetString());
         m_fontTypeHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome TextWatermarkTemplateInput::Deserialize(const Value &value)
     {
         if (!value["FontSize"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TextWatermarkTemplateInput.FontSize` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TextWatermarkTemplateInput.FontSize` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fontSize = string(value["FontSize"].GetString());
         m_fontSizeHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome TextWatermarkTemplateInput::Deserialize(const Value &value)
     {
         if (!value["FontColor"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TextWatermarkTemplateInput.FontColor` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TextWatermarkTemplateInput.FontColor` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fontColor = string(value["FontColor"].GetString());
         m_fontColorHasBeenSet = true;
@@ -66,9 +65,9 @@ CoreInternalOutcome TextWatermarkTemplateInput::Deserialize(const Value &value)
 
     if (value.HasMember("FontAlpha") && !value["FontAlpha"].IsNull())
     {
-        if (!value["FontAlpha"].IsDouble())
+        if (!value["FontAlpha"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `TextWatermarkTemplateInput.FontAlpha` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TextWatermarkTemplateInput.FontAlpha` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_fontAlpha = value["FontAlpha"].GetDouble();
         m_fontAlphaHasBeenSet = true;
@@ -78,36 +77,36 @@ CoreInternalOutcome TextWatermarkTemplateInput::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void TextWatermarkTemplateInput::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TextWatermarkTemplateInput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_fontTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FontType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fontType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fontType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fontSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FontSize";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fontSize.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fontSize.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fontColorHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FontColor";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fontColor.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fontColor.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fontAlphaHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FontAlpha";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_fontAlpha, allocator);

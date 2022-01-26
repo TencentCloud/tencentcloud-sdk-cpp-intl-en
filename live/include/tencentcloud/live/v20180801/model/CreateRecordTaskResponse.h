@@ -40,11 +40,12 @@ namespace TencentCloud
                     CreateRecordTaskResponse();
                     ~CreateRecordTaskResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Task ID, which uniquely identifies the recording task globally.
-                     * @return TaskId Task ID, which uniquely identifies the recording task globally.
+                     * 获取A globally unique task ID. If `TaskId` is returned, the recording task has been successfully created.
+                     * @return TaskId A globally unique task ID. If `TaskId` is returned, the recording task has been successfully created.
                      */
                     std::string GetTaskId() const;
 
@@ -57,7 +58,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task ID, which uniquely identifies the recording task globally.
+                     * A globally unique task ID. If `TaskId` is returned, the recording task has been successfully created.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

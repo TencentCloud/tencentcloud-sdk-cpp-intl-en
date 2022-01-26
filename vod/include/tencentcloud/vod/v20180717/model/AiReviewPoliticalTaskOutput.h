@@ -104,12 +104,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Tags for the results of video politically sensitive information detection. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+                     * 获取Tags for the results of video politically sensitive information detection. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
 violation_photo:
 <li>violation_photo: violating photo.</li>
 Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
 <li>politician: political figure.</li>
-                     * @return Label Tags for the results of video politically sensitive information detection. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+                     * @return Label Tags for the results of video politically sensitive information detection. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
 violation_photo:
 <li>violation_photo: violating photo.</li>
 Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
@@ -118,12 +118,12 @@ Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/mili
                     std::string GetLabel() const;
 
                     /**
-                     * 设置Tags for the results of video politically sensitive information detection. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+                     * 设置Tags for the results of video politically sensitive information detection. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
 violation_photo:
 <li>violation_photo: violating photo.</li>
 Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
 <li>politician: political figure.</li>
-                     * @param Label Tags for the results of video politically sensitive information detection. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+                     * @param Label Tags for the results of video politically sensitive information detection. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
 violation_photo:
 <li>violation_photo: violating photo.</li>
 Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
@@ -138,18 +138,18 @@ Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/mili
                     bool LabelHasBeenSet() const;
 
                     /**
-                     * 获取List of video segments that contain the detected politically sensitive information.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SegmentSet List of video segments that contain the detected politically sensitive information.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取List of video segments that contain politically sensitive information
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
+                     * @return SegmentSet List of video segments that contain politically sensitive information
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
                      */
                     std::vector<MediaContentReviewPoliticalSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置List of video segments that contain the detected politically sensitive information.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SegmentSet List of video segments that contain the detected politically sensitive information.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置List of video segments that contain politically sensitive information
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
+                     * @param SegmentSet List of video segments that contain politically sensitive information
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
                      */
                     void SetSegmentSet(const std::vector<MediaContentReviewPoliticalSegmentItem>& _segmentSet);
 
@@ -158,6 +158,42 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return SegmentSet 是否已赋值
                      */
                     bool SegmentSetHasBeenSet() const;
+
+                    /**
+                     * 获取URL to the file for video segments that contain politically sensitive information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     * @return SegmentSetFileUrl URL to the file for video segments that contain politically sensitive information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     */
+                    std::string GetSegmentSetFileUrl() const;
+
+                    /**
+                     * 设置URL to the file for video segments that contain politically sensitive information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     * @param SegmentSetFileUrl URL to the file for video segments that contain politically sensitive information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     */
+                    void SetSegmentSetFileUrl(const std::string& _segmentSetFileUrl);
+
+                    /**
+                     * 判断参数 SegmentSetFileUrl 是否已赋值
+                     * @return SegmentSetFileUrl 是否已赋值
+                     */
+                    bool SegmentSetFileUrlHasBeenSet() const;
+
+                    /**
+                     * 获取Expiration time of the URL to the file for video segments that contain politically sensitive information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     * @return SegmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain politically sensitive information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     */
+                    std::string GetSegmentSetFileUrlExpireTime() const;
+
+                    /**
+                     * 设置Expiration time of the URL to the file for video segments that contain politically sensitive information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     * @param SegmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain politically sensitive information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     */
+                    void SetSegmentSetFileUrlExpireTime(const std::string& _segmentSetFileUrlExpireTime);
+
+                    /**
+                     * 判断参数 SegmentSetFileUrlExpireTime 是否已赋值
+                     * @return SegmentSetFileUrlExpireTime 是否已赋值
+                     */
+                    bool SegmentSetFileUrlExpireTimeHasBeenSet() const;
 
                 private:
 
@@ -179,7 +215,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Tags for the results of video politically sensitive information detection. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+                     * Tags for the results of video politically sensitive information detection. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
 violation_photo:
 <li>violation_photo: violating photo.</li>
 Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
@@ -189,11 +225,23 @@ Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/mili
                     bool m_labelHasBeenSet;
 
                     /**
-                     * List of video segments that contain the detected politically sensitive information.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * List of video segments that contain politically sensitive information
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
                      */
                     std::vector<MediaContentReviewPoliticalSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;
+
+                    /**
+                     * URL to the file for video segments that contain politically sensitive information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     */
+                    std::string m_segmentSetFileUrl;
+                    bool m_segmentSetFileUrlHasBeenSet;
+
+                    /**
+                     * Expiration time of the URL to the file for video segments that contain politically sensitive information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     */
+                    std::string m_segmentSetFileUrlExpireTime;
+                    bool m_segmentSetFileUrlExpireTimeHasBeenSet;
 
                 };
             }

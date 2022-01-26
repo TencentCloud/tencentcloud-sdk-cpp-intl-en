@@ -41,11 +41,12 @@ namespace TencentCloud
                     DescribeReviewDetailsResponse();
                     ~DescribeReviewDetailsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Number of initiated content audits.
-                     * @return TotalCount Number of initiated content audits.
+                     * 获取Times of initiating intelligent content recognition tasks.
+                     * @return TotalCount Times of initiating intelligent content recognition tasks.
                      */
                     int64_t GetTotalCount() const;
 
@@ -56,8 +57,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Total content audit duration.
-                     * @return TotalDuration Total content audit duration.
+                     * 获取Duration of intelligent recognition content.
+                     * @return TotalDuration Duration of intelligent recognition content.
                      */
                     int64_t GetTotalDuration() const;
 
@@ -68,8 +69,8 @@ namespace TencentCloud
                     bool TotalDurationHasBeenSet() const;
 
                     /**
-                     * 获取Data of content audit duration, which is collected once per day.
-                     * @return Data Data of content audit duration, which is collected once per day.
+                     * 获取Data of intelligent recognition content duration. One piece of data is collected every day.
+                     * @return Data Data of intelligent recognition content duration. One piece of data is collected every day.
                      */
                     std::vector<StatDataItem> GetData() const;
 
@@ -82,19 +83,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of initiated content audits.
+                     * Times of initiating intelligent content recognition tasks.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Total content audit duration.
+                     * Duration of intelligent recognition content.
                      */
                     int64_t m_totalDuration;
                     bool m_totalDurationHasBeenSet;
 
                     /**
-                     * Data of content audit duration, which is collected once per day.
+                     * Data of intelligent recognition content duration. One piece of data is collected every day.
                      */
                     std::vector<StatDataItem> m_data;
                     bool m_dataHasBeenSet;

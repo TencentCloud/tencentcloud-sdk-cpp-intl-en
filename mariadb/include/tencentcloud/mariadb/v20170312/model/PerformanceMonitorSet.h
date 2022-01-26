@@ -120,14 +120,14 @@ namespace TencentCloud
                     bool MemHitRateHasBeenSet() const;
 
                     /**
-                     * 获取Master/slave delay
-                     * @return SlaveDelay Master/slave delay
+                     * 获取Primary/Secondary delay
+                     * @return SlaveDelay Primary/Secondary delay
                      */
                     MonitorData GetSlaveDelay() const;
 
                     /**
-                     * 设置Master/slave delay
-                     * @param SlaveDelay Master/slave delay
+                     * 设置Primary/Secondary delay
+                     * @param SlaveDelay Primary/Secondary delay
                      */
                     void SetSlaveDelay(const MonitorData& _slaveDelay);
 
@@ -210,14 +210,14 @@ namespace TencentCloud
                     bool InsertTotalHasBeenSet() const;
 
                     /**
-                     * 获取Whether master/slave switch occurred. 1: yes, 0: no
-                     * @return IsMasterSwitched Whether master/slave switch occurred. 1: yes, 0: no
+                     * 获取Whether primary/Secondary switch occurred. 1: yes, 0: no
+                     * @return IsMasterSwitched Whether primary/Secondary switch occurred. 1: yes, 0: no
                      */
                     MonitorData GetIsMasterSwitched() const;
 
                     /**
-                     * 设置Whether master/slave switch occurred. 1: yes, 0: no
-                     * @param IsMasterSwitched Whether master/slave switch occurred. 1: yes, 0: no
+                     * 设置Whether primary/Secondary switch occurred. 1: yes, 0: no
+                     * @param IsMasterSwitched Whether primary/Secondary switch occurred. 1: yes, 0: no
                      */
                     void SetIsMasterSwitched(const MonitorData& _isMasterSwitched);
 
@@ -254,7 +254,7 @@ namespace TencentCloud
                     bool m_memHitRateHasBeenSet;
 
                     /**
-                     * Master/slave delay
+                     * Primary/Secondary delay
                      */
                     MonitorData m_slaveDelay;
                     bool m_slaveDelayHasBeenSet;
@@ -284,7 +284,7 @@ namespace TencentCloud
                     bool m_insertTotalHasBeenSet;
 
                     /**
-                     * Whether master/slave switch occurred. 1: yes, 0: no
+                     * Whether primary/Secondary switch occurred. 1: yes, 0: no
                      */
                     MonitorData m_isMasterSwitched;
                     bool m_isMasterSwitchedHasBeenSet;

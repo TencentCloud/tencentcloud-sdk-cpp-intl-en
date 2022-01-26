@@ -20,42 +20,51 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 ReplaceSecurityGroupPolicyRequest::ReplaceSecurityGroupPolicyRequest() :
     m_securityGroupIdHasBeenSet(false),
-    m_securityGroupPolicySetHasBeenSet(false)
+    m_securityGroupPolicySetHasBeenSet(false),
+    m_originalSecurityGroupPolicySetHasBeenSet(false)
 {
 }
 
 string ReplaceSecurityGroupPolicyRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_securityGroupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SecurityGroupId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_securityGroupId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_securityGroupId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_securityGroupPolicySetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SecurityGroupPolicySet";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_securityGroupPolicySet.ToJsonObject(d[key.c_str()], allocator);
     }
 
+    if (m_originalSecurityGroupPolicySetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OriginalSecurityGroupPolicySet";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_originalSecurityGroupPolicySet.ToJsonObject(d[key.c_str()], allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -91,6 +100,22 @@ void ReplaceSecurityGroupPolicyRequest::SetSecurityGroupPolicySet(const Security
 bool ReplaceSecurityGroupPolicyRequest::SecurityGroupPolicySetHasBeenSet() const
 {
     return m_securityGroupPolicySetHasBeenSet;
+}
+
+SecurityGroupPolicySet ReplaceSecurityGroupPolicyRequest::GetOriginalSecurityGroupPolicySet() const
+{
+    return m_originalSecurityGroupPolicySet;
+}
+
+void ReplaceSecurityGroupPolicyRequest::SetOriginalSecurityGroupPolicySet(const SecurityGroupPolicySet& _originalSecurityGroupPolicySet)
+{
+    m_originalSecurityGroupPolicySet = _originalSecurityGroupPolicySet;
+    m_originalSecurityGroupPolicySetHasBeenSet = true;
+}
+
+bool ReplaceSecurityGroupPolicyRequest::OriginalSecurityGroupPolicySetHasBeenSet() const
+{
+    return m_originalSecurityGroupPolicySetHasBeenSet;
 }
 
 

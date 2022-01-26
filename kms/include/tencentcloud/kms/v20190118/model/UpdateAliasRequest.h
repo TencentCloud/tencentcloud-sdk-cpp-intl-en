@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取New alias containing 1–60 characters or digits
-                     * @return Alias New alias containing 1–60 characters or digits
+                     * 获取New alias containing 1-60 characters or digits
+                     * @return Alias New alias containing 1-60 characters or digits
                      */
                     std::string GetAlias() const;
 
                     /**
-                     * 设置New alias containing 1–60 characters or digits
-                     * @param Alias New alias containing 1–60 characters or digits
+                     * 设置New alias containing 1-60 characters or digits
+                     * @param Alias New alias containing 1-60 characters or digits
                      */
                     void SetAlias(const std::string& _alias);
 
@@ -81,7 +81,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * New alias containing 1–60 characters or digits
+                     * New alias containing 1-60 characters or digits
                      */
                     std::string m_alias;
                     bool m_aliasHasBeenSet;

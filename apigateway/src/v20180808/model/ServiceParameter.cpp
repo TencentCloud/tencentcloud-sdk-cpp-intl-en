@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 ServiceParameter::ServiceParameter() :
@@ -32,7 +31,7 @@ ServiceParameter::ServiceParameter() :
 {
 }
 
-CoreInternalOutcome ServiceParameter::Deserialize(const Value &value)
+CoreInternalOutcome ServiceParameter::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +40,7 @@ CoreInternalOutcome ServiceParameter::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ServiceParameter.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceParameter.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -51,7 +50,7 @@ CoreInternalOutcome ServiceParameter::Deserialize(const Value &value)
     {
         if (!value["Position"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ServiceParameter.Position` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceParameter.Position` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_position = string(value["Position"].GetString());
         m_positionHasBeenSet = true;
@@ -61,7 +60,7 @@ CoreInternalOutcome ServiceParameter::Deserialize(const Value &value)
     {
         if (!value["RelevantRequestParameterPosition"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ServiceParameter.RelevantRequestParameterPosition` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceParameter.RelevantRequestParameterPosition` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_relevantRequestParameterPosition = string(value["RelevantRequestParameterPosition"].GetString());
         m_relevantRequestParameterPositionHasBeenSet = true;
@@ -71,7 +70,7 @@ CoreInternalOutcome ServiceParameter::Deserialize(const Value &value)
     {
         if (!value["RelevantRequestParameterName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ServiceParameter.RelevantRequestParameterName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceParameter.RelevantRequestParameterName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_relevantRequestParameterName = string(value["RelevantRequestParameterName"].GetString());
         m_relevantRequestParameterNameHasBeenSet = true;
@@ -81,7 +80,7 @@ CoreInternalOutcome ServiceParameter::Deserialize(const Value &value)
     {
         if (!value["DefaultValue"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ServiceParameter.DefaultValue` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceParameter.DefaultValue` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_defaultValue = string(value["DefaultValue"].GetString());
         m_defaultValueHasBeenSet = true;
@@ -91,7 +90,7 @@ CoreInternalOutcome ServiceParameter::Deserialize(const Value &value)
     {
         if (!value["RelevantRequestParameterDesc"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ServiceParameter.RelevantRequestParameterDesc` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceParameter.RelevantRequestParameterDesc` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_relevantRequestParameterDesc = string(value["RelevantRequestParameterDesc"].GetString());
         m_relevantRequestParameterDescHasBeenSet = true;
@@ -101,7 +100,7 @@ CoreInternalOutcome ServiceParameter::Deserialize(const Value &value)
     {
         if (!value["RelevantRequestParameterType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ServiceParameter.RelevantRequestParameterType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceParameter.RelevantRequestParameterType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_relevantRequestParameterType = string(value["RelevantRequestParameterType"].GetString());
         m_relevantRequestParameterTypeHasBeenSet = true;
@@ -111,63 +110,63 @@ CoreInternalOutcome ServiceParameter::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ServiceParameter::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ServiceParameter::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_positionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Position";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_position.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_position.c_str(), allocator).Move(), allocator);
     }
 
     if (m_relevantRequestParameterPositionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RelevantRequestParameterPosition";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_relevantRequestParameterPosition.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_relevantRequestParameterPosition.c_str(), allocator).Move(), allocator);
     }
 
     if (m_relevantRequestParameterNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RelevantRequestParameterName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_relevantRequestParameterName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_relevantRequestParameterName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_defaultValueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DefaultValue";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_defaultValue.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_defaultValue.c_str(), allocator).Move(), allocator);
     }
 
     if (m_relevantRequestParameterDescHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RelevantRequestParameterDesc";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_relevantRequestParameterDesc.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_relevantRequestParameterDesc.c_str(), allocator).Move(), allocator);
     }
 
     if (m_relevantRequestParameterTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RelevantRequestParameterType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_relevantRequestParameterType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_relevantRequestParameterType.c_str(), allocator).Move(), allocator);
     }
 
 }

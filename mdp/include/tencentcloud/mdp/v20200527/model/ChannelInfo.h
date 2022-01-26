@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mdp/v20200527/model/PointInfo.h>
+#include <tencentcloud/mdp/v20200527/model/CacheInfo.h>
 
 
 namespace TencentCloud
@@ -119,6 +120,28 @@ namespace TencentCloud
                      */
                     bool PointsHasBeenSet() const;
 
+                    /**
+                     * 获取Cache configuration
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @return CacheInfo Cache configuration
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    CacheInfo GetCacheInfo() const;
+
+                    /**
+                     * 设置Cache configuration
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @param CacheInfo Cache configuration
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetCacheInfo(const CacheInfo& _cacheInfo);
+
+                    /**
+                     * 判断参数 CacheInfo 是否已赋值
+                     * @return CacheInfo 是否已赋值
+                     */
+                    bool CacheInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -144,6 +167,13 @@ namespace TencentCloud
                      */
                     PointInfo m_points;
                     bool m_pointsHasBeenSet;
+
+                    /**
+                     * Cache configuration
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    CacheInfo m_cacheInfo;
+                    bool m_cacheInfoHasBeenSet;
 
                 };
             }

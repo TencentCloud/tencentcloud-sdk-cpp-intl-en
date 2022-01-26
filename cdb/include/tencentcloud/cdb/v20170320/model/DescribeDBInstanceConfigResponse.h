@@ -42,11 +42,12 @@ namespace TencentCloud
                     DescribeDBInstanceConfigResponse();
                     ~DescribeDBInstanceConfigResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Data protection mode of the master instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
-                     * @return ProtectMode Data protection mode of the master instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
+                     * 获取Data protection mode of the primary instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
+                     * @return ProtectMode Data protection mode of the primary instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
                      */
                     int64_t GetProtectMode() const;
 
@@ -81,8 +82,10 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Configuration information of the slave database.
-                     * @return SlaveConfig Configuration information of the slave database.
+                     * 获取Configurations of the replica node
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @return SlaveConfig Configurations of the replica node
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      */
                     SlaveConfig GetSlaveConfig() const;
 
@@ -93,8 +96,10 @@ namespace TencentCloud
                     bool SlaveConfigHasBeenSet() const;
 
                     /**
-                     * 获取Configuration information of slave database 2 of a strong sync instance.
-                     * @return BackupConfig Configuration information of slave database 2 of a strong sync instance.
+                     * 获取Configurations of the second replica node of a strong-sync instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @return BackupConfig Configurations of the second replica node of a strong-sync instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      */
                     BackupConfig GetBackupConfig() const;
 
@@ -104,10 +109,22 @@ namespace TencentCloud
                      */
                     bool BackupConfigHasBeenSet() const;
 
+                    /**
+                     * 获取This parameter is only available for multi-AZ instances. It indicates whether the source AZ is the same as the one specified upon purchase. `true`: not the same, `false`: the same.
+                     * @return Switched This parameter is only available for multi-AZ instances. It indicates whether the source AZ is the same as the one specified upon purchase. `true`: not the same, `false`: the same.
+                     */
+                    bool GetSwitched() const;
+
+                    /**
+                     * 判断参数 Switched 是否已赋值
+                     * @return Switched 是否已赋值
+                     */
+                    bool SwitchedHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Data protection mode of the master instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
+                     * Data protection mode of the primary instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
                      */
                     int64_t m_protectMode;
                     bool m_protectModeHasBeenSet;
@@ -125,16 +142,24 @@ namespace TencentCloud
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Configuration information of the slave database.
+                     * Configurations of the replica node
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      */
                     SlaveConfig m_slaveConfig;
                     bool m_slaveConfigHasBeenSet;
 
                     /**
-                     * Configuration information of slave database 2 of a strong sync instance.
+                     * Configurations of the second replica node of a strong-sync instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      */
                     BackupConfig m_backupConfig;
                     bool m_backupConfigHasBeenSet;
+
+                    /**
+                     * This parameter is only available for multi-AZ instances. It indicates whether the source AZ is the same as the one specified upon purchase. `true`: not the same, `false`: the same.
+                     */
+                    bool m_switched;
+                    bool m_switchedHasBeenSet;
 
                 };
             }

@@ -29,14 +29,16 @@
 #include <tencentcloud/vod/v20180717/model/FileDeleteTask.h>
 #include <tencentcloud/vod/v20180717/model/PullUploadTask.h>
 #include <tencentcloud/vod/v20180717/model/EditMediaTask.h>
-#include <tencentcloud/vod/v20180717/model/WechatPublishTask.h>
-#include <tencentcloud/vod/v20180717/model/TranscodeTask2017.h>
-#include <tencentcloud/vod/v20180717/model/ConcatTask2017.h>
-#include <tencentcloud/vod/v20180717/model/ClipTask2017.h>
-#include <tencentcloud/vod/v20180717/model/CreateImageSpriteTask2017.h>
-#include <tencentcloud/vod/v20180717/model/SnapshotByTimeOffsetTask2017.h>
+#include <tencentcloud/vod/v20180717/model/SplitMediaTask.h>
 #include <tencentcloud/vod/v20180717/model/ComposeMediaTask.h>
+#include <tencentcloud/vod/v20180717/model/ClipTask2017.h>
+#include <tencentcloud/vod/v20180717/model/TranscodeTask2017.h>
+#include <tencentcloud/vod/v20180717/model/CreateImageSpriteTask2017.h>
+#include <tencentcloud/vod/v20180717/model/ConcatTask2017.h>
+#include <tencentcloud/vod/v20180717/model/SnapshotByTimeOffsetTask2017.h>
+#include <tencentcloud/vod/v20180717/model/WechatPublishTask.h>
 #include <tencentcloud/vod/v20180717/model/WechatMiniProgramPublishTask.h>
+#include <tencentcloud/vod/v20180717/model/RestoreMediaTask.h>
 
 
 namespace TencentCloud
@@ -78,70 +80,74 @@ namespace TencentCloud
                     bool EventHandleHasBeenSet() const;
 
                     /**
-                     * 获取<b>Supported event type:</b>
-<li>NewFileUpload: video upload completion;</li>
-<li>ProcedureStateChanged: task flow status change;</li>
-<li>FileDeleted: video deletion completion;</li>
-<li>PullComplete: video pull for upload completion;</li>
-<li>EditMediaComplete: video editing completion;</li>
-<li>WechatPublishComplete: release on WeChat completion;</li>
-<li>ComposeMediaComplete: media file composing completion;</li>
-<li>WechatMiniProgramPublishComplete: release on WeChat Mini Program completion.</li>
-<b>Event types compatible with v2017:</b>
-<li>TranscodeComplete: video transcoding completion;</li>
-<li>ConcatComplete: video splicing completion;</li>
-<li>ClipComplete: video clipping completion;</li>
-<li>CreateImageSpriteComplete: image sprite generating completion;</li>
-<li>CreateSnapshotByTimeOffsetComplete: time point screencapturing completion.</li>
-                     * @return EventType <b>Supported event type:</b>
-<li>NewFileUpload: video upload completion;</li>
-<li>ProcedureStateChanged: task flow status change;</li>
-<li>FileDeleted: video deletion completion;</li>
-<li>PullComplete: video pull for upload completion;</li>
-<li>EditMediaComplete: video editing completion;</li>
-<li>WechatPublishComplete: release on WeChat completion;</li>
-<li>ComposeMediaComplete: media file composing completion;</li>
-<li>WechatMiniProgramPublishComplete: release on WeChat Mini Program completion.</li>
-<b>Event types compatible with v2017:</b>
-<li>TranscodeComplete: video transcoding completion;</li>
-<li>ConcatComplete: video splicing completion;</li>
-<li>ClipComplete: video clipping completion;</li>
-<li>CreateImageSpriteComplete: image sprite generating completion;</li>
-<li>CreateSnapshotByTimeOffsetComplete: time point screencapturing completion.</li>
+                     * 获取<b>Supported event types:</b>
+<li>NewFileUpload: finished video upload</li>
+<li>ProcedureStateChanged: task flow status changed</li>
+<li>FileDeleted: finished video deletion</li>
+<li>PullComplete: finished pulling for upload</li>
+<li>EditMediaComplete: finished video editing</li>
+<li>SplitMediaComplete: finished video splitting</li>
+<li>WechatPublishComplete: finished publishing on WeChat</li>
+<li>ComposeMediaComplete: finished producing the media file</li>
+<li>WechatMiniProgramPublishComplete: finished publishing on WeChat Mini Program</li>
+<b>Support v2017 task types:</b>
+<li>TranscodeComplete: finished video transcoding</li>
+<li>ConcatComplete: finished video splicing</li>
+<li>ClipComplete: finished video clipping</li>
+<li>CreateImageSpriteComplete: finished image sprite generation</li>
+<li>CreateSnapshotByTimeOffsetComplete: finished point-in-time screencapturing</li>
+                     * @return EventType <b>Supported event types:</b>
+<li>NewFileUpload: finished video upload</li>
+<li>ProcedureStateChanged: task flow status changed</li>
+<li>FileDeleted: finished video deletion</li>
+<li>PullComplete: finished pulling for upload</li>
+<li>EditMediaComplete: finished video editing</li>
+<li>SplitMediaComplete: finished video splitting</li>
+<li>WechatPublishComplete: finished publishing on WeChat</li>
+<li>ComposeMediaComplete: finished producing the media file</li>
+<li>WechatMiniProgramPublishComplete: finished publishing on WeChat Mini Program</li>
+<b>Support v2017 task types:</b>
+<li>TranscodeComplete: finished video transcoding</li>
+<li>ConcatComplete: finished video splicing</li>
+<li>ClipComplete: finished video clipping</li>
+<li>CreateImageSpriteComplete: finished image sprite generation</li>
+<li>CreateSnapshotByTimeOffsetComplete: finished point-in-time screencapturing</li>
                      */
                     std::string GetEventType() const;
 
                     /**
-                     * 设置<b>Supported event type:</b>
-<li>NewFileUpload: video upload completion;</li>
-<li>ProcedureStateChanged: task flow status change;</li>
-<li>FileDeleted: video deletion completion;</li>
-<li>PullComplete: video pull for upload completion;</li>
-<li>EditMediaComplete: video editing completion;</li>
-<li>WechatPublishComplete: release on WeChat completion;</li>
-<li>ComposeMediaComplete: media file composing completion;</li>
-<li>WechatMiniProgramPublishComplete: release on WeChat Mini Program completion.</li>
-<b>Event types compatible with v2017:</b>
-<li>TranscodeComplete: video transcoding completion;</li>
-<li>ConcatComplete: video splicing completion;</li>
-<li>ClipComplete: video clipping completion;</li>
-<li>CreateImageSpriteComplete: image sprite generating completion;</li>
-<li>CreateSnapshotByTimeOffsetComplete: time point screencapturing completion.</li>
-                     * @param EventType <b>Supported event type:</b>
-<li>NewFileUpload: video upload completion;</li>
-<li>ProcedureStateChanged: task flow status change;</li>
-<li>FileDeleted: video deletion completion;</li>
-<li>PullComplete: video pull for upload completion;</li>
-<li>EditMediaComplete: video editing completion;</li>
-<li>WechatPublishComplete: release on WeChat completion;</li>
-<li>ComposeMediaComplete: media file composing completion;</li>
-<li>WechatMiniProgramPublishComplete: release on WeChat Mini Program completion.</li>
-<b>Event types compatible with v2017:</b>
-<li>TranscodeComplete: video transcoding completion;</li>
-<li>ConcatComplete: video splicing completion;</li>
-<li>ClipComplete: video clipping completion;</li>
-<li>CreateImageSpriteComplete: image sprite generating completion;</li>
-<li>CreateSnapshotByTimeOffsetComplete: time point screencapturing completion.</li>
+                     * 设置<b>Supported event types:</b>
+<li>NewFileUpload: finished video upload</li>
+<li>ProcedureStateChanged: task flow status changed</li>
+<li>FileDeleted: finished video deletion</li>
+<li>PullComplete: finished pulling for upload</li>
+<li>EditMediaComplete: finished video editing</li>
+<li>SplitMediaComplete: finished video splitting</li>
+<li>WechatPublishComplete: finished publishing on WeChat</li>
+<li>ComposeMediaComplete: finished producing the media file</li>
+<li>WechatMiniProgramPublishComplete: finished publishing on WeChat Mini Program</li>
+<b>Support v2017 task types:</b>
+<li>TranscodeComplete: finished video transcoding</li>
+<li>ConcatComplete: finished video splicing</li>
+<li>ClipComplete: finished video clipping</li>
+<li>CreateImageSpriteComplete: finished image sprite generation</li>
+<li>CreateSnapshotByTimeOffsetComplete: finished point-in-time screencapturing</li>
+                     * @param EventType <b>Supported event types:</b>
+<li>NewFileUpload: finished video upload</li>
+<li>ProcedureStateChanged: task flow status changed</li>
+<li>FileDeleted: finished video deletion</li>
+<li>PullComplete: finished pulling for upload</li>
+<li>EditMediaComplete: finished video editing</li>
+<li>SplitMediaComplete: finished video splitting</li>
+<li>WechatPublishComplete: finished publishing on WeChat</li>
+<li>ComposeMediaComplete: finished producing the media file</li>
+<li>WechatMiniProgramPublishComplete: finished publishing on WeChat Mini Program</li>
+<b>Support v2017 task types:</b>
+<li>TranscodeComplete: finished video transcoding</li>
+<li>ConcatComplete: finished video splicing</li>
+<li>ClipComplete: finished video clipping</li>
+<li>CreateImageSpriteComplete: finished image sprite generation</li>
+<li>CreateSnapshotByTimeOffsetComplete: finished point-in-time screencapturing</li>
                      */
                     void SetEventType(const std::string& _eventType);
 
@@ -262,136 +268,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool EditMediaCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取Release on WeChat completion event, which is valid if the event type is `WechatPublishComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return WechatPublishCompleteEvent Release on WeChat completion event, which is valid if the event type is `WechatPublishComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Video splitting completion event, which is valid if the event type is `EditMediaComplete`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return SplitMediaCompleteEvent Video splitting completion event, which is valid if the event type is `EditMediaComplete`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
-                    WechatPublishTask GetWechatPublishCompleteEvent() const;
+                    SplitMediaTask GetSplitMediaCompleteEvent() const;
 
                     /**
-                     * 设置Release on WeChat completion event, which is valid if the event type is `WechatPublishComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param WechatPublishCompleteEvent Release on WeChat completion event, which is valid if the event type is `WechatPublishComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Video splitting completion event, which is valid if the event type is `EditMediaComplete`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param SplitMediaCompleteEvent Video splitting completion event, which is valid if the event type is `EditMediaComplete`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
-                    void SetWechatPublishCompleteEvent(const WechatPublishTask& _wechatPublishCompleteEvent);
+                    void SetSplitMediaCompleteEvent(const SplitMediaTask& _splitMediaCompleteEvent);
 
                     /**
-                     * 判断参数 WechatPublishCompleteEvent 是否已赋值
-                     * @return WechatPublishCompleteEvent 是否已赋值
+                     * 判断参数 SplitMediaCompleteEvent 是否已赋值
+                     * @return SplitMediaCompleteEvent 是否已赋值
                      */
-                    bool WechatPublishCompleteEventHasBeenSet() const;
-
-                    /**
-                     * 获取Video transcoding completion event, which is valid if the event type is `TranscodeComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TranscodeCompleteEvent Video transcoding completion event, which is valid if the event type is `TranscodeComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    TranscodeTask2017 GetTranscodeCompleteEvent() const;
-
-                    /**
-                     * 设置Video transcoding completion event, which is valid if the event type is `TranscodeComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TranscodeCompleteEvent Video transcoding completion event, which is valid if the event type is `TranscodeComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    void SetTranscodeCompleteEvent(const TranscodeTask2017& _transcodeCompleteEvent);
-
-                    /**
-                     * 判断参数 TranscodeCompleteEvent 是否已赋值
-                     * @return TranscodeCompleteEvent 是否已赋值
-                     */
-                    bool TranscodeCompleteEventHasBeenSet() const;
-
-                    /**
-                     * 获取Video splicing completion event, which is valid if the event type is `ConcatComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ConcatCompleteEvent Video splicing completion event, which is valid if the event type is `ConcatComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    ConcatTask2017 GetConcatCompleteEvent() const;
-
-                    /**
-                     * 设置Video splicing completion event, which is valid if the event type is `ConcatComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ConcatCompleteEvent Video splicing completion event, which is valid if the event type is `ConcatComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    void SetConcatCompleteEvent(const ConcatTask2017& _concatCompleteEvent);
-
-                    /**
-                     * 判断参数 ConcatCompleteEvent 是否已赋值
-                     * @return ConcatCompleteEvent 是否已赋值
-                     */
-                    bool ConcatCompleteEventHasBeenSet() const;
-
-                    /**
-                     * 获取Video clipping completion event, which is valid if the event type is `ClipComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ClipCompleteEvent Video clipping completion event, which is valid if the event type is `ClipComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    ClipTask2017 GetClipCompleteEvent() const;
-
-                    /**
-                     * 设置Video clipping completion event, which is valid if the event type is `ClipComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ClipCompleteEvent Video clipping completion event, which is valid if the event type is `ClipComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    void SetClipCompleteEvent(const ClipTask2017& _clipCompleteEvent);
-
-                    /**
-                     * 判断参数 ClipCompleteEvent 是否已赋值
-                     * @return ClipCompleteEvent 是否已赋值
-                     */
-                    bool ClipCompleteEventHasBeenSet() const;
-
-                    /**
-                     * 获取Image sprite generating completion event, which is valid if the event type is `CreateImageSpriteComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CreateImageSpriteCompleteEvent Image sprite generating completion event, which is valid if the event type is `CreateImageSpriteComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    CreateImageSpriteTask2017 GetCreateImageSpriteCompleteEvent() const;
-
-                    /**
-                     * 设置Image sprite generating completion event, which is valid if the event type is `CreateImageSpriteComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreateImageSpriteCompleteEvent Image sprite generating completion event, which is valid if the event type is `CreateImageSpriteComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    void SetCreateImageSpriteCompleteEvent(const CreateImageSpriteTask2017& _createImageSpriteCompleteEvent);
-
-                    /**
-                     * 判断参数 CreateImageSpriteCompleteEvent 是否已赋值
-                     * @return CreateImageSpriteCompleteEvent 是否已赋值
-                     */
-                    bool CreateImageSpriteCompleteEventHasBeenSet() const;
-
-                    /**
-                     * 获取Time point screencapturing completion event, which is valid when the event type is `CreateSnapshotByTimeOffsetComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SnapshotByTimeOffsetCompleteEvent Time point screencapturing completion event, which is valid when the event type is `CreateSnapshotByTimeOffsetComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    SnapshotByTimeOffsetTask2017 GetSnapshotByTimeOffsetCompleteEvent() const;
-
-                    /**
-                     * 设置Time point screencapturing completion event, which is valid when the event type is `CreateSnapshotByTimeOffsetComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SnapshotByTimeOffsetCompleteEvent Time point screencapturing completion event, which is valid when the event type is `CreateSnapshotByTimeOffsetComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    void SetSnapshotByTimeOffsetCompleteEvent(const SnapshotByTimeOffsetTask2017& _snapshotByTimeOffsetCompleteEvent);
-
-                    /**
-                     * 判断参数 SnapshotByTimeOffsetCompleteEvent 是否已赋值
-                     * @return SnapshotByTimeOffsetCompleteEvent 是否已赋值
-                     */
-                    bool SnapshotByTimeOffsetCompleteEventHasBeenSet() const;
+                    bool SplitMediaCompleteEventHasBeenSet() const;
 
                     /**
                      * 获取Media file composing task completion event, which is valid when the event type is `ComposeMediaComplete`.
@@ -416,6 +312,138 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ComposeMediaCompleteEventHasBeenSet() const;
 
                     /**
+                     * 获取Video clipping completion event, which is valid if the event type is `ClipComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return ClipCompleteEvent Video clipping completion event, which is valid if the event type is `ClipComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    ClipTask2017 GetClipCompleteEvent() const;
+
+                    /**
+                     * 设置Video clipping completion event, which is valid if the event type is `ClipComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param ClipCompleteEvent Video clipping completion event, which is valid if the event type is `ClipComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetClipCompleteEvent(const ClipTask2017& _clipCompleteEvent);
+
+                    /**
+                     * 判断参数 ClipCompleteEvent 是否已赋值
+                     * @return ClipCompleteEvent 是否已赋值
+                     */
+                    bool ClipCompleteEventHasBeenSet() const;
+
+                    /**
+                     * 获取Video transcoding completion event, which is valid if the event type is `TranscodeComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return TranscodeCompleteEvent Video transcoding completion event, which is valid if the event type is `TranscodeComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    TranscodeTask2017 GetTranscodeCompleteEvent() const;
+
+                    /**
+                     * 设置Video transcoding completion event, which is valid if the event type is `TranscodeComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param TranscodeCompleteEvent Video transcoding completion event, which is valid if the event type is `TranscodeComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetTranscodeCompleteEvent(const TranscodeTask2017& _transcodeCompleteEvent);
+
+                    /**
+                     * 判断参数 TranscodeCompleteEvent 是否已赋值
+                     * @return TranscodeCompleteEvent 是否已赋值
+                     */
+                    bool TranscodeCompleteEventHasBeenSet() const;
+
+                    /**
+                     * 获取Image sprite generating completion event, which is valid if the event type is `CreateImageSpriteComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return CreateImageSpriteCompleteEvent Image sprite generating completion event, which is valid if the event type is `CreateImageSpriteComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    CreateImageSpriteTask2017 GetCreateImageSpriteCompleteEvent() const;
+
+                    /**
+                     * 设置Image sprite generating completion event, which is valid if the event type is `CreateImageSpriteComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param CreateImageSpriteCompleteEvent Image sprite generating completion event, which is valid if the event type is `CreateImageSpriteComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetCreateImageSpriteCompleteEvent(const CreateImageSpriteTask2017& _createImageSpriteCompleteEvent);
+
+                    /**
+                     * 判断参数 CreateImageSpriteCompleteEvent 是否已赋值
+                     * @return CreateImageSpriteCompleteEvent 是否已赋值
+                     */
+                    bool CreateImageSpriteCompleteEventHasBeenSet() const;
+
+                    /**
+                     * 获取Video splicing completion event, which is valid if the event type is `ConcatComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return ConcatCompleteEvent Video splicing completion event, which is valid if the event type is `ConcatComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    ConcatTask2017 GetConcatCompleteEvent() const;
+
+                    /**
+                     * 设置Video splicing completion event, which is valid if the event type is `ConcatComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param ConcatCompleteEvent Video splicing completion event, which is valid if the event type is `ConcatComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetConcatCompleteEvent(const ConcatTask2017& _concatCompleteEvent);
+
+                    /**
+                     * 判断参数 ConcatCompleteEvent 是否已赋值
+                     * @return ConcatCompleteEvent 是否已赋值
+                     */
+                    bool ConcatCompleteEventHasBeenSet() const;
+
+                    /**
+                     * 获取Time point screencapturing completion event, which is valid when the event type is `CreateSnapshotByTimeOffsetComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return SnapshotByTimeOffsetCompleteEvent Time point screencapturing completion event, which is valid when the event type is `CreateSnapshotByTimeOffsetComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    SnapshotByTimeOffsetTask2017 GetSnapshotByTimeOffsetCompleteEvent() const;
+
+                    /**
+                     * 设置Time point screencapturing completion event, which is valid when the event type is `CreateSnapshotByTimeOffsetComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param SnapshotByTimeOffsetCompleteEvent Time point screencapturing completion event, which is valid when the event type is `CreateSnapshotByTimeOffsetComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetSnapshotByTimeOffsetCompleteEvent(const SnapshotByTimeOffsetTask2017& _snapshotByTimeOffsetCompleteEvent);
+
+                    /**
+                     * 判断参数 SnapshotByTimeOffsetCompleteEvent 是否已赋值
+                     * @return SnapshotByTimeOffsetCompleteEvent 是否已赋值
+                     */
+                    bool SnapshotByTimeOffsetCompleteEventHasBeenSet() const;
+
+                    /**
+                     * 获取Release on WeChat completion event, which is valid if the event type is `WechatPublishComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return WechatPublishCompleteEvent Release on WeChat completion event, which is valid if the event type is `WechatPublishComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    WechatPublishTask GetWechatPublishCompleteEvent() const;
+
+                    /**
+                     * 设置Release on WeChat completion event, which is valid if the event type is `WechatPublishComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param WechatPublishCompleteEvent Release on WeChat completion event, which is valid if the event type is `WechatPublishComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetWechatPublishCompleteEvent(const WechatPublishTask& _wechatPublishCompleteEvent);
+
+                    /**
+                     * 判断参数 WechatPublishCompleteEvent 是否已赋值
+                     * @return WechatPublishCompleteEvent 是否已赋值
+                     */
+                    bool WechatPublishCompleteEventHasBeenSet() const;
+
+                    /**
                      * 获取Release on WeChat Mini Program task completion event, which is valid if the event type is `WechatMiniProgramPublishComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return WechatMiniProgramPublishCompleteEvent Release on WeChat Mini Program task completion event, which is valid if the event type is `WechatMiniProgramPublishComplete`.
@@ -437,6 +465,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool WechatMiniProgramPublishCompleteEventHasBeenSet() const;
 
+                    /**
+                     * 获取Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return RestoreMediaCompleteEvent Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    RestoreMediaTask GetRestoreMediaCompleteEvent() const;
+
+                    /**
+                     * 设置Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param RestoreMediaCompleteEvent Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetRestoreMediaCompleteEvent(const RestoreMediaTask& _restoreMediaCompleteEvent);
+
+                    /**
+                     * 判断参数 RestoreMediaCompleteEvent 是否已赋值
+                     * @return RestoreMediaCompleteEvent 是否已赋值
+                     */
+                    bool RestoreMediaCompleteEventHasBeenSet() const;
+
                 private:
 
                     /**
@@ -446,21 +496,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_eventHandleHasBeenSet;
 
                     /**
-                     * <b>Supported event type:</b>
-<li>NewFileUpload: video upload completion;</li>
-<li>ProcedureStateChanged: task flow status change;</li>
-<li>FileDeleted: video deletion completion;</li>
-<li>PullComplete: video pull for upload completion;</li>
-<li>EditMediaComplete: video editing completion;</li>
-<li>WechatPublishComplete: release on WeChat completion;</li>
-<li>ComposeMediaComplete: media file composing completion;</li>
-<li>WechatMiniProgramPublishComplete: release on WeChat Mini Program completion.</li>
-<b>Event types compatible with v2017:</b>
-<li>TranscodeComplete: video transcoding completion;</li>
-<li>ConcatComplete: video splicing completion;</li>
-<li>ClipComplete: video clipping completion;</li>
-<li>CreateImageSpriteComplete: image sprite generating completion;</li>
-<li>CreateSnapshotByTimeOffsetComplete: time point screencapturing completion.</li>
+                     * <b>Supported event types:</b>
+<li>NewFileUpload: finished video upload</li>
+<li>ProcedureStateChanged: task flow status changed</li>
+<li>FileDeleted: finished video deletion</li>
+<li>PullComplete: finished pulling for upload</li>
+<li>EditMediaComplete: finished video editing</li>
+<li>SplitMediaComplete: finished video splitting</li>
+<li>WechatPublishComplete: finished publishing on WeChat</li>
+<li>ComposeMediaComplete: finished producing the media file</li>
+<li>WechatMiniProgramPublishComplete: finished publishing on WeChat Mini Program</li>
+<b>Support v2017 task types:</b>
+<li>TranscodeComplete: finished video transcoding</li>
+<li>ConcatComplete: finished video splicing</li>
+<li>ClipComplete: finished video clipping</li>
+<li>CreateImageSpriteComplete: finished image sprite generation</li>
+<li>CreateSnapshotByTimeOffsetComplete: finished point-in-time screencapturing</li>
                      */
                     std::string m_eventType;
                     bool m_eventTypeHasBeenSet;
@@ -501,46 +552,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_editMediaCompleteEventHasBeenSet;
 
                     /**
-                     * Release on WeChat completion event, which is valid if the event type is `WechatPublishComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Video splitting completion event, which is valid if the event type is `EditMediaComplete`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
-                    WechatPublishTask m_wechatPublishCompleteEvent;
-                    bool m_wechatPublishCompleteEventHasBeenSet;
-
-                    /**
-                     * Video transcoding completion event, which is valid if the event type is `TranscodeComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    TranscodeTask2017 m_transcodeCompleteEvent;
-                    bool m_transcodeCompleteEventHasBeenSet;
-
-                    /**
-                     * Video splicing completion event, which is valid if the event type is `ConcatComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    ConcatTask2017 m_concatCompleteEvent;
-                    bool m_concatCompleteEventHasBeenSet;
-
-                    /**
-                     * Video clipping completion event, which is valid if the event type is `ClipComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    ClipTask2017 m_clipCompleteEvent;
-                    bool m_clipCompleteEventHasBeenSet;
-
-                    /**
-                     * Image sprite generating completion event, which is valid if the event type is `CreateImageSpriteComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    CreateImageSpriteTask2017 m_createImageSpriteCompleteEvent;
-                    bool m_createImageSpriteCompleteEventHasBeenSet;
-
-                    /**
-                     * Time point screencapturing completion event, which is valid when the event type is `CreateSnapshotByTimeOffsetComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    SnapshotByTimeOffsetTask2017 m_snapshotByTimeOffsetCompleteEvent;
-                    bool m_snapshotByTimeOffsetCompleteEventHasBeenSet;
+                    SplitMediaTask m_splitMediaCompleteEvent;
+                    bool m_splitMediaCompleteEventHasBeenSet;
 
                     /**
                      * Media file composing task completion event, which is valid when the event type is `ComposeMediaComplete`.
@@ -550,11 +566,60 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_composeMediaCompleteEventHasBeenSet;
 
                     /**
+                     * Video clipping completion event, which is valid if the event type is `ClipComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    ClipTask2017 m_clipCompleteEvent;
+                    bool m_clipCompleteEventHasBeenSet;
+
+                    /**
+                     * Video transcoding completion event, which is valid if the event type is `TranscodeComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    TranscodeTask2017 m_transcodeCompleteEvent;
+                    bool m_transcodeCompleteEventHasBeenSet;
+
+                    /**
+                     * Image sprite generating completion event, which is valid if the event type is `CreateImageSpriteComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    CreateImageSpriteTask2017 m_createImageSpriteCompleteEvent;
+                    bool m_createImageSpriteCompleteEventHasBeenSet;
+
+                    /**
+                     * Video splicing completion event, which is valid if the event type is `ConcatComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    ConcatTask2017 m_concatCompleteEvent;
+                    bool m_concatCompleteEventHasBeenSet;
+
+                    /**
+                     * Time point screencapturing completion event, which is valid when the event type is `CreateSnapshotByTimeOffsetComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    SnapshotByTimeOffsetTask2017 m_snapshotByTimeOffsetCompleteEvent;
+                    bool m_snapshotByTimeOffsetCompleteEventHasBeenSet;
+
+                    /**
+                     * Release on WeChat completion event, which is valid if the event type is `WechatPublishComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    WechatPublishTask m_wechatPublishCompleteEvent;
+                    bool m_wechatPublishCompleteEventHasBeenSet;
+
+                    /**
                      * Release on WeChat Mini Program task completion event, which is valid if the event type is `WechatMiniProgramPublishComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     WechatMiniProgramPublishTask m_wechatMiniProgramPublishCompleteEvent;
                     bool m_wechatMiniProgramPublishCompleteEventHasBeenSet;
+
+                    /**
+                     * Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    RestoreMediaTask m_restoreMediaCompleteEvent;
+                    bool m_restoreMediaCompleteEventHasBeenSet;
 
                 };
             }

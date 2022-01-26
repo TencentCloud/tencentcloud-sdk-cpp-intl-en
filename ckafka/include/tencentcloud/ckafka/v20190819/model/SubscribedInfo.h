@@ -109,6 +109,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool PartitionOffsetHasBeenSet() const;
 
+                    /**
+                     * 获取ID of the subscribed topic. 
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return TopicId ID of the subscribed topic. 
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetTopicId() const;
+
+                    /**
+                     * 设置ID of the subscribed topic. 
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param TopicId ID of the subscribed topic. 
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetTopicId(const std::string& _topicId);
+
+                    /**
+                     * 判断参数 TopicId 是否已赋值
+                     * @return TopicId 是否已赋值
+                     */
+                    bool TopicIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -130,6 +152,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<PartitionOffset> m_partitionOffset;
                     bool m_partitionOffsetHasBeenSet;
+
+                    /**
+                     * ID of the subscribed topic. 
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_topicId;
+                    bool m_topicIdHasBeenSet;
 
                 };
             }

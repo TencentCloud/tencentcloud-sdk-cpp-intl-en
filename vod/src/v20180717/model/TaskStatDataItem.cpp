@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 TaskStatDataItem::TaskStatDataItem() :
@@ -28,7 +27,7 @@ TaskStatDataItem::TaskStatDataItem() :
 {
 }
 
-CoreInternalOutcome TaskStatDataItem::Deserialize(const Value &value)
+CoreInternalOutcome TaskStatDataItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome TaskStatDataItem::Deserialize(const Value &value)
     {
         if (!value["Time"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TaskStatDataItem.Time` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskStatDataItem.Time` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_time = string(value["Time"].GetString());
         m_timeHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome TaskStatDataItem::Deserialize(const Value &value)
     {
         if (!value["Count"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TaskStatDataItem.Count` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskStatDataItem.Count` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_count = value["Count"].GetInt64();
         m_countHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome TaskStatDataItem::Deserialize(const Value &value)
     {
         if (!value["Usage"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TaskStatDataItem.Usage` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskStatDataItem.Usage` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_usage = value["Usage"].GetInt64();
         m_usageHasBeenSet = true;
@@ -67,20 +66,20 @@ CoreInternalOutcome TaskStatDataItem::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void TaskStatDataItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TaskStatDataItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_timeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Time";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_time.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_time.c_str(), allocator).Move(), allocator);
     }
 
     if (m_countHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Count";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_count, allocator);
@@ -88,7 +87,7 @@ void TaskStatDataItem::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_usageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Usage";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_usage, allocator);

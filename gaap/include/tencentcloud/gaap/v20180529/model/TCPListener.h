@@ -355,6 +355,116 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool CreateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return ClientIPMethod Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetClientIPMethod() const;
+
+                    /**
+                     * 设置Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param ClientIPMethod Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetClientIPMethod(const uint64_t& _clientIPMethod);
+
+                    /**
+                     * 判断参数 ClientIPMethod 是否已赋值
+                     * @return ClientIPMethod 是否已赋值
+                     */
+                    bool ClientIPMethodHasBeenSet() const;
+
+                    /**
+                     * 获取Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return HealthyThreshold Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetHealthyThreshold() const;
+
+                    /**
+                     * 设置Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param HealthyThreshold Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetHealthyThreshold(const uint64_t& _healthyThreshold);
+
+                    /**
+                     * 判断参数 HealthyThreshold 是否已赋值
+                     * @return HealthyThreshold 是否已赋值
+                     */
+                    bool HealthyThresholdHasBeenSet() const;
+
+                    /**
+                     * 获取Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return UnhealthyThreshold Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    uint64_t GetUnhealthyThreshold() const;
+
+                    /**
+                     * 设置Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param UnhealthyThreshold Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetUnhealthyThreshold(const uint64_t& _unhealthyThreshold);
+
+                    /**
+                     * 判断参数 UnhealthyThreshold 是否已赋值
+                     * @return UnhealthyThreshold 是否已赋值
+                     */
+                    bool UnhealthyThresholdHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return FailoverSwitch Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetFailoverSwitch() const;
+
+                    /**
+                     * 设置Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param FailoverSwitch Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetFailoverSwitch(const uint64_t& _failoverSwitch);
+
+                    /**
+                     * 判断参数 FailoverSwitch 是否已赋值
+                     * @return FailoverSwitch 是否已赋值
+                     */
+                    bool FailoverSwitchHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return SessionPersist Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    uint64_t GetSessionPersist() const;
+
+                    /**
+                     * 设置Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param SessionPersist Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetSessionPersist(const uint64_t& _sessionPersist);
+
+                    /**
+                     * 判断参数 SessionPersist 是否已赋值
+                     * @return SessionPersist 是否已赋值
+                     */
+                    bool SessionPersistHasBeenSet() const;
+
                 private:
 
                     /**
@@ -454,6 +564,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_createTime;
                     bool m_createTimeHasBeenSet;
+
+                    /**
+                     * Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_clientIPMethod;
+                    bool m_clientIPMethodHasBeenSet;
+
+                    /**
+                     * Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_healthyThreshold;
+                    bool m_healthyThresholdHasBeenSet;
+
+                    /**
+                     * Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    uint64_t m_unhealthyThreshold;
+                    bool m_unhealthyThresholdHasBeenSet;
+
+                    /**
+                     * Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_failoverSwitch;
+                    bool m_failoverSwitchHasBeenSet;
+
+                    /**
+                     * Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    uint64_t m_sessionPersist;
+                    bool m_sessionPersistHasBeenSet;
 
                 };
             }

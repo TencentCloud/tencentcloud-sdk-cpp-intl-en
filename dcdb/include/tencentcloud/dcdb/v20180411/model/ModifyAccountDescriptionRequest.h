@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool HostHasBeenSet() const;
 
                     /**
-                     * 获取New account remarks, which can contain 0–256 characters.
-                     * @return Description New account remarks, which can contain 0–256 characters.
+                     * 获取New account remarks, which can contain 0-256 characters.
+                     * @return Description New account remarks, which can contain 0-256 characters.
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置New account remarks, which can contain 0–256 characters.
-                     * @param Description New account remarks, which can contain 0–256 characters.
+                     * 设置New account remarks, which can contain 0-256 characters.
+                     * @param Description New account remarks, which can contain 0-256 characters.
                      */
                     void SetDescription(const std::string& _description);
 
@@ -135,7 +135,7 @@ namespace TencentCloud
                     bool m_hostHasBeenSet;
 
                     /**
-                     * New account remarks, which can contain 0–256 characters.
+                     * New account remarks, which can contain 0-256 characters.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;

@@ -96,6 +96,42 @@ namespace TencentCloud
                      */
                     bool DomainsHasBeenSet() const;
 
+                    /**
+                     * 获取Redirection status code. Valid values: 301, 302, and 307.
+                     * @return RewriteCodes Redirection status code. Valid values: 301, 302, and 307.
+                     */
+                    std::vector<int64_t> GetRewriteCodes() const;
+
+                    /**
+                     * 设置Redirection status code. Valid values: 301, 302, and 307.
+                     * @param RewriteCodes Redirection status code. Valid values: 301, 302, and 307.
+                     */
+                    void SetRewriteCodes(const std::vector<int64_t>& _rewriteCodes);
+
+                    /**
+                     * 判断参数 RewriteCodes 是否已赋值
+                     * @return RewriteCodes 是否已赋值
+                     */
+                    bool RewriteCodesHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the matched URL is carried in redirection.
+                     * @return TakeUrls Whether the matched URL is carried in redirection.
+                     */
+                    std::vector<bool> GetTakeUrls() const;
+
+                    /**
+                     * 设置Whether the matched URL is carried in redirection.
+                     * @param TakeUrls Whether the matched URL is carried in redirection.
+                     */
+                    void SetTakeUrls(const std::vector<bool>& _takeUrls);
+
+                    /**
+                     * 判断参数 TakeUrls 是否已赋值
+                     * @return TakeUrls 是否已赋值
+                     */
+                    bool TakeUrlsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +151,18 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_domains;
                     bool m_domainsHasBeenSet;
+
+                    /**
+                     * Redirection status code. Valid values: 301, 302, and 307.
+                     */
+                    std::vector<int64_t> m_rewriteCodes;
+                    bool m_rewriteCodesHasBeenSet;
+
+                    /**
+                     * Whether the matched URL is carried in redirection.
+                     */
+                    std::vector<bool> m_takeUrls;
+                    bool m_takeUrlsHasBeenSet;
 
                 };
             }

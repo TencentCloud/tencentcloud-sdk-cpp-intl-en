@@ -43,18 +43,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Date in the format of `YYYY-mm-dd`.
-Data is available at 3 AM the next day. You are recommended to query the latest data after this time point.
-                     * @return DayTime Date in the format of `YYYY-mm-dd`.
-Data is available at 3 AM the next day. You are recommended to query the latest data after this time point.
+                     * 获取Date in the format of YYYY-mm-dd
+Data is available at 3am Beijing Time the next day. You are recommended to query the latest data after this time point. Data in the last 3 months can be queried.
+                     * @return DayTime Date in the format of YYYY-mm-dd
+Data is available at 3am Beijing Time the next day. You are recommended to query the latest data after this time point. Data in the last 3 months can be queried.
                      */
                     std::string GetDayTime() const;
 
                     /**
-                     * 设置Date in the format of `YYYY-mm-dd`.
-Data is available at 3 AM the next day. You are recommended to query the latest data after this time point.
-                     * @param DayTime Date in the format of `YYYY-mm-dd`.
-Data is available at 3 AM the next day. You are recommended to query the latest data after this time point.
+                     * 设置Date in the format of YYYY-mm-dd
+Data is available at 3am Beijing Time the next day. You are recommended to query the latest data after this time point. Data in the last 3 months can be queried.
+                     * @param DayTime Date in the format of YYYY-mm-dd
+Data is available at 3am Beijing Time the next day. You are recommended to query the latest data after this time point. Data in the last 3 months can be queried.
                      */
                     void SetDayTime(const std::string& _dayTime);
 
@@ -118,11 +118,59 @@ Data is available at 3 AM the next day. You are recommended to query the latest 
                      */
                     bool PageSizeHasBeenSet() const;
 
+                    /**
+                     * 获取Valid values:
+Mainland: query data for Mainland China,
+Oversea: query data for regions outside Mainland China,
+Default: query data for all regions.
+                     * @return MainlandOrOversea Valid values:
+Mainland: query data for Mainland China,
+Oversea: query data for regions outside Mainland China,
+Default: query data for all regions.
+                     */
+                    std::string GetMainlandOrOversea() const;
+
+                    /**
+                     * 设置Valid values:
+Mainland: query data for Mainland China,
+Oversea: query data for regions outside Mainland China,
+Default: query data for all regions.
+                     * @param MainlandOrOversea Valid values:
+Mainland: query data for Mainland China,
+Oversea: query data for regions outside Mainland China,
+Default: query data for all regions.
+                     */
+                    void SetMainlandOrOversea(const std::string& _mainlandOrOversea);
+
+                    /**
+                     * 判断参数 MainlandOrOversea 是否已赋值
+                     * @return MainlandOrOversea 是否已赋值
+                     */
+                    bool MainlandOrOverseaHasBeenSet() const;
+
+                    /**
+                     * 获取Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
+                     * @return ServiceName Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
+                     */
+                    std::string GetServiceName() const;
+
+                    /**
+                     * 设置Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
+                     * @param ServiceName Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
+                     */
+                    void SetServiceName(const std::string& _serviceName);
+
+                    /**
+                     * 判断参数 ServiceName 是否已赋值
+                     * @return ServiceName 是否已赋值
+                     */
+                    bool ServiceNameHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Date in the format of `YYYY-mm-dd`.
-Data is available at 3 AM the next day. You are recommended to query the latest data after this time point.
+                     * Date in the format of YYYY-mm-dd
+Data is available at 3am Beijing Time the next day. You are recommended to query the latest data after this time point. Data in the last 3 months can be queried.
                      */
                     std::string m_dayTime;
                     bool m_dayTimeHasBeenSet;
@@ -144,6 +192,21 @@ Data is available at 3 AM the next day. You are recommended to query the latest 
                      */
                     uint64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;
+
+                    /**
+                     * Valid values:
+Mainland: query data for Mainland China,
+Oversea: query data for regions outside Mainland China,
+Default: query data for all regions.
+                     */
+                    std::string m_mainlandOrOversea;
+                    bool m_mainlandOrOverseaHasBeenSet;
+
+                    /**
+                     * Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
+                     */
+                    std::string m_serviceName;
+                    bool m_serviceNameHasBeenSet;
 
                 };
             }

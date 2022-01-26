@@ -153,6 +153,132 @@ namespace TencentCloud
                      */
                     bool IPSECOptionsSpecificationHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable the tunnel health check.
+                     * @return EnableHealthCheck Whether to enable the tunnel health check.
+                     */
+                    bool GetEnableHealthCheck() const;
+
+                    /**
+                     * 设置Whether to enable the tunnel health check.
+                     * @param EnableHealthCheck Whether to enable the tunnel health check.
+                     */
+                    void SetEnableHealthCheck(const bool& _enableHealthCheck);
+
+                    /**
+                     * 判断参数 EnableHealthCheck 是否已赋值
+                     * @return EnableHealthCheck 是否已赋值
+                     */
+                    bool EnableHealthCheckHasBeenSet() const;
+
+                    /**
+                     * 获取Local IP address for the tunnel health check
+                     * @return HealthCheckLocalIp Local IP address for the tunnel health check
+                     */
+                    std::string GetHealthCheckLocalIp() const;
+
+                    /**
+                     * 设置Local IP address for the tunnel health check
+                     * @param HealthCheckLocalIp Local IP address for the tunnel health check
+                     */
+                    void SetHealthCheckLocalIp(const std::string& _healthCheckLocalIp);
+
+                    /**
+                     * 判断参数 HealthCheckLocalIp 是否已赋值
+                     * @return HealthCheckLocalIp 是否已赋值
+                     */
+                    bool HealthCheckLocalIpHasBeenSet() const;
+
+                    /**
+                     * 获取Peer IP address for the tunnel health check
+                     * @return HealthCheckRemoteIp Peer IP address for the tunnel health check
+                     */
+                    std::string GetHealthCheckRemoteIp() const;
+
+                    /**
+                     * 设置Peer IP address for the tunnel health check
+                     * @param HealthCheckRemoteIp Peer IP address for the tunnel health check
+                     */
+                    void SetHealthCheckRemoteIp(const std::string& _healthCheckRemoteIp);
+
+                    /**
+                     * 判断参数 HealthCheckRemoteIp 是否已赋值
+                     * @return HealthCheckRemoteIp 是否已赋值
+                     */
+                    bool HealthCheckRemoteIpHasBeenSet() const;
+
+                    /**
+                     * 获取Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`.
+                     * @return NegotiationType Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`.
+                     */
+                    std::string GetNegotiationType() const;
+
+                    /**
+                     * 设置Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`.
+                     * @param NegotiationType Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`.
+                     */
+                    void SetNegotiationType(const std::string& _negotiationType);
+
+                    /**
+                     * 判断参数 NegotiationType 是否已赋值
+                     * @return NegotiationType 是否已赋值
+                     */
+                    bool NegotiationTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies whether to enable DPD. Valid values: `0` (disable) and `1` (enable)
+                     * @return DpdEnable Specifies whether to enable DPD. Valid values: `0` (disable) and `1` (enable)
+                     */
+                    int64_t GetDpdEnable() const;
+
+                    /**
+                     * 设置Specifies whether to enable DPD. Valid values: `0` (disable) and `1` (enable)
+                     * @param DpdEnable Specifies whether to enable DPD. Valid values: `0` (disable) and `1` (enable)
+                     */
+                    void SetDpdEnable(const int64_t& _dpdEnable);
+
+                    /**
+                     * 判断参数 DpdEnable 是否已赋值
+                     * @return DpdEnable 是否已赋值
+                     */
+                    bool DpdEnableHasBeenSet() const;
+
+                    /**
+                     * 获取DPD timeout period. Default: 30; unit: second. If the request is not responded within this period, the peer end is considered not exists. This parameter is valid when the value of `DpdEnable` is 1. 
+                     * @return DpdTimeout DPD timeout period. Default: 30; unit: second. If the request is not responded within this period, the peer end is considered not exists. This parameter is valid when the value of `DpdEnable` is 1. 
+                     */
+                    std::string GetDpdTimeout() const;
+
+                    /**
+                     * 设置DPD timeout period. Default: 30; unit: second. If the request is not responded within this period, the peer end is considered not exists. This parameter is valid when the value of `DpdEnable` is 1. 
+                     * @param DpdTimeout DPD timeout period. Default: 30; unit: second. If the request is not responded within this period, the peer end is considered not exists. This parameter is valid when the value of `DpdEnable` is 1. 
+                     */
+                    void SetDpdTimeout(const std::string& _dpdTimeout);
+
+                    /**
+                     * 判断参数 DpdTimeout 是否已赋值
+                     * @return DpdTimeout 是否已赋值
+                     */
+                    bool DpdTimeoutHasBeenSet() const;
+
+                    /**
+                     * 获取The action after DPD timeout. Valid values: `clear` (disconnect) and `restart` (try again). It’s valid when `DpdEnable` is `1`. 
+                     * @return DpdAction The action after DPD timeout. Valid values: `clear` (disconnect) and `restart` (try again). It’s valid when `DpdEnable` is `1`. 
+                     */
+                    std::string GetDpdAction() const;
+
+                    /**
+                     * 设置The action after DPD timeout. Valid values: `clear` (disconnect) and `restart` (try again). It’s valid when `DpdEnable` is `1`. 
+                     * @param DpdAction The action after DPD timeout. Valid values: `clear` (disconnect) and `restart` (try again). It’s valid when `DpdEnable` is `1`. 
+                     */
+                    void SetDpdAction(const std::string& _dpdAction);
+
+                    /**
+                     * 判断参数 DpdAction 是否已赋值
+                     * @return DpdAction 是否已赋值
+                     */
+                    bool DpdActionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -190,6 +316,48 @@ namespace TencentCloud
                      */
                     IPSECOptionsSpecification m_iPSECOptionsSpecification;
                     bool m_iPSECOptionsSpecificationHasBeenSet;
+
+                    /**
+                     * Whether to enable the tunnel health check.
+                     */
+                    bool m_enableHealthCheck;
+                    bool m_enableHealthCheckHasBeenSet;
+
+                    /**
+                     * Local IP address for the tunnel health check
+                     */
+                    std::string m_healthCheckLocalIp;
+                    bool m_healthCheckLocalIpHasBeenSet;
+
+                    /**
+                     * Peer IP address for the tunnel health check
+                     */
+                    std::string m_healthCheckRemoteIp;
+                    bool m_healthCheckRemoteIpHasBeenSet;
+
+                    /**
+                     * Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`.
+                     */
+                    std::string m_negotiationType;
+                    bool m_negotiationTypeHasBeenSet;
+
+                    /**
+                     * Specifies whether to enable DPD. Valid values: `0` (disable) and `1` (enable)
+                     */
+                    int64_t m_dpdEnable;
+                    bool m_dpdEnableHasBeenSet;
+
+                    /**
+                     * DPD timeout period. Default: 30; unit: second. If the request is not responded within this period, the peer end is considered not exists. This parameter is valid when the value of `DpdEnable` is 1. 
+                     */
+                    std::string m_dpdTimeout;
+                    bool m_dpdTimeoutHasBeenSet;
+
+                    /**
+                     * The action after DPD timeout. Valid values: `clear` (disconnect) and `restart` (try again). It’s valid when `DpdEnable` is `1`. 
+                     */
+                    std::string m_dpdAction;
+                    bool m_dpdActionHasBeenSet;
 
                 };
             }

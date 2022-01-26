@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mongodb::V20190725::Model;
-using namespace rapidjson;
 using namespace std;
 
 InstanceDetail::InstanceDetail() :
@@ -63,7 +62,7 @@ InstanceDetail::InstanceDetail() :
 {
 }
 
-CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
+CoreInternalOutcome InstanceDetail::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -72,7 +71,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(value["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -82,7 +81,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["InstanceName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.InstanceName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.InstanceName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceName = string(value["InstanceName"].GetString());
         m_instanceNameHasBeenSet = true;
@@ -92,7 +91,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["PayMode"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.PayMode` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.PayMode` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_payMode = value["PayMode"].GetUint64();
         m_payModeHasBeenSet = true;
@@ -102,7 +101,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["ProjectId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.ProjectId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.ProjectId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_projectId = value["ProjectId"].GetUint64();
         m_projectIdHasBeenSet = true;
@@ -112,7 +111,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["ClusterType"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.ClusterType` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.ClusterType` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_clusterType = value["ClusterType"].GetUint64();
         m_clusterTypeHasBeenSet = true;
@@ -122,7 +121,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["Region"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.Region` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.Region` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_region = string(value["Region"].GetString());
         m_regionHasBeenSet = true;
@@ -132,7 +131,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["Zone"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.Zone` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.Zone` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_zone = string(value["Zone"].GetString());
         m_zoneHasBeenSet = true;
@@ -142,7 +141,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["NetType"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.NetType` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.NetType` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_netType = value["NetType"].GetUint64();
         m_netTypeHasBeenSet = true;
@@ -152,7 +151,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["VpcId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.VpcId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.VpcId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpcId = string(value["VpcId"].GetString());
         m_vpcIdHasBeenSet = true;
@@ -162,7 +161,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["SubnetId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.SubnetId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.SubnetId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_subnetId = string(value["SubnetId"].GetString());
         m_subnetIdHasBeenSet = true;
@@ -172,7 +171,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["Status"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.Status` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.Status` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_status = value["Status"].GetInt64();
         m_statusHasBeenSet = true;
@@ -182,7 +181,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["Vip"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.Vip` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.Vip` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vip = string(value["Vip"].GetString());
         m_vipHasBeenSet = true;
@@ -192,7 +191,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["Vport"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.Vport` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.Vport` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_vport = value["Vport"].GetUint64();
         m_vportHasBeenSet = true;
@@ -202,7 +201,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -212,7 +211,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["DeadLine"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.DeadLine` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.DeadLine` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_deadLine = string(value["DeadLine"].GetString());
         m_deadLineHasBeenSet = true;
@@ -222,7 +221,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["MongoVersion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.MongoVersion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.MongoVersion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_mongoVersion = string(value["MongoVersion"].GetString());
         m_mongoVersionHasBeenSet = true;
@@ -232,7 +231,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["Memory"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.Memory` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.Memory` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_memory = value["Memory"].GetUint64();
         m_memoryHasBeenSet = true;
@@ -242,7 +241,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["Volume"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.Volume` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.Volume` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_volume = value["Volume"].GetUint64();
         m_volumeHasBeenSet = true;
@@ -252,7 +251,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["CpuNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.CpuNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.CpuNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_cpuNum = value["CpuNum"].GetUint64();
         m_cpuNumHasBeenSet = true;
@@ -262,7 +261,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["MachineType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.MachineType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.MachineType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_machineType = string(value["MachineType"].GetString());
         m_machineTypeHasBeenSet = true;
@@ -272,7 +271,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["SecondaryNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.SecondaryNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.SecondaryNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_secondaryNum = value["SecondaryNum"].GetUint64();
         m_secondaryNumHasBeenSet = true;
@@ -282,7 +281,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["ReplicationSetNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.ReplicationSetNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.ReplicationSetNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_replicationSetNum = value["ReplicationSetNum"].GetUint64();
         m_replicationSetNumHasBeenSet = true;
@@ -292,7 +291,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["AutoRenewFlag"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.AutoRenewFlag` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.AutoRenewFlag` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_autoRenewFlag = value["AutoRenewFlag"].GetInt64();
         m_autoRenewFlagHasBeenSet = true;
@@ -302,7 +301,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["UsedVolume"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.UsedVolume` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.UsedVolume` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_usedVolume = value["UsedVolume"].GetUint64();
         m_usedVolumeHasBeenSet = true;
@@ -312,7 +311,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["MaintenanceStart"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.MaintenanceStart` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.MaintenanceStart` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_maintenanceStart = string(value["MaintenanceStart"].GetString());
         m_maintenanceStartHasBeenSet = true;
@@ -322,7 +321,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["MaintenanceEnd"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.MaintenanceEnd` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.MaintenanceEnd` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_maintenanceEnd = string(value["MaintenanceEnd"].GetString());
         m_maintenanceEndHasBeenSet = true;
@@ -331,10 +330,10 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     if (value.HasMember("ReplicaSets") && !value["ReplicaSets"].IsNull())
     {
         if (!value["ReplicaSets"].IsArray())
-            return CoreInternalOutcome(Error("response `InstanceDetail.ReplicaSets` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.ReplicaSets` is not array type"));
 
-        const Value &tmpValue = value["ReplicaSets"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["ReplicaSets"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             ShardInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -351,10 +350,10 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     if (value.HasMember("ReadonlyInstances") && !value["ReadonlyInstances"].IsNull())
     {
         if (!value["ReadonlyInstances"].IsArray())
-            return CoreInternalOutcome(Error("response `InstanceDetail.ReadonlyInstances` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.ReadonlyInstances` is not array type"));
 
-        const Value &tmpValue = value["ReadonlyInstances"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["ReadonlyInstances"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             DBInstanceInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -371,10 +370,10 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     if (value.HasMember("StandbyInstances") && !value["StandbyInstances"].IsNull())
     {
         if (!value["StandbyInstances"].IsArray())
-            return CoreInternalOutcome(Error("response `InstanceDetail.StandbyInstances` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.StandbyInstances` is not array type"));
 
-        const Value &tmpValue = value["StandbyInstances"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["StandbyInstances"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             DBInstanceInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -391,10 +390,10 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     if (value.HasMember("CloneInstances") && !value["CloneInstances"].IsNull())
     {
         if (!value["CloneInstances"].IsArray())
-            return CoreInternalOutcome(Error("response `InstanceDetail.CloneInstances` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.CloneInstances` is not array type"));
 
-        const Value &tmpValue = value["CloneInstances"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["CloneInstances"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             DBInstanceInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -412,7 +411,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["RelatedInstance"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.RelatedInstance` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.RelatedInstance` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_relatedInstance.Deserialize(value["RelatedInstance"]);
@@ -428,10 +427,10 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     if (value.HasMember("Tags") && !value["Tags"].IsNull())
     {
         if (!value["Tags"].IsArray())
-            return CoreInternalOutcome(Error("response `InstanceDetail.Tags` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.Tags` is not array type"));
 
-        const Value &tmpValue = value["Tags"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Tags"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             TagInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -449,7 +448,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["InstanceVer"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.InstanceVer` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.InstanceVer` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_instanceVer = value["InstanceVer"].GetUint64();
         m_instanceVerHasBeenSet = true;
@@ -459,7 +458,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["ClusterVer"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.ClusterVer` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.ClusterVer` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_clusterVer = value["ClusterVer"].GetUint64();
         m_clusterVerHasBeenSet = true;
@@ -469,7 +468,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["Protocol"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.Protocol` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.Protocol` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_protocol = value["Protocol"].GetUint64();
         m_protocolHasBeenSet = true;
@@ -479,7 +478,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["InstanceType"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.InstanceType` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.InstanceType` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_instanceType = value["InstanceType"].GetUint64();
         m_instanceTypeHasBeenSet = true;
@@ -489,7 +488,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["InstanceStatusDesc"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.InstanceStatusDesc` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.InstanceStatusDesc` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceStatusDesc = string(value["InstanceStatusDesc"].GetString());
         m_instanceStatusDescHasBeenSet = true;
@@ -499,7 +498,7 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     {
         if (!value["RealInstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetail.RealInstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetail.RealInstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_realInstanceId = string(value["RealInstanceId"].GetString());
         m_realInstanceIdHasBeenSet = true;
@@ -509,28 +508,28 @@ CoreInternalOutcome InstanceDetail::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void InstanceDetail::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void InstanceDetail::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_payModeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PayMode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_payMode, allocator);
@@ -538,7 +537,7 @@ void InstanceDetail::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_projectIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProjectId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_projectId, allocator);
@@ -546,7 +545,7 @@ void InstanceDetail::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_clusterTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClusterType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_clusterType, allocator);
@@ -554,23 +553,23 @@ void InstanceDetail::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_regionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Region";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_region.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_region.c_str(), allocator).Move(), allocator);
     }
 
     if (m_zoneHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Zone";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_zone.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_zone.c_str(), allocator).Move(), allocator);
     }
 
     if (m_netTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_netType, allocator);
@@ -578,23 +577,23 @@ void InstanceDetail::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_vpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vpcId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpcId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_subnetIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubnetId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_subnetId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_subnetId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);
@@ -602,15 +601,15 @@ void InstanceDetail::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_vipHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Vip";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vip.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vip.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vportHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Vport";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_vport, allocator);
@@ -618,31 +617,31 @@ void InstanceDetail::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_deadLineHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DeadLine";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_deadLine.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_deadLine.c_str(), allocator).Move(), allocator);
     }
 
     if (m_mongoVersionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MongoVersion";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_mongoVersion.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_mongoVersion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_memoryHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Memory";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_memory, allocator);
@@ -650,7 +649,7 @@ void InstanceDetail::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_volumeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Volume";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_volume, allocator);
@@ -658,7 +657,7 @@ void InstanceDetail::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_cpuNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CpuNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cpuNum, allocator);
@@ -666,15 +665,15 @@ void InstanceDetail::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_machineTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MachineType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_machineType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_machineType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_secondaryNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SecondaryNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_secondaryNum, allocator);
@@ -682,7 +681,7 @@ void InstanceDetail::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_replicationSetNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReplicationSetNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_replicationSetNum, allocator);
@@ -690,7 +689,7 @@ void InstanceDetail::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_autoRenewFlagHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AutoRenewFlag";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_autoRenewFlag, allocator);
@@ -698,7 +697,7 @@ void InstanceDetail::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_usedVolumeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UsedVolume";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_usedVolume, allocator);
@@ -706,107 +705,107 @@ void InstanceDetail::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_maintenanceStartHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaintenanceStart";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_maintenanceStart.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_maintenanceStart.c_str(), allocator).Move(), allocator);
     }
 
     if (m_maintenanceEndHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaintenanceEnd";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_maintenanceEnd.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_maintenanceEnd.c_str(), allocator).Move(), allocator);
     }
 
     if (m_replicaSetsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReplicaSets";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_replicaSets.begin(); itr != m_replicaSets.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_readonlyInstancesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReadonlyInstances";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_readonlyInstances.begin(); itr != m_readonlyInstances.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_standbyInstancesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StandbyInstances";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_standbyInstances.begin(); itr != m_standbyInstances.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_cloneInstancesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CloneInstances";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_cloneInstances.begin(); itr != m_cloneInstances.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_relatedInstanceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RelatedInstance";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_relatedInstance.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_tagsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Tags";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_instanceVerHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceVer";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_instanceVer, allocator);
@@ -814,7 +813,7 @@ void InstanceDetail::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_clusterVerHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClusterVer";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_clusterVer, allocator);
@@ -822,7 +821,7 @@ void InstanceDetail::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_protocolHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Protocol";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_protocol, allocator);
@@ -830,7 +829,7 @@ void InstanceDetail::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_instanceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_instanceType, allocator);
@@ -838,18 +837,18 @@ void InstanceDetail::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_instanceStatusDescHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceStatusDesc";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceStatusDesc.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceStatusDesc.c_str(), allocator).Move(), allocator);
     }
 
     if (m_realInstanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RealInstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_realInstanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_realInstanceId.c_str(), allocator).Move(), allocator);
     }
 
 }

@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/TagInfoUnit.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/MachineInfo.h>
 
 
 namespace TencentCloud
@@ -134,14 +135,14 @@ namespace TencentCloud
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResourceTags 
+                     * 获取Cluster tag list
+                     * @return ResourceTags Cluster tag list
                      */
                     std::vector<TagInfoUnit> GetResourceTags() const;
 
                     /**
-                     * 设置
-                     * @param ResourceTags 
+                     * 设置Cluster tag list
+                     * @param ResourceTags Cluster tag list
                      */
                     void SetResourceTags(const std::vector<TagInfoUnit>& _resourceTags);
 
@@ -168,6 +169,78 @@ namespace TencentCloud
                      * @return Ipv6Enable 是否已赋值
                      */
                     bool Ipv6EnableHasBeenSet() const;
+
+                    /**
+                     * 获取Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+                     * @return ServerList Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+                     */
+                    std::vector<MachineInfo> GetServerList() const;
+
+                    /**
+                     * 设置Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+                     * @param ServerList Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+                     */
+                    void SetServerList(const std::vector<MachineInfo>& _serverList);
+
+                    /**
+                     * 判断参数 ServerList 是否已赋值
+                     * @return ServerList 是否已赋值
+                     */
+                    bool ServerListHasBeenSet() const;
+
+                    /**
+                     * 获取Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+                     * @return ProxyList Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+                     */
+                    std::vector<MachineInfo> GetProxyList() const;
+
+                    /**
+                     * 设置Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+                     * @param ProxyList Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+                     */
+                    void SetProxyList(const std::vector<MachineInfo>& _proxyList);
+
+                    /**
+                     * 判断参数 ProxyList 是否已赋值
+                     * @return ProxyList 是否已赋值
+                     */
+                    bool ProxyListHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster type. Valid values: `1` (standard), `2` (dedicated)
+                     * @return ClusterType Cluster type. Valid values: `1` (standard), `2` (dedicated)
+                     */
+                    int64_t GetClusterType() const;
+
+                    /**
+                     * 设置Cluster type. Valid values: `1` (standard), `2` (dedicated)
+                     * @param ClusterType Cluster type. Valid values: `1` (standard), `2` (dedicated)
+                     */
+                    void SetClusterType(const int64_t& _clusterType);
+
+                    /**
+                     * 判断参数 ClusterType 是否已赋值
+                     * @return ClusterType 是否已赋值
+                     */
+                    bool ClusterTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Authentication type. Valid values: `0` (static password), `1` (signature)
+                     * @return AuthType Authentication type. Valid values: `0` (static password), `1` (signature)
+                     */
+                    int64_t GetAuthType() const;
+
+                    /**
+                     * 设置Authentication type. Valid values: `0` (static password), `1` (signature)
+                     * @param AuthType Authentication type. Valid values: `0` (static password), `1` (signature)
+                     */
+                    void SetAuthType(const int64_t& _authType);
+
+                    /**
+                     * 判断参数 AuthType 是否已赋值
+                     * @return AuthType 是否已赋值
+                     */
+                    bool AuthTypeHasBeenSet() const;
 
                 private:
 
@@ -202,7 +275,7 @@ namespace TencentCloud
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * 
+                     * Cluster tag list
                      */
                     std::vector<TagInfoUnit> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;
@@ -212,6 +285,30 @@ namespace TencentCloud
                      */
                     int64_t m_ipv6Enable;
                     bool m_ipv6EnableHasBeenSet;
+
+                    /**
+                     * Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+                     */
+                    std::vector<MachineInfo> m_serverList;
+                    bool m_serverListHasBeenSet;
+
+                    /**
+                     * Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+                     */
+                    std::vector<MachineInfo> m_proxyList;
+                    bool m_proxyListHasBeenSet;
+
+                    /**
+                     * Cluster type. Valid values: `1` (standard), `2` (dedicated)
+                     */
+                    int64_t m_clusterType;
+                    bool m_clusterTypeHasBeenSet;
+
+                    /**
+                     * Authentication type. Valid values: `0` (static password), `1` (signature)
+                     */
+                    int64_t m_authType;
+                    bool m_authTypeHasBeenSet;
 
                 };
             }

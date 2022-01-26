@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 RollbackTimeRange::RollbackTimeRange() :
@@ -27,7 +26,7 @@ RollbackTimeRange::RollbackTimeRange() :
 {
 }
 
-CoreInternalOutcome RollbackTimeRange::Deserialize(const Value &value)
+CoreInternalOutcome RollbackTimeRange::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome RollbackTimeRange::Deserialize(const Value &value)
     {
         if (!value["Begin"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RollbackTimeRange.Begin` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RollbackTimeRange.Begin` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_begin = string(value["Begin"].GetString());
         m_beginHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome RollbackTimeRange::Deserialize(const Value &value)
     {
         if (!value["End"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RollbackTimeRange.End` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RollbackTimeRange.End` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_end = string(value["End"].GetString());
         m_endHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome RollbackTimeRange::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void RollbackTimeRange::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void RollbackTimeRange::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_beginHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Begin";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_begin.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_begin.c_str(), allocator).Move(), allocator);
     }
 
     if (m_endHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "End";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_end.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_end.c_str(), allocator).Move(), allocator);
     }
 
 }

@@ -82,6 +82,24 @@ namespace TencentCloud
                      */
                     bool CountHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it is the Tencent Cloud IP for automated testing
+                     * @return InternalService Whether it is the Tencent Cloud IP for automated testing
+                     */
+                    bool GetInternalService() const;
+
+                    /**
+                     * 设置Whether it is the Tencent Cloud IP for automated testing
+                     * @param InternalService Whether it is the Tencent Cloud IP for automated testing
+                     */
+                    void SetInternalService(const bool& _internalService);
+
+                    /**
+                     * 判断参数 InternalService 是否已赋值
+                     * @return InternalService 是否已赋值
+                     */
+                    bool InternalServiceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -95,6 +113,12 @@ namespace TencentCloud
                      */
                     uint64_t m_count;
                     bool m_countHasBeenSet;
+
+                    /**
+                     * Whether it is the Tencent Cloud IP for automated testing
+                     */
+                    bool m_internalService;
+                    bool m_internalServiceHasBeenSet;
 
                 };
             }

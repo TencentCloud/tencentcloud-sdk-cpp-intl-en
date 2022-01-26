@@ -40,9 +40,31 @@ namespace TencentCloud
                     UpdateInstanceResponse();
                     ~UpdateInstanceResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
+
+                    /**
+                     * 获取Order ID
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return DealName Order ID
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetDealName() const;
+
+                    /**
+                     * 判断参数 DealName 是否已赋值
+                     * @return DealName 是否已赋值
+                     */
+                    bool DealNameHasBeenSet() const;
 
                 private:
+
+                    /**
+                     * Order ID
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_dealName;
+                    bool m_dealNameHasBeenSet;
 
                 };
             }

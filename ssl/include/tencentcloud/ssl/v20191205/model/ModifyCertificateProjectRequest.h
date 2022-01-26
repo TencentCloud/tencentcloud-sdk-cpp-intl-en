@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID list of certificates whose projects need to be modified. A maximum 100 certificate IDs are supported.
-                     * @return CertificateIdList ID list of certificates whose projects need to be modified. A maximum 100 certificate IDs are supported.
+                     * 获取ID list of certificates whose projects need to be modified. A maximum of 100 certificate IDs are supported.
+                     * @return CertificateIdList ID list of certificates whose projects need to be modified. A maximum of 100 certificate IDs are supported.
                      */
                     std::vector<std::string> GetCertificateIdList() const;
 
                     /**
-                     * 设置ID list of certificates whose projects need to be modified. A maximum 100 certificate IDs are supported.
-                     * @param CertificateIdList ID list of certificates whose projects need to be modified. A maximum 100 certificate IDs are supported.
+                     * 设置ID list of certificates whose projects need to be modified. A maximum of 100 certificate IDs are supported.
+                     * @param CertificateIdList ID list of certificates whose projects need to be modified. A maximum of 100 certificate IDs are supported.
                      */
                     void SetCertificateIdList(const std::vector<std::string>& _certificateIdList);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool CertificateIdListHasBeenSet() const;
 
                     /**
-                     * 获取Project ID.
-                     * @return ProjectId Project ID.
+                     * 获取Project ID
+                     * @return ProjectId Project ID
                      */
                     uint64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID.
-                     * @param ProjectId Project ID.
+                     * 设置Project ID
+                     * @param ProjectId Project ID
                      */
                     void SetProjectId(const uint64_t& _projectId);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID list of certificates whose projects need to be modified. A maximum 100 certificate IDs are supported.
+                     * ID list of certificates whose projects need to be modified. A maximum of 100 certificate IDs are supported.
                      */
                     std::vector<std::string> m_certificateIdList;
                     bool m_certificateIdListHasBeenSet;
 
                     /**
-                     * Project ID.
+                     * Project ID
                      */
                     uint64_t m_projectId;
                     bool m_projectIdHasBeenSet;

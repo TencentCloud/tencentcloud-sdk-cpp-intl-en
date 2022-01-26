@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Clb::V20180317::Model;
-using namespace rapidjson;
 using namespace std;
 
 SnatIp::SnatIp() :
@@ -27,7 +26,7 @@ SnatIp::SnatIp() :
 {
 }
 
-CoreInternalOutcome SnatIp::Deserialize(const Value &value)
+CoreInternalOutcome SnatIp::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome SnatIp::Deserialize(const Value &value)
     {
         if (!value["SubnetId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SnatIp.SubnetId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnatIp.SubnetId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_subnetId = string(value["SubnetId"].GetString());
         m_subnetIdHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome SnatIp::Deserialize(const Value &value)
     {
         if (!value["Ip"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SnatIp.Ip` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnatIp.Ip` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ip = string(value["Ip"].GetString());
         m_ipHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome SnatIp::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void SnatIp::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SnatIp::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_subnetIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubnetId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_subnetId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_subnetId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ipHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Ip";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ip.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ip.c_str(), allocator).Move(), allocator);
     }
 
 }

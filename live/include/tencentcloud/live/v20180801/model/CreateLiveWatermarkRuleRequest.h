@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool StreamNameHasBeenSet() const;
 
                     /**
-                     * 获取Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](/document/product/267/30154) API.
-                     * @return TemplateId Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](/document/product/267/30154) API.
+                     * 获取Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API.
+                     * @return TemplateId Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API.
                      */
                     int64_t GetTemplateId() const;
 
                     /**
-                     * 设置Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](/document/product/267/30154) API.
-                     * @param TemplateId Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](/document/product/267/30154) API.
+                     * 设置Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API.
+                     * @param TemplateId Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API.
                      */
                     void SetTemplateId(const int64_t& _templateId);
 
@@ -135,7 +135,7 @@ namespace TencentCloud
                     bool m_streamNameHasBeenSet;
 
                     /**
-                     * Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](/document/product/267/30154) API.
+                     * Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API.
                      */
                     int64_t m_templateId;
                     bool m_templateIdHasBeenSet;

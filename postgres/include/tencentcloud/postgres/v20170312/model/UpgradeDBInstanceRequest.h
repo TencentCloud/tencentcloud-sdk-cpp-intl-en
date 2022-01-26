@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool VoucherIdsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ActivityId 
+                     * 获取Activity ID
+                     * @return ActivityId Activity ID
                      */
                     int64_t GetActivityId() const;
 
                     /**
-                     * 设置
-                     * @param ActivityId 
+                     * 设置Activity ID
+                     * @param ActivityId Activity ID
                      */
                     void SetActivityId(const int64_t& _activityId);
 
@@ -149,6 +149,60 @@ namespace TencentCloud
                      * @return ActivityId 是否已赋值
                      */
                     bool ActivityIdHasBeenSet() const;
+
+                    /**
+                     * 获取Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (switch at specified time). Default value: `0`
+                     * @return SwitchTag Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (switch at specified time). Default value: `0`
+                     */
+                    int64_t GetSwitchTag() const;
+
+                    /**
+                     * 设置Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (switch at specified time). Default value: `0`
+                     * @param SwitchTag Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (switch at specified time). Default value: `0`
+                     */
+                    void SetSwitchTag(const int64_t& _switchTag);
+
+                    /**
+                     * 判断参数 SwitchTag 是否已赋值
+                     * @return SwitchTag 是否已赋值
+                     */
+                    bool SwitchTagHasBeenSet() const;
+
+                    /**
+                     * 获取The earliest time to start a switch
+                     * @return SwitchStartTime The earliest time to start a switch
+                     */
+                    std::string GetSwitchStartTime() const;
+
+                    /**
+                     * 设置The earliest time to start a switch
+                     * @param SwitchStartTime The earliest time to start a switch
+                     */
+                    void SetSwitchStartTime(const std::string& _switchStartTime);
+
+                    /**
+                     * 判断参数 SwitchStartTime 是否已赋值
+                     * @return SwitchStartTime 是否已赋值
+                     */
+                    bool SwitchStartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取The latest time to start a switch
+                     * @return SwitchEndTime The latest time to start a switch
+                     */
+                    std::string GetSwitchEndTime() const;
+
+                    /**
+                     * 设置The latest time to start a switch
+                     * @param SwitchEndTime The latest time to start a switch
+                     */
+                    void SetSwitchEndTime(const std::string& _switchEndTime);
+
+                    /**
+                     * 判断参数 SwitchEndTime 是否已赋值
+                     * @return SwitchEndTime 是否已赋值
+                     */
+                    bool SwitchEndTimeHasBeenSet() const;
 
                 private:
 
@@ -183,10 +237,28 @@ namespace TencentCloud
                     bool m_voucherIdsHasBeenSet;
 
                     /**
-                     * 
+                     * Activity ID
                      */
                     int64_t m_activityId;
                     bool m_activityIdHasBeenSet;
+
+                    /**
+                     * Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (switch at specified time). Default value: `0`
+                     */
+                    int64_t m_switchTag;
+                    bool m_switchTagHasBeenSet;
+
+                    /**
+                     * The earliest time to start a switch
+                     */
+                    std::string m_switchStartTime;
+                    bool m_switchStartTimeHasBeenSet;
+
+                    /**
+                     * The latest time to start a switch
+                     */
+                    std::string m_switchEndTime;
+                    bool m_switchEndTimeHasBeenSet;
 
                 };
             }

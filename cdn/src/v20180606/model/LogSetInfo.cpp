@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 LogSetInfo::LogSetInfo() :
@@ -29,11 +28,13 @@ LogSetInfo::LogSetInfo() :
     m_isDefaultHasBeenSet(false),
     m_logsetSavePeriodHasBeenSet(false),
     m_createTimeHasBeenSet(false),
-    m_regionHasBeenSet(false)
+    m_regionHasBeenSet(false),
+    m_deletedHasBeenSet(false),
+    m_regionEnHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome LogSetInfo::Deserialize(const Value &value)
+CoreInternalOutcome LogSetInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +43,7 @@ CoreInternalOutcome LogSetInfo::Deserialize(const Value &value)
     {
         if (!value["AppId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `LogSetInfo.AppId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LogSetInfo.AppId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_appId = value["AppId"].GetUint64();
         m_appIdHasBeenSet = true;
@@ -52,7 +53,7 @@ CoreInternalOutcome LogSetInfo::Deserialize(const Value &value)
     {
         if (!value["Channel"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LogSetInfo.Channel` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LogSetInfo.Channel` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_channel = string(value["Channel"].GetString());
         m_channelHasBeenSet = true;
@@ -62,7 +63,7 @@ CoreInternalOutcome LogSetInfo::Deserialize(const Value &value)
     {
         if (!value["LogsetId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LogSetInfo.LogsetId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LogSetInfo.LogsetId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_logsetId = string(value["LogsetId"].GetString());
         m_logsetIdHasBeenSet = true;
@@ -72,7 +73,7 @@ CoreInternalOutcome LogSetInfo::Deserialize(const Value &value)
     {
         if (!value["LogsetName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LogSetInfo.LogsetName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LogSetInfo.LogsetName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_logsetName = string(value["LogsetName"].GetString());
         m_logsetNameHasBeenSet = true;
@@ -82,7 +83,7 @@ CoreInternalOutcome LogSetInfo::Deserialize(const Value &value)
     {
         if (!value["IsDefault"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `LogSetInfo.IsDefault` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LogSetInfo.IsDefault` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_isDefault = value["IsDefault"].GetUint64();
         m_isDefaultHasBeenSet = true;
@@ -92,7 +93,7 @@ CoreInternalOutcome LogSetInfo::Deserialize(const Value &value)
     {
         if (!value["LogsetSavePeriod"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `LogSetInfo.LogsetSavePeriod` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LogSetInfo.LogsetSavePeriod` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_logsetSavePeriod = value["LogsetSavePeriod"].GetUint64();
         m_logsetSavePeriodHasBeenSet = true;
@@ -102,7 +103,7 @@ CoreInternalOutcome LogSetInfo::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LogSetInfo.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LogSetInfo.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -112,22 +113,42 @@ CoreInternalOutcome LogSetInfo::Deserialize(const Value &value)
     {
         if (!value["Region"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LogSetInfo.Region` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LogSetInfo.Region` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_region = string(value["Region"].GetString());
         m_regionHasBeenSet = true;
+    }
+
+    if (value.HasMember("Deleted") && !value["Deleted"].IsNull())
+    {
+        if (!value["Deleted"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `LogSetInfo.Deleted` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_deleted = string(value["Deleted"].GetString());
+        m_deletedHasBeenSet = true;
+    }
+
+    if (value.HasMember("RegionEn") && !value["RegionEn"].IsNull())
+    {
+        if (!value["RegionEn"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `LogSetInfo.RegionEn` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_regionEn = string(value["RegionEn"].GetString());
+        m_regionEnHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void LogSetInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void LogSetInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_appIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AppId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_appId, allocator);
@@ -135,31 +156,31 @@ void LogSetInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_channelHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Channel";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_channel.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_channel.c_str(), allocator).Move(), allocator);
     }
 
     if (m_logsetIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LogsetId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_logsetId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_logsetId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_logsetNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LogsetName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_logsetName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_logsetName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_isDefaultHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsDefault";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isDefault, allocator);
@@ -167,7 +188,7 @@ void LogSetInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_logsetSavePeriodHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LogsetSavePeriod";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_logsetSavePeriod, allocator);
@@ -175,18 +196,34 @@ void LogSetInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_regionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Region";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_region.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_region.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_deletedHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Deleted";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_deleted.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_regionEnHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RegionEn";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_regionEn.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -318,5 +355,37 @@ void LogSetInfo::SetRegion(const string& _region)
 bool LogSetInfo::RegionHasBeenSet() const
 {
     return m_regionHasBeenSet;
+}
+
+string LogSetInfo::GetDeleted() const
+{
+    return m_deleted;
+}
+
+void LogSetInfo::SetDeleted(const string& _deleted)
+{
+    m_deleted = _deleted;
+    m_deletedHasBeenSet = true;
+}
+
+bool LogSetInfo::DeletedHasBeenSet() const
+{
+    return m_deletedHasBeenSet;
+}
+
+string LogSetInfo::GetRegionEn() const
+{
+    return m_regionEn;
+}
+
+void LogSetInfo::SetRegionEn(const string& _regionEn)
+{
+    m_regionEn = _regionEn;
+    m_regionEnHasBeenSet = true;
+}
+
+bool LogSetInfo::RegionEnHasBeenSet() const
+{
+    return m_regionEnHasBeenSet;
 }
 

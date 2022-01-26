@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 ProcedureTemplate::ProcedureTemplate() :
@@ -35,7 +34,7 @@ ProcedureTemplate::ProcedureTemplate() :
 {
 }
 
-CoreInternalOutcome ProcedureTemplate::Deserialize(const Value &value)
+CoreInternalOutcome ProcedureTemplate::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -44,7 +43,7 @@ CoreInternalOutcome ProcedureTemplate::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ProcedureTemplate.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTemplate.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -54,7 +53,7 @@ CoreInternalOutcome ProcedureTemplate::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ProcedureTemplate.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTemplate.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -64,7 +63,7 @@ CoreInternalOutcome ProcedureTemplate::Deserialize(const Value &value)
     {
         if (!value["Comment"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ProcedureTemplate.Comment` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTemplate.Comment` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_comment = string(value["Comment"].GetString());
         m_commentHasBeenSet = true;
@@ -74,7 +73,7 @@ CoreInternalOutcome ProcedureTemplate::Deserialize(const Value &value)
     {
         if (!value["MediaProcessTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `ProcedureTemplate.MediaProcessTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTemplate.MediaProcessTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_mediaProcessTask.Deserialize(value["MediaProcessTask"]);
@@ -91,7 +90,7 @@ CoreInternalOutcome ProcedureTemplate::Deserialize(const Value &value)
     {
         if (!value["AiContentReviewTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `ProcedureTemplate.AiContentReviewTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTemplate.AiContentReviewTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_aiContentReviewTask.Deserialize(value["AiContentReviewTask"]);
@@ -108,7 +107,7 @@ CoreInternalOutcome ProcedureTemplate::Deserialize(const Value &value)
     {
         if (!value["AiAnalysisTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `ProcedureTemplate.AiAnalysisTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTemplate.AiAnalysisTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_aiAnalysisTask.Deserialize(value["AiAnalysisTask"]);
@@ -125,7 +124,7 @@ CoreInternalOutcome ProcedureTemplate::Deserialize(const Value &value)
     {
         if (!value["AiRecognitionTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `ProcedureTemplate.AiRecognitionTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTemplate.AiRecognitionTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_aiRecognitionTask.Deserialize(value["AiRecognitionTask"]);
@@ -142,7 +141,7 @@ CoreInternalOutcome ProcedureTemplate::Deserialize(const Value &value)
     {
         if (!value["MiniProgramPublishTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `ProcedureTemplate.MiniProgramPublishTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTemplate.MiniProgramPublishTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_miniProgramPublishTask.Deserialize(value["MiniProgramPublishTask"]);
@@ -159,7 +158,7 @@ CoreInternalOutcome ProcedureTemplate::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ProcedureTemplate.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTemplate.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -169,7 +168,7 @@ CoreInternalOutcome ProcedureTemplate::Deserialize(const Value &value)
     {
         if (!value["UpdateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ProcedureTemplate.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTemplate.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_updateTime = string(value["UpdateTime"].GetString());
         m_updateTimeHasBeenSet = true;
@@ -179,92 +178,92 @@ CoreInternalOutcome ProcedureTemplate::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ProcedureTemplate::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ProcedureTemplate::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_commentHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Comment";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_comment.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_comment.c_str(), allocator).Move(), allocator);
     }
 
     if (m_mediaProcessTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MediaProcessTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_mediaProcessTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_aiContentReviewTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AiContentReviewTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_aiContentReviewTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_aiAnalysisTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AiAnalysisTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_aiAnalysisTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_aiRecognitionTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AiRecognitionTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_aiRecognitionTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_miniProgramPublishTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MiniProgramPublishTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_miniProgramPublishTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_updateTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UpdateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_updateTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_updateTime.c_str(), allocator).Move(), allocator);
     }
 
 }

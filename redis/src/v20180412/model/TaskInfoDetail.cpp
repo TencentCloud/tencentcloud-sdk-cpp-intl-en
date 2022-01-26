@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Redis::V20180412::Model;
-using namespace rapidjson;
 using namespace std;
 
 TaskInfoDetail::TaskInfoDetail() :
@@ -34,7 +33,7 @@ TaskInfoDetail::TaskInfoDetail() :
 {
 }
 
-CoreInternalOutcome TaskInfoDetail::Deserialize(const Value &value)
+CoreInternalOutcome TaskInfoDetail::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -43,7 +42,7 @@ CoreInternalOutcome TaskInfoDetail::Deserialize(const Value &value)
     {
         if (!value["TaskId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TaskInfoDetail.TaskId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskInfoDetail.TaskId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_taskId = value["TaskId"].GetInt64();
         m_taskIdHasBeenSet = true;
@@ -53,7 +52,7 @@ CoreInternalOutcome TaskInfoDetail::Deserialize(const Value &value)
     {
         if (!value["StartTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TaskInfoDetail.StartTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskInfoDetail.StartTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_startTime = string(value["StartTime"].GetString());
         m_startTimeHasBeenSet = true;
@@ -63,7 +62,7 @@ CoreInternalOutcome TaskInfoDetail::Deserialize(const Value &value)
     {
         if (!value["TaskType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TaskInfoDetail.TaskType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskInfoDetail.TaskType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_taskType = string(value["TaskType"].GetString());
         m_taskTypeHasBeenSet = true;
@@ -73,7 +72,7 @@ CoreInternalOutcome TaskInfoDetail::Deserialize(const Value &value)
     {
         if (!value["InstanceName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TaskInfoDetail.InstanceName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskInfoDetail.InstanceName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceName = string(value["InstanceName"].GetString());
         m_instanceNameHasBeenSet = true;
@@ -83,7 +82,7 @@ CoreInternalOutcome TaskInfoDetail::Deserialize(const Value &value)
     {
         if (!value["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TaskInfoDetail.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskInfoDetail.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(value["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -93,7 +92,7 @@ CoreInternalOutcome TaskInfoDetail::Deserialize(const Value &value)
     {
         if (!value["ProjectId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TaskInfoDetail.ProjectId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskInfoDetail.ProjectId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_projectId = value["ProjectId"].GetInt64();
         m_projectIdHasBeenSet = true;
@@ -101,9 +100,9 @@ CoreInternalOutcome TaskInfoDetail::Deserialize(const Value &value)
 
     if (value.HasMember("Progress") && !value["Progress"].IsNull())
     {
-        if (!value["Progress"].IsDouble())
+        if (!value["Progress"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `TaskInfoDetail.Progress` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskInfoDetail.Progress` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_progress = value["Progress"].GetDouble();
         m_progressHasBeenSet = true;
@@ -113,7 +112,7 @@ CoreInternalOutcome TaskInfoDetail::Deserialize(const Value &value)
     {
         if (!value["EndTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TaskInfoDetail.EndTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskInfoDetail.EndTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_endTime = string(value["EndTime"].GetString());
         m_endTimeHasBeenSet = true;
@@ -123,7 +122,7 @@ CoreInternalOutcome TaskInfoDetail::Deserialize(const Value &value)
     {
         if (!value["Result"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TaskInfoDetail.Result` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskInfoDetail.Result` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_result = value["Result"].GetInt64();
         m_resultHasBeenSet = true;
@@ -133,12 +132,12 @@ CoreInternalOutcome TaskInfoDetail::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void TaskInfoDetail::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TaskInfoDetail::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_taskIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TaskId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_taskId, allocator);
@@ -146,39 +145,39 @@ void TaskInfoDetail::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_startTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_startTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_startTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_taskTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TaskType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_taskType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_taskType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_projectIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProjectId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_projectId, allocator);
@@ -186,7 +185,7 @@ void TaskInfoDetail::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_progressHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Progress";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_progress, allocator);
@@ -194,15 +193,15 @@ void TaskInfoDetail::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_endTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_endTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_endTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_resultHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Result";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_result, allocator);

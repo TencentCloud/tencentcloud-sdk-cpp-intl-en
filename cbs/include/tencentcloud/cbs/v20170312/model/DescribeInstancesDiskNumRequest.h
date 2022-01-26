@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the CVM instance can be queried via the API [DescribeInstances](/document/product/213/15728).
-                     * @return InstanceIds ID of the CVM instance can be queried via the API [DescribeInstances](/document/product/213/15728).
+                     * 获取ID of the CVM instance can be queried via the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/15728?from_cn_redirect=1).
+                     * @return InstanceIds ID of the CVM instance can be queried via the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/15728?from_cn_redirect=1).
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置ID of the CVM instance can be queried via the API [DescribeInstances](/document/product/213/15728).
-                     * @param InstanceIds ID of the CVM instance can be queried via the API [DescribeInstances](/document/product/213/15728).
+                     * 设置ID of the CVM instance can be queried via the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/15728?from_cn_redirect=1).
+                     * @param InstanceIds ID of the CVM instance can be queried via the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/15728?from_cn_redirect=1).
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
@@ -63,7 +63,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the CVM instance can be queried via the API [DescribeInstances](/document/product/213/15728).
+                     * ID of the CVM instance can be queried via the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/15728?from_cn_redirect=1).
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;

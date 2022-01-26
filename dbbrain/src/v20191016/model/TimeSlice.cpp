@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dbbrain::V20191016::Model;
-using namespace rapidjson;
 using namespace std;
 
 TimeSlice::TimeSlice() :
@@ -27,7 +26,7 @@ TimeSlice::TimeSlice() :
 {
 }
 
-CoreInternalOutcome TimeSlice::Deserialize(const Value &value)
+CoreInternalOutcome TimeSlice::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome TimeSlice::Deserialize(const Value &value)
     {
         if (!value["Count"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TimeSlice.Count` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TimeSlice.Count` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_count = value["Count"].GetInt64();
         m_countHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome TimeSlice::Deserialize(const Value &value)
     {
         if (!value["Timestamp"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TimeSlice.Timestamp` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TimeSlice.Timestamp` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_timestamp = value["Timestamp"].GetInt64();
         m_timestampHasBeenSet = true;
@@ -56,12 +55,12 @@ CoreInternalOutcome TimeSlice::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void TimeSlice::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TimeSlice::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_countHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Count";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_count, allocator);
@@ -69,7 +68,7 @@ void TimeSlice::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_timestampHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Timestamp";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_timestamp, allocator);

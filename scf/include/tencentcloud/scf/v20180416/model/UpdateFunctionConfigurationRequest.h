@@ -26,6 +26,8 @@
 #include <tencentcloud/scf/v20180416/model/LayerVersionSimple.h>
 #include <tencentcloud/scf/v20180416/model/DeadLetterConfig.h>
 #include <tencentcloud/scf/v20180416/model/PublicNetConfigIn.h>
+#include <tencentcloud/scf/v20180416/model/CfsConfig.h>
+#include <tencentcloud/scf/v20180416/model/ProtocolParams.h>
 
 
 namespace TencentCloud
@@ -84,14 +86,14 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB.
-                     * @return MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB.
+                     * 获取Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
+                     * @return MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
                      */
                     int64_t GetMemorySize() const;
 
                     /**
-                     * 设置Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB.
-                     * @param MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB.
+                     * 设置Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
+                     * @param MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
                      */
                     void SetMemorySize(const int64_t& _memorySize);
 
@@ -102,14 +104,14 @@ namespace TencentCloud
                     bool MemorySizeHasBeenSet() const;
 
                     /**
-                     * 获取Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
-                     * @return Timeout Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
+                     * 获取Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
+                     * @return Timeout Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
                      */
                     int64_t GetTimeout() const;
 
                     /**
-                     * 设置Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
-                     * @param Timeout Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
+                     * 设置Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
+                     * @param Timeout Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
                      */
                     void SetTimeout(const int64_t& _timeout);
 
@@ -120,14 +122,14 @@ namespace TencentCloud
                     bool TimeoutHasBeenSet() const;
 
                     /**
-                     * 获取Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8
-                     * @return Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8
+                     * 获取Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime
+                     * @return Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime
                      */
                     std::string GetRuntime() const;
 
                     /**
-                     * 设置Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8
-                     * @param Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8
+                     * 设置Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime
+                     * @param Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime
                      */
                     void SetRuntime(const std::string& _runtime);
 
@@ -210,6 +212,24 @@ namespace TencentCloud
                     bool RoleHasBeenSet() const;
 
                     /**
+                     * 获取Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+                     * @return InstallDependency Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+                     */
+                    std::string GetInstallDependency() const;
+
+                    /**
+                     * 设置Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+                     * @param InstallDependency Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+                     */
+                    void SetInstallDependency(const std::string& _installDependency);
+
+                    /**
+                     * 判断参数 InstallDependency 是否已赋值
+                     * @return InstallDependency 是否已赋值
+                     */
+                    bool InstallDependencyHasBeenSet() const;
+
+                    /**
                      * 获取CLS logset ID to which logs are shipped
                      * @return ClsLogsetId CLS logset ID to which logs are shipped
                      */
@@ -246,14 +266,14 @@ namespace TencentCloud
                     bool ClsTopicIdHasBeenSet() const;
 
                     /**
-                     * 获取It specifies whether to synchronously release a new version during the update. The default value is `FALSE`, indicating not to release a new version.
-                     * @return Publish It specifies whether to synchronously release a new version during the update. The default value is `FALSE`, indicating not to release a new version.
+                     * 获取It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version
+                     * @return Publish It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version
                      */
                     std::string GetPublish() const;
 
                     /**
-                     * 设置It specifies whether to synchronously release a new version during the update. The default value is `FALSE`, indicating not to release a new version.
-                     * @param Publish It specifies whether to synchronously release a new version during the update. The default value is `FALSE`, indicating not to release a new version.
+                     * 设置It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version
+                     * @param Publish It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version
                      */
                     void SetPublish(const std::string& _publish);
 
@@ -335,6 +355,60 @@ namespace TencentCloud
                      */
                     bool PublicNetConfigHasBeenSet() const;
 
+                    /**
+                     * 获取File system configuration input parameter, which is used for the function to bind the CFS file system
+                     * @return CfsConfig File system configuration input parameter, which is used for the function to bind the CFS file system
+                     */
+                    CfsConfig GetCfsConfig() const;
+
+                    /**
+                     * 设置File system configuration input parameter, which is used for the function to bind the CFS file system
+                     * @param CfsConfig File system configuration input parameter, which is used for the function to bind the CFS file system
+                     */
+                    void SetCfsConfig(const CfsConfig& _cfsConfig);
+
+                    /**
+                     * 判断参数 CfsConfig 是否已赋值
+                     * @return CfsConfig 是否已赋值
+                     */
+                    bool CfsConfigHasBeenSet() const;
+
+                    /**
+                     * 获取The function initialization timeout period
+                     * @return InitTimeout The function initialization timeout period
+                     */
+                    int64_t GetInitTimeout() const;
+
+                    /**
+                     * 设置The function initialization timeout period
+                     * @param InitTimeout The function initialization timeout period
+                     */
+                    void SetInitTimeout(const int64_t& _initTimeout);
+
+                    /**
+                     * 判断参数 InitTimeout 是否已赋值
+                     * @return InitTimeout 是否已赋值
+                     */
+                    bool InitTimeoutHasBeenSet() const;
+
+                    /**
+                     * 获取Parameters of the specified protocol
+                     * @return ProtocolParams Parameters of the specified protocol
+                     */
+                    ProtocolParams GetProtocolParams() const;
+
+                    /**
+                     * 设置Parameters of the specified protocol
+                     * @param ProtocolParams Parameters of the specified protocol
+                     */
+                    void SetProtocolParams(const ProtocolParams& _protocolParams);
+
+                    /**
+                     * 判断参数 ProtocolParams 是否已赋值
+                     * @return ProtocolParams 是否已赋值
+                     */
+                    bool ProtocolParamsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -350,19 +424,19 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB.
+                     * Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
                      */
                     int64_t m_memorySize;
                     bool m_memorySizeHasBeenSet;
 
                     /**
-                     * Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
+                     * Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
                      */
                     int64_t m_timeout;
                     bool m_timeoutHasBeenSet;
 
                     /**
-                     * Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8
+                     * Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime
                      */
                     std::string m_runtime;
                     bool m_runtimeHasBeenSet;
@@ -392,6 +466,12 @@ namespace TencentCloud
                     bool m_roleHasBeenSet;
 
                     /**
+                     * Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+                     */
+                    std::string m_installDependency;
+                    bool m_installDependencyHasBeenSet;
+
+                    /**
                      * CLS logset ID to which logs are shipped
                      */
                     std::string m_clsLogsetId;
@@ -404,7 +484,7 @@ namespace TencentCloud
                     bool m_clsTopicIdHasBeenSet;
 
                     /**
-                     * It specifies whether to synchronously release a new version during the update. The default value is `FALSE`, indicating not to release a new version.
+                     * It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version
                      */
                     std::string m_publish;
                     bool m_publishHasBeenSet;
@@ -432,6 +512,24 @@ namespace TencentCloud
                      */
                     PublicNetConfigIn m_publicNetConfig;
                     bool m_publicNetConfigHasBeenSet;
+
+                    /**
+                     * File system configuration input parameter, which is used for the function to bind the CFS file system
+                     */
+                    CfsConfig m_cfsConfig;
+                    bool m_cfsConfigHasBeenSet;
+
+                    /**
+                     * The function initialization timeout period
+                     */
+                    int64_t m_initTimeout;
+                    bool m_initTimeoutHasBeenSet;
+
+                    /**
+                     * Parameters of the specified protocol
+                     */
+                    ProtocolParams m_protocolParams;
+                    bool m_protocolParamsHasBeenSet;
 
                 };
             }

@@ -48,14 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Master version of alias
-                     * @return FunctionVersion Master version of alias
+                     * 获取Master version pointed to by the alias
+                     * @return FunctionVersion Master version pointed to by the alias
                      */
                     std::string GetFunctionVersion() const;
 
                     /**
-                     * 设置Master version of alias
-                     * @param FunctionVersion Master version of alias
+                     * 设置Master version pointed to by the alias
+                     * @param FunctionVersion Master version pointed to by the alias
                      */
                     void SetFunctionVersion(const std::string& _functionVersion);
 
@@ -174,7 +174,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Master version of alias
+                     * Master version pointed to by the alias
                      */
                     std::string m_functionVersion;
                     bool m_functionVersionHasBeenSet;

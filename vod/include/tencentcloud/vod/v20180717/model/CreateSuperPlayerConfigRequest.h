@@ -193,14 +193,14 @@ Default value: OFF.
                     bool ResolutionNamesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Domain 
+                     * 获取Domain name used for playback. If it is left empty or set to `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
+                     * @return Domain Domain name used for playback. If it is left empty or set to `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置
-                     * @param Domain 
+                     * 设置Domain name used for playback. If it is left empty or set to `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
+                     * @param Domain Domain name used for playback. If it is left empty or set to `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
                      */
                     void SetDomain(const std::string& _domain);
 
@@ -211,14 +211,22 @@ Default value: OFF.
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Scheme 
+                     * 获取Scheme used for playback. If it is left empty or set to `Default`, the scheme configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used. Other valid values:
+<li>HTTP;</li>
+<li>HTTPS.</li>
+                     * @return Scheme Scheme used for playback. If it is left empty or set to `Default`, the scheme configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used. Other valid values:
+<li>HTTP;</li>
+<li>HTTPS.</li>
                      */
                     std::string GetScheme() const;
 
                     /**
-                     * 设置
-                     * @param Scheme 
+                     * 设置Scheme used for playback. If it is left empty or set to `Default`, the scheme configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used. Other valid values:
+<li>HTTP;</li>
+<li>HTTPS.</li>
+                     * @param Scheme Scheme used for playback. If it is left empty or set to `Default`, the scheme configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used. Other valid values:
+<li>HTTP;</li>
+<li>HTTPS.</li>
                      */
                     void SetScheme(const std::string& _scheme);
 
@@ -247,14 +255,14 @@ Default value: OFF.
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取[Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     * @return SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * 获取[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置[Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     * @param SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * 设置[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
@@ -313,13 +321,15 @@ Default value: OFF.
                     bool m_resolutionNamesHasBeenSet;
 
                     /**
-                     * 
+                     * Domain name used for playback. If it is left empty or set to `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * 
+                     * Scheme used for playback. If it is left empty or set to `Default`, the scheme configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used. Other valid values:
+<li>HTTP;</li>
+<li>HTTPS.</li>
                      */
                     std::string m_scheme;
                     bool m_schemeHasBeenSet;
@@ -331,7 +341,7 @@ Default value: OFF.
                     bool m_commentHasBeenSet;
 
                     /**
-                     * [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;

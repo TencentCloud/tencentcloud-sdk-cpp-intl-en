@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID filter of content audit templates. Array length limit: 100.
-                     * @return Definitions Unique ID filter of content audit templates. Array length limit: 100.
+                     * 获取Unique IDs for filters of an intelligent content recognition template. Array length limit: 100.
+                     * @return Definitions Unique IDs for filters of an intelligent content recognition template. Array length limit: 100.
                      */
                     std::vector<int64_t> GetDefinitions() const;
 
                     /**
-                     * 设置Unique ID filter of content audit templates. Array length limit: 100.
-                     * @param Definitions Unique ID filter of content audit templates. Array length limit: 100.
+                     * 设置Unique IDs for filters of an intelligent content recognition template. Array length limit: 100.
+                     * @param Definitions Unique IDs for filters of an intelligent content recognition template. Array length limit: 100.
                      */
                     void SetDefinitions(const std::vector<int64_t>& _definitions);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取[Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     * @return SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * 获取[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置[Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     * @param SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * 设置[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
@@ -117,7 +117,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique ID filter of content audit templates. Array length limit: 100.
+                     * Unique IDs for filters of an intelligent content recognition template. Array length limit: 100.
                      */
                     std::vector<int64_t> m_definitions;
                     bool m_definitionsHasBeenSet;
@@ -135,7 +135,7 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;

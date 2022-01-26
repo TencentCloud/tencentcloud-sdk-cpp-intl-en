@@ -41,6 +41,7 @@ namespace TencentCloud
                     DescribePersonSamplesResponse();
                     ~DescribePersonSamplesResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -56,8 +57,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Figure information.
-                     * @return PersonSet Figure information.
+                     * 获取Image information
+                     * @return PersonSet Image information
                      */
                     std::vector<AiSamplePerson> GetPersonSet() const;
 
@@ -76,7 +77,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Figure information.
+                     * Image information
                      */
                     std::vector<AiSamplePerson> m_personSet;
                     bool m_personSetHasBeenSet;

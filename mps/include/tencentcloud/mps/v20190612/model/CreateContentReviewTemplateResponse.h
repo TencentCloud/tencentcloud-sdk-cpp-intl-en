@@ -40,11 +40,12 @@ namespace TencentCloud
                     CreateContentReviewTemplateResponse();
                     ~CreateContentReviewTemplateResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Unique ID of a content audit template.
-                     * @return Definition Unique ID of a content audit template.
+                     * 获取Unique ID of an intelligent content recognition template
+                     * @return Definition Unique ID of an intelligent content recognition template
                      */
                     int64_t GetDefinition() const;
 
@@ -57,7 +58,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique ID of a content audit template.
+                     * Unique ID of an intelligent content recognition template
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

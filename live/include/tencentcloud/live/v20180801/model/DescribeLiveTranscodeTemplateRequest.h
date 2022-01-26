@@ -44,17 +44,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Template ID.
-Note: get the template ID in the returned value of the [CreateLiveTranscodeTemplate](/document/product/267/32646) API call.
+Note: get the template ID in the returned value of the [CreateLiveTranscodeTemplate](https://intl.cloud.tencent.com/document/product/267/32646?from_cn_redirect=1) API call.
                      * @return TemplateId Template ID.
-Note: get the template ID in the returned value of the [CreateLiveTranscodeTemplate](/document/product/267/32646) API call.
+Note: get the template ID in the returned value of the [CreateLiveTranscodeTemplate](https://intl.cloud.tencent.com/document/product/267/32646?from_cn_redirect=1) API call.
                      */
                     int64_t GetTemplateId() const;
 
                     /**
                      * 设置Template ID.
-Note: get the template ID in the returned value of the [CreateLiveTranscodeTemplate](/document/product/267/32646) API call.
+Note: get the template ID in the returned value of the [CreateLiveTranscodeTemplate](https://intl.cloud.tencent.com/document/product/267/32646?from_cn_redirect=1) API call.
                      * @param TemplateId Template ID.
-Note: get the template ID in the returned value of the [CreateLiveTranscodeTemplate](/document/product/267/32646) API call.
+Note: get the template ID in the returned value of the [CreateLiveTranscodeTemplate](https://intl.cloud.tencent.com/document/product/267/32646?from_cn_redirect=1) API call.
                      */
                     void SetTemplateId(const int64_t& _templateId);
 
@@ -68,7 +68,7 @@ Note: get the template ID in the returned value of the [CreateLiveTranscodeTempl
 
                     /**
                      * Template ID.
-Note: get the template ID in the returned value of the [CreateLiveTranscodeTemplate](/document/product/267/32646) API call.
+Note: get the template ID in the returned value of the [CreateLiveTranscodeTemplate](https://intl.cloud.tencent.com/document/product/267/32646?from_cn_redirect=1) API call.
                      */
                     int64_t m_templateId;
                     bool m_templateIdHasBeenSet;

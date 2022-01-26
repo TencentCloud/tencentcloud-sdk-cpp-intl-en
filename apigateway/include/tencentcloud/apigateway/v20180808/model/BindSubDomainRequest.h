@@ -187,6 +187,24 @@ namespace TencentCloud
                      */
                     bool PathMappingSetHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+                     * @return IsForcedHttps Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+                     */
+                    bool GetIsForcedHttps() const;
+
+                    /**
+                     * 设置Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+                     * @param IsForcedHttps Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+                     */
+                    void SetIsForcedHttps(const bool& _isForcedHttps);
+
+                    /**
+                     * 判断参数 IsForcedHttps 是否已赋值
+                     * @return IsForcedHttps 是否已赋值
+                     */
+                    bool IsForcedHttpsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -236,6 +254,12 @@ namespace TencentCloud
                      */
                     std::vector<PathMapping> m_pathMappingSet;
                     bool m_pathMappingSetHasBeenSet;
+
+                    /**
+                     * Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+                     */
+                    bool m_isForcedHttps;
+                    bool m_isForcedHttpsHasBeenSet;
 
                 };
             }

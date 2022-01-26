@@ -20,12 +20,11 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeWordSamplesRequest::DescribeWordSamplesRequest() :
-    m_usagesHasBeenSet(false),
     m_keywordsHasBeenSet(false),
+    m_usagesHasBeenSet(false),
     m_tagsHasBeenSet(false),
     m_offsetHasBeenSet(false),
     m_limitHasBeenSet(false)
@@ -34,53 +33,53 @@ DescribeWordSamplesRequest::DescribeWordSamplesRequest() :
 
 string DescribeWordSamplesRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
-
-    if (m_usagesHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "Usages";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
-
-        for (auto itr = m_usages.begin(); itr != m_usages.end(); ++itr)
-        {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
-        }
-    }
 
     if (m_keywordsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Keywords";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_keywords.begin(); itr != m_keywords.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_usagesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Usages";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_usages.begin(); itr != m_usages.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_tagsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Tags";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_offsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Offset";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_offset, allocator);
@@ -88,35 +87,19 @@ string DescribeWordSamplesRequest::ToJsonString() const
 
     if (m_limitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Limit";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_limit, allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
 
-
-vector<string> DescribeWordSamplesRequest::GetUsages() const
-{
-    return m_usages;
-}
-
-void DescribeWordSamplesRequest::SetUsages(const vector<string>& _usages)
-{
-    m_usages = _usages;
-    m_usagesHasBeenSet = true;
-}
-
-bool DescribeWordSamplesRequest::UsagesHasBeenSet() const
-{
-    return m_usagesHasBeenSet;
-}
 
 vector<string> DescribeWordSamplesRequest::GetKeywords() const
 {
@@ -132,6 +115,22 @@ void DescribeWordSamplesRequest::SetKeywords(const vector<string>& _keywords)
 bool DescribeWordSamplesRequest::KeywordsHasBeenSet() const
 {
     return m_keywordsHasBeenSet;
+}
+
+vector<string> DescribeWordSamplesRequest::GetUsages() const
+{
+    return m_usages;
+}
+
+void DescribeWordSamplesRequest::SetUsages(const vector<string>& _usages)
+{
+    m_usages = _usages;
+    m_usagesHasBeenSet = true;
+}
+
+bool DescribeWordSamplesRequest::UsagesHasBeenSet() const
+{
+    return m_usagesHasBeenSet;
 }
 
 vector<string> DescribeWordSamplesRequest::GetTags() const

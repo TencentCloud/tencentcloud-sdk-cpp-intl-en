@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Tke::V20180525::Model;
-using namespace rapidjson;
 using namespace std;
 
 InstanceAdvancedSettings::InstanceAdvancedSettings() :
@@ -28,11 +27,13 @@ InstanceAdvancedSettings::InstanceAdvancedSettings() :
     m_unschedulableHasBeenSet(false),
     m_labelsHasBeenSet(false),
     m_dataDisksHasBeenSet(false),
-    m_extraArgsHasBeenSet(false)
+    m_extraArgsHasBeenSet(false),
+    m_desiredPodNumberHasBeenSet(false),
+    m_preStartUserScriptHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome InstanceAdvancedSettings::Deserialize(const Value &value)
+CoreInternalOutcome InstanceAdvancedSettings::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +42,7 @@ CoreInternalOutcome InstanceAdvancedSettings::Deserialize(const Value &value)
     {
         if (!value["MountTarget"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceAdvancedSettings.MountTarget` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceAdvancedSettings.MountTarget` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_mountTarget = string(value["MountTarget"].GetString());
         m_mountTargetHasBeenSet = true;
@@ -51,7 +52,7 @@ CoreInternalOutcome InstanceAdvancedSettings::Deserialize(const Value &value)
     {
         if (!value["DockerGraphPath"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceAdvancedSettings.DockerGraphPath` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceAdvancedSettings.DockerGraphPath` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_dockerGraphPath = string(value["DockerGraphPath"].GetString());
         m_dockerGraphPathHasBeenSet = true;
@@ -61,7 +62,7 @@ CoreInternalOutcome InstanceAdvancedSettings::Deserialize(const Value &value)
     {
         if (!value["UserScript"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceAdvancedSettings.UserScript` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceAdvancedSettings.UserScript` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_userScript = string(value["UserScript"].GetString());
         m_userScriptHasBeenSet = true;
@@ -71,7 +72,7 @@ CoreInternalOutcome InstanceAdvancedSettings::Deserialize(const Value &value)
     {
         if (!value["Unschedulable"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `InstanceAdvancedSettings.Unschedulable` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceAdvancedSettings.Unschedulable` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_unschedulable = value["Unschedulable"].GetInt64();
         m_unschedulableHasBeenSet = true;
@@ -80,10 +81,10 @@ CoreInternalOutcome InstanceAdvancedSettings::Deserialize(const Value &value)
     if (value.HasMember("Labels") && !value["Labels"].IsNull())
     {
         if (!value["Labels"].IsArray())
-            return CoreInternalOutcome(Error("response `InstanceAdvancedSettings.Labels` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `InstanceAdvancedSettings.Labels` is not array type"));
 
-        const Value &tmpValue = value["Labels"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Labels"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             Label item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -100,10 +101,10 @@ CoreInternalOutcome InstanceAdvancedSettings::Deserialize(const Value &value)
     if (value.HasMember("DataDisks") && !value["DataDisks"].IsNull())
     {
         if (!value["DataDisks"].IsArray())
-            return CoreInternalOutcome(Error("response `InstanceAdvancedSettings.DataDisks` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `InstanceAdvancedSettings.DataDisks` is not array type"));
 
-        const Value &tmpValue = value["DataDisks"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["DataDisks"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             DataDisk item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -121,7 +122,7 @@ CoreInternalOutcome InstanceAdvancedSettings::Deserialize(const Value &value)
     {
         if (!value["ExtraArgs"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `InstanceAdvancedSettings.ExtraArgs` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceAdvancedSettings.ExtraArgs` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_extraArgs.Deserialize(value["ExtraArgs"]);
@@ -134,40 +135,60 @@ CoreInternalOutcome InstanceAdvancedSettings::Deserialize(const Value &value)
         m_extraArgsHasBeenSet = true;
     }
 
+    if (value.HasMember("DesiredPodNumber") && !value["DesiredPodNumber"].IsNull())
+    {
+        if (!value["DesiredPodNumber"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `InstanceAdvancedSettings.DesiredPodNumber` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_desiredPodNumber = value["DesiredPodNumber"].GetInt64();
+        m_desiredPodNumberHasBeenSet = true;
+    }
+
+    if (value.HasMember("PreStartUserScript") && !value["PreStartUserScript"].IsNull())
+    {
+        if (!value["PreStartUserScript"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `InstanceAdvancedSettings.PreStartUserScript` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_preStartUserScript = string(value["PreStartUserScript"].GetString());
+        m_preStartUserScriptHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void InstanceAdvancedSettings::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void InstanceAdvancedSettings::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_mountTargetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MountTarget";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_mountTarget.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_mountTarget.c_str(), allocator).Move(), allocator);
     }
 
     if (m_dockerGraphPathHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DockerGraphPath";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_dockerGraphPath.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_dockerGraphPath.c_str(), allocator).Move(), allocator);
     }
 
     if (m_userScriptHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UserScript";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_userScript.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_userScript.c_str(), allocator).Move(), allocator);
     }
 
     if (m_unschedulableHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Unschedulable";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_unschedulable, allocator);
@@ -175,41 +196,57 @@ void InstanceAdvancedSettings::ToJsonObject(Value &value, Document::AllocatorTyp
 
     if (m_labelsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Labels";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_labels.begin(); itr != m_labels.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_dataDisksHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DataDisks";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_dataDisks.begin(); itr != m_dataDisks.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_extraArgsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ExtraArgs";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_extraArgs.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_desiredPodNumberHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DesiredPodNumber";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_desiredPodNumber, allocator);
+    }
+
+    if (m_preStartUserScriptHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PreStartUserScript";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_preStartUserScript.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -325,5 +362,37 @@ void InstanceAdvancedSettings::SetExtraArgs(const InstanceExtraArgs& _extraArgs)
 bool InstanceAdvancedSettings::ExtraArgsHasBeenSet() const
 {
     return m_extraArgsHasBeenSet;
+}
+
+int64_t InstanceAdvancedSettings::GetDesiredPodNumber() const
+{
+    return m_desiredPodNumber;
+}
+
+void InstanceAdvancedSettings::SetDesiredPodNumber(const int64_t& _desiredPodNumber)
+{
+    m_desiredPodNumber = _desiredPodNumber;
+    m_desiredPodNumberHasBeenSet = true;
+}
+
+bool InstanceAdvancedSettings::DesiredPodNumberHasBeenSet() const
+{
+    return m_desiredPodNumberHasBeenSet;
+}
+
+string InstanceAdvancedSettings::GetPreStartUserScript() const
+{
+    return m_preStartUserScript;
+}
+
+void InstanceAdvancedSettings::SetPreStartUserScript(const string& _preStartUserScript)
+{
+    m_preStartUserScript = _preStartUserScript;
+    m_preStartUserScriptHasBeenSet = true;
+}
+
+bool InstanceAdvancedSettings::PreStartUserScriptHasBeenSet() const
+{
+    return m_preStartUserScriptHasBeenSet;
 }
 

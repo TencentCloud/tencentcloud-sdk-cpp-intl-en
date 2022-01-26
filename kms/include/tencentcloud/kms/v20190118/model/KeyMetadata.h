@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return KeyId 
+                     * 获取Globally unique CMK ID
+                     * @return KeyId Globally unique CMK ID
                      */
                     std::string GetKeyId() const;
 
                     /**
-                     * 设置
-                     * @param KeyId 
+                     * 设置Globally unique CMK ID
+                     * @param KeyId Globally unique CMK ID
                      */
                     void SetKeyId(const std::string& _keyId);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool KeyIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Alias 
+                     * 获取Alias that makes a key more recognizable and understandable
+                     * @return Alias Alias that makes a key more recognizable and understandable
                      */
                     std::string GetAlias() const;
 
                     /**
-                     * 设置
-                     * @param Alias 
+                     * 设置Alias that makes a key more recognizable and understandable
+                     * @param Alias Alias that makes a key more recognizable and understandable
                      */
                     void SetAlias(const std::string& _alias);
 
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool AliasHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CreateTime 
+                     * 获取Key creation time
+                     * @return CreateTime Key creation time
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
-                     * 设置
-                     * @param CreateTime 
+                     * 设置Key creation time
+                     * @param CreateTime Key creation time
                      */
                     void SetCreateTime(const uint64_t& _createTime);
 
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Description 
+                     * 获取CMK description
+                     * @return Description CMK description
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置
-                     * @param Description 
+                     * 设置CMK description
+                     * @param Description CMK description
                      */
                     void SetDescription(const std::string& _description);
 
@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport.
-                     * @return KeyState CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport.
+                     * 获取CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
+                     * @return KeyState CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
                      */
                     std::string GetKeyState() const;
 
                     /**
-                     * 设置CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport.
-                     * @param KeyState CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport.
+                     * 设置CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
+                     * @param KeyState CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
                      */
                     void SetKeyState(const std::string& _keyState);
 
@@ -137,14 +137,14 @@ namespace TencentCloud
                     bool KeyStateHasBeenSet() const;
 
                     /**
-                     * 获取CMK purpose. Valid values: ENCRYPT_DECRYPT, ASYMMETRIC_DECRYPT_RSA_2048, ASYMMETRIC_DECRYPT_SM2
-                     * @return KeyUsage CMK purpose. Valid values: ENCRYPT_DECRYPT, ASYMMETRIC_DECRYPT_RSA_2048, ASYMMETRIC_DECRYPT_SM2
+                     * 获取CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
+                     * @return KeyUsage CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
                      */
                     std::string GetKeyUsage() const;
 
                     /**
-                     * 设置CMK purpose. Valid values: ENCRYPT_DECRYPT, ASYMMETRIC_DECRYPT_RSA_2048, ASYMMETRIC_DECRYPT_SM2
-                     * @param KeyUsage CMK purpose. Valid values: ENCRYPT_DECRYPT, ASYMMETRIC_DECRYPT_RSA_2048, ASYMMETRIC_DECRYPT_SM2
+                     * 设置CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
+                     * @param KeyUsage CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
                      */
                     void SetKeyUsage(const std::string& _keyUsage);
 
@@ -173,14 +173,14 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CreatorUin 
+                     * 获取Creator
+                     * @return CreatorUin Creator
                      */
                     uint64_t GetCreatorUin() const;
 
                     /**
-                     * 设置
-                     * @param CreatorUin 
+                     * 设置Creator
+                     * @param CreatorUin Creator
                      */
                     void SetCreatorUin(const uint64_t& _creatorUin);
 
@@ -191,14 +191,14 @@ namespace TencentCloud
                     bool CreatorUinHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return KeyRotationEnabled 
+                     * 获取Whether key rotation is enabled
+                     * @return KeyRotationEnabled Whether key rotation is enabled
                      */
                     bool GetKeyRotationEnabled() const;
 
                     /**
-                     * 设置
-                     * @param KeyRotationEnabled 
+                     * 设置Whether key rotation is enabled
+                     * @param KeyRotationEnabled Whether key rotation is enabled
                      */
                     void SetKeyRotationEnabled(const bool& _keyRotationEnabled);
 
@@ -209,14 +209,14 @@ namespace TencentCloud
                     bool KeyRotationEnabledHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Owner 
+                     * 获取CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
+                     * @return Owner CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
                      */
                     std::string GetOwner() const;
 
                     /**
-                     * 设置
-                     * @param Owner 
+                     * 设置CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
+                     * @param Owner CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
                      */
                     void SetOwner(const std::string& _owner);
 
@@ -227,14 +227,14 @@ namespace TencentCloud
                     bool OwnerHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NextRotateTime 
+                     * 获取Time of next rotation if key rotation is enabled
+                     * @return NextRotateTime Time of next rotation if key rotation is enabled
                      */
                     uint64_t GetNextRotateTime() const;
 
                     /**
-                     * 设置
-                     * @param NextRotateTime 
+                     * 设置Time of next rotation if key rotation is enabled
+                     * @param NextRotateTime Time of next rotation if key rotation is enabled
                      */
                     void SetNextRotateTime(const uint64_t& _nextRotateTime);
 
@@ -245,14 +245,14 @@ namespace TencentCloud
                     bool NextRotateTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DeletionDate 
+                     * 获取Scheduled deletion time
+                     * @return DeletionDate Scheduled deletion time
                      */
                     uint64_t GetDeletionDate() const;
 
                     /**
-                     * 设置
-                     * @param DeletionDate 
+                     * 设置Scheduled deletion time
+                     * @param DeletionDate Scheduled deletion time
                      */
                     void SetDeletionDate(const uint64_t& _deletionDate);
 
@@ -285,17 +285,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OriginHasBeenSet() const;
 
                     /**
-                     * 获取It’s valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
+                     * 获取It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ValidTo It’s valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
+                     * @return ValidTo It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetValidTo() const;
 
                     /**
-                     * 设置It’s valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
+                     * 设置It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ValidTo It’s valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
+                     * @param ValidTo It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetValidTo(const uint64_t& _validTo);
@@ -327,37 +327,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * 
+                     * Globally unique CMK ID
                      */
                     std::string m_keyId;
                     bool m_keyIdHasBeenSet;
 
                     /**
-                     * 
+                     * Alias that makes a key more recognizable and understandable
                      */
                     std::string m_alias;
                     bool m_aliasHasBeenSet;
 
                     /**
-                     * 
+                     * Key creation time
                      */
                     uint64_t m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * 
+                     * CMK description
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport.
+                     * CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
                      */
                     std::string m_keyState;
                     bool m_keyStateHasBeenSet;
 
                     /**
-                     * CMK purpose. Valid values: ENCRYPT_DECRYPT, ASYMMETRIC_DECRYPT_RSA_2048, ASYMMETRIC_DECRYPT_SM2
+                     * CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
                      */
                     std::string m_keyUsage;
                     bool m_keyUsageHasBeenSet;
@@ -369,31 +369,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Creator
                      */
                     uint64_t m_creatorUin;
                     bool m_creatorUinHasBeenSet;
 
                     /**
-                     * 
+                     * Whether key rotation is enabled
                      */
                     bool m_keyRotationEnabled;
                     bool m_keyRotationEnabledHasBeenSet;
 
                     /**
-                     * 
+                     * CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
                      */
                     std::string m_owner;
                     bool m_ownerHasBeenSet;
 
                     /**
-                     * 
+                     * Time of next rotation if key rotation is enabled
                      */
                     uint64_t m_nextRotateTime;
                     bool m_nextRotateTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Scheduled deletion time
                      */
                     uint64_t m_deletionDate;
                     bool m_deletionDateHasBeenSet;
@@ -406,7 +406,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_originHasBeenSet;
 
                     /**
-                     * It’s valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
+                     * It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_validTo;

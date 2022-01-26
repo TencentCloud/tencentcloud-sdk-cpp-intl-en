@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 TargetServicesReq::TargetServicesReq() :
@@ -30,7 +29,7 @@ TargetServicesReq::TargetServicesReq() :
 {
 }
 
-CoreInternalOutcome TargetServicesReq::Deserialize(const Value &value)
+CoreInternalOutcome TargetServicesReq::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome TargetServicesReq::Deserialize(const Value &value)
     {
         if (!value["VmIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TargetServicesReq.VmIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TargetServicesReq.VmIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vmIp = string(value["VmIp"].GetString());
         m_vmIpHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome TargetServicesReq::Deserialize(const Value &value)
     {
         if (!value["VpcId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TargetServicesReq.VpcId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TargetServicesReq.VpcId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpcId = string(value["VpcId"].GetString());
         m_vpcIdHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome TargetServicesReq::Deserialize(const Value &value)
     {
         if (!value["VmPort"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TargetServicesReq.VmPort` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TargetServicesReq.VmPort` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_vmPort = value["VmPort"].GetInt64();
         m_vmPortHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome TargetServicesReq::Deserialize(const Value &value)
     {
         if (!value["HostIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TargetServicesReq.HostIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TargetServicesReq.HostIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_hostIp = string(value["HostIp"].GetString());
         m_hostIpHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome TargetServicesReq::Deserialize(const Value &value)
     {
         if (!value["DockerIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TargetServicesReq.DockerIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TargetServicesReq.DockerIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_dockerIp = string(value["DockerIp"].GetString());
         m_dockerIpHasBeenSet = true;
@@ -89,28 +88,28 @@ CoreInternalOutcome TargetServicesReq::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void TargetServicesReq::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TargetServicesReq::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_vmIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VmIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vmIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vmIp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vpcId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpcId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vmPortHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VmPort";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_vmPort, allocator);
@@ -118,18 +117,18 @@ void TargetServicesReq::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_hostIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HostIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_hostIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_hostIp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_dockerIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DockerIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_dockerIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_dockerIp.c_str(), allocator).Move(), allocator);
     }
 
 }

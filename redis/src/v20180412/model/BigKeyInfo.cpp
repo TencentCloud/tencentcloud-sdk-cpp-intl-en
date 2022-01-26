@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Redis::V20180412::Model;
-using namespace rapidjson;
 using namespace std;
 
 BigKeyInfo::BigKeyInfo() :
@@ -30,7 +29,7 @@ BigKeyInfo::BigKeyInfo() :
 {
 }
 
-CoreInternalOutcome BigKeyInfo::Deserialize(const Value &value)
+CoreInternalOutcome BigKeyInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome BigKeyInfo::Deserialize(const Value &value)
     {
         if (!value["DB"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `BigKeyInfo.DB` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BigKeyInfo.DB` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_dB = value["DB"].GetInt64();
         m_dBHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome BigKeyInfo::Deserialize(const Value &value)
     {
         if (!value["Key"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BigKeyInfo.Key` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BigKeyInfo.Key` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_key = string(value["Key"].GetString());
         m_keyHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome BigKeyInfo::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BigKeyInfo.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BigKeyInfo.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome BigKeyInfo::Deserialize(const Value &value)
     {
         if (!value["Size"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `BigKeyInfo.Size` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BigKeyInfo.Size` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_size = value["Size"].GetInt64();
         m_sizeHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome BigKeyInfo::Deserialize(const Value &value)
     {
         if (!value["Updatetime"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `BigKeyInfo.Updatetime` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BigKeyInfo.Updatetime` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_updatetime = value["Updatetime"].GetInt64();
         m_updatetimeHasBeenSet = true;
@@ -89,12 +88,12 @@ CoreInternalOutcome BigKeyInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void BigKeyInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void BigKeyInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_dBHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DB";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_dB, allocator);
@@ -102,23 +101,23 @@ void BigKeyInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_keyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Key";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_key.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_key.c_str(), allocator).Move(), allocator);
     }
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Size";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_size, allocator);
@@ -126,7 +125,7 @@ void BigKeyInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_updatetimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Updatetime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_updatetime, allocator);

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * IP blacklist/whitelist
+                * IP blocklist/allowlist
                 */
                 class IpBlackWhite : public AbstractModel
                 {
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool IpHasBeenSet() const;
 
                     /**
-                     * 获取Blacklist/whitelist type. Valid values: [black, white]
-                     * @return Type Blacklist/whitelist type. Valid values: [black, white]
+                     * 获取Blocklist/allowlist type. Valid values: [black, white]
+                     * @return Type Blocklist/allowlist type. Valid values: [black, white]
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Blacklist/whitelist type. Valid values: [black, white]
-                     * @param Type Blacklist/whitelist type. Valid values: [black, white]
+                     * 设置Blocklist/allowlist type. Valid values: [black, white]
+                     * @param Type Blocklist/allowlist type. Valid values: [black, white]
                      */
                     void SetType(const std::string& _type);
 
@@ -91,7 +91,7 @@ namespace TencentCloud
                     bool m_ipHasBeenSet;
 
                     /**
-                     * Blacklist/whitelist type. Valid values: [black, white]
+                     * Blocklist/allowlist type. Valid values: [black, white]
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

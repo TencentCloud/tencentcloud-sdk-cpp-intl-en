@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mdl::V20200326::Model;
-using namespace rapidjson;
 using namespace std;
 
 ChannelOutputsStatistics::ChannelOutputsStatistics() :
@@ -27,7 +26,7 @@ ChannelOutputsStatistics::ChannelOutputsStatistics() :
 {
 }
 
-CoreInternalOutcome ChannelOutputsStatistics::Deserialize(const Value &value)
+CoreInternalOutcome ChannelOutputsStatistics::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome ChannelOutputsStatistics::Deserialize(const Value &value)
     {
         if (!value["OutputGroupName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ChannelOutputsStatistics.OutputGroupName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ChannelOutputsStatistics.OutputGroupName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_outputGroupName = string(value["OutputGroupName"].GetString());
         m_outputGroupNameHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome ChannelOutputsStatistics::Deserialize(const Value &value)
     {
         if (!value["Statistics"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `ChannelOutputsStatistics.Statistics` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ChannelOutputsStatistics.Statistics` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_statistics.Deserialize(value["Statistics"]);
@@ -63,23 +62,23 @@ CoreInternalOutcome ChannelOutputsStatistics::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ChannelOutputsStatistics::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ChannelOutputsStatistics::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_outputGroupNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OutputGroupName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_outputGroupName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_outputGroupName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statisticsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Statistics";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_statistics.ToJsonObject(value[key.c_str()], allocator);
     }
 

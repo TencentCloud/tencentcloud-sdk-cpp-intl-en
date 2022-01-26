@@ -137,22 +137,22 @@ namespace TencentCloud
                     bool HttpsCrtHasBeenSet() const;
 
                     /**
-                     * 获取Certificate type:
-0: Tencent Cloud-hosted certificate.
-1: user-added certificate.
-                     * @return CertType Certificate type:
-0: Tencent Cloud-hosted certificate.
-1: user-added certificate.
+                     * 获取Certificate type.
+0: user-added certificate
+1: Tencent Cloud-hosted certificate
+                     * @return CertType Certificate type.
+0: user-added certificate
+1: Tencent Cloud-hosted certificate
                      */
                     int64_t GetCertType() const;
 
                     /**
-                     * 设置Certificate type:
-0: Tencent Cloud-hosted certificate.
-1: user-added certificate.
-                     * @param CertType Certificate type:
-0: Tencent Cloud-hosted certificate.
-1: user-added certificate.
+                     * 设置Certificate type.
+0: user-added certificate
+1: Tencent Cloud-hosted certificate
+                     * @param CertType Certificate type.
+0: user-added certificate
+1: Tencent Cloud-hosted certificate
                      */
                     void SetCertType(const int64_t& _certType);
 
@@ -231,9 +231,9 @@ namespace TencentCloud
                     bool m_httpsCrtHasBeenSet;
 
                     /**
-                     * Certificate type:
-0: Tencent Cloud-hosted certificate.
-1: user-added certificate.
+                     * Certificate type.
+0: user-added certificate
+1: Tencent Cloud-hosted certificate
                      */
                     int64_t m_certType;
                     bool m_certTypeHasBeenSet;

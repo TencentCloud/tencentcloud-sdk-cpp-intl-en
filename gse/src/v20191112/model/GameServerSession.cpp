@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gse::V20191112::Model;
-using namespace rapidjson;
 using namespace std;
 
 GameServerSession::GameServerSession() :
@@ -47,7 +46,7 @@ GameServerSession::GameServerSession() :
 {
 }
 
-CoreInternalOutcome GameServerSession::Deserialize(const Value &value)
+CoreInternalOutcome GameServerSession::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -56,7 +55,7 @@ CoreInternalOutcome GameServerSession::Deserialize(const Value &value)
     {
         if (!value["CreationTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GameServerSession.CreationTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GameServerSession.CreationTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_creationTime = string(value["CreationTime"].GetString());
         m_creationTimeHasBeenSet = true;
@@ -66,7 +65,7 @@ CoreInternalOutcome GameServerSession::Deserialize(const Value &value)
     {
         if (!value["CreatorId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GameServerSession.CreatorId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GameServerSession.CreatorId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_creatorId = string(value["CreatorId"].GetString());
         m_creatorIdHasBeenSet = true;
@@ -76,7 +75,7 @@ CoreInternalOutcome GameServerSession::Deserialize(const Value &value)
     {
         if (!value["CurrentPlayerSessionCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `GameServerSession.CurrentPlayerSessionCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GameServerSession.CurrentPlayerSessionCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_currentPlayerSessionCount = value["CurrentPlayerSessionCount"].GetUint64();
         m_currentPlayerSessionCountHasBeenSet = true;
@@ -86,7 +85,7 @@ CoreInternalOutcome GameServerSession::Deserialize(const Value &value)
     {
         if (!value["DnsName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GameServerSession.DnsName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GameServerSession.DnsName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_dnsName = string(value["DnsName"].GetString());
         m_dnsNameHasBeenSet = true;
@@ -96,7 +95,7 @@ CoreInternalOutcome GameServerSession::Deserialize(const Value &value)
     {
         if (!value["FleetId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GameServerSession.FleetId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GameServerSession.FleetId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fleetId = string(value["FleetId"].GetString());
         m_fleetIdHasBeenSet = true;
@@ -105,10 +104,10 @@ CoreInternalOutcome GameServerSession::Deserialize(const Value &value)
     if (value.HasMember("GameProperties") && !value["GameProperties"].IsNull())
     {
         if (!value["GameProperties"].IsArray())
-            return CoreInternalOutcome(Error("response `GameServerSession.GameProperties` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `GameServerSession.GameProperties` is not array type"));
 
-        const Value &tmpValue = value["GameProperties"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["GameProperties"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             GameProperty item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -126,7 +125,7 @@ CoreInternalOutcome GameServerSession::Deserialize(const Value &value)
     {
         if (!value["GameServerSessionData"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GameServerSession.GameServerSessionData` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GameServerSession.GameServerSessionData` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_gameServerSessionData = string(value["GameServerSessionData"].GetString());
         m_gameServerSessionDataHasBeenSet = true;
@@ -136,7 +135,7 @@ CoreInternalOutcome GameServerSession::Deserialize(const Value &value)
     {
         if (!value["GameServerSessionId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GameServerSession.GameServerSessionId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GameServerSession.GameServerSessionId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_gameServerSessionId = string(value["GameServerSessionId"].GetString());
         m_gameServerSessionIdHasBeenSet = true;
@@ -146,7 +145,7 @@ CoreInternalOutcome GameServerSession::Deserialize(const Value &value)
     {
         if (!value["IpAddress"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GameServerSession.IpAddress` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GameServerSession.IpAddress` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ipAddress = string(value["IpAddress"].GetString());
         m_ipAddressHasBeenSet = true;
@@ -156,7 +155,7 @@ CoreInternalOutcome GameServerSession::Deserialize(const Value &value)
     {
         if (!value["MatchmakerData"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GameServerSession.MatchmakerData` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GameServerSession.MatchmakerData` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_matchmakerData = string(value["MatchmakerData"].GetString());
         m_matchmakerDataHasBeenSet = true;
@@ -166,7 +165,7 @@ CoreInternalOutcome GameServerSession::Deserialize(const Value &value)
     {
         if (!value["MaximumPlayerSessionCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `GameServerSession.MaximumPlayerSessionCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GameServerSession.MaximumPlayerSessionCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_maximumPlayerSessionCount = value["MaximumPlayerSessionCount"].GetUint64();
         m_maximumPlayerSessionCountHasBeenSet = true;
@@ -176,7 +175,7 @@ CoreInternalOutcome GameServerSession::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GameServerSession.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GameServerSession.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -186,7 +185,7 @@ CoreInternalOutcome GameServerSession::Deserialize(const Value &value)
     {
         if (!value["PlayerSessionCreationPolicy"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GameServerSession.PlayerSessionCreationPolicy` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GameServerSession.PlayerSessionCreationPolicy` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_playerSessionCreationPolicy = string(value["PlayerSessionCreationPolicy"].GetString());
         m_playerSessionCreationPolicyHasBeenSet = true;
@@ -196,7 +195,7 @@ CoreInternalOutcome GameServerSession::Deserialize(const Value &value)
     {
         if (!value["Port"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `GameServerSession.Port` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GameServerSession.Port` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_port = value["Port"].GetUint64();
         m_portHasBeenSet = true;
@@ -206,7 +205,7 @@ CoreInternalOutcome GameServerSession::Deserialize(const Value &value)
     {
         if (!value["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GameServerSession.Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GameServerSession.Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(value["Status"].GetString());
         m_statusHasBeenSet = true;
@@ -216,7 +215,7 @@ CoreInternalOutcome GameServerSession::Deserialize(const Value &value)
     {
         if (!value["StatusReason"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GameServerSession.StatusReason` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GameServerSession.StatusReason` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_statusReason = string(value["StatusReason"].GetString());
         m_statusReasonHasBeenSet = true;
@@ -226,7 +225,7 @@ CoreInternalOutcome GameServerSession::Deserialize(const Value &value)
     {
         if (!value["TerminationTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GameServerSession.TerminationTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GameServerSession.TerminationTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_terminationTime = string(value["TerminationTime"].GetString());
         m_terminationTimeHasBeenSet = true;
@@ -236,7 +235,7 @@ CoreInternalOutcome GameServerSession::Deserialize(const Value &value)
     {
         if (!value["InstanceType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GameServerSession.InstanceType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GameServerSession.InstanceType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceType = string(value["InstanceType"].GetString());
         m_instanceTypeHasBeenSet = true;
@@ -246,7 +245,7 @@ CoreInternalOutcome GameServerSession::Deserialize(const Value &value)
     {
         if (!value["CurrentCustomCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `GameServerSession.CurrentCustomCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GameServerSession.CurrentCustomCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_currentCustomCount = value["CurrentCustomCount"].GetInt64();
         m_currentCustomCountHasBeenSet = true;
@@ -256,7 +255,7 @@ CoreInternalOutcome GameServerSession::Deserialize(const Value &value)
     {
         if (!value["MaxCustomCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `GameServerSession.MaxCustomCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GameServerSession.MaxCustomCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_maxCustomCount = value["MaxCustomCount"].GetInt64();
         m_maxCustomCountHasBeenSet = true;
@@ -266,7 +265,7 @@ CoreInternalOutcome GameServerSession::Deserialize(const Value &value)
     {
         if (!value["Weight"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `GameServerSession.Weight` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GameServerSession.Weight` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_weight = value["Weight"].GetInt64();
         m_weightHasBeenSet = true;
@@ -276,7 +275,7 @@ CoreInternalOutcome GameServerSession::Deserialize(const Value &value)
     {
         if (!value["AvailabilityStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GameServerSession.AvailabilityStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GameServerSession.AvailabilityStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_availabilityStatus = string(value["AvailabilityStatus"].GetString());
         m_availabilityStatusHasBeenSet = true;
@@ -286,28 +285,28 @@ CoreInternalOutcome GameServerSession::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void GameServerSession::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void GameServerSession::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_creationTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreationTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_creationTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_creationTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_creatorIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatorId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_creatorId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_creatorId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_currentPlayerSessionCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CurrentPlayerSessionCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_currentPlayerSessionCount, allocator);
@@ -315,70 +314,70 @@ void GameServerSession::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_dnsNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DnsName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_dnsName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_dnsName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fleetIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FleetId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fleetId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fleetId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_gamePropertiesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "GameProperties";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_gameProperties.begin(); itr != m_gameProperties.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_gameServerSessionDataHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "GameServerSessionData";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_gameServerSessionData.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_gameServerSessionData.c_str(), allocator).Move(), allocator);
     }
 
     if (m_gameServerSessionIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "GameServerSessionId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_gameServerSessionId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_gameServerSessionId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ipAddressHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IpAddress";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ipAddress.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ipAddress.c_str(), allocator).Move(), allocator);
     }
 
     if (m_matchmakerDataHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MatchmakerData";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_matchmakerData.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_matchmakerData.c_str(), allocator).Move(), allocator);
     }
 
     if (m_maximumPlayerSessionCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaximumPlayerSessionCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_maximumPlayerSessionCount, allocator);
@@ -386,23 +385,23 @@ void GameServerSession::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_playerSessionCreationPolicyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PlayerSessionCreationPolicy";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_playerSessionCreationPolicy.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_playerSessionCreationPolicy.c_str(), allocator).Move(), allocator);
     }
 
     if (m_portHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Port";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_port, allocator);
@@ -410,39 +409,39 @@ void GameServerSession::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_status.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusReasonHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StatusReason";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_statusReason.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_statusReason.c_str(), allocator).Move(), allocator);
     }
 
     if (m_terminationTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TerminationTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_terminationTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_terminationTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_currentCustomCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CurrentCustomCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_currentCustomCount, allocator);
@@ -450,7 +449,7 @@ void GameServerSession::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_maxCustomCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaxCustomCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_maxCustomCount, allocator);
@@ -458,7 +457,7 @@ void GameServerSession::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_weightHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Weight";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_weight, allocator);
@@ -466,10 +465,10 @@ void GameServerSession::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_availabilityStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AvailabilityStatus";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_availabilityStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_availabilityStatus.c_str(), allocator).Move(), allocator);
     }
 
 }

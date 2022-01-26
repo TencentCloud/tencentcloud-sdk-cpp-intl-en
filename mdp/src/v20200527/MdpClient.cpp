@@ -40,42 +40,42 @@ MdpClient::MdpClient(const Credential &credential, const string &region, const C
 }
 
 
-MdpClient::CreateMediaPackageChannelOutcome MdpClient::CreateMediaPackageChannel(const CreateMediaPackageChannelRequest &request)
+MdpClient::BindNewLVBDomainWithChannelOutcome MdpClient::BindNewLVBDomainWithChannel(const BindNewLVBDomainWithChannelRequest &request)
 {
-    auto outcome = MakeRequest(request, "CreateMediaPackageChannel");
+    auto outcome = MakeRequest(request, "BindNewLVBDomainWithChannel");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        CreateMediaPackageChannelResponse rsp = CreateMediaPackageChannelResponse();
+        BindNewLVBDomainWithChannelResponse rsp = BindNewLVBDomainWithChannelResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return CreateMediaPackageChannelOutcome(rsp);
+            return BindNewLVBDomainWithChannelOutcome(rsp);
         else
-            return CreateMediaPackageChannelOutcome(o.GetError());
+            return BindNewLVBDomainWithChannelOutcome(o.GetError());
     }
     else
     {
-        return CreateMediaPackageChannelOutcome(outcome.GetError());
+        return BindNewLVBDomainWithChannelOutcome(outcome.GetError());
     }
 }
 
-void MdpClient::CreateMediaPackageChannelAsync(const CreateMediaPackageChannelRequest& request, const CreateMediaPackageChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdpClient::BindNewLVBDomainWithChannelAsync(const BindNewLVBDomainWithChannelRequest& request, const BindNewLVBDomainWithChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->CreateMediaPackageChannel(request), context);
+        handler(this, request, this->BindNewLVBDomainWithChannel(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdpClient::CreateMediaPackageChannelOutcomeCallable MdpClient::CreateMediaPackageChannelCallable(const CreateMediaPackageChannelRequest &request)
+MdpClient::BindNewLVBDomainWithChannelOutcomeCallable MdpClient::BindNewLVBDomainWithChannelCallable(const BindNewLVBDomainWithChannelRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateMediaPackageChannelOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<BindNewLVBDomainWithChannelOutcome()>>(
         [this, request]()
         {
-            return this->CreateMediaPackageChannel(request);
+            return this->BindNewLVBDomainWithChannel(request);
         }
     );
 
@@ -83,42 +83,42 @@ MdpClient::CreateMediaPackageChannelOutcomeCallable MdpClient::CreateMediaPackag
     return task->get_future();
 }
 
-MdpClient::CreateMediaPackageChannelEndpointOutcome MdpClient::CreateMediaPackageChannelEndpoint(const CreateMediaPackageChannelEndpointRequest &request)
+MdpClient::CreateStreamPackageChannelOutcome MdpClient::CreateStreamPackageChannel(const CreateStreamPackageChannelRequest &request)
 {
-    auto outcome = MakeRequest(request, "CreateMediaPackageChannelEndpoint");
+    auto outcome = MakeRequest(request, "CreateStreamPackageChannel");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        CreateMediaPackageChannelEndpointResponse rsp = CreateMediaPackageChannelEndpointResponse();
+        CreateStreamPackageChannelResponse rsp = CreateStreamPackageChannelResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return CreateMediaPackageChannelEndpointOutcome(rsp);
+            return CreateStreamPackageChannelOutcome(rsp);
         else
-            return CreateMediaPackageChannelEndpointOutcome(o.GetError());
+            return CreateStreamPackageChannelOutcome(o.GetError());
     }
     else
     {
-        return CreateMediaPackageChannelEndpointOutcome(outcome.GetError());
+        return CreateStreamPackageChannelOutcome(outcome.GetError());
     }
 }
 
-void MdpClient::CreateMediaPackageChannelEndpointAsync(const CreateMediaPackageChannelEndpointRequest& request, const CreateMediaPackageChannelEndpointAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdpClient::CreateStreamPackageChannelAsync(const CreateStreamPackageChannelRequest& request, const CreateStreamPackageChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->CreateMediaPackageChannelEndpoint(request), context);
+        handler(this, request, this->CreateStreamPackageChannel(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdpClient::CreateMediaPackageChannelEndpointOutcomeCallable MdpClient::CreateMediaPackageChannelEndpointCallable(const CreateMediaPackageChannelEndpointRequest &request)
+MdpClient::CreateStreamPackageChannelOutcomeCallable MdpClient::CreateStreamPackageChannelCallable(const CreateStreamPackageChannelRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateMediaPackageChannelEndpointOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<CreateStreamPackageChannelOutcome()>>(
         [this, request]()
         {
-            return this->CreateMediaPackageChannelEndpoint(request);
+            return this->CreateStreamPackageChannel(request);
         }
     );
 
@@ -126,42 +126,42 @@ MdpClient::CreateMediaPackageChannelEndpointOutcomeCallable MdpClient::CreateMed
     return task->get_future();
 }
 
-MdpClient::DeleteMediaPackageChannelEndpointsOutcome MdpClient::DeleteMediaPackageChannelEndpoints(const DeleteMediaPackageChannelEndpointsRequest &request)
+MdpClient::CreateStreamPackageChannelEndpointOutcome MdpClient::CreateStreamPackageChannelEndpoint(const CreateStreamPackageChannelEndpointRequest &request)
 {
-    auto outcome = MakeRequest(request, "DeleteMediaPackageChannelEndpoints");
+    auto outcome = MakeRequest(request, "CreateStreamPackageChannelEndpoint");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        DeleteMediaPackageChannelEndpointsResponse rsp = DeleteMediaPackageChannelEndpointsResponse();
+        CreateStreamPackageChannelEndpointResponse rsp = CreateStreamPackageChannelEndpointResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return DeleteMediaPackageChannelEndpointsOutcome(rsp);
+            return CreateStreamPackageChannelEndpointOutcome(rsp);
         else
-            return DeleteMediaPackageChannelEndpointsOutcome(o.GetError());
+            return CreateStreamPackageChannelEndpointOutcome(o.GetError());
     }
     else
     {
-        return DeleteMediaPackageChannelEndpointsOutcome(outcome.GetError());
+        return CreateStreamPackageChannelEndpointOutcome(outcome.GetError());
     }
 }
 
-void MdpClient::DeleteMediaPackageChannelEndpointsAsync(const DeleteMediaPackageChannelEndpointsRequest& request, const DeleteMediaPackageChannelEndpointsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdpClient::CreateStreamPackageChannelEndpointAsync(const CreateStreamPackageChannelEndpointRequest& request, const CreateStreamPackageChannelEndpointAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->DeleteMediaPackageChannelEndpoints(request), context);
+        handler(this, request, this->CreateStreamPackageChannelEndpoint(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdpClient::DeleteMediaPackageChannelEndpointsOutcomeCallable MdpClient::DeleteMediaPackageChannelEndpointsCallable(const DeleteMediaPackageChannelEndpointsRequest &request)
+MdpClient::CreateStreamPackageChannelEndpointOutcomeCallable MdpClient::CreateStreamPackageChannelEndpointCallable(const CreateStreamPackageChannelEndpointRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteMediaPackageChannelEndpointsOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<CreateStreamPackageChannelEndpointOutcome()>>(
         [this, request]()
         {
-            return this->DeleteMediaPackageChannelEndpoints(request);
+            return this->CreateStreamPackageChannelEndpoint(request);
         }
     );
 
@@ -169,42 +169,42 @@ MdpClient::DeleteMediaPackageChannelEndpointsOutcomeCallable MdpClient::DeleteMe
     return task->get_future();
 }
 
-MdpClient::DeleteMediaPackageChannelsOutcome MdpClient::DeleteMediaPackageChannels(const DeleteMediaPackageChannelsRequest &request)
+MdpClient::DeleteStreamPackageChannelEndpointsOutcome MdpClient::DeleteStreamPackageChannelEndpoints(const DeleteStreamPackageChannelEndpointsRequest &request)
 {
-    auto outcome = MakeRequest(request, "DeleteMediaPackageChannels");
+    auto outcome = MakeRequest(request, "DeleteStreamPackageChannelEndpoints");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        DeleteMediaPackageChannelsResponse rsp = DeleteMediaPackageChannelsResponse();
+        DeleteStreamPackageChannelEndpointsResponse rsp = DeleteStreamPackageChannelEndpointsResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return DeleteMediaPackageChannelsOutcome(rsp);
+            return DeleteStreamPackageChannelEndpointsOutcome(rsp);
         else
-            return DeleteMediaPackageChannelsOutcome(o.GetError());
+            return DeleteStreamPackageChannelEndpointsOutcome(o.GetError());
     }
     else
     {
-        return DeleteMediaPackageChannelsOutcome(outcome.GetError());
+        return DeleteStreamPackageChannelEndpointsOutcome(outcome.GetError());
     }
 }
 
-void MdpClient::DeleteMediaPackageChannelsAsync(const DeleteMediaPackageChannelsRequest& request, const DeleteMediaPackageChannelsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdpClient::DeleteStreamPackageChannelEndpointsAsync(const DeleteStreamPackageChannelEndpointsRequest& request, const DeleteStreamPackageChannelEndpointsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->DeleteMediaPackageChannels(request), context);
+        handler(this, request, this->DeleteStreamPackageChannelEndpoints(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdpClient::DeleteMediaPackageChannelsOutcomeCallable MdpClient::DeleteMediaPackageChannelsCallable(const DeleteMediaPackageChannelsRequest &request)
+MdpClient::DeleteStreamPackageChannelEndpointsOutcomeCallable MdpClient::DeleteStreamPackageChannelEndpointsCallable(const DeleteStreamPackageChannelEndpointsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteMediaPackageChannelsOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<DeleteStreamPackageChannelEndpointsOutcome()>>(
         [this, request]()
         {
-            return this->DeleteMediaPackageChannels(request);
+            return this->DeleteStreamPackageChannelEndpoints(request);
         }
     );
 
@@ -212,42 +212,42 @@ MdpClient::DeleteMediaPackageChannelsOutcomeCallable MdpClient::DeleteMediaPacka
     return task->get_future();
 }
 
-MdpClient::DescribeMediaPackageChannelOutcome MdpClient::DescribeMediaPackageChannel(const DescribeMediaPackageChannelRequest &request)
+MdpClient::DeleteStreamPackageChannelsOutcome MdpClient::DeleteStreamPackageChannels(const DeleteStreamPackageChannelsRequest &request)
 {
-    auto outcome = MakeRequest(request, "DescribeMediaPackageChannel");
+    auto outcome = MakeRequest(request, "DeleteStreamPackageChannels");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        DescribeMediaPackageChannelResponse rsp = DescribeMediaPackageChannelResponse();
+        DeleteStreamPackageChannelsResponse rsp = DeleteStreamPackageChannelsResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return DescribeMediaPackageChannelOutcome(rsp);
+            return DeleteStreamPackageChannelsOutcome(rsp);
         else
-            return DescribeMediaPackageChannelOutcome(o.GetError());
+            return DeleteStreamPackageChannelsOutcome(o.GetError());
     }
     else
     {
-        return DescribeMediaPackageChannelOutcome(outcome.GetError());
+        return DeleteStreamPackageChannelsOutcome(outcome.GetError());
     }
 }
 
-void MdpClient::DescribeMediaPackageChannelAsync(const DescribeMediaPackageChannelRequest& request, const DescribeMediaPackageChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdpClient::DeleteStreamPackageChannelsAsync(const DeleteStreamPackageChannelsRequest& request, const DeleteStreamPackageChannelsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->DescribeMediaPackageChannel(request), context);
+        handler(this, request, this->DeleteStreamPackageChannels(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdpClient::DescribeMediaPackageChannelOutcomeCallable MdpClient::DescribeMediaPackageChannelCallable(const DescribeMediaPackageChannelRequest &request)
+MdpClient::DeleteStreamPackageChannelsOutcomeCallable MdpClient::DeleteStreamPackageChannelsCallable(const DeleteStreamPackageChannelsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMediaPackageChannelOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<DeleteStreamPackageChannelsOutcome()>>(
         [this, request]()
         {
-            return this->DescribeMediaPackageChannel(request);
+            return this->DeleteStreamPackageChannels(request);
         }
     );
 
@@ -255,42 +255,42 @@ MdpClient::DescribeMediaPackageChannelOutcomeCallable MdpClient::DescribeMediaPa
     return task->get_future();
 }
 
-MdpClient::DescribeMediaPackageChannelsOutcome MdpClient::DescribeMediaPackageChannels(const DescribeMediaPackageChannelsRequest &request)
+MdpClient::DescribeStreamPackageChannelOutcome MdpClient::DescribeStreamPackageChannel(const DescribeStreamPackageChannelRequest &request)
 {
-    auto outcome = MakeRequest(request, "DescribeMediaPackageChannels");
+    auto outcome = MakeRequest(request, "DescribeStreamPackageChannel");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        DescribeMediaPackageChannelsResponse rsp = DescribeMediaPackageChannelsResponse();
+        DescribeStreamPackageChannelResponse rsp = DescribeStreamPackageChannelResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return DescribeMediaPackageChannelsOutcome(rsp);
+            return DescribeStreamPackageChannelOutcome(rsp);
         else
-            return DescribeMediaPackageChannelsOutcome(o.GetError());
+            return DescribeStreamPackageChannelOutcome(o.GetError());
     }
     else
     {
-        return DescribeMediaPackageChannelsOutcome(outcome.GetError());
+        return DescribeStreamPackageChannelOutcome(outcome.GetError());
     }
 }
 
-void MdpClient::DescribeMediaPackageChannelsAsync(const DescribeMediaPackageChannelsRequest& request, const DescribeMediaPackageChannelsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdpClient::DescribeStreamPackageChannelAsync(const DescribeStreamPackageChannelRequest& request, const DescribeStreamPackageChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->DescribeMediaPackageChannels(request), context);
+        handler(this, request, this->DescribeStreamPackageChannel(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdpClient::DescribeMediaPackageChannelsOutcomeCallable MdpClient::DescribeMediaPackageChannelsCallable(const DescribeMediaPackageChannelsRequest &request)
+MdpClient::DescribeStreamPackageChannelOutcomeCallable MdpClient::DescribeStreamPackageChannelCallable(const DescribeStreamPackageChannelRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMediaPackageChannelsOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<DescribeStreamPackageChannelOutcome()>>(
         [this, request]()
         {
-            return this->DescribeMediaPackageChannels(request);
+            return this->DescribeStreamPackageChannel(request);
         }
     );
 
@@ -298,42 +298,42 @@ MdpClient::DescribeMediaPackageChannelsOutcomeCallable MdpClient::DescribeMediaP
     return task->get_future();
 }
 
-MdpClient::ModifyMediaPackageChannelOutcome MdpClient::ModifyMediaPackageChannel(const ModifyMediaPackageChannelRequest &request)
+MdpClient::DescribeStreamPackageChannelsOutcome MdpClient::DescribeStreamPackageChannels(const DescribeStreamPackageChannelsRequest &request)
 {
-    auto outcome = MakeRequest(request, "ModifyMediaPackageChannel");
+    auto outcome = MakeRequest(request, "DescribeStreamPackageChannels");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        ModifyMediaPackageChannelResponse rsp = ModifyMediaPackageChannelResponse();
+        DescribeStreamPackageChannelsResponse rsp = DescribeStreamPackageChannelsResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return ModifyMediaPackageChannelOutcome(rsp);
+            return DescribeStreamPackageChannelsOutcome(rsp);
         else
-            return ModifyMediaPackageChannelOutcome(o.GetError());
+            return DescribeStreamPackageChannelsOutcome(o.GetError());
     }
     else
     {
-        return ModifyMediaPackageChannelOutcome(outcome.GetError());
+        return DescribeStreamPackageChannelsOutcome(outcome.GetError());
     }
 }
 
-void MdpClient::ModifyMediaPackageChannelAsync(const ModifyMediaPackageChannelRequest& request, const ModifyMediaPackageChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdpClient::DescribeStreamPackageChannelsAsync(const DescribeStreamPackageChannelsRequest& request, const DescribeStreamPackageChannelsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->ModifyMediaPackageChannel(request), context);
+        handler(this, request, this->DescribeStreamPackageChannels(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdpClient::ModifyMediaPackageChannelOutcomeCallable MdpClient::ModifyMediaPackageChannelCallable(const ModifyMediaPackageChannelRequest &request)
+MdpClient::DescribeStreamPackageChannelsOutcomeCallable MdpClient::DescribeStreamPackageChannelsCallable(const DescribeStreamPackageChannelsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyMediaPackageChannelOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<DescribeStreamPackageChannelsOutcome()>>(
         [this, request]()
         {
-            return this->ModifyMediaPackageChannel(request);
+            return this->DescribeStreamPackageChannels(request);
         }
     );
 
@@ -341,42 +341,42 @@ MdpClient::ModifyMediaPackageChannelOutcomeCallable MdpClient::ModifyMediaPackag
     return task->get_future();
 }
 
-MdpClient::ModifyMediaPackageChannelEndpointOutcome MdpClient::ModifyMediaPackageChannelEndpoint(const ModifyMediaPackageChannelEndpointRequest &request)
+MdpClient::ModifyStreamPackageChannelOutcome MdpClient::ModifyStreamPackageChannel(const ModifyStreamPackageChannelRequest &request)
 {
-    auto outcome = MakeRequest(request, "ModifyMediaPackageChannelEndpoint");
+    auto outcome = MakeRequest(request, "ModifyStreamPackageChannel");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        ModifyMediaPackageChannelEndpointResponse rsp = ModifyMediaPackageChannelEndpointResponse();
+        ModifyStreamPackageChannelResponse rsp = ModifyStreamPackageChannelResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return ModifyMediaPackageChannelEndpointOutcome(rsp);
+            return ModifyStreamPackageChannelOutcome(rsp);
         else
-            return ModifyMediaPackageChannelEndpointOutcome(o.GetError());
+            return ModifyStreamPackageChannelOutcome(o.GetError());
     }
     else
     {
-        return ModifyMediaPackageChannelEndpointOutcome(outcome.GetError());
+        return ModifyStreamPackageChannelOutcome(outcome.GetError());
     }
 }
 
-void MdpClient::ModifyMediaPackageChannelEndpointAsync(const ModifyMediaPackageChannelEndpointRequest& request, const ModifyMediaPackageChannelEndpointAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdpClient::ModifyStreamPackageChannelAsync(const ModifyStreamPackageChannelRequest& request, const ModifyStreamPackageChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->ModifyMediaPackageChannelEndpoint(request), context);
+        handler(this, request, this->ModifyStreamPackageChannel(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdpClient::ModifyMediaPackageChannelEndpointOutcomeCallable MdpClient::ModifyMediaPackageChannelEndpointCallable(const ModifyMediaPackageChannelEndpointRequest &request)
+MdpClient::ModifyStreamPackageChannelOutcomeCallable MdpClient::ModifyStreamPackageChannelCallable(const ModifyStreamPackageChannelRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyMediaPackageChannelEndpointOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<ModifyStreamPackageChannelOutcome()>>(
         [this, request]()
         {
-            return this->ModifyMediaPackageChannelEndpoint(request);
+            return this->ModifyStreamPackageChannel(request);
         }
     );
 
@@ -384,42 +384,128 @@ MdpClient::ModifyMediaPackageChannelEndpointOutcomeCallable MdpClient::ModifyMed
     return task->get_future();
 }
 
-MdpClient::ModifyMediaPackageChannelInputAuthInfoOutcome MdpClient::ModifyMediaPackageChannelInputAuthInfo(const ModifyMediaPackageChannelInputAuthInfoRequest &request)
+MdpClient::ModifyStreamPackageChannelEndpointOutcome MdpClient::ModifyStreamPackageChannelEndpoint(const ModifyStreamPackageChannelEndpointRequest &request)
 {
-    auto outcome = MakeRequest(request, "ModifyMediaPackageChannelInputAuthInfo");
+    auto outcome = MakeRequest(request, "ModifyStreamPackageChannelEndpoint");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        ModifyMediaPackageChannelInputAuthInfoResponse rsp = ModifyMediaPackageChannelInputAuthInfoResponse();
+        ModifyStreamPackageChannelEndpointResponse rsp = ModifyStreamPackageChannelEndpointResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return ModifyMediaPackageChannelInputAuthInfoOutcome(rsp);
+            return ModifyStreamPackageChannelEndpointOutcome(rsp);
         else
-            return ModifyMediaPackageChannelInputAuthInfoOutcome(o.GetError());
+            return ModifyStreamPackageChannelEndpointOutcome(o.GetError());
     }
     else
     {
-        return ModifyMediaPackageChannelInputAuthInfoOutcome(outcome.GetError());
+        return ModifyStreamPackageChannelEndpointOutcome(outcome.GetError());
     }
 }
 
-void MdpClient::ModifyMediaPackageChannelInputAuthInfoAsync(const ModifyMediaPackageChannelInputAuthInfoRequest& request, const ModifyMediaPackageChannelInputAuthInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdpClient::ModifyStreamPackageChannelEndpointAsync(const ModifyStreamPackageChannelEndpointRequest& request, const ModifyStreamPackageChannelEndpointAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->ModifyMediaPackageChannelInputAuthInfo(request), context);
+        handler(this, request, this->ModifyStreamPackageChannelEndpoint(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdpClient::ModifyMediaPackageChannelInputAuthInfoOutcomeCallable MdpClient::ModifyMediaPackageChannelInputAuthInfoCallable(const ModifyMediaPackageChannelInputAuthInfoRequest &request)
+MdpClient::ModifyStreamPackageChannelEndpointOutcomeCallable MdpClient::ModifyStreamPackageChannelEndpointCallable(const ModifyStreamPackageChannelEndpointRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyMediaPackageChannelInputAuthInfoOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<ModifyStreamPackageChannelEndpointOutcome()>>(
         [this, request]()
         {
-            return this->ModifyMediaPackageChannelInputAuthInfo(request);
+            return this->ModifyStreamPackageChannelEndpoint(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::ModifyStreamPackageChannelInputAuthInfoOutcome MdpClient::ModifyStreamPackageChannelInputAuthInfo(const ModifyStreamPackageChannelInputAuthInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyStreamPackageChannelInputAuthInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyStreamPackageChannelInputAuthInfoResponse rsp = ModifyStreamPackageChannelInputAuthInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyStreamPackageChannelInputAuthInfoOutcome(rsp);
+        else
+            return ModifyStreamPackageChannelInputAuthInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyStreamPackageChannelInputAuthInfoOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::ModifyStreamPackageChannelInputAuthInfoAsync(const ModifyStreamPackageChannelInputAuthInfoRequest& request, const ModifyStreamPackageChannelInputAuthInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyStreamPackageChannelInputAuthInfo(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::ModifyStreamPackageChannelInputAuthInfoOutcomeCallable MdpClient::ModifyStreamPackageChannelInputAuthInfoCallable(const ModifyStreamPackageChannelInputAuthInfoRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyStreamPackageChannelInputAuthInfoOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyStreamPackageChannelInputAuthInfo(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdpClient::UnbindCdnDomainWithChannelOutcome MdpClient::UnbindCdnDomainWithChannel(const UnbindCdnDomainWithChannelRequest &request)
+{
+    auto outcome = MakeRequest(request, "UnbindCdnDomainWithChannel");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UnbindCdnDomainWithChannelResponse rsp = UnbindCdnDomainWithChannelResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UnbindCdnDomainWithChannelOutcome(rsp);
+        else
+            return UnbindCdnDomainWithChannelOutcome(o.GetError());
+    }
+    else
+    {
+        return UnbindCdnDomainWithChannelOutcome(outcome.GetError());
+    }
+}
+
+void MdpClient::UnbindCdnDomainWithChannelAsync(const UnbindCdnDomainWithChannelRequest& request, const UnbindCdnDomainWithChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UnbindCdnDomainWithChannel(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdpClient::UnbindCdnDomainWithChannelOutcomeCallable MdpClient::UnbindCdnDomainWithChannelCallable(const UnbindCdnDomainWithChannelRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UnbindCdnDomainWithChannelOutcome()>>(
+        [this, request]()
+        {
+            return this->UnbindCdnDomainWithChannel(request);
         }
     );
 

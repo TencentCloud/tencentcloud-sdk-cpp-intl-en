@@ -118,6 +118,24 @@ namespace TencentCloud
                      */
                     bool WriteHasBeenSet() const;
 
+                    /**
+                     * 获取Disk capacity. Each value is comprised of two data, with the first data representing the used capacity and the second one representing the total disk capacity.
+                     * @return CapacityRatio Disk capacity. Each value is comprised of two data, with the first data representing the used capacity and the second one representing the total disk capacity.
+                     */
+                    std::vector<int64_t> GetCapacityRatio() const;
+
+                    /**
+                     * 设置Disk capacity. Each value is comprised of two data, with the first data representing the used capacity and the second one representing the total disk capacity.
+                     * @param CapacityRatio Disk capacity. Each value is comprised of two data, with the first data representing the used capacity and the second one representing the total disk capacity.
+                     */
+                    void SetCapacityRatio(const std::vector<int64_t>& _capacityRatio);
+
+                    /**
+                     * 判断参数 CapacityRatio 是否已赋值
+                     * @return CapacityRatio 是否已赋值
+                     */
+                    bool CapacityRatioHasBeenSet() const;
+
                 private:
 
                     /**
@@ -143,6 +161,12 @@ namespace TencentCloud
                      */
                     std::vector<int64_t> m_write;
                     bool m_writeHasBeenSet;
+
+                    /**
+                     * Disk capacity. Each value is comprised of two data, with the first data representing the used capacity and the second one representing the total disk capacity.
+                     */
+                    std::vector<int64_t> m_capacityRatio;
+                    bool m_capacityRatioHasBeenSet;
 
                 };
             }

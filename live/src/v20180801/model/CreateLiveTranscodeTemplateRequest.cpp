@@ -20,18 +20,17 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Live::V20180801::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateLiveTranscodeTemplateRequest::CreateLiveTranscodeTemplateRequest() :
     m_templateNameHasBeenSet(false),
     m_videoBitrateHasBeenSet(false),
-    m_vcodecHasBeenSet(false),
     m_acodecHasBeenSet(false),
     m_audioBitrateHasBeenSet(false),
+    m_vcodecHasBeenSet(false),
     m_descriptionHasBeenSet(false),
-    m_widthHasBeenSet(false),
     m_needVideoHasBeenSet(false),
+    m_widthHasBeenSet(false),
     m_needAudioHasBeenSet(false),
     m_heightHasBeenSet(false),
     m_fpsHasBeenSet(false),
@@ -42,84 +41,85 @@ CreateLiveTranscodeTemplateRequest::CreateLiveTranscodeTemplateRequest() :
     m_heightToOrigHasBeenSet(false),
     m_fpsToOrigHasBeenSet(false),
     m_aiTransCodeHasBeenSet(false),
-    m_adaptBitratePercentHasBeenSet(false)
+    m_adaptBitratePercentHasBeenSet(false),
+    m_shortEdgeAsHeightHasBeenSet(false)
 {
 }
 
 string CreateLiveTranscodeTemplateRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_templateNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TemplateName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_templateName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_templateName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_videoBitrateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VideoBitrate";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_videoBitrate, allocator);
     }
 
-    if (m_vcodecHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "Vcodec";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_vcodec.c_str(), allocator).Move(), allocator);
-    }
-
     if (m_acodecHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Acodec";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_acodec.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_acodec.c_str(), allocator).Move(), allocator);
     }
 
     if (m_audioBitrateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AudioBitrate";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_audioBitrate, allocator);
     }
 
-    if (m_descriptionHasBeenSet)
+    if (m_vcodecHasBeenSet)
     {
-        Value iKey(kStringType);
-        string key = "Description";
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Vcodec";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_description.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_vcodec.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_widthHasBeenSet)
+    if (m_descriptionHasBeenSet)
     {
-        Value iKey(kStringType);
-        string key = "Width";
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Description";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_width, allocator);
+        d.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
     }
 
     if (m_needVideoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NeedVideo";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_needVideo, allocator);
     }
 
+    if (m_widthHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Width";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_width, allocator);
+    }
+
     if (m_needAudioHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NeedAudio";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_needAudio, allocator);
@@ -127,7 +127,7 @@ string CreateLiveTranscodeTemplateRequest::ToJsonString() const
 
     if (m_heightHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Height";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_height, allocator);
@@ -135,7 +135,7 @@ string CreateLiveTranscodeTemplateRequest::ToJsonString() const
 
     if (m_fpsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Fps";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_fps, allocator);
@@ -143,7 +143,7 @@ string CreateLiveTranscodeTemplateRequest::ToJsonString() const
 
     if (m_gopHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Gop";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_gop, allocator);
@@ -151,7 +151,7 @@ string CreateLiveTranscodeTemplateRequest::ToJsonString() const
 
     if (m_rotateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Rotate";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_rotate, allocator);
@@ -159,15 +159,15 @@ string CreateLiveTranscodeTemplateRequest::ToJsonString() const
 
     if (m_profileHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Profile";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_profile.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_profile.c_str(), allocator).Move(), allocator);
     }
 
     if (m_bitrateToOrigHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BitrateToOrig";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_bitrateToOrig, allocator);
@@ -175,7 +175,7 @@ string CreateLiveTranscodeTemplateRequest::ToJsonString() const
 
     if (m_heightToOrigHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HeightToOrig";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_heightToOrig, allocator);
@@ -183,7 +183,7 @@ string CreateLiveTranscodeTemplateRequest::ToJsonString() const
 
     if (m_fpsToOrigHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FpsToOrig";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_fpsToOrig, allocator);
@@ -191,7 +191,7 @@ string CreateLiveTranscodeTemplateRequest::ToJsonString() const
 
     if (m_aiTransCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AiTransCode";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_aiTransCode, allocator);
@@ -199,15 +199,23 @@ string CreateLiveTranscodeTemplateRequest::ToJsonString() const
 
     if (m_adaptBitratePercentHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AdaptBitratePercent";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_adaptBitratePercent, allocator);
     }
 
+    if (m_shortEdgeAsHeightHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ShortEdgeAsHeight";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_shortEdgeAsHeight, allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -245,22 +253,6 @@ bool CreateLiveTranscodeTemplateRequest::VideoBitrateHasBeenSet() const
     return m_videoBitrateHasBeenSet;
 }
 
-string CreateLiveTranscodeTemplateRequest::GetVcodec() const
-{
-    return m_vcodec;
-}
-
-void CreateLiveTranscodeTemplateRequest::SetVcodec(const string& _vcodec)
-{
-    m_vcodec = _vcodec;
-    m_vcodecHasBeenSet = true;
-}
-
-bool CreateLiveTranscodeTemplateRequest::VcodecHasBeenSet() const
-{
-    return m_vcodecHasBeenSet;
-}
-
 string CreateLiveTranscodeTemplateRequest::GetAcodec() const
 {
     return m_acodec;
@@ -293,6 +285,22 @@ bool CreateLiveTranscodeTemplateRequest::AudioBitrateHasBeenSet() const
     return m_audioBitrateHasBeenSet;
 }
 
+string CreateLiveTranscodeTemplateRequest::GetVcodec() const
+{
+    return m_vcodec;
+}
+
+void CreateLiveTranscodeTemplateRequest::SetVcodec(const string& _vcodec)
+{
+    m_vcodec = _vcodec;
+    m_vcodecHasBeenSet = true;
+}
+
+bool CreateLiveTranscodeTemplateRequest::VcodecHasBeenSet() const
+{
+    return m_vcodecHasBeenSet;
+}
+
 string CreateLiveTranscodeTemplateRequest::GetDescription() const
 {
     return m_description;
@@ -309,22 +317,6 @@ bool CreateLiveTranscodeTemplateRequest::DescriptionHasBeenSet() const
     return m_descriptionHasBeenSet;
 }
 
-int64_t CreateLiveTranscodeTemplateRequest::GetWidth() const
-{
-    return m_width;
-}
-
-void CreateLiveTranscodeTemplateRequest::SetWidth(const int64_t& _width)
-{
-    m_width = _width;
-    m_widthHasBeenSet = true;
-}
-
-bool CreateLiveTranscodeTemplateRequest::WidthHasBeenSet() const
-{
-    return m_widthHasBeenSet;
-}
-
 int64_t CreateLiveTranscodeTemplateRequest::GetNeedVideo() const
 {
     return m_needVideo;
@@ -339,6 +331,22 @@ void CreateLiveTranscodeTemplateRequest::SetNeedVideo(const int64_t& _needVideo)
 bool CreateLiveTranscodeTemplateRequest::NeedVideoHasBeenSet() const
 {
     return m_needVideoHasBeenSet;
+}
+
+int64_t CreateLiveTranscodeTemplateRequest::GetWidth() const
+{
+    return m_width;
+}
+
+void CreateLiveTranscodeTemplateRequest::SetWidth(const int64_t& _width)
+{
+    m_width = _width;
+    m_widthHasBeenSet = true;
+}
+
+bool CreateLiveTranscodeTemplateRequest::WidthHasBeenSet() const
+{
+    return m_widthHasBeenSet;
 }
 
 int64_t CreateLiveTranscodeTemplateRequest::GetNeedAudio() const
@@ -515,6 +523,22 @@ void CreateLiveTranscodeTemplateRequest::SetAdaptBitratePercent(const double& _a
 bool CreateLiveTranscodeTemplateRequest::AdaptBitratePercentHasBeenSet() const
 {
     return m_adaptBitratePercentHasBeenSet;
+}
+
+int64_t CreateLiveTranscodeTemplateRequest::GetShortEdgeAsHeight() const
+{
+    return m_shortEdgeAsHeight;
+}
+
+void CreateLiveTranscodeTemplateRequest::SetShortEdgeAsHeight(const int64_t& _shortEdgeAsHeight)
+{
+    m_shortEdgeAsHeight = _shortEdgeAsHeight;
+    m_shortEdgeAsHeightHasBeenSet = true;
+}
+
+bool CreateLiveTranscodeTemplateRequest::ShortEdgeAsHeightHasBeenSet() const
+{
+    return m_shortEdgeAsHeightHasBeenSet;
 }
 
 

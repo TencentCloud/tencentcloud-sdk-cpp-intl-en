@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool CcnIdHasBeenSet() const;
 
                     /**
-                     * 获取The name of the CCN. The maximum length is 60 characters.
-                     * @return CcnName The name of the CCN. The maximum length is 60 characters.
+                     * 获取The name of CCN instance. Up to 60 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
+                     * @return CcnName The name of CCN instance. Up to 60 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
                      */
                     std::string GetCcnName() const;
 
                     /**
-                     * 设置The name of the CCN. The maximum length is 60 characters.
-                     * @param CcnName The name of the CCN. The maximum length is 60 characters.
+                     * 设置The name of CCN instance. Up to 60 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
+                     * @param CcnName The name of CCN instance. Up to 60 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
                      */
                     void SetCcnName(const std::string& _ccnName);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool CcnNameHasBeenSet() const;
 
                     /**
-                     * 获取The description of the CCN. The maximum length is 100 characters.
-                     * @return CcnDescription The description of the CCN. The maximum length is 100 characters.
+                     * 获取The description of CCN instance. Up to 100 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
+                     * @return CcnDescription The description of CCN instance. Up to 100 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
                      */
                     std::string GetCcnDescription() const;
 
                     /**
-                     * 设置The description of the CCN. The maximum length is 100 characters.
-                     * @param CcnDescription The description of the CCN. The maximum length is 100 characters.
+                     * 设置The description of CCN instance. Up to 100 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
+                     * @param CcnDescription The description of CCN instance. Up to 100 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
                      */
                     void SetCcnDescription(const std::string& _ccnDescription);
 
@@ -105,13 +105,13 @@ namespace TencentCloud
                     bool m_ccnIdHasBeenSet;
 
                     /**
-                     * The name of the CCN. The maximum length is 60 characters.
+                     * The name of CCN instance. Up to 60 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
                      */
                     std::string m_ccnName;
                     bool m_ccnNameHasBeenSet;
 
                     /**
-                     * The description of the CCN. The maximum length is 100 characters.
+                     * The description of CCN instance. Up to 100 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
                      */
                     std::string m_ccnDescription;
                     bool m_ccnDescriptionHasBeenSet;

@@ -41,6 +41,7 @@ namespace TencentCloud
                     DescribeBlockIPListResponse();
                     ~DescribeBlockIPListResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -68,8 +69,8 @@ namespace TencentCloud
                     bool ClientIPFieldHasBeenSet() const;
 
                     /**
-                     * 获取List of IPs added to blacklist 12360
-                     * @return BlockedIPList List of IPs added to blacklist 12360
+                     * 获取List of IPs added to blocklist 12360
+                     * @return BlockedIPList List of IPs added to blocklist 12360
                      */
                     std::vector<BlockedIP> GetBlockedIPList() const;
 
@@ -94,7 +95,7 @@ namespace TencentCloud
                     bool m_clientIPFieldHasBeenSet;
 
                     /**
-                     * List of IPs added to blacklist 12360
+                     * List of IPs added to blocklist 12360
                      */
                     std::vector<BlockedIP> m_blockedIPList;
                     bool m_blockedIPListHasBeenSet;

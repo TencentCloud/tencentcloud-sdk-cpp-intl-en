@@ -24,6 +24,7 @@
 #include <tencentcloud/tke/v20180525/model/InstanceAdvancedSettings.h>
 #include <tencentcloud/tke/v20180525/model/EnhancedService.h>
 #include <tencentcloud/tke/v20180525/model/LoginSettings.h>
+#include <tencentcloud/tke/v20180525/model/NodePoolOption.h>
 
 
 namespace TencentCloud
@@ -64,14 +65,14 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance list
-                     * @return InstanceIds Instance list
+                     * 获取Instance list. Spot instance is not supported.
+                     * @return InstanceIds Instance list. Spot instance is not supported.
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置Instance list
-                     * @param InstanceIds Instance list
+                     * 设置Instance list. Spot instance is not supported.
+                     * @param InstanceIds Instance list. Spot instance is not supported.
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
@@ -82,14 +83,14 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Additional parameter to be set for the instance
-                     * @return InstanceAdvancedSettings Additional parameter to be set for the instance
+                     * 获取Detailed information of the instance
+                     * @return InstanceAdvancedSettings Detailed information of the instance
                      */
                     InstanceAdvancedSettings GetInstanceAdvancedSettings() const;
 
                     /**
-                     * 设置Additional parameter to be set for the instance
-                     * @param InstanceAdvancedSettings Additional parameter to be set for the instance
+                     * 设置Detailed information of the instance
+                     * @param InstanceAdvancedSettings Detailed information of the instance
                      */
                     void SetInstanceAdvancedSettings(const InstanceAdvancedSettings& _instanceAdvancedSettings);
 
@@ -136,6 +137,24 @@ namespace TencentCloud
                     bool LoginSettingsHasBeenSet() const;
 
                     /**
+                     * 获取When reinstalling the system, you can specify the HostName of the modified instance (when the cluster is in HostName mode, this parameter is required, and the rule name is the same as the [Create CVM Instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API HostName except for uppercase letters not being supported.
+                     * @return HostName When reinstalling the system, you can specify the HostName of the modified instance (when the cluster is in HostName mode, this parameter is required, and the rule name is the same as the [Create CVM Instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API HostName except for uppercase letters not being supported.
+                     */
+                    std::string GetHostName() const;
+
+                    /**
+                     * 设置When reinstalling the system, you can specify the HostName of the modified instance (when the cluster is in HostName mode, this parameter is required, and the rule name is the same as the [Create CVM Instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API HostName except for uppercase letters not being supported.
+                     * @param HostName When reinstalling the system, you can specify the HostName of the modified instance (when the cluster is in HostName mode, this parameter is required, and the rule name is the same as the [Create CVM Instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API HostName except for uppercase letters not being supported.
+                     */
+                    void SetHostName(const std::string& _hostName);
+
+                    /**
+                     * 判断参数 HostName 是否已赋值
+                     * @return HostName 是否已赋值
+                     */
+                    bool HostNameHasBeenSet() const;
+
+                    /**
                      * 获取Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
                      * @return SecurityGroupIds Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
                      */
@@ -154,22 +173,66 @@ namespace TencentCloud
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HostName 
+                     * 获取Node pool options
+                     * @return NodePool Node pool options
                      */
-                    std::string GetHostName() const;
+                    NodePoolOption GetNodePool() const;
 
                     /**
-                     * 设置
-                     * @param HostName 
+                     * 设置Node pool options
+                     * @param NodePool Node pool options
                      */
-                    void SetHostName(const std::string& _hostName);
+                    void SetNodePool(const NodePoolOption& _nodePool);
 
                     /**
-                     * 判断参数 HostName 是否已赋值
-                     * @return HostName 是否已赋值
+                     * 判断参数 NodePool 是否已赋值
+                     * @return NodePool 是否已赋值
                      */
-                    bool HostNameHasBeenSet() const;
+                    bool NodePoolHasBeenSet() const;
+
+                    /**
+                     * 获取Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
+                     * @return SkipValidateOptions Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
+                     */
+                    std::vector<std::string> GetSkipValidateOptions() const;
+
+                    /**
+                     * 设置Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
+                     * @param SkipValidateOptions Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
+                     */
+                    void SetSkipValidateOptions(const std::vector<std::string>& _skipValidateOptions);
+
+                    /**
+                     * 判断参数 SkipValidateOptions 是否已赋值
+                     * @return SkipValidateOptions 是否已赋值
+                     */
+                    bool SkipValidateOptionsHasBeenSet() const;
+
+                    /**
+                     * 获取This parameter is used to customize the configuration of an instance, which corresponds to the `InstanceIds` one-to-one in sequence. If this parameter is passed in, the default parameter `InstanceAdvancedSettings` will be overwritten and will not take effect. If this parameter is not passed in, the `InstanceAdvancedSettings` will take effect for each instance.
+
+The array length of `InstanceAdvancedSettingsOverride` should be the same as the array length of `InstanceIds`. If its array length is greater than the `InstanceIds` array length, an error will be reported. If its array length is less than the `InstanceIds` array length, the instance without corresponding configuration will use the default configuration.
+                     * @return InstanceAdvancedSettingsOverrides This parameter is used to customize the configuration of an instance, which corresponds to the `InstanceIds` one-to-one in sequence. If this parameter is passed in, the default parameter `InstanceAdvancedSettings` will be overwritten and will not take effect. If this parameter is not passed in, the `InstanceAdvancedSettings` will take effect for each instance.
+
+The array length of `InstanceAdvancedSettingsOverride` should be the same as the array length of `InstanceIds`. If its array length is greater than the `InstanceIds` array length, an error will be reported. If its array length is less than the `InstanceIds` array length, the instance without corresponding configuration will use the default configuration.
+                     */
+                    std::vector<InstanceAdvancedSettings> GetInstanceAdvancedSettingsOverrides() const;
+
+                    /**
+                     * 设置This parameter is used to customize the configuration of an instance, which corresponds to the `InstanceIds` one-to-one in sequence. If this parameter is passed in, the default parameter `InstanceAdvancedSettings` will be overwritten and will not take effect. If this parameter is not passed in, the `InstanceAdvancedSettings` will take effect for each instance.
+
+The array length of `InstanceAdvancedSettingsOverride` should be the same as the array length of `InstanceIds`. If its array length is greater than the `InstanceIds` array length, an error will be reported. If its array length is less than the `InstanceIds` array length, the instance without corresponding configuration will use the default configuration.
+                     * @param InstanceAdvancedSettingsOverrides This parameter is used to customize the configuration of an instance, which corresponds to the `InstanceIds` one-to-one in sequence. If this parameter is passed in, the default parameter `InstanceAdvancedSettings` will be overwritten and will not take effect. If this parameter is not passed in, the `InstanceAdvancedSettings` will take effect for each instance.
+
+The array length of `InstanceAdvancedSettingsOverride` should be the same as the array length of `InstanceIds`. If its array length is greater than the `InstanceIds` array length, an error will be reported. If its array length is less than the `InstanceIds` array length, the instance without corresponding configuration will use the default configuration.
+                     */
+                    void SetInstanceAdvancedSettingsOverrides(const std::vector<InstanceAdvancedSettings>& _instanceAdvancedSettingsOverrides);
+
+                    /**
+                     * 判断参数 InstanceAdvancedSettingsOverrides 是否已赋值
+                     * @return InstanceAdvancedSettingsOverrides 是否已赋值
+                     */
+                    bool InstanceAdvancedSettingsOverridesHasBeenSet() const;
 
                 private:
 
@@ -180,13 +243,13 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Instance list
+                     * Instance list. Spot instance is not supported.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Additional parameter to be set for the instance
+                     * Detailed information of the instance
                      */
                     InstanceAdvancedSettings m_instanceAdvancedSettings;
                     bool m_instanceAdvancedSettingsHasBeenSet;
@@ -204,16 +267,36 @@ namespace TencentCloud
                     bool m_loginSettingsHasBeenSet;
 
                     /**
+                     * When reinstalling the system, you can specify the HostName of the modified instance (when the cluster is in HostName mode, this parameter is required, and the rule name is the same as the [Create CVM Instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API HostName except for uppercase letters not being supported.
+                     */
+                    std::string m_hostName;
+                    bool m_hostNameHasBeenSet;
+
+                    /**
                      * Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
 
                     /**
-                     * 
+                     * Node pool options
                      */
-                    std::string m_hostName;
-                    bool m_hostNameHasBeenSet;
+                    NodePoolOption m_nodePool;
+                    bool m_nodePoolHasBeenSet;
+
+                    /**
+                     * Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
+                     */
+                    std::vector<std::string> m_skipValidateOptions;
+                    bool m_skipValidateOptionsHasBeenSet;
+
+                    /**
+                     * This parameter is used to customize the configuration of an instance, which corresponds to the `InstanceIds` one-to-one in sequence. If this parameter is passed in, the default parameter `InstanceAdvancedSettings` will be overwritten and will not take effect. If this parameter is not passed in, the `InstanceAdvancedSettings` will take effect for each instance.
+
+The array length of `InstanceAdvancedSettingsOverride` should be the same as the array length of `InstanceIds`. If its array length is greater than the `InstanceIds` array length, an error will be reported. If its array length is less than the `InstanceIds` array length, the instance without corresponding configuration will use the default configuration.
+                     */
+                    std::vector<InstanceAdvancedSettings> m_instanceAdvancedSettingsOverrides;
+                    bool m_instanceAdvancedSettingsOverridesHasBeenSet;
 
                 };
             }

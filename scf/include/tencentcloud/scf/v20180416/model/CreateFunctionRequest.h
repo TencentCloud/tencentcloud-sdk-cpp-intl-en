@@ -27,6 +27,9 @@
 #include <tencentcloud/scf/v20180416/model/LayerVersionSimple.h>
 #include <tencentcloud/scf/v20180416/model/DeadLetterConfig.h>
 #include <tencentcloud/scf/v20180416/model/PublicNetConfigIn.h>
+#include <tencentcloud/scf/v20180416/model/CfsConfig.h>
+#include <tencentcloud/scf/v20180416/model/Tag.h>
+#include <tencentcloud/scf/v20180416/model/ProtocolParams.h>
 
 
 namespace TencentCloud
@@ -67,14 +70,14 @@ namespace TencentCloud
                     bool FunctionNameHasBeenSet() const;
 
                     /**
-                     * 获取Function code. Note: You cannot specify `Cos` and `ZipFile` at the same time.
-                     * @return Code Function code. Note: You cannot specify `Cos` and `ZipFile` at the same time.
+                     * 获取Function code. Note: `COS`, `ZipFile`, and `DemoId` cannot be specified at the same time.
+                     * @return Code Function code. Note: `COS`, `ZipFile`, and `DemoId` cannot be specified at the same time.
                      */
                     Code GetCode() const;
 
                     /**
-                     * 设置Function code. Note: You cannot specify `Cos` and `ZipFile` at the same time.
-                     * @param Code Function code. Note: You cannot specify `Cos` and `ZipFile` at the same time.
+                     * 设置Function code. Note: `COS`, `ZipFile`, and `DemoId` cannot be specified at the same time.
+                     * @param Code Function code. Note: `COS`, `ZipFile`, and `DemoId` cannot be specified at the same time.
                      */
                     void SetCode(const Code& _code);
 
@@ -85,14 +88,14 @@ namespace TencentCloud
                     bool CodeHasBeenSet() const;
 
                     /**
-                     * 获取Name of the handler, which is in the “file name.handler name” form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
-                     * @return Handler Name of the handler, which is in the “file name.handler name” form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
+                     * 获取Function handler name. It supports the format of "file name.handler name" where the file name and handler name are separated with a "." (for Java, it is in the format of "package name.class name::handler name"). File and handler names can contain 2–60 letters, digits, underscores, and dashes and must start and end with letters
+                     * @return Handler Function handler name. It supports the format of "file name.handler name" where the file name and handler name are separated with a "." (for Java, it is in the format of "package name.class name::handler name"). File and handler names can contain 2–60 letters, digits, underscores, and dashes and must start and end with letters
                      */
                     std::string GetHandler() const;
 
                     /**
-                     * 设置Name of the handler, which is in the “file name.handler name” form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
-                     * @param Handler Name of the handler, which is in the “file name.handler name” form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
+                     * 设置Function handler name. It supports the format of "file name.handler name" where the file name and handler name are separated with a "." (for Java, it is in the format of "package name.class name::handler name"). File and handler names can contain 2–60 letters, digits, underscores, and dashes and must start and end with letters
+                     * @param Handler Function handler name. It supports the format of "file name.handler name" where the file name and handler name are separated with a "." (for Java, it is in the format of "package name.class name::handler name"). File and handler names can contain 2–60 letters, digits, underscores, and dashes and must start and end with letters
                      */
                     void SetHandler(const std::string& _handler);
 
@@ -121,14 +124,14 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB
-                     * @return MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB
+                     * 获取Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3072 MB in increments of 128 MB
+                     * @return MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3072 MB in increments of 128 MB
                      */
                     int64_t GetMemorySize() const;
 
                     /**
-                     * 设置Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB
-                     * @param MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB
+                     * 设置Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3072 MB in increments of 128 MB
+                     * @param MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3072 MB in increments of 128 MB
                      */
                     void SetMemorySize(const int64_t& _memorySize);
 
@@ -139,14 +142,14 @@ namespace TencentCloud
                     bool MemorySizeHasBeenSet() const;
 
                     /**
-                     * 获取Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
-                     * @return Timeout Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
+                     * 获取Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
+                     * @return Timeout Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
                      */
                     int64_t GetTimeout() const;
 
                     /**
-                     * 设置Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
-                     * @param Timeout Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
+                     * 设置Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
+                     * @param Timeout Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
                      */
                     void SetTimeout(const int64_t& _timeout);
 
@@ -175,14 +178,14 @@ namespace TencentCloud
                     bool EnvironmentHasBeenSet() const;
 
                     /**
-                     * 获取Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8. Default value: Python2.7
-                     * @return Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8. Default value: Python2.7
+                     * 获取Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, Php5, Php7, Go1, Java8, CustomRuntime. Default value: Python2.7
+                     * @return Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, Php5, Php7, Go1, Java8, CustomRuntime. Default value: Python2.7
                      */
                     std::string GetRuntime() const;
 
                     /**
-                     * 设置Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8. Default value: Python2.7
-                     * @param Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8. Default value: Python2.7
+                     * 设置Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, Php5, Php7, Go1, Java8, CustomRuntime. Default value: Python2.7
+                     * @param Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, Php5, Php7, Go1, Java8, CustomRuntime. Default value: Python2.7
                      */
                     void SetRuntime(const std::string& _runtime);
 
@@ -247,6 +250,24 @@ namespace TencentCloud
                     bool RoleHasBeenSet() const;
 
                     /**
+                     * 获取Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+                     * @return InstallDependency Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+                     */
+                    std::string GetInstallDependency() const;
+
+                    /**
+                     * 设置Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+                     * @param InstallDependency Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+                     */
+                    void SetInstallDependency(const std::string& _installDependency);
+
+                    /**
+                     * 判断参数 InstallDependency 是否已赋值
+                     * @return InstallDependency 是否已赋值
+                     */
+                    bool InstallDependencyHasBeenSet() const;
+
+                    /**
                      * 获取CLS Logset ID to which the function logs are shipped
                      * @return ClsLogsetId CLS Logset ID to which the function logs are shipped
                      */
@@ -301,14 +322,14 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Code source, including ZipFile, Cos, Demo, TempCos, and Git. This field is required if the source is Git.
-                     * @return CodeSource Code source, including ZipFile, Cos, Demo, TempCos, and Git. This field is required if the source is Git.
+                     * 获取Code source. Valid values: ZipFile, Cos, Demo
+                     * @return CodeSource Code source. Valid values: ZipFile, Cos, Demo
                      */
                     std::string GetCodeSource() const;
 
                     /**
-                     * 设置Code source, including ZipFile, Cos, Demo, TempCos, and Git. This field is required if the source is Git.
-                     * @param CodeSource Code source, including ZipFile, Cos, Demo, TempCos, and Git. This field is required if the source is Git.
+                     * 设置Code source. Valid values: ZipFile, Cos, Demo
+                     * @param CodeSource Code source. Valid values: ZipFile, Cos, Demo
                      */
                     void SetCodeSource(const std::string& _codeSource);
 
@@ -372,6 +393,132 @@ namespace TencentCloud
                      */
                     bool PublicNetConfigHasBeenSet() const;
 
+                    /**
+                     * 获取File system configuration parameter, which is used for the function to mount the file system
+                     * @return CfsConfig File system configuration parameter, which is used for the function to mount the file system
+                     */
+                    CfsConfig GetCfsConfig() const;
+
+                    /**
+                     * 设置File system configuration parameter, which is used for the function to mount the file system
+                     * @param CfsConfig File system configuration parameter, which is used for the function to mount the file system
+                     */
+                    void SetCfsConfig(const CfsConfig& _cfsConfig);
+
+                    /**
+                     * 判断参数 CfsConfig 是否已赋值
+                     * @return CfsConfig 是否已赋值
+                     */
+                    bool CfsConfigHasBeenSet() const;
+
+                    /**
+                     * 获取The function initialization timeout period. It defaults to 65s for general cases and 90s for image deployment functions.
+                     * @return InitTimeout The function initialization timeout period. It defaults to 65s for general cases and 90s for image deployment functions.
+                     */
+                    int64_t GetInitTimeout() const;
+
+                    /**
+                     * 设置The function initialization timeout period. It defaults to 65s for general cases and 90s for image deployment functions.
+                     * @param InitTimeout The function initialization timeout period. It defaults to 65s for general cases and 90s for image deployment functions.
+                     */
+                    void SetInitTimeout(const int64_t& _initTimeout);
+
+                    /**
+                     * 判断参数 InitTimeout 是否已赋值
+                     * @return InitTimeout 是否已赋值
+                     */
+                    bool InitTimeoutHasBeenSet() const;
+
+                    /**
+                     * 获取Tag parameter of the function. It is an array of key-value pairs.
+                     * @return Tags Tag parameter of the function. It is an array of key-value pairs.
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Tag parameter of the function. It is an array of key-value pairs.
+                     * @param Tags Tag parameter of the function. It is an array of key-value pairs.
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable the async attribute. TRUE: yes; FALSE: no
+                     * @return AsyncRunEnable Whether to enable the async attribute. TRUE: yes; FALSE: no
+                     */
+                    std::string GetAsyncRunEnable() const;
+
+                    /**
+                     * 设置Whether to enable the async attribute. TRUE: yes; FALSE: no
+                     * @param AsyncRunEnable Whether to enable the async attribute. TRUE: yes; FALSE: no
+                     */
+                    void SetAsyncRunEnable(const std::string& _asyncRunEnable);
+
+                    /**
+                     * 判断参数 AsyncRunEnable 是否已赋值
+                     * @return AsyncRunEnable 是否已赋值
+                     */
+                    bool AsyncRunEnableHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable event tracking. TRUE: yes; FALSE: no
+                     * @return TraceEnable Whether to enable event tracking. TRUE: yes; FALSE: no
+                     */
+                    std::string GetTraceEnable() const;
+
+                    /**
+                     * 设置Whether to enable event tracking. TRUE: yes; FALSE: no
+                     * @param TraceEnable Whether to enable event tracking. TRUE: yes; FALSE: no
+                     */
+                    void SetTraceEnable(const std::string& _traceEnable);
+
+                    /**
+                     * 判断参数 TraceEnable 是否已赋值
+                     * @return TraceEnable 是否已赋值
+                     */
+                    bool TraceEnableHasBeenSet() const;
+
+                    /**
+                     * 获取Protocols supported by HTTP-triggered functions. Valid value: `WS` (WebSockets)
+                     * @return ProtocolType Protocols supported by HTTP-triggered functions. Valid value: `WS` (WebSockets)
+                     */
+                    std::string GetProtocolType() const;
+
+                    /**
+                     * 设置Protocols supported by HTTP-triggered functions. Valid value: `WS` (WebSockets)
+                     * @param ProtocolType Protocols supported by HTTP-triggered functions. Valid value: `WS` (WebSockets)
+                     */
+                    void SetProtocolType(const std::string& _protocolType);
+
+                    /**
+                     * 判断参数 ProtocolType 是否已赋值
+                     * @return ProtocolType 是否已赋值
+                     */
+                    bool ProtocolTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Parameters of the specified protocol
+                     * @return ProtocolParams Parameters of the specified protocol
+                     */
+                    ProtocolParams GetProtocolParams() const;
+
+                    /**
+                     * 设置Parameters of the specified protocol
+                     * @param ProtocolParams Parameters of the specified protocol
+                     */
+                    void SetProtocolParams(const ProtocolParams& _protocolParams);
+
+                    /**
+                     * 判断参数 ProtocolParams 是否已赋值
+                     * @return ProtocolParams 是否已赋值
+                     */
+                    bool ProtocolParamsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -381,13 +528,13 @@ namespace TencentCloud
                     bool m_functionNameHasBeenSet;
 
                     /**
-                     * Function code. Note: You cannot specify `Cos` and `ZipFile` at the same time.
+                     * Function code. Note: `COS`, `ZipFile`, and `DemoId` cannot be specified at the same time.
                      */
                     Code m_code;
                     bool m_codeHasBeenSet;
 
                     /**
-                     * Name of the handler, which is in the “file name.handler name” form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
+                     * Function handler name. It supports the format of "file name.handler name" where the file name and handler name are separated with a "." (for Java, it is in the format of "package name.class name::handler name"). File and handler names can contain 2–60 letters, digits, underscores, and dashes and must start and end with letters
                      */
                     std::string m_handler;
                     bool m_handlerHasBeenSet;
@@ -399,13 +546,13 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB
+                     * Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3072 MB in increments of 128 MB
                      */
                     int64_t m_memorySize;
                     bool m_memorySizeHasBeenSet;
 
                     /**
-                     * Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
+                     * Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
                      */
                     int64_t m_timeout;
                     bool m_timeoutHasBeenSet;
@@ -417,7 +564,7 @@ namespace TencentCloud
                     bool m_environmentHasBeenSet;
 
                     /**
-                     * Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8. Default value: Python2.7
+                     * Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, Php5, Php7, Go1, Java8, CustomRuntime. Default value: Python2.7
                      */
                     std::string m_runtime;
                     bool m_runtimeHasBeenSet;
@@ -441,6 +588,12 @@ namespace TencentCloud
                     bool m_roleHasBeenSet;
 
                     /**
+                     * Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+                     */
+                    std::string m_installDependency;
+                    bool m_installDependencyHasBeenSet;
+
+                    /**
                      * CLS Logset ID to which the function logs are shipped
                      */
                     std::string m_clsLogsetId;
@@ -459,7 +612,7 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Code source, including ZipFile, Cos, Demo, TempCos, and Git. This field is required if the source is Git.
+                     * Code source. Valid values: ZipFile, Cos, Demo
                      */
                     std::string m_codeSource;
                     bool m_codeSourceHasBeenSet;
@@ -481,6 +634,48 @@ namespace TencentCloud
                      */
                     PublicNetConfigIn m_publicNetConfig;
                     bool m_publicNetConfigHasBeenSet;
+
+                    /**
+                     * File system configuration parameter, which is used for the function to mount the file system
+                     */
+                    CfsConfig m_cfsConfig;
+                    bool m_cfsConfigHasBeenSet;
+
+                    /**
+                     * The function initialization timeout period. It defaults to 65s for general cases and 90s for image deployment functions.
+                     */
+                    int64_t m_initTimeout;
+                    bool m_initTimeoutHasBeenSet;
+
+                    /**
+                     * Tag parameter of the function. It is an array of key-value pairs.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * Whether to enable the async attribute. TRUE: yes; FALSE: no
+                     */
+                    std::string m_asyncRunEnable;
+                    bool m_asyncRunEnableHasBeenSet;
+
+                    /**
+                     * Whether to enable event tracking. TRUE: yes; FALSE: no
+                     */
+                    std::string m_traceEnable;
+                    bool m_traceEnableHasBeenSet;
+
+                    /**
+                     * Protocols supported by HTTP-triggered functions. Valid value: `WS` (WebSockets)
+                     */
+                    std::string m_protocolType;
+                    bool m_protocolTypeHasBeenSet;
+
+                    /**
+                     * Parameters of the specified protocol
+                     */
+                    ProtocolParams m_protocolParams;
+                    bool m_protocolParamsHasBeenSet;
 
                 };
             }

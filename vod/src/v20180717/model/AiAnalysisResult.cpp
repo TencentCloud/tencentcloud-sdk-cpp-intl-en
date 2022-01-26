@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 AiAnalysisResult::AiAnalysisResult() :
@@ -31,7 +30,7 @@ AiAnalysisResult::AiAnalysisResult() :
 {
 }
 
-CoreInternalOutcome AiAnalysisResult::Deserialize(const Value &value)
+CoreInternalOutcome AiAnalysisResult::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome AiAnalysisResult::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AiAnalysisResult.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiAnalysisResult.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -50,7 +49,7 @@ CoreInternalOutcome AiAnalysisResult::Deserialize(const Value &value)
     {
         if (!value["ClassificationTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AiAnalysisResult.ClassificationTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiAnalysisResult.ClassificationTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_classificationTask.Deserialize(value["ClassificationTask"]);
@@ -67,7 +66,7 @@ CoreInternalOutcome AiAnalysisResult::Deserialize(const Value &value)
     {
         if (!value["CoverTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AiAnalysisResult.CoverTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiAnalysisResult.CoverTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_coverTask.Deserialize(value["CoverTask"]);
@@ -84,7 +83,7 @@ CoreInternalOutcome AiAnalysisResult::Deserialize(const Value &value)
     {
         if (!value["TagTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AiAnalysisResult.TagTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiAnalysisResult.TagTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_tagTask.Deserialize(value["TagTask"]);
@@ -101,7 +100,7 @@ CoreInternalOutcome AiAnalysisResult::Deserialize(const Value &value)
     {
         if (!value["FrameTagTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AiAnalysisResult.FrameTagTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiAnalysisResult.FrameTagTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_frameTagTask.Deserialize(value["FrameTagTask"]);
@@ -118,7 +117,7 @@ CoreInternalOutcome AiAnalysisResult::Deserialize(const Value &value)
     {
         if (!value["HighlightTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AiAnalysisResult.HighlightTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiAnalysisResult.HighlightTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_highlightTask.Deserialize(value["HighlightTask"]);
@@ -135,59 +134,59 @@ CoreInternalOutcome AiAnalysisResult::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void AiAnalysisResult::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AiAnalysisResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_classificationTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClassificationTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_classificationTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_coverTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CoverTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_coverTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_tagTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TagTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_tagTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_frameTagTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FrameTagTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_frameTagTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_highlightTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HighlightTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_highlightTask.ToJsonObject(value[key.c_str()], allocator);
     }
 

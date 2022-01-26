@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mdl::V20200326::Model;
-using namespace rapidjson;
 using namespace std;
 
 AudioTemplateInfo::AudioTemplateInfo() :
@@ -30,7 +29,7 @@ AudioTemplateInfo::AudioTemplateInfo() :
 {
 }
 
-CoreInternalOutcome AudioTemplateInfo::Deserialize(const Value &value)
+CoreInternalOutcome AudioTemplateInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome AudioTemplateInfo::Deserialize(const Value &value)
     {
         if (!value["AudioSelectorName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AudioTemplateInfo.AudioSelectorName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AudioTemplateInfo.AudioSelectorName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_audioSelectorName = string(value["AudioSelectorName"].GetString());
         m_audioSelectorNameHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome AudioTemplateInfo::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AudioTemplateInfo.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AudioTemplateInfo.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome AudioTemplateInfo::Deserialize(const Value &value)
     {
         if (!value["Acodec"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AudioTemplateInfo.Acodec` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AudioTemplateInfo.Acodec` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_acodec = string(value["Acodec"].GetString());
         m_acodecHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome AudioTemplateInfo::Deserialize(const Value &value)
     {
         if (!value["AudioBitrate"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AudioTemplateInfo.AudioBitrate` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AudioTemplateInfo.AudioBitrate` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_audioBitrate = value["AudioBitrate"].GetUint64();
         m_audioBitrateHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome AudioTemplateInfo::Deserialize(const Value &value)
     {
         if (!value["LanguageCode"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AudioTemplateInfo.LanguageCode` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AudioTemplateInfo.LanguageCode` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_languageCode = string(value["LanguageCode"].GetString());
         m_languageCodeHasBeenSet = true;
@@ -89,36 +88,36 @@ CoreInternalOutcome AudioTemplateInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void AudioTemplateInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AudioTemplateInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_audioSelectorNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AudioSelectorName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_audioSelectorName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_audioSelectorName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_acodecHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Acodec";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_acodec.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_acodec.c_str(), allocator).Move(), allocator);
     }
 
     if (m_audioBitrateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AudioBitrate";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_audioBitrate, allocator);
@@ -126,10 +125,10 @@ void AudioTemplateInfo::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_languageCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LanguageCode";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_languageCode.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_languageCode.c_str(), allocator).Move(), allocator);
     }
 
 }

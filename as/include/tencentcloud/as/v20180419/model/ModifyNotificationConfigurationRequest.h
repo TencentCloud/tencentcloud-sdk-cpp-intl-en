@@ -103,14 +103,14 @@ namespace TencentCloud
                     bool NotificationTypesHasBeenSet() const;
 
                     /**
-                     * 获取Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://cloud.tencent.com/document/product/598/34589) API.
-                     * @return NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://cloud.tencent.com/document/product/598/34589) API.
+                     * 获取Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
+                     * @return NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
                      */
                     std::vector<std::string> GetNotificationUserGroupIds() const;
 
                     /**
-                     * 设置Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://cloud.tencent.com/document/product/598/34589) API.
-                     * @param NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://cloud.tencent.com/document/product/598/34589) API.
+                     * 设置Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
+                     * @param NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
                      */
                     void SetNotificationUserGroupIds(const std::vector<std::string>& _notificationUserGroupIds);
 
@@ -119,6 +119,42 @@ namespace TencentCloud
                      * @return NotificationUserGroupIds 是否已赋值
                      */
                     bool NotificationUserGroupIdsHasBeenSet() const;
+
+                    /**
+                     * 获取CMQ or TDMQ CMQ queue name.
+                     * @return QueueName CMQ or TDMQ CMQ queue name.
+                     */
+                    std::string GetQueueName() const;
+
+                    /**
+                     * 设置CMQ or TDMQ CMQ queue name.
+                     * @param QueueName CMQ or TDMQ CMQ queue name.
+                     */
+                    void SetQueueName(const std::string& _queueName);
+
+                    /**
+                     * 判断参数 QueueName 是否已赋值
+                     * @return QueueName 是否已赋值
+                     */
+                    bool QueueNameHasBeenSet() const;
+
+                    /**
+                     * 获取CMQ or TDMQ CMQ toipc name.
+                     * @return TopicName CMQ or TDMQ CMQ toipc name.
+                     */
+                    std::string GetTopicName() const;
+
+                    /**
+                     * 设置CMQ or TDMQ CMQ toipc name.
+                     * @param TopicName CMQ or TDMQ CMQ toipc name.
+                     */
+                    void SetTopicName(const std::string& _topicName);
+
+                    /**
+                     * 判断参数 TopicName 是否已赋值
+                     * @return TopicName 是否已赋值
+                     */
+                    bool TopicNameHasBeenSet() const;
 
                 private:
 
@@ -141,10 +177,22 @@ namespace TencentCloud
                     bool m_notificationTypesHasBeenSet;
 
                     /**
-                     * Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://cloud.tencent.com/document/product/598/34589) API.
+                     * Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
                      */
                     std::vector<std::string> m_notificationUserGroupIds;
                     bool m_notificationUserGroupIdsHasBeenSet;
+
+                    /**
+                     * CMQ or TDMQ CMQ queue name.
+                     */
+                    std::string m_queueName;
+                    bool m_queueNameHasBeenSet;
+
+                    /**
+                     * CMQ or TDMQ CMQ toipc name.
+                     */
+                    std::string m_topicName;
+                    bool m_topicNameHasBeenSet;
 
                 };
             }

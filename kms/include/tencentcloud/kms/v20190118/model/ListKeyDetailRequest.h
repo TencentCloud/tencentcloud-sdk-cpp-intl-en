@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/kms/v20190118/model/TagFilter.h>
 
 
 namespace TencentCloud
@@ -43,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Offset 
+                     * 获取This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0.
+                     * @return Offset This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0.
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置
-                     * @param Offset 
+                     * 设置This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0.
+                     * @param Offset This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0.
                      */
                     void SetOffset(const uint64_t& _offset);
 
@@ -79,14 +80,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Role 
+                     * 获取Filters by creator role. 0 (default value): the CMK is created by the user; 1: the CMK is created automatically by an authorized Tencent Cloud service.
+                     * @return Role Filters by creator role. 0 (default value): the CMK is created by the user; 1: the CMK is created automatically by an authorized Tencent Cloud service.
                      */
                     uint64_t GetRole() const;
 
                     /**
-                     * 设置
-                     * @param Role 
+                     * 设置Filters by creator role. 0 (default value): the CMK is created by the user; 1: the CMK is created automatically by an authorized Tencent Cloud service.
+                     * @param Role Filters by creator role. 0 (default value): the CMK is created by the user; 1: the CMK is created automatically by an authorized Tencent Cloud service.
                      */
                     void SetRole(const uint64_t& _role);
 
@@ -97,14 +98,14 @@ namespace TencentCloud
                     bool RoleHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OrderType 
+                     * 获取Sorts by CMK creation time. 0: descending; 1: ascending
+                     * @return OrderType Sorts by CMK creation time. 0: descending; 1: ascending
                      */
                     uint64_t GetOrderType() const;
 
                     /**
-                     * 设置
-                     * @param OrderType 
+                     * 设置Sorts by CMK creation time. 0: descending; 1: ascending
+                     * @param OrderType Sorts by CMK creation time. 0: descending; 1: ascending
                      */
                     void SetOrderType(const uint64_t& _orderType);
 
@@ -115,14 +116,14 @@ namespace TencentCloud
                     bool OrderTypeHasBeenSet() const;
 
                     /**
-                     * 获取Filters by CMK status. 0: all CMKs; 1: CMKs in `Enabled` status only; 2: CMKs in `Disabled` status only; 3: CMKs in `PendingDelete` status only (i.e., keys with schedule deletion enabled); 4: CMKs in `PendingImport` status only.
-                     * @return KeyState Filters by CMK status. 0: all CMKs; 1: CMKs in `Enabled` status only; 2: CMKs in `Disabled` status only; 3: CMKs in `PendingDelete` status only (i.e., keys with schedule deletion enabled); 4: CMKs in `PendingImport` status only.
+                     * 获取Filters by CMK status. 0: all CMKs; 1: CMKs in `Enabled` status only; 2: CMKs in `Disabled` status only; 3: CMKs in `PendingDelete` status only (i.e., keys with schedule deletion enabled); 4: CMKs in `PendingImport` status only; 5: CMKs in `Archived` status only.
+                     * @return KeyState Filters by CMK status. 0: all CMKs; 1: CMKs in `Enabled` status only; 2: CMKs in `Disabled` status only; 3: CMKs in `PendingDelete` status only (i.e., keys with schedule deletion enabled); 4: CMKs in `PendingImport` status only; 5: CMKs in `Archived` status only.
                      */
                     uint64_t GetKeyState() const;
 
                     /**
-                     * 设置Filters by CMK status. 0: all CMKs; 1: CMKs in `Enabled` status only; 2: CMKs in `Disabled` status only; 3: CMKs in `PendingDelete` status only (i.e., keys with schedule deletion enabled); 4: CMKs in `PendingImport` status only.
-                     * @param KeyState Filters by CMK status. 0: all CMKs; 1: CMKs in `Enabled` status only; 2: CMKs in `Disabled` status only; 3: CMKs in `PendingDelete` status only (i.e., keys with schedule deletion enabled); 4: CMKs in `PendingImport` status only.
+                     * 设置Filters by CMK status. 0: all CMKs; 1: CMKs in `Enabled` status only; 2: CMKs in `Disabled` status only; 3: CMKs in `PendingDelete` status only (i.e., keys with schedule deletion enabled); 4: CMKs in `PendingImport` status only; 5: CMKs in `Archived` status only.
+                     * @param KeyState Filters by CMK status. 0: all CMKs; 1: CMKs in `Enabled` status only; 2: CMKs in `Disabled` status only; 3: CMKs in `PendingDelete` status only (i.e., keys with schedule deletion enabled); 4: CMKs in `PendingImport` status only; 5: CMKs in `Archived` status only.
                      */
                     void SetKeyState(const uint64_t& _keyState);
 
@@ -133,14 +134,14 @@ namespace TencentCloud
                     bool KeyStateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SearchKeyAlias 
+                     * 获取Performs a fuzzy query by `KeyId` or `Alias`
+                     * @return SearchKeyAlias Performs a fuzzy query by `KeyId` or `Alias`
                      */
                     std::string GetSearchKeyAlias() const;
 
                     /**
-                     * 设置
-                     * @param SearchKeyAlias 
+                     * 设置Performs a fuzzy query by `KeyId` or `Alias`
+                     * @param SearchKeyAlias Performs a fuzzy query by `KeyId` or `Alias`
                      */
                     void SetSearchKeyAlias(const std::string& _searchKeyAlias);
 
@@ -169,14 +170,14 @@ namespace TencentCloud
                     bool OriginHasBeenSet() const;
 
                     /**
-                     * 获取Filter by `KeyUsage` of CMKs. Valid values: `ALL` (filter all CMKs), `ENCRYPT_DECRYPT` (it will be used when the parameter is left empty), `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`.
-                     * @return KeyUsage Filter by `KeyUsage` of CMKs. Valid values: `ALL` (filter all CMKs), `ENCRYPT_DECRYPT` (it will be used when the parameter is left empty), `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`.
+                     * 获取Filters by the `KeyUsage` field value. Valid values: `ALL` (all CMKs), `ENCRYPT_DECRYPT` (used when this field is left empty), `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
+                     * @return KeyUsage Filters by the `KeyUsage` field value. Valid values: `ALL` (all CMKs), `ENCRYPT_DECRYPT` (used when this field is left empty), `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
                      */
                     std::string GetKeyUsage() const;
 
                     /**
-                     * 设置Filter by `KeyUsage` of CMKs. Valid values: `ALL` (filter all CMKs), `ENCRYPT_DECRYPT` (it will be used when the parameter is left empty), `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`.
-                     * @param KeyUsage Filter by `KeyUsage` of CMKs. Valid values: `ALL` (filter all CMKs), `ENCRYPT_DECRYPT` (it will be used when the parameter is left empty), `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`.
+                     * 设置Filters by the `KeyUsage` field value. Valid values: `ALL` (all CMKs), `ENCRYPT_DECRYPT` (used when this field is left empty), `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
+                     * @param KeyUsage Filters by the `KeyUsage` field value. Valid values: `ALL` (all CMKs), `ENCRYPT_DECRYPT` (used when this field is left empty), `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
                      */
                     void SetKeyUsage(const std::string& _keyUsage);
 
@@ -186,10 +187,28 @@ namespace TencentCloud
                      */
                     bool KeyUsageHasBeenSet() const;
 
+                    /**
+                     * 获取Tag filter condition
+                     * @return TagFilters Tag filter condition
+                     */
+                    std::vector<TagFilter> GetTagFilters() const;
+
+                    /**
+                     * 设置Tag filter condition
+                     * @param TagFilters Tag filter condition
+                     */
+                    void SetTagFilters(const std::vector<TagFilter>& _tagFilters);
+
+                    /**
+                     * 判断参数 TagFilters 是否已赋值
+                     * @return TagFilters 是否已赋值
+                     */
+                    bool TagFiltersHasBeenSet() const;
+
                 private:
 
                     /**
-                     * 
+                     * This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
@@ -201,25 +220,25 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * 
+                     * Filters by creator role. 0 (default value): the CMK is created by the user; 1: the CMK is created automatically by an authorized Tencent Cloud service.
                      */
                     uint64_t m_role;
                     bool m_roleHasBeenSet;
 
                     /**
-                     * 
+                     * Sorts by CMK creation time. 0: descending; 1: ascending
                      */
                     uint64_t m_orderType;
                     bool m_orderTypeHasBeenSet;
 
                     /**
-                     * Filters by CMK status. 0: all CMKs; 1: CMKs in `Enabled` status only; 2: CMKs in `Disabled` status only; 3: CMKs in `PendingDelete` status only (i.e., keys with schedule deletion enabled); 4: CMKs in `PendingImport` status only.
+                     * Filters by CMK status. 0: all CMKs; 1: CMKs in `Enabled` status only; 2: CMKs in `Disabled` status only; 3: CMKs in `PendingDelete` status only (i.e., keys with schedule deletion enabled); 4: CMKs in `PendingImport` status only; 5: CMKs in `Archived` status only.
                      */
                     uint64_t m_keyState;
                     bool m_keyStateHasBeenSet;
 
                     /**
-                     * 
+                     * Performs a fuzzy query by `KeyId` or `Alias`
                      */
                     std::string m_searchKeyAlias;
                     bool m_searchKeyAliasHasBeenSet;
@@ -231,10 +250,16 @@ namespace TencentCloud
                     bool m_originHasBeenSet;
 
                     /**
-                     * Filter by `KeyUsage` of CMKs. Valid values: `ALL` (filter all CMKs), `ENCRYPT_DECRYPT` (it will be used when the parameter is left empty), `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`.
+                     * Filters by the `KeyUsage` field value. Valid values: `ALL` (all CMKs), `ENCRYPT_DECRYPT` (used when this field is left empty), `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
                      */
                     std::string m_keyUsage;
                     bool m_keyUsageHasBeenSet;
+
+                    /**
+                     * Tag filter condition
+                     */
+                    std::vector<TagFilter> m_tagFilters;
+                    bool m_tagFiltersHasBeenSet;
 
                 };
             }

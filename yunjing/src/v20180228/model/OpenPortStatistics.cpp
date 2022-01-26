@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Yunjing::V20180228::Model;
-using namespace rapidjson;
 using namespace std;
 
 OpenPortStatistics::OpenPortStatistics() :
@@ -27,7 +26,7 @@ OpenPortStatistics::OpenPortStatistics() :
 {
 }
 
-CoreInternalOutcome OpenPortStatistics::Deserialize(const Value &value)
+CoreInternalOutcome OpenPortStatistics::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome OpenPortStatistics::Deserialize(const Value &value)
     {
         if (!value["Port"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `OpenPortStatistics.Port` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OpenPortStatistics.Port` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_port = value["Port"].GetUint64();
         m_portHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome OpenPortStatistics::Deserialize(const Value &value)
     {
         if (!value["MachineNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `OpenPortStatistics.MachineNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OpenPortStatistics.MachineNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_machineNum = value["MachineNum"].GetUint64();
         m_machineNumHasBeenSet = true;
@@ -56,12 +55,12 @@ CoreInternalOutcome OpenPortStatistics::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void OpenPortStatistics::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void OpenPortStatistics::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_portHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Port";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_port, allocator);
@@ -69,7 +68,7 @@ void OpenPortStatistics::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_machineNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MachineNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_machineNum, allocator);

@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/ckafka/v20190819/model/Tag.h>
 
 
 namespace TencentCloud
@@ -61,14 +62,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Topic name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
-                     * @return TopicName Topic name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+                     * 获取Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * @return TopicName Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置Topic name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
-                     * @param TopicName Topic name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+                     * 设置Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * @param TopicName Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
                      */
                     void SetTopicName(const std::string& _topicName);
 
@@ -115,14 +116,14 @@ namespace TencentCloud
                     bool ReplicaNumHasBeenSet() const;
 
                     /**
-                     * 获取IP whitelist switch. 1: enabled, 0: disabled. Default value: 0
-                     * @return EnableWhiteList IP whitelist switch. 1: enabled, 0: disabled. Default value: 0
+                     * 获取IP allowlist switch. 1: enabled, 0: disabled. Default value: 0
+                     * @return EnableWhiteList IP allowlist switch. 1: enabled, 0: disabled. Default value: 0
                      */
                     int64_t GetEnableWhiteList() const;
 
                     /**
-                     * 设置IP whitelist switch. 1: enabled, 0: disabled. Default value: 0
-                     * @param EnableWhiteList IP whitelist switch. 1: enabled, 0: disabled. Default value: 0
+                     * 设置IP allowlist switch. 1: enabled, 0: disabled. Default value: 0
+                     * @param EnableWhiteList IP allowlist switch. 1: enabled, 0: disabled. Default value: 0
                      */
                     void SetEnableWhiteList(const int64_t& _enableWhiteList);
 
@@ -133,14 +134,14 @@ namespace TencentCloud
                     bool EnableWhiteListHasBeenSet() const;
 
                     /**
-                     * 获取IP whitelist list for quota limit, which is required if `enableWhileList` is 1
-                     * @return IpWhiteList IP whitelist list for quota limit, which is required if `enableWhileList` is 1
+                     * 获取IP allowlist list for quota limit, which is required if `enableWhileList` is 1
+                     * @return IpWhiteList IP allowlist list for quota limit, which is required if `enableWhileList` is 1
                      */
                     std::vector<std::string> GetIpWhiteList() const;
 
                     /**
-                     * 设置IP whitelist list for quota limit, which is required if `enableWhileList` is 1
-                     * @param IpWhiteList IP whitelist list for quota limit, which is required if `enableWhileList` is 1
+                     * 设置IP allowlist list for quota limit, which is required if `enableWhileList` is 1
+                     * @param IpWhiteList IP allowlist list for quota limit, which is required if `enableWhileList` is 1
                      */
                     void SetIpWhiteList(const std::vector<std::string>& _ipWhiteList);
 
@@ -258,6 +259,78 @@ namespace TencentCloud
                      */
                     bool SegmentMsHasBeenSet() const;
 
+                    /**
+                     * 获取Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+                     * @return EnableAclRule Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+                     */
+                    int64_t GetEnableAclRule() const;
+
+                    /**
+                     * 设置Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+                     * @param EnableAclRule Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+                     */
+                    void SetEnableAclRule(const int64_t& _enableAclRule);
+
+                    /**
+                     * 判断参数 EnableAclRule 是否已赋值
+                     * @return EnableAclRule 是否已赋值
+                     */
+                    bool EnableAclRuleHasBeenSet() const;
+
+                    /**
+                     * 获取Name of the preset ACL rule.
+                     * @return AclRuleName Name of the preset ACL rule.
+                     */
+                    std::string GetAclRuleName() const;
+
+                    /**
+                     * 设置Name of the preset ACL rule.
+                     * @param AclRuleName Name of the preset ACL rule.
+                     */
+                    void SetAclRuleName(const std::string& _aclRuleName);
+
+                    /**
+                     * 判断参数 AclRuleName 是否已赋值
+                     * @return AclRuleName 是否已赋值
+                     */
+                    bool AclRuleNameHasBeenSet() const;
+
+                    /**
+                     * 获取Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+                     * @return RetentionBytes Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+                     */
+                    int64_t GetRetentionBytes() const;
+
+                    /**
+                     * 设置Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+                     * @param RetentionBytes Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+                     */
+                    void SetRetentionBytes(const int64_t& _retentionBytes);
+
+                    /**
+                     * 判断参数 RetentionBytes 是否已赋值
+                     * @return RetentionBytes 是否已赋值
+                     */
+                    bool RetentionBytesHasBeenSet() const;
+
+                    /**
+                     * 获取Tag list.
+                     * @return Tags Tag list.
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Tag list.
+                     * @param Tags Tag list.
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -267,7 +340,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Topic name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+                     * Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
@@ -285,13 +358,13 @@ namespace TencentCloud
                     bool m_replicaNumHasBeenSet;
 
                     /**
-                     * IP whitelist switch. 1: enabled, 0: disabled. Default value: 0
+                     * IP allowlist switch. 1: enabled, 0: disabled. Default value: 0
                      */
                     int64_t m_enableWhiteList;
                     bool m_enableWhiteListHasBeenSet;
 
                     /**
-                     * IP whitelist list for quota limit, which is required if `enableWhileList` is 1
+                     * IP allowlist list for quota limit, which is required if `enableWhileList` is 1
                      */
                     std::vector<std::string> m_ipWhiteList;
                     bool m_ipWhiteListHasBeenSet;
@@ -331,6 +404,30 @@ namespace TencentCloud
                      */
                     int64_t m_segmentMs;
                     bool m_segmentMsHasBeenSet;
+
+                    /**
+                     * Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+                     */
+                    int64_t m_enableAclRule;
+                    bool m_enableAclRuleHasBeenSet;
+
+                    /**
+                     * Name of the preset ACL rule.
+                     */
+                    std::string m_aclRuleName;
+                    bool m_aclRuleNameHasBeenSet;
+
+                    /**
+                     * Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+                     */
+                    int64_t m_retentionBytes;
+                    bool m_retentionBytesHasBeenSet;
+
+                    /**
+                     * Tag list.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

@@ -25,6 +25,10 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/as/v20180419/model/AttachInstancesRequest.h>
 #include <tencentcloud/as/v20180419/model/AttachInstancesResponse.h>
+#include <tencentcloud/as/v20180419/model/AttachLoadBalancersRequest.h>
+#include <tencentcloud/as/v20180419/model/AttachLoadBalancersResponse.h>
+#include <tencentcloud/as/v20180419/model/ClearLaunchConfigurationAttributesRequest.h>
+#include <tencentcloud/as/v20180419/model/ClearLaunchConfigurationAttributesResponse.h>
 #include <tencentcloud/as/v20180419/model/CompleteLifecycleActionRequest.h>
 #include <tencentcloud/as/v20180419/model/CompleteLifecycleActionResponse.h>
 #include <tencentcloud/as/v20180419/model/CreateAutoScalingGroupRequest.h>
@@ -37,8 +41,6 @@
 #include <tencentcloud/as/v20180419/model/CreateLifecycleHookResponse.h>
 #include <tencentcloud/as/v20180419/model/CreateNotificationConfigurationRequest.h>
 #include <tencentcloud/as/v20180419/model/CreateNotificationConfigurationResponse.h>
-#include <tencentcloud/as/v20180419/model/CreatePaiInstanceRequest.h>
-#include <tencentcloud/as/v20180419/model/CreatePaiInstanceResponse.h>
 #include <tencentcloud/as/v20180419/model/CreateScalingPolicyRequest.h>
 #include <tencentcloud/as/v20180419/model/CreateScalingPolicyResponse.h>
 #include <tencentcloud/as/v20180419/model/CreateScheduledActionRequest.h>
@@ -59,6 +61,8 @@
 #include <tencentcloud/as/v20180419/model/DescribeAccountLimitsResponse.h>
 #include <tencentcloud/as/v20180419/model/DescribeAutoScalingActivitiesRequest.h>
 #include <tencentcloud/as/v20180419/model/DescribeAutoScalingActivitiesResponse.h>
+#include <tencentcloud/as/v20180419/model/DescribeAutoScalingAdvicesRequest.h>
+#include <tencentcloud/as/v20180419/model/DescribeAutoScalingAdvicesResponse.h>
 #include <tencentcloud/as/v20180419/model/DescribeAutoScalingGroupLastActivitiesRequest.h>
 #include <tencentcloud/as/v20180419/model/DescribeAutoScalingGroupLastActivitiesResponse.h>
 #include <tencentcloud/as/v20180419/model/DescribeAutoScalingGroupsRequest.h>
@@ -71,14 +75,14 @@
 #include <tencentcloud/as/v20180419/model/DescribeLifecycleHooksResponse.h>
 #include <tencentcloud/as/v20180419/model/DescribeNotificationConfigurationsRequest.h>
 #include <tencentcloud/as/v20180419/model/DescribeNotificationConfigurationsResponse.h>
-#include <tencentcloud/as/v20180419/model/DescribePaiInstancesRequest.h>
-#include <tencentcloud/as/v20180419/model/DescribePaiInstancesResponse.h>
 #include <tencentcloud/as/v20180419/model/DescribeScalingPoliciesRequest.h>
 #include <tencentcloud/as/v20180419/model/DescribeScalingPoliciesResponse.h>
 #include <tencentcloud/as/v20180419/model/DescribeScheduledActionsRequest.h>
 #include <tencentcloud/as/v20180419/model/DescribeScheduledActionsResponse.h>
 #include <tencentcloud/as/v20180419/model/DetachInstancesRequest.h>
 #include <tencentcloud/as/v20180419/model/DetachInstancesResponse.h>
+#include <tencentcloud/as/v20180419/model/DetachLoadBalancersRequest.h>
+#include <tencentcloud/as/v20180419/model/DetachLoadBalancersResponse.h>
 #include <tencentcloud/as/v20180419/model/DisableAutoScalingGroupRequest.h>
 #include <tencentcloud/as/v20180419/model/DisableAutoScalingGroupResponse.h>
 #include <tencentcloud/as/v20180419/model/EnableAutoScalingGroupRequest.h>
@@ -91,6 +95,8 @@
 #include <tencentcloud/as/v20180419/model/ModifyDesiredCapacityResponse.h>
 #include <tencentcloud/as/v20180419/model/ModifyLaunchConfigurationAttributesRequest.h>
 #include <tencentcloud/as/v20180419/model/ModifyLaunchConfigurationAttributesResponse.h>
+#include <tencentcloud/as/v20180419/model/ModifyLoadBalancerTargetAttributesRequest.h>
+#include <tencentcloud/as/v20180419/model/ModifyLoadBalancerTargetAttributesResponse.h>
 #include <tencentcloud/as/v20180419/model/ModifyLoadBalancersRequest.h>
 #include <tencentcloud/as/v20180419/model/ModifyLoadBalancersResponse.h>
 #include <tencentcloud/as/v20180419/model/ModifyNotificationConfigurationRequest.h>
@@ -99,10 +105,12 @@
 #include <tencentcloud/as/v20180419/model/ModifyScalingPolicyResponse.h>
 #include <tencentcloud/as/v20180419/model/ModifyScheduledActionRequest.h>
 #include <tencentcloud/as/v20180419/model/ModifyScheduledActionResponse.h>
-#include <tencentcloud/as/v20180419/model/PreviewPaiDomainNameRequest.h>
-#include <tencentcloud/as/v20180419/model/PreviewPaiDomainNameResponse.h>
 #include <tencentcloud/as/v20180419/model/RemoveInstancesRequest.h>
 #include <tencentcloud/as/v20180419/model/RemoveInstancesResponse.h>
+#include <tencentcloud/as/v20180419/model/ScaleInInstancesRequest.h>
+#include <tencentcloud/as/v20180419/model/ScaleInInstancesResponse.h>
+#include <tencentcloud/as/v20180419/model/ScaleOutInstancesRequest.h>
+#include <tencentcloud/as/v20180419/model/ScaleOutInstancesResponse.h>
 #include <tencentcloud/as/v20180419/model/SetInstancesProtectionRequest.h>
 #include <tencentcloud/as/v20180419/model/SetInstancesProtectionResponse.h>
 #include <tencentcloud/as/v20180419/model/StartAutoScalingInstancesRequest.h>
@@ -127,139 +135,151 @@ namespace TencentCloud
                 AsClient(const Credential &credential, const std::string &region);
                 AsClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::AttachInstancesResponse> AttachInstancesOutcome;
+                typedef Outcome<Core::Error, Model::AttachInstancesResponse> AttachInstancesOutcome;
                 typedef std::future<AttachInstancesOutcome> AttachInstancesOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::AttachInstancesRequest&, AttachInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AttachInstancesAsyncHandler;
-                typedef Outcome<Error, Model::CompleteLifecycleActionResponse> CompleteLifecycleActionOutcome;
+                typedef Outcome<Core::Error, Model::AttachLoadBalancersResponse> AttachLoadBalancersOutcome;
+                typedef std::future<AttachLoadBalancersOutcome> AttachLoadBalancersOutcomeCallable;
+                typedef std::function<void(const AsClient*, const Model::AttachLoadBalancersRequest&, AttachLoadBalancersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AttachLoadBalancersAsyncHandler;
+                typedef Outcome<Core::Error, Model::ClearLaunchConfigurationAttributesResponse> ClearLaunchConfigurationAttributesOutcome;
+                typedef std::future<ClearLaunchConfigurationAttributesOutcome> ClearLaunchConfigurationAttributesOutcomeCallable;
+                typedef std::function<void(const AsClient*, const Model::ClearLaunchConfigurationAttributesRequest&, ClearLaunchConfigurationAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ClearLaunchConfigurationAttributesAsyncHandler;
+                typedef Outcome<Core::Error, Model::CompleteLifecycleActionResponse> CompleteLifecycleActionOutcome;
                 typedef std::future<CompleteLifecycleActionOutcome> CompleteLifecycleActionOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::CompleteLifecycleActionRequest&, CompleteLifecycleActionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CompleteLifecycleActionAsyncHandler;
-                typedef Outcome<Error, Model::CreateAutoScalingGroupResponse> CreateAutoScalingGroupOutcome;
+                typedef Outcome<Core::Error, Model::CreateAutoScalingGroupResponse> CreateAutoScalingGroupOutcome;
                 typedef std::future<CreateAutoScalingGroupOutcome> CreateAutoScalingGroupOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::CreateAutoScalingGroupRequest&, CreateAutoScalingGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAutoScalingGroupAsyncHandler;
-                typedef Outcome<Error, Model::CreateAutoScalingGroupFromInstanceResponse> CreateAutoScalingGroupFromInstanceOutcome;
+                typedef Outcome<Core::Error, Model::CreateAutoScalingGroupFromInstanceResponse> CreateAutoScalingGroupFromInstanceOutcome;
                 typedef std::future<CreateAutoScalingGroupFromInstanceOutcome> CreateAutoScalingGroupFromInstanceOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::CreateAutoScalingGroupFromInstanceRequest&, CreateAutoScalingGroupFromInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAutoScalingGroupFromInstanceAsyncHandler;
-                typedef Outcome<Error, Model::CreateLaunchConfigurationResponse> CreateLaunchConfigurationOutcome;
+                typedef Outcome<Core::Error, Model::CreateLaunchConfigurationResponse> CreateLaunchConfigurationOutcome;
                 typedef std::future<CreateLaunchConfigurationOutcome> CreateLaunchConfigurationOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::CreateLaunchConfigurationRequest&, CreateLaunchConfigurationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLaunchConfigurationAsyncHandler;
-                typedef Outcome<Error, Model::CreateLifecycleHookResponse> CreateLifecycleHookOutcome;
+                typedef Outcome<Core::Error, Model::CreateLifecycleHookResponse> CreateLifecycleHookOutcome;
                 typedef std::future<CreateLifecycleHookOutcome> CreateLifecycleHookOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::CreateLifecycleHookRequest&, CreateLifecycleHookOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLifecycleHookAsyncHandler;
-                typedef Outcome<Error, Model::CreateNotificationConfigurationResponse> CreateNotificationConfigurationOutcome;
+                typedef Outcome<Core::Error, Model::CreateNotificationConfigurationResponse> CreateNotificationConfigurationOutcome;
                 typedef std::future<CreateNotificationConfigurationOutcome> CreateNotificationConfigurationOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::CreateNotificationConfigurationRequest&, CreateNotificationConfigurationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateNotificationConfigurationAsyncHandler;
-                typedef Outcome<Error, Model::CreatePaiInstanceResponse> CreatePaiInstanceOutcome;
-                typedef std::future<CreatePaiInstanceOutcome> CreatePaiInstanceOutcomeCallable;
-                typedef std::function<void(const AsClient*, const Model::CreatePaiInstanceRequest&, CreatePaiInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePaiInstanceAsyncHandler;
-                typedef Outcome<Error, Model::CreateScalingPolicyResponse> CreateScalingPolicyOutcome;
+                typedef Outcome<Core::Error, Model::CreateScalingPolicyResponse> CreateScalingPolicyOutcome;
                 typedef std::future<CreateScalingPolicyOutcome> CreateScalingPolicyOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::CreateScalingPolicyRequest&, CreateScalingPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateScalingPolicyAsyncHandler;
-                typedef Outcome<Error, Model::CreateScheduledActionResponse> CreateScheduledActionOutcome;
+                typedef Outcome<Core::Error, Model::CreateScheduledActionResponse> CreateScheduledActionOutcome;
                 typedef std::future<CreateScheduledActionOutcome> CreateScheduledActionOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::CreateScheduledActionRequest&, CreateScheduledActionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateScheduledActionAsyncHandler;
-                typedef Outcome<Error, Model::DeleteAutoScalingGroupResponse> DeleteAutoScalingGroupOutcome;
+                typedef Outcome<Core::Error, Model::DeleteAutoScalingGroupResponse> DeleteAutoScalingGroupOutcome;
                 typedef std::future<DeleteAutoScalingGroupOutcome> DeleteAutoScalingGroupOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::DeleteAutoScalingGroupRequest&, DeleteAutoScalingGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAutoScalingGroupAsyncHandler;
-                typedef Outcome<Error, Model::DeleteLaunchConfigurationResponse> DeleteLaunchConfigurationOutcome;
+                typedef Outcome<Core::Error, Model::DeleteLaunchConfigurationResponse> DeleteLaunchConfigurationOutcome;
                 typedef std::future<DeleteLaunchConfigurationOutcome> DeleteLaunchConfigurationOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::DeleteLaunchConfigurationRequest&, DeleteLaunchConfigurationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLaunchConfigurationAsyncHandler;
-                typedef Outcome<Error, Model::DeleteLifecycleHookResponse> DeleteLifecycleHookOutcome;
+                typedef Outcome<Core::Error, Model::DeleteLifecycleHookResponse> DeleteLifecycleHookOutcome;
                 typedef std::future<DeleteLifecycleHookOutcome> DeleteLifecycleHookOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::DeleteLifecycleHookRequest&, DeleteLifecycleHookOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLifecycleHookAsyncHandler;
-                typedef Outcome<Error, Model::DeleteNotificationConfigurationResponse> DeleteNotificationConfigurationOutcome;
+                typedef Outcome<Core::Error, Model::DeleteNotificationConfigurationResponse> DeleteNotificationConfigurationOutcome;
                 typedef std::future<DeleteNotificationConfigurationOutcome> DeleteNotificationConfigurationOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::DeleteNotificationConfigurationRequest&, DeleteNotificationConfigurationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteNotificationConfigurationAsyncHandler;
-                typedef Outcome<Error, Model::DeleteScalingPolicyResponse> DeleteScalingPolicyOutcome;
+                typedef Outcome<Core::Error, Model::DeleteScalingPolicyResponse> DeleteScalingPolicyOutcome;
                 typedef std::future<DeleteScalingPolicyOutcome> DeleteScalingPolicyOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::DeleteScalingPolicyRequest&, DeleteScalingPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteScalingPolicyAsyncHandler;
-                typedef Outcome<Error, Model::DeleteScheduledActionResponse> DeleteScheduledActionOutcome;
+                typedef Outcome<Core::Error, Model::DeleteScheduledActionResponse> DeleteScheduledActionOutcome;
                 typedef std::future<DeleteScheduledActionOutcome> DeleteScheduledActionOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::DeleteScheduledActionRequest&, DeleteScheduledActionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteScheduledActionAsyncHandler;
-                typedef Outcome<Error, Model::DescribeAccountLimitsResponse> DescribeAccountLimitsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAccountLimitsResponse> DescribeAccountLimitsOutcome;
                 typedef std::future<DescribeAccountLimitsOutcome> DescribeAccountLimitsOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::DescribeAccountLimitsRequest&, DescribeAccountLimitsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccountLimitsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeAutoScalingActivitiesResponse> DescribeAutoScalingActivitiesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAutoScalingActivitiesResponse> DescribeAutoScalingActivitiesOutcome;
                 typedef std::future<DescribeAutoScalingActivitiesOutcome> DescribeAutoScalingActivitiesOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::DescribeAutoScalingActivitiesRequest&, DescribeAutoScalingActivitiesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAutoScalingActivitiesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeAutoScalingGroupLastActivitiesResponse> DescribeAutoScalingGroupLastActivitiesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAutoScalingAdvicesResponse> DescribeAutoScalingAdvicesOutcome;
+                typedef std::future<DescribeAutoScalingAdvicesOutcome> DescribeAutoScalingAdvicesOutcomeCallable;
+                typedef std::function<void(const AsClient*, const Model::DescribeAutoScalingAdvicesRequest&, DescribeAutoScalingAdvicesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAutoScalingAdvicesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAutoScalingGroupLastActivitiesResponse> DescribeAutoScalingGroupLastActivitiesOutcome;
                 typedef std::future<DescribeAutoScalingGroupLastActivitiesOutcome> DescribeAutoScalingGroupLastActivitiesOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::DescribeAutoScalingGroupLastActivitiesRequest&, DescribeAutoScalingGroupLastActivitiesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAutoScalingGroupLastActivitiesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeAutoScalingGroupsResponse> DescribeAutoScalingGroupsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAutoScalingGroupsResponse> DescribeAutoScalingGroupsOutcome;
                 typedef std::future<DescribeAutoScalingGroupsOutcome> DescribeAutoScalingGroupsOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::DescribeAutoScalingGroupsRequest&, DescribeAutoScalingGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAutoScalingGroupsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeAutoScalingInstancesResponse> DescribeAutoScalingInstancesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAutoScalingInstancesResponse> DescribeAutoScalingInstancesOutcome;
                 typedef std::future<DescribeAutoScalingInstancesOutcome> DescribeAutoScalingInstancesOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::DescribeAutoScalingInstancesRequest&, DescribeAutoScalingInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAutoScalingInstancesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLaunchConfigurationsResponse> DescribeLaunchConfigurationsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLaunchConfigurationsResponse> DescribeLaunchConfigurationsOutcome;
                 typedef std::future<DescribeLaunchConfigurationsOutcome> DescribeLaunchConfigurationsOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::DescribeLaunchConfigurationsRequest&, DescribeLaunchConfigurationsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLaunchConfigurationsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLifecycleHooksResponse> DescribeLifecycleHooksOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLifecycleHooksResponse> DescribeLifecycleHooksOutcome;
                 typedef std::future<DescribeLifecycleHooksOutcome> DescribeLifecycleHooksOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::DescribeLifecycleHooksRequest&, DescribeLifecycleHooksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLifecycleHooksAsyncHandler;
-                typedef Outcome<Error, Model::DescribeNotificationConfigurationsResponse> DescribeNotificationConfigurationsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeNotificationConfigurationsResponse> DescribeNotificationConfigurationsOutcome;
                 typedef std::future<DescribeNotificationConfigurationsOutcome> DescribeNotificationConfigurationsOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::DescribeNotificationConfigurationsRequest&, DescribeNotificationConfigurationsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNotificationConfigurationsAsyncHandler;
-                typedef Outcome<Error, Model::DescribePaiInstancesResponse> DescribePaiInstancesOutcome;
-                typedef std::future<DescribePaiInstancesOutcome> DescribePaiInstancesOutcomeCallable;
-                typedef std::function<void(const AsClient*, const Model::DescribePaiInstancesRequest&, DescribePaiInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePaiInstancesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeScalingPoliciesResponse> DescribeScalingPoliciesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeScalingPoliciesResponse> DescribeScalingPoliciesOutcome;
                 typedef std::future<DescribeScalingPoliciesOutcome> DescribeScalingPoliciesOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::DescribeScalingPoliciesRequest&, DescribeScalingPoliciesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeScalingPoliciesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeScheduledActionsResponse> DescribeScheduledActionsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeScheduledActionsResponse> DescribeScheduledActionsOutcome;
                 typedef std::future<DescribeScheduledActionsOutcome> DescribeScheduledActionsOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::DescribeScheduledActionsRequest&, DescribeScheduledActionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeScheduledActionsAsyncHandler;
-                typedef Outcome<Error, Model::DetachInstancesResponse> DetachInstancesOutcome;
+                typedef Outcome<Core::Error, Model::DetachInstancesResponse> DetachInstancesOutcome;
                 typedef std::future<DetachInstancesOutcome> DetachInstancesOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::DetachInstancesRequest&, DetachInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DetachInstancesAsyncHandler;
-                typedef Outcome<Error, Model::DisableAutoScalingGroupResponse> DisableAutoScalingGroupOutcome;
+                typedef Outcome<Core::Error, Model::DetachLoadBalancersResponse> DetachLoadBalancersOutcome;
+                typedef std::future<DetachLoadBalancersOutcome> DetachLoadBalancersOutcomeCallable;
+                typedef std::function<void(const AsClient*, const Model::DetachLoadBalancersRequest&, DetachLoadBalancersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DetachLoadBalancersAsyncHandler;
+                typedef Outcome<Core::Error, Model::DisableAutoScalingGroupResponse> DisableAutoScalingGroupOutcome;
                 typedef std::future<DisableAutoScalingGroupOutcome> DisableAutoScalingGroupOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::DisableAutoScalingGroupRequest&, DisableAutoScalingGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableAutoScalingGroupAsyncHandler;
-                typedef Outcome<Error, Model::EnableAutoScalingGroupResponse> EnableAutoScalingGroupOutcome;
+                typedef Outcome<Core::Error, Model::EnableAutoScalingGroupResponse> EnableAutoScalingGroupOutcome;
                 typedef std::future<EnableAutoScalingGroupOutcome> EnableAutoScalingGroupOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::EnableAutoScalingGroupRequest&, EnableAutoScalingGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableAutoScalingGroupAsyncHandler;
-                typedef Outcome<Error, Model::ExecuteScalingPolicyResponse> ExecuteScalingPolicyOutcome;
+                typedef Outcome<Core::Error, Model::ExecuteScalingPolicyResponse> ExecuteScalingPolicyOutcome;
                 typedef std::future<ExecuteScalingPolicyOutcome> ExecuteScalingPolicyOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::ExecuteScalingPolicyRequest&, ExecuteScalingPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExecuteScalingPolicyAsyncHandler;
-                typedef Outcome<Error, Model::ModifyAutoScalingGroupResponse> ModifyAutoScalingGroupOutcome;
+                typedef Outcome<Core::Error, Model::ModifyAutoScalingGroupResponse> ModifyAutoScalingGroupOutcome;
                 typedef std::future<ModifyAutoScalingGroupOutcome> ModifyAutoScalingGroupOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::ModifyAutoScalingGroupRequest&, ModifyAutoScalingGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAutoScalingGroupAsyncHandler;
-                typedef Outcome<Error, Model::ModifyDesiredCapacityResponse> ModifyDesiredCapacityOutcome;
+                typedef Outcome<Core::Error, Model::ModifyDesiredCapacityResponse> ModifyDesiredCapacityOutcome;
                 typedef std::future<ModifyDesiredCapacityOutcome> ModifyDesiredCapacityOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::ModifyDesiredCapacityRequest&, ModifyDesiredCapacityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDesiredCapacityAsyncHandler;
-                typedef Outcome<Error, Model::ModifyLaunchConfigurationAttributesResponse> ModifyLaunchConfigurationAttributesOutcome;
+                typedef Outcome<Core::Error, Model::ModifyLaunchConfigurationAttributesResponse> ModifyLaunchConfigurationAttributesOutcome;
                 typedef std::future<ModifyLaunchConfigurationAttributesOutcome> ModifyLaunchConfigurationAttributesOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::ModifyLaunchConfigurationAttributesRequest&, ModifyLaunchConfigurationAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLaunchConfigurationAttributesAsyncHandler;
-                typedef Outcome<Error, Model::ModifyLoadBalancersResponse> ModifyLoadBalancersOutcome;
+                typedef Outcome<Core::Error, Model::ModifyLoadBalancerTargetAttributesResponse> ModifyLoadBalancerTargetAttributesOutcome;
+                typedef std::future<ModifyLoadBalancerTargetAttributesOutcome> ModifyLoadBalancerTargetAttributesOutcomeCallable;
+                typedef std::function<void(const AsClient*, const Model::ModifyLoadBalancerTargetAttributesRequest&, ModifyLoadBalancerTargetAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLoadBalancerTargetAttributesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyLoadBalancersResponse> ModifyLoadBalancersOutcome;
                 typedef std::future<ModifyLoadBalancersOutcome> ModifyLoadBalancersOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::ModifyLoadBalancersRequest&, ModifyLoadBalancersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLoadBalancersAsyncHandler;
-                typedef Outcome<Error, Model::ModifyNotificationConfigurationResponse> ModifyNotificationConfigurationOutcome;
+                typedef Outcome<Core::Error, Model::ModifyNotificationConfigurationResponse> ModifyNotificationConfigurationOutcome;
                 typedef std::future<ModifyNotificationConfigurationOutcome> ModifyNotificationConfigurationOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::ModifyNotificationConfigurationRequest&, ModifyNotificationConfigurationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyNotificationConfigurationAsyncHandler;
-                typedef Outcome<Error, Model::ModifyScalingPolicyResponse> ModifyScalingPolicyOutcome;
+                typedef Outcome<Core::Error, Model::ModifyScalingPolicyResponse> ModifyScalingPolicyOutcome;
                 typedef std::future<ModifyScalingPolicyOutcome> ModifyScalingPolicyOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::ModifyScalingPolicyRequest&, ModifyScalingPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyScalingPolicyAsyncHandler;
-                typedef Outcome<Error, Model::ModifyScheduledActionResponse> ModifyScheduledActionOutcome;
+                typedef Outcome<Core::Error, Model::ModifyScheduledActionResponse> ModifyScheduledActionOutcome;
                 typedef std::future<ModifyScheduledActionOutcome> ModifyScheduledActionOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::ModifyScheduledActionRequest&, ModifyScheduledActionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyScheduledActionAsyncHandler;
-                typedef Outcome<Error, Model::PreviewPaiDomainNameResponse> PreviewPaiDomainNameOutcome;
-                typedef std::future<PreviewPaiDomainNameOutcome> PreviewPaiDomainNameOutcomeCallable;
-                typedef std::function<void(const AsClient*, const Model::PreviewPaiDomainNameRequest&, PreviewPaiDomainNameOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PreviewPaiDomainNameAsyncHandler;
-                typedef Outcome<Error, Model::RemoveInstancesResponse> RemoveInstancesOutcome;
+                typedef Outcome<Core::Error, Model::RemoveInstancesResponse> RemoveInstancesOutcome;
                 typedef std::future<RemoveInstancesOutcome> RemoveInstancesOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::RemoveInstancesRequest&, RemoveInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RemoveInstancesAsyncHandler;
-                typedef Outcome<Error, Model::SetInstancesProtectionResponse> SetInstancesProtectionOutcome;
+                typedef Outcome<Core::Error, Model::ScaleInInstancesResponse> ScaleInInstancesOutcome;
+                typedef std::future<ScaleInInstancesOutcome> ScaleInInstancesOutcomeCallable;
+                typedef std::function<void(const AsClient*, const Model::ScaleInInstancesRequest&, ScaleInInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ScaleInInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ScaleOutInstancesResponse> ScaleOutInstancesOutcome;
+                typedef std::future<ScaleOutInstancesOutcome> ScaleOutInstancesOutcomeCallable;
+                typedef std::function<void(const AsClient*, const Model::ScaleOutInstancesRequest&, ScaleOutInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ScaleOutInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::SetInstancesProtectionResponse> SetInstancesProtectionOutcome;
                 typedef std::future<SetInstancesProtectionOutcome> SetInstancesProtectionOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::SetInstancesProtectionRequest&, SetInstancesProtectionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetInstancesProtectionAsyncHandler;
-                typedef Outcome<Error, Model::StartAutoScalingInstancesResponse> StartAutoScalingInstancesOutcome;
+                typedef Outcome<Core::Error, Model::StartAutoScalingInstancesResponse> StartAutoScalingInstancesOutcome;
                 typedef std::future<StartAutoScalingInstancesOutcome> StartAutoScalingInstancesOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::StartAutoScalingInstancesRequest&, StartAutoScalingInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartAutoScalingInstancesAsyncHandler;
-                typedef Outcome<Error, Model::StopAutoScalingInstancesResponse> StopAutoScalingInstancesOutcome;
+                typedef Outcome<Core::Error, Model::StopAutoScalingInstancesResponse> StopAutoScalingInstancesOutcome;
                 typedef std::future<StopAutoScalingInstancesOutcome> StopAutoScalingInstancesOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::StopAutoScalingInstancesRequest&, StopAutoScalingInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopAutoScalingInstancesAsyncHandler;
-                typedef Outcome<Error, Model::UpgradeLaunchConfigurationResponse> UpgradeLaunchConfigurationOutcome;
+                typedef Outcome<Core::Error, Model::UpgradeLaunchConfigurationResponse> UpgradeLaunchConfigurationOutcome;
                 typedef std::future<UpgradeLaunchConfigurationOutcome> UpgradeLaunchConfigurationOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::UpgradeLaunchConfigurationRequest&, UpgradeLaunchConfigurationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeLaunchConfigurationAsyncHandler;
-                typedef Outcome<Error, Model::UpgradeLifecycleHookResponse> UpgradeLifecycleHookOutcome;
+                typedef Outcome<Core::Error, Model::UpgradeLifecycleHookResponse> UpgradeLifecycleHookOutcome;
                 typedef std::future<UpgradeLifecycleHookOutcome> UpgradeLifecycleHookOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::UpgradeLifecycleHookRequest&, UpgradeLifecycleHookOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeLifecycleHookAsyncHandler;
 
@@ -274,6 +294,24 @@ namespace TencentCloud
                 AttachInstancesOutcome AttachInstances(const Model::AttachInstancesRequest &request);
                 void AttachInstancesAsync(const Model::AttachInstancesRequest& request, const AttachInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AttachInstancesOutcomeCallable AttachInstancesCallable(const Model::AttachInstancesRequest& request);
+
+                /**
+                 *This API is used to add CLBs to a security group.
+                 * @param req AttachLoadBalancersRequest
+                 * @return AttachLoadBalancersOutcome
+                 */
+                AttachLoadBalancersOutcome AttachLoadBalancers(const Model::AttachLoadBalancersRequest &request);
+                void AttachLoadBalancersAsync(const Model::AttachLoadBalancersRequest& request, const AttachLoadBalancersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AttachLoadBalancersOutcomeCallable AttachLoadBalancersCallable(const Model::AttachLoadBalancersRequest& request);
+
+                /**
+                 *This API is used to clear specific attributes of the launch configuration.
+                 * @param req ClearLaunchConfigurationAttributesRequest
+                 * @return ClearLaunchConfigurationAttributesOutcome
+                 */
+                ClearLaunchConfigurationAttributesOutcome ClearLaunchConfigurationAttributes(const Model::ClearLaunchConfigurationAttributesRequest &request);
+                void ClearLaunchConfigurationAttributesAsync(const Model::ClearLaunchConfigurationAttributesRequest& request, const ClearLaunchConfigurationAttributesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ClearLaunchConfigurationAttributesOutcomeCallable ClearLaunchConfigurationAttributesCallable(const Model::ClearLaunchConfigurationAttributesRequest& request);
 
                 /**
                  *This API (CompleteLifecycleAction) is used to complete a lifecycle action.
@@ -312,7 +350,7 @@ Note: for a scaling group that is created based on a monthly-subscribed instance
 
 * A few fields of a launch configuration can be modified through `ModifyLaunchConfigurationAttributes`. To use a new launch configuration, it is recommended to create it from scratch.
 
-* You can create up to 20 launch configurations for each project. For more information, see [Usage Limits](https://cloud.tencent.com/document/product/377/3120).
+* You can create up to 20 launch configurations for each project. For more information, see [Usage Limits](https://intl.cloud.tencent.com/document/product/377/3120?from_cn_redirect=1).
 
                  * @param req CreateLaunchConfigurationRequest
                  * @return CreateLaunchConfigurationOutcome
@@ -349,22 +387,40 @@ Note: for a scaling group that is created based on a monthly-subscribed instance
                 CreateLifecycleHookOutcomeCallable CreateLifecycleHookCallable(const Model::CreateLifecycleHookRequest& request);
 
                 /**
-                 *This API (CreateNotificationConfiguration) is used to create a notification.
+                 *This API is used to create a notification policy.
+When the notification is sent to a CMQ topic or queue, the following contents are included:
+```
+{
+    "Service": "Tencent Cloud Auto Scaling",
+    "CreatedTime": "2021-10-11T10:15:11Z", // Activity creation time
+    "AppId": "100000000",
+    "ActivityId": "asa-fznnvrja", // Scaling activity ID
+    "AutoScalingGroupId": "asg-pc2oqu2z", // Scaling group ID
+    "ActivityType": "SCALE_OUT",  // Scaling activity type
+    "StatusCode": "SUCCESSFUL",   // Scaling activity result
+    "Description": "Activity was launched in response to a difference between desired capacity and actual capacity,
+    scale out 1 instance(s).", // Scaling activity description
+    "StartTime": "2021-10-11T10:15:11Z",  // Activity starting time
+    "EndTime": "2021-10-11T10:15:32Z",    // Activity ending time
+    "DetailedStatusMessageSet": [ // A collection of failed attempts during the scaling process (Failed attempts are allowed in a successful scaling activity)
+        {
+            "Code": "InvalidInstanceType",
+            "Zone": "ap-guangzhou-2",
+            "InstanceId": "",
+            "InstanceChargeType": "POSTPAID_BY_HOUR",
+            "SubnetId": "subnet-4t5mgeuu",
+            "Message": "The specified instance type `S5.LARGE8` is invalid in `subnet-4t5mgeuu`, `ap-guangzhou-2`.",
+            "InstanceType": "S5.LARGE8",
+        }
+    ]
+}
+```
                  * @param req CreateNotificationConfigurationRequest
                  * @return CreateNotificationConfigurationOutcome
                  */
                 CreateNotificationConfigurationOutcome CreateNotificationConfiguration(const Model::CreateNotificationConfigurationRequest &request);
                 void CreateNotificationConfigurationAsync(const Model::CreateNotificationConfigurationRequest& request, const CreateNotificationConfigurationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateNotificationConfigurationOutcomeCallable CreateNotificationConfigurationCallable(const Model::CreateNotificationConfigurationRequest& request);
-
-                /**
-                 *This API (CreatePaiInstance) is used to create a PAI instance.
-                 * @param req CreatePaiInstanceRequest
-                 * @return CreatePaiInstanceOutcome
-                 */
-                CreatePaiInstanceOutcome CreatePaiInstance(const Model::CreatePaiInstanceRequest &request);
-                void CreatePaiInstanceAsync(const Model::CreatePaiInstanceRequest& request, const CreatePaiInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreatePaiInstanceOutcomeCallable CreatePaiInstanceCallable(const Model::CreatePaiInstanceRequest& request);
 
                 /**
                  *This API (CreateScalingPolicy) is used to create an alarm trigger policy.
@@ -460,6 +516,15 @@ Note: for a scaling group that is created based on a monthly-subscribed instance
                 DescribeAutoScalingActivitiesOutcomeCallable DescribeAutoScalingActivitiesCallable(const Model::DescribeAutoScalingActivitiesRequest& request);
 
                 /**
+                 *This API is used to query suggestions for scaling group configurations.
+                 * @param req DescribeAutoScalingAdvicesRequest
+                 * @return DescribeAutoScalingAdvicesOutcome
+                 */
+                DescribeAutoScalingAdvicesOutcome DescribeAutoScalingAdvices(const Model::DescribeAutoScalingAdvicesRequest &request);
+                void DescribeAutoScalingAdvicesAsync(const Model::DescribeAutoScalingAdvicesRequest& request, const DescribeAutoScalingAdvicesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAutoScalingAdvicesOutcomeCallable DescribeAutoScalingAdvicesCallable(const Model::DescribeAutoScalingAdvicesRequest& request);
+
+                /**
                  *This API is used to query the latest activity history of an auto scaling group.
                  * @param req DescribeAutoScalingGroupLastActivitiesRequest
                  * @return DescribeAutoScalingGroupLastActivitiesOutcome
@@ -529,18 +594,6 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
                 DescribeNotificationConfigurationsOutcomeCallable DescribeNotificationConfigurationsCallable(const Model::DescribeNotificationConfigurationsRequest& request);
 
                 /**
-                 *This API (DescribePaiInstances) is used to query the information of PAI instances.
-
-* You can query the detailed information of PAI instances based on information such as instance ID and instance domain name. For more information on filters, see `Filter`.
-* If the parameter is empty, a certain number (specified by `Limit` and 20 by default) of PAI instances of the current user will be returned.
-                 * @param req DescribePaiInstancesRequest
-                 * @return DescribePaiInstancesOutcome
-                 */
-                DescribePaiInstancesOutcome DescribePaiInstances(const Model::DescribePaiInstancesRequest &request);
-                void DescribePaiInstancesAsync(const Model::DescribePaiInstancesRequest& request, const DescribePaiInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribePaiInstancesOutcomeCallable DescribePaiInstancesCallable(const Model::DescribePaiInstancesRequest& request);
-
-                /**
                  *This API (DescribeScalingPolicies) is used to query alarm trigger policies.
                  * @param req DescribeScalingPoliciesRequest
                  * @return DescribeScalingPoliciesOutcome
@@ -562,13 +615,25 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
                 DescribeScheduledActionsOutcomeCallable DescribeScheduledActionsCallable(const Model::DescribeScheduledActionsRequest& request);
 
                 /**
-                 *This API (DetachInstances) is used to remove CVM instances from an auto scaling group. Instances removed via this API will not be terminated.
+                 *This API is used to remove CVM instances from a scaling group. Instances removed via this API will not be terminated.
+* If the number of remaining `IN_SERVICE` instances in the scaling group is less than the minimum capacity, this API will return an error.
+* However, if the scaling group is in `DISABLED` status, the removal will not verify the relationship between the number of `IN_SERVICE` instances and the minimum capacity.
+* This removal will unassociate the CVM from the CLB instance that has been configured for the scaling group.
                  * @param req DetachInstancesRequest
                  * @return DetachInstancesOutcome
                  */
                 DetachInstancesOutcome DetachInstances(const Model::DetachInstancesRequest &request);
                 void DetachInstancesAsync(const Model::DetachInstancesRequest& request, const DetachInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DetachInstancesOutcomeCallable DetachInstancesCallable(const Model::DetachInstancesRequest& request);
+
+                /**
+                 *This API is used to unbind one or more CLBs from a scaling group. This API will not terminate CLBs.
+                 * @param req DetachLoadBalancersRequest
+                 * @return DetachLoadBalancersOutcome
+                 */
+                DetachLoadBalancersOutcome DetachLoadBalancers(const Model::DetachLoadBalancersRequest &request);
+                void DetachLoadBalancersAsync(const Model::DetachLoadBalancersRequest& request, const DetachLoadBalancersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DetachLoadBalancersOutcomeCallable DetachLoadBalancersCallable(const Model::DetachLoadBalancersRequest& request);
 
                 /**
                  *This API (DisableAutoScalingGroup) is used to disable the specified auto scaling group.
@@ -631,11 +696,20 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
                 ModifyLaunchConfigurationAttributesOutcomeCallable ModifyLaunchConfigurationAttributesCallable(const Model::ModifyLaunchConfigurationAttributesRequest& request);
 
                 /**
-                 *This API (ModifyLoadBalancers) is used to modify the load balancers of an auto scaling group.
+                 *This API is used to modify the target rule attributes of the CLB in the scaling group.
+                 * @param req ModifyLoadBalancerTargetAttributesRequest
+                 * @return ModifyLoadBalancerTargetAttributesOutcome
+                 */
+                ModifyLoadBalancerTargetAttributesOutcome ModifyLoadBalancerTargetAttributes(const Model::ModifyLoadBalancerTargetAttributesRequest &request);
+                void ModifyLoadBalancerTargetAttributesAsync(const Model::ModifyLoadBalancerTargetAttributesRequest& request, const ModifyLoadBalancerTargetAttributesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyLoadBalancerTargetAttributesOutcomeCallable ModifyLoadBalancerTargetAttributesCallable(const Model::ModifyLoadBalancerTargetAttributesRequest& request);
 
-* This API can specify a new load balancer configuration for the auto scaling group. The new configuration overwrites the original load balancer configuration.
-* If you want to clear the load balancer for the auto scaling group, specify only the auto scaling group ID but not the specific load balancer when calling this API.
-* This API modifies the load balancer of the auto scaling group and generate a scaling activity to asynchronously modify the load balancers of existing instances.
+                /**
+                 *This API is used to modify the cloud load balancers of a scaling group.
+
+* This API can specify a new cloud load balancer configuration for the scaling group. The new configuration overwrites the original load balancer configuration.
+* To clear the cloud load balancer of the scaling group, specify only the scaling group ID but not the specific cloud load balancer.
+* This API modifies the cloud load balancer of the scaling group and generate a scaling activity to asynchronously modify the cloud load balancers of existing instances.
                  * @param req ModifyLoadBalancersRequest
                  * @return ModifyLoadBalancersOutcome
                  */
@@ -644,7 +718,8 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
                 ModifyLoadBalancersOutcomeCallable ModifyLoadBalancersCallable(const Model::ModifyLoadBalancersRequest& request);
 
                 /**
-                 *This API (ModifyNotificationConfiguration) is used to modify a notification.
+                 *This API is used to modify a notification policy.
+* The receiver type of the notification policy cannot be modified.
                  * @param req ModifyNotificationConfigurationRequest
                  * @return ModifyNotificationConfigurationOutcome
                  */
@@ -671,17 +746,10 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
                 ModifyScheduledActionOutcomeCallable ModifyScheduledActionCallable(const Model::ModifyScheduledActionRequest& request);
 
                 /**
-                 *This API (PreviewPaiDomainName) is used to preview a PAI domain name.
-
-                 * @param req PreviewPaiDomainNameRequest
-                 * @return PreviewPaiDomainNameOutcome
-                 */
-                PreviewPaiDomainNameOutcome PreviewPaiDomainName(const Model::PreviewPaiDomainNameRequest &request);
-                void PreviewPaiDomainNameAsync(const Model::PreviewPaiDomainNameRequest& request, const PreviewPaiDomainNameAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                PreviewPaiDomainNameOutcomeCallable PreviewPaiDomainNameCallable(const Model::PreviewPaiDomainNameRequest& request);
-
-                /**
-                 *This API (RemoveInstances) is used to remove CVM instances from an auto scaling group. Instances created automatically by AS will be terminated, while those added to the auto scaling group after creation will be removed and retained.
+                 *This API is used to delete CVM instances from a scaling group. Instances that are automatically created through AS will be terminated, while those manually added to the scaling group will be removed and retained.
+* If the number of remaining `IN_SERVICE` instances in the scaling group is less than the minimum capacity, this API will return an error.
+* However, if the scaling group is in `DISABLED` status, the removal will not verify the relationship between the number of `IN_SERVICE` instances and the minimum capacity.
+* This removal will unassociate the CVM from the CLB instance that has been configured for the scaling group.
                  * @param req RemoveInstancesRequest
                  * @return RemoveInstancesOutcome
                  */
@@ -690,8 +758,34 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
                 RemoveInstancesOutcomeCallable RemoveInstancesCallable(const Model::RemoveInstancesRequest& request);
 
                 /**
-                 *This API (SetInstancesProtection) is used to enable scale-in protection for an instance.
-When an instance has scale-in protection enabled, it will not be removed when scaling is triggered by replacement of unhealthy instances, alarm trigger policy, threshold change, etc.
+                 *This API is used to reduce the specified number of instances from the scaling group, which returns the scaling activity ID `ActivityId`.
+* The scaling group is not active.
+* The scale-in instances will be selected according to the `TerminationPolicies` policy as described in [Reducing Capacity](https://intl.cloud.tencent.com/document/product/377/8563?from_cn_redirect=1).
+* Only the `IN_SERVICE` instances will be reduced. To reduce instances in other statues, use the [`DetachInstances`](https://intl.cloud.tencent.com/document/api/377/20436?from_cn_redirect=1) or [`RemoveInstances`](https://intl.cloud.tencent.com/document/api/377/20431?from_cn_redirect=1) API.
+* The desired capacity will be reduced accordingly. The new desired capacity should be no less than the minimum capacity.
+* If the scale-in activity failed or partially succeeded, the final desired capacity only deducts the instances that have been reduced successfully.
+                 * @param req ScaleInInstancesRequest
+                 * @return ScaleInInstancesOutcome
+                 */
+                ScaleInInstancesOutcome ScaleInInstances(const Model::ScaleInInstancesRequest &request);
+                void ScaleInInstancesAsync(const Model::ScaleInInstancesRequest& request, const ScaleInInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ScaleInInstancesOutcomeCallable ScaleInInstancesCallable(const Model::ScaleInInstancesRequest& request);
+
+                /**
+                 *This API is used to add the specified number of instances to the scaling group, which returns the scaling activity ID `ActivityId`.
+* The scaling group is not active.
+* The desired capacity will be increased accordingly. The new desired capacity should be no more than the maximum capacity.
+* If the scale-out activity failed or partially succeeded, the final desired capacity only includes the instances that have been added successfully.
+                 * @param req ScaleOutInstancesRequest
+                 * @return ScaleOutInstancesOutcome
+                 */
+                ScaleOutInstancesOutcome ScaleOutInstances(const Model::ScaleOutInstancesRequest &request);
+                void ScaleOutInstancesAsync(const Model::ScaleOutInstancesRequest& request, const ScaleOutInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ScaleOutInstancesOutcomeCallable ScaleOutInstancesCallable(const Model::ScaleOutInstancesRequest& request);
+
+                /**
+                 *This API is used to enable scale-in protection for an instance.
+When scale-in protection is enabled, the instance will not be removed in scale-in activities triggered by replacement of unhealthy instances, alarm threshold reached, change of desired quantity, etc.
                  * @param req SetInstancesProtectionRequest
                  * @return SetInstancesProtectionOutcome
                  */
@@ -714,7 +808,7 @@ When an instance has scale-in protection enabled, it will not be removed when sc
                  *This API is used to shut down CVM instances in a scaling group.
 * Use the `SOFT_FIRST` shutdown, which means the CVM will be forcibly shut down if the soft shutdown fails.
 * Shutting down instances in the `IN_SERVICE` status will reduce the desired capacity, but the desired capacity cannot be less than the minimum value.
-* To use the `STOP_CHARGING` shutdown, the instances you want to shut down must satisfy the conditions of [no charges when shut down](https://cloud.tencent.com/document/product/213/19918).
+* To use the `STOP_CHARGING` shutdown, the instances you want to shut down must satisfy the conditions of [no charges when shut down](https://intl.cloud.tencent.com/document/product/213/19918?from_cn_redirect=1).
 * This API supports batch operation. Up to 100 instances can be shut down in each request.
                  * @param req StopAutoScalingInstancesRequest
                  * @return StopAutoScalingInstancesOutcome

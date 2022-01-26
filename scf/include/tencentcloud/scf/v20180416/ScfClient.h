@@ -41,22 +41,42 @@
 #include <tencentcloud/scf/v20180416/model/DeleteLayerVersionResponse.h>
 #include <tencentcloud/scf/v20180416/model/DeleteNamespaceRequest.h>
 #include <tencentcloud/scf/v20180416/model/DeleteNamespaceResponse.h>
+#include <tencentcloud/scf/v20180416/model/DeleteProvisionedConcurrencyConfigRequest.h>
+#include <tencentcloud/scf/v20180416/model/DeleteProvisionedConcurrencyConfigResponse.h>
+#include <tencentcloud/scf/v20180416/model/DeleteReservedConcurrencyConfigRequest.h>
+#include <tencentcloud/scf/v20180416/model/DeleteReservedConcurrencyConfigResponse.h>
 #include <tencentcloud/scf/v20180416/model/DeleteTriggerRequest.h>
 #include <tencentcloud/scf/v20180416/model/DeleteTriggerResponse.h>
+#include <tencentcloud/scf/v20180416/model/GetAccountRequest.h>
+#include <tencentcloud/scf/v20180416/model/GetAccountResponse.h>
 #include <tencentcloud/scf/v20180416/model/GetAliasRequest.h>
 #include <tencentcloud/scf/v20180416/model/GetAliasResponse.h>
+#include <tencentcloud/scf/v20180416/model/GetAsyncEventStatusRequest.h>
+#include <tencentcloud/scf/v20180416/model/GetAsyncEventStatusResponse.h>
 #include <tencentcloud/scf/v20180416/model/GetFunctionRequest.h>
 #include <tencentcloud/scf/v20180416/model/GetFunctionResponse.h>
 #include <tencentcloud/scf/v20180416/model/GetFunctionAddressRequest.h>
 #include <tencentcloud/scf/v20180416/model/GetFunctionAddressResponse.h>
+#include <tencentcloud/scf/v20180416/model/GetFunctionEventInvokeConfigRequest.h>
+#include <tencentcloud/scf/v20180416/model/GetFunctionEventInvokeConfigResponse.h>
 #include <tencentcloud/scf/v20180416/model/GetFunctionLogsRequest.h>
 #include <tencentcloud/scf/v20180416/model/GetFunctionLogsResponse.h>
 #include <tencentcloud/scf/v20180416/model/GetLayerVersionRequest.h>
 #include <tencentcloud/scf/v20180416/model/GetLayerVersionResponse.h>
+#include <tencentcloud/scf/v20180416/model/GetProvisionedConcurrencyConfigRequest.h>
+#include <tencentcloud/scf/v20180416/model/GetProvisionedConcurrencyConfigResponse.h>
+#include <tencentcloud/scf/v20180416/model/GetRequestStatusRequest.h>
+#include <tencentcloud/scf/v20180416/model/GetRequestStatusResponse.h>
+#include <tencentcloud/scf/v20180416/model/GetReservedConcurrencyConfigRequest.h>
+#include <tencentcloud/scf/v20180416/model/GetReservedConcurrencyConfigResponse.h>
 #include <tencentcloud/scf/v20180416/model/InvokeRequest.h>
 #include <tencentcloud/scf/v20180416/model/InvokeResponse.h>
+#include <tencentcloud/scf/v20180416/model/InvokeFunctionRequest.h>
+#include <tencentcloud/scf/v20180416/model/InvokeFunctionResponse.h>
 #include <tencentcloud/scf/v20180416/model/ListAliasesRequest.h>
 #include <tencentcloud/scf/v20180416/model/ListAliasesResponse.h>
+#include <tencentcloud/scf/v20180416/model/ListAsyncEventsRequest.h>
+#include <tencentcloud/scf/v20180416/model/ListAsyncEventsResponse.h>
 #include <tencentcloud/scf/v20180416/model/ListFunctionsRequest.h>
 #include <tencentcloud/scf/v20180416/model/ListFunctionsResponse.h>
 #include <tencentcloud/scf/v20180416/model/ListLayerVersionsRequest.h>
@@ -73,12 +93,22 @@
 #include <tencentcloud/scf/v20180416/model/PublishLayerVersionResponse.h>
 #include <tencentcloud/scf/v20180416/model/PublishVersionRequest.h>
 #include <tencentcloud/scf/v20180416/model/PublishVersionResponse.h>
+#include <tencentcloud/scf/v20180416/model/PutProvisionedConcurrencyConfigRequest.h>
+#include <tencentcloud/scf/v20180416/model/PutProvisionedConcurrencyConfigResponse.h>
+#include <tencentcloud/scf/v20180416/model/PutReservedConcurrencyConfigRequest.h>
+#include <tencentcloud/scf/v20180416/model/PutReservedConcurrencyConfigResponse.h>
+#include <tencentcloud/scf/v20180416/model/PutTotalConcurrencyConfigRequest.h>
+#include <tencentcloud/scf/v20180416/model/PutTotalConcurrencyConfigResponse.h>
+#include <tencentcloud/scf/v20180416/model/TerminateAsyncEventRequest.h>
+#include <tencentcloud/scf/v20180416/model/TerminateAsyncEventResponse.h>
 #include <tencentcloud/scf/v20180416/model/UpdateAliasRequest.h>
 #include <tencentcloud/scf/v20180416/model/UpdateAliasResponse.h>
 #include <tencentcloud/scf/v20180416/model/UpdateFunctionCodeRequest.h>
 #include <tencentcloud/scf/v20180416/model/UpdateFunctionCodeResponse.h>
 #include <tencentcloud/scf/v20180416/model/UpdateFunctionConfigurationRequest.h>
 #include <tencentcloud/scf/v20180416/model/UpdateFunctionConfigurationResponse.h>
+#include <tencentcloud/scf/v20180416/model/UpdateFunctionEventInvokeConfigRequest.h>
+#include <tencentcloud/scf/v20180416/model/UpdateFunctionEventInvokeConfigResponse.h>
 #include <tencentcloud/scf/v20180416/model/UpdateNamespaceRequest.h>
 #include <tencentcloud/scf/v20180416/model/UpdateNamespaceResponse.h>
 
@@ -95,91 +125,136 @@ namespace TencentCloud
                 ScfClient(const Credential &credential, const std::string &region);
                 ScfClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::CopyFunctionResponse> CopyFunctionOutcome;
+                typedef Outcome<Core::Error, Model::CopyFunctionResponse> CopyFunctionOutcome;
                 typedef std::future<CopyFunctionOutcome> CopyFunctionOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::CopyFunctionRequest&, CopyFunctionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CopyFunctionAsyncHandler;
-                typedef Outcome<Error, Model::CreateAliasResponse> CreateAliasOutcome;
+                typedef Outcome<Core::Error, Model::CreateAliasResponse> CreateAliasOutcome;
                 typedef std::future<CreateAliasOutcome> CreateAliasOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::CreateAliasRequest&, CreateAliasOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAliasAsyncHandler;
-                typedef Outcome<Error, Model::CreateFunctionResponse> CreateFunctionOutcome;
+                typedef Outcome<Core::Error, Model::CreateFunctionResponse> CreateFunctionOutcome;
                 typedef std::future<CreateFunctionOutcome> CreateFunctionOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::CreateFunctionRequest&, CreateFunctionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateFunctionAsyncHandler;
-                typedef Outcome<Error, Model::CreateNamespaceResponse> CreateNamespaceOutcome;
+                typedef Outcome<Core::Error, Model::CreateNamespaceResponse> CreateNamespaceOutcome;
                 typedef std::future<CreateNamespaceOutcome> CreateNamespaceOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::CreateNamespaceRequest&, CreateNamespaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateNamespaceAsyncHandler;
-                typedef Outcome<Error, Model::CreateTriggerResponse> CreateTriggerOutcome;
+                typedef Outcome<Core::Error, Model::CreateTriggerResponse> CreateTriggerOutcome;
                 typedef std::future<CreateTriggerOutcome> CreateTriggerOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::CreateTriggerRequest&, CreateTriggerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateTriggerAsyncHandler;
-                typedef Outcome<Error, Model::DeleteAliasResponse> DeleteAliasOutcome;
+                typedef Outcome<Core::Error, Model::DeleteAliasResponse> DeleteAliasOutcome;
                 typedef std::future<DeleteAliasOutcome> DeleteAliasOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::DeleteAliasRequest&, DeleteAliasOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAliasAsyncHandler;
-                typedef Outcome<Error, Model::DeleteFunctionResponse> DeleteFunctionOutcome;
+                typedef Outcome<Core::Error, Model::DeleteFunctionResponse> DeleteFunctionOutcome;
                 typedef std::future<DeleteFunctionOutcome> DeleteFunctionOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::DeleteFunctionRequest&, DeleteFunctionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteFunctionAsyncHandler;
-                typedef Outcome<Error, Model::DeleteLayerVersionResponse> DeleteLayerVersionOutcome;
+                typedef Outcome<Core::Error, Model::DeleteLayerVersionResponse> DeleteLayerVersionOutcome;
                 typedef std::future<DeleteLayerVersionOutcome> DeleteLayerVersionOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::DeleteLayerVersionRequest&, DeleteLayerVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLayerVersionAsyncHandler;
-                typedef Outcome<Error, Model::DeleteNamespaceResponse> DeleteNamespaceOutcome;
+                typedef Outcome<Core::Error, Model::DeleteNamespaceResponse> DeleteNamespaceOutcome;
                 typedef std::future<DeleteNamespaceOutcome> DeleteNamespaceOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::DeleteNamespaceRequest&, DeleteNamespaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteNamespaceAsyncHandler;
-                typedef Outcome<Error, Model::DeleteTriggerResponse> DeleteTriggerOutcome;
+                typedef Outcome<Core::Error, Model::DeleteProvisionedConcurrencyConfigResponse> DeleteProvisionedConcurrencyConfigOutcome;
+                typedef std::future<DeleteProvisionedConcurrencyConfigOutcome> DeleteProvisionedConcurrencyConfigOutcomeCallable;
+                typedef std::function<void(const ScfClient*, const Model::DeleteProvisionedConcurrencyConfigRequest&, DeleteProvisionedConcurrencyConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteProvisionedConcurrencyConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteReservedConcurrencyConfigResponse> DeleteReservedConcurrencyConfigOutcome;
+                typedef std::future<DeleteReservedConcurrencyConfigOutcome> DeleteReservedConcurrencyConfigOutcomeCallable;
+                typedef std::function<void(const ScfClient*, const Model::DeleteReservedConcurrencyConfigRequest&, DeleteReservedConcurrencyConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteReservedConcurrencyConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteTriggerResponse> DeleteTriggerOutcome;
                 typedef std::future<DeleteTriggerOutcome> DeleteTriggerOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::DeleteTriggerRequest&, DeleteTriggerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTriggerAsyncHandler;
-                typedef Outcome<Error, Model::GetAliasResponse> GetAliasOutcome;
+                typedef Outcome<Core::Error, Model::GetAccountResponse> GetAccountOutcome;
+                typedef std::future<GetAccountOutcome> GetAccountOutcomeCallable;
+                typedef std::function<void(const ScfClient*, const Model::GetAccountRequest&, GetAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetAccountAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetAliasResponse> GetAliasOutcome;
                 typedef std::future<GetAliasOutcome> GetAliasOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::GetAliasRequest&, GetAliasOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetAliasAsyncHandler;
-                typedef Outcome<Error, Model::GetFunctionResponse> GetFunctionOutcome;
+                typedef Outcome<Core::Error, Model::GetAsyncEventStatusResponse> GetAsyncEventStatusOutcome;
+                typedef std::future<GetAsyncEventStatusOutcome> GetAsyncEventStatusOutcomeCallable;
+                typedef std::function<void(const ScfClient*, const Model::GetAsyncEventStatusRequest&, GetAsyncEventStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetAsyncEventStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetFunctionResponse> GetFunctionOutcome;
                 typedef std::future<GetFunctionOutcome> GetFunctionOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::GetFunctionRequest&, GetFunctionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetFunctionAsyncHandler;
-                typedef Outcome<Error, Model::GetFunctionAddressResponse> GetFunctionAddressOutcome;
+                typedef Outcome<Core::Error, Model::GetFunctionAddressResponse> GetFunctionAddressOutcome;
                 typedef std::future<GetFunctionAddressOutcome> GetFunctionAddressOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::GetFunctionAddressRequest&, GetFunctionAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetFunctionAddressAsyncHandler;
-                typedef Outcome<Error, Model::GetFunctionLogsResponse> GetFunctionLogsOutcome;
+                typedef Outcome<Core::Error, Model::GetFunctionEventInvokeConfigResponse> GetFunctionEventInvokeConfigOutcome;
+                typedef std::future<GetFunctionEventInvokeConfigOutcome> GetFunctionEventInvokeConfigOutcomeCallable;
+                typedef std::function<void(const ScfClient*, const Model::GetFunctionEventInvokeConfigRequest&, GetFunctionEventInvokeConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetFunctionEventInvokeConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetFunctionLogsResponse> GetFunctionLogsOutcome;
                 typedef std::future<GetFunctionLogsOutcome> GetFunctionLogsOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::GetFunctionLogsRequest&, GetFunctionLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetFunctionLogsAsyncHandler;
-                typedef Outcome<Error, Model::GetLayerVersionResponse> GetLayerVersionOutcome;
+                typedef Outcome<Core::Error, Model::GetLayerVersionResponse> GetLayerVersionOutcome;
                 typedef std::future<GetLayerVersionOutcome> GetLayerVersionOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::GetLayerVersionRequest&, GetLayerVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetLayerVersionAsyncHandler;
-                typedef Outcome<Error, Model::InvokeResponse> InvokeOutcome;
+                typedef Outcome<Core::Error, Model::GetProvisionedConcurrencyConfigResponse> GetProvisionedConcurrencyConfigOutcome;
+                typedef std::future<GetProvisionedConcurrencyConfigOutcome> GetProvisionedConcurrencyConfigOutcomeCallable;
+                typedef std::function<void(const ScfClient*, const Model::GetProvisionedConcurrencyConfigRequest&, GetProvisionedConcurrencyConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetProvisionedConcurrencyConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetRequestStatusResponse> GetRequestStatusOutcome;
+                typedef std::future<GetRequestStatusOutcome> GetRequestStatusOutcomeCallable;
+                typedef std::function<void(const ScfClient*, const Model::GetRequestStatusRequest&, GetRequestStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetRequestStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetReservedConcurrencyConfigResponse> GetReservedConcurrencyConfigOutcome;
+                typedef std::future<GetReservedConcurrencyConfigOutcome> GetReservedConcurrencyConfigOutcomeCallable;
+                typedef std::function<void(const ScfClient*, const Model::GetReservedConcurrencyConfigRequest&, GetReservedConcurrencyConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetReservedConcurrencyConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::InvokeResponse> InvokeOutcome;
                 typedef std::future<InvokeOutcome> InvokeOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::InvokeRequest&, InvokeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InvokeAsyncHandler;
-                typedef Outcome<Error, Model::ListAliasesResponse> ListAliasesOutcome;
+                typedef Outcome<Core::Error, Model::InvokeFunctionResponse> InvokeFunctionOutcome;
+                typedef std::future<InvokeFunctionOutcome> InvokeFunctionOutcomeCallable;
+                typedef std::function<void(const ScfClient*, const Model::InvokeFunctionRequest&, InvokeFunctionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InvokeFunctionAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListAliasesResponse> ListAliasesOutcome;
                 typedef std::future<ListAliasesOutcome> ListAliasesOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::ListAliasesRequest&, ListAliasesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListAliasesAsyncHandler;
-                typedef Outcome<Error, Model::ListFunctionsResponse> ListFunctionsOutcome;
+                typedef Outcome<Core::Error, Model::ListAsyncEventsResponse> ListAsyncEventsOutcome;
+                typedef std::future<ListAsyncEventsOutcome> ListAsyncEventsOutcomeCallable;
+                typedef std::function<void(const ScfClient*, const Model::ListAsyncEventsRequest&, ListAsyncEventsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListAsyncEventsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListFunctionsResponse> ListFunctionsOutcome;
                 typedef std::future<ListFunctionsOutcome> ListFunctionsOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::ListFunctionsRequest&, ListFunctionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListFunctionsAsyncHandler;
-                typedef Outcome<Error, Model::ListLayerVersionsResponse> ListLayerVersionsOutcome;
+                typedef Outcome<Core::Error, Model::ListLayerVersionsResponse> ListLayerVersionsOutcome;
                 typedef std::future<ListLayerVersionsOutcome> ListLayerVersionsOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::ListLayerVersionsRequest&, ListLayerVersionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListLayerVersionsAsyncHandler;
-                typedef Outcome<Error, Model::ListLayersResponse> ListLayersOutcome;
+                typedef Outcome<Core::Error, Model::ListLayersResponse> ListLayersOutcome;
                 typedef std::future<ListLayersOutcome> ListLayersOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::ListLayersRequest&, ListLayersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListLayersAsyncHandler;
-                typedef Outcome<Error, Model::ListNamespacesResponse> ListNamespacesOutcome;
+                typedef Outcome<Core::Error, Model::ListNamespacesResponse> ListNamespacesOutcome;
                 typedef std::future<ListNamespacesOutcome> ListNamespacesOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::ListNamespacesRequest&, ListNamespacesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListNamespacesAsyncHandler;
-                typedef Outcome<Error, Model::ListTriggersResponse> ListTriggersOutcome;
+                typedef Outcome<Core::Error, Model::ListTriggersResponse> ListTriggersOutcome;
                 typedef std::future<ListTriggersOutcome> ListTriggersOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::ListTriggersRequest&, ListTriggersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListTriggersAsyncHandler;
-                typedef Outcome<Error, Model::ListVersionByFunctionResponse> ListVersionByFunctionOutcome;
+                typedef Outcome<Core::Error, Model::ListVersionByFunctionResponse> ListVersionByFunctionOutcome;
                 typedef std::future<ListVersionByFunctionOutcome> ListVersionByFunctionOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::ListVersionByFunctionRequest&, ListVersionByFunctionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListVersionByFunctionAsyncHandler;
-                typedef Outcome<Error, Model::PublishLayerVersionResponse> PublishLayerVersionOutcome;
+                typedef Outcome<Core::Error, Model::PublishLayerVersionResponse> PublishLayerVersionOutcome;
                 typedef std::future<PublishLayerVersionOutcome> PublishLayerVersionOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::PublishLayerVersionRequest&, PublishLayerVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PublishLayerVersionAsyncHandler;
-                typedef Outcome<Error, Model::PublishVersionResponse> PublishVersionOutcome;
+                typedef Outcome<Core::Error, Model::PublishVersionResponse> PublishVersionOutcome;
                 typedef std::future<PublishVersionOutcome> PublishVersionOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::PublishVersionRequest&, PublishVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PublishVersionAsyncHandler;
-                typedef Outcome<Error, Model::UpdateAliasResponse> UpdateAliasOutcome;
+                typedef Outcome<Core::Error, Model::PutProvisionedConcurrencyConfigResponse> PutProvisionedConcurrencyConfigOutcome;
+                typedef std::future<PutProvisionedConcurrencyConfigOutcome> PutProvisionedConcurrencyConfigOutcomeCallable;
+                typedef std::function<void(const ScfClient*, const Model::PutProvisionedConcurrencyConfigRequest&, PutProvisionedConcurrencyConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PutProvisionedConcurrencyConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::PutReservedConcurrencyConfigResponse> PutReservedConcurrencyConfigOutcome;
+                typedef std::future<PutReservedConcurrencyConfigOutcome> PutReservedConcurrencyConfigOutcomeCallable;
+                typedef std::function<void(const ScfClient*, const Model::PutReservedConcurrencyConfigRequest&, PutReservedConcurrencyConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PutReservedConcurrencyConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::PutTotalConcurrencyConfigResponse> PutTotalConcurrencyConfigOutcome;
+                typedef std::future<PutTotalConcurrencyConfigOutcome> PutTotalConcurrencyConfigOutcomeCallable;
+                typedef std::function<void(const ScfClient*, const Model::PutTotalConcurrencyConfigRequest&, PutTotalConcurrencyConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PutTotalConcurrencyConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::TerminateAsyncEventResponse> TerminateAsyncEventOutcome;
+                typedef std::future<TerminateAsyncEventOutcome> TerminateAsyncEventOutcomeCallable;
+                typedef std::function<void(const ScfClient*, const Model::TerminateAsyncEventRequest&, TerminateAsyncEventOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminateAsyncEventAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateAliasResponse> UpdateAliasOutcome;
                 typedef std::future<UpdateAliasOutcome> UpdateAliasOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::UpdateAliasRequest&, UpdateAliasOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateAliasAsyncHandler;
-                typedef Outcome<Error, Model::UpdateFunctionCodeResponse> UpdateFunctionCodeOutcome;
+                typedef Outcome<Core::Error, Model::UpdateFunctionCodeResponse> UpdateFunctionCodeOutcome;
                 typedef std::future<UpdateFunctionCodeOutcome> UpdateFunctionCodeOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::UpdateFunctionCodeRequest&, UpdateFunctionCodeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateFunctionCodeAsyncHandler;
-                typedef Outcome<Error, Model::UpdateFunctionConfigurationResponse> UpdateFunctionConfigurationOutcome;
+                typedef Outcome<Core::Error, Model::UpdateFunctionConfigurationResponse> UpdateFunctionConfigurationOutcome;
                 typedef std::future<UpdateFunctionConfigurationOutcome> UpdateFunctionConfigurationOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::UpdateFunctionConfigurationRequest&, UpdateFunctionConfigurationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateFunctionConfigurationAsyncHandler;
-                typedef Outcome<Error, Model::UpdateNamespaceResponse> UpdateNamespaceOutcome;
+                typedef Outcome<Core::Error, Model::UpdateFunctionEventInvokeConfigResponse> UpdateFunctionEventInvokeConfigOutcome;
+                typedef std::future<UpdateFunctionEventInvokeConfigOutcome> UpdateFunctionEventInvokeConfigOutcomeCallable;
+                typedef std::function<void(const ScfClient*, const Model::UpdateFunctionEventInvokeConfigRequest&, UpdateFunctionEventInvokeConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateFunctionEventInvokeConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateNamespaceResponse> UpdateNamespaceOutcome;
                 typedef std::future<UpdateNamespaceOutcome> UpdateNamespaceOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::UpdateNamespaceRequest&, UpdateNamespaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateNamespaceAsyncHandler;
 
@@ -265,13 +340,31 @@ An alias must point to a master version and can point to an additional version a
                 DeleteLayerVersionOutcomeCallable DeleteLayerVersionCallable(const Model::DeleteLayerVersionRequest& request);
 
                 /**
-                 *This API is used to create a namespace based on the input parameters.
+                 *This API is used to delete the specific namespace according to the parameters passed in.
                  * @param req DeleteNamespaceRequest
                  * @return DeleteNamespaceOutcome
                  */
                 DeleteNamespaceOutcome DeleteNamespace(const Model::DeleteNamespaceRequest &request);
                 void DeleteNamespaceAsync(const Model::DeleteNamespaceRequest& request, const DeleteNamespaceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteNamespaceOutcomeCallable DeleteNamespaceCallable(const Model::DeleteNamespaceRequest& request);
+
+                /**
+                 *This API is used to delete the provisioned concurrency configuration of a function version.
+                 * @param req DeleteProvisionedConcurrencyConfigRequest
+                 * @return DeleteProvisionedConcurrencyConfigOutcome
+                 */
+                DeleteProvisionedConcurrencyConfigOutcome DeleteProvisionedConcurrencyConfig(const Model::DeleteProvisionedConcurrencyConfigRequest &request);
+                void DeleteProvisionedConcurrencyConfigAsync(const Model::DeleteProvisionedConcurrencyConfigRequest& request, const DeleteProvisionedConcurrencyConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteProvisionedConcurrencyConfigOutcomeCallable DeleteProvisionedConcurrencyConfigCallable(const Model::DeleteProvisionedConcurrencyConfigRequest& request);
+
+                /**
+                 *This API is used to delete the configuration of reserved quota.
+                 * @param req DeleteReservedConcurrencyConfigRequest
+                 * @return DeleteReservedConcurrencyConfigOutcome
+                 */
+                DeleteReservedConcurrencyConfigOutcome DeleteReservedConcurrencyConfig(const Model::DeleteReservedConcurrencyConfigRequest &request);
+                void DeleteReservedConcurrencyConfigAsync(const Model::DeleteReservedConcurrencyConfigRequest& request, const DeleteReservedConcurrencyConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteReservedConcurrencyConfigOutcomeCallable DeleteReservedConcurrencyConfigCallable(const Model::DeleteReservedConcurrencyConfigRequest& request);
 
                 /**
                  *This API is used to delete an existing trigger based on the input parameters.
@@ -283,6 +376,15 @@ An alias must point to a master version and can point to an additional version a
                 DeleteTriggerOutcomeCallable DeleteTriggerCallable(const Model::DeleteTriggerRequest& request);
 
                 /**
+                 *This API is used to get the account information.
+                 * @param req GetAccountRequest
+                 * @return GetAccountOutcome
+                 */
+                GetAccountOutcome GetAccount(const Model::GetAccountRequest &request);
+                void GetAccountAsync(const Model::GetAccountRequest& request, const GetAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetAccountOutcomeCallable GetAccountCallable(const Model::GetAccountRequest& request);
+
+                /**
                  *This API is used to get the alias details such as the name, description, version, and routing information.
                  * @param req GetAliasRequest
                  * @return GetAliasOutcome
@@ -290,6 +392,15 @@ An alias must point to a master version and can point to an additional version a
                 GetAliasOutcome GetAlias(const Model::GetAliasRequest &request);
                 void GetAliasAsync(const Model::GetAliasRequest& request, const GetAliasAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 GetAliasOutcomeCallable GetAliasCallable(const Model::GetAliasRequest& request);
+
+                /**
+                 *This API is used to get the status of an async function execution event. The event status is retained for 3*24 hours, counting from the completion of the event.
+                 * @param req GetAsyncEventStatusRequest
+                 * @return GetAsyncEventStatusOutcome
+                 */
+                GetAsyncEventStatusOutcome GetAsyncEventStatus(const Model::GetAsyncEventStatusRequest &request);
+                void GetAsyncEventStatusAsync(const Model::GetAsyncEventStatusRequest& request, const GetAsyncEventStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetAsyncEventStatusOutcomeCallable GetAsyncEventStatusCallable(const Model::GetAsyncEventStatusRequest& request);
 
                 /**
                  *This API is used to obtain function details, such as name, code, handler, associated trigger, and timeout.
@@ -310,6 +421,15 @@ An alias must point to a master version and can point to an additional version a
                 GetFunctionAddressOutcomeCallable GetFunctionAddressCallable(const Model::GetFunctionAddressRequest& request);
 
                 /**
+                 *This API is used to get the async retry configuration of a function, including the number of retry attempts and message retention period.
+                 * @param req GetFunctionEventInvokeConfigRequest
+                 * @return GetFunctionEventInvokeConfigOutcome
+                 */
+                GetFunctionEventInvokeConfigOutcome GetFunctionEventInvokeConfig(const Model::GetFunctionEventInvokeConfigRequest &request);
+                void GetFunctionEventInvokeConfigAsync(const Model::GetFunctionEventInvokeConfigRequest& request, const GetFunctionEventInvokeConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetFunctionEventInvokeConfigOutcomeCallable GetFunctionEventInvokeConfigCallable(const Model::GetFunctionEventInvokeConfigRequest& request);
+
+                /**
                  *This API is used to return function running logs according to the specified log query criteria.
                  * @param req GetFunctionLogsRequest
                  * @return GetFunctionLogsOutcome
@@ -328,6 +448,33 @@ An alias must point to a master version and can point to an additional version a
                 GetLayerVersionOutcomeCallable GetLayerVersionCallable(const Model::GetLayerVersionRequest& request);
 
                 /**
+                 *This API is used to get the provisioned concurrency details of a function or its specified version.
+                 * @param req GetProvisionedConcurrencyConfigRequest
+                 * @return GetProvisionedConcurrencyConfigOutcome
+                 */
+                GetProvisionedConcurrencyConfigOutcome GetProvisionedConcurrencyConfig(const Model::GetProvisionedConcurrencyConfigRequest &request);
+                void GetProvisionedConcurrencyConfigAsync(const Model::GetProvisionedConcurrencyConfigRequest& request, const GetProvisionedConcurrencyConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetProvisionedConcurrencyConfigOutcomeCallable GetProvisionedConcurrencyConfigCallable(const Model::GetProvisionedConcurrencyConfigRequest& request);
+
+                /**
+                 *This API is used to query the status of a single function request.
+                 * @param req GetRequestStatusRequest
+                 * @return GetRequestStatusOutcome
+                 */
+                GetRequestStatusOutcome GetRequestStatus(const Model::GetRequestStatusRequest &request);
+                void GetRequestStatusAsync(const Model::GetRequestStatusRequest& request, const GetRequestStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetRequestStatusOutcomeCallable GetRequestStatusCallable(const Model::GetRequestStatusRequest& request);
+
+                /**
+                 *This API is used to obtain the reserved quota details of a function. 
+                 * @param req GetReservedConcurrencyConfigRequest
+                 * @return GetReservedConcurrencyConfigOutcome
+                 */
+                GetReservedConcurrencyConfigOutcome GetReservedConcurrencyConfig(const Model::GetReservedConcurrencyConfigRequest &request);
+                void GetReservedConcurrencyConfigAsync(const Model::GetReservedConcurrencyConfigRequest& request, const GetReservedConcurrencyConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetReservedConcurrencyConfigOutcomeCallable GetReservedConcurrencyConfigCallable(const Model::GetReservedConcurrencyConfigRequest& request);
+
+                /**
                  *This API is used to run a function.
                  * @param req InvokeRequest
                  * @return InvokeOutcome
@@ -337,6 +484,15 @@ An alias must point to a master version and can point to an additional version a
                 InvokeOutcomeCallable InvokeCallable(const Model::InvokeRequest& request);
 
                 /**
+                 * This API is used to invoke functions synchronously.
+                 * @param req InvokeFunctionRequest
+                 * @return InvokeFunctionOutcome
+                 */
+                InvokeFunctionOutcome InvokeFunction(const Model::InvokeFunctionRequest &request);
+                void InvokeFunctionAsync(const Model::InvokeFunctionRequest& request, const InvokeFunctionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                InvokeFunctionOutcomeCallable InvokeFunctionCallable(const Model::InvokeFunctionRequest& request);
+
+                /**
                  *This API is used to return the list of all aliases under a function. You can filter them by the specific function version.
                  * @param req ListAliasesRequest
                  * @return ListAliasesOutcome
@@ -344,6 +500,15 @@ An alias must point to a master version and can point to an additional version a
                 ListAliasesOutcome ListAliases(const Model::ListAliasesRequest &request);
                 void ListAliasesAsync(const Model::ListAliasesRequest& request, const ListAliasesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ListAliasesOutcomeCallable ListAliasesCallable(const Model::ListAliasesRequest& request);
+
+                /**
+                 *This API is used to pull the list of async function events.
+                 * @param req ListAsyncEventsRequest
+                 * @return ListAsyncEventsOutcome
+                 */
+                ListAsyncEventsOutcome ListAsyncEvents(const Model::ListAsyncEventsRequest &request);
+                void ListAsyncEventsAsync(const Model::ListAsyncEventsRequest& request, const ListAsyncEventsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListAsyncEventsOutcomeCallable ListAsyncEventsCallable(const Model::ListAsyncEventsRequest& request);
 
                 /**
                  *This API is used to return relevant function information based on the input query parameters.
@@ -418,6 +583,42 @@ An alias must point to a master version and can point to an additional version a
                 PublishVersionOutcomeCallable PublishVersionCallable(const Model::PublishVersionRequest& request);
 
                 /**
+                 *This API is used to set the provisioned concurrency of a non-$LATEST version of a function.
+                 * @param req PutProvisionedConcurrencyConfigRequest
+                 * @return PutProvisionedConcurrencyConfigOutcome
+                 */
+                PutProvisionedConcurrencyConfigOutcome PutProvisionedConcurrencyConfig(const Model::PutProvisionedConcurrencyConfigRequest &request);
+                void PutProvisionedConcurrencyConfigAsync(const Model::PutProvisionedConcurrencyConfigRequest& request, const PutProvisionedConcurrencyConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                PutProvisionedConcurrencyConfigOutcomeCallable PutProvisionedConcurrencyConfigCallable(const Model::PutProvisionedConcurrencyConfigRequest& request);
+
+                /**
+                 *This API is used to configure the reserved quota of a function.
+                 * @param req PutReservedConcurrencyConfigRequest
+                 * @return PutReservedConcurrencyConfigOutcome
+                 */
+                PutReservedConcurrencyConfigOutcome PutReservedConcurrencyConfig(const Model::PutReservedConcurrencyConfigRequest &request);
+                void PutReservedConcurrencyConfigAsync(const Model::PutReservedConcurrencyConfigRequest& request, const PutReservedConcurrencyConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                PutReservedConcurrencyConfigOutcomeCallable PutReservedConcurrencyConfigCallable(const Model::PutReservedConcurrencyConfigRequest& request);
+
+                /**
+                 *This API is used to modify the account concurrency quota.
+                 * @param req PutTotalConcurrencyConfigRequest
+                 * @return PutTotalConcurrencyConfigOutcome
+                 */
+                PutTotalConcurrencyConfigOutcome PutTotalConcurrencyConfig(const Model::PutTotalConcurrencyConfigRequest &request);
+                void PutTotalConcurrencyConfigAsync(const Model::PutTotalConcurrencyConfigRequest& request, const PutTotalConcurrencyConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                PutTotalConcurrencyConfigOutcomeCallable PutTotalConcurrencyConfigCallable(const Model::PutTotalConcurrencyConfigRequest& request);
+
+                /**
+                 *This API is used to terminate a running async function event.
+                 * @param req TerminateAsyncEventRequest
+                 * @return TerminateAsyncEventOutcome
+                 */
+                TerminateAsyncEventOutcome TerminateAsyncEvent(const Model::TerminateAsyncEventRequest &request);
+                void TerminateAsyncEventAsync(const Model::TerminateAsyncEventRequest& request, const TerminateAsyncEventAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                TerminateAsyncEventOutcomeCallable TerminateAsyncEventCallable(const Model::TerminateAsyncEventRequest& request);
+
+                /**
                  *This API is used to update the configuration of an alias.
                  * @param req UpdateAliasRequest
                  * @return UpdateAliasOutcome
@@ -443,6 +644,15 @@ An alias must point to a master version and can point to an additional version a
                 UpdateFunctionConfigurationOutcome UpdateFunctionConfiguration(const Model::UpdateFunctionConfigurationRequest &request);
                 void UpdateFunctionConfigurationAsync(const Model::UpdateFunctionConfigurationRequest& request, const UpdateFunctionConfigurationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UpdateFunctionConfigurationOutcomeCallable UpdateFunctionConfigurationCallable(const Model::UpdateFunctionConfigurationRequest& request);
+
+                /**
+                 *This API is used to update the async retry configuration of a function, including the number of retry attempts and message retention period.
+                 * @param req UpdateFunctionEventInvokeConfigRequest
+                 * @return UpdateFunctionEventInvokeConfigOutcome
+                 */
+                UpdateFunctionEventInvokeConfigOutcome UpdateFunctionEventInvokeConfig(const Model::UpdateFunctionEventInvokeConfigRequest &request);
+                void UpdateFunctionEventInvokeConfigAsync(const Model::UpdateFunctionEventInvokeConfigRequest& request, const UpdateFunctionEventInvokeConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateFunctionEventInvokeConfigOutcomeCallable UpdateFunctionEventInvokeConfigCallable(const Model::UpdateFunctionEventInvokeConfigRequest& request);
 
                 /**
                  *This API is used to update a namespace.

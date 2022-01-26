@@ -40,6 +40,7 @@ namespace TencentCloud
                     MLIDCardOCRResponse();
                     ~MLIDCardOCRResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -149,20 +150,22 @@ namespace TencentCloud
                     bool AdvancedInfoHasBeenSet() const;
 
                     /**
-                     * 获取Certificate types
-MyKad: Malaysian Identity Card
-MyPR: Malaysia Permanent Resident Identity Card
-MyTentera: Malaysian Armed Forces Identity Card
-MyKAS: Malaysian Temporary Resident Identity Card
-POLIS: Royal Malaysia Police Identity Card
-IKAD: Malaysia Temporary Employment Visit Pass
-                     * @return Type Certificate types
-MyKad: Malaysian Identity Card
-MyPR: Malaysia Permanent Resident Identity Card
-MyTentera: Malaysian Armed Forces Identity Card
-MyKAS: Malaysian Temporary Resident Identity Card
-POLIS: Royal Malaysia Police Identity Card
-IKAD: Malaysia Temporary Employment Visit Pass
+                     * 获取Certificate type
+MyKad  ID card
+MyPR    Permanent resident card
+MyTentera   Military identity card
+MyKAS    Temporary ID card
+POLIS  Police card
+IKAD   Work permit
+MyKid   Kid card
+                     * @return Type Certificate type
+MyKad  ID card
+MyPR    Permanent resident card
+MyTentera   Military identity card
+MyKAS    Temporary ID card
+POLIS  Police card
+IKAD   Work permit
+MyKid   Kid card
                      */
                     std::string GetType() const;
 
@@ -171,6 +174,18 @@ IKAD: Malaysia Temporary Employment Visit Pass
                      * @return Type 是否已赋值
                      */
                     bool TypeHasBeenSet() const;
+
+                    /**
+                     * 获取Date of birth (currently, this field is only supported for IKAD).
+                     * @return Birthday Date of birth (currently, this field is only supported for IKAD).
+                     */
+                    std::string GetBirthday() const;
+
+                    /**
+                     * 判断参数 Birthday 是否已赋值
+                     * @return Birthday 是否已赋值
+                     */
+                    bool BirthdayHasBeenSet() const;
 
                 private:
 
@@ -228,16 +243,23 @@ IKAD: Malaysia Temporary Employment Visit Pass
                     bool m_advancedInfoHasBeenSet;
 
                     /**
-                     * Certificate types
-MyKad: Malaysian Identity Card
-MyPR: Malaysia Permanent Resident Identity Card
-MyTentera: Malaysian Armed Forces Identity Card
-MyKAS: Malaysian Temporary Resident Identity Card
-POLIS: Royal Malaysia Police Identity Card
-IKAD: Malaysia Temporary Employment Visit Pass
+                     * Certificate type
+MyKad  ID card
+MyPR    Permanent resident card
+MyTentera   Military identity card
+MyKAS    Temporary ID card
+POLIS  Police card
+IKAD   Work permit
+MyKid   Kid card
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
+
+                    /**
+                     * Date of birth (currently, this field is only supported for IKAD).
+                     */
+                    std::string m_birthday;
+                    bool m_birthdayHasBeenSet;
 
                 };
             }

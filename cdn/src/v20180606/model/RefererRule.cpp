@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 RefererRule::RefererRule() :
@@ -30,7 +29,7 @@ RefererRule::RefererRule() :
 {
 }
 
-CoreInternalOutcome RefererRule::Deserialize(const Value &value)
+CoreInternalOutcome RefererRule::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome RefererRule::Deserialize(const Value &value)
     {
         if (!value["RuleType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RefererRule.RuleType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RefererRule.RuleType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ruleType = string(value["RuleType"].GetString());
         m_ruleTypeHasBeenSet = true;
@@ -48,10 +47,10 @@ CoreInternalOutcome RefererRule::Deserialize(const Value &value)
     if (value.HasMember("RulePaths") && !value["RulePaths"].IsNull())
     {
         if (!value["RulePaths"].IsArray())
-            return CoreInternalOutcome(Error("response `RefererRule.RulePaths` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `RefererRule.RulePaths` is not array type"));
 
-        const Value &tmpValue = value["RulePaths"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["RulePaths"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_rulePaths.push_back((*itr).GetString());
         }
@@ -62,7 +61,7 @@ CoreInternalOutcome RefererRule::Deserialize(const Value &value)
     {
         if (!value["RefererType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RefererRule.RefererType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RefererRule.RefererType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_refererType = string(value["RefererType"].GetString());
         m_refererTypeHasBeenSet = true;
@@ -71,10 +70,10 @@ CoreInternalOutcome RefererRule::Deserialize(const Value &value)
     if (value.HasMember("Referers") && !value["Referers"].IsNull())
     {
         if (!value["Referers"].IsArray())
-            return CoreInternalOutcome(Error("response `RefererRule.Referers` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `RefererRule.Referers` is not array type"));
 
-        const Value &tmpValue = value["Referers"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Referers"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_referers.push_back((*itr).GetString());
         }
@@ -85,7 +84,7 @@ CoreInternalOutcome RefererRule::Deserialize(const Value &value)
     {
         if (!value["AllowEmpty"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `RefererRule.AllowEmpty` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RefererRule.AllowEmpty` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_allowEmpty = value["AllowEmpty"].GetBool();
         m_allowEmptyHasBeenSet = true;
@@ -95,54 +94,54 @@ CoreInternalOutcome RefererRule::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void RefererRule::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void RefererRule::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_ruleTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RuleType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ruleType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ruleType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_rulePathsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RulePaths";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_rulePaths.begin(); itr != m_rulePaths.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_refererTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RefererType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_refererType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_refererType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_referersHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Referers";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_referers.begin(); itr != m_referers.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_allowEmptyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AllowEmpty";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_allowEmpty, allocator);

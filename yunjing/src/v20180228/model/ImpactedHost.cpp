@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Yunjing::V20180228::Model;
-using namespace rapidjson;
 using namespace std;
 
 ImpactedHost::ImpactedHost() :
@@ -34,7 +33,7 @@ ImpactedHost::ImpactedHost() :
 {
 }
 
-CoreInternalOutcome ImpactedHost::Deserialize(const Value &value)
+CoreInternalOutcome ImpactedHost::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -43,7 +42,7 @@ CoreInternalOutcome ImpactedHost::Deserialize(const Value &value)
     {
         if (!value["Id"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ImpactedHost.Id` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImpactedHost.Id` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_id = value["Id"].GetUint64();
         m_idHasBeenSet = true;
@@ -53,7 +52,7 @@ CoreInternalOutcome ImpactedHost::Deserialize(const Value &value)
     {
         if (!value["MachineIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ImpactedHost.MachineIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImpactedHost.MachineIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_machineIp = string(value["MachineIp"].GetString());
         m_machineIpHasBeenSet = true;
@@ -63,7 +62,7 @@ CoreInternalOutcome ImpactedHost::Deserialize(const Value &value)
     {
         if (!value["MachineName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ImpactedHost.MachineName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImpactedHost.MachineName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_machineName = string(value["MachineName"].GetString());
         m_machineNameHasBeenSet = true;
@@ -73,7 +72,7 @@ CoreInternalOutcome ImpactedHost::Deserialize(const Value &value)
     {
         if (!value["LastScanTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ImpactedHost.LastScanTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImpactedHost.LastScanTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_lastScanTime = string(value["LastScanTime"].GetString());
         m_lastScanTimeHasBeenSet = true;
@@ -83,7 +82,7 @@ CoreInternalOutcome ImpactedHost::Deserialize(const Value &value)
     {
         if (!value["VulStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ImpactedHost.VulStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImpactedHost.VulStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vulStatus = string(value["VulStatus"].GetString());
         m_vulStatusHasBeenSet = true;
@@ -93,7 +92,7 @@ CoreInternalOutcome ImpactedHost::Deserialize(const Value &value)
     {
         if (!value["Uuid"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ImpactedHost.Uuid` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImpactedHost.Uuid` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_uuid = string(value["Uuid"].GetString());
         m_uuidHasBeenSet = true;
@@ -103,7 +102,7 @@ CoreInternalOutcome ImpactedHost::Deserialize(const Value &value)
     {
         if (!value["Description"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ImpactedHost.Description` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImpactedHost.Description` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_description = string(value["Description"].GetString());
         m_descriptionHasBeenSet = true;
@@ -113,7 +112,7 @@ CoreInternalOutcome ImpactedHost::Deserialize(const Value &value)
     {
         if (!value["VulId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ImpactedHost.VulId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImpactedHost.VulId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_vulId = value["VulId"].GetUint64();
         m_vulIdHasBeenSet = true;
@@ -123,7 +122,7 @@ CoreInternalOutcome ImpactedHost::Deserialize(const Value &value)
     {
         if (!value["IsProVersion"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `ImpactedHost.IsProVersion` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImpactedHost.IsProVersion` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_isProVersion = value["IsProVersion"].GetBool();
         m_isProVersionHasBeenSet = true;
@@ -133,12 +132,12 @@ CoreInternalOutcome ImpactedHost::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ImpactedHost::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ImpactedHost::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_idHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Id";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_id, allocator);
@@ -146,55 +145,55 @@ void ImpactedHost::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_machineIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MachineIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_machineIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_machineIp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_machineNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MachineName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_machineName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_machineName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_lastScanTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LastScanTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_lastScanTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_lastScanTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vulStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VulStatus";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vulStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vulStatus.c_str(), allocator).Move(), allocator);
     }
 
     if (m_uuidHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Uuid";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_uuid.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_uuid.c_str(), allocator).Move(), allocator);
     }
 
     if (m_descriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Description";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_description.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vulIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VulId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_vulId, allocator);
@@ -202,7 +201,7 @@ void ImpactedHost::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_isProVersionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsProVersion";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isProVersion, allocator);

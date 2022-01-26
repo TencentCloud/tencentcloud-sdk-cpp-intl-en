@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/dc/v20180410/model/Coordinate.h>
 
 
 namespace TencentCloud
@@ -154,6 +155,116 @@ namespace TencentCloud
                      */
                     bool RegionIdHasBeenSet() const;
 
+                    /**
+                     * 获取Available port type at the access point. Valid values: 1000BASE-T: gigabit electrical port; 1000BASE-LX: 10 km gigabit single-mode optical port; 1000BASE-ZX: 80 km gigabit single-mode optical port; 10GBASE-LR: 10 km 10-gigabit single-mode optical port; 10GBASE-ZR: 80 km 10-gigabit single-mode optical port; 10GBASE-LH: 40 km 10-gigabit single-mode optical port; 100GBASE-LR4: 10 km 100-gigabit single-mode optical portfiber optic port.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return AvailablePortType Available port type at the access point. Valid values: 1000BASE-T: gigabit electrical port; 1000BASE-LX: 10 km gigabit single-mode optical port; 1000BASE-ZX: 80 km gigabit single-mode optical port; 10GBASE-LR: 10 km 10-gigabit single-mode optical port; 10GBASE-ZR: 80 km 10-gigabit single-mode optical port; 10GBASE-LH: 40 km 10-gigabit single-mode optical port; 100GBASE-LR4: 10 km 100-gigabit single-mode optical portfiber optic port.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    std::vector<std::string> GetAvailablePortType() const;
+
+                    /**
+                     * 设置Available port type at the access point. Valid values: 1000BASE-T: gigabit electrical port; 1000BASE-LX: 10 km gigabit single-mode optical port; 1000BASE-ZX: 80 km gigabit single-mode optical port; 10GBASE-LR: 10 km 10-gigabit single-mode optical port; 10GBASE-ZR: 80 km 10-gigabit single-mode optical port; 10GBASE-LH: 40 km 10-gigabit single-mode optical port; 100GBASE-LR4: 10 km 100-gigabit single-mode optical portfiber optic port.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param AvailablePortType Available port type at the access point. Valid values: 1000BASE-T: gigabit electrical port; 1000BASE-LX: 10 km gigabit single-mode optical port; 1000BASE-ZX: 80 km gigabit single-mode optical port; 10GBASE-LR: 10 km 10-gigabit single-mode optical port; 10GBASE-ZR: 80 km 10-gigabit single-mode optical port; 10GBASE-LH: 40 km 10-gigabit single-mode optical port; 100GBASE-LR4: 10 km 100-gigabit single-mode optical portfiber optic port.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    void SetAvailablePortType(const std::vector<std::string>& _availablePortType);
+
+                    /**
+                     * 判断参数 AvailablePortType 是否已赋值
+                     * @return AvailablePortType 是否已赋值
+                     */
+                    bool AvailablePortTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Latitude and longitude of the access point
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Coordinate Latitude and longitude of the access point
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    Coordinate GetCoordinate() const;
+
+                    /**
+                     * 设置Latitude and longitude of the access point
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param Coordinate Latitude and longitude of the access point
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetCoordinate(const Coordinate& _coordinate);
+
+                    /**
+                     * 判断参数 Coordinate 是否已赋值
+                     * @return Coordinate 是否已赋值
+                     */
+                    bool CoordinateHasBeenSet() const;
+
+                    /**
+                     * 获取City where the access point is located
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return City City where the access point is located
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetCity() const;
+
+                    /**
+                     * 设置City where the access point is located
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param City City where the access point is located
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetCity(const std::string& _city);
+
+                    /**
+                     * 判断参数 City 是否已赋值
+                     * @return City 是否已赋值
+                     */
+                    bool CityHasBeenSet() const;
+
+                    /**
+                     * 获取Access point region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Area Access point region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetArea() const;
+
+                    /**
+                     * 设置Access point region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param Area Access point region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetArea(const std::string& _area);
+
+                    /**
+                     * 判断参数 Area 是否已赋值
+                     * @return Area 是否已赋值
+                     */
+                    bool AreaHasBeenSet() const;
+
+                    /**
+                     * 获取Access point type. Valid values: `VXLAN`, `QCPL`, and `QCAR`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return AccessPointType Access point type. Valid values: `VXLAN`, `QCPL`, and `QCAR`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetAccessPointType() const;
+
+                    /**
+                     * 设置Access point type. Valid values: `VXLAN`, `QCPL`, and `QCAR`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param AccessPointType Access point type. Valid values: `VXLAN`, `QCPL`, and `QCAR`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetAccessPointType(const std::string& _accessPointType);
+
+                    /**
+                     * 判断参数 AccessPointType 是否已赋值
+                     * @return AccessPointType 是否已赋值
+                     */
+                    bool AccessPointTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -191,6 +302,41 @@ namespace TencentCloud
                      */
                     std::string m_regionId;
                     bool m_regionIdHasBeenSet;
+
+                    /**
+                     * Available port type at the access point. Valid values: 1000BASE-T: gigabit electrical port; 1000BASE-LX: 10 km gigabit single-mode optical port; 1000BASE-ZX: 80 km gigabit single-mode optical port; 10GBASE-LR: 10 km 10-gigabit single-mode optical port; 10GBASE-ZR: 80 km 10-gigabit single-mode optical port; 10GBASE-LH: 40 km 10-gigabit single-mode optical port; 100GBASE-LR4: 10 km 100-gigabit single-mode optical portfiber optic port.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    std::vector<std::string> m_availablePortType;
+                    bool m_availablePortTypeHasBeenSet;
+
+                    /**
+                     * Latitude and longitude of the access point
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    Coordinate m_coordinate;
+                    bool m_coordinateHasBeenSet;
+
+                    /**
+                     * City where the access point is located
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_city;
+                    bool m_cityHasBeenSet;
+
+                    /**
+                     * Access point region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_area;
+                    bool m_areaHasBeenSet;
+
+                    /**
+                     * Access point type. Valid values: `VXLAN`, `QCPL`, and `QCAR`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_accessPointType;
+                    bool m_accessPointTypeHasBeenSet;
 
                 };
             }

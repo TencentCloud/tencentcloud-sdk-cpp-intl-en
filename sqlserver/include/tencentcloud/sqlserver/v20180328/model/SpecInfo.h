@@ -302,6 +302,42 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool PayModeStatusHasBeenSet() const;
 
+                    /**
+                     * 获取Instance type. Valid values: HA (High-Availability Edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (Basic Edition)
+                     * @return InstanceType Instance type. Valid values: HA (High-Availability Edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (Basic Edition)
+                     */
+                    std::string GetInstanceType() const;
+
+                    /**
+                     * 设置Instance type. Valid values: HA (High-Availability Edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (Basic Edition)
+                     * @param InstanceType Instance type. Valid values: HA (High-Availability Edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (Basic Edition)
+                     */
+                    void SetInstanceType(const std::string& _instanceType);
+
+                    /**
+                     * 判断参数 InstanceType 是否已赋值
+                     * @return InstanceType 是否已赋值
+                     */
+                    bool InstanceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether multi-AZ deployment is supported. Valid values: MultiZones (only multi-AZ deployment is supported), SameZones (only single-AZ deployment is supported), ALL (both deployments are supported)
+                     * @return MultiZonesStatus Whether multi-AZ deployment is supported. Valid values: MultiZones (only multi-AZ deployment is supported), SameZones (only single-AZ deployment is supported), ALL (both deployments are supported)
+                     */
+                    std::string GetMultiZonesStatus() const;
+
+                    /**
+                     * 设置Whether multi-AZ deployment is supported. Valid values: MultiZones (only multi-AZ deployment is supported), SameZones (only single-AZ deployment is supported), ALL (both deployments are supported)
+                     * @param MultiZonesStatus Whether multi-AZ deployment is supported. Valid values: MultiZones (only multi-AZ deployment is supported), SameZones (only single-AZ deployment is supported), ALL (both deployments are supported)
+                     */
+                    void SetMultiZonesStatus(const std::string& _multiZonesStatus);
+
+                    /**
+                     * 判断参数 MultiZonesStatus 是否已赋值
+                     * @return MultiZonesStatus 是否已赋值
+                     */
+                    bool MultiZonesStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -388,6 +424,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_payModeStatus;
                     bool m_payModeStatusHasBeenSet;
+
+                    /**
+                     * Instance type. Valid values: HA (High-Availability Edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (Basic Edition)
+                     */
+                    std::string m_instanceType;
+                    bool m_instanceTypeHasBeenSet;
+
+                    /**
+                     * Whether multi-AZ deployment is supported. Valid values: MultiZones (only multi-AZ deployment is supported), SameZones (only single-AZ deployment is supported), ALL (both deployments are supported)
+                     */
+                    std::string m_multiZonesStatus;
+                    bool m_multiZonesStatusHasBeenSet;
 
                 };
             }

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Yunjing::V20180228::Model;
-using namespace rapidjson;
 using namespace std;
 
 Account::Account() :
@@ -34,7 +33,7 @@ Account::Account() :
 {
 }
 
-CoreInternalOutcome Account::Deserialize(const Value &value)
+CoreInternalOutcome Account::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -43,7 +42,7 @@ CoreInternalOutcome Account::Deserialize(const Value &value)
     {
         if (!value["Id"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Account.Id` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Account.Id` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_id = value["Id"].GetUint64();
         m_idHasBeenSet = true;
@@ -53,7 +52,7 @@ CoreInternalOutcome Account::Deserialize(const Value &value)
     {
         if (!value["Uuid"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Account.Uuid` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Account.Uuid` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_uuid = string(value["Uuid"].GetString());
         m_uuidHasBeenSet = true;
@@ -63,7 +62,7 @@ CoreInternalOutcome Account::Deserialize(const Value &value)
     {
         if (!value["MachineIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Account.MachineIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Account.MachineIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_machineIp = string(value["MachineIp"].GetString());
         m_machineIpHasBeenSet = true;
@@ -73,7 +72,7 @@ CoreInternalOutcome Account::Deserialize(const Value &value)
     {
         if (!value["MachineName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Account.MachineName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Account.MachineName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_machineName = string(value["MachineName"].GetString());
         m_machineNameHasBeenSet = true;
@@ -83,7 +82,7 @@ CoreInternalOutcome Account::Deserialize(const Value &value)
     {
         if (!value["Username"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Account.Username` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Account.Username` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_username = string(value["Username"].GetString());
         m_usernameHasBeenSet = true;
@@ -93,7 +92,7 @@ CoreInternalOutcome Account::Deserialize(const Value &value)
     {
         if (!value["Groups"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Account.Groups` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Account.Groups` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_groups = string(value["Groups"].GetString());
         m_groupsHasBeenSet = true;
@@ -103,7 +102,7 @@ CoreInternalOutcome Account::Deserialize(const Value &value)
     {
         if (!value["Privilege"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Account.Privilege` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Account.Privilege` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_privilege = string(value["Privilege"].GetString());
         m_privilegeHasBeenSet = true;
@@ -113,7 +112,7 @@ CoreInternalOutcome Account::Deserialize(const Value &value)
     {
         if (!value["AccountCreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Account.AccountCreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Account.AccountCreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_accountCreateTime = string(value["AccountCreateTime"].GetString());
         m_accountCreateTimeHasBeenSet = true;
@@ -123,7 +122,7 @@ CoreInternalOutcome Account::Deserialize(const Value &value)
     {
         if (!value["LastLoginTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Account.LastLoginTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Account.LastLoginTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_lastLoginTime = string(value["LastLoginTime"].GetString());
         m_lastLoginTimeHasBeenSet = true;
@@ -133,12 +132,12 @@ CoreInternalOutcome Account::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Account::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Account::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_idHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Id";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_id, allocator);
@@ -146,66 +145,66 @@ void Account::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_uuidHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Uuid";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_uuid.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_uuid.c_str(), allocator).Move(), allocator);
     }
 
     if (m_machineIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MachineIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_machineIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_machineIp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_machineNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MachineName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_machineName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_machineName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_usernameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Username";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_username.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_username.c_str(), allocator).Move(), allocator);
     }
 
     if (m_groupsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Groups";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_groups.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_groups.c_str(), allocator).Move(), allocator);
     }
 
     if (m_privilegeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Privilege";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_privilege.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_privilege.c_str(), allocator).Move(), allocator);
     }
 
     if (m_accountCreateTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AccountCreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_accountCreateTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_accountCreateTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_lastLoginTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LastLoginTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_lastLoginTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_lastLoginTime.c_str(), allocator).Move(), allocator);
     }
 
 }

@@ -40,11 +40,12 @@ namespace TencentCloud
                     GenerateDataKeyResponse();
                     ~GenerateDataKeyResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取
-                     * @return KeyId 
+                     * 获取Globally unique CMK ID
+                     * @return KeyId Globally unique CMK ID
                      */
                     std::string GetKeyId() const;
 
@@ -55,8 +56,10 @@ namespace TencentCloud
                     bool KeyIdHasBeenSet() const;
 
                     /**
-                     * 获取Plaintext of the generated data key. The plaintext is Base64-encoded and can be used locally after having it Base64-decoded.
-                     * @return Plaintext Plaintext of the generated data key. The plaintext is Base64-encoded and can be used locally after having it Base64-decoded.
+                     * 获取If `EncryptionPublicKey` is left empty, a Base64-encoded ciphertext will be returned. To get the plaintext, you need to decode the ciphertext first.
+If `EncryptionPublicKey` is specified, this field will return the Base64-encoded ciphertext encrypted with the specified public key. To get the plaintext, you need to decode the ciphertext and upload the corresponding private key.
+                     * @return Plaintext If `EncryptionPublicKey` is left empty, a Base64-encoded ciphertext will be returned. To get the plaintext, you need to decode the ciphertext first.
+If `EncryptionPublicKey` is specified, this field will return the Base64-encoded ciphertext encrypted with the specified public key. To get the plaintext, you need to decode the ciphertext and upload the corresponding private key.
                      */
                     std::string GetPlaintext() const;
 
@@ -81,13 +84,14 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Globally unique CMK ID
                      */
                     std::string m_keyId;
                     bool m_keyIdHasBeenSet;
 
                     /**
-                     * Plaintext of the generated data key. The plaintext is Base64-encoded and can be used locally after having it Base64-decoded.
+                     * If `EncryptionPublicKey` is left empty, a Base64-encoded ciphertext will be returned. To get the plaintext, you need to decode the ciphertext first.
+If `EncryptionPublicKey` is specified, this field will return the Base64-encoded ciphertext encrypted with the specified public key. To get the plaintext, you need to decode the ciphertext and upload the corresponding private key.
                      */
                     std::string m_plaintext;
                     bool m_plaintextHasBeenSet;

@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vpc/v20170312/model/InstanceChargePrepaid.h>
+#include <tencentcloud/vpc/v20170312/model/Tag.h>
 
 
 namespace TencentCloud
@@ -44,14 +45,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
-                     * @return VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+                     * 获取VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
+                     * @return VpcId VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
-                     * @param VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+                     * 设置VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
+                     * @param VpcId VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
                      */
                     void SetVpcId(const std::string& _vpcId);
 
@@ -152,14 +153,14 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway
-                     * @return Type VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway
+                     * 获取VPN gateway type. Values: `CCN` (CCN VPN gateway), `SSL` (SSL VPN gateway)
+                     * @return Type VPN gateway type. Values: `CCN` (CCN VPN gateway), `SSL` (SSL VPN gateway)
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway
-                     * @param Type VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway
+                     * 设置VPN gateway type. Values: `CCN` (CCN VPN gateway), `SSL` (SSL VPN gateway)
+                     * @param Type VPN gateway type. Values: `CCN` (CCN VPN gateway), `SSL` (SSL VPN gateway)
                      */
                     void SetType(const std::string& _type);
 
@@ -169,10 +170,64 @@ namespace TencentCloud
                      */
                     bool TypeHasBeenSet() const;
 
+                    /**
+                     * 获取Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取CDC instance ID
+                     * @return CdcId CDC instance ID
+                     */
+                    std::string GetCdcId() const;
+
+                    /**
+                     * 设置CDC instance ID
+                     * @param CdcId CDC instance ID
+                     */
+                    void SetCdcId(const std::string& _cdcId);
+
+                    /**
+                     * 判断参数 CdcId 是否已赋值
+                     * @return CdcId 是否已赋值
+                     */
+                    bool CdcIdHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum number of connected clients allowed for the SSL VPN gateway. Valid values: [5, 10, 20, 50, 100]. This parameter is only required for SSL VPN gateways.
+                     * @return MaxConnection Maximum number of connected clients allowed for the SSL VPN gateway. Valid values: [5, 10, 20, 50, 100]. This parameter is only required for SSL VPN gateways.
+                     */
+                    uint64_t GetMaxConnection() const;
+
+                    /**
+                     * 设置Maximum number of connected clients allowed for the SSL VPN gateway. Valid values: [5, 10, 20, 50, 100]. This parameter is only required for SSL VPN gateways.
+                     * @param MaxConnection Maximum number of connected clients allowed for the SSL VPN gateway. Valid values: [5, 10, 20, 50, 100]. This parameter is only required for SSL VPN gateways.
+                     */
+                    void SetMaxConnection(const uint64_t& _maxConnection);
+
+                    /**
+                     * 判断参数 MaxConnection 是否已赋值
+                     * @return MaxConnection 是否已赋值
+                     */
+                    bool MaxConnectionHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+                     * VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
@@ -208,10 +263,28 @@ namespace TencentCloud
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway
+                     * VPN gateway type. Values: `CCN` (CCN VPN gateway), `SSL` (SSL VPN gateway)
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
+
+                    /**
+                     * Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * CDC instance ID
+                     */
+                    std::string m_cdcId;
+                    bool m_cdcIdHasBeenSet;
+
+                    /**
+                     * Maximum number of connected clients allowed for the SSL VPN gateway. Valid values: [5, 10, 20, 50, 100]. This parameter is only required for SSL VPN gateways.
+                     */
+                    uint64_t m_maxConnection;
+                    bool m_maxConnectionHasBeenSet;
 
                 };
             }

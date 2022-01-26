@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/batch/v20170312/model/Task.h>
+#include <tencentcloud/batch/v20170312/model/Tag.h>
 
 
 namespace TencentCloud
@@ -137,6 +138,28 @@ namespace TencentCloud
                      */
                     bool CreateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Tag list bound to the task template.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return Tags Tag list bound to the task template.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Tag list bound to the task template.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param Tags Tag list bound to the task template.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -168,6 +191,13 @@ namespace TencentCloud
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
+
+                    /**
+                     * Tag list bound to the task template.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

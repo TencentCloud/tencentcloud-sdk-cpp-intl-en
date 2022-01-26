@@ -21,6 +21,8 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vod/v20180717/model/TimeRange.h>
+#include <tencentcloud/vod/v20180717/model/SortBy.h>
 
 
 namespace TencentCloud
@@ -79,6 +81,68 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
+                     * 获取Filter: task creation time.
+                     * @return CreateTime Filter: task creation time.
+                     */
+                    TimeRange GetCreateTime() const;
+
+                    /**
+                     * 设置Filter: task creation time.
+                     * @param CreateTime Filter: task creation time.
+                     */
+                    void SetCreateTime(const TimeRange& _createTime);
+
+                    /**
+                     * 判断参数 CreateTime 是否已赋值
+                     * @return CreateTime 是否已赋值
+                     */
+                    bool CreateTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Filter: task end time.
+                     * @return FinishTime Filter: task end time.
+                     */
+                    TimeRange GetFinishTime() const;
+
+                    /**
+                     * 设置Filter: task end time.
+                     * @param FinishTime Filter: task end time.
+                     */
+                    void SetFinishTime(const TimeRange& _finishTime);
+
+                    /**
+                     * 判断参数 FinishTime 是否已赋值
+                     * @return FinishTime 是否已赋值
+                     */
+                    bool FinishTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Sort field. Valid values:
+<li>`CreateTime`: task creation time</li>
+<li>`FinishTime`: task end time</li>
+                     * @return Sort Sort field. Valid values:
+<li>`CreateTime`: task creation time</li>
+<li>`FinishTime`: task end time</li>
+                     */
+                    SortBy GetSort() const;
+
+                    /**
+                     * 设置Sort field. Valid values:
+<li>`CreateTime`: task creation time</li>
+<li>`FinishTime`: task end time</li>
+                     * @param Sort Sort field. Valid values:
+<li>`CreateTime`: task creation time</li>
+<li>`FinishTime`: task end time</li>
+                     */
+                    void SetSort(const SortBy& _sort);
+
+                    /**
+                     * 判断参数 Sort 是否已赋值
+                     * @return Sort 是否已赋值
+                     */
+                    bool SortHasBeenSet() const;
+
+                    /**
                      * 获取Number of entries to be returned. Default value: 10. Maximum value: 100.
                      * @return Limit Number of entries to be returned. Default value: 10. Maximum value: 100.
                      */
@@ -115,14 +179,14 @@ namespace TencentCloud
                     bool ScrollTokenHasBeenSet() const;
 
                     /**
-                     * 获取[Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     * @return SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * 获取[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置[Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     * @param SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * 设置[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
@@ -147,6 +211,26 @@ namespace TencentCloud
                     bool m_fileIdHasBeenSet;
 
                     /**
+                     * Filter: task creation time.
+                     */
+                    TimeRange m_createTime;
+                    bool m_createTimeHasBeenSet;
+
+                    /**
+                     * Filter: task end time.
+                     */
+                    TimeRange m_finishTime;
+                    bool m_finishTimeHasBeenSet;
+
+                    /**
+                     * Sort field. Valid values:
+<li>`CreateTime`: task creation time</li>
+<li>`FinishTime`: task end time</li>
+                     */
+                    SortBy m_sort;
+                    bool m_sortHasBeenSet;
+
+                    /**
                      * Number of entries to be returned. Default value: 10. Maximum value: 100.
                      */
                     uint64_t m_limit;
@@ -159,7 +243,7 @@ namespace TencentCloud
                     bool m_scrollTokenHasBeenSet;
 
                     /**
-                     * [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;

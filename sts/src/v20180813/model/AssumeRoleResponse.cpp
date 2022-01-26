@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Sts::V20180813::Model;
-using namespace rapidjson;
 using namespace std;
 
 AssumeRoleResponse::AssumeRoleResponse() :
@@ -33,20 +32,20 @@ AssumeRoleResponse::AssumeRoleResponse() :
 
 CoreInternalOutcome AssumeRoleResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -57,11 +56,11 @@ CoreInternalOutcome AssumeRoleResponse::Deserialize(const string &payload)
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -69,7 +68,7 @@ CoreInternalOutcome AssumeRoleResponse::Deserialize(const string &payload)
     {
         if (!rsp["Credentials"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `Credentials` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Credentials` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_credentials.Deserialize(rsp["Credentials"]);
@@ -86,7 +85,7 @@ CoreInternalOutcome AssumeRoleResponse::Deserialize(const string &payload)
     {
         if (!rsp["ExpiredTime"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ExpiredTime` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ExpiredTime` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_expiredTime = rsp["ExpiredTime"].GetInt64();
         m_expiredTimeHasBeenSet = true;
@@ -96,7 +95,7 @@ CoreInternalOutcome AssumeRoleResponse::Deserialize(const string &payload)
     {
         if (!rsp["Expiration"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Expiration` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Expiration` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_expiration = string(rsp["Expiration"].GetString());
         m_expirationHasBeenSet = true;
@@ -104,6 +103,48 @@ CoreInternalOutcome AssumeRoleResponse::Deserialize(const string &payload)
 
 
     return CoreInternalOutcome(true);
+}
+
+string AssumeRoleResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_credentialsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Credentials";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_credentials.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_expiredTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExpiredTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_expiredTime, allocator);
+    }
+
+    if (m_expirationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Expiration";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_expiration.c_str(), allocator).Move(), allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

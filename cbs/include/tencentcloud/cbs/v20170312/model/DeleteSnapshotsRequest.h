@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](/document/product/362/15647).
-                     * @return SnapshotIds List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](/document/product/362/15647).
+                     * 获取List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+                     * @return SnapshotIds List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
                      */
                     std::vector<std::string> GetSnapshotIds() const;
 
                     /**
-                     * 设置List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](/document/product/362/15647).
-                     * @param SnapshotIds List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](/document/product/362/15647).
+                     * 设置List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+                     * @param SnapshotIds List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
                      */
                     void SetSnapshotIds(const std::vector<std::string>& _snapshotIds);
 
@@ -60,13 +60,37 @@ namespace TencentCloud
                      */
                     bool SnapshotIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to forcibly delete the image associated with the snapshot
+                     * @return DeleteBindImages Whether to forcibly delete the image associated with the snapshot
+                     */
+                    bool GetDeleteBindImages() const;
+
+                    /**
+                     * 设置Whether to forcibly delete the image associated with the snapshot
+                     * @param DeleteBindImages Whether to forcibly delete the image associated with the snapshot
+                     */
+                    void SetDeleteBindImages(const bool& _deleteBindImages);
+
+                    /**
+                     * 判断参数 DeleteBindImages 是否已赋值
+                     * @return DeleteBindImages 是否已赋值
+                     */
+                    bool DeleteBindImagesHasBeenSet() const;
+
                 private:
 
                     /**
-                     * List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](/document/product/362/15647).
+                     * List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
                      */
                     std::vector<std::string> m_snapshotIds;
                     bool m_snapshotIdsHasBeenSet;
+
+                    /**
+                     * Whether to forcibly delete the image associated with the snapshot
+                     */
+                    bool m_deleteBindImages;
+                    bool m_deleteBindImagesHasBeenSet;
 
                 };
             }

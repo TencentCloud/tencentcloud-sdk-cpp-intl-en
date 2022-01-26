@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Scf::V20180416::Model;
-using namespace rapidjson;
 using namespace std;
 
 PublicNetConfigOut::PublicNetConfigOut() :
@@ -27,7 +26,7 @@ PublicNetConfigOut::PublicNetConfigOut() :
 {
 }
 
-CoreInternalOutcome PublicNetConfigOut::Deserialize(const Value &value)
+CoreInternalOutcome PublicNetConfigOut::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome PublicNetConfigOut::Deserialize(const Value &value)
     {
         if (!value["PublicNetStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PublicNetConfigOut.PublicNetStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PublicNetConfigOut.PublicNetStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_publicNetStatus = string(value["PublicNetStatus"].GetString());
         m_publicNetStatusHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome PublicNetConfigOut::Deserialize(const Value &value)
     {
         if (!value["EipConfig"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `PublicNetConfigOut.EipConfig` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PublicNetConfigOut.EipConfig` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_eipConfig.Deserialize(value["EipConfig"]);
@@ -63,23 +62,23 @@ CoreInternalOutcome PublicNetConfigOut::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void PublicNetConfigOut::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void PublicNetConfigOut::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_publicNetStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PublicNetStatus";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_publicNetStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_publicNetStatus.c_str(), allocator).Move(), allocator);
     }
 
     if (m_eipConfigHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EipConfig";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_eipConfig.ToJsonObject(value[key.c_str()], allocator);
     }
 

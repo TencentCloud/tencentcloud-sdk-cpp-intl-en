@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Iai::V20200303::Model;
-using namespace rapidjson;
 using namespace std;
 
 FaceHairAttributesInfo::FaceHairAttributesInfo() :
@@ -28,7 +27,7 @@ FaceHairAttributesInfo::FaceHairAttributesInfo() :
 {
 }
 
-CoreInternalOutcome FaceHairAttributesInfo::Deserialize(const Value &value)
+CoreInternalOutcome FaceHairAttributesInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome FaceHairAttributesInfo::Deserialize(const Value &value)
     {
         if (!value["Length"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `FaceHairAttributesInfo.Length` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FaceHairAttributesInfo.Length` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_length = value["Length"].GetInt64();
         m_lengthHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome FaceHairAttributesInfo::Deserialize(const Value &value)
     {
         if (!value["Bang"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `FaceHairAttributesInfo.Bang` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FaceHairAttributesInfo.Bang` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_bang = value["Bang"].GetInt64();
         m_bangHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome FaceHairAttributesInfo::Deserialize(const Value &value)
     {
         if (!value["Color"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `FaceHairAttributesInfo.Color` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FaceHairAttributesInfo.Color` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_color = value["Color"].GetInt64();
         m_colorHasBeenSet = true;
@@ -67,12 +66,12 @@ CoreInternalOutcome FaceHairAttributesInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void FaceHairAttributesInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void FaceHairAttributesInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_lengthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Length";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_length, allocator);
@@ -80,7 +79,7 @@ void FaceHairAttributesInfo::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_bangHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Bang";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_bang, allocator);
@@ -88,7 +87,7 @@ void FaceHairAttributesInfo::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_colorHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Color";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_color, allocator);

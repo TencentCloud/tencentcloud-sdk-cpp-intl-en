@@ -369,6 +369,24 @@ global: locked globally
                      */
                     bool ReadonlyHasBeenSet() const;
 
+                    /**
+                     * 获取Product of the domain name, either `cdn` or `ecdn`.
+                     * @return Product Product of the domain name, either `cdn` or `ecdn`.
+                     */
+                    std::string GetProduct() const;
+
+                    /**
+                     * 设置Product of the domain name, either `cdn` or `ecdn`.
+                     * @param Product Product of the domain name, either `cdn` or `ecdn`.
+                     */
+                    void SetProduct(const std::string& _product);
+
+                    /**
+                     * 判断参数 Product 是否已赋值
+                     * @return Product 是否已赋值
+                     */
+                    bool ProductHasBeenSet() const;
+
                 private:
 
                     /**
@@ -470,6 +488,12 @@ global: locked globally
                      */
                     std::string m_readonly;
                     bool m_readonlyHasBeenSet;
+
+                    /**
+                     * Product of the domain name, either `cdn` or `ecdn`.
+                     */
+                    std::string m_product;
+                    bool m_productHasBeenSet;
 
                 };
             }

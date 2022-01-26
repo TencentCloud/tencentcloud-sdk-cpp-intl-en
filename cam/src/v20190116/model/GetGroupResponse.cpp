@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cam::V20190116::Model;
-using namespace rapidjson;
 using namespace std;
 
 GetGroupResponse::GetGroupResponse() :
@@ -36,20 +35,20 @@ GetGroupResponse::GetGroupResponse() :
 
 CoreInternalOutcome GetGroupResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -60,11 +59,11 @@ CoreInternalOutcome GetGroupResponse::Deserialize(const string &payload)
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -72,7 +71,7 @@ CoreInternalOutcome GetGroupResponse::Deserialize(const string &payload)
     {
         if (!rsp["GroupId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `GroupId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_groupId = rsp["GroupId"].GetUint64();
         m_groupIdHasBeenSet = true;
@@ -82,7 +81,7 @@ CoreInternalOutcome GetGroupResponse::Deserialize(const string &payload)
     {
         if (!rsp["GroupName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GroupName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_groupName = string(rsp["GroupName"].GetString());
         m_groupNameHasBeenSet = true;
@@ -92,7 +91,7 @@ CoreInternalOutcome GetGroupResponse::Deserialize(const string &payload)
     {
         if (!rsp["GroupNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `GroupNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_groupNum = rsp["GroupNum"].GetUint64();
         m_groupNumHasBeenSet = true;
@@ -102,7 +101,7 @@ CoreInternalOutcome GetGroupResponse::Deserialize(const string &payload)
     {
         if (!rsp["Remark"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Remark` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Remark` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_remark = string(rsp["Remark"].GetString());
         m_remarkHasBeenSet = true;
@@ -112,7 +111,7 @@ CoreInternalOutcome GetGroupResponse::Deserialize(const string &payload)
     {
         if (!rsp["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(rsp["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -121,10 +120,10 @@ CoreInternalOutcome GetGroupResponse::Deserialize(const string &payload)
     if (rsp.HasMember("UserInfo") && !rsp["UserInfo"].IsNull())
     {
         if (!rsp["UserInfo"].IsArray())
-            return CoreInternalOutcome(Error("response `UserInfo` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `UserInfo` is not array type"));
 
-        const Value &tmpValue = rsp["UserInfo"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["UserInfo"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             GroupMemberInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -140,6 +139,78 @@ CoreInternalOutcome GetGroupResponse::Deserialize(const string &payload)
 
 
     return CoreInternalOutcome(true);
+}
+
+string GetGroupResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_groupIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GroupId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_groupId, allocator);
+    }
+
+    if (m_groupNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GroupName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_groupName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_groupNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GroupNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_groupNum, allocator);
+    }
+
+    if (m_remarkHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Remark";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_remark.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_createTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CreateTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_userInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UserInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_userInfo.begin(); itr != m_userInfo.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

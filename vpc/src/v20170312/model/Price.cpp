@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 Price::Price() :
@@ -27,7 +26,7 @@ Price::Price() :
 {
 }
 
-CoreInternalOutcome Price::Deserialize(const Value &value)
+CoreInternalOutcome Price::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome Price::Deserialize(const Value &value)
     {
         if (!value["InstancePrice"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `Price.InstancePrice` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Price.InstancePrice` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_instancePrice.Deserialize(value["InstancePrice"]);
@@ -53,7 +52,7 @@ CoreInternalOutcome Price::Deserialize(const Value &value)
     {
         if (!value["BandwidthPrice"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `Price.BandwidthPrice` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Price.BandwidthPrice` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_bandwidthPrice.Deserialize(value["BandwidthPrice"]);
@@ -70,24 +69,24 @@ CoreInternalOutcome Price::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Price::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Price::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_instancePriceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstancePrice";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_instancePrice.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_bandwidthPriceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BandwidthPrice";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_bandwidthPrice.ToJsonObject(value[key.c_str()], allocator);
     }
 

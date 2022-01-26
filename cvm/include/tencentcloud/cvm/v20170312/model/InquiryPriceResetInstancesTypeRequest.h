@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID(s). You can obtain the instance IDs from the value of `InstanceId` returned by the [`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API. The maximum number of instances in each request is 1.
-                     * @return InstanceIds Instance ID(s). You can obtain the instance IDs from the value of `InstanceId` returned by the [`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API. The maximum number of instances in each request is 1.
+                     * 获取Instance ID(s). You can obtain the instance IDs from the value of `InstanceId` returned by the [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) API. The maximum number of instances in each request is 1.
+                     * @return InstanceIds Instance ID(s). You can obtain the instance IDs from the value of `InstanceId` returned by the [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) API. The maximum number of instances in each request is 1.
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置Instance ID(s). You can obtain the instance IDs from the value of `InstanceId` returned by the [`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API. The maximum number of instances in each request is 1.
-                     * @param InstanceIds Instance ID(s). You can obtain the instance IDs from the value of `InstanceId` returned by the [`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API. The maximum number of instances in each request is 1.
+                     * 设置Instance ID(s). You can obtain the instance IDs from the value of `InstanceId` returned by the [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) API. The maximum number of instances in each request is 1.
+                     * @param InstanceIds Instance ID(s). You can obtain the instance IDs from the value of `InstanceId` returned by the [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) API. The maximum number of instances in each request is 1.
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Instance model. Resources vary with the instance model. Specific values can be found in the tables of [Instance Types] (https://cloud.tencent.com/document/product/213/11518) or in the latest specifications via the [DescribeInstanceTypeConfigs] (https://cloud.tencent.com/document/product/213/15749) API.
-                     * @return InstanceType Instance model. Resources vary with the instance model. Specific values can be found in the tables of [Instance Types] (https://cloud.tencent.com/document/product/213/11518) or in the latest specifications via the [DescribeInstanceTypeConfigs] (https://cloud.tencent.com/document/product/213/15749) API.
+                     * 获取Instance model. Resources vary with the instance model. Specific values can be found in the tables of [Instance Types] (https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1) or in the latest specifications via the [DescribeInstanceTypeConfigs] (https://intl.cloud.tencent.com/document/product/213/15749?from_cn_redirect=1) API.
+                     * @return InstanceType Instance model. Resources vary with the instance model. Specific values can be found in the tables of [Instance Types] (https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1) or in the latest specifications via the [DescribeInstanceTypeConfigs] (https://intl.cloud.tencent.com/document/product/213/15749?from_cn_redirect=1) API.
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Instance model. Resources vary with the instance model. Specific values can be found in the tables of [Instance Types] (https://cloud.tencent.com/document/product/213/11518) or in the latest specifications via the [DescribeInstanceTypeConfigs] (https://cloud.tencent.com/document/product/213/15749) API.
-                     * @param InstanceType Instance model. Resources vary with the instance model. Specific values can be found in the tables of [Instance Types] (https://cloud.tencent.com/document/product/213/11518) or in the latest specifications via the [DescribeInstanceTypeConfigs] (https://cloud.tencent.com/document/product/213/15749) API.
+                     * 设置Instance model. Resources vary with the instance model. Specific values can be found in the tables of [Instance Types] (https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1) or in the latest specifications via the [DescribeInstanceTypeConfigs] (https://intl.cloud.tencent.com/document/product/213/15749?from_cn_redirect=1) API.
+                     * @param InstanceType Instance model. Resources vary with the instance model. Specific values can be found in the tables of [Instance Types] (https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1) or in the latest specifications via the [DescribeInstanceTypeConfigs] (https://intl.cloud.tencent.com/document/product/213/15749?from_cn_redirect=1) API.
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID(s). You can obtain the instance IDs from the value of `InstanceId` returned by the [`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API. The maximum number of instances in each request is 1.
+                     * Instance ID(s). You can obtain the instance IDs from the value of `InstanceId` returned by the [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) API. The maximum number of instances in each request is 1.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Instance model. Resources vary with the instance model. Specific values can be found in the tables of [Instance Types] (https://cloud.tencent.com/document/product/213/11518) or in the latest specifications via the [DescribeInstanceTypeConfigs] (https://cloud.tencent.com/document/product/213/15749) API.
+                     * Instance model. Resources vary with the instance model. Specific values can be found in the tables of [Instance Types] (https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1) or in the latest specifications via the [DescribeInstanceTypeConfigs] (https://intl.cloud.tencent.com/document/product/213/15749?from_cn_redirect=1) API.
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;

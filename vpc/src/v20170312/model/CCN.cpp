@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 CCN::CCN() :
@@ -31,11 +30,14 @@ CCN::CCN() :
     m_qosLevelHasBeenSet(false),
     m_instanceChargeTypeHasBeenSet(false),
     m_bandwidthLimitTypeHasBeenSet(false),
-    m_tagSetHasBeenSet(false)
+    m_tagSetHasBeenSet(false),
+    m_routePriorityFlagHasBeenSet(false),
+    m_routeTableCountHasBeenSet(false),
+    m_routeTableFlagHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome CCN::Deserialize(const Value &value)
+CoreInternalOutcome CCN::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -44,7 +46,7 @@ CoreInternalOutcome CCN::Deserialize(const Value &value)
     {
         if (!value["CcnId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CCN.CcnId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CCN.CcnId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ccnId = string(value["CcnId"].GetString());
         m_ccnIdHasBeenSet = true;
@@ -54,7 +56,7 @@ CoreInternalOutcome CCN::Deserialize(const Value &value)
     {
         if (!value["CcnName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CCN.CcnName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CCN.CcnName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ccnName = string(value["CcnName"].GetString());
         m_ccnNameHasBeenSet = true;
@@ -64,7 +66,7 @@ CoreInternalOutcome CCN::Deserialize(const Value &value)
     {
         if (!value["CcnDescription"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CCN.CcnDescription` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CCN.CcnDescription` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ccnDescription = string(value["CcnDescription"].GetString());
         m_ccnDescriptionHasBeenSet = true;
@@ -74,7 +76,7 @@ CoreInternalOutcome CCN::Deserialize(const Value &value)
     {
         if (!value["InstanceCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CCN.InstanceCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CCN.InstanceCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_instanceCount = value["InstanceCount"].GetUint64();
         m_instanceCountHasBeenSet = true;
@@ -84,7 +86,7 @@ CoreInternalOutcome CCN::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CCN.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CCN.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -94,7 +96,7 @@ CoreInternalOutcome CCN::Deserialize(const Value &value)
     {
         if (!value["State"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CCN.State` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CCN.State` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_state = string(value["State"].GetString());
         m_stateHasBeenSet = true;
@@ -104,7 +106,7 @@ CoreInternalOutcome CCN::Deserialize(const Value &value)
     {
         if (!value["QosLevel"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CCN.QosLevel` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CCN.QosLevel` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_qosLevel = string(value["QosLevel"].GetString());
         m_qosLevelHasBeenSet = true;
@@ -114,7 +116,7 @@ CoreInternalOutcome CCN::Deserialize(const Value &value)
     {
         if (!value["InstanceChargeType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CCN.InstanceChargeType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CCN.InstanceChargeType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceChargeType = string(value["InstanceChargeType"].GetString());
         m_instanceChargeTypeHasBeenSet = true;
@@ -124,7 +126,7 @@ CoreInternalOutcome CCN::Deserialize(const Value &value)
     {
         if (!value["BandwidthLimitType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CCN.BandwidthLimitType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CCN.BandwidthLimitType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_bandwidthLimitType = string(value["BandwidthLimitType"].GetString());
         m_bandwidthLimitTypeHasBeenSet = true;
@@ -133,10 +135,10 @@ CoreInternalOutcome CCN::Deserialize(const Value &value)
     if (value.HasMember("TagSet") && !value["TagSet"].IsNull())
     {
         if (!value["TagSet"].IsArray())
-            return CoreInternalOutcome(Error("response `CCN.TagSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `CCN.TagSet` is not array type"));
 
-        const Value &tmpValue = value["TagSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["TagSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             Tag item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -150,40 +152,70 @@ CoreInternalOutcome CCN::Deserialize(const Value &value)
         m_tagSetHasBeenSet = true;
     }
 
+    if (value.HasMember("RoutePriorityFlag") && !value["RoutePriorityFlag"].IsNull())
+    {
+        if (!value["RoutePriorityFlag"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `CCN.RoutePriorityFlag` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_routePriorityFlag = value["RoutePriorityFlag"].GetBool();
+        m_routePriorityFlagHasBeenSet = true;
+    }
+
+    if (value.HasMember("RouteTableCount") && !value["RouteTableCount"].IsNull())
+    {
+        if (!value["RouteTableCount"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `CCN.RouteTableCount` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_routeTableCount = value["RouteTableCount"].GetUint64();
+        m_routeTableCountHasBeenSet = true;
+    }
+
+    if (value.HasMember("RouteTableFlag") && !value["RouteTableFlag"].IsNull())
+    {
+        if (!value["RouteTableFlag"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `CCN.RouteTableFlag` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_routeTableFlag = value["RouteTableFlag"].GetBool();
+        m_routeTableFlagHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void CCN::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void CCN::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_ccnIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CcnId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ccnId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ccnId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ccnNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CcnName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ccnName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ccnName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ccnDescriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CcnDescription";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ccnDescription.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ccnDescription.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_instanceCount, allocator);
@@ -191,57 +223,81 @@ void CCN::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_stateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "State";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_state.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_state.c_str(), allocator).Move(), allocator);
     }
 
     if (m_qosLevelHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "QosLevel";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_qosLevel.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_qosLevel.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceChargeTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceChargeType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceChargeType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceChargeType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_bandwidthLimitTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BandwidthLimitType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_bandwidthLimitType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_bandwidthLimitType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tagSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TagSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_tagSet.begin(); itr != m_tagSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_routePriorityFlagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RoutePriorityFlag";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_routePriorityFlag, allocator);
+    }
+
+    if (m_routeTableCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RouteTableCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_routeTableCount, allocator);
+    }
+
+    if (m_routeTableFlagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RouteTableFlag";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_routeTableFlag, allocator);
     }
 
 }
@@ -405,5 +461,53 @@ void CCN::SetTagSet(const vector<Tag>& _tagSet)
 bool CCN::TagSetHasBeenSet() const
 {
     return m_tagSetHasBeenSet;
+}
+
+bool CCN::GetRoutePriorityFlag() const
+{
+    return m_routePriorityFlag;
+}
+
+void CCN::SetRoutePriorityFlag(const bool& _routePriorityFlag)
+{
+    m_routePriorityFlag = _routePriorityFlag;
+    m_routePriorityFlagHasBeenSet = true;
+}
+
+bool CCN::RoutePriorityFlagHasBeenSet() const
+{
+    return m_routePriorityFlagHasBeenSet;
+}
+
+uint64_t CCN::GetRouteTableCount() const
+{
+    return m_routeTableCount;
+}
+
+void CCN::SetRouteTableCount(const uint64_t& _routeTableCount)
+{
+    m_routeTableCount = _routeTableCount;
+    m_routeTableCountHasBeenSet = true;
+}
+
+bool CCN::RouteTableCountHasBeenSet() const
+{
+    return m_routeTableCountHasBeenSet;
+}
+
+bool CCN::GetRouteTableFlag() const
+{
+    return m_routeTableFlag;
+}
+
+void CCN::SetRouteTableFlag(const bool& _routeTableFlag)
+{
+    m_routeTableFlag = _routeTableFlag;
+    m_routeTableFlagHasBeenSet = true;
+}
+
+bool CCN::RouteTableFlagHasBeenSet() const
+{
+    return m_routeTableFlagHasBeenSet;
 }
 

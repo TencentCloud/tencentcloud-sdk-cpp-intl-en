@@ -63,14 +63,14 @@ namespace TencentCloud
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies for which ports to create listeners. Each port corresponds to a new listener
-                     * @return Ports Specifies for which ports to create listeners. Each port corresponds to a new listener
+                     * 获取Specifies for which ports to create listeners. Each port corresponds to a new listener.
+                     * @return Ports Specifies for which ports to create listeners. Each port corresponds to a new listener.
                      */
                     std::vector<int64_t> GetPorts() const;
 
                     /**
-                     * 设置Specifies for which ports to create listeners. Each port corresponds to a new listener
-                     * @param Ports Specifies for which ports to create listeners. Each port corresponds to a new listener
+                     * 设置Specifies for which ports to create listeners. Each port corresponds to a new listener.
+                     * @param Ports Specifies for which ports to create listeners. Each port corresponds to a new listener.
                      */
                     void SetPorts(const std::vector<int64_t>& _ports);
 
@@ -81,14 +81,14 @@ namespace TencentCloud
                     bool PortsHasBeenSet() const;
 
                     /**
-                     * 获取Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application)
-                     * @return Protocol Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application)
+                     * 获取Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
+                     * @return Protocol Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application)
-                     * @param Protocol Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application)
+                     * 设置Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
+                     * @param Protocol Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
                      */
                     void SetProtocol(const std::string& _protocol);
 
@@ -117,14 +117,14 @@ namespace TencentCloud
                     bool ListenerNamesHasBeenSet() const;
 
                     /**
-                     * 获取Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners
-                     * @return HealthCheck Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners
+                     * 获取Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
+                     * @return HealthCheck Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
                      */
                     HealthCheck GetHealthCheck() const;
 
                     /**
-                     * 设置Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners
-                     * @param HealthCheck Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners
+                     * 设置Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
+                     * @param HealthCheck Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
                      */
                     void SetHealthCheck(const HealthCheck& _healthCheck);
 
@@ -228,6 +228,78 @@ They represent weighted round robin and least connections, respectively. Default
                      */
                     bool TargetTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners. If this field is not specified, the default session persistence type will be used.
+                     * @return SessionType Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners. If this field is not specified, the default session persistence type will be used.
+                     */
+                    std::string GetSessionType() const;
+
+                    /**
+                     * 设置Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners. If this field is not specified, the default session persistence type will be used.
+                     * @param SessionType Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners. If this field is not specified, the default session persistence type will be used.
+                     */
+                    void SetSessionType(const std::string& _sessionType);
+
+                    /**
+                     * 判断参数 SessionType 是否已赋值
+                     * @return SessionType 是否已赋值
+                     */
+                    bool SessionTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners. Valid values: 0 (disable; default value) and 1 (enable).
+                     * @return KeepaliveEnable Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners. Valid values: 0 (disable; default value) and 1 (enable).
+                     */
+                    int64_t GetKeepaliveEnable() const;
+
+                    /**
+                     * 设置Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners. Valid values: 0 (disable; default value) and 1 (enable).
+                     * @param KeepaliveEnable Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners. Valid values: 0 (disable; default value) and 1 (enable).
+                     */
+                    void SetKeepaliveEnable(const int64_t& _keepaliveEnable);
+
+                    /**
+                     * 判断参数 KeepaliveEnable 是否已赋值
+                     * @return KeepaliveEnable 是否已赋值
+                     */
+                    bool KeepaliveEnableHasBeenSet() const;
+
+                    /**
+                     * 获取This parameter is used to specify the end port and is required when creating a port range listener. Only one member can be passed in when inputting the `Ports` parameter, which is used to specify the start port. If you want to try the port range feature, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+                     * @return EndPort This parameter is used to specify the end port and is required when creating a port range listener. Only one member can be passed in when inputting the `Ports` parameter, which is used to specify the start port. If you want to try the port range feature, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+                     */
+                    uint64_t GetEndPort() const;
+
+                    /**
+                     * 设置This parameter is used to specify the end port and is required when creating a port range listener. Only one member can be passed in when inputting the `Ports` parameter, which is used to specify the start port. If you want to try the port range feature, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+                     * @param EndPort This parameter is used to specify the end port and is required when creating a port range listener. Only one member can be passed in when inputting the `Ports` parameter, which is used to specify the start port. If you want to try the port range feature, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+                     */
+                    void SetEndPort(const uint64_t& _endPort);
+
+                    /**
+                     * 判断参数 EndPort 是否已赋值
+                     * @return EndPort 是否已赋值
+                     */
+                    bool EndPortHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+                     * @return DeregisterTargetRst Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+                     */
+                    bool GetDeregisterTargetRst() const;
+
+                    /**
+                     * 设置Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+                     * @param DeregisterTargetRst Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+                     */
+                    void SetDeregisterTargetRst(const bool& _deregisterTargetRst);
+
+                    /**
+                     * 判断参数 DeregisterTargetRst 是否已赋值
+                     * @return DeregisterTargetRst 是否已赋值
+                     */
+                    bool DeregisterTargetRstHasBeenSet() const;
+
                 private:
 
                     /**
@@ -237,13 +309,13 @@ They represent weighted round robin and least connections, respectively. Default
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * Specifies for which ports to create listeners. Each port corresponds to a new listener
+                     * Specifies for which ports to create listeners. Each port corresponds to a new listener.
                      */
                     std::vector<int64_t> m_ports;
                     bool m_portsHasBeenSet;
 
                     /**
-                     * Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application)
+                     * Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
@@ -255,7 +327,7 @@ They represent weighted round robin and least connections, respectively. Default
                     bool m_listenerNamesHasBeenSet;
 
                     /**
-                     * Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners
+                     * Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
                      */
                     HealthCheck m_healthCheck;
                     bool m_healthCheckHasBeenSet;
@@ -290,6 +362,30 @@ They represent weighted round robin and least connections, respectively. Default
                      */
                     std::string m_targetType;
                     bool m_targetTypeHasBeenSet;
+
+                    /**
+                     * Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners. If this field is not specified, the default session persistence type will be used.
+                     */
+                    std::string m_sessionType;
+                    bool m_sessionTypeHasBeenSet;
+
+                    /**
+                     * Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners. Valid values: 0 (disable; default value) and 1 (enable).
+                     */
+                    int64_t m_keepaliveEnable;
+                    bool m_keepaliveEnableHasBeenSet;
+
+                    /**
+                     * This parameter is used to specify the end port and is required when creating a port range listener. Only one member can be passed in when inputting the `Ports` parameter, which is used to specify the start port. If you want to try the port range feature, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+                     */
+                    uint64_t m_endPort;
+                    bool m_endPortHasBeenSet;
+
+                    /**
+                     * Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+                     */
+                    bool m_deregisterTargetRst;
+                    bool m_deregisterTargetRstHasBeenSet;
 
                 };
             }

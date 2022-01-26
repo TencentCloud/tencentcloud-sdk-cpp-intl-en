@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Sqlserver::V20180328::Model;
-using namespace rapidjson;
 using namespace std;
 
 AccountPrivilege::AccountPrivilege() :
@@ -27,7 +26,7 @@ AccountPrivilege::AccountPrivilege() :
 {
 }
 
-CoreInternalOutcome AccountPrivilege::Deserialize(const Value &value)
+CoreInternalOutcome AccountPrivilege::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome AccountPrivilege::Deserialize(const Value &value)
     {
         if (!value["UserName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccountPrivilege.UserName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccountPrivilege.UserName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_userName = string(value["UserName"].GetString());
         m_userNameHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome AccountPrivilege::Deserialize(const Value &value)
     {
         if (!value["Privilege"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccountPrivilege.Privilege` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccountPrivilege.Privilege` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_privilege = string(value["Privilege"].GetString());
         m_privilegeHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome AccountPrivilege::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void AccountPrivilege::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AccountPrivilege::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_userNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UserName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_userName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_userName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_privilegeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Privilege";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_privilege.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_privilege.c_str(), allocator).Move(), allocator);
     }
 
 }

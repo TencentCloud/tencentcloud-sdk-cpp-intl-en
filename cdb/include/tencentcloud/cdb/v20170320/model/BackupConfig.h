@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Configuration information of ECDB slave database 2. This field is only applicable to ECDB instances
+                * Configuration information of ECDB secondary database 2. This field is only applicable to ECDB instances
                 */
                 class BackupConfig : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Replication mode of slave database 2. Value range: async, semi-sync
-                     * @return ReplicationMode Replication mode of slave database 2. Value range: async, semi-sync
+                     * 获取Replication mode of secondary database 2. Value range: async, semi-sync
+                     * @return ReplicationMode Replication mode of secondary database 2. Value range: async, semi-sync
                      */
                     std::string GetReplicationMode() const;
 
                     /**
-                     * 设置Replication mode of slave database 2. Value range: async, semi-sync
-                     * @param ReplicationMode Replication mode of slave database 2. Value range: async, semi-sync
+                     * 设置Replication mode of secondary database 2. Value range: async, semi-sync
+                     * @param ReplicationMode Replication mode of secondary database 2. Value range: async, semi-sync
                      */
                     void SetReplicationMode(const std::string& _replicationMode);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool ReplicationModeHasBeenSet() const;
 
                     /**
-                     * 获取Name of the AZ of slave database 2, such as ap-shanghai-1
-                     * @return Zone Name of the AZ of slave database 2, such as ap-shanghai-1
+                     * 获取Name of the AZ of secondary database 2, such as ap-shanghai-1
+                     * @return Zone Name of the AZ of secondary database 2, such as ap-shanghai-1
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Name of the AZ of slave database 2, such as ap-shanghai-1
-                     * @param Zone Name of the AZ of slave database 2, such as ap-shanghai-1
+                     * 设置Name of the AZ of secondary database 2, such as ap-shanghai-1
+                     * @param Zone Name of the AZ of secondary database 2, such as ap-shanghai-1
                      */
                     void SetZone(const std::string& _zone);
 
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Private IP address of slave database 2
-                     * @return Vip Private IP address of slave database 2
+                     * 获取Private IP address of secondary database 2
+                     * @return Vip Private IP address of secondary database 2
                      */
                     std::string GetVip() const;
 
                     /**
-                     * 设置Private IP address of slave database 2
-                     * @param Vip Private IP address of slave database 2
+                     * 设置Private IP address of secondary database 2
+                     * @param Vip Private IP address of secondary database 2
                      */
                     void SetVip(const std::string& _vip);
 
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取Access port of slave database 2
-                     * @return Vport Access port of slave database 2
+                     * 获取Access port of secondary database 2
+                     * @return Vport Access port of secondary database 2
                      */
                     uint64_t GetVport() const;
 
                     /**
-                     * 设置Access port of slave database 2
-                     * @param Vport Access port of slave database 2
+                     * 设置Access port of secondary database 2
+                     * @param Vport Access port of secondary database 2
                      */
                     void SetVport(const uint64_t& _vport);
 
@@ -121,25 +121,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Replication mode of slave database 2. Value range: async, semi-sync
+                     * Replication mode of secondary database 2. Value range: async, semi-sync
                      */
                     std::string m_replicationMode;
                     bool m_replicationModeHasBeenSet;
 
                     /**
-                     * Name of the AZ of slave database 2, such as ap-shanghai-1
+                     * Name of the AZ of secondary database 2, such as ap-shanghai-1
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Private IP address of slave database 2
+                     * Private IP address of secondary database 2
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
 
                     /**
-                     * Access port of slave database 2
+                     * Access port of secondary database 2
                      */
                     uint64_t m_vport;
                     bool m_vportHasBeenSet;

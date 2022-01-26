@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Tke::V20180525::Model;
-using namespace rapidjson;
 using namespace std;
 
 RegionInstance::RegionInstance() :
@@ -31,7 +30,7 @@ RegionInstance::RegionInstance() :
 {
 }
 
-CoreInternalOutcome RegionInstance::Deserialize(const Value &value)
+CoreInternalOutcome RegionInstance::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome RegionInstance::Deserialize(const Value &value)
     {
         if (!value["RegionName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RegionInstance.RegionName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RegionInstance.RegionName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_regionName = string(value["RegionName"].GetString());
         m_regionNameHasBeenSet = true;
@@ -50,7 +49,7 @@ CoreInternalOutcome RegionInstance::Deserialize(const Value &value)
     {
         if (!value["RegionId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `RegionInstance.RegionId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RegionInstance.RegionId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_regionId = value["RegionId"].GetInt64();
         m_regionIdHasBeenSet = true;
@@ -60,7 +59,7 @@ CoreInternalOutcome RegionInstance::Deserialize(const Value &value)
     {
         if (!value["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RegionInstance.Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RegionInstance.Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(value["Status"].GetString());
         m_statusHasBeenSet = true;
@@ -70,7 +69,7 @@ CoreInternalOutcome RegionInstance::Deserialize(const Value &value)
     {
         if (!value["FeatureGates"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RegionInstance.FeatureGates` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RegionInstance.FeatureGates` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_featureGates = string(value["FeatureGates"].GetString());
         m_featureGatesHasBeenSet = true;
@@ -80,7 +79,7 @@ CoreInternalOutcome RegionInstance::Deserialize(const Value &value)
     {
         if (!value["Alias"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RegionInstance.Alias` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RegionInstance.Alias` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_alias = string(value["Alias"].GetString());
         m_aliasHasBeenSet = true;
@@ -90,7 +89,7 @@ CoreInternalOutcome RegionInstance::Deserialize(const Value &value)
     {
         if (!value["Remark"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RegionInstance.Remark` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RegionInstance.Remark` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_remark = string(value["Remark"].GetString());
         m_remarkHasBeenSet = true;
@@ -100,20 +99,20 @@ CoreInternalOutcome RegionInstance::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void RegionInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void RegionInstance::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_regionNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RegionName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_regionName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_regionName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_regionIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RegionId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_regionId, allocator);
@@ -121,34 +120,34 @@ void RegionInstance::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_status.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
     }
 
     if (m_featureGatesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FeatureGates";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_featureGates.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_featureGates.c_str(), allocator).Move(), allocator);
     }
 
     if (m_aliasHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Alias";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_alias.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_alias.c_str(), allocator).Move(), allocator);
     }
 
     if (m_remarkHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Remark";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_remark.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_remark.c_str(), allocator).Move(), allocator);
     }
 
 }

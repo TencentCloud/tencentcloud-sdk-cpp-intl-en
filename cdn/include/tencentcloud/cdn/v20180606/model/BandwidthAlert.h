@@ -47,22 +47,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Bandwidth cap configuration switch
-on: enabled
-off: disabled
-                     * @return Switch Bandwidth cap configuration switch
-on: enabled
-off: disabled
+                     * 获取Specifies whether to enable the bandwidth cap
+`on`: enable
+`off`: disable
+                     * @return Switch Specifies whether to enable the bandwidth cap
+`on`: enable
+`off`: disable
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Bandwidth cap configuration switch
-on: enabled
-off: disabled
-                     * @param Switch Bandwidth cap configuration switch
-on: enabled
-off: disabled
+                     * 设置Specifies whether to enable the bandwidth cap
+`on`: enable
+`off`: disable
+                     * @param Switch Specifies whether to enable the bandwidth cap
+`on`: enable
+`off`: disable
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -73,18 +73,18 @@ off: disabled
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Bandwidth cap threshold (in bps)
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return BpsThreshold Bandwidth cap threshold (in bps)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取The upper limit of bandwidth usage (in bps) or traffic usage (in bytes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return BpsThreshold The upper limit of bandwidth usage (in bps) or traffic usage (in bytes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     int64_t GetBpsThreshold() const;
 
                     /**
-                     * 设置Bandwidth cap threshold (in bps)
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param BpsThreshold Bandwidth cap threshold (in bps)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置The upper limit of bandwidth usage (in bps) or traffic usage (in bytes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param BpsThreshold The upper limit of bandwidth usage (in bps) or traffic usage (in bytes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetBpsThreshold(const int64_t& _bpsThreshold);
 
@@ -125,18 +125,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CounterMeasureHasBeenSet() const;
 
                     /**
-                     * 获取The last time the bandwidth cap threshold was triggered
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return LastTriggerTime The last time the bandwidth cap threshold was triggered
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取The last time when the usage upper limit in the Chinese mainland was reached
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return LastTriggerTime The last time when the usage upper limit in the Chinese mainland was reached
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetLastTriggerTime() const;
 
                     /**
-                     * 设置The last time the bandwidth cap threshold was triggered
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param LastTriggerTime The last time the bandwidth cap threshold was triggered
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置The last time when the usage upper limit in the Chinese mainland was reached
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param LastTriggerTime The last time when the usage upper limit in the Chinese mainland was reached
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetLastTriggerTime(const std::string& _lastTriggerTime);
 
@@ -146,19 +146,123 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool LastTriggerTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Indicates whether to trigger alerts when the upper limit is reached
+`on`: enable
+`off`: disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return AlertSwitch Indicates whether to trigger alerts when the upper limit is reached
+`on`: enable
+`off`: disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetAlertSwitch() const;
+
+                    /**
+                     * 设置Indicates whether to trigger alerts when the upper limit is reached
+`on`: enable
+`off`: disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param AlertSwitch Indicates whether to trigger alerts when the upper limit is reached
+`on`: enable
+`off`: disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetAlertSwitch(const std::string& _alertSwitch);
+
+                    /**
+                     * 判断参数 AlertSwitch 是否已赋值
+                     * @return AlertSwitch 是否已赋值
+                     */
+                    bool AlertSwitchHasBeenSet() const;
+
+                    /**
+                     * 获取Triggers alarms when the ratio of bandwidth or traffic usage to the usage upper limit reaches the specified value
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return AlertPercentage Triggers alarms when the ratio of bandwidth or traffic usage to the usage upper limit reaches the specified value
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetAlertPercentage() const;
+
+                    /**
+                     * 设置Triggers alarms when the ratio of bandwidth or traffic usage to the usage upper limit reaches the specified value
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param AlertPercentage Triggers alarms when the ratio of bandwidth or traffic usage to the usage upper limit reaches the specified value
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetAlertPercentage(const int64_t& _alertPercentage);
+
+                    /**
+                     * 判断参数 AlertPercentage 是否已赋值
+                     * @return AlertPercentage 是否已赋值
+                     */
+                    bool AlertPercentageHasBeenSet() const;
+
+                    /**
+                     * 获取The last time when the usage outside the Chinese mainland reached the upper limit
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return LastTriggerTimeOverseas The last time when the usage outside the Chinese mainland reached the upper limit
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetLastTriggerTimeOverseas() const;
+
+                    /**
+                     * 设置The last time when the usage outside the Chinese mainland reached the upper limit
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param LastTriggerTimeOverseas The last time when the usage outside the Chinese mainland reached the upper limit
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetLastTriggerTimeOverseas(const std::string& _lastTriggerTimeOverseas);
+
+                    /**
+                     * 判断参数 LastTriggerTimeOverseas 是否已赋值
+                     * @return LastTriggerTimeOverseas 是否已赋值
+                     */
+                    bool LastTriggerTimeOverseasHasBeenSet() const;
+
+                    /**
+                     * 获取Dimension of the usage limit
+`bandwidth`: bandwidth
+`flux`: traffic
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Metric Dimension of the usage limit
+`bandwidth`: bandwidth
+`flux`: traffic
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetMetric() const;
+
+                    /**
+                     * 设置Dimension of the usage limit
+`bandwidth`: bandwidth
+`flux`: traffic
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param Metric Dimension of the usage limit
+`bandwidth`: bandwidth
+`flux`: traffic
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetMetric(const std::string& _metric);
+
+                    /**
+                     * 判断参数 Metric 是否已赋值
+                     * @return Metric 是否已赋值
+                     */
+                    bool MetricHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Bandwidth cap configuration switch
-on: enabled
-off: disabled
+                     * Specifies whether to enable the bandwidth cap
+`on`: enable
+`off`: disable
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Bandwidth cap threshold (in bps)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * The upper limit of bandwidth usage (in bps) or traffic usage (in bytes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     int64_t m_bpsThreshold;
                     bool m_bpsThresholdHasBeenSet;
@@ -173,11 +277,43 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_counterMeasureHasBeenSet;
 
                     /**
-                     * The last time the bandwidth cap threshold was triggered
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * The last time when the usage upper limit in the Chinese mainland was reached
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_lastTriggerTime;
                     bool m_lastTriggerTimeHasBeenSet;
+
+                    /**
+                     * Indicates whether to trigger alerts when the upper limit is reached
+`on`: enable
+`off`: disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_alertSwitch;
+                    bool m_alertSwitchHasBeenSet;
+
+                    /**
+                     * Triggers alarms when the ratio of bandwidth or traffic usage to the usage upper limit reaches the specified value
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_alertPercentage;
+                    bool m_alertPercentageHasBeenSet;
+
+                    /**
+                     * The last time when the usage outside the Chinese mainland reached the upper limit
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_lastTriggerTimeOverseas;
+                    bool m_lastTriggerTimeOverseasHasBeenSet;
+
+                    /**
+                     * Dimension of the usage limit
+`bandwidth`: bandwidth
+`flux`: traffic
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_metric;
+                    bool m_metricHasBeenSet;
 
                 };
             }

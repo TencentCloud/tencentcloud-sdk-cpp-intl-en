@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Subapplication creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-                     * @return CreateTime Subapplication creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * 获取Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return CreateTime Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Subapplication creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-                     * @param CreateTime Subapplication creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * 设置Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param CreateTime Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     void SetCreateTime(const std::string& _createTime);
 
@@ -120,21 +120,29 @@ namespace TencentCloud
 
                     /**
                      * 获取Subapplication status. Valid values:
-<li>On: enabled;</li>
-<li>Off: disabled.</li>
+<li>On: enabled</li>
+<li>Off: disabled</li>
+<li>Destroying: terminating</li>
+<li>Destroyed: terminated</li>
                      * @return Status Subapplication status. Valid values:
-<li>On: enabled;</li>
-<li>Off: disabled.</li>
+<li>On: enabled</li>
+<li>Off: disabled</li>
+<li>Destroying: terminating</li>
+<li>Destroyed: terminated</li>
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Subapplication status. Valid values:
-<li>On: enabled;</li>
-<li>Off: disabled.</li>
+<li>On: enabled</li>
+<li>Off: disabled</li>
+<li>Destroying: terminating</li>
+<li>Destroyed: terminated</li>
                      * @param Status Subapplication status. Valid values:
-<li>On: enabled;</li>
-<li>Off: disabled.</li>
+<li>On: enabled</li>
+<li>Off: disabled</li>
+<li>Destroying: terminating</li>
+<li>Destroyed: terminated</li>
                      */
                     void SetStatus(const std::string& _status);
 
@@ -165,15 +173,17 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Subapplication creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
                      * Subapplication status. Valid values:
-<li>On: enabled;</li>
-<li>Off: disabled.</li>
+<li>On: enabled</li>
+<li>Off: disabled</li>
+<li>Destroying: terminating</li>
+<li>Destroyed: terminated</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

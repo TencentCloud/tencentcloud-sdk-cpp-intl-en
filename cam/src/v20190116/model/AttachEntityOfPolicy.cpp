@@ -18,18 +18,18 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cam::V20190116::Model;
-using namespace rapidjson;
 using namespace std;
 
 AttachEntityOfPolicy::AttachEntityOfPolicy() :
     m_idHasBeenSet(false),
     m_nameHasBeenSet(false),
     m_uinHasBeenSet(false),
-    m_relatedTypeHasBeenSet(false)
+    m_relatedTypeHasBeenSet(false),
+    m_attachmentTimeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome AttachEntityOfPolicy::Deserialize(const Value &value)
+CoreInternalOutcome AttachEntityOfPolicy::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +38,7 @@ CoreInternalOutcome AttachEntityOfPolicy::Deserialize(const Value &value)
     {
         if (!value["Id"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AttachEntityOfPolicy.Id` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AttachEntityOfPolicy.Id` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_id = string(value["Id"].GetString());
         m_idHasBeenSet = true;
@@ -48,7 +48,7 @@ CoreInternalOutcome AttachEntityOfPolicy::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AttachEntityOfPolicy.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AttachEntityOfPolicy.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -58,7 +58,7 @@ CoreInternalOutcome AttachEntityOfPolicy::Deserialize(const Value &value)
     {
         if (!value["Uin"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AttachEntityOfPolicy.Uin` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AttachEntityOfPolicy.Uin` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_uin = value["Uin"].GetUint64();
         m_uinHasBeenSet = true;
@@ -68,38 +68,48 @@ CoreInternalOutcome AttachEntityOfPolicy::Deserialize(const Value &value)
     {
         if (!value["RelatedType"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AttachEntityOfPolicy.RelatedType` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AttachEntityOfPolicy.RelatedType` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_relatedType = value["RelatedType"].GetUint64();
         m_relatedTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("AttachmentTime") && !value["AttachmentTime"].IsNull())
+    {
+        if (!value["AttachmentTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AttachEntityOfPolicy.AttachmentTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_attachmentTime = string(value["AttachmentTime"].GetString());
+        m_attachmentTimeHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void AttachEntityOfPolicy::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AttachEntityOfPolicy::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_idHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Id";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_id.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_id.c_str(), allocator).Move(), allocator);
     }
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_uinHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Uin";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_uin, allocator);
@@ -107,10 +117,18 @@ void AttachEntityOfPolicy::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_relatedTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RelatedType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_relatedType, allocator);
+    }
+
+    if (m_attachmentTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AttachmentTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_attachmentTime.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -178,5 +196,21 @@ void AttachEntityOfPolicy::SetRelatedType(const uint64_t& _relatedType)
 bool AttachEntityOfPolicy::RelatedTypeHasBeenSet() const
 {
     return m_relatedTypeHasBeenSet;
+}
+
+string AttachEntityOfPolicy::GetAttachmentTime() const
+{
+    return m_attachmentTime;
+}
+
+void AttachEntityOfPolicy::SetAttachmentTime(const string& _attachmentTime)
+{
+    m_attachmentTime = _attachmentTime;
+    m_attachmentTimeHasBeenSet = true;
+}
+
+bool AttachEntityOfPolicy::AttachmentTimeHasBeenSet() const
+{
+    return m_attachmentTimeHasBeenSet;
 }
 

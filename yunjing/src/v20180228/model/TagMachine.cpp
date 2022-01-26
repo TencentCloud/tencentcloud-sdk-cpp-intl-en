@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Yunjing::V20180228::Model;
-using namespace rapidjson;
 using namespace std;
 
 TagMachine::TagMachine() :
@@ -32,7 +31,7 @@ TagMachine::TagMachine() :
 {
 }
 
-CoreInternalOutcome TagMachine::Deserialize(const Value &value)
+CoreInternalOutcome TagMachine::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +40,7 @@ CoreInternalOutcome TagMachine::Deserialize(const Value &value)
     {
         if (!value["Id"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TagMachine.Id` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TagMachine.Id` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_id = string(value["Id"].GetString());
         m_idHasBeenSet = true;
@@ -51,7 +50,7 @@ CoreInternalOutcome TagMachine::Deserialize(const Value &value)
     {
         if (!value["Quuid"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TagMachine.Quuid` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TagMachine.Quuid` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_quuid = string(value["Quuid"].GetString());
         m_quuidHasBeenSet = true;
@@ -61,7 +60,7 @@ CoreInternalOutcome TagMachine::Deserialize(const Value &value)
     {
         if (!value["MachineName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TagMachine.MachineName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TagMachine.MachineName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_machineName = string(value["MachineName"].GetString());
         m_machineNameHasBeenSet = true;
@@ -71,7 +70,7 @@ CoreInternalOutcome TagMachine::Deserialize(const Value &value)
     {
         if (!value["MachineIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TagMachine.MachineIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TagMachine.MachineIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_machineIp = string(value["MachineIp"].GetString());
         m_machineIpHasBeenSet = true;
@@ -81,7 +80,7 @@ CoreInternalOutcome TagMachine::Deserialize(const Value &value)
     {
         if (!value["MachineWanIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TagMachine.MachineWanIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TagMachine.MachineWanIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_machineWanIp = string(value["MachineWanIp"].GetString());
         m_machineWanIpHasBeenSet = true;
@@ -91,7 +90,7 @@ CoreInternalOutcome TagMachine::Deserialize(const Value &value)
     {
         if (!value["MachineRegion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TagMachine.MachineRegion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TagMachine.MachineRegion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_machineRegion = string(value["MachineRegion"].GetString());
         m_machineRegionHasBeenSet = true;
@@ -101,7 +100,7 @@ CoreInternalOutcome TagMachine::Deserialize(const Value &value)
     {
         if (!value["MachineType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TagMachine.MachineType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TagMachine.MachineType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_machineType = string(value["MachineType"].GetString());
         m_machineTypeHasBeenSet = true;
@@ -111,63 +110,63 @@ CoreInternalOutcome TagMachine::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void TagMachine::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TagMachine::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_idHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Id";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_id.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_id.c_str(), allocator).Move(), allocator);
     }
 
     if (m_quuidHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Quuid";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_quuid.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_quuid.c_str(), allocator).Move(), allocator);
     }
 
     if (m_machineNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MachineName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_machineName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_machineName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_machineIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MachineIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_machineIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_machineIp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_machineWanIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MachineWanIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_machineWanIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_machineWanIp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_machineRegionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MachineRegion";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_machineRegion.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_machineRegion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_machineTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MachineType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_machineType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_machineType.c_str(), allocator).Move(), allocator);
     }
 
 }

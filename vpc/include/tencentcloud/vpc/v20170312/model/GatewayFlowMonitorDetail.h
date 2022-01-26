@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool OutPkgHasBeenSet() const;
 
                     /**
-                     * 获取Inbound bandwidth, unit: `Byte`.
-                     * @return InTraffic Inbound bandwidth, unit: `Byte`.
+                     * 获取Inbound traffic, in Byte.
+                     * @return InTraffic Inbound traffic, in Byte.
                      */
                     uint64_t GetInTraffic() const;
 
                     /**
-                     * 设置Inbound bandwidth, unit: `Byte`.
-                     * @param InTraffic Inbound bandwidth, unit: `Byte`.
+                     * 设置Inbound traffic, in Byte.
+                     * @param InTraffic Inbound traffic, in Byte.
                      */
                     void SetInTraffic(const uint64_t& _inTraffic);
 
@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool InTrafficHasBeenSet() const;
 
                     /**
-                     * 获取Outbound bandwidth, unit: `Byte`.
-                     * @return OutTraffic Outbound bandwidth, unit: `Byte`.
+                     * 获取Outbound traffic, in Byte.
+                     * @return OutTraffic Outbound traffic, in Byte.
                      */
                     uint64_t GetOutTraffic() const;
 
                     /**
-                     * 设置Outbound bandwidth, unit: `Byte`.
-                     * @param OutTraffic Outbound bandwidth, unit: `Byte`.
+                     * 设置Outbound traffic, in Byte.
+                     * @param OutTraffic Outbound traffic, in Byte.
                      */
                     void SetOutTraffic(const uint64_t& _outTraffic);
 
@@ -157,13 +157,13 @@ namespace TencentCloud
                     bool m_outPkgHasBeenSet;
 
                     /**
-                     * Inbound bandwidth, unit: `Byte`.
+                     * Inbound traffic, in Byte.
                      */
                     uint64_t m_inTraffic;
                     bool m_inTrafficHasBeenSet;
 
                     /**
-                     * Outbound bandwidth, unit: `Byte`.
+                     * Outbound traffic, in Byte.
                      */
                     uint64_t m_outTraffic;
                     bool m_outTrafficHasBeenSet;

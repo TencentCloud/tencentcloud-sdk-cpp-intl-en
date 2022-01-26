@@ -285,14 +285,14 @@ Required if `Protocol` is `https`;
                     bool BasicIspCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Domain 
+                     * 获取This optional field must be specified when HTTPS protocol is used.
+                     * @return Domain This optional field must be specified when HTTPS protocol is used.
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置
-                     * @param Domain 
+                     * 设置This optional field must be specified when HTTPS protocol is used.
+                     * @param Domain This optional field must be specified when HTTPS protocol is used.
                      */
                     void SetDomain(const std::string& _domain);
 
@@ -382,7 +382,7 @@ Required if `Protocol` is `https`;
                     bool m_basicIspCodeHasBeenSet;
 
                     /**
-                     * 
+                     * This optional field must be specified when HTTPS protocol is used.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;

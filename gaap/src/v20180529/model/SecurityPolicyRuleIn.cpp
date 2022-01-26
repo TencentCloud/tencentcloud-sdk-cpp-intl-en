@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 SecurityPolicyRuleIn::SecurityPolicyRuleIn() :
@@ -30,7 +29,7 @@ SecurityPolicyRuleIn::SecurityPolicyRuleIn() :
 {
 }
 
-CoreInternalOutcome SecurityPolicyRuleIn::Deserialize(const Value &value)
+CoreInternalOutcome SecurityPolicyRuleIn::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome SecurityPolicyRuleIn::Deserialize(const Value &value)
     {
         if (!value["SourceCidr"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityPolicyRuleIn.SourceCidr` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityPolicyRuleIn.SourceCidr` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_sourceCidr = string(value["SourceCidr"].GetString());
         m_sourceCidrHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome SecurityPolicyRuleIn::Deserialize(const Value &value)
     {
         if (!value["Action"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityPolicyRuleIn.Action` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityPolicyRuleIn.Action` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_action = string(value["Action"].GetString());
         m_actionHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome SecurityPolicyRuleIn::Deserialize(const Value &value)
     {
         if (!value["AliasName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityPolicyRuleIn.AliasName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityPolicyRuleIn.AliasName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_aliasName = string(value["AliasName"].GetString());
         m_aliasNameHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome SecurityPolicyRuleIn::Deserialize(const Value &value)
     {
         if (!value["Protocol"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityPolicyRuleIn.Protocol` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityPolicyRuleIn.Protocol` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_protocol = string(value["Protocol"].GetString());
         m_protocolHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome SecurityPolicyRuleIn::Deserialize(const Value &value)
     {
         if (!value["DestPortRange"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityPolicyRuleIn.DestPortRange` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityPolicyRuleIn.DestPortRange` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_destPortRange = string(value["DestPortRange"].GetString());
         m_destPortRangeHasBeenSet = true;
@@ -89,47 +88,47 @@ CoreInternalOutcome SecurityPolicyRuleIn::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void SecurityPolicyRuleIn::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SecurityPolicyRuleIn::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_sourceCidrHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SourceCidr";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_sourceCidr.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sourceCidr.c_str(), allocator).Move(), allocator);
     }
 
     if (m_actionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Action";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_action.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_action.c_str(), allocator).Move(), allocator);
     }
 
     if (m_aliasNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AliasName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_aliasName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_aliasName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_protocolHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Protocol";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_protocol.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
     }
 
     if (m_destPortRangeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DestPortRange";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_destPortRange.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_destPortRange.c_str(), allocator).Move(), allocator);
     }
 
 }

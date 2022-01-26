@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 CvmInstance::CvmInstance() :
@@ -37,7 +36,7 @@ CvmInstance::CvmInstance() :
 {
 }
 
-CoreInternalOutcome CvmInstance::Deserialize(const Value &value)
+CoreInternalOutcome CvmInstance::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -46,7 +45,7 @@ CoreInternalOutcome CvmInstance::Deserialize(const Value &value)
     {
         if (!value["VpcId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CvmInstance.VpcId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CvmInstance.VpcId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpcId = string(value["VpcId"].GetString());
         m_vpcIdHasBeenSet = true;
@@ -56,7 +55,7 @@ CoreInternalOutcome CvmInstance::Deserialize(const Value &value)
     {
         if (!value["SubnetId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CvmInstance.SubnetId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CvmInstance.SubnetId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_subnetId = string(value["SubnetId"].GetString());
         m_subnetIdHasBeenSet = true;
@@ -66,7 +65,7 @@ CoreInternalOutcome CvmInstance::Deserialize(const Value &value)
     {
         if (!value["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CvmInstance.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CvmInstance.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(value["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -76,7 +75,7 @@ CoreInternalOutcome CvmInstance::Deserialize(const Value &value)
     {
         if (!value["InstanceName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CvmInstance.InstanceName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CvmInstance.InstanceName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceName = string(value["InstanceName"].GetString());
         m_instanceNameHasBeenSet = true;
@@ -86,7 +85,7 @@ CoreInternalOutcome CvmInstance::Deserialize(const Value &value)
     {
         if (!value["InstanceState"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CvmInstance.InstanceState` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CvmInstance.InstanceState` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceState = string(value["InstanceState"].GetString());
         m_instanceStateHasBeenSet = true;
@@ -96,7 +95,7 @@ CoreInternalOutcome CvmInstance::Deserialize(const Value &value)
     {
         if (!value["CPU"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CvmInstance.CPU` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CvmInstance.CPU` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_cPU = value["CPU"].GetUint64();
         m_cPUHasBeenSet = true;
@@ -106,7 +105,7 @@ CoreInternalOutcome CvmInstance::Deserialize(const Value &value)
     {
         if (!value["Memory"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CvmInstance.Memory` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CvmInstance.Memory` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_memory = value["Memory"].GetUint64();
         m_memoryHasBeenSet = true;
@@ -116,7 +115,7 @@ CoreInternalOutcome CvmInstance::Deserialize(const Value &value)
     {
         if (!value["CreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CvmInstance.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CvmInstance.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createdTime = string(value["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
@@ -126,7 +125,7 @@ CoreInternalOutcome CvmInstance::Deserialize(const Value &value)
     {
         if (!value["InstanceType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CvmInstance.InstanceType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CvmInstance.InstanceType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceType = string(value["InstanceType"].GetString());
         m_instanceTypeHasBeenSet = true;
@@ -136,7 +135,7 @@ CoreInternalOutcome CvmInstance::Deserialize(const Value &value)
     {
         if (!value["EniLimit"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CvmInstance.EniLimit` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CvmInstance.EniLimit` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_eniLimit = value["EniLimit"].GetUint64();
         m_eniLimitHasBeenSet = true;
@@ -146,7 +145,7 @@ CoreInternalOutcome CvmInstance::Deserialize(const Value &value)
     {
         if (!value["EniIpLimit"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CvmInstance.EniIpLimit` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CvmInstance.EniIpLimit` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_eniIpLimit = value["EniIpLimit"].GetUint64();
         m_eniIpLimitHasBeenSet = true;
@@ -156,7 +155,7 @@ CoreInternalOutcome CvmInstance::Deserialize(const Value &value)
     {
         if (!value["InstanceEniCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CvmInstance.InstanceEniCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CvmInstance.InstanceEniCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_instanceEniCount = value["InstanceEniCount"].GetUint64();
         m_instanceEniCountHasBeenSet = true;
@@ -166,52 +165,52 @@ CoreInternalOutcome CvmInstance::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void CvmInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void CvmInstance::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_vpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vpcId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpcId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_subnetIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubnetId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_subnetId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_subnetId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceStateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceState";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceState.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceState.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cPUHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CPU";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cPU, allocator);
@@ -219,7 +218,7 @@ void CvmInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_memoryHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Memory";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_memory, allocator);
@@ -227,23 +226,23 @@ void CvmInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_createdTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createdTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_eniLimitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EniLimit";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_eniLimit, allocator);
@@ -251,7 +250,7 @@ void CvmInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_eniIpLimitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EniIpLimit";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_eniIpLimit, allocator);
@@ -259,7 +258,7 @@ void CvmInstance::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_instanceEniCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceEniCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_instanceEniCount, allocator);

@@ -295,14 +295,14 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Type edition. 1: standalone edition; 2: master-slave edition; 3: cluster edition
-                     * @return TypeVersion Type edition. 1: standalone edition; 2: master-slave edition; 3: cluster edition
+                     * 获取Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition
+                     * @return TypeVersion Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition
                      */
                     int64_t GetTypeVersion() const;
 
                     /**
-                     * 设置Type edition. 1: standalone edition; 2: master-slave edition; 3: cluster edition
-                     * @param TypeVersion Type edition. 1: standalone edition; 2: master-slave edition; 3: cluster edition
+                     * 设置Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition
+                     * @param TypeVersion Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition
                      */
                     void SetTypeVersion(const int64_t& _typeVersion);
 
@@ -420,6 +420,24 @@ namespace TencentCloud
                      */
                     bool TypeListHasBeenSet() const;
 
+                    /**
+                     * 获取Internal parameter, which can be ignored
+                     * @return MonitorVersion Internal parameter, which can be ignored
+                     */
+                    std::string GetMonitorVersion() const;
+
+                    /**
+                     * 设置Internal parameter, which can be ignored
+                     * @param MonitorVersion Internal parameter, which can be ignored
+                     */
+                    void SetMonitorVersion(const std::string& _monitorVersion);
+
+                    /**
+                     * 判断参数 MonitorVersion 是否已赋值
+                     * @return MonitorVersion 是否已赋值
+                     */
+                    bool MonitorVersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -507,7 +525,7 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Type edition. 1: standalone edition; 2: master-slave edition; 3: cluster edition
+                     * Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition
                      */
                     int64_t m_typeVersion;
                     bool m_typeVersionHasBeenSet;
@@ -547,6 +565,12 @@ namespace TencentCloud
                      */
                     std::vector<int64_t> m_typeList;
                     bool m_typeListHasBeenSet;
+
+                    /**
+                     * Internal parameter, which can be ignored
+                     */
+                    std::string m_monitorVersion;
+                    bool m_monitorVersionHasBeenSet;
 
                 };
             }

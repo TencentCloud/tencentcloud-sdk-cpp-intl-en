@@ -41,6 +41,7 @@ namespace TencentCloud
                     DescribeWhiteBoxKeyDetailsResponse();
                     ~DescribeWhiteBoxKeyDetailsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -55,6 +56,20 @@ namespace TencentCloud
                      */
                     bool KeyInfosHasBeenSet() const;
 
+                    /**
+                     * 获取Total number of keys
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return TotalCount Total number of keys
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetTotalCount() const;
+
+                    /**
+                     * 判断参数 TotalCount 是否已赋值
+                     * @return TotalCount 是否已赋值
+                     */
+                    bool TotalCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -62,6 +77,13 @@ namespace TencentCloud
                      */
                     std::vector<WhiteboxKeyInfo> m_keyInfos;
                     bool m_keyInfosHasBeenSet;
+
+                    /**
+                     * Total number of keys
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_totalCount;
+                    bool m_totalCountHasBeenSet;
 
                 };
             }

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Monitor::V20180724::Model;
-using namespace rapidjson;
 using namespace std;
 
 ModifyPolicyGroupCondition::ModifyPolicyGroupCondition() :
@@ -33,7 +32,7 @@ ModifyPolicyGroupCondition::ModifyPolicyGroupCondition() :
 {
 }
 
-CoreInternalOutcome ModifyPolicyGroupCondition::Deserialize(const Value &value)
+CoreInternalOutcome ModifyPolicyGroupCondition::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +41,7 @@ CoreInternalOutcome ModifyPolicyGroupCondition::Deserialize(const Value &value)
     {
         if (!value["MetricId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ModifyPolicyGroupCondition.MetricId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ModifyPolicyGroupCondition.MetricId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_metricId = value["MetricId"].GetInt64();
         m_metricIdHasBeenSet = true;
@@ -52,7 +51,7 @@ CoreInternalOutcome ModifyPolicyGroupCondition::Deserialize(const Value &value)
     {
         if (!value["CalcType"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ModifyPolicyGroupCondition.CalcType` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ModifyPolicyGroupCondition.CalcType` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_calcType = value["CalcType"].GetInt64();
         m_calcTypeHasBeenSet = true;
@@ -62,7 +61,7 @@ CoreInternalOutcome ModifyPolicyGroupCondition::Deserialize(const Value &value)
     {
         if (!value["CalcValue"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ModifyPolicyGroupCondition.CalcValue` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ModifyPolicyGroupCondition.CalcValue` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_calcValue = string(value["CalcValue"].GetString());
         m_calcValueHasBeenSet = true;
@@ -72,7 +71,7 @@ CoreInternalOutcome ModifyPolicyGroupCondition::Deserialize(const Value &value)
     {
         if (!value["CalcPeriod"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ModifyPolicyGroupCondition.CalcPeriod` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ModifyPolicyGroupCondition.CalcPeriod` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_calcPeriod = value["CalcPeriod"].GetInt64();
         m_calcPeriodHasBeenSet = true;
@@ -82,7 +81,7 @@ CoreInternalOutcome ModifyPolicyGroupCondition::Deserialize(const Value &value)
     {
         if (!value["ContinuePeriod"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ModifyPolicyGroupCondition.ContinuePeriod` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ModifyPolicyGroupCondition.ContinuePeriod` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_continuePeriod = value["ContinuePeriod"].GetInt64();
         m_continuePeriodHasBeenSet = true;
@@ -92,7 +91,7 @@ CoreInternalOutcome ModifyPolicyGroupCondition::Deserialize(const Value &value)
     {
         if (!value["AlarmNotifyType"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ModifyPolicyGroupCondition.AlarmNotifyType` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ModifyPolicyGroupCondition.AlarmNotifyType` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_alarmNotifyType = value["AlarmNotifyType"].GetInt64();
         m_alarmNotifyTypeHasBeenSet = true;
@@ -102,7 +101,7 @@ CoreInternalOutcome ModifyPolicyGroupCondition::Deserialize(const Value &value)
     {
         if (!value["AlarmNotifyPeriod"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ModifyPolicyGroupCondition.AlarmNotifyPeriod` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ModifyPolicyGroupCondition.AlarmNotifyPeriod` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_alarmNotifyPeriod = value["AlarmNotifyPeriod"].GetInt64();
         m_alarmNotifyPeriodHasBeenSet = true;
@@ -112,7 +111,7 @@ CoreInternalOutcome ModifyPolicyGroupCondition::Deserialize(const Value &value)
     {
         if (!value["RuleId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ModifyPolicyGroupCondition.RuleId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ModifyPolicyGroupCondition.RuleId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_ruleId = value["RuleId"].GetInt64();
         m_ruleIdHasBeenSet = true;
@@ -122,12 +121,12 @@ CoreInternalOutcome ModifyPolicyGroupCondition::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ModifyPolicyGroupCondition::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ModifyPolicyGroupCondition::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_metricIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MetricId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_metricId, allocator);
@@ -135,7 +134,7 @@ void ModifyPolicyGroupCondition::ToJsonObject(Value &value, Document::AllocatorT
 
     if (m_calcTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CalcType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_calcType, allocator);
@@ -143,15 +142,15 @@ void ModifyPolicyGroupCondition::ToJsonObject(Value &value, Document::AllocatorT
 
     if (m_calcValueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CalcValue";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_calcValue.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_calcValue.c_str(), allocator).Move(), allocator);
     }
 
     if (m_calcPeriodHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CalcPeriod";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_calcPeriod, allocator);
@@ -159,7 +158,7 @@ void ModifyPolicyGroupCondition::ToJsonObject(Value &value, Document::AllocatorT
 
     if (m_continuePeriodHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ContinuePeriod";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_continuePeriod, allocator);
@@ -167,7 +166,7 @@ void ModifyPolicyGroupCondition::ToJsonObject(Value &value, Document::AllocatorT
 
     if (m_alarmNotifyTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AlarmNotifyType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_alarmNotifyType, allocator);
@@ -175,7 +174,7 @@ void ModifyPolicyGroupCondition::ToJsonObject(Value &value, Document::AllocatorT
 
     if (m_alarmNotifyPeriodHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AlarmNotifyPeriod";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_alarmNotifyPeriod, allocator);
@@ -183,7 +182,7 @@ void ModifyPolicyGroupCondition::ToJsonObject(Value &value, Document::AllocatorT
 
     if (m_ruleIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RuleId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_ruleId, allocator);

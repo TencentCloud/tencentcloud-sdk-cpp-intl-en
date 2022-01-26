@@ -20,41 +20,49 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Monitor::V20180724::Model;
-using namespace rapidjson;
 using namespace std;
 
 UnBindingAllPolicyObjectRequest::UnBindingAllPolicyObjectRequest() :
     m_moduleHasBeenSet(false),
-    m_groupIdHasBeenSet(false)
+    m_groupIdHasBeenSet(false),
+    m_policyIdHasBeenSet(false)
 {
 }
 
 string UnBindingAllPolicyObjectRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_moduleHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Module";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_module.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_module.c_str(), allocator).Move(), allocator);
     }
 
     if (m_groupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "GroupId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_groupId, allocator);
     }
 
+    if (m_policyIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PolicyId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_policyId.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -90,6 +98,22 @@ void UnBindingAllPolicyObjectRequest::SetGroupId(const int64_t& _groupId)
 bool UnBindingAllPolicyObjectRequest::GroupIdHasBeenSet() const
 {
     return m_groupIdHasBeenSet;
+}
+
+string UnBindingAllPolicyObjectRequest::GetPolicyId() const
+{
+    return m_policyId;
+}
+
+void UnBindingAllPolicyObjectRequest::SetPolicyId(const string& _policyId)
+{
+    m_policyId = _policyId;
+    m_policyIdHasBeenSet = true;
+}
+
+bool UnBindingAllPolicyObjectRequest::PolicyIdHasBeenSet() const
+{
+    return m_policyIdHasBeenSet;
 }
 
 

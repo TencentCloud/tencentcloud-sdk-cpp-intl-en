@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cdn/v20180606/model/LogSetInfo.h>
 #include <tencentcloud/cdn/v20180606/model/TopicInfo.h>
+#include <tencentcloud/cdn/v20180606/model/ExtraLogset.h>
 
 
 namespace TencentCloud
@@ -42,11 +43,12 @@ namespace TencentCloud
                     ListClsLogTopicsResponse();
                     ~ListClsLogTopicsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Logset information
-                     * @return Logset Logset information
+                     * 获取Information of logsets in the Shanghai region
+                     * @return Logset Information of logsets in the Shanghai region
                      */
                     LogSetInfo GetLogset() const;
 
@@ -57,10 +59,10 @@ namespace TencentCloud
                     bool LogsetHasBeenSet() const;
 
                     /**
-                     * 获取Log topic information list
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Topics Log topic information list
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Information of log topics in the Shanghai region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Topics Information of log topics in the Shanghai region
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<TopicInfo> GetTopics() const;
 
@@ -70,20 +72,41 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool TopicsHasBeenSet() const;
 
+                    /**
+                     * 获取Information on logsets in regions except Shanghai
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return ExtraLogset Information on logsets in regions except Shanghai
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ExtraLogset> GetExtraLogset() const;
+
+                    /**
+                     * 判断参数 ExtraLogset 是否已赋值
+                     * @return ExtraLogset 是否已赋值
+                     */
+                    bool ExtraLogsetHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Logset information
+                     * Information of logsets in the Shanghai region
                      */
                     LogSetInfo m_logset;
                     bool m_logsetHasBeenSet;
 
                     /**
-                     * Log topic information list
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Information of log topics in the Shanghai region
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<TopicInfo> m_topics;
                     bool m_topicsHasBeenSet;
+
+                    /**
+                     * Information on logsets in regions except Shanghai
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ExtraLogset> m_extraLogset;
+                    bool m_extraLogsetHasBeenSet;
 
                 };
             }

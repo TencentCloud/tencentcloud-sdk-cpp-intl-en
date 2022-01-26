@@ -29,6 +29,7 @@
 #include <tencentcloud/cdn/v20180606/model/HeaderKey.h>
 #include <tencentcloud/cdn/v20180606/model/CacheTagKey.h>
 #include <tencentcloud/cdn/v20180606/model/SchemeKey.h>
+#include <tencentcloud/cdn/v20180606/model/KeyRule.h>
 
 
 namespace TencentCloud
@@ -40,7 +41,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Cache key configuration (filter parameter configuration)
+                * Cache key configuration (Ignore Query String configuration)
                 */
                 class CacheKey : public AbstractModel
                 {
@@ -53,21 +54,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Whether to enable full-path cache
-on: enable full-path cache (i.e., disable parameter filter)
-off: disable full-path cache (i.e., enable parameter filter)
+`on`: enables full-path cache (i.e., disables Ignore Query String)
+`off`: disables full-path cache (i.e., enables Ignore Query String)
                      * @return FullUrlCache Whether to enable full-path cache
-on: enable full-path cache (i.e., disable parameter filter)
-off: disable full-path cache (i.e., enable parameter filter)
+`on`: enables full-path cache (i.e., disables Ignore Query String)
+`off`: disables full-path cache (i.e., enables Ignore Query String)
                      */
                     std::string GetFullUrlCache() const;
 
                     /**
                      * 设置Whether to enable full-path cache
-on: enable full-path cache (i.e., disable parameter filter)
-off: disable full-path cache (i.e., enable parameter filter)
+`on`: enables full-path cache (i.e., disables Ignore Query String)
+`off`: disables full-path cache (i.e., enables Ignore Query String)
                      * @param FullUrlCache Whether to enable full-path cache
-on: enable full-path cache (i.e., disable parameter filter)
-off: disable full-path cache (i.e., enable parameter filter)
+`on`: enables full-path cache (i.e., disables Ignore Query String)
+`off`: disables full-path cache (i.e., enables Ignore Query String)
                      */
                     void SetFullUrlCache(const std::string& _fullUrlCache);
 
@@ -209,12 +210,34 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool SchemeHasBeenSet() const;
 
+                    /**
+                     * 获取Path-based cache key configuration
+Note: this field may return null, indicating that no valid value is obtained.
+                     * @return KeyRules Path-based cache key configuration
+Note: this field may return null, indicating that no valid value is obtained.
+                     */
+                    std::vector<KeyRule> GetKeyRules() const;
+
+                    /**
+                     * 设置Path-based cache key configuration
+Note: this field may return null, indicating that no valid value is obtained.
+                     * @param KeyRules Path-based cache key configuration
+Note: this field may return null, indicating that no valid value is obtained.
+                     */
+                    void SetKeyRules(const std::vector<KeyRule>& _keyRules);
+
+                    /**
+                     * 判断参数 KeyRules 是否已赋值
+                     * @return KeyRules 是否已赋值
+                     */
+                    bool KeyRulesHasBeenSet() const;
+
                 private:
 
                     /**
                      * Whether to enable full-path cache
-on: enable full-path cache (i.e., disable parameter filter)
-off: disable full-path cache (i.e., enable parameter filter)
+`on`: enables full-path cache (i.e., disables Ignore Query String)
+`off`: disables full-path cache (i.e., enables Ignore Query String)
                      */
                     std::string m_fullUrlCache;
                     bool m_fullUrlCacheHasBeenSet;
@@ -260,6 +283,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     SchemeKey m_scheme;
                     bool m_schemeHasBeenSet;
+
+                    /**
+                     * Path-based cache key configuration
+Note: this field may return null, indicating that no valid value is obtained.
+                     */
+                    std::vector<KeyRule> m_keyRules;
+                    bool m_keyRulesHasBeenSet;
 
                 };
             }

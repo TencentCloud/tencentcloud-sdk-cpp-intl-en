@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Tcaplusdb::V20190823::Model;
-using namespace rapidjson;
 using namespace std;
 
 TableRollbackResultNew::TableRollbackResultNew() :
@@ -36,7 +35,7 @@ TableRollbackResultNew::TableRollbackResultNew() :
 {
 }
 
-CoreInternalOutcome TableRollbackResultNew::Deserialize(const Value &value)
+CoreInternalOutcome TableRollbackResultNew::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -45,7 +44,7 @@ CoreInternalOutcome TableRollbackResultNew::Deserialize(const Value &value)
     {
         if (!value["TableInstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TableRollbackResultNew.TableInstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TableRollbackResultNew.TableInstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tableInstanceId = string(value["TableInstanceId"].GetString());
         m_tableInstanceIdHasBeenSet = true;
@@ -55,7 +54,7 @@ CoreInternalOutcome TableRollbackResultNew::Deserialize(const Value &value)
     {
         if (!value["TaskId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TableRollbackResultNew.TaskId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TableRollbackResultNew.TaskId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_taskId = string(value["TaskId"].GetString());
         m_taskIdHasBeenSet = true;
@@ -65,7 +64,7 @@ CoreInternalOutcome TableRollbackResultNew::Deserialize(const Value &value)
     {
         if (!value["TableName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TableRollbackResultNew.TableName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TableRollbackResultNew.TableName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tableName = string(value["TableName"].GetString());
         m_tableNameHasBeenSet = true;
@@ -75,7 +74,7 @@ CoreInternalOutcome TableRollbackResultNew::Deserialize(const Value &value)
     {
         if (!value["TableType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TableRollbackResultNew.TableType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TableRollbackResultNew.TableType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tableType = string(value["TableType"].GetString());
         m_tableTypeHasBeenSet = true;
@@ -85,7 +84,7 @@ CoreInternalOutcome TableRollbackResultNew::Deserialize(const Value &value)
     {
         if (!value["TableIdlType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TableRollbackResultNew.TableIdlType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TableRollbackResultNew.TableIdlType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tableIdlType = string(value["TableIdlType"].GetString());
         m_tableIdlTypeHasBeenSet = true;
@@ -95,7 +94,7 @@ CoreInternalOutcome TableRollbackResultNew::Deserialize(const Value &value)
     {
         if (!value["TableGroupId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TableRollbackResultNew.TableGroupId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TableRollbackResultNew.TableGroupId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tableGroupId = string(value["TableGroupId"].GetString());
         m_tableGroupIdHasBeenSet = true;
@@ -105,7 +104,7 @@ CoreInternalOutcome TableRollbackResultNew::Deserialize(const Value &value)
     {
         if (!value["Error"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `TableRollbackResultNew.Error` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TableRollbackResultNew.Error` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_error.Deserialize(value["Error"]);
@@ -121,10 +120,10 @@ CoreInternalOutcome TableRollbackResultNew::Deserialize(const Value &value)
     if (value.HasMember("TaskIds") && !value["TaskIds"].IsNull())
     {
         if (!value["TaskIds"].IsArray())
-            return CoreInternalOutcome(Error("response `TableRollbackResultNew.TaskIds` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `TableRollbackResultNew.TaskIds` is not array type"));
 
-        const Value &tmpValue = value["TaskIds"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["TaskIds"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_taskIds.push_back((*itr).GetString());
         }
@@ -135,7 +134,7 @@ CoreInternalOutcome TableRollbackResultNew::Deserialize(const Value &value)
     {
         if (!value["FileId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TableRollbackResultNew.FileId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TableRollbackResultNew.FileId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fileId = string(value["FileId"].GetString());
         m_fileIdHasBeenSet = true;
@@ -145,7 +144,7 @@ CoreInternalOutcome TableRollbackResultNew::Deserialize(const Value &value)
     {
         if (!value["SuccKeyNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TableRollbackResultNew.SuccKeyNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TableRollbackResultNew.SuccKeyNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_succKeyNum = value["SuccKeyNum"].GetUint64();
         m_succKeyNumHasBeenSet = true;
@@ -155,7 +154,7 @@ CoreInternalOutcome TableRollbackResultNew::Deserialize(const Value &value)
     {
         if (!value["TotalKeyNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TableRollbackResultNew.TotalKeyNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TableRollbackResultNew.TotalKeyNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_totalKeyNum = value["TotalKeyNum"].GetUint64();
         m_totalKeyNumHasBeenSet = true;
@@ -165,90 +164,90 @@ CoreInternalOutcome TableRollbackResultNew::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void TableRollbackResultNew::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TableRollbackResultNew::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_tableInstanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TableInstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_tableInstanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tableInstanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_taskIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TaskId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_taskId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_taskId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tableNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TableName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_tableName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tableName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tableTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TableType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_tableType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tableType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tableIdlTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TableIdlType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_tableIdlType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tableIdlType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tableGroupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TableGroupId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_tableGroupId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tableGroupId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_errorHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Error";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_error.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_taskIdsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TaskIds";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_taskIds.begin(); itr != m_taskIds.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_fileIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fileId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fileId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_succKeyNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SuccKeyNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_succKeyNum, allocator);
@@ -256,7 +255,7 @@ void TableRollbackResultNew::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_totalKeyNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TotalKeyNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_totalKeyNum, allocator);

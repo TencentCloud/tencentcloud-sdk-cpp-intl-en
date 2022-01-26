@@ -142,18 +142,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool LabelHasBeenSet() const;
 
                     /**
-                     * 获取List of video segments that contain the detected porn information.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SegmentSet List of video segments that contain the detected porn information.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取List of video segments that contain porn information
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
+                     * @return SegmentSet List of video segments that contain porn information
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
                      */
                     std::vector<MediaContentReviewSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置List of video segments that contain the detected porn information.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SegmentSet List of video segments that contain the detected porn information.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置List of video segments that contain porn information
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
+                     * @param SegmentSet List of video segments that contain porn information
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
                      */
                     void SetSegmentSet(const std::vector<MediaContentReviewSegmentItem>& _segmentSet);
 
@@ -162,6 +162,42 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return SegmentSet 是否已赋值
                      */
                     bool SegmentSetHasBeenSet() const;
+
+                    /**
+                     * 获取URL to the file for video segments that contain porn information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     * @return SegmentSetFileUrl URL to the file for video segments that contain porn information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     */
+                    std::string GetSegmentSetFileUrl() const;
+
+                    /**
+                     * 设置URL to the file for video segments that contain porn information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     * @param SegmentSetFileUrl URL to the file for video segments that contain porn information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     */
+                    void SetSegmentSetFileUrl(const std::string& _segmentSetFileUrl);
+
+                    /**
+                     * 判断参数 SegmentSetFileUrl 是否已赋值
+                     * @return SegmentSetFileUrl 是否已赋值
+                     */
+                    bool SegmentSetFileUrlHasBeenSet() const;
+
+                    /**
+                     * 获取Expiration time of the URL to the file of for video segments that contain porn information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     * @return SegmentSetFileUrlExpireTime Expiration time of the URL to the file of for video segments that contain porn information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     */
+                    std::string GetSegmentSetFileUrlExpireTime() const;
+
+                    /**
+                     * 设置Expiration time of the URL to the file of for video segments that contain porn information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     * @param SegmentSetFileUrlExpireTime Expiration time of the URL to the file of for video segments that contain porn information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     */
+                    void SetSegmentSetFileUrlExpireTime(const std::string& _segmentSetFileUrlExpireTime);
+
+                    /**
+                     * 判断参数 SegmentSetFileUrlExpireTime 是否已赋值
+                     * @return SegmentSetFileUrlExpireTime 是否已赋值
+                     */
+                    bool SegmentSetFileUrlExpireTimeHasBeenSet() const;
 
                 private:
 
@@ -194,11 +230,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_labelHasBeenSet;
 
                     /**
-                     * List of video segments that contain the detected porn information.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * List of video segments that contain porn information
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
                      */
                     std::vector<MediaContentReviewSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;
+
+                    /**
+                     * URL to the file for video segments that contain porn information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     */
+                    std::string m_segmentSetFileUrl;
+                    bool m_segmentSetFileUrlHasBeenSet;
+
+                    /**
+                     * Expiration time of the URL to the file of for video segments that contain porn information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     */
+                    std::string m_segmentSetFileUrlExpireTime;
+                    bool m_segmentSetFileUrlExpireTimeHasBeenSet;
 
                 };
             }

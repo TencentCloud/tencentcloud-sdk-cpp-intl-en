@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
-                     * @return Cpu Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
+                     * 获取Computing resource specification in terms of CPU core
+                     * @return Cpu Computing resource specification in terms of CPU core
                      */
                     uint64_t GetCpu() const;
 
                     /**
-                     * 设置Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
-                     * @param Cpu Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
+                     * 设置Computing resource specification in terms of CPU core
+                     * @param Cpu Computing resource specification in terms of CPU core
                      */
                     void SetCpu(const uint64_t& _cpu);
 
@@ -299,14 +299,14 @@ namespace TencentCloud
                     bool ClusterTypeHasBeenSet() const;
 
                     /**
-                     * 获取Minimum number of slave nodes in a replica set
-                     * @return MinNodeNum Minimum number of slave nodes in a replica set
+                     * 获取Minimum number of secondary nodes in a replica set
+                     * @return MinNodeNum Minimum number of secondary nodes in a replica set
                      */
                     uint64_t GetMinNodeNum() const;
 
                     /**
-                     * 设置Minimum number of slave nodes in a replica set
-                     * @param MinNodeNum Minimum number of slave nodes in a replica set
+                     * 设置Minimum number of secondary nodes in a replica set
+                     * @param MinNodeNum Minimum number of secondary nodes in a replica set
                      */
                     void SetMinNodeNum(const uint64_t& _minNodeNum);
 
@@ -317,14 +317,14 @@ namespace TencentCloud
                     bool MinNodeNumHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of slave nodes in a replica set
-                     * @return MaxNodeNum Maximum number of slave nodes in a replica set
+                     * 获取Maximum number of secondary nodes in a replica set
+                     * @return MaxNodeNum Maximum number of secondary nodes in a replica set
                      */
                     uint64_t GetMaxNodeNum() const;
 
                     /**
-                     * 设置Maximum number of slave nodes in a replica set
-                     * @param MaxNodeNum Maximum number of slave nodes in a replica set
+                     * 设置Maximum number of secondary nodes in a replica set
+                     * @param MaxNodeNum Maximum number of secondary nodes in a replica set
                      */
                     void SetMaxNodeNum(const uint64_t& _maxNodeNum);
 
@@ -371,14 +371,14 @@ namespace TencentCloud
                     bool MaxReplicateSetNumHasBeenSet() const;
 
                     /**
-                     * 获取Minimum number of slave nodes in a shard
-                     * @return MinReplicateSetNodeNum Minimum number of slave nodes in a shard
+                     * 获取Minimum number of secondary nodes in a shard
+                     * @return MinReplicateSetNodeNum Minimum number of secondary nodes in a shard
                      */
                     uint64_t GetMinReplicateSetNodeNum() const;
 
                     /**
-                     * 设置Minimum number of slave nodes in a shard
-                     * @param MinReplicateSetNodeNum Minimum number of slave nodes in a shard
+                     * 设置Minimum number of secondary nodes in a shard
+                     * @param MinReplicateSetNodeNum Minimum number of secondary nodes in a shard
                      */
                     void SetMinReplicateSetNodeNum(const uint64_t& _minReplicateSetNodeNum);
 
@@ -389,14 +389,14 @@ namespace TencentCloud
                     bool MinReplicateSetNodeNumHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of slave nodes in a shard
-                     * @return MaxReplicateSetNodeNum Maximum number of slave nodes in a shard
+                     * 获取Maximum number of secondary nodes in a shard
+                     * @return MaxReplicateSetNodeNum Maximum number of secondary nodes in a shard
                      */
                     uint64_t GetMaxReplicateSetNodeNum() const;
 
                     /**
-                     * 设置Maximum number of slave nodes in a shard
-                     * @param MaxReplicateSetNodeNum Maximum number of slave nodes in a shard
+                     * 设置Maximum number of secondary nodes in a shard
+                     * @param MaxReplicateSetNodeNum Maximum number of secondary nodes in a shard
                      */
                     void SetMaxReplicateSetNodeNum(const uint64_t& _maxReplicateSetNodeNum);
 
@@ -439,7 +439,7 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
+                     * Computing resource specification in terms of CPU core
                      */
                     uint64_t m_cpu;
                     bool m_cpuHasBeenSet;
@@ -511,13 +511,13 @@ namespace TencentCloud
                     bool m_clusterTypeHasBeenSet;
 
                     /**
-                     * Minimum number of slave nodes in a replica set
+                     * Minimum number of secondary nodes in a replica set
                      */
                     uint64_t m_minNodeNum;
                     bool m_minNodeNumHasBeenSet;
 
                     /**
-                     * Maximum number of slave nodes in a replica set
+                     * Maximum number of secondary nodes in a replica set
                      */
                     uint64_t m_maxNodeNum;
                     bool m_maxNodeNumHasBeenSet;
@@ -535,13 +535,13 @@ namespace TencentCloud
                     bool m_maxReplicateSetNumHasBeenSet;
 
                     /**
-                     * Minimum number of slave nodes in a shard
+                     * Minimum number of secondary nodes in a shard
                      */
                     uint64_t m_minReplicateSetNodeNum;
                     bool m_minReplicateSetNodeNumHasBeenSet;
 
                     /**
-                     * Maximum number of slave nodes in a shard
+                     * Maximum number of secondary nodes in a shard
                      */
                     uint64_t m_maxReplicateSetNodeNum;
                     bool m_maxReplicateSetNodeNumHasBeenSet;

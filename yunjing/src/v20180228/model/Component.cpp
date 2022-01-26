@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Yunjing::V20180228::Model;
-using namespace rapidjson;
 using namespace std;
 
 Component::Component() :
@@ -33,7 +32,7 @@ Component::Component() :
 {
 }
 
-CoreInternalOutcome Component::Deserialize(const Value &value)
+CoreInternalOutcome Component::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +41,7 @@ CoreInternalOutcome Component::Deserialize(const Value &value)
     {
         if (!value["Id"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Component.Id` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Component.Id` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_id = value["Id"].GetUint64();
         m_idHasBeenSet = true;
@@ -52,7 +51,7 @@ CoreInternalOutcome Component::Deserialize(const Value &value)
     {
         if (!value["Uuid"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Component.Uuid` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Component.Uuid` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_uuid = string(value["Uuid"].GetString());
         m_uuidHasBeenSet = true;
@@ -62,7 +61,7 @@ CoreInternalOutcome Component::Deserialize(const Value &value)
     {
         if (!value["MachineIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Component.MachineIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Component.MachineIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_machineIp = string(value["MachineIp"].GetString());
         m_machineIpHasBeenSet = true;
@@ -72,7 +71,7 @@ CoreInternalOutcome Component::Deserialize(const Value &value)
     {
         if (!value["MachineName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Component.MachineName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Component.MachineName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_machineName = string(value["MachineName"].GetString());
         m_machineNameHasBeenSet = true;
@@ -82,7 +81,7 @@ CoreInternalOutcome Component::Deserialize(const Value &value)
     {
         if (!value["ComponentVersion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Component.ComponentVersion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Component.ComponentVersion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_componentVersion = string(value["ComponentVersion"].GetString());
         m_componentVersionHasBeenSet = true;
@@ -92,7 +91,7 @@ CoreInternalOutcome Component::Deserialize(const Value &value)
     {
         if (!value["ComponentType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Component.ComponentType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Component.ComponentType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_componentType = string(value["ComponentType"].GetString());
         m_componentTypeHasBeenSet = true;
@@ -102,7 +101,7 @@ CoreInternalOutcome Component::Deserialize(const Value &value)
     {
         if (!value["ComponentName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Component.ComponentName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Component.ComponentName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_componentName = string(value["ComponentName"].GetString());
         m_componentNameHasBeenSet = true;
@@ -112,7 +111,7 @@ CoreInternalOutcome Component::Deserialize(const Value &value)
     {
         if (!value["ModifyTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Component.ModifyTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Component.ModifyTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_modifyTime = string(value["ModifyTime"].GetString());
         m_modifyTimeHasBeenSet = true;
@@ -122,12 +121,12 @@ CoreInternalOutcome Component::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Component::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Component::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_idHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Id";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_id, allocator);
@@ -135,58 +134,58 @@ void Component::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_uuidHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Uuid";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_uuid.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_uuid.c_str(), allocator).Move(), allocator);
     }
 
     if (m_machineIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MachineIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_machineIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_machineIp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_machineNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MachineName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_machineName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_machineName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_componentVersionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ComponentVersion";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_componentVersion.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_componentVersion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_componentTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ComponentType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_componentType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_componentType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_componentNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ComponentName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_componentName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_componentName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_modifyTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ModifyTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_modifyTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_modifyTime.c_str(), allocator).Move(), allocator);
     }
 
 }

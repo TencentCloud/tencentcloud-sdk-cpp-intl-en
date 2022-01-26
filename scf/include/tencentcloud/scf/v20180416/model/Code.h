@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/scf/v20180416/model/ImageConfig.h>
 
 
 namespace TencentCloud
@@ -47,14 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取COS bucket name
-                     * @return CosBucketName COS bucket name
+                     * 获取Object bucket name (enter the custom part of the bucket name without `-appid`)
+                     * @return CosBucketName Object bucket name (enter the custom part of the bucket name without `-appid`)
                      */
                     std::string GetCosBucketName() const;
 
                     /**
-                     * 设置COS bucket name
-                     * @param CosBucketName COS bucket name
+                     * 设置Object bucket name (enter the custom part of the bucket name without `-appid`)
+                     * @param CosBucketName Object bucket name (enter the custom part of the bucket name without `-appid`)
                      */
                     void SetCosBucketName(const std::string& _cosBucketName);
 
@@ -65,14 +66,14 @@ namespace TencentCloud
                     bool CosBucketNameHasBeenSet() const;
 
                     /**
-                     * 获取COS object path
-                     * @return CosObjectName COS object path
+                     * 获取File path of code package stored in COS, which should start with “/”
+                     * @return CosObjectName File path of code package stored in COS, which should start with “/”
                      */
                     std::string GetCosObjectName() const;
 
                     /**
-                     * 设置COS object path
-                     * @param CosObjectName COS object path
+                     * 设置File path of code package stored in COS, which should start with “/”
+                     * @param CosObjectName File path of code package stored in COS, which should start with “/”
                      */
                     void SetCosObjectName(const std::string& _cosObjectName);
 
@@ -83,14 +84,14 @@ namespace TencentCloud
                     bool CosObjectNameHasBeenSet() const;
 
                     /**
-                     * 获取It contains a function code file and its dependencies in the ZIP format. When you use this API, the ZIP file needs to be encoded with Base64. Up to 20 MB is supported.
-                     * @return ZipFile It contains a function code file and its dependencies in the ZIP format. When you use this API, the ZIP file needs to be encoded with Base64. Up to 20 MB is supported.
+                     * 获取This parameter contains a .zip file (up to 50 MB) of the function code file and its dependencies. When this API is used, the content of the .zip file needs to be Base64-encoded
+                     * @return ZipFile This parameter contains a .zip file (up to 50 MB) of the function code file and its dependencies. When this API is used, the content of the .zip file needs to be Base64-encoded
                      */
                     std::string GetZipFile() const;
 
                     /**
-                     * 设置It contains a function code file and its dependencies in the ZIP format. When you use this API, the ZIP file needs to be encoded with Base64. Up to 20 MB is supported.
-                     * @param ZipFile It contains a function code file and its dependencies in the ZIP format. When you use this API, the ZIP file needs to be encoded with Base64. Up to 20 MB is supported.
+                     * 设置This parameter contains a .zip file (up to 50 MB) of the function code file and its dependencies. When this API is used, the content of the .zip file needs to be Base64-encoded
+                     * @param ZipFile This parameter contains a .zip file (up to 50 MB) of the function code file and its dependencies. When this API is used, the content of the .zip file needs to be Base64-encoded
                      */
                     void SetZipFile(const std::string& _zipFile);
 
@@ -298,22 +299,40 @@ namespace TencentCloud
                      */
                     bool GitUserNameSecretHasBeenSet() const;
 
+                    /**
+                     * 获取TCR image configurations
+                     * @return ImageConfig TCR image configurations
+                     */
+                    ImageConfig GetImageConfig() const;
+
+                    /**
+                     * 设置TCR image configurations
+                     * @param ImageConfig TCR image configurations
+                     */
+                    void SetImageConfig(const ImageConfig& _imageConfig);
+
+                    /**
+                     * 判断参数 ImageConfig 是否已赋值
+                     * @return ImageConfig 是否已赋值
+                     */
+                    bool ImageConfigHasBeenSet() const;
+
                 private:
 
                     /**
-                     * COS bucket name
+                     * Object bucket name (enter the custom part of the bucket name without `-appid`)
                      */
                     std::string m_cosBucketName;
                     bool m_cosBucketNameHasBeenSet;
 
                     /**
-                     * COS object path
+                     * File path of code package stored in COS, which should start with “/”
                      */
                     std::string m_cosObjectName;
                     bool m_cosObjectNameHasBeenSet;
 
                     /**
-                     * It contains a function code file and its dependencies in the ZIP format. When you use this API, the ZIP file needs to be encoded with Base64. Up to 20 MB is supported.
+                     * This parameter contains a .zip file (up to 50 MB) of the function code file and its dependencies. When this API is used, the content of the .zip file needs to be Base64-encoded
                      */
                     std::string m_zipFile;
                     bool m_zipFileHasBeenSet;
@@ -383,6 +402,12 @@ namespace TencentCloud
                      */
                     std::string m_gitUserNameSecret;
                     bool m_gitUserNameSecretHasBeenSet;
+
+                    /**
+                     * TCR image configurations
+                     */
+                    ImageConfig m_imageConfig;
+                    bool m_imageConfigHasBeenSet;
 
                 };
             }

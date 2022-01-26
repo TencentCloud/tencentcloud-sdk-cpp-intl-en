@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gme::V20180711::Model;
-using namespace rapidjson;
 using namespace std;
 
 ScanPiece::ScanPiece() :
@@ -35,7 +34,7 @@ ScanPiece::ScanPiece() :
 {
 }
 
-CoreInternalOutcome ScanPiece::Deserialize(const Value &value)
+CoreInternalOutcome ScanPiece::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -44,7 +43,7 @@ CoreInternalOutcome ScanPiece::Deserialize(const Value &value)
     {
         if (!value["DumpUrl"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ScanPiece.DumpUrl` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScanPiece.DumpUrl` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_dumpUrl = string(value["DumpUrl"].GetString());
         m_dumpUrlHasBeenSet = true;
@@ -54,7 +53,7 @@ CoreInternalOutcome ScanPiece::Deserialize(const Value &value)
     {
         if (!value["HitFlag"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `ScanPiece.HitFlag` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScanPiece.HitFlag` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_hitFlag = value["HitFlag"].GetBool();
         m_hitFlagHasBeenSet = true;
@@ -64,7 +63,7 @@ CoreInternalOutcome ScanPiece::Deserialize(const Value &value)
     {
         if (!value["MainType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ScanPiece.MainType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScanPiece.MainType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_mainType = string(value["MainType"].GetString());
         m_mainTypeHasBeenSet = true;
@@ -73,10 +72,10 @@ CoreInternalOutcome ScanPiece::Deserialize(const Value &value)
     if (value.HasMember("ScanDetail") && !value["ScanDetail"].IsNull())
     {
         if (!value["ScanDetail"].IsArray())
-            return CoreInternalOutcome(Error("response `ScanPiece.ScanDetail` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ScanPiece.ScanDetail` is not array type"));
 
-        const Value &tmpValue = value["ScanDetail"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["ScanDetail"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             ScanDetail item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -94,7 +93,7 @@ CoreInternalOutcome ScanPiece::Deserialize(const Value &value)
     {
         if (!value["RoomId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ScanPiece.RoomId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScanPiece.RoomId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_roomId = string(value["RoomId"].GetString());
         m_roomIdHasBeenSet = true;
@@ -104,7 +103,7 @@ CoreInternalOutcome ScanPiece::Deserialize(const Value &value)
     {
         if (!value["OpenId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ScanPiece.OpenId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScanPiece.OpenId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_openId = string(value["OpenId"].GetString());
         m_openIdHasBeenSet = true;
@@ -114,7 +113,7 @@ CoreInternalOutcome ScanPiece::Deserialize(const Value &value)
     {
         if (!value["Info"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ScanPiece.Info` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScanPiece.Info` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_info = string(value["Info"].GetString());
         m_infoHasBeenSet = true;
@@ -124,7 +123,7 @@ CoreInternalOutcome ScanPiece::Deserialize(const Value &value)
     {
         if (!value["Offset"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ScanPiece.Offset` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScanPiece.Offset` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_offset = value["Offset"].GetUint64();
         m_offsetHasBeenSet = true;
@@ -134,7 +133,7 @@ CoreInternalOutcome ScanPiece::Deserialize(const Value &value)
     {
         if (!value["Duration"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ScanPiece.Duration` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScanPiece.Duration` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_duration = value["Duration"].GetUint64();
         m_durationHasBeenSet = true;
@@ -144,7 +143,7 @@ CoreInternalOutcome ScanPiece::Deserialize(const Value &value)
     {
         if (!value["PieceStartTime"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ScanPiece.PieceStartTime` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScanPiece.PieceStartTime` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_pieceStartTime = value["PieceStartTime"].GetUint64();
         m_pieceStartTimeHasBeenSet = true;
@@ -154,20 +153,20 @@ CoreInternalOutcome ScanPiece::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ScanPiece::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ScanPiece::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_dumpUrlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DumpUrl";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_dumpUrl.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_dumpUrl.c_str(), allocator).Move(), allocator);
     }
 
     if (m_hitFlagHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HitFlag";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_hitFlag, allocator);
@@ -175,54 +174,54 @@ void ScanPiece::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_mainTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MainType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_mainType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_mainType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_scanDetailHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ScanDetail";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_scanDetail.begin(); itr != m_scanDetail.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_roomIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RoomId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_roomId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_roomId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_openIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OpenId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_openId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_openId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_infoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Info";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_info.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_info.c_str(), allocator).Move(), allocator);
     }
 
     if (m_offsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Offset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_offset, allocator);
@@ -230,7 +229,7 @@ void ScanPiece::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_durationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Duration";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_duration, allocator);
@@ -238,7 +237,7 @@ void ScanPiece::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_pieceStartTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PieceStartTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_pieceStartTime, allocator);

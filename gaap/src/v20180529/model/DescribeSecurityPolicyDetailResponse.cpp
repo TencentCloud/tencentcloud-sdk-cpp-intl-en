@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeSecurityPolicyDetailResponse::DescribeSecurityPolicyDetailResponse() :
@@ -35,20 +34,20 @@ DescribeSecurityPolicyDetailResponse::DescribeSecurityPolicyDetailResponse() :
 
 CoreInternalOutcome DescribeSecurityPolicyDetailResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -59,11 +58,11 @@ CoreInternalOutcome DescribeSecurityPolicyDetailResponse::Deserialize(const stri
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -71,7 +70,7 @@ CoreInternalOutcome DescribeSecurityPolicyDetailResponse::Deserialize(const stri
     {
         if (!rsp["ProxyId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ProxyId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProxyId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_proxyId = string(rsp["ProxyId"].GetString());
         m_proxyIdHasBeenSet = true;
@@ -81,7 +80,7 @@ CoreInternalOutcome DescribeSecurityPolicyDetailResponse::Deserialize(const stri
     {
         if (!rsp["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(rsp["Status"].GetString());
         m_statusHasBeenSet = true;
@@ -91,7 +90,7 @@ CoreInternalOutcome DescribeSecurityPolicyDetailResponse::Deserialize(const stri
     {
         if (!rsp["DefaultAction"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DefaultAction` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DefaultAction` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_defaultAction = string(rsp["DefaultAction"].GetString());
         m_defaultActionHasBeenSet = true;
@@ -101,7 +100,7 @@ CoreInternalOutcome DescribeSecurityPolicyDetailResponse::Deserialize(const stri
     {
         if (!rsp["PolicyId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PolicyId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PolicyId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_policyId = string(rsp["PolicyId"].GetString());
         m_policyIdHasBeenSet = true;
@@ -110,10 +109,10 @@ CoreInternalOutcome DescribeSecurityPolicyDetailResponse::Deserialize(const stri
     if (rsp.HasMember("RuleList") && !rsp["RuleList"].IsNull())
     {
         if (!rsp["RuleList"].IsArray())
-            return CoreInternalOutcome(Error("response `RuleList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `RuleList` is not array type"));
 
-        const Value &tmpValue = rsp["RuleList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["RuleList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             SecurityPolicyRuleOut item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -129,6 +128,70 @@ CoreInternalOutcome DescribeSecurityPolicyDetailResponse::Deserialize(const stri
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeSecurityPolicyDetailResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_proxyIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProxyId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_proxyId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_statusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Status";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_defaultActionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DefaultAction";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_defaultAction.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_policyIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PolicyId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_policyId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_ruleListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RuleList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_ruleList.begin(); itr != m_ruleList.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

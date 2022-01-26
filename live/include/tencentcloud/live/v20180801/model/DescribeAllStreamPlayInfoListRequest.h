@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Query time accurate down to the minute in the format of `yyyy-mm-dd HH:MM:SS`. Data for the last month can be queried. The data has a delay of about 5 minutes; therefore, if you want to query real-time data, we recommend you pass in a point in time 5 minutes ago.
-                     * @return QueryTime Query time accurate down to the minute in the format of `yyyy-mm-dd HH:MM:SS`. Data for the last month can be queried. The data has a delay of about 5 minutes; therefore, if you want to query real-time data, we recommend you pass in a point in time 5 minutes ago.
+                     * 获取Query time point accurate to the minute. You can query data within the last month. As there is a 5-minute delay in the data, you're advised to pass in a time point 5 minutes earlier than needed. Format: yyyy-mm-dd HH:MM:00. As the accuracy is to the minute, please set the value of second to `00`.
+                     * @return QueryTime Query time point accurate to the minute. You can query data within the last month. As there is a 5-minute delay in the data, you're advised to pass in a time point 5 minutes earlier than needed. Format: yyyy-mm-dd HH:MM:00. As the accuracy is to the minute, please set the value of second to `00`.
                      */
                     std::string GetQueryTime() const;
 
                     /**
-                     * 设置Query time accurate down to the minute in the format of `yyyy-mm-dd HH:MM:SS`. Data for the last month can be queried. The data has a delay of about 5 minutes; therefore, if you want to query real-time data, we recommend you pass in a point in time 5 minutes ago.
-                     * @param QueryTime Query time accurate down to the minute in the format of `yyyy-mm-dd HH:MM:SS`. Data for the last month can be queried. The data has a delay of about 5 minutes; therefore, if you want to query real-time data, we recommend you pass in a point in time 5 minutes ago.
+                     * 设置Query time point accurate to the minute. You can query data within the last month. As there is a 5-minute delay in the data, you're advised to pass in a time point 5 minutes earlier than needed. Format: yyyy-mm-dd HH:MM:00. As the accuracy is to the minute, please set the value of second to `00`.
+                     * @param QueryTime Query time point accurate to the minute. You can query data within the last month. As there is a 5-minute delay in the data, you're advised to pass in a time point 5 minutes earlier than needed. Format: yyyy-mm-dd HH:MM:00. As the accuracy is to the minute, please set the value of second to `00`.
                      */
                     void SetQueryTime(const std::string& _queryTime);
 
@@ -60,13 +60,37 @@ namespace TencentCloud
                      */
                     bool QueryTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Playback domain name list. If this parameter is left empty, full data will be queried.
+                     * @return PlayDomains Playback domain name list. If this parameter is left empty, full data will be queried.
+                     */
+                    std::vector<std::string> GetPlayDomains() const;
+
+                    /**
+                     * 设置Playback domain name list. If this parameter is left empty, full data will be queried.
+                     * @param PlayDomains Playback domain name list. If this parameter is left empty, full data will be queried.
+                     */
+                    void SetPlayDomains(const std::vector<std::string>& _playDomains);
+
+                    /**
+                     * 判断参数 PlayDomains 是否已赋值
+                     * @return PlayDomains 是否已赋值
+                     */
+                    bool PlayDomainsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Query time accurate down to the minute in the format of `yyyy-mm-dd HH:MM:SS`. Data for the last month can be queried. The data has a delay of about 5 minutes; therefore, if you want to query real-time data, we recommend you pass in a point in time 5 minutes ago.
+                     * Query time point accurate to the minute. You can query data within the last month. As there is a 5-minute delay in the data, you're advised to pass in a time point 5 minutes earlier than needed. Format: yyyy-mm-dd HH:MM:00. As the accuracy is to the minute, please set the value of second to `00`.
                      */
                     std::string m_queryTime;
                     bool m_queryTimeHasBeenSet;
+
+                    /**
+                     * Playback domain name list. If this parameter is left empty, full data will be queried.
+                     */
+                    std::vector<std::string> m_playDomains;
+                    bool m_playDomainsHasBeenSet;
 
                 };
             }

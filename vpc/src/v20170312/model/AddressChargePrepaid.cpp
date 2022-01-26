@@ -18,16 +18,15 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 AddressChargePrepaid::AddressChargePrepaid() :
     m_periodHasBeenSet(false),
-    m_renewFlagHasBeenSet(false)
+    m_autoRenewFlagHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome AddressChargePrepaid::Deserialize(const Value &value)
+CoreInternalOutcome AddressChargePrepaid::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,43 +35,43 @@ CoreInternalOutcome AddressChargePrepaid::Deserialize(const Value &value)
     {
         if (!value["Period"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `AddressChargePrepaid.Period` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AddressChargePrepaid.Period` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_period = value["Period"].GetInt64();
         m_periodHasBeenSet = true;
     }
 
-    if (value.HasMember("RenewFlag") && !value["RenewFlag"].IsNull())
+    if (value.HasMember("AutoRenewFlag") && !value["AutoRenewFlag"].IsNull())
     {
-        if (!value["RenewFlag"].IsString())
+        if (!value["AutoRenewFlag"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `AddressChargePrepaid.RenewFlag` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AddressChargePrepaid.AutoRenewFlag` IsInt64=false incorrectly").SetRequestId(requestId));
         }
-        m_renewFlag = string(value["RenewFlag"].GetString());
-        m_renewFlagHasBeenSet = true;
+        m_autoRenewFlag = value["AutoRenewFlag"].GetInt64();
+        m_autoRenewFlagHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void AddressChargePrepaid::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AddressChargePrepaid::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_periodHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Period";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_period, allocator);
     }
 
-    if (m_renewFlagHasBeenSet)
+    if (m_autoRenewFlagHasBeenSet)
     {
-        Value iKey(kStringType);
-        string key = "RenewFlag";
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutoRenewFlag";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_renewFlag.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, m_autoRenewFlag, allocator);
     }
 
 }
@@ -94,19 +93,19 @@ bool AddressChargePrepaid::PeriodHasBeenSet() const
     return m_periodHasBeenSet;
 }
 
-string AddressChargePrepaid::GetRenewFlag() const
+int64_t AddressChargePrepaid::GetAutoRenewFlag() const
 {
-    return m_renewFlag;
+    return m_autoRenewFlag;
 }
 
-void AddressChargePrepaid::SetRenewFlag(const string& _renewFlag)
+void AddressChargePrepaid::SetAutoRenewFlag(const int64_t& _autoRenewFlag)
 {
-    m_renewFlag = _renewFlag;
-    m_renewFlagHasBeenSet = true;
+    m_autoRenewFlag = _autoRenewFlag;
+    m_autoRenewFlagHasBeenSet = true;
 }
 
-bool AddressChargePrepaid::RenewFlagHasBeenSet() const
+bool AddressChargePrepaid::AutoRenewFlagHasBeenSet() const
 {
-    return m_renewFlagHasBeenSet;
+    return m_autoRenewFlagHasBeenSet;
 }
 

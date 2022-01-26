@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Organization::V20181225::Model;
-using namespace rapidjson;
 using namespace std;
 
 OrgNode::OrgNode() :
@@ -29,7 +28,7 @@ OrgNode::OrgNode() :
 {
 }
 
-CoreInternalOutcome OrgNode::Deserialize(const Value &value)
+CoreInternalOutcome OrgNode::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome OrgNode::Deserialize(const Value &value)
     {
         if (!value["NodeId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `OrgNode.NodeId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OrgNode.NodeId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_nodeId = value["NodeId"].GetUint64();
         m_nodeIdHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome OrgNode::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `OrgNode.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OrgNode.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome OrgNode::Deserialize(const Value &value)
     {
         if (!value["ParentNodeId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `OrgNode.ParentNodeId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OrgNode.ParentNodeId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_parentNodeId = value["ParentNodeId"].GetUint64();
         m_parentNodeIdHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome OrgNode::Deserialize(const Value &value)
     {
         if (!value["MemberCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `OrgNode.MemberCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OrgNode.MemberCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_memberCount = value["MemberCount"].GetUint64();
         m_memberCountHasBeenSet = true;
@@ -78,12 +77,12 @@ CoreInternalOutcome OrgNode::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void OrgNode::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void OrgNode::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_nodeIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NodeId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_nodeId, allocator);
@@ -91,15 +90,15 @@ void OrgNode::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_parentNodeIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ParentNodeId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_parentNodeId, allocator);
@@ -107,7 +106,7 @@ void OrgNode::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_memberCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MemberCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_memberCount, allocator);

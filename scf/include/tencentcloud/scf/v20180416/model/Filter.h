@@ -49,14 +49,26 @@ If multiple values exist in one filter, the logical relationship between these v
 
 
                     /**
-                     * 获取Fields to be filtered
-                     * @return Name Fields to be filtered
+                     * 获取Fields to be filtered. Up to 10 conditions allowed.
+Values of `Name`: `VpcId`, `SubnetId`, `ClsTopicId`, `ClsLogsetId`, `Role`, `CfsId`, `CfsMountInsId`, `Eip`. Values limit: 1.
+Name options: Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable. Values limit: 20.
+When `Name` is `Runtime`, `CustomImage` refers to the image type function 
+                     * @return Name Fields to be filtered. Up to 10 conditions allowed.
+Values of `Name`: `VpcId`, `SubnetId`, `ClsTopicId`, `ClsLogsetId`, `Role`, `CfsId`, `CfsMountInsId`, `Eip`. Values limit: 1.
+Name options: Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable. Values limit: 20.
+When `Name` is `Runtime`, `CustomImage` refers to the image type function 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Fields to be filtered
-                     * @param Name Fields to be filtered
+                     * 设置Fields to be filtered. Up to 10 conditions allowed.
+Values of `Name`: `VpcId`, `SubnetId`, `ClsTopicId`, `ClsLogsetId`, `Role`, `CfsId`, `CfsMountInsId`, `Eip`. Values limit: 1.
+Name options: Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable. Values limit: 20.
+When `Name` is `Runtime`, `CustomImage` refers to the image type function 
+                     * @param Name Fields to be filtered. Up to 10 conditions allowed.
+Values of `Name`: `VpcId`, `SubnetId`, `ClsTopicId`, `ClsLogsetId`, `Role`, `CfsId`, `CfsMountInsId`, `Eip`. Values limit: 1.
+Name options: Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable. Values limit: 20.
+When `Name` is `Runtime`, `CustomImage` refers to the image type function 
                      */
                     void SetName(const std::string& _name);
 
@@ -87,7 +99,10 @@ If multiple values exist in one filter, the logical relationship between these v
                 private:
 
                     /**
-                     * Fields to be filtered
+                     * Fields to be filtered. Up to 10 conditions allowed.
+Values of `Name`: `VpcId`, `SubnetId`, `ClsTopicId`, `ClsLogsetId`, `Role`, `CfsId`, `CfsMountInsId`, `Eip`. Values limit: 1.
+Name options: Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable. Values limit: 20.
+When `Name` is `Runtime`, `CustomImage` refers to the image type function 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

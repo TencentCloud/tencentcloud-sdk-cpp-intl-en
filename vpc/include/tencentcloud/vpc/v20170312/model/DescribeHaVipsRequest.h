@@ -63,33 +63,37 @@ namespace TencentCloud
 
                     /**
                      * 获取Filter condition. `HaVipIds` and `Filters` cannot be specified at the same time.
-<li>havip-id - String - The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.</li>
-<li>havip-name - String - `HAVIP` name.</li>
-<li>vpc-id - String - The `ID` of the VPC where `HAVIP` is located.</li>
-<li>subnet-id - String - The `ID` of the subnet where `HAVIP` is located.</li>
-<li>address-ip - String - The `EIP` to which `HAVIP` is bound.</li>
+li>havip-id - String - The unique ID of the HAVIP, such as `havip-9o233uri`.</li>
+<li>havip-name - String - HAVIP name.</li>
+<li>vpc-id - String - VPC ID of the HAVIP.</li>
+<li>subnet-id - String - Subnet ID of the HAVIP.</li>
+<li>vip - String - Virtual IP address of the HAVIP.</li>
+<li>address-ip - String - Bound EIP.</li>
                      * @return Filters Filter condition. `HaVipIds` and `Filters` cannot be specified at the same time.
-<li>havip-id - String - The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.</li>
-<li>havip-name - String - `HAVIP` name.</li>
-<li>vpc-id - String - The `ID` of the VPC where `HAVIP` is located.</li>
-<li>subnet-id - String - The `ID` of the subnet where `HAVIP` is located.</li>
-<li>address-ip - String - The `EIP` to which `HAVIP` is bound.</li>
+li>havip-id - String - The unique ID of the HAVIP, such as `havip-9o233uri`.</li>
+<li>havip-name - String - HAVIP name.</li>
+<li>vpc-id - String - VPC ID of the HAVIP.</li>
+<li>subnet-id - String - Subnet ID of the HAVIP.</li>
+<li>vip - String - Virtual IP address of the HAVIP.</li>
+<li>address-ip - String - Bound EIP.</li>
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter condition. `HaVipIds` and `Filters` cannot be specified at the same time.
-<li>havip-id - String - The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.</li>
-<li>havip-name - String - `HAVIP` name.</li>
-<li>vpc-id - String - The `ID` of the VPC where `HAVIP` is located.</li>
-<li>subnet-id - String - The `ID` of the subnet where `HAVIP` is located.</li>
-<li>address-ip - String - The `EIP` to which `HAVIP` is bound.</li>
+li>havip-id - String - The unique ID of the HAVIP, such as `havip-9o233uri`.</li>
+<li>havip-name - String - HAVIP name.</li>
+<li>vpc-id - String - VPC ID of the HAVIP.</li>
+<li>subnet-id - String - Subnet ID of the HAVIP.</li>
+<li>vip - String - Virtual IP address of the HAVIP.</li>
+<li>address-ip - String - Bound EIP.</li>
                      * @param Filters Filter condition. `HaVipIds` and `Filters` cannot be specified at the same time.
-<li>havip-id - String - The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.</li>
-<li>havip-name - String - `HAVIP` name.</li>
-<li>vpc-id - String - The `ID` of the VPC where `HAVIP` is located.</li>
-<li>subnet-id - String - The `ID` of the subnet where `HAVIP` is located.</li>
-<li>address-ip - String - The `EIP` to which `HAVIP` is bound.</li>
+li>havip-id - String - The unique ID of the HAVIP, such as `havip-9o233uri`.</li>
+<li>havip-name - String - HAVIP name.</li>
+<li>vpc-id - String - VPC ID of the HAVIP.</li>
+<li>subnet-id - String - Subnet ID of the HAVIP.</li>
+<li>vip - String - Virtual IP address of the HAVIP.</li>
+<li>address-ip - String - Bound EIP.</li>
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -145,11 +149,12 @@ namespace TencentCloud
 
                     /**
                      * Filter condition. `HaVipIds` and `Filters` cannot be specified at the same time.
-<li>havip-id - String - The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.</li>
-<li>havip-name - String - `HAVIP` name.</li>
-<li>vpc-id - String - The `ID` of the VPC where `HAVIP` is located.</li>
-<li>subnet-id - String - The `ID` of the subnet where `HAVIP` is located.</li>
-<li>address-ip - String - The `EIP` to which `HAVIP` is bound.</li>
+li>havip-id - String - The unique ID of the HAVIP, such as `havip-9o233uri`.</li>
+<li>havip-name - String - HAVIP name.</li>
+<li>vpc-id - String - VPC ID of the HAVIP.</li>
+<li>subnet-id - String - Subnet ID of the HAVIP.</li>
+<li>vip - String - Virtual IP address of the HAVIP.</li>
+<li>address-ip - String - Bound EIP.</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

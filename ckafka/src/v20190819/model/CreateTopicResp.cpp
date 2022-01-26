@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ckafka::V20190819::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateTopicResp::CreateTopicResp() :
@@ -26,7 +25,7 @@ CreateTopicResp::CreateTopicResp() :
 {
 }
 
-CoreInternalOutcome CreateTopicResp::Deserialize(const Value &value)
+CoreInternalOutcome CreateTopicResp::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -35,7 +34,7 @@ CoreInternalOutcome CreateTopicResp::Deserialize(const Value &value)
     {
         if (!value["TopicId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CreateTopicResp.TopicId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CreateTopicResp.TopicId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_topicId = string(value["TopicId"].GetString());
         m_topicIdHasBeenSet = true;
@@ -45,15 +44,15 @@ CoreInternalOutcome CreateTopicResp::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void CreateTopicResp::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void CreateTopicResp::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_topicIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TopicId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_topicId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_topicId.c_str(), allocator).Move(), allocator);
     }
 
 }

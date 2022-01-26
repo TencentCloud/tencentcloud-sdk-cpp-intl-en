@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 LiveStreamAiReviewImagePoliticalResult::LiveStreamAiReviewImagePoliticalResult() :
@@ -34,16 +33,16 @@ LiveStreamAiReviewImagePoliticalResult::LiveStreamAiReviewImagePoliticalResult()
 {
 }
 
-CoreInternalOutcome LiveStreamAiReviewImagePoliticalResult::Deserialize(const Value &value)
+CoreInternalOutcome LiveStreamAiReviewImagePoliticalResult::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
 
     if (value.HasMember("StartPtsTime") && !value["StartPtsTime"].IsNull())
     {
-        if (!value["StartPtsTime"].IsDouble())
+        if (!value["StartPtsTime"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamAiReviewImagePoliticalResult.StartPtsTime` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamAiReviewImagePoliticalResult.StartPtsTime` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_startPtsTime = value["StartPtsTime"].GetDouble();
         m_startPtsTimeHasBeenSet = true;
@@ -51,9 +50,9 @@ CoreInternalOutcome LiveStreamAiReviewImagePoliticalResult::Deserialize(const Va
 
     if (value.HasMember("EndPtsTime") && !value["EndPtsTime"].IsNull())
     {
-        if (!value["EndPtsTime"].IsDouble())
+        if (!value["EndPtsTime"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamAiReviewImagePoliticalResult.EndPtsTime` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamAiReviewImagePoliticalResult.EndPtsTime` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_endPtsTime = value["EndPtsTime"].GetDouble();
         m_endPtsTimeHasBeenSet = true;
@@ -61,9 +60,9 @@ CoreInternalOutcome LiveStreamAiReviewImagePoliticalResult::Deserialize(const Va
 
     if (value.HasMember("Confidence") && !value["Confidence"].IsNull())
     {
-        if (!value["Confidence"].IsDouble())
+        if (!value["Confidence"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamAiReviewImagePoliticalResult.Confidence` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamAiReviewImagePoliticalResult.Confidence` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_confidence = value["Confidence"].GetDouble();
         m_confidenceHasBeenSet = true;
@@ -73,7 +72,7 @@ CoreInternalOutcome LiveStreamAiReviewImagePoliticalResult::Deserialize(const Va
     {
         if (!value["Suggestion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamAiReviewImagePoliticalResult.Suggestion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamAiReviewImagePoliticalResult.Suggestion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_suggestion = string(value["Suggestion"].GetString());
         m_suggestionHasBeenSet = true;
@@ -83,7 +82,7 @@ CoreInternalOutcome LiveStreamAiReviewImagePoliticalResult::Deserialize(const Va
     {
         if (!value["Label"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamAiReviewImagePoliticalResult.Label` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamAiReviewImagePoliticalResult.Label` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_label = string(value["Label"].GetString());
         m_labelHasBeenSet = true;
@@ -93,7 +92,7 @@ CoreInternalOutcome LiveStreamAiReviewImagePoliticalResult::Deserialize(const Va
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamAiReviewImagePoliticalResult.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamAiReviewImagePoliticalResult.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -102,10 +101,10 @@ CoreInternalOutcome LiveStreamAiReviewImagePoliticalResult::Deserialize(const Va
     if (value.HasMember("AreaCoordSet") && !value["AreaCoordSet"].IsNull())
     {
         if (!value["AreaCoordSet"].IsArray())
-            return CoreInternalOutcome(Error("response `LiveStreamAiReviewImagePoliticalResult.AreaCoordSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamAiReviewImagePoliticalResult.AreaCoordSet` is not array type"));
 
-        const Value &tmpValue = value["AreaCoordSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["AreaCoordSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_areaCoordSet.push_back((*itr).GetInt64());
         }
@@ -116,7 +115,7 @@ CoreInternalOutcome LiveStreamAiReviewImagePoliticalResult::Deserialize(const Va
     {
         if (!value["Url"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamAiReviewImagePoliticalResult.Url` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamAiReviewImagePoliticalResult.Url` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_url = string(value["Url"].GetString());
         m_urlHasBeenSet = true;
@@ -126,7 +125,7 @@ CoreInternalOutcome LiveStreamAiReviewImagePoliticalResult::Deserialize(const Va
     {
         if (!value["PicUrlExpireTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamAiReviewImagePoliticalResult.PicUrlExpireTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamAiReviewImagePoliticalResult.PicUrlExpireTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_picUrlExpireTime = string(value["PicUrlExpireTime"].GetString());
         m_picUrlExpireTimeHasBeenSet = true;
@@ -136,12 +135,12 @@ CoreInternalOutcome LiveStreamAiReviewImagePoliticalResult::Deserialize(const Va
     return CoreInternalOutcome(true);
 }
 
-void LiveStreamAiReviewImagePoliticalResult::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void LiveStreamAiReviewImagePoliticalResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_startPtsTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartPtsTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_startPtsTime, allocator);
@@ -149,7 +148,7 @@ void LiveStreamAiReviewImagePoliticalResult::ToJsonObject(Value &value, Document
 
     if (m_endPtsTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndPtsTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_endPtsTime, allocator);
@@ -157,7 +156,7 @@ void LiveStreamAiReviewImagePoliticalResult::ToJsonObject(Value &value, Document
 
     if (m_confidenceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Confidence";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_confidence, allocator);
@@ -165,55 +164,55 @@ void LiveStreamAiReviewImagePoliticalResult::ToJsonObject(Value &value, Document
 
     if (m_suggestionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Suggestion";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_suggestion.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_suggestion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_labelHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Label";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_label.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_label.c_str(), allocator).Move(), allocator);
     }
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_areaCoordSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AreaCoordSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_areaCoordSet.begin(); itr != m_areaCoordSet.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 
     if (m_urlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Url";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_url.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_url.c_str(), allocator).Move(), allocator);
     }
 
     if (m_picUrlExpireTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PicUrlExpireTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_picUrlExpireTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_picUrlExpireTime.c_str(), allocator).Move(), allocator);
     }
 
 }

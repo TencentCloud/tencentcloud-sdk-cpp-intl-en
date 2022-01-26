@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * User information, including when the user enters/exits a room, etc.
+                * User information, including when the user enters/exits a room
                 */
                 class UserInformation : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Room ID of string type.
-                     * @return RoomStr Room ID of string type.
+                     * 获取Room ID
+                     * @return RoomStr Room ID
                      */
                     std::string GetRoomStr() const;
 
                     /**
-                     * 设置Room ID of string type.
-                     * @param RoomStr Room ID of string type.
+                     * 设置Room ID
+                     * @param RoomStr Room ID
                      */
                     void SetRoomStr(const std::string& _roomStr);
 
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool JoinTsHasBeenSet() const;
 
                     /**
-                     * 获取The time when the user exits the room
-                     * @return LeaveTs The time when the user exits the room
+                     * 获取The time when the user exits the room. If the user is still in the room, the current time will be returned
+                     * @return LeaveTs The time when the user exits the room. If the user is still in the room, the current time will be returned
                      */
                     uint64_t GetLeaveTs() const;
 
                     /**
-                     * 设置The time when the user exits the room
-                     * @param LeaveTs The time when the user exits the room
+                     * 设置The time when the user exits the room. If the user is still in the room, the current time will be returned
+                     * @param LeaveTs The time when the user exits the room. If the user is still in the room, the current time will be returned
                      */
                     void SetLeaveTs(const uint64_t& _leaveTs);
 
@@ -193,7 +193,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Room ID of string type.
+                     * Room ID
                      */
                     std::string m_roomStr;
                     bool m_roomStrHasBeenSet;
@@ -211,7 +211,7 @@ namespace TencentCloud
                     bool m_joinTsHasBeenSet;
 
                     /**
-                     * The time when the user exits the room
+                     * The time when the user exits the room. If the user is still in the room, the current time will be returned
                      */
                     uint64_t m_leaveTs;
                     bool m_leaveTsHasBeenSet;

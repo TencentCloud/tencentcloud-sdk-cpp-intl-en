@@ -114,6 +114,24 @@ namespace TencentCloud
                      */
                     bool LimitHasBeenSet() const;
 
+                    /**
+                     * 获取Name of the preset ACL rule.
+                     * @return AclRuleName Name of the preset ACL rule.
+                     */
+                    std::string GetAclRuleName() const;
+
+                    /**
+                     * 设置Name of the preset ACL rule.
+                     * @param AclRuleName Name of the preset ACL rule.
+                     */
+                    void SetAclRuleName(const std::string& _aclRuleName);
+
+                    /**
+                     * 判断参数 AclRuleName 是否已赋值
+                     * @return AclRuleName 是否已赋值
+                     */
+                    bool AclRuleNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -139,6 +157,12 @@ namespace TencentCloud
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
+
+                    /**
+                     * Name of the preset ACL rule.
+                     */
+                    std::string m_aclRuleName;
+                    bool m_aclRuleNameHasBeenSet;
 
                 };
             }

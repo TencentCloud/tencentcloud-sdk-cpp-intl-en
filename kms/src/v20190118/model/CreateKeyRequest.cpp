@@ -20,59 +20,74 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Kms::V20190118::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateKeyRequest::CreateKeyRequest() :
     m_aliasHasBeenSet(false),
     m_descriptionHasBeenSet(false),
     m_keyUsageHasBeenSet(false),
-    m_typeHasBeenSet(false)
+    m_typeHasBeenSet(false),
+    m_tagsHasBeenSet(false)
 {
 }
 
 string CreateKeyRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_aliasHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Alias";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_alias.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_alias.c_str(), allocator).Move(), allocator);
     }
 
     if (m_descriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Description";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_description.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
     }
 
     if (m_keyUsageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "KeyUsage";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_keyUsage.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_keyUsage.c_str(), allocator).Move(), allocator);
     }
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_type, allocator);
     }
 
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -140,6 +155,22 @@ void CreateKeyRequest::SetType(const uint64_t& _type)
 bool CreateKeyRequest::TypeHasBeenSet() const
 {
     return m_typeHasBeenSet;
+}
+
+vector<Tag> CreateKeyRequest::GetTags() const
+{
+    return m_tags;
+}
+
+void CreateKeyRequest::SetTags(const vector<Tag>& _tags)
+{
+    m_tags = _tags;
+    m_tagsHasBeenSet = true;
+}
+
+bool CreateKeyRequest::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
 }
 
 

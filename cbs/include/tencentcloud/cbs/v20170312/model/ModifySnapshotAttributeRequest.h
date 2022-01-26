@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
-                     * @return SnapshotId Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
+                     * 获取Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+                     * @return SnapshotId Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
                      */
                     std::string GetSnapshotId() const;
 
                     /**
-                     * 设置Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
-                     * @param SnapshotId Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
+                     * 设置Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+                     * @param SnapshotId Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
                      */
                     void SetSnapshotId(const std::string& _snapshotId);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool SnapshotNameHasBeenSet() const;
 
                     /**
-                     * 获取The retention time of the snapshot. FALSE: non-permanent retention; TRUE: permanent retention. You can only modify non-permanent snapshots to permanent snapshots.
-                     * @return IsPermanent The retention time of the snapshot. FALSE: non-permanent retention; TRUE: permanent retention. You can only modify non-permanent snapshots to permanent snapshots.
+                     * 获取Snapshot retention mode. Valid values: `FALSE`: non-permanent retention; `TRUE`: permanent retention.
+                     * @return IsPermanent Snapshot retention mode. Valid values: `FALSE`: non-permanent retention; `TRUE`: permanent retention.
                      */
                     bool GetIsPermanent() const;
 
                     /**
-                     * 设置The retention time of the snapshot. FALSE: non-permanent retention; TRUE: permanent retention. You can only modify non-permanent snapshots to permanent snapshots.
-                     * @param IsPermanent The retention time of the snapshot. FALSE: non-permanent retention; TRUE: permanent retention. You can only modify non-permanent snapshots to permanent snapshots.
+                     * 设置Snapshot retention mode. Valid values: `FALSE`: non-permanent retention; `TRUE`: permanent retention.
+                     * @param IsPermanent Snapshot retention mode. Valid values: `FALSE`: non-permanent retention; `TRUE`: permanent retention.
                      */
                     void SetIsPermanent(const bool& _isPermanent);
 
@@ -96,10 +96,28 @@ namespace TencentCloud
                      */
                     bool IsPermanentHasBeenSet() const;
 
+                    /**
+                     * 获取Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration.
+                     * @return Deadline Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration.
+                     */
+                    std::string GetDeadline() const;
+
+                    /**
+                     * 设置Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration.
+                     * @param Deadline Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration.
+                     */
+                    void SetDeadline(const std::string& _deadline);
+
+                    /**
+                     * 判断参数 Deadline 是否已赋值
+                     * @return Deadline 是否已赋值
+                     */
+                    bool DeadlineHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
+                     * Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
                      */
                     std::string m_snapshotId;
                     bool m_snapshotIdHasBeenSet;
@@ -111,10 +129,16 @@ namespace TencentCloud
                     bool m_snapshotNameHasBeenSet;
 
                     /**
-                     * The retention time of the snapshot. FALSE: non-permanent retention; TRUE: permanent retention. You can only modify non-permanent snapshots to permanent snapshots.
+                     * Snapshot retention mode. Valid values: `FALSE`: non-permanent retention; `TRUE`: permanent retention.
                      */
                     bool m_isPermanent;
                     bool m_isPermanentHasBeenSet;
+
+                    /**
+                     * Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration.
+                     */
+                    std::string m_deadline;
+                    bool m_deadlineHasBeenSet;
 
                 };
             }

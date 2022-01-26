@@ -20,32 +20,40 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeDBSecurityGroupsRequest::DescribeDBSecurityGroupsRequest() :
-    m_instanceIdHasBeenSet(false)
+    m_instanceIdHasBeenSet(false),
+    m_forReadonlyInstanceHasBeenSet(false)
 {
 }
 
 string DescribeDBSecurityGroupsRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_forReadonlyInstanceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ForReadonlyInstance";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_forReadonlyInstance, allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -65,6 +73,22 @@ void DescribeDBSecurityGroupsRequest::SetInstanceId(const string& _instanceId)
 bool DescribeDBSecurityGroupsRequest::InstanceIdHasBeenSet() const
 {
     return m_instanceIdHasBeenSet;
+}
+
+bool DescribeDBSecurityGroupsRequest::GetForReadonlyInstance() const
+{
+    return m_forReadonlyInstance;
+}
+
+void DescribeDBSecurityGroupsRequest::SetForReadonlyInstance(const bool& _forReadonlyInstance)
+{
+    m_forReadonlyInstance = _forReadonlyInstance;
+    m_forReadonlyInstanceHasBeenSet = true;
+}
+
+bool DescribeDBSecurityGroupsRequest::ForReadonlyInstanceHasBeenSet() const
+{
+    return m_forReadonlyInstanceHasBeenSet;
 }
 
 

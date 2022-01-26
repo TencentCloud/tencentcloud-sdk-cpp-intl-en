@@ -19,58 +19,70 @@ set(mdp_public_header
   )
 
 set(mdp_public_header_model
-  include/tencentcloud/mdp/v20200527/model/ModifyMediaPackageChannelEndpointRequest.h
-  include/tencentcloud/mdp/v20200527/model/DescribeMediaPackageChannelRequest.h
-  include/tencentcloud/mdp/v20200527/model/DeleteMediaPackageChannelEndpointsResponse.h
-  include/tencentcloud/mdp/v20200527/model/ModifyMediaPackageChannelInputAuthInfoRequest.h
-  include/tencentcloud/mdp/v20200527/model/CreateMediaPackageChannelEndpointRequest.h
-  include/tencentcloud/mdp/v20200527/model/CreateMediaPackageChannelResponse.h
-  include/tencentcloud/mdp/v20200527/model/ModifyMediaPackageChannelRequest.h
-  include/tencentcloud/mdp/v20200527/model/ModifyMediaPackageChannelEndpointResponse.h
+  include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelsRequest.h
+  include/tencentcloud/mdp/v20200527/model/PointInfo.h
+  include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelsResponse.h
+  include/tencentcloud/mdp/v20200527/model/BindNewLVBDomainWithChannelResponse.h
+  include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageChannelsResponse.h
+  include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageChannelsRequest.h
+  include/tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelEndpointResponse.h
+  include/tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelInputAuthInfoResponse.h
+  include/tencentcloud/mdp/v20200527/model/CreateStreamPackageChannelResponse.h
+  include/tencentcloud/mdp/v20200527/model/CreateStreamPackageChannelEndpointResponse.h
+  include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelEndpointsRequest.h
   include/tencentcloud/mdp/v20200527/model/ChannelInfo.h
-  include/tencentcloud/mdp/v20200527/model/ModifyMediaPackageChannelInputAuthInfoResponse.h
+  include/tencentcloud/mdp/v20200527/model/CacheInfo.h
+  include/tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelEndpointsResponse.h
   include/tencentcloud/mdp/v20200527/model/InputInfo.h
   include/tencentcloud/mdp/v20200527/model/InputAuthInfo.h
-  include/tencentcloud/mdp/v20200527/model/CreateMediaPackageChannelRequest.h
-  include/tencentcloud/mdp/v20200527/model/DeleteMediaPackageChannelEndpointsRequest.h
-  include/tencentcloud/mdp/v20200527/model/DeleteMediaPackageChannelsRequest.h
+  include/tencentcloud/mdp/v20200527/model/UnbindCdnDomainWithChannelRequest.h
   include/tencentcloud/mdp/v20200527/model/EndpointInfo.h
-  include/tencentcloud/mdp/v20200527/model/DescribeMediaPackageChannelsResponse.h
-  include/tencentcloud/mdp/v20200527/model/ModifyMediaPackageChannelResponse.h
-  include/tencentcloud/mdp/v20200527/model/DescribeMediaPackageChannelResponse.h
-  include/tencentcloud/mdp/v20200527/model/PointInfo.h
-  include/tencentcloud/mdp/v20200527/model/DeleteMediaPackageChannelsResponse.h
-  include/tencentcloud/mdp/v20200527/model/DescribeMediaPackageChannelsRequest.h
+  include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageChannelRequest.h
+  include/tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelRequest.h
+  include/tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelEndpointRequest.h
+  include/tencentcloud/mdp/v20200527/model/CacheInfoInfo.h
+  include/tencentcloud/mdp/v20200527/model/CreateStreamPackageChannelEndpointRequest.h
+  include/tencentcloud/mdp/v20200527/model/UnbindCdnDomainWithChannelResponse.h
+  include/tencentcloud/mdp/v20200527/model/CreateStreamPackageChannelRequest.h
+  include/tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelInputAuthInfoRequest.h
+  include/tencentcloud/mdp/v20200527/model/BindNewLVBDomainWithChannelRequest.h
+  include/tencentcloud/mdp/v20200527/model/DescribeStreamPackageChannelResponse.h
+  include/tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelResponse.h
   include/tencentcloud/mdp/v20200527/model/EndpointAuthInfo.h
-  include/tencentcloud/mdp/v20200527/model/CreateMediaPackageChannelEndpointResponse.h
   )
 
 set(mdp_src
   src/v20200527/MdpClient.cpp
-  src/v20200527/model/ModifyMediaPackageChannelEndpointRequest.cpp
-  src/v20200527/model/DescribeMediaPackageChannelRequest.cpp
-  src/v20200527/model/DeleteMediaPackageChannelEndpointsResponse.cpp
-  src/v20200527/model/ModifyMediaPackageChannelInputAuthInfoRequest.cpp
-  src/v20200527/model/CreateMediaPackageChannelEndpointRequest.cpp
-  src/v20200527/model/CreateMediaPackageChannelResponse.cpp
-  src/v20200527/model/ModifyMediaPackageChannelRequest.cpp
-  src/v20200527/model/ModifyMediaPackageChannelEndpointResponse.cpp
+  src/v20200527/model/DeleteStreamPackageChannelsRequest.cpp
+  src/v20200527/model/PointInfo.cpp
+  src/v20200527/model/DeleteStreamPackageChannelsResponse.cpp
+  src/v20200527/model/BindNewLVBDomainWithChannelResponse.cpp
+  src/v20200527/model/DescribeStreamPackageChannelsResponse.cpp
+  src/v20200527/model/DescribeStreamPackageChannelsRequest.cpp
+  src/v20200527/model/ModifyStreamPackageChannelEndpointResponse.cpp
+  src/v20200527/model/ModifyStreamPackageChannelInputAuthInfoResponse.cpp
+  src/v20200527/model/CreateStreamPackageChannelResponse.cpp
+  src/v20200527/model/CreateStreamPackageChannelEndpointResponse.cpp
+  src/v20200527/model/DeleteStreamPackageChannelEndpointsRequest.cpp
   src/v20200527/model/ChannelInfo.cpp
-  src/v20200527/model/ModifyMediaPackageChannelInputAuthInfoResponse.cpp
+  src/v20200527/model/CacheInfo.cpp
+  src/v20200527/model/DeleteStreamPackageChannelEndpointsResponse.cpp
   src/v20200527/model/InputInfo.cpp
   src/v20200527/model/InputAuthInfo.cpp
-  src/v20200527/model/CreateMediaPackageChannelRequest.cpp
-  src/v20200527/model/DeleteMediaPackageChannelEndpointsRequest.cpp
-  src/v20200527/model/DeleteMediaPackageChannelsRequest.cpp
+  src/v20200527/model/UnbindCdnDomainWithChannelRequest.cpp
   src/v20200527/model/EndpointInfo.cpp
-  src/v20200527/model/DescribeMediaPackageChannelsResponse.cpp
-  src/v20200527/model/ModifyMediaPackageChannelResponse.cpp
-  src/v20200527/model/DescribeMediaPackageChannelResponse.cpp
-  src/v20200527/model/PointInfo.cpp
-  src/v20200527/model/DeleteMediaPackageChannelsResponse.cpp
-  src/v20200527/model/DescribeMediaPackageChannelsRequest.cpp
+  src/v20200527/model/DescribeStreamPackageChannelRequest.cpp
+  src/v20200527/model/ModifyStreamPackageChannelRequest.cpp
+  src/v20200527/model/ModifyStreamPackageChannelEndpointRequest.cpp
+  src/v20200527/model/CacheInfoInfo.cpp
+  src/v20200527/model/CreateStreamPackageChannelEndpointRequest.cpp
+  src/v20200527/model/UnbindCdnDomainWithChannelResponse.cpp
+  src/v20200527/model/CreateStreamPackageChannelRequest.cpp
+  src/v20200527/model/ModifyStreamPackageChannelInputAuthInfoRequest.cpp
+  src/v20200527/model/BindNewLVBDomainWithChannelRequest.cpp
+  src/v20200527/model/DescribeStreamPackageChannelResponse.cpp
+  src/v20200527/model/ModifyStreamPackageChannelResponse.cpp
   src/v20200527/model/EndpointAuthInfo.cpp
-  src/v20200527/model/CreateMediaPackageChannelEndpointResponse.cpp
   )
 
 set(mdp_include

@@ -71,14 +71,14 @@ namespace TencentCloud
                     bool LaunchConfigurationNameHasBeenSet() const;
 
                     /**
-                     * 获取Valid [image](https://cloud.tencent.com/document/product/213/4940) ID in the format of `img-8toqc6s3`. There are four types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><li>Marketplace images </li><br/>You can obtain the available image IDs in the following ways: <br/><li>For `public images`, `custom images`, and `shared images`, log in to the [console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE) to query the image IDs; for `marketplace images`, query the image IDs through [Cloud Marketplace](https://market.cloud.tencent.com/list). </li><li>This value can be obtained from the `ImageId` field in the return value of the [DescribeImages API](https://cloud.tencent.com/document/api/213/15715).</li>
-                     * @return ImageId Valid [image](https://cloud.tencent.com/document/product/213/4940) ID in the format of `img-8toqc6s3`. There are four types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><li>Marketplace images </li><br/>You can obtain the available image IDs in the following ways: <br/><li>For `public images`, `custom images`, and `shared images`, log in to the [console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE) to query the image IDs; for `marketplace images`, query the image IDs through [Cloud Marketplace](https://market.cloud.tencent.com/list). </li><li>This value can be obtained from the `ImageId` field in the return value of the [DescribeImages API](https://cloud.tencent.com/document/api/213/15715).</li>
+                     * 获取Valid [image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-8toqc6s3`. There are four types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><li>Marketplace images </li><br/>You can obtain the available image IDs in the following ways: <br/><li>For `public images`, `custom images`, and `shared images`, log in to the [console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE) to query the image IDs; for `marketplace images`, query the image IDs through [Cloud Marketplace](https://market.cloud.tencent.com/list). </li><li>This value can be obtained from the `ImageId` field in the return value of the [DescribeImages API](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1).</li>
+                     * @return ImageId Valid [image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-8toqc6s3`. There are four types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><li>Marketplace images </li><br/>You can obtain the available image IDs in the following ways: <br/><li>For `public images`, `custom images`, and `shared images`, log in to the [console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE) to query the image IDs; for `marketplace images`, query the image IDs through [Cloud Marketplace](https://market.cloud.tencent.com/list). </li><li>This value can be obtained from the `ImageId` field in the return value of the [DescribeImages API](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1).</li>
                      */
                     std::string GetImageId() const;
 
                     /**
-                     * 设置Valid [image](https://cloud.tencent.com/document/product/213/4940) ID in the format of `img-8toqc6s3`. There are four types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><li>Marketplace images </li><br/>You can obtain the available image IDs in the following ways: <br/><li>For `public images`, `custom images`, and `shared images`, log in to the [console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE) to query the image IDs; for `marketplace images`, query the image IDs through [Cloud Marketplace](https://market.cloud.tencent.com/list). </li><li>This value can be obtained from the `ImageId` field in the return value of the [DescribeImages API](https://cloud.tencent.com/document/api/213/15715).</li>
-                     * @param ImageId Valid [image](https://cloud.tencent.com/document/product/213/4940) ID in the format of `img-8toqc6s3`. There are four types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><li>Marketplace images </li><br/>You can obtain the available image IDs in the following ways: <br/><li>For `public images`, `custom images`, and `shared images`, log in to the [console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE) to query the image IDs; for `marketplace images`, query the image IDs through [Cloud Marketplace](https://market.cloud.tencent.com/list). </li><li>This value can be obtained from the `ImageId` field in the return value of the [DescribeImages API](https://cloud.tencent.com/document/api/213/15715).</li>
+                     * 设置Valid [image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-8toqc6s3`. There are four types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><li>Marketplace images </li><br/>You can obtain the available image IDs in the following ways: <br/><li>For `public images`, `custom images`, and `shared images`, log in to the [console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE) to query the image IDs; for `marketplace images`, query the image IDs through [Cloud Marketplace](https://market.cloud.tencent.com/list). </li><li>This value can be obtained from the `ImageId` field in the return value of the [DescribeImages API](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1).</li>
+                     * @param ImageId Valid [image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-8toqc6s3`. There are four types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><li>Marketplace images </li><br/>You can obtain the available image IDs in the following ways: <br/><li>For `public images`, `custom images`, and `shared images`, log in to the [console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE) to query the image IDs; for `marketplace images`, query the image IDs through [Cloud Marketplace](https://market.cloud.tencent.com/list). </li><li>This value can be obtained from the `ImageId` field in the return value of the [DescribeImages API](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1).</li>
                      */
                     void SetImageId(const std::string& _imageId);
 
@@ -89,14 +89,18 @@ namespace TencentCloud
                     bool ImageIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the returned values of [DescribeProject](https://cloud.tencent.com/document/api/378/4400). If this is left empty, default project is used.
-                     * @return ProjectId ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the returned values of [DescribeProject](https://cloud.tencent.com/document/api/378/4400). If this is left empty, default project is used.
+                     * 获取Project ID of the launch configuration. The default project is used if it’s left blank.
+Note that this project ID is not the same as the project ID of the scaling group. 
+                     * @return ProjectId Project ID of the launch configuration. The default project is used if it’s left blank.
+Note that this project ID is not the same as the project ID of the scaling group. 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
-                     * 设置ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the returned values of [DescribeProject](https://cloud.tencent.com/document/api/378/4400). If this is left empty, default project is used.
-                     * @param ProjectId ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the returned values of [DescribeProject](https://cloud.tencent.com/document/api/378/4400). If this is left empty, default project is used.
+                     * 设置Project ID of the launch configuration. The default project is used if it’s left blank.
+Note that this project ID is not the same as the project ID of the scaling group. 
+                     * @param ProjectId Project ID of the launch configuration. The default project is used if it’s left blank.
+Note that this project ID is not the same as the project ID of the scaling group. 
                      */
                     void SetProjectId(const uint64_t& _projectId);
 
@@ -107,17 +111,17 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance model. Different instance models specify different resource specifications. The specific value can be obtained by calling the [DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749) API to get the latest specification table or referring to the descriptions in [Instance Types](https://cloud.tencent.com/document/product/213/11518).
+                     * 获取Instance model. Different instance models specify different resource specifications. The specific value can be obtained by calling the [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) API to get the latest specification table or referring to the descriptions in [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
 `InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
-                     * @return InstanceType Instance model. Different instance models specify different resource specifications. The specific value can be obtained by calling the [DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749) API to get the latest specification table or referring to the descriptions in [Instance Types](https://cloud.tencent.com/document/product/213/11518).
+                     * @return InstanceType Instance model. Different instance models specify different resource specifications. The specific value can be obtained by calling the [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) API to get the latest specification table or referring to the descriptions in [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
 `InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Instance model. Different instance models specify different resource specifications. The specific value can be obtained by calling the [DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749) API to get the latest specification table or referring to the descriptions in [Instance Types](https://cloud.tencent.com/document/product/213/11518).
+                     * 设置Instance model. Different instance models specify different resource specifications. The specific value can be obtained by calling the [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) API to get the latest specification table or referring to the descriptions in [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
 `InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
-                     * @param InstanceType Instance model. Different instance models specify different resource specifications. The specific value can be obtained by calling the [DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749) API to get the latest specification table or referring to the descriptions in [Instance Types](https://cloud.tencent.com/document/product/213/11518).
+                     * @param InstanceType Instance model. Different instance models specify different resource specifications. The specific value can be obtained by calling the [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) API to get the latest specification table or referring to the descriptions in [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
 `InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -201,14 +205,14 @@ namespace TencentCloud
                     bool LoginSettingsHasBeenSet() const;
 
                     /**
-                     * 获取The security group to which the instance belongs. This parameter can be obtained by calling the `SecurityGroupId` field in the returned value of [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808). If this parameter is not specified, no security group will be bound by default.
-                     * @return SecurityGroupIds The security group to which the instance belongs. This parameter can be obtained by calling the `SecurityGroupId` field in the returned value of [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808). If this parameter is not specified, no security group will be bound by default.
+                     * 获取The security group to which the instance belongs. This parameter can be obtained by calling the `SecurityGroupId` field in the returned value of [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1). If this parameter is not specified, no security group will be bound by default.
+                     * @return SecurityGroupIds The security group to which the instance belongs. This parameter can be obtained by calling the `SecurityGroupId` field in the returned value of [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1). If this parameter is not specified, no security group will be bound by default.
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置The security group to which the instance belongs. This parameter can be obtained by calling the `SecurityGroupId` field in the returned value of [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808). If this parameter is not specified, no security group will be bound by default.
-                     * @param SecurityGroupIds The security group to which the instance belongs. This parameter can be obtained by calling the `SecurityGroupId` field in the returned value of [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808). If this parameter is not specified, no security group will be bound by default.
+                     * 设置The security group to which the instance belongs. This parameter can be obtained by calling the `SecurityGroupId` field in the returned value of [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1). If this parameter is not specified, no security group will be bound by default.
+                     * @param SecurityGroupIds The security group to which the instance belongs. This parameter can be obtained by calling the `SecurityGroupId` field in the returned value of [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1). If this parameter is not specified, no security group will be bound by default.
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
@@ -255,22 +259,22 @@ namespace TencentCloud
                     bool UserDataHasBeenSet() const;
 
                     /**
-                     * 获取Instance billing type. CVM instances are POSTPAID_BY_HOUR by default.
-<br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
-<br><li>SPOTPAID: Bidding
-                     * @return InstanceChargeType Instance billing type. CVM instances are POSTPAID_BY_HOUR by default.
-<br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
-<br><li>SPOTPAID: Bidding
+                     * 获取Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
+<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
+<br><li>SPOTPAID: spot instance
+                     * @return InstanceChargeType Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
+<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
+<br><li>SPOTPAID: spot instance
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
-                     * 设置Instance billing type. CVM instances are POSTPAID_BY_HOUR by default.
-<br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
-<br><li>SPOTPAID: Bidding
-                     * @param InstanceChargeType Instance billing type. CVM instances are POSTPAID_BY_HOUR by default.
-<br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
-<br><li>SPOTPAID: Bidding
+                     * 设置Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
+<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
+<br><li>SPOTPAID: spot instance
+                     * @param InstanceChargeType Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
+<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
+<br><li>SPOTPAID: spot instance
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
 
@@ -413,14 +417,18 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
                     bool HostNameSettingsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceNameSettings 
+                     * 获取Settings of CVM instance names
+If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
+                     * @return InstanceNameSettings Settings of CVM instance names
+If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
                      */
                     InstanceNameSettings GetInstanceNameSettings() const;
 
                     /**
-                     * 设置
-                     * @param InstanceNameSettings 
+                     * 设置Settings of CVM instance names
+If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
+                     * @param InstanceNameSettings Settings of CVM instance names
+If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
                      */
                     void SetInstanceNameSettings(const InstanceNameSettings& _instanceNameSettings);
 
@@ -431,14 +439,14 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
                     bool InstanceNameSettingsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceChargePrepaid 
+                     * 获取Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
+                     * @return InstanceChargePrepaid Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
                      */
                     InstanceChargePrepaid GetInstanceChargePrepaid() const;
 
                     /**
-                     * 设置
-                     * @param InstanceChargePrepaid 
+                     * 设置Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
+                     * @param InstanceChargePrepaid Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
                      */
                     void SetInstanceChargePrepaid(const InstanceChargePrepaid& _instanceChargePrepaid);
 
@@ -447,6 +455,32 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
                      * @return InstanceChargePrepaid 是否已赋值
                      */
                     bool InstanceChargePrepaidHasBeenSet() const;
+
+                    /**
+                     * 获取Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type
+                     * @return DiskTypePolicy Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type
+                     */
+                    std::string GetDiskTypePolicy() const;
+
+                    /**
+                     * 设置Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type
+                     * @param DiskTypePolicy Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type
+                     */
+                    void SetDiskTypePolicy(const std::string& _diskTypePolicy);
+
+                    /**
+                     * 判断参数 DiskTypePolicy 是否已赋值
+                     * @return DiskTypePolicy 是否已赋值
+                     */
+                    bool DiskTypePolicyHasBeenSet() const;
 
                 private:
 
@@ -457,19 +491,20 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
                     bool m_launchConfigurationNameHasBeenSet;
 
                     /**
-                     * Valid [image](https://cloud.tencent.com/document/product/213/4940) ID in the format of `img-8toqc6s3`. There are four types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><li>Marketplace images </li><br/>You can obtain the available image IDs in the following ways: <br/><li>For `public images`, `custom images`, and `shared images`, log in to the [console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE) to query the image IDs; for `marketplace images`, query the image IDs through [Cloud Marketplace](https://market.cloud.tencent.com/list). </li><li>This value can be obtained from the `ImageId` field in the return value of the [DescribeImages API](https://cloud.tencent.com/document/api/213/15715).</li>
+                     * Valid [image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-8toqc6s3`. There are four types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><li>Marketplace images </li><br/>You can obtain the available image IDs in the following ways: <br/><li>For `public images`, `custom images`, and `shared images`, log in to the [console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE) to query the image IDs; for `marketplace images`, query the image IDs through [Cloud Marketplace](https://market.cloud.tencent.com/list). </li><li>This value can be obtained from the `ImageId` field in the return value of the [DescribeImages API](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1).</li>
                      */
                     std::string m_imageId;
                     bool m_imageIdHasBeenSet;
 
                     /**
-                     * ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the returned values of [DescribeProject](https://cloud.tencent.com/document/api/378/4400). If this is left empty, default project is used.
+                     * Project ID of the launch configuration. The default project is used if it’s left blank.
+Note that this project ID is not the same as the project ID of the scaling group. 
                      */
                     uint64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Instance model. Different instance models specify different resource specifications. The specific value can be obtained by calling the [DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749) API to get the latest specification table or referring to the descriptions in [Instance Types](https://cloud.tencent.com/document/product/213/11518).
+                     * Instance model. Different instance models specify different resource specifications. The specific value can be obtained by calling the [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) API to get the latest specification table or referring to the descriptions in [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
 `InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
                      */
                     std::string m_instanceType;
@@ -500,7 +535,7 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
                     bool m_loginSettingsHasBeenSet;
 
                     /**
-                     * The security group to which the instance belongs. This parameter can be obtained by calling the `SecurityGroupId` field in the returned value of [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808). If this parameter is not specified, no security group will be bound by default.
+                     * The security group to which the instance belongs. This parameter can be obtained by calling the `SecurityGroupId` field in the returned value of [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1). If this parameter is not specified, no security group will be bound by default.
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
@@ -518,9 +553,9 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
                     bool m_userDataHasBeenSet;
 
                     /**
-                     * Instance billing type. CVM instances are POSTPAID_BY_HOUR by default.
-<br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
-<br><li>SPOTPAID: Bidding
+                     * Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
+<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
+<br><li>SPOTPAID: spot instance
                      */
                     std::string m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;
@@ -568,16 +603,25 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
                     bool m_hostNameSettingsHasBeenSet;
 
                     /**
-                     * 
+                     * Settings of CVM instance names
+If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
                      */
                     InstanceNameSettings m_instanceNameSettings;
                     bool m_instanceNameSettingsHasBeenSet;
 
                     /**
-                     * 
+                     * Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
                      */
                     InstanceChargePrepaid m_instanceChargePrepaid;
                     bool m_instanceChargePrepaidHasBeenSet;
+
+                    /**
+                     * Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type
+                     */
+                    std::string m_diskTypePolicy;
+                    bool m_diskTypePolicyHasBeenSet;
 
                 };
             }

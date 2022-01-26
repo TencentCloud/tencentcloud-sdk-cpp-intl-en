@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Ssl::V20191205::Model;
-using namespace rapidjson;
 using namespace std;
 
 UploadCertificateRequest::UploadCertificateRequest() :
@@ -28,60 +27,69 @@ UploadCertificateRequest::UploadCertificateRequest() :
     m_certificatePrivateKeyHasBeenSet(false),
     m_certificateTypeHasBeenSet(false),
     m_aliasHasBeenSet(false),
-    m_projectIdHasBeenSet(false)
+    m_projectIdHasBeenSet(false),
+    m_certificateUseHasBeenSet(false)
 {
 }
 
 string UploadCertificateRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_certificatePublicKeyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CertificatePublicKey";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_certificatePublicKey.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_certificatePublicKey.c_str(), allocator).Move(), allocator);
     }
 
     if (m_certificatePrivateKeyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CertificatePrivateKey";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_certificatePrivateKey.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_certificatePrivateKey.c_str(), allocator).Move(), allocator);
     }
 
     if (m_certificateTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CertificateType";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_certificateType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_certificateType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_aliasHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Alias";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_alias.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_alias.c_str(), allocator).Move(), allocator);
     }
 
     if (m_projectIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProjectId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_projectId, allocator);
     }
 
+    if (m_certificateUseHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CertificateUse";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_certificateUse.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -165,6 +173,22 @@ void UploadCertificateRequest::SetProjectId(const uint64_t& _projectId)
 bool UploadCertificateRequest::ProjectIdHasBeenSet() const
 {
     return m_projectIdHasBeenSet;
+}
+
+string UploadCertificateRequest::GetCertificateUse() const
+{
+    return m_certificateUse;
+}
+
+void UploadCertificateRequest::SetCertificateUse(const string& _certificateUse)
+{
+    m_certificateUse = _certificateUse;
+    m_certificateUseHasBeenSet = true;
+}
+
+bool UploadCertificateRequest::CertificateUseHasBeenSet() const
+{
+    return m_certificateUseHasBeenSet;
 }
 
 

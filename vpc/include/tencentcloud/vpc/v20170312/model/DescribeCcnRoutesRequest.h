@@ -82,32 +82,36 @@ namespace TencentCloud
                     /**
                      * 获取Filter condition. `RouteIds` and `Filters` cannot be specified at the same time.
 <li>route-id - String - (Filter condition) Routing policy ID.</li>
-<li>cidr-block - String - (Filter condition) Destination port.</li>
+<li>cidr-block - String - (Filter condition) Destination.</li>
 <li>instance-type - String - (Filter condition) The next hop type.</li>
 <li>instance-region - String - (Filter condition) The next hop region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the next hop.</li>
+<li>instance-id - String - (Filter condition) The instance ID of the next hop.</li>
+<li>route-table-id - String - (Filter condition) The list of route table IDs in the format of `ccntr-1234edfr`. Filters by the route table ID.</li>
                      * @return Filters Filter condition. `RouteIds` and `Filters` cannot be specified at the same time.
 <li>route-id - String - (Filter condition) Routing policy ID.</li>
-<li>cidr-block - String - (Filter condition) Destination port.</li>
+<li>cidr-block - String - (Filter condition) Destination.</li>
 <li>instance-type - String - (Filter condition) The next hop type.</li>
 <li>instance-region - String - (Filter condition) The next hop region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the next hop.</li>
+<li>instance-id - String - (Filter condition) The instance ID of the next hop.</li>
+<li>route-table-id - String - (Filter condition) The list of route table IDs in the format of `ccntr-1234edfr`. Filters by the route table ID.</li>
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter condition. `RouteIds` and `Filters` cannot be specified at the same time.
 <li>route-id - String - (Filter condition) Routing policy ID.</li>
-<li>cidr-block - String - (Filter condition) Destination port.</li>
+<li>cidr-block - String - (Filter condition) Destination.</li>
 <li>instance-type - String - (Filter condition) The next hop type.</li>
 <li>instance-region - String - (Filter condition) The next hop region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the next hop.</li>
+<li>instance-id - String - (Filter condition) The instance ID of the next hop.</li>
+<li>route-table-id - String - (Filter condition) The list of route table IDs in the format of `ccntr-1234edfr`. Filters by the route table ID.</li>
                      * @param Filters Filter condition. `RouteIds` and `Filters` cannot be specified at the same time.
 <li>route-id - String - (Filter condition) Routing policy ID.</li>
-<li>cidr-block - String - (Filter condition) Destination port.</li>
+<li>cidr-block - String - (Filter condition) Destination.</li>
 <li>instance-type - String - (Filter condition) The next hop type.</li>
 <li>instance-region - String - (Filter condition) The next hop region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the next hop.</li>
+<li>instance-id - String - (Filter condition) The instance ID of the next hop.</li>
+<li>route-table-id - String - (Filter condition) The list of route table IDs in the format of `ccntr-1234edfr`. Filters by the route table ID.</li>
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -170,10 +174,11 @@ namespace TencentCloud
                     /**
                      * Filter condition. `RouteIds` and `Filters` cannot be specified at the same time.
 <li>route-id - String - (Filter condition) Routing policy ID.</li>
-<li>cidr-block - String - (Filter condition) Destination port.</li>
+<li>cidr-block - String - (Filter condition) Destination.</li>
 <li>instance-type - String - (Filter condition) The next hop type.</li>
 <li>instance-region - String - (Filter condition) The next hop region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the next hop.</li>
+<li>instance-id - String - (Filter condition) The instance ID of the next hop.</li>
+<li>route-table-id - String - (Filter condition) The list of route table IDs in the format of `ccntr-1234edfr`. Filters by the route table ID.</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

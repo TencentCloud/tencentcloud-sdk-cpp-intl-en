@@ -50,14 +50,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Container 
+                     * 获取Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
+                     * @return Container Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
                      */
                     std::string GetContainer() const;
 
                     /**
-                     * 设置
-                     * @param Container 
+                     * 设置Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
+                     * @param Container Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
                      */
                     void SetContainer(const std::string& _container);
 
@@ -68,14 +68,26 @@ namespace TencentCloud
                     bool ContainerHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RemoveVideo 
+                     * 获取Whether to remove video data. Valid values:
+<li>0: retain;</li>
+<li>1: remove.</li>
+Default value: 0.
+                     * @return RemoveVideo Whether to remove video data. Valid values:
+<li>0: retain;</li>
+<li>1: remove.</li>
+Default value: 0.
                      */
                     int64_t GetRemoveVideo() const;
 
                     /**
-                     * 设置
-                     * @param RemoveVideo 
+                     * 设置Whether to remove video data. Valid values:
+<li>0: retain;</li>
+<li>1: remove.</li>
+Default value: 0.
+                     * @param RemoveVideo Whether to remove video data. Valid values:
+<li>0: retain;</li>
+<li>1: remove.</li>
+Default value: 0.
                      */
                     void SetRemoveVideo(const int64_t& _removeVideo);
 
@@ -86,14 +98,26 @@ namespace TencentCloud
                     bool RemoveVideoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RemoveAudio 
+                     * 获取Whether to remove audio data. Valid values:
+<li>0: retain;</li>
+<li>1: remove.</li>
+Default value: 0.
+                     * @return RemoveAudio Whether to remove audio data. Valid values:
+<li>0: retain;</li>
+<li>1: remove.</li>
+Default value: 0.
                      */
                     int64_t GetRemoveAudio() const;
 
                     /**
-                     * 设置
-                     * @param RemoveAudio 
+                     * 设置Whether to remove audio data. Valid values:
+<li>0: retain;</li>
+<li>1: remove.</li>
+Default value: 0.
+                     * @param RemoveAudio Whether to remove audio data. Valid values:
+<li>0: retain;</li>
+<li>1: remove.</li>
+Default value: 0.
                      */
                     void SetRemoveAudio(const int64_t& _removeAudio);
 
@@ -104,14 +128,14 @@ namespace TencentCloud
                     bool RemoveAudioHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VideoTemplate 
+                     * 获取Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
+                     * @return VideoTemplate Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
                      */
                     VideoTemplateInfo GetVideoTemplate() const;
 
                     /**
-                     * 设置
-                     * @param VideoTemplate 
+                     * 设置Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
+                     * @param VideoTemplate Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
                      */
                     void SetVideoTemplate(const VideoTemplateInfo& _videoTemplate);
 
@@ -122,14 +146,14 @@ namespace TencentCloud
                     bool VideoTemplateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioTemplate 
+                     * 获取Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
+                     * @return AudioTemplate Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
                      */
                     AudioTemplateInfo GetAudioTemplate() const;
 
                     /**
-                     * 设置
-                     * @param AudioTemplate 
+                     * 设置Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
+                     * @param AudioTemplate Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
                      */
                     void SetAudioTemplate(const AudioTemplateInfo& _audioTemplate);
 
@@ -140,14 +164,14 @@ namespace TencentCloud
                     bool AudioTemplateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TEHDConfig 
+                     * 获取TESHD transcoding parameter.
+                     * @return TEHDConfig TESHD transcoding parameter.
                      */
                     TEHDConfig GetTEHDConfig() const;
 
                     /**
-                     * 设置
-                     * @param TEHDConfig 
+                     * 设置TESHD transcoding parameter.
+                     * @param TEHDConfig TESHD transcoding parameter.
                      */
                     void SetTEHDConfig(const TEHDConfig& _tEHDConfig);
 
@@ -160,37 +184,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
                      */
                     std::string m_container;
                     bool m_containerHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to remove video data. Valid values:
+<li>0: retain;</li>
+<li>1: remove.</li>
+Default value: 0.
                      */
                     int64_t m_removeVideo;
                     bool m_removeVideoHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to remove audio data. Valid values:
+<li>0: retain;</li>
+<li>1: remove.</li>
+Default value: 0.
                      */
                     int64_t m_removeAudio;
                     bool m_removeAudioHasBeenSet;
 
                     /**
-                     * 
+                     * Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
                      */
                     VideoTemplateInfo m_videoTemplate;
                     bool m_videoTemplateHasBeenSet;
 
                     /**
-                     * 
+                     * Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
                      */
                     AudioTemplateInfo m_audioTemplate;
                     bool m_audioTemplateHasBeenSet;
 
                     /**
-                     * 
+                     * TESHD transcoding parameter.
                      */
                     TEHDConfig m_tEHDConfig;
                     bool m_tEHDConfigHasBeenSet;

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 ViolationUrl::ViolationUrl() :
@@ -31,7 +30,7 @@ ViolationUrl::ViolationUrl() :
 {
 }
 
-CoreInternalOutcome ViolationUrl::Deserialize(const Value &value)
+CoreInternalOutcome ViolationUrl::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome ViolationUrl::Deserialize(const Value &value)
     {
         if (!value["Id"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ViolationUrl.Id` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ViolationUrl.Id` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_id = value["Id"].GetInt64();
         m_idHasBeenSet = true;
@@ -50,7 +49,7 @@ CoreInternalOutcome ViolationUrl::Deserialize(const Value &value)
     {
         if (!value["RealUrl"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ViolationUrl.RealUrl` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ViolationUrl.RealUrl` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_realUrl = string(value["RealUrl"].GetString());
         m_realUrlHasBeenSet = true;
@@ -60,7 +59,7 @@ CoreInternalOutcome ViolationUrl::Deserialize(const Value &value)
     {
         if (!value["DownloadUrl"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ViolationUrl.DownloadUrl` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ViolationUrl.DownloadUrl` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_downloadUrl = string(value["DownloadUrl"].GetString());
         m_downloadUrlHasBeenSet = true;
@@ -70,7 +69,7 @@ CoreInternalOutcome ViolationUrl::Deserialize(const Value &value)
     {
         if (!value["UrlStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ViolationUrl.UrlStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ViolationUrl.UrlStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_urlStatus = string(value["UrlStatus"].GetString());
         m_urlStatusHasBeenSet = true;
@@ -80,7 +79,7 @@ CoreInternalOutcome ViolationUrl::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ViolationUrl.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ViolationUrl.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -90,7 +89,7 @@ CoreInternalOutcome ViolationUrl::Deserialize(const Value &value)
     {
         if (!value["UpdateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ViolationUrl.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ViolationUrl.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_updateTime = string(value["UpdateTime"].GetString());
         m_updateTimeHasBeenSet = true;
@@ -100,12 +99,12 @@ CoreInternalOutcome ViolationUrl::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ViolationUrl::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ViolationUrl::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_idHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Id";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_id, allocator);
@@ -113,42 +112,42 @@ void ViolationUrl::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_realUrlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RealUrl";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_realUrl.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_realUrl.c_str(), allocator).Move(), allocator);
     }
 
     if (m_downloadUrlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DownloadUrl";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_downloadUrl.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_downloadUrl.c_str(), allocator).Move(), allocator);
     }
 
     if (m_urlStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UrlStatus";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_urlStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_urlStatus.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_updateTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UpdateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_updateTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_updateTime.c_str(), allocator).Move(), allocator);
     }
 
 }

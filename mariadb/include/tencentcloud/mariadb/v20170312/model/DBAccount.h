@@ -137,14 +137,14 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
-                     * @return ReadOnly Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
+                     * 获取Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
+                     * @return ReadOnly Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
                      */
                     int64_t GetReadOnly() const;
 
                     /**
-                     * 设置Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
-                     * @param ReadOnly Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
+                     * 设置Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
+                     * @param ReadOnly Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
                      */
                     void SetReadOnly(const int64_t& _readOnly);
 
@@ -155,17 +155,17 @@ namespace TencentCloud
                     bool ReadOnlyHasBeenSet() const;
 
                     /**
-                     * 获取This field is meaningful for read-only accounts, indicating to select a slave where the master/slave delay is below this value
+                     * 获取This field is meaningful for read-only accounts, indicating to select a secondary where the primary/secondary delay is below this value
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DelayThresh This field is meaningful for read-only accounts, indicating to select a slave where the master/slave delay is below this value
+                     * @return DelayThresh This field is meaningful for read-only accounts, indicating to select a secondary where the primary/secondary delay is below this value
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetDelayThresh() const;
 
                     /**
-                     * 设置This field is meaningful for read-only accounts, indicating to select a slave where the master/slave delay is below this value
+                     * 设置This field is meaningful for read-only accounts, indicating to select a secondary where the primary/secondary delay is below this value
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DelayThresh This field is meaningful for read-only accounts, indicating to select a slave where the master/slave delay is below this value
+                     * @param DelayThresh This field is meaningful for read-only accounts, indicating to select a secondary where the primary/secondary delay is below this value
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetDelayThresh(const int64_t& _delayThresh);
@@ -209,13 +209,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
+                     * Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
                      */
                     int64_t m_readOnly;
                     bool m_readOnlyHasBeenSet;
 
                     /**
-                     * This field is meaningful for read-only accounts, indicating to select a slave where the master/slave delay is below this value
+                     * This field is meaningful for read-only accounts, indicating to select a secondary where the primary/secondary delay is below this value
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_delayThresh;

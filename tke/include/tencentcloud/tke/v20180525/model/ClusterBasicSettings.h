@@ -156,14 +156,14 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TagSpecification 
+                     * 获取Tag description list. This parameter is used to bind a tag to a resource instance. Currently, a tag can only be bound to cluster instances.
+                     * @return TagSpecification Tag description list. This parameter is used to bind a tag to a resource instance. Currently, a tag can only be bound to cluster instances.
                      */
                     std::vector<TagSpecification> GetTagSpecification() const;
 
                     /**
-                     * 设置
-                     * @param TagSpecification 
+                     * 设置Tag description list. This parameter is used to bind a tag to a resource instance. Currently, a tag can only be bound to cluster instances.
+                     * @param TagSpecification Tag description list. This parameter is used to bind a tag to a resource instance. Currently, a tag can only be bound to cluster instances.
                      */
                     void SetTagSpecification(const std::vector<TagSpecification>& _tagSpecification);
 
@@ -174,14 +174,14 @@ namespace TencentCloud
                     bool TagSpecificationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OsCustomizeType 
+                     * 获取Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+                     * @return OsCustomizeType Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
                      */
                     std::string GetOsCustomizeType() const;
 
                     /**
-                     * 设置
-                     * @param OsCustomizeType 
+                     * 设置Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+                     * @param OsCustomizeType Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
                      */
                     void SetOsCustomizeType(const std::string& _osCustomizeType);
 
@@ -192,14 +192,14 @@ namespace TencentCloud
                     bool OsCustomizeTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NeedWorkSecurityGroup 
+                     * 获取Whether to enable the node’s default security group (default: `No`, Aphla feature)
+                     * @return NeedWorkSecurityGroup Whether to enable the node’s default security group (default: `No`, Aphla feature)
                      */
                     bool GetNeedWorkSecurityGroup() const;
 
                     /**
-                     * 设置
-                     * @param NeedWorkSecurityGroup 
+                     * 设置Whether to enable the node’s default security group (default: `No`, Aphla feature)
+                     * @param NeedWorkSecurityGroup Whether to enable the node’s default security group (default: `No`, Aphla feature)
                      */
                     void SetNeedWorkSecurityGroup(const bool& _needWorkSecurityGroup);
 
@@ -208,6 +208,24 @@ namespace TencentCloud
                      * @return NeedWorkSecurityGroup 是否已赋值
                      */
                     bool NeedWorkSecurityGroupHasBeenSet() const;
+
+                    /**
+                     * 获取When the Cilium Overlay add-on is selected, TKE will take two IPs from the subnet to create the private network CLB.
+                     * @return SubnetId When the Cilium Overlay add-on is selected, TKE will take two IPs from the subnet to create the private network CLB.
+                     */
+                    std::string GetSubnetId() const;
+
+                    /**
+                     * 设置When the Cilium Overlay add-on is selected, TKE will take two IPs from the subnet to create the private network CLB.
+                     * @param SubnetId When the Cilium Overlay add-on is selected, TKE will take two IPs from the subnet to create the private network CLB.
+                     */
+                    void SetSubnetId(const std::string& _subnetId);
+
+                    /**
+                     * 判断参数 SubnetId 是否已赋值
+                     * @return SubnetId 是否已赋值
+                     */
+                    bool SubnetIdHasBeenSet() const;
 
                 private:
 
@@ -248,22 +266,28 @@ namespace TencentCloud
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * 
+                     * Tag description list. This parameter is used to bind a tag to a resource instance. Currently, a tag can only be bound to cluster instances.
                      */
                     std::vector<TagSpecification> m_tagSpecification;
                     bool m_tagSpecificationHasBeenSet;
 
                     /**
-                     * 
+                     * Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
                      */
                     std::string m_osCustomizeType;
                     bool m_osCustomizeTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to enable the node’s default security group (default: `No`, Aphla feature)
                      */
                     bool m_needWorkSecurityGroup;
                     bool m_needWorkSecurityGroupHasBeenSet;
+
+                    /**
+                     * When the Cilium Overlay add-on is selected, TKE will take two IPs from the subnet to create the private network CLB.
+                     */
+                    std::string m_subnetId;
+                    bool m_subnetIdHasBeenSet;
 
                 };
             }

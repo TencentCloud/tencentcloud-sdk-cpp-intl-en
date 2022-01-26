@@ -177,14 +177,14 @@ namespace TencentCloud
                     bool FrameTagConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
-                     * @return CreateTime Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
+                     * 获取Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * @return CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
-                     * @param CreateTime Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
+                     * 设置Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * @param CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
                      */
                     void SetCreateTime(const std::string& _createTime);
 
@@ -195,14 +195,14 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
-                     * @return UpdateTime Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
+                     * 获取Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * @return UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
-                     * @param UpdateTime Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
+                     * 设置Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * @param UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
@@ -257,13 +257,13 @@ namespace TencentCloud
                     bool m_frameTagConfigureHasBeenSet;
 
                     /**
-                     * Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
+                     * Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
+                     * Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

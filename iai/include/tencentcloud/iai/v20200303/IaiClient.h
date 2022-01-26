@@ -25,8 +25,6 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/iai/v20200303/model/AnalyzeFaceRequest.h>
 #include <tencentcloud/iai/v20200303/model/AnalyzeFaceResponse.h>
-#include <tencentcloud/iai/v20200303/model/CheckSimilarPersonRequest.h>
-#include <tencentcloud/iai/v20200303/model/CheckSimilarPersonResponse.h>
 #include <tencentcloud/iai/v20200303/model/CompareFaceRequest.h>
 #include <tencentcloud/iai/v20200303/model/CompareFaceResponse.h>
 #include <tencentcloud/iai/v20200303/model/CopyPersonRequest.h>
@@ -49,10 +47,6 @@
 #include <tencentcloud/iai/v20200303/model/DetectFaceResponse.h>
 #include <tencentcloud/iai/v20200303/model/DetectLiveFaceRequest.h>
 #include <tencentcloud/iai/v20200303/model/DetectLiveFaceResponse.h>
-#include <tencentcloud/iai/v20200303/model/EstimateCheckSimilarPersonCostTimeRequest.h>
-#include <tencentcloud/iai/v20200303/model/EstimateCheckSimilarPersonCostTimeResponse.h>
-#include <tencentcloud/iai/v20200303/model/GetCheckSimilarPersonJobIdListRequest.h>
-#include <tencentcloud/iai/v20200303/model/GetCheckSimilarPersonJobIdListResponse.h>
 #include <tencentcloud/iai/v20200303/model/GetGroupInfoRequest.h>
 #include <tencentcloud/iai/v20200303/model/GetGroupInfoResponse.h>
 #include <tencentcloud/iai/v20200303/model/GetGroupListRequest.h>
@@ -65,8 +59,6 @@
 #include <tencentcloud/iai/v20200303/model/GetPersonListResponse.h>
 #include <tencentcloud/iai/v20200303/model/GetPersonListNumRequest.h>
 #include <tencentcloud/iai/v20200303/model/GetPersonListNumResponse.h>
-#include <tencentcloud/iai/v20200303/model/GetSimilarPersonResultRequest.h>
-#include <tencentcloud/iai/v20200303/model/GetSimilarPersonResultResponse.h>
 #include <tencentcloud/iai/v20200303/model/ModifyGroupRequest.h>
 #include <tencentcloud/iai/v20200303/model/ModifyGroupResponse.h>
 #include <tencentcloud/iai/v20200303/model/ModifyPersonBaseInfoRequest.h>
@@ -99,97 +91,85 @@ namespace TencentCloud
                 IaiClient(const Credential &credential, const std::string &region);
                 IaiClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::AnalyzeFaceResponse> AnalyzeFaceOutcome;
+                typedef Outcome<Core::Error, Model::AnalyzeFaceResponse> AnalyzeFaceOutcome;
                 typedef std::future<AnalyzeFaceOutcome> AnalyzeFaceOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::AnalyzeFaceRequest&, AnalyzeFaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AnalyzeFaceAsyncHandler;
-                typedef Outcome<Error, Model::CheckSimilarPersonResponse> CheckSimilarPersonOutcome;
-                typedef std::future<CheckSimilarPersonOutcome> CheckSimilarPersonOutcomeCallable;
-                typedef std::function<void(const IaiClient*, const Model::CheckSimilarPersonRequest&, CheckSimilarPersonOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckSimilarPersonAsyncHandler;
-                typedef Outcome<Error, Model::CompareFaceResponse> CompareFaceOutcome;
+                typedef Outcome<Core::Error, Model::CompareFaceResponse> CompareFaceOutcome;
                 typedef std::future<CompareFaceOutcome> CompareFaceOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::CompareFaceRequest&, CompareFaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CompareFaceAsyncHandler;
-                typedef Outcome<Error, Model::CopyPersonResponse> CopyPersonOutcome;
+                typedef Outcome<Core::Error, Model::CopyPersonResponse> CopyPersonOutcome;
                 typedef std::future<CopyPersonOutcome> CopyPersonOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::CopyPersonRequest&, CopyPersonOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CopyPersonAsyncHandler;
-                typedef Outcome<Error, Model::CreateFaceResponse> CreateFaceOutcome;
+                typedef Outcome<Core::Error, Model::CreateFaceResponse> CreateFaceOutcome;
                 typedef std::future<CreateFaceOutcome> CreateFaceOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::CreateFaceRequest&, CreateFaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateFaceAsyncHandler;
-                typedef Outcome<Error, Model::CreateGroupResponse> CreateGroupOutcome;
+                typedef Outcome<Core::Error, Model::CreateGroupResponse> CreateGroupOutcome;
                 typedef std::future<CreateGroupOutcome> CreateGroupOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::CreateGroupRequest&, CreateGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateGroupAsyncHandler;
-                typedef Outcome<Error, Model::CreatePersonResponse> CreatePersonOutcome;
+                typedef Outcome<Core::Error, Model::CreatePersonResponse> CreatePersonOutcome;
                 typedef std::future<CreatePersonOutcome> CreatePersonOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::CreatePersonRequest&, CreatePersonOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePersonAsyncHandler;
-                typedef Outcome<Error, Model::DeleteFaceResponse> DeleteFaceOutcome;
+                typedef Outcome<Core::Error, Model::DeleteFaceResponse> DeleteFaceOutcome;
                 typedef std::future<DeleteFaceOutcome> DeleteFaceOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::DeleteFaceRequest&, DeleteFaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteFaceAsyncHandler;
-                typedef Outcome<Error, Model::DeleteGroupResponse> DeleteGroupOutcome;
+                typedef Outcome<Core::Error, Model::DeleteGroupResponse> DeleteGroupOutcome;
                 typedef std::future<DeleteGroupOutcome> DeleteGroupOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::DeleteGroupRequest&, DeleteGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteGroupAsyncHandler;
-                typedef Outcome<Error, Model::DeletePersonResponse> DeletePersonOutcome;
+                typedef Outcome<Core::Error, Model::DeletePersonResponse> DeletePersonOutcome;
                 typedef std::future<DeletePersonOutcome> DeletePersonOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::DeletePersonRequest&, DeletePersonOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeletePersonAsyncHandler;
-                typedef Outcome<Error, Model::DeletePersonFromGroupResponse> DeletePersonFromGroupOutcome;
+                typedef Outcome<Core::Error, Model::DeletePersonFromGroupResponse> DeletePersonFromGroupOutcome;
                 typedef std::future<DeletePersonFromGroupOutcome> DeletePersonFromGroupOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::DeletePersonFromGroupRequest&, DeletePersonFromGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeletePersonFromGroupAsyncHandler;
-                typedef Outcome<Error, Model::DetectFaceResponse> DetectFaceOutcome;
+                typedef Outcome<Core::Error, Model::DetectFaceResponse> DetectFaceOutcome;
                 typedef std::future<DetectFaceOutcome> DetectFaceOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::DetectFaceRequest&, DetectFaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DetectFaceAsyncHandler;
-                typedef Outcome<Error, Model::DetectLiveFaceResponse> DetectLiveFaceOutcome;
+                typedef Outcome<Core::Error, Model::DetectLiveFaceResponse> DetectLiveFaceOutcome;
                 typedef std::future<DetectLiveFaceOutcome> DetectLiveFaceOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::DetectLiveFaceRequest&, DetectLiveFaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DetectLiveFaceAsyncHandler;
-                typedef Outcome<Error, Model::EstimateCheckSimilarPersonCostTimeResponse> EstimateCheckSimilarPersonCostTimeOutcome;
-                typedef std::future<EstimateCheckSimilarPersonCostTimeOutcome> EstimateCheckSimilarPersonCostTimeOutcomeCallable;
-                typedef std::function<void(const IaiClient*, const Model::EstimateCheckSimilarPersonCostTimeRequest&, EstimateCheckSimilarPersonCostTimeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EstimateCheckSimilarPersonCostTimeAsyncHandler;
-                typedef Outcome<Error, Model::GetCheckSimilarPersonJobIdListResponse> GetCheckSimilarPersonJobIdListOutcome;
-                typedef std::future<GetCheckSimilarPersonJobIdListOutcome> GetCheckSimilarPersonJobIdListOutcomeCallable;
-                typedef std::function<void(const IaiClient*, const Model::GetCheckSimilarPersonJobIdListRequest&, GetCheckSimilarPersonJobIdListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetCheckSimilarPersonJobIdListAsyncHandler;
-                typedef Outcome<Error, Model::GetGroupInfoResponse> GetGroupInfoOutcome;
+                typedef Outcome<Core::Error, Model::GetGroupInfoResponse> GetGroupInfoOutcome;
                 typedef std::future<GetGroupInfoOutcome> GetGroupInfoOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::GetGroupInfoRequest&, GetGroupInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetGroupInfoAsyncHandler;
-                typedef Outcome<Error, Model::GetGroupListResponse> GetGroupListOutcome;
+                typedef Outcome<Core::Error, Model::GetGroupListResponse> GetGroupListOutcome;
                 typedef std::future<GetGroupListOutcome> GetGroupListOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::GetGroupListRequest&, GetGroupListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetGroupListAsyncHandler;
-                typedef Outcome<Error, Model::GetPersonBaseInfoResponse> GetPersonBaseInfoOutcome;
+                typedef Outcome<Core::Error, Model::GetPersonBaseInfoResponse> GetPersonBaseInfoOutcome;
                 typedef std::future<GetPersonBaseInfoOutcome> GetPersonBaseInfoOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::GetPersonBaseInfoRequest&, GetPersonBaseInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetPersonBaseInfoAsyncHandler;
-                typedef Outcome<Error, Model::GetPersonGroupInfoResponse> GetPersonGroupInfoOutcome;
+                typedef Outcome<Core::Error, Model::GetPersonGroupInfoResponse> GetPersonGroupInfoOutcome;
                 typedef std::future<GetPersonGroupInfoOutcome> GetPersonGroupInfoOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::GetPersonGroupInfoRequest&, GetPersonGroupInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetPersonGroupInfoAsyncHandler;
-                typedef Outcome<Error, Model::GetPersonListResponse> GetPersonListOutcome;
+                typedef Outcome<Core::Error, Model::GetPersonListResponse> GetPersonListOutcome;
                 typedef std::future<GetPersonListOutcome> GetPersonListOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::GetPersonListRequest&, GetPersonListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetPersonListAsyncHandler;
-                typedef Outcome<Error, Model::GetPersonListNumResponse> GetPersonListNumOutcome;
+                typedef Outcome<Core::Error, Model::GetPersonListNumResponse> GetPersonListNumOutcome;
                 typedef std::future<GetPersonListNumOutcome> GetPersonListNumOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::GetPersonListNumRequest&, GetPersonListNumOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetPersonListNumAsyncHandler;
-                typedef Outcome<Error, Model::GetSimilarPersonResultResponse> GetSimilarPersonResultOutcome;
-                typedef std::future<GetSimilarPersonResultOutcome> GetSimilarPersonResultOutcomeCallable;
-                typedef std::function<void(const IaiClient*, const Model::GetSimilarPersonResultRequest&, GetSimilarPersonResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetSimilarPersonResultAsyncHandler;
-                typedef Outcome<Error, Model::ModifyGroupResponse> ModifyGroupOutcome;
+                typedef Outcome<Core::Error, Model::ModifyGroupResponse> ModifyGroupOutcome;
                 typedef std::future<ModifyGroupOutcome> ModifyGroupOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::ModifyGroupRequest&, ModifyGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyGroupAsyncHandler;
-                typedef Outcome<Error, Model::ModifyPersonBaseInfoResponse> ModifyPersonBaseInfoOutcome;
+                typedef Outcome<Core::Error, Model::ModifyPersonBaseInfoResponse> ModifyPersonBaseInfoOutcome;
                 typedef std::future<ModifyPersonBaseInfoOutcome> ModifyPersonBaseInfoOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::ModifyPersonBaseInfoRequest&, ModifyPersonBaseInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyPersonBaseInfoAsyncHandler;
-                typedef Outcome<Error, Model::ModifyPersonGroupInfoResponse> ModifyPersonGroupInfoOutcome;
+                typedef Outcome<Core::Error, Model::ModifyPersonGroupInfoResponse> ModifyPersonGroupInfoOutcome;
                 typedef std::future<ModifyPersonGroupInfoOutcome> ModifyPersonGroupInfoOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::ModifyPersonGroupInfoRequest&, ModifyPersonGroupInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyPersonGroupInfoAsyncHandler;
-                typedef Outcome<Error, Model::SearchFacesResponse> SearchFacesOutcome;
+                typedef Outcome<Core::Error, Model::SearchFacesResponse> SearchFacesOutcome;
                 typedef std::future<SearchFacesOutcome> SearchFacesOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::SearchFacesRequest&, SearchFacesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SearchFacesAsyncHandler;
-                typedef Outcome<Error, Model::SearchFacesReturnsByGroupResponse> SearchFacesReturnsByGroupOutcome;
+                typedef Outcome<Core::Error, Model::SearchFacesReturnsByGroupResponse> SearchFacesReturnsByGroupOutcome;
                 typedef std::future<SearchFacesReturnsByGroupOutcome> SearchFacesReturnsByGroupOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::SearchFacesReturnsByGroupRequest&, SearchFacesReturnsByGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SearchFacesReturnsByGroupAsyncHandler;
-                typedef Outcome<Error, Model::SearchPersonsResponse> SearchPersonsOutcome;
+                typedef Outcome<Core::Error, Model::SearchPersonsResponse> SearchPersonsOutcome;
                 typedef std::future<SearchPersonsOutcome> SearchPersonsOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::SearchPersonsRequest&, SearchPersonsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SearchPersonsAsyncHandler;
-                typedef Outcome<Error, Model::SearchPersonsReturnsByGroupResponse> SearchPersonsReturnsByGroupOutcome;
+                typedef Outcome<Core::Error, Model::SearchPersonsReturnsByGroupResponse> SearchPersonsReturnsByGroupOutcome;
                 typedef std::future<SearchPersonsReturnsByGroupOutcome> SearchPersonsReturnsByGroupOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::SearchPersonsReturnsByGroupRequest&, SearchPersonsReturnsByGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SearchPersonsReturnsByGroupAsyncHandler;
-                typedef Outcome<Error, Model::VerifyFaceResponse> VerifyFaceOutcome;
+                typedef Outcome<Core::Error, Model::VerifyFaceResponse> VerifyFaceOutcome;
                 typedef std::future<VerifyFaceOutcome> VerifyFaceOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::VerifyFaceRequest&, VerifyFaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> VerifyFaceAsyncHandler;
-                typedef Outcome<Error, Model::VerifyPersonResponse> VerifyPersonOutcome;
+                typedef Outcome<Core::Error, Model::VerifyPersonResponse> VerifyPersonOutcome;
                 typedef std::future<VerifyPersonOutcome> VerifyPersonOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::VerifyPersonRequest&, VerifyPersonOutcome, const std::shared_ptr<const AsyncCallerContext>&)> VerifyPersonAsyncHandler;
 
@@ -208,28 +188,9 @@ namespace TencentCloud
                 AnalyzeFaceOutcomeCallable AnalyzeFaceCallable(const Model::AnalyzeFaceRequest& request);
 
                 /**
-                 *This API is used to check a specified group for suspected duplicate persons and list their information.
-
-You can use this API to check for duplicate persons in one group so as to avoid situations where the same person has multiple roles in the group. You can also use it to check for duplicate persons across multiple groups to see whether the same person exists in multiple groups at the same time.
-
-Duplicate check across algorithm model versions is not supported. Currently, this feature is available only to groups with algorithm model v3.0.
-
->     
-- If you perform a duplicate check on the same group again, you need to wait for the last operation to complete, that is, when the `GroupIds` entered in the two requests are the same, if the first request is not completed, the second request will fail.
-
->     
-- The status of the group on which the duplicate check is to be performed is that when the duplicate check task really starts, that is, after you initiate the duplicate check request; if your duplicate check task needs to queue up, any addition or deletion operation performed on the group during the queuing will affect the duplicate check result. Tencent Cloud will use the group status when the duplicate check task actually starts. After the task starts, any operation on the group will not affect the task execution; however, you are still recommended not to add/delete persons or faces to/from the group after the task starts.
-                 * @param req CheckSimilarPersonRequest
-                 * @return CheckSimilarPersonOutcome
-                 */
-                CheckSimilarPersonOutcome CheckSimilarPerson(const Model::CheckSimilarPersonRequest &request);
-                void CheckSimilarPersonAsync(const Model::CheckSimilarPersonRequest& request, const CheckSimilarPersonAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CheckSimilarPersonOutcomeCallable CheckSimilarPersonCallable(const Model::CheckSimilarPersonRequest& request);
-
-                /**
                  *This API is used to calculate the similarity of faces in two images and return the face similarity score.
 
-If you need to judge "whether the person in the image is someone specified" in scenarios such as face login, i.e., checking whether the person in a given image is someone with a known identity, you are recommended to use the [VerifyFace](https://cloud.tencent.com/document/product/867/32806) or [VerifyPerson](https://cloud.tencent.com/document/product/867/38879) API.
+If you need to judge "whether the person in the image is someone specified" in scenarios such as face login, i.e., checking whether the person in a given image is someone with a known identity, we recommend using the [VerifyFace](https://intl.cloud.tencent.com/document/product/867/44983?from_cn_redirect=1) or [VerifyPerson](https://intl.cloud.tencent.com/document/product/867/44982?from_cn_redirect=1) API.
 
 >     
 - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
@@ -243,7 +204,7 @@ If you need to judge "whether the person in the image is someone specified" in s
                 /**
                  *This API is used to copy a person in a group to another group (without copying the description). One person can exist in up to 100 groups at the same time.
 >     
-- Note: if the version of the algorithm model was 2.0 when the person was created, the copy operation will fail if it is to copy to a group not on algorithm model v2.0.
+- Note: in the case that the version of the algorithm model was 2.0 when the person was created, the copy operation will fail if the target group is not of algorithm model 2.0.
                  * @param req CopyPersonRequest
                  * @return CopyPersonOutcome
                  */
@@ -330,15 +291,15 @@ The maximum number of faces that can be included in one group varies by algorith
                  *This API is used to detect the position, attributes, and quality information of a face in the given image. The position information includes (x, y, w, h); the face attributes include gender, age, expression, beauty, glass, hair, mask, and pose (pitch, roll, yaw); and the face quality information includes the overall quality score, sharpness, brightness, and completeness.
 
  
-The face quality information is mainly used to evaluate the quality of the input face image. When using the Face Recognition service, you are recommended to evaluate the quality of the input face image first to improve the effects of subsequent processing. Application scenarios of this feature include:
+The face quality information is mainly used to evaluate the quality of the input face image. When using the Face Recognition service, we recommend evaluating the quality of the input face image first to improve the effects of subsequent processing. Application scenarios of this feature include:
 
-1). [Creating](https://cloud.tencent.com/document/product/867/32793)/[Adding](https://cloud.tencent.com/document/product/867/32795) a person in a group: this is to ensure the quality of the face information to facilitate subsequent processing.
+1. [Creating](https://intl.cloud.tencent.com/document/product/867/45014?from_cn_redirect=1)/[Adding](https://intl.cloud.tencent.com/document/product/867/45016?from_cn_redirect=1) a person in a group: this is to ensure the quality of the face information to facilitate subsequent processing.
 
-2). [Face search](https://cloud.tencent.com/document/product/867/32798): this is to ensure the quality of the input image to quickly find the corresponding person.
+2. [Face search](https://intl.cloud.tencent.com/document/product/867/44994?from_cn_redirect=1): this is to ensure the quality of the input image to quickly find the corresponding person.
 
-3). [Face verification](https://cloud.tencent.com/document/product/867/32806): this is to ensure the quality of the face information to avoid cases where the verification incorrectly fails.
+3. [Face verification](https://intl.cloud.tencent.com/document/product/867/44983?from_cn_redirect=1): this is to ensure the quality of the face information to avoid cases where the verification incorrectly fails.
 
-4). [Face fusion](https://cloud.tencent.com/product/facefusion): this is to ensure the quality of the uploaded face images to improve the fusion effect.
+4. Face fusion: this is to ensure the quality of the uploaded face images to improve the fusion effect.
 
 >     
 - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
@@ -354,7 +315,7 @@ The face quality information is mainly used to evaluate the quality of the input
                 /**
                  *This API is used to detect the liveness of a user with a user-uploaded image. Its difference from video-based liveness detection lies in that the user does not need to speak, shake their head, or wink for detection.
 
-Image-based liveness detection is suitable for scenarios where the image is a selfie or the requirement for attack defense is not high. If you have a higher security requirement for liveness detection, please use [Faceid](https://cloud.tencent.com/product/faceid).
+Image-based liveness detection is suitable for scenarios where the image is a selfie or the requirement for attack defense is not high. If you have a higher security requirement for liveness detection, please use [FaceID](https://intl.cloud.tencent.com/product/faceid?from_cn_redirect=1).
 
 >     
 - The aspect ratio of the image should be close to 3:4 (width:height); otherwise, the score returned for the image will be meaningless. This API is suitable for selfie scenarios, and the score returned in other scenarios will be meaningless.
@@ -367,30 +328,6 @@ Image-based liveness detection is suitable for scenarios where the image is a se
                 DetectLiveFaceOutcome DetectLiveFace(const Model::DetectLiveFaceRequest &request);
                 void DetectLiveFaceAsync(const Model::DetectLiveFaceRequest& request, const DetectLiveFaceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DetectLiveFaceOutcomeCallable DetectLiveFaceCallable(const Model::DetectLiveFaceRequest& request);
-
-                /**
-                 *This API is used to get the estimated duration of a duplicate person check task.
-
-If the `EndTimestamp` meets your expectations, please initiate the duplicate person check request as soon as possible; otherwise, the task may take more time.
-
-If the estimated duration is more than 5 hours, the duplicate person check feature cannot be used.
-                 * @param req EstimateCheckSimilarPersonCostTimeRequest
-                 * @return EstimateCheckSimilarPersonCostTimeOutcome
-                 */
-                EstimateCheckSimilarPersonCostTimeOutcome EstimateCheckSimilarPersonCostTime(const Model::EstimateCheckSimilarPersonCostTimeRequest &request);
-                void EstimateCheckSimilarPersonCostTimeAsync(const Model::EstimateCheckSimilarPersonCostTimeRequest& request, const EstimateCheckSimilarPersonCostTimeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                EstimateCheckSimilarPersonCostTimeOutcomeCallable EstimateCheckSimilarPersonCostTimeCallable(const Model::EstimateCheckSimilarPersonCostTimeRequest& request);
-
-                /**
-                 *This API is used to get the list of duplicate person check tasks and sort them in reverse order by task creation time (i.e., the newest one is at the top)
-
-Only data in the past year is retained.
-                 * @param req GetCheckSimilarPersonJobIdListRequest
-                 * @return GetCheckSimilarPersonJobIdListOutcome
-                 */
-                GetCheckSimilarPersonJobIdListOutcome GetCheckSimilarPersonJobIdList(const Model::GetCheckSimilarPersonJobIdListRequest &request);
-                void GetCheckSimilarPersonJobIdListAsync(const Model::GetCheckSimilarPersonJobIdListRequest& request, const GetCheckSimilarPersonJobIdListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                GetCheckSimilarPersonJobIdListOutcomeCallable GetCheckSimilarPersonJobIdListCallable(const Model::GetCheckSimilarPersonJobIdListRequest& request);
 
                 /**
                  *This API is used to get the group information.
@@ -447,15 +384,6 @@ Only data in the past year is retained.
                 GetPersonListNumOutcomeCallable GetPersonListNumCallable(const Model::GetPersonListNumRequest& request);
 
                 /**
-                 *This API is used to get the result of the `CheckSimilarPerson` API.
-                 * @param req GetSimilarPersonResultRequest
-                 * @return GetSimilarPersonResultOutcome
-                 */
-                GetSimilarPersonResultOutcome GetSimilarPersonResult(const Model::GetSimilarPersonResultRequest &request);
-                void GetSimilarPersonResultAsync(const Model::GetSimilarPersonResultRequest& request, const GetSimilarPersonResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                GetSimilarPersonResultOutcomeCallable GetSimilarPersonResultCallable(const Model::GetSimilarPersonResultRequest& request);
-
-                /**
                  *This API is used to modify the name, tag, and custom description field of a group.
                  * @param req ModifyGroupRequest
                  * @return ModifyGroupOutcome
@@ -487,12 +415,12 @@ Only data in the past year is retained.
 
 Up to 10 faces in an image can be recognized at a time, and up to 100 groups can be searched in at a time.
 
-The maximum number of faces in a group that can be searched for at a time is subject to the group's algorithm model version (`FaceModelVersion`), which is 1 million for v2.0 or 3 million for v3.0.
+The maximum number of faces in groups that can be searched for at a time is subject to the group's algorithm model version (`FaceModelVersion`), which is 1 million for v2.0 or 3 million for v3.0.
 
-This API recognizes each face of a person as an independent one. By contrast, the [SearchPersons](https://cloud.tencent.com/document/product/867/38881) and [SearchPersonsReturnsByGroup](https://cloud.tencent.com/document/product/867/38880) APIs fuse the features of all faces of a person; for example, if a person has 4 faces, they will fuse the features of the 4 faces and generate the summarized facial features of the person to make the search more accurate.
+This API recognizes each face image of a person as an independent one. By contrast, the [SearchPersons](https://intl.cloud.tencent.com/document/product/867/44992?from_cn_redirect=1) and [SearchPersonsReturnsByGroup](https://intl.cloud.tencent.com/document/product/867/44991?from_cn_redirect=1) APIs fuse the features of all face images of a person; for example, if a person has 4 face images, they will fuse the features of the 4 face images and generate the summarized facial features of the person to make the search more accurate.
 
 
-This API should be used together with the [CreateGroup API](https://cloud.tencent.com/document/product/867/32794).
+This API should be used together with [Group Management APIs](https://intl.cloud.tencent.com/document/product/867/45015?from_cn_redirect=1).
 
 >     
 - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
@@ -508,11 +436,11 @@ This API should be used together with the [CreateGroup API](https://cloud.tencen
 
 Up to 10 faces in the image can be recognized at a time, and cross-group search is supported.
 
-The maximum number of faces in a group that can be searched for at a time is subject to the group's algorithm model version (`FaceModelVersion`), which is 1 million for v2.0 or 3 million for v3.0.
+The maximum number of faces in groups that can be searched for at a time is subject to the group's algorithm model version (`FaceModelVersion`), which is 1 million for v2.0 or 3 million for v3.0.
 
-This API recognizes each face of a person as an independent one. By contrast, the [SearchPersons](https://cloud.tencent.com/document/product/867/38881) and [SearchPersonsReturnsByGroup](https://cloud.tencent.com/document/product/867/38880) APIs fuse the features of all faces of a person; for example, if a person has 4 faces, they will fuse the features of the 4 faces and generate the summarized facial features of the person to make the search more accurate.
+This API recognizes each face image of a person as an independent one. By contrast, the [SearchPersons](https://intl.cloud.tencent.com/document/product/867/44992?from_cn_redirect=1) and [SearchPersonsReturnsByGroup](https://intl.cloud.tencent.com/document/product/867/44991?from_cn_redirect=1) APIs fuse the features of all face images of a person; for example, if a person has 4 face images, they will fuse the features of the 4 face images and generate the summarized facial features of the person to make the search more accurate.
 
-This API should be used together with the [CreateGroup API](https://cloud.tencent.com/document/product/867/32794).
+This API should be used together with [Group Management APIs](https://intl.cloud.tencent.com/document/product/867/45015?from_cn_redirect=1).
 
 >     
 - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
@@ -530,9 +458,9 @@ This API should be used together with the [CreateGroup API](https://cloud.tencen
 
 Up to 10 faces in an image can be recognized at a time, and up to 100 groups can be searched in at a time.
 
-The maximum number of faces in a group that can be searched for at a time is subject to the group's algorithm model version (`FaceModelVersion`), which is 1 million for v2.0 or 3 million for v3.0.
+The maximum number of faces in groups that can be searched for at a time is subject to the group's algorithm model version (`FaceModelVersion`), which is 1 million for v2.0 or 3 million for v3.0.
 
-This API fuses the features of all faces of a person; for example, if a person has 4 faces, it will fuse the features of the 4 faces and generate the summarized facial features of the person to make the person search (i.e., judging whether the face image to be recognized is of a specified person) more accurate. By contrast, the [SearchFaces](https://cloud.tencent.com/document/product/867/32798) and [SearchFacesReturnsByGroup](https://cloud.tencent.com/document/product/867/38882) APIs recognize each face of a person as an independent one for search.
+This API fuses the features of all face images of a person; for example, if a person has 4 face images, it will fuse the features of the 4 face images and generate the summarized facial features of the person to make the person search (i.e., judging whether the face image to be recognized is of a specified person) more accurate. By contrast, the [SearchFaces](https://intl.cloud.tencent.com/document/product/867/44994?from_cn_redirect=1) and [SearchFacesReturnsByGroup](https://intl.cloud.tencent.com/document/product/867/44993?from_cn_redirect=1) APIs recognize each face image of a person as an independent one for search.
 
 >     
 - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
@@ -549,9 +477,9 @@ This API fuses the features of all faces of a person; for example, if a person h
 
 Up to 10 faces in the image can be recognized at a time, and cross-group search is supported.
 
-The maximum number of faces in a group that can be searched for at a time is subject to the group's algorithm model version (`FaceModelVersion`), which is 1 million for v2.0 or 3 million for v3.0.
+The maximum number of faces in groups that can be searched for at a time is subject to the group's algorithm model version (`FaceModelVersion`), which is 1 million for v2.0 or 3 million for v3.0.
 
-This API fuses the features of all faces of a person; for example, if a person has 4 faces, it will fuse the features of the 4 faces and generate the summarized facial features of the person to make the person search (i.e., judging whether the face image to be recognized is of a specified person) more accurate. By contrast, the [SearchFaces](https://cloud.tencent.com/document/product/867/32798) and [SearchFacesReturnsByGroup](https://cloud.tencent.com/document/product/867/38882) APIs recognize each face of a person as an independent one for search.
+This API fuses the features of all face images of a person; for example, if a person has 4 face images, it will fuse the features of the 4 face images and generate the summarized facial features of the person to make the person search (i.e., judging whether the face image to be recognized is of a specified person) more accurate. By contrast, the [SearchFaces](https://intl.cloud.tencent.com/document/product/867/44994?from_cn_redirect=1) and [SearchFacesReturnsByGroup](https://intl.cloud.tencent.com/document/product/867/44993?from_cn_redirect=1) APIs recognize each face image of a person as an independent one for search.
 >     
 - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
 - This feature is available only to groups whose algorithm model version (`FaceModelVersion`) is 3.0.
@@ -563,11 +491,11 @@ This API fuses the features of all faces of a person; for example, if a person h
                 SearchPersonsReturnsByGroupOutcomeCallable SearchPersonsReturnsByGroupCallable(const Model::SearchPersonsReturnsByGroupRequest& request);
 
                 /**
-                 *This API is used to judge whether a person in an image corresponds to a given `PersonId`. For more information on `PersonId`, please see [CreateGroup](https://cloud.tencent.com/document/product/867/32794). 
+                 *This API is used to judge whether a person in an image corresponds to a given `PersonId`. For more information on `PersonId`, please see [Group Management APIs](https://intl.cloud.tencent.com/document/product/867/45015?from_cn_redirect=1). 
 
-Unlike the [CompareFace](https://cloud.tencent.com/document/product/867/32802) API that is used to judge the similarity between two faces, this API is used to judge "whether the person in the image is someone specified" whose information is stored in a group. This "someone" may have multiple face images.
+The `VerifyFace` API judges whether a person is someone specified whose information is stored in a group, and the "someone" may have multiple face images. By contrast, the [CompareFace](https://intl.cloud.tencent.com/document/product/867/44987?from_cn_redirect=1) API judges the similarity between two faces.
 
-This API recognizes each face of a person as an independent one. By contrast, the [VerifyPerson](https://cloud.tencent.com/document/product/867/38879) API fuses the features of all faces of a person; for example, if a person has 4 faces, it will fuse the features of the 4 faces and generate the summarized facial features of the person to make the person verification (i.e., judging whether the face image to be recognized is of a specified person) more accurate.
+This API recognizes each face image of a person as an independent one. By contrast, the [VerifyPerson](https://intl.cloud.tencent.com/document/product/867/44982?from_cn_redirect=1) API fuses the features of all face images of a person; for example, if a person has 4 face images, it will fuse the features of the 4 face images and generate the summarized facial features of the person to make the person verification (i.e., judging whether the face image to be recognized is of a specified person) more accurate.
 
 >     
 - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
@@ -579,10 +507,10 @@ This API recognizes each face of a person as an independent one. By contrast, th
                 VerifyFaceOutcomeCallable VerifyFaceCallable(const Model::VerifyFaceRequest& request);
 
                 /**
-                 *This API is used to judge whether a person in an image corresponds to a given `PersonId`. For more information on `PersonId`, please see [CreateGroup](https://cloud.tencent.com/document/product/867/32794).
-This API fuses the features of all faces of a person; for example, if a person has 4 faces, it will fuse the features of the 4 faces and generate the summarized facial features of the person to make the person verification (i.e., judging whether the face image to be recognized is of a specified person) more accurate.
+                 *This API is used to judge whether a person in an image corresponds to a given `PersonId`. For more information on `PersonId`, please see [Group Management APIs](https://intl.cloud.tencent.com/document/product/867/45015?from_cn_redirect=1).
+This API fuses the features of all face images of a person; for example, if a person has 4 face images, it will fuse the features of the 4 face images and generate the summarized facial features of the person to make the person verification (i.e., judging whether the face image to be recognized is of a specified person) more accurate.
 
- Unlike the `CompareFace` API that is used to judge the similarity between two faces, this API is used to judge "whether the person in the image is someone specified" whose information is stored in a group. This "someone" may have multiple face images.
+ The face verification APIs judge whether a person is someone specified whose information is stored in a group, and the "someone" may have multiple face images. By contrast, the face comparison APIs judge the similarity between two faces.
 
 
 >     

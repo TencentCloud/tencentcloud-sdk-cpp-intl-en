@@ -47,22 +47,26 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Input layer. Value range: [1,16].
-1) For `image_layer` of background stream (i.e., main host video image or canvas), enter 1.
-2) For audio stream mix, this parameter is also required.
-                     * @return ImageLayer Input layer. Value range: [1,16].
-1) For `image_layer` of background stream (i.e., main host video image or canvas), enter 1.
-2) For audio stream mix, this parameter is also required.
+                     * 获取Input layer. Value range: [1,16]
+(1) For the background stream, i.e., the room owner’s image or the canvas, set this parameter to `1`.
+(2) This parameter is required for audio-only stream mixing as well.
+Note that two inputs cannot have the same `ImageLayer` value.
+                     * @return ImageLayer Input layer. Value range: [1,16]
+(1) For the background stream, i.e., the room owner’s image or the canvas, set this parameter to `1`.
+(2) This parameter is required for audio-only stream mixing as well.
+Note that two inputs cannot have the same `ImageLayer` value.
                      */
                     int64_t GetImageLayer() const;
 
                     /**
-                     * 设置Input layer. Value range: [1,16].
-1) For `image_layer` of background stream (i.e., main host video image or canvas), enter 1.
-2) For audio stream mix, this parameter is also required.
-                     * @param ImageLayer Input layer. Value range: [1,16].
-1) For `image_layer` of background stream (i.e., main host video image or canvas), enter 1.
-2) For audio stream mix, this parameter is also required.
+                     * 设置Input layer. Value range: [1,16]
+(1) For the background stream, i.e., the room owner’s image or the canvas, set this parameter to `1`.
+(2) This parameter is required for audio-only stream mixing as well.
+Note that two inputs cannot have the same `ImageLayer` value.
+                     * @param ImageLayer Input layer. Value range: [1,16]
+(1) For the background stream, i.e., the room owner’s image or the canvas, set this parameter to `1`.
+(2) This parameter is required for audio-only stream mixing as well.
+Note that two inputs cannot have the same `ImageLayer` value.
                      */
                     void SetImageLayer(const int64_t& _imageLayer);
 
@@ -115,40 +119,6 @@ If this parameter is left empty, 0 will be used by default.
                     bool InputTypeHasBeenSet() const;
 
                     /**
-                     * 获取Output width of input video image. Value range:
-Pixel: [0,2000]
-Percentage: [0.01,0.99]
-If this parameter is left empty, the input stream width will be used by default.
-If percentage is used, the expected output is (percentage * background width).
-                     * @return ImageWidth Output width of input video image. Value range:
-Pixel: [0,2000]
-Percentage: [0.01,0.99]
-If this parameter is left empty, the input stream width will be used by default.
-If percentage is used, the expected output is (percentage * background width).
-                     */
-                    double GetImageWidth() const;
-
-                    /**
-                     * 设置Output width of input video image. Value range:
-Pixel: [0,2000]
-Percentage: [0.01,0.99]
-If this parameter is left empty, the input stream width will be used by default.
-If percentage is used, the expected output is (percentage * background width).
-                     * @param ImageWidth Output width of input video image. Value range:
-Pixel: [0,2000]
-Percentage: [0.01,0.99]
-If this parameter is left empty, the input stream width will be used by default.
-If percentage is used, the expected output is (percentage * background width).
-                     */
-                    void SetImageWidth(const double& _imageWidth);
-
-                    /**
-                     * 判断参数 ImageWidth 是否已赋值
-                     * @return ImageWidth 是否已赋值
-                     */
-                    bool ImageWidthHasBeenSet() const;
-
-                    /**
                      * 获取Output height of input video image. Value range:
 Pixel: [0,2000]
 Percentage: [0.01,0.99]
@@ -181,6 +151,40 @@ If percentage is used, the expected output is (percentage * background height).
                      * @return ImageHeight 是否已赋值
                      */
                     bool ImageHeightHasBeenSet() const;
+
+                    /**
+                     * 获取Output width of input video image. Value range:
+Pixel: [0,2000]
+Percentage: [0.01,0.99]
+If this parameter is left empty, the input stream width will be used by default.
+If percentage is used, the expected output is (percentage * background width).
+                     * @return ImageWidth Output width of input video image. Value range:
+Pixel: [0,2000]
+Percentage: [0.01,0.99]
+If this parameter is left empty, the input stream width will be used by default.
+If percentage is used, the expected output is (percentage * background width).
+                     */
+                    double GetImageWidth() const;
+
+                    /**
+                     * 设置Output width of input video image. Value range:
+Pixel: [0,2000]
+Percentage: [0.01,0.99]
+If this parameter is left empty, the input stream width will be used by default.
+If percentage is used, the expected output is (percentage * background width).
+                     * @param ImageWidth Output width of input video image. Value range:
+Pixel: [0,2000]
+Percentage: [0.01,0.99]
+If this parameter is left empty, the input stream width will be used by default.
+If percentage is used, the expected output is (percentage * background width).
+                     */
+                    void SetImageWidth(const double& _imageWidth);
+
+                    /**
+                     * 判断参数 ImageWidth 是否已赋值
+                     * @return ImageWidth 是否已赋值
+                     */
+                    bool ImageWidthHasBeenSet() const;
 
                     /**
                      * 获取X-axis offset of input in output video image. Value range:
@@ -329,9 +333,10 @@ Gray: 0x999999
                 private:
 
                     /**
-                     * Input layer. Value range: [1,16].
-1) For `image_layer` of background stream (i.e., main host video image or canvas), enter 1.
-2) For audio stream mix, this parameter is also required.
+                     * Input layer. Value range: [1,16]
+(1) For the background stream, i.e., the room owner’s image or the canvas, set this parameter to `1`.
+(2) This parameter is required for audio-only stream mixing as well.
+Note that two inputs cannot have the same `ImageLayer` value.
                      */
                     int64_t m_imageLayer;
                     bool m_imageLayerHasBeenSet;
@@ -349,16 +354,6 @@ If this parameter is left empty, 0 will be used by default.
                     bool m_inputTypeHasBeenSet;
 
                     /**
-                     * Output width of input video image. Value range:
-Pixel: [0,2000]
-Percentage: [0.01,0.99]
-If this parameter is left empty, the input stream width will be used by default.
-If percentage is used, the expected output is (percentage * background width).
-                     */
-                    double m_imageWidth;
-                    bool m_imageWidthHasBeenSet;
-
-                    /**
                      * Output height of input video image. Value range:
 Pixel: [0,2000]
 Percentage: [0.01,0.99]
@@ -367,6 +362,16 @@ If percentage is used, the expected output is (percentage * background height).
                      */
                     double m_imageHeight;
                     bool m_imageHeightHasBeenSet;
+
+                    /**
+                     * Output width of input video image. Value range:
+Pixel: [0,2000]
+Percentage: [0.01,0.99]
+If this parameter is left empty, the input stream width will be used by default.
+If percentage is used, the expected output is (percentage * background width).
+                     */
+                    double m_imageWidth;
+                    bool m_imageWidthHasBeenSet;
 
                     /**
                      * X-axis offset of input in output video image. Value range:

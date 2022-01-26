@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Emr::V20190103::Model;
-using namespace rapidjson;
 using namespace std;
 
 PreExecuteFileSettings::PreExecuteFileSettings() :
@@ -37,7 +36,7 @@ PreExecuteFileSettings::PreExecuteFileSettings() :
 {
 }
 
-CoreInternalOutcome PreExecuteFileSettings::Deserialize(const Value &value)
+CoreInternalOutcome PreExecuteFileSettings::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -46,7 +45,7 @@ CoreInternalOutcome PreExecuteFileSettings::Deserialize(const Value &value)
     {
         if (!value["Path"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PreExecuteFileSettings.Path` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PreExecuteFileSettings.Path` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_path = string(value["Path"].GetString());
         m_pathHasBeenSet = true;
@@ -55,10 +54,10 @@ CoreInternalOutcome PreExecuteFileSettings::Deserialize(const Value &value)
     if (value.HasMember("Args") && !value["Args"].IsNull())
     {
         if (!value["Args"].IsArray())
-            return CoreInternalOutcome(Error("response `PreExecuteFileSettings.Args` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `PreExecuteFileSettings.Args` is not array type"));
 
-        const Value &tmpValue = value["Args"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Args"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_args.push_back((*itr).GetString());
         }
@@ -69,7 +68,7 @@ CoreInternalOutcome PreExecuteFileSettings::Deserialize(const Value &value)
     {
         if (!value["Bucket"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PreExecuteFileSettings.Bucket` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PreExecuteFileSettings.Bucket` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_bucket = string(value["Bucket"].GetString());
         m_bucketHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome PreExecuteFileSettings::Deserialize(const Value &value)
     {
         if (!value["Region"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PreExecuteFileSettings.Region` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PreExecuteFileSettings.Region` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_region = string(value["Region"].GetString());
         m_regionHasBeenSet = true;
@@ -89,7 +88,7 @@ CoreInternalOutcome PreExecuteFileSettings::Deserialize(const Value &value)
     {
         if (!value["Domain"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PreExecuteFileSettings.Domain` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PreExecuteFileSettings.Domain` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_domain = string(value["Domain"].GetString());
         m_domainHasBeenSet = true;
@@ -99,7 +98,7 @@ CoreInternalOutcome PreExecuteFileSettings::Deserialize(const Value &value)
     {
         if (!value["RunOrder"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `PreExecuteFileSettings.RunOrder` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PreExecuteFileSettings.RunOrder` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_runOrder = value["RunOrder"].GetInt64();
         m_runOrderHasBeenSet = true;
@@ -109,7 +108,7 @@ CoreInternalOutcome PreExecuteFileSettings::Deserialize(const Value &value)
     {
         if (!value["WhenRun"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PreExecuteFileSettings.WhenRun` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PreExecuteFileSettings.WhenRun` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_whenRun = string(value["WhenRun"].GetString());
         m_whenRunHasBeenSet = true;
@@ -119,7 +118,7 @@ CoreInternalOutcome PreExecuteFileSettings::Deserialize(const Value &value)
     {
         if (!value["CosFileName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PreExecuteFileSettings.CosFileName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PreExecuteFileSettings.CosFileName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cosFileName = string(value["CosFileName"].GetString());
         m_cosFileNameHasBeenSet = true;
@@ -129,7 +128,7 @@ CoreInternalOutcome PreExecuteFileSettings::Deserialize(const Value &value)
     {
         if (!value["CosFileURI"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PreExecuteFileSettings.CosFileURI` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PreExecuteFileSettings.CosFileURI` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cosFileURI = string(value["CosFileURI"].GetString());
         m_cosFileURIHasBeenSet = true;
@@ -139,7 +138,7 @@ CoreInternalOutcome PreExecuteFileSettings::Deserialize(const Value &value)
     {
         if (!value["CosSecretId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PreExecuteFileSettings.CosSecretId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PreExecuteFileSettings.CosSecretId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cosSecretId = string(value["CosSecretId"].GetString());
         m_cosSecretIdHasBeenSet = true;
@@ -149,7 +148,7 @@ CoreInternalOutcome PreExecuteFileSettings::Deserialize(const Value &value)
     {
         if (!value["CosSecretKey"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PreExecuteFileSettings.CosSecretKey` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PreExecuteFileSettings.CosSecretKey` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cosSecretKey = string(value["CosSecretKey"].GetString());
         m_cosSecretKeyHasBeenSet = true;
@@ -159,7 +158,7 @@ CoreInternalOutcome PreExecuteFileSettings::Deserialize(const Value &value)
     {
         if (!value["AppId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PreExecuteFileSettings.AppId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PreExecuteFileSettings.AppId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_appId = string(value["AppId"].GetString());
         m_appIdHasBeenSet = true;
@@ -169,57 +168,57 @@ CoreInternalOutcome PreExecuteFileSettings::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void PreExecuteFileSettings::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void PreExecuteFileSettings::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_pathHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Path";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_path.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_path.c_str(), allocator).Move(), allocator);
     }
 
     if (m_argsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Args";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_args.begin(); itr != m_args.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_bucketHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Bucket";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_bucket.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_bucket.c_str(), allocator).Move(), allocator);
     }
 
     if (m_regionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Region";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_region.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_region.c_str(), allocator).Move(), allocator);
     }
 
     if (m_domainHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Domain";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_domain.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_domain.c_str(), allocator).Move(), allocator);
     }
 
     if (m_runOrderHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RunOrder";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_runOrder, allocator);
@@ -227,50 +226,50 @@ void PreExecuteFileSettings::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_whenRunHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "WhenRun";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_whenRun.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_whenRun.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cosFileNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CosFileName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cosFileName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cosFileName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cosFileURIHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CosFileURI";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cosFileURI.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cosFileURI.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cosSecretIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CosSecretId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cosSecretId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cosSecretId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cosSecretKeyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CosSecretKey";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cosSecretKey.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cosSecretKey.c_str(), allocator).Move(), allocator);
     }
 
     if (m_appIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AppId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_appId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_appId.c_str(), allocator).Move(), allocator);
     }
 
 }

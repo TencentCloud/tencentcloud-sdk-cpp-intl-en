@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 MediaAiAnalysisCoverItem::MediaAiAnalysisCoverItem() :
@@ -27,7 +26,7 @@ MediaAiAnalysisCoverItem::MediaAiAnalysisCoverItem() :
 {
 }
 
-CoreInternalOutcome MediaAiAnalysisCoverItem::Deserialize(const Value &value)
+CoreInternalOutcome MediaAiAnalysisCoverItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome MediaAiAnalysisCoverItem::Deserialize(const Value &value)
     {
         if (!value["CoverPath"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaAiAnalysisCoverItem.CoverPath` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaAiAnalysisCoverItem.CoverPath` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_coverPath = string(value["CoverPath"].GetString());
         m_coverPathHasBeenSet = true;
@@ -44,9 +43,9 @@ CoreInternalOutcome MediaAiAnalysisCoverItem::Deserialize(const Value &value)
 
     if (value.HasMember("Confidence") && !value["Confidence"].IsNull())
     {
-        if (!value["Confidence"].IsDouble())
+        if (!value["Confidence"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `MediaAiAnalysisCoverItem.Confidence` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaAiAnalysisCoverItem.Confidence` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_confidence = value["Confidence"].GetDouble();
         m_confidenceHasBeenSet = true;
@@ -56,20 +55,20 @@ CoreInternalOutcome MediaAiAnalysisCoverItem::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void MediaAiAnalysisCoverItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MediaAiAnalysisCoverItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_coverPathHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CoverPath";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_coverPath.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_coverPath.c_str(), allocator).Move(), allocator);
     }
 
     if (m_confidenceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Confidence";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_confidence, allocator);

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Monitor::V20180724::Model;
-using namespace rapidjson;
 using namespace std;
 
 BindingPolicyObjectDimension::BindingPolicyObjectDimension() :
@@ -29,7 +28,7 @@ BindingPolicyObjectDimension::BindingPolicyObjectDimension() :
 {
 }
 
-CoreInternalOutcome BindingPolicyObjectDimension::Deserialize(const Value &value)
+CoreInternalOutcome BindingPolicyObjectDimension::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome BindingPolicyObjectDimension::Deserialize(const Value &value
     {
         if (!value["Region"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BindingPolicyObjectDimension.Region` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BindingPolicyObjectDimension.Region` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_region = string(value["Region"].GetString());
         m_regionHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome BindingPolicyObjectDimension::Deserialize(const Value &value
     {
         if (!value["RegionId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `BindingPolicyObjectDimension.RegionId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BindingPolicyObjectDimension.RegionId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_regionId = value["RegionId"].GetInt64();
         m_regionIdHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome BindingPolicyObjectDimension::Deserialize(const Value &value
     {
         if (!value["Dimensions"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BindingPolicyObjectDimension.Dimensions` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BindingPolicyObjectDimension.Dimensions` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_dimensions = string(value["Dimensions"].GetString());
         m_dimensionsHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome BindingPolicyObjectDimension::Deserialize(const Value &value
     {
         if (!value["EventDimensions"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BindingPolicyObjectDimension.EventDimensions` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BindingPolicyObjectDimension.EventDimensions` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_eventDimensions = string(value["EventDimensions"].GetString());
         m_eventDimensionsHasBeenSet = true;
@@ -78,20 +77,20 @@ CoreInternalOutcome BindingPolicyObjectDimension::Deserialize(const Value &value
     return CoreInternalOutcome(true);
 }
 
-void BindingPolicyObjectDimension::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void BindingPolicyObjectDimension::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_regionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Region";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_region.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_region.c_str(), allocator).Move(), allocator);
     }
 
     if (m_regionIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RegionId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_regionId, allocator);
@@ -99,18 +98,18 @@ void BindingPolicyObjectDimension::ToJsonObject(Value &value, Document::Allocato
 
     if (m_dimensionsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Dimensions";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_dimensions.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_dimensions.c_str(), allocator).Move(), allocator);
     }
 
     if (m_eventDimensionsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EventDimensions";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_eventDimensions.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_eventDimensions.c_str(), allocator).Move(), allocator);
     }
 
 }

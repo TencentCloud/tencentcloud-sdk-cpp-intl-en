@@ -43,18 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`,
-The start time cannot be more than 30 days after the current time.
-                     * @return StartTime Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`,
-The start time cannot be more than 30 days after the current time.
+                     * 获取Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
+                     * @return StartTime Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`,
-The start time cannot be more than 30 days after the current time.
-                     * @param StartTime Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`,
-The start time cannot be more than 30 days after the current time.
+                     * 设置Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
+                     * @param StartTime Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
                      */
                     void SetStartTime(const std::string& _startTime);
 
@@ -65,18 +61,18 @@ The start time cannot be more than 30 days after the current time.
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`.
-The end time and start time must be on the same day.
-                     * @return EndTime End time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`.
-The end time and start time must be on the same day.
+                     * 获取End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
+The start time and end time cannot be more than 24 hours apart and must be within the last 15 days.
+                     * @return EndTime End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
+The start time and end time cannot be more than 24 hours apart and must be within the last 15 days.
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`.
-The end time and start time must be on the same day.
-                     * @param EndTime End time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`.
-The end time and start time must be on the same day.
+                     * 设置End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
+The start time and end time cannot be more than 24 hours apart and must be within the last 15 days.
+                     * @param EndTime End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
+The start time and end time cannot be more than 24 hours apart and must be within the last 15 days.
                      */
                     void SetEndTime(const std::string& _endTime);
 
@@ -131,22 +127,22 @@ If this parameter is left empty, full playback data will be queried.
                     bool StreamNameHasBeenSet() const;
 
                     /**
-                     * 获取Push path, which is the same as the `AppName` in the playback address, subject to exact match, and valid if `StreamName` is passed in.
-If this parameter is left empty, full playback data will be queried.
-Note: to query by `AppName`, you need to submit a ticket for application.
-                     * @return AppName Push path, which is the same as the `AppName` in the playback address, subject to exact match, and valid if `StreamName` is passed in.
-If this parameter is left empty, full playback data will be queried.
-Note: to query by `AppName`, you need to submit a ticket for application.
+                     * 获取Push address. Its value is the same as the `AppName` in playback address. It supports exact match, and takes effect only when `StreamName` is passed at the same time.
+If it is left empty, the full playback data will be queried.
+Note: to query by `AppName`, you need to submit a ticket first. After your application succeeds, it will take about 5 business days (subject to the time in the reply) for the configuration to take effect.
+                     * @return AppName Push address. Its value is the same as the `AppName` in playback address. It supports exact match, and takes effect only when `StreamName` is passed at the same time.
+If it is left empty, the full playback data will be queried.
+Note: to query by `AppName`, you need to submit a ticket first. After your application succeeds, it will take about 5 business days (subject to the time in the reply) for the configuration to take effect.
                      */
                     std::string GetAppName() const;
 
                     /**
-                     * 设置Push path, which is the same as the `AppName` in the playback address, subject to exact match, and valid if `StreamName` is passed in.
-If this parameter is left empty, full playback data will be queried.
-Note: to query by `AppName`, you need to submit a ticket for application.
-                     * @param AppName Push path, which is the same as the `AppName` in the playback address, subject to exact match, and valid if `StreamName` is passed in.
-If this parameter is left empty, full playback data will be queried.
-Note: to query by `AppName`, you need to submit a ticket for application.
+                     * 设置Push address. Its value is the same as the `AppName` in playback address. It supports exact match, and takes effect only when `StreamName` is passed at the same time.
+If it is left empty, the full playback data will be queried.
+Note: to query by `AppName`, you need to submit a ticket first. After your application succeeds, it will take about 5 business days (subject to the time in the reply) for the configuration to take effect.
+                     * @param AppName Push address. Its value is the same as the `AppName` in playback address. It supports exact match, and takes effect only when `StreamName` is passed at the same time.
+If it is left empty, the full playback data will be queried.
+Note: to query by `AppName`, you need to submit a ticket first. After your application succeeds, it will take about 5 business days (subject to the time in the reply) for the configuration to take effect.
                      */
                     void SetAppName(const std::string& _appName);
 
@@ -156,18 +152,35 @@ Note: to query by `AppName`, you need to submit a ticket for application.
                      */
                     bool AppNameHasBeenSet() const;
 
+                    /**
+                     * 获取Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
+                     * @return ServiceName Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
+                     */
+                    std::string GetServiceName() const;
+
+                    /**
+                     * 设置Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
+                     * @param ServiceName Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
+                     */
+                    void SetServiceName(const std::string& _serviceName);
+
+                    /**
+                     * 判断参数 ServiceName 是否已赋值
+                     * @return ServiceName 是否已赋值
+                     */
+                    bool ServiceNameHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`,
-The start time cannot be more than 30 days after the current time.
+                     * Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`.
-The end time and start time must be on the same day.
+                     * End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
+The start time and end time cannot be more than 24 hours apart and must be within the last 15 days.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
@@ -187,12 +200,18 @@ If this parameter is left empty, full playback data will be queried.
                     bool m_streamNameHasBeenSet;
 
                     /**
-                     * Push path, which is the same as the `AppName` in the playback address, subject to exact match, and valid if `StreamName` is passed in.
-If this parameter is left empty, full playback data will be queried.
-Note: to query by `AppName`, you need to submit a ticket for application.
+                     * Push address. Its value is the same as the `AppName` in playback address. It supports exact match, and takes effect only when `StreamName` is passed at the same time.
+If it is left empty, the full playback data will be queried.
+Note: to query by `AppName`, you need to submit a ticket first. After your application succeeds, it will take about 5 business days (subject to the time in the reply) for the configuration to take effect.
                      */
                     std::string m_appName;
                     bool m_appNameHasBeenSet;
+
+                    /**
+                     * Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
+                     */
+                    std::string m_serviceName;
+                    bool m_serviceNameHasBeenSet;
 
                 };
             }

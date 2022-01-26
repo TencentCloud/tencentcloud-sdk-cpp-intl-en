@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cam::V20190116::Model;
-using namespace rapidjson;
 using namespace std;
 
 AccessKey::AccessKey() :
@@ -28,7 +27,7 @@ AccessKey::AccessKey() :
 {
 }
 
-CoreInternalOutcome AccessKey::Deserialize(const Value &value)
+CoreInternalOutcome AccessKey::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome AccessKey::Deserialize(const Value &value)
     {
         if (!value["AccessKeyId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccessKey.AccessKeyId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccessKey.AccessKeyId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_accessKeyId = string(value["AccessKeyId"].GetString());
         m_accessKeyIdHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome AccessKey::Deserialize(const Value &value)
     {
         if (!value["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccessKey.Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccessKey.Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(value["Status"].GetString());
         m_statusHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome AccessKey::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccessKey.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccessKey.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -67,31 +66,31 @@ CoreInternalOutcome AccessKey::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void AccessKey::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AccessKey::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_accessKeyIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AccessKeyId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_accessKeyId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_accessKeyId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_status.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
 }

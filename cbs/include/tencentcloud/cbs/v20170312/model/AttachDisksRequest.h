@@ -43,32 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the elastic cloud disk to be mounted, which can be queried through the API [DescribeDisks](/document/product/362/16315). A maximum of 10 elastic cloud disks can be mounted in a single request.
-                     * @return DiskIds ID of the elastic cloud disk to be mounted, which can be queried through the API [DescribeDisks](/document/product/362/16315). A maximum of 10 elastic cloud disks can be mounted in a single request.
-                     */
-                    std::vector<std::string> GetDiskIds() const;
-
-                    /**
-                     * 设置ID of the elastic cloud disk to be mounted, which can be queried through the API [DescribeDisks](/document/product/362/16315). A maximum of 10 elastic cloud disks can be mounted in a single request.
-                     * @param DiskIds ID of the elastic cloud disk to be mounted, which can be queried through the API [DescribeDisks](/document/product/362/16315). A maximum of 10 elastic cloud disks can be mounted in a single request.
-                     */
-                    void SetDiskIds(const std::vector<std::string>& _diskIds);
-
-                    /**
-                     * 判断参数 DiskIds 是否已赋值
-                     * @return DiskIds 是否已赋值
-                     */
-                    bool DiskIdsHasBeenSet() const;
-
-                    /**
-                     * 获取ID of the CVM instance on which the cloud disk will be mounted. It can be queried via the API [DescribeInstances](/document/product/213/15728).
-                     * @return InstanceId ID of the CVM instance on which the cloud disk will be mounted. It can be queried via the API [DescribeInstances](/document/product/213/15728).
+                     * 获取ID of the CVM instance on which the cloud disk will be mounted. It can be queried via the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/15728?from_cn_redirect=1).
+                     * @return InstanceId ID of the CVM instance on which the cloud disk will be mounted. It can be queried via the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/15728?from_cn_redirect=1).
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置ID of the CVM instance on which the cloud disk will be mounted. It can be queried via the API [DescribeInstances](/document/product/213/15728).
-                     * @param InstanceId ID of the CVM instance on which the cloud disk will be mounted. It can be queried via the API [DescribeInstances](/document/product/213/15728).
+                     * 设置ID of the CVM instance on which the cloud disk will be mounted. It can be queried via the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/15728?from_cn_redirect=1).
+                     * @param InstanceId ID of the CVM instance on which the cloud disk will be mounted. It can be queried via the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/15728?from_cn_redirect=1).
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -77,6 +59,24 @@ namespace TencentCloud
                      * @return InstanceId 是否已赋值
                      */
                     bool InstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取ID of the elastic cloud disk to be mounted, which can be queried through the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1). A maximum of 10 elastic cloud disks can be mounted in a single request.
+                     * @return DiskIds ID of the elastic cloud disk to be mounted, which can be queried through the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1). A maximum of 10 elastic cloud disks can be mounted in a single request.
+                     */
+                    std::vector<std::string> GetDiskIds() const;
+
+                    /**
+                     * 设置ID of the elastic cloud disk to be mounted, which can be queried through the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1). A maximum of 10 elastic cloud disks can be mounted in a single request.
+                     * @param DiskIds ID of the elastic cloud disk to be mounted, which can be queried through the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1). A maximum of 10 elastic cloud disks can be mounted in a single request.
+                     */
+                    void SetDiskIds(const std::vector<std::string>& _diskIds);
+
+                    /**
+                     * 判断参数 DiskIds 是否已赋值
+                     * @return DiskIds 是否已赋值
+                     */
+                    bool DiskIdsHasBeenSet() const;
 
                     /**
                      * 获取Optional parameter. If this is not passed only the mount operation is executed. If `True` is passed, the cloud disk will be configured to be terminated when the server it is mounted to is terminated. This is only valid for pay-as-you-go cloud disks.
@@ -96,25 +96,49 @@ namespace TencentCloud
                      */
                     bool DeleteWithInstanceHasBeenSet() const;
 
+                    /**
+                     * 获取(Optional) Specifies the cloud disk mounting method. It’s only valid for BM models. Valid values: <br><li>PF<br><li>VF
+                     * @return AttachMode (Optional) Specifies the cloud disk mounting method. It’s only valid for BM models. Valid values: <br><li>PF<br><li>VF
+                     */
+                    std::string GetAttachMode() const;
+
+                    /**
+                     * 设置(Optional) Specifies the cloud disk mounting method. It’s only valid for BM models. Valid values: <br><li>PF<br><li>VF
+                     * @param AttachMode (Optional) Specifies the cloud disk mounting method. It’s only valid for BM models. Valid values: <br><li>PF<br><li>VF
+                     */
+                    void SetAttachMode(const std::string& _attachMode);
+
+                    /**
+                     * 判断参数 AttachMode 是否已赋值
+                     * @return AttachMode 是否已赋值
+                     */
+                    bool AttachModeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * ID of the elastic cloud disk to be mounted, which can be queried through the API [DescribeDisks](/document/product/362/16315). A maximum of 10 elastic cloud disks can be mounted in a single request.
-                     */
-                    std::vector<std::string> m_diskIds;
-                    bool m_diskIdsHasBeenSet;
-
-                    /**
-                     * ID of the CVM instance on which the cloud disk will be mounted. It can be queried via the API [DescribeInstances](/document/product/213/15728).
+                     * ID of the CVM instance on which the cloud disk will be mounted. It can be queried via the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/15728?from_cn_redirect=1).
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * ID of the elastic cloud disk to be mounted, which can be queried through the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1). A maximum of 10 elastic cloud disks can be mounted in a single request.
+                     */
+                    std::vector<std::string> m_diskIds;
+                    bool m_diskIdsHasBeenSet;
 
                     /**
                      * Optional parameter. If this is not passed only the mount operation is executed. If `True` is passed, the cloud disk will be configured to be terminated when the server it is mounted to is terminated. This is only valid for pay-as-you-go cloud disks.
                      */
                     bool m_deleteWithInstance;
                     bool m_deleteWithInstanceHasBeenSet;
+
+                    /**
+                     * (Optional) Specifies the cloud disk mounting method. It’s only valid for BM models. Valid values: <br><li>PF<br><li>VF
+                     */
+                    std::string m_attachMode;
+                    bool m_attachModeHasBeenSet;
 
                 };
             }

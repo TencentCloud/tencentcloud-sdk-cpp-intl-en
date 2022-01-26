@@ -18,11 +18,11 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 AiAnalysisTaskTagResult::AiAnalysisTaskTagResult() :
     m_statusHasBeenSet(false),
+    m_errCodeExtHasBeenSet(false),
     m_errCodeHasBeenSet(false),
     m_messageHasBeenSet(false),
     m_inputHasBeenSet(false),
@@ -30,7 +30,7 @@ AiAnalysisTaskTagResult::AiAnalysisTaskTagResult() :
 {
 }
 
-CoreInternalOutcome AiAnalysisTaskTagResult::Deserialize(const Value &value)
+CoreInternalOutcome AiAnalysisTaskTagResult::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,17 +39,27 @@ CoreInternalOutcome AiAnalysisTaskTagResult::Deserialize(const Value &value)
     {
         if (!value["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AiAnalysisTaskTagResult.Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiAnalysisTaskTagResult.Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(value["Status"].GetString());
         m_statusHasBeenSet = true;
+    }
+
+    if (value.HasMember("ErrCodeExt") && !value["ErrCodeExt"].IsNull())
+    {
+        if (!value["ErrCodeExt"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AiAnalysisTaskTagResult.ErrCodeExt` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_errCodeExt = string(value["ErrCodeExt"].GetString());
+        m_errCodeExtHasBeenSet = true;
     }
 
     if (value.HasMember("ErrCode") && !value["ErrCode"].IsNull())
     {
         if (!value["ErrCode"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `AiAnalysisTaskTagResult.ErrCode` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiAnalysisTaskTagResult.ErrCode` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_errCode = value["ErrCode"].GetInt64();
         m_errCodeHasBeenSet = true;
@@ -59,7 +69,7 @@ CoreInternalOutcome AiAnalysisTaskTagResult::Deserialize(const Value &value)
     {
         if (!value["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AiAnalysisTaskTagResult.Message` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiAnalysisTaskTagResult.Message` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_message = string(value["Message"].GetString());
         m_messageHasBeenSet = true;
@@ -69,7 +79,7 @@ CoreInternalOutcome AiAnalysisTaskTagResult::Deserialize(const Value &value)
     {
         if (!value["Input"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AiAnalysisTaskTagResult.Input` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiAnalysisTaskTagResult.Input` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_input.Deserialize(value["Input"]);
@@ -86,7 +96,7 @@ CoreInternalOutcome AiAnalysisTaskTagResult::Deserialize(const Value &value)
     {
         if (!value["Output"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AiAnalysisTaskTagResult.Output` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiAnalysisTaskTagResult.Output` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_output.Deserialize(value["Output"]);
@@ -103,20 +113,28 @@ CoreInternalOutcome AiAnalysisTaskTagResult::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void AiAnalysisTaskTagResult::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AiAnalysisTaskTagResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_status.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_errCodeExtHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ErrCodeExt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_errCodeExt.c_str(), allocator).Move(), allocator);
     }
 
     if (m_errCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ErrCode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_errCode, allocator);
@@ -124,27 +142,27 @@ void AiAnalysisTaskTagResult::ToJsonObject(Value &value, Document::AllocatorType
 
     if (m_messageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Message";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_message.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_message.c_str(), allocator).Move(), allocator);
     }
 
     if (m_inputHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Input";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_input.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_outputHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Output";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_output.ToJsonObject(value[key.c_str()], allocator);
     }
 
@@ -165,6 +183,22 @@ void AiAnalysisTaskTagResult::SetStatus(const string& _status)
 bool AiAnalysisTaskTagResult::StatusHasBeenSet() const
 {
     return m_statusHasBeenSet;
+}
+
+string AiAnalysisTaskTagResult::GetErrCodeExt() const
+{
+    return m_errCodeExt;
+}
+
+void AiAnalysisTaskTagResult::SetErrCodeExt(const string& _errCodeExt)
+{
+    m_errCodeExt = _errCodeExt;
+    m_errCodeExtHasBeenSet = true;
+}
+
+bool AiAnalysisTaskTagResult::ErrCodeExtHasBeenSet() const
+{
+    return m_errCodeExtHasBeenSet;
 }
 
 int64_t AiAnalysisTaskTagResult::GetErrCode() const

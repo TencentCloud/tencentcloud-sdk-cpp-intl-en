@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 AdaptiveDynamicStreamingInfoItem::AdaptiveDynamicStreamingInfoItem() :
@@ -29,7 +28,7 @@ AdaptiveDynamicStreamingInfoItem::AdaptiveDynamicStreamingInfoItem() :
 {
 }
 
-CoreInternalOutcome AdaptiveDynamicStreamingInfoItem::Deserialize(const Value &value)
+CoreInternalOutcome AdaptiveDynamicStreamingInfoItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome AdaptiveDynamicStreamingInfoItem::Deserialize(const Value &v
     {
         if (!value["Definition"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `AdaptiveDynamicStreamingInfoItem.Definition` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingInfoItem.Definition` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_definition = value["Definition"].GetInt64();
         m_definitionHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome AdaptiveDynamicStreamingInfoItem::Deserialize(const Value &v
     {
         if (!value["Package"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AdaptiveDynamicStreamingInfoItem.Package` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingInfoItem.Package` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_package = string(value["Package"].GetString());
         m_packageHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome AdaptiveDynamicStreamingInfoItem::Deserialize(const Value &v
     {
         if (!value["DrmType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AdaptiveDynamicStreamingInfoItem.DrmType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingInfoItem.DrmType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_drmType = string(value["DrmType"].GetString());
         m_drmTypeHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome AdaptiveDynamicStreamingInfoItem::Deserialize(const Value &v
     {
         if (!value["Url"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AdaptiveDynamicStreamingInfoItem.Url` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingInfoItem.Url` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_url = string(value["Url"].GetString());
         m_urlHasBeenSet = true;
@@ -78,12 +77,12 @@ CoreInternalOutcome AdaptiveDynamicStreamingInfoItem::Deserialize(const Value &v
     return CoreInternalOutcome(true);
 }
 
-void AdaptiveDynamicStreamingInfoItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AdaptiveDynamicStreamingInfoItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_definitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Definition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_definition, allocator);
@@ -91,26 +90,26 @@ void AdaptiveDynamicStreamingInfoItem::ToJsonObject(Value &value, Document::Allo
 
     if (m_packageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Package";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_package.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_package.c_str(), allocator).Move(), allocator);
     }
 
     if (m_drmTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DrmType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_drmType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_drmType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_urlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Url";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_url.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_url.c_str(), allocator).Move(), allocator);
     }
 
 }

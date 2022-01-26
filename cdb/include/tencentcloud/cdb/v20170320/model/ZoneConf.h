@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool DeployModeHasBeenSet() const;
 
                     /**
-                     * 获取AZ where the master instance is located
-                     * @return MasterZone AZ where the master instance is located
+                     * 获取AZ where the primary instance is located
+                     * @return MasterZone AZ where the primary instance is located
                      */
                     std::vector<std::string> GetMasterZone() const;
 
                     /**
-                     * 设置AZ where the master instance is located
-                     * @param MasterZone AZ where the master instance is located
+                     * 设置AZ where the primary instance is located
+                     * @param MasterZone AZ where the primary instance is located
                      */
                     void SetMasterZone(const std::vector<std::string>& _masterZone);
 
@@ -127,7 +127,7 @@ namespace TencentCloud
                     bool m_deployModeHasBeenSet;
 
                     /**
-                     * AZ where the master instance is located
+                     * AZ where the primary instance is located
                      */
                     std::vector<std::string> m_masterZone;
                     bool m_masterZoneHasBeenSet;

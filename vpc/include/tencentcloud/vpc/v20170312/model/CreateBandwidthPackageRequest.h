@@ -44,14 +44,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'.
-                     * @return NetworkType The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'.
+                     * 获取The network type of the bandwidth package. Default value: `BGP`. Valid values:
+`BGP` 
+`HIGH_QUALITY_BGP`
+                     * @return NetworkType The network type of the bandwidth package. Default value: `BGP`. Valid values:
+`BGP` 
+`HIGH_QUALITY_BGP`
                      */
                     std::string GetNetworkType() const;
 
                     /**
-                     * 设置The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'.
-                     * @param NetworkType The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'.
+                     * 设置The network type of the bandwidth package. Default value: `BGP`. Valid values:
+`BGP` 
+`HIGH_QUALITY_BGP`
+                     * @param NetworkType The network type of the bandwidth package. Default value: `BGP`. Valid values:
+`BGP` 
+`HIGH_QUALITY_BGP`
                      */
                     void SetNetworkType(const std::string& _networkType);
 
@@ -62,14 +70,26 @@ namespace TencentCloud
                     bool NetworkTypeHasBeenSet() const;
 
                     /**
-                     * 获取The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.
-                     * @return ChargeType The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.
+                     * 获取The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
+<li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
+<li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
+<li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
+                     * @return ChargeType The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
+<li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
+<li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
+<li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
                      */
                     std::string GetChargeType() const;
 
                     /**
-                     * 设置The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.
-                     * @param ChargeType The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.
+                     * 设置The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
+<li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
+<li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
+<li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
+                     * @param ChargeType The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
+<li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
+<li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
+<li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
                      */
                     void SetChargeType(const std::string& _chargeType);
 
@@ -98,14 +118,14 @@ namespace TencentCloud
                     bool BandwidthPackageNameHasBeenSet() const;
 
                     /**
-                     * 获取The number of bandwidth packages (enter 1 for bill-by-CVM accounts).
-                     * @return BandwidthPackageCount The number of bandwidth packages (enter 1 for bill-by-CVM accounts).
+                     * 获取The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
+                     * @return BandwidthPackageCount The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
                      */
                     uint64_t GetBandwidthPackageCount() const;
 
                     /**
-                     * 设置The number of bandwidth packages (enter 1 for bill-by-CVM accounts).
-                     * @param BandwidthPackageCount The number of bandwidth packages (enter 1 for bill-by-CVM accounts).
+                     * 设置The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
+                     * @param BandwidthPackageCount The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
                      */
                     void SetBandwidthPackageCount(const uint64_t& _bandwidthPackageCount);
 
@@ -116,14 +136,14 @@ namespace TencentCloud
                     bool BandwidthPackageCountHasBeenSet() const;
 
                     /**
-                     * 获取The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
-                     * @return InternetMaxBandwidth The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
+                     * 获取The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. This feature is currently in beta.
+                     * @return InternetMaxBandwidth The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. This feature is currently in beta.
                      */
                     int64_t GetInternetMaxBandwidth() const;
 
                     /**
-                     * 设置The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
-                     * @param InternetMaxBandwidth The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
+                     * 设置The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. This feature is currently in beta.
+                     * @param InternetMaxBandwidth The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. This feature is currently in beta.
                      */
                     void SetInternetMaxBandwidth(const int64_t& _internetMaxBandwidth);
 
@@ -172,13 +192,18 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'.
+                     * The network type of the bandwidth package. Default value: `BGP`. Valid values:
+`BGP` 
+`HIGH_QUALITY_BGP`
                      */
                     std::string m_networkType;
                     bool m_networkTypeHasBeenSet;
 
                     /**
-                     * The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.
+                     * The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
+<li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
+<li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
+<li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
                      */
                     std::string m_chargeType;
                     bool m_chargeTypeHasBeenSet;
@@ -190,13 +215,13 @@ namespace TencentCloud
                     bool m_bandwidthPackageNameHasBeenSet;
 
                     /**
-                     * The number of bandwidth packages (enter 1 for bill-by-CVM accounts).
+                     * The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
                      */
                     uint64_t m_bandwidthPackageCount;
                     bool m_bandwidthPackageCountHasBeenSet;
 
                     /**
-                     * The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
+                     * The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. This feature is currently in beta.
                      */
                     int64_t m_internetMaxBandwidth;
                     bool m_internetMaxBandwidthHasBeenSet;

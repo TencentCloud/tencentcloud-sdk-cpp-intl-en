@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 CommitUploadResponse::CommitUploadResponse() :
@@ -33,20 +32,20 @@ CommitUploadResponse::CommitUploadResponse() :
 
 CoreInternalOutcome CommitUploadResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -57,11 +56,11 @@ CoreInternalOutcome CommitUploadResponse::Deserialize(const string &payload)
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -69,7 +68,7 @@ CoreInternalOutcome CommitUploadResponse::Deserialize(const string &payload)
     {
         if (!rsp["FileId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FileId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FileId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fileId = string(rsp["FileId"].GetString());
         m_fileIdHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome CommitUploadResponse::Deserialize(const string &payload)
     {
         if (!rsp["MediaUrl"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaUrl` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaUrl` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_mediaUrl = string(rsp["MediaUrl"].GetString());
         m_mediaUrlHasBeenSet = true;
@@ -89,7 +88,7 @@ CoreInternalOutcome CommitUploadResponse::Deserialize(const string &payload)
     {
         if (!rsp["CoverUrl"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CoverUrl` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CoverUrl` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_coverUrl = string(rsp["CoverUrl"].GetString());
         m_coverUrlHasBeenSet = true;
@@ -97,6 +96,47 @@ CoreInternalOutcome CommitUploadResponse::Deserialize(const string &payload)
 
 
     return CoreInternalOutcome(true);
+}
+
+string CommitUploadResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_fileIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FileId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fileId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_mediaUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MediaUrl";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_mediaUrl.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_coverUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CoverUrl";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_coverUrl.c_str(), allocator).Move(), allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cmq::V20190304::Model;
-using namespace rapidjson;
 using namespace std;
 
 Subscription::Subscription() :
@@ -37,7 +36,7 @@ Subscription::Subscription() :
 {
 }
 
-CoreInternalOutcome Subscription::Deserialize(const Value &value)
+CoreInternalOutcome Subscription::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -46,7 +45,7 @@ CoreInternalOutcome Subscription::Deserialize(const Value &value)
     {
         if (!value["SubscriptionName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Subscription.SubscriptionName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Subscription.SubscriptionName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_subscriptionName = string(value["SubscriptionName"].GetString());
         m_subscriptionNameHasBeenSet = true;
@@ -56,7 +55,7 @@ CoreInternalOutcome Subscription::Deserialize(const Value &value)
     {
         if (!value["SubscriptionId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Subscription.SubscriptionId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Subscription.SubscriptionId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_subscriptionId = string(value["SubscriptionId"].GetString());
         m_subscriptionIdHasBeenSet = true;
@@ -66,7 +65,7 @@ CoreInternalOutcome Subscription::Deserialize(const Value &value)
     {
         if (!value["TopicOwner"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Subscription.TopicOwner` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Subscription.TopicOwner` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_topicOwner = value["TopicOwner"].GetUint64();
         m_topicOwnerHasBeenSet = true;
@@ -76,7 +75,7 @@ CoreInternalOutcome Subscription::Deserialize(const Value &value)
     {
         if (!value["MsgCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Subscription.MsgCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Subscription.MsgCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_msgCount = value["MsgCount"].GetUint64();
         m_msgCountHasBeenSet = true;
@@ -86,7 +85,7 @@ CoreInternalOutcome Subscription::Deserialize(const Value &value)
     {
         if (!value["LastModifyTime"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Subscription.LastModifyTime` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Subscription.LastModifyTime` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_lastModifyTime = value["LastModifyTime"].GetUint64();
         m_lastModifyTimeHasBeenSet = true;
@@ -96,7 +95,7 @@ CoreInternalOutcome Subscription::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Subscription.CreateTime` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Subscription.CreateTime` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = value["CreateTime"].GetUint64();
         m_createTimeHasBeenSet = true;
@@ -105,10 +104,10 @@ CoreInternalOutcome Subscription::Deserialize(const Value &value)
     if (value.HasMember("BindingKey") && !value["BindingKey"].IsNull())
     {
         if (!value["BindingKey"].IsArray())
-            return CoreInternalOutcome(Error("response `Subscription.BindingKey` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Subscription.BindingKey` is not array type"));
 
-        const Value &tmpValue = value["BindingKey"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["BindingKey"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_bindingKey.push_back((*itr).GetString());
         }
@@ -119,7 +118,7 @@ CoreInternalOutcome Subscription::Deserialize(const Value &value)
     {
         if (!value["Endpoint"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Subscription.Endpoint` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Subscription.Endpoint` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_endpoint = string(value["Endpoint"].GetString());
         m_endpointHasBeenSet = true;
@@ -128,10 +127,10 @@ CoreInternalOutcome Subscription::Deserialize(const Value &value)
     if (value.HasMember("FilterTags") && !value["FilterTags"].IsNull())
     {
         if (!value["FilterTags"].IsArray())
-            return CoreInternalOutcome(Error("response `Subscription.FilterTags` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Subscription.FilterTags` is not array type"));
 
-        const Value &tmpValue = value["FilterTags"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["FilterTags"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_filterTags.push_back((*itr).GetString());
         }
@@ -142,7 +141,7 @@ CoreInternalOutcome Subscription::Deserialize(const Value &value)
     {
         if (!value["Protocol"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Subscription.Protocol` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Subscription.Protocol` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_protocol = string(value["Protocol"].GetString());
         m_protocolHasBeenSet = true;
@@ -152,7 +151,7 @@ CoreInternalOutcome Subscription::Deserialize(const Value &value)
     {
         if (!value["NotifyStrategy"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Subscription.NotifyStrategy` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Subscription.NotifyStrategy` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_notifyStrategy = string(value["NotifyStrategy"].GetString());
         m_notifyStrategyHasBeenSet = true;
@@ -162,7 +161,7 @@ CoreInternalOutcome Subscription::Deserialize(const Value &value)
     {
         if (!value["NotifyContentFormat"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Subscription.NotifyContentFormat` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Subscription.NotifyContentFormat` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_notifyContentFormat = string(value["NotifyContentFormat"].GetString());
         m_notifyContentFormatHasBeenSet = true;
@@ -172,28 +171,28 @@ CoreInternalOutcome Subscription::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Subscription::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Subscription::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_subscriptionNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubscriptionName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_subscriptionName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_subscriptionName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_subscriptionIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubscriptionId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_subscriptionId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_subscriptionId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_topicOwnerHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TopicOwner";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_topicOwner, allocator);
@@ -201,7 +200,7 @@ void Subscription::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_msgCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MsgCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_msgCount, allocator);
@@ -209,7 +208,7 @@ void Subscription::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_lastModifyTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LastModifyTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_lastModifyTime, allocator);
@@ -217,7 +216,7 @@ void Subscription::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_createTime, allocator);
@@ -225,60 +224,60 @@ void Subscription::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_bindingKeyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BindingKey";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_bindingKey.begin(); itr != m_bindingKey.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_endpointHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Endpoint";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_endpoint.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_endpoint.c_str(), allocator).Move(), allocator);
     }
 
     if (m_filterTagsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FilterTags";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_filterTags.begin(); itr != m_filterTags.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_protocolHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Protocol";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_protocol.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
     }
 
     if (m_notifyStrategyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NotifyStrategy";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_notifyStrategy.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_notifyStrategy.c_str(), allocator).Move(), allocator);
     }
 
     if (m_notifyContentFormatHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NotifyContentFormat";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_notifyContentFormat.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_notifyContentFormat.c_str(), allocator).Move(), allocator);
     }
 
 }

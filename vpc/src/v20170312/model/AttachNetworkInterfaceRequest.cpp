@@ -20,41 +20,49 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 AttachNetworkInterfaceRequest::AttachNetworkInterfaceRequest() :
     m_networkInterfaceIdHasBeenSet(false),
-    m_instanceIdHasBeenSet(false)
+    m_instanceIdHasBeenSet(false),
+    m_attachTypeHasBeenSet(false)
 {
 }
 
 string AttachNetworkInterfaceRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_networkInterfaceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetworkInterfaceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_networkInterfaceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_networkInterfaceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_attachTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AttachType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_attachType, allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -90,6 +98,22 @@ void AttachNetworkInterfaceRequest::SetInstanceId(const string& _instanceId)
 bool AttachNetworkInterfaceRequest::InstanceIdHasBeenSet() const
 {
     return m_instanceIdHasBeenSet;
+}
+
+uint64_t AttachNetworkInterfaceRequest::GetAttachType() const
+{
+    return m_attachType;
+}
+
+void AttachNetworkInterfaceRequest::SetAttachType(const uint64_t& _attachType)
+{
+    m_attachType = _attachType;
+    m_attachTypeHasBeenSet = true;
+}
+
+bool AttachNetworkInterfaceRequest::AttachTypeHasBeenSet() const
+{
+    return m_attachTypeHasBeenSet;
 }
 
 

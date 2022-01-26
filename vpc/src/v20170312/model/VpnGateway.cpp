@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 VpnGateway::VpnGateway() :
@@ -39,11 +38,13 @@ VpnGateway::VpnGateway() :
     m_zoneHasBeenSet(false),
     m_vpnGatewayQuotaSetHasBeenSet(false),
     m_versionHasBeenSet(false),
-    m_networkInstanceIdHasBeenSet(false)
+    m_networkInstanceIdHasBeenSet(false),
+    m_cdcIdHasBeenSet(false),
+    m_maxConnectionHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome VpnGateway::Deserialize(const Value &value)
+CoreInternalOutcome VpnGateway::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -52,7 +53,7 @@ CoreInternalOutcome VpnGateway::Deserialize(const Value &value)
     {
         if (!value["VpnGatewayId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnGateway.VpnGatewayId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnGateway.VpnGatewayId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpnGatewayId = string(value["VpnGatewayId"].GetString());
         m_vpnGatewayIdHasBeenSet = true;
@@ -62,7 +63,7 @@ CoreInternalOutcome VpnGateway::Deserialize(const Value &value)
     {
         if (!value["VpcId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnGateway.VpcId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnGateway.VpcId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpcId = string(value["VpcId"].GetString());
         m_vpcIdHasBeenSet = true;
@@ -72,7 +73,7 @@ CoreInternalOutcome VpnGateway::Deserialize(const Value &value)
     {
         if (!value["VpnGatewayName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnGateway.VpnGatewayName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnGateway.VpnGatewayName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpnGatewayName = string(value["VpnGatewayName"].GetString());
         m_vpnGatewayNameHasBeenSet = true;
@@ -82,7 +83,7 @@ CoreInternalOutcome VpnGateway::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnGateway.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnGateway.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -92,7 +93,7 @@ CoreInternalOutcome VpnGateway::Deserialize(const Value &value)
     {
         if (!value["State"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnGateway.State` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnGateway.State` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_state = string(value["State"].GetString());
         m_stateHasBeenSet = true;
@@ -102,7 +103,7 @@ CoreInternalOutcome VpnGateway::Deserialize(const Value &value)
     {
         if (!value["PublicIpAddress"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnGateway.PublicIpAddress` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnGateway.PublicIpAddress` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_publicIpAddress = string(value["PublicIpAddress"].GetString());
         m_publicIpAddressHasBeenSet = true;
@@ -112,7 +113,7 @@ CoreInternalOutcome VpnGateway::Deserialize(const Value &value)
     {
         if (!value["RenewFlag"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnGateway.RenewFlag` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnGateway.RenewFlag` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_renewFlag = string(value["RenewFlag"].GetString());
         m_renewFlagHasBeenSet = true;
@@ -122,7 +123,7 @@ CoreInternalOutcome VpnGateway::Deserialize(const Value &value)
     {
         if (!value["InstanceChargeType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnGateway.InstanceChargeType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnGateway.InstanceChargeType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceChargeType = string(value["InstanceChargeType"].GetString());
         m_instanceChargeTypeHasBeenSet = true;
@@ -132,7 +133,7 @@ CoreInternalOutcome VpnGateway::Deserialize(const Value &value)
     {
         if (!value["InternetMaxBandwidthOut"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `VpnGateway.InternetMaxBandwidthOut` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnGateway.InternetMaxBandwidthOut` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_internetMaxBandwidthOut = value["InternetMaxBandwidthOut"].GetUint64();
         m_internetMaxBandwidthOutHasBeenSet = true;
@@ -142,7 +143,7 @@ CoreInternalOutcome VpnGateway::Deserialize(const Value &value)
     {
         if (!value["CreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnGateway.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnGateway.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createdTime = string(value["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
@@ -152,7 +153,7 @@ CoreInternalOutcome VpnGateway::Deserialize(const Value &value)
     {
         if (!value["ExpiredTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnGateway.ExpiredTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnGateway.ExpiredTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_expiredTime = string(value["ExpiredTime"].GetString());
         m_expiredTimeHasBeenSet = true;
@@ -162,7 +163,7 @@ CoreInternalOutcome VpnGateway::Deserialize(const Value &value)
     {
         if (!value["IsAddressBlocked"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `VpnGateway.IsAddressBlocked` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnGateway.IsAddressBlocked` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_isAddressBlocked = value["IsAddressBlocked"].GetBool();
         m_isAddressBlockedHasBeenSet = true;
@@ -172,7 +173,7 @@ CoreInternalOutcome VpnGateway::Deserialize(const Value &value)
     {
         if (!value["NewPurchasePlan"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnGateway.NewPurchasePlan` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnGateway.NewPurchasePlan` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_newPurchasePlan = string(value["NewPurchasePlan"].GetString());
         m_newPurchasePlanHasBeenSet = true;
@@ -182,7 +183,7 @@ CoreInternalOutcome VpnGateway::Deserialize(const Value &value)
     {
         if (!value["RestrictState"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnGateway.RestrictState` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnGateway.RestrictState` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_restrictState = string(value["RestrictState"].GetString());
         m_restrictStateHasBeenSet = true;
@@ -192,7 +193,7 @@ CoreInternalOutcome VpnGateway::Deserialize(const Value &value)
     {
         if (!value["Zone"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnGateway.Zone` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnGateway.Zone` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_zone = string(value["Zone"].GetString());
         m_zoneHasBeenSet = true;
@@ -201,10 +202,10 @@ CoreInternalOutcome VpnGateway::Deserialize(const Value &value)
     if (value.HasMember("VpnGatewayQuotaSet") && !value["VpnGatewayQuotaSet"].IsNull())
     {
         if (!value["VpnGatewayQuotaSet"].IsArray())
-            return CoreInternalOutcome(Error("response `VpnGateway.VpnGatewayQuotaSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `VpnGateway.VpnGatewayQuotaSet` is not array type"));
 
-        const Value &tmpValue = value["VpnGatewayQuotaSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["VpnGatewayQuotaSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             VpnGatewayQuota item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -222,7 +223,7 @@ CoreInternalOutcome VpnGateway::Deserialize(const Value &value)
     {
         if (!value["Version"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnGateway.Version` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnGateway.Version` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_version = string(value["Version"].GetString());
         m_versionHasBeenSet = true;
@@ -232,86 +233,106 @@ CoreInternalOutcome VpnGateway::Deserialize(const Value &value)
     {
         if (!value["NetworkInstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnGateway.NetworkInstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnGateway.NetworkInstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_networkInstanceId = string(value["NetworkInstanceId"].GetString());
         m_networkInstanceIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("CdcId") && !value["CdcId"].IsNull())
+    {
+        if (!value["CdcId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `VpnGateway.CdcId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_cdcId = string(value["CdcId"].GetString());
+        m_cdcIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("MaxConnection") && !value["MaxConnection"].IsNull())
+    {
+        if (!value["MaxConnection"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `VpnGateway.MaxConnection` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_maxConnection = value["MaxConnection"].GetUint64();
+        m_maxConnectionHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void VpnGateway::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void VpnGateway::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_vpnGatewayIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpnGatewayId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vpnGatewayId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpnGatewayId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vpcId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpcId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vpnGatewayNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpnGatewayName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vpnGatewayName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpnGatewayName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_stateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "State";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_state.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_state.c_str(), allocator).Move(), allocator);
     }
 
     if (m_publicIpAddressHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PublicIpAddress";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_publicIpAddress.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_publicIpAddress.c_str(), allocator).Move(), allocator);
     }
 
     if (m_renewFlagHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RenewFlag";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_renewFlag.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_renewFlag.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceChargeTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceChargeType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceChargeType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceChargeType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_internetMaxBandwidthOutHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InternetMaxBandwidthOut";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_internetMaxBandwidthOut, allocator);
@@ -319,23 +340,23 @@ void VpnGateway::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_createdTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createdTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_expiredTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ExpiredTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_expiredTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_expiredTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_isAddressBlockedHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsAddressBlocked";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isAddressBlocked, allocator);
@@ -343,57 +364,73 @@ void VpnGateway::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_newPurchasePlanHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NewPurchasePlan";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_newPurchasePlan.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_newPurchasePlan.c_str(), allocator).Move(), allocator);
     }
 
     if (m_restrictStateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RestrictState";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_restrictState.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_restrictState.c_str(), allocator).Move(), allocator);
     }
 
     if (m_zoneHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Zone";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_zone.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_zone.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vpnGatewayQuotaSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpnGatewayQuotaSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_vpnGatewayQuotaSet.begin(); itr != m_vpnGatewayQuotaSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_versionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Version";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_version.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_version.c_str(), allocator).Move(), allocator);
     }
 
     if (m_networkInstanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetworkInstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_networkInstanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_networkInstanceId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_cdcIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CdcId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cdcId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_maxConnectionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MaxConnection";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_maxConnection, allocator);
     }
 
 }
@@ -685,5 +722,37 @@ void VpnGateway::SetNetworkInstanceId(const string& _networkInstanceId)
 bool VpnGateway::NetworkInstanceIdHasBeenSet() const
 {
     return m_networkInstanceIdHasBeenSet;
+}
+
+string VpnGateway::GetCdcId() const
+{
+    return m_cdcId;
+}
+
+void VpnGateway::SetCdcId(const string& _cdcId)
+{
+    m_cdcId = _cdcId;
+    m_cdcIdHasBeenSet = true;
+}
+
+bool VpnGateway::CdcIdHasBeenSet() const
+{
+    return m_cdcIdHasBeenSet;
+}
+
+uint64_t VpnGateway::GetMaxConnection() const
+{
+    return m_maxConnection;
+}
+
+void VpnGateway::SetMaxConnection(const uint64_t& _maxConnection)
+{
+    m_maxConnection = _maxConnection;
+    m_maxConnectionHasBeenSet = true;
+}
+
+bool VpnGateway::MaxConnectionHasBeenSet() const
+{
+    return m_maxConnectionHasBeenSet;
 }
 

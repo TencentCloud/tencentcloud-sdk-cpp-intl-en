@@ -52,29 +52,93 @@ namespace TencentCloud
 
                     /**
                      * 获取Product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>1: EMR v1.3.1.</li>
-<li>2: EMR v2.0.1.</li>
-<li>4: EMR v2.1.0.</li>
-<li>7: EMR v3.0.0.</li>
+<li>1: EMR v1.3.1</li>
+<li>2: EMR v2.0.1</li>
+<li>4: EMR v2.1.0</li>
+<li>7: EMR v3.0.0</li>
+<li>9: EMR v2.2.0</li>
+<li>11: ClickHouse v1.0.0</li>
+<li>13: Druid v1.0.0</li>
+<li>15: EMR v2.2.1</li>
+<li>16: EMR v2.3.0</li>
+<li>17: ClickHouse v1.1.0</li>
+<li>19: EMR v2.4.0</li>
+<li>20: EMR v2.5.0</li>
+<li>22: ClickHouse v1.2.0</li>
+<li>24: EMR TianQiong v1.0.0</li>
+<li>25: EMR v3.1.0</li>
+<li>26: Doris v1.0.0</li>
+<li>27: Kafka v1.0.0</li>
+<li>28: EMR v3.2.0</li>
+<li>29: EMR v2.5.1</li>
+<li>30: EMR v2.6.0</li>
                      * @return ProductId Product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>1: EMR v1.3.1.</li>
-<li>2: EMR v2.0.1.</li>
-<li>4: EMR v2.1.0.</li>
-<li>7: EMR v3.0.0.</li>
+<li>1: EMR v1.3.1</li>
+<li>2: EMR v2.0.1</li>
+<li>4: EMR v2.1.0</li>
+<li>7: EMR v3.0.0</li>
+<li>9: EMR v2.2.0</li>
+<li>11: ClickHouse v1.0.0</li>
+<li>13: Druid v1.0.0</li>
+<li>15: EMR v2.2.1</li>
+<li>16: EMR v2.3.0</li>
+<li>17: ClickHouse v1.1.0</li>
+<li>19: EMR v2.4.0</li>
+<li>20: EMR v2.5.0</li>
+<li>22: ClickHouse v1.2.0</li>
+<li>24: EMR TianQiong v1.0.0</li>
+<li>25: EMR v3.1.0</li>
+<li>26: Doris v1.0.0</li>
+<li>27: Kafka v1.0.0</li>
+<li>28: EMR v3.2.0</li>
+<li>29: EMR v2.5.1</li>
+<li>30: EMR v2.6.0</li>
                      */
                     uint64_t GetProductId() const;
 
                     /**
                      * 设置Product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>1: EMR v1.3.1.</li>
-<li>2: EMR v2.0.1.</li>
-<li>4: EMR v2.1.0.</li>
-<li>7: EMR v3.0.0.</li>
+<li>1: EMR v1.3.1</li>
+<li>2: EMR v2.0.1</li>
+<li>4: EMR v2.1.0</li>
+<li>7: EMR v3.0.0</li>
+<li>9: EMR v2.2.0</li>
+<li>11: ClickHouse v1.0.0</li>
+<li>13: Druid v1.0.0</li>
+<li>15: EMR v2.2.1</li>
+<li>16: EMR v2.3.0</li>
+<li>17: ClickHouse v1.1.0</li>
+<li>19: EMR v2.4.0</li>
+<li>20: EMR v2.5.0</li>
+<li>22: ClickHouse v1.2.0</li>
+<li>24: EMR TianQiong v1.0.0</li>
+<li>25: EMR v3.1.0</li>
+<li>26: Doris v1.0.0</li>
+<li>27: Kafka v1.0.0</li>
+<li>28: EMR v3.2.0</li>
+<li>29: EMR v2.5.1</li>
+<li>30: EMR v2.6.0</li>
                      * @param ProductId Product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>1: EMR v1.3.1.</li>
-<li>2: EMR v2.0.1.</li>
-<li>4: EMR v2.1.0.</li>
-<li>7: EMR v3.0.0.</li>
+<li>1: EMR v1.3.1</li>
+<li>2: EMR v2.0.1</li>
+<li>4: EMR v2.1.0</li>
+<li>7: EMR v3.0.0</li>
+<li>9: EMR v2.2.0</li>
+<li>11: ClickHouse v1.0.0</li>
+<li>13: Druid v1.0.0</li>
+<li>15: EMR v2.2.1</li>
+<li>16: EMR v2.3.0</li>
+<li>17: ClickHouse v1.1.0</li>
+<li>19: EMR v2.4.0</li>
+<li>20: EMR v2.5.0</li>
+<li>22: ClickHouse v1.2.0</li>
+<li>24: EMR TianQiong v1.0.0</li>
+<li>25: EMR v3.1.0</li>
+<li>26: Doris v1.0.0</li>
+<li>27: Kafka v1.0.0</li>
+<li>28: EMR v3.2.0</li>
+<li>29: EMR v2.5.1</li>
+<li>30: EMR v2.6.0</li>
                      */
                     void SetProductId(const uint64_t& _productId);
 
@@ -103,30 +167,18 @@ namespace TencentCloud
                     bool VPCSettingsHasBeenSet() const;
 
                     /**
-                     * 获取List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
-<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
-                     * @return Software List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
-<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
+                     * 获取List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
+Enter an instance value: `hive` or `flink`.
+                     * @return Software List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
+Enter an instance value: `hive` or `flink`.
                      */
                     std::vector<std::string> GetSoftware() const;
 
                     /**
-                     * 设置List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
-<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
-                     * @param Software List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
-<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
+                     * 设置List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
+Enter an instance value: `hive` or `flink`.
+                     * @param Software List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
+Enter an instance value: `hive` or `flink`.
                      */
                     void SetSoftware(const std::vector<std::string>& _software);
 
@@ -182,20 +234,20 @@ namespace TencentCloud
 
                     /**
                      * 获取Instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li>
                      * @return InstanceName Instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li>
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li>
                      * @param InstanceName Instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li>
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -361,14 +413,14 @@ namespace TencentCloud
                     bool SgIdHasBeenSet() const;
 
                     /**
-                     * 获取Bootstrap script settings.
-                     * @return PreExecutedFileSettings Bootstrap script settings.
+                     * 获取[Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings
+                     * @return PreExecutedFileSettings [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings
                      */
                     std::vector<PreExecuteFileSettings> GetPreExecutedFileSettings() const;
 
                     /**
-                     * 设置Bootstrap script settings.
-                     * @param PreExecutedFileSettings Bootstrap script settings.
+                     * 设置[Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings
+                     * @param PreExecutedFileSettings [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings
                      */
                     void SetPreExecutedFileSettings(const std::vector<PreExecuteFileSettings>& _preExecutedFileSettings);
 
@@ -522,13 +574,17 @@ namespace TencentCloud
 
                     /**
                      * 获取List of spread placement group IDs. Only one can be specified currently.
+This parameter can be obtained in the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1) API.
                      * @return DisasterRecoverGroupIds List of spread placement group IDs. Only one can be specified currently.
+This parameter can be obtained in the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1) API.
                      */
                     std::vector<std::string> GetDisasterRecoverGroupIds() const;
 
                     /**
                      * 设置List of spread placement group IDs. Only one can be specified currently.
+This parameter can be obtained in the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1) API.
                      * @param DisasterRecoverGroupIds List of spread placement group IDs. Only one can be specified currently.
+This parameter can be obtained in the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1) API.
                      */
                     void SetDisasterRecoverGroupIds(const std::vector<std::string>& _disasterRecoverGroupIds);
 
@@ -622,14 +678,82 @@ namespace TencentCloud
                      */
                     bool MetaDBInfoHasBeenSet() const;
 
+                    /**
+                     * 获取Custom application role.
+                     * @return ApplicationRole Custom application role.
+                     */
+                    std::string GetApplicationRole() const;
+
+                    /**
+                     * 设置Custom application role.
+                     * @param ApplicationRole Custom application role.
+                     */
+                    void SetApplicationRole(const std::string& _applicationRole);
+
+                    /**
+                     * 判断参数 ApplicationRole 是否已赋值
+                     * @return ApplicationRole 是否已赋值
+                     */
+                    bool ApplicationRoleHasBeenSet() const;
+
+                    /**
+                     * 获取Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+                     * @return SceneName Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+                     */
+                    std::string GetSceneName() const;
+
+                    /**
+                     * 设置Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+                     * @param SceneName Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+                     */
+                    void SetSceneName(const std::string& _sceneName);
+
+                    /**
+                     * 判断参数 SceneName 是否已赋值
+                     * @return SceneName 是否已赋值
+                     */
+                    bool SceneNameHasBeenSet() const;
+
                 private:
 
                     /**
                      * Product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>1: EMR v1.3.1.</li>
-<li>2: EMR v2.0.1.</li>
-<li>4: EMR v2.1.0.</li>
-<li>7: EMR v3.0.0.</li>
+<li>1: EMR v1.3.1</li>
+<li>2: EMR v2.0.1</li>
+<li>4: EMR v2.1.0</li>
+<li>7: EMR v3.0.0</li>
+<li>9: EMR v2.2.0</li>
+<li>11: ClickHouse v1.0.0</li>
+<li>13: Druid v1.0.0</li>
+<li>15: EMR v2.2.1</li>
+<li>16: EMR v2.3.0</li>
+<li>17: ClickHouse v1.1.0</li>
+<li>19: EMR v2.4.0</li>
+<li>20: EMR v2.5.0</li>
+<li>22: ClickHouse v1.2.0</li>
+<li>24: EMR TianQiong v1.0.0</li>
+<li>25: EMR v3.1.0</li>
+<li>26: Doris v1.0.0</li>
+<li>27: Kafka v1.0.0</li>
+<li>28: EMR v3.2.0</li>
+<li>29: EMR v2.5.1</li>
+<li>30: EMR v2.6.0</li>
                      */
                     uint64_t m_productId;
                     bool m_productIdHasBeenSet;
@@ -641,11 +765,8 @@ namespace TencentCloud
                     bool m_vPCSettingsHasBeenSet;
 
                     /**
-                     * List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
-<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
+                     * List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
+Enter an instance value: `hive` or `flink`.
                      */
                     std::vector<std::string> m_software;
                     bool m_softwareHasBeenSet;
@@ -666,7 +787,7 @@ namespace TencentCloud
 
                     /**
                      * Instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li>
                      */
                     std::string m_instanceName;
@@ -722,7 +843,7 @@ namespace TencentCloud
                     bool m_sgIdHasBeenSet;
 
                     /**
-                     * Bootstrap script settings.
+                     * [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings
                      */
                     std::vector<PreExecuteFileSettings> m_preExecutedFileSettings;
                     bool m_preExecutedFileSettingsHasBeenSet;
@@ -775,6 +896,7 @@ namespace TencentCloud
 
                     /**
                      * List of spread placement group IDs. Only one can be specified currently.
+This parameter can be obtained in the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1) API.
                      */
                     std::vector<std::string> m_disasterRecoverGroupIds;
                     bool m_disasterRecoverGroupIdsHasBeenSet;
@@ -805,6 +927,22 @@ namespace TencentCloud
                      */
                     CustomMetaInfo m_metaDBInfo;
                     bool m_metaDBInfoHasBeenSet;
+
+                    /**
+                     * Custom application role.
+                     */
+                    std::string m_applicationRole;
+                    bool m_applicationRoleHasBeenSet;
+
+                    /**
+                     * Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+                     */
+                    std::string m_sceneName;
+                    bool m_sceneNameHasBeenSet;
 
                 };
             }

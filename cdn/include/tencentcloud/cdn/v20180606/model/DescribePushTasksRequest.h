@@ -185,26 +185,30 @@ You must specify either a task ID or a starting time.
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取Specifies a task state for your query:
+                     * 获取Queries the status of a specified task
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
-                     * @return Status Specifies a task state for your query:
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+                     * @return Status Queries the status of a specified task
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Specifies a task state for your query:
+                     * 设置Queries the status of a specified task
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
-                     * @param Status Specifies a task state for your query:
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+                     * @param Status Queries the status of a specified task
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
                      */
                     void SetStatus(const std::string& _status);
 
@@ -263,10 +267,11 @@ You must specify either a task ID or a starting time.
                     bool m_areaHasBeenSet;
 
                     /**
-                     * Specifies a task state for your query:
+                     * Queries the status of a specified task
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

@@ -44,14 +44,34 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filter. Valid values: db-instance-id, db-instance-name
-                     * @return Filters Filter. Valid values: db-instance-id, db-instance-name
+                     * 获取Filter instances using one or more criteria. Valid filter names:
+db-instance-id: filter by instance ID (in string format)
+db-instance-name: filter by instance name (in string format)
+db-project-id: filter by project ID (in integer format)
+db-pay-mode: filter by billing mode (in string format)
+db-tag-key: filter by tag key (in string format)
+                     * @return Filters Filter instances using one or more criteria. Valid filter names:
+db-instance-id: filter by instance ID (in string format)
+db-instance-name: filter by instance name (in string format)
+db-project-id: filter by project ID (in integer format)
+db-pay-mode: filter by billing mode (in string format)
+db-tag-key: filter by tag key (in string format)
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter. Valid values: db-instance-id, db-instance-name
-                     * @param Filters Filter. Valid values: db-instance-id, db-instance-name
+                     * 设置Filter instances using one or more criteria. Valid filter names:
+db-instance-id: filter by instance ID (in string format)
+db-instance-name: filter by instance name (in string format)
+db-project-id: filter by project ID (in integer format)
+db-pay-mode: filter by billing mode (in string format)
+db-tag-key: filter by tag key (in string format)
+                     * @param Filters Filter instances using one or more criteria. Valid filter names:
+db-instance-id: filter by instance ID (in string format)
+db-instance-name: filter by instance name (in string format)
+db-project-id: filter by project ID (in integer format)
+db-pay-mode: filter by billing mode (in string format)
+db-tag-key: filter by tag key (in string format)
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -62,14 +82,14 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Number of entries returned per page. Default value: 10.
-                     * @return Limit Number of entries returned per page. Default value: 10.
+                     * 获取The maximum number of results returned per page. Value range: 1-100. Default: `10`
+                     * @return Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of entries returned per page. Default value: 10.
-                     * @param Limit Number of entries returned per page. Default value: 10.
+                     * 设置The maximum number of results returned per page. Value range: 1-100. Default: `10`
+                     * @param Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -80,32 +100,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Page number, starting from 0.
-                     * @return Offset Page number, starting from 0.
-                     */
-                    uint64_t GetOffset() const;
-
-                    /**
-                     * 设置Page number, starting from 0.
-                     * @param Offset Page number, starting from 0.
-                     */
-                    void SetOffset(const uint64_t& _offset);
-
-                    /**
-                     * 判断参数 Offset 是否已赋值
-                     * @return Offset 是否已赋值
-                     */
-                    bool OffsetHasBeenSet() const;
-
-                    /**
-                     * 获取
-                     * @return OrderBy 
+                     * 获取Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
+                     * @return OrderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置
-                     * @param OrderBy 
+                     * 设置Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
+                     * @param OrderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
                      */
                     void SetOrderBy(const std::string& _orderBy);
 
@@ -116,14 +118,32 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OrderByType 
+                     * 获取Pagination offset, starting from 0
+                     * @return Offset Pagination offset, starting from 0
+                     */
+                    uint64_t GetOffset() const;
+
+                    /**
+                     * 设置Pagination offset, starting from 0
+                     * @param Offset Pagination offset, starting from 0
+                     */
+                    void SetOffset(const uint64_t& _offset);
+
+                    /**
+                     * 判断参数 Offset 是否已赋值
+                     * @return Offset 是否已赋值
+                     */
+                    bool OffsetHasBeenSet() const;
+
+                    /**
+                     * 获取Sorting order. Valid values: `asc` (ascending), `desc` (descending)
+                     * @return OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending)
                      */
                     std::string GetOrderByType() const;
 
                     /**
-                     * 设置
-                     * @param OrderByType 
+                     * 设置Sorting order. Valid values: `asc` (ascending), `desc` (descending)
+                     * @param OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending)
                      */
                     void SetOrderByType(const std::string& _orderByType);
 
@@ -136,31 +156,36 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Filter. Valid values: db-instance-id, db-instance-name
+                     * Filter instances using one or more criteria. Valid filter names:
+db-instance-id: filter by instance ID (in string format)
+db-instance-name: filter by instance name (in string format)
+db-project-id: filter by project ID (in integer format)
+db-pay-mode: filter by billing mode (in string format)
+db-tag-key: filter by tag key (in string format)
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Number of entries returned per page. Default value: 10.
+                     * The maximum number of results returned per page. Value range: 1-100. Default: `10`
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Page number, starting from 0.
-                     */
-                    uint64_t m_offset;
-                    bool m_offsetHasBeenSet;
-
-                    /**
-                     * 
+                     * Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * 
+                     * Pagination offset, starting from 0
+                     */
+                    uint64_t m_offset;
+                    bool m_offsetHasBeenSet;
+
+                    /**
+                     * Sorting order. Valid values: `asc` (ascending), `desc` (descending)
                      */
                     std::string m_orderByType;
                     bool m_orderByTypeHasBeenSet;

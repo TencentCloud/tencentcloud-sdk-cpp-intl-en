@@ -21,30 +21,29 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gme::V20180711::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeAppStatisticsResponse::DescribeAppStatisticsResponse() :
-    m_appStatisticsHasBeenSet(false)
+    m_dataHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome DescribeAppStatisticsResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -55,47 +54,70 @@ CoreInternalOutcome DescribeAppStatisticsResponse::Deserialize(const string &pay
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
-    if (rsp.HasMember("AppStatistics") && !rsp["AppStatistics"].IsNull())
+    if (rsp.HasMember("Data") && !rsp["Data"].IsNull())
     {
-        if (!rsp["AppStatistics"].IsArray())
-            return CoreInternalOutcome(Error("response `AppStatistics` is not array type"));
-
-        const Value &tmpValue = rsp["AppStatistics"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        if (!rsp["Data"].IsObject())
         {
-            AppStatisticsItem item;
-            CoreInternalOutcome outcome = item.Deserialize(*itr);
-            if (!outcome.IsSuccess())
-            {
-                outcome.GetError().SetRequestId(requestId);
-                return outcome;
-            }
-            m_appStatistics.push_back(item);
+            return CoreInternalOutcome(Core::Error("response `Data` is not object type").SetRequestId(requestId));
         }
-        m_appStatisticsHasBeenSet = true;
+
+        CoreInternalOutcome outcome = m_data.Deserialize(rsp["Data"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_dataHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-
-vector<AppStatisticsItem> DescribeAppStatisticsResponse::GetAppStatistics() const
+string DescribeAppStatisticsResponse::ToJsonString() const
 {
-    return m_appStatistics;
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_dataHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Data";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_data.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
-bool DescribeAppStatisticsResponse::AppStatisticsHasBeenSet() const
+
+DescribeAppStatisticsResp DescribeAppStatisticsResponse::GetData() const
 {
-    return m_appStatisticsHasBeenSet;
+    return m_data;
+}
+
+bool DescribeAppStatisticsResponse::DataHasBeenSet() const
+{
+    return m_dataHasBeenSet;
 }
 
 

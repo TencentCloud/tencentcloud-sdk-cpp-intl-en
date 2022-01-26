@@ -222,6 +222,78 @@ namespace TencentCloud
                      */
                     bool RealServerPortsHasBeenSet() const;
 
+                    /**
+                     * 获取Listener methods of getting client IPs. 0: TOA; 1: Proxy Protocol.
+                     * @return ClientIPMethod Listener methods of getting client IPs. 0: TOA; 1: Proxy Protocol.
+                     */
+                    int64_t GetClientIPMethod() const;
+
+                    /**
+                     * 设置Listener methods of getting client IPs. 0: TOA; 1: Proxy Protocol.
+                     * @param ClientIPMethod Listener methods of getting client IPs. 0: TOA; 1: Proxy Protocol.
+                     */
+                    void SetClientIPMethod(const int64_t& _clientIPMethod);
+
+                    /**
+                     * 判断参数 ClientIPMethod 是否已赋值
+                     * @return ClientIPMethod 是否已赋值
+                     */
+                    bool ClientIPMethodHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable the primary/secondary origin server mode. Valid values: 1 (enable) and 0 (disable). It cannot be enabled for domain name origin servers.
+                     * @return FailoverSwitch Whether to enable the primary/secondary origin server mode. Valid values: 1 (enable) and 0 (disable). It cannot be enabled for domain name origin servers.
+                     */
+                    int64_t GetFailoverSwitch() const;
+
+                    /**
+                     * 设置Whether to enable the primary/secondary origin server mode. Valid values: 1 (enable) and 0 (disable). It cannot be enabled for domain name origin servers.
+                     * @param FailoverSwitch Whether to enable the primary/secondary origin server mode. Valid values: 1 (enable) and 0 (disable). It cannot be enabled for domain name origin servers.
+                     */
+                    void SetFailoverSwitch(const int64_t& _failoverSwitch);
+
+                    /**
+                     * 判断参数 FailoverSwitch 是否已赋值
+                     * @return FailoverSwitch 是否已赋值
+                     */
+                    bool FailoverSwitchHasBeenSet() const;
+
+                    /**
+                     * 获取Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+                     * @return HealthyThreshold Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+                     */
+                    uint64_t GetHealthyThreshold() const;
+
+                    /**
+                     * 设置Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+                     * @param HealthyThreshold Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+                     */
+                    void SetHealthyThreshold(const uint64_t& _healthyThreshold);
+
+                    /**
+                     * 判断参数 HealthyThreshold 是否已赋值
+                     * @return HealthyThreshold 是否已赋值
+                     */
+                    bool HealthyThresholdHasBeenSet() const;
+
+                    /**
+                     * 获取Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+                     * @return UnhealthyThreshold Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+                     */
+                    uint64_t GetUnhealthyThreshold() const;
+
+                    /**
+                     * 设置Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+                     * @param UnhealthyThreshold Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+                     */
+                    void SetUnhealthyThreshold(const uint64_t& _unhealthyThreshold);
+
+                    /**
+                     * 判断参数 UnhealthyThreshold 是否已赋值
+                     * @return UnhealthyThreshold 是否已赋值
+                     */
+                    bool UnhealthyThresholdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -283,6 +355,30 @@ namespace TencentCloud
                      */
                     std::vector<uint64_t> m_realServerPorts;
                     bool m_realServerPortsHasBeenSet;
+
+                    /**
+                     * Listener methods of getting client IPs. 0: TOA; 1: Proxy Protocol.
+                     */
+                    int64_t m_clientIPMethod;
+                    bool m_clientIPMethodHasBeenSet;
+
+                    /**
+                     * Whether to enable the primary/secondary origin server mode. Valid values: 1 (enable) and 0 (disable). It cannot be enabled for domain name origin servers.
+                     */
+                    int64_t m_failoverSwitch;
+                    bool m_failoverSwitchHasBeenSet;
+
+                    /**
+                     * Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+                     */
+                    uint64_t m_healthyThreshold;
+                    bool m_healthyThresholdHasBeenSet;
+
+                    /**
+                     * Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+                     */
+                    uint64_t m_unhealthyThreshold;
+                    bool m_unhealthyThresholdHasBeenSet;
 
                 };
             }

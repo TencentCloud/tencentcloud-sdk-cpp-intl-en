@@ -20,41 +20,94 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Ocr::V20181119::Model;
-using namespace rapidjson;
 using namespace std;
 
 BankCardOCRRequest::BankCardOCRRequest() :
     m_imageBase64HasBeenSet(false),
-    m_imageUrlHasBeenSet(false)
+    m_imageUrlHasBeenSet(false),
+    m_retBorderCutImageHasBeenSet(false),
+    m_retCardNoImageHasBeenSet(false),
+    m_enableCopyCheckHasBeenSet(false),
+    m_enableReshootCheckHasBeenSet(false),
+    m_enableBorderCheckHasBeenSet(false),
+    m_enableQualityValueHasBeenSet(false)
 {
 }
 
 string BankCardOCRRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_imageBase64HasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ImageBase64";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_imageBase64.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_imageBase64.c_str(), allocator).Move(), allocator);
     }
 
     if (m_imageUrlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ImageUrl";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_imageUrl.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_imageUrl.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_retBorderCutImageHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RetBorderCutImage";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_retBorderCutImage, allocator);
+    }
+
+    if (m_retCardNoImageHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RetCardNoImage";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_retCardNoImage, allocator);
+    }
+
+    if (m_enableCopyCheckHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableCopyCheck";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_enableCopyCheck, allocator);
+    }
+
+    if (m_enableReshootCheckHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableReshootCheck";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_enableReshootCheck, allocator);
+    }
+
+    if (m_enableBorderCheckHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableBorderCheck";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_enableBorderCheck, allocator);
+    }
+
+    if (m_enableQualityValueHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableQualityValue";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_enableQualityValue, allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -90,6 +143,102 @@ void BankCardOCRRequest::SetImageUrl(const string& _imageUrl)
 bool BankCardOCRRequest::ImageUrlHasBeenSet() const
 {
     return m_imageUrlHasBeenSet;
+}
+
+bool BankCardOCRRequest::GetRetBorderCutImage() const
+{
+    return m_retBorderCutImage;
+}
+
+void BankCardOCRRequest::SetRetBorderCutImage(const bool& _retBorderCutImage)
+{
+    m_retBorderCutImage = _retBorderCutImage;
+    m_retBorderCutImageHasBeenSet = true;
+}
+
+bool BankCardOCRRequest::RetBorderCutImageHasBeenSet() const
+{
+    return m_retBorderCutImageHasBeenSet;
+}
+
+bool BankCardOCRRequest::GetRetCardNoImage() const
+{
+    return m_retCardNoImage;
+}
+
+void BankCardOCRRequest::SetRetCardNoImage(const bool& _retCardNoImage)
+{
+    m_retCardNoImage = _retCardNoImage;
+    m_retCardNoImageHasBeenSet = true;
+}
+
+bool BankCardOCRRequest::RetCardNoImageHasBeenSet() const
+{
+    return m_retCardNoImageHasBeenSet;
+}
+
+bool BankCardOCRRequest::GetEnableCopyCheck() const
+{
+    return m_enableCopyCheck;
+}
+
+void BankCardOCRRequest::SetEnableCopyCheck(const bool& _enableCopyCheck)
+{
+    m_enableCopyCheck = _enableCopyCheck;
+    m_enableCopyCheckHasBeenSet = true;
+}
+
+bool BankCardOCRRequest::EnableCopyCheckHasBeenSet() const
+{
+    return m_enableCopyCheckHasBeenSet;
+}
+
+bool BankCardOCRRequest::GetEnableReshootCheck() const
+{
+    return m_enableReshootCheck;
+}
+
+void BankCardOCRRequest::SetEnableReshootCheck(const bool& _enableReshootCheck)
+{
+    m_enableReshootCheck = _enableReshootCheck;
+    m_enableReshootCheckHasBeenSet = true;
+}
+
+bool BankCardOCRRequest::EnableReshootCheckHasBeenSet() const
+{
+    return m_enableReshootCheckHasBeenSet;
+}
+
+bool BankCardOCRRequest::GetEnableBorderCheck() const
+{
+    return m_enableBorderCheck;
+}
+
+void BankCardOCRRequest::SetEnableBorderCheck(const bool& _enableBorderCheck)
+{
+    m_enableBorderCheck = _enableBorderCheck;
+    m_enableBorderCheckHasBeenSet = true;
+}
+
+bool BankCardOCRRequest::EnableBorderCheckHasBeenSet() const
+{
+    return m_enableBorderCheckHasBeenSet;
+}
+
+bool BankCardOCRRequest::GetEnableQualityValue() const
+{
+    return m_enableQualityValue;
+}
+
+void BankCardOCRRequest::SetEnableQualityValue(const bool& _enableQualityValue)
+{
+    m_enableQualityValue = _enableQualityValue;
+    m_enableQualityValueHasBeenSet = true;
+}
+
+bool BankCardOCRRequest::EnableQualityValueHasBeenSet() const
+{
+    return m_enableQualityValueHasBeenSet;
 }
 
 

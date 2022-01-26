@@ -43,24 +43,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the VPC instance
-                     * @return VpcId ID of the VPC instance
-                     */
-                    std::string GetVpcId() const;
-
-                    /**
-                     * 设置ID of the VPC instance
-                     * @param VpcId ID of the VPC instance
-                     */
-                    void SetVpcId(const std::string& _vpcId);
-
-                    /**
-                     * 判断参数 VpcId 是否已赋值
-                     * @return VpcId 是否已赋值
-                     */
-                    bool VpcIdHasBeenSet() const;
-
-                    /**
                      * 获取The unique ID of the flow log.
                      * @return FlowLogId The unique ID of the flow log.
                      */
@@ -77,6 +59,24 @@ namespace TencentCloud
                      * @return FlowLogId 是否已赋值
                      */
                     bool FlowLogIdHasBeenSet() const;
+
+                    /**
+                     * 获取The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the attributes of a CCN flow log is modified.
+                     * @return VpcId The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the attributes of a CCN flow log is modified.
+                     */
+                    std::string GetVpcId() const;
+
+                    /**
+                     * 设置The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the attributes of a CCN flow log is modified.
+                     * @param VpcId The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the attributes of a CCN flow log is modified.
+                     */
+                    void SetVpcId(const std::string& _vpcId);
+
+                    /**
+                     * 判断参数 VpcId 是否已赋值
+                     * @return VpcId 是否已赋值
+                     */
+                    bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取The name of the flow log.
@@ -117,16 +117,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the VPC instance
-                     */
-                    std::string m_vpcId;
-                    bool m_vpcIdHasBeenSet;
-
-                    /**
                      * The unique ID of the flow log.
                      */
                     std::string m_flowLogId;
                     bool m_flowLogIdHasBeenSet;
+
+                    /**
+                     * The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the attributes of a CCN flow log is modified.
+                     */
+                    std::string m_vpcId;
+                    bool m_vpcIdHasBeenSet;
 
                     /**
                      * The name of the flow log.

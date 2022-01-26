@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gme::V20180711::Model;
-using namespace rapidjson;
 using namespace std;
 
 ScanVoiceResult::ScanVoiceResult() :
@@ -27,7 +26,7 @@ ScanVoiceResult::ScanVoiceResult() :
 {
 }
 
-CoreInternalOutcome ScanVoiceResult::Deserialize(const Value &value)
+CoreInternalOutcome ScanVoiceResult::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome ScanVoiceResult::Deserialize(const Value &value)
     {
         if (!value["DataId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ScanVoiceResult.DataId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScanVoiceResult.DataId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_dataId = string(value["DataId"].GetString());
         m_dataIdHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome ScanVoiceResult::Deserialize(const Value &value)
     {
         if (!value["TaskId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ScanVoiceResult.TaskId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScanVoiceResult.TaskId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_taskId = string(value["TaskId"].GetString());
         m_taskIdHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome ScanVoiceResult::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ScanVoiceResult::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ScanVoiceResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_dataIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DataId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_dataId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_dataId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_taskIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TaskId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_taskId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_taskId.c_str(), allocator).Move(), allocator);
     }
 
 }

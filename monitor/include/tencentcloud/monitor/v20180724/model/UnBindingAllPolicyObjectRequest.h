@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool ModuleHasBeenSet() const;
 
                     /**
-                     * 获取Policy group ID.
-                     * @return GroupId Policy group ID.
+                     * 获取Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., `0`, can be passed in.
+                     * @return GroupId Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., `0`, can be passed in.
                      */
                     int64_t GetGroupId() const;
 
                     /**
-                     * 设置Policy group ID.
-                     * @param GroupId Policy group ID.
+                     * 设置Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., `0`, can be passed in.
+                     * @param GroupId Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., `0`, can be passed in.
                      */
                     void SetGroupId(const int64_t& _groupId);
 
@@ -77,6 +77,24 @@ namespace TencentCloud
                      * @return GroupId 是否已赋值
                      */
                     bool GroupIdHasBeenSet() const;
+
+                    /**
+                     * 获取Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
+                     * @return PolicyId Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
+                     */
+                    std::string GetPolicyId() const;
+
+                    /**
+                     * 设置Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
+                     * @param PolicyId Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
+                     */
+                    void SetPolicyId(const std::string& _policyId);
+
+                    /**
+                     * 判断参数 PolicyId 是否已赋值
+                     * @return PolicyId 是否已赋值
+                     */
+                    bool PolicyIdHasBeenSet() const;
 
                 private:
 
@@ -87,10 +105,16 @@ namespace TencentCloud
                     bool m_moduleHasBeenSet;
 
                     /**
-                     * Policy group ID.
+                     * Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., `0`, can be passed in.
                      */
                     int64_t m_groupId;
                     bool m_groupIdHasBeenSet;
+
+                    /**
+                     * Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
+                     */
+                    std::string m_policyId;
+                    bool m_policyIdHasBeenSet;
 
                 };
             }

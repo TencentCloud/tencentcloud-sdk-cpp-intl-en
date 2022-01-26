@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取The `uin` of the resource owner (root account)
-                     * @return OwnerUin The `uin` of the resource owner (root account)
+                     * 获取The UIN of the resource owner (root account)
+                     * @return OwnerUin The UIN of the resource owner (root account)
                      */
                     int64_t GetOwnerUin() const;
 
                     /**
-                     * 设置The `uin` of the resource owner (root account)
-                     * @param OwnerUin The `uin` of the resource owner (root account)
+                     * 设置The UIN of the resource owner (root account)
+                     * @param OwnerUin The UIN of the resource owner (root account)
                      */
                     void SetOwnerUin(const int64_t& _ownerUin);
 
@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Creator `uin`
-                     * @return CreatorUin Creator `uin`
+                     * 获取Creator UIN
+                     * @return CreatorUin Creator UIN
                      */
                     int64_t GetCreatorUin() const;
 
                     /**
-                     * 设置Creator `uin`
-                     * @param CreatorUin Creator `uin`
+                     * 设置Creator UIN
+                     * @param CreatorUin Creator UIN
                      */
                     void SetCreatorUin(const int64_t& _creatorUin);
 
@@ -155,14 +155,14 @@ namespace TencentCloud
                     bool SrcPlatHasBeenSet() const;
 
                     /**
-                     * 获取Source `AppId`
-                     * @return SrcAppId Source `AppId`
+                     * 获取Source APPID
+                     * @return SrcAppId Source APPID
                      */
                     int64_t GetSrcAppId() const;
 
                     /**
-                     * 设置Source `AppId`
-                     * @param SrcAppId Source `AppId`
+                     * 设置Source APPID
+                     * @param SrcAppId Source APPID
                      */
                     void SetSrcAppId(const int64_t& _srcAppId);
 
@@ -173,14 +173,14 @@ namespace TencentCloud
                     bool SrcAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Project status. 0: normal; -1: disabled; 3: default project.
-                     * @return Status Project status. 0: normal; -1: disabled; 3: default project.
+                     * 获取Project status. Valid values: `0` (normal), `-1` (disabled), `3` (default project).
+                     * @return Status Project status. Valid values: `0` (normal), `-1` (disabled), `3` (default project).
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Project status. 0: normal; -1: disabled; 3: default project.
-                     * @param Status Project status. 0: normal; -1: disabled; 3: default project.
+                     * 设置Project status. Valid values: `0` (normal), `-1` (disabled), `3` (default project).
+                     * @param Status Project status. Valid values: `0` (normal), `-1` (disabled), `3` (default project).
                      */
                     void SetStatus(const int64_t& _status);
 
@@ -209,14 +209,14 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is the default project. 1: yes; 0: no.
-                     * @return IsDefault Whether it is the default project. 1: yes; 0: no.
+                     * 获取Whether it is the default project. Valid values: `1` (yes), `0` (no).
+                     * @return IsDefault Whether it is the default project. Valid values: `1` (yes), `0` (no).
                      */
                     int64_t GetIsDefault() const;
 
                     /**
-                     * 设置Whether it is the default project. 1: yes; 0: no.
-                     * @param IsDefault Whether it is the default project. 1: yes; 0: no.
+                     * 设置Whether it is the default project. Valid values: `1` (yes), `0` (no).
+                     * @param IsDefault Whether it is the default project. Valid values: `1` (yes), `0` (no).
                      */
                     void SetIsDefault(const int64_t& _isDefault);
 
@@ -253,7 +253,7 @@ namespace TencentCloud
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * The `uin` of the resource owner (root account)
+                     * The UIN of the resource owner (root account)
                      */
                     int64_t m_ownerUin;
                     bool m_ownerUinHasBeenSet;
@@ -271,7 +271,7 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Creator `uin`
+                     * Creator UIN
                      */
                     int64_t m_creatorUin;
                     bool m_creatorUinHasBeenSet;
@@ -283,13 +283,13 @@ namespace TencentCloud
                     bool m_srcPlatHasBeenSet;
 
                     /**
-                     * Source `AppId`
+                     * Source APPID
                      */
                     int64_t m_srcAppId;
                     bool m_srcAppIdHasBeenSet;
 
                     /**
-                     * Project status. 0: normal; -1: disabled; 3: default project.
+                     * Project status. Valid values: `0` (normal), `-1` (disabled), `3` (default project).
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
@@ -301,7 +301,7 @@ namespace TencentCloud
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Whether it is the default project. 1: yes; 0: no.
+                     * Whether it is the default project. Valid values: `1` (yes), `0` (no).
                      */
                     int64_t m_isDefault;
                     bool m_isDefaultHasBeenSet;

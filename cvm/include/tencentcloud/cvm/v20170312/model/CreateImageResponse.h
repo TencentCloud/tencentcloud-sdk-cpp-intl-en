@@ -40,12 +40,13 @@ namespace TencentCloud
                     CreateImageResponse();
                     ~CreateImageResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Image ID
+                     * 获取Image ID.
 Note: This field may return null, indicating that no valid value was found.
-                     * @return ImageId Image ID
+                     * @return ImageId Image ID.
 Note: This field may return null, indicating that no valid value was found.
                      */
                     std::string GetImageId() const;
@@ -59,7 +60,7 @@ Note: This field may return null, indicating that no valid value was found.
                 private:
 
                     /**
-                     * Image ID
+                     * Image ID.
 Note: This field may return null, indicating that no valid value was found.
                      */
                     std::string m_imageId;

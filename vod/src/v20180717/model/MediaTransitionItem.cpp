@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 MediaTransitionItem::MediaTransitionItem() :
@@ -27,16 +26,16 @@ MediaTransitionItem::MediaTransitionItem() :
 {
 }
 
-CoreInternalOutcome MediaTransitionItem::Deserialize(const Value &value)
+CoreInternalOutcome MediaTransitionItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
 
     if (value.HasMember("Duration") && !value["Duration"].IsNull())
     {
-        if (!value["Duration"].IsDouble())
+        if (!value["Duration"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `MediaTransitionItem.Duration` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaTransitionItem.Duration` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_duration = value["Duration"].GetDouble();
         m_durationHasBeenSet = true;
@@ -45,10 +44,10 @@ CoreInternalOutcome MediaTransitionItem::Deserialize(const Value &value)
     if (value.HasMember("Transitions") && !value["Transitions"].IsNull())
     {
         if (!value["Transitions"].IsArray())
-            return CoreInternalOutcome(Error("response `MediaTransitionItem.Transitions` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `MediaTransitionItem.Transitions` is not array type"));
 
-        const Value &tmpValue = value["Transitions"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Transitions"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             TransitionOpertion item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -66,12 +65,12 @@ CoreInternalOutcome MediaTransitionItem::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void MediaTransitionItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MediaTransitionItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_durationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Duration";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_duration, allocator);
@@ -79,15 +78,15 @@ void MediaTransitionItem::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_transitionsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Transitions";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_transitions.begin(); itr != m_transitions.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }

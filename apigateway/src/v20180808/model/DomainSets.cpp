@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 DomainSets::DomainSets() :
@@ -27,7 +26,7 @@ DomainSets::DomainSets() :
 {
 }
 
-CoreInternalOutcome DomainSets::Deserialize(const Value &value)
+CoreInternalOutcome DomainSets::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome DomainSets::Deserialize(const Value &value)
     {
         if (!value["TotalCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DomainSets.TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainSets.TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_totalCount = value["TotalCount"].GetInt64();
         m_totalCountHasBeenSet = true;
@@ -45,10 +44,10 @@ CoreInternalOutcome DomainSets::Deserialize(const Value &value)
     if (value.HasMember("DomainSet") && !value["DomainSet"].IsNull())
     {
         if (!value["DomainSet"].IsArray())
-            return CoreInternalOutcome(Error("response `DomainSets.DomainSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DomainSets.DomainSet` is not array type"));
 
-        const Value &tmpValue = value["DomainSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["DomainSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             DomainSetList item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -66,12 +65,12 @@ CoreInternalOutcome DomainSets::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void DomainSets::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DomainSets::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_totalCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TotalCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_totalCount, allocator);
@@ -79,15 +78,15 @@ void DomainSets::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_domainSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DomainSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_domainSet.begin(); itr != m_domainSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }

@@ -246,6 +246,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool CreateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the connection group contains a Microsoft connection
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return ProxyType Whether the connection group contains a Microsoft connection
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetProxyType() const;
+
+                    /**
+                     * 设置Whether the connection group contains a Microsoft connection
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param ProxyType Whether the connection group contains a Microsoft connection
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetProxyType(const uint64_t& _proxyType);
+
+                    /**
+                     * 判断参数 ProxyType 是否已赋值
+                     * @return ProxyType 是否已赋值
+                     */
+                    bool ProxyTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -310,6 +332,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_createTime;
                     bool m_createTimeHasBeenSet;
+
+                    /**
+                     * Whether the connection group contains a Microsoft connection
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_proxyType;
+                    bool m_proxyTypeHasBeenSet;
 
                 };
             }

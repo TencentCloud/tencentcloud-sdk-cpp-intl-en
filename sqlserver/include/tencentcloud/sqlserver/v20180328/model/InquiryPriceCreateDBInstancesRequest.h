@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool InstanceChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Length of purchase in months. Value range: 1–48. Default value: 1
-                     * @return Period Length of purchase in months. Value range: 1–48. Default value: 1
+                     * 获取Length of purchase in months. Value range: 1-48. Default value: 1
+                     * @return Period Length of purchase in months. Value range: 1-48. Default value: 1
                      */
                     int64_t GetPeriod() const;
 
                     /**
-                     * 设置Length of purchase in months. Value range: 1–48. Default value: 1
-                     * @param Period Length of purchase in months. Value range: 1–48. Default value: 1
+                     * 设置Length of purchase in months. Value range: 1-48. Default value: 1
+                     * @param Period Length of purchase in months. Value range: 1-48. Default value: 1
                      */
                     void SetPeriod(const int64_t& _period);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取Number of instances purchased at a time. Value range: 1–100. Default value: 1
-                     * @return GoodsNum Number of instances purchased at a time. Value range: 1–100. Default value: 1
+                     * 获取Number of instances purchased at a time. Value range: 1-100. Default value: 1
+                     * @return GoodsNum Number of instances purchased at a time. Value range: 1-100. Default value: 1
                      */
                     int64_t GetGoodsNum() const;
 
                     /**
-                     * 设置Number of instances purchased at a time. Value range: 1–100. Default value: 1
-                     * @param GoodsNum Number of instances purchased at a time. Value range: 1–100. Default value: 1
+                     * 设置Number of instances purchased at a time. Value range: 1-100. Default value: 1
+                     * @param GoodsNum Number of instances purchased at a time. Value range: 1-100. Default value: 1
                      */
                     void SetGoodsNum(const int64_t& _goodsNum);
 
@@ -167,6 +167,60 @@ namespace TencentCloud
                      * @return DBVersion 是否已赋值
                      */
                     bool DBVersionHasBeenSet() const;
+
+                    /**
+                     * 获取The number of CPU cores of the instance you want to purchase.
+                     * @return Cpu The number of CPU cores of the instance you want to purchase.
+                     */
+                    int64_t GetCpu() const;
+
+                    /**
+                     * 设置The number of CPU cores of the instance you want to purchase.
+                     * @param Cpu The number of CPU cores of the instance you want to purchase.
+                     */
+                    void SetCpu(const int64_t& _cpu);
+
+                    /**
+                     * 判断参数 Cpu 是否已赋值
+                     * @return Cpu 是否已赋值
+                     */
+                    bool CpuHasBeenSet() const;
+
+                    /**
+                     * 获取The type of purchased instance. Valid values: HA (high-availability edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (basic edition). Default value: HA.
+                     * @return InstanceType The type of purchased instance. Valid values: HA (high-availability edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (basic edition). Default value: HA.
+                     */
+                    std::string GetInstanceType() const;
+
+                    /**
+                     * 设置The type of purchased instance. Valid values: HA (high-availability edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (basic edition). Default value: HA.
+                     * @param InstanceType The type of purchased instance. Valid values: HA (high-availability edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (basic edition). Default value: HA.
+                     */
+                    void SetInstanceType(const std::string& _instanceType);
+
+                    /**
+                     * 判断参数 InstanceType 是否已赋值
+                     * @return InstanceType 是否已赋值
+                     */
+                    bool InstanceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取The host type of purchased instance. Valid values: PM (physical machine), CLOUD_PREMIUM (physical machine with premium cloud disk), CLOUD_SSD (physical machine with SSD). Default value: PM.
+                     * @return MachineType The host type of purchased instance. Valid values: PM (physical machine), CLOUD_PREMIUM (physical machine with premium cloud disk), CLOUD_SSD (physical machine with SSD). Default value: PM.
+                     */
+                    std::string GetMachineType() const;
+
+                    /**
+                     * 设置The host type of purchased instance. Valid values: PM (physical machine), CLOUD_PREMIUM (physical machine with premium cloud disk), CLOUD_SSD (physical machine with SSD). Default value: PM.
+                     * @param MachineType The host type of purchased instance. Valid values: PM (physical machine), CLOUD_PREMIUM (physical machine with premium cloud disk), CLOUD_SSD (physical machine with SSD). Default value: PM.
+                     */
+                    void SetMachineType(const std::string& _machineType);
+
+                    /**
+                     * 判断参数 MachineType 是否已赋值
+                     * @return MachineType 是否已赋值
+                     */
+                    bool MachineTypeHasBeenSet() const;
 
                 private:
 
@@ -195,13 +249,13 @@ namespace TencentCloud
                     bool m_instanceChargeTypeHasBeenSet;
 
                     /**
-                     * Length of purchase in months. Value range: 1–48. Default value: 1
+                     * Length of purchase in months. Value range: 1-48. Default value: 1
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * Number of instances purchased at a time. Value range: 1–100. Default value: 1
+                     * Number of instances purchased at a time. Value range: 1-100. Default value: 1
                      */
                     int64_t m_goodsNum;
                     bool m_goodsNumHasBeenSet;
@@ -211,6 +265,24 @@ namespace TencentCloud
                      */
                     std::string m_dBVersion;
                     bool m_dBVersionHasBeenSet;
+
+                    /**
+                     * The number of CPU cores of the instance you want to purchase.
+                     */
+                    int64_t m_cpu;
+                    bool m_cpuHasBeenSet;
+
+                    /**
+                     * The type of purchased instance. Valid values: HA (high-availability edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (basic edition). Default value: HA.
+                     */
+                    std::string m_instanceType;
+                    bool m_instanceTypeHasBeenSet;
+
+                    /**
+                     * The host type of purchased instance. Valid values: PM (physical machine), CLOUD_PREMIUM (physical machine with premium cloud disk), CLOUD_SSD (physical machine with SSD). Default value: PM.
+                     */
+                    std::string m_machineType;
+                    bool m_machineTypeHasBeenSet;
 
                 };
             }

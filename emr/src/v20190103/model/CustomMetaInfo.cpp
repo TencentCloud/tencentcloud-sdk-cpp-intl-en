@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Emr::V20190103::Model;
-using namespace rapidjson;
 using namespace std;
 
 CustomMetaInfo::CustomMetaInfo() :
@@ -28,7 +27,7 @@ CustomMetaInfo::CustomMetaInfo() :
 {
 }
 
-CoreInternalOutcome CustomMetaInfo::Deserialize(const Value &value)
+CoreInternalOutcome CustomMetaInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome CustomMetaInfo::Deserialize(const Value &value)
     {
         if (!value["MetaDataJdbcUrl"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CustomMetaInfo.MetaDataJdbcUrl` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CustomMetaInfo.MetaDataJdbcUrl` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_metaDataJdbcUrl = string(value["MetaDataJdbcUrl"].GetString());
         m_metaDataJdbcUrlHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome CustomMetaInfo::Deserialize(const Value &value)
     {
         if (!value["MetaDataUser"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CustomMetaInfo.MetaDataUser` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CustomMetaInfo.MetaDataUser` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_metaDataUser = string(value["MetaDataUser"].GetString());
         m_metaDataUserHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome CustomMetaInfo::Deserialize(const Value &value)
     {
         if (!value["MetaDataPass"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CustomMetaInfo.MetaDataPass` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CustomMetaInfo.MetaDataPass` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_metaDataPass = string(value["MetaDataPass"].GetString());
         m_metaDataPassHasBeenSet = true;
@@ -67,31 +66,31 @@ CoreInternalOutcome CustomMetaInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void CustomMetaInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void CustomMetaInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_metaDataJdbcUrlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MetaDataJdbcUrl";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_metaDataJdbcUrl.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_metaDataJdbcUrl.c_str(), allocator).Move(), allocator);
     }
 
     if (m_metaDataUserHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MetaDataUser";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_metaDataUser.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_metaDataUser.c_str(), allocator).Move(), allocator);
     }
 
     if (m_metaDataPassHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MetaDataPass";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_metaDataPass.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_metaDataPass.c_str(), allocator).Move(), allocator);
     }
 
 }

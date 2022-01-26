@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 OutputAudioStream::OutputAudioStream() :
@@ -28,7 +27,7 @@ OutputAudioStream::OutputAudioStream() :
 {
 }
 
-CoreInternalOutcome OutputAudioStream::Deserialize(const Value &value)
+CoreInternalOutcome OutputAudioStream::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome OutputAudioStream::Deserialize(const Value &value)
     {
         if (!value["Codec"].IsString())
         {
-            return CoreInternalOutcome(Error("response `OutputAudioStream.Codec` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OutputAudioStream.Codec` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_codec = string(value["Codec"].GetString());
         m_codecHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome OutputAudioStream::Deserialize(const Value &value)
     {
         if (!value["SampleRate"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `OutputAudioStream.SampleRate` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OutputAudioStream.SampleRate` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_sampleRate = value["SampleRate"].GetInt64();
         m_sampleRateHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome OutputAudioStream::Deserialize(const Value &value)
     {
         if (!value["AudioChannel"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `OutputAudioStream.AudioChannel` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OutputAudioStream.AudioChannel` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_audioChannel = value["AudioChannel"].GetInt64();
         m_audioChannelHasBeenSet = true;
@@ -67,20 +66,20 @@ CoreInternalOutcome OutputAudioStream::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void OutputAudioStream::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void OutputAudioStream::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_codecHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Codec";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_codec.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_codec.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sampleRateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SampleRate";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_sampleRate, allocator);
@@ -88,7 +87,7 @@ void OutputAudioStream::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_audioChannelHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AudioChannel";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_audioChannel, allocator);

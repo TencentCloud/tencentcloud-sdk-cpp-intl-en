@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 LiveStreamOcrWordsRecognitionResult::LiveStreamOcrWordsRecognitionResult() :
@@ -30,7 +29,7 @@ LiveStreamOcrWordsRecognitionResult::LiveStreamOcrWordsRecognitionResult() :
 {
 }
 
-CoreInternalOutcome LiveStreamOcrWordsRecognitionResult::Deserialize(const Value &value)
+CoreInternalOutcome LiveStreamOcrWordsRecognitionResult::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome LiveStreamOcrWordsRecognitionResult::Deserialize(const Value
     {
         if (!value["Word"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamOcrWordsRecognitionResult.Word` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamOcrWordsRecognitionResult.Word` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_word = string(value["Word"].GetString());
         m_wordHasBeenSet = true;
@@ -47,9 +46,9 @@ CoreInternalOutcome LiveStreamOcrWordsRecognitionResult::Deserialize(const Value
 
     if (value.HasMember("StartPtsTime") && !value["StartPtsTime"].IsNull())
     {
-        if (!value["StartPtsTime"].IsDouble())
+        if (!value["StartPtsTime"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamOcrWordsRecognitionResult.StartPtsTime` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamOcrWordsRecognitionResult.StartPtsTime` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_startPtsTime = value["StartPtsTime"].GetDouble();
         m_startPtsTimeHasBeenSet = true;
@@ -57,9 +56,9 @@ CoreInternalOutcome LiveStreamOcrWordsRecognitionResult::Deserialize(const Value
 
     if (value.HasMember("EndPtsTime") && !value["EndPtsTime"].IsNull())
     {
-        if (!value["EndPtsTime"].IsDouble())
+        if (!value["EndPtsTime"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamOcrWordsRecognitionResult.EndPtsTime` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamOcrWordsRecognitionResult.EndPtsTime` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_endPtsTime = value["EndPtsTime"].GetDouble();
         m_endPtsTimeHasBeenSet = true;
@@ -67,9 +66,9 @@ CoreInternalOutcome LiveStreamOcrWordsRecognitionResult::Deserialize(const Value
 
     if (value.HasMember("Confidence") && !value["Confidence"].IsNull())
     {
-        if (!value["Confidence"].IsDouble())
+        if (!value["Confidence"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamOcrWordsRecognitionResult.Confidence` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamOcrWordsRecognitionResult.Confidence` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_confidence = value["Confidence"].GetDouble();
         m_confidenceHasBeenSet = true;
@@ -78,10 +77,10 @@ CoreInternalOutcome LiveStreamOcrWordsRecognitionResult::Deserialize(const Value
     if (value.HasMember("AreaCoords") && !value["AreaCoords"].IsNull())
     {
         if (!value["AreaCoords"].IsArray())
-            return CoreInternalOutcome(Error("response `LiveStreamOcrWordsRecognitionResult.AreaCoords` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamOcrWordsRecognitionResult.AreaCoords` is not array type"));
 
-        const Value &tmpValue = value["AreaCoords"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["AreaCoords"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_areaCoords.push_back((*itr).GetInt64());
         }
@@ -92,20 +91,20 @@ CoreInternalOutcome LiveStreamOcrWordsRecognitionResult::Deserialize(const Value
     return CoreInternalOutcome(true);
 }
 
-void LiveStreamOcrWordsRecognitionResult::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void LiveStreamOcrWordsRecognitionResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_wordHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Word";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_word.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_word.c_str(), allocator).Move(), allocator);
     }
 
     if (m_startPtsTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartPtsTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_startPtsTime, allocator);
@@ -113,7 +112,7 @@ void LiveStreamOcrWordsRecognitionResult::ToJsonObject(Value &value, Document::A
 
     if (m_endPtsTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndPtsTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_endPtsTime, allocator);
@@ -121,7 +120,7 @@ void LiveStreamOcrWordsRecognitionResult::ToJsonObject(Value &value, Document::A
 
     if (m_confidenceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Confidence";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_confidence, allocator);
@@ -129,14 +128,14 @@ void LiveStreamOcrWordsRecognitionResult::ToJsonObject(Value &value, Document::A
 
     if (m_areaCoordsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AreaCoords";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_areaCoords.begin(); itr != m_areaCoords.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 

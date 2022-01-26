@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 AiRecognitionTaskObjectResultInput::AiRecognitionTaskObjectResultInput() :
@@ -26,7 +25,7 @@ AiRecognitionTaskObjectResultInput::AiRecognitionTaskObjectResultInput() :
 {
 }
 
-CoreInternalOutcome AiRecognitionTaskObjectResultInput::Deserialize(const Value &value)
+CoreInternalOutcome AiRecognitionTaskObjectResultInput::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -35,7 +34,7 @@ CoreInternalOutcome AiRecognitionTaskObjectResultInput::Deserialize(const Value 
     {
         if (!value["Definition"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `AiRecognitionTaskObjectResultInput.Definition` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionTaskObjectResultInput.Definition` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_definition = value["Definition"].GetInt64();
         m_definitionHasBeenSet = true;
@@ -45,12 +44,12 @@ CoreInternalOutcome AiRecognitionTaskObjectResultInput::Deserialize(const Value 
     return CoreInternalOutcome(true);
 }
 
-void AiRecognitionTaskObjectResultInput::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AiRecognitionTaskObjectResultInput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_definitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Definition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_definition, allocator);

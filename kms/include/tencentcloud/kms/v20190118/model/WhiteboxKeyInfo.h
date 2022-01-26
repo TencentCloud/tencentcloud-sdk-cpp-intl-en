@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool KeyIdHasBeenSet() const;
 
                     /**
-                     * 获取Unique alias that makes a key more recognizable and understandable. This parameter should be 1 to 60 letters, digits, `-`, and `_`; it must begin with a letter or digit and cannot be left empty.
-                     * @return Alias Unique alias that makes a key more recognizable and understandable. This parameter should be 1 to 60 letters, digits, `-`, and `_`; it must begin with a letter or digit and cannot be left empty.
+                     * 获取Unique alias that makes a key more recognizable and understandable. This parameter cannot be empty, can contain 1 to 60 letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
+                     * @return Alias Unique alias that makes a key more recognizable and understandable. This parameter cannot be empty, can contain 1 to 60 letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
                      */
                     std::string GetAlias() const;
 
                     /**
-                     * 设置Unique alias that makes a key more recognizable and understandable. This parameter should be 1 to 60 letters, digits, `-`, and `_`; it must begin with a letter or digit and cannot be left empty.
-                     * @param Alias Unique alias that makes a key more recognizable and understandable. This parameter should be 1 to 60 letters, digits, `-`, and `_`; it must begin with a letter or digit and cannot be left empty.
+                     * 设置Unique alias that makes a key more recognizable and understandable. This parameter cannot be empty, can contain 1 to 60 letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
+                     * @param Alias Unique alias that makes a key more recognizable and understandable. This parameter cannot be empty, can contain 1 to 60 letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
                      */
                     void SetAlias(const std::string& _alias);
 
@@ -227,14 +227,14 @@ namespace TencentCloud
                     bool DecryptKeyHasBeenSet() const;
 
                     /**
-                     * 获取Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
-                     * @return ResourceId Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
+                     * 获取Resource ID in the format of `creatorUin/$creatorUin/$keyId`
+                     * @return ResourceId Resource ID in the format of `creatorUin/$creatorUin/$keyId`
                      */
                     std::string GetResourceId() const;
 
                     /**
-                     * 设置Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
-                     * @param ResourceId Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
+                     * 设置Resource ID in the format of `creatorUin/$creatorUin/$keyId`
+                     * @param ResourceId Resource ID in the format of `creatorUin/$creatorUin/$keyId`
                      */
                     void SetResourceId(const std::string& _resourceId);
 
@@ -243,6 +243,28 @@ namespace TencentCloud
                      * @return ResourceId 是否已赋值
                      */
                     bool ResourceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Whether there is a device fingerprint bound to the current key
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return DeviceFingerprintBind Whether there is a device fingerprint bound to the current key
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool GetDeviceFingerprintBind() const;
+
+                    /**
+                     * 设置Whether there is a device fingerprint bound to the current key
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param DeviceFingerprintBind Whether there is a device fingerprint bound to the current key
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDeviceFingerprintBind(const bool& _deviceFingerprintBind);
+
+                    /**
+                     * 判断参数 DeviceFingerprintBind 是否已赋值
+                     * @return DeviceFingerprintBind 是否已赋值
+                     */
+                    bool DeviceFingerprintBindHasBeenSet() const;
 
                 private:
 
@@ -253,7 +275,7 @@ namespace TencentCloud
                     bool m_keyIdHasBeenSet;
 
                     /**
-                     * Unique alias that makes a key more recognizable and understandable. This parameter should be 1 to 60 letters, digits, `-`, and `_`; it must begin with a letter or digit and cannot be left empty.
+                     * Unique alias that makes a key more recognizable and understandable. This parameter cannot be empty, can contain 1 to 60 letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
                      */
                     std::string m_alias;
                     bool m_aliasHasBeenSet;
@@ -307,10 +329,17 @@ namespace TencentCloud
                     bool m_decryptKeyHasBeenSet;
 
                     /**
-                     * Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
+                     * Resource ID in the format of `creatorUin/$creatorUin/$keyId`
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;
+
+                    /**
+                     * Whether there is a device fingerprint bound to the current key
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool m_deviceFingerprintBind;
+                    bool m_deviceFingerprintBindHasBeenSet;
 
                 };
             }

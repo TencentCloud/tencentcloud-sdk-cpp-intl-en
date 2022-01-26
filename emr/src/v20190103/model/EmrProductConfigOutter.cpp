@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Emr::V20190103::Model;
-using namespace rapidjson;
 using namespace std;
 
 EmrProductConfigOutter::EmrProductConfigOutter() :
@@ -37,11 +36,13 @@ EmrProductConfigOutter::EmrProductConfigOutter() :
     m_supportHAHasBeenSet(false),
     m_securityOnHasBeenSet(false),
     m_securityGroupHasBeenSet(false),
-    m_cbsEncryptHasBeenSet(false)
+    m_cbsEncryptHasBeenSet(false),
+    m_applicationRoleHasBeenSet(false),
+    m_securityGroupsHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome EmrProductConfigOutter::Deserialize(const Value &value)
+CoreInternalOutcome EmrProductConfigOutter::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -49,10 +50,10 @@ CoreInternalOutcome EmrProductConfigOutter::Deserialize(const Value &value)
     if (value.HasMember("SoftInfo") && !value["SoftInfo"].IsNull())
     {
         if (!value["SoftInfo"].IsArray())
-            return CoreInternalOutcome(Error("response `EmrProductConfigOutter.SoftInfo` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `EmrProductConfigOutter.SoftInfo` is not array type"));
 
-        const Value &tmpValue = value["SoftInfo"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["SoftInfo"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_softInfo.push_back((*itr).GetString());
         }
@@ -63,7 +64,7 @@ CoreInternalOutcome EmrProductConfigOutter::Deserialize(const Value &value)
     {
         if (!value["MasterNodeSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `EmrProductConfigOutter.MasterNodeSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EmrProductConfigOutter.MasterNodeSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_masterNodeSize = value["MasterNodeSize"].GetInt64();
         m_masterNodeSizeHasBeenSet = true;
@@ -73,7 +74,7 @@ CoreInternalOutcome EmrProductConfigOutter::Deserialize(const Value &value)
     {
         if (!value["CoreNodeSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `EmrProductConfigOutter.CoreNodeSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EmrProductConfigOutter.CoreNodeSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_coreNodeSize = value["CoreNodeSize"].GetInt64();
         m_coreNodeSizeHasBeenSet = true;
@@ -83,7 +84,7 @@ CoreInternalOutcome EmrProductConfigOutter::Deserialize(const Value &value)
     {
         if (!value["TaskNodeSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `EmrProductConfigOutter.TaskNodeSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EmrProductConfigOutter.TaskNodeSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_taskNodeSize = value["TaskNodeSize"].GetInt64();
         m_taskNodeSizeHasBeenSet = true;
@@ -93,7 +94,7 @@ CoreInternalOutcome EmrProductConfigOutter::Deserialize(const Value &value)
     {
         if (!value["ComNodeSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `EmrProductConfigOutter.ComNodeSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EmrProductConfigOutter.ComNodeSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_comNodeSize = value["ComNodeSize"].GetInt64();
         m_comNodeSizeHasBeenSet = true;
@@ -103,7 +104,7 @@ CoreInternalOutcome EmrProductConfigOutter::Deserialize(const Value &value)
     {
         if (!value["MasterResource"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `EmrProductConfigOutter.MasterResource` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EmrProductConfigOutter.MasterResource` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_masterResource.Deserialize(value["MasterResource"]);
@@ -120,7 +121,7 @@ CoreInternalOutcome EmrProductConfigOutter::Deserialize(const Value &value)
     {
         if (!value["CoreResource"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `EmrProductConfigOutter.CoreResource` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EmrProductConfigOutter.CoreResource` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_coreResource.Deserialize(value["CoreResource"]);
@@ -137,7 +138,7 @@ CoreInternalOutcome EmrProductConfigOutter::Deserialize(const Value &value)
     {
         if (!value["TaskResource"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `EmrProductConfigOutter.TaskResource` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EmrProductConfigOutter.TaskResource` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_taskResource.Deserialize(value["TaskResource"]);
@@ -154,7 +155,7 @@ CoreInternalOutcome EmrProductConfigOutter::Deserialize(const Value &value)
     {
         if (!value["ComResource"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `EmrProductConfigOutter.ComResource` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EmrProductConfigOutter.ComResource` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_comResource.Deserialize(value["ComResource"]);
@@ -171,7 +172,7 @@ CoreInternalOutcome EmrProductConfigOutter::Deserialize(const Value &value)
     {
         if (!value["OnCos"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `EmrProductConfigOutter.OnCos` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EmrProductConfigOutter.OnCos` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_onCos = value["OnCos"].GetBool();
         m_onCosHasBeenSet = true;
@@ -181,7 +182,7 @@ CoreInternalOutcome EmrProductConfigOutter::Deserialize(const Value &value)
     {
         if (!value["ChargeType"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `EmrProductConfigOutter.ChargeType` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EmrProductConfigOutter.ChargeType` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_chargeType = value["ChargeType"].GetInt64();
         m_chargeTypeHasBeenSet = true;
@@ -191,7 +192,7 @@ CoreInternalOutcome EmrProductConfigOutter::Deserialize(const Value &value)
     {
         if (!value["RouterNodeSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `EmrProductConfigOutter.RouterNodeSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EmrProductConfigOutter.RouterNodeSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_routerNodeSize = value["RouterNodeSize"].GetInt64();
         m_routerNodeSizeHasBeenSet = true;
@@ -201,7 +202,7 @@ CoreInternalOutcome EmrProductConfigOutter::Deserialize(const Value &value)
     {
         if (!value["SupportHA"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `EmrProductConfigOutter.SupportHA` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EmrProductConfigOutter.SupportHA` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_supportHA = value["SupportHA"].GetBool();
         m_supportHAHasBeenSet = true;
@@ -211,7 +212,7 @@ CoreInternalOutcome EmrProductConfigOutter::Deserialize(const Value &value)
     {
         if (!value["SecurityOn"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `EmrProductConfigOutter.SecurityOn` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EmrProductConfigOutter.SecurityOn` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_securityOn = value["SecurityOn"].GetBool();
         m_securityOnHasBeenSet = true;
@@ -221,7 +222,7 @@ CoreInternalOutcome EmrProductConfigOutter::Deserialize(const Value &value)
     {
         if (!value["SecurityGroup"].IsString())
         {
-            return CoreInternalOutcome(Error("response `EmrProductConfigOutter.SecurityGroup` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EmrProductConfigOutter.SecurityGroup` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_securityGroup = string(value["SecurityGroup"].GetString());
         m_securityGroupHasBeenSet = true;
@@ -231,35 +232,58 @@ CoreInternalOutcome EmrProductConfigOutter::Deserialize(const Value &value)
     {
         if (!value["CbsEncrypt"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `EmrProductConfigOutter.CbsEncrypt` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EmrProductConfigOutter.CbsEncrypt` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_cbsEncrypt = value["CbsEncrypt"].GetInt64();
         m_cbsEncryptHasBeenSet = true;
+    }
+
+    if (value.HasMember("ApplicationRole") && !value["ApplicationRole"].IsNull())
+    {
+        if (!value["ApplicationRole"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `EmrProductConfigOutter.ApplicationRole` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_applicationRole = string(value["ApplicationRole"].GetString());
+        m_applicationRoleHasBeenSet = true;
+    }
+
+    if (value.HasMember("SecurityGroups") && !value["SecurityGroups"].IsNull())
+    {
+        if (!value["SecurityGroups"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `EmrProductConfigOutter.SecurityGroups` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["SecurityGroups"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_securityGroups.push_back((*itr).GetString());
+        }
+        m_securityGroupsHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void EmrProductConfigOutter::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void EmrProductConfigOutter::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_softInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SoftInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_softInfo.begin(); itr != m_softInfo.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_masterNodeSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MasterNodeSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_masterNodeSize, allocator);
@@ -267,7 +291,7 @@ void EmrProductConfigOutter::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_coreNodeSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CoreNodeSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_coreNodeSize, allocator);
@@ -275,7 +299,7 @@ void EmrProductConfigOutter::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_taskNodeSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TaskNodeSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_taskNodeSize, allocator);
@@ -283,7 +307,7 @@ void EmrProductConfigOutter::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_comNodeSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ComNodeSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_comNodeSize, allocator);
@@ -291,43 +315,43 @@ void EmrProductConfigOutter::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_masterResourceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MasterResource";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_masterResource.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_coreResourceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CoreResource";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_coreResource.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_taskResourceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TaskResource";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_taskResource.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_comResourceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ComResource";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_comResource.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_onCosHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OnCos";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_onCos, allocator);
@@ -335,7 +359,7 @@ void EmrProductConfigOutter::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_chargeTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ChargeType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_chargeType, allocator);
@@ -343,7 +367,7 @@ void EmrProductConfigOutter::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_routerNodeSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RouterNodeSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_routerNodeSize, allocator);
@@ -351,7 +375,7 @@ void EmrProductConfigOutter::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_supportHAHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SupportHA";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_supportHA, allocator);
@@ -359,7 +383,7 @@ void EmrProductConfigOutter::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_securityOnHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SecurityOn";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_securityOn, allocator);
@@ -367,18 +391,39 @@ void EmrProductConfigOutter::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_securityGroupHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SecurityGroup";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_securityGroup.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_securityGroup.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cbsEncryptHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CbsEncrypt";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cbsEncrypt, allocator);
+    }
+
+    if (m_applicationRoleHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ApplicationRole";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_applicationRole.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_securityGroupsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SecurityGroups";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_securityGroups.begin(); itr != m_securityGroups.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
 }
@@ -638,5 +683,37 @@ void EmrProductConfigOutter::SetCbsEncrypt(const int64_t& _cbsEncrypt)
 bool EmrProductConfigOutter::CbsEncryptHasBeenSet() const
 {
     return m_cbsEncryptHasBeenSet;
+}
+
+string EmrProductConfigOutter::GetApplicationRole() const
+{
+    return m_applicationRole;
+}
+
+void EmrProductConfigOutter::SetApplicationRole(const string& _applicationRole)
+{
+    m_applicationRole = _applicationRole;
+    m_applicationRoleHasBeenSet = true;
+}
+
+bool EmrProductConfigOutter::ApplicationRoleHasBeenSet() const
+{
+    return m_applicationRoleHasBeenSet;
+}
+
+vector<string> EmrProductConfigOutter::GetSecurityGroups() const
+{
+    return m_securityGroups;
+}
+
+void EmrProductConfigOutter::SetSecurityGroups(const vector<string>& _securityGroups)
+{
+    m_securityGroups = _securityGroups;
+    m_securityGroupsHasBeenSet = true;
+}
+
+bool EmrProductConfigOutter::SecurityGroupsHasBeenSet() const
+{
+    return m_securityGroupsHasBeenSet;
 }
 

@@ -20,28 +20,31 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Billing::V20180709::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeBillResourceSummaryRequest::DescribeBillResourceSummaryRequest() :
     m_offsetHasBeenSet(false),
     m_limitHasBeenSet(false),
-    m_periodTypeHasBeenSet(false),
     m_monthHasBeenSet(false),
-    m_needRecordNumHasBeenSet(false)
+    m_periodTypeHasBeenSet(false),
+    m_needRecordNumHasBeenSet(false),
+    m_actionTypeHasBeenSet(false),
+    m_resourceIdHasBeenSet(false),
+    m_payModeHasBeenSet(false),
+    m_businessCodeHasBeenSet(false)
 {
 }
 
 string DescribeBillResourceSummaryRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_offsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Offset";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_offset, allocator);
@@ -49,39 +52,71 @@ string DescribeBillResourceSummaryRequest::ToJsonString() const
 
     if (m_limitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Limit";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_limit, allocator);
     }
 
-    if (m_periodTypeHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "PeriodType";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_periodType.c_str(), allocator).Move(), allocator);
-    }
-
     if (m_monthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Month";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_month.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_month.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_periodTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PeriodType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_periodType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_needRecordNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NeedRecordNum";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_needRecordNum, allocator);
     }
 
+    if (m_actionTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ActionType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_actionType.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    if (m_resourceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ResourceId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_resourceId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_payModeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PayMode";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_payMode.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_businessCodeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BusinessCode";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_businessCode.c_str(), allocator).Move(), allocator);
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -119,22 +154,6 @@ bool DescribeBillResourceSummaryRequest::LimitHasBeenSet() const
     return m_limitHasBeenSet;
 }
 
-string DescribeBillResourceSummaryRequest::GetPeriodType() const
-{
-    return m_periodType;
-}
-
-void DescribeBillResourceSummaryRequest::SetPeriodType(const string& _periodType)
-{
-    m_periodType = _periodType;
-    m_periodTypeHasBeenSet = true;
-}
-
-bool DescribeBillResourceSummaryRequest::PeriodTypeHasBeenSet() const
-{
-    return m_periodTypeHasBeenSet;
-}
-
 string DescribeBillResourceSummaryRequest::GetMonth() const
 {
     return m_month;
@@ -151,6 +170,22 @@ bool DescribeBillResourceSummaryRequest::MonthHasBeenSet() const
     return m_monthHasBeenSet;
 }
 
+string DescribeBillResourceSummaryRequest::GetPeriodType() const
+{
+    return m_periodType;
+}
+
+void DescribeBillResourceSummaryRequest::SetPeriodType(const string& _periodType)
+{
+    m_periodType = _periodType;
+    m_periodTypeHasBeenSet = true;
+}
+
+bool DescribeBillResourceSummaryRequest::PeriodTypeHasBeenSet() const
+{
+    return m_periodTypeHasBeenSet;
+}
+
 int64_t DescribeBillResourceSummaryRequest::GetNeedRecordNum() const
 {
     return m_needRecordNum;
@@ -165,6 +200,70 @@ void DescribeBillResourceSummaryRequest::SetNeedRecordNum(const int64_t& _needRe
 bool DescribeBillResourceSummaryRequest::NeedRecordNumHasBeenSet() const
 {
     return m_needRecordNumHasBeenSet;
+}
+
+string DescribeBillResourceSummaryRequest::GetActionType() const
+{
+    return m_actionType;
+}
+
+void DescribeBillResourceSummaryRequest::SetActionType(const string& _actionType)
+{
+    m_actionType = _actionType;
+    m_actionTypeHasBeenSet = true;
+}
+
+bool DescribeBillResourceSummaryRequest::ActionTypeHasBeenSet() const
+{
+    return m_actionTypeHasBeenSet;
+}
+
+string DescribeBillResourceSummaryRequest::GetResourceId() const
+{
+    return m_resourceId;
+}
+
+void DescribeBillResourceSummaryRequest::SetResourceId(const string& _resourceId)
+{
+    m_resourceId = _resourceId;
+    m_resourceIdHasBeenSet = true;
+}
+
+bool DescribeBillResourceSummaryRequest::ResourceIdHasBeenSet() const
+{
+    return m_resourceIdHasBeenSet;
+}
+
+string DescribeBillResourceSummaryRequest::GetPayMode() const
+{
+    return m_payMode;
+}
+
+void DescribeBillResourceSummaryRequest::SetPayMode(const string& _payMode)
+{
+    m_payMode = _payMode;
+    m_payModeHasBeenSet = true;
+}
+
+bool DescribeBillResourceSummaryRequest::PayModeHasBeenSet() const
+{
+    return m_payModeHasBeenSet;
+}
+
+string DescribeBillResourceSummaryRequest::GetBusinessCode() const
+{
+    return m_businessCode;
+}
+
+void DescribeBillResourceSummaryRequest::SetBusinessCode(const string& _businessCode)
+{
+    m_businessCode = _businessCode;
+    m_businessCodeHasBeenSet = true;
+}
+
+bool DescribeBillResourceSummaryRequest::BusinessCodeHasBeenSet() const
+{
+    return m_businessCodeHasBeenSet;
 }
 
 

@@ -112,6 +112,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool CodecHasBeenSet() const;
 
+                    /**
+                     * 获取Number of sound channels, e.g., 2
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @return Channel Number of sound channels, e.g., 2
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    int64_t GetChannel() const;
+
+                    /**
+                     * 设置Number of sound channels, e.g., 2
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @param Channel Number of sound channels, e.g., 2
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetChannel(const int64_t& _channel);
+
+                    /**
+                     * 判断参数 Channel 是否已赋值
+                     * @return Channel 是否已赋值
+                     */
+                    bool ChannelHasBeenSet() const;
+
                 private:
 
                     /**
@@ -134,6 +156,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_codec;
                     bool m_codecHasBeenSet;
+
+                    /**
+                     * Number of sound channels, e.g., 2
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    int64_t m_channel;
+                    bool m_channelHasBeenSet;
 
                 };
             }

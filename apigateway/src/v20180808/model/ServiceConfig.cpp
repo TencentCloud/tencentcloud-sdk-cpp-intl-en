@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 ServiceConfig::ServiceConfig() :
@@ -26,11 +25,12 @@ ServiceConfig::ServiceConfig() :
     m_uniqVpcIdHasBeenSet(false),
     m_urlHasBeenSet(false),
     m_pathHasBeenSet(false),
-    m_methodHasBeenSet(false)
+    m_methodHasBeenSet(false),
+    m_cosConfigHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ServiceConfig::Deserialize(const Value &value)
+CoreInternalOutcome ServiceConfig::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +39,7 @@ CoreInternalOutcome ServiceConfig::Deserialize(const Value &value)
     {
         if (!value["Product"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ServiceConfig.Product` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceConfig.Product` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_product = string(value["Product"].GetString());
         m_productHasBeenSet = true;
@@ -49,7 +49,7 @@ CoreInternalOutcome ServiceConfig::Deserialize(const Value &value)
     {
         if (!value["UniqVpcId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ServiceConfig.UniqVpcId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceConfig.UniqVpcId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_uniqVpcId = string(value["UniqVpcId"].GetString());
         m_uniqVpcIdHasBeenSet = true;
@@ -59,7 +59,7 @@ CoreInternalOutcome ServiceConfig::Deserialize(const Value &value)
     {
         if (!value["Url"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ServiceConfig.Url` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceConfig.Url` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_url = string(value["Url"].GetString());
         m_urlHasBeenSet = true;
@@ -69,7 +69,7 @@ CoreInternalOutcome ServiceConfig::Deserialize(const Value &value)
     {
         if (!value["Path"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ServiceConfig.Path` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceConfig.Path` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_path = string(value["Path"].GetString());
         m_pathHasBeenSet = true;
@@ -79,57 +79,83 @@ CoreInternalOutcome ServiceConfig::Deserialize(const Value &value)
     {
         if (!value["Method"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ServiceConfig.Method` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceConfig.Method` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_method = string(value["Method"].GetString());
         m_methodHasBeenSet = true;
+    }
+
+    if (value.HasMember("CosConfig") && !value["CosConfig"].IsNull())
+    {
+        if (!value["CosConfig"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `ServiceConfig.CosConfig` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_cosConfig.Deserialize(value["CosConfig"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_cosConfigHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void ServiceConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ServiceConfig::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_productHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Product";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_product.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_product.c_str(), allocator).Move(), allocator);
     }
 
     if (m_uniqVpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UniqVpcId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_uniqVpcId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_uniqVpcId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_urlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Url";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_url.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_url.c_str(), allocator).Move(), allocator);
     }
 
     if (m_pathHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Path";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_path.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_path.c_str(), allocator).Move(), allocator);
     }
 
     if (m_methodHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Method";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_method.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_method.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_cosConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CosConfig";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_cosConfig.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -213,5 +239,21 @@ void ServiceConfig::SetMethod(const string& _method)
 bool ServiceConfig::MethodHasBeenSet() const
 {
     return m_methodHasBeenSet;
+}
+
+CosConfig ServiceConfig::GetCosConfig() const
+{
+    return m_cosConfig;
+}
+
+void ServiceConfig::SetCosConfig(const CosConfig& _cosConfig)
+{
+    m_cosConfig = _cosConfig;
+    m_cosConfigHasBeenSet = true;
+}
+
+bool ServiceConfig::CosConfigHasBeenSet() const
+{
+    return m_cosConfigHasBeenSet;
 }
 

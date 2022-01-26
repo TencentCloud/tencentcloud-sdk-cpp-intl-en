@@ -43,22 +43,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
-                     * @return ImageBase64 Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+                     * 获取Base64-encoded value of image/PDF.
+The image/PDF cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
+                     * @return ImageBase64 Base64-encoded value of image/PDF.
+The image/PDF cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
                      */
                     std::string GetImageBase64() const;
 
                     /**
-                     * 设置Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
-                     * @param ImageBase64 Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+                     * 设置Base64-encoded value of image/PDF.
+The image/PDF cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
+                     * @param ImageBase64 Base64-encoded value of image/PDF.
+The image/PDF cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
                      */
                     void SetImageBase64(const std::string& _imageBase64);
 
@@ -69,22 +65,22 @@ Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are pr
                     bool ImageBase64HasBeenSet() const;
 
                     /**
-                     * 获取URL address of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
-                     * @return ImageUrl URL address of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+                     * 获取URL address of image/PDF. (This field is not supported outside Chinese mainland)
+The image/PDF cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+                     * @return ImageUrl URL address of image/PDF. (This field is not supported outside Chinese mainland)
+The image/PDF cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
                      */
                     std::string GetImageUrl() const;
 
                     /**
-                     * 设置URL address of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
-                     * @param ImageUrl URL address of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+                     * 设置URL address of image/PDF. (This field is not supported outside Chinese mainland)
+The image/PDF cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+                     * @param ImageUrl URL address of image/PDF. (This field is not supported outside Chinese mainland)
+The image/PDF cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
                      */
                     void SetImageUrl(const std::string& _imageUrl);
 
@@ -113,50 +109,114 @@ You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL 
                     bool SceneHasBeenSet() const;
 
                     /**
-                     * 获取Language to be recognized.
+                     * 获取Language to recognize
 The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
 Valid values:
-zh\auto\jap\kor\nspa\fre\ger\por\nvie\may\rus\ita\nhol\swe\fin\dan\nnor\hun\tha\lat
-Value meanings:
-Chinese-English mix, automatic recognition, Japanese, Korean,
-Spanish, French, German, Portuguese,
-Vietnamese, Malay, Russian, Italian,
-Dutch, Swedish, Finnish, Danish,
-Norwegian, Hungarian, Thai, Latin.
-                     * @return LanguageType Language to be recognized.
+`zh`: Chinese-English mix
+`zh_rare`: supports letters, digits, rare Chinese characters, Traditional Chinese characters, special characters, etc.
+`auto`
+`mix`: language mix
+`jap`: Japanese
+`kor`: Korean
+`spa`: Spanish
+`fre`: French
+`ger`: German
+`por`: Portuguese
+`vie`: Vietnamese
+`may`: Malay
+`rus`: Russian
+`ita`: Italian
+`hol`: Dutch
+`swe`: Swedish
+`fin`: Finnish
+`dan`: Danish
+`nor`: Norwegian
+`hun`: Hungarian
+`tha`: Thai
+`hi`: Hindi
+`ara`: Arabic
+                     * @return LanguageType Language to recognize
 The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
 Valid values:
-zh\auto\jap\kor\nspa\fre\ger\por\nvie\may\rus\ita\nhol\swe\fin\dan\nnor\hun\tha\lat
-Value meanings:
-Chinese-English mix, automatic recognition, Japanese, Korean,
-Spanish, French, German, Portuguese,
-Vietnamese, Malay, Russian, Italian,
-Dutch, Swedish, Finnish, Danish,
-Norwegian, Hungarian, Thai, Latin.
+`zh`: Chinese-English mix
+`zh_rare`: supports letters, digits, rare Chinese characters, Traditional Chinese characters, special characters, etc.
+`auto`
+`mix`: language mix
+`jap`: Japanese
+`kor`: Korean
+`spa`: Spanish
+`fre`: French
+`ger`: German
+`por`: Portuguese
+`vie`: Vietnamese
+`may`: Malay
+`rus`: Russian
+`ita`: Italian
+`hol`: Dutch
+`swe`: Swedish
+`fin`: Finnish
+`dan`: Danish
+`nor`: Norwegian
+`hun`: Hungarian
+`tha`: Thai
+`hi`: Hindi
+`ara`: Arabic
                      */
                     std::string GetLanguageType() const;
 
                     /**
-                     * 设置Language to be recognized.
+                     * 设置Language to recognize
 The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
 Valid values:
-zh\auto\jap\kor\nspa\fre\ger\por\nvie\may\rus\ita\nhol\swe\fin\dan\nnor\hun\tha\lat
-Value meanings:
-Chinese-English mix, automatic recognition, Japanese, Korean,
-Spanish, French, German, Portuguese,
-Vietnamese, Malay, Russian, Italian,
-Dutch, Swedish, Finnish, Danish,
-Norwegian, Hungarian, Thai, Latin.
-                     * @param LanguageType Language to be recognized.
+`zh`: Chinese-English mix
+`zh_rare`: supports letters, digits, rare Chinese characters, Traditional Chinese characters, special characters, etc.
+`auto`
+`mix`: language mix
+`jap`: Japanese
+`kor`: Korean
+`spa`: Spanish
+`fre`: French
+`ger`: German
+`por`: Portuguese
+`vie`: Vietnamese
+`may`: Malay
+`rus`: Russian
+`ita`: Italian
+`hol`: Dutch
+`swe`: Swedish
+`fin`: Finnish
+`dan`: Danish
+`nor`: Norwegian
+`hun`: Hungarian
+`tha`: Thai
+`hi`: Hindi
+`ara`: Arabic
+                     * @param LanguageType Language to recognize
 The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
 Valid values:
-zh\auto\jap\kor\nspa\fre\ger\por\nvie\may\rus\ita\nhol\swe\fin\dan\nnor\hun\tha\lat
-Value meanings:
-Chinese-English mix, automatic recognition, Japanese, Korean,
-Spanish, French, German, Portuguese,
-Vietnamese, Malay, Russian, Italian,
-Dutch, Swedish, Finnish, Danish,
-Norwegian, Hungarian, Thai, Latin.
+`zh`: Chinese-English mix
+`zh_rare`: supports letters, digits, rare Chinese characters, Traditional Chinese characters, special characters, etc.
+`auto`
+`mix`: language mix
+`jap`: Japanese
+`kor`: Korean
+`spa`: Spanish
+`fre`: French
+`ger`: German
+`por`: Portuguese
+`vie`: Vietnamese
+`may`: Malay
+`rus`: Russian
+`ita`: Italian
+`hol`: Dutch
+`swe`: Swedish
+`fin`: Finnish
+`dan`: Danish
+`nor`: Norwegian
+`hun`: Hungarian
+`tha`: Thai
+`hi`: Hindi
+`ara`: Arabic
                      */
                     void SetLanguageType(const std::string& _languageType);
 
@@ -166,20 +226,73 @@ Norwegian, Hungarian, Thai, Latin.
                      */
                     bool LanguageTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable PDF recognition. Default value: false. After this feature is enabled, both images and PDF files can be recognized at the same time.
+                     * @return IsPdf Whether to enable PDF recognition. Default value: false. After this feature is enabled, both images and PDF files can be recognized at the same time.
+                     */
+                    bool GetIsPdf() const;
+
+                    /**
+                     * 设置Whether to enable PDF recognition. Default value: false. After this feature is enabled, both images and PDF files can be recognized at the same time.
+                     * @param IsPdf Whether to enable PDF recognition. Default value: false. After this feature is enabled, both images and PDF files can be recognized at the same time.
+                     */
+                    void SetIsPdf(const bool& _isPdf);
+
+                    /**
+                     * 判断参数 IsPdf 是否已赋值
+                     * @return IsPdf 是否已赋值
+                     */
+                    bool IsPdfHasBeenSet() const;
+
+                    /**
+                     * 获取Page number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of the `IsPdf` parameter is `true`. Default value: 1.
+                     * @return PdfPageNumber Page number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of the `IsPdf` parameter is `true`. Default value: 1.
+                     */
+                    uint64_t GetPdfPageNumber() const;
+
+                    /**
+                     * 设置Page number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of the `IsPdf` parameter is `true`. Default value: 1.
+                     * @param PdfPageNumber Page number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of the `IsPdf` parameter is `true`. Default value: 1.
+                     */
+                    void SetPdfPageNumber(const uint64_t& _pdfPageNumber);
+
+                    /**
+                     * 判断参数 PdfPageNumber 是否已赋值
+                     * @return PdfPageNumber 是否已赋值
+                     */
+                    bool PdfPageNumberHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to return the character information. Default value: `false`
+                     * @return IsWords Whether to return the character information. Default value: `false`
+                     */
+                    bool GetIsWords() const;
+
+                    /**
+                     * 设置Whether to return the character information. Default value: `false`
+                     * @param IsWords Whether to return the character information. Default value: `false`
+                     */
+                    void SetIsWords(const bool& _isWords);
+
+                    /**
+                     * 判断参数 IsWords 是否已赋值
+                     * @return IsWords 是否已赋值
+                     */
+                    bool IsWordsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+                     * Base64-encoded value of image/PDF.
+The image/PDF cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
                      */
                     std::string m_imageBase64;
                     bool m_imageBase64HasBeenSet;
 
                     /**
-                     * URL address of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+                     * URL address of image/PDF. (This field is not supported outside Chinese mainland)
+The image/PDF cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
                      */
                     std::string m_imageUrl;
                     bool m_imageUrlHasBeenSet;
@@ -191,19 +304,53 @@ You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL 
                     bool m_sceneHasBeenSet;
 
                     /**
-                     * Language to be recognized.
+                     * Language to recognize
 The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
 Valid values:
-zh\auto\jap\kor\nspa\fre\ger\por\nvie\may\rus\ita\nhol\swe\fin\dan\nnor\hun\tha\lat
-Value meanings:
-Chinese-English mix, automatic recognition, Japanese, Korean,
-Spanish, French, German, Portuguese,
-Vietnamese, Malay, Russian, Italian,
-Dutch, Swedish, Finnish, Danish,
-Norwegian, Hungarian, Thai, Latin.
+`zh`: Chinese-English mix
+`zh_rare`: supports letters, digits, rare Chinese characters, Traditional Chinese characters, special characters, etc.
+`auto`
+`mix`: language mix
+`jap`: Japanese
+`kor`: Korean
+`spa`: Spanish
+`fre`: French
+`ger`: German
+`por`: Portuguese
+`vie`: Vietnamese
+`may`: Malay
+`rus`: Russian
+`ita`: Italian
+`hol`: Dutch
+`swe`: Swedish
+`fin`: Finnish
+`dan`: Danish
+`nor`: Norwegian
+`hun`: Hungarian
+`tha`: Thai
+`hi`: Hindi
+`ara`: Arabic
                      */
                     std::string m_languageType;
                     bool m_languageTypeHasBeenSet;
+
+                    /**
+                     * Whether to enable PDF recognition. Default value: false. After this feature is enabled, both images and PDF files can be recognized at the same time.
+                     */
+                    bool m_isPdf;
+                    bool m_isPdfHasBeenSet;
+
+                    /**
+                     * Page number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of the `IsPdf` parameter is `true`. Default value: 1.
+                     */
+                    uint64_t m_pdfPageNumber;
+                    bool m_pdfPageNumberHasBeenSet;
+
+                    /**
+                     * Whether to return the character information. Default value: `false`
+                     */
+                    bool m_isWords;
+                    bool m_isWordsHasBeenSet;
 
                 };
             }

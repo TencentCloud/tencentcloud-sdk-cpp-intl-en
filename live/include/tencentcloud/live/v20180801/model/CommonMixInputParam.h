@@ -49,14 +49,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Input stream name of up to 80 bytes, which is a string containing letters, digits, and underscores.
-                     * @return InputStreamName Input stream name of up to 80 bytes, which is a string containing letters, digits, and underscores.
+                     * 获取Input stream name, which can contain up to 80 bytes of letters, digits, and underscores.
+The value should be the name of an input stream for stream mix when `LayoutParams.InputType` is set to `0` (audio and video), `4` (pure audio), or `5` (pure video).
+The value can be a random name for identification, such as `Canvas1` or `Picture1`, when `LayoutParams.InputType` is set to `2` (image) or `3` (canvas).
+                     * @return InputStreamName Input stream name, which can contain up to 80 bytes of letters, digits, and underscores.
+The value should be the name of an input stream for stream mix when `LayoutParams.InputType` is set to `0` (audio and video), `4` (pure audio), or `5` (pure video).
+The value can be a random name for identification, such as `Canvas1` or `Picture1`, when `LayoutParams.InputType` is set to `2` (image) or `3` (canvas).
                      */
                     std::string GetInputStreamName() const;
 
                     /**
-                     * 设置Input stream name of up to 80 bytes, which is a string containing letters, digits, and underscores.
-                     * @param InputStreamName Input stream name of up to 80 bytes, which is a string containing letters, digits, and underscores.
+                     * 设置Input stream name, which can contain up to 80 bytes of letters, digits, and underscores.
+The value should be the name of an input stream for stream mix when `LayoutParams.InputType` is set to `0` (audio and video), `4` (pure audio), or `5` (pure video).
+The value can be a random name for identification, such as `Canvas1` or `Picture1`, when `LayoutParams.InputType` is set to `2` (image) or `3` (canvas).
+                     * @param InputStreamName Input stream name, which can contain up to 80 bytes of letters, digits, and underscores.
+The value should be the name of an input stream for stream mix when `LayoutParams.InputType` is set to `0` (audio and video), `4` (pure audio), or `5` (pure video).
+The value can be a random name for identification, such as `Canvas1` or `Picture1`, when `LayoutParams.InputType` is set to `2` (image) or `3` (canvas).
                      */
                     void SetInputStreamName(const std::string& _inputStreamName);
 
@@ -105,7 +113,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Input stream name of up to 80 bytes, which is a string containing letters, digits, and underscores.
+                     * Input stream name, which can contain up to 80 bytes of letters, digits, and underscores.
+The value should be the name of an input stream for stream mix when `LayoutParams.InputType` is set to `0` (audio and video), `4` (pure audio), or `5` (pure video).
+The value can be a random name for identification, such as `Canvas1` or `Picture1`, when `LayoutParams.InputType` is set to `2` (image) or `3` (canvas).
                      */
                     std::string m_inputStreamName;
                     bool m_inputStreamNameHasBeenSet;

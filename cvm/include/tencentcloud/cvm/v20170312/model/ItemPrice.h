@@ -266,6 +266,240 @@ Note: this field may return null, indicating that no valid value is obtained.
                      */
                     bool UnitPriceDiscountThirdStepHasBeenSet() const;
 
+                    /**
+                     * 获取Original 3-year payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @return OriginalPriceThreeYear Original 3-year payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    double GetOriginalPriceThreeYear() const;
+
+                    /**
+                     * 设置Original 3-year payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @param OriginalPriceThreeYear Original 3-year payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetOriginalPriceThreeYear(const double& _originalPriceThreeYear);
+
+                    /**
+                     * 判断参数 OriginalPriceThreeYear 是否已赋值
+                     * @return OriginalPriceThreeYear 是否已赋值
+                     */
+                    bool OriginalPriceThreeYearHasBeenSet() const;
+
+                    /**
+                     * 获取Discounted 3-year upfront payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @return DiscountPriceThreeYear Discounted 3-year upfront payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    double GetDiscountPriceThreeYear() const;
+
+                    /**
+                     * 设置Discounted 3-year upfront payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @param DiscountPriceThreeYear Discounted 3-year upfront payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetDiscountPriceThreeYear(const double& _discountPriceThreeYear);
+
+                    /**
+                     * 判断参数 DiscountPriceThreeYear 是否已赋值
+                     * @return DiscountPriceThreeYear 是否已赋值
+                     */
+                    bool DiscountPriceThreeYearHasBeenSet() const;
+
+                    /**
+                     * 获取Discount for 3-year upfront payment. For example, 20.0 indicates 80% off.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @return DiscountThreeYear Discount for 3-year upfront payment. For example, 20.0 indicates 80% off.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    double GetDiscountThreeYear() const;
+
+                    /**
+                     * 设置Discount for 3-year upfront payment. For example, 20.0 indicates 80% off.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @param DiscountThreeYear Discount for 3-year upfront payment. For example, 20.0 indicates 80% off.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetDiscountThreeYear(const double& _discountThreeYear);
+
+                    /**
+                     * 判断参数 DiscountThreeYear 是否已赋值
+                     * @return DiscountThreeYear 是否已赋值
+                     */
+                    bool DiscountThreeYearHasBeenSet() const;
+
+                    /**
+                     * 获取Original 5-year payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @return OriginalPriceFiveYear Original 5-year payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    double GetOriginalPriceFiveYear() const;
+
+                    /**
+                     * 设置Original 5-year payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @param OriginalPriceFiveYear Original 5-year payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetOriginalPriceFiveYear(const double& _originalPriceFiveYear);
+
+                    /**
+                     * 判断参数 OriginalPriceFiveYear 是否已赋值
+                     * @return OriginalPriceFiveYear 是否已赋值
+                     */
+                    bool OriginalPriceFiveYearHasBeenSet() const;
+
+                    /**
+                     * 获取Discounted 5-year upfront payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @return DiscountPriceFiveYear Discounted 5-year upfront payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    double GetDiscountPriceFiveYear() const;
+
+                    /**
+                     * 设置Discounted 5-year upfront payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @param DiscountPriceFiveYear Discounted 5-year upfront payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetDiscountPriceFiveYear(const double& _discountPriceFiveYear);
+
+                    /**
+                     * 判断参数 DiscountPriceFiveYear 是否已赋值
+                     * @return DiscountPriceFiveYear 是否已赋值
+                     */
+                    bool DiscountPriceFiveYearHasBeenSet() const;
+
+                    /**
+                     * 获取Discount for 5-year upfront payment. For example, 20.0 indicates 80% off.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @return DiscountFiveYear Discount for 5-year upfront payment. For example, 20.0 indicates 80% off.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    double GetDiscountFiveYear() const;
+
+                    /**
+                     * 设置Discount for 5-year upfront payment. For example, 20.0 indicates 80% off.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @param DiscountFiveYear Discount for 5-year upfront payment. For example, 20.0 indicates 80% off.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetDiscountFiveYear(const double& _discountFiveYear);
+
+                    /**
+                     * 判断参数 DiscountFiveYear 是否已赋值
+                     * @return DiscountFiveYear 是否已赋值
+                     */
+                    bool DiscountFiveYearHasBeenSet() const;
+
+                    /**
+                     * 获取Original 1-year payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @return OriginalPriceOneYear Original 1-year payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    double GetOriginalPriceOneYear() const;
+
+                    /**
+                     * 设置Original 1-year payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @param OriginalPriceOneYear Original 1-year payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetOriginalPriceOneYear(const double& _originalPriceOneYear);
+
+                    /**
+                     * 判断参数 OriginalPriceOneYear 是否已赋值
+                     * @return OriginalPriceOneYear 是否已赋值
+                     */
+                    bool OriginalPriceOneYearHasBeenSet() const;
+
+                    /**
+                     * 获取Discounted 1-year payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @return DiscountPriceOneYear Discounted 1-year payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    double GetDiscountPriceOneYear() const;
+
+                    /**
+                     * 设置Discounted 1-year payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @param DiscountPriceOneYear Discounted 1-year payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetDiscountPriceOneYear(const double& _discountPriceOneYear);
+
+                    /**
+                     * 判断参数 DiscountPriceOneYear 是否已赋值
+                     * @return DiscountPriceOneYear 是否已赋值
+                     */
+                    bool DiscountPriceOneYearHasBeenSet() const;
+
+                    /**
+                     * 获取Discount for 1-year upfront payment. For example, 20.0 indicates 80% off.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @return DiscountOneYear Discount for 1-year upfront payment. For example, 20.0 indicates 80% off.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    double GetDiscountOneYear() const;
+
+                    /**
+                     * 设置Discount for 1-year upfront payment. For example, 20.0 indicates 80% off.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @param DiscountOneYear Discount for 1-year upfront payment. For example, 20.0 indicates 80% off.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetDiscountOneYear(const double& _discountOneYear);
+
+                    /**
+                     * 判断参数 DiscountOneYear 是否已赋值
+                     * @return DiscountOneYear 是否已赋值
+                     */
+                    bool DiscountOneYearHasBeenSet() const;
+
                 private:
 
                     /**
@@ -337,6 +571,78 @@ Note: this field may return null, indicating that no valid value is obtained.
                      */
                     double m_unitPriceDiscountThirdStep;
                     bool m_unitPriceDiscountThirdStepHasBeenSet;
+
+                    /**
+                     * Original 3-year payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    double m_originalPriceThreeYear;
+                    bool m_originalPriceThreeYearHasBeenSet;
+
+                    /**
+                     * Discounted 3-year upfront payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    double m_discountPriceThreeYear;
+                    bool m_discountPriceThreeYearHasBeenSet;
+
+                    /**
+                     * Discount for 3-year upfront payment. For example, 20.0 indicates 80% off.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    double m_discountThreeYear;
+                    bool m_discountThreeYearHasBeenSet;
+
+                    /**
+                     * Original 5-year payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    double m_originalPriceFiveYear;
+                    bool m_originalPriceFiveYearHasBeenSet;
+
+                    /**
+                     * Discounted 5-year upfront payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    double m_discountPriceFiveYear;
+                    bool m_discountPriceFiveYearHasBeenSet;
+
+                    /**
+                     * Discount for 5-year upfront payment. For example, 20.0 indicates 80% off.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    double m_discountFiveYear;
+                    bool m_discountFiveYearHasBeenSet;
+
+                    /**
+                     * Original 1-year payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    double m_originalPriceOneYear;
+                    bool m_originalPriceOneYearHasBeenSet;
+
+                    /**
+                     * Discounted 1-year payment, in USD. This parameter is only available to upfront payment mode.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    double m_discountPriceOneYear;
+                    bool m_discountPriceOneYearHasBeenSet;
+
+                    /**
+                     * Discount for 1-year upfront payment. For example, 20.0 indicates 80% off.
+Note: this field may return `null`, indicating that no valid value was found.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    double m_discountOneYear;
+                    bool m_discountOneYearHasBeenSet;
 
                 };
             }

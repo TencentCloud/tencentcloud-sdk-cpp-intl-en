@@ -20,16 +20,15 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Dc::V20180410::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateDirectConnectRequest::CreateDirectConnectRequest() :
     m_directConnectNameHasBeenSet(false),
     m_accessPointIdHasBeenSet(false),
     m_lineOperatorHasBeenSet(false),
-    m_locationHasBeenSet(false),
     m_portTypeHasBeenSet(false),
     m_circuitCodeHasBeenSet(false),
+    m_locationHasBeenSet(false),
     m_bandwidthHasBeenSet(false),
     m_redundantDirectConnectIdHasBeenSet(false),
     m_vlanHasBeenSet(false),
@@ -39,68 +38,69 @@ CreateDirectConnectRequest::CreateDirectConnectRequest() :
     m_customerContactMailHasBeenSet(false),
     m_customerContactNumberHasBeenSet(false),
     m_faultReportContactPersonHasBeenSet(false),
-    m_faultReportContactNumberHasBeenSet(false)
+    m_faultReportContactNumberHasBeenSet(false),
+    m_signLawHasBeenSet(false)
 {
 }
 
 string CreateDirectConnectRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_directConnectNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DirectConnectName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_directConnectName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_directConnectName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_accessPointIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AccessPointId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_accessPointId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_accessPointId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_lineOperatorHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LineOperator";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_lineOperator.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_locationHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "Location";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_location.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_lineOperator.c_str(), allocator).Move(), allocator);
     }
 
     if (m_portTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PortType";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_portType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_portType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_circuitCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CircuitCode";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_circuitCode.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_circuitCode.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_locationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Location";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_location.c_str(), allocator).Move(), allocator);
     }
 
     if (m_bandwidthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Bandwidth";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_bandwidth, allocator);
@@ -108,15 +108,15 @@ string CreateDirectConnectRequest::ToJsonString() const
 
     if (m_redundantDirectConnectIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RedundantDirectConnectId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_redundantDirectConnectId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_redundantDirectConnectId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vlanHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Vlan";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_vlan, allocator);
@@ -124,63 +124,71 @@ string CreateDirectConnectRequest::ToJsonString() const
 
     if (m_tencentAddressHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TencentAddress";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_tencentAddress.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_tencentAddress.c_str(), allocator).Move(), allocator);
     }
 
     if (m_customerAddressHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CustomerAddress";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_customerAddress.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_customerAddress.c_str(), allocator).Move(), allocator);
     }
 
     if (m_customerNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CustomerName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_customerName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_customerName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_customerContactMailHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CustomerContactMail";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_customerContactMail.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_customerContactMail.c_str(), allocator).Move(), allocator);
     }
 
     if (m_customerContactNumberHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CustomerContactNumber";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_customerContactNumber.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_customerContactNumber.c_str(), allocator).Move(), allocator);
     }
 
     if (m_faultReportContactPersonHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FaultReportContactPerson";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_faultReportContactPerson.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_faultReportContactPerson.c_str(), allocator).Move(), allocator);
     }
 
     if (m_faultReportContactNumberHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FaultReportContactNumber";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_faultReportContactNumber.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_faultReportContactNumber.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_signLawHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SignLaw";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_signLaw, allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -234,22 +242,6 @@ bool CreateDirectConnectRequest::LineOperatorHasBeenSet() const
     return m_lineOperatorHasBeenSet;
 }
 
-string CreateDirectConnectRequest::GetLocation() const
-{
-    return m_location;
-}
-
-void CreateDirectConnectRequest::SetLocation(const string& _location)
-{
-    m_location = _location;
-    m_locationHasBeenSet = true;
-}
-
-bool CreateDirectConnectRequest::LocationHasBeenSet() const
-{
-    return m_locationHasBeenSet;
-}
-
 string CreateDirectConnectRequest::GetPortType() const
 {
     return m_portType;
@@ -280,6 +272,22 @@ void CreateDirectConnectRequest::SetCircuitCode(const string& _circuitCode)
 bool CreateDirectConnectRequest::CircuitCodeHasBeenSet() const
 {
     return m_circuitCodeHasBeenSet;
+}
+
+string CreateDirectConnectRequest::GetLocation() const
+{
+    return m_location;
+}
+
+void CreateDirectConnectRequest::SetLocation(const string& _location)
+{
+    m_location = _location;
+    m_locationHasBeenSet = true;
+}
+
+bool CreateDirectConnectRequest::LocationHasBeenSet() const
+{
+    return m_locationHasBeenSet;
 }
 
 int64_t CreateDirectConnectRequest::GetBandwidth() const
@@ -440,6 +448,22 @@ void CreateDirectConnectRequest::SetFaultReportContactNumber(const string& _faul
 bool CreateDirectConnectRequest::FaultReportContactNumberHasBeenSet() const
 {
     return m_faultReportContactNumberHasBeenSet;
+}
+
+bool CreateDirectConnectRequest::GetSignLaw() const
+{
+    return m_signLaw;
+}
+
+void CreateDirectConnectRequest::SetSignLaw(const bool& _signLaw)
+{
+    m_signLaw = _signLaw;
+    m_signLawHasBeenSet = true;
+}
+
+bool CreateDirectConnectRequest::SignLawHasBeenSet() const
+{
+    return m_signLawHasBeenSet;
 }
 
 

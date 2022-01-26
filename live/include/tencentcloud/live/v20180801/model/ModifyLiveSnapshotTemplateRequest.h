@@ -106,17 +106,17 @@ Maximum length: 1,024 bytes.
 
                     /**
                      * 获取Screencapturing interval in seconds. Default value: 10s.
-Value range: 5–600s.
+Value range: 5-300s.
                      * @return SnapshotInterval Screencapturing interval in seconds. Default value: 10s.
-Value range: 5–600s.
+Value range: 5-300s.
                      */
                     int64_t GetSnapshotInterval() const;
 
                     /**
                      * 设置Screencapturing interval in seconds. Default value: 10s.
-Value range: 5–600s.
+Value range: 5-300s.
                      * @param SnapshotInterval Screencapturing interval in seconds. Default value: 10s.
-Value range: 5–600s.
+Value range: 5-300s.
                      */
                     void SetSnapshotInterval(const int64_t& _snapshotInterval);
 
@@ -208,13 +208,17 @@ Value range: 5–600s.
 
                     /**
                      * 获取COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
                      * @return CosBucket COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
                      */
                     std::string GetCosBucket() const;
 
                     /**
                      * 设置COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
                      * @param CosBucket COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
                      */
                     void SetCosBucket(const std::string& _cosBucket);
 
@@ -302,7 +306,7 @@ Maximum length: 1,024 bytes.
 
                     /**
                      * Screencapturing interval in seconds. Default value: 10s.
-Value range: 5–600s.
+Value range: 5-300s.
                      */
                     int64_t m_snapshotInterval;
                     bool m_snapshotIntervalHasBeenSet;
@@ -335,6 +339,7 @@ Value range: 5–600s.
 
                     /**
                      * COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
                      */
                     std::string m_cosBucket;
                     bool m_cosBucketHasBeenSet;

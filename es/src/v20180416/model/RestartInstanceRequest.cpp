@@ -20,41 +20,49 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Es::V20180416::Model;
-using namespace rapidjson;
 using namespace std;
 
 RestartInstanceRequest::RestartInstanceRequest() :
     m_instanceIdHasBeenSet(false),
-    m_forceRestartHasBeenSet(false)
+    m_forceRestartHasBeenSet(false),
+    m_restartModeHasBeenSet(false)
 {
 }
 
 string RestartInstanceRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_forceRestartHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ForceRestart";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_forceRestart, allocator);
     }
 
+    if (m_restartModeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RestartMode";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_restartMode, allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -90,6 +98,22 @@ void RestartInstanceRequest::SetForceRestart(const bool& _forceRestart)
 bool RestartInstanceRequest::ForceRestartHasBeenSet() const
 {
     return m_forceRestartHasBeenSet;
+}
+
+int64_t RestartInstanceRequest::GetRestartMode() const
+{
+    return m_restartMode;
+}
+
+void RestartInstanceRequest::SetRestartMode(const int64_t& _restartMode)
+{
+    m_restartMode = _restartMode;
+    m_restartModeHasBeenSet = true;
+}
+
+bool RestartInstanceRequest::RestartModeHasBeenSet() const
+{
+    return m_restartModeHasBeenSet;
 }
 
 

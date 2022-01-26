@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Live::V20180801::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeProIspPlaySumInfoListResponse::DescribeProIspPlaySumInfoListResponse() :
@@ -39,20 +38,20 @@ DescribeProIspPlaySumInfoListResponse::DescribeProIspPlaySumInfoListResponse() :
 
 CoreInternalOutcome DescribeProIspPlaySumInfoListResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -63,19 +62,19 @@ CoreInternalOutcome DescribeProIspPlaySumInfoListResponse::Deserialize(const str
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
     if (rsp.HasMember("TotalFlux") && !rsp["TotalFlux"].IsNull())
     {
-        if (!rsp["TotalFlux"].IsDouble())
+        if (!rsp["TotalFlux"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `TotalFlux` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TotalFlux` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_totalFlux = rsp["TotalFlux"].GetDouble();
         m_totalFluxHasBeenSet = true;
@@ -85,7 +84,7 @@ CoreInternalOutcome DescribeProIspPlaySumInfoListResponse::Deserialize(const str
     {
         if (!rsp["TotalRequest"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TotalRequest` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TotalRequest` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_totalRequest = rsp["TotalRequest"].GetUint64();
         m_totalRequestHasBeenSet = true;
@@ -95,7 +94,7 @@ CoreInternalOutcome DescribeProIspPlaySumInfoListResponse::Deserialize(const str
     {
         if (!rsp["StatType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `StatType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `StatType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_statType = string(rsp["StatType"].GetString());
         m_statTypeHasBeenSet = true;
@@ -105,7 +104,7 @@ CoreInternalOutcome DescribeProIspPlaySumInfoListResponse::Deserialize(const str
     {
         if (!rsp["PageSize"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `PageSize` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PageSize` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_pageSize = rsp["PageSize"].GetUint64();
         m_pageSizeHasBeenSet = true;
@@ -115,7 +114,7 @@ CoreInternalOutcome DescribeProIspPlaySumInfoListResponse::Deserialize(const str
     {
         if (!rsp["PageNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `PageNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PageNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_pageNum = rsp["PageNum"].GetUint64();
         m_pageNumHasBeenSet = true;
@@ -125,7 +124,7 @@ CoreInternalOutcome DescribeProIspPlaySumInfoListResponse::Deserialize(const str
     {
         if (!rsp["TotalNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TotalNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TotalNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_totalNum = rsp["TotalNum"].GetUint64();
         m_totalNumHasBeenSet = true;
@@ -135,7 +134,7 @@ CoreInternalOutcome DescribeProIspPlaySumInfoListResponse::Deserialize(const str
     {
         if (!rsp["TotalPage"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TotalPage` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TotalPage` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_totalPage = rsp["TotalPage"].GetUint64();
         m_totalPageHasBeenSet = true;
@@ -144,10 +143,10 @@ CoreInternalOutcome DescribeProIspPlaySumInfoListResponse::Deserialize(const str
     if (rsp.HasMember("DataInfoList") && !rsp["DataInfoList"].IsNull())
     {
         if (!rsp["DataInfoList"].IsArray())
-            return CoreInternalOutcome(Error("response `DataInfoList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DataInfoList` is not array type"));
 
-        const Value &tmpValue = rsp["DataInfoList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["DataInfoList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             ProIspPlaySumInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -163,9 +162,9 @@ CoreInternalOutcome DescribeProIspPlaySumInfoListResponse::Deserialize(const str
 
     if (rsp.HasMember("AvgFluxPerSecond") && !rsp["AvgFluxPerSecond"].IsNull())
     {
-        if (!rsp["AvgFluxPerSecond"].IsDouble())
+        if (!rsp["AvgFluxPerSecond"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `AvgFluxPerSecond` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AvgFluxPerSecond` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_avgFluxPerSecond = rsp["AvgFluxPerSecond"].GetDouble();
         m_avgFluxPerSecondHasBeenSet = true;
@@ -173,6 +172,102 @@ CoreInternalOutcome DescribeProIspPlaySumInfoListResponse::Deserialize(const str
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeProIspPlaySumInfoListResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_totalFluxHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalFlux";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalFlux, allocator);
+    }
+
+    if (m_totalRequestHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalRequest";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalRequest, allocator);
+    }
+
+    if (m_statTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StatType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_statType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_pageSizeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PageSize";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_pageSize, allocator);
+    }
+
+    if (m_pageNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PageNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_pageNum, allocator);
+    }
+
+    if (m_totalNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalNum, allocator);
+    }
+
+    if (m_totalPageHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalPage";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalPage, allocator);
+    }
+
+    if (m_dataInfoListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DataInfoList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_dataInfoList.begin(); itr != m_dataInfoList.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_avgFluxPerSecondHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AvgFluxPerSecond";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_avgFluxPerSecond, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

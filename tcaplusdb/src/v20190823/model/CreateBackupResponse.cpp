@@ -21,30 +21,30 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Tcaplusdb::V20190823::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateBackupResponse::CreateBackupResponse() :
-    m_taskIdsHasBeenSet(false)
+    m_taskIdsHasBeenSet(false),
+    m_applicationIdsHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome CreateBackupResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -55,29 +55,85 @@ CoreInternalOutcome CreateBackupResponse::Deserialize(const string &payload)
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
     if (rsp.HasMember("TaskIds") && !rsp["TaskIds"].IsNull())
     {
         if (!rsp["TaskIds"].IsArray())
-            return CoreInternalOutcome(Error("response `TaskIds` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `TaskIds` is not array type"));
 
-        const Value &tmpValue = rsp["TaskIds"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["TaskIds"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_taskIds.push_back((*itr).GetString());
         }
         m_taskIdsHasBeenSet = true;
     }
 
+    if (rsp.HasMember("ApplicationIds") && !rsp["ApplicationIds"].IsNull())
+    {
+        if (!rsp["ApplicationIds"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `ApplicationIds` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["ApplicationIds"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_applicationIds.push_back((*itr).GetString());
+        }
+        m_applicationIdsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
+}
+
+string CreateBackupResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_taskIdsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TaskIds";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_taskIds.begin(); itr != m_taskIds.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_applicationIdsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ApplicationIds";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_applicationIds.begin(); itr != m_applicationIds.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 
@@ -89,6 +145,16 @@ vector<string> CreateBackupResponse::GetTaskIds() const
 bool CreateBackupResponse::TaskIdsHasBeenSet() const
 {
     return m_taskIdsHasBeenSet;
+}
+
+vector<string> CreateBackupResponse::GetApplicationIds() const
+{
+    return m_applicationIds;
+}
+
+bool CreateBackupResponse::ApplicationIdsHasBeenSet() const
+{
+    return m_applicationIdsHasBeenSet;
 }
 
 

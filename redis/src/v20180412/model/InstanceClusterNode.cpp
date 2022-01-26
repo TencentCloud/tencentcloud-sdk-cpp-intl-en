@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Redis::V20180412::Model;
-using namespace rapidjson;
 using namespace std;
 
 InstanceClusterNode::InstanceClusterNode() :
@@ -38,7 +37,7 @@ InstanceClusterNode::InstanceClusterNode() :
 {
 }
 
-CoreInternalOutcome InstanceClusterNode::Deserialize(const Value &value)
+CoreInternalOutcome InstanceClusterNode::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -47,7 +46,7 @@ CoreInternalOutcome InstanceClusterNode::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceClusterNode.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceClusterNode.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome InstanceClusterNode::Deserialize(const Value &value)
     {
         if (!value["RunId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceClusterNode.RunId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceClusterNode.RunId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_runId = string(value["RunId"].GetString());
         m_runIdHasBeenSet = true;
@@ -67,7 +66,7 @@ CoreInternalOutcome InstanceClusterNode::Deserialize(const Value &value)
     {
         if (!value["Role"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `InstanceClusterNode.Role` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceClusterNode.Role` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_role = value["Role"].GetInt64();
         m_roleHasBeenSet = true;
@@ -77,7 +76,7 @@ CoreInternalOutcome InstanceClusterNode::Deserialize(const Value &value)
     {
         if (!value["Status"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `InstanceClusterNode.Status` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceClusterNode.Status` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_status = value["Status"].GetInt64();
         m_statusHasBeenSet = true;
@@ -87,7 +86,7 @@ CoreInternalOutcome InstanceClusterNode::Deserialize(const Value &value)
     {
         if (!value["Connected"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `InstanceClusterNode.Connected` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceClusterNode.Connected` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_connected = value["Connected"].GetInt64();
         m_connectedHasBeenSet = true;
@@ -97,7 +96,7 @@ CoreInternalOutcome InstanceClusterNode::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceClusterNode.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceClusterNode.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -107,7 +106,7 @@ CoreInternalOutcome InstanceClusterNode::Deserialize(const Value &value)
     {
         if (!value["DownTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceClusterNode.DownTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceClusterNode.DownTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_downTime = string(value["DownTime"].GetString());
         m_downTimeHasBeenSet = true;
@@ -117,7 +116,7 @@ CoreInternalOutcome InstanceClusterNode::Deserialize(const Value &value)
     {
         if (!value["Slots"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceClusterNode.Slots` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceClusterNode.Slots` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_slots = string(value["Slots"].GetString());
         m_slotsHasBeenSet = true;
@@ -127,7 +126,7 @@ CoreInternalOutcome InstanceClusterNode::Deserialize(const Value &value)
     {
         if (!value["Keys"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `InstanceClusterNode.Keys` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceClusterNode.Keys` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_keys = value["Keys"].GetInt64();
         m_keysHasBeenSet = true;
@@ -137,7 +136,7 @@ CoreInternalOutcome InstanceClusterNode::Deserialize(const Value &value)
     {
         if (!value["Qps"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `InstanceClusterNode.Qps` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceClusterNode.Qps` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_qps = value["Qps"].GetInt64();
         m_qpsHasBeenSet = true;
@@ -145,9 +144,9 @@ CoreInternalOutcome InstanceClusterNode::Deserialize(const Value &value)
 
     if (value.HasMember("QpsSlope") && !value["QpsSlope"].IsNull())
     {
-        if (!value["QpsSlope"].IsDouble())
+        if (!value["QpsSlope"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `InstanceClusterNode.QpsSlope` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceClusterNode.QpsSlope` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_qpsSlope = value["QpsSlope"].GetDouble();
         m_qpsSlopeHasBeenSet = true;
@@ -157,7 +156,7 @@ CoreInternalOutcome InstanceClusterNode::Deserialize(const Value &value)
     {
         if (!value["Storage"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `InstanceClusterNode.Storage` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceClusterNode.Storage` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_storage = value["Storage"].GetInt64();
         m_storageHasBeenSet = true;
@@ -165,9 +164,9 @@ CoreInternalOutcome InstanceClusterNode::Deserialize(const Value &value)
 
     if (value.HasMember("StorageSlope") && !value["StorageSlope"].IsNull())
     {
-        if (!value["StorageSlope"].IsDouble())
+        if (!value["StorageSlope"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `InstanceClusterNode.StorageSlope` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceClusterNode.StorageSlope` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_storageSlope = value["StorageSlope"].GetDouble();
         m_storageSlopeHasBeenSet = true;
@@ -177,28 +176,28 @@ CoreInternalOutcome InstanceClusterNode::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void InstanceClusterNode::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void InstanceClusterNode::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_runIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RunId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_runId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_runId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_roleHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Role";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_role, allocator);
@@ -206,7 +205,7 @@ void InstanceClusterNode::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);
@@ -214,7 +213,7 @@ void InstanceClusterNode::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_connectedHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Connected";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_connected, allocator);
@@ -222,31 +221,31 @@ void InstanceClusterNode::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_downTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DownTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_downTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_downTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_slotsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Slots";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_slots.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_slots.c_str(), allocator).Move(), allocator);
     }
 
     if (m_keysHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Keys";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_keys, allocator);
@@ -254,7 +253,7 @@ void InstanceClusterNode::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_qpsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Qps";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_qps, allocator);
@@ -262,7 +261,7 @@ void InstanceClusterNode::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_qpsSlopeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "QpsSlope";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_qpsSlope, allocator);
@@ -270,7 +269,7 @@ void InstanceClusterNode::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_storageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Storage";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_storage, allocator);
@@ -278,7 +277,7 @@ void InstanceClusterNode::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_storageSlopeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StorageSlope";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_storageSlope, allocator);

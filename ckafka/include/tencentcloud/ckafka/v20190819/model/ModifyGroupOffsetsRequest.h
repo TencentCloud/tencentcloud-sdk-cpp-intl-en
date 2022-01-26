@@ -168,6 +168,24 @@ namespace TencentCloud
                      */
                     bool OffsetHasBeenSet() const;
 
+                    /**
+                     * 获取List of partitions that need to be reset. If the topics parameter is not specified, reset partitions in the corresponding partition list of all topics. If the topics parameter is specified, reset partitions of the corresponding partition list of the specified topic list.
+                     * @return Partitions List of partitions that need to be reset. If the topics parameter is not specified, reset partitions in the corresponding partition list of all topics. If the topics parameter is specified, reset partitions of the corresponding partition list of the specified topic list.
+                     */
+                    std::vector<int64_t> GetPartitions() const;
+
+                    /**
+                     * 设置List of partitions that need to be reset. If the topics parameter is not specified, reset partitions in the corresponding partition list of all topics. If the topics parameter is specified, reset partitions of the corresponding partition list of the specified topic list.
+                     * @param Partitions List of partitions that need to be reset. If the topics parameter is not specified, reset partitions in the corresponding partition list of all topics. If the topics parameter is specified, reset partitions of the corresponding partition list of the specified topic list.
+                     */
+                    void SetPartitions(const std::vector<int64_t>& _partitions);
+
+                    /**
+                     * 判断参数 Partitions 是否已赋值
+                     * @return Partitions 是否已赋值
+                     */
+                    bool PartitionsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -211,6 +229,12 @@ namespace TencentCloud
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
+
+                    /**
+                     * List of partitions that need to be reset. If the topics parameter is not specified, reset partitions in the corresponding partition list of all topics. If the topics parameter is specified, reset partitions of the corresponding partition list of the specified topic list.
+                     */
+                    std::vector<int64_t> m_partitions;
+                    bool m_partitionsHasBeenSet;
 
                 };
             }

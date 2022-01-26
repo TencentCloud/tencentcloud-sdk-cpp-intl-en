@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/yunjing/v20180228/model/MachineTag.h>
+#include <tencentcloud/yunjing/v20180228/model/RegionInfo.h>
 
 
 namespace TencentCloud
@@ -287,6 +288,108 @@ namespace TencentCloud
                      */
                     bool TagHasBeenSet() const;
 
+                    /**
+                     * 获取Number of baseline risks.
+                     * @return BaselineNum Number of baseline risks.
+                     */
+                    int64_t GetBaselineNum() const;
+
+                    /**
+                     * 设置Number of baseline risks.
+                     * @param BaselineNum Number of baseline risks.
+                     */
+                    void SetBaselineNum(const int64_t& _baselineNum);
+
+                    /**
+                     * 判断参数 BaselineNum 是否已赋值
+                     * @return BaselineNum 是否已赋值
+                     */
+                    bool BaselineNumHasBeenSet() const;
+
+                    /**
+                     * 获取Number of network risks.
+                     * @return CyberAttackNum Number of network risks.
+                     */
+                    int64_t GetCyberAttackNum() const;
+
+                    /**
+                     * 设置Number of network risks.
+                     * @param CyberAttackNum Number of network risks.
+                     */
+                    void SetCyberAttackNum(const int64_t& _cyberAttackNum);
+
+                    /**
+                     * 判断参数 CyberAttackNum 是否已赋值
+                     * @return CyberAttackNum 是否已赋值
+                     */
+                    bool CyberAttackNumHasBeenSet() const;
+
+                    /**
+                     * 获取Risk status.
+<li>SAFE: safe</li>
+<li>RISK: at risk</li>
+<li>UNKNOWN: unknown</li>
+                     * @return SecurityStatus Risk status.
+<li>SAFE: safe</li>
+<li>RISK: at risk</li>
+<li>UNKNOWN: unknown</li>
+                     */
+                    std::string GetSecurityStatus() const;
+
+                    /**
+                     * 设置Risk status.
+<li>SAFE: safe</li>
+<li>RISK: at risk</li>
+<li>UNKNOWN: unknown</li>
+                     * @param SecurityStatus Risk status.
+<li>SAFE: safe</li>
+<li>RISK: at risk</li>
+<li>UNKNOWN: unknown</li>
+                     */
+                    void SetSecurityStatus(const std::string& _securityStatus);
+
+                    /**
+                     * 判断参数 SecurityStatus 是否已赋值
+                     * @return SecurityStatus 是否已赋值
+                     */
+                    bool SecurityStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Number of intrusions
+                     * @return InvasionNum Number of intrusions
+                     */
+                    int64_t GetInvasionNum() const;
+
+                    /**
+                     * 设置Number of intrusions
+                     * @param InvasionNum Number of intrusions
+                     */
+                    void SetInvasionNum(const int64_t& _invasionNum);
+
+                    /**
+                     * 判断参数 InvasionNum 是否已赋值
+                     * @return InvasionNum 是否已赋值
+                     */
+                    bool InvasionNumHasBeenSet() const;
+
+                    /**
+                     * 获取Region information
+                     * @return RegionInfo Region information
+                     */
+                    RegionInfo GetRegionInfo() const;
+
+                    /**
+                     * 设置Region information
+                     * @param RegionInfo Region information
+                     */
+                    void SetRegionInfo(const RegionInfo& _regionInfo);
+
+                    /**
+                     * 判断参数 RegionInfo 是否已赋值
+                     * @return RegionInfo 是否已赋值
+                     */
+                    bool RegionInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -366,6 +469,39 @@ namespace TencentCloud
                      */
                     std::vector<MachineTag> m_tag;
                     bool m_tagHasBeenSet;
+
+                    /**
+                     * Number of baseline risks.
+                     */
+                    int64_t m_baselineNum;
+                    bool m_baselineNumHasBeenSet;
+
+                    /**
+                     * Number of network risks.
+                     */
+                    int64_t m_cyberAttackNum;
+                    bool m_cyberAttackNumHasBeenSet;
+
+                    /**
+                     * Risk status.
+<li>SAFE: safe</li>
+<li>RISK: at risk</li>
+<li>UNKNOWN: unknown</li>
+                     */
+                    std::string m_securityStatus;
+                    bool m_securityStatusHasBeenSet;
+
+                    /**
+                     * Number of intrusions
+                     */
+                    int64_t m_invasionNum;
+                    bool m_invasionNumHasBeenSet;
+
+                    /**
+                     * Region information
+                     */
+                    RegionInfo m_regionInfo;
+                    bool m_regionInfoHasBeenSet;
 
                 };
             }

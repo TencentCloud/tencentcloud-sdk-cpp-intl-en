@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ckafka::V20190819::Model;
-using namespace rapidjson;
 using namespace std;
 
 ConsumerGroupTopic::ConsumerGroupTopic() :
@@ -27,7 +26,7 @@ ConsumerGroupTopic::ConsumerGroupTopic() :
 {
 }
 
-CoreInternalOutcome ConsumerGroupTopic::Deserialize(const Value &value)
+CoreInternalOutcome ConsumerGroupTopic::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome ConsumerGroupTopic::Deserialize(const Value &value)
     {
         if (!value["TopicId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ConsumerGroupTopic.TopicId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ConsumerGroupTopic.TopicId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_topicId = string(value["TopicId"].GetString());
         m_topicIdHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome ConsumerGroupTopic::Deserialize(const Value &value)
     {
         if (!value["TopicName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ConsumerGroupTopic.TopicName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ConsumerGroupTopic.TopicName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_topicName = string(value["TopicName"].GetString());
         m_topicNameHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome ConsumerGroupTopic::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ConsumerGroupTopic::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ConsumerGroupTopic::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_topicIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TopicId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_topicId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_topicId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_topicNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TopicName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_topicName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_topicName.c_str(), allocator).Move(), allocator);
     }
 
 }

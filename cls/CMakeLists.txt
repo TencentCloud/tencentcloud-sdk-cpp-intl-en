@@ -1,0 +1,396 @@
+#
+# Copyright (c) 2017-2019 THL A29 Limited, a Tencent company. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+set(cls_public_header
+  include/tencentcloud/cls/v20201016/ClsClient.h
+  )
+
+set(cls_public_header_model
+  include/tencentcloud/cls/v20201016/model/UploadLogResponse.h
+  include/tencentcloud/cls/v20201016/model/CreateAlarmResponse.h
+  include/tencentcloud/cls/v20201016/model/AlarmInfo.h
+  include/tencentcloud/cls/v20201016/model/LogInfo.h
+  include/tencentcloud/cls/v20201016/model/DeleteAlarmNoticeResponse.h
+  include/tencentcloud/cls/v20201016/model/DescribeLogContextRequest.h
+  include/tencentcloud/cls/v20201016/model/DeleteShipperRequest.h
+  include/tencentcloud/cls/v20201016/model/ModifyTopicRequest.h
+  include/tencentcloud/cls/v20201016/model/DeleteLogsetResponse.h
+  include/tencentcloud/cls/v20201016/model/DescribeShipperTasksResponse.h
+  include/tencentcloud/cls/v20201016/model/CreateMachineGroupResponse.h
+  include/tencentcloud/cls/v20201016/model/DescribeConfigMachineGroupsRequest.h
+  include/tencentcloud/cls/v20201016/model/DescribeAsyncContextResultResponse.h
+  include/tencentcloud/cls/v20201016/model/UploadLogRequest.h
+  include/tencentcloud/cls/v20201016/model/CreateAsyncContextTaskRequest.h
+  include/tencentcloud/cls/v20201016/model/CreateLogsetRequest.h
+  include/tencentcloud/cls/v20201016/model/LogItem.h
+  include/tencentcloud/cls/v20201016/model/SearchLogResponse.h
+  include/tencentcloud/cls/v20201016/model/DeleteTopicRequest.h
+  include/tencentcloud/cls/v20201016/model/DescribePartitionsRequest.h
+  include/tencentcloud/cls/v20201016/model/ModifyAlarmResponse.h
+  include/tencentcloud/cls/v20201016/model/DescribeShipperTasksRequest.h
+  include/tencentcloud/cls/v20201016/model/DescribeAlarmsRequest.h
+  include/tencentcloud/cls/v20201016/model/CreateAsyncContextTaskResponse.h
+  include/tencentcloud/cls/v20201016/model/DescribeShippersResponse.h
+  include/tencentcloud/cls/v20201016/model/ModifyShipperResponse.h
+  include/tencentcloud/cls/v20201016/model/RetryShipperTaskRequest.h
+  include/tencentcloud/cls/v20201016/model/CallBackInfo.h
+  include/tencentcloud/cls/v20201016/model/AlarmTargetInfo.h
+  include/tencentcloud/cls/v20201016/model/DescribeIndexRequest.h
+  include/tencentcloud/cls/v20201016/model/DescribeConfigsResponse.h
+  include/tencentcloud/cls/v20201016/model/CreateLogsetResponse.h
+  include/tencentcloud/cls/v20201016/model/DeleteAsyncContextTaskResponse.h
+  include/tencentcloud/cls/v20201016/model/DeleteMachineGroupResponse.h
+  include/tencentcloud/cls/v20201016/model/Tag.h
+  include/tencentcloud/cls/v20201016/model/DescribeAsyncContextResultRequest.h
+  include/tencentcloud/cls/v20201016/model/DeleteAsyncSearchTaskResponse.h
+  include/tencentcloud/cls/v20201016/model/DescribeExportsRequest.h
+  include/tencentcloud/cls/v20201016/model/CreateAsyncSearchTaskRequest.h
+  include/tencentcloud/cls/v20201016/model/TopicInfo.h
+  include/tencentcloud/cls/v20201016/model/DescribeConsumerRequest.h
+  include/tencentcloud/cls/v20201016/model/ShipperTaskInfo.h
+  include/tencentcloud/cls/v20201016/model/ModifyConsumerRequest.h
+  include/tencentcloud/cls/v20201016/model/CreateIndexResponse.h
+  include/tencentcloud/cls/v20201016/model/DeleteConfigFromMachineGroupResponse.h
+  include/tencentcloud/cls/v20201016/model/CreateConsumerResponse.h
+  include/tencentcloud/cls/v20201016/model/ModifyMachineGroupResponse.h
+  include/tencentcloud/cls/v20201016/model/RuleInfo.h
+  include/tencentcloud/cls/v20201016/model/DeleteMachineGroupRequest.h
+  include/tencentcloud/cls/v20201016/model/FullTextInfo.h
+  include/tencentcloud/cls/v20201016/model/DescribePartitionsResponse.h
+  include/tencentcloud/cls/v20201016/model/DescribeConfigMachineGroupsResponse.h
+  include/tencentcloud/cls/v20201016/model/ModifyAlarmRequest.h
+  include/tencentcloud/cls/v20201016/model/DescribeTopicsResponse.h
+  include/tencentcloud/cls/v20201016/model/LogItems.h
+  include/tencentcloud/cls/v20201016/model/ModifyAlarmNoticeRequest.h
+  include/tencentcloud/cls/v20201016/model/RuleKeyValueInfo.h
+  include/tencentcloud/cls/v20201016/model/CreateAlarmRequest.h
+  include/tencentcloud/cls/v20201016/model/DeleteExportResponse.h
+  include/tencentcloud/cls/v20201016/model/PartitionInfo.h
+  include/tencentcloud/cls/v20201016/model/DescribeShippersRequest.h
+  include/tencentcloud/cls/v20201016/model/ExcludePathInfo.h
+  include/tencentcloud/cls/v20201016/model/FilterRuleInfo.h
+  include/tencentcloud/cls/v20201016/model/RetryShipperTaskResponse.h
+  include/tencentcloud/cls/v20201016/model/SplitPartitionRequest.h
+  include/tencentcloud/cls/v20201016/model/MachineGroupInfo.h
+  include/tencentcloud/cls/v20201016/model/DescribeMachineGroupsRequest.h
+  include/tencentcloud/cls/v20201016/model/DescribeAsyncContextTasksResponse.h
+  include/tencentcloud/cls/v20201016/model/CreateIndexRequest.h
+  include/tencentcloud/cls/v20201016/model/DeleteConsumerResponse.h
+  include/tencentcloud/cls/v20201016/model/DescribeTopicsRequest.h
+  include/tencentcloud/cls/v20201016/model/GetAlarmLogResponse.h
+  include/tencentcloud/cls/v20201016/model/DescribeAsyncSearchTasksRequest.h
+  include/tencentcloud/cls/v20201016/model/CreateTopicRequest.h
+  include/tencentcloud/cls/v20201016/model/DescribeAsyncSearchResultResponse.h
+  include/tencentcloud/cls/v20201016/model/DescribeAsyncContextTasksRequest.h
+  include/tencentcloud/cls/v20201016/model/AlarmTarget.h
+  include/tencentcloud/cls/v20201016/model/DeleteConfigResponse.h
+  include/tencentcloud/cls/v20201016/model/ModifyIndexResponse.h
+  include/tencentcloud/cls/v20201016/model/DeleteConsumerRequest.h
+  include/tencentcloud/cls/v20201016/model/DeleteIndexRequest.h
+  include/tencentcloud/cls/v20201016/model/DescribeConsumerResponse.h
+  include/tencentcloud/cls/v20201016/model/ExtractRuleInfo.h
+  include/tencentcloud/cls/v20201016/model/AsyncContextTask.h
+  include/tencentcloud/cls/v20201016/model/ModifyConsumerResponse.h
+  include/tencentcloud/cls/v20201016/model/DescribeConfigsRequest.h
+  include/tencentcloud/cls/v20201016/model/DeleteConfigRequest.h
+  include/tencentcloud/cls/v20201016/model/AnalysisDimensional.h
+  include/tencentcloud/cls/v20201016/model/LogsetInfo.h
+  include/tencentcloud/cls/v20201016/model/RuleTagInfo.h
+  include/tencentcloud/cls/v20201016/model/CreateExportRequest.h
+  include/tencentcloud/cls/v20201016/model/DescribeAlarmNoticesResponse.h
+  include/tencentcloud/cls/v20201016/model/ModifyConfigRequest.h
+  include/tencentcloud/cls/v20201016/model/DescribeLogsetsResponse.h
+  include/tencentcloud/cls/v20201016/model/JsonInfo.h
+  include/tencentcloud/cls/v20201016/model/CreateShipperRequest.h
+  include/tencentcloud/cls/v20201016/model/CreateTopicResponse.h
+  include/tencentcloud/cls/v20201016/model/DeleteAlarmResponse.h
+  include/tencentcloud/cls/v20201016/model/DescribeMachinesResponse.h
+  include/tencentcloud/cls/v20201016/model/DescribeAlarmsResponse.h
+  include/tencentcloud/cls/v20201016/model/CreateAlarmNoticeResponse.h
+  include/tencentcloud/cls/v20201016/model/ModifyTopicResponse.h
+  include/tencentcloud/cls/v20201016/model/CreateConfigRequest.h
+  include/tencentcloud/cls/v20201016/model/CreateShipperResponse.h
+  include/tencentcloud/cls/v20201016/model/DeleteIndexResponse.h
+  include/tencentcloud/cls/v20201016/model/DeleteAsyncContextTaskRequest.h
+  include/tencentcloud/cls/v20201016/model/ModifyIndexRequest.h
+  include/tencentcloud/cls/v20201016/model/Column.h
+  include/tencentcloud/cls/v20201016/model/CompressInfo.h
+  include/tencentcloud/cls/v20201016/model/ValueInfo.h
+  include/tencentcloud/cls/v20201016/model/GetAlarmLogRequest.h
+  include/tencentcloud/cls/v20201016/model/DescribeMachinesRequest.h
+  include/tencentcloud/cls/v20201016/model/DeleteShipperResponse.h
+  include/tencentcloud/cls/v20201016/model/ExportInfo.h
+  include/tencentcloud/cls/v20201016/model/ConfigInfo.h
+  include/tencentcloud/cls/v20201016/model/DeleteExportRequest.h
+  include/tencentcloud/cls/v20201016/model/SplitPartitionResponse.h
+  include/tencentcloud/cls/v20201016/model/LogContextInfo.h
+  include/tencentcloud/cls/v20201016/model/ModifyShipperRequest.h
+  include/tencentcloud/cls/v20201016/model/DescribeLogContextResponse.h
+  include/tencentcloud/cls/v20201016/model/DescribeAsyncSearchResultRequest.h
+  include/tencentcloud/cls/v20201016/model/CreateConsumerRequest.h
+  include/tencentcloud/cls/v20201016/model/AlarmNotice.h
+  include/tencentcloud/cls/v20201016/model/ModifyConfigResponse.h
+  include/tencentcloud/cls/v20201016/model/ModifyAlarmNoticeResponse.h
+  include/tencentcloud/cls/v20201016/model/DescribeAsyncSearchTasksResponse.h
+  include/tencentcloud/cls/v20201016/model/ContentInfo.h
+  include/tencentcloud/cls/v20201016/model/ApplyConfigToMachineGroupResponse.h
+  include/tencentcloud/cls/v20201016/model/DeleteAlarmRequest.h
+  include/tencentcloud/cls/v20201016/model/CreateConfigResponse.h
+  include/tencentcloud/cls/v20201016/model/MachineGroupTypeInfo.h
+  include/tencentcloud/cls/v20201016/model/DeleteConfigFromMachineGroupRequest.h
+  include/tencentcloud/cls/v20201016/model/ShipperInfo.h
+  include/tencentcloud/cls/v20201016/model/KeyValueInfo.h
+  include/tencentcloud/cls/v20201016/model/DeleteAsyncSearchTaskRequest.h
+  include/tencentcloud/cls/v20201016/model/ModifyMachineGroupRequest.h
+  include/tencentcloud/cls/v20201016/model/MergePartitionRequest.h
+  include/tencentcloud/cls/v20201016/model/DescribeAlarmNoticesRequest.h
+  include/tencentcloud/cls/v20201016/model/NoticeReceiver.h
+  include/tencentcloud/cls/v20201016/model/AsyncSearchTask.h
+  include/tencentcloud/cls/v20201016/model/Ckafka.h
+  include/tencentcloud/cls/v20201016/model/WebCallback.h
+  include/tencentcloud/cls/v20201016/model/CreateAsyncSearchTaskResponse.h
+  include/tencentcloud/cls/v20201016/model/DeleteAlarmNoticeRequest.h
+  include/tencentcloud/cls/v20201016/model/DeleteLogsetRequest.h
+  include/tencentcloud/cls/v20201016/model/MachineInfo.h
+  include/tencentcloud/cls/v20201016/model/ModifyLogsetResponse.h
+  include/tencentcloud/cls/v20201016/model/MonitorTime.h
+  include/tencentcloud/cls/v20201016/model/SearchLogRequest.h
+  include/tencentcloud/cls/v20201016/model/CreateMachineGroupRequest.h
+  include/tencentcloud/cls/v20201016/model/DescribeExportsResponse.h
+  include/tencentcloud/cls/v20201016/model/ApplyConfigToMachineGroupRequest.h
+  include/tencentcloud/cls/v20201016/model/DescribeMachineGroupConfigsResponse.h
+  include/tencentcloud/cls/v20201016/model/CsvInfo.h
+  include/tencentcloud/cls/v20201016/model/CreateAlarmNoticeRequest.h
+  include/tencentcloud/cls/v20201016/model/DescribeIndexResponse.h
+  include/tencentcloud/cls/v20201016/model/DescribeMachineGroupConfigsRequest.h
+  include/tencentcloud/cls/v20201016/model/ModifyLogsetRequest.h
+  include/tencentcloud/cls/v20201016/model/DescribeMachineGroupsResponse.h
+  include/tencentcloud/cls/v20201016/model/DescribeLogsetsRequest.h
+  include/tencentcloud/cls/v20201016/model/DeleteTopicResponse.h
+  include/tencentcloud/cls/v20201016/model/Filter.h
+  include/tencentcloud/cls/v20201016/model/ConsumerContent.h
+  include/tencentcloud/cls/v20201016/model/CreateExportResponse.h
+  include/tencentcloud/cls/v20201016/model/KeyRegexInfo.h
+  include/tencentcloud/cls/v20201016/model/MergePartitionResponse.h
+  )
+
+set(cls_src
+  src/v20201016/ClsClient.cpp
+  src/v20201016/model/UploadLogResponse.cpp
+  src/v20201016/model/CreateAlarmResponse.cpp
+  src/v20201016/model/AlarmInfo.cpp
+  src/v20201016/model/LogInfo.cpp
+  src/v20201016/model/DeleteAlarmNoticeResponse.cpp
+  src/v20201016/model/DescribeLogContextRequest.cpp
+  src/v20201016/model/DeleteShipperRequest.cpp
+  src/v20201016/model/ModifyTopicRequest.cpp
+  src/v20201016/model/DeleteLogsetResponse.cpp
+  src/v20201016/model/DescribeShipperTasksResponse.cpp
+  src/v20201016/model/CreateMachineGroupResponse.cpp
+  src/v20201016/model/DescribeConfigMachineGroupsRequest.cpp
+  src/v20201016/model/DescribeAsyncContextResultResponse.cpp
+  src/v20201016/model/UploadLogRequest.cpp
+  src/v20201016/model/CreateAsyncContextTaskRequest.cpp
+  src/v20201016/model/CreateLogsetRequest.cpp
+  src/v20201016/model/LogItem.cpp
+  src/v20201016/model/SearchLogResponse.cpp
+  src/v20201016/model/DeleteTopicRequest.cpp
+  src/v20201016/model/DescribePartitionsRequest.cpp
+  src/v20201016/model/ModifyAlarmResponse.cpp
+  src/v20201016/model/DescribeShipperTasksRequest.cpp
+  src/v20201016/model/DescribeAlarmsRequest.cpp
+  src/v20201016/model/CreateAsyncContextTaskResponse.cpp
+  src/v20201016/model/DescribeShippersResponse.cpp
+  src/v20201016/model/ModifyShipperResponse.cpp
+  src/v20201016/model/RetryShipperTaskRequest.cpp
+  src/v20201016/model/CallBackInfo.cpp
+  src/v20201016/model/AlarmTargetInfo.cpp
+  src/v20201016/model/DescribeIndexRequest.cpp
+  src/v20201016/model/DescribeConfigsResponse.cpp
+  src/v20201016/model/CreateLogsetResponse.cpp
+  src/v20201016/model/DeleteAsyncContextTaskResponse.cpp
+  src/v20201016/model/DeleteMachineGroupResponse.cpp
+  src/v20201016/model/Tag.cpp
+  src/v20201016/model/DescribeAsyncContextResultRequest.cpp
+  src/v20201016/model/DeleteAsyncSearchTaskResponse.cpp
+  src/v20201016/model/DescribeExportsRequest.cpp
+  src/v20201016/model/CreateAsyncSearchTaskRequest.cpp
+  src/v20201016/model/TopicInfo.cpp
+  src/v20201016/model/DescribeConsumerRequest.cpp
+  src/v20201016/model/ShipperTaskInfo.cpp
+  src/v20201016/model/ModifyConsumerRequest.cpp
+  src/v20201016/model/CreateIndexResponse.cpp
+  src/v20201016/model/DeleteConfigFromMachineGroupResponse.cpp
+  src/v20201016/model/CreateConsumerResponse.cpp
+  src/v20201016/model/ModifyMachineGroupResponse.cpp
+  src/v20201016/model/RuleInfo.cpp
+  src/v20201016/model/DeleteMachineGroupRequest.cpp
+  src/v20201016/model/FullTextInfo.cpp
+  src/v20201016/model/DescribePartitionsResponse.cpp
+  src/v20201016/model/DescribeConfigMachineGroupsResponse.cpp
+  src/v20201016/model/ModifyAlarmRequest.cpp
+  src/v20201016/model/DescribeTopicsResponse.cpp
+  src/v20201016/model/LogItems.cpp
+  src/v20201016/model/ModifyAlarmNoticeRequest.cpp
+  src/v20201016/model/RuleKeyValueInfo.cpp
+  src/v20201016/model/CreateAlarmRequest.cpp
+  src/v20201016/model/DeleteExportResponse.cpp
+  src/v20201016/model/PartitionInfo.cpp
+  src/v20201016/model/DescribeShippersRequest.cpp
+  src/v20201016/model/ExcludePathInfo.cpp
+  src/v20201016/model/FilterRuleInfo.cpp
+  src/v20201016/model/RetryShipperTaskResponse.cpp
+  src/v20201016/model/SplitPartitionRequest.cpp
+  src/v20201016/model/MachineGroupInfo.cpp
+  src/v20201016/model/DescribeMachineGroupsRequest.cpp
+  src/v20201016/model/DescribeAsyncContextTasksResponse.cpp
+  src/v20201016/model/CreateIndexRequest.cpp
+  src/v20201016/model/DeleteConsumerResponse.cpp
+  src/v20201016/model/DescribeTopicsRequest.cpp
+  src/v20201016/model/GetAlarmLogResponse.cpp
+  src/v20201016/model/DescribeAsyncSearchTasksRequest.cpp
+  src/v20201016/model/CreateTopicRequest.cpp
+  src/v20201016/model/DescribeAsyncSearchResultResponse.cpp
+  src/v20201016/model/DescribeAsyncContextTasksRequest.cpp
+  src/v20201016/model/AlarmTarget.cpp
+  src/v20201016/model/DeleteConfigResponse.cpp
+  src/v20201016/model/ModifyIndexResponse.cpp
+  src/v20201016/model/DeleteConsumerRequest.cpp
+  src/v20201016/model/DeleteIndexRequest.cpp
+  src/v20201016/model/DescribeConsumerResponse.cpp
+  src/v20201016/model/ExtractRuleInfo.cpp
+  src/v20201016/model/AsyncContextTask.cpp
+  src/v20201016/model/ModifyConsumerResponse.cpp
+  src/v20201016/model/DescribeConfigsRequest.cpp
+  src/v20201016/model/DeleteConfigRequest.cpp
+  src/v20201016/model/AnalysisDimensional.cpp
+  src/v20201016/model/LogsetInfo.cpp
+  src/v20201016/model/RuleTagInfo.cpp
+  src/v20201016/model/CreateExportRequest.cpp
+  src/v20201016/model/DescribeAlarmNoticesResponse.cpp
+  src/v20201016/model/ModifyConfigRequest.cpp
+  src/v20201016/model/DescribeLogsetsResponse.cpp
+  src/v20201016/model/JsonInfo.cpp
+  src/v20201016/model/CreateShipperRequest.cpp
+  src/v20201016/model/CreateTopicResponse.cpp
+  src/v20201016/model/DeleteAlarmResponse.cpp
+  src/v20201016/model/DescribeMachinesResponse.cpp
+  src/v20201016/model/DescribeAlarmsResponse.cpp
+  src/v20201016/model/CreateAlarmNoticeResponse.cpp
+  src/v20201016/model/ModifyTopicResponse.cpp
+  src/v20201016/model/CreateConfigRequest.cpp
+  src/v20201016/model/CreateShipperResponse.cpp
+  src/v20201016/model/DeleteIndexResponse.cpp
+  src/v20201016/model/DeleteAsyncContextTaskRequest.cpp
+  src/v20201016/model/ModifyIndexRequest.cpp
+  src/v20201016/model/Column.cpp
+  src/v20201016/model/CompressInfo.cpp
+  src/v20201016/model/ValueInfo.cpp
+  src/v20201016/model/GetAlarmLogRequest.cpp
+  src/v20201016/model/DescribeMachinesRequest.cpp
+  src/v20201016/model/DeleteShipperResponse.cpp
+  src/v20201016/model/ExportInfo.cpp
+  src/v20201016/model/ConfigInfo.cpp
+  src/v20201016/model/DeleteExportRequest.cpp
+  src/v20201016/model/SplitPartitionResponse.cpp
+  src/v20201016/model/LogContextInfo.cpp
+  src/v20201016/model/ModifyShipperRequest.cpp
+  src/v20201016/model/DescribeLogContextResponse.cpp
+  src/v20201016/model/DescribeAsyncSearchResultRequest.cpp
+  src/v20201016/model/CreateConsumerRequest.cpp
+  src/v20201016/model/AlarmNotice.cpp
+  src/v20201016/model/ModifyConfigResponse.cpp
+  src/v20201016/model/ModifyAlarmNoticeResponse.cpp
+  src/v20201016/model/DescribeAsyncSearchTasksResponse.cpp
+  src/v20201016/model/ContentInfo.cpp
+  src/v20201016/model/ApplyConfigToMachineGroupResponse.cpp
+  src/v20201016/model/DeleteAlarmRequest.cpp
+  src/v20201016/model/CreateConfigResponse.cpp
+  src/v20201016/model/MachineGroupTypeInfo.cpp
+  src/v20201016/model/DeleteConfigFromMachineGroupRequest.cpp
+  src/v20201016/model/ShipperInfo.cpp
+  src/v20201016/model/KeyValueInfo.cpp
+  src/v20201016/model/DeleteAsyncSearchTaskRequest.cpp
+  src/v20201016/model/ModifyMachineGroupRequest.cpp
+  src/v20201016/model/MergePartitionRequest.cpp
+  src/v20201016/model/DescribeAlarmNoticesRequest.cpp
+  src/v20201016/model/NoticeReceiver.cpp
+  src/v20201016/model/AsyncSearchTask.cpp
+  src/v20201016/model/Ckafka.cpp
+  src/v20201016/model/WebCallback.cpp
+  src/v20201016/model/CreateAsyncSearchTaskResponse.cpp
+  src/v20201016/model/DeleteAlarmNoticeRequest.cpp
+  src/v20201016/model/DeleteLogsetRequest.cpp
+  src/v20201016/model/MachineInfo.cpp
+  src/v20201016/model/ModifyLogsetResponse.cpp
+  src/v20201016/model/MonitorTime.cpp
+  src/v20201016/model/SearchLogRequest.cpp
+  src/v20201016/model/CreateMachineGroupRequest.cpp
+  src/v20201016/model/DescribeExportsResponse.cpp
+  src/v20201016/model/ApplyConfigToMachineGroupRequest.cpp
+  src/v20201016/model/DescribeMachineGroupConfigsResponse.cpp
+  src/v20201016/model/CsvInfo.cpp
+  src/v20201016/model/CreateAlarmNoticeRequest.cpp
+  src/v20201016/model/DescribeIndexResponse.cpp
+  src/v20201016/model/DescribeMachineGroupConfigsRequest.cpp
+  src/v20201016/model/ModifyLogsetRequest.cpp
+  src/v20201016/model/DescribeMachineGroupsResponse.cpp
+  src/v20201016/model/DescribeLogsetsRequest.cpp
+  src/v20201016/model/DeleteTopicResponse.cpp
+  src/v20201016/model/Filter.cpp
+  src/v20201016/model/ConsumerContent.cpp
+  src/v20201016/model/CreateExportResponse.cpp
+  src/v20201016/model/KeyRegexInfo.cpp
+  src/v20201016/model/MergePartitionResponse.cpp
+  )
+
+set(cls_include
+    include/tencentcloud/cls
+  )
+
+add_library(cls ${LIB_TYPE}
+  ${cls_public_header}
+  ${cls_public_header_model}
+  ${cls_src})
+
+set_target_properties(cls
+  PROPERTIES
+  LINKER_LANGUAGE CXX
+  ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib
+  LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib
+  RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
+  OUTPUT_NAME ${TARGET_OUTPUT_NAME_PREFIX}cls
+  )
+
+target_include_directories(cls
+  PRIVATE include
+    ${CMAKE_SOURCE_DIR}/core/include
+  )
+target_link_libraries(cls
+  core)
+
+#install(FILES ${cls_public_header}
+#  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud/cls/v20201016)
+#install(FILES ${cls_public_header_model}
+#  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud/cls/v20201016/model)
+install(DIRECTORY ${cls_include}
+  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud)
+
+install(TARGETS cls
+  ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+  )

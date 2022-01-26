@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Iai::V20200303::Model;
-using namespace rapidjson;
 using namespace std;
 
 GetPersonBaseInfoResponse::GetPersonBaseInfoResponse() :
@@ -33,20 +32,20 @@ GetPersonBaseInfoResponse::GetPersonBaseInfoResponse() :
 
 CoreInternalOutcome GetPersonBaseInfoResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -57,11 +56,11 @@ CoreInternalOutcome GetPersonBaseInfoResponse::Deserialize(const string &payload
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -69,7 +68,7 @@ CoreInternalOutcome GetPersonBaseInfoResponse::Deserialize(const string &payload
     {
         if (!rsp["PersonName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PersonName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PersonName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_personName = string(rsp["PersonName"].GetString());
         m_personNameHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome GetPersonBaseInfoResponse::Deserialize(const string &payload
     {
         if (!rsp["Gender"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Gender` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Gender` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_gender = rsp["Gender"].GetInt64();
         m_genderHasBeenSet = true;
@@ -88,10 +87,10 @@ CoreInternalOutcome GetPersonBaseInfoResponse::Deserialize(const string &payload
     if (rsp.HasMember("FaceIds") && !rsp["FaceIds"].IsNull())
     {
         if (!rsp["FaceIds"].IsArray())
-            return CoreInternalOutcome(Error("response `FaceIds` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `FaceIds` is not array type"));
 
-        const Value &tmpValue = rsp["FaceIds"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["FaceIds"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_faceIds.push_back((*itr).GetString());
         }
@@ -100,6 +99,52 @@ CoreInternalOutcome GetPersonBaseInfoResponse::Deserialize(const string &payload
 
 
     return CoreInternalOutcome(true);
+}
+
+string GetPersonBaseInfoResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_personNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PersonName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_personName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_genderHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Gender";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_gender, allocator);
+    }
+
+    if (m_faceIdsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FaceIds";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_faceIds.begin(); itr != m_faceIds.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

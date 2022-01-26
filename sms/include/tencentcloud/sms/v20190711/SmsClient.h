@@ -69,60 +69,60 @@ namespace TencentCloud
                 SmsClient(const Credential &credential, const std::string &region);
                 SmsClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::AddSmsSignResponse> AddSmsSignOutcome;
+                typedef Outcome<Core::Error, Model::AddSmsSignResponse> AddSmsSignOutcome;
                 typedef std::future<AddSmsSignOutcome> AddSmsSignOutcomeCallable;
                 typedef std::function<void(const SmsClient*, const Model::AddSmsSignRequest&, AddSmsSignOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddSmsSignAsyncHandler;
-                typedef Outcome<Error, Model::AddSmsTemplateResponse> AddSmsTemplateOutcome;
+                typedef Outcome<Core::Error, Model::AddSmsTemplateResponse> AddSmsTemplateOutcome;
                 typedef std::future<AddSmsTemplateOutcome> AddSmsTemplateOutcomeCallable;
                 typedef std::function<void(const SmsClient*, const Model::AddSmsTemplateRequest&, AddSmsTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddSmsTemplateAsyncHandler;
-                typedef Outcome<Error, Model::CallbackStatusStatisticsResponse> CallbackStatusStatisticsOutcome;
+                typedef Outcome<Core::Error, Model::CallbackStatusStatisticsResponse> CallbackStatusStatisticsOutcome;
                 typedef std::future<CallbackStatusStatisticsOutcome> CallbackStatusStatisticsOutcomeCallable;
                 typedef std::function<void(const SmsClient*, const Model::CallbackStatusStatisticsRequest&, CallbackStatusStatisticsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CallbackStatusStatisticsAsyncHandler;
-                typedef Outcome<Error, Model::DeleteSmsSignResponse> DeleteSmsSignOutcome;
+                typedef Outcome<Core::Error, Model::DeleteSmsSignResponse> DeleteSmsSignOutcome;
                 typedef std::future<DeleteSmsSignOutcome> DeleteSmsSignOutcomeCallable;
                 typedef std::function<void(const SmsClient*, const Model::DeleteSmsSignRequest&, DeleteSmsSignOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteSmsSignAsyncHandler;
-                typedef Outcome<Error, Model::DeleteSmsTemplateResponse> DeleteSmsTemplateOutcome;
+                typedef Outcome<Core::Error, Model::DeleteSmsTemplateResponse> DeleteSmsTemplateOutcome;
                 typedef std::future<DeleteSmsTemplateOutcome> DeleteSmsTemplateOutcomeCallable;
                 typedef std::function<void(const SmsClient*, const Model::DeleteSmsTemplateRequest&, DeleteSmsTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteSmsTemplateAsyncHandler;
-                typedef Outcome<Error, Model::DescribeSmsSignListResponse> DescribeSmsSignListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeSmsSignListResponse> DescribeSmsSignListOutcome;
                 typedef std::future<DescribeSmsSignListOutcome> DescribeSmsSignListOutcomeCallable;
                 typedef std::function<void(const SmsClient*, const Model::DescribeSmsSignListRequest&, DescribeSmsSignListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSmsSignListAsyncHandler;
-                typedef Outcome<Error, Model::DescribeSmsTemplateListResponse> DescribeSmsTemplateListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeSmsTemplateListResponse> DescribeSmsTemplateListOutcome;
                 typedef std::future<DescribeSmsTemplateListOutcome> DescribeSmsTemplateListOutcomeCallable;
                 typedef std::function<void(const SmsClient*, const Model::DescribeSmsTemplateListRequest&, DescribeSmsTemplateListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSmsTemplateListAsyncHandler;
-                typedef Outcome<Error, Model::ModifySmsSignResponse> ModifySmsSignOutcome;
+                typedef Outcome<Core::Error, Model::ModifySmsSignResponse> ModifySmsSignOutcome;
                 typedef std::future<ModifySmsSignOutcome> ModifySmsSignOutcomeCallable;
                 typedef std::function<void(const SmsClient*, const Model::ModifySmsSignRequest&, ModifySmsSignOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySmsSignAsyncHandler;
-                typedef Outcome<Error, Model::ModifySmsTemplateResponse> ModifySmsTemplateOutcome;
+                typedef Outcome<Core::Error, Model::ModifySmsTemplateResponse> ModifySmsTemplateOutcome;
                 typedef std::future<ModifySmsTemplateOutcome> ModifySmsTemplateOutcomeCallable;
                 typedef std::function<void(const SmsClient*, const Model::ModifySmsTemplateRequest&, ModifySmsTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySmsTemplateAsyncHandler;
-                typedef Outcome<Error, Model::PullSmsReplyStatusResponse> PullSmsReplyStatusOutcome;
+                typedef Outcome<Core::Error, Model::PullSmsReplyStatusResponse> PullSmsReplyStatusOutcome;
                 typedef std::future<PullSmsReplyStatusOutcome> PullSmsReplyStatusOutcomeCallable;
                 typedef std::function<void(const SmsClient*, const Model::PullSmsReplyStatusRequest&, PullSmsReplyStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PullSmsReplyStatusAsyncHandler;
-                typedef Outcome<Error, Model::PullSmsReplyStatusByPhoneNumberResponse> PullSmsReplyStatusByPhoneNumberOutcome;
+                typedef Outcome<Core::Error, Model::PullSmsReplyStatusByPhoneNumberResponse> PullSmsReplyStatusByPhoneNumberOutcome;
                 typedef std::future<PullSmsReplyStatusByPhoneNumberOutcome> PullSmsReplyStatusByPhoneNumberOutcomeCallable;
                 typedef std::function<void(const SmsClient*, const Model::PullSmsReplyStatusByPhoneNumberRequest&, PullSmsReplyStatusByPhoneNumberOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PullSmsReplyStatusByPhoneNumberAsyncHandler;
-                typedef Outcome<Error, Model::PullSmsSendStatusResponse> PullSmsSendStatusOutcome;
+                typedef Outcome<Core::Error, Model::PullSmsSendStatusResponse> PullSmsSendStatusOutcome;
                 typedef std::future<PullSmsSendStatusOutcome> PullSmsSendStatusOutcomeCallable;
                 typedef std::function<void(const SmsClient*, const Model::PullSmsSendStatusRequest&, PullSmsSendStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PullSmsSendStatusAsyncHandler;
-                typedef Outcome<Error, Model::PullSmsSendStatusByPhoneNumberResponse> PullSmsSendStatusByPhoneNumberOutcome;
+                typedef Outcome<Core::Error, Model::PullSmsSendStatusByPhoneNumberResponse> PullSmsSendStatusByPhoneNumberOutcome;
                 typedef std::future<PullSmsSendStatusByPhoneNumberOutcome> PullSmsSendStatusByPhoneNumberOutcomeCallable;
                 typedef std::function<void(const SmsClient*, const Model::PullSmsSendStatusByPhoneNumberRequest&, PullSmsSendStatusByPhoneNumberOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PullSmsSendStatusByPhoneNumberAsyncHandler;
-                typedef Outcome<Error, Model::SendSmsResponse> SendSmsOutcome;
+                typedef Outcome<Core::Error, Model::SendSmsResponse> SendSmsOutcome;
                 typedef std::future<SendSmsOutcome> SendSmsOutcomeCallable;
                 typedef std::function<void(const SmsClient*, const Model::SendSmsRequest&, SendSmsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SendSmsAsyncHandler;
-                typedef Outcome<Error, Model::SendStatusStatisticsResponse> SendStatusStatisticsOutcome;
+                typedef Outcome<Core::Error, Model::SendStatusStatisticsResponse> SendStatusStatisticsOutcome;
                 typedef std::future<SendStatusStatisticsOutcome> SendStatusStatisticsOutcomeCallable;
                 typedef std::function<void(const SmsClient*, const Model::SendStatusStatisticsRequest&, SendStatusStatisticsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SendStatusStatisticsAsyncHandler;
-                typedef Outcome<Error, Model::SmsPackagesStatisticsResponse> SmsPackagesStatisticsOutcome;
+                typedef Outcome<Core::Error, Model::SmsPackagesStatisticsResponse> SmsPackagesStatisticsOutcome;
                 typedef std::future<SmsPackagesStatisticsOutcome> SmsPackagesStatisticsOutcomeCallable;
                 typedef std::function<void(const SmsClient*, const Model::SmsPackagesStatisticsRequest&, SmsPackagesStatisticsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SmsPackagesStatisticsAsyncHandler;
 
 
 
                 /**
-                 *This API is used to add an SMS signature. Please read the [Tencent Cloud SMS Signature Review Standards](https://cloud.tencent.com/document/product/382/39022) before starting an application.
->⚠️ Note: individual users cannot use this API to apply for SMS signatures. For more information, please see [Identity Verification Overview](https://cloud.tencent.com/document/product/378/3629). If your account identity is individual, please log in to the console to apply for SMS signatures. For detailed directions, please see [Creating SMS Signatures](https://cloud.tencent.com/document/product/382/36136#Sign).
+                 *This API is used to add an SMS signature. Please read the [Tencent Cloud SMS Signature Review Standards](https://intl.cloud.tencent.com/document/product/382/39022?from_cn_redirect=1) before starting an application.
+> Note: individual users cannot use this API to apply for SMS signatures. For more information, please see [Identity Verification Overview](https://intl.cloud.tencent.com/document/product/378/3629?from_cn_redirect=1). If your account identity is individual, please log in to the console to apply for SMS signatures. For detailed directions, please see [Creating SMS Signatures](https://intl.cloud.tencent.com/document/product/382/36136?from_cn_redirect=1#Sign).
                  * @param req AddSmsSignRequest
                  * @return AddSmsSignOutcome
                  */
@@ -131,8 +131,8 @@ namespace TencentCloud
                 AddSmsSignOutcomeCallable AddSmsSignCallable(const Model::AddSmsSignRequest& request);
 
                 /**
-                 *This API is used to add an SMS template. Please read the [Tencent Cloud SMS Body Template Review Standards](https://cloud.tencent.com/document/product/382/39023) before starting an application.
->⚠️ Note: individual users cannot use this API to apply for SMS body templates. For more information, please see [Identity Verification Overview](https://cloud.tencent.com/document/product/378/3629). If your account identity is individual, please log in to the console to apply for SMS body templates. For detailed directions, please see [Creating SMS Body Templates](https://cloud.tencent.com/document/product/382/36136#Template).
+                 *This API is used to add an SMS template. Please read the [Tencent Cloud SMS Body Template Review Standards](https://intl.cloud.tencent.com/document/product/382/39023?from_cn_redirect=1) before starting an application.
+> Note: individual users cannot use this API to apply for SMS body templates. For more information, please see [Identity Verification Overview](https://intl.cloud.tencent.com/document/product/378/3629?from_cn_redirect=1). If your account identity is individual, please log in to the console to apply for SMS body templates. For detailed directions, please see [Creating SMS Body Templates](https://intl.cloud.tencent.com/document/product/382/36136?from_cn_redirect=1#Template).
                  * @param req AddSmsTemplateRequest
                  * @return AddSmsTemplateOutcome
                  */
@@ -150,7 +150,7 @@ namespace TencentCloud
                 CallbackStatusStatisticsOutcomeCallable CallbackStatusStatisticsCallable(const Model::CallbackStatusStatisticsRequest& request);
 
                 /**
-                 *>⚠️ Note: individual users cannot use this API to delete SMS signatures. For more information, please see [Identity Verification Overview](https://cloud.tencent.com/document/product/378/3629). You can log in to the console to delete SMS signatures. For detailed directions, please see the notes on deleting SMS signatures in [SMS Signature Operations](https://cloud.tencent.com/document/product/382/36136#Sign).
+                 *> Note: individual users cannot use this API to delete SMS signatures. For more information, please see [Identity Verification Overview](https://intl.cloud.tencent.com/document/product/378/3629?from_cn_redirect=1). You can log in to the console to delete SMS signatures. For detailed directions, please see the notes on deleting SMS signatures in [SMS Signature Operations](https://intl.cloud.tencent.com/document/product/382/36136?from_cn_redirect=1#Sign).
                  * @param req DeleteSmsSignRequest
                  * @return DeleteSmsSignOutcome
                  */
@@ -159,7 +159,7 @@ namespace TencentCloud
                 DeleteSmsSignOutcomeCallable DeleteSmsSignCallable(const Model::DeleteSmsSignRequest& request);
 
                 /**
-                 *>⚠️ Note: individual users cannot use this API to delete SMS body templates. For more information, please see [Identity Verification Overview](https://cloud.tencent.com/document/product/378/3629). You can log in to the console to delete SMS body templates. For detailed directions, please see the notes on deleting SMS body templates in [SMS Body Template Operations](https://cloud.tencent.com/document/product/382/36136#Template).
+                 *> Note: individual users cannot use this API to delete SMS body templates. For more information, please see [Identity Verification Overview](https://intl.cloud.tencent.com/document/product/378/3629?from_cn_redirect=1). You can log in to the console to delete SMS body templates. For detailed directions, please see the notes on deleting SMS body templates in [SMS Body Template Operations](https://intl.cloud.tencent.com/document/product/382/36136?from_cn_redirect=1#Template).
                  * @param req DeleteSmsTemplateRequest
                  * @return DeleteSmsTemplateOutcome
                  */
@@ -168,7 +168,7 @@ namespace TencentCloud
                 DeleteSmsTemplateOutcomeCallable DeleteSmsTemplateCallable(const Model::DeleteSmsTemplateRequest& request);
 
                 /**
-                 *>⚠️ Note: individual users cannot use this API to query SMS signatures. For more information, please see [Identity Verification Overview](https://cloud.tencent.com/document/product/378/3629).
+                 *> Note: individual users cannot use this API to query SMS signatures. For more information, please see [Identity Verification Overview](https://intl.cloud.tencent.com/document/product/378/3629?from_cn_redirect=1).
                  * @param req DescribeSmsSignListRequest
                  * @return DescribeSmsSignListOutcome
                  */
@@ -177,7 +177,7 @@ namespace TencentCloud
                 DescribeSmsSignListOutcomeCallable DescribeSmsSignListCallable(const Model::DescribeSmsSignListRequest& request);
 
                 /**
-                 *>⚠️ Note: individual users cannot use this API to query SMS body templates. For more information, please see [Identity Verification Overview](https://cloud.tencent.com/document/product/378/3629).
+                 *> Note: individual users cannot use this API to query SMS body templates. For more information, please see [Identity Verification Overview](https://intl.cloud.tencent.com/document/product/378/3629?from_cn_redirect=1).
                  * @param req DescribeSmsTemplateListRequest
                  * @return DescribeSmsTemplateListOutcome
                  */
@@ -186,8 +186,8 @@ namespace TencentCloud
                 DescribeSmsTemplateListOutcomeCallable DescribeSmsTemplateListCallable(const Model::DescribeSmsTemplateListRequest& request);
 
                 /**
-                 *This API is used to modify an SMS signature. Please read the [Tencent Cloud SMS Signature Review Standards](https://cloud.tencent.com/document/product/382/39022) before making a modification.
->- ⚠️ Note: individual users cannot use this API to modify SMS signatures. For more information, please see [Identity Verification Overview](https://cloud.tencent.com/document/product/378/3629). If your account identity is individual, you can log in to the console to modify SMS signatures.
+                 *This API is used to modify an SMS signature. Please read the [Tencent Cloud SMS Signature Review Standards](https://intl.cloud.tencent.com/document/product/382/39022?from_cn_redirect=1) before making a modification.
+>-  Note: individual users cannot use this API to modify SMS signatures. For more information, please see [Identity Verification Overview](https://intl.cloud.tencent.com/document/product/378/3629?from_cn_redirect=1). If your account identity is individual, you can log in to the console to modify SMS signatures.
 >- Modifications can be made only if the signature status is **pending review** or **rejected**. **Approved** signatures cannot be modified.
                  * @param req ModifySmsSignRequest
                  * @return ModifySmsSignOutcome
@@ -197,8 +197,8 @@ namespace TencentCloud
                 ModifySmsSignOutcomeCallable ModifySmsSignCallable(const Model::ModifySmsSignRequest& request);
 
                 /**
-                 *This API is used to modify an SMS body template. Please read the [Tencent Cloud SMS Body Template Review Standards](https://cloud.tencent.com/document/product/382/39023) before making a modification.
->- ⚠️ Note: individual users cannot use this API to modify SMS body templates. For more information, please see [Identity Verification Overview](https://cloud.tencent.com/document/product/378/3629). If your account identity is individual, you can log in to the console to modify SMS body templates.
+                 *This API is used to modify an SMS body template. Please read the [Tencent Cloud SMS Body Template Review Standards](https://intl.cloud.tencent.com/document/product/382/39023?from_cn_redirect=1) before making a modification.
+>-  Note: individual users cannot use this API to modify SMS body templates. For more information, please see [Identity Verification Overview](https://intl.cloud.tencent.com/document/product/378/3629?from_cn_redirect=1). If your account identity is individual, you can log in to the console to modify SMS body templates.
 >- Modifications can be made only if the body template status is **pending review** or **rejected**. **Approved** body templates cannot be modified.
                  * @param req ModifySmsTemplateRequest
                  * @return ModifySmsTemplateOutcome

@@ -32,6 +32,8 @@
 #include <tencentcloud/ecdn/v20191012/model/Cache.h>
 #include <tencentcloud/ecdn/v20191012/model/Https.h>
 #include <tencentcloud/ecdn/v20191012/model/ForceRedirect.h>
+#include <tencentcloud/ecdn/v20191012/model/Tag.h>
+#include <tencentcloud/ecdn/v20191012/model/WebSocket.h>
 
 
 namespace TencentCloud
@@ -221,17 +223,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool OriginHasBeenSet() const;
 
                     /**
-                     * 获取IP blacklist/whitelist configuration.
+                     * 获取IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return IpFilter IP blacklist/whitelist configuration.
+                     * @return IpFilter IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     IpFilter GetIpFilter() const;
 
                     /**
-                     * 设置IP blacklist/whitelist configuration.
+                     * 设置IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IpFilter IP blacklist/whitelist configuration.
+                     * @param IpFilter IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetIpFilter(const IpFilter& _ipFilter);
@@ -440,6 +442,50 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool ReadonlyHasBeenSet() const;
 
+                    /**
+                     * 获取Domain name tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return Tag Domain name tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<Tag> GetTag() const;
+
+                    /**
+                     * 设置Domain name tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param Tag Domain name tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetTag(const std::vector<Tag>& _tag);
+
+                    /**
+                     * 判断参数 Tag 是否已赋值
+                     * @return Tag 是否已赋值
+                     */
+                    bool TagHasBeenSet() const;
+
+                    /**
+                     * 获取WebSocket configuration.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return WebSocket WebSocket configuration.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    WebSocket GetWebSocket() const;
+
+                    /**
+                     * 设置WebSocket configuration.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param WebSocket WebSocket configuration.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetWebSocket(const WebSocket& _webSocket);
+
+                    /**
+                     * 判断参数 WebSocket 是否已赋值
+                     * @return WebSocket 是否已赋值
+                     */
+                    bool WebSocketHasBeenSet() const;
+
                 private:
 
                     /**
@@ -498,7 +544,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_originHasBeenSet;
 
                     /**
-                     * IP blacklist/whitelist configuration.
+                     * IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     IpFilter m_ipFilter;
@@ -566,6 +612,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_readonly;
                     bool m_readonlyHasBeenSet;
+
+                    /**
+                     * Domain name tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<Tag> m_tag;
+                    bool m_tagHasBeenSet;
+
+                    /**
+                     * WebSocket configuration.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    WebSocket m_webSocket;
+                    bool m_webSocketHasBeenSet;
 
                 };
             }

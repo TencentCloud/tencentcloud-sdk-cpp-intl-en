@@ -47,14 +47,26 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cloud disk type. Valid values: CLOUD_PREMIUM, CLOUD_SSD, CLOUD_BASIC
-                     * @return DiskType Cloud disk type. Valid values: CLOUD_PREMIUM, CLOUD_SSD, CLOUD_BASIC
+                     * 获取Cloud disk type
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_HSSD`: Enhanced SSD</li>
+                     * @return DiskType Cloud disk type
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_HSSD`: Enhanced SSD</li>
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置Cloud disk type. Valid values: CLOUD_PREMIUM, CLOUD_SSD, CLOUD_BASIC
-                     * @param DiskType Cloud disk type. Valid values: CLOUD_PREMIUM, CLOUD_SSD, CLOUD_BASIC
+                     * 设置Cloud disk type
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_HSSD`: Enhanced SSD</li>
+                     * @param DiskType Cloud disk type
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_HSSD`: Enhanced SSD</li>
                      */
                     void SetDiskType(const std::string& _diskType);
 
@@ -103,7 +115,10 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cloud disk type. Valid values: CLOUD_PREMIUM, CLOUD_SSD, CLOUD_BASIC
+                     * Cloud disk type
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_HSSD`: Enhanced SSD</li>
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;

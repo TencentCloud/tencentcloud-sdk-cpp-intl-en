@@ -105,14 +105,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool FleetIdHasBeenSet() const;
 
                     /**
-                     * 获取Game server session ID
-                     * @return GameServerSessionId Game server session ID
+                     * 获取Game server session ID. It should contain 1 to 256 ASCII characters.
+                     * @return GameServerSessionId Game server session ID. It should contain 1 to 256 ASCII characters.
                      */
                     std::string GetGameServerSessionId() const;
 
                     /**
-                     * 设置Game server session ID
-                     * @param GameServerSessionId Game server session ID
+                     * 设置Game server session ID. It should contain 1 to 256 ASCII characters.
+                     * @param GameServerSessionId Game server session ID. It should contain 1 to 256 ASCII characters.
                      */
                     void SetGameServerSessionId(const std::string& _gameServerSessionId);
 
@@ -141,18 +141,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IpAddressHasBeenSet() const;
 
                     /**
-                     * 获取Player information
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PlayerData Player information
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Player custom data. Up to 2048 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return PlayerData Player custom data. Up to 2048 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string GetPlayerData() const;
 
                     /**
-                     * 设置Player information
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PlayerData Player information
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Player custom data. Up to 2048 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param PlayerData Player custom data. Up to 2048 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     void SetPlayerData(const std::string& _playerData);
 
@@ -163,18 +163,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PlayerDataHasBeenSet() const;
 
                     /**
-                     * 获取Player ID
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PlayerId Player ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Player ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return PlayerId Player ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string GetPlayerId() const;
 
                     /**
-                     * 设置Player ID
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PlayerId Player ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Player ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param PlayerId Player ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     void SetPlayerId(const std::string& _playerId);
 
@@ -203,14 +203,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PlayerSessionIdHasBeenSet() const;
 
                     /**
-                     * 获取Port number
-                     * @return Port Port number
+                     * 获取Port number. It should be a value between 1 to 60000.
+                     * @return Port Port number. It should be a value between 1 to 60000.
                      */
                     uint64_t GetPort() const;
 
                     /**
-                     * 设置Port number
-                     * @param Port Port number
+                     * 设置Port number. It should be a value between 1 to 60000.
+                     * @param Port Port number. It should be a value between 1 to 60000.
                      */
                     void SetPort(const uint64_t& _port);
 
@@ -221,14 +221,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Player session status
-                     * @return Status Player session status
+                     * 获取Player session status. Valid values: RESERVED = 1, ACTIVE = 2, COMPLETED =3, TIMEDOUT = 4
+                     * @return Status Player session status. Valid values: RESERVED = 1, ACTIVE = 2, COMPLETED =3, TIMEDOUT = 4
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Player session status
-                     * @param Status Player session status
+                     * 设置Player session status. Valid values: RESERVED = 1, ACTIVE = 2, COMPLETED =3, TIMEDOUT = 4
+                     * @param Status Player session status. Valid values: RESERVED = 1, ACTIVE = 2, COMPLETED =3, TIMEDOUT = 4
                      */
                     void SetStatus(const std::string& _status);
 
@@ -282,7 +282,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_fleetIdHasBeenSet;
 
                     /**
-                     * Game server session ID
+                     * Game server session ID. It should contain 1 to 256 ASCII characters.
                      */
                     std::string m_gameServerSessionId;
                     bool m_gameServerSessionIdHasBeenSet;
@@ -294,15 +294,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_ipAddressHasBeenSet;
 
                     /**
-                     * Player information
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Player custom data. Up to 2048 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string m_playerData;
                     bool m_playerDataHasBeenSet;
 
                     /**
-                     * Player ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Player ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string m_playerId;
                     bool m_playerIdHasBeenSet;
@@ -314,13 +314,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_playerSessionIdHasBeenSet;
 
                     /**
-                     * Port number
+                     * Port number. It should be a value between 1 to 60000.
                      */
                     uint64_t m_port;
                     bool m_portHasBeenSet;
 
                     /**
-                     * Player session status
+                     * Player session status. Valid values: RESERVED = 1, ACTIVE = 2, COMPLETED =3, TIMEDOUT = 4
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

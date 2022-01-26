@@ -96,6 +96,94 @@ namespace TencentCloud
                      */
                     bool PolicyIdHasBeenSet() const;
 
+                    /**
+                     * 获取Security rule action
+                     * @return RuleAction Security rule action
+                     */
+                    std::string GetRuleAction() const;
+
+                    /**
+                     * 设置Security rule action
+                     * @param RuleAction Security rule action
+                     */
+                    void SetRuleAction(const std::string& _ruleAction);
+
+                    /**
+                     * 判断参数 RuleAction 是否已赋值
+                     * @return RuleAction 是否已赋值
+                     */
+                    bool RuleActionHasBeenSet() const;
+
+                    /**
+                     * 获取A CIDR IP address associated with the rule
+                     * @return SourceCidr A CIDR IP address associated with the rule
+                     */
+                    std::string GetSourceCidr() const;
+
+                    /**
+                     * 设置A CIDR IP address associated with the rule
+                     * @param SourceCidr A CIDR IP address associated with the rule
+                     */
+                    void SetSourceCidr(const std::string& _sourceCidr);
+
+                    /**
+                     * 判断参数 SourceCidr 是否已赋值
+                     * @return SourceCidr 是否已赋值
+                     */
+                    bool SourceCidrHasBeenSet() const;
+
+                    /**
+                     * 获取Protocol type
+                     * @return Protocol Protocol type
+                     */
+                    std::string GetProtocol() const;
+
+                    /**
+                     * 设置Protocol type
+                     * @param Protocol Protocol type
+                     */
+                    void SetProtocol(const std::string& _protocol);
+
+                    /**
+                     * 判断参数 Protocol 是否已赋值
+                     * @return Protocol 是否已赋值
+                     */
+                    bool ProtocolHasBeenSet() const;
+
+                    /**
+                     * 获取Port range. Valid values:
+A single port: 80
+Multiple ports: 80 and 443
+Consecutive ports: 3306-20000
+All ports: ALL
+                     * @return DestPortRange Port range. Valid values:
+A single port: 80
+Multiple ports: 80 and 443
+Consecutive ports: 3306-20000
+All ports: ALL
+                     */
+                    std::string GetDestPortRange() const;
+
+                    /**
+                     * 设置Port range. Valid values:
+A single port: 80
+Multiple ports: 80 and 443
+Consecutive ports: 3306-20000
+All ports: ALL
+                     * @param DestPortRange Port range. Valid values:
+A single port: 80
+Multiple ports: 80 and 443
+Consecutive ports: 3306-20000
+All ports: ALL
+                     */
+                    void SetDestPortRange(const std::string& _destPortRange);
+
+                    /**
+                     * 判断参数 DestPortRange 是否已赋值
+                     * @return DestPortRange 是否已赋值
+                     */
+                    bool DestPortRangeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +203,34 @@ namespace TencentCloud
                      */
                     std::string m_policyId;
                     bool m_policyIdHasBeenSet;
+
+                    /**
+                     * Security rule action
+                     */
+                    std::string m_ruleAction;
+                    bool m_ruleActionHasBeenSet;
+
+                    /**
+                     * A CIDR IP address associated with the rule
+                     */
+                    std::string m_sourceCidr;
+                    bool m_sourceCidrHasBeenSet;
+
+                    /**
+                     * Protocol type
+                     */
+                    std::string m_protocol;
+                    bool m_protocolHasBeenSet;
+
+                    /**
+                     * Port range. Valid values:
+A single port: 80
+Multiple ports: 80 and 443
+Consecutive ports: 3306-20000
+All ports: ALL
+                     */
+                    std::string m_destPortRange;
+                    bool m_destPortRangeHasBeenSet;
 
                 };
             }

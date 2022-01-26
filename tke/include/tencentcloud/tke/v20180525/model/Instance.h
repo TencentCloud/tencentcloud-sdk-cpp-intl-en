@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Cluster’s instance information
+                * Cluster's instance information
                 */
                 class Instance : public AbstractModel
                 {

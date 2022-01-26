@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 AiRecognitionResult::AiRecognitionResult() :
@@ -31,7 +30,7 @@ AiRecognitionResult::AiRecognitionResult() :
 {
 }
 
-CoreInternalOutcome AiRecognitionResult::Deserialize(const Value &value)
+CoreInternalOutcome AiRecognitionResult::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome AiRecognitionResult::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AiRecognitionResult.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionResult.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -50,7 +49,7 @@ CoreInternalOutcome AiRecognitionResult::Deserialize(const Value &value)
     {
         if (!value["FaceTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AiRecognitionResult.FaceTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionResult.FaceTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_faceTask.Deserialize(value["FaceTask"]);
@@ -67,7 +66,7 @@ CoreInternalOutcome AiRecognitionResult::Deserialize(const Value &value)
     {
         if (!value["AsrWordsTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AiRecognitionResult.AsrWordsTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionResult.AsrWordsTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_asrWordsTask.Deserialize(value["AsrWordsTask"]);
@@ -84,7 +83,7 @@ CoreInternalOutcome AiRecognitionResult::Deserialize(const Value &value)
     {
         if (!value["AsrFullTextTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AiRecognitionResult.AsrFullTextTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionResult.AsrFullTextTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_asrFullTextTask.Deserialize(value["AsrFullTextTask"]);
@@ -101,7 +100,7 @@ CoreInternalOutcome AiRecognitionResult::Deserialize(const Value &value)
     {
         if (!value["OcrWordsTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AiRecognitionResult.OcrWordsTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionResult.OcrWordsTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_ocrWordsTask.Deserialize(value["OcrWordsTask"]);
@@ -118,7 +117,7 @@ CoreInternalOutcome AiRecognitionResult::Deserialize(const Value &value)
     {
         if (!value["OcrFullTextTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AiRecognitionResult.OcrFullTextTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionResult.OcrFullTextTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_ocrFullTextTask.Deserialize(value["OcrFullTextTask"]);
@@ -135,59 +134,59 @@ CoreInternalOutcome AiRecognitionResult::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void AiRecognitionResult::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AiRecognitionResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_faceTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FaceTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_faceTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_asrWordsTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AsrWordsTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_asrWordsTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_asrFullTextTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AsrFullTextTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_asrFullTextTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_ocrWordsTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OcrWordsTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_ocrWordsTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_ocrFullTextTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OcrFullTextTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_ocrFullTextTask.ToJsonObject(value[key.c_str()], allocator);
     }
 

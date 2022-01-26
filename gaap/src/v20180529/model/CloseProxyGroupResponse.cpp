@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 CloseProxyGroupResponse::CloseProxyGroupResponse() :
@@ -32,20 +31,20 @@ CloseProxyGroupResponse::CloseProxyGroupResponse() :
 
 CoreInternalOutcome CloseProxyGroupResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -56,21 +55,21 @@ CoreInternalOutcome CloseProxyGroupResponse::Deserialize(const string &payload)
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
     if (rsp.HasMember("InvalidStatusInstanceSet") && !rsp["InvalidStatusInstanceSet"].IsNull())
     {
         if (!rsp["InvalidStatusInstanceSet"].IsArray())
-            return CoreInternalOutcome(Error("response `InvalidStatusInstanceSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `InvalidStatusInstanceSet` is not array type"));
 
-        const Value &tmpValue = rsp["InvalidStatusInstanceSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["InvalidStatusInstanceSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_invalidStatusInstanceSet.push_back((*itr).GetString());
         }
@@ -80,10 +79,10 @@ CoreInternalOutcome CloseProxyGroupResponse::Deserialize(const string &payload)
     if (rsp.HasMember("OperationFailedInstanceSet") && !rsp["OperationFailedInstanceSet"].IsNull())
     {
         if (!rsp["OperationFailedInstanceSet"].IsArray())
-            return CoreInternalOutcome(Error("response `OperationFailedInstanceSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `OperationFailedInstanceSet` is not array type"));
 
-        const Value &tmpValue = rsp["OperationFailedInstanceSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["OperationFailedInstanceSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_operationFailedInstanceSet.push_back((*itr).GetString());
         }
@@ -92,6 +91,49 @@ CoreInternalOutcome CloseProxyGroupResponse::Deserialize(const string &payload)
 
 
     return CoreInternalOutcome(true);
+}
+
+string CloseProxyGroupResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_invalidStatusInstanceSetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InvalidStatusInstanceSet";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_invalidStatusInstanceSet.begin(); itr != m_invalidStatusInstanceSet.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_operationFailedInstanceSetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OperationFailedInstanceSet";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_operationFailedInstanceSet.begin(); itr != m_operationFailedInstanceSet.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

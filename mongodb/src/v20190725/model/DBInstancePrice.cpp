@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mongodb::V20190725::Model;
-using namespace rapidjson;
 using namespace std;
 
 DBInstancePrice::DBInstancePrice() :
@@ -28,16 +27,16 @@ DBInstancePrice::DBInstancePrice() :
 {
 }
 
-CoreInternalOutcome DBInstancePrice::Deserialize(const Value &value)
+CoreInternalOutcome DBInstancePrice::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
 
     if (value.HasMember("UnitPrice") && !value["UnitPrice"].IsNull())
     {
-        if (!value["UnitPrice"].IsDouble())
+        if (!value["UnitPrice"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `DBInstancePrice.UnitPrice` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstancePrice.UnitPrice` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_unitPrice = value["UnitPrice"].GetDouble();
         m_unitPriceHasBeenSet = true;
@@ -45,9 +44,9 @@ CoreInternalOutcome DBInstancePrice::Deserialize(const Value &value)
 
     if (value.HasMember("OriginalPrice") && !value["OriginalPrice"].IsNull())
     {
-        if (!value["OriginalPrice"].IsDouble())
+        if (!value["OriginalPrice"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `DBInstancePrice.OriginalPrice` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstancePrice.OriginalPrice` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_originalPrice = value["OriginalPrice"].GetDouble();
         m_originalPriceHasBeenSet = true;
@@ -55,9 +54,9 @@ CoreInternalOutcome DBInstancePrice::Deserialize(const Value &value)
 
     if (value.HasMember("DiscountPrice") && !value["DiscountPrice"].IsNull())
     {
-        if (!value["DiscountPrice"].IsDouble())
+        if (!value["DiscountPrice"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `DBInstancePrice.DiscountPrice` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstancePrice.DiscountPrice` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_discountPrice = value["DiscountPrice"].GetDouble();
         m_discountPriceHasBeenSet = true;
@@ -67,12 +66,12 @@ CoreInternalOutcome DBInstancePrice::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void DBInstancePrice::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DBInstancePrice::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_unitPriceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UnitPrice";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_unitPrice, allocator);
@@ -80,7 +79,7 @@ void DBInstancePrice::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_originalPriceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OriginalPrice";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_originalPrice, allocator);
@@ -88,7 +87,7 @@ void DBInstancePrice::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_discountPriceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiscountPrice";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_discountPrice, allocator);

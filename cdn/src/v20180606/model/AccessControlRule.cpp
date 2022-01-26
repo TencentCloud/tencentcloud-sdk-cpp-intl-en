@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 AccessControlRule::AccessControlRule() :
@@ -29,7 +28,7 @@ AccessControlRule::AccessControlRule() :
 {
 }
 
-CoreInternalOutcome AccessControlRule::Deserialize(const Value &value)
+CoreInternalOutcome AccessControlRule::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome AccessControlRule::Deserialize(const Value &value)
     {
         if (!value["RuleType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccessControlRule.RuleType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccessControlRule.RuleType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ruleType = string(value["RuleType"].GetString());
         m_ruleTypeHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome AccessControlRule::Deserialize(const Value &value)
     {
         if (!value["RuleContent"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccessControlRule.RuleContent` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccessControlRule.RuleContent` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ruleContent = string(value["RuleContent"].GetString());
         m_ruleContentHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome AccessControlRule::Deserialize(const Value &value)
     {
         if (!value["Regex"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccessControlRule.Regex` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccessControlRule.Regex` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_regex = string(value["Regex"].GetString());
         m_regexHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome AccessControlRule::Deserialize(const Value &value)
     {
         if (!value["RuleHeader"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccessControlRule.RuleHeader` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccessControlRule.RuleHeader` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ruleHeader = string(value["RuleHeader"].GetString());
         m_ruleHeaderHasBeenSet = true;
@@ -78,39 +77,39 @@ CoreInternalOutcome AccessControlRule::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void AccessControlRule::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AccessControlRule::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_ruleTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RuleType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ruleType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ruleType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ruleContentHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RuleContent";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ruleContent.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ruleContent.c_str(), allocator).Move(), allocator);
     }
 
     if (m_regexHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Regex";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_regex.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_regex.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ruleHeaderHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RuleHeader";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ruleHeader.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ruleHeader.c_str(), allocator).Move(), allocator);
     }
 
 }

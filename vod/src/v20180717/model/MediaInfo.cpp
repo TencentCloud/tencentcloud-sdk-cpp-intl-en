@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 MediaInfo::MediaInfo() :
@@ -32,11 +31,12 @@ MediaInfo::MediaInfo() :
     m_keyFrameDescInfoHasBeenSet(false),
     m_adaptiveDynamicStreamingInfoHasBeenSet(false),
     m_miniProgramReviewInfoHasBeenSet(false),
+    m_subtitleInfoHasBeenSet(false),
     m_fileIdHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome MediaInfo::Deserialize(const Value &value)
+CoreInternalOutcome MediaInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -45,7 +45,7 @@ CoreInternalOutcome MediaInfo::Deserialize(const Value &value)
     {
         if (!value["BasicInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaInfo.BasicInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaInfo.BasicInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_basicInfo.Deserialize(value["BasicInfo"]);
@@ -62,7 +62,7 @@ CoreInternalOutcome MediaInfo::Deserialize(const Value &value)
     {
         if (!value["MetaData"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaInfo.MetaData` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaInfo.MetaData` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_metaData.Deserialize(value["MetaData"]);
@@ -79,7 +79,7 @@ CoreInternalOutcome MediaInfo::Deserialize(const Value &value)
     {
         if (!value["TranscodeInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaInfo.TranscodeInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaInfo.TranscodeInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_transcodeInfo.Deserialize(value["TranscodeInfo"]);
@@ -96,7 +96,7 @@ CoreInternalOutcome MediaInfo::Deserialize(const Value &value)
     {
         if (!value["AnimatedGraphicsInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaInfo.AnimatedGraphicsInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaInfo.AnimatedGraphicsInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_animatedGraphicsInfo.Deserialize(value["AnimatedGraphicsInfo"]);
@@ -113,7 +113,7 @@ CoreInternalOutcome MediaInfo::Deserialize(const Value &value)
     {
         if (!value["SampleSnapshotInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaInfo.SampleSnapshotInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaInfo.SampleSnapshotInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_sampleSnapshotInfo.Deserialize(value["SampleSnapshotInfo"]);
@@ -130,7 +130,7 @@ CoreInternalOutcome MediaInfo::Deserialize(const Value &value)
     {
         if (!value["ImageSpriteInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaInfo.ImageSpriteInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaInfo.ImageSpriteInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_imageSpriteInfo.Deserialize(value["ImageSpriteInfo"]);
@@ -147,7 +147,7 @@ CoreInternalOutcome MediaInfo::Deserialize(const Value &value)
     {
         if (!value["SnapshotByTimeOffsetInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaInfo.SnapshotByTimeOffsetInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaInfo.SnapshotByTimeOffsetInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_snapshotByTimeOffsetInfo.Deserialize(value["SnapshotByTimeOffsetInfo"]);
@@ -164,7 +164,7 @@ CoreInternalOutcome MediaInfo::Deserialize(const Value &value)
     {
         if (!value["KeyFrameDescInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaInfo.KeyFrameDescInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaInfo.KeyFrameDescInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_keyFrameDescInfo.Deserialize(value["KeyFrameDescInfo"]);
@@ -181,7 +181,7 @@ CoreInternalOutcome MediaInfo::Deserialize(const Value &value)
     {
         if (!value["AdaptiveDynamicStreamingInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaInfo.AdaptiveDynamicStreamingInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaInfo.AdaptiveDynamicStreamingInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_adaptiveDynamicStreamingInfo.Deserialize(value["AdaptiveDynamicStreamingInfo"]);
@@ -198,7 +198,7 @@ CoreInternalOutcome MediaInfo::Deserialize(const Value &value)
     {
         if (!value["MiniProgramReviewInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaInfo.MiniProgramReviewInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaInfo.MiniProgramReviewInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_miniProgramReviewInfo.Deserialize(value["MiniProgramReviewInfo"]);
@@ -211,11 +211,28 @@ CoreInternalOutcome MediaInfo::Deserialize(const Value &value)
         m_miniProgramReviewInfoHasBeenSet = true;
     }
 
+    if (value.HasMember("SubtitleInfo") && !value["SubtitleInfo"].IsNull())
+    {
+        if (!value["SubtitleInfo"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `MediaInfo.SubtitleInfo` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_subtitleInfo.Deserialize(value["SubtitleInfo"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_subtitleInfoHasBeenSet = true;
+    }
+
     if (value.HasMember("FileId") && !value["FileId"].IsNull())
     {
         if (!value["FileId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaInfo.FileId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaInfo.FileId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fileId = string(value["FileId"].GetString());
         m_fileIdHasBeenSet = true;
@@ -225,105 +242,114 @@ CoreInternalOutcome MediaInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void MediaInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MediaInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_basicInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BasicInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_basicInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_metaDataHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MetaData";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_metaData.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_transcodeInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TranscodeInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_transcodeInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_animatedGraphicsInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AnimatedGraphicsInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_animatedGraphicsInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_sampleSnapshotInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SampleSnapshotInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_sampleSnapshotInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_imageSpriteInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ImageSpriteInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_imageSpriteInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_snapshotByTimeOffsetInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SnapshotByTimeOffsetInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_snapshotByTimeOffsetInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_keyFrameDescInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "KeyFrameDescInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_keyFrameDescInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_adaptiveDynamicStreamingInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AdaptiveDynamicStreamingInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_adaptiveDynamicStreamingInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_miniProgramReviewInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MiniProgramReviewInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_miniProgramReviewInfo.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_subtitleInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubtitleInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_subtitleInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_fileIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fileId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fileId.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -487,6 +513,22 @@ void MediaInfo::SetMiniProgramReviewInfo(const MediaMiniProgramReviewInfo& _mini
 bool MediaInfo::MiniProgramReviewInfoHasBeenSet() const
 {
     return m_miniProgramReviewInfoHasBeenSet;
+}
+
+MediaSubtitleInfo MediaInfo::GetSubtitleInfo() const
+{
+    return m_subtitleInfo;
+}
+
+void MediaInfo::SetSubtitleInfo(const MediaSubtitleInfo& _subtitleInfo)
+{
+    m_subtitleInfo = _subtitleInfo;
+    m_subtitleInfoHasBeenSet = true;
+}
+
+bool MediaInfo::SubtitleInfoHasBeenSet() const
+{
+    return m_subtitleInfoHasBeenSet;
 }
 
 string MediaInfo::GetFileId() const

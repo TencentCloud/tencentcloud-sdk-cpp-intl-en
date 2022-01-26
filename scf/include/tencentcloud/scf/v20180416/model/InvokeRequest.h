@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool FunctionNameHasBeenSet() const;
 
                     /**
-                     * 获取The value is `RequestResponse` (synchronous) or `Event` (asynchronous). The default value is synchronous.
-                     * @return InvocationType The value is `RequestResponse` (synchronous) or `Event` (asynchronous). The default value is synchronous.
+                     * 获取Fill in `RequestResponse` for synchronized invocations (default and recommended) and `Event` for asychronized invocations. Note that for synchronized invocations, the max timeout period is 300s. Choose asychronized invocations if the required timeout period is longer than 300 seconds. You can also use [InvokeFunction](https://intl.cloud.tencent.com/document/product/583/58400?from_cn_redirect=1) for synchronized invocations. 
+                     * @return InvocationType Fill in `RequestResponse` for synchronized invocations (default and recommended) and `Event` for asychronized invocations. Note that for synchronized invocations, the max timeout period is 300s. Choose asychronized invocations if the required timeout period is longer than 300 seconds. You can also use [InvokeFunction](https://intl.cloud.tencent.com/document/product/583/58400?from_cn_redirect=1) for synchronized invocations. 
                      */
                     std::string GetInvocationType() const;
 
                     /**
-                     * 设置The value is `RequestResponse` (synchronous) or `Event` (asynchronous). The default value is synchronous.
-                     * @param InvocationType The value is `RequestResponse` (synchronous) or `Event` (asynchronous). The default value is synchronous.
+                     * 设置Fill in `RequestResponse` for synchronized invocations (default and recommended) and `Event` for asychronized invocations. Note that for synchronized invocations, the max timeout period is 300s. Choose asychronized invocations if the required timeout period is longer than 300 seconds. You can also use [InvokeFunction](https://intl.cloud.tencent.com/document/product/583/58400?from_cn_redirect=1) for synchronized invocations. 
+                     * @param InvocationType Fill in `RequestResponse` for synchronized invocations (default and recommended) and `Event` for asychronized invocations. Note that for synchronized invocations, the max timeout period is 300s. Choose asychronized invocations if the required timeout period is longer than 300 seconds. You can also use [InvokeFunction](https://intl.cloud.tencent.com/document/product/583/58400?from_cn_redirect=1) for synchronized invocations. 
                      */
                     void SetInvocationType(const std::string& _invocationType);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool InvocationTypeHasBeenSet() const;
 
                     /**
-                     * 获取Version number of the triggered function
-                     * @return Qualifier Version number of the triggered function
+                     * 获取The version or alias of the triggered function. It defaults to $LATEST
+                     * @return Qualifier The version or alias of the triggered function. It defaults to $LATEST
                      */
                     std::string GetQualifier() const;
 
                     /**
-                     * 设置Version number of the triggered function
-                     * @param Qualifier Version number of the triggered function
+                     * 设置The version or alias of the triggered function. It defaults to $LATEST
+                     * @param Qualifier The version or alias of the triggered function. It defaults to $LATEST
                      */
                     void SetQualifier(const std::string& _qualifier);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool QualifierHasBeenSet() const;
 
                     /**
-                     * 获取Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
-                     * @return ClientContext Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
+                     * 获取Function running parameter, which is in the JSON format. The maximum parameter size is 6 MB for synchronized invocations and 128KB for asynchronized invocations. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
+                     * @return ClientContext Function running parameter, which is in the JSON format. The maximum parameter size is 6 MB for synchronized invocations and 128KB for asynchronized invocations. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
                      */
                     std::string GetClientContext() const;
 
                     /**
-                     * 设置Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
-                     * @param ClientContext Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
+                     * 设置Function running parameter, which is in the JSON format. The maximum parameter size is 6 MB for synchronized invocations and 128KB for asynchronized invocations. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
+                     * @param ClientContext Function running parameter, which is in the JSON format. The maximum parameter size is 6 MB for synchronized invocations and 128KB for asynchronized invocations. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
                      */
                     void SetClientContext(const std::string& _clientContext);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool ClientContextHasBeenSet() const;
 
                     /**
-                     * 获取If this field is specified for a synchronous invocation, the return value will contain a 4-KB log. The value is `None` (default) or `Tail`. If the value is `Tail`, `logMsg` in the return parameter will contain the corresponding function execution log.
-                     * @return LogType If this field is specified for a synchronous invocation, the return value will contain a 4-KB log. The value is `None` (default) or `Tail`. If the value is `Tail`, `logMsg` in the return parameter will contain the corresponding function execution log.
+                     * 获取Null for async invocations
+                     * @return LogType Null for async invocations
                      */
                     std::string GetLogType() const;
 
                     /**
-                     * 设置If this field is specified for a synchronous invocation, the return value will contain a 4-KB log. The value is `None` (default) or `Tail`. If the value is `Tail`, `logMsg` in the return parameter will contain the corresponding function execution log.
-                     * @param LogType If this field is specified for a synchronous invocation, the return value will contain a 4-KB log. The value is `None` (default) or `Tail`. If the value is `Tail`, `logMsg` in the return parameter will contain the corresponding function execution log.
+                     * 设置Null for async invocations
+                     * @param LogType Null for async invocations
                      */
                     void SetLogType(const std::string& _logType);
 
@@ -177,25 +177,25 @@ namespace TencentCloud
                     bool m_functionNameHasBeenSet;
 
                     /**
-                     * The value is `RequestResponse` (synchronous) or `Event` (asynchronous). The default value is synchronous.
+                     * Fill in `RequestResponse` for synchronized invocations (default and recommended) and `Event` for asychronized invocations. Note that for synchronized invocations, the max timeout period is 300s. Choose asychronized invocations if the required timeout period is longer than 300 seconds. You can also use [InvokeFunction](https://intl.cloud.tencent.com/document/product/583/58400?from_cn_redirect=1) for synchronized invocations. 
                      */
                     std::string m_invocationType;
                     bool m_invocationTypeHasBeenSet;
 
                     /**
-                     * Version number of the triggered function
+                     * The version or alias of the triggered function. It defaults to $LATEST
                      */
                     std::string m_qualifier;
                     bool m_qualifierHasBeenSet;
 
                     /**
-                     * Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
+                     * Function running parameter, which is in the JSON format. The maximum parameter size is 6 MB for synchronized invocations and 128KB for asynchronized invocations. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
                      */
                     std::string m_clientContext;
                     bool m_clientContextHasBeenSet;
 
                     /**
-                     * If this field is specified for a synchronous invocation, the return value will contain a 4-KB log. The value is `None` (default) or `Tail`. If the value is `Tail`, `logMsg` in the return parameter will contain the corresponding function execution log.
+                     * Null for async invocations
                      */
                     std::string m_logType;
                     bool m_logTypeHasBeenSet;

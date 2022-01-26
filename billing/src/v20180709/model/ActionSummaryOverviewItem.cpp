@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Billing::V20180709::Model;
-using namespace rapidjson;
 using namespace std;
 
 ActionSummaryOverviewItem::ActionSummaryOverviewItem() :
@@ -29,11 +28,12 @@ ActionSummaryOverviewItem::ActionSummaryOverviewItem() :
     m_cashPayAmountHasBeenSet(false),
     m_incentivePayAmountHasBeenSet(false),
     m_voucherPayAmountHasBeenSet(false),
-    m_billMonthHasBeenSet(false)
+    m_billMonthHasBeenSet(false),
+    m_totalCostHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ActionSummaryOverviewItem::Deserialize(const Value &value)
+CoreInternalOutcome ActionSummaryOverviewItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +42,7 @@ CoreInternalOutcome ActionSummaryOverviewItem::Deserialize(const Value &value)
     {
         if (!value["ActionType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ActionSummaryOverviewItem.ActionType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ActionSummaryOverviewItem.ActionType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_actionType = string(value["ActionType"].GetString());
         m_actionTypeHasBeenSet = true;
@@ -52,7 +52,7 @@ CoreInternalOutcome ActionSummaryOverviewItem::Deserialize(const Value &value)
     {
         if (!value["ActionTypeName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ActionSummaryOverviewItem.ActionTypeName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ActionSummaryOverviewItem.ActionTypeName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_actionTypeName = string(value["ActionTypeName"].GetString());
         m_actionTypeNameHasBeenSet = true;
@@ -62,7 +62,7 @@ CoreInternalOutcome ActionSummaryOverviewItem::Deserialize(const Value &value)
     {
         if (!value["RealTotalCost"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ActionSummaryOverviewItem.RealTotalCost` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ActionSummaryOverviewItem.RealTotalCost` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_realTotalCost = string(value["RealTotalCost"].GetString());
         m_realTotalCostHasBeenSet = true;
@@ -72,7 +72,7 @@ CoreInternalOutcome ActionSummaryOverviewItem::Deserialize(const Value &value)
     {
         if (!value["RealTotalCostRatio"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ActionSummaryOverviewItem.RealTotalCostRatio` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ActionSummaryOverviewItem.RealTotalCostRatio` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_realTotalCostRatio = string(value["RealTotalCostRatio"].GetString());
         m_realTotalCostRatioHasBeenSet = true;
@@ -82,7 +82,7 @@ CoreInternalOutcome ActionSummaryOverviewItem::Deserialize(const Value &value)
     {
         if (!value["CashPayAmount"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ActionSummaryOverviewItem.CashPayAmount` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ActionSummaryOverviewItem.CashPayAmount` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cashPayAmount = string(value["CashPayAmount"].GetString());
         m_cashPayAmountHasBeenSet = true;
@@ -92,7 +92,7 @@ CoreInternalOutcome ActionSummaryOverviewItem::Deserialize(const Value &value)
     {
         if (!value["IncentivePayAmount"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ActionSummaryOverviewItem.IncentivePayAmount` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ActionSummaryOverviewItem.IncentivePayAmount` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_incentivePayAmount = string(value["IncentivePayAmount"].GetString());
         m_incentivePayAmountHasBeenSet = true;
@@ -102,7 +102,7 @@ CoreInternalOutcome ActionSummaryOverviewItem::Deserialize(const Value &value)
     {
         if (!value["VoucherPayAmount"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ActionSummaryOverviewItem.VoucherPayAmount` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ActionSummaryOverviewItem.VoucherPayAmount` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_voucherPayAmount = string(value["VoucherPayAmount"].GetString());
         m_voucherPayAmountHasBeenSet = true;
@@ -112,81 +112,99 @@ CoreInternalOutcome ActionSummaryOverviewItem::Deserialize(const Value &value)
     {
         if (!value["BillMonth"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ActionSummaryOverviewItem.BillMonth` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ActionSummaryOverviewItem.BillMonth` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_billMonth = string(value["BillMonth"].GetString());
         m_billMonthHasBeenSet = true;
+    }
+
+    if (value.HasMember("TotalCost") && !value["TotalCost"].IsNull())
+    {
+        if (!value["TotalCost"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ActionSummaryOverviewItem.TotalCost` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_totalCost = string(value["TotalCost"].GetString());
+        m_totalCostHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void ActionSummaryOverviewItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ActionSummaryOverviewItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_actionTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ActionType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_actionType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_actionType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_actionTypeNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ActionTypeName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_actionTypeName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_actionTypeName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_realTotalCostHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RealTotalCost";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_realTotalCost.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_realTotalCost.c_str(), allocator).Move(), allocator);
     }
 
     if (m_realTotalCostRatioHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RealTotalCostRatio";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_realTotalCostRatio.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_realTotalCostRatio.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cashPayAmountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CashPayAmount";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cashPayAmount.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cashPayAmount.c_str(), allocator).Move(), allocator);
     }
 
     if (m_incentivePayAmountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IncentivePayAmount";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_incentivePayAmount.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_incentivePayAmount.c_str(), allocator).Move(), allocator);
     }
 
     if (m_voucherPayAmountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VoucherPayAmount";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_voucherPayAmount.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_voucherPayAmount.c_str(), allocator).Move(), allocator);
     }
 
     if (m_billMonthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BillMonth";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_billMonth.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_billMonth.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_totalCostHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalCost";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_totalCost.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -318,5 +336,21 @@ void ActionSummaryOverviewItem::SetBillMonth(const string& _billMonth)
 bool ActionSummaryOverviewItem::BillMonthHasBeenSet() const
 {
     return m_billMonthHasBeenSet;
+}
+
+string ActionSummaryOverviewItem::GetTotalCost() const
+{
+    return m_totalCost;
+}
+
+void ActionSummaryOverviewItem::SetTotalCost(const string& _totalCost)
+{
+    m_totalCost = _totalCost;
+    m_totalCostHasBeenSet = true;
+}
+
+bool ActionSummaryOverviewItem::TotalCostHasBeenSet() const
+{
+    return m_totalCostHasBeenSet;
 }
 

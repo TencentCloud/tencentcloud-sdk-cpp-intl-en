@@ -277,14 +277,14 @@ namespace TencentCloud
                     bool ConditionTempGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter by recipient or recipient group. The value “user” indicates by recipient. The value “group” indicates by recipient group.
-                     * @return ReceiverType Filter by recipient or recipient group. The value “user” indicates by recipient. The value “group” indicates by recipient group.
+                     * 获取Filter by recipient or recipient group. The value 'user' indicates by recipient. The value 'group' indicates by recipient group.
+                     * @return ReceiverType Filter by recipient or recipient group. The value 'user' indicates by recipient. The value 'group' indicates by recipient group.
                      */
                     std::string GetReceiverType() const;
 
                     /**
-                     * 设置Filter by recipient or recipient group. The value “user” indicates by recipient. The value “group” indicates by recipient group.
-                     * @param ReceiverType Filter by recipient or recipient group. The value “user” indicates by recipient. The value “group” indicates by recipient group.
+                     * 设置Filter by recipient or recipient group. The value 'user' indicates by recipient. The value 'group' indicates by recipient group.
+                     * @param ReceiverType Filter by recipient or recipient group. The value 'user' indicates by recipient. The value 'group' indicates by recipient group.
                      */
                     void SetReceiverType(const std::string& _receiverType);
 
@@ -293,6 +293,24 @@ namespace TencentCloud
                      * @return ReceiverType 是否已赋值
                      */
                     bool ReceiverTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Filter conditions. Whether the alarm policy has been enabled or disabled
+                     * @return IsOpen Filter conditions. Whether the alarm policy has been enabled or disabled
+                     */
+                    bool GetIsOpen() const;
+
+                    /**
+                     * 设置Filter conditions. Whether the alarm policy has been enabled or disabled
+                     * @param IsOpen Filter conditions. Whether the alarm policy has been enabled or disabled
+                     */
+                    void SetIsOpen(const bool& _isOpen);
+
+                    /**
+                     * 判断参数 IsOpen 是否已赋值
+                     * @return IsOpen 是否已赋值
+                     */
+                    bool IsOpenHasBeenSet() const;
 
                 private:
 
@@ -375,10 +393,16 @@ namespace TencentCloud
                     bool m_conditionTempGroupIdHasBeenSet;
 
                     /**
-                     * Filter by recipient or recipient group. The value “user” indicates by recipient. The value “group” indicates by recipient group.
+                     * Filter by recipient or recipient group. The value 'user' indicates by recipient. The value 'group' indicates by recipient group.
                      */
                     std::string m_receiverType;
                     bool m_receiverTypeHasBeenSet;
+
+                    /**
+                     * Filter conditions. Whether the alarm policy has been enabled or disabled
+                     */
+                    bool m_isOpen;
+                    bool m_isOpenHasBeenSet;
 
                 };
             }

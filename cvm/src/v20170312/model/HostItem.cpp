@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cvm::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 HostItem::HostItem() :
@@ -38,7 +37,7 @@ HostItem::HostItem() :
 {
 }
 
-CoreInternalOutcome HostItem::Deserialize(const Value &value)
+CoreInternalOutcome HostItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -47,7 +46,7 @@ CoreInternalOutcome HostItem::Deserialize(const Value &value)
     {
         if (!value["Placement"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `HostItem.Placement` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HostItem.Placement` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_placement.Deserialize(value["Placement"]);
@@ -64,7 +63,7 @@ CoreInternalOutcome HostItem::Deserialize(const Value &value)
     {
         if (!value["HostId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HostItem.HostId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HostItem.HostId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_hostId = string(value["HostId"].GetString());
         m_hostIdHasBeenSet = true;
@@ -74,7 +73,7 @@ CoreInternalOutcome HostItem::Deserialize(const Value &value)
     {
         if (!value["HostType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HostItem.HostType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HostItem.HostType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_hostType = string(value["HostType"].GetString());
         m_hostTypeHasBeenSet = true;
@@ -84,7 +83,7 @@ CoreInternalOutcome HostItem::Deserialize(const Value &value)
     {
         if (!value["HostName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HostItem.HostName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HostItem.HostName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_hostName = string(value["HostName"].GetString());
         m_hostNameHasBeenSet = true;
@@ -94,7 +93,7 @@ CoreInternalOutcome HostItem::Deserialize(const Value &value)
     {
         if (!value["HostChargeType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HostItem.HostChargeType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HostItem.HostChargeType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_hostChargeType = string(value["HostChargeType"].GetString());
         m_hostChargeTypeHasBeenSet = true;
@@ -104,7 +103,7 @@ CoreInternalOutcome HostItem::Deserialize(const Value &value)
     {
         if (!value["RenewFlag"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HostItem.RenewFlag` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HostItem.RenewFlag` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_renewFlag = string(value["RenewFlag"].GetString());
         m_renewFlagHasBeenSet = true;
@@ -114,7 +113,7 @@ CoreInternalOutcome HostItem::Deserialize(const Value &value)
     {
         if (!value["CreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HostItem.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HostItem.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createdTime = string(value["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
@@ -124,7 +123,7 @@ CoreInternalOutcome HostItem::Deserialize(const Value &value)
     {
         if (!value["ExpiredTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HostItem.ExpiredTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HostItem.ExpiredTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_expiredTime = string(value["ExpiredTime"].GetString());
         m_expiredTimeHasBeenSet = true;
@@ -133,10 +132,10 @@ CoreInternalOutcome HostItem::Deserialize(const Value &value)
     if (value.HasMember("InstanceIds") && !value["InstanceIds"].IsNull())
     {
         if (!value["InstanceIds"].IsArray())
-            return CoreInternalOutcome(Error("response `HostItem.InstanceIds` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `HostItem.InstanceIds` is not array type"));
 
-        const Value &tmpValue = value["InstanceIds"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["InstanceIds"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_instanceIds.push_back((*itr).GetString());
         }
@@ -147,7 +146,7 @@ CoreInternalOutcome HostItem::Deserialize(const Value &value)
     {
         if (!value["HostState"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HostItem.HostState` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HostItem.HostState` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_hostState = string(value["HostState"].GetString());
         m_hostStateHasBeenSet = true;
@@ -157,7 +156,7 @@ CoreInternalOutcome HostItem::Deserialize(const Value &value)
     {
         if (!value["HostIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HostItem.HostIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HostItem.HostIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_hostIp = string(value["HostIp"].GetString());
         m_hostIpHasBeenSet = true;
@@ -167,7 +166,7 @@ CoreInternalOutcome HostItem::Deserialize(const Value &value)
     {
         if (!value["HostResource"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `HostItem.HostResource` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HostItem.HostResource` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_hostResource.Deserialize(value["HostResource"]);
@@ -184,7 +183,7 @@ CoreInternalOutcome HostItem::Deserialize(const Value &value)
     {
         if (!value["CageId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HostItem.CageId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HostItem.CageId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cageId = string(value["CageId"].GetString());
         m_cageIdHasBeenSet = true;
@@ -194,118 +193,118 @@ CoreInternalOutcome HostItem::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void HostItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void HostItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_placementHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Placement";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_placement.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_hostIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HostId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_hostId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_hostId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_hostTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HostType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_hostType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_hostType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_hostNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HostName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_hostName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_hostName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_hostChargeTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HostChargeType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_hostChargeType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_hostChargeType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_renewFlagHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RenewFlag";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_renewFlag.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_renewFlag.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createdTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createdTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_expiredTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ExpiredTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_expiredTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_expiredTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceIdsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceIds";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_instanceIds.begin(); itr != m_instanceIds.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_hostStateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HostState";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_hostState.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_hostState.c_str(), allocator).Move(), allocator);
     }
 
     if (m_hostIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HostIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_hostIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_hostIp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_hostResourceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HostResource";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_hostResource.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_cageIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CageId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cageId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cageId.c_str(), allocator).Move(), allocator);
     }
 
 }

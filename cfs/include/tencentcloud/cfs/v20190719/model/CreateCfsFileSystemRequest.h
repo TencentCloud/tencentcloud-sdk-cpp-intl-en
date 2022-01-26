@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://cloud.tencent.com/document/product/582/13225)
-                     * @return Zone AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://cloud.tencent.com/document/product/582/13225)
+                     * 获取AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://intl.cloud.tencent.com/document/product/582/13225?from_cn_redirect=1)
+                     * @return Zone AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://intl.cloud.tencent.com/document/product/582/13225?from_cn_redirect=1)
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://cloud.tencent.com/document/product/582/13225)
-                     * @param Zone AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://cloud.tencent.com/document/product/582/13225)
+                     * 设置AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://intl.cloud.tencent.com/document/product/582/13225?from_cn_redirect=1)
+                     * @param Zone AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://intl.cloud.tencent.com/document/product/582/13225?from_cn_redirect=1)
                      */
                     void SetZone(const std::string& _zone);
 
@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Network type. Valid values: VPC (VPC), BASIC (basic network)
-                     * @return NetInterface Network type. Valid values: VPC (VPC), BASIC (basic network)
+                     * 获取Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended.
+                     * @return NetInterface Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended.
                      */
                     std::string GetNetInterface() const;
 
                     /**
-                     * 设置Network type. Valid values: VPC (VPC), BASIC (basic network)
-                     * @param NetInterface Network type. Valid values: VPC (VPC), BASIC (basic network)
+                     * 设置Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended.
+                     * @param NetInterface Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended.
                      */
                     void SetNetInterface(const std::string& _netInterface);
 
@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool NetInterfaceHasBeenSet() const;
 
                     /**
-                     * 获取Permission group ID
-                     * @return PGroupId Permission group ID
+                     * 获取Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`.
+                     * @return PGroupId Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`.
                      */
                     std::string GetPGroupId() const;
 
                     /**
-                     * 设置Permission group ID
-                     * @param PGroupId Permission group ID
+                     * 设置Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`.
+                     * @param PGroupId Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`.
                      */
                     void SetPGroupId(const std::string& _pGroupId);
 
@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool PGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取File system protocol type. Valid values: NFS, CIFS. If this parameter is left empty, NFS will be used by default
-                     * @return Protocol File system protocol type. Valid values: NFS, CIFS. If this parameter is left empty, NFS will be used by default
+                     * 获取File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`.
+                     * @return Protocol File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`.
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置File system protocol type. Valid values: NFS, CIFS. If this parameter is left empty, NFS will be used by default
-                     * @param Protocol File system protocol type. Valid values: NFS, CIFS. If this parameter is left empty, NFS will be used by default
+                     * 设置File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`.
+                     * @param Protocol File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`.
                      */
                     void SetProtocol(const std::string& _protocol);
 
@@ -116,14 +116,14 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取File system storage class. Valid values: SD (standard), HP (high-performance)
-                     * @return StorageType File system storage class. Valid values: SD (standard), HP (high-performance)
+                     * 获取Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo)
+                     * @return StorageType Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo)
                      */
                     std::string GetStorageType() const;
 
                     /**
-                     * 设置File system storage class. Valid values: SD (standard), HP (high-performance)
-                     * @param StorageType File system storage class. Valid values: SD (standard), HP (high-performance)
+                     * 设置Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo)
+                     * @param StorageType Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo)
                      */
                     void SetStorageType(const std::string& _storageType);
 
@@ -170,14 +170,14 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies an IP address, which is supported only for VPC. If this parameter is left empty, a random IP will be assigned in the subnet
-                     * @return MountIP Specifies an IP address, which is supported only for VPC. If this parameter is left empty, a random IP will be assigned in the subnet
+                     * 获取IP address (this parameter supports only the VPC network type, and the Turbo series is not supported). If this parameter is left empty, a random IP in the subnet will be assigned.
+                     * @return MountIP IP address (this parameter supports only the VPC network type, and the Turbo series is not supported). If this parameter is left empty, a random IP in the subnet will be assigned.
                      */
                     std::string GetMountIP() const;
 
                     /**
-                     * 设置Specifies an IP address, which is supported only for VPC. If this parameter is left empty, a random IP will be assigned in the subnet
-                     * @param MountIP Specifies an IP address, which is supported only for VPC. If this parameter is left empty, a random IP will be assigned in the subnet
+                     * 设置IP address (this parameter supports only the VPC network type, and the Turbo series is not supported). If this parameter is left empty, a random IP in the subnet will be assigned.
+                     * @param MountIP IP address (this parameter supports only the VPC network type, and the Turbo series is not supported). If this parameter is left empty, a random IP in the subnet will be assigned.
                      */
                     void SetMountIP(const std::string& _mountIP);
 
@@ -223,34 +223,106 @@ namespace TencentCloud
                      */
                     bool ResourceTagsHasBeenSet() const;
 
+                    /**
+                     * 获取A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed. This string is valid for 2 hours.
+                     * @return ClientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed. This string is valid for 2 hours.
+                     */
+                    std::string GetClientToken() const;
+
+                    /**
+                     * 设置A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed. This string is valid for 2 hours.
+                     * @param ClientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed. This string is valid for 2 hours.
+                     */
+                    void SetClientToken(const std::string& _clientToken);
+
+                    /**
+                     * 判断参数 ClientToken 是否已赋值
+                     * @return ClientToken 是否已赋值
+                     */
+                    bool ClientTokenHasBeenSet() const;
+
+                    /**
+                     * 获取CCN instance ID (required if the network type is CCN)
+                     * @return CcnId CCN instance ID (required if the network type is CCN)
+                     */
+                    std::string GetCcnId() const;
+
+                    /**
+                     * 设置CCN instance ID (required if the network type is CCN)
+                     * @param CcnId CCN instance ID (required if the network type is CCN)
+                     */
+                    void SetCcnId(const std::string& _ccnId);
+
+                    /**
+                     * 判断参数 CcnId 是否已赋值
+                     * @return CcnId 是否已赋值
+                     */
+                    bool CcnIdHasBeenSet() const;
+
+                    /**
+                     * 获取CCN IP range used by the CFS (required if the network type is CCN), which cannot conflict with other IP ranges bound in CCN
+                     * @return CidrBlock CCN IP range used by the CFS (required if the network type is CCN), which cannot conflict with other IP ranges bound in CCN
+                     */
+                    std::string GetCidrBlock() const;
+
+                    /**
+                     * 设置CCN IP range used by the CFS (required if the network type is CCN), which cannot conflict with other IP ranges bound in CCN
+                     * @param CidrBlock CCN IP range used by the CFS (required if the network type is CCN), which cannot conflict with other IP ranges bound in CCN
+                     */
+                    void SetCidrBlock(const std::string& _cidrBlock);
+
+                    /**
+                     * 判断参数 CidrBlock 是否已赋值
+                     * @return CidrBlock 是否已赋值
+                     */
+                    bool CidrBlockHasBeenSet() const;
+
+                    /**
+                     * 获取File system capacity, in GiB (required for the Turbo series). For Standard Turbo, the minimum purchase required is 40,960 GiB (40 TiB) and the expansion increment is 20,480 GiB (20 TiB). For High-Performance Turbo, the minimum purchase required is 20,480 GiB (20 TiB) and the expansion increment is 10,240 GiB (10 TiB).
+                     * @return Capacity File system capacity, in GiB (required for the Turbo series). For Standard Turbo, the minimum purchase required is 40,960 GiB (40 TiB) and the expansion increment is 20,480 GiB (20 TiB). For High-Performance Turbo, the minimum purchase required is 20,480 GiB (20 TiB) and the expansion increment is 10,240 GiB (10 TiB).
+                     */
+                    uint64_t GetCapacity() const;
+
+                    /**
+                     * 设置File system capacity, in GiB (required for the Turbo series). For Standard Turbo, the minimum purchase required is 40,960 GiB (40 TiB) and the expansion increment is 20,480 GiB (20 TiB). For High-Performance Turbo, the minimum purchase required is 20,480 GiB (20 TiB) and the expansion increment is 10,240 GiB (10 TiB).
+                     * @param Capacity File system capacity, in GiB (required for the Turbo series). For Standard Turbo, the minimum purchase required is 40,960 GiB (40 TiB) and the expansion increment is 20,480 GiB (20 TiB). For High-Performance Turbo, the minimum purchase required is 20,480 GiB (20 TiB) and the expansion increment is 10,240 GiB (10 TiB).
+                     */
+                    void SetCapacity(const uint64_t& _capacity);
+
+                    /**
+                     * 判断参数 Capacity 是否已赋值
+                     * @return Capacity 是否已赋值
+                     */
+                    bool CapacityHasBeenSet() const;
+
                 private:
 
                     /**
-                     * AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://cloud.tencent.com/document/product/582/13225)
+                     * AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://intl.cloud.tencent.com/document/product/582/13225?from_cn_redirect=1)
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Network type. Valid values: VPC (VPC), BASIC (basic network)
+                     * Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended.
                      */
                     std::string m_netInterface;
                     bool m_netInterfaceHasBeenSet;
 
                     /**
-                     * Permission group ID
+                     * Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`.
                      */
                     std::string m_pGroupId;
                     bool m_pGroupIdHasBeenSet;
 
                     /**
-                     * File system protocol type. Valid values: NFS, CIFS. If this parameter is left empty, NFS will be used by default
+                     * File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`.
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * File system storage class. Valid values: SD (standard), HP (high-performance)
+                     * Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo)
                      */
                     std::string m_storageType;
                     bool m_storageTypeHasBeenSet;
@@ -268,7 +340,7 @@ namespace TencentCloud
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Specifies an IP address, which is supported only for VPC. If this parameter is left empty, a random IP will be assigned in the subnet
+                     * IP address (this parameter supports only the VPC network type, and the Turbo series is not supported). If this parameter is left empty, a random IP in the subnet will be assigned.
                      */
                     std::string m_mountIP;
                     bool m_mountIPHasBeenSet;
@@ -284,6 +356,30 @@ namespace TencentCloud
                      */
                     std::vector<TagInfo> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;
+
+                    /**
+                     * A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed. This string is valid for 2 hours.
+                     */
+                    std::string m_clientToken;
+                    bool m_clientTokenHasBeenSet;
+
+                    /**
+                     * CCN instance ID (required if the network type is CCN)
+                     */
+                    std::string m_ccnId;
+                    bool m_ccnIdHasBeenSet;
+
+                    /**
+                     * CCN IP range used by the CFS (required if the network type is CCN), which cannot conflict with other IP ranges bound in CCN
+                     */
+                    std::string m_cidrBlock;
+                    bool m_cidrBlockHasBeenSet;
+
+                    /**
+                     * File system capacity, in GiB (required for the Turbo series). For Standard Turbo, the minimum purchase required is 40,960 GiB (40 TiB) and the expansion increment is 20,480 GiB (20 TiB). For High-Performance Turbo, the minimum purchase required is 20,480 GiB (20 TiB) and the expansion increment is 10,240 GiB (10 TiB).
+                     */
+                    uint64_t m_capacity;
+                    bool m_capacityHasBeenSet;
 
                 };
             }

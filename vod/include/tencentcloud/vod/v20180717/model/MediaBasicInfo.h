@@ -92,17 +92,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Creation time of media file in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * 获取Creation time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CreateTime Creation time of media file in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * @return CreateTime Creation time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time of media file in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * 设置Creation time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreateTime Creation time of media file in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * @param CreateTime Creation time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -114,17 +114,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * 获取Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return UpdateTime Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * @return UpdateTime Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * 设置Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param UpdateTime Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * @param UpdateTime Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -136,17 +136,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of media file in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
+                     * 获取Expiration time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ExpireTime Expiration time of media file in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
+                     * @return ExpireTime Expiration time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置Expiration time of media file in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
+                     * 设置Expiration time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ExpireTime Expiration time of media file in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
+                     * @param ExpireTime Expiration time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -312,18 +312,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SourceInfoHasBeenSet() const;
 
                     /**
-                     * 获取Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://cloud.tencent.com/document/api/213/15692#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return StorageRegion Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://cloud.tencent.com/document/api/213/15692#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
+                     * @return StorageRegion Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
                      */
                     std::string GetStorageRegion() const;
 
                     /**
-                     * 设置Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://cloud.tencent.com/document/api/213/15692#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param StorageRegion Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://cloud.tencent.com/document/api/213/15692#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
+                     * @param StorageRegion Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
                      */
                     void SetStorageRegion(const std::string& _storageRegion);
 
@@ -374,14 +370,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool VidHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Category 
+                     * 获取File type:
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
+                     * @return Category File type:
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
                      */
                     std::string GetCategory() const;
 
                     /**
-                     * 设置
-                     * @param Category 
+                     * 设置File type:
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
+                     * @param Category File type:
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
                      */
                     void SetCategory(const std::string& _category);
 
@@ -417,6 +425,40 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool StatusHasBeenSet() const;
 
+                    /**
+                     * 获取Storage class of a media file:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
+<li>ARCHIVE</li>
+<li>DEEP_ARCHIVE</li>
+                     * @return StorageClass Storage class of a media file:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
+<li>ARCHIVE</li>
+<li>DEEP_ARCHIVE</li>
+                     */
+                    std::string GetStorageClass() const;
+
+                    /**
+                     * 设置Storage class of a media file:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
+<li>ARCHIVE</li>
+<li>DEEP_ARCHIVE</li>
+                     * @param StorageClass Storage class of a media file:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
+<li>ARCHIVE</li>
+<li>DEEP_ARCHIVE</li>
+                     */
+                    void SetStorageClass(const std::string& _storageClass);
+
+                    /**
+                     * 判断参数 StorageClass 是否已赋值
+                     * @return StorageClass 是否已赋值
+                     */
+                    bool StorageClassHasBeenSet() const;
+
                 private:
 
                     /**
@@ -434,21 +476,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Creation time of media file in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * Creation time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Expiration time of media file in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
+                     * Expiration time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_expireTime;
@@ -504,8 +546,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_sourceInfoHasBeenSet;
 
                     /**
-                     * Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://cloud.tencent.com/document/api/213/15692#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
                      */
                     std::string m_storageRegion;
                     bool m_storageRegionHasBeenSet;
@@ -524,7 +565,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_vidHasBeenSet;
 
                     /**
-                     * 
+                     * File type:
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
                      */
                     std::string m_category;
                     bool m_categoryHasBeenSet;
@@ -536,6 +580,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
+
+                    /**
+                     * Storage class of a media file:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
+<li>ARCHIVE</li>
+<li>DEEP_ARCHIVE</li>
+                     */
+                    std::string m_storageClass;
+                    bool m_storageClassHasBeenSet;
 
                 };
             }

@@ -274,6 +274,86 @@ namespace TencentCloud
                      */
                     bool CcnUinHasBeenSet() const;
 
+                    /**
+                     * 获取General location of the associated instance, such as CHINA_MAINLAND.
+                     * @return InstanceArea General location of the associated instance, such as CHINA_MAINLAND.
+                     */
+                    std::string GetInstanceArea() const;
+
+                    /**
+                     * 设置General location of the associated instance, such as CHINA_MAINLAND.
+                     * @param InstanceArea General location of the associated instance, such as CHINA_MAINLAND.
+                     */
+                    void SetInstanceArea(const std::string& _instanceArea);
+
+                    /**
+                     * 判断参数 InstanceArea 是否已赋值
+                     * @return InstanceArea 是否已赋值
+                     */
+                    bool InstanceAreaHasBeenSet() const;
+
+                    /**
+                     * 获取Description
+                     * @return Description Description
+                     */
+                    std::string GetDescription() const;
+
+                    /**
+                     * 设置Description
+                     * @param Description Description
+                     */
+                    void SetDescription(const std::string& _description);
+
+                    /**
+                     * 判断参数 Description 是否已赋值
+                     * @return Description 是否已赋值
+                     */
+                    bool DescriptionHasBeenSet() const;
+
+                    /**
+                     * 获取Route table ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return RouteTableId Route table ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetRouteTableId() const;
+
+                    /**
+                     * 设置Route table ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param RouteTableId Route table ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetRouteTableId(const std::string& _routeTableId);
+
+                    /**
+                     * 判断参数 RouteTableId 是否已赋值
+                     * @return RouteTableId 是否已赋值
+                     */
+                    bool RouteTableIdHasBeenSet() const;
+
+                    /**
+                     * 获取Route table name
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return RouteTableName Route table name
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetRouteTableName() const;
+
+                    /**
+                     * 设置Route table name
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param RouteTableName Route table name
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetRouteTableName(const std::string& _routeTableName);
+
+                    /**
+                     * 判断参数 RouteTableName 是否已赋值
+                     * @return RouteTableName 是否已赋值
+                     */
+                    bool RouteTableNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -347,6 +427,32 @@ namespace TencentCloud
                      */
                     std::string m_ccnUin;
                     bool m_ccnUinHasBeenSet;
+
+                    /**
+                     * General location of the associated instance, such as CHINA_MAINLAND.
+                     */
+                    std::string m_instanceArea;
+                    bool m_instanceAreaHasBeenSet;
+
+                    /**
+                     * Description
+                     */
+                    std::string m_description;
+                    bool m_descriptionHasBeenSet;
+
+                    /**
+                     * Route table ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_routeTableId;
+                    bool m_routeTableIdHasBeenSet;
+
+                    /**
+                     * Route table name
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_routeTableName;
+                    bool m_routeTableNameHasBeenSet;
 
                 };
             }

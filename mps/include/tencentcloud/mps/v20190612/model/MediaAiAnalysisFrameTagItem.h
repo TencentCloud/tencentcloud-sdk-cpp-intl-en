@@ -65,6 +65,24 @@ namespace TencentCloud
                     bool TagHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return CategorySet 
+                     */
+                    std::vector<std::string> GetCategorySet() const;
+
+                    /**
+                     * 设置
+                     * @param CategorySet 
+                     */
+                    void SetCategorySet(const std::vector<std::string>& _categorySet);
+
+                    /**
+                     * 判断参数 CategorySet 是否已赋值
+                     * @return CategorySet 是否已赋值
+                     */
+                    bool CategorySetHasBeenSet() const;
+
+                    /**
                      * 获取Confidence of intelligently generated frame-specific tag between 0 and 100.
                      * @return Confidence Confidence of intelligently generated frame-specific tag between 0 and 100.
                      */
@@ -89,6 +107,12 @@ namespace TencentCloud
                      */
                     std::string m_tag;
                     bool m_tagHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<std::string> m_categorySet;
+                    bool m_categorySetHasBeenSet;
 
                     /**
                      * Confidence of intelligently generated frame-specific tag between 0 and 100.

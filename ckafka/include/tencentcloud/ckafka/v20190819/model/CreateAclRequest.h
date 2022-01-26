@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取ACL resource type. 0: UNKNOWN, 1: ANY, 2: TOPIC, 3: GROUP, 4: CLUSTER, 5: TRANSACTIONAL_ID. Currently, only `TOPIC` is available, and other fields will be used for future ACLs compatible with open-source Kafka
-                     * @return ResourceType ACL resource type. 0: UNKNOWN, 1: ANY, 2: TOPIC, 3: GROUP, 4: CLUSTER, 5: TRANSACTIONAL_ID. Currently, only `TOPIC` is available, and other fields will be used for future ACLs compatible with open-source Kafka
+                     * 获取ACL resource type (`2`: TOPIC, `3`: GROUP, `4`: CLUSTER).
+                     * @return ResourceType ACL resource type (`2`: TOPIC, `3`: GROUP, `4`: CLUSTER).
                      */
                     int64_t GetResourceType() const;
 
                     /**
-                     * 设置ACL resource type. 0: UNKNOWN, 1: ANY, 2: TOPIC, 3: GROUP, 4: CLUSTER, 5: TRANSACTIONAL_ID. Currently, only `TOPIC` is available, and other fields will be used for future ACLs compatible with open-source Kafka
-                     * @param ResourceType ACL resource type. 0: UNKNOWN, 1: ANY, 2: TOPIC, 3: GROUP, 4: CLUSTER, 5: TRANSACTIONAL_ID. Currently, only `TOPIC` is available, and other fields will be used for future ACLs compatible with open-source Kafka
+                     * 设置ACL resource type (`2`: TOPIC, `3`: GROUP, `4`: CLUSTER).
+                     * @param ResourceType ACL resource type (`2`: TOPIC, `3`: GROUP, `4`: CLUSTER).
                      */
                     void SetResourceType(const int64_t& _resourceType);
 
@@ -79,32 +79,14 @@ namespace TencentCloud
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Resource name, which is related to `resourceType`. For example, if `resourceType` is `TOPIC`, this field indicates the topic name; if `resourceType` is `GROUP`, this field indicates the group name
-                     * @return ResourceName Resource name, which is related to `resourceType`. For example, if `resourceType` is `TOPIC`, this field indicates the topic name; if `resourceType` is `GROUP`, this field indicates the group name
-                     */
-                    std::string GetResourceName() const;
-
-                    /**
-                     * 设置Resource name, which is related to `resourceType`. For example, if `resourceType` is `TOPIC`, this field indicates the topic name; if `resourceType` is `GROUP`, this field indicates the group name
-                     * @param ResourceName Resource name, which is related to `resourceType`. For example, if `resourceType` is `TOPIC`, this field indicates the topic name; if `resourceType` is `GROUP`, this field indicates the group name
-                     */
-                    void SetResourceName(const std::string& _resourceName);
-
-                    /**
-                     * 判断参数 ResourceName 是否已赋值
-                     * @return ResourceName 是否已赋值
-                     */
-                    bool ResourceNameHasBeenSet() const;
-
-                    /**
-                     * 获取ACL operation mode. 0: UNKNOWN, 1: ANY, 2: ALL, 3: READ, 4: WRITE, 5: CREATE, 6: DELETE, 7: ALTER, 8: DESCRIBE, 9: CLUSTER_ACTION, 10: DESCRIBE_CONFIGS, 11: ALTER_CONFIGS
-                     * @return Operation ACL operation mode. 0: UNKNOWN, 1: ANY, 2: ALL, 3: READ, 4: WRITE, 5: CREATE, 6: DELETE, 7: ALTER, 8: DESCRIBE, 9: CLUSTER_ACTION, 10: DESCRIBE_CONFIGS, 11: ALTER_CONFIGS
+                     * 获取ACL operation type (`2`: ALL, `3`: READ, `4`: WRITE, `5`: CREATE, `6`: DELETE, `7`: ALTER, `8`: DESCRIBE, `9`: CLUSTER_ACTION, `10`: DESCRIBE_CONFIGS, `11`: ALTER_CONFIGS, `12`: IDEMPOTENT_WRITE).
+                     * @return Operation ACL operation type (`2`: ALL, `3`: READ, `4`: WRITE, `5`: CREATE, `6`: DELETE, `7`: ALTER, `8`: DESCRIBE, `9`: CLUSTER_ACTION, `10`: DESCRIBE_CONFIGS, `11`: ALTER_CONFIGS, `12`: IDEMPOTENT_WRITE).
                      */
                     int64_t GetOperation() const;
 
                     /**
-                     * 设置ACL operation mode. 0: UNKNOWN, 1: ANY, 2: ALL, 3: READ, 4: WRITE, 5: CREATE, 6: DELETE, 7: ALTER, 8: DESCRIBE, 9: CLUSTER_ACTION, 10: DESCRIBE_CONFIGS, 11: ALTER_CONFIGS
-                     * @param Operation ACL operation mode. 0: UNKNOWN, 1: ANY, 2: ALL, 3: READ, 4: WRITE, 5: CREATE, 6: DELETE, 7: ALTER, 8: DESCRIBE, 9: CLUSTER_ACTION, 10: DESCRIBE_CONFIGS, 11: ALTER_CONFIGS
+                     * 设置ACL operation type (`2`: ALL, `3`: READ, `4`: WRITE, `5`: CREATE, `6`: DELETE, `7`: ALTER, `8`: DESCRIBE, `9`: CLUSTER_ACTION, `10`: DESCRIBE_CONFIGS, `11`: ALTER_CONFIGS, `12`: IDEMPOTENT_WRITE).
+                     * @param Operation ACL operation type (`2`: ALL, `3`: READ, `4`: WRITE, `5`: CREATE, `6`: DELETE, `7`: ALTER, `8`: DESCRIBE, `9`: CLUSTER_ACTION, `10`: DESCRIBE_CONFIGS, `11`: ALTER_CONFIGS, `12`: IDEMPOTENT_WRITE).
                      */
                     void SetOperation(const int64_t& _operation);
 
@@ -115,14 +97,14 @@ namespace TencentCloud
                     bool OperationHasBeenSet() const;
 
                     /**
-                     * 获取Permission type. 0: UNKNOWN, 1: ANY, 2: DENY, 3: ALLOW. Currently, CKafka supports `ALLOW` (equivalent to whitelist), and other fields will be used for future ACLs compatible with open-source Kafka
-                     * @return PermissionType Permission type. 0: UNKNOWN, 1: ANY, 2: DENY, 3: ALLOW. Currently, CKafka supports `ALLOW` (equivalent to whitelist), and other fields will be used for future ACLs compatible with open-source Kafka
+                     * 获取Permission type (`2`: DENY, `3`: ALLOW). CKafka currently supports `ALLOW`, which is equivalent to allowlist. `DENY` will be supported for ACLs compatible with open-source Kafka.
+                     * @return PermissionType Permission type (`2`: DENY, `3`: ALLOW). CKafka currently supports `ALLOW`, which is equivalent to allowlist. `DENY` will be supported for ACLs compatible with open-source Kafka.
                      */
                     int64_t GetPermissionType() const;
 
                     /**
-                     * 设置Permission type. 0: UNKNOWN, 1: ANY, 2: DENY, 3: ALLOW. Currently, CKafka supports `ALLOW` (equivalent to whitelist), and other fields will be used for future ACLs compatible with open-source Kafka
-                     * @param PermissionType Permission type. 0: UNKNOWN, 1: ANY, 2: DENY, 3: ALLOW. Currently, CKafka supports `ALLOW` (equivalent to whitelist), and other fields will be used for future ACLs compatible with open-source Kafka
+                     * 设置Permission type (`2`: DENY, `3`: ALLOW). CKafka currently supports `ALLOW`, which is equivalent to allowlist. `DENY` will be supported for ACLs compatible with open-source Kafka.
+                     * @param PermissionType Permission type (`2`: DENY, `3`: ALLOW). CKafka currently supports `ALLOW`, which is equivalent to allowlist. `DENY` will be supported for ACLs compatible with open-source Kafka.
                      */
                     void SetPermissionType(const int64_t& _permissionType);
 
@@ -131,6 +113,24 @@ namespace TencentCloud
                      * @return PermissionType 是否已赋值
                      */
                     bool PermissionTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Resource name, which is related to `resourceType`. For example, if `resourceType` is `TOPIC`, this field indicates the topic name; if `resourceType` is `GROUP`, this field indicates the group name; if `resourceType` is `CLUSTER`, this field can be left empty.
+                     * @return ResourceName Resource name, which is related to `resourceType`. For example, if `resourceType` is `TOPIC`, this field indicates the topic name; if `resourceType` is `GROUP`, this field indicates the group name; if `resourceType` is `CLUSTER`, this field can be left empty.
+                     */
+                    std::string GetResourceName() const;
+
+                    /**
+                     * 设置Resource name, which is related to `resourceType`. For example, if `resourceType` is `TOPIC`, this field indicates the topic name; if `resourceType` is `GROUP`, this field indicates the group name; if `resourceType` is `CLUSTER`, this field can be left empty.
+                     * @param ResourceName Resource name, which is related to `resourceType`. For example, if `resourceType` is `TOPIC`, this field indicates the topic name; if `resourceType` is `GROUP`, this field indicates the group name; if `resourceType` is `CLUSTER`, this field can be left empty.
+                     */
+                    void SetResourceName(const std::string& _resourceName);
+
+                    /**
+                     * 判断参数 ResourceName 是否已赋值
+                     * @return ResourceName 是否已赋值
+                     */
+                    bool ResourceNameHasBeenSet() const;
 
                     /**
                      * 获取The default value is `*`, which means that any host can access. Currently, CKafka does not support the host as `*`, but the future product based on the open-source Kafka will directly support this
@@ -151,14 +151,14 @@ namespace TencentCloud
                     bool HostHasBeenSet() const;
 
                     /**
-                     * 获取User list. The default value is `*`, which means that any user can access. The current user can only be one included in the user list
-                     * @return Principal User list. The default value is `*`, which means that any user can access. The current user can only be one included in the user list
+                     * 获取The list of users allowed to access the topic. Default: User:*, meaning all users. The current user must be in the user list. Add `User:` before the user name (`User:A` for example).
+                     * @return Principal The list of users allowed to access the topic. Default: User:*, meaning all users. The current user must be in the user list. Add `User:` before the user name (`User:A` for example).
                      */
                     std::string GetPrincipal() const;
 
                     /**
-                     * 设置User list. The default value is `*`, which means that any user can access. The current user can only be one included in the user list
-                     * @param Principal User list. The default value is `*`, which means that any user can access. The current user can only be one included in the user list
+                     * 设置The list of users allowed to access the topic. Default: User:*, meaning all users. The current user must be in the user list. Add `User:` before the user name (`User:A` for example).
+                     * @param Principal The list of users allowed to access the topic. Default: User:*, meaning all users. The current user must be in the user list. Add `User:` before the user name (`User:A` for example).
                      */
                     void SetPrincipal(const std::string& _principal);
 
@@ -167,6 +167,24 @@ namespace TencentCloud
                      * @return Principal 是否已赋值
                      */
                     bool PrincipalHasBeenSet() const;
+
+                    /**
+                     * 获取The resource name list, which is in JSON string format. Either `ResourceName` or `resourceNameList` can be specified.
+                     * @return ResourceNameList The resource name list, which is in JSON string format. Either `ResourceName` or `resourceNameList` can be specified.
+                     */
+                    std::string GetResourceNameList() const;
+
+                    /**
+                     * 设置The resource name list, which is in JSON string format. Either `ResourceName` or `resourceNameList` can be specified.
+                     * @param ResourceNameList The resource name list, which is in JSON string format. Either `ResourceName` or `resourceNameList` can be specified.
+                     */
+                    void SetResourceNameList(const std::string& _resourceNameList);
+
+                    /**
+                     * 判断参数 ResourceNameList 是否已赋值
+                     * @return ResourceNameList 是否已赋值
+                     */
+                    bool ResourceNameListHasBeenSet() const;
 
                 private:
 
@@ -177,28 +195,28 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * ACL resource type. 0: UNKNOWN, 1: ANY, 2: TOPIC, 3: GROUP, 4: CLUSTER, 5: TRANSACTIONAL_ID. Currently, only `TOPIC` is available, and other fields will be used for future ACLs compatible with open-source Kafka
+                     * ACL resource type (`2`: TOPIC, `3`: GROUP, `4`: CLUSTER).
                      */
                     int64_t m_resourceType;
                     bool m_resourceTypeHasBeenSet;
 
                     /**
-                     * Resource name, which is related to `resourceType`. For example, if `resourceType` is `TOPIC`, this field indicates the topic name; if `resourceType` is `GROUP`, this field indicates the group name
-                     */
-                    std::string m_resourceName;
-                    bool m_resourceNameHasBeenSet;
-
-                    /**
-                     * ACL operation mode. 0: UNKNOWN, 1: ANY, 2: ALL, 3: READ, 4: WRITE, 5: CREATE, 6: DELETE, 7: ALTER, 8: DESCRIBE, 9: CLUSTER_ACTION, 10: DESCRIBE_CONFIGS, 11: ALTER_CONFIGS
+                     * ACL operation type (`2`: ALL, `3`: READ, `4`: WRITE, `5`: CREATE, `6`: DELETE, `7`: ALTER, `8`: DESCRIBE, `9`: CLUSTER_ACTION, `10`: DESCRIBE_CONFIGS, `11`: ALTER_CONFIGS, `12`: IDEMPOTENT_WRITE).
                      */
                     int64_t m_operation;
                     bool m_operationHasBeenSet;
 
                     /**
-                     * Permission type. 0: UNKNOWN, 1: ANY, 2: DENY, 3: ALLOW. Currently, CKafka supports `ALLOW` (equivalent to whitelist), and other fields will be used for future ACLs compatible with open-source Kafka
+                     * Permission type (`2`: DENY, `3`: ALLOW). CKafka currently supports `ALLOW`, which is equivalent to allowlist. `DENY` will be supported for ACLs compatible with open-source Kafka.
                      */
                     int64_t m_permissionType;
                     bool m_permissionTypeHasBeenSet;
+
+                    /**
+                     * Resource name, which is related to `resourceType`. For example, if `resourceType` is `TOPIC`, this field indicates the topic name; if `resourceType` is `GROUP`, this field indicates the group name; if `resourceType` is `CLUSTER`, this field can be left empty.
+                     */
+                    std::string m_resourceName;
+                    bool m_resourceNameHasBeenSet;
 
                     /**
                      * The default value is `*`, which means that any host can access. Currently, CKafka does not support the host as `*`, but the future product based on the open-source Kafka will directly support this
@@ -207,10 +225,16 @@ namespace TencentCloud
                     bool m_hostHasBeenSet;
 
                     /**
-                     * User list. The default value is `*`, which means that any user can access. The current user can only be one included in the user list
+                     * The list of users allowed to access the topic. Default: User:*, meaning all users. The current user must be in the user list. Add `User:` before the user name (`User:A` for example).
                      */
                     std::string m_principal;
                     bool m_principalHasBeenSet;
+
+                    /**
+                     * The resource name list, which is in JSON string format. Either `ResourceName` or `resourceNameList` can be specified.
+                     */
+                    std::string m_resourceNameList;
+                    bool m_resourceNameListHasBeenSet;
 
                 };
             }

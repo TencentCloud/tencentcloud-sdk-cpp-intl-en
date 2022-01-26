@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 PornConfigureInfoForUpdate::PornConfigureInfoForUpdate() :
@@ -28,7 +27,7 @@ PornConfigureInfoForUpdate::PornConfigureInfoForUpdate() :
 {
 }
 
-CoreInternalOutcome PornConfigureInfoForUpdate::Deserialize(const Value &value)
+CoreInternalOutcome PornConfigureInfoForUpdate::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome PornConfigureInfoForUpdate::Deserialize(const Value &value)
     {
         if (!value["ImgReviewInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `PornConfigureInfoForUpdate.ImgReviewInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PornConfigureInfoForUpdate.ImgReviewInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_imgReviewInfo.Deserialize(value["ImgReviewInfo"]);
@@ -54,7 +53,7 @@ CoreInternalOutcome PornConfigureInfoForUpdate::Deserialize(const Value &value)
     {
         if (!value["AsrReviewInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `PornConfigureInfoForUpdate.AsrReviewInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PornConfigureInfoForUpdate.AsrReviewInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_asrReviewInfo.Deserialize(value["AsrReviewInfo"]);
@@ -71,7 +70,7 @@ CoreInternalOutcome PornConfigureInfoForUpdate::Deserialize(const Value &value)
     {
         if (!value["OcrReviewInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `PornConfigureInfoForUpdate.OcrReviewInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PornConfigureInfoForUpdate.OcrReviewInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_ocrReviewInfo.Deserialize(value["OcrReviewInfo"]);
@@ -88,33 +87,33 @@ CoreInternalOutcome PornConfigureInfoForUpdate::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void PornConfigureInfoForUpdate::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void PornConfigureInfoForUpdate::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_imgReviewInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ImgReviewInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_imgReviewInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_asrReviewInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AsrReviewInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_asrReviewInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_ocrReviewInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OcrReviewInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_ocrReviewInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 

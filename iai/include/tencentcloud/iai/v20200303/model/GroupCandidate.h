@@ -66,14 +66,14 @@ namespace TencentCloud
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Most matching candidates recognized.
-                     * @return Candidates Most matching candidates recognized.
+                     * 获取Most matching candidate recognized
+                     * @return Candidates Most matching candidate recognized
                      */
                     std::vector<Candidate> GetCandidates() const;
 
                     /**
-                     * 设置Most matching candidates recognized.
-                     * @param Candidates Most matching candidates recognized.
+                     * 设置Most matching candidate recognized
+                     * @param Candidates Most matching candidate recognized
                      */
                     void SetCandidates(const std::vector<Candidate>& _candidates);
 
@@ -92,7 +92,7 @@ namespace TencentCloud
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * Most matching candidates recognized.
+                     * Most matching candidate recognized
                      */
                     std::vector<Candidate> m_candidates;
                     bool m_candidatesHasBeenSet;

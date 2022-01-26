@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Certificate ID.
-                     * @return CertificateId Certificate ID.
+                     * 获取Certificate ID
+                     * @return CertificateId Certificate ID
                      */
                     std::string GetCertificateId() const;
 
                     /**
-                     * 设置Certificate ID.
-                     * @param CertificateId Certificate ID.
+                     * 设置Certificate ID
+                     * @param CertificateId Certificate ID
                      */
                     void SetCertificateId(const std::string& _certificateId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool CertificateIdHasBeenSet() const;
 
                     /**
-                     * 获取Alias.
-                     * @return Alias Alias.
+                     * 获取Alias
+                     * @return Alias Alias
                      */
                     std::string GetAlias() const;
 
                     /**
-                     * 设置Alias.
-                     * @param Alias Alias.
+                     * 设置Alias
+                     * @param Alias Alias
                      */
                     void SetAlias(const std::string& _alias);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Certificate ID.
+                     * Certificate ID
                      */
                     std::string m_certificateId;
                     bool m_certificateIdHasBeenSet;
 
                     /**
-                     * Alias.
+                     * Alias
                      */
                     std::string m_alias;
                     bool m_aliasHasBeenSet;

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Batch::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 TaskInstanceMetrics::TaskInstanceMetrics() :
@@ -33,7 +32,7 @@ TaskInstanceMetrics::TaskInstanceMetrics() :
 {
 }
 
-CoreInternalOutcome TaskInstanceMetrics::Deserialize(const Value &value)
+CoreInternalOutcome TaskInstanceMetrics::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +41,7 @@ CoreInternalOutcome TaskInstanceMetrics::Deserialize(const Value &value)
     {
         if (!value["SubmittedCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TaskInstanceMetrics.SubmittedCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskInstanceMetrics.SubmittedCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_submittedCount = value["SubmittedCount"].GetInt64();
         m_submittedCountHasBeenSet = true;
@@ -52,7 +51,7 @@ CoreInternalOutcome TaskInstanceMetrics::Deserialize(const Value &value)
     {
         if (!value["PendingCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TaskInstanceMetrics.PendingCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskInstanceMetrics.PendingCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_pendingCount = value["PendingCount"].GetInt64();
         m_pendingCountHasBeenSet = true;
@@ -62,7 +61,7 @@ CoreInternalOutcome TaskInstanceMetrics::Deserialize(const Value &value)
     {
         if (!value["RunnableCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TaskInstanceMetrics.RunnableCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskInstanceMetrics.RunnableCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_runnableCount = value["RunnableCount"].GetInt64();
         m_runnableCountHasBeenSet = true;
@@ -72,7 +71,7 @@ CoreInternalOutcome TaskInstanceMetrics::Deserialize(const Value &value)
     {
         if (!value["StartingCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TaskInstanceMetrics.StartingCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskInstanceMetrics.StartingCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_startingCount = value["StartingCount"].GetInt64();
         m_startingCountHasBeenSet = true;
@@ -82,7 +81,7 @@ CoreInternalOutcome TaskInstanceMetrics::Deserialize(const Value &value)
     {
         if (!value["RunningCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TaskInstanceMetrics.RunningCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskInstanceMetrics.RunningCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_runningCount = value["RunningCount"].GetInt64();
         m_runningCountHasBeenSet = true;
@@ -92,7 +91,7 @@ CoreInternalOutcome TaskInstanceMetrics::Deserialize(const Value &value)
     {
         if (!value["SucceedCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TaskInstanceMetrics.SucceedCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskInstanceMetrics.SucceedCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_succeedCount = value["SucceedCount"].GetInt64();
         m_succeedCountHasBeenSet = true;
@@ -102,7 +101,7 @@ CoreInternalOutcome TaskInstanceMetrics::Deserialize(const Value &value)
     {
         if (!value["FailedInterruptedCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TaskInstanceMetrics.FailedInterruptedCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskInstanceMetrics.FailedInterruptedCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_failedInterruptedCount = value["FailedInterruptedCount"].GetInt64();
         m_failedInterruptedCountHasBeenSet = true;
@@ -112,7 +111,7 @@ CoreInternalOutcome TaskInstanceMetrics::Deserialize(const Value &value)
     {
         if (!value["FailedCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TaskInstanceMetrics.FailedCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskInstanceMetrics.FailedCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_failedCount = value["FailedCount"].GetInt64();
         m_failedCountHasBeenSet = true;
@@ -122,12 +121,12 @@ CoreInternalOutcome TaskInstanceMetrics::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void TaskInstanceMetrics::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TaskInstanceMetrics::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_submittedCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubmittedCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_submittedCount, allocator);
@@ -135,7 +134,7 @@ void TaskInstanceMetrics::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_pendingCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PendingCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_pendingCount, allocator);
@@ -143,7 +142,7 @@ void TaskInstanceMetrics::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_runnableCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RunnableCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_runnableCount, allocator);
@@ -151,7 +150,7 @@ void TaskInstanceMetrics::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_startingCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartingCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_startingCount, allocator);
@@ -159,7 +158,7 @@ void TaskInstanceMetrics::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_runningCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RunningCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_runningCount, allocator);
@@ -167,7 +166,7 @@ void TaskInstanceMetrics::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_succeedCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SucceedCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_succeedCount, allocator);
@@ -175,7 +174,7 @@ void TaskInstanceMetrics::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_failedInterruptedCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FailedInterruptedCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_failedInterruptedCount, allocator);
@@ -183,7 +182,7 @@ void TaskInstanceMetrics::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_failedCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FailedCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_failedCount, allocator);

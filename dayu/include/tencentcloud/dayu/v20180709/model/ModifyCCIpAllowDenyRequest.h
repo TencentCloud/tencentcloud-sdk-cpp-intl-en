@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool MethodHasBeenSet() const;
 
                     /**
-                     * 获取Blacklist/whitelist type. Valid values: [white (whitelist), black (blacklist)]
-                     * @return Type Blacklist/whitelist type. Valid values: [white (whitelist), black (blacklist)]
+                     * 获取Blocklist/allowlist type. Valid values: [white (allowlist), black (blocklist)]
+                     * @return Type Blocklist/allowlist type. Valid values: [white (allowlist), black (blocklist)]
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Blacklist/whitelist type. Valid values: [white (whitelist), black (blacklist)]
-                     * @param Type Blacklist/whitelist type. Valid values: [white (whitelist), black (blacklist)]
+                     * 设置Blocklist/allowlist type. Valid values: [white (allowlist), black (blocklist)]
+                     * @param Type Blocklist/allowlist type. Valid values: [white (allowlist), black (blocklist)]
                      */
                     void SetType(const std::string& _type);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Blacklisted/whitelisted IP array
-                     * @return IpList Blacklisted/whitelisted IP array
+                     * 获取Blocklisted/whitelisted IP array
+                     * @return IpList Blocklisted/whitelisted IP array
                      */
                     std::vector<std::string> GetIpList() const;
 
                     /**
-                     * 设置Blacklisted/whitelisted IP array
-                     * @param IpList Blacklisted/whitelisted IP array
+                     * 设置Blocklisted/whitelisted IP array
+                     * @param IpList Blocklisted/whitelisted IP array
                      */
                     void SetIpList(const std::vector<std::string>& _ipList);
 
@@ -211,13 +211,13 @@ If `Method` is `delete`, this field can be left empty;
                     bool m_methodHasBeenSet;
 
                     /**
-                     * Blacklist/whitelist type. Valid values: [white (whitelist), black (blacklist)]
+                     * Blocklist/allowlist type. Valid values: [white (allowlist), black (blocklist)]
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Blacklisted/whitelisted IP array
+                     * Blocklisted/whitelisted IP array
                      */
                     std::vector<std::string> m_ipList;
                     bool m_ipListHasBeenSet;

@@ -88,13 +88,17 @@ Only letters, digits, underscores, and hyphens can be contained.
 
                     /**
                      * 获取COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
                      * @return CosBucket COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
                      */
                     std::string GetCosBucket() const;
 
                     /**
                      * 设置COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
                      * @param CosBucket COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
                      */
                     void SetCosBucket(const std::string& _cosBucket);
 
@@ -149,18 +153,18 @@ Only letters, digits, underscores, and hyphens can be contained.
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Screencapturing interval in seconds. Default value: 10s.
-Value range: 5–600s.
-                     * @return SnapshotInterval Screencapturing interval in seconds. Default value: 10s.
-Value range: 5–600s.
+                     * 获取Screencapturing interval (s). Default value: 10
+Value range: 2-300
+                     * @return SnapshotInterval Screencapturing interval (s). Default value: 10
+Value range: 2-300
                      */
                     int64_t GetSnapshotInterval() const;
 
                     /**
-                     * 设置Screencapturing interval in seconds. Default value: 10s.
-Value range: 5–600s.
-                     * @param SnapshotInterval Screencapturing interval in seconds. Default value: 10s.
-Value range: 5–600s.
+                     * 设置Screencapturing interval (s). Default value: 10
+Value range: 2-300
+                     * @param SnapshotInterval Screencapturing interval (s). Default value: 10
+Value range: 2-300
                      */
                     void SetSnapshotInterval(const int64_t& _snapshotInterval);
 
@@ -171,14 +175,18 @@ Value range: 5–600s.
                     bool SnapshotIntervalHasBeenSet() const;
 
                     /**
-                     * 获取Screenshot width. Default value: 0 (original width).
-                     * @return Width Screenshot width. Default value: 0 (original width).
+                     * 获取Screenshot width. Default value: `0` (original width)
+Value range: 0-3000
+                     * @return Width Screenshot width. Default value: `0` (original width)
+Value range: 0-3000
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置Screenshot width. Default value: 0 (original width).
-                     * @param Width Screenshot width. Default value: 0 (original width).
+                     * 设置Screenshot width. Default value: `0` (original width)
+Value range: 0-3000
+                     * @param Width Screenshot width. Default value: `0` (original width)
+Value range: 0-3000
                      */
                     void SetWidth(const int64_t& _width);
 
@@ -189,14 +197,18 @@ Value range: 5–600s.
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Screenshot height. Default value: 0 (original height).
-                     * @return Height Screenshot height. Default value: 0 (original height).
+                     * 获取Screenshot height. Default value: `0` (original height)
+Value range: 0-2000
+                     * @return Height Screenshot height. Default value: `0` (original height)
+Value range: 0-2000
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置Screenshot height. Default value: 0 (original height).
-                     * @param Height Screenshot height. Default value: 0 (original height).
+                     * 设置Screenshot height. Default value: `0` (original height)
+Value range: 0-2000
+                     * @param Height Screenshot height. Default value: `0` (original height)
+Value range: 0-2000
                      */
                     void SetHeight(const int64_t& _height);
 
@@ -225,14 +237,26 @@ Value range: 5–600s.
                     bool PornFlagHasBeenSet() const;
 
                     /**
-                     * 获取COS bucket folder prefix.
-                     * @return CosPrefix COS bucket folder prefix.
+                     * 获取COS Bucket folder prefix.
+If no value is entered, the default value
+`/{Year}-{Month}-{Day}`
+will be used.
+                     * @return CosPrefix COS Bucket folder prefix.
+If no value is entered, the default value
+`/{Year}-{Month}-{Day}`
+will be used.
                      */
                     std::string GetCosPrefix() const;
 
                     /**
-                     * 设置COS bucket folder prefix.
-                     * @param CosPrefix COS bucket folder prefix.
+                     * 设置COS Bucket folder prefix.
+If no value is entered, the default value
+`/{Year}-{Month}-{Day}`
+will be used.
+                     * @param CosPrefix COS Bucket folder prefix.
+If no value is entered, the default value
+`/{Year}-{Month}-{Day}`
+will be used.
                      */
                     void SetCosPrefix(const std::string& _cosPrefix);
 
@@ -244,13 +268,25 @@ Value range: 5–600s.
 
                     /**
                      * 获取COS filename.
+If no value is entered, the default value 
+`{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}`
+will be used.
                      * @return CosFileName COS filename.
+If no value is entered, the default value 
+`{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}`
+will be used.
                      */
                     std::string GetCosFileName() const;
 
                     /**
                      * 设置COS filename.
+If no value is entered, the default value 
+`{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}`
+will be used.
                      * @param CosFileName COS filename.
+If no value is entered, the default value 
+`{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}`
+will be used.
                      */
                     void SetCosFileName(const std::string& _cosFileName);
 
@@ -278,6 +314,7 @@ Only letters, digits, underscores, and hyphens can be contained.
 
                     /**
                      * COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
                      */
                     std::string m_cosBucket;
                     bool m_cosBucketHasBeenSet;
@@ -297,20 +334,22 @@ Only letters, digits, underscores, and hyphens can be contained.
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Screencapturing interval in seconds. Default value: 10s.
-Value range: 5–600s.
+                     * Screencapturing interval (s). Default value: 10
+Value range: 2-300
                      */
                     int64_t m_snapshotInterval;
                     bool m_snapshotIntervalHasBeenSet;
 
                     /**
-                     * Screenshot width. Default value: 0 (original width).
+                     * Screenshot width. Default value: `0` (original width)
+Value range: 0-3000
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Screenshot height. Default value: 0 (original height).
+                     * Screenshot height. Default value: `0` (original height)
+Value range: 0-2000
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
@@ -322,13 +361,19 @@ Value range: 5–600s.
                     bool m_pornFlagHasBeenSet;
 
                     /**
-                     * COS bucket folder prefix.
+                     * COS Bucket folder prefix.
+If no value is entered, the default value
+`/{Year}-{Month}-{Day}`
+will be used.
                      */
                     std::string m_cosPrefix;
                     bool m_cosPrefixHasBeenSet;
 
                     /**
                      * COS filename.
+If no value is entered, the default value 
+`{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}`
+will be used.
                      */
                     std::string m_cosFileName;
                     bool m_cosFileNameHasBeenSet;

@@ -40,11 +40,12 @@ namespace TencentCloud
                     EncryptResponse();
                     ~EncryptResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Base64-encoded encrypted ciphertext
-                     * @return CiphertextBlob Base64-encoded encrypted ciphertext
+                     * 获取Base64-encoded ciphertext, which is the encrypted information of the ciphertext and key. To get the plaintext, you need to pass in this field to the Decrypt API.
+                     * @return CiphertextBlob Base64-encoded ciphertext, which is the encrypted information of the ciphertext and key. To get the plaintext, you need to pass in this field to the Decrypt API.
                      */
                     std::string GetCiphertextBlob() const;
 
@@ -55,8 +56,8 @@ namespace TencentCloud
                     bool CiphertextBlobHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return KeyId 
+                     * 获取Globally unique ID of the CMK used for encryption
+                     * @return KeyId Globally unique ID of the CMK used for encryption
                      */
                     std::string GetKeyId() const;
 
@@ -69,13 +70,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Base64-encoded encrypted ciphertext
+                     * Base64-encoded ciphertext, which is the encrypted information of the ciphertext and key. To get the plaintext, you need to pass in this field to the Decrypt API.
                      */
                     std::string m_ciphertextBlob;
                     bool m_ciphertextBlobHasBeenSet;
 
                     /**
-                     * 
+                     * Globally unique ID of the CMK used for encryption
                      */
                     std::string m_keyId;
                     bool m_keyIdHasBeenSet;

@@ -23,6 +23,8 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/clb/v20180317/model/InternetAccessible.h>
 #include <tencentcloud/clb/v20180317/model/TagInfo.h>
+#include <tencentcloud/clb/v20180317/model/ExclusiveCluster.h>
+#include <tencentcloud/clb/v20180317/model/SnatIp.h>
 
 
 namespace TencentCloud
@@ -67,14 +69,14 @@ OPEN: public network; INTERNAL: private network.
                     bool LoadBalancerTypeHasBeenSet() const;
 
                     /**
-                     * 获取CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
-                     * @return Forward CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
+                     * 获取CLB instance type. Valid value: 1 (generic CLB instance).
+                     * @return Forward CLB instance type. Valid value: 1 (generic CLB instance).
                      */
                     int64_t GetForward() const;
 
                     /**
-                     * 设置CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
-                     * @param Forward CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
+                     * 设置CLB instance type. Valid value: 1 (generic CLB instance).
+                     * @param Forward CLB instance type. Valid value: 1 (generic CLB instance).
                      */
                     void SetForward(const int64_t& _forward);
 
@@ -85,18 +87,18 @@ OPEN: public network; INTERNAL: private network.
                     bool ForwardHasBeenSet() const;
 
                     /**
-                     * 获取CLB instance name, which takes effect only when an instance is created. Rule: 1-50 letters, digits, dashes (-), or underscores (_).
-Note: If this name is the same as the name of an existing CLB instance in the system, the system will automatically generate a name for this newly created instance.
-                     * @return LoadBalancerName CLB instance name, which takes effect only when an instance is created. Rule: 1-50 letters, digits, dashes (-), or underscores (_).
-Note: If this name is the same as the name of an existing CLB instance in the system, the system will automatically generate a name for this newly created instance.
+                     * 获取CLB instance name, which takes effect only when only one instance is to be created in the request. It can consist 1 to 60 letters, digits, hyphens (-), or underscores (_).
+Note: if the name of the new CLB instance already exists, a default name will be generated automatically.
+                     * @return LoadBalancerName CLB instance name, which takes effect only when only one instance is to be created in the request. It can consist 1 to 60 letters, digits, hyphens (-), or underscores (_).
+Note: if the name of the new CLB instance already exists, a default name will be generated automatically.
                      */
                     std::string GetLoadBalancerName() const;
 
                     /**
-                     * 设置CLB instance name, which takes effect only when an instance is created. Rule: 1-50 letters, digits, dashes (-), or underscores (_).
-Note: If this name is the same as the name of an existing CLB instance in the system, the system will automatically generate a name for this newly created instance.
-                     * @param LoadBalancerName CLB instance name, which takes effect only when an instance is created. Rule: 1-50 letters, digits, dashes (-), or underscores (_).
-Note: If this name is the same as the name of an existing CLB instance in the system, the system will automatically generate a name for this newly created instance.
+                     * 设置CLB instance name, which takes effect only when only one instance is to be created in the request. It can consist 1 to 60 letters, digits, hyphens (-), or underscores (_).
+Note: if the name of the new CLB instance already exists, a default name will be generated automatically.
+                     * @param LoadBalancerName CLB instance name, which takes effect only when only one instance is to be created in the request. It can consist 1 to 60 letters, digits, hyphens (-), or underscores (_).
+Note: if the name of the new CLB instance already exists, a default name will be generated automatically.
                      */
                     void SetLoadBalancerName(const std::string& _loadBalancerName);
 
@@ -107,14 +109,14 @@ Note: If this name is the same as the name of an existing CLB instance in the sy
                     bool LoadBalancerNameHasBeenSet() const;
 
                     /**
-                     * 获取Network ID of the backend target server of CLB, which can be obtained through the DescribeVpcEx API. If this parameter is not passed in, it will default to a basic network ("0").
-                     * @return VpcId Network ID of the backend target server of CLB, which can be obtained through the DescribeVpcEx API. If this parameter is not passed in, it will default to a basic network ("0").
+                     * 获取Network ID of the target CLB real server, such as `vpc-12345678`, which can be obtained through the [DescribeVpcEx](https://intl.cloud.tencent.com/document/product/215/1372?from_cn_redirect=1) API. If this parameter is not specified, it will default to `DefaultVPC`. This parameter is required for creating a CLB instance.
+                     * @return VpcId Network ID of the target CLB real server, such as `vpc-12345678`, which can be obtained through the [DescribeVpcEx](https://intl.cloud.tencent.com/document/product/215/1372?from_cn_redirect=1) API. If this parameter is not specified, it will default to `DefaultVPC`. This parameter is required for creating a CLB instance.
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置Network ID of the backend target server of CLB, which can be obtained through the DescribeVpcEx API. If this parameter is not passed in, it will default to a basic network ("0").
-                     * @param VpcId Network ID of the backend target server of CLB, which can be obtained through the DescribeVpcEx API. If this parameter is not passed in, it will default to a basic network ("0").
+                     * 设置Network ID of the target CLB real server, such as `vpc-12345678`, which can be obtained through the [DescribeVpcEx](https://intl.cloud.tencent.com/document/product/215/1372?from_cn_redirect=1) API. If this parameter is not specified, it will default to `DefaultVPC`. This parameter is required for creating a CLB instance.
+                     * @param VpcId Network ID of the target CLB real server, such as `vpc-12345678`, which can be obtained through the [DescribeVpcEx](https://intl.cloud.tencent.com/document/product/215/1372?from_cn_redirect=1) API. If this parameter is not specified, it will default to `DefaultVPC`. This parameter is required for creating a CLB instance.
                      */
                     void SetVpcId(const std::string& _vpcId);
 
@@ -125,14 +127,14 @@ Note: If this name is the same as the name of an existing CLB instance in the sy
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet.
-                     * @return SubnetId A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet.
+                     * 获取A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet. This parameter is required for creating a CLB instance.
+                     * @return SubnetId A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet. This parameter is required for creating a CLB instance.
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet.
-                     * @param SubnetId A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet.
+                     * 设置A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet. This parameter is required for creating a CLB instance.
+                     * @param SubnetId A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet. This parameter is required for creating a CLB instance.
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
@@ -143,14 +145,14 @@ Note: If this name is the same as the name of an existing CLB instance in the sy
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
-                     * @return ProjectId ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
+                     * 获取Project ID of the CLB instance, which can be obtained through the [DescribeProject](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this parameter is not specified, it will default to the default project.
+                     * @return ProjectId Project ID of the CLB instance, which can be obtained through the [DescribeProject](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this parameter is not specified, it will default to the default project.
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
-                     * @param ProjectId ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
+                     * 设置Project ID of the CLB instance, which can be obtained through the [DescribeProject](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this parameter is not specified, it will default to the default project.
+                     * @param ProjectId Project ID of the CLB instance, which can be obtained through the [DescribeProject](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this parameter is not specified, it will default to the default project.
                      */
                     void SetProjectId(const int64_t& _projectId);
 
@@ -161,14 +163,14 @@ Note: If this name is the same as the name of an existing CLB instance in the sy
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取IP version. Valid values: IPv4, IPv6, IPv6FullChain. Default value: IPv4. This parameter is applicable only to public network CLB instances.
-                     * @return AddressIPVersion IP version. Valid values: IPv4, IPv6, IPv6FullChain. Default value: IPv4. This parameter is applicable only to public network CLB instances.
+                     * 获取IP version. Valid values: `IPV4` (default), `IPV6` (IPV6 NAT64 version) or `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
+                     * @return AddressIPVersion IP version. Valid values: `IPV4` (default), `IPV6` (IPV6 NAT64 version) or `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
                      */
                     std::string GetAddressIPVersion() const;
 
                     /**
-                     * 设置IP version. Valid values: IPv4, IPv6, IPv6FullChain. Default value: IPv4. This parameter is applicable only to public network CLB instances.
-                     * @param AddressIPVersion IP version. Valid values: IPv4, IPv6, IPv6FullChain. Default value: IPv4. This parameter is applicable only to public network CLB instances.
+                     * 设置IP version. Valid values: `IPV4` (default), `IPV6` (IPV6 NAT64 version) or `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
+                     * @param AddressIPVersion IP version. Valid values: `IPV4` (default), `IPV6` (IPV6 NAT64 version) or `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
                      */
                     void SetAddressIPVersion(const std::string& _addressIPVersion);
 
@@ -219,14 +221,14 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
                     bool MasterZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies an AZ ID for creating a CLB instance, such as ap-guangzhou-1, which is applicable only to public network CLB.
-                     * @return ZoneId Specifies an AZ ID for creating a CLB instance, such as ap-guangzhou-1, which is applicable only to public network CLB.
+                     * 获取Specifies an AZ ID for creating a CLB instance, such as `ap-guangzhou-1`, which is applicable only to public network CLB instances.
+                     * @return ZoneId Specifies an AZ ID for creating a CLB instance, such as `ap-guangzhou-1`, which is applicable only to public network CLB instances.
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Specifies an AZ ID for creating a CLB instance, such as ap-guangzhou-1, which is applicable only to public network CLB.
-                     * @param ZoneId Specifies an AZ ID for creating a CLB instance, such as ap-guangzhou-1, which is applicable only to public network CLB.
+                     * 设置Specifies an AZ ID for creating a CLB instance, such as `ap-guangzhou-1`, which is applicable only to public network CLB instances.
+                     * @param ZoneId Specifies an AZ ID for creating a CLB instance, such as `ap-guangzhou-1`, which is applicable only to public network CLB instances.
                      */
                     void SetZoneId(const std::string& _zoneId);
 
@@ -273,14 +275,14 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
                     bool VipIspHasBeenSet() const;
 
                     /**
-                     * 获取Tags a CLB instance when purchasing it
-                     * @return Tags Tags a CLB instance when purchasing it
+                     * 获取Tags a CLB instance when purchasing it.
+                     * @return Tags Tags a CLB instance when purchasing it.
                      */
                     std::vector<TagInfo> GetTags() const;
 
                     /**
-                     * 设置Tags a CLB instance when purchasing it
-                     * @param Tags Tags a CLB instance when purchasing it
+                     * 设置Tags a CLB instance when purchasing it.
+                     * @param Tags Tags a CLB instance when purchasing it.
                      */
                     void SetTags(const std::vector<TagInfo>& _tags);
 
@@ -289,6 +291,228 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
                      * @return Tags 是否已赋值
                      */
                     bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies a VIP for the CLB instance.
+<ul><li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.</li>
+<li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.
+</li></ul>
+                     * @return Vip Specifies a VIP for the CLB instance.
+<ul><li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.</li>
+<li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.
+</li></ul>
+                     */
+                    std::string GetVip() const;
+
+                    /**
+                     * 设置Specifies a VIP for the CLB instance.
+<ul><li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.</li>
+<li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.
+</li></ul>
+                     * @param Vip Specifies a VIP for the CLB instance.
+<ul><li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.</li>
+<li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.
+</li></ul>
+                     */
+                    void SetVip(const std::string& _vip);
+
+                    /**
+                     * 判断参数 Vip 是否已赋值
+                     * @return Vip 是否已赋值
+                     */
+                    bool VipHasBeenSet() const;
+
+                    /**
+                     * 获取Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
+                     * @return BandwidthPackageId Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
+                     */
+                    std::string GetBandwidthPackageId() const;
+
+                    /**
+                     * 设置Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
+                     * @param BandwidthPackageId Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
+                     */
+                    void SetBandwidthPackageId(const std::string& _bandwidthPackageId);
+
+                    /**
+                     * 判断参数 BandwidthPackageId 是否已赋值
+                     * @return BandwidthPackageId 是否已赋值
+                     */
+                    bool BandwidthPackageIdHasBeenSet() const;
+
+                    /**
+                     * 获取Exclusive cluster information. This parameter is required for creating exclusive clusters of CLB instances.
+                     * @return ExclusiveCluster Exclusive cluster information. This parameter is required for creating exclusive clusters of CLB instances.
+                     */
+                    ExclusiveCluster GetExclusiveCluster() const;
+
+                    /**
+                     * 设置Exclusive cluster information. This parameter is required for creating exclusive clusters of CLB instances.
+                     * @param ExclusiveCluster Exclusive cluster information. This parameter is required for creating exclusive clusters of CLB instances.
+                     */
+                    void SetExclusiveCluster(const ExclusiveCluster& _exclusiveCluster);
+
+                    /**
+                     * 判断参数 ExclusiveCluster 是否已赋值
+                     * @return ExclusiveCluster 是否已赋值
+                     */
+                    bool ExclusiveClusterHasBeenSet() const;
+
+                    /**
+                     * 获取Creates an LCU-supported CLB instance
+<ul><li>To create an LCU-supported CLB, this field is required and the value is `SLA`. LCU-supports CLBs adopt the pay-as-you-go model and their performance is guaranteed.</li>
+<li>It’s not required for a shared CLB instance.</li></ul>
+                     * @return SlaType Creates an LCU-supported CLB instance
+<ul><li>To create an LCU-supported CLB, this field is required and the value is `SLA`. LCU-supports CLBs adopt the pay-as-you-go model and their performance is guaranteed.</li>
+<li>It’s not required for a shared CLB instance.</li></ul>
+                     */
+                    std::string GetSlaType() const;
+
+                    /**
+                     * 设置Creates an LCU-supported CLB instance
+<ul><li>To create an LCU-supported CLB, this field is required and the value is `SLA`. LCU-supports CLBs adopt the pay-as-you-go model and their performance is guaranteed.</li>
+<li>It’s not required for a shared CLB instance.</li></ul>
+                     * @param SlaType Creates an LCU-supported CLB instance
+<ul><li>To create an LCU-supported CLB, this field is required and the value is `SLA`. LCU-supports CLBs adopt the pay-as-you-go model and their performance is guaranteed.</li>
+<li>It’s not required for a shared CLB instance.</li></ul>
+                     */
+                    void SetSlaType(const std::string& _slaType);
+
+                    /**
+                     * 判断参数 SlaType 是否已赋值
+                     * @return SlaType 是否已赋值
+                     */
+                    bool SlaTypeHasBeenSet() const;
+
+                    /**
+                     * 获取A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
+                     * @return ClientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
+                     */
+                    std::string GetClientToken() const;
+
+                    /**
+                     * 设置A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
+                     * @param ClientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
+                     */
+                    void SetClientToken(const std::string& _clientToken);
+
+                    /**
+                     * 判断参数 ClientToken 是否已赋值
+                     * @return ClientToken 是否已赋值
+                     */
+                    bool ClientTokenHasBeenSet() const;
+
+                    /**
+                     * 获取Whether Binding IPs of other VPCs feature switch
+                     * @return SnatPro Whether Binding IPs of other VPCs feature switch
+                     */
+                    bool GetSnatPro() const;
+
+                    /**
+                     * 设置Whether Binding IPs of other VPCs feature switch
+                     * @param SnatPro Whether Binding IPs of other VPCs feature switch
+                     */
+                    void SetSnatPro(const bool& _snatPro);
+
+                    /**
+                     * 判断参数 SnatPro 是否已赋值
+                     * @return SnatPro 是否已赋值
+                     */
+                    bool SnatProHasBeenSet() const;
+
+                    /**
+                     * 获取Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
+                     * @return SnatIps Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
+                     */
+                    std::vector<SnatIp> GetSnatIps() const;
+
+                    /**
+                     * 设置Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
+                     * @param SnatIps Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
+                     */
+                    void SetSnatIps(const std::vector<SnatIp>& _snatIps);
+
+                    /**
+                     * 判断参数 SnatIps 是否已赋值
+                     * @return SnatIps 是否已赋值
+                     */
+                    bool SnatIpsHasBeenSet() const;
+
+                    /**
+                     * 获取Tag for the STGW exclusive cluster.
+                     * @return ClusterTag Tag for the STGW exclusive cluster.
+                     */
+                    std::string GetClusterTag() const;
+
+                    /**
+                     * 设置Tag for the STGW exclusive cluster.
+                     * @param ClusterTag Tag for the STGW exclusive cluster.
+                     */
+                    void SetClusterTag(const std::string& _clusterTag);
+
+                    /**
+                     * 判断参数 ClusterTag 是否已赋值
+                     * @return ClusterTag 是否已赋值
+                     */
+                    bool ClusterTagHasBeenSet() const;
+
+                    /**
+                     * 获取Sets the secondary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB instances.
+Note: A secondary AZ will load traffic if the primary AZ has failures. The API `DescribeMasterZones` is used to query the primary and secondary AZ list of a region.
+                     * @return SlaveZoneId Sets the secondary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB instances.
+Note: A secondary AZ will load traffic if the primary AZ has failures. The API `DescribeMasterZones` is used to query the primary and secondary AZ list of a region.
+                     */
+                    std::string GetSlaveZoneId() const;
+
+                    /**
+                     * 设置Sets the secondary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB instances.
+Note: A secondary AZ will load traffic if the primary AZ has failures. The API `DescribeMasterZones` is used to query the primary and secondary AZ list of a region.
+                     * @param SlaveZoneId Sets the secondary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB instances.
+Note: A secondary AZ will load traffic if the primary AZ has failures. The API `DescribeMasterZones` is used to query the primary and secondary AZ list of a region.
+                     */
+                    void SetSlaveZoneId(const std::string& _slaveZoneId);
+
+                    /**
+                     * 判断参数 SlaveZoneId 是否已赋值
+                     * @return SlaveZoneId 是否已赋值
+                     */
+                    bool SlaveZoneIdHasBeenSet() const;
+
+                    /**
+                     * 获取Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
+                     * @return EipAddressId Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
+                     */
+                    std::string GetEipAddressId() const;
+
+                    /**
+                     * 设置Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
+                     * @param EipAddressId Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
+                     */
+                    void SetEipAddressId(const std::string& _eipAddressId);
+
+                    /**
+                     * 判断参数 EipAddressId 是否已赋值
+                     * @return EipAddressId 是否已赋值
+                     */
+                    bool EipAddressIdHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to allow CLB traffic to the target group. `true`: allows CLB traffic to the target group and verifies security groups only on CLB; `false`: denies CLB traffic to the target group and verifies security groups on both CLB and backend instances.
+                     * @return LoadBalancerPassToTarget Whether to allow CLB traffic to the target group. `true`: allows CLB traffic to the target group and verifies security groups only on CLB; `false`: denies CLB traffic to the target group and verifies security groups on both CLB and backend instances.
+                     */
+                    bool GetLoadBalancerPassToTarget() const;
+
+                    /**
+                     * 设置Whether to allow CLB traffic to the target group. `true`: allows CLB traffic to the target group and verifies security groups only on CLB; `false`: denies CLB traffic to the target group and verifies security groups on both CLB and backend instances.
+                     * @param LoadBalancerPassToTarget Whether to allow CLB traffic to the target group. `true`: allows CLB traffic to the target group and verifies security groups only on CLB; `false`: denies CLB traffic to the target group and verifies security groups on both CLB and backend instances.
+                     */
+                    void SetLoadBalancerPassToTarget(const bool& _loadBalancerPassToTarget);
+
+                    /**
+                     * 判断参数 LoadBalancerPassToTarget 是否已赋值
+                     * @return LoadBalancerPassToTarget 是否已赋值
+                     */
+                    bool LoadBalancerPassToTargetHasBeenSet() const;
 
                 private:
 
@@ -300,38 +524,38 @@ OPEN: public network; INTERNAL: private network.
                     bool m_loadBalancerTypeHasBeenSet;
 
                     /**
-                     * CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
+                     * CLB instance type. Valid value: 1 (generic CLB instance).
                      */
                     int64_t m_forward;
                     bool m_forwardHasBeenSet;
 
                     /**
-                     * CLB instance name, which takes effect only when an instance is created. Rule: 1-50 letters, digits, dashes (-), or underscores (_).
-Note: If this name is the same as the name of an existing CLB instance in the system, the system will automatically generate a name for this newly created instance.
+                     * CLB instance name, which takes effect only when only one instance is to be created in the request. It can consist 1 to 60 letters, digits, hyphens (-), or underscores (_).
+Note: if the name of the new CLB instance already exists, a default name will be generated automatically.
                      */
                     std::string m_loadBalancerName;
                     bool m_loadBalancerNameHasBeenSet;
 
                     /**
-                     * Network ID of the backend target server of CLB, which can be obtained through the DescribeVpcEx API. If this parameter is not passed in, it will default to a basic network ("0").
+                     * Network ID of the target CLB real server, such as `vpc-12345678`, which can be obtained through the [DescribeVpcEx](https://intl.cloud.tencent.com/document/product/215/1372?from_cn_redirect=1) API. If this parameter is not specified, it will default to `DefaultVPC`. This parameter is required for creating a CLB instance.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet.
+                     * A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet. This parameter is required for creating a CLB instance.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
+                     * Project ID of the CLB instance, which can be obtained through the [DescribeProject](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this parameter is not specified, it will default to the default project.
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * IP version. Valid values: IPv4, IPv6, IPv6FullChain. Default value: IPv4. This parameter is applicable only to public network CLB instances.
+                     * IP version. Valid values: `IPV4` (default), `IPV6` (IPV6 NAT64 version) or `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
                      */
                     std::string m_addressIPVersion;
                     bool m_addressIPVersionHasBeenSet;
@@ -350,7 +574,7 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
                     bool m_masterZoneIdHasBeenSet;
 
                     /**
-                     * Specifies an AZ ID for creating a CLB instance, such as ap-guangzhou-1, which is applicable only to public network CLB.
+                     * Specifies an AZ ID for creating a CLB instance, such as `ap-guangzhou-1`, which is applicable only to public network CLB instances.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
@@ -368,10 +592,82 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
                     bool m_vipIspHasBeenSet;
 
                     /**
-                     * Tags a CLB instance when purchasing it
+                     * Tags a CLB instance when purchasing it.
                      */
                     std::vector<TagInfo> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Specifies a VIP for the CLB instance.
+<ul><li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.</li>
+<li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.
+</li></ul>
+                     */
+                    std::string m_vip;
+                    bool m_vipHasBeenSet;
+
+                    /**
+                     * Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
+                     */
+                    std::string m_bandwidthPackageId;
+                    bool m_bandwidthPackageIdHasBeenSet;
+
+                    /**
+                     * Exclusive cluster information. This parameter is required for creating exclusive clusters of CLB instances.
+                     */
+                    ExclusiveCluster m_exclusiveCluster;
+                    bool m_exclusiveClusterHasBeenSet;
+
+                    /**
+                     * Creates an LCU-supported CLB instance
+<ul><li>To create an LCU-supported CLB, this field is required and the value is `SLA`. LCU-supports CLBs adopt the pay-as-you-go model and their performance is guaranteed.</li>
+<li>It’s not required for a shared CLB instance.</li></ul>
+                     */
+                    std::string m_slaType;
+                    bool m_slaTypeHasBeenSet;
+
+                    /**
+                     * A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
+                     */
+                    std::string m_clientToken;
+                    bool m_clientTokenHasBeenSet;
+
+                    /**
+                     * Whether Binding IPs of other VPCs feature switch
+                     */
+                    bool m_snatPro;
+                    bool m_snatProHasBeenSet;
+
+                    /**
+                     * Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
+                     */
+                    std::vector<SnatIp> m_snatIps;
+                    bool m_snatIpsHasBeenSet;
+
+                    /**
+                     * Tag for the STGW exclusive cluster.
+                     */
+                    std::string m_clusterTag;
+                    bool m_clusterTagHasBeenSet;
+
+                    /**
+                     * Sets the secondary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB instances.
+Note: A secondary AZ will load traffic if the primary AZ has failures. The API `DescribeMasterZones` is used to query the primary and secondary AZ list of a region.
+                     */
+                    std::string m_slaveZoneId;
+                    bool m_slaveZoneIdHasBeenSet;
+
+                    /**
+                     * Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
+                     */
+                    std::string m_eipAddressId;
+                    bool m_eipAddressIdHasBeenSet;
+
+                    /**
+                     * Whether to allow CLB traffic to the target group. `true`: allows CLB traffic to the target group and verifies security groups only on CLB; `false`: denies CLB traffic to the target group and verifies security groups on both CLB and backend instances.
+                     */
+                    bool m_loadBalancerPassToTarget;
+                    bool m_loadBalancerPassToTargetHasBeenSet;
 
                 };
             }

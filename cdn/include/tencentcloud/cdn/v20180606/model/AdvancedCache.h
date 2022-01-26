@@ -36,8 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
-Note: this version does not support setting homepage cache rules.
+                * (Disused) Advanced cache validity configuration. You can use `RuleCache` instead.
                 */
                 class AdvancedCache : public AbstractModel
                 {
@@ -109,30 +108,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IgnoreCacheControlHasBeenSet() const;
 
                     /**
-                     * 获取Ignore the Set-Cookie header of an origin server
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return IgnoreSetCookie Ignore the Set-Cookie header of an origin server
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to cache the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+on: Enable; do not cache the header and body.
+off: Disable; follow the custom cache rules of cache nodes.
+It is disabled by default.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return IgnoreSetCookie Whether to cache the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+on: Enable; do not cache the header and body.
+off: Disable; follow the custom cache rules of cache nodes.
+It is disabled by default.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetIgnoreSetCookie() const;
 
                     /**
-                     * 设置Ignore the Set-Cookie header of an origin server
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IgnoreSetCookie Ignore the Set-Cookie header of an origin server
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to cache the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+on: Enable; do not cache the header and body.
+off: Disable; follow the custom cache rules of cache nodes.
+It is disabled by default.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param IgnoreSetCookie Whether to cache the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+on: Enable; do not cache the header and body.
+off: Disable; follow the custom cache rules of cache nodes.
+It is disabled by default.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetIgnoreSetCookie(const std::string& _ignoreSetCookie);
 
@@ -163,11 +162,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_ignoreCacheControlHasBeenSet;
 
                     /**
-                     * Ignore the Set-Cookie header of an origin server
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Whether to cache the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+on: Enable; do not cache the header and body.
+off: Disable; follow the custom cache rules of cache nodes.
+It is disabled by default.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_ignoreSetCookie;
                     bool m_ignoreSetCookieHasBeenSet;

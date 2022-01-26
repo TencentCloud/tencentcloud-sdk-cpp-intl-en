@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vod/v20180717/model/StorageStatData.h>
 
 
 namespace TencentCloud
@@ -40,6 +41,7 @@ namespace TencentCloud
                     DescribeStorageDataResponse();
                     ~DescribeStorageDataResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -90,6 +92,18 @@ namespace TencentCloud
                      */
                     bool StandardStorageHasBeenSet() const;
 
+                    /**
+                     * 获取Storage usage by billing region.
+                     * @return StorageStat Storage usage by billing region.
+                     */
+                    std::vector<StorageStatData> GetStorageStat() const;
+
+                    /**
+                     * 判断参数 StorageStat 是否已赋值
+                     * @return StorageStat 是否已赋值
+                     */
+                    bool StorageStatHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +129,12 @@ namespace TencentCloud
                      */
                     uint64_t m_standardStorage;
                     bool m_standardStorageHasBeenSet;
+
+                    /**
+                     * Storage usage by billing region.
+                     */
+                    std::vector<StorageStatData> m_storageStat;
+                    bool m_storageStatHasBeenSet;
 
                 };
             }

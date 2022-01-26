@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 AiContentReviewResult::AiContentReviewResult() :
@@ -36,7 +35,7 @@ AiContentReviewResult::AiContentReviewResult() :
 {
 }
 
-CoreInternalOutcome AiContentReviewResult::Deserialize(const Value &value)
+CoreInternalOutcome AiContentReviewResult::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -45,7 +44,7 @@ CoreInternalOutcome AiContentReviewResult::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AiContentReviewResult.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiContentReviewResult.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -55,7 +54,7 @@ CoreInternalOutcome AiContentReviewResult::Deserialize(const Value &value)
     {
         if (!value["PornTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AiContentReviewResult.PornTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiContentReviewResult.PornTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_pornTask.Deserialize(value["PornTask"]);
@@ -72,7 +71,7 @@ CoreInternalOutcome AiContentReviewResult::Deserialize(const Value &value)
     {
         if (!value["TerrorismTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AiContentReviewResult.TerrorismTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiContentReviewResult.TerrorismTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_terrorismTask.Deserialize(value["TerrorismTask"]);
@@ -89,7 +88,7 @@ CoreInternalOutcome AiContentReviewResult::Deserialize(const Value &value)
     {
         if (!value["PoliticalTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AiContentReviewResult.PoliticalTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiContentReviewResult.PoliticalTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_politicalTask.Deserialize(value["PoliticalTask"]);
@@ -106,7 +105,7 @@ CoreInternalOutcome AiContentReviewResult::Deserialize(const Value &value)
     {
         if (!value["PornAsrTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AiContentReviewResult.PornAsrTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiContentReviewResult.PornAsrTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_pornAsrTask.Deserialize(value["PornAsrTask"]);
@@ -123,7 +122,7 @@ CoreInternalOutcome AiContentReviewResult::Deserialize(const Value &value)
     {
         if (!value["PornOcrTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AiContentReviewResult.PornOcrTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiContentReviewResult.PornOcrTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_pornOcrTask.Deserialize(value["PornOcrTask"]);
@@ -140,7 +139,7 @@ CoreInternalOutcome AiContentReviewResult::Deserialize(const Value &value)
     {
         if (!value["PoliticalAsrTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AiContentReviewResult.PoliticalAsrTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiContentReviewResult.PoliticalAsrTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_politicalAsrTask.Deserialize(value["PoliticalAsrTask"]);
@@ -157,7 +156,7 @@ CoreInternalOutcome AiContentReviewResult::Deserialize(const Value &value)
     {
         if (!value["PoliticalOcrTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AiContentReviewResult.PoliticalOcrTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiContentReviewResult.PoliticalOcrTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_politicalOcrTask.Deserialize(value["PoliticalOcrTask"]);
@@ -174,7 +173,7 @@ CoreInternalOutcome AiContentReviewResult::Deserialize(const Value &value)
     {
         if (!value["TerrorismOcrTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AiContentReviewResult.TerrorismOcrTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiContentReviewResult.TerrorismOcrTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_terrorismOcrTask.Deserialize(value["TerrorismOcrTask"]);
@@ -191,7 +190,7 @@ CoreInternalOutcome AiContentReviewResult::Deserialize(const Value &value)
     {
         if (!value["ProhibitedAsrTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AiContentReviewResult.ProhibitedAsrTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiContentReviewResult.ProhibitedAsrTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_prohibitedAsrTask.Deserialize(value["ProhibitedAsrTask"]);
@@ -208,7 +207,7 @@ CoreInternalOutcome AiContentReviewResult::Deserialize(const Value &value)
     {
         if (!value["ProhibitedOcrTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AiContentReviewResult.ProhibitedOcrTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiContentReviewResult.ProhibitedOcrTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_prohibitedOcrTask.Deserialize(value["ProhibitedOcrTask"]);
@@ -225,104 +224,104 @@ CoreInternalOutcome AiContentReviewResult::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void AiContentReviewResult::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AiContentReviewResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_pornTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PornTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_pornTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_terrorismTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TerrorismTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_terrorismTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_politicalTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PoliticalTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_politicalTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_pornAsrTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PornAsrTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_pornAsrTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_pornOcrTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PornOcrTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_pornOcrTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_politicalAsrTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PoliticalAsrTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_politicalAsrTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_politicalOcrTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PoliticalOcrTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_politicalOcrTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_terrorismOcrTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TerrorismOcrTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_terrorismOcrTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_prohibitedAsrTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProhibitedAsrTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_prohibitedAsrTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_prohibitedOcrTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProhibitedOcrTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_prohibitedOcrTask.ToJsonObject(value[key.c_str()], allocator);
     }
 

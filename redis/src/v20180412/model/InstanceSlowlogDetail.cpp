@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Redis::V20180412::Model;
-using namespace rapidjson;
 using namespace std;
 
 InstanceSlowlogDetail::InstanceSlowlogDetail() :
@@ -26,11 +25,12 @@ InstanceSlowlogDetail::InstanceSlowlogDetail() :
     m_clientHasBeenSet(false),
     m_commandHasBeenSet(false),
     m_commandLineHasBeenSet(false),
-    m_executeTimeHasBeenSet(false)
+    m_executeTimeHasBeenSet(false),
+    m_nodeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome InstanceSlowlogDetail::Deserialize(const Value &value)
+CoreInternalOutcome InstanceSlowlogDetail::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +39,7 @@ CoreInternalOutcome InstanceSlowlogDetail::Deserialize(const Value &value)
     {
         if (!value["Duration"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `InstanceSlowlogDetail.Duration` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceSlowlogDetail.Duration` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_duration = value["Duration"].GetInt64();
         m_durationHasBeenSet = true;
@@ -49,7 +49,7 @@ CoreInternalOutcome InstanceSlowlogDetail::Deserialize(const Value &value)
     {
         if (!value["Client"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceSlowlogDetail.Client` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceSlowlogDetail.Client` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_client = string(value["Client"].GetString());
         m_clientHasBeenSet = true;
@@ -59,7 +59,7 @@ CoreInternalOutcome InstanceSlowlogDetail::Deserialize(const Value &value)
     {
         if (!value["Command"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceSlowlogDetail.Command` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceSlowlogDetail.Command` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_command = string(value["Command"].GetString());
         m_commandHasBeenSet = true;
@@ -69,7 +69,7 @@ CoreInternalOutcome InstanceSlowlogDetail::Deserialize(const Value &value)
     {
         if (!value["CommandLine"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceSlowlogDetail.CommandLine` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceSlowlogDetail.CommandLine` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_commandLine = string(value["CommandLine"].GetString());
         m_commandLineHasBeenSet = true;
@@ -79,22 +79,32 @@ CoreInternalOutcome InstanceSlowlogDetail::Deserialize(const Value &value)
     {
         if (!value["ExecuteTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceSlowlogDetail.ExecuteTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceSlowlogDetail.ExecuteTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_executeTime = string(value["ExecuteTime"].GetString());
         m_executeTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("Node") && !value["Node"].IsNull())
+    {
+        if (!value["Node"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `InstanceSlowlogDetail.Node` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_node = string(value["Node"].GetString());
+        m_nodeHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void InstanceSlowlogDetail::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void InstanceSlowlogDetail::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_durationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Duration";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_duration, allocator);
@@ -102,34 +112,42 @@ void InstanceSlowlogDetail::ToJsonObject(Value &value, Document::AllocatorType& 
 
     if (m_clientHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Client";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_client.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_client.c_str(), allocator).Move(), allocator);
     }
 
     if (m_commandHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Command";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_command.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_command.c_str(), allocator).Move(), allocator);
     }
 
     if (m_commandLineHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CommandLine";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_commandLine.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_commandLine.c_str(), allocator).Move(), allocator);
     }
 
     if (m_executeTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ExecuteTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_executeTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_executeTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_nodeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Node";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_node.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -213,5 +231,21 @@ void InstanceSlowlogDetail::SetExecuteTime(const string& _executeTime)
 bool InstanceSlowlogDetail::ExecuteTimeHasBeenSet() const
 {
     return m_executeTimeHasBeenSet;
+}
+
+string InstanceSlowlogDetail::GetNode() const
+{
+    return m_node;
+}
+
+void InstanceSlowlogDetail::SetNode(const string& _node)
+{
+    m_node = _node;
+    m_nodeHasBeenSet = true;
+}
+
+bool InstanceSlowlogDetail::NodeHasBeenSet() const
+{
+    return m_nodeHasBeenSet;
 }
 

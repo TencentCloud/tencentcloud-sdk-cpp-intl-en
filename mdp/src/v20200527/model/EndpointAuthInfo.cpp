@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mdp::V20200527::Model;
-using namespace rapidjson;
 using namespace std;
 
 EndpointAuthInfo::EndpointAuthInfo() :
@@ -28,7 +27,7 @@ EndpointAuthInfo::EndpointAuthInfo() :
 {
 }
 
-CoreInternalOutcome EndpointAuthInfo::Deserialize(const Value &value)
+CoreInternalOutcome EndpointAuthInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,10 +35,10 @@ CoreInternalOutcome EndpointAuthInfo::Deserialize(const Value &value)
     if (value.HasMember("WhiteIpList") && !value["WhiteIpList"].IsNull())
     {
         if (!value["WhiteIpList"].IsArray())
-            return CoreInternalOutcome(Error("response `EndpointAuthInfo.WhiteIpList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `EndpointAuthInfo.WhiteIpList` is not array type"));
 
-        const Value &tmpValue = value["WhiteIpList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["WhiteIpList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_whiteIpList.push_back((*itr).GetString());
         }
@@ -49,10 +48,10 @@ CoreInternalOutcome EndpointAuthInfo::Deserialize(const Value &value)
     if (value.HasMember("BlackIpList") && !value["BlackIpList"].IsNull())
     {
         if (!value["BlackIpList"].IsArray())
-            return CoreInternalOutcome(Error("response `EndpointAuthInfo.BlackIpList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `EndpointAuthInfo.BlackIpList` is not array type"));
 
-        const Value &tmpValue = value["BlackIpList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["BlackIpList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_blackIpList.push_back((*itr).GetString());
         }
@@ -63,7 +62,7 @@ CoreInternalOutcome EndpointAuthInfo::Deserialize(const Value &value)
     {
         if (!value["AuthKey"].IsString())
         {
-            return CoreInternalOutcome(Error("response `EndpointAuthInfo.AuthKey` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EndpointAuthInfo.AuthKey` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_authKey = string(value["AuthKey"].GetString());
         m_authKeyHasBeenSet = true;
@@ -73,41 +72,41 @@ CoreInternalOutcome EndpointAuthInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void EndpointAuthInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void EndpointAuthInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_whiteIpListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "WhiteIpList";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_whiteIpList.begin(); itr != m_whiteIpList.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_blackIpListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BlackIpList";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_blackIpList.begin(); itr != m_blackIpList.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_authKeyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AuthKey";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_authKey.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_authKey.c_str(), allocator).Move(), allocator);
     }
 
 }

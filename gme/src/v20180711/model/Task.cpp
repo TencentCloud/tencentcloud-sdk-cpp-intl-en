@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gme::V20180711::Model;
-using namespace rapidjson;
 using namespace std;
 
 Task::Task() :
@@ -29,7 +28,7 @@ Task::Task() :
 {
 }
 
-CoreInternalOutcome Task::Deserialize(const Value &value)
+CoreInternalOutcome Task::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome Task::Deserialize(const Value &value)
     {
         if (!value["DataId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Task.DataId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Task.DataId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_dataId = string(value["DataId"].GetString());
         m_dataIdHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome Task::Deserialize(const Value &value)
     {
         if (!value["Url"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Task.Url` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Task.Url` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_url = string(value["Url"].GetString());
         m_urlHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome Task::Deserialize(const Value &value)
     {
         if (!value["RoomId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Task.RoomId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Task.RoomId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_roomId = string(value["RoomId"].GetString());
         m_roomIdHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome Task::Deserialize(const Value &value)
     {
         if (!value["OpenId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Task.OpenId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Task.OpenId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_openId = string(value["OpenId"].GetString());
         m_openIdHasBeenSet = true;
@@ -78,39 +77,39 @@ CoreInternalOutcome Task::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Task::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Task::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_dataIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DataId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_dataId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_dataId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_urlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Url";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_url.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_url.c_str(), allocator).Move(), allocator);
     }
 
     if (m_roomIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RoomId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_roomId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_roomId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_openIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OpenId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_openId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_openId.c_str(), allocator).Move(), allocator);
     }
 
 }

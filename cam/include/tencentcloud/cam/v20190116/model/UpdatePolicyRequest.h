@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Policy ID
-                     * @return PolicyId Policy ID
+                     * 获取Policy ID. Either `PolicyId` or `PolicyName` must be entered
+                     * @return PolicyId Policy ID. Either `PolicyId` or `PolicyName` must be entered
                      */
                     uint64_t GetPolicyId() const;
 
                     /**
-                     * 设置Policy ID
-                     * @param PolicyId Policy ID
+                     * 设置Policy ID. Either `PolicyId` or `PolicyName` must be entered
+                     * @param PolicyId Policy ID. Either `PolicyId` or `PolicyName` must be entered
                      */
                     void SetPolicyId(const uint64_t& _policyId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool PolicyIdHasBeenSet() const;
 
                     /**
-                     * 获取Policy Name
-                     * @return PolicyName Policy Name
+                     * 获取Policy name. Either `PolicyName` or `PolicyId` must be entered
+                     * @return PolicyName Policy name. Either `PolicyName` or `PolicyId` must be entered
                      */
                     std::string GetPolicyName() const;
 
                     /**
-                     * 设置Policy Name
-                     * @param PolicyName Policy Name
+                     * 设置Policy name. Either `PolicyName` or `PolicyId` must be entered
+                     * @param PolicyName Policy name. Either `PolicyName` or `PolicyId` must be entered
                      */
                     void SetPolicyName(const std::string& _policyName);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://cloud.tencent.com/document/product/598/36221).
-                     * @return PolicyDocument Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://cloud.tencent.com/document/product/598/36221).
+                     * 获取Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://intl.cloud.tencent.com/document/product/598/36221?from_cn_redirect=1).
+                     * @return PolicyDocument Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://intl.cloud.tencent.com/document/product/598/36221?from_cn_redirect=1).
                      */
                     std::string GetPolicyDocument() const;
 
                     /**
-                     * 设置Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://cloud.tencent.com/document/product/598/36221).
-                     * @param PolicyDocument Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://cloud.tencent.com/document/product/598/36221).
+                     * 设置Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://intl.cloud.tencent.com/document/product/598/36221?from_cn_redirect=1).
+                     * @param PolicyDocument Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://intl.cloud.tencent.com/document/product/598/36221?from_cn_redirect=1).
                      */
                     void SetPolicyDocument(const std::string& _policyDocument);
 
@@ -135,13 +135,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Policy ID
+                     * Policy ID. Either `PolicyId` or `PolicyName` must be entered
                      */
                     uint64_t m_policyId;
                     bool m_policyIdHasBeenSet;
 
                     /**
-                     * Policy Name
+                     * Policy name. Either `PolicyName` or `PolicyId` must be entered
                      */
                     std::string m_policyName;
                     bool m_policyNameHasBeenSet;
@@ -153,7 +153,7 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://cloud.tencent.com/document/product/598/36221).
+                     * Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://intl.cloud.tencent.com/document/product/598/36221?from_cn_redirect=1).
                      */
                     std::string m_policyDocument;
                     bool m_policyDocumentHasBeenSet;

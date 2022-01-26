@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 MediaOutputInfo::MediaOutputInfo() :
@@ -28,7 +27,7 @@ MediaOutputInfo::MediaOutputInfo() :
 {
 }
 
-CoreInternalOutcome MediaOutputInfo::Deserialize(const Value &value)
+CoreInternalOutcome MediaOutputInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome MediaOutputInfo::Deserialize(const Value &value)
     {
         if (!value["Region"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaOutputInfo.Region` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaOutputInfo.Region` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_region = string(value["Region"].GetString());
         m_regionHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome MediaOutputInfo::Deserialize(const Value &value)
     {
         if (!value["Bucket"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaOutputInfo.Bucket` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaOutputInfo.Bucket` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_bucket = string(value["Bucket"].GetString());
         m_bucketHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome MediaOutputInfo::Deserialize(const Value &value)
     {
         if (!value["Dir"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaOutputInfo.Dir` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaOutputInfo.Dir` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_dir = string(value["Dir"].GetString());
         m_dirHasBeenSet = true;
@@ -67,31 +66,31 @@ CoreInternalOutcome MediaOutputInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void MediaOutputInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MediaOutputInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_regionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Region";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_region.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_region.c_str(), allocator).Move(), allocator);
     }
 
     if (m_bucketHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Bucket";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_bucket.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_bucket.c_str(), allocator).Move(), allocator);
     }
 
     if (m_dirHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Dir";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_dir.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_dir.c_str(), allocator).Move(), allocator);
     }
 
 }

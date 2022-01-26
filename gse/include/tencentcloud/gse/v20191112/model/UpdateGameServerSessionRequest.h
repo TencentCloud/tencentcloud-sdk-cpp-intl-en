@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Game server session ID
-                     * @return GameServerSessionId Game server session ID
+                     * 获取Game server session ID. It should contain 1 to 256 ASCII characters.
+                     * @return GameServerSessionId Game server session ID. It should contain 1 to 256 ASCII characters.
                      */
                     std::string GetGameServerSessionId() const;
 
                     /**
-                     * 设置Game server session ID
-                     * @param GameServerSessionId Game server session ID
+                     * 设置Game server session ID. It should contain 1 to 256 ASCII characters.
+                     * @param GameServerSessionId Game server session ID. It should contain 1 to 256 ASCII characters.
                      */
                     void SetGameServerSessionId(const std::string& _gameServerSessionId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool GameServerSessionIdHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of players
-                     * @return MaximumPlayerSessionCount Maximum number of players
+                     * 获取The maximum number of players, which cannot be less than 0.
+                     * @return MaximumPlayerSessionCount The maximum number of players, which cannot be less than 0.
                      */
                     uint64_t GetMaximumPlayerSessionCount() const;
 
                     /**
-                     * 设置Maximum number of players
-                     * @param MaximumPlayerSessionCount Maximum number of players
+                     * 设置The maximum number of players, which cannot be less than 0.
+                     * @param MaximumPlayerSessionCount The maximum number of players, which cannot be less than 0.
                      */
                     void SetMaximumPlayerSessionCount(const uint64_t& _maximumPlayerSessionCount);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool MaximumPlayerSessionCountHasBeenSet() const;
 
                     /**
-                     * 获取Game server session name
-                     * @return Name Game server session name
+                     * 获取Name of the game server session. It should contain 1 to 1024 ASCII characters.
+                     * @return Name Name of the game server session. It should contain 1 to 1024 ASCII characters.
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Game server session name
-                     * @param Name Game server session name
+                     * 设置Name of the game server session. It should contain 1 to 1024 ASCII characters.
+                     * @param Name Name of the game server session. It should contain 1 to 1024 ASCII characters.
                      */
                     void SetName(const std::string& _name);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
-                     * @return PlayerSessionCreationPolicy Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
+                     * 获取Player session creation policy, which includes `ACCEPT_ALL` (allow all players) and `DENY_ALL` (reject all players).
+                     * @return PlayerSessionCreationPolicy Player session creation policy, which includes `ACCEPT_ALL` (allow all players) and `DENY_ALL` (reject all players).
                      */
                     std::string GetPlayerSessionCreationPolicy() const;
 
                     /**
-                     * 设置Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
-                     * @param PlayerSessionCreationPolicy Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
+                     * 设置Player session creation policy, which includes `ACCEPT_ALL` (allow all players) and `DENY_ALL` (reject all players).
+                     * @param PlayerSessionCreationPolicy Player session creation policy, which includes `ACCEPT_ALL` (allow all players) and `DENY_ALL` (reject all players).
                      */
                     void SetPlayerSessionCreationPolicy(const std::string& _playerSessionCreationPolicy);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool PlayerSessionCreationPolicyHasBeenSet() const;
 
                     /**
-                     * 获取Protection policy. Valid values: NoProtection, TimeLimitProtection, FullProtection
-                     * @return ProtectionPolicy Protection policy. Valid values: NoProtection, TimeLimitProtection, FullProtection
+                     * 获取Protection policy, which includes `NoProtection`·(no protection), `TimeLimitProtection` (time-limited protection) and `FullProtection` (full protection)
+                     * @return ProtectionPolicy Protection policy, which includes `NoProtection`·(no protection), `TimeLimitProtection` (time-limited protection) and `FullProtection` (full protection)
                      */
                     std::string GetProtectionPolicy() const;
 
                     /**
-                     * 设置Protection policy. Valid values: NoProtection, TimeLimitProtection, FullProtection
-                     * @param ProtectionPolicy Protection policy. Valid values: NoProtection, TimeLimitProtection, FullProtection
+                     * 设置Protection policy, which includes `NoProtection`·(no protection), `TimeLimitProtection` (time-limited protection) and `FullProtection` (full protection)
+                     * @param ProtectionPolicy Protection policy, which includes `NoProtection`·(no protection), `TimeLimitProtection` (time-limited protection) and `FullProtection` (full protection)
                      */
                     void SetProtectionPolicy(const std::string& _protectionPolicy);
 
@@ -135,31 +135,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Game server session ID
+                     * Game server session ID. It should contain 1 to 256 ASCII characters.
                      */
                     std::string m_gameServerSessionId;
                     bool m_gameServerSessionIdHasBeenSet;
 
                     /**
-                     * Maximum number of players
+                     * The maximum number of players, which cannot be less than 0.
                      */
                     uint64_t m_maximumPlayerSessionCount;
                     bool m_maximumPlayerSessionCountHasBeenSet;
 
                     /**
-                     * Game server session name
+                     * Name of the game server session. It should contain 1 to 1024 ASCII characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
+                     * Player session creation policy, which includes `ACCEPT_ALL` (allow all players) and `DENY_ALL` (reject all players).
                      */
                     std::string m_playerSessionCreationPolicy;
                     bool m_playerSessionCreationPolicyHasBeenSet;
 
                     /**
-                     * Protection policy. Valid values: NoProtection, TimeLimitProtection, FullProtection
+                     * Protection policy, which includes `NoProtection`·(no protection), `TimeLimitProtection` (time-limited protection) and `FullProtection` (full protection)
                      */
                     std::string m_protectionPolicy;
                     bool m_protectionPolicyHasBeenSet;

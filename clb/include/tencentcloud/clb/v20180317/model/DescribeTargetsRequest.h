@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CLB instance ID
-                     * @return LoadBalancerId CLB instance ID
+                     * 获取CLB instance ID.
+                     * @return LoadBalancerId CLB instance ID.
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
-                     * 设置CLB instance ID
-                     * @param LoadBalancerId CLB instance ID
+                     * 设置CLB instance ID.
+                     * @param LoadBalancerId CLB instance ID.
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取List of listener IDs
-                     * @return ListenerIds List of listener IDs
+                     * 获取List of listener IDs (20 IDs at most).
+                     * @return ListenerIds List of listener IDs (20 IDs at most).
                      */
                     std::vector<std::string> GetListenerIds() const;
 
                     /**
-                     * 设置List of listener IDs
-                     * @param ListenerIds List of listener IDs
+                     * 设置List of listener IDs (20 IDs at most).
+                     * @param ListenerIds List of listener IDs (20 IDs at most).
                      */
                     void SetListenerIds(const std::vector<std::string>& _listenerIds);
 
@@ -117,13 +117,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * CLB instance ID
+                     * CLB instance ID.
                      */
                     std::string m_loadBalancerId;
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * List of listener IDs
+                     * List of listener IDs (20 IDs at most).
                      */
                     std::vector<std::string> m_listenerIds;
                     bool m_listenerIdsHasBeenSet;

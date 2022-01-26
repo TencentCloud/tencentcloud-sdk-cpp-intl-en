@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 RequestParameter::RequestParameter() :
@@ -31,7 +30,7 @@ RequestParameter::RequestParameter() :
 {
 }
 
-CoreInternalOutcome RequestParameter::Deserialize(const Value &value)
+CoreInternalOutcome RequestParameter::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome RequestParameter::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RequestParameter.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RequestParameter.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -50,7 +49,7 @@ CoreInternalOutcome RequestParameter::Deserialize(const Value &value)
     {
         if (!value["Desc"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RequestParameter.Desc` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RequestParameter.Desc` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_desc = string(value["Desc"].GetString());
         m_descHasBeenSet = true;
@@ -60,7 +59,7 @@ CoreInternalOutcome RequestParameter::Deserialize(const Value &value)
     {
         if (!value["Position"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RequestParameter.Position` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RequestParameter.Position` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_position = string(value["Position"].GetString());
         m_positionHasBeenSet = true;
@@ -70,7 +69,7 @@ CoreInternalOutcome RequestParameter::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RequestParameter.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RequestParameter.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -80,7 +79,7 @@ CoreInternalOutcome RequestParameter::Deserialize(const Value &value)
     {
         if (!value["DefaultValue"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RequestParameter.DefaultValue` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RequestParameter.DefaultValue` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_defaultValue = string(value["DefaultValue"].GetString());
         m_defaultValueHasBeenSet = true;
@@ -90,7 +89,7 @@ CoreInternalOutcome RequestParameter::Deserialize(const Value &value)
     {
         if (!value["Required"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `RequestParameter.Required` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RequestParameter.Required` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_required = value["Required"].GetBool();
         m_requiredHasBeenSet = true;
@@ -100,52 +99,52 @@ CoreInternalOutcome RequestParameter::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void RequestParameter::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void RequestParameter::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_descHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Desc";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_desc.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_desc.c_str(), allocator).Move(), allocator);
     }
 
     if (m_positionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Position";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_position.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_position.c_str(), allocator).Move(), allocator);
     }
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_defaultValueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DefaultValue";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_defaultValue.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_defaultValue.c_str(), allocator).Move(), allocator);
     }
 
     if (m_requiredHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Required";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_required, allocator);

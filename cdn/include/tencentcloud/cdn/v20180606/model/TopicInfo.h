@@ -122,6 +122,50 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool CreateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Either `cdn` or `ecdn`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Channel Either `cdn` or `ecdn`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetChannel() const;
+
+                    /**
+                     * 设置Either `cdn` or `ecdn`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param Channel Either `cdn` or `ecdn`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetChannel(const std::string& _channel);
+
+                    /**
+                     * 判断参数 Channel 是否已赋值
+                     * @return Channel 是否已赋值
+                     */
+                    bool ChannelHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the log topic has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Deleted Whether the log topic has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDeleted() const;
+
+                    /**
+                     * 设置Whether the log topic has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param Deleted Whether the log topic has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetDeleted(const std::string& _deleted);
+
+                    /**
+                     * 判断参数 Deleted 是否已赋值
+                     * @return Deleted 是否已赋值
+                     */
+                    bool DeletedHasBeenSet() const;
+
                 private:
 
                     /**
@@ -148,6 +192,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
+
+                    /**
+                     * Either `cdn` or `ecdn`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_channel;
+                    bool m_channelHasBeenSet;
+
+                    /**
+                     * Whether the log topic has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_deleted;
+                    bool m_deletedHasBeenSet;
 
                 };
             }

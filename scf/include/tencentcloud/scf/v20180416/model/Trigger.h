@@ -190,6 +190,78 @@ namespace TencentCloud
                      */
                     bool AvailableStatusHasBeenSet() const;
 
+                    /**
+                     * 获取Minimum resource ID of trigger
+                     * @return ResourceId Minimum resource ID of trigger
+                     */
+                    std::string GetResourceId() const;
+
+                    /**
+                     * 设置Minimum resource ID of trigger
+                     * @param ResourceId Minimum resource ID of trigger
+                     */
+                    void SetResourceId(const std::string& _resourceId);
+
+                    /**
+                     * 判断参数 ResourceId 是否已赋值
+                     * @return ResourceId 是否已赋值
+                     */
+                    bool ResourceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Trigger-Function binding status
+                     * @return BindStatus Trigger-Function binding status
+                     */
+                    std::string GetBindStatus() const;
+
+                    /**
+                     * 设置Trigger-Function binding status
+                     * @param BindStatus Trigger-Function binding status
+                     */
+                    void SetBindStatus(const std::string& _bindStatus);
+
+                    /**
+                     * 判断参数 BindStatus 是否已赋值
+                     * @return BindStatus 是否已赋值
+                     */
+                    bool BindStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+                     * @return TriggerAttribute Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+                     */
+                    std::string GetTriggerAttribute() const;
+
+                    /**
+                     * 设置Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+                     * @param TriggerAttribute Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+                     */
+                    void SetTriggerAttribute(const std::string& _triggerAttribute);
+
+                    /**
+                     * 判断参数 TriggerAttribute 是否已赋值
+                     * @return TriggerAttribute 是否已赋值
+                     */
+                    bool TriggerAttributeHasBeenSet() const;
+
+                    /**
+                     * 获取The alias or version bound with the trigger
+                     * @return Qualifier The alias or version bound with the trigger
+                     */
+                    std::string GetQualifier() const;
+
+                    /**
+                     * 设置The alias or version bound with the trigger
+                     * @param Qualifier The alias or version bound with the trigger
+                     */
+                    void SetQualifier(const std::string& _qualifier);
+
+                    /**
+                     * 判断参数 Qualifier 是否已赋值
+                     * @return Qualifier 是否已赋值
+                     */
+                    bool QualifierHasBeenSet() const;
+
                 private:
 
                     /**
@@ -239,6 +311,30 @@ namespace TencentCloud
                      */
                     std::string m_availableStatus;
                     bool m_availableStatusHasBeenSet;
+
+                    /**
+                     * Minimum resource ID of trigger
+                     */
+                    std::string m_resourceId;
+                    bool m_resourceIdHasBeenSet;
+
+                    /**
+                     * Trigger-Function binding status
+                     */
+                    std::string m_bindStatus;
+                    bool m_bindStatusHasBeenSet;
+
+                    /**
+                     * Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+                     */
+                    std::string m_triggerAttribute;
+                    bool m_triggerAttributeHasBeenSet;
+
+                    /**
+                     * The alias or version bound with the trigger
+                     */
+                    std::string m_qualifier;
+                    bool m_qualifierHasBeenSet;
 
                 };
             }

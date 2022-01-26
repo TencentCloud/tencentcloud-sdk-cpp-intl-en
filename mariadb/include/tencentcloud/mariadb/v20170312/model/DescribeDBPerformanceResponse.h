@@ -41,6 +41,7 @@ namespace TencentCloud
                     DescribeDBPerformanceResponse();
                     ~DescribeDBPerformanceResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -140,8 +141,8 @@ namespace TencentCloud
                     bool ConnActiveHasBeenSet() const;
 
                     /**
-                     * 获取Whether master/slave switch occurred. 1: yes, 0: no
-                     * @return IsMasterSwitched Whether master/slave switch occurred. 1: yes, 0: no
+                     * 获取Whether primary/secondary switch occurred. 1: yes, 0: no
+                     * @return IsMasterSwitched Whether primary/secondary switch occurred. 1: yes, 0: no
                      */
                     MonitorData GetIsMasterSwitched() const;
 
@@ -152,8 +153,8 @@ namespace TencentCloud
                     bool IsMasterSwitchedHasBeenSet() const;
 
                     /**
-                     * 获取Master/slave delay
-                     * @return SlaveDelay Master/slave delay
+                     * 获取primary/secondary delay
+                     * @return SlaveDelay primary/secondary delay
                      */
                     MonitorData GetSlaveDelay() const;
 
@@ -214,13 +215,13 @@ namespace TencentCloud
                     bool m_connActiveHasBeenSet;
 
                     /**
-                     * Whether master/slave switch occurred. 1: yes, 0: no
+                     * Whether primary/secondary switch occurred. 1: yes, 0: no
                      */
                     MonitorData m_isMasterSwitched;
                     bool m_isMasterSwitchedHasBeenSet;
 
                     /**
-                     * Master/slave delay
+                     * primary/secondary delay
                      */
                     MonitorData m_slaveDelay;
                     bool m_slaveDelayHasBeenSet;

@@ -45,14 +45,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Figure ID.
-                     * @return PersonId Figure ID.
+                     * 获取ID of a sample.
+                     * @return PersonId ID of a sample.
                      */
                     std::string GetPersonId() const;
 
                     /**
-                     * 设置Figure ID.
-                     * @param PersonId Figure ID.
+                     * 设置ID of a sample.
+                     * @param PersonId ID of a sample.
                      */
                     void SetPersonId(const std::string& _personId);
 
@@ -99,26 +99,26 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Figure use case. Valid values:
-1. Recognition: it is used for content recognition and equivalent to `Recognition.Face`.
-2. Review: it is used for content audit and equivalent to `Review.Face`.
-3. All: it is used for content recognition and content audit and equivalent to 1+2 above.
-                     * @return Usages Figure use case. Valid values:
-1. Recognition: it is used for content recognition and equivalent to `Recognition.Face`.
-2. Review: it is used for content audit and equivalent to `Review.Face`.
-3. All: it is used for content recognition and content audit and equivalent to 1+2 above.
+                     * 获取Sample usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
+                     * @return Usages Sample usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
                      */
                     std::vector<std::string> GetUsages() const;
 
                     /**
-                     * 设置Figure use case. Valid values:
-1. Recognition: it is used for content recognition and equivalent to `Recognition.Face`.
-2. Review: it is used for content audit and equivalent to `Review.Face`.
-3. All: it is used for content recognition and content audit and equivalent to 1+2 above.
-                     * @param Usages Figure use case. Valid values:
-1. Recognition: it is used for content recognition and equivalent to `Recognition.Face`.
-2. Review: it is used for content audit and equivalent to `Review.Face`.
-3. All: it is used for content recognition and content audit and equivalent to 1+2 above.
+                     * 设置Sample usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
+                     * @param Usages Sample usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
                      */
                     void SetUsages(const std::vector<std::string>& _usages);
 
@@ -129,14 +129,14 @@ namespace TencentCloud
                     bool UsagesHasBeenSet() const;
 
                     /**
-                     * 获取Face operation information.
-                     * @return FaceOperationInfo Face operation information.
+                     * 获取Information of operations on facial features.
+                     * @return FaceOperationInfo Information of operations on facial features.
                      */
                     AiSampleFaceOperation GetFaceOperationInfo() const;
 
                     /**
-                     * 设置Face operation information.
-                     * @param FaceOperationInfo Face operation information.
+                     * 设置Information of operations on facial features.
+                     * @param FaceOperationInfo Information of operations on facial features.
                      */
                     void SetFaceOperationInfo(const AiSampleFaceOperation& _faceOperationInfo);
 
@@ -165,14 +165,14 @@ namespace TencentCloud
                     bool TagOperationInfoHasBeenSet() const;
 
                     /**
-                     * 获取[Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     * @return SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * 获取[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置[Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     * @param SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * 设置[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
@@ -185,7 +185,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Figure ID.
+                     * ID of a sample.
                      */
                     std::string m_personId;
                     bool m_personIdHasBeenSet;
@@ -203,16 +203,16 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Figure use case. Valid values:
-1. Recognition: it is used for content recognition and equivalent to `Recognition.Face`.
-2. Review: it is used for content audit and equivalent to `Review.Face`.
-3. All: it is used for content recognition and content audit and equivalent to 1+2 above.
+                     * Sample usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
                      */
                     std::vector<std::string> m_usages;
                     bool m_usagesHasBeenSet;
 
                     /**
-                     * Face operation information.
+                     * Information of operations on facial features.
                      */
                     AiSampleFaceOperation m_faceOperationInfo;
                     bool m_faceOperationInfoHasBeenSet;
@@ -224,7 +224,7 @@ namespace TencentCloud
                     bool m_tagOperationInfoHasBeenSet;
 
                     /**
-                     * [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;

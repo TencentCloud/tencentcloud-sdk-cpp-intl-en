@@ -92,17 +92,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool StrategyNameHasBeenSet() const;
 
                     /**
-                     * 获取Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
+                     * 获取Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return StrategyType Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
+                     * @return StrategyType Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetStrategyType() const;
 
                     /**
-                     * 设置Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
+                     * 设置Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param StrategyType Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
+                     * @param StrategyType Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetStrategyType(const std::string& _strategyType);
@@ -262,7 +262,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_strategyNameHasBeenSet;
 
                     /**
-                     * Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
+                     * Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_strategyType;

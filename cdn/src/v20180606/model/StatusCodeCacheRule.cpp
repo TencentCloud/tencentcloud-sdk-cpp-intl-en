@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 StatusCodeCacheRule::StatusCodeCacheRule() :
@@ -27,7 +26,7 @@ StatusCodeCacheRule::StatusCodeCacheRule() :
 {
 }
 
-CoreInternalOutcome StatusCodeCacheRule::Deserialize(const Value &value)
+CoreInternalOutcome StatusCodeCacheRule::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome StatusCodeCacheRule::Deserialize(const Value &value)
     {
         if (!value["StatusCode"].IsString())
         {
-            return CoreInternalOutcome(Error("response `StatusCodeCacheRule.StatusCode` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `StatusCodeCacheRule.StatusCode` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_statusCode = string(value["StatusCode"].GetString());
         m_statusCodeHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome StatusCodeCacheRule::Deserialize(const Value &value)
     {
         if (!value["CacheTime"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `StatusCodeCacheRule.CacheTime` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `StatusCodeCacheRule.CacheTime` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_cacheTime = value["CacheTime"].GetInt64();
         m_cacheTimeHasBeenSet = true;
@@ -56,20 +55,20 @@ CoreInternalOutcome StatusCodeCacheRule::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void StatusCodeCacheRule::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void StatusCodeCacheRule::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_statusCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StatusCode";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_statusCode.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_statusCode.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cacheTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CacheTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cacheTime, allocator);

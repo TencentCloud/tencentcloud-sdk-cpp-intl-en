@@ -125,29 +125,29 @@ namespace TencentCloud
 
                     /**
                      * 获取Filter.
-<li>Keywords - String - Required: No - Query keywords</li>
-<li>Status - String - Required: No - Agent status (OFFLINE: offline, ONLINE: online)</li>
-<li>Version - String  Required: No - Current CWP edition (PRO_VERSION: Pro, BASIC_VERSION: Basic)</li>
-Each filter supports only one value. Query with multiple values in "OR" relationship is not supported for the time being
+<li>Keywords - String - Required: no - Query keywords </li>
+<li>Status - String - Required: no - CWP client status (valid values: OFFLINE, ONLINE, UNINSTALLED)</li>
+<li>Version - String - Required: no - Current CWP version (valid values: PRO_VERSION, BASIC_VERSION)</li>
+Each filter can have only one value but does not support "OR" queries with multiple values
                      * @return Filters Filter.
-<li>Keywords - String - Required: No - Query keywords</li>
-<li>Status - String - Required: No - Agent status (OFFLINE: offline, ONLINE: online)</li>
-<li>Version - String  Required: No - Current CWP edition (PRO_VERSION: Pro, BASIC_VERSION: Basic)</li>
-Each filter supports only one value. Query with multiple values in "OR" relationship is not supported for the time being
+<li>Keywords - String - Required: no - Query keywords </li>
+<li>Status - String - Required: no - CWP client status (valid values: OFFLINE, ONLINE, UNINSTALLED)</li>
+<li>Version - String - Required: no - Current CWP version (valid values: PRO_VERSION, BASIC_VERSION)</li>
+Each filter can have only one value but does not support "OR" queries with multiple values
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter.
-<li>Keywords - String - Required: No - Query keywords</li>
-<li>Status - String - Required: No - Agent status (OFFLINE: offline, ONLINE: online)</li>
-<li>Version - String  Required: No - Current CWP edition (PRO_VERSION: Pro, BASIC_VERSION: Basic)</li>
-Each filter supports only one value. Query with multiple values in "OR" relationship is not supported for the time being
+<li>Keywords - String - Required: no - Query keywords </li>
+<li>Status - String - Required: no - CWP client status (valid values: OFFLINE, ONLINE, UNINSTALLED)</li>
+<li>Version - String - Required: no - Current CWP version (valid values: PRO_VERSION, BASIC_VERSION)</li>
+Each filter can have only one value but does not support "OR" queries with multiple values
                      * @param Filters Filter.
-<li>Keywords - String - Required: No - Query keywords</li>
-<li>Status - String - Required: No - Agent status (OFFLINE: offline, ONLINE: online)</li>
-<li>Version - String  Required: No - Current CWP edition (PRO_VERSION: Pro, BASIC_VERSION: Basic)</li>
-Each filter supports only one value. Query with multiple values in "OR" relationship is not supported for the time being
+<li>Keywords - String - Required: no - Query keywords </li>
+<li>Status - String - Required: no - CWP client status (valid values: OFFLINE, ONLINE, UNINSTALLED)</li>
+<li>Version - String - Required: no - Current CWP version (valid values: PRO_VERSION, BASIC_VERSION)</li>
+Each filter can have only one value but does not support "OR" queries with multiple values
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -187,10 +187,10 @@ Each filter supports only one value. Query with multiple values in "OR" relation
 
                     /**
                      * Filter.
-<li>Keywords - String - Required: No - Query keywords</li>
-<li>Status - String - Required: No - Agent status (OFFLINE: offline, ONLINE: online)</li>
-<li>Version - String  Required: No - Current CWP edition (PRO_VERSION: Pro, BASIC_VERSION: Basic)</li>
-Each filter supports only one value. Query with multiple values in "OR" relationship is not supported for the time being
+<li>Keywords - String - Required: no - Query keywords </li>
+<li>Status - String - Required: no - CWP client status (valid values: OFFLINE, ONLINE, UNINSTALLED)</li>
+<li>Version - String - Required: no - Current CWP version (valid values: PRO_VERSION, BASIC_VERSION)</li>
+Each filter can have only one value but does not support "OR" queries with multiple values
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

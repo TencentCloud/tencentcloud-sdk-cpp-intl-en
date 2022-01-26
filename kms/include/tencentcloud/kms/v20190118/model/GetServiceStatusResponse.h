@@ -40,6 +40,7 @@ namespace TencentCloud
                     GetServiceStatusResponse();
                     ~GetServiceStatusResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -66,6 +67,60 @@ namespace TencentCloud
                      */
                     bool InvalidTypeHasBeenSet() const;
 
+                    /**
+                     * 获取0: Basic Edition, 1: Ultimate Edition
+                     * @return UserLevel 0: Basic Edition, 1: Ultimate Edition
+                     */
+                    uint64_t GetUserLevel() const;
+
+                    /**
+                     * 判断参数 UserLevel 是否已赋值
+                     * @return UserLevel 是否已赋值
+                     */
+                    bool UserLevelHasBeenSet() const;
+
+                    /**
+                     * 获取Ultimate Edition expiration time
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return ProExpireTime Ultimate Edition expiration time
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetProExpireTime() const;
+
+                    /**
+                     * 判断参数 ProExpireTime 是否已赋值
+                     * @return ProExpireTime 是否已赋值
+                     */
+                    bool ProExpireTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to automatically renew Ultimate Edition. 0: no, 1: yes
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return ProRenewFlag Whether to automatically renew Ultimate Edition. 0: no, 1: yes
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetProRenewFlag() const;
+
+                    /**
+                     * 判断参数 ProRenewFlag 是否已赋值
+                     * @return ProRenewFlag 是否已赋值
+                     */
+                    bool ProRenewFlagHasBeenSet() const;
+
+                    /**
+                     * 获取Unique ID of the Ultimate Edition purchase record. If the Ultimate Edition is not activated, the returned value will be null.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return ProResourceId Unique ID of the Ultimate Edition purchase record. If the Ultimate Edition is not activated, the returned value will be null.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetProResourceId() const;
+
+                    /**
+                     * 判断参数 ProResourceId 是否已赋值
+                     * @return ProResourceId 是否已赋值
+                     */
+                    bool ProResourceIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -79,6 +134,33 @@ namespace TencentCloud
                      */
                     int64_t m_invalidType;
                     bool m_invalidTypeHasBeenSet;
+
+                    /**
+                     * 0: Basic Edition, 1: Ultimate Edition
+                     */
+                    uint64_t m_userLevel;
+                    bool m_userLevelHasBeenSet;
+
+                    /**
+                     * Ultimate Edition expiration time
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_proExpireTime;
+                    bool m_proExpireTimeHasBeenSet;
+
+                    /**
+                     * Whether to automatically renew Ultimate Edition. 0: no, 1: yes
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_proRenewFlag;
+                    bool m_proRenewFlagHasBeenSet;
+
+                    /**
+                     * Unique ID of the Ultimate Edition purchase record. If the Ultimate Edition is not activated, the returned value will be null.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_proResourceId;
+                    bool m_proResourceIdHasBeenSet;
 
                 };
             }

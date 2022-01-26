@@ -45,6 +45,7 @@ namespace TencentCloud
                     DescribePolicyGroupInfoResponse();
                     ~DescribePolicyGroupInfoResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -250,9 +251,9 @@ Note: This field may return null, indicating that no valid value was found.
                     bool CanSetDefaultHasBeenSet() const;
 
                     /**
-                     * 获取Whether the “AND” rule is used.
+                     * 获取Whether the 'AND' rule is used.
 Note: This field may return null, indicating that no valid value was found.
-                     * @return IsUnionRule Whether the “AND” rule is used.
+                     * @return IsUnionRule Whether the 'AND' rule is used.
 Note: This field may return null, indicating that no valid value was found.
                      */
                     int64_t GetIsUnionRule() const;
@@ -367,7 +368,7 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_canSetDefaultHasBeenSet;
 
                     /**
-                     * Whether the “AND” rule is used.
+                     * Whether the 'AND' rule is used.
 Note: This field may return null, indicating that no valid value was found.
                      */
                     int64_t m_isUnionRule;

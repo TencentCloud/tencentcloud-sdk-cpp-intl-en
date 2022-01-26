@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool DirectConnectNameHasBeenSet() const;
 
                     /**
-                     * 获取Circuit code of connection, which is provided by the ISP or connection provider.
-                     * @return CircuitCode Circuit code of connection, which is provided by the ISP or connection provider.
+                     * 获取Circuit code of a connection, which is provided by the ISP or connection provider.
+                     * @return CircuitCode Circuit code of a connection, which is provided by the ISP or connection provider.
                      */
                     std::string GetCircuitCode() const;
 
                     /**
-                     * 设置Circuit code of connection, which is provided by the ISP or connection provider.
-                     * @param CircuitCode Circuit code of connection, which is provided by the ISP or connection provider.
+                     * 设置Circuit code of a connection, which is provided by the ISP or connection provider.
+                     * @param CircuitCode Circuit code of a connection, which is provided by the ISP or connection provider.
                      */
                     void SetCircuitCode(const std::string& _circuitCode);
 
@@ -240,6 +240,42 @@ namespace TencentCloud
                      */
                     bool FaultReportContactNumberHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the connection applicant has signed the service agreement.
+                     * @return SignLaw Whether the connection applicant has signed the service agreement.
+                     */
+                    bool GetSignLaw() const;
+
+                    /**
+                     * 设置Whether the connection applicant has signed the service agreement.
+                     * @param SignLaw Whether the connection applicant has signed the service agreement.
+                     */
+                    void SetSignLaw(const bool& _signLaw);
+
+                    /**
+                     * 判断参数 SignLaw 是否已赋值
+                     * @return SignLaw 是否已赋值
+                     */
+                    bool SignLawHasBeenSet() const;
+
+                    /**
+                     * 获取Connection’s bandwidth
+                     * @return Bandwidth Connection’s bandwidth
+                     */
+                    uint64_t GetBandwidth() const;
+
+                    /**
+                     * 设置Connection’s bandwidth
+                     * @param Bandwidth Connection’s bandwidth
+                     */
+                    void SetBandwidth(const uint64_t& _bandwidth);
+
+                    /**
+                     * 判断参数 Bandwidth 是否已赋值
+                     * @return Bandwidth 是否已赋值
+                     */
+                    bool BandwidthHasBeenSet() const;
+
                 private:
 
                     /**
@@ -255,7 +291,7 @@ namespace TencentCloud
                     bool m_directConnectNameHasBeenSet;
 
                     /**
-                     * Circuit code of connection, which is provided by the ISP or connection provider.
+                     * Circuit code of a connection, which is provided by the ISP or connection provider.
                      */
                     std::string m_circuitCode;
                     bool m_circuitCodeHasBeenSet;
@@ -307,6 +343,18 @@ namespace TencentCloud
                      */
                     std::string m_faultReportContactNumber;
                     bool m_faultReportContactNumberHasBeenSet;
+
+                    /**
+                     * Whether the connection applicant has signed the service agreement.
+                     */
+                    bool m_signLaw;
+                    bool m_signLawHasBeenSet;
+
+                    /**
+                     * Connection’s bandwidth
+                     */
+                    uint64_t m_bandwidth;
+                    bool m_bandwidthHasBeenSet;
 
                 };
             }

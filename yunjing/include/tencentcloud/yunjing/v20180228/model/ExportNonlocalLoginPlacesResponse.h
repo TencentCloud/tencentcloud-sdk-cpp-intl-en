@@ -40,6 +40,7 @@ namespace TencentCloud
                     ExportNonlocalLoginPlacesResponse();
                     ~ExportNonlocalLoginPlacesResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -54,6 +55,18 @@ namespace TencentCloud
                      */
                     bool DownloadUrlHasBeenSet() const;
 
+                    /**
+                     * 获取Export task ID
+                     * @return TaskId Export task ID
+                     */
+                    std::string GetTaskId() const;
+
+                    /**
+                     * 判断参数 TaskId 是否已赋值
+                     * @return TaskId 是否已赋值
+                     */
+                    bool TaskIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -61,6 +74,12 @@ namespace TencentCloud
                      */
                     std::string m_downloadUrl;
                     bool m_downloadUrlHasBeenSet;
+
+                    /**
+                     * Export task ID
+                     */
+                    std::string m_taskId;
+                    bool m_taskIdHasBeenSet;
 
                 };
             }

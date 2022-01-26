@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool HostUinHasBeenSet() const;
 
                     /**
-                     * 获取Creator’s name
-                     * @return HostName Creator’s name
+                     * 获取Creator's name
+                     * @return HostName Creator's name
                      */
                     std::string GetHostName() const;
 
                     /**
-                     * 设置Creator’s name
-                     * @param HostName Creator’s name
+                     * 设置Creator's name
+                     * @param HostName Creator's name
                      */
                     void SetHostName(const std::string& _hostName);
 
@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool HostNameHasBeenSet() const;
 
                     /**
-                     * 获取Creator’s email address
-                     * @return HostMail Creator’s email address
+                     * 获取Creator's email address
+                     * @return HostMail Creator's email address
                      */
                     std::string GetHostMail() const;
 
                     /**
-                     * 设置Creator’s email address
-                     * @param HostMail Creator’s email address
+                     * 设置Creator's email address
+                     * @param HostMail Creator's email address
                      */
                     void SetHostMail(const std::string& _hostMail);
 
@@ -265,13 +265,13 @@ namespace TencentCloud
                     bool m_hostUinHasBeenSet;
 
                     /**
-                     * Creator’s name
+                     * Creator's name
                      */
                     std::string m_hostName;
                     bool m_hostNameHasBeenSet;
 
                     /**
-                     * Creator’s email address
+                     * Creator's email address
                      */
                     std::string m_hostMail;
                     bool m_hostMailHasBeenSet;

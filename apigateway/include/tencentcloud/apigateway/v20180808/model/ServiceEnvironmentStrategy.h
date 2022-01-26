@@ -140,6 +140,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool StrategyHasBeenSet() const;
 
+                    /**
+                     * 获取Maximum quota value
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return MaxStrategy Maximum quota value
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetMaxStrategy() const;
+
+                    /**
+                     * 设置Maximum quota value
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param MaxStrategy Maximum quota value
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetMaxStrategy(const int64_t& _maxStrategy);
+
+                    /**
+                     * 判断参数 MaxStrategy 是否已赋值
+                     * @return MaxStrategy 是否已赋值
+                     */
+                    bool MaxStrategyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -172,6 +194,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_strategy;
                     bool m_strategyHasBeenSet;
+
+                    /**
+                     * Maximum quota value
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_maxStrategy;
+                    bool m_maxStrategyHasBeenSet;
 
                 };
             }

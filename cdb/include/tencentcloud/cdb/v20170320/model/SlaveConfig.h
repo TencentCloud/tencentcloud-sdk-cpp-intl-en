@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Replication mode of the slave database. Value range: async, semi-sync
-                     * @return ReplicationMode Replication mode of the slave database. Value range: async, semi-sync
+                     * 获取Replication mode of the secondary database. Value range: async, semi-sync
+                     * @return ReplicationMode Replication mode of the secondary database. Value range: async, semi-sync
                      */
                     std::string GetReplicationMode() const;
 
                     /**
-                     * 设置Replication mode of the slave database. Value range: async, semi-sync
-                     * @param ReplicationMode Replication mode of the slave database. Value range: async, semi-sync
+                     * 设置Replication mode of the secondary database. Value range: async, semi-sync
+                     * @param ReplicationMode Replication mode of the secondary database. Value range: async, semi-sync
                      */
                     void SetReplicationMode(const std::string& _replicationMode);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool ReplicationModeHasBeenSet() const;
 
                     /**
-                     * 获取AZ name of the slave database, such as ap-shanghai-1
-                     * @return Zone AZ name of the slave database, such as ap-shanghai-1
+                     * 获取AZ name of the secondary database, such as ap-shanghai-1
+                     * @return Zone AZ name of the secondary database, such as ap-shanghai-1
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置AZ name of the slave database, such as ap-shanghai-1
-                     * @param Zone AZ name of the slave database, such as ap-shanghai-1
+                     * 设置AZ name of the secondary database, such as ap-shanghai-1
+                     * @param Zone AZ name of the secondary database, such as ap-shanghai-1
                      */
                     void SetZone(const std::string& _zone);
 
@@ -85,13 +85,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Replication mode of the slave database. Value range: async, semi-sync
+                     * Replication mode of the secondary database. Value range: async, semi-sync
                      */
                     std::string m_replicationMode;
                     bool m_replicationModeHasBeenSet;
 
                     /**
-                     * AZ name of the slave database, such as ap-shanghai-1
+                     * AZ name of the secondary database, such as ap-shanghai-1
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;

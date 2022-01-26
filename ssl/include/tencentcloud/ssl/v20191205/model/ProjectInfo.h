@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Content of the ProjectInfo parameter. ProjectInfo is an element of Certificates array which is returned by DescribeCertificates.
+                * Content of the `ProjectInfo` parameter. `ProjectInfo` is an element of `Certificates` array which is returned by `DescribeCertificates`.
                 */
                 class ProjectInfo : public AbstractModel
                 {
@@ -47,17 +47,17 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Project name.
+                     * 获取Project name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ProjectName Project name.
+                     * @return ProjectName Project name
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetProjectName() const;
 
                     /**
-                     * 设置Project name.
+                     * 设置Project name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ProjectName Project name.
+                     * @param ProjectName Project name
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetProjectName(const std::string& _projectName);
@@ -69,17 +69,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ProjectNameHasBeenSet() const;
 
                     /**
-                     * 获取UIN of the project creator.
+                     * 获取UIN of the project creator
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ProjectCreatorUin UIN of the project creator.
+                     * @return ProjectCreatorUin UIN of the project creator
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetProjectCreatorUin() const;
 
                     /**
-                     * 设置UIN of the project creator.
+                     * 设置UIN of the project creator
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ProjectCreatorUin UIN of the project creator.
+                     * @param ProjectCreatorUin UIN of the project creator
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetProjectCreatorUin(const uint64_t& _projectCreatorUin);
@@ -91,17 +91,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ProjectCreatorUinHasBeenSet() const;
 
                     /**
-                     * 获取Project creation time.
+                     * 获取Project creation time
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ProjectCreateTime Project creation time.
+                     * @return ProjectCreateTime Project creation time
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetProjectCreateTime() const;
 
                     /**
-                     * 设置Project creation time.
+                     * 设置Project creation time
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ProjectCreateTime Project creation time.
+                     * @param ProjectCreateTime Project creation time
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetProjectCreateTime(const std::string& _projectCreateTime);
@@ -113,17 +113,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ProjectCreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Brief project information.
+                     * 获取Brief project information
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ProjectResume Brief project information.
+                     * @return ProjectResume Brief project information
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetProjectResume() const;
 
                     /**
-                     * 设置Brief project information.
+                     * 设置Brief project information
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ProjectResume Brief project information.
+                     * @param ProjectResume Brief project information
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetProjectResume(const std::string& _projectResume);
@@ -135,17 +135,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ProjectResumeHasBeenSet() const;
 
                     /**
-                     * 获取User UIN.
+                     * 获取User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return OwnerUin User UIN.
+                     * @return OwnerUin User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetOwnerUin() const;
 
                     /**
-                     * 设置User UIN.
+                     * 设置User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OwnerUin User UIN.
+                     * @param OwnerUin User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetOwnerUin(const uint64_t& _ownerUin);
@@ -157,17 +157,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool OwnerUinHasBeenSet() const;
 
                     /**
-                     * 获取Project ID.
+                     * 获取Project ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ProjectId Project ID.
+                     * @return ProjectId Project ID
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetProjectId() const;
 
                     /**
-                     * 设置Project ID.
+                     * 设置Project ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ProjectId Project ID.
+                     * @param ProjectId Project ID
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetProjectId(const std::string& _projectId);
@@ -181,42 +181,42 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Project name.
+                     * Project name
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_projectName;
                     bool m_projectNameHasBeenSet;
 
                     /**
-                     * UIN of the project creator.
+                     * UIN of the project creator
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_projectCreatorUin;
                     bool m_projectCreatorUinHasBeenSet;
 
                     /**
-                     * Project creation time.
+                     * Project creation time
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_projectCreateTime;
                     bool m_projectCreateTimeHasBeenSet;
 
                     /**
-                     * Brief project information.
+                     * Brief project information
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_projectResume;
                     bool m_projectResumeHasBeenSet;
 
                     /**
-                     * User UIN.
+                     * User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_ownerUin;
                     bool m_ownerUinHasBeenSet;
 
                     /**
-                     * Project ID.
+                     * Project ID
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_projectId;

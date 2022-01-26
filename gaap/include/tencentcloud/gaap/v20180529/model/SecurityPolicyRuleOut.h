@@ -163,14 +163,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PolicyId 
+                     * 获取Security policy ID
+                     * @return PolicyId Security policy ID
                      */
                     std::string GetPolicyId() const;
 
                     /**
-                     * 设置
-                     * @param PolicyId 
+                     * 设置Security policy ID
+                     * @param PolicyId Security policy ID
                      */
                     void SetPolicyId(const std::string& _policyId);
 
@@ -221,7 +221,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * 
+                     * Security policy ID
                      */
                     std::string m_policyId;
                     bool m_policyIdHasBeenSet;

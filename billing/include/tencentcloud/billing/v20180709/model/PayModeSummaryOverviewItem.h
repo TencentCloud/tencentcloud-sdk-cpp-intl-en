@@ -191,6 +191,24 @@ namespace TencentCloud
                      */
                     bool VoucherPayAmountHasBeenSet() const;
 
+                    /**
+                     * 获取The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+                     * @return TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+                     */
+                    std::string GetTotalCost() const;
+
+                    /**
+                     * 设置The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+                     * @param TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+                     */
+                    void SetTotalCost(const std::string& _totalCost);
+
+                    /**
+                     * 判断参数 TotalCost 是否已赋值
+                     * @return TotalCost 是否已赋值
+                     */
+                    bool TotalCostHasBeenSet() const;
+
                 private:
 
                     /**
@@ -240,6 +258,12 @@ namespace TencentCloud
                      */
                     std::string m_voucherPayAmount;
                     bool m_voucherPayAmountHasBeenSet;
+
+                    /**
+                     * The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+                     */
+                    std::string m_totalCost;
+                    bool m_totalCostHasBeenSet;
 
                 };
             }

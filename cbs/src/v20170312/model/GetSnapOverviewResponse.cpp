@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cbs::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 GetSnapOverviewResponse::GetSnapOverviewResponse() :
@@ -34,20 +33,20 @@ GetSnapOverviewResponse::GetSnapOverviewResponse() :
 
 CoreInternalOutcome GetSnapOverviewResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -58,19 +57,19 @@ CoreInternalOutcome GetSnapOverviewResponse::Deserialize(const string &payload)
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
     if (rsp.HasMember("TotalSize") && !rsp["TotalSize"].IsNull())
     {
-        if (!rsp["TotalSize"].IsDouble())
+        if (!rsp["TotalSize"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `TotalSize` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TotalSize` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_totalSize = rsp["TotalSize"].GetDouble();
         m_totalSizeHasBeenSet = true;
@@ -78,9 +77,9 @@ CoreInternalOutcome GetSnapOverviewResponse::Deserialize(const string &payload)
 
     if (rsp.HasMember("RealTradeSize") && !rsp["RealTradeSize"].IsNull())
     {
-        if (!rsp["RealTradeSize"].IsDouble())
+        if (!rsp["RealTradeSize"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `RealTradeSize` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RealTradeSize` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_realTradeSize = rsp["RealTradeSize"].GetDouble();
         m_realTradeSizeHasBeenSet = true;
@@ -88,9 +87,9 @@ CoreInternalOutcome GetSnapOverviewResponse::Deserialize(const string &payload)
 
     if (rsp.HasMember("FreeQuota") && !rsp["FreeQuota"].IsNull())
     {
-        if (!rsp["FreeQuota"].IsDouble())
+        if (!rsp["FreeQuota"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `FreeQuota` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FreeQuota` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_freeQuota = rsp["FreeQuota"].GetDouble();
         m_freeQuotaHasBeenSet = true;
@@ -100,7 +99,7 @@ CoreInternalOutcome GetSnapOverviewResponse::Deserialize(const string &payload)
     {
         if (!rsp["TotalNums"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TotalNums` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TotalNums` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_totalNums = rsp["TotalNums"].GetInt64();
         m_totalNumsHasBeenSet = true;
@@ -108,6 +107,55 @@ CoreInternalOutcome GetSnapOverviewResponse::Deserialize(const string &payload)
 
 
     return CoreInternalOutcome(true);
+}
+
+string GetSnapOverviewResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_totalSizeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalSize";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalSize, allocator);
+    }
+
+    if (m_realTradeSizeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RealTradeSize";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_realTradeSize, allocator);
+    }
+
+    if (m_freeQuotaHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FreeQuota";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_freeQuota, allocator);
+    }
+
+    if (m_totalNumsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalNums";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalNums, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

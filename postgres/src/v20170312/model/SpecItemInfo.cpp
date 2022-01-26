@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Postgres::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 SpecItemInfo::SpecItemInfo() :
@@ -31,11 +30,13 @@ SpecItemInfo::SpecItemInfo() :
     m_minStorageHasBeenSet(false),
     m_qpsHasBeenSet(false),
     m_pidHasBeenSet(false),
-    m_typeHasBeenSet(false)
+    m_typeHasBeenSet(false),
+    m_majorVersionHasBeenSet(false),
+    m_kernelVersionHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome SpecItemInfo::Deserialize(const Value &value)
+CoreInternalOutcome SpecItemInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -44,7 +45,7 @@ CoreInternalOutcome SpecItemInfo::Deserialize(const Value &value)
     {
         if (!value["SpecCode"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SpecItemInfo.SpecCode` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SpecItemInfo.SpecCode` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_specCode = string(value["SpecCode"].GetString());
         m_specCodeHasBeenSet = true;
@@ -54,7 +55,7 @@ CoreInternalOutcome SpecItemInfo::Deserialize(const Value &value)
     {
         if (!value["Version"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SpecItemInfo.Version` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SpecItemInfo.Version` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_version = string(value["Version"].GetString());
         m_versionHasBeenSet = true;
@@ -64,7 +65,7 @@ CoreInternalOutcome SpecItemInfo::Deserialize(const Value &value)
     {
         if (!value["VersionName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SpecItemInfo.VersionName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SpecItemInfo.VersionName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_versionName = string(value["VersionName"].GetString());
         m_versionNameHasBeenSet = true;
@@ -74,7 +75,7 @@ CoreInternalOutcome SpecItemInfo::Deserialize(const Value &value)
     {
         if (!value["Cpu"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `SpecItemInfo.Cpu` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SpecItemInfo.Cpu` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_cpu = value["Cpu"].GetUint64();
         m_cpuHasBeenSet = true;
@@ -84,7 +85,7 @@ CoreInternalOutcome SpecItemInfo::Deserialize(const Value &value)
     {
         if (!value["Memory"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `SpecItemInfo.Memory` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SpecItemInfo.Memory` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_memory = value["Memory"].GetUint64();
         m_memoryHasBeenSet = true;
@@ -94,7 +95,7 @@ CoreInternalOutcome SpecItemInfo::Deserialize(const Value &value)
     {
         if (!value["MaxStorage"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `SpecItemInfo.MaxStorage` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SpecItemInfo.MaxStorage` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_maxStorage = value["MaxStorage"].GetUint64();
         m_maxStorageHasBeenSet = true;
@@ -104,7 +105,7 @@ CoreInternalOutcome SpecItemInfo::Deserialize(const Value &value)
     {
         if (!value["MinStorage"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `SpecItemInfo.MinStorage` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SpecItemInfo.MinStorage` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_minStorage = value["MinStorage"].GetUint64();
         m_minStorageHasBeenSet = true;
@@ -114,7 +115,7 @@ CoreInternalOutcome SpecItemInfo::Deserialize(const Value &value)
     {
         if (!value["Qps"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `SpecItemInfo.Qps` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SpecItemInfo.Qps` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_qps = value["Qps"].GetUint64();
         m_qpsHasBeenSet = true;
@@ -124,7 +125,7 @@ CoreInternalOutcome SpecItemInfo::Deserialize(const Value &value)
     {
         if (!value["Pid"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `SpecItemInfo.Pid` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SpecItemInfo.Pid` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_pid = value["Pid"].GetUint64();
         m_pidHasBeenSet = true;
@@ -134,46 +135,66 @@ CoreInternalOutcome SpecItemInfo::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SpecItemInfo.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SpecItemInfo.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
+    }
+
+    if (value.HasMember("MajorVersion") && !value["MajorVersion"].IsNull())
+    {
+        if (!value["MajorVersion"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SpecItemInfo.MajorVersion` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_majorVersion = string(value["MajorVersion"].GetString());
+        m_majorVersionHasBeenSet = true;
+    }
+
+    if (value.HasMember("KernelVersion") && !value["KernelVersion"].IsNull())
+    {
+        if (!value["KernelVersion"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SpecItemInfo.KernelVersion` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_kernelVersion = string(value["KernelVersion"].GetString());
+        m_kernelVersionHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void SpecItemInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SpecItemInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_specCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SpecCode";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_specCode.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_specCode.c_str(), allocator).Move(), allocator);
     }
 
     if (m_versionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Version";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_version.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_version.c_str(), allocator).Move(), allocator);
     }
 
     if (m_versionNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VersionName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_versionName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_versionName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cpuHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Cpu";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cpu, allocator);
@@ -181,7 +202,7 @@ void SpecItemInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_memoryHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Memory";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_memory, allocator);
@@ -189,7 +210,7 @@ void SpecItemInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_maxStorageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaxStorage";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_maxStorage, allocator);
@@ -197,7 +218,7 @@ void SpecItemInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_minStorageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MinStorage";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_minStorage, allocator);
@@ -205,7 +226,7 @@ void SpecItemInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_qpsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Qps";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_qps, allocator);
@@ -213,7 +234,7 @@ void SpecItemInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_pidHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Pid";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_pid, allocator);
@@ -221,10 +242,26 @@ void SpecItemInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_majorVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MajorVersion";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_majorVersion.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_kernelVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "KernelVersion";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_kernelVersion.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -388,5 +425,37 @@ void SpecItemInfo::SetType(const string& _type)
 bool SpecItemInfo::TypeHasBeenSet() const
 {
     return m_typeHasBeenSet;
+}
+
+string SpecItemInfo::GetMajorVersion() const
+{
+    return m_majorVersion;
+}
+
+void SpecItemInfo::SetMajorVersion(const string& _majorVersion)
+{
+    m_majorVersion = _majorVersion;
+    m_majorVersionHasBeenSet = true;
+}
+
+bool SpecItemInfo::MajorVersionHasBeenSet() const
+{
+    return m_majorVersionHasBeenSet;
+}
+
+string SpecItemInfo::GetKernelVersion() const
+{
+    return m_kernelVersion;
+}
+
+void SpecItemInfo::SetKernelVersion(const string& _kernelVersion)
+{
+    m_kernelVersion = _kernelVersion;
+    m_kernelVersionHasBeenSet = true;
+}
+
+bool SpecItemInfo::KernelVersionHasBeenSet() const
+{
+    return m_kernelVersionHasBeenSet;
 }
 

@@ -35,6 +35,7 @@
 #include <tencentcloud/apigateway/v20180808/model/TsfLoadBalanceConfResp.h>
 #include <tencentcloud/apigateway/v20180808/model/HealthCheckConf.h>
 #include <tencentcloud/apigateway/v20180808/model/Tag.h>
+#include <tencentcloud/apigateway/v20180808/model/Base64EncodedTriggerRule.h>
 
 
 namespace TencentCloud
@@ -1091,6 +1092,94 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Environment information published for API.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return Environments Environment information published for API.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetEnvironments() const;
+
+                    /**
+                     * 设置Environment information published for API.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param Environments Environment information published for API.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetEnvironments(const std::vector<std::string>& _environments);
+
+                    /**
+                     * 判断参数 Environments 是否已赋值
+                     * @return Environments 是否已赋值
+                     */
+                    bool EnvironmentsHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return IsBase64Encoded Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool GetIsBase64Encoded() const;
+
+                    /**
+                     * 设置Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param IsBase64Encoded Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetIsBase64Encoded(const bool& _isBase64Encoded);
+
+                    /**
+                     * 判断参数 IsBase64Encoded 是否已赋值
+                     * @return IsBase64Encoded 是否已赋值
+                     */
+                    bool IsBase64EncodedHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return IsBase64Trigger Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool GetIsBase64Trigger() const;
+
+                    /**
+                     * 设置Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param IsBase64Trigger Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetIsBase64Trigger(const bool& _isBase64Trigger);
+
+                    /**
+                     * 判断参数 IsBase64Trigger 是否已赋值
+                     * @return IsBase64Trigger 是否已赋值
+                     */
+                    bool IsBase64TriggerHasBeenSet() const;
+
+                    /**
+                     * 获取Header trigger rules. The number of rules cannot exceed 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Base64EncodedTriggerRules Header trigger rules. The number of rules cannot exceed 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Base64EncodedTriggerRule> GetBase64EncodedTriggerRules() const;
+
+                    /**
+                     * 设置Header trigger rules. The number of rules cannot exceed 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Base64EncodedTriggerRules Header trigger rules. The number of rules cannot exceed 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetBase64EncodedTriggerRules(const std::vector<Base64EncodedTriggerRule>& _base64EncodedTriggerRules);
+
+                    /**
+                     * 判断参数 Base64EncodedTriggerRules 是否已赋值
+                     * @return Base64EncodedTriggerRules 是否已赋值
+                     */
+                    bool Base64EncodedTriggerRulesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1421,6 +1510,34 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Environment information published for API.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_environments;
+                    bool m_environmentsHasBeenSet;
+
+                    /**
+                     * Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool m_isBase64Encoded;
+                    bool m_isBase64EncodedHasBeenSet;
+
+                    /**
+                     * Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool m_isBase64Trigger;
+                    bool m_isBase64TriggerHasBeenSet;
+
+                    /**
+                     * Header trigger rules. The number of rules cannot exceed 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Base64EncodedTriggerRule> m_base64EncodedTriggerRules;
+                    bool m_base64EncodedTriggerRulesHasBeenSet;
 
                 };
             }

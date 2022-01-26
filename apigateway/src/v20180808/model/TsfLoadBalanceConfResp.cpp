@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 TsfLoadBalanceConfResp::TsfLoadBalanceConfResp() :
@@ -29,7 +28,7 @@ TsfLoadBalanceConfResp::TsfLoadBalanceConfResp() :
 {
 }
 
-CoreInternalOutcome TsfLoadBalanceConfResp::Deserialize(const Value &value)
+CoreInternalOutcome TsfLoadBalanceConfResp::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome TsfLoadBalanceConfResp::Deserialize(const Value &value)
     {
         if (!value["IsLoadBalance"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `TsfLoadBalanceConfResp.IsLoadBalance` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TsfLoadBalanceConfResp.IsLoadBalance` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_isLoadBalance = value["IsLoadBalance"].GetBool();
         m_isLoadBalanceHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome TsfLoadBalanceConfResp::Deserialize(const Value &value)
     {
         if (!value["Method"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TsfLoadBalanceConfResp.Method` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TsfLoadBalanceConfResp.Method` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_method = string(value["Method"].GetString());
         m_methodHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome TsfLoadBalanceConfResp::Deserialize(const Value &value)
     {
         if (!value["SessionStickRequired"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `TsfLoadBalanceConfResp.SessionStickRequired` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TsfLoadBalanceConfResp.SessionStickRequired` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_sessionStickRequired = value["SessionStickRequired"].GetBool();
         m_sessionStickRequiredHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome TsfLoadBalanceConfResp::Deserialize(const Value &value)
     {
         if (!value["SessionStickTimeout"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TsfLoadBalanceConfResp.SessionStickTimeout` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TsfLoadBalanceConfResp.SessionStickTimeout` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_sessionStickTimeout = value["SessionStickTimeout"].GetInt64();
         m_sessionStickTimeoutHasBeenSet = true;
@@ -78,12 +77,12 @@ CoreInternalOutcome TsfLoadBalanceConfResp::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void TsfLoadBalanceConfResp::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TsfLoadBalanceConfResp::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_isLoadBalanceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsLoadBalance";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isLoadBalance, allocator);
@@ -91,15 +90,15 @@ void TsfLoadBalanceConfResp::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_methodHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Method";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_method.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_method.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sessionStickRequiredHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SessionStickRequired";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_sessionStickRequired, allocator);
@@ -107,7 +106,7 @@ void TsfLoadBalanceConfResp::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_sessionStickTimeoutHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SessionStickTimeout";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_sessionStickTimeout, allocator);

@@ -18,17 +18,18 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 IpFilter::IpFilter() :
     m_switchHasBeenSet(false),
     m_filterTypeHasBeenSet(false),
-    m_filtersHasBeenSet(false)
+    m_filtersHasBeenSet(false),
+    m_filterRulesHasBeenSet(false),
+    m_returnCodeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome IpFilter::Deserialize(const Value &value)
+CoreInternalOutcome IpFilter::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +38,7 @@ CoreInternalOutcome IpFilter::Deserialize(const Value &value)
     {
         if (!value["Switch"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IpFilter.Switch` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IpFilter.Switch` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_switch = string(value["Switch"].GetString());
         m_switchHasBeenSet = true;
@@ -47,7 +48,7 @@ CoreInternalOutcome IpFilter::Deserialize(const Value &value)
     {
         if (!value["FilterType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IpFilter.FilterType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IpFilter.FilterType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_filterType = string(value["FilterType"].GetString());
         m_filterTypeHasBeenSet = true;
@@ -56,50 +57,103 @@ CoreInternalOutcome IpFilter::Deserialize(const Value &value)
     if (value.HasMember("Filters") && !value["Filters"].IsNull())
     {
         if (!value["Filters"].IsArray())
-            return CoreInternalOutcome(Error("response `IpFilter.Filters` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `IpFilter.Filters` is not array type"));
 
-        const Value &tmpValue = value["Filters"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Filters"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_filters.push_back((*itr).GetString());
         }
         m_filtersHasBeenSet = true;
     }
 
+    if (value.HasMember("FilterRules") && !value["FilterRules"].IsNull())
+    {
+        if (!value["FilterRules"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `IpFilter.FilterRules` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["FilterRules"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            IpFilterPathRule item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_filterRules.push_back(item);
+        }
+        m_filterRulesHasBeenSet = true;
+    }
+
+    if (value.HasMember("ReturnCode") && !value["ReturnCode"].IsNull())
+    {
+        if (!value["ReturnCode"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `IpFilter.ReturnCode` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_returnCode = value["ReturnCode"].GetInt64();
+        m_returnCodeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void IpFilter::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void IpFilter::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_switchHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Switch";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_switch.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_switch.c_str(), allocator).Move(), allocator);
     }
 
     if (m_filterTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FilterType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_filterType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_filterType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_filtersHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Filters";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_filters.begin(); itr != m_filters.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
+    }
+
+    if (m_filterRulesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FilterRules";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_filterRules.begin(); itr != m_filterRules.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_returnCodeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ReturnCode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_returnCode, allocator);
     }
 
 }
@@ -151,5 +205,37 @@ void IpFilter::SetFilters(const vector<string>& _filters)
 bool IpFilter::FiltersHasBeenSet() const
 {
     return m_filtersHasBeenSet;
+}
+
+vector<IpFilterPathRule> IpFilter::GetFilterRules() const
+{
+    return m_filterRules;
+}
+
+void IpFilter::SetFilterRules(const vector<IpFilterPathRule>& _filterRules)
+{
+    m_filterRules = _filterRules;
+    m_filterRulesHasBeenSet = true;
+}
+
+bool IpFilter::FilterRulesHasBeenSet() const
+{
+    return m_filterRulesHasBeenSet;
+}
+
+int64_t IpFilter::GetReturnCode() const
+{
+    return m_returnCode;
+}
+
+void IpFilter::SetReturnCode(const int64_t& _returnCode)
+{
+    m_returnCode = _returnCode;
+    m_returnCodeHasBeenSet = true;
+}
+
+bool IpFilter::ReturnCodeHasBeenSet() const
+{
+    return m_returnCodeHasBeenSet;
 }
 

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 TaskNotifyConfig::TaskNotifyConfig() :
@@ -26,11 +25,13 @@ TaskNotifyConfig::TaskNotifyConfig() :
     m_cmqRegionHasBeenSet(false),
     m_queueNameHasBeenSet(false),
     m_topicNameHasBeenSet(false),
-    m_notifyModeHasBeenSet(false)
+    m_notifyModeHasBeenSet(false),
+    m_notifyTypeHasBeenSet(false),
+    m_notifyUrlHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome TaskNotifyConfig::Deserialize(const Value &value)
+CoreInternalOutcome TaskNotifyConfig::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +40,7 @@ CoreInternalOutcome TaskNotifyConfig::Deserialize(const Value &value)
     {
         if (!value["CmqModel"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TaskNotifyConfig.CmqModel` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskNotifyConfig.CmqModel` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cmqModel = string(value["CmqModel"].GetString());
         m_cmqModelHasBeenSet = true;
@@ -49,7 +50,7 @@ CoreInternalOutcome TaskNotifyConfig::Deserialize(const Value &value)
     {
         if (!value["CmqRegion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TaskNotifyConfig.CmqRegion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskNotifyConfig.CmqRegion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cmqRegion = string(value["CmqRegion"].GetString());
         m_cmqRegionHasBeenSet = true;
@@ -59,7 +60,7 @@ CoreInternalOutcome TaskNotifyConfig::Deserialize(const Value &value)
     {
         if (!value["QueueName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TaskNotifyConfig.QueueName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskNotifyConfig.QueueName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_queueName = string(value["QueueName"].GetString());
         m_queueNameHasBeenSet = true;
@@ -69,7 +70,7 @@ CoreInternalOutcome TaskNotifyConfig::Deserialize(const Value &value)
     {
         if (!value["TopicName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TaskNotifyConfig.TopicName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskNotifyConfig.TopicName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_topicName = string(value["TopicName"].GetString());
         m_topicNameHasBeenSet = true;
@@ -79,57 +80,93 @@ CoreInternalOutcome TaskNotifyConfig::Deserialize(const Value &value)
     {
         if (!value["NotifyMode"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TaskNotifyConfig.NotifyMode` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskNotifyConfig.NotifyMode` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_notifyMode = string(value["NotifyMode"].GetString());
         m_notifyModeHasBeenSet = true;
+    }
+
+    if (value.HasMember("NotifyType") && !value["NotifyType"].IsNull())
+    {
+        if (!value["NotifyType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `TaskNotifyConfig.NotifyType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_notifyType = string(value["NotifyType"].GetString());
+        m_notifyTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("NotifyUrl") && !value["NotifyUrl"].IsNull())
+    {
+        if (!value["NotifyUrl"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `TaskNotifyConfig.NotifyUrl` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_notifyUrl = string(value["NotifyUrl"].GetString());
+        m_notifyUrlHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void TaskNotifyConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TaskNotifyConfig::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_cmqModelHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CmqModel";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cmqModel.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cmqModel.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cmqRegionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CmqRegion";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cmqRegion.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cmqRegion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_queueNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "QueueName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_queueName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_queueName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_topicNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TopicName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_topicName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_topicName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_notifyModeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NotifyMode";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_notifyMode.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_notifyMode.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_notifyTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NotifyType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_notifyType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_notifyUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NotifyUrl";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_notifyUrl.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -213,5 +250,37 @@ void TaskNotifyConfig::SetNotifyMode(const string& _notifyMode)
 bool TaskNotifyConfig::NotifyModeHasBeenSet() const
 {
     return m_notifyModeHasBeenSet;
+}
+
+string TaskNotifyConfig::GetNotifyType() const
+{
+    return m_notifyType;
+}
+
+void TaskNotifyConfig::SetNotifyType(const string& _notifyType)
+{
+    m_notifyType = _notifyType;
+    m_notifyTypeHasBeenSet = true;
+}
+
+bool TaskNotifyConfig::NotifyTypeHasBeenSet() const
+{
+    return m_notifyTypeHasBeenSet;
+}
+
+string TaskNotifyConfig::GetNotifyUrl() const
+{
+    return m_notifyUrl;
+}
+
+void TaskNotifyConfig::SetNotifyUrl(const string& _notifyUrl)
+{
+    m_notifyUrl = _notifyUrl;
+    m_notifyUrlHasBeenSet = true;
+}
+
+bool TaskNotifyConfig::NotifyUrlHasBeenSet() const
+{
+    return m_notifyUrlHasBeenSet;
 }
 

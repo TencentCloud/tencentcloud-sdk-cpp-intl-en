@@ -141,14 +141,14 @@ namespace TencentCloud
                     bool EndPtsTimeHasBeenSet() const;
 
                     /**
-                     * 获取Confidence of recognized segment. Value range: 0-100.
-                     * @return Confidence Confidence of recognized segment. Value range: 0-100.
+                     * 获取Confidence of recognized segment. Value range: 0–100.
+                     * @return Confidence Confidence of recognized segment. Value range: 0–100.
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Confidence of recognized segment. Value range: 0-100.
-                     * @param Confidence Confidence of recognized segment. Value range: 0-100.
+                     * 设置Confidence of recognized segment. Value range: 0–100.
+                     * @param Confidence Confidence of recognized segment. Value range: 0–100.
                      */
                     void SetConfidence(const double& _confidence);
 
@@ -210,7 +210,7 @@ namespace TencentCloud
                     bool m_endPtsTimeHasBeenSet;
 
                     /**
-                     * Confidence of recognized segment. Value range: 0-100.
+                     * Confidence of recognized segment. Value range: 0–100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;

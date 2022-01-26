@@ -96,6 +96,24 @@ namespace TencentCloud
                      */
                     bool ChargeTypeHasBeenSet() const;
 
+                    /**
+                     * 获取When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
+                     * @return MigrateOnRefund When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
+                     */
+                    bool GetMigrateOnRefund() const;
+
+                    /**
+                     * 设置When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
+                     * @param MigrateOnRefund When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
+                     */
+                    void SetMigrateOnRefund(const bool& _migrateOnRefund);
+
+                    /**
+                     * 判断参数 MigrateOnRefund 是否已赋值
+                     * @return MigrateOnRefund 是否已赋值
+                     */
+                    bool MigrateOnRefundHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +133,12 @@ namespace TencentCloud
                      */
                     std::string m_chargeType;
                     bool m_chargeTypeHasBeenSet;
+
+                    /**
+                     * When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
+                     */
+                    bool m_migrateOnRefund;
+                    bool m_migrateOnRefundHasBeenSet;
 
                 };
             }

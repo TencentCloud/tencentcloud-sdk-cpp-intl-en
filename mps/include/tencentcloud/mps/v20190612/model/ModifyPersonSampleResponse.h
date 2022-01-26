@@ -42,11 +42,12 @@ namespace TencentCloud
                     ModifyPersonSampleResponse();
                     ~ModifyPersonSampleResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Figure information.
-                     * @return Person Figure information.
+                     * 获取Image information
+                     * @return Person Image information
                      */
                     AiSamplePerson GetPerson() const;
 
@@ -57,10 +58,10 @@ namespace TencentCloud
                     bool PersonHasBeenSet() const;
 
                     /**
-                     * 获取Face information failing to be processed.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FailFaceInfoSet Face information failing to be processed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Information of images that failed the verification by facial feature positioning.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return FailFaceInfoSet Information of images that failed the verification by facial feature positioning.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<AiSampleFailFaceInfo> GetFailFaceInfoSet() const;
 
@@ -73,14 +74,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Figure information.
+                     * Image information
                      */
                     AiSamplePerson m_person;
                     bool m_personHasBeenSet;
 
                     /**
-                     * Face information failing to be processed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Information of images that failed the verification by facial feature positioning.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<AiSampleFailFaceInfo> m_failFaceInfoSet;
                     bool m_failFaceInfoSetHasBeenSet;

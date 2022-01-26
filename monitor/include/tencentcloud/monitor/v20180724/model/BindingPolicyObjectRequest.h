@@ -44,24 +44,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Policy group ID.
-                     * @return GroupId Policy group ID.
-                     */
-                    int64_t GetGroupId() const;
-
-                    /**
-                     * 设置Policy group ID.
-                     * @param GroupId Policy group ID.
-                     */
-                    void SetGroupId(const int64_t& _groupId);
-
-                    /**
-                     * 判断参数 GroupId 是否已赋值
-                     * @return GroupId 是否已赋值
-                     */
-                    bool GroupIdHasBeenSet() const;
-
-                    /**
                      * 获取Required. The value is fixed to monitor.
                      * @return Module Required. The value is fixed to monitor.
                      */
@@ -78,6 +60,42 @@ namespace TencentCloud
                      * @return Module 是否已赋值
                      */
                     bool ModuleHasBeenSet() const;
+
+                    /**
+                     * 获取Policy group ID, such as `4739573`. This parameter will be disused soon. Another parameter `PolicyId` is recommended.
+                     * @return GroupId Policy group ID, such as `4739573`. This parameter will be disused soon. Another parameter `PolicyId` is recommended.
+                     */
+                    int64_t GetGroupId() const;
+
+                    /**
+                     * 设置Policy group ID, such as `4739573`. This parameter will be disused soon. Another parameter `PolicyId` is recommended.
+                     * @param GroupId Policy group ID, such as `4739573`. This parameter will be disused soon. Another parameter `PolicyId` is recommended.
+                     */
+                    void SetGroupId(const int64_t& _groupId);
+
+                    /**
+                     * 判断参数 GroupId 是否已赋值
+                     * @return GroupId 是否已赋值
+                     */
+                    bool GroupIdHasBeenSet() const;
+
+                    /**
+                     * 获取Alarm policy ID, such as `policy-gh892hg0`. At least one of the two parameters, `PolicyId` and `GroupId`, must be specified; otherwise, an error will be reported. `PolicyId` is preferred over `GroupId` when both of them are specified.
+                     * @return PolicyId Alarm policy ID, such as `policy-gh892hg0`. At least one of the two parameters, `PolicyId` and `GroupId`, must be specified; otherwise, an error will be reported. `PolicyId` is preferred over `GroupId` when both of them are specified.
+                     */
+                    std::string GetPolicyId() const;
+
+                    /**
+                     * 设置Alarm policy ID, such as `policy-gh892hg0`. At least one of the two parameters, `PolicyId` and `GroupId`, must be specified; otherwise, an error will be reported. `PolicyId` is preferred over `GroupId` when both of them are specified.
+                     * @param PolicyId Alarm policy ID, such as `policy-gh892hg0`. At least one of the two parameters, `PolicyId` and `GroupId`, must be specified; otherwise, an error will be reported. `PolicyId` is preferred over `GroupId` when both of them are specified.
+                     */
+                    void SetPolicyId(const std::string& _policyId);
+
+                    /**
+                     * 判断参数 PolicyId 是否已赋值
+                     * @return PolicyId 是否已赋值
+                     */
+                    bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取Instance group ID.
@@ -118,16 +136,22 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Policy group ID.
+                     * Required. The value is fixed to monitor.
+                     */
+                    std::string m_module;
+                    bool m_moduleHasBeenSet;
+
+                    /**
+                     * Policy group ID, such as `4739573`. This parameter will be disused soon. Another parameter `PolicyId` is recommended.
                      */
                     int64_t m_groupId;
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * Required. The value is fixed to monitor.
+                     * Alarm policy ID, such as `policy-gh892hg0`. At least one of the two parameters, `PolicyId` and `GroupId`, must be specified; otherwise, an error will be reported. `PolicyId` is preferred over `GroupId` when both of them are specified.
                      */
-                    std::string m_module;
-                    bool m_moduleHasBeenSet;
+                    std::string m_policyId;
+                    bool m_policyIdHasBeenSet;
 
                     /**
                      * Instance group ID.

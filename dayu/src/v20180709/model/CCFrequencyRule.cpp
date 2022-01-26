@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dayu::V20180709::Model;
-using namespace rapidjson;
 using namespace std;
 
 CCFrequencyRule::CCFrequencyRule() :
@@ -34,7 +33,7 @@ CCFrequencyRule::CCFrequencyRule() :
 {
 }
 
-CoreInternalOutcome CCFrequencyRule::Deserialize(const Value &value)
+CoreInternalOutcome CCFrequencyRule::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -43,7 +42,7 @@ CoreInternalOutcome CCFrequencyRule::Deserialize(const Value &value)
     {
         if (!value["CCFrequencyRuleId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CCFrequencyRule.CCFrequencyRuleId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CCFrequencyRule.CCFrequencyRuleId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cCFrequencyRuleId = string(value["CCFrequencyRuleId"].GetString());
         m_cCFrequencyRuleIdHasBeenSet = true;
@@ -53,7 +52,7 @@ CoreInternalOutcome CCFrequencyRule::Deserialize(const Value &value)
     {
         if (!value["Uri"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CCFrequencyRule.Uri` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CCFrequencyRule.Uri` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_uri = string(value["Uri"].GetString());
         m_uriHasBeenSet = true;
@@ -63,7 +62,7 @@ CoreInternalOutcome CCFrequencyRule::Deserialize(const Value &value)
     {
         if (!value["UserAgent"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CCFrequencyRule.UserAgent` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CCFrequencyRule.UserAgent` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_userAgent = string(value["UserAgent"].GetString());
         m_userAgentHasBeenSet = true;
@@ -73,7 +72,7 @@ CoreInternalOutcome CCFrequencyRule::Deserialize(const Value &value)
     {
         if (!value["Cookie"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CCFrequencyRule.Cookie` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CCFrequencyRule.Cookie` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cookie = string(value["Cookie"].GetString());
         m_cookieHasBeenSet = true;
@@ -83,7 +82,7 @@ CoreInternalOutcome CCFrequencyRule::Deserialize(const Value &value)
     {
         if (!value["Mode"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CCFrequencyRule.Mode` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CCFrequencyRule.Mode` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_mode = string(value["Mode"].GetString());
         m_modeHasBeenSet = true;
@@ -93,7 +92,7 @@ CoreInternalOutcome CCFrequencyRule::Deserialize(const Value &value)
     {
         if (!value["Period"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CCFrequencyRule.Period` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CCFrequencyRule.Period` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_period = value["Period"].GetUint64();
         m_periodHasBeenSet = true;
@@ -103,7 +102,7 @@ CoreInternalOutcome CCFrequencyRule::Deserialize(const Value &value)
     {
         if (!value["ReqNumber"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CCFrequencyRule.ReqNumber` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CCFrequencyRule.ReqNumber` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_reqNumber = value["ReqNumber"].GetUint64();
         m_reqNumberHasBeenSet = true;
@@ -113,7 +112,7 @@ CoreInternalOutcome CCFrequencyRule::Deserialize(const Value &value)
     {
         if (!value["Act"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CCFrequencyRule.Act` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CCFrequencyRule.Act` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_act = string(value["Act"].GetString());
         m_actHasBeenSet = true;
@@ -123,7 +122,7 @@ CoreInternalOutcome CCFrequencyRule::Deserialize(const Value &value)
     {
         if (!value["ExeDuration"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CCFrequencyRule.ExeDuration` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CCFrequencyRule.ExeDuration` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_exeDuration = value["ExeDuration"].GetUint64();
         m_exeDurationHasBeenSet = true;
@@ -133,52 +132,52 @@ CoreInternalOutcome CCFrequencyRule::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void CCFrequencyRule::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void CCFrequencyRule::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_cCFrequencyRuleIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CCFrequencyRuleId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cCFrequencyRuleId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cCFrequencyRuleId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_uriHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Uri";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_uri.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_uri.c_str(), allocator).Move(), allocator);
     }
 
     if (m_userAgentHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UserAgent";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_userAgent.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_userAgent.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cookieHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Cookie";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cookie.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cookie.c_str(), allocator).Move(), allocator);
     }
 
     if (m_modeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Mode";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_mode.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_mode.c_str(), allocator).Move(), allocator);
     }
 
     if (m_periodHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Period";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_period, allocator);
@@ -186,7 +185,7 @@ void CCFrequencyRule::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_reqNumberHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReqNumber";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_reqNumber, allocator);
@@ -194,15 +193,15 @@ void CCFrequencyRule::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_actHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Act";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_act.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_act.c_str(), allocator).Move(), allocator);
     }
 
     if (m_exeDurationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ExeDuration";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_exeDuration, allocator);

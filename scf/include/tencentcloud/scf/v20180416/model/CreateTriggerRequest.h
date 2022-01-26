@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool TriggerNameHasBeenSet() const;
 
                     /**
-                     * 获取Trigger type. Currently, COS, CMQ, timer, and ckafka triggers are supported.
-                     * @return Type Trigger type. Currently, COS, CMQ, timer, and ckafka triggers are supported.
+                     * 获取Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka` and `apigw`. To create a CLS trigger, please refer to [Creating Shipping Task (SCF)](https://intl.cloud.tencent.com/document/product/614/61096?from_cn_redirect=1).
+                     * @return Type Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka` and `apigw`. To create a CLS trigger, please refer to [Creating Shipping Task (SCF)](https://intl.cloud.tencent.com/document/product/614/61096?from_cn_redirect=1).
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Trigger type. Currently, COS, CMQ, timer, and ckafka triggers are supported.
-                     * @param Type Trigger type. Currently, COS, CMQ, timer, and ckafka triggers are supported.
+                     * 设置Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka` and `apigw`. To create a CLS trigger, please refer to [Creating Shipping Task (SCF)](https://intl.cloud.tencent.com/document/product/614/61096?from_cn_redirect=1).
+                     * @param Type Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka` and `apigw`. To create a CLS trigger, please refer to [Creating Shipping Task (SCF)](https://intl.cloud.tencent.com/document/product/614/61096?from_cn_redirect=1).
                      */
                     void SetType(const std::string& _type);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取For parameters of triggers, see [Trigger Description](https://cloud.tencent.com/document/product/583/39901)
-                     * @return TriggerDesc For parameters of triggers, see [Trigger Description](https://cloud.tencent.com/document/product/583/39901)
+                     * 获取For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1)
+                     * @return TriggerDesc For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1)
                      */
                     std::string GetTriggerDesc() const;
 
                     /**
-                     * 设置For parameters of triggers, see [Trigger Description](https://cloud.tencent.com/document/product/583/39901)
-                     * @param TriggerDesc For parameters of triggers, see [Trigger Description](https://cloud.tencent.com/document/product/583/39901)
+                     * 设置For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1)
+                     * @param TriggerDesc For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1)
                      */
                     void SetTriggerDesc(const std::string& _triggerDesc);
 
@@ -168,6 +168,24 @@ namespace TencentCloud
                      */
                     bool EnableHasBeenSet() const;
 
+                    /**
+                     * 获取Custom argument, supporting only the timer trigger.
+                     * @return CustomArgument Custom argument, supporting only the timer trigger.
+                     */
+                    std::string GetCustomArgument() const;
+
+                    /**
+                     * 设置Custom argument, supporting only the timer trigger.
+                     * @param CustomArgument Custom argument, supporting only the timer trigger.
+                     */
+                    void SetCustomArgument(const std::string& _customArgument);
+
+                    /**
+                     * 判断参数 CustomArgument 是否已赋值
+                     * @return CustomArgument 是否已赋值
+                     */
+                    bool CustomArgumentHasBeenSet() const;
+
                 private:
 
                     /**
@@ -183,13 +201,13 @@ namespace TencentCloud
                     bool m_triggerNameHasBeenSet;
 
                     /**
-                     * Trigger type. Currently, COS, CMQ, timer, and ckafka triggers are supported.
+                     * Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka` and `apigw`. To create a CLS trigger, please refer to [Creating Shipping Task (SCF)](https://intl.cloud.tencent.com/document/product/614/61096?from_cn_redirect=1).
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * For parameters of triggers, see [Trigger Description](https://cloud.tencent.com/document/product/583/39901)
+                     * For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1)
                      */
                     std::string m_triggerDesc;
                     bool m_triggerDescHasBeenSet;
@@ -211,6 +229,12 @@ namespace TencentCloud
                      */
                     std::string m_enable;
                     bool m_enableHasBeenSet;
+
+                    /**
+                     * Custom argument, supporting only the timer trigger.
+                     */
+                    std::string m_customArgument;
+                    bool m_customArgumentHasBeenSet;
 
                 };
             }

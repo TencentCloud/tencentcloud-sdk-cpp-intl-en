@@ -40,6 +40,7 @@ namespace TencentCloud
                     CompareFaceResponse();
                     ~CompareFaceResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -47,12 +48,12 @@ namespace TencentCloud
 The returned similarity score varies by algorithm version. 
 If you need to verify whether the faces in the two images are the same person, then the 0.1%, 0.01%, and 0.001% FARs on v3.0 correspond to scores of 40, 50, and 60, respectively. Generally, if the score is above 50, it can be judged that they are the same person. 
 The 0.1%, 0.01%, and 0.001% FARs on v2.0 correspond to scores of 70, 80, and 90, respectively. Generally, if the score is above 80, it can be judged that they are the same person. 
-If you need to verify whether the faces in the two images are the same person, you are recommended to use the `VerifyFace` API.
+If you need to verify whether the faces in the two images are the same person, we recommend using the `VerifyFace` API.
                      * @return Score Face similarity score between two images.
 The returned similarity score varies by algorithm version. 
 If you need to verify whether the faces in the two images are the same person, then the 0.1%, 0.01%, and 0.001% FARs on v3.0 correspond to scores of 40, 50, and 60, respectively. Generally, if the score is above 50, it can be judged that they are the same person. 
 The 0.1%, 0.01%, and 0.001% FARs on v2.0 correspond to scores of 70, 80, and 90, respectively. Generally, if the score is above 80, it can be judged that they are the same person. 
-If you need to verify whether the faces in the two images are the same person, you are recommended to use the `VerifyFace` API.
+If you need to verify whether the faces in the two images are the same person, we recommend using the `VerifyFace` API.
                      */
                     double GetScore() const;
 
@@ -81,7 +82,7 @@ If you need to verify whether the faces in the two images are the same person, y
 The returned similarity score varies by algorithm version. 
 If you need to verify whether the faces in the two images are the same person, then the 0.1%, 0.01%, and 0.001% FARs on v3.0 correspond to scores of 40, 50, and 60, respectively. Generally, if the score is above 50, it can be judged that they are the same person. 
 The 0.1%, 0.01%, and 0.001% FARs on v2.0 correspond to scores of 70, 80, and 90, respectively. Generally, if the score is above 80, it can be judged that they are the same person. 
-If you need to verify whether the faces in the two images are the same person, you are recommended to use the `VerifyFace` API.
+If you need to verify whether the faces in the two images are the same person, we recommend using the `VerifyFace` API.
                      */
                     double m_score;
                     bool m_scoreHasBeenSet;

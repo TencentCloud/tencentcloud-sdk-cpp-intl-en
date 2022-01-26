@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/as/v20180419/model/ServiceSettings.h>
+#include <tencentcloud/as/v20180419/model/SpotMixedAllocationPolicy.h>
 
 
 namespace TencentCloud
@@ -354,14 +355,14 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
                     bool ServiceSettingsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Ipv6AddressCount 
+                     * 获取The number of IPv6 addresses that an instance has. Valid values: 0 and 1.
+                     * @return Ipv6AddressCount The number of IPv6 addresses that an instance has. Valid values: 0 and 1.
                      */
                     int64_t GetIpv6AddressCount() const;
 
                     /**
-                     * 设置
-                     * @param Ipv6AddressCount 
+                     * 设置The number of IPv6 addresses that an instance has. Valid values: 0 and 1.
+                     * @param Ipv6AddressCount The number of IPv6 addresses that an instance has. Valid values: 0 and 1.
                      */
                     void SetIpv6AddressCount(const int64_t& _ipv6AddressCount);
 
@@ -372,14 +373,46 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
                     bool Ipv6AddressCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MultiZoneSubnetPolicy 
+                     * 获取Multi-availability zone/subnet policy. Valid values: PRIORITY and EQUALITY.
+<br><li> PRIORITY: creates instances based on the priority determined by the order in the availability zone/subnet list. If an instance can be successfully created in the availability zone/subnet of the highest priority, all instances will be created in the availability zone/subnet.
+<br><li> EQUALITY: scales out the availability zone/subnet with the least instances each time. This gives each availability zone/subnet an opportunity for scale-out and disperses the instances created during multiple scale-out operations across different availability zones/subnets.
+
+Notes about this policy:
+<br><li> When the scaling group is a basic network, this policy applies to multiple availability zones. When the scaling group is a VPC, this policy applies to multiple subnets, and you do not need to consider availability zones. For example, if you have four subnets (A, B, C, and D) and A, B, and C are in availability zone 1 and D is in availability zone 2, you do not need to consider the availability zones when determining the order of the subnets.
+<br><li> This policy is applicable to multiple availability zones/subnets, but is not applicable to multiple models with launch configurations. When there are multiple models, the PRIORITY policy is applied.
+<br><li> During instance creation, apply the multi-model policy and then apply the multi-availability zones/subnet policy. For example, if you have models A and B and subnets 1, 2, and 3 (based on the PRIORITY policy), creation will be attempted in the following order: A1, A2, A3, B1, B2, and B3. If A1 is sold out, A2 (not B1) is tried next.
+<br><li> No matter what policy is used, a single scaling event always uses a specific configuration at priority (model * availability zone/subnet).
+                     * @return MultiZoneSubnetPolicy Multi-availability zone/subnet policy. Valid values: PRIORITY and EQUALITY.
+<br><li> PRIORITY: creates instances based on the priority determined by the order in the availability zone/subnet list. If an instance can be successfully created in the availability zone/subnet of the highest priority, all instances will be created in the availability zone/subnet.
+<br><li> EQUALITY: scales out the availability zone/subnet with the least instances each time. This gives each availability zone/subnet an opportunity for scale-out and disperses the instances created during multiple scale-out operations across different availability zones/subnets.
+
+Notes about this policy:
+<br><li> When the scaling group is a basic network, this policy applies to multiple availability zones. When the scaling group is a VPC, this policy applies to multiple subnets, and you do not need to consider availability zones. For example, if you have four subnets (A, B, C, and D) and A, B, and C are in availability zone 1 and D is in availability zone 2, you do not need to consider the availability zones when determining the order of the subnets.
+<br><li> This policy is applicable to multiple availability zones/subnets, but is not applicable to multiple models with launch configurations. When there are multiple models, the PRIORITY policy is applied.
+<br><li> During instance creation, apply the multi-model policy and then apply the multi-availability zones/subnet policy. For example, if you have models A and B and subnets 1, 2, and 3 (based on the PRIORITY policy), creation will be attempted in the following order: A1, A2, A3, B1, B2, and B3. If A1 is sold out, A2 (not B1) is tried next.
+<br><li> No matter what policy is used, a single scaling event always uses a specific configuration at priority (model * availability zone/subnet).
                      */
                     std::string GetMultiZoneSubnetPolicy() const;
 
                     /**
-                     * 设置
-                     * @param MultiZoneSubnetPolicy 
+                     * 设置Multi-availability zone/subnet policy. Valid values: PRIORITY and EQUALITY.
+<br><li> PRIORITY: creates instances based on the priority determined by the order in the availability zone/subnet list. If an instance can be successfully created in the availability zone/subnet of the highest priority, all instances will be created in the availability zone/subnet.
+<br><li> EQUALITY: scales out the availability zone/subnet with the least instances each time. This gives each availability zone/subnet an opportunity for scale-out and disperses the instances created during multiple scale-out operations across different availability zones/subnets.
+
+Notes about this policy:
+<br><li> When the scaling group is a basic network, this policy applies to multiple availability zones. When the scaling group is a VPC, this policy applies to multiple subnets, and you do not need to consider availability zones. For example, if you have four subnets (A, B, C, and D) and A, B, and C are in availability zone 1 and D is in availability zone 2, you do not need to consider the availability zones when determining the order of the subnets.
+<br><li> This policy is applicable to multiple availability zones/subnets, but is not applicable to multiple models with launch configurations. When there are multiple models, the PRIORITY policy is applied.
+<br><li> During instance creation, apply the multi-model policy and then apply the multi-availability zones/subnet policy. For example, if you have models A and B and subnets 1, 2, and 3 (based on the PRIORITY policy), creation will be attempted in the following order: A1, A2, A3, B1, B2, and B3. If A1 is sold out, A2 (not B1) is tried next.
+<br><li> No matter what policy is used, a single scaling event always uses a specific configuration at priority (model * availability zone/subnet).
+                     * @param MultiZoneSubnetPolicy Multi-availability zone/subnet policy. Valid values: PRIORITY and EQUALITY.
+<br><li> PRIORITY: creates instances based on the priority determined by the order in the availability zone/subnet list. If an instance can be successfully created in the availability zone/subnet of the highest priority, all instances will be created in the availability zone/subnet.
+<br><li> EQUALITY: scales out the availability zone/subnet with the least instances each time. This gives each availability zone/subnet an opportunity for scale-out and disperses the instances created during multiple scale-out operations across different availability zones/subnets.
+
+Notes about this policy:
+<br><li> When the scaling group is a basic network, this policy applies to multiple availability zones. When the scaling group is a VPC, this policy applies to multiple subnets, and you do not need to consider availability zones. For example, if you have four subnets (A, B, C, and D) and A, B, and C are in availability zone 1 and D is in availability zone 2, you do not need to consider the availability zones when determining the order of the subnets.
+<br><li> This policy is applicable to multiple availability zones/subnets, but is not applicable to multiple models with launch configurations. When there are multiple models, the PRIORITY policy is applied.
+<br><li> During instance creation, apply the multi-model policy and then apply the multi-availability zones/subnet policy. For example, if you have models A and B and subnets 1, 2, and 3 (based on the PRIORITY policy), creation will be attempted in the following order: A1, A2, A3, B1, B2, and B3. If A1 is sold out, A2 (not B1) is tried next.
+<br><li> No matter what policy is used, a single scaling event always uses a specific configuration at priority (model * availability zone/subnet).
                      */
                     void SetMultiZoneSubnetPolicy(const std::string& _multiZoneSubnetPolicy);
 
@@ -388,6 +421,116 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
                      * @return MultiZoneSubnetPolicy 是否已赋值
                      */
                     bool MultiZoneSubnetPolicyHasBeenSet() const;
+
+                    /**
+                     * 获取Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
+                     * @return HealthCheckType Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
+                     */
+                    std::string GetHealthCheckType() const;
+
+                    /**
+                     * 设置Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
+                     * @param HealthCheckType Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
+                     */
+                    void SetHealthCheckType(const std::string& _healthCheckType);
+
+                    /**
+                     * 判断参数 HealthCheckType 是否已赋值
+                     * @return HealthCheckType 是否已赋值
+                     */
+                    bool HealthCheckTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Grace period of the CLB health check
+                     * @return LoadBalancerHealthCheckGracePeriod Grace period of the CLB health check
+                     */
+                    uint64_t GetLoadBalancerHealthCheckGracePeriod() const;
+
+                    /**
+                     * 设置Grace period of the CLB health check
+                     * @param LoadBalancerHealthCheckGracePeriod Grace period of the CLB health check
+                     */
+                    void SetLoadBalancerHealthCheckGracePeriod(const uint64_t& _loadBalancerHealthCheckGracePeriod);
+
+                    /**
+                     * 判断参数 LoadBalancerHealthCheckGracePeriod 是否已赋值
+                     * @return LoadBalancerHealthCheckGracePeriod 是否已赋值
+                     */
+                    bool LoadBalancerHealthCheckGracePeriodHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies how to assign instances. Valid values: `LAUNCH_CONFIGURATION` and `SPOT_MIXED`.
+<br><li>`LAUNCH_CONFIGURATION`: the launch configuration mode.
+<br><li>`SPOT_MIXED`: a mixed instance mode. Currently, this mode is supported only when the launch configuration takes the pay-as-you-go billing mode. With this mode, the scaling group can provision a combination of pay-as-you-go instances and spot instances to meet the configured capacity. Note that the billing mode of the associated launch configuration cannot be modified when this mode is used.
+                     * @return InstanceAllocationPolicy Specifies how to assign instances. Valid values: `LAUNCH_CONFIGURATION` and `SPOT_MIXED`.
+<br><li>`LAUNCH_CONFIGURATION`: the launch configuration mode.
+<br><li>`SPOT_MIXED`: a mixed instance mode. Currently, this mode is supported only when the launch configuration takes the pay-as-you-go billing mode. With this mode, the scaling group can provision a combination of pay-as-you-go instances and spot instances to meet the configured capacity. Note that the billing mode of the associated launch configuration cannot be modified when this mode is used.
+                     */
+                    std::string GetInstanceAllocationPolicy() const;
+
+                    /**
+                     * 设置Specifies how to assign instances. Valid values: `LAUNCH_CONFIGURATION` and `SPOT_MIXED`.
+<br><li>`LAUNCH_CONFIGURATION`: the launch configuration mode.
+<br><li>`SPOT_MIXED`: a mixed instance mode. Currently, this mode is supported only when the launch configuration takes the pay-as-you-go billing mode. With this mode, the scaling group can provision a combination of pay-as-you-go instances and spot instances to meet the configured capacity. Note that the billing mode of the associated launch configuration cannot be modified when this mode is used.
+                     * @param InstanceAllocationPolicy Specifies how to assign instances. Valid values: `LAUNCH_CONFIGURATION` and `SPOT_MIXED`.
+<br><li>`LAUNCH_CONFIGURATION`: the launch configuration mode.
+<br><li>`SPOT_MIXED`: a mixed instance mode. Currently, this mode is supported only when the launch configuration takes the pay-as-you-go billing mode. With this mode, the scaling group can provision a combination of pay-as-you-go instances and spot instances to meet the configured capacity. Note that the billing mode of the associated launch configuration cannot be modified when this mode is used.
+                     */
+                    void SetInstanceAllocationPolicy(const std::string& _instanceAllocationPolicy);
+
+                    /**
+                     * 判断参数 InstanceAllocationPolicy 是否已赋值
+                     * @return InstanceAllocationPolicy 是否已赋值
+                     */
+                    bool InstanceAllocationPolicyHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies how to assign pay-as-you-go instances and spot instances.
+This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIXED`.
+                     * @return SpotMixedAllocationPolicy Specifies how to assign pay-as-you-go instances and spot instances.
+This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIXED`.
+                     */
+                    SpotMixedAllocationPolicy GetSpotMixedAllocationPolicy() const;
+
+                    /**
+                     * 设置Specifies how to assign pay-as-you-go instances and spot instances.
+This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIXED`.
+                     * @param SpotMixedAllocationPolicy Specifies how to assign pay-as-you-go instances and spot instances.
+This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIXED`.
+                     */
+                    void SetSpotMixedAllocationPolicy(const SpotMixedAllocationPolicy& _spotMixedAllocationPolicy);
+
+                    /**
+                     * 判断参数 SpotMixedAllocationPolicy 是否已赋值
+                     * @return SpotMixedAllocationPolicy 是否已赋值
+                     */
+                    bool SpotMixedAllocationPolicyHasBeenSet() const;
+
+                    /**
+                     * 获取Indicates whether the capacity rebalancing feature is enabled. This parameter is only valid for spot instances in the scaling group. Valid values:
+<br><li>`TRUE`: yes. Before the spot instances in the scaling group are about to be automatically repossessed, AS will terminate them. The scale-in hook (if configured) will take effect before the termination. After the termination process starts, AS will asynchronously initiate a scaling activity to meet the desired capacity.
+<br><li>`FALSE`: no. In this case, AS will add instances to meet the desired capacity only after the spot instances are terminated.
+                     * @return CapacityRebalance Indicates whether the capacity rebalancing feature is enabled. This parameter is only valid for spot instances in the scaling group. Valid values:
+<br><li>`TRUE`: yes. Before the spot instances in the scaling group are about to be automatically repossessed, AS will terminate them. The scale-in hook (if configured) will take effect before the termination. After the termination process starts, AS will asynchronously initiate a scaling activity to meet the desired capacity.
+<br><li>`FALSE`: no. In this case, AS will add instances to meet the desired capacity only after the spot instances are terminated.
+                     */
+                    bool GetCapacityRebalance() const;
+
+                    /**
+                     * 设置Indicates whether the capacity rebalancing feature is enabled. This parameter is only valid for spot instances in the scaling group. Valid values:
+<br><li>`TRUE`: yes. Before the spot instances in the scaling group are about to be automatically repossessed, AS will terminate them. The scale-in hook (if configured) will take effect before the termination. After the termination process starts, AS will asynchronously initiate a scaling activity to meet the desired capacity.
+<br><li>`FALSE`: no. In this case, AS will add instances to meet the desired capacity only after the spot instances are terminated.
+                     * @param CapacityRebalance Indicates whether the capacity rebalancing feature is enabled. This parameter is only valid for spot instances in the scaling group. Valid values:
+<br><li>`TRUE`: yes. Before the spot instances in the scaling group are about to be automatically repossessed, AS will terminate them. The scale-in hook (if configured) will take effect before the termination. After the termination process starts, AS will asynchronously initiate a scaling activity to meet the desired capacity.
+<br><li>`FALSE`: no. In this case, AS will add instances to meet the desired capacity only after the spot instances are terminated.
+                     */
+                    void SetCapacityRebalance(const bool& _capacityRebalance);
+
+                    /**
+                     * 判断参数 CapacityRebalance 是否已赋值
+                     * @return CapacityRebalance 是否已赋值
+                     */
+                    bool CapacityRebalanceHasBeenSet() const;
 
                 private:
 
@@ -492,16 +635,59 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
                     bool m_serviceSettingsHasBeenSet;
 
                     /**
-                     * 
+                     * The number of IPv6 addresses that an instance has. Valid values: 0 and 1.
                      */
                     int64_t m_ipv6AddressCount;
                     bool m_ipv6AddressCountHasBeenSet;
 
                     /**
-                     * 
+                     * Multi-availability zone/subnet policy. Valid values: PRIORITY and EQUALITY.
+<br><li> PRIORITY: creates instances based on the priority determined by the order in the availability zone/subnet list. If an instance can be successfully created in the availability zone/subnet of the highest priority, all instances will be created in the availability zone/subnet.
+<br><li> EQUALITY: scales out the availability zone/subnet with the least instances each time. This gives each availability zone/subnet an opportunity for scale-out and disperses the instances created during multiple scale-out operations across different availability zones/subnets.
+
+Notes about this policy:
+<br><li> When the scaling group is a basic network, this policy applies to multiple availability zones. When the scaling group is a VPC, this policy applies to multiple subnets, and you do not need to consider availability zones. For example, if you have four subnets (A, B, C, and D) and A, B, and C are in availability zone 1 and D is in availability zone 2, you do not need to consider the availability zones when determining the order of the subnets.
+<br><li> This policy is applicable to multiple availability zones/subnets, but is not applicable to multiple models with launch configurations. When there are multiple models, the PRIORITY policy is applied.
+<br><li> During instance creation, apply the multi-model policy and then apply the multi-availability zones/subnet policy. For example, if you have models A and B and subnets 1, 2, and 3 (based on the PRIORITY policy), creation will be attempted in the following order: A1, A2, A3, B1, B2, and B3. If A1 is sold out, A2 (not B1) is tried next.
+<br><li> No matter what policy is used, a single scaling event always uses a specific configuration at priority (model * availability zone/subnet).
                      */
                     std::string m_multiZoneSubnetPolicy;
                     bool m_multiZoneSubnetPolicyHasBeenSet;
+
+                    /**
+                     * Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
+                     */
+                    std::string m_healthCheckType;
+                    bool m_healthCheckTypeHasBeenSet;
+
+                    /**
+                     * Grace period of the CLB health check
+                     */
+                    uint64_t m_loadBalancerHealthCheckGracePeriod;
+                    bool m_loadBalancerHealthCheckGracePeriodHasBeenSet;
+
+                    /**
+                     * Specifies how to assign instances. Valid values: `LAUNCH_CONFIGURATION` and `SPOT_MIXED`.
+<br><li>`LAUNCH_CONFIGURATION`: the launch configuration mode.
+<br><li>`SPOT_MIXED`: a mixed instance mode. Currently, this mode is supported only when the launch configuration takes the pay-as-you-go billing mode. With this mode, the scaling group can provision a combination of pay-as-you-go instances and spot instances to meet the configured capacity. Note that the billing mode of the associated launch configuration cannot be modified when this mode is used.
+                     */
+                    std::string m_instanceAllocationPolicy;
+                    bool m_instanceAllocationPolicyHasBeenSet;
+
+                    /**
+                     * Specifies how to assign pay-as-you-go instances and spot instances.
+This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIXED`.
+                     */
+                    SpotMixedAllocationPolicy m_spotMixedAllocationPolicy;
+                    bool m_spotMixedAllocationPolicyHasBeenSet;
+
+                    /**
+                     * Indicates whether the capacity rebalancing feature is enabled. This parameter is only valid for spot instances in the scaling group. Valid values:
+<br><li>`TRUE`: yes. Before the spot instances in the scaling group are about to be automatically repossessed, AS will terminate them. The scale-in hook (if configured) will take effect before the termination. After the termination process starts, AS will asynchronously initiate a scaling activity to meet the desired capacity.
+<br><li>`FALSE`: no. In this case, AS will add instances to meet the desired capacity only after the spot instances are terminated.
+                     */
+                    bool m_capacityRebalance;
+                    bool m_capacityRebalanceHasBeenSet;
 
                 };
             }

@@ -216,6 +216,24 @@ namespace TencentCloud
                      */
                     bool RouterCountHasBeenSet() const;
 
+                    /**
+                     * 获取Number of master nodes to add
+                     * @return MasterCount Number of master nodes to add
+                     */
+                    uint64_t GetMasterCount() const;
+
+                    /**
+                     * 设置Number of master nodes to add
+                     * @param MasterCount Number of master nodes to add
+                     */
+                    void SetMasterCount(const uint64_t& _masterCount);
+
+                    /**
+                     * 判断参数 MasterCount 是否已赋值
+                     * @return MasterCount 是否已赋值
+                     */
+                    bool MasterCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -274,6 +292,12 @@ namespace TencentCloud
                      */
                     uint64_t m_routerCount;
                     bool m_routerCountHasBeenSet;
+
+                    /**
+                     * Number of master nodes to add
+                     */
+                    uint64_t m_masterCount;
+                    bool m_masterCountHasBeenSet;
 
                 };
             }

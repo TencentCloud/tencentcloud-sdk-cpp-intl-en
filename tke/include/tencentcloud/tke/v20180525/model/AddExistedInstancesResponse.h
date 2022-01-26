@@ -40,6 +40,7 @@ namespace TencentCloud
                     AddExistedInstancesResponse();
                     ~AddExistedInstancesResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -84,6 +85,20 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     bool TimeoutInstanceIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Causes of the failure to add a node to a cluster
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return FailedReasons Causes of the failure to add a node to a cluster
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    std::vector<std::string> GetFailedReasons() const;
+
+                    /**
+                     * 判断参数 FailedReasons 是否已赋值
+                     * @return FailedReasons 是否已赋值
+                     */
+                    bool FailedReasonsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -106,6 +121,13 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     std::vector<std::string> m_timeoutInstanceIds;
                     bool m_timeoutInstanceIdsHasBeenSet;
+
+                    /**
+                     * Causes of the failure to add a node to a cluster
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    std::vector<std::string> m_failedReasons;
+                    bool m_failedReasonsHasBeenSet;
 
                 };
             }

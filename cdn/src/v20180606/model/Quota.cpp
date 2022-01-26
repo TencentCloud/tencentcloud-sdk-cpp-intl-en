@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 Quota::Quota() :
@@ -29,7 +28,7 @@ Quota::Quota() :
 {
 }
 
-CoreInternalOutcome Quota::Deserialize(const Value &value)
+CoreInternalOutcome Quota::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome Quota::Deserialize(const Value &value)
     {
         if (!value["Batch"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Quota.Batch` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Quota.Batch` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_batch = value["Batch"].GetInt64();
         m_batchHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome Quota::Deserialize(const Value &value)
     {
         if (!value["Total"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Quota.Total` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Quota.Total` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_total = value["Total"].GetInt64();
         m_totalHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome Quota::Deserialize(const Value &value)
     {
         if (!value["Available"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Quota.Available` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Quota.Available` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_available = value["Available"].GetInt64();
         m_availableHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome Quota::Deserialize(const Value &value)
     {
         if (!value["Area"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Quota.Area` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Quota.Area` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_area = string(value["Area"].GetString());
         m_areaHasBeenSet = true;
@@ -78,12 +77,12 @@ CoreInternalOutcome Quota::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Quota::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Quota::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_batchHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Batch";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_batch, allocator);
@@ -91,7 +90,7 @@ void Quota::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
 
     if (m_totalHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Total";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_total, allocator);
@@ -99,7 +98,7 @@ void Quota::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
 
     if (m_availableHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Available";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_available, allocator);
@@ -107,10 +106,10 @@ void Quota::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
 
     if (m_areaHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Area";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_area.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_area.c_str(), allocator).Move(), allocator);
     }
 
 }

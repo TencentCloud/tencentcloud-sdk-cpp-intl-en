@@ -20,48 +20,56 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 UnassignPrivateIpAddressesRequest::UnassignPrivateIpAddressesRequest() :
     m_networkInterfaceIdHasBeenSet(false),
-    m_privateIpAddressesHasBeenSet(false)
+    m_privateIpAddressesHasBeenSet(false),
+    m_instanceIdHasBeenSet(false)
 {
 }
 
 string UnassignPrivateIpAddressesRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_networkInterfaceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetworkInterfaceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_networkInterfaceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_networkInterfaceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_privateIpAddressesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PrivateIpAddresses";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_privateIpAddresses.begin(); itr != m_privateIpAddresses.end(); ++itr, ++i)
         {
-            d[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
     }
 
+    if (m_instanceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -97,6 +105,22 @@ void UnassignPrivateIpAddressesRequest::SetPrivateIpAddresses(const vector<Priva
 bool UnassignPrivateIpAddressesRequest::PrivateIpAddressesHasBeenSet() const
 {
     return m_privateIpAddressesHasBeenSet;
+}
+
+string UnassignPrivateIpAddressesRequest::GetInstanceId() const
+{
+    return m_instanceId;
+}
+
+void UnassignPrivateIpAddressesRequest::SetInstanceId(const string& _instanceId)
+{
+    m_instanceId = _instanceId;
+    m_instanceIdHasBeenSet = true;
+}
+
+bool UnassignPrivateIpAddressesRequest::InstanceIdHasBeenSet() const
+{
+    return m_instanceIdHasBeenSet;
 }
 
 

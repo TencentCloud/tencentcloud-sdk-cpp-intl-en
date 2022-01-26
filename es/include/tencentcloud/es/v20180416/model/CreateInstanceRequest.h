@@ -24,6 +24,7 @@
 #include <tencentcloud/es/v20180416/model/ZoneDetail.h>
 #include <tencentcloud/es/v20180416/model/NodeInfo.h>
 #include <tencentcloud/es/v20180416/model/TagInfo.h>
+#include <tencentcloud/es/v20180416/model/WebNodeTypeInfo.h>
 
 
 namespace TencentCloud
@@ -64,14 +65,14 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1")
-                     * @return EsVersion Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1")
+                     * 获取Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
+                     * @return EsVersion Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
                      */
                     std::string GetEsVersion() const;
 
                     /**
-                     * 设置Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1")
-                     * @param EsVersion Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1")
+                     * 设置Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
+                     * @param EsVersion Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
                      */
                     void SetEsVersion(const std::string& _esVersion);
 
@@ -155,17 +156,17 @@ namespace TencentCloud
 
                     /**
                      * 获取This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2–50)
+Number of nodes (2-50)
                      * @return NodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2–50)
+Number of nodes (2-50)
                      */
                     uint64_t GetNodeNum() const;
 
                     /**
                      * 设置This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2–50)
+Number of nodes (2-50)
                      * @param NodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2–50)
+Number of nodes (2-50)
                      */
                     void SetNodeNum(const uint64_t& _nodeNum);
 
@@ -351,17 +352,17 @@ Node disk size in GB
 
                     /**
                      * 获取This parameter has been disused. Please use `NodeInfoList`
-Whether to create a dedicated master node <li>true: yes </li><li>false: no </li>Default value: false
+Whether to create a dedicated primary node <li>true: yes </li><li>false: no </li>Default value: false
                      * @return EnableDedicatedMaster This parameter has been disused. Please use `NodeInfoList`
-Whether to create a dedicated master node <li>true: yes </li><li>false: no </li>Default value: false
+Whether to create a dedicated primary node <li>true: yes </li><li>false: no </li>Default value: false
                      */
                     bool GetEnableDedicatedMaster() const;
 
                     /**
                      * 设置This parameter has been disused. Please use `NodeInfoList`
-Whether to create a dedicated master node <li>true: yes </li><li>false: no </li>Default value: false
+Whether to create a dedicated primary node <li>true: yes </li><li>false: no </li>Default value: false
                      * @param EnableDedicatedMaster This parameter has been disused. Please use `NodeInfoList`
-Whether to create a dedicated master node <li>true: yes </li><li>false: no </li>Default value: false
+Whether to create a dedicated primary node <li>true: yes </li><li>false: no </li>Default value: false
                      */
                     void SetEnableDedicatedMaster(const bool& _enableDedicatedMaster);
 
@@ -373,17 +374,17 @@ Whether to create a dedicated master node <li>true: yes </li><li>false: no </li>
 
                     /**
                      * 获取This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
+Number of dedicated primary nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
                      * @return MasterNodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
+Number of dedicated primary nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
                      */
                     uint64_t GetMasterNodeNum() const;
 
                     /**
                      * 设置This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
+Number of dedicated primary nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
                      * @param MasterNodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
+Number of dedicated primary nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
                      */
                     void SetMasterNodeNum(const uint64_t& _masterNodeNum);
 
@@ -395,17 +396,17 @@ Number of dedicated master nodes (only 3 and 5 are supported. This value must be
 
                     /**
                      * 获取This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+Dedicated primary node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
                      * @return MasterNodeType This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+Dedicated primary node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
                      */
                     std::string GetMasterNodeType() const;
 
                     /**
                      * 设置This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+Dedicated primary node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
                      * @param MasterNodeType This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+Dedicated primary node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
                      */
                     void SetMasterNodeType(const std::string& _masterNodeType);
 
@@ -417,17 +418,17 @@ Dedicated master node type, which must be passed in if `EnableDedicatedMaster` i
 
                     /**
                      * 获取This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
+Dedicated primary node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
                      * @return MasterNodeDiskSize This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
+Dedicated primary node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
                      */
                     uint64_t GetMasterNodeDiskSize() const;
 
                     /**
                      * 设置This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
+Dedicated primary node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
                      * @param MasterNodeDiskSize This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
+Dedicated primary node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
                      */
                     void SetMasterNodeDiskSize(const uint64_t& _masterNodeDiskSize);
 
@@ -563,6 +564,60 @@ Dedicated master node disk size in GB, which is optional. If passed in, it can o
                      */
                     bool BasicSecurityTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
+                     * @return SceneType Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
+                     */
+                    int64_t GetSceneType() const;
+
+                    /**
+                     * 设置Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
+                     * @param SceneType Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
+                     */
+                    void SetSceneType(const int64_t& _sceneType);
+
+                    /**
+                     * 判断参数 SceneType 是否已赋值
+                     * @return SceneType 是否已赋值
+                     */
+                    bool SceneTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Visual node configuration
+                     * @return WebNodeTypeInfo Visual node configuration
+                     */
+                    WebNodeTypeInfo GetWebNodeTypeInfo() const;
+
+                    /**
+                     * 设置Visual node configuration
+                     * @param WebNodeTypeInfo Visual node configuration
+                     */
+                    void SetWebNodeTypeInfo(const WebNodeTypeInfo& _webNodeTypeInfo);
+
+                    /**
+                     * 判断参数 WebNodeTypeInfo 是否已赋值
+                     * @return WebNodeTypeInfo 是否已赋值
+                     */
+                    bool WebNodeTypeInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Valid values: `https`, `http` (default)
+                     * @return Protocol Valid values: `https`, `http` (default)
+                     */
+                    std::string GetProtocol() const;
+
+                    /**
+                     * 设置Valid values: `https`, `http` (default)
+                     * @param Protocol Valid values: `https`, `http` (default)
+                     */
+                    void SetProtocol(const std::string& _protocol);
+
+                    /**
+                     * 判断参数 Protocol 是否已赋值
+                     * @return Protocol 是否已赋值
+                     */
+                    bool ProtocolHasBeenSet() const;
+
                 private:
 
                     /**
@@ -572,7 +627,7 @@ Dedicated master node disk size in GB, which is optional. If passed in, it can o
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1")
+                     * Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
                      */
                     std::string m_esVersion;
                     bool m_esVersionHasBeenSet;
@@ -603,7 +658,7 @@ Dedicated master node disk size in GB, which is optional. If passed in, it can o
 
                     /**
                      * This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2–50)
+Number of nodes (2-50)
                      */
                     uint64_t m_nodeNum;
                     bool m_nodeNumHasBeenSet;
@@ -667,28 +722,28 @@ Node disk size in GB
 
                     /**
                      * This parameter has been disused. Please use `NodeInfoList`
-Whether to create a dedicated master node <li>true: yes </li><li>false: no </li>Default value: false
+Whether to create a dedicated primary node <li>true: yes </li><li>false: no </li>Default value: false
                      */
                     bool m_enableDedicatedMaster;
                     bool m_enableDedicatedMasterHasBeenSet;
 
                     /**
                      * This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
+Number of dedicated primary nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
                      */
                     uint64_t m_masterNodeNum;
                     bool m_masterNodeNumHasBeenSet;
 
                     /**
                      * This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+Dedicated primary node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
                      */
                     std::string m_masterNodeType;
                     bool m_masterNodeTypeHasBeenSet;
 
                     /**
                      * This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
+Dedicated primary node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
                      */
                     uint64_t m_masterNodeDiskSize;
                     bool m_masterNodeDiskSizeHasBeenSet;
@@ -734,6 +789,24 @@ Dedicated master node disk size in GB, which is optional. If passed in, it can o
                      */
                     uint64_t m_basicSecurityType;
                     bool m_basicSecurityTypeHasBeenSet;
+
+                    /**
+                     * Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
+                     */
+                    int64_t m_sceneType;
+                    bool m_sceneTypeHasBeenSet;
+
+                    /**
+                     * Visual node configuration
+                     */
+                    WebNodeTypeInfo m_webNodeTypeInfo;
+                    bool m_webNodeTypeInfoHasBeenSet;
+
+                    /**
+                     * Valid values: `https`, `http` (default)
+                     */
+                    std::string m_protocol;
+                    bool m_protocolHasBeenSet;
 
                 };
             }

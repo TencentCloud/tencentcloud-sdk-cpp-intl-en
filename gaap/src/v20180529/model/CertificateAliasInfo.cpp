@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 CertificateAliasInfo::CertificateAliasInfo() :
@@ -27,7 +26,7 @@ CertificateAliasInfo::CertificateAliasInfo() :
 {
 }
 
-CoreInternalOutcome CertificateAliasInfo::Deserialize(const Value &value)
+CoreInternalOutcome CertificateAliasInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome CertificateAliasInfo::Deserialize(const Value &value)
     {
         if (!value["CertificateId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CertificateAliasInfo.CertificateId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CertificateAliasInfo.CertificateId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_certificateId = string(value["CertificateId"].GetString());
         m_certificateIdHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome CertificateAliasInfo::Deserialize(const Value &value)
     {
         if (!value["CertificateAlias"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CertificateAliasInfo.CertificateAlias` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CertificateAliasInfo.CertificateAlias` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_certificateAlias = string(value["CertificateAlias"].GetString());
         m_certificateAliasHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome CertificateAliasInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void CertificateAliasInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void CertificateAliasInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_certificateIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CertificateId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_certificateId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_certificateId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_certificateAliasHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CertificateAlias";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_certificateAlias.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_certificateAlias.c_str(), allocator).Move(), allocator);
     }
 
 }

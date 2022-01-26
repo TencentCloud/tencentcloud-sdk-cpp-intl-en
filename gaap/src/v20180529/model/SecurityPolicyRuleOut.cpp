@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 SecurityPolicyRuleOut::SecurityPolicyRuleOut() :
@@ -32,7 +31,7 @@ SecurityPolicyRuleOut::SecurityPolicyRuleOut() :
 {
 }
 
-CoreInternalOutcome SecurityPolicyRuleOut::Deserialize(const Value &value)
+CoreInternalOutcome SecurityPolicyRuleOut::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +40,7 @@ CoreInternalOutcome SecurityPolicyRuleOut::Deserialize(const Value &value)
     {
         if (!value["Action"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityPolicyRuleOut.Action` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityPolicyRuleOut.Action` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_action = string(value["Action"].GetString());
         m_actionHasBeenSet = true;
@@ -51,7 +50,7 @@ CoreInternalOutcome SecurityPolicyRuleOut::Deserialize(const Value &value)
     {
         if (!value["SourceCidr"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityPolicyRuleOut.SourceCidr` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityPolicyRuleOut.SourceCidr` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_sourceCidr = string(value["SourceCidr"].GetString());
         m_sourceCidrHasBeenSet = true;
@@ -61,7 +60,7 @@ CoreInternalOutcome SecurityPolicyRuleOut::Deserialize(const Value &value)
     {
         if (!value["AliasName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityPolicyRuleOut.AliasName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityPolicyRuleOut.AliasName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_aliasName = string(value["AliasName"].GetString());
         m_aliasNameHasBeenSet = true;
@@ -71,7 +70,7 @@ CoreInternalOutcome SecurityPolicyRuleOut::Deserialize(const Value &value)
     {
         if (!value["DestPortRange"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityPolicyRuleOut.DestPortRange` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityPolicyRuleOut.DestPortRange` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_destPortRange = string(value["DestPortRange"].GetString());
         m_destPortRangeHasBeenSet = true;
@@ -81,7 +80,7 @@ CoreInternalOutcome SecurityPolicyRuleOut::Deserialize(const Value &value)
     {
         if (!value["RuleId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityPolicyRuleOut.RuleId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityPolicyRuleOut.RuleId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ruleId = string(value["RuleId"].GetString());
         m_ruleIdHasBeenSet = true;
@@ -91,7 +90,7 @@ CoreInternalOutcome SecurityPolicyRuleOut::Deserialize(const Value &value)
     {
         if (!value["Protocol"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityPolicyRuleOut.Protocol` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityPolicyRuleOut.Protocol` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_protocol = string(value["Protocol"].GetString());
         m_protocolHasBeenSet = true;
@@ -101,7 +100,7 @@ CoreInternalOutcome SecurityPolicyRuleOut::Deserialize(const Value &value)
     {
         if (!value["PolicyId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityPolicyRuleOut.PolicyId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityPolicyRuleOut.PolicyId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_policyId = string(value["PolicyId"].GetString());
         m_policyIdHasBeenSet = true;
@@ -111,63 +110,63 @@ CoreInternalOutcome SecurityPolicyRuleOut::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void SecurityPolicyRuleOut::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SecurityPolicyRuleOut::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_actionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Action";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_action.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_action.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sourceCidrHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SourceCidr";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_sourceCidr.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sourceCidr.c_str(), allocator).Move(), allocator);
     }
 
     if (m_aliasNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AliasName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_aliasName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_aliasName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_destPortRangeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DestPortRange";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_destPortRange.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_destPortRange.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ruleIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RuleId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ruleId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ruleId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_protocolHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Protocol";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_protocol.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
     }
 
     if (m_policyIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PolicyId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_policyId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_policyId.c_str(), allocator).Move(), allocator);
     }
 
 }

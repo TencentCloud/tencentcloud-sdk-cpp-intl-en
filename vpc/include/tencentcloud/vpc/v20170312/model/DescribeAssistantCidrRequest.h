@@ -62,17 +62,17 @@ namespace TencentCloud
                     bool VpcIdsHasBeenSet() const;
 
                     /**
-                     * 获取Filter condition. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
+                     * 获取Filter condition. `VpcIds` and `Filters` cannot be specified at the same time.
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
-                     * @return Filters Filter condition. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
+                     * @return Filters Filter condition. `VpcIds` and `Filters` cannot be specified at the same time.
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter condition. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
+                     * 设置Filter condition. `VpcIds` and `Filters` cannot be specified at the same time.
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
-                     * @param Filters Filter condition. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
+                     * @param Filters Filter condition. `VpcIds` and `Filters` cannot be specified at the same time.
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -128,7 +128,7 @@ namespace TencentCloud
                     bool m_vpcIdsHasBeenSet;
 
                     /**
-                     * Filter condition. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
+                     * Filter condition. `VpcIds` and `Filters` cannot be specified at the same time.
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
                      */
                     std::vector<Filter> m_filters;

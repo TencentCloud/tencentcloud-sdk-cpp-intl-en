@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Kms::V20190118::Model;
-using namespace rapidjson;
 using namespace std;
 
 GetParametersForImportResponse::GetParametersForImportResponse() :
@@ -34,20 +33,20 @@ GetParametersForImportResponse::GetParametersForImportResponse() :
 
 CoreInternalOutcome GetParametersForImportResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -58,11 +57,11 @@ CoreInternalOutcome GetParametersForImportResponse::Deserialize(const string &pa
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -70,7 +69,7 @@ CoreInternalOutcome GetParametersForImportResponse::Deserialize(const string &pa
     {
         if (!rsp["KeyId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `KeyId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `KeyId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_keyId = string(rsp["KeyId"].GetString());
         m_keyIdHasBeenSet = true;
@@ -80,7 +79,7 @@ CoreInternalOutcome GetParametersForImportResponse::Deserialize(const string &pa
     {
         if (!rsp["ImportToken"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ImportToken` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImportToken` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_importToken = string(rsp["ImportToken"].GetString());
         m_importTokenHasBeenSet = true;
@@ -90,7 +89,7 @@ CoreInternalOutcome GetParametersForImportResponse::Deserialize(const string &pa
     {
         if (!rsp["PublicKey"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PublicKey` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PublicKey` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_publicKey = string(rsp["PublicKey"].GetString());
         m_publicKeyHasBeenSet = true;
@@ -100,7 +99,7 @@ CoreInternalOutcome GetParametersForImportResponse::Deserialize(const string &pa
     {
         if (!rsp["ParametersValidTo"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ParametersValidTo` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParametersValidTo` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_parametersValidTo = rsp["ParametersValidTo"].GetUint64();
         m_parametersValidToHasBeenSet = true;
@@ -108,6 +107,55 @@ CoreInternalOutcome GetParametersForImportResponse::Deserialize(const string &pa
 
 
     return CoreInternalOutcome(true);
+}
+
+string GetParametersForImportResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_keyIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "KeyId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_keyId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_importTokenHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ImportToken";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_importToken.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_publicKeyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PublicKey";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_publicKey.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_parametersValidToHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ParametersValidTo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_parametersValidTo, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

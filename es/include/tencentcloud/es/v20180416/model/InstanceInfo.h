@@ -31,6 +31,8 @@
 #include <tencentcloud/es/v20180416/model/TagInfo.h>
 #include <tencentcloud/es/v20180416/model/NodeInfo.h>
 #include <tencentcloud/es/v20180416/model/ZoneDetail.h>
+#include <tencentcloud/es/v20180416/model/KibanaNodeInfo.h>
+#include <tencentcloud/es/v20180416/model/WebNodeTypeInfo.h>
 
 
 namespace TencentCloud
@@ -594,14 +596,14 @@ namespace TencentCloud
                     bool IkConfigHasBeenSet() const;
 
                     /**
-                     * 获取Dedicated master node configuration
-                     * @return MasterNodeInfo Dedicated master node configuration
+                     * 获取Dedicated primary node configuration
+                     * @return MasterNodeInfo Dedicated primary node configuration
                      */
                     MasterNodeInfo GetMasterNodeInfo() const;
 
                     /**
-                     * 设置Dedicated master node configuration
-                     * @param MasterNodeInfo Dedicated master node configuration
+                     * 设置Dedicated primary node configuration
+                     * @param MasterNodeInfo Dedicated primary node configuration
                      */
                     void SetMasterNodeInfo(const MasterNodeInfo& _masterNodeInfo);
 
@@ -707,17 +709,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      * @return WarmNodeType Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string GetWarmNodeType() const;
 
                     /**
                      * 设置Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      * @param WarmNodeType Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     void SetWarmNodeType(const std::string& _warmNodeType);
 
@@ -729,17 +731,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of warm nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      * @return WarmNodeNum Number of warm nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     uint64_t GetWarmNodeNum() const;
 
                     /**
                      * 设置Number of warm nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      * @param WarmNodeNum Number of warm nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     void SetWarmNodeNum(const uint64_t& _warmNodeNum);
 
@@ -751,17 +753,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of warm node CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      * @return WarmCpuNum Number of warm node CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     uint64_t GetWarmCpuNum() const;
 
                     /**
                      * 设置Number of warm node CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      * @param WarmCpuNum Number of warm node CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     void SetWarmCpuNum(const uint64_t& _warmCpuNum);
 
@@ -772,18 +774,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WarmCpuNumHasBeenSet() const;
 
                     /**
-                     * 获取Warm node memory size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return WarmMemSize Warm node memory size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Warm node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return WarmMemSize Warm node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     uint64_t GetWarmMemSize() const;
 
                     /**
-                     * 设置Warm node memory size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param WarmMemSize Warm node memory size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Warm node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param WarmMemSize Warm node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     void SetWarmMemSize(const uint64_t& _warmMemSize);
 
@@ -795,17 +797,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Warm node disk type
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      * @return WarmDiskType Warm node disk type
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string GetWarmDiskType() const;
 
                     /**
                      * 设置Warm node disk type
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      * @param WarmDiskType Warm node disk type
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     void SetWarmDiskType(const std::string& _warmDiskType);
 
@@ -816,18 +818,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WarmDiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Warm node disk size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return WarmDiskSize Warm node disk size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Warm node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return WarmDiskSize Warm node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     uint64_t GetWarmDiskSize() const;
 
                     /**
-                     * 设置Warm node disk size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param WarmDiskSize Warm node disk size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Warm node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param WarmDiskSize Warm node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     void SetWarmDiskSize(const uint64_t& _warmDiskSize);
 
@@ -1053,6 +1055,424 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool SecurityTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return SceneType Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetSceneType() const;
+
+                    /**
+                     * 设置Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param SceneType Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetSceneType(const int64_t& _sceneType);
+
+                    /**
+                     * 判断参数 SceneType 是否已赋值
+                     * @return SceneType 是否已赋值
+                     */
+                    bool SceneTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Kibana configuration item.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return KibanaConfig Kibana configuration item.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetKibanaConfig() const;
+
+                    /**
+                     * 设置Kibana configuration item.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param KibanaConfig Kibana configuration item.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetKibanaConfig(const std::string& _kibanaConfig);
+
+                    /**
+                     * 判断参数 KibanaConfig 是否已赋值
+                     * @return KibanaConfig 是否已赋值
+                     */
+                    bool KibanaConfigHasBeenSet() const;
+
+                    /**
+                     * 获取Kibana node information
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @return KibanaNodeInfo Kibana node information
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    KibanaNodeInfo GetKibanaNodeInfo() const;
+
+                    /**
+                     * 设置Kibana node information
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @param KibanaNodeInfo Kibana node information
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetKibanaNodeInfo(const KibanaNodeInfo& _kibanaNodeInfo);
+
+                    /**
+                     * 判断参数 KibanaNodeInfo 是否已赋值
+                     * @return KibanaNodeInfo 是否已赋值
+                     */
+                    bool KibanaNodeInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Visual node configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return WebNodeTypeInfo Visual node configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    WebNodeTypeInfo GetWebNodeTypeInfo() const;
+
+                    /**
+                     * 设置Visual node configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param WebNodeTypeInfo Visual node configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetWebNodeTypeInfo(const WebNodeTypeInfo& _webNodeTypeInfo);
+
+                    /**
+                     * 判断参数 WebNodeTypeInfo 是否已赋值
+                     * @return WebNodeTypeInfo 是否已赋值
+                     */
+                    bool WebNodeTypeInfoHasBeenSet() const;
+
+                    /**
+                     * 获取JDK type. Valid values: `oracle`, `kona`
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Jdk JDK type. Valid values: `oracle`, `kona`
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetJdk() const;
+
+                    /**
+                     * 设置JDK type. Valid values: `oracle`, `kona`
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param Jdk JDK type. Valid values: `oracle`, `kona`
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetJdk(const std::string& _jdk);
+
+                    /**
+                     * 判断参数 Jdk 是否已赋值
+                     * @return Jdk 是否已赋值
+                     */
+                    bool JdkHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster network communication protocol
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Protocol Cluster network communication protocol
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetProtocol() const;
+
+                    /**
+                     * 设置Cluster network communication protocol
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param Protocol Cluster network communication protocol
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetProtocol(const std::string& _protocol);
+
+                    /**
+                     * 判断参数 Protocol 是否已赋值
+                     * @return Protocol 是否已赋值
+                     */
+                    bool ProtocolHasBeenSet() const;
+
+                    /**
+                     * 获取Security group ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return SecurityGroups Security group ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetSecurityGroups() const;
+
+                    /**
+                     * 设置Security group ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param SecurityGroups Security group ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetSecurityGroups(const std::vector<std::string>& _securityGroups);
+
+                    /**
+                     * 判断参数 SecurityGroups 是否已赋值
+                     * @return SecurityGroups 是否已赋值
+                     */
+                    bool SecurityGroupsHasBeenSet() const;
+
+                    /**
+                     * 获取Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return ColdNodeType Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetColdNodeType() const;
+
+                    /**
+                     * 设置Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param ColdNodeType Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetColdNodeType(const std::string& _coldNodeType);
+
+                    /**
+                     * 判断参数 ColdNodeType 是否已赋值
+                     * @return ColdNodeType 是否已赋值
+                     */
+                    bool ColdNodeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Number of cold nodes
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return ColdNodeNum Number of cold nodes
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    uint64_t GetColdNodeNum() const;
+
+                    /**
+                     * 设置Number of cold nodes
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param ColdNodeNum Number of cold nodes
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetColdNodeNum(const uint64_t& _coldNodeNum);
+
+                    /**
+                     * 判断参数 ColdNodeNum 是否已赋值
+                     * @return ColdNodeNum 是否已赋值
+                     */
+                    bool ColdNodeNumHasBeenSet() const;
+
+                    /**
+                     * 获取Number of cold node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return ColdCpuNum Number of cold node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    uint64_t GetColdCpuNum() const;
+
+                    /**
+                     * 设置Number of cold node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param ColdCpuNum Number of cold node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetColdCpuNum(const uint64_t& _coldCpuNum);
+
+                    /**
+                     * 判断参数 ColdCpuNum 是否已赋值
+                     * @return ColdCpuNum 是否已赋值
+                     */
+                    bool ColdCpuNumHasBeenSet() const;
+
+                    /**
+                     * 获取Cold node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return ColdMemSize Cold node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    uint64_t GetColdMemSize() const;
+
+                    /**
+                     * 设置Cold node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param ColdMemSize Cold node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetColdMemSize(const uint64_t& _coldMemSize);
+
+                    /**
+                     * 判断参数 ColdMemSize 是否已赋值
+                     * @return ColdMemSize 是否已赋值
+                     */
+                    bool ColdMemSizeHasBeenSet() const;
+
+                    /**
+                     * 获取Cold node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return ColdDiskType Cold node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetColdDiskType() const;
+
+                    /**
+                     * 设置Cold node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param ColdDiskType Cold node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetColdDiskType(const std::string& _coldDiskType);
+
+                    /**
+                     * 判断参数 ColdDiskType 是否已赋值
+                     * @return ColdDiskType 是否已赋值
+                     */
+                    bool ColdDiskTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Cold node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return ColdDiskSize Cold node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    uint64_t GetColdDiskSize() const;
+
+                    /**
+                     * 设置Cold node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param ColdDiskSize Cold node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetColdDiskSize(const uint64_t& _coldDiskSize);
+
+                    /**
+                     * 判断参数 ColdDiskSize 是否已赋值
+                     * @return ColdDiskSize 是否已赋值
+                     */
+                    bool ColdDiskSizeHasBeenSet() const;
+
+                    /**
+                     * 获取Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return FrozenNodeType Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetFrozenNodeType() const;
+
+                    /**
+                     * 设置Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param FrozenNodeType Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetFrozenNodeType(const std::string& _frozenNodeType);
+
+                    /**
+                     * 判断参数 FrozenNodeType 是否已赋值
+                     * @return FrozenNodeType 是否已赋值
+                     */
+                    bool FrozenNodeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Number of frozen nodes
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return FrozenNodeNum Number of frozen nodes
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    uint64_t GetFrozenNodeNum() const;
+
+                    /**
+                     * 设置Number of frozen nodes
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param FrozenNodeNum Number of frozen nodes
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetFrozenNodeNum(const uint64_t& _frozenNodeNum);
+
+                    /**
+                     * 判断参数 FrozenNodeNum 是否已赋值
+                     * @return FrozenNodeNum 是否已赋值
+                     */
+                    bool FrozenNodeNumHasBeenSet() const;
+
+                    /**
+                     * 获取Number of frozen node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return FrozenCpuNum Number of frozen node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    uint64_t GetFrozenCpuNum() const;
+
+                    /**
+                     * 设置Number of frozen node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param FrozenCpuNum Number of frozen node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetFrozenCpuNum(const uint64_t& _frozenCpuNum);
+
+                    /**
+                     * 判断参数 FrozenCpuNum 是否已赋值
+                     * @return FrozenCpuNum 是否已赋值
+                     */
+                    bool FrozenCpuNumHasBeenSet() const;
+
+                    /**
+                     * 获取Frozen node memory size (GB)
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return FrozenMemSize Frozen node memory size (GB)
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    uint64_t GetFrozenMemSize() const;
+
+                    /**
+                     * 设置Frozen node memory size (GB)
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param FrozenMemSize Frozen node memory size (GB)
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetFrozenMemSize(const uint64_t& _frozenMemSize);
+
+                    /**
+                     * 判断参数 FrozenMemSize 是否已赋值
+                     * @return FrozenMemSize 是否已赋值
+                     */
+                    bool FrozenMemSizeHasBeenSet() const;
+
+                    /**
+                     * 获取Frozen node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return FrozenDiskType Frozen node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetFrozenDiskType() const;
+
+                    /**
+                     * 设置Frozen node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param FrozenDiskType Frozen node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetFrozenDiskType(const std::string& _frozenDiskType);
+
+                    /**
+                     * 判断参数 FrozenDiskType 是否已赋值
+                     * @return FrozenDiskType 是否已赋值
+                     */
+                    bool FrozenDiskTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Frozen node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return FrozenDiskSize Frozen node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    uint64_t GetFrozenDiskSize() const;
+
+                    /**
+                     * 设置Frozen node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param FrozenDiskSize Frozen node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetFrozenDiskSize(const uint64_t& _frozenDiskSize);
+
+                    /**
+                     * 判断参数 FrozenDiskSize 是否已赋值
+                     * @return FrozenDiskSize 是否已赋值
+                     */
+                    bool FrozenDiskSizeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1236,7 +1656,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_ikConfigHasBeenSet;
 
                     /**
-                     * Dedicated master node configuration
+                     * Dedicated primary node configuration
                      */
                     MasterNodeInfo m_masterNodeInfo;
                     bool m_masterNodeInfoHasBeenSet;
@@ -1274,42 +1694,42 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string m_warmNodeType;
                     bool m_warmNodeTypeHasBeenSet;
 
                     /**
                      * Number of warm nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     uint64_t m_warmNodeNum;
                     bool m_warmNodeNumHasBeenSet;
 
                     /**
                      * Number of warm node CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     uint64_t m_warmCpuNum;
                     bool m_warmCpuNumHasBeenSet;
 
                     /**
-                     * Warm node memory size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Warm node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     uint64_t m_warmMemSize;
                     bool m_warmMemSizeHasBeenSet;
 
                     /**
                      * Warm node disk type
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string m_warmDiskType;
                     bool m_warmDiskTypeHasBeenSet;
 
                     /**
-                     * Warm node disk size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Warm node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     uint64_t m_warmDiskSize;
                     bool m_warmDiskSizeHasBeenSet;
@@ -1382,6 +1802,139 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_securityType;
                     bool m_securityTypeHasBeenSet;
+
+                    /**
+                     * Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_sceneType;
+                    bool m_sceneTypeHasBeenSet;
+
+                    /**
+                     * Kibana configuration item.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_kibanaConfig;
+                    bool m_kibanaConfigHasBeenSet;
+
+                    /**
+                     * Kibana node information
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    KibanaNodeInfo m_kibanaNodeInfo;
+                    bool m_kibanaNodeInfoHasBeenSet;
+
+                    /**
+                     * Visual node configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    WebNodeTypeInfo m_webNodeTypeInfo;
+                    bool m_webNodeTypeInfoHasBeenSet;
+
+                    /**
+                     * JDK type. Valid values: `oracle`, `kona`
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_jdk;
+                    bool m_jdkHasBeenSet;
+
+                    /**
+                     * Cluster network communication protocol
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_protocol;
+                    bool m_protocolHasBeenSet;
+
+                    /**
+                     * Security group ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_securityGroups;
+                    bool m_securityGroupsHasBeenSet;
+
+                    /**
+                     * Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_coldNodeType;
+                    bool m_coldNodeTypeHasBeenSet;
+
+                    /**
+                     * Number of cold nodes
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    uint64_t m_coldNodeNum;
+                    bool m_coldNodeNumHasBeenSet;
+
+                    /**
+                     * Number of cold node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    uint64_t m_coldCpuNum;
+                    bool m_coldCpuNumHasBeenSet;
+
+                    /**
+                     * Cold node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    uint64_t m_coldMemSize;
+                    bool m_coldMemSizeHasBeenSet;
+
+                    /**
+                     * Cold node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_coldDiskType;
+                    bool m_coldDiskTypeHasBeenSet;
+
+                    /**
+                     * Cold node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    uint64_t m_coldDiskSize;
+                    bool m_coldDiskSizeHasBeenSet;
+
+                    /**
+                     * Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_frozenNodeType;
+                    bool m_frozenNodeTypeHasBeenSet;
+
+                    /**
+                     * Number of frozen nodes
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    uint64_t m_frozenNodeNum;
+                    bool m_frozenNodeNumHasBeenSet;
+
+                    /**
+                     * Number of frozen node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    uint64_t m_frozenCpuNum;
+                    bool m_frozenCpuNumHasBeenSet;
+
+                    /**
+                     * Frozen node memory size (GB)
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    uint64_t m_frozenMemSize;
+                    bool m_frozenMemSizeHasBeenSet;
+
+                    /**
+                     * Frozen node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_frozenDiskType;
+                    bool m_frozenDiskTypeHasBeenSet;
+
+                    /**
+                     * Frozen node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    uint64_t m_frozenDiskSize;
+                    bool m_frozenDiskSizeHasBeenSet;
 
                 };
             }

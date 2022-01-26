@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 ProxyGroupInfo::ProxyGroupInfo() :
@@ -30,11 +29,12 @@ ProxyGroupInfo::ProxyGroupInfo() :
     m_statusHasBeenSet(false),
     m_tagSetHasBeenSet(false),
     m_versionHasBeenSet(false),
-    m_createTimeHasBeenSet(false)
+    m_createTimeHasBeenSet(false),
+    m_proxyTypeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ProxyGroupInfo::Deserialize(const Value &value)
+CoreInternalOutcome ProxyGroupInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -43,7 +43,7 @@ CoreInternalOutcome ProxyGroupInfo::Deserialize(const Value &value)
     {
         if (!value["GroupId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ProxyGroupInfo.GroupId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProxyGroupInfo.GroupId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_groupId = string(value["GroupId"].GetString());
         m_groupIdHasBeenSet = true;
@@ -53,7 +53,7 @@ CoreInternalOutcome ProxyGroupInfo::Deserialize(const Value &value)
     {
         if (!value["Domain"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ProxyGroupInfo.Domain` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProxyGroupInfo.Domain` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_domain = string(value["Domain"].GetString());
         m_domainHasBeenSet = true;
@@ -63,7 +63,7 @@ CoreInternalOutcome ProxyGroupInfo::Deserialize(const Value &value)
     {
         if (!value["GroupName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ProxyGroupInfo.GroupName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProxyGroupInfo.GroupName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_groupName = string(value["GroupName"].GetString());
         m_groupNameHasBeenSet = true;
@@ -73,7 +73,7 @@ CoreInternalOutcome ProxyGroupInfo::Deserialize(const Value &value)
     {
         if (!value["ProjectId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ProxyGroupInfo.ProjectId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProxyGroupInfo.ProjectId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_projectId = value["ProjectId"].GetInt64();
         m_projectIdHasBeenSet = true;
@@ -83,7 +83,7 @@ CoreInternalOutcome ProxyGroupInfo::Deserialize(const Value &value)
     {
         if (!value["RealServerRegionInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `ProxyGroupInfo.RealServerRegionInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProxyGroupInfo.RealServerRegionInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_realServerRegionInfo.Deserialize(value["RealServerRegionInfo"]);
@@ -100,7 +100,7 @@ CoreInternalOutcome ProxyGroupInfo::Deserialize(const Value &value)
     {
         if (!value["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ProxyGroupInfo.Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProxyGroupInfo.Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(value["Status"].GetString());
         m_statusHasBeenSet = true;
@@ -109,10 +109,10 @@ CoreInternalOutcome ProxyGroupInfo::Deserialize(const Value &value)
     if (value.HasMember("TagSet") && !value["TagSet"].IsNull())
     {
         if (!value["TagSet"].IsArray())
-            return CoreInternalOutcome(Error("response `ProxyGroupInfo.TagSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ProxyGroupInfo.TagSet` is not array type"));
 
-        const Value &tmpValue = value["TagSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["TagSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             TagPair item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -130,7 +130,7 @@ CoreInternalOutcome ProxyGroupInfo::Deserialize(const Value &value)
     {
         if (!value["Version"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ProxyGroupInfo.Version` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProxyGroupInfo.Version` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_version = string(value["Version"].GetString());
         m_versionHasBeenSet = true;
@@ -140,46 +140,56 @@ CoreInternalOutcome ProxyGroupInfo::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ProxyGroupInfo.CreateTime` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProxyGroupInfo.CreateTime` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = value["CreateTime"].GetUint64();
         m_createTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("ProxyType") && !value["ProxyType"].IsNull())
+    {
+        if (!value["ProxyType"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ProxyGroupInfo.ProxyType` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_proxyType = value["ProxyType"].GetUint64();
+        m_proxyTypeHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void ProxyGroupInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ProxyGroupInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_groupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "GroupId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_groupId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_groupId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_domainHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Domain";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_domain.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_domain.c_str(), allocator).Move(), allocator);
     }
 
     if (m_groupNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "GroupName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_groupName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_groupName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_projectIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProjectId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_projectId, allocator);
@@ -187,50 +197,58 @@ void ProxyGroupInfo::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_realServerRegionInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RealServerRegionInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_realServerRegionInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_status.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tagSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TagSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_tagSet.begin(); itr != m_tagSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_versionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Version";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_version.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_version.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_createTime, allocator);
+    }
+
+    if (m_proxyTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProxyType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_proxyType, allocator);
     }
 
 }
@@ -378,5 +396,21 @@ void ProxyGroupInfo::SetCreateTime(const uint64_t& _createTime)
 bool ProxyGroupInfo::CreateTimeHasBeenSet() const
 {
     return m_createTimeHasBeenSet;
+}
+
+uint64_t ProxyGroupInfo::GetProxyType() const
+{
+    return m_proxyType;
+}
+
+void ProxyGroupInfo::SetProxyType(const uint64_t& _proxyType)
+{
+    m_proxyType = _proxyType;
+    m_proxyTypeHasBeenSet = true;
+}
+
+bool ProxyGroupInfo::ProxyTypeHasBeenSet() const
+{
+    return m_proxyTypeHasBeenSet;
 }
 

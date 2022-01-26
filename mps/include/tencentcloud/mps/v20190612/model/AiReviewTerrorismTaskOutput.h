@@ -96,46 +96,50 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Tag of the detected terrorism information in a video. Valid values:
-<li>guns: Weapons and guns.</li>
-<li>crowd: Crowd.</li>
-<li>police: Police force.</li>
-<li>bloody: Bloody scenes.</li>
-<li>banners: Terrorism flags.</li>
-<li>militant: Militants.</li>
-<li>explosion: Explosions and fires.</li>
-<li>terrorists: Terrorists.</li>
-                     * @return Label Tag of the detected terrorism information in a video. Valid values:
-<li>guns: Weapons and guns.</li>
-<li>crowd: Crowd.</li>
-<li>police: Police force.</li>
-<li>bloody: Bloody scenes.</li>
-<li>banners: Terrorism flags.</li>
-<li>militant: Militants.</li>
-<li>explosion: Explosions and fires.</li>
-<li>terrorists: Terrorists.</li>
+                     * 获取Tags for detected terrorism information in a video. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`police`: police forces</li>
+<li>`bloody`: bloodiness</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
+                     * @return Label Tags for detected terrorism information in a video. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`police`: police forces</li>
+<li>`bloody`: bloodiness</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置Tag of the detected terrorism information in a video. Valid values:
-<li>guns: Weapons and guns.</li>
-<li>crowd: Crowd.</li>
-<li>police: Police force.</li>
-<li>bloody: Bloody scenes.</li>
-<li>banners: Terrorism flags.</li>
-<li>militant: Militants.</li>
-<li>explosion: Explosions and fires.</li>
-<li>terrorists: Terrorists.</li>
-                     * @param Label Tag of the detected terrorism information in a video. Valid values:
-<li>guns: Weapons and guns.</li>
-<li>crowd: Crowd.</li>
-<li>police: Police force.</li>
-<li>bloody: Bloody scenes.</li>
-<li>banners: Terrorism flags.</li>
-<li>militant: Militants.</li>
-<li>explosion: Explosions and fires.</li>
-<li>terrorists: Terrorists.</li>
+                     * 设置Tags for detected terrorism information in a video. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`police`: police forces</li>
+<li>`bloody`: bloodiness</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
+                     * @param Label Tags for detected terrorism information in a video. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`police`: police forces</li>
+<li>`bloody`: bloodiness</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
                      */
                     void SetLabel(const std::string& _label);
 
@@ -181,15 +185,16 @@ namespace TencentCloud
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Tag of the detected terrorism information in a video. Valid values:
-<li>guns: Weapons and guns.</li>
-<li>crowd: Crowd.</li>
-<li>police: Police force.</li>
-<li>bloody: Bloody scenes.</li>
-<li>banners: Terrorism flags.</li>
-<li>militant: Militants.</li>
-<li>explosion: Explosions and fires.</li>
-<li>terrorists: Terrorists.</li>
+                     * Tags for detected terrorism information in a video. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`police`: police forces</li>
+<li>`bloody`: bloodiness</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;

@@ -116,14 +116,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Indicates by which field to sort the returned results. Valid values: AddTime, ModTime. Default value: ModTime
-                     * @return OrderBy Indicates by which field to sort the returned results. Valid values: AddTime, ModTime. Default value: ModTime
+                     * 获取Indicates by which field to sort the returned results. Valid values: add_time, mod_time. Default value: mod_time
+                     * @return OrderBy Indicates by which field to sort the returned results. Valid values: add_time, mod_time. Default value: mod_time
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Indicates by which field to sort the returned results. Valid values: AddTime, ModTime. Default value: ModTime
-                     * @param OrderBy Indicates by which field to sort the returned results. Valid values: AddTime, ModTime. Default value: ModTime
+                     * 设置Indicates by which field to sort the returned results. Valid values: add_time, mod_time. Default value: mod_time
+                     * @param OrderBy Indicates by which field to sort the returned results. Valid values: add_time, mod_time. Default value: mod_time
                      */
                     void SetOrderBy(const std::string& _orderBy);
 
@@ -153,17 +153,17 @@ namespace TencentCloud
 
                     /**
                      * 获取* Qualifier:
-Function version, i.e., alias
+Function version, alias
                      * @return Filters * Qualifier:
-Function version, i.e., alias
+Function version, alias
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置* Qualifier:
-Function version, i.e., alias
+Function version, alias
                      * @param Filters * Qualifier:
-Function version, i.e., alias
+Function version, alias
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -200,7 +200,7 @@ Function version, i.e., alias
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Indicates by which field to sort the returned results. Valid values: AddTime, ModTime. Default value: ModTime
+                     * Indicates by which field to sort the returned results. Valid values: add_time, mod_time. Default value: mod_time
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
@@ -213,7 +213,7 @@ Function version, i.e., alias
 
                     /**
                      * * Qualifier:
-Function version, i.e., alias
+Function version, alias
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

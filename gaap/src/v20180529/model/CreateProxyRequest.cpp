@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateProxyRequest::CreateProxyRequest() :
@@ -34,20 +33,24 @@ CreateProxyRequest::CreateProxyRequest() :
     m_groupIdHasBeenSet(false),
     m_tagSetHasBeenSet(false),
     m_clonedProxyIdHasBeenSet(false),
-    m_billingTypeHasBeenSet(false)
+    m_billingTypeHasBeenSet(false),
+    m_iPAddressVersionHasBeenSet(false),
+    m_networkTypeHasBeenSet(false),
+    m_packageTypeHasBeenSet(false),
+    m_http3SupportedHasBeenSet(false)
 {
 }
 
 string CreateProxyRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_projectIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProjectId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_projectId, allocator);
@@ -55,23 +58,23 @@ string CreateProxyRequest::ToJsonString() const
 
     if (m_proxyNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProxyName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_proxyName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_proxyName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_accessRegionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AccessRegion";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_accessRegion.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_accessRegion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_bandwidthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Bandwidth";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_bandwidth, allocator);
@@ -79,7 +82,7 @@ string CreateProxyRequest::ToJsonString() const
 
     if (m_concurrentHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Concurrent";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_concurrent, allocator);
@@ -87,62 +90,94 @@ string CreateProxyRequest::ToJsonString() const
 
     if (m_realServerRegionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RealServerRegion";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_realServerRegion.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_realServerRegion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_clientTokenHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClientToken";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_clientToken.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_clientToken.c_str(), allocator).Move(), allocator);
     }
 
     if (m_groupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "GroupId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_groupId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_groupId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tagSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TagSet";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_tagSet.begin(); itr != m_tagSet.end(); ++itr, ++i)
         {
-            d[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
     }
 
     if (m_clonedProxyIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClonedProxyId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_clonedProxyId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_clonedProxyId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_billingTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BillingType";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_billingType, allocator);
     }
 
+    if (m_iPAddressVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IPAddressVersion";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_iPAddressVersion.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    if (m_networkTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NetworkType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_networkType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_packageTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PackageType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_packageType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_http3SupportedHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Http3Supported";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_http3Supported, allocator);
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -322,6 +357,70 @@ void CreateProxyRequest::SetBillingType(const int64_t& _billingType)
 bool CreateProxyRequest::BillingTypeHasBeenSet() const
 {
     return m_billingTypeHasBeenSet;
+}
+
+string CreateProxyRequest::GetIPAddressVersion() const
+{
+    return m_iPAddressVersion;
+}
+
+void CreateProxyRequest::SetIPAddressVersion(const string& _iPAddressVersion)
+{
+    m_iPAddressVersion = _iPAddressVersion;
+    m_iPAddressVersionHasBeenSet = true;
+}
+
+bool CreateProxyRequest::IPAddressVersionHasBeenSet() const
+{
+    return m_iPAddressVersionHasBeenSet;
+}
+
+string CreateProxyRequest::GetNetworkType() const
+{
+    return m_networkType;
+}
+
+void CreateProxyRequest::SetNetworkType(const string& _networkType)
+{
+    m_networkType = _networkType;
+    m_networkTypeHasBeenSet = true;
+}
+
+bool CreateProxyRequest::NetworkTypeHasBeenSet() const
+{
+    return m_networkTypeHasBeenSet;
+}
+
+string CreateProxyRequest::GetPackageType() const
+{
+    return m_packageType;
+}
+
+void CreateProxyRequest::SetPackageType(const string& _packageType)
+{
+    m_packageType = _packageType;
+    m_packageTypeHasBeenSet = true;
+}
+
+bool CreateProxyRequest::PackageTypeHasBeenSet() const
+{
+    return m_packageTypeHasBeenSet;
+}
+
+int64_t CreateProxyRequest::GetHttp3Supported() const
+{
+    return m_http3Supported;
+}
+
+void CreateProxyRequest::SetHttp3Supported(const int64_t& _http3Supported)
+{
+    m_http3Supported = _http3Supported;
+    m_http3SupportedHasBeenSet = true;
+}
+
+bool CreateProxyRequest::Http3SupportedHasBeenSet() const
+{
+    return m_http3SupportedHasBeenSet;
 }
 
 

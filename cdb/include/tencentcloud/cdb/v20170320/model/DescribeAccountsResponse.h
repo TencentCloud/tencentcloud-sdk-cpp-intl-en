@@ -41,6 +41,7 @@ namespace TencentCloud
                     DescribeAccountsResponse();
                     ~DescribeAccountsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -67,6 +68,18 @@ namespace TencentCloud
                      */
                     bool ItemsHasBeenSet() const;
 
+                    /**
+                     * 获取The maximum number of instance connections (set by the MySQL parameter `max_connections`)
+                     * @return MaxUserConnections The maximum number of instance connections (set by the MySQL parameter `max_connections`)
+                     */
+                    int64_t GetMaxUserConnections() const;
+
+                    /**
+                     * 判断参数 MaxUserConnections 是否已赋值
+                     * @return MaxUserConnections 是否已赋值
+                     */
+                    bool MaxUserConnectionsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -80,6 +93,12 @@ namespace TencentCloud
                      */
                     std::vector<AccountInfo> m_items;
                     bool m_itemsHasBeenSet;
+
+                    /**
+                     * The maximum number of instance connections (set by the MySQL parameter `max_connections`)
+                     */
+                    int64_t m_maxUserConnections;
+                    bool m_maxUserConnectionsHasBeenSet;
 
                 };
             }

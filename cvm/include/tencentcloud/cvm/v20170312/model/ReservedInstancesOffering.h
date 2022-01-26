@@ -48,17 +48,17 @@ namespace TencentCloud
 
                     /**
                      * 获取The availability zones in which the Reserved Instance can be purchased, such as ap-guangzhou-1.
-Valid value: <a href="https://cloud.tencent.com/document/product/213/6091">Availability Zones</a>
+Valid value: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">Availability Zones</a>
                      * @return Zone The availability zones in which the Reserved Instance can be purchased, such as ap-guangzhou-1.
-Valid value: <a href="https://cloud.tencent.com/document/product/213/6091">Availability Zones</a>
+Valid value: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">Availability Zones</a>
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置The availability zones in which the Reserved Instance can be purchased, such as ap-guangzhou-1.
-Valid value: <a href="https://cloud.tencent.com/document/product/213/6091">Availability Zones</a>
+Valid value: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">Availability Zones</a>
                      * @param Zone The availability zones in which the Reserved Instance can be purchased, such as ap-guangzhou-1.
-Valid value: <a href="https://cloud.tencent.com/document/product/213/6091">Availability Zones</a>
+Valid value: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">Availability Zones</a>
                      */
                     void SetZone(const std::string& _zone);
 
@@ -136,17 +136,17 @@ Unit: this field uses the currency code specified in `currencyCode`, and only su
 
                     /**
                      * 获取The instance model of the Reserved Instance, such as S3.MEDIUM4.
-Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Models</a>
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518">Reserved Instance Types</a>
                      * @return InstanceType The instance model of the Reserved Instance, such as S3.MEDIUM4.
-Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Models</a>
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518">Reserved Instance Types</a>
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置The instance model of the Reserved Instance, such as S3.MEDIUM4.
-Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Models</a>
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518">Reserved Instance Types</a>
                      * @param InstanceType The instance model of the Reserved Instance, such as S3.MEDIUM4.
-Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Models</a>
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518">Reserved Instance Types</a>
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
@@ -248,7 +248,7 @@ Unit: USD/hr. This field uses the currency code specified in `currencyCode`, and
 
                     /**
                      * The availability zones in which the Reserved Instance can be purchased, such as ap-guangzhou-1.
-Valid value: <a href="https://cloud.tencent.com/document/product/213/6091">Availability Zones</a>
+Valid value: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">Availability Zones</a>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
@@ -276,7 +276,7 @@ Unit: this field uses the currency code specified in `currencyCode`, and only su
 
                     /**
                      * The instance model of the Reserved Instance, such as S3.MEDIUM4.
-Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Models</a>
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518">Reserved Instance Types</a>
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Video editing task information
                 */
                 class EditMediaTask : public AbstractModel
                 {
@@ -49,14 +49,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TaskId 
+                     * 获取Task ID.
+                     * @return TaskId Task ID.
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置
-                     * @param TaskId 
+                     * 设置Task ID.
+                     * @param TaskId Task ID.
                      */
                     void SetTaskId(const std::string& _taskId);
 
@@ -67,14 +67,22 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Task status. Valid values:
+<li>PROCESSING: processing;</li>
+<li>FINISH: completed.</li>
+                     * @return Status Task status. Valid values:
+<li>PROCESSING: processing;</li>
+<li>FINISH: completed.</li>
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param Status 
+                     * 设置Task status. Valid values:
+<li>PROCESSING: processing;</li>
+<li>FINISH: completed.</li>
+                     * @param Status Task status. Valid values:
+<li>PROCESSING: processing;</li>
+<li>FINISH: completed.</li>
                      */
                     void SetStatus(const std::string& _status);
 
@@ -85,14 +93,22 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ErrCode 
+                     * 获取Error code
+<li>0: success;</li>
+<li>Other values: failure.</li>
+                     * @return ErrCode Error code
+<li>0: success;</li>
+<li>Other values: failure.</li>
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置
-                     * @param ErrCode 
+                     * 设置Error code
+<li>0: success;</li>
+<li>Other values: failure.</li>
+                     * @param ErrCode Error code
+<li>0: success;</li>
+<li>Other values: failure.</li>
                      */
                     void SetErrCode(const int64_t& _errCode);
 
@@ -103,14 +119,14 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Message 
+                     * 获取Error message.
+                     * @return Message Error message.
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置
-                     * @param Message 
+                     * 设置Error message.
+                     * @param Message Error message.
                      */
                     void SetMessage(const std::string& _message);
 
@@ -121,14 +137,14 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Input 
+                     * 获取Input of video editing task.
+                     * @return Input Input of video editing task.
                      */
                     EditMediaTaskInput GetInput() const;
 
                     /**
-                     * 设置
-                     * @param Input 
+                     * 设置Input of video editing task.
+                     * @param Input Input of video editing task.
                      */
                     void SetInput(const EditMediaTaskInput& _input);
 
@@ -139,14 +155,14 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Output of video editing task.
+                     * @return Output Output of video editing task.
                      */
                     EditMediaTaskOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param Output 
+                     * 设置Output of video editing task.
+                     * @param Output Output of video editing task.
                      */
                     void SetOutput(const EditMediaTaskOutput& _output);
 
@@ -159,37 +175,41 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Task ID.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * 
+                     * Task status. Valid values:
+<li>PROCESSING: processing;</li>
+<li>FINISH: completed.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * Error code
+<li>0: success;</li>
+<li>Other values: failure.</li>
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * 
+                     * Error message.
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * 
+                     * Input of video editing task.
                      */
                     EditMediaTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * Output of video editing task.
                      */
                     EditMediaTaskOutput m_output;
                     bool m_outputHasBeenSet;

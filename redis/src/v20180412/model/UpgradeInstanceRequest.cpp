@@ -20,35 +20,35 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Redis::V20180412::Model;
-using namespace rapidjson;
 using namespace std;
 
 UpgradeInstanceRequest::UpgradeInstanceRequest() :
     m_instanceIdHasBeenSet(false),
     m_memSizeHasBeenSet(false),
     m_redisShardNumHasBeenSet(false),
-    m_redisReplicasNumHasBeenSet(false)
+    m_redisReplicasNumHasBeenSet(false),
+    m_nodeSetHasBeenSet(false)
 {
 }
 
 string UpgradeInstanceRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_memSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MemSize";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_memSize, allocator);
@@ -56,7 +56,7 @@ string UpgradeInstanceRequest::ToJsonString() const
 
     if (m_redisShardNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RedisShardNum";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_redisShardNum, allocator);
@@ -64,15 +64,30 @@ string UpgradeInstanceRequest::ToJsonString() const
 
     if (m_redisReplicasNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RedisReplicasNum";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_redisReplicasNum, allocator);
     }
 
+    if (m_nodeSetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NodeSet";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+        int i=0;
+        for (auto itr = m_nodeSet.begin(); itr != m_nodeSet.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -140,6 +155,22 @@ void UpgradeInstanceRequest::SetRedisReplicasNum(const uint64_t& _redisReplicasN
 bool UpgradeInstanceRequest::RedisReplicasNumHasBeenSet() const
 {
     return m_redisReplicasNumHasBeenSet;
+}
+
+vector<RedisNodeInfo> UpgradeInstanceRequest::GetNodeSet() const
+{
+    return m_nodeSet;
+}
+
+void UpgradeInstanceRequest::SetNodeSet(const vector<RedisNodeInfo>& _nodeSet)
+{
+    m_nodeSet = _nodeSet;
+    m_nodeSetHasBeenSet = true;
+}
+
+bool UpgradeInstanceRequest::NodeSetHasBeenSet() const
+{
+    return m_nodeSetHasBeenSet;
 }
 
 

@@ -44,22 +44,26 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filter conditions.
-<li>address-template-name - String - (Filter condition) IP address template name.</li>
-<li>address-template-id - String - (Filter condition) IP address template instance ID, such as `ipm-mdunqeb6`.</li>
-                     * @return Filters Filter conditions.
-<li>address-template-name - String - (Filter condition) IP address template name.</li>
-<li>address-template-id - String - (Filter condition) IP address template instance ID, such as `ipm-mdunqeb6`.</li>
+                     * 获取Filters
+<li>address-template-name - IP address template name.</li>
+<li>address-template-id - IP address template ID, such as `ipm-mdunqeb6`.</li>
+<li>address-ip - IP address.</li>
+                     * @return Filters Filters
+<li>address-template-name - IP address template name.</li>
+<li>address-template-id - IP address template ID, such as `ipm-mdunqeb6`.</li>
+<li>address-ip - IP address.</li>
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter conditions.
-<li>address-template-name - String - (Filter condition) IP address template name.</li>
-<li>address-template-id - String - (Filter condition) IP address template instance ID, such as `ipm-mdunqeb6`.</li>
-                     * @param Filters Filter conditions.
-<li>address-template-name - String - (Filter condition) IP address template name.</li>
-<li>address-template-id - String - (Filter condition) IP address template instance ID, such as `ipm-mdunqeb6`.</li>
+                     * 设置Filters
+<li>address-template-name - IP address template name.</li>
+<li>address-template-id - IP address template ID, such as `ipm-mdunqeb6`.</li>
+<li>address-ip - IP address.</li>
+                     * @param Filters Filters
+<li>address-template-name - IP address template name.</li>
+<li>address-template-id - IP address template ID, such as `ipm-mdunqeb6`.</li>
+<li>address-ip - IP address.</li>
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -108,9 +112,10 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Filter conditions.
-<li>address-template-name - String - (Filter condition) IP address template name.</li>
-<li>address-template-id - String - (Filter condition) IP address template instance ID, such as `ipm-mdunqeb6`.</li>
+                     * Filters
+<li>address-template-name - IP address template name.</li>
+<li>address-template-id - IP address template ID, such as `ipm-mdunqeb6`.</li>
+<li>address-ip - IP address.</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
-                     * @return Product Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
+                     * 获取Database engine name. For this API, its value is `redis`.
+                     * @return Product Database engine name. For this API, its value is `redis`.
                      */
                     std::string GetProduct() const;
 
                     /**
-                     * 设置Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
-                     * @param Product Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
+                     * 设置Database engine name. For this API, its value is `redis`.
+                     * @param Product Database engine name. For this API, its value is `redis`.
                      */
                     void SetProduct(const std::string& _product);
 
@@ -81,7 +81,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
+                     * Database engine name. For this API, its value is `redis`.
                      */
                     std::string m_product;
                     bool m_productHasBeenSet;

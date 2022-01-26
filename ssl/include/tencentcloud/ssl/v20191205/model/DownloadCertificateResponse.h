@@ -40,6 +40,7 @@ namespace TencentCloud
                     DownloadCertificateResponse();
                     ~DownloadCertificateResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -57,9 +58,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ContentHasBeenSet() const;
 
                     /**
-                     * 获取MIME type. application/zip: ZIP file.
+                     * 获取MIME type. `application/zip`: ZIP file
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ContentType MIME type. application/zip: ZIP file.
+                     * @return ContentType MIME type. `application/zip`: ZIP file
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetContentType() const;
@@ -80,7 +81,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_contentHasBeenSet;
 
                     /**
-                     * MIME type. application/zip: ZIP file.
+                     * MIME type. `application/zip`: ZIP file
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_contentType;

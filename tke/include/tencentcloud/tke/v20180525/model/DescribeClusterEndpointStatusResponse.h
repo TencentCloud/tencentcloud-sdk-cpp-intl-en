@@ -40,11 +40,14 @@ namespace TencentCloud
                     DescribeClusterEndpointStatusResponse();
                     ~DescribeClusterEndpointStatusResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Queries cluster access port status (Created = successfully enabled; Creating = in the process of being enabled; NotFound = not enabled).
-                     * @return Status Queries cluster access port status (Created = successfully enabled; Creating = in the process of being enabled; NotFound = not enabled).
+                     * 获取The status of cluster access port. It can be `Created` (enabled); `Creating` (enabling) and `NotFound` (not enabled)
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return Status The status of cluster access port. It can be `Created` (enabled); `Creating` (enabling) and `NotFound` (not enabled)
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string GetStatus() const;
 
@@ -54,13 +57,35 @@ namespace TencentCloud
                      */
                     bool StatusHasBeenSet() const;
 
+                    /**
+                     * 获取Details of the error occurred while opening the access port
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return ErrorMsg Details of the error occurred while opening the access port
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    std::string GetErrorMsg() const;
+
+                    /**
+                     * 判断参数 ErrorMsg 是否已赋值
+                     * @return ErrorMsg 是否已赋值
+                     */
+                    bool ErrorMsgHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Queries cluster access port status (Created = successfully enabled; Creating = in the process of being enabled; NotFound = not enabled).
+                     * The status of cluster access port. It can be `Created` (enabled); `Creating` (enabling) and `NotFound` (not enabled)
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
+
+                    /**
+                     * Details of the error occurred while opening the access port
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    std::string m_errorMsg;
+                    bool m_errorMsgHasBeenSet;
 
                 };
             }

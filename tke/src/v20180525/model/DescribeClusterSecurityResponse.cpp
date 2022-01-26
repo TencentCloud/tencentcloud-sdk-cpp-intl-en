@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Tke::V20180525::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeClusterSecurityResponse::DescribeClusterSecurityResponse() :
@@ -39,20 +38,20 @@ DescribeClusterSecurityResponse::DescribeClusterSecurityResponse() :
 
 CoreInternalOutcome DescribeClusterSecurityResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -63,11 +62,11 @@ CoreInternalOutcome DescribeClusterSecurityResponse::Deserialize(const string &p
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -75,7 +74,7 @@ CoreInternalOutcome DescribeClusterSecurityResponse::Deserialize(const string &p
     {
         if (!rsp["UserName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UserName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UserName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_userName = string(rsp["UserName"].GetString());
         m_userNameHasBeenSet = true;
@@ -85,7 +84,7 @@ CoreInternalOutcome DescribeClusterSecurityResponse::Deserialize(const string &p
     {
         if (!rsp["Password"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Password` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Password` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_password = string(rsp["Password"].GetString());
         m_passwordHasBeenSet = true;
@@ -95,7 +94,7 @@ CoreInternalOutcome DescribeClusterSecurityResponse::Deserialize(const string &p
     {
         if (!rsp["CertificationAuthority"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CertificationAuthority` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CertificationAuthority` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_certificationAuthority = string(rsp["CertificationAuthority"].GetString());
         m_certificationAuthorityHasBeenSet = true;
@@ -105,7 +104,7 @@ CoreInternalOutcome DescribeClusterSecurityResponse::Deserialize(const string &p
     {
         if (!rsp["ClusterExternalEndpoint"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClusterExternalEndpoint` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClusterExternalEndpoint` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_clusterExternalEndpoint = string(rsp["ClusterExternalEndpoint"].GetString());
         m_clusterExternalEndpointHasBeenSet = true;
@@ -115,7 +114,7 @@ CoreInternalOutcome DescribeClusterSecurityResponse::Deserialize(const string &p
     {
         if (!rsp["Domain"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Domain` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Domain` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_domain = string(rsp["Domain"].GetString());
         m_domainHasBeenSet = true;
@@ -125,7 +124,7 @@ CoreInternalOutcome DescribeClusterSecurityResponse::Deserialize(const string &p
     {
         if (!rsp["PgwEndpoint"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PgwEndpoint` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PgwEndpoint` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_pgwEndpoint = string(rsp["PgwEndpoint"].GetString());
         m_pgwEndpointHasBeenSet = true;
@@ -134,10 +133,10 @@ CoreInternalOutcome DescribeClusterSecurityResponse::Deserialize(const string &p
     if (rsp.HasMember("SecurityPolicy") && !rsp["SecurityPolicy"].IsNull())
     {
         if (!rsp["SecurityPolicy"].IsArray())
-            return CoreInternalOutcome(Error("response `SecurityPolicy` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `SecurityPolicy` is not array type"));
 
-        const Value &tmpValue = rsp["SecurityPolicy"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["SecurityPolicy"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_securityPolicy.push_back((*itr).GetString());
         }
@@ -148,7 +147,7 @@ CoreInternalOutcome DescribeClusterSecurityResponse::Deserialize(const string &p
     {
         if (!rsp["Kubeconfig"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Kubeconfig` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Kubeconfig` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_kubeconfig = string(rsp["Kubeconfig"].GetString());
         m_kubeconfigHasBeenSet = true;
@@ -158,7 +157,7 @@ CoreInternalOutcome DescribeClusterSecurityResponse::Deserialize(const string &p
     {
         if (!rsp["JnsGwEndpoint"].IsString())
         {
-            return CoreInternalOutcome(Error("response `JnsGwEndpoint` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `JnsGwEndpoint` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_jnsGwEndpoint = string(rsp["JnsGwEndpoint"].GetString());
         m_jnsGwEndpointHasBeenSet = true;
@@ -166,6 +165,100 @@ CoreInternalOutcome DescribeClusterSecurityResponse::Deserialize(const string &p
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeClusterSecurityResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_userNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UserName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_userName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_passwordHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Password";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_password.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_certificationAuthorityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CertificationAuthority";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_certificationAuthority.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_clusterExternalEndpointHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClusterExternalEndpoint";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clusterExternalEndpoint.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_domainHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Domain";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_domain.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_pgwEndpointHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PgwEndpoint";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_pgwEndpoint.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_securityPolicyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SecurityPolicy";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_securityPolicy.begin(); itr != m_securityPolicy.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_kubeconfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Kubeconfig";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_kubeconfig.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_jnsGwEndpointHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "JnsGwEndpoint";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_jnsGwEndpoint.c_str(), allocator).Move(), allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

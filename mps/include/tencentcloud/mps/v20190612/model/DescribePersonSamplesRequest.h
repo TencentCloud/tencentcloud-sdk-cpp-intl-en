@@ -43,34 +43,34 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Pulled figure type. Valid values:
-<li>UserDefine: Custom figure library;</li>
-<li>Default: Default figure library.</li>
+                     * 获取Type of images to pull. Valid values:
+<li>UserDefine: custom image library</li>
+<li>Default: default image library</li>
 
-Default value: UserDefine (the custom figure library will be pulled.)
-Note: The default figure library can be pulled only through "figure name" or "figure ID + figure name", and only one face image will be returned.
-                     * @return Type Pulled figure type. Valid values:
-<li>UserDefine: Custom figure library;</li>
-<li>Default: Default figure library.</li>
+Default value: UserDefine. Samples in the custom image library will be pulled.
+Note: you can pull the default image library only using the image name or a combination of the image name and ID, and only one face image is returned.
+                     * @return Type Type of images to pull. Valid values:
+<li>UserDefine: custom image library</li>
+<li>Default: default image library</li>
 
-Default value: UserDefine (the custom figure library will be pulled.)
-Note: The default figure library can be pulled only through "figure name" or "figure ID + figure name", and only one face image will be returned.
+Default value: UserDefine. Samples in the custom image library will be pulled.
+Note: you can pull the default image library only using the image name or a combination of the image name and ID, and only one face image is returned.
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Pulled figure type. Valid values:
-<li>UserDefine: Custom figure library;</li>
-<li>Default: Default figure library.</li>
+                     * 设置Type of images to pull. Valid values:
+<li>UserDefine: custom image library</li>
+<li>Default: default image library</li>
 
-Default value: UserDefine (the custom figure library will be pulled.)
-Note: The default figure library can be pulled only through "figure name" or "figure ID + figure name", and only one face image will be returned.
-                     * @param Type Pulled figure type. Valid values:
-<li>UserDefine: Custom figure library;</li>
-<li>Default: Default figure library.</li>
+Default value: UserDefine. Samples in the custom image library will be pulled.
+Note: you can pull the default image library only using the image name or a combination of the image name and ID, and only one face image is returned.
+                     * @param Type Type of images to pull. Valid values:
+<li>UserDefine: custom image library</li>
+<li>Default: default image library</li>
 
-Default value: UserDefine (the custom figure library will be pulled.)
-Note: The default figure library can be pulled only through "figure name" or "figure ID + figure name", and only one face image will be returned.
+Default value: UserDefine. Samples in the custom image library will be pulled.
+Note: you can pull the default image library only using the image name or a combination of the image name and ID, and only one face image is returned.
                      */
                     void SetType(const std::string& _type);
 
@@ -81,14 +81,14 @@ Note: The default figure library can be pulled only through "figure name" or "fi
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Figure ID. Array length limit: 100.
-                     * @return PersonIds Figure ID. Array length limit: 100.
+                     * 获取Image ID. Array length limit: 100
+                     * @return PersonIds Image ID. Array length limit: 100
                      */
                     std::vector<std::string> GetPersonIds() const;
 
                     /**
-                     * 设置Figure ID. Array length limit: 100.
-                     * @param PersonIds Figure ID. Array length limit: 100.
+                     * 设置Image ID. Array length limit: 100
+                     * @param PersonIds Image ID. Array length limit: 100
                      */
                     void SetPersonIds(const std::vector<std::string>& _personIds);
 
@@ -99,14 +99,14 @@ Note: The default figure library can be pulled only through "figure name" or "fi
                     bool PersonIdsHasBeenSet() const;
 
                     /**
-                     * 获取Figure name. Array length limit: 20.
-                     * @return Names Figure name. Array length limit: 20.
+                     * 获取Image name. Array length limit: 20
+                     * @return Names Image name. Array length limit: 20
                      */
                     std::vector<std::string> GetNames() const;
 
                     /**
-                     * 设置Figure name. Array length limit: 20.
-                     * @param Names Figure name. Array length limit: 20.
+                     * 设置Image name. Array length limit: 20
+                     * @param Names Image name. Array length limit: 20
                      */
                     void SetNames(const std::vector<std::string>& _names);
 
@@ -117,14 +117,14 @@ Note: The default figure library can be pulled only through "figure name" or "fi
                     bool NamesHasBeenSet() const;
 
                     /**
-                     * 获取Figure tag. Array length limit: 20.
-                     * @return Tags Figure tag. Array length limit: 20.
+                     * 获取Image tag. Array length limit: 20
+                     * @return Tags Image tag. Array length limit: 20
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
-                     * 设置Figure tag. Array length limit: 20.
-                     * @param Tags Figure tag. Array length limit: 20.
+                     * 设置Image tag. Array length limit: 20
+                     * @param Tags Image tag. Array length limit: 20
                      */
                     void SetTags(const std::vector<std::string>& _tags);
 
@@ -173,30 +173,30 @@ Note: The default figure library can be pulled only through "figure name" or "fi
                 private:
 
                     /**
-                     * Pulled figure type. Valid values:
-<li>UserDefine: Custom figure library;</li>
-<li>Default: Default figure library.</li>
+                     * Type of images to pull. Valid values:
+<li>UserDefine: custom image library</li>
+<li>Default: default image library</li>
 
-Default value: UserDefine (the custom figure library will be pulled.)
-Note: The default figure library can be pulled only through "figure name" or "figure ID + figure name", and only one face image will be returned.
+Default value: UserDefine. Samples in the custom image library will be pulled.
+Note: you can pull the default image library only using the image name or a combination of the image name and ID, and only one face image is returned.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Figure ID. Array length limit: 100.
+                     * Image ID. Array length limit: 100
                      */
                     std::vector<std::string> m_personIds;
                     bool m_personIdsHasBeenSet;
 
                     /**
-                     * Figure name. Array length limit: 20.
+                     * Image name. Array length limit: 20
                      */
                     std::vector<std::string> m_names;
                     bool m_namesHasBeenSet;
 
                     /**
-                     * Figure tag. Array length limit: 20.
+                     * Image tag. Array length limit: 20
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;

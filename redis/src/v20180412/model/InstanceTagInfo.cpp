@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Redis::V20180412::Model;
-using namespace rapidjson;
 using namespace std;
 
 InstanceTagInfo::InstanceTagInfo() :
@@ -27,7 +26,7 @@ InstanceTagInfo::InstanceTagInfo() :
 {
 }
 
-CoreInternalOutcome InstanceTagInfo::Deserialize(const Value &value)
+CoreInternalOutcome InstanceTagInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome InstanceTagInfo::Deserialize(const Value &value)
     {
         if (!value["TagKey"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceTagInfo.TagKey` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceTagInfo.TagKey` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tagKey = string(value["TagKey"].GetString());
         m_tagKeyHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome InstanceTagInfo::Deserialize(const Value &value)
     {
         if (!value["TagValue"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceTagInfo.TagValue` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceTagInfo.TagValue` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tagValue = string(value["TagValue"].GetString());
         m_tagValueHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome InstanceTagInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void InstanceTagInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void InstanceTagInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_tagKeyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TagKey";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_tagKey.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tagKey.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tagValueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TagValue";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_tagValue.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tagValue.c_str(), allocator).Move(), allocator);
     }
 
 }

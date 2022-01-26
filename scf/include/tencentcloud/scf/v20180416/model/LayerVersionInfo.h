@@ -167,30 +167,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LayerNameHasBeenSet() const;
 
                     /**
-                     * 获取The status of the layer version. Values can be: 
-`Active`: normal
-`Publishing`: publishing
-`PublishFailed`: failed to publish
-`Deleted`: deleted
-                     * @return Status The status of the layer version. Values can be: 
-`Active`: normal
-`Publishing`: publishing
-`PublishFailed`: failed to publish
-`Deleted`: deleted
+                     * 获取Current status of specific layer version. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
+                     * @return Status Current status of specific layer version. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置The status of the layer version. Values can be: 
-`Active`: normal
-`Publishing`: publishing
-`PublishFailed`: failed to publish
-`Deleted`: deleted
-                     * @param Status The status of the layer version. Values can be: 
-`Active`: normal
-`Publishing`: publishing
-`PublishFailed`: failed to publish
-`Deleted`: deleted
+                     * 设置Current status of specific layer version. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
+                     * @param Status Current status of specific layer version. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
                      */
                     void SetStatus(const std::string& _status);
 
@@ -242,11 +226,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_layerNameHasBeenSet;
 
                     /**
-                     * The status of the layer version. Values can be: 
-`Active`: normal
-`Publishing`: publishing
-`PublishFailed`: failed to publish
-`Deleted`: deleted
+                     * Current status of specific layer version. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

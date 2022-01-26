@@ -155,14 +155,26 @@ Default value: 0.
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResolutionAdaptive 
+                     * 获取Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
+                     * @return ResolutionAdaptive Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
                      */
                     std::string GetResolutionAdaptive() const;
 
                     /**
-                     * 设置
-                     * @param ResolutionAdaptive 
+                     * 设置Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
+                     * @param ResolutionAdaptive Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
                      */
                     void SetResolutionAdaptive(const std::string& _resolutionAdaptive);
 
@@ -281,7 +293,10 @@ Default value: 0.
                     bool m_heightHasBeenSet;
 
                     /**
-                     * 
+                     * Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
                      */
                     std::string m_resolutionAdaptive;
                     bool m_resolutionAdaptiveHasBeenSet;

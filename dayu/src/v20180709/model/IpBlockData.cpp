@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dayu::V20180709::Model;
-using namespace rapidjson;
 using namespace std;
 
 IpBlockData::IpBlockData() :
@@ -30,7 +29,7 @@ IpBlockData::IpBlockData() :
 {
 }
 
-CoreInternalOutcome IpBlockData::Deserialize(const Value &value)
+CoreInternalOutcome IpBlockData::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome IpBlockData::Deserialize(const Value &value)
     {
         if (!value["Ip"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IpBlockData.Ip` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IpBlockData.Ip` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ip = string(value["Ip"].GetString());
         m_ipHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome IpBlockData::Deserialize(const Value &value)
     {
         if (!value["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IpBlockData.Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IpBlockData.Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(value["Status"].GetString());
         m_statusHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome IpBlockData::Deserialize(const Value &value)
     {
         if (!value["BlockTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IpBlockData.BlockTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IpBlockData.BlockTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_blockTime = string(value["BlockTime"].GetString());
         m_blockTimeHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome IpBlockData::Deserialize(const Value &value)
     {
         if (!value["UnBlockTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IpBlockData.UnBlockTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IpBlockData.UnBlockTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_unBlockTime = string(value["UnBlockTime"].GetString());
         m_unBlockTimeHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome IpBlockData::Deserialize(const Value &value)
     {
         if (!value["ActionType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IpBlockData.ActionType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IpBlockData.ActionType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_actionType = string(value["ActionType"].GetString());
         m_actionTypeHasBeenSet = true;
@@ -89,47 +88,47 @@ CoreInternalOutcome IpBlockData::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void IpBlockData::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void IpBlockData::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_ipHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Ip";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ip.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ip.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_status.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
     }
 
     if (m_blockTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BlockTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_blockTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_blockTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_unBlockTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UnBlockTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_unBlockTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_unBlockTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_actionTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ActionType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_actionType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_actionType.c_str(), allocator).Move(), allocator);
     }
 
 }

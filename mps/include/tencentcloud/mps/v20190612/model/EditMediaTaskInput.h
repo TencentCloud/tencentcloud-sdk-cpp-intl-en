@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Input of video editing task.
                 */
                 class EditMediaTaskInput : public AbstractModel
                 {
@@ -48,14 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return FileInfoSet 
+                     * 获取Information of input video file.
+                     * @return FileInfoSet Information of input video file.
                      */
                     std::vector<EditMediaFileInfo> GetFileInfoSet() const;
 
                     /**
-                     * 设置
-                     * @param FileInfoSet 
+                     * 设置Information of input video file.
+                     * @param FileInfoSet Information of input video file.
                      */
                     void SetFileInfoSet(const std::vector<EditMediaFileInfo>& _fileInfoSet);
 
@@ -68,7 +68,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Information of input video file.
                      */
                     std::vector<EditMediaFileInfo> m_fileInfoSet;
                     bool m_fileInfoSetHasBeenSet;

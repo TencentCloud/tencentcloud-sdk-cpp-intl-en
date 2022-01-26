@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Tke::V20180525::Model;
-using namespace rapidjson;
 using namespace std;
 
 ResourceDeleteOption::ResourceDeleteOption() :
@@ -27,7 +26,7 @@ ResourceDeleteOption::ResourceDeleteOption() :
 {
 }
 
-CoreInternalOutcome ResourceDeleteOption::Deserialize(const Value &value)
+CoreInternalOutcome ResourceDeleteOption::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome ResourceDeleteOption::Deserialize(const Value &value)
     {
         if (!value["ResourceType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ResourceDeleteOption.ResourceType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ResourceDeleteOption.ResourceType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_resourceType = string(value["ResourceType"].GetString());
         m_resourceTypeHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome ResourceDeleteOption::Deserialize(const Value &value)
     {
         if (!value["DeleteMode"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ResourceDeleteOption.DeleteMode` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ResourceDeleteOption.DeleteMode` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_deleteMode = string(value["DeleteMode"].GetString());
         m_deleteModeHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome ResourceDeleteOption::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ResourceDeleteOption::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ResourceDeleteOption::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_resourceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResourceType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_resourceType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resourceType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_deleteModeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DeleteMode";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_deleteMode.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_deleteMode.c_str(), allocator).Move(), allocator);
     }
 
 }

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Content of the DvAuths parameter.
+                * Content of the `DvAuths` parameter
                 */
                 class DvAuths : public AbstractModel
                 {
@@ -47,17 +47,17 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取DV authentication key.
+                     * 获取DV authentication key
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DvAuthKey DV authentication key.
+                     * @return DvAuthKey DV authentication key
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetDvAuthKey() const;
 
                     /**
-                     * 设置DV authentication key.
+                     * 设置DV authentication key
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DvAuthKey DV authentication key.
+                     * @param DvAuthKey DV authentication key
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetDvAuthKey(const std::string& _dvAuthKey);
@@ -69,17 +69,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DvAuthKeyHasBeenSet() const;
 
                     /**
-                     * 获取DV authentication value.
+                     * 获取DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DvAuthValue DV authentication value.
+                     * @return DvAuthValue DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetDvAuthValue() const;
 
                     /**
-                     * 设置DV authentication value.
+                     * 设置DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DvAuthValue DV authentication value.
+                     * @param DvAuthValue DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetDvAuthValue(const std::string& _dvAuthValue);
@@ -91,17 +91,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DvAuthValueHasBeenSet() const;
 
                     /**
-                     * 获取Domain name of the DV authentication value.
+                     * 获取Domain name of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DvAuthDomain Domain name of the DV authentication value.
+                     * @return DvAuthDomain Domain name of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetDvAuthDomain() const;
 
                     /**
-                     * 设置Domain name of the DV authentication value.
+                     * 设置Domain name of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DvAuthDomain Domain name of the DV authentication value.
+                     * @param DvAuthDomain Domain name of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetDvAuthDomain(const std::string& _dvAuthDomain);
@@ -113,17 +113,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DvAuthDomainHasBeenSet() const;
 
                     /**
-                     * 获取Path of the DV authentication value.
+                     * 获取Path of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DvAuthPath Path of the DV authentication value.
+                     * @return DvAuthPath Path of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetDvAuthPath() const;
 
                     /**
-                     * 设置Path of the DV authentication value.
+                     * 设置Path of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DvAuthPath Path of the DV authentication value.
+                     * @param DvAuthPath Path of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetDvAuthPath(const std::string& _dvAuthPath);
@@ -135,17 +135,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DvAuthPathHasBeenSet() const;
 
                     /**
-                     * 获取DV authentication sub-domain name.
+                     * 获取DV authentication sub-domain name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DvAuthSubDomain DV authentication sub-domain name.
+                     * @return DvAuthSubDomain DV authentication sub-domain name
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetDvAuthSubDomain() const;
 
                     /**
-                     * 设置DV authentication sub-domain name.
+                     * 设置DV authentication sub-domain name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DvAuthSubDomain DV authentication sub-domain name.
+                     * @param DvAuthSubDomain DV authentication sub-domain name
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetDvAuthSubDomain(const std::string& _dvAuthSubDomain);
@@ -157,17 +157,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DvAuthSubDomainHasBeenSet() const;
 
                     /**
-                     * 获取DV authentication type.
+                     * 获取DV authentication type
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DvAuthVerifyType DV authentication type.
+                     * @return DvAuthVerifyType DV authentication type
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetDvAuthVerifyType() const;
 
                     /**
-                     * 设置DV authentication type.
+                     * 设置DV authentication type
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DvAuthVerifyType DV authentication type.
+                     * @param DvAuthVerifyType DV authentication type
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetDvAuthVerifyType(const std::string& _dvAuthVerifyType);
@@ -181,42 +181,42 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * DV authentication key.
+                     * DV authentication key
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dvAuthKey;
                     bool m_dvAuthKeyHasBeenSet;
 
                     /**
-                     * DV authentication value.
+                     * DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dvAuthValue;
                     bool m_dvAuthValueHasBeenSet;
 
                     /**
-                     * Domain name of the DV authentication value.
+                     * Domain name of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dvAuthDomain;
                     bool m_dvAuthDomainHasBeenSet;
 
                     /**
-                     * Path of the DV authentication value.
+                     * Path of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dvAuthPath;
                     bool m_dvAuthPathHasBeenSet;
 
                     /**
-                     * DV authentication sub-domain name.
+                     * DV authentication sub-domain name
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dvAuthSubDomain;
                     bool m_dvAuthSubDomainHasBeenSet;
 
                     /**
-                     * DV authentication type.
+                     * DV authentication type
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dvAuthVerifyType;

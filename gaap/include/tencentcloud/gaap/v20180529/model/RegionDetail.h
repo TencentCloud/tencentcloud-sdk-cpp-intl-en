@@ -82,6 +82,60 @@ namespace TencentCloud
                      */
                     bool RegionNameHasBeenSet() const;
 
+                    /**
+                     * 获取Region where the data center locates
+                     * @return RegionArea Region where the data center locates
+                     */
+                    std::string GetRegionArea() const;
+
+                    /**
+                     * 设置Region where the data center locates
+                     * @param RegionArea Region where the data center locates
+                     */
+                    void SetRegionArea(const std::string& _regionArea);
+
+                    /**
+                     * 判断参数 RegionArea 是否已赋值
+                     * @return RegionArea 是否已赋值
+                     */
+                    bool RegionAreaHasBeenSet() const;
+
+                    /**
+                     * 获取Name of the region where the data center locates
+                     * @return RegionAreaName Name of the region where the data center locates
+                     */
+                    std::string GetRegionAreaName() const;
+
+                    /**
+                     * 设置Name of the region where the data center locates
+                     * @param RegionAreaName Name of the region where the data center locates
+                     */
+                    void SetRegionAreaName(const std::string& _regionAreaName);
+
+                    /**
+                     * 判断参数 RegionAreaName 是否已赋值
+                     * @return RegionAreaName 是否已赋值
+                     */
+                    bool RegionAreaNameHasBeenSet() const;
+
+                    /**
+                     * 获取Data center type. `dc`: data center; `ec`: edge server.
+                     * @return IDCType Data center type. `dc`: data center; `ec`: edge server.
+                     */
+                    std::string GetIDCType() const;
+
+                    /**
+                     * 设置Data center type. `dc`: data center; `ec`: edge server.
+                     * @param IDCType Data center type. `dc`: data center; `ec`: edge server.
+                     */
+                    void SetIDCType(const std::string& _iDCType);
+
+                    /**
+                     * 判断参数 IDCType 是否已赋值
+                     * @return IDCType 是否已赋值
+                     */
+                    bool IDCTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -95,6 +149,24 @@ namespace TencentCloud
                      */
                     std::string m_regionName;
                     bool m_regionNameHasBeenSet;
+
+                    /**
+                     * Region where the data center locates
+                     */
+                    std::string m_regionArea;
+                    bool m_regionAreaHasBeenSet;
+
+                    /**
+                     * Name of the region where the data center locates
+                     */
+                    std::string m_regionAreaName;
+                    bool m_regionAreaNameHasBeenSet;
+
+                    /**
+                     * Data center type. `dc`: data center; `ec`: edge server.
+                     */
+                    std::string m_iDCType;
+                    bool m_iDCTypeHasBeenSet;
 
                 };
             }

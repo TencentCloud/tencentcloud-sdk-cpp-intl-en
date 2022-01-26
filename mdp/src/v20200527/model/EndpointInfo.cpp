@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mdp::V20200527::Model;
-using namespace rapidjson;
 using namespace std;
 
 EndpointInfo::EndpointInfo() :
@@ -28,7 +27,7 @@ EndpointInfo::EndpointInfo() :
 {
 }
 
-CoreInternalOutcome EndpointInfo::Deserialize(const Value &value)
+CoreInternalOutcome EndpointInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome EndpointInfo::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `EndpointInfo.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EndpointInfo.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome EndpointInfo::Deserialize(const Value &value)
     {
         if (!value["Url"].IsString())
         {
-            return CoreInternalOutcome(Error("response `EndpointInfo.Url` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EndpointInfo.Url` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_url = string(value["Url"].GetString());
         m_urlHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome EndpointInfo::Deserialize(const Value &value)
     {
         if (!value["AuthInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `EndpointInfo.AuthInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EndpointInfo.AuthInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_authInfo.Deserialize(value["AuthInfo"]);
@@ -74,31 +73,31 @@ CoreInternalOutcome EndpointInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void EndpointInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void EndpointInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_urlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Url";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_url.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_url.c_str(), allocator).Move(), allocator);
     }
 
     if (m_authInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AuthInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_authInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 

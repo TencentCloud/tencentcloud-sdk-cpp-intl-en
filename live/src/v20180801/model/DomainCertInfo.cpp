@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Live::V20180801::Model;
-using namespace rapidjson;
 using namespace std;
 
 DomainCertInfo::DomainCertInfo() :
@@ -30,11 +29,13 @@ DomainCertInfo::DomainCertInfo() :
     m_certTypeHasBeenSet(false),
     m_certExpireTimeHasBeenSet(false),
     m_domainNameHasBeenSet(false),
-    m_statusHasBeenSet(false)
+    m_statusHasBeenSet(false),
+    m_certDomainsHasBeenSet(false),
+    m_cloudCertIdHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DomainCertInfo::Deserialize(const Value &value)
+CoreInternalOutcome DomainCertInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -43,7 +44,7 @@ CoreInternalOutcome DomainCertInfo::Deserialize(const Value &value)
     {
         if (!value["CertId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DomainCertInfo.CertId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainCertInfo.CertId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_certId = value["CertId"].GetInt64();
         m_certIdHasBeenSet = true;
@@ -53,7 +54,7 @@ CoreInternalOutcome DomainCertInfo::Deserialize(const Value &value)
     {
         if (!value["CertName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DomainCertInfo.CertName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainCertInfo.CertName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_certName = string(value["CertName"].GetString());
         m_certNameHasBeenSet = true;
@@ -63,7 +64,7 @@ CoreInternalOutcome DomainCertInfo::Deserialize(const Value &value)
     {
         if (!value["Description"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DomainCertInfo.Description` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainCertInfo.Description` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_description = string(value["Description"].GetString());
         m_descriptionHasBeenSet = true;
@@ -73,7 +74,7 @@ CoreInternalOutcome DomainCertInfo::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DomainCertInfo.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainCertInfo.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -83,7 +84,7 @@ CoreInternalOutcome DomainCertInfo::Deserialize(const Value &value)
     {
         if (!value["HttpsCrt"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DomainCertInfo.HttpsCrt` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainCertInfo.HttpsCrt` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_httpsCrt = string(value["HttpsCrt"].GetString());
         m_httpsCrtHasBeenSet = true;
@@ -93,7 +94,7 @@ CoreInternalOutcome DomainCertInfo::Deserialize(const Value &value)
     {
         if (!value["CertType"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DomainCertInfo.CertType` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainCertInfo.CertType` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_certType = value["CertType"].GetInt64();
         m_certTypeHasBeenSet = true;
@@ -103,7 +104,7 @@ CoreInternalOutcome DomainCertInfo::Deserialize(const Value &value)
     {
         if (!value["CertExpireTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DomainCertInfo.CertExpireTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainCertInfo.CertExpireTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_certExpireTime = string(value["CertExpireTime"].GetString());
         m_certExpireTimeHasBeenSet = true;
@@ -113,7 +114,7 @@ CoreInternalOutcome DomainCertInfo::Deserialize(const Value &value)
     {
         if (!value["DomainName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DomainCertInfo.DomainName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainCertInfo.DomainName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_domainName = string(value["DomainName"].GetString());
         m_domainNameHasBeenSet = true;
@@ -123,22 +124,45 @@ CoreInternalOutcome DomainCertInfo::Deserialize(const Value &value)
     {
         if (!value["Status"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DomainCertInfo.Status` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainCertInfo.Status` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_status = value["Status"].GetInt64();
         m_statusHasBeenSet = true;
+    }
+
+    if (value.HasMember("CertDomains") && !value["CertDomains"].IsNull())
+    {
+        if (!value["CertDomains"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `DomainCertInfo.CertDomains` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["CertDomains"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_certDomains.push_back((*itr).GetString());
+        }
+        m_certDomainsHasBeenSet = true;
+    }
+
+    if (value.HasMember("CloudCertId") && !value["CloudCertId"].IsNull())
+    {
+        if (!value["CloudCertId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DomainCertInfo.CloudCertId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_cloudCertId = string(value["CloudCertId"].GetString());
+        m_cloudCertIdHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void DomainCertInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DomainCertInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_certIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CertId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_certId, allocator);
@@ -146,39 +170,39 @@ void DomainCertInfo::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_certNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CertName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_certName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_certName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_descriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Description";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_description.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_httpsCrtHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HttpsCrt";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_httpsCrt.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_httpsCrt.c_str(), allocator).Move(), allocator);
     }
 
     if (m_certTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CertType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_certType, allocator);
@@ -186,26 +210,47 @@ void DomainCertInfo::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_certExpireTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CertExpireTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_certExpireTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_certExpireTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_domainNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DomainName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_domainName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_domainName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);
+    }
+
+    if (m_certDomainsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CertDomains";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_certDomains.begin(); itr != m_certDomains.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_cloudCertIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CloudCertId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cloudCertId.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -353,5 +398,37 @@ void DomainCertInfo::SetStatus(const int64_t& _status)
 bool DomainCertInfo::StatusHasBeenSet() const
 {
     return m_statusHasBeenSet;
+}
+
+vector<string> DomainCertInfo::GetCertDomains() const
+{
+    return m_certDomains;
+}
+
+void DomainCertInfo::SetCertDomains(const vector<string>& _certDomains)
+{
+    m_certDomains = _certDomains;
+    m_certDomainsHasBeenSet = true;
+}
+
+bool DomainCertInfo::CertDomainsHasBeenSet() const
+{
+    return m_certDomainsHasBeenSet;
+}
+
+string DomainCertInfo::GetCloudCertId() const
+{
+    return m_cloudCertId;
+}
+
+void DomainCertInfo::SetCloudCertId(const string& _cloudCertId)
+{
+    m_cloudCertId = _cloudCertId;
+    m_cloudCertIdHasBeenSet = true;
+}
+
+bool DomainCertInfo::CloudCertIdHasBeenSet() const
+{
+    return m_cloudCertIdHasBeenSet;
 }
 

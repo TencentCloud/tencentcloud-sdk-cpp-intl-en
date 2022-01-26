@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Filename. The file should have already been uploaded to Tencent Cloud.
-                     * @return FileName Filename. The file should have already been uploaded to Tencent Cloud.
+                     * 获取Filename. The file must be a .sql file uploaded to Tencent Cloud.
+                     * @return FileName Filename. The file must be a .sql file uploaded to Tencent Cloud.
                      */
                     std::string GetFileName() const;
 
                     /**
-                     * 设置Filename. The file should have already been uploaded to Tencent Cloud.
-                     * @param FileName Filename. The file should have already been uploaded to Tencent Cloud.
+                     * 设置Filename. The file must be a .sql file uploaded to Tencent Cloud.
+                     * @param FileName Filename. The file must be a .sql file uploaded to Tencent Cloud.
                      */
                     void SetFileName(const std::string& _fileName);
 
@@ -141,7 +141,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Filename. The file should have already been uploaded to Tencent Cloud.
+                     * Filename. The file must be a .sql file uploaded to Tencent Cloud.
                      */
                     std::string m_fileName;
                     bool m_fileNameHasBeenSet;

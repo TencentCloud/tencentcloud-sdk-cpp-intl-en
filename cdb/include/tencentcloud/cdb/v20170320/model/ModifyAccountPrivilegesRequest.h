@@ -170,6 +170,24 @@ Note: if this parameter is not passed in, it means to clear the permission.
                      */
                     bool ColumnPrivilegesHasBeenSet() const;
 
+                    /**
+                     * 获取If this parameter is specified, permissions are modified in batches. Valid values: `grant`, `revoke`.
+                     * @return ModifyAction If this parameter is specified, permissions are modified in batches. Valid values: `grant`, `revoke`.
+                     */
+                    std::string GetModifyAction() const;
+
+                    /**
+                     * 设置If this parameter is specified, permissions are modified in batches. Valid values: `grant`, `revoke`.
+                     * @param ModifyAction If this parameter is specified, permissions are modified in batches. Valid values: `grant`, `revoke`.
+                     */
+                    void SetModifyAction(const std::string& _modifyAction);
+
+                    /**
+                     * 判断参数 ModifyAction 是否已赋值
+                     * @return ModifyAction 是否已赋值
+                     */
+                    bool ModifyActionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -211,6 +229,12 @@ Note: if this parameter is not passed in, it means to clear the permission.
                      */
                     std::vector<ColumnPrivilege> m_columnPrivileges;
                     bool m_columnPrivilegesHasBeenSet;
+
+                    /**
+                     * If this parameter is specified, permissions are modified in batches. Valid values: `grant`, `revoke`.
+                     */
+                    std::string m_modifyAction;
+                    bool m_modifyActionHasBeenSet;
 
                 };
             }

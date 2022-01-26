@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 InquiryPriceCreateProxyRequest::InquiryPriceCreateProxyRequest() :
@@ -30,28 +29,32 @@ InquiryPriceCreateProxyRequest::InquiryPriceCreateProxyRequest() :
     m_concurrencyHasBeenSet(false),
     m_realServerRegionHasBeenSet(false),
     m_concurrentHasBeenSet(false),
-    m_billingTypeHasBeenSet(false)
+    m_billingTypeHasBeenSet(false),
+    m_iPAddressVersionHasBeenSet(false),
+    m_networkTypeHasBeenSet(false),
+    m_packageTypeHasBeenSet(false),
+    m_http3SupportedHasBeenSet(false)
 {
 }
 
 string InquiryPriceCreateProxyRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_accessRegionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AccessRegion";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_accessRegion.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_accessRegion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_bandwidthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Bandwidth";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_bandwidth, allocator);
@@ -59,15 +62,15 @@ string InquiryPriceCreateProxyRequest::ToJsonString() const
 
     if (m_destRegionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DestRegion";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_destRegion.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_destRegion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_concurrencyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Concurrency";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_concurrency, allocator);
@@ -75,15 +78,15 @@ string InquiryPriceCreateProxyRequest::ToJsonString() const
 
     if (m_realServerRegionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RealServerRegion";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_realServerRegion.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_realServerRegion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_concurrentHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Concurrent";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_concurrent, allocator);
@@ -91,15 +94,47 @@ string InquiryPriceCreateProxyRequest::ToJsonString() const
 
     if (m_billingTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BillingType";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_billingType, allocator);
     }
 
+    if (m_iPAddressVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IPAddressVersion";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_iPAddressVersion.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    if (m_networkTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NetworkType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_networkType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_packageTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PackageType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_packageType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_http3SupportedHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Http3Supported";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_http3Supported, allocator);
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -215,6 +250,70 @@ void InquiryPriceCreateProxyRequest::SetBillingType(const int64_t& _billingType)
 bool InquiryPriceCreateProxyRequest::BillingTypeHasBeenSet() const
 {
     return m_billingTypeHasBeenSet;
+}
+
+string InquiryPriceCreateProxyRequest::GetIPAddressVersion() const
+{
+    return m_iPAddressVersion;
+}
+
+void InquiryPriceCreateProxyRequest::SetIPAddressVersion(const string& _iPAddressVersion)
+{
+    m_iPAddressVersion = _iPAddressVersion;
+    m_iPAddressVersionHasBeenSet = true;
+}
+
+bool InquiryPriceCreateProxyRequest::IPAddressVersionHasBeenSet() const
+{
+    return m_iPAddressVersionHasBeenSet;
+}
+
+string InquiryPriceCreateProxyRequest::GetNetworkType() const
+{
+    return m_networkType;
+}
+
+void InquiryPriceCreateProxyRequest::SetNetworkType(const string& _networkType)
+{
+    m_networkType = _networkType;
+    m_networkTypeHasBeenSet = true;
+}
+
+bool InquiryPriceCreateProxyRequest::NetworkTypeHasBeenSet() const
+{
+    return m_networkTypeHasBeenSet;
+}
+
+string InquiryPriceCreateProxyRequest::GetPackageType() const
+{
+    return m_packageType;
+}
+
+void InquiryPriceCreateProxyRequest::SetPackageType(const string& _packageType)
+{
+    m_packageType = _packageType;
+    m_packageTypeHasBeenSet = true;
+}
+
+bool InquiryPriceCreateProxyRequest::PackageTypeHasBeenSet() const
+{
+    return m_packageTypeHasBeenSet;
+}
+
+int64_t InquiryPriceCreateProxyRequest::GetHttp3Supported() const
+{
+    return m_http3Supported;
+}
+
+void InquiryPriceCreateProxyRequest::SetHttp3Supported(const int64_t& _http3Supported)
+{
+    m_http3Supported = _http3Supported;
+    m_http3SupportedHasBeenSet = true;
+}
+
+bool InquiryPriceCreateProxyRequest::Http3SupportedHasBeenSet() const
+{
+    return m_http3SupportedHasBeenSet;
 }
 
 

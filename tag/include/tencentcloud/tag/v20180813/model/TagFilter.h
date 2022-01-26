@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Tag filtering array. “**AND**” relation if multiple arrays.
+                * Tag filtering array. '**AND**' relation if multiple arrays.
                 */
                 class TagFilter : public AbstractModel
                 {
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool TagKeyHasBeenSet() const;
 
                     /**
-                     * 获取Tag value array. “**OR**” relation if multiple values.
-                     * @return TagValue Tag value array. “**OR**” relation if multiple values.
+                     * 获取Tag value array. '**OR**' relation if multiple values.
+                     * @return TagValue Tag value array. '**OR**' relation if multiple values.
                      */
                     std::vector<std::string> GetTagValue() const;
 
                     /**
-                     * 设置Tag value array. “**OR**” relation if multiple values.
-                     * @param TagValue Tag value array. “**OR**” relation if multiple values.
+                     * 设置Tag value array. '**OR**' relation if multiple values.
+                     * @param TagValue Tag value array. '**OR**' relation if multiple values.
                      */
                     void SetTagValue(const std::vector<std::string>& _tagValue);
 
@@ -91,7 +91,7 @@ namespace TencentCloud
                     bool m_tagKeyHasBeenSet;
 
                     /**
-                     * Tag value array. “**OR**” relation if multiple values.
+                     * Tag value array. '**OR**' relation if multiple values.
                      */
                     std::vector<std::string> m_tagValue;
                     bool m_tagValueHasBeenSet;

@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeGroupDomainConfigResponse::DescribeGroupDomainConfigResponse() :
@@ -34,20 +33,20 @@ DescribeGroupDomainConfigResponse::DescribeGroupDomainConfigResponse() :
 
 CoreInternalOutcome DescribeGroupDomainConfigResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -58,21 +57,21 @@ CoreInternalOutcome DescribeGroupDomainConfigResponse::Deserialize(const string 
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
     if (rsp.HasMember("AccessRegionList") && !rsp["AccessRegionList"].IsNull())
     {
         if (!rsp["AccessRegionList"].IsArray())
-            return CoreInternalOutcome(Error("response `AccessRegionList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `AccessRegionList` is not array type"));
 
-        const Value &tmpValue = rsp["AccessRegionList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["AccessRegionList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             DomainAccessRegionDict item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -90,7 +89,7 @@ CoreInternalOutcome DescribeGroupDomainConfigResponse::Deserialize(const string 
     {
         if (!rsp["DefaultDnsIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DefaultDnsIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DefaultDnsIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_defaultDnsIp = string(rsp["DefaultDnsIp"].GetString());
         m_defaultDnsIpHasBeenSet = true;
@@ -100,7 +99,7 @@ CoreInternalOutcome DescribeGroupDomainConfigResponse::Deserialize(const string 
     {
         if (!rsp["GroupId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GroupId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_groupId = string(rsp["GroupId"].GetString());
         m_groupIdHasBeenSet = true;
@@ -110,7 +109,7 @@ CoreInternalOutcome DescribeGroupDomainConfigResponse::Deserialize(const string 
     {
         if (!rsp["AccessRegionCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `AccessRegionCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccessRegionCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_accessRegionCount = rsp["AccessRegionCount"].GetInt64();
         m_accessRegionCountHasBeenSet = true;
@@ -118,6 +117,62 @@ CoreInternalOutcome DescribeGroupDomainConfigResponse::Deserialize(const string 
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeGroupDomainConfigResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_accessRegionListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AccessRegionList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_accessRegionList.begin(); itr != m_accessRegionList.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_defaultDnsIpHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DefaultDnsIp";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_defaultDnsIp.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_groupIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GroupId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_groupId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_accessRegionCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AccessRegionCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_accessRegionCount, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

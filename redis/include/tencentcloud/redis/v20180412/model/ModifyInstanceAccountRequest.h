@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Sub-account routing policy. Enter `master` to route to the master node or `slave` to route to the slave node
-                     * @return ReadonlyPolicy Sub-account routing policy. Enter `master` to route to the master node or `slave` to route to the slave node
+                     * 获取Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
+                     * @return ReadonlyPolicy Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
                      */
                     std::vector<std::string> GetReadonlyPolicy() const;
 
                     /**
-                     * 设置Sub-account routing policy. Enter `master` to route to the master node or `slave` to route to the slave node
-                     * @param ReadonlyPolicy Sub-account routing policy. Enter `master` to route to the master node or `slave` to route to the slave node
+                     * 设置Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
+                     * @param ReadonlyPolicy Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
                      */
                     void SetReadonlyPolicy(const std::vector<std::string>& _readonlyPolicy);
 
@@ -195,7 +195,7 @@ namespace TencentCloud
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Sub-account routing policy. Enter `master` to route to the master node or `slave` to route to the slave node
+                     * Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
                      */
                     std::vector<std::string> m_readonlyPolicy;
                     bool m_readonlyPolicyHasBeenSet;

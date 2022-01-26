@@ -62,42 +62,46 @@ namespace TencentCloud
                     bool AutoScalingGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取Filter.
+                     * 获取Filters.
 <li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
 <li> auto-scaling-group-name - String - Required: No - (Filter) Filter by auto scaling group name.</li>
+<li> vague-auto-scaling-group-name - String - Required: No - (Filter) Fuzzy search by auto scaling group name.</li>
 <li> launch-configuration-id - String - Required: No - (Filter) Filter by launch configuration ID.</li>
 <li> tag-key - String - Required: No - (Filter) Filter by tag key.</li>
 <li> tag-value - String - Required: No - (Filter) Filter by tag value.</li>
-<li> tag:tag-key - String - Required: No - (Filter) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key. For detailed usage, see sample 2</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `AutoScalingGroupIds` and `Filters` at the same time.
-                     * @return Filters Filter.
+<li> tag:tag-key - String - Required: No - (Filter) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key. For more information, see example 2.</li>
+The maximum number of `Filters` in each request is 10. The upper limit for `Filter.Values` is 5. This parameter cannot specify `AutoScalingGroupIds` and `Filters` at the same time.
+                     * @return Filters Filters.
 <li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
 <li> auto-scaling-group-name - String - Required: No - (Filter) Filter by auto scaling group name.</li>
+<li> vague-auto-scaling-group-name - String - Required: No - (Filter) Fuzzy search by auto scaling group name.</li>
 <li> launch-configuration-id - String - Required: No - (Filter) Filter by launch configuration ID.</li>
 <li> tag-key - String - Required: No - (Filter) Filter by tag key.</li>
 <li> tag-value - String - Required: No - (Filter) Filter by tag value.</li>
-<li> tag:tag-key - String - Required: No - (Filter) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key. For detailed usage, see sample 2</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `AutoScalingGroupIds` and `Filters` at the same time.
+<li> tag:tag-key - String - Required: No - (Filter) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key. For more information, see example 2.</li>
+The maximum number of `Filters` in each request is 10. The upper limit for `Filter.Values` is 5. This parameter cannot specify `AutoScalingGroupIds` and `Filters` at the same time.
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter.
+                     * 设置Filters.
 <li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
 <li> auto-scaling-group-name - String - Required: No - (Filter) Filter by auto scaling group name.</li>
+<li> vague-auto-scaling-group-name - String - Required: No - (Filter) Fuzzy search by auto scaling group name.</li>
 <li> launch-configuration-id - String - Required: No - (Filter) Filter by launch configuration ID.</li>
 <li> tag-key - String - Required: No - (Filter) Filter by tag key.</li>
 <li> tag-value - String - Required: No - (Filter) Filter by tag value.</li>
-<li> tag:tag-key - String - Required: No - (Filter) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key. For detailed usage, see sample 2</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `AutoScalingGroupIds` and `Filters` at the same time.
-                     * @param Filters Filter.
+<li> tag:tag-key - String - Required: No - (Filter) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key. For more information, see example 2.</li>
+The maximum number of `Filters` in each request is 10. The upper limit for `Filter.Values` is 5. This parameter cannot specify `AutoScalingGroupIds` and `Filters` at the same time.
+                     * @param Filters Filters.
 <li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
 <li> auto-scaling-group-name - String - Required: No - (Filter) Filter by auto scaling group name.</li>
+<li> vague-auto-scaling-group-name - String - Required: No - (Filter) Fuzzy search by auto scaling group name.</li>
 <li> launch-configuration-id - String - Required: No - (Filter) Filter by launch configuration ID.</li>
 <li> tag-key - String - Required: No - (Filter) Filter by tag key.</li>
 <li> tag-value - String - Required: No - (Filter) Filter by tag value.</li>
-<li> tag:tag-key - String - Required: No - (Filter) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key. For detailed usage, see sample 2</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `AutoScalingGroupIds` and `Filters` at the same time.
+<li> tag:tag-key - String - Required: No - (Filter) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key. For more information, see example 2.</li>
+The maximum number of `Filters` in each request is 10. The upper limit for `Filter.Values` is 5. This parameter cannot specify `AutoScalingGroupIds` and `Filters` at the same time.
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -108,14 +112,14 @@ The maximum number of `Filters` per request is 10. The upper limit for `Filter.V
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
-                     * @return Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
+                     * 获取Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+                     * @return Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
-                     * @param Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
+                     * 设置Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+                     * @param Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -126,14 +130,14 @@ The maximum number of `Filters` per request is 10. The upper limit for `Filter.V
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
-                     * @return Offset Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
+                     * 获取Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+                     * @return Offset Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
-                     * @param Offset Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
+                     * 设置Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+                     * @param Offset Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
                      */
                     void SetOffset(const uint64_t& _offset);
 
@@ -152,26 +156,27 @@ The maximum number of `Filters` per request is 10. The upper limit for `Filter.V
                     bool m_autoScalingGroupIdsHasBeenSet;
 
                     /**
-                     * Filter.
+                     * Filters.
 <li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
 <li> auto-scaling-group-name - String - Required: No - (Filter) Filter by auto scaling group name.</li>
+<li> vague-auto-scaling-group-name - String - Required: No - (Filter) Fuzzy search by auto scaling group name.</li>
 <li> launch-configuration-id - String - Required: No - (Filter) Filter by launch configuration ID.</li>
 <li> tag-key - String - Required: No - (Filter) Filter by tag key.</li>
 <li> tag-value - String - Required: No - (Filter) Filter by tag value.</li>
-<li> tag:tag-key - String - Required: No - (Filter) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key. For detailed usage, see sample 2</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `AutoScalingGroupIds` and `Filters` at the same time.
+<li> tag:tag-key - String - Required: No - (Filter) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key. For more information, see example 2.</li>
+The maximum number of `Filters` in each request is 10. The upper limit for `Filter.Values` is 5. This parameter cannot specify `AutoScalingGroupIds` and `Filters` at the same time.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
+                     * Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
+                     * Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;

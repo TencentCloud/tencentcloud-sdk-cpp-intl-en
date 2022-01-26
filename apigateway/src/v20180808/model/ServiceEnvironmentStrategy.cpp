@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 ServiceEnvironmentStrategy::ServiceEnvironmentStrategy() :
@@ -26,11 +25,12 @@ ServiceEnvironmentStrategy::ServiceEnvironmentStrategy() :
     m_urlHasBeenSet(false),
     m_statusHasBeenSet(false),
     m_versionNameHasBeenSet(false),
-    m_strategyHasBeenSet(false)
+    m_strategyHasBeenSet(false),
+    m_maxStrategyHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ServiceEnvironmentStrategy::Deserialize(const Value &value)
+CoreInternalOutcome ServiceEnvironmentStrategy::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +39,7 @@ CoreInternalOutcome ServiceEnvironmentStrategy::Deserialize(const Value &value)
     {
         if (!value["EnvironmentName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ServiceEnvironmentStrategy.EnvironmentName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceEnvironmentStrategy.EnvironmentName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_environmentName = string(value["EnvironmentName"].GetString());
         m_environmentNameHasBeenSet = true;
@@ -49,7 +49,7 @@ CoreInternalOutcome ServiceEnvironmentStrategy::Deserialize(const Value &value)
     {
         if (!value["Url"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ServiceEnvironmentStrategy.Url` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceEnvironmentStrategy.Url` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_url = string(value["Url"].GetString());
         m_urlHasBeenSet = true;
@@ -59,7 +59,7 @@ CoreInternalOutcome ServiceEnvironmentStrategy::Deserialize(const Value &value)
     {
         if (!value["Status"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ServiceEnvironmentStrategy.Status` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceEnvironmentStrategy.Status` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_status = value["Status"].GetInt64();
         m_statusHasBeenSet = true;
@@ -69,7 +69,7 @@ CoreInternalOutcome ServiceEnvironmentStrategy::Deserialize(const Value &value)
     {
         if (!value["VersionName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ServiceEnvironmentStrategy.VersionName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceEnvironmentStrategy.VersionName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_versionName = string(value["VersionName"].GetString());
         m_versionNameHasBeenSet = true;
@@ -79,38 +79,48 @@ CoreInternalOutcome ServiceEnvironmentStrategy::Deserialize(const Value &value)
     {
         if (!value["Strategy"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ServiceEnvironmentStrategy.Strategy` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceEnvironmentStrategy.Strategy` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_strategy = value["Strategy"].GetInt64();
         m_strategyHasBeenSet = true;
+    }
+
+    if (value.HasMember("MaxStrategy") && !value["MaxStrategy"].IsNull())
+    {
+        if (!value["MaxStrategy"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ServiceEnvironmentStrategy.MaxStrategy` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_maxStrategy = value["MaxStrategy"].GetInt64();
+        m_maxStrategyHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void ServiceEnvironmentStrategy::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ServiceEnvironmentStrategy::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_environmentNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EnvironmentName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_environmentName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_environmentName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_urlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Url";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_url.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_url.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);
@@ -118,18 +128,26 @@ void ServiceEnvironmentStrategy::ToJsonObject(Value &value, Document::AllocatorT
 
     if (m_versionNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VersionName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_versionName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_versionName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_strategyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Strategy";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_strategy, allocator);
+    }
+
+    if (m_maxStrategyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MaxStrategy";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_maxStrategy, allocator);
     }
 
 }
@@ -213,5 +231,21 @@ void ServiceEnvironmentStrategy::SetStrategy(const int64_t& _strategy)
 bool ServiceEnvironmentStrategy::StrategyHasBeenSet() const
 {
     return m_strategyHasBeenSet;
+}
+
+int64_t ServiceEnvironmentStrategy::GetMaxStrategy() const
+{
+    return m_maxStrategy;
+}
+
+void ServiceEnvironmentStrategy::SetMaxStrategy(const int64_t& _maxStrategy)
+{
+    m_maxStrategy = _maxStrategy;
+    m_maxStrategyHasBeenSet = true;
+}
+
+bool ServiceEnvironmentStrategy::MaxStrategyHasBeenSet() const
+{
+    return m_maxStrategyHasBeenSet;
 }
 

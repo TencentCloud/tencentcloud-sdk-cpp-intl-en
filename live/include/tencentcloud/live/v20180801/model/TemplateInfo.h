@@ -47,18 +47,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video encoding format:
-h264/h265.
-                     * @return Vcodec Video encoding format:
-h264/h265.
+                     * 获取Codec: h264/h265/origin. Default value: h264.
+
+origin: keep the original codec.
+                     * @return Vcodec Codec: h264/h265/origin. Default value: h264.
+
+origin: keep the original codec.
                      */
                     std::string GetVcodec() const;
 
                     /**
-                     * 设置Video encoding format:
-h264/h265.
-                     * @param Vcodec Video encoding format:
-h264/h265.
+                     * 设置Codec: h264/h265/origin. Default value: h264.
+
+origin: keep the original codec.
+                     * @param Vcodec Codec: h264/h265/origin. Default value: h264.
+
+origin: keep the original codec.
                      */
                     void SetVcodec(const std::string& _vcodec);
 
@@ -69,14 +73,22 @@ h264/h265.
                     bool VcodecHasBeenSet() const;
 
                     /**
-                     * 获取Video bitrate. Value range: 100–8000 Kbps.
-                     * @return VideoBitrate Video bitrate. Value range: 100–8000 Kbps.
+                     * 获取Video bitrate. Value range: 0–8,000 Kbps.
+If the value is 0, the original bitrate will be retained.
+Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate.
+                     * @return VideoBitrate Video bitrate. Value range: 0–8,000 Kbps.
+If the value is 0, the original bitrate will be retained.
+Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate.
                      */
                     int64_t GetVideoBitrate() const;
 
                     /**
-                     * 设置Video bitrate. Value range: 100–8000 Kbps.
-                     * @param VideoBitrate Video bitrate. Value range: 100–8000 Kbps.
+                     * 设置Video bitrate. Value range: 0–8,000 Kbps.
+If the value is 0, the original bitrate will be retained.
+Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate.
+                     * @param VideoBitrate Video bitrate. Value range: 0–8,000 Kbps.
+If the value is 0, the original bitrate will be retained.
+Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate.
                      */
                     void SetVideoBitrate(const int64_t& _videoBitrate);
 
@@ -87,14 +99,18 @@ h264/h265.
                     bool VideoBitrateHasBeenSet() const;
 
                     /**
-                     * 获取Audio codec. Valid values: aac, mp3.
-                     * @return Acodec Audio codec. Valid values: aac, mp3.
+                     * 获取Audio codec: aac. Default value: aac.
+Note: This parameter will not take effect for now and will be supported soon.
+                     * @return Acodec Audio codec: aac. Default value: aac.
+Note: This parameter will not take effect for now and will be supported soon.
                      */
                     std::string GetAcodec() const;
 
                     /**
-                     * 设置Audio codec. Valid values: aac, mp3.
-                     * @param Acodec Audio codec. Valid values: aac, mp3.
+                     * 设置Audio codec: aac. Default value: aac.
+Note: This parameter will not take effect for now and will be supported soon.
+                     * @param Acodec Audio codec: aac. Default value: aac.
+Note: This parameter will not take effect for now and will be supported soon.
                      */
                     void SetAcodec(const std::string& _acodec);
 
@@ -106,13 +122,17 @@ h264/h265.
 
                     /**
                      * 获取Audio bitrate. Value range: 0–500 Kbps.
+0 by default.
                      * @return AudioBitrate Audio bitrate. Value range: 0–500 Kbps.
+0 by default.
                      */
                     int64_t GetAudioBitrate() const;
 
                     /**
                      * 设置Audio bitrate. Value range: 0–500 Kbps.
+0 by default.
                      * @param AudioBitrate Audio bitrate. Value range: 0–500 Kbps.
+0 by default.
                      */
                     void SetAudioBitrate(const int64_t& _audioBitrate);
 
@@ -123,14 +143,22 @@ h264/h265.
                     bool AudioBitrateHasBeenSet() const;
 
                     /**
-                     * 获取Width. Value range: 0–3000.
-                     * @return Width Width. Value range: 0–3000.
+                     * 获取Width. Default value: 0.
+Value range: [0-3,000].
+The value must be a multiple of 2. The original width is 0.
+                     * @return Width Width. Default value: 0.
+Value range: [0-3,000].
+The value must be a multiple of 2. The original width is 0.
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置Width. Value range: 0–3000.
-                     * @param Width Width. Value range: 0–3000.
+                     * 设置Width. Default value: 0.
+Value range: [0-3,000].
+The value must be a multiple of 2. The original width is 0.
+                     * @param Width Width. Default value: 0.
+Value range: [0-3,000].
+The value must be a multiple of 2. The original width is 0.
                      */
                     void SetWidth(const int64_t& _width);
 
@@ -141,14 +169,22 @@ h264/h265.
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Height. Value range: 0–3000.
-                     * @return Height Height. Value range: 0–3000.
+                     * 获取Height. Default value: 0.
+Value range: [0-3,000].
+The value must be a multiple of 2. The original width is 0.
+                     * @return Height Height. Default value: 0.
+Value range: [0-3,000].
+The value must be a multiple of 2. The original width is 0.
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置Height. Value range: 0–3000.
-                     * @param Height Height. Value range: 0–3000.
+                     * 设置Height. Default value: 0.
+Value range: [0-3,000].
+The value must be a multiple of 2. The original width is 0.
+                     * @param Height Height. Default value: 0.
+Value range: [0-3,000].
+The value must be a multiple of 2. The original width is 0.
                      */
                     void SetHeight(const int64_t& _height);
 
@@ -159,14 +195,18 @@ h264/h265.
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Frame rate. Value range: 0–200 FPS.
-                     * @return Fps Frame rate. Value range: 0–200 FPS.
+                     * 获取Frame rate. Default value: 0.
+Range: 0-60 Fps.
+                     * @return Fps Frame rate. Default value: 0.
+Range: 0-60 Fps.
                      */
                     int64_t GetFps() const;
 
                     /**
-                     * 设置Frame rate. Value range: 0–200 FPS.
-                     * @param Fps Frame rate. Value range: 0–200 FPS.
+                     * 设置Frame rate. Default value: 0.
+Range: 0-60 Fps.
+                     * @param Fps Frame rate. Default value: 0.
+Range: 0-60 Fps.
                      */
                     void SetFps(const int64_t& _fps);
 
@@ -177,14 +217,22 @@ h264/h265.
                     bool FpsHasBeenSet() const;
 
                     /**
-                     * 获取Keyframe interval. Value range: 1–50s.
-                     * @return Gop Keyframe interval. Value range: 1–50s.
+                     * 获取Keyframe interval, unit: second.
+Original interval by default
+Range: 2-6
+                     * @return Gop Keyframe interval, unit: second.
+Original interval by default
+Range: 2-6
                      */
                     int64_t GetGop() const;
 
                     /**
-                     * 设置Keyframe interval. Value range: 1–50s.
-                     * @param Gop Keyframe interval. Value range: 1–50s.
+                     * 设置Keyframe interval, unit: second.
+Original interval by default
+Range: 2-6
+                     * @param Gop Keyframe interval, unit: second.
+Original interval by default
+Range: 2-6
                      */
                     void SetGop(const int64_t& _gop);
 
@@ -195,14 +243,18 @@ h264/h265.
                     bool GopHasBeenSet() const;
 
                     /**
-                     * 获取Rotation angle. Valid values: 0, 90, 180, 270.
-                     * @return Rotate Rotation angle. Valid values: 0, 90, 180, 270.
+                     * 获取Rotation angle. Default value: 0.
+Value range: 0, 90, 180, 270
+                     * @return Rotate Rotation angle. Default value: 0.
+Value range: 0, 90, 180, 270
                      */
                     int64_t GetRotate() const;
 
                     /**
-                     * 设置Rotation angle. Valid values: 0, 90, 180, 270.
-                     * @param Rotate Rotation angle. Valid values: 0, 90, 180, 270.
+                     * 设置Rotation angle. Default value: 0.
+Value range: 0, 90, 180, 270
+                     * @param Rotate Rotation angle. Default value: 0.
+Value range: 0, 90, 180, 270
                      */
                     void SetRotate(const int64_t& _rotate);
 
@@ -213,18 +265,18 @@ h264/h265.
                     bool RotateHasBeenSet() const;
 
                     /**
-                     * 获取Encoding quality. Valid values:
-baseline, main, high.
-                     * @return Profile Encoding quality. Valid values:
-baseline, main, high.
+                     * 获取Encoding quality:
+baseline/main/high. Default value: baseline.
+                     * @return Profile Encoding quality:
+baseline/main/high. Default value: baseline.
                      */
                     std::string GetProfile() const;
 
                     /**
-                     * 设置Encoding quality. Valid values:
-baseline, main, high.
-                     * @param Profile Encoding quality. Valid values:
-baseline, main, high.
+                     * 设置Encoding quality:
+baseline/main/high. Default value: baseline.
+                     * @param Profile Encoding quality:
+baseline/main/high. Default value: baseline.
                      */
                     void SetProfile(const std::string& _profile);
 
@@ -235,14 +287,22 @@ baseline, main, high.
                     bool ProfileHasBeenSet() const;
 
                     /**
-                     * 获取Whether to not exceed the original bitrate. 0: no; 1: yes.
-                     * @return BitrateToOrig Whether to not exceed the original bitrate. 0: no; 1: yes.
+                     * 获取Whether to use the original bitrate when the set bitrate is larger than the original bitrate.
+0: no, 1: yes
+Default value: 0.
+                     * @return BitrateToOrig Whether to use the original bitrate when the set bitrate is larger than the original bitrate.
+0: no, 1: yes
+Default value: 0.
                      */
                     int64_t GetBitrateToOrig() const;
 
                     /**
-                     * 设置Whether to not exceed the original bitrate. 0: no; 1: yes.
-                     * @param BitrateToOrig Whether to not exceed the original bitrate. 0: no; 1: yes.
+                     * 设置Whether to use the original bitrate when the set bitrate is larger than the original bitrate.
+0: no, 1: yes
+Default value: 0.
+                     * @param BitrateToOrig Whether to use the original bitrate when the set bitrate is larger than the original bitrate.
+0: no, 1: yes
+Default value: 0.
                      */
                     void SetBitrateToOrig(const int64_t& _bitrateToOrig);
 
@@ -253,14 +313,22 @@ baseline, main, high.
                     bool BitrateToOrigHasBeenSet() const;
 
                     /**
-                     * 获取Whether to not exceed the original height. 0: no; 1: yes.
-                     * @return HeightToOrig Whether to not exceed the original height. 0: no; 1: yes.
+                     * 获取Whether to use the original height when the set height is higher than the original height.
+0: no, 1: yes
+Default value: 0.
+                     * @return HeightToOrig Whether to use the original height when the set height is higher than the original height.
+0: no, 1: yes
+Default value: 0.
                      */
                     int64_t GetHeightToOrig() const;
 
                     /**
-                     * 设置Whether to not exceed the original height. 0: no; 1: yes.
-                     * @param HeightToOrig Whether to not exceed the original height. 0: no; 1: yes.
+                     * 设置Whether to use the original height when the set height is higher than the original height.
+0: no, 1: yes
+Default value: 0.
+                     * @param HeightToOrig Whether to use the original height when the set height is higher than the original height.
+0: no, 1: yes
+Default value: 0.
                      */
                     void SetHeightToOrig(const int64_t& _heightToOrig);
 
@@ -271,14 +339,22 @@ baseline, main, high.
                     bool HeightToOrigHasBeenSet() const;
 
                     /**
-                     * 获取Whether to not exceed the original frame rate. 0: no; 1: yes.
-                     * @return FpsToOrig Whether to not exceed the original frame rate. 0: no; 1: yes.
+                     * 获取Whether to use the original frame rate when the set frame rate is larger than the original frame rate.
+0: no, 1: yes
+Default value: 0.
+                     * @return FpsToOrig Whether to use the original frame rate when the set frame rate is larger than the original frame rate.
+0: no, 1: yes
+Default value: 0.
                      */
                     int64_t GetFpsToOrig() const;
 
                     /**
-                     * 设置Whether to not exceed the original frame rate. 0: no; 1: yes.
-                     * @param FpsToOrig Whether to not exceed the original frame rate. 0: no; 1: yes.
+                     * 设置Whether to use the original frame rate when the set frame rate is larger than the original frame rate.
+0: no, 1: yes
+Default value: 0.
+                     * @param FpsToOrig Whether to use the original frame rate when the set frame rate is larger than the original frame rate.
+0: no, 1: yes
+Default value: 0.
                      */
                     void SetFpsToOrig(const int64_t& _fpsToOrig);
 
@@ -397,14 +473,26 @@ baseline, main, high.
                     bool AiTransCodeHasBeenSet() const;
 
                     /**
-                     * 获取`VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
-                     * @return AdaptBitratePercent `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
+                     * 获取Bitrate compression ratio of top speed code video.
+Target bitrate of top speed code = VideoBitrate * (1-AdaptBitratePercent)
+
+Value range: 0.0-0.5.
+                     * @return AdaptBitratePercent Bitrate compression ratio of top speed code video.
+Target bitrate of top speed code = VideoBitrate * (1-AdaptBitratePercent)
+
+Value range: 0.0-0.5.
                      */
                     double GetAdaptBitratePercent() const;
 
                     /**
-                     * 设置`VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
-                     * @param AdaptBitratePercent `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
+                     * 设置Bitrate compression ratio of top speed code video.
+Target bitrate of top speed code = VideoBitrate * (1-AdaptBitratePercent)
+
+Value range: 0.0-0.5.
+                     * @param AdaptBitratePercent Bitrate compression ratio of top speed code video.
+Target bitrate of top speed code = VideoBitrate * (1-AdaptBitratePercent)
+
+Value range: 0.0-0.5.
                      */
                     void SetAdaptBitratePercent(const double& _adaptBitratePercent);
 
@@ -414,84 +502,125 @@ baseline, main, high.
                      */
                     bool AdaptBitratePercentHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to take the shorter side as height. 0: no, 1: yes. Default value: 0.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return ShortEdgeAsHeight Whether to take the shorter side as height. 0: no, 1: yes. Default value: 0.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    int64_t GetShortEdgeAsHeight() const;
+
+                    /**
+                     * 设置Whether to take the shorter side as height. 0: no, 1: yes. Default value: 0.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param ShortEdgeAsHeight Whether to take the shorter side as height. 0: no, 1: yes. Default value: 0.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    void SetShortEdgeAsHeight(const int64_t& _shortEdgeAsHeight);
+
+                    /**
+                     * 判断参数 ShortEdgeAsHeight 是否已赋值
+                     * @return ShortEdgeAsHeight 是否已赋值
+                     */
+                    bool ShortEdgeAsHeightHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Video encoding format:
-h264/h265.
+                     * Codec: h264/h265/origin. Default value: h264.
+
+origin: keep the original codec.
                      */
                     std::string m_vcodec;
                     bool m_vcodecHasBeenSet;
 
                     /**
-                     * Video bitrate. Value range: 100–8000 Kbps.
+                     * Video bitrate. Value range: 0–8,000 Kbps.
+If the value is 0, the original bitrate will be retained.
+Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate.
                      */
                     int64_t m_videoBitrate;
                     bool m_videoBitrateHasBeenSet;
 
                     /**
-                     * Audio codec. Valid values: aac, mp3.
+                     * Audio codec: aac. Default value: aac.
+Note: This parameter will not take effect for now and will be supported soon.
                      */
                     std::string m_acodec;
                     bool m_acodecHasBeenSet;
 
                     /**
                      * Audio bitrate. Value range: 0–500 Kbps.
+0 by default.
                      */
                     int64_t m_audioBitrate;
                     bool m_audioBitrateHasBeenSet;
 
                     /**
-                     * Width. Value range: 0–3000.
+                     * Width. Default value: 0.
+Value range: [0-3,000].
+The value must be a multiple of 2. The original width is 0.
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Height. Value range: 0–3000.
+                     * Height. Default value: 0.
+Value range: [0-3,000].
+The value must be a multiple of 2. The original width is 0.
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Frame rate. Value range: 0–200 FPS.
+                     * Frame rate. Default value: 0.
+Range: 0-60 Fps.
                      */
                     int64_t m_fps;
                     bool m_fpsHasBeenSet;
 
                     /**
-                     * Keyframe interval. Value range: 1–50s.
+                     * Keyframe interval, unit: second.
+Original interval by default
+Range: 2-6
                      */
                     int64_t m_gop;
                     bool m_gopHasBeenSet;
 
                     /**
-                     * Rotation angle. Valid values: 0, 90, 180, 270.
+                     * Rotation angle. Default value: 0.
+Value range: 0, 90, 180, 270
                      */
                     int64_t m_rotate;
                     bool m_rotateHasBeenSet;
 
                     /**
-                     * Encoding quality. Valid values:
-baseline, main, high.
+                     * Encoding quality:
+baseline/main/high. Default value: baseline.
                      */
                     std::string m_profile;
                     bool m_profileHasBeenSet;
 
                     /**
-                     * Whether to not exceed the original bitrate. 0: no; 1: yes.
+                     * Whether to use the original bitrate when the set bitrate is larger than the original bitrate.
+0: no, 1: yes
+Default value: 0.
                      */
                     int64_t m_bitrateToOrig;
                     bool m_bitrateToOrigHasBeenSet;
 
                     /**
-                     * Whether to not exceed the original height. 0: no; 1: yes.
+                     * Whether to use the original height when the set height is higher than the original height.
+0: no, 1: yes
+Default value: 0.
                      */
                     int64_t m_heightToOrig;
                     bool m_heightToOrigHasBeenSet;
 
                     /**
-                     * Whether to not exceed the original frame rate. 0: no; 1: yes.
+                     * Whether to use the original frame rate when the set frame rate is larger than the original frame rate.
+0: no, 1: yes
+Default value: 0.
                      */
                     int64_t m_fpsToOrig;
                     bool m_fpsToOrigHasBeenSet;
@@ -533,10 +662,20 @@ baseline, main, high.
                     bool m_aiTransCodeHasBeenSet;
 
                     /**
-                     * `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
+                     * Bitrate compression ratio of top speed code video.
+Target bitrate of top speed code = VideoBitrate * (1-AdaptBitratePercent)
+
+Value range: 0.0-0.5.
                      */
                     double m_adaptBitratePercent;
                     bool m_adaptBitratePercentHasBeenSet;
+
+                    /**
+                     * Whether to take the shorter side as height. 0: no, 1: yes. Default value: 0.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    int64_t m_shortEdgeAsHeight;
+                    bool m_shortEdgeAsHeightHasBeenSet;
 
                 };
             }

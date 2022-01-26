@@ -119,6 +119,24 @@ namespace TencentCloud
                     bool StreamBeginNotifyUrlHasBeenSet() const;
 
                     /**
+                     * 获取Stream mixing callback URL (disused)
+                     * @return StreamMixNotifyUrl Stream mixing callback URL (disused)
+                     */
+                    std::string GetStreamMixNotifyUrl() const;
+
+                    /**
+                     * 设置Stream mixing callback URL (disused)
+                     * @param StreamMixNotifyUrl Stream mixing callback URL (disused)
+                     */
+                    void SetStreamMixNotifyUrl(const std::string& _streamMixNotifyUrl);
+
+                    /**
+                     * 判断参数 StreamMixNotifyUrl 是否已赋值
+                     * @return StreamMixNotifyUrl 是否已赋值
+                     */
+                    bool StreamMixNotifyUrlHasBeenSet() const;
+
+                    /**
                      * 获取Interruption callback URL.
                      * @return StreamEndNotifyUrl Interruption callback URL.
                      */
@@ -135,24 +153,6 @@ namespace TencentCloud
                      * @return StreamEndNotifyUrl 是否已赋值
                      */
                     bool StreamEndNotifyUrlHasBeenSet() const;
-
-                    /**
-                     * 获取Stream mixing callback URL.
-                     * @return StreamMixNotifyUrl Stream mixing callback URL.
-                     */
-                    std::string GetStreamMixNotifyUrl() const;
-
-                    /**
-                     * 设置Stream mixing callback URL.
-                     * @param StreamMixNotifyUrl Stream mixing callback URL.
-                     */
-                    void SetStreamMixNotifyUrl(const std::string& _streamMixNotifyUrl);
-
-                    /**
-                     * 判断参数 StreamMixNotifyUrl 是否已赋值
-                     * @return StreamMixNotifyUrl 是否已赋值
-                     */
-                    bool StreamMixNotifyUrlHasBeenSet() const;
 
                     /**
                      * 获取Recording callback URL.
@@ -253,16 +253,16 @@ namespace TencentCloud
                     bool m_streamBeginNotifyUrlHasBeenSet;
 
                     /**
+                     * Stream mixing callback URL (disused)
+                     */
+                    std::string m_streamMixNotifyUrl;
+                    bool m_streamMixNotifyUrlHasBeenSet;
+
+                    /**
                      * Interruption callback URL.
                      */
                     std::string m_streamEndNotifyUrl;
                     bool m_streamEndNotifyUrlHasBeenSet;
-
-                    /**
-                     * Stream mixing callback URL.
-                     */
-                    std::string m_streamMixNotifyUrl;
-                    bool m_streamMixNotifyUrlHasBeenSet;
 
                     /**
                      * Recording callback URL.

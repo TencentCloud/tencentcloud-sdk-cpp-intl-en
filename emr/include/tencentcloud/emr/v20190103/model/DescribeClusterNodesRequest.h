@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/emr/v20190103/model/SearchItem.h>
 
 
 namespace TencentCloud
@@ -146,6 +147,42 @@ Note: only the above values are supported for the time being. Entering other val
                      */
                     bool LimitHasBeenSet() const;
 
+                    /**
+                     * 获取Resource type. Valid values: all, host, pod. Default value: all
+                     * @return HardwareResourceType Resource type. Valid values: all, host, pod. Default value: all
+                     */
+                    std::string GetHardwareResourceType() const;
+
+                    /**
+                     * 设置Resource type. Valid values: all, host, pod. Default value: all
+                     * @param HardwareResourceType Resource type. Valid values: all, host, pod. Default value: all
+                     */
+                    void SetHardwareResourceType(const std::string& _hardwareResourceType);
+
+                    /**
+                     * 判断参数 HardwareResourceType 是否已赋值
+                     * @return HardwareResourceType 是否已赋值
+                     */
+                    bool HardwareResourceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Searchable field
+                     * @return SearchFields Searchable field
+                     */
+                    std::vector<SearchItem> GetSearchFields() const;
+
+                    /**
+                     * 设置Searchable field
+                     * @param SearchFields Searchable field
+                     */
+                    void SetSearchFields(const std::vector<SearchItem>& _searchFields);
+
+                    /**
+                     * 判断参数 SearchFields 是否已赋值
+                     * @return SearchFields 是否已赋值
+                     */
+                    bool SearchFieldsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -179,6 +216,18 @@ Note: only the above values are supported for the time being. Entering other val
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
+
+                    /**
+                     * Resource type. Valid values: all, host, pod. Default value: all
+                     */
+                    std::string m_hardwareResourceType;
+                    bool m_hardwareResourceTypeHasBeenSet;
+
+                    /**
+                     * Searchable field
+                     */
+                    std::vector<SearchItem> m_searchFields;
+                    bool m_searchFieldsHasBeenSet;
 
                 };
             }

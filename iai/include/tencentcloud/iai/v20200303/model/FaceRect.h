@@ -47,22 +47,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Horizontal coordinate of the top-left corner of face frame. 
+                     * 获取Horizontal coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
-                     * @return X Horizontal coordinate of the top-left corner of face frame. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
+                     * @return X Horizontal coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
                      */
                     int64_t GetX() const;
 
                     /**
-                     * 设置Horizontal coordinate of the top-left corner of face frame. 
+                     * 设置Horizontal coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
-                     * @param X Horizontal coordinate of the top-left corner of face frame. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
+                     * @param X Horizontal coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
                      */
                     void SetX(const int64_t& _x);
 
@@ -73,22 +73,22 @@ If you want to capture a complete face, you can set the negative coordinates to 
                     bool XHasBeenSet() const;
 
                     /**
-                     * 获取Vertical coordinate of the top-left corner of face frame. 
+                     * 获取Vertical coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
-                     * @return Y Vertical coordinate of the top-left corner of face frame. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
+                     * @return Y Vertical coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
                      */
                     int64_t GetY() const;
 
                     /**
-                     * 设置Vertical coordinate of the top-left corner of face frame. 
+                     * 设置Vertical coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
-                     * @param Y Vertical coordinate of the top-left corner of face frame. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
+                     * @param Y Vertical coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
                      */
                     void SetY(const int64_t& _y);
 
@@ -137,17 +137,17 @@ If you want to capture a complete face, you can set the negative coordinates to 
                 private:
 
                     /**
-                     * Horizontal coordinate of the top-left corner of face frame. 
+                     * Horizontal coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
                      */
                     int64_t m_x;
                     bool m_xHasBeenSet;
 
                     /**
-                     * Vertical coordinate of the top-left corner of face frame. 
+                     * Vertical coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
                      */
                     int64_t m_y;
                     bool m_yHasBeenSet;

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Iai::V20200303::Model;
-using namespace rapidjson;
 using namespace std;
 
 FaceQualityInfo::FaceQualityInfo() :
@@ -29,7 +28,7 @@ FaceQualityInfo::FaceQualityInfo() :
 {
 }
 
-CoreInternalOutcome FaceQualityInfo::Deserialize(const Value &value)
+CoreInternalOutcome FaceQualityInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome FaceQualityInfo::Deserialize(const Value &value)
     {
         if (!value["Score"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `FaceQualityInfo.Score` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FaceQualityInfo.Score` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_score = value["Score"].GetInt64();
         m_scoreHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome FaceQualityInfo::Deserialize(const Value &value)
     {
         if (!value["Sharpness"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `FaceQualityInfo.Sharpness` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FaceQualityInfo.Sharpness` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_sharpness = value["Sharpness"].GetInt64();
         m_sharpnessHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome FaceQualityInfo::Deserialize(const Value &value)
     {
         if (!value["Brightness"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `FaceQualityInfo.Brightness` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FaceQualityInfo.Brightness` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_brightness = value["Brightness"].GetInt64();
         m_brightnessHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome FaceQualityInfo::Deserialize(const Value &value)
     {
         if (!value["Completeness"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `FaceQualityInfo.Completeness` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FaceQualityInfo.Completeness` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_completeness.Deserialize(value["Completeness"]);
@@ -85,12 +84,12 @@ CoreInternalOutcome FaceQualityInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void FaceQualityInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void FaceQualityInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_scoreHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Score";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_score, allocator);
@@ -98,7 +97,7 @@ void FaceQualityInfo::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_sharpnessHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Sharpness";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_sharpness, allocator);
@@ -106,7 +105,7 @@ void FaceQualityInfo::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_brightnessHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Brightness";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_brightness, allocator);
@@ -114,10 +113,10 @@ void FaceQualityInfo::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_completenessHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Completeness";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_completeness.ToJsonObject(value[key.c_str()], allocator);
     }
 

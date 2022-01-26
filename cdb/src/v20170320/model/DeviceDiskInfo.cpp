@@ -18,18 +18,18 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 DeviceDiskInfo::DeviceDiskInfo() :
     m_ioRatioPerSecHasBeenSet(false),
     m_ioWaitTimeHasBeenSet(false),
     m_readHasBeenSet(false),
-    m_writeHasBeenSet(false)
+    m_writeHasBeenSet(false),
+    m_capacityRatioHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DeviceDiskInfo::Deserialize(const Value &value)
+CoreInternalOutcome DeviceDiskInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,10 +37,10 @@ CoreInternalOutcome DeviceDiskInfo::Deserialize(const Value &value)
     if (value.HasMember("IoRatioPerSec") && !value["IoRatioPerSec"].IsNull())
     {
         if (!value["IoRatioPerSec"].IsArray())
-            return CoreInternalOutcome(Error("response `DeviceDiskInfo.IoRatioPerSec` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DeviceDiskInfo.IoRatioPerSec` is not array type"));
 
-        const Value &tmpValue = value["IoRatioPerSec"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["IoRatioPerSec"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_ioRatioPerSec.push_back((*itr).GetInt64());
         }
@@ -50,10 +50,10 @@ CoreInternalOutcome DeviceDiskInfo::Deserialize(const Value &value)
     if (value.HasMember("IoWaitTime") && !value["IoWaitTime"].IsNull())
     {
         if (!value["IoWaitTime"].IsArray())
-            return CoreInternalOutcome(Error("response `DeviceDiskInfo.IoWaitTime` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DeviceDiskInfo.IoWaitTime` is not array type"));
 
-        const Value &tmpValue = value["IoWaitTime"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["IoWaitTime"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_ioWaitTime.push_back((*itr).GetInt64());
         }
@@ -63,10 +63,10 @@ CoreInternalOutcome DeviceDiskInfo::Deserialize(const Value &value)
     if (value.HasMember("Read") && !value["Read"].IsNull())
     {
         if (!value["Read"].IsArray())
-            return CoreInternalOutcome(Error("response `DeviceDiskInfo.Read` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DeviceDiskInfo.Read` is not array type"));
 
-        const Value &tmpValue = value["Read"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Read"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_read.push_back((*itr).GetInt64());
         }
@@ -76,72 +76,98 @@ CoreInternalOutcome DeviceDiskInfo::Deserialize(const Value &value)
     if (value.HasMember("Write") && !value["Write"].IsNull())
     {
         if (!value["Write"].IsArray())
-            return CoreInternalOutcome(Error("response `DeviceDiskInfo.Write` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DeviceDiskInfo.Write` is not array type"));
 
-        const Value &tmpValue = value["Write"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Write"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_write.push_back((*itr).GetInt64());
         }
         m_writeHasBeenSet = true;
     }
 
+    if (value.HasMember("CapacityRatio") && !value["CapacityRatio"].IsNull())
+    {
+        if (!value["CapacityRatio"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `DeviceDiskInfo.CapacityRatio` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["CapacityRatio"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_capacityRatio.push_back((*itr).GetInt64());
+        }
+        m_capacityRatioHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void DeviceDiskInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DeviceDiskInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_ioRatioPerSecHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IoRatioPerSec";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_ioRatioPerSec.begin(); itr != m_ioRatioPerSec.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 
     if (m_ioWaitTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IoWaitTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_ioWaitTime.begin(); itr != m_ioWaitTime.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 
     if (m_readHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Read";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_read.begin(); itr != m_read.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 
     if (m_writeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Write";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_write.begin(); itr != m_write.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
+        }
+    }
+
+    if (m_capacityRatioHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CapacityRatio";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_capacityRatio.begin(); itr != m_capacityRatio.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 
@@ -210,5 +236,21 @@ void DeviceDiskInfo::SetWrite(const vector<int64_t>& _write)
 bool DeviceDiskInfo::WriteHasBeenSet() const
 {
     return m_writeHasBeenSet;
+}
+
+vector<int64_t> DeviceDiskInfo::GetCapacityRatio() const
+{
+    return m_capacityRatio;
+}
+
+void DeviceDiskInfo::SetCapacityRatio(const vector<int64_t>& _capacityRatio)
+{
+    m_capacityRatio = _capacityRatio;
+    m_capacityRatioHasBeenSet = true;
+}
+
+bool DeviceDiskInfo::CapacityRatioHasBeenSet() const
+{
+    return m_capacityRatioHasBeenSet;
 }
 

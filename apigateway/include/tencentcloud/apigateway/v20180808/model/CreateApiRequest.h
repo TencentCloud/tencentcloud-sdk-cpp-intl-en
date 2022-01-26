@@ -72,14 +72,14 @@ namespace TencentCloud
                     bool ServiceIdHasBeenSet() const;
 
                     /**
-                     * 获取API backend service type. Valid values: HTTP, MOCK, TSF, CLB, SCF, WEBSOCKET, TARGET (in beta test).
-                     * @return ServiceType API backend service type. Valid values: HTTP, MOCK, TSF, CLB, SCF, WEBSOCKET, TARGET (in beta test).
+                     * 获取API backend service type. Valid values: HTTP, MOCK, TSF, SCF, WEBSOCKET, TARGET (in beta test).
+                     * @return ServiceType API backend service type. Valid values: HTTP, MOCK, TSF, SCF, WEBSOCKET, TARGET (in beta test).
                      */
                     std::string GetServiceType() const;
 
                     /**
-                     * 设置API backend service type. Valid values: HTTP, MOCK, TSF, CLB, SCF, WEBSOCKET, TARGET (in beta test).
-                     * @param ServiceType API backend service type. Valid values: HTTP, MOCK, TSF, CLB, SCF, WEBSOCKET, TARGET (in beta test).
+                     * 设置API backend service type. Valid values: HTTP, MOCK, TSF, SCF, WEBSOCKET, TARGET (in beta test).
+                     * @param ServiceType API backend service type. Valid values: HTTP, MOCK, TSF, SCF, WEBSOCKET, TARGET (in beta test).
                      */
                     void SetServiceType(const std::string& _serviceType);
 
@@ -108,14 +108,14 @@ namespace TencentCloud
                     bool ServiceTimeoutHasBeenSet() const;
 
                     /**
-                     * 获取API frontend request type, such as HTTP, HTTPS, or HTTP and HTTPS.
-                     * @return Protocol API frontend request type, such as HTTP, HTTPS, or HTTP and HTTPS.
+                     * 获取API frontend request protocol. Valid values: HTTPS, WEBSOCKET.
+                     * @return Protocol API frontend request protocol. Valid values: HTTPS, WEBSOCKET.
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置API frontend request type, such as HTTP, HTTPS, or HTTP and HTTPS.
-                     * @param Protocol API frontend request type, such as HTTP, HTTPS, or HTTP and HTTPS.
+                     * 设置API frontend request protocol. Valid values: HTTPS, WEBSOCKET.
+                     * @param Protocol API frontend request protocol. Valid values: HTTPS, WEBSOCKET.
                      */
                     void SetProtocol(const std::string& _protocol);
 
@@ -198,14 +198,14 @@ namespace TencentCloud
                     bool ApiTypeHasBeenSet() const;
 
                     /**
-                     * 获取API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH. Default value: NONE.
-                     * @return AuthType API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH. Default value: NONE.
+                     * 获取API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH, APP (application authentication). Default value: NONE.
+                     * @return AuthType API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH, APP (application authentication). Default value: NONE.
                      */
                     std::string GetAuthType() const;
 
                     /**
-                     * 设置API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH. Default value: NONE.
-                     * @param AuthType API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH. Default value: NONE.
+                     * 设置API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH, APP (application authentication). Default value: NONE.
+                     * @param AuthType API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH, APP (application authentication). Default value: NONE.
                      */
                     void SetAuthType(const std::string& _authType);
 
@@ -863,6 +863,114 @@ namespace TencentCloud
                      */
                     bool UserTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+                     * @return IsBase64Encoded Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+                     */
+                    bool GetIsBase64Encoded() const;
+
+                    /**
+                     * 设置Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+                     * @param IsBase64Encoded Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+                     */
+                    void SetIsBase64Encoded(const bool& _isBase64Encoded);
+
+                    /**
+                     * 判断参数 IsBase64Encoded 是否已赋值
+                     * @return IsBase64Encoded 是否已赋值
+                     */
+                    bool IsBase64EncodedHasBeenSet() const;
+
+                    /**
+                     * 获取SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+                     * @return ServiceScfFunctionType SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+                     */
+                    std::string GetServiceScfFunctionType() const;
+
+                    /**
+                     * 设置SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+                     * @param ServiceScfFunctionType SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+                     */
+                    void SetServiceScfFunctionType(const std::string& _serviceScfFunctionType);
+
+                    /**
+                     * 判断参数 ServiceScfFunctionType 是否已赋值
+                     * @return ServiceScfFunctionType 是否已赋值
+                     */
+                    bool ServiceScfFunctionTypeHasBeenSet() const;
+
+                    /**
+                     * 获取EIAM application type.
+                     * @return EIAMAppType EIAM application type.
+                     */
+                    std::string GetEIAMAppType() const;
+
+                    /**
+                     * 设置EIAM application type.
+                     * @param EIAMAppType EIAM application type.
+                     */
+                    void SetEIAMAppType(const std::string& _eIAMAppType);
+
+                    /**
+                     * 判断参数 EIAMAppType 是否已赋值
+                     * @return EIAMAppType 是否已赋值
+                     */
+                    bool EIAMAppTypeHasBeenSet() const;
+
+                    /**
+                     * 获取EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+                     * @return EIAMAuthType EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+                     */
+                    std::string GetEIAMAuthType() const;
+
+                    /**
+                     * 设置EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+                     * @param EIAMAuthType EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+                     */
+                    void SetEIAMAuthType(const std::string& _eIAMAuthType);
+
+                    /**
+                     * 判断参数 EIAMAuthType 是否已赋值
+                     * @return EIAMAuthType 是否已赋值
+                     */
+                    bool EIAMAuthTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Validity of the EIAM application token. Unit: second. Default value: `7200`.
+                     * @return TokenTimeout Validity of the EIAM application token. Unit: second. Default value: `7200`.
+                     */
+                    int64_t GetTokenTimeout() const;
+
+                    /**
+                     * 设置Validity of the EIAM application token. Unit: second. Default value: `7200`.
+                     * @param TokenTimeout Validity of the EIAM application token. Unit: second. Default value: `7200`.
+                     */
+                    void SetTokenTimeout(const int64_t& _tokenTimeout);
+
+                    /**
+                     * 判断参数 TokenTimeout 是否已赋值
+                     * @return TokenTimeout 是否已赋值
+                     */
+                    bool TokenTimeoutHasBeenSet() const;
+
+                    /**
+                     * 获取EIAM application ID.
+                     * @return EIAMAppId EIAM application ID.
+                     */
+                    std::string GetEIAMAppId() const;
+
+                    /**
+                     * 设置EIAM application ID.
+                     * @param EIAMAppId EIAM application ID.
+                     */
+                    void SetEIAMAppId(const std::string& _eIAMAppId);
+
+                    /**
+                     * 判断参数 EIAMAppId 是否已赋值
+                     * @return EIAMAppId 是否已赋值
+                     */
+                    bool EIAMAppIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -872,7 +980,7 @@ namespace TencentCloud
                     bool m_serviceIdHasBeenSet;
 
                     /**
-                     * API backend service type. Valid values: HTTP, MOCK, TSF, CLB, SCF, WEBSOCKET, TARGET (in beta test).
+                     * API backend service type. Valid values: HTTP, MOCK, TSF, SCF, WEBSOCKET, TARGET (in beta test).
                      */
                     std::string m_serviceType;
                     bool m_serviceTypeHasBeenSet;
@@ -884,7 +992,7 @@ namespace TencentCloud
                     bool m_serviceTimeoutHasBeenSet;
 
                     /**
-                     * API frontend request type, such as HTTP, HTTPS, or HTTP and HTTPS.
+                     * API frontend request protocol. Valid values: HTTPS, WEBSOCKET.
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
@@ -914,7 +1022,7 @@ namespace TencentCloud
                     bool m_apiTypeHasBeenSet;
 
                     /**
-                     * API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH. Default value: NONE.
+                     * API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH, APP (application authentication). Default value: NONE.
                      */
                     std::string m_authType;
                     bool m_authTypeHasBeenSet;
@@ -1134,6 +1242,42 @@ namespace TencentCloud
                      */
                     std::string m_userType;
                     bool m_userTypeHasBeenSet;
+
+                    /**
+                     * Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+                     */
+                    bool m_isBase64Encoded;
+                    bool m_isBase64EncodedHasBeenSet;
+
+                    /**
+                     * SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+                     */
+                    std::string m_serviceScfFunctionType;
+                    bool m_serviceScfFunctionTypeHasBeenSet;
+
+                    /**
+                     * EIAM application type.
+                     */
+                    std::string m_eIAMAppType;
+                    bool m_eIAMAppTypeHasBeenSet;
+
+                    /**
+                     * EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+                     */
+                    std::string m_eIAMAuthType;
+                    bool m_eIAMAuthTypeHasBeenSet;
+
+                    /**
+                     * Validity of the EIAM application token. Unit: second. Default value: `7200`.
+                     */
+                    int64_t m_tokenTimeout;
+                    bool m_tokenTimeoutHasBeenSet;
+
+                    /**
+                     * EIAM application ID.
+                     */
+                    std::string m_eIAMAppId;
+                    bool m_eIAMAppIdHasBeenSet;
 
                 };
             }

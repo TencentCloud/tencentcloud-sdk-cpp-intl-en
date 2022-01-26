@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 TerrorismImgReviewTemplateInfoForUpdate::TerrorismImgReviewTemplateInfoForUpdate() :
@@ -29,7 +28,7 @@ TerrorismImgReviewTemplateInfoForUpdate::TerrorismImgReviewTemplateInfoForUpdate
 {
 }
 
-CoreInternalOutcome TerrorismImgReviewTemplateInfoForUpdate::Deserialize(const Value &value)
+CoreInternalOutcome TerrorismImgReviewTemplateInfoForUpdate::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome TerrorismImgReviewTemplateInfoForUpdate::Deserialize(const V
     {
         if (!value["Switch"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TerrorismImgReviewTemplateInfoForUpdate.Switch` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TerrorismImgReviewTemplateInfoForUpdate.Switch` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_switch = string(value["Switch"].GetString());
         m_switchHasBeenSet = true;
@@ -47,10 +46,10 @@ CoreInternalOutcome TerrorismImgReviewTemplateInfoForUpdate::Deserialize(const V
     if (value.HasMember("LabelSet") && !value["LabelSet"].IsNull())
     {
         if (!value["LabelSet"].IsArray())
-            return CoreInternalOutcome(Error("response `TerrorismImgReviewTemplateInfoForUpdate.LabelSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `TerrorismImgReviewTemplateInfoForUpdate.LabelSet` is not array type"));
 
-        const Value &tmpValue = value["LabelSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["LabelSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_labelSet.push_back((*itr).GetString());
         }
@@ -61,7 +60,7 @@ CoreInternalOutcome TerrorismImgReviewTemplateInfoForUpdate::Deserialize(const V
     {
         if (!value["BlockConfidence"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TerrorismImgReviewTemplateInfoForUpdate.BlockConfidence` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TerrorismImgReviewTemplateInfoForUpdate.BlockConfidence` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_blockConfidence = value["BlockConfidence"].GetInt64();
         m_blockConfidenceHasBeenSet = true;
@@ -71,7 +70,7 @@ CoreInternalOutcome TerrorismImgReviewTemplateInfoForUpdate::Deserialize(const V
     {
         if (!value["ReviewConfidence"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TerrorismImgReviewTemplateInfoForUpdate.ReviewConfidence` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TerrorismImgReviewTemplateInfoForUpdate.ReviewConfidence` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_reviewConfidence = value["ReviewConfidence"].GetInt64();
         m_reviewConfidenceHasBeenSet = true;
@@ -81,33 +80,33 @@ CoreInternalOutcome TerrorismImgReviewTemplateInfoForUpdate::Deserialize(const V
     return CoreInternalOutcome(true);
 }
 
-void TerrorismImgReviewTemplateInfoForUpdate::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TerrorismImgReviewTemplateInfoForUpdate::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_switchHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Switch";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_switch.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_switch.c_str(), allocator).Move(), allocator);
     }
 
     if (m_labelSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LabelSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_labelSet.begin(); itr != m_labelSet.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_blockConfidenceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BlockConfidence";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_blockConfidence, allocator);
@@ -115,7 +114,7 @@ void TerrorismImgReviewTemplateInfoForUpdate::ToJsonObject(Value &value, Documen
 
     if (m_reviewConfidenceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReviewConfidence";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_reviewConfidence, allocator);

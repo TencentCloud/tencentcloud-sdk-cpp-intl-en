@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cfs::V20190719::Model;
-using namespace rapidjson;
 using namespace std;
 
 PGroupRuleInfo::PGroupRuleInfo() :
@@ -30,7 +29,7 @@ PGroupRuleInfo::PGroupRuleInfo() :
 {
 }
 
-CoreInternalOutcome PGroupRuleInfo::Deserialize(const Value &value)
+CoreInternalOutcome PGroupRuleInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome PGroupRuleInfo::Deserialize(const Value &value)
     {
         if (!value["RuleId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PGroupRuleInfo.RuleId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PGroupRuleInfo.RuleId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ruleId = string(value["RuleId"].GetString());
         m_ruleIdHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome PGroupRuleInfo::Deserialize(const Value &value)
     {
         if (!value["AuthClientIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PGroupRuleInfo.AuthClientIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PGroupRuleInfo.AuthClientIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_authClientIp = string(value["AuthClientIp"].GetString());
         m_authClientIpHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome PGroupRuleInfo::Deserialize(const Value &value)
     {
         if (!value["RWPermission"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PGroupRuleInfo.RWPermission` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PGroupRuleInfo.RWPermission` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_rWPermission = string(value["RWPermission"].GetString());
         m_rWPermissionHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome PGroupRuleInfo::Deserialize(const Value &value)
     {
         if (!value["UserPermission"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PGroupRuleInfo.UserPermission` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PGroupRuleInfo.UserPermission` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_userPermission = string(value["UserPermission"].GetString());
         m_userPermissionHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome PGroupRuleInfo::Deserialize(const Value &value)
     {
         if (!value["Priority"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `PGroupRuleInfo.Priority` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PGroupRuleInfo.Priority` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_priority = value["Priority"].GetInt64();
         m_priorityHasBeenSet = true;
@@ -89,44 +88,44 @@ CoreInternalOutcome PGroupRuleInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void PGroupRuleInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void PGroupRuleInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_ruleIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RuleId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ruleId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ruleId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_authClientIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AuthClientIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_authClientIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_authClientIp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_rWPermissionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RWPermission";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_rWPermission.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_rWPermission.c_str(), allocator).Move(), allocator);
     }
 
     if (m_userPermissionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UserPermission";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_userPermission.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_userPermission.c_str(), allocator).Move(), allocator);
     }
 
     if (m_priorityHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Priority";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_priority, allocator);

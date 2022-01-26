@@ -18,16 +18,16 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mongodb::V20190725::Model;
-using namespace rapidjson;
 using namespace std;
 
 ClientConnection::ClientConnection() :
     m_iPHasBeenSet(false),
-    m_countHasBeenSet(false)
+    m_countHasBeenSet(false),
+    m_internalServiceHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ClientConnection::Deserialize(const Value &value)
+CoreInternalOutcome ClientConnection::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +36,7 @@ CoreInternalOutcome ClientConnection::Deserialize(const Value &value)
     {
         if (!value["IP"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClientConnection.IP` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClientConnection.IP` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_iP = string(value["IP"].GetString());
         m_iPHasBeenSet = true;
@@ -46,33 +46,51 @@ CoreInternalOutcome ClientConnection::Deserialize(const Value &value)
     {
         if (!value["Count"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ClientConnection.Count` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClientConnection.Count` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_count = value["Count"].GetUint64();
         m_countHasBeenSet = true;
+    }
+
+    if (value.HasMember("InternalService") && !value["InternalService"].IsNull())
+    {
+        if (!value["InternalService"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClientConnection.InternalService` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_internalService = value["InternalService"].GetBool();
+        m_internalServiceHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void ClientConnection::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ClientConnection::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_iPHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IP";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_iP.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_iP.c_str(), allocator).Move(), allocator);
     }
 
     if (m_countHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Count";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_count, allocator);
+    }
+
+    if (m_internalServiceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InternalService";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_internalService, allocator);
     }
 
 }
@@ -108,5 +126,21 @@ void ClientConnection::SetCount(const uint64_t& _count)
 bool ClientConnection::CountHasBeenSet() const
 {
     return m_countHasBeenSet;
+}
+
+bool ClientConnection::GetInternalService() const
+{
+    return m_internalService;
+}
+
+void ClientConnection::SetInternalService(const bool& _internalService)
+{
+    m_internalService = _internalService;
+    m_internalServiceHasBeenSet = true;
+}
+
+bool ClientConnection::InternalServiceHasBeenSet() const
+{
+    return m_internalServiceHasBeenSet;
 }
 

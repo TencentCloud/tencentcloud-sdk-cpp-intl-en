@@ -187,14 +187,14 @@ namespace TencentCloud
                     bool OrderByTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to query slow queries of the slave. 0: master, 1: slave
-                     * @return Slave Whether to query slow queries of the slave. 0: master, 1: slave
+                     * 获取Whether to query slow queries of the secondary. 0: primary, 1: secondary
+                     * @return Slave Whether to query slow queries of the secondary. 0: primary, 1: secondary
                      */
                     int64_t GetSlave() const;
 
                     /**
-                     * 设置Whether to query slow queries of the slave. 0: master, 1: slave
-                     * @param Slave Whether to query slow queries of the slave. 0: master, 1: slave
+                     * 设置Whether to query slow queries of the secondary. 0: primary, 1: secondary
+                     * @param Slave Whether to query slow queries of the secondary. 0: primary, 1: secondary
                      */
                     void SetSlave(const int64_t& _slave);
 
@@ -255,7 +255,7 @@ namespace TencentCloud
                     bool m_orderByTypeHasBeenSet;
 
                     /**
-                     * Whether to query slow queries of the slave. 0: master, 1: slave
+                     * Whether to query slow queries of the secondary. 0: primary, 1: secondary
                      */
                     int64_t m_slave;
                     bool m_slaveHasBeenSet;

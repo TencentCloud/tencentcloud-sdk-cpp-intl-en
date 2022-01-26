@@ -126,6 +126,49 @@ CdnClient::CreateClsLogTopicOutcomeCallable CdnClient::CreateClsLogTopicCallable
     return task->get_future();
 }
 
+CdnClient::CreateScdnFailedLogTaskOutcome CdnClient::CreateScdnFailedLogTask(const CreateScdnFailedLogTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateScdnFailedLogTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateScdnFailedLogTaskResponse rsp = CreateScdnFailedLogTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateScdnFailedLogTaskOutcome(rsp);
+        else
+            return CreateScdnFailedLogTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateScdnFailedLogTaskOutcome(outcome.GetError());
+    }
+}
+
+void CdnClient::CreateScdnFailedLogTaskAsync(const CreateScdnFailedLogTaskRequest& request, const CreateScdnFailedLogTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateScdnFailedLogTask(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdnClient::CreateScdnFailedLogTaskOutcomeCallable CdnClient::CreateScdnFailedLogTaskCallable(const CreateScdnFailedLogTaskRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateScdnFailedLogTaskOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateScdnFailedLogTask(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CdnClient::DeleteCdnDomainOutcome CdnClient::DeleteCdnDomain(const DeleteCdnDomainRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteCdnDomain");
@@ -377,6 +420,49 @@ CdnClient::DescribeCdnIpOutcomeCallable CdnClient::DescribeCdnIpCallable(const D
         [this, request]()
         {
             return this->DescribeCdnIp(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdnClient::DescribeCdnOriginIpOutcome CdnClient::DescribeCdnOriginIp(const DescribeCdnOriginIpRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCdnOriginIp");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCdnOriginIpResponse rsp = DescribeCdnOriginIpResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCdnOriginIpOutcome(rsp);
+        else
+            return DescribeCdnOriginIpOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCdnOriginIpOutcome(outcome.GetError());
+    }
+}
+
+void CdnClient::DescribeCdnOriginIpAsync(const DescribeCdnOriginIpRequest& request, const DescribeCdnOriginIpAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCdnOriginIp(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdnClient::DescribeCdnOriginIpOutcomeCallable CdnClient::DescribeCdnOriginIpCallable(const DescribeCdnOriginIpRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCdnOriginIpOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCdnOriginIp(request);
         }
     );
 
@@ -1710,6 +1796,49 @@ CdnClient::UpdatePayTypeOutcomeCallable CdnClient::UpdatePayTypeCallable(const U
         [this, request]()
         {
             return this->UpdatePayType(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdnClient::UpdateScdnDomainOutcome CdnClient::UpdateScdnDomain(const UpdateScdnDomainRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateScdnDomain");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateScdnDomainResponse rsp = UpdateScdnDomainResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateScdnDomainOutcome(rsp);
+        else
+            return UpdateScdnDomainOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateScdnDomainOutcome(outcome.GetError());
+    }
+}
+
+void CdnClient::UpdateScdnDomainAsync(const UpdateScdnDomainRequest& request, const UpdateScdnDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpdateScdnDomain(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdnClient::UpdateScdnDomainOutcomeCallable CdnClient::UpdateScdnDomainCallable(const UpdateScdnDomainRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpdateScdnDomainOutcome()>>(
+        [this, request]()
+        {
+            return this->UpdateScdnDomain(request);
         }
     );
 

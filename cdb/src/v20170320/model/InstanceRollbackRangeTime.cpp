@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 InstanceRollbackRangeTime::InstanceRollbackRangeTime() :
@@ -29,7 +28,7 @@ InstanceRollbackRangeTime::InstanceRollbackRangeTime() :
 {
 }
 
-CoreInternalOutcome InstanceRollbackRangeTime::Deserialize(const Value &value)
+CoreInternalOutcome InstanceRollbackRangeTime::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome InstanceRollbackRangeTime::Deserialize(const Value &value)
     {
         if (!value["Code"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `InstanceRollbackRangeTime.Code` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceRollbackRangeTime.Code` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_code = value["Code"].GetInt64();
         m_codeHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome InstanceRollbackRangeTime::Deserialize(const Value &value)
     {
         if (!value["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceRollbackRangeTime.Message` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceRollbackRangeTime.Message` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_message = string(value["Message"].GetString());
         m_messageHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome InstanceRollbackRangeTime::Deserialize(const Value &value)
     {
         if (!value["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceRollbackRangeTime.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceRollbackRangeTime.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(value["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -67,10 +66,10 @@ CoreInternalOutcome InstanceRollbackRangeTime::Deserialize(const Value &value)
     if (value.HasMember("Times") && !value["Times"].IsNull())
     {
         if (!value["Times"].IsArray())
-            return CoreInternalOutcome(Error("response `InstanceRollbackRangeTime.Times` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `InstanceRollbackRangeTime.Times` is not array type"));
 
-        const Value &tmpValue = value["Times"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Times"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             RollbackTimeRange item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -88,12 +87,12 @@ CoreInternalOutcome InstanceRollbackRangeTime::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void InstanceRollbackRangeTime::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void InstanceRollbackRangeTime::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_codeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Code";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_code, allocator);
@@ -101,31 +100,31 @@ void InstanceRollbackRangeTime::ToJsonObject(Value &value, Document::AllocatorTy
 
     if (m_messageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Message";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_message.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_message.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_timesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Times";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_times.begin(); itr != m_times.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }

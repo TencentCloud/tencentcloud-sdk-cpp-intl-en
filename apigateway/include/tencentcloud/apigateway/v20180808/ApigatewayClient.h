@@ -23,6 +23,10 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/apigateway/v20180808/model/AttachPluginRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/AttachPluginResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/BindApiAppRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/BindApiAppResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/BindEnvironmentRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/BindEnvironmentResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/BindIPStrategyRequest.h>
@@ -31,22 +35,36 @@
 #include <tencentcloud/apigateway/v20180808/model/BindSecretIdsResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/BindSubDomainRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/BindSubDomainResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/BuildAPIDocRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/BuildAPIDocResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/CreateAPIDocRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/CreateAPIDocResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/CreateApiRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/CreateApiResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/CreateApiAppRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/CreateApiAppResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/CreateApiKeyRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/CreateApiKeyResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/CreateIPStrategyRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/CreateIPStrategyResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/CreatePluginRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/CreatePluginResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/CreateServiceRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/CreateServiceResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/CreateUsagePlanRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/CreateUsagePlanResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/DeleteAPIDocRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/DeleteAPIDocResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DeleteApiRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/DeleteApiResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/DeleteApiAppRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/DeleteApiAppResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DeleteApiKeyRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/DeleteApiKeyResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DeleteIPStrategyRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/DeleteIPStrategyResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/DeletePluginRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/DeletePluginResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DeleteServiceRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/DeleteServiceResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DeleteServiceSubDomainMappingRequest.h>
@@ -55,10 +73,26 @@
 #include <tencentcloud/apigateway/v20180808/model/DeleteUsagePlanResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DemoteServiceUsagePlanRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/DemoteServiceUsagePlanResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeAPIDocDetailRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeAPIDocDetailResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeAPIDocsRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeAPIDocsResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeAllPluginApisRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeAllPluginApisResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeApiRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeApiResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeApiAppRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeApiAppResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeApiAppBindApisStatusRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeApiAppBindApisStatusResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeApiAppsStatusRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeApiAppsStatusResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeApiBindApiAppsStatusRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeApiBindApiAppsStatusResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeApiEnvironmentStrategyRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeApiEnvironmentStrategyResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeApiForApiAppRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeApiForApiAppResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeApiKeyRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeApiKeyResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeApiKeysStatusRequest.h>
@@ -75,6 +109,10 @@
 #include <tencentcloud/apigateway/v20180808/model/DescribeIPStrategysStatusResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeLogSearchRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeLogSearchResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribePluginRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribePluginResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribePluginApisRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribePluginApisResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeServiceRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeServiceResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeServiceEnvironmentListRequest.h>
@@ -83,6 +121,8 @@
 #include <tencentcloud/apigateway/v20180808/model/DescribeServiceEnvironmentReleaseHistoryResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeServiceEnvironmentStrategyRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeServiceEnvironmentStrategyResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeServiceForApiAppRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribeServiceForApiAppResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeServiceReleaseVersionRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeServiceReleaseVersionResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeServiceSubDomainMappingsRequest.h>
@@ -101,20 +141,28 @@
 #include <tencentcloud/apigateway/v20180808/model/DescribeUsagePlanSecretIdsResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeUsagePlansStatusRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeUsagePlansStatusResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/DetachPluginRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/DetachPluginResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DisableApiKeyRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/DisableApiKeyResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/EnableApiKeyRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/EnableApiKeyResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/GenerateApiDocumentRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/GenerateApiDocumentResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/ModifyAPIDocRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/ModifyAPIDocResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/ModifyApiRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/ModifyApiResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/ModifyApiAppRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/ModifyApiAppResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/ModifyApiEnvironmentStrategyRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/ModifyApiEnvironmentStrategyResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/ModifyApiIncrementRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/ModifyApiIncrementResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/ModifyIPStrategyRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/ModifyIPStrategyResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/ModifyPluginRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/ModifyPluginResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/ModifyServiceRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/ModifyServiceResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/ModifyServiceEnvironmentStrategyRequest.h>
@@ -125,6 +173,8 @@
 #include <tencentcloud/apigateway/v20180808/model/ModifyUsagePlanResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/ReleaseServiceRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/ReleaseServiceResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/ResetAPIDocPasswordRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/ResetAPIDocPasswordResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/UnBindEnvironmentRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/UnBindEnvironmentResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/UnBindIPStrategyRequest.h>
@@ -135,6 +185,10 @@
 #include <tencentcloud/apigateway/v20180808/model/UnBindSubDomainResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/UnReleaseServiceRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/UnReleaseServiceResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/UnbindApiAppRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/UnbindApiAppResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/UpdateApiAppKeyRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/UpdateApiAppKeyResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/UpdateApiKeyRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/UpdateApiKeyResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/UpdateServiceRequest.h>
@@ -153,182 +207,281 @@ namespace TencentCloud
                 ApigatewayClient(const Credential &credential, const std::string &region);
                 ApigatewayClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::BindEnvironmentResponse> BindEnvironmentOutcome;
+                typedef Outcome<Core::Error, Model::AttachPluginResponse> AttachPluginOutcome;
+                typedef std::future<AttachPluginOutcome> AttachPluginOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::AttachPluginRequest&, AttachPluginOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AttachPluginAsyncHandler;
+                typedef Outcome<Core::Error, Model::BindApiAppResponse> BindApiAppOutcome;
+                typedef std::future<BindApiAppOutcome> BindApiAppOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::BindApiAppRequest&, BindApiAppOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BindApiAppAsyncHandler;
+                typedef Outcome<Core::Error, Model::BindEnvironmentResponse> BindEnvironmentOutcome;
                 typedef std::future<BindEnvironmentOutcome> BindEnvironmentOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::BindEnvironmentRequest&, BindEnvironmentOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BindEnvironmentAsyncHandler;
-                typedef Outcome<Error, Model::BindIPStrategyResponse> BindIPStrategyOutcome;
+                typedef Outcome<Core::Error, Model::BindIPStrategyResponse> BindIPStrategyOutcome;
                 typedef std::future<BindIPStrategyOutcome> BindIPStrategyOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::BindIPStrategyRequest&, BindIPStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BindIPStrategyAsyncHandler;
-                typedef Outcome<Error, Model::BindSecretIdsResponse> BindSecretIdsOutcome;
+                typedef Outcome<Core::Error, Model::BindSecretIdsResponse> BindSecretIdsOutcome;
                 typedef std::future<BindSecretIdsOutcome> BindSecretIdsOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::BindSecretIdsRequest&, BindSecretIdsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BindSecretIdsAsyncHandler;
-                typedef Outcome<Error, Model::BindSubDomainResponse> BindSubDomainOutcome;
+                typedef Outcome<Core::Error, Model::BindSubDomainResponse> BindSubDomainOutcome;
                 typedef std::future<BindSubDomainOutcome> BindSubDomainOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::BindSubDomainRequest&, BindSubDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BindSubDomainAsyncHandler;
-                typedef Outcome<Error, Model::CreateApiResponse> CreateApiOutcome;
+                typedef Outcome<Core::Error, Model::BuildAPIDocResponse> BuildAPIDocOutcome;
+                typedef std::future<BuildAPIDocOutcome> BuildAPIDocOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::BuildAPIDocRequest&, BuildAPIDocOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BuildAPIDocAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateAPIDocResponse> CreateAPIDocOutcome;
+                typedef std::future<CreateAPIDocOutcome> CreateAPIDocOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::CreateAPIDocRequest&, CreateAPIDocOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAPIDocAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateApiResponse> CreateApiOutcome;
                 typedef std::future<CreateApiOutcome> CreateApiOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::CreateApiRequest&, CreateApiOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateApiAsyncHandler;
-                typedef Outcome<Error, Model::CreateApiKeyResponse> CreateApiKeyOutcome;
+                typedef Outcome<Core::Error, Model::CreateApiAppResponse> CreateApiAppOutcome;
+                typedef std::future<CreateApiAppOutcome> CreateApiAppOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::CreateApiAppRequest&, CreateApiAppOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateApiAppAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateApiKeyResponse> CreateApiKeyOutcome;
                 typedef std::future<CreateApiKeyOutcome> CreateApiKeyOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::CreateApiKeyRequest&, CreateApiKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateApiKeyAsyncHandler;
-                typedef Outcome<Error, Model::CreateIPStrategyResponse> CreateIPStrategyOutcome;
+                typedef Outcome<Core::Error, Model::CreateIPStrategyResponse> CreateIPStrategyOutcome;
                 typedef std::future<CreateIPStrategyOutcome> CreateIPStrategyOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::CreateIPStrategyRequest&, CreateIPStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateIPStrategyAsyncHandler;
-                typedef Outcome<Error, Model::CreateServiceResponse> CreateServiceOutcome;
+                typedef Outcome<Core::Error, Model::CreatePluginResponse> CreatePluginOutcome;
+                typedef std::future<CreatePluginOutcome> CreatePluginOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::CreatePluginRequest&, CreatePluginOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePluginAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateServiceResponse> CreateServiceOutcome;
                 typedef std::future<CreateServiceOutcome> CreateServiceOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::CreateServiceRequest&, CreateServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateServiceAsyncHandler;
-                typedef Outcome<Error, Model::CreateUsagePlanResponse> CreateUsagePlanOutcome;
+                typedef Outcome<Core::Error, Model::CreateUsagePlanResponse> CreateUsagePlanOutcome;
                 typedef std::future<CreateUsagePlanOutcome> CreateUsagePlanOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::CreateUsagePlanRequest&, CreateUsagePlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateUsagePlanAsyncHandler;
-                typedef Outcome<Error, Model::DeleteApiResponse> DeleteApiOutcome;
+                typedef Outcome<Core::Error, Model::DeleteAPIDocResponse> DeleteAPIDocOutcome;
+                typedef std::future<DeleteAPIDocOutcome> DeleteAPIDocOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::DeleteAPIDocRequest&, DeleteAPIDocOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAPIDocAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteApiResponse> DeleteApiOutcome;
                 typedef std::future<DeleteApiOutcome> DeleteApiOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DeleteApiRequest&, DeleteApiOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteApiAsyncHandler;
-                typedef Outcome<Error, Model::DeleteApiKeyResponse> DeleteApiKeyOutcome;
+                typedef Outcome<Core::Error, Model::DeleteApiAppResponse> DeleteApiAppOutcome;
+                typedef std::future<DeleteApiAppOutcome> DeleteApiAppOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::DeleteApiAppRequest&, DeleteApiAppOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteApiAppAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteApiKeyResponse> DeleteApiKeyOutcome;
                 typedef std::future<DeleteApiKeyOutcome> DeleteApiKeyOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DeleteApiKeyRequest&, DeleteApiKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteApiKeyAsyncHandler;
-                typedef Outcome<Error, Model::DeleteIPStrategyResponse> DeleteIPStrategyOutcome;
+                typedef Outcome<Core::Error, Model::DeleteIPStrategyResponse> DeleteIPStrategyOutcome;
                 typedef std::future<DeleteIPStrategyOutcome> DeleteIPStrategyOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DeleteIPStrategyRequest&, DeleteIPStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteIPStrategyAsyncHandler;
-                typedef Outcome<Error, Model::DeleteServiceResponse> DeleteServiceOutcome;
+                typedef Outcome<Core::Error, Model::DeletePluginResponse> DeletePluginOutcome;
+                typedef std::future<DeletePluginOutcome> DeletePluginOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::DeletePluginRequest&, DeletePluginOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeletePluginAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteServiceResponse> DeleteServiceOutcome;
                 typedef std::future<DeleteServiceOutcome> DeleteServiceOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DeleteServiceRequest&, DeleteServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteServiceAsyncHandler;
-                typedef Outcome<Error, Model::DeleteServiceSubDomainMappingResponse> DeleteServiceSubDomainMappingOutcome;
+                typedef Outcome<Core::Error, Model::DeleteServiceSubDomainMappingResponse> DeleteServiceSubDomainMappingOutcome;
                 typedef std::future<DeleteServiceSubDomainMappingOutcome> DeleteServiceSubDomainMappingOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DeleteServiceSubDomainMappingRequest&, DeleteServiceSubDomainMappingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteServiceSubDomainMappingAsyncHandler;
-                typedef Outcome<Error, Model::DeleteUsagePlanResponse> DeleteUsagePlanOutcome;
+                typedef Outcome<Core::Error, Model::DeleteUsagePlanResponse> DeleteUsagePlanOutcome;
                 typedef std::future<DeleteUsagePlanOutcome> DeleteUsagePlanOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DeleteUsagePlanRequest&, DeleteUsagePlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteUsagePlanAsyncHandler;
-                typedef Outcome<Error, Model::DemoteServiceUsagePlanResponse> DemoteServiceUsagePlanOutcome;
+                typedef Outcome<Core::Error, Model::DemoteServiceUsagePlanResponse> DemoteServiceUsagePlanOutcome;
                 typedef std::future<DemoteServiceUsagePlanOutcome> DemoteServiceUsagePlanOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DemoteServiceUsagePlanRequest&, DemoteServiceUsagePlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DemoteServiceUsagePlanAsyncHandler;
-                typedef Outcome<Error, Model::DescribeApiResponse> DescribeApiOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAPIDocDetailResponse> DescribeAPIDocDetailOutcome;
+                typedef std::future<DescribeAPIDocDetailOutcome> DescribeAPIDocDetailOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::DescribeAPIDocDetailRequest&, DescribeAPIDocDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAPIDocDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAPIDocsResponse> DescribeAPIDocsOutcome;
+                typedef std::future<DescribeAPIDocsOutcome> DescribeAPIDocsOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::DescribeAPIDocsRequest&, DescribeAPIDocsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAPIDocsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAllPluginApisResponse> DescribeAllPluginApisOutcome;
+                typedef std::future<DescribeAllPluginApisOutcome> DescribeAllPluginApisOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::DescribeAllPluginApisRequest&, DescribeAllPluginApisOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAllPluginApisAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeApiResponse> DescribeApiOutcome;
                 typedef std::future<DescribeApiOutcome> DescribeApiOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeApiRequest&, DescribeApiOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApiAsyncHandler;
-                typedef Outcome<Error, Model::DescribeApiEnvironmentStrategyResponse> DescribeApiEnvironmentStrategyOutcome;
+                typedef Outcome<Core::Error, Model::DescribeApiAppResponse> DescribeApiAppOutcome;
+                typedef std::future<DescribeApiAppOutcome> DescribeApiAppOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::DescribeApiAppRequest&, DescribeApiAppOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApiAppAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeApiAppBindApisStatusResponse> DescribeApiAppBindApisStatusOutcome;
+                typedef std::future<DescribeApiAppBindApisStatusOutcome> DescribeApiAppBindApisStatusOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::DescribeApiAppBindApisStatusRequest&, DescribeApiAppBindApisStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApiAppBindApisStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeApiAppsStatusResponse> DescribeApiAppsStatusOutcome;
+                typedef std::future<DescribeApiAppsStatusOutcome> DescribeApiAppsStatusOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::DescribeApiAppsStatusRequest&, DescribeApiAppsStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApiAppsStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeApiBindApiAppsStatusResponse> DescribeApiBindApiAppsStatusOutcome;
+                typedef std::future<DescribeApiBindApiAppsStatusOutcome> DescribeApiBindApiAppsStatusOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::DescribeApiBindApiAppsStatusRequest&, DescribeApiBindApiAppsStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApiBindApiAppsStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeApiEnvironmentStrategyResponse> DescribeApiEnvironmentStrategyOutcome;
                 typedef std::future<DescribeApiEnvironmentStrategyOutcome> DescribeApiEnvironmentStrategyOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeApiEnvironmentStrategyRequest&, DescribeApiEnvironmentStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApiEnvironmentStrategyAsyncHandler;
-                typedef Outcome<Error, Model::DescribeApiKeyResponse> DescribeApiKeyOutcome;
+                typedef Outcome<Core::Error, Model::DescribeApiForApiAppResponse> DescribeApiForApiAppOutcome;
+                typedef std::future<DescribeApiForApiAppOutcome> DescribeApiForApiAppOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::DescribeApiForApiAppRequest&, DescribeApiForApiAppOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApiForApiAppAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeApiKeyResponse> DescribeApiKeyOutcome;
                 typedef std::future<DescribeApiKeyOutcome> DescribeApiKeyOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeApiKeyRequest&, DescribeApiKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApiKeyAsyncHandler;
-                typedef Outcome<Error, Model::DescribeApiKeysStatusResponse> DescribeApiKeysStatusOutcome;
+                typedef Outcome<Core::Error, Model::DescribeApiKeysStatusResponse> DescribeApiKeysStatusOutcome;
                 typedef std::future<DescribeApiKeysStatusOutcome> DescribeApiKeysStatusOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeApiKeysStatusRequest&, DescribeApiKeysStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApiKeysStatusAsyncHandler;
-                typedef Outcome<Error, Model::DescribeApiUsagePlanResponse> DescribeApiUsagePlanOutcome;
+                typedef Outcome<Core::Error, Model::DescribeApiUsagePlanResponse> DescribeApiUsagePlanOutcome;
                 typedef std::future<DescribeApiUsagePlanOutcome> DescribeApiUsagePlanOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeApiUsagePlanRequest&, DescribeApiUsagePlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApiUsagePlanAsyncHandler;
-                typedef Outcome<Error, Model::DescribeApisStatusResponse> DescribeApisStatusOutcome;
+                typedef Outcome<Core::Error, Model::DescribeApisStatusResponse> DescribeApisStatusOutcome;
                 typedef std::future<DescribeApisStatusOutcome> DescribeApisStatusOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeApisStatusRequest&, DescribeApisStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApisStatusAsyncHandler;
-                typedef Outcome<Error, Model::DescribeIPStrategyResponse> DescribeIPStrategyOutcome;
+                typedef Outcome<Core::Error, Model::DescribeIPStrategyResponse> DescribeIPStrategyOutcome;
                 typedef std::future<DescribeIPStrategyOutcome> DescribeIPStrategyOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeIPStrategyRequest&, DescribeIPStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIPStrategyAsyncHandler;
-                typedef Outcome<Error, Model::DescribeIPStrategyApisStatusResponse> DescribeIPStrategyApisStatusOutcome;
+                typedef Outcome<Core::Error, Model::DescribeIPStrategyApisStatusResponse> DescribeIPStrategyApisStatusOutcome;
                 typedef std::future<DescribeIPStrategyApisStatusOutcome> DescribeIPStrategyApisStatusOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeIPStrategyApisStatusRequest&, DescribeIPStrategyApisStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIPStrategyApisStatusAsyncHandler;
-                typedef Outcome<Error, Model::DescribeIPStrategysStatusResponse> DescribeIPStrategysStatusOutcome;
+                typedef Outcome<Core::Error, Model::DescribeIPStrategysStatusResponse> DescribeIPStrategysStatusOutcome;
                 typedef std::future<DescribeIPStrategysStatusOutcome> DescribeIPStrategysStatusOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeIPStrategysStatusRequest&, DescribeIPStrategysStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIPStrategysStatusAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLogSearchResponse> DescribeLogSearchOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLogSearchResponse> DescribeLogSearchOutcome;
                 typedef std::future<DescribeLogSearchOutcome> DescribeLogSearchOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeLogSearchRequest&, DescribeLogSearchOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLogSearchAsyncHandler;
-                typedef Outcome<Error, Model::DescribeServiceResponse> DescribeServiceOutcome;
+                typedef Outcome<Core::Error, Model::DescribePluginResponse> DescribePluginOutcome;
+                typedef std::future<DescribePluginOutcome> DescribePluginOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::DescribePluginRequest&, DescribePluginOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePluginAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePluginApisResponse> DescribePluginApisOutcome;
+                typedef std::future<DescribePluginApisOutcome> DescribePluginApisOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::DescribePluginApisRequest&, DescribePluginApisOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePluginApisAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeServiceResponse> DescribeServiceOutcome;
                 typedef std::future<DescribeServiceOutcome> DescribeServiceOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeServiceRequest&, DescribeServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeServiceAsyncHandler;
-                typedef Outcome<Error, Model::DescribeServiceEnvironmentListResponse> DescribeServiceEnvironmentListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeServiceEnvironmentListResponse> DescribeServiceEnvironmentListOutcome;
                 typedef std::future<DescribeServiceEnvironmentListOutcome> DescribeServiceEnvironmentListOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeServiceEnvironmentListRequest&, DescribeServiceEnvironmentListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeServiceEnvironmentListAsyncHandler;
-                typedef Outcome<Error, Model::DescribeServiceEnvironmentReleaseHistoryResponse> DescribeServiceEnvironmentReleaseHistoryOutcome;
+                typedef Outcome<Core::Error, Model::DescribeServiceEnvironmentReleaseHistoryResponse> DescribeServiceEnvironmentReleaseHistoryOutcome;
                 typedef std::future<DescribeServiceEnvironmentReleaseHistoryOutcome> DescribeServiceEnvironmentReleaseHistoryOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeServiceEnvironmentReleaseHistoryRequest&, DescribeServiceEnvironmentReleaseHistoryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeServiceEnvironmentReleaseHistoryAsyncHandler;
-                typedef Outcome<Error, Model::DescribeServiceEnvironmentStrategyResponse> DescribeServiceEnvironmentStrategyOutcome;
+                typedef Outcome<Core::Error, Model::DescribeServiceEnvironmentStrategyResponse> DescribeServiceEnvironmentStrategyOutcome;
                 typedef std::future<DescribeServiceEnvironmentStrategyOutcome> DescribeServiceEnvironmentStrategyOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeServiceEnvironmentStrategyRequest&, DescribeServiceEnvironmentStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeServiceEnvironmentStrategyAsyncHandler;
-                typedef Outcome<Error, Model::DescribeServiceReleaseVersionResponse> DescribeServiceReleaseVersionOutcome;
+                typedef Outcome<Core::Error, Model::DescribeServiceForApiAppResponse> DescribeServiceForApiAppOutcome;
+                typedef std::future<DescribeServiceForApiAppOutcome> DescribeServiceForApiAppOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::DescribeServiceForApiAppRequest&, DescribeServiceForApiAppOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeServiceForApiAppAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeServiceReleaseVersionResponse> DescribeServiceReleaseVersionOutcome;
                 typedef std::future<DescribeServiceReleaseVersionOutcome> DescribeServiceReleaseVersionOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeServiceReleaseVersionRequest&, DescribeServiceReleaseVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeServiceReleaseVersionAsyncHandler;
-                typedef Outcome<Error, Model::DescribeServiceSubDomainMappingsResponse> DescribeServiceSubDomainMappingsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeServiceSubDomainMappingsResponse> DescribeServiceSubDomainMappingsOutcome;
                 typedef std::future<DescribeServiceSubDomainMappingsOutcome> DescribeServiceSubDomainMappingsOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeServiceSubDomainMappingsRequest&, DescribeServiceSubDomainMappingsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeServiceSubDomainMappingsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeServiceSubDomainsResponse> DescribeServiceSubDomainsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeServiceSubDomainsResponse> DescribeServiceSubDomainsOutcome;
                 typedef std::future<DescribeServiceSubDomainsOutcome> DescribeServiceSubDomainsOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeServiceSubDomainsRequest&, DescribeServiceSubDomainsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeServiceSubDomainsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeServiceUsagePlanResponse> DescribeServiceUsagePlanOutcome;
+                typedef Outcome<Core::Error, Model::DescribeServiceUsagePlanResponse> DescribeServiceUsagePlanOutcome;
                 typedef std::future<DescribeServiceUsagePlanOutcome> DescribeServiceUsagePlanOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeServiceUsagePlanRequest&, DescribeServiceUsagePlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeServiceUsagePlanAsyncHandler;
-                typedef Outcome<Error, Model::DescribeServicesStatusResponse> DescribeServicesStatusOutcome;
+                typedef Outcome<Core::Error, Model::DescribeServicesStatusResponse> DescribeServicesStatusOutcome;
                 typedef std::future<DescribeServicesStatusOutcome> DescribeServicesStatusOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeServicesStatusRequest&, DescribeServicesStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeServicesStatusAsyncHandler;
-                typedef Outcome<Error, Model::DescribeUsagePlanResponse> DescribeUsagePlanOutcome;
+                typedef Outcome<Core::Error, Model::DescribeUsagePlanResponse> DescribeUsagePlanOutcome;
                 typedef std::future<DescribeUsagePlanOutcome> DescribeUsagePlanOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeUsagePlanRequest&, DescribeUsagePlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUsagePlanAsyncHandler;
-                typedef Outcome<Error, Model::DescribeUsagePlanEnvironmentsResponse> DescribeUsagePlanEnvironmentsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeUsagePlanEnvironmentsResponse> DescribeUsagePlanEnvironmentsOutcome;
                 typedef std::future<DescribeUsagePlanEnvironmentsOutcome> DescribeUsagePlanEnvironmentsOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeUsagePlanEnvironmentsRequest&, DescribeUsagePlanEnvironmentsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUsagePlanEnvironmentsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeUsagePlanSecretIdsResponse> DescribeUsagePlanSecretIdsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeUsagePlanSecretIdsResponse> DescribeUsagePlanSecretIdsOutcome;
                 typedef std::future<DescribeUsagePlanSecretIdsOutcome> DescribeUsagePlanSecretIdsOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeUsagePlanSecretIdsRequest&, DescribeUsagePlanSecretIdsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUsagePlanSecretIdsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeUsagePlansStatusResponse> DescribeUsagePlansStatusOutcome;
+                typedef Outcome<Core::Error, Model::DescribeUsagePlansStatusResponse> DescribeUsagePlansStatusOutcome;
                 typedef std::future<DescribeUsagePlansStatusOutcome> DescribeUsagePlansStatusOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeUsagePlansStatusRequest&, DescribeUsagePlansStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUsagePlansStatusAsyncHandler;
-                typedef Outcome<Error, Model::DisableApiKeyResponse> DisableApiKeyOutcome;
+                typedef Outcome<Core::Error, Model::DetachPluginResponse> DetachPluginOutcome;
+                typedef std::future<DetachPluginOutcome> DetachPluginOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::DetachPluginRequest&, DetachPluginOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DetachPluginAsyncHandler;
+                typedef Outcome<Core::Error, Model::DisableApiKeyResponse> DisableApiKeyOutcome;
                 typedef std::future<DisableApiKeyOutcome> DisableApiKeyOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DisableApiKeyRequest&, DisableApiKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableApiKeyAsyncHandler;
-                typedef Outcome<Error, Model::EnableApiKeyResponse> EnableApiKeyOutcome;
+                typedef Outcome<Core::Error, Model::EnableApiKeyResponse> EnableApiKeyOutcome;
                 typedef std::future<EnableApiKeyOutcome> EnableApiKeyOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::EnableApiKeyRequest&, EnableApiKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableApiKeyAsyncHandler;
-                typedef Outcome<Error, Model::GenerateApiDocumentResponse> GenerateApiDocumentOutcome;
+                typedef Outcome<Core::Error, Model::GenerateApiDocumentResponse> GenerateApiDocumentOutcome;
                 typedef std::future<GenerateApiDocumentOutcome> GenerateApiDocumentOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::GenerateApiDocumentRequest&, GenerateApiDocumentOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GenerateApiDocumentAsyncHandler;
-                typedef Outcome<Error, Model::ModifyApiResponse> ModifyApiOutcome;
+                typedef Outcome<Core::Error, Model::ModifyAPIDocResponse> ModifyAPIDocOutcome;
+                typedef std::future<ModifyAPIDocOutcome> ModifyAPIDocOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::ModifyAPIDocRequest&, ModifyAPIDocOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAPIDocAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyApiResponse> ModifyApiOutcome;
                 typedef std::future<ModifyApiOutcome> ModifyApiOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::ModifyApiRequest&, ModifyApiOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyApiAsyncHandler;
-                typedef Outcome<Error, Model::ModifyApiEnvironmentStrategyResponse> ModifyApiEnvironmentStrategyOutcome;
+                typedef Outcome<Core::Error, Model::ModifyApiAppResponse> ModifyApiAppOutcome;
+                typedef std::future<ModifyApiAppOutcome> ModifyApiAppOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::ModifyApiAppRequest&, ModifyApiAppOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyApiAppAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyApiEnvironmentStrategyResponse> ModifyApiEnvironmentStrategyOutcome;
                 typedef std::future<ModifyApiEnvironmentStrategyOutcome> ModifyApiEnvironmentStrategyOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::ModifyApiEnvironmentStrategyRequest&, ModifyApiEnvironmentStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyApiEnvironmentStrategyAsyncHandler;
-                typedef Outcome<Error, Model::ModifyApiIncrementResponse> ModifyApiIncrementOutcome;
+                typedef Outcome<Core::Error, Model::ModifyApiIncrementResponse> ModifyApiIncrementOutcome;
                 typedef std::future<ModifyApiIncrementOutcome> ModifyApiIncrementOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::ModifyApiIncrementRequest&, ModifyApiIncrementOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyApiIncrementAsyncHandler;
-                typedef Outcome<Error, Model::ModifyIPStrategyResponse> ModifyIPStrategyOutcome;
+                typedef Outcome<Core::Error, Model::ModifyIPStrategyResponse> ModifyIPStrategyOutcome;
                 typedef std::future<ModifyIPStrategyOutcome> ModifyIPStrategyOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::ModifyIPStrategyRequest&, ModifyIPStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyIPStrategyAsyncHandler;
-                typedef Outcome<Error, Model::ModifyServiceResponse> ModifyServiceOutcome;
+                typedef Outcome<Core::Error, Model::ModifyPluginResponse> ModifyPluginOutcome;
+                typedef std::future<ModifyPluginOutcome> ModifyPluginOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::ModifyPluginRequest&, ModifyPluginOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyPluginAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyServiceResponse> ModifyServiceOutcome;
                 typedef std::future<ModifyServiceOutcome> ModifyServiceOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::ModifyServiceRequest&, ModifyServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyServiceAsyncHandler;
-                typedef Outcome<Error, Model::ModifyServiceEnvironmentStrategyResponse> ModifyServiceEnvironmentStrategyOutcome;
+                typedef Outcome<Core::Error, Model::ModifyServiceEnvironmentStrategyResponse> ModifyServiceEnvironmentStrategyOutcome;
                 typedef std::future<ModifyServiceEnvironmentStrategyOutcome> ModifyServiceEnvironmentStrategyOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::ModifyServiceEnvironmentStrategyRequest&, ModifyServiceEnvironmentStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyServiceEnvironmentStrategyAsyncHandler;
-                typedef Outcome<Error, Model::ModifySubDomainResponse> ModifySubDomainOutcome;
+                typedef Outcome<Core::Error, Model::ModifySubDomainResponse> ModifySubDomainOutcome;
                 typedef std::future<ModifySubDomainOutcome> ModifySubDomainOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::ModifySubDomainRequest&, ModifySubDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySubDomainAsyncHandler;
-                typedef Outcome<Error, Model::ModifyUsagePlanResponse> ModifyUsagePlanOutcome;
+                typedef Outcome<Core::Error, Model::ModifyUsagePlanResponse> ModifyUsagePlanOutcome;
                 typedef std::future<ModifyUsagePlanOutcome> ModifyUsagePlanOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::ModifyUsagePlanRequest&, ModifyUsagePlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyUsagePlanAsyncHandler;
-                typedef Outcome<Error, Model::ReleaseServiceResponse> ReleaseServiceOutcome;
+                typedef Outcome<Core::Error, Model::ReleaseServiceResponse> ReleaseServiceOutcome;
                 typedef std::future<ReleaseServiceOutcome> ReleaseServiceOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::ReleaseServiceRequest&, ReleaseServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReleaseServiceAsyncHandler;
-                typedef Outcome<Error, Model::UnBindEnvironmentResponse> UnBindEnvironmentOutcome;
+                typedef Outcome<Core::Error, Model::ResetAPIDocPasswordResponse> ResetAPIDocPasswordOutcome;
+                typedef std::future<ResetAPIDocPasswordOutcome> ResetAPIDocPasswordOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::ResetAPIDocPasswordRequest&, ResetAPIDocPasswordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetAPIDocPasswordAsyncHandler;
+                typedef Outcome<Core::Error, Model::UnBindEnvironmentResponse> UnBindEnvironmentOutcome;
                 typedef std::future<UnBindEnvironmentOutcome> UnBindEnvironmentOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::UnBindEnvironmentRequest&, UnBindEnvironmentOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnBindEnvironmentAsyncHandler;
-                typedef Outcome<Error, Model::UnBindIPStrategyResponse> UnBindIPStrategyOutcome;
+                typedef Outcome<Core::Error, Model::UnBindIPStrategyResponse> UnBindIPStrategyOutcome;
                 typedef std::future<UnBindIPStrategyOutcome> UnBindIPStrategyOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::UnBindIPStrategyRequest&, UnBindIPStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnBindIPStrategyAsyncHandler;
-                typedef Outcome<Error, Model::UnBindSecretIdsResponse> UnBindSecretIdsOutcome;
+                typedef Outcome<Core::Error, Model::UnBindSecretIdsResponse> UnBindSecretIdsOutcome;
                 typedef std::future<UnBindSecretIdsOutcome> UnBindSecretIdsOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::UnBindSecretIdsRequest&, UnBindSecretIdsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnBindSecretIdsAsyncHandler;
-                typedef Outcome<Error, Model::UnBindSubDomainResponse> UnBindSubDomainOutcome;
+                typedef Outcome<Core::Error, Model::UnBindSubDomainResponse> UnBindSubDomainOutcome;
                 typedef std::future<UnBindSubDomainOutcome> UnBindSubDomainOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::UnBindSubDomainRequest&, UnBindSubDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnBindSubDomainAsyncHandler;
-                typedef Outcome<Error, Model::UnReleaseServiceResponse> UnReleaseServiceOutcome;
+                typedef Outcome<Core::Error, Model::UnReleaseServiceResponse> UnReleaseServiceOutcome;
                 typedef std::future<UnReleaseServiceOutcome> UnReleaseServiceOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::UnReleaseServiceRequest&, UnReleaseServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnReleaseServiceAsyncHandler;
-                typedef Outcome<Error, Model::UpdateApiKeyResponse> UpdateApiKeyOutcome;
+                typedef Outcome<Core::Error, Model::UnbindApiAppResponse> UnbindApiAppOutcome;
+                typedef std::future<UnbindApiAppOutcome> UnbindApiAppOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::UnbindApiAppRequest&, UnbindApiAppOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnbindApiAppAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateApiAppKeyResponse> UpdateApiAppKeyOutcome;
+                typedef std::future<UpdateApiAppKeyOutcome> UpdateApiAppKeyOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::UpdateApiAppKeyRequest&, UpdateApiAppKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateApiAppKeyAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateApiKeyResponse> UpdateApiKeyOutcome;
                 typedef std::future<UpdateApiKeyOutcome> UpdateApiKeyOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::UpdateApiKeyRequest&, UpdateApiKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateApiKeyAsyncHandler;
-                typedef Outcome<Error, Model::UpdateServiceResponse> UpdateServiceOutcome;
+                typedef Outcome<Core::Error, Model::UpdateServiceResponse> UpdateServiceOutcome;
                 typedef std::future<UpdateServiceOutcome> UpdateServiceOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::UpdateServiceRequest&, UpdateServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateServiceAsyncHandler;
 
 
+
+                /**
+                 *This API is used to bind a plugin to an API.
+                 * @param req AttachPluginRequest
+                 * @return AttachPluginOutcome
+                 */
+                AttachPluginOutcome AttachPlugin(const Model::AttachPluginRequest &request);
+                void AttachPluginAsync(const Model::AttachPluginRequest& request, const AttachPluginAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AttachPluginOutcomeCallable AttachPluginCallable(const Model::AttachPluginRequest& request);
+
+                /**
+                 *This API is used to bind an application to an API.
+                 * @param req BindApiAppRequest
+                 * @return BindApiAppOutcome
+                 */
+                BindApiAppOutcome BindApiApp(const Model::BindApiAppRequest &request);
+                void BindApiAppAsync(const Model::BindApiAppRequest& request, const BindApiAppAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                BindApiAppOutcomeCallable BindApiAppCallable(const Model::BindApiAppRequest& request);
 
                 /**
                  *This API is used to bind a usage plan to a service or API.
@@ -371,6 +524,24 @@ Each service in API Gateway provides a default domain name for users to call. If
                 BindSubDomainOutcomeCallable BindSubDomainCallable(const Model::BindSubDomainRequest& request);
 
                 /**
+                 *This API is used to build an API document.
+                 * @param req BuildAPIDocRequest
+                 * @return BuildAPIDocOutcome
+                 */
+                BuildAPIDocOutcome BuildAPIDoc(const Model::BuildAPIDocRequest &request);
+                void BuildAPIDocAsync(const Model::BuildAPIDocRequest& request, const BuildAPIDocAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                BuildAPIDocOutcomeCallable BuildAPIDocCallable(const Model::BuildAPIDocRequest& request);
+
+                /**
+                 *This API is used to create an API document.
+                 * @param req CreateAPIDocRequest
+                 * @return CreateAPIDocOutcome
+                 */
+                CreateAPIDocOutcome CreateAPIDoc(const Model::CreateAPIDocRequest &request);
+                void CreateAPIDocAsync(const Model::CreateAPIDocRequest& request, const CreateAPIDocAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateAPIDocOutcomeCallable CreateAPIDocCallable(const Model::CreateAPIDocRequest& request);
+
+                /**
                  *This API is used to create an API. Before creating an API, you need to create a service, as each API belongs to a certain service.
                  * @param req CreateApiRequest
                  * @return CreateApiOutcome
@@ -378,6 +549,15 @@ Each service in API Gateway provides a default domain name for users to call. If
                 CreateApiOutcome CreateApi(const Model::CreateApiRequest &request);
                 void CreateApiAsync(const Model::CreateApiRequest& request, const CreateApiAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateApiOutcomeCallable CreateApiCallable(const Model::CreateApiRequest& request);
+
+                /**
+                 *This API is used to create an application.
+                 * @param req CreateApiAppRequest
+                 * @return CreateApiAppOutcome
+                 */
+                CreateApiAppOutcome CreateApiApp(const Model::CreateApiAppRequest &request);
+                void CreateApiAppAsync(const Model::CreateApiAppRequest& request, const CreateApiAppAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateApiAppOutcomeCallable CreateApiAppCallable(const Model::CreateApiAppRequest& request);
 
                 /**
                  *This API is used to create an API key pair.
@@ -396,6 +576,15 @@ Each service in API Gateway provides a default domain name for users to call. If
                 CreateIPStrategyOutcome CreateIPStrategy(const Model::CreateIPStrategyRequest &request);
                 void CreateIPStrategyAsync(const Model::CreateIPStrategyRequest& request, const CreateIPStrategyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateIPStrategyOutcomeCallable CreateIPStrategyCallable(const Model::CreateIPStrategyRequest& request);
+
+                /**
+                 *This API is used to create an API Gateway plugin.
+                 * @param req CreatePluginRequest
+                 * @return CreatePluginOutcome
+                 */
+                CreatePluginOutcome CreatePlugin(const Model::CreatePluginRequest &request);
+                void CreatePluginAsync(const Model::CreatePluginRequest& request, const CreatePluginAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreatePluginOutcomeCallable CreatePluginCallable(const Model::CreatePluginRequest& request);
 
                 /**
                  *This API is used to create a service.
@@ -418,6 +607,15 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
                 CreateUsagePlanOutcomeCallable CreateUsagePlanCallable(const Model::CreateUsagePlanRequest& request);
 
                 /**
+                 *This API is used to delete an API document.
+                 * @param req DeleteAPIDocRequest
+                 * @return DeleteAPIDocOutcome
+                 */
+                DeleteAPIDocOutcome DeleteAPIDoc(const Model::DeleteAPIDocRequest &request);
+                void DeleteAPIDocAsync(const Model::DeleteAPIDocRequest& request, const DeleteAPIDocAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteAPIDocOutcomeCallable DeleteAPIDocCallable(const Model::DeleteAPIDocRequest& request);
+
+                /**
                  *This API is used to delete a created API.
                  * @param req DeleteApiRequest
                  * @return DeleteApiOutcome
@@ -425,6 +623,15 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
                 DeleteApiOutcome DeleteApi(const Model::DeleteApiRequest &request);
                 void DeleteApiAsync(const Model::DeleteApiRequest& request, const DeleteApiAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteApiOutcomeCallable DeleteApiCallable(const Model::DeleteApiRequest& request);
+
+                /**
+                 *This API is used to delete a created application.
+                 * @param req DeleteApiAppRequest
+                 * @return DeleteApiAppOutcome
+                 */
+                DeleteApiAppOutcome DeleteApiApp(const Model::DeleteApiAppRequest &request);
+                void DeleteApiAppAsync(const Model::DeleteApiAppRequest& request, const DeleteApiAppAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteApiAppOutcomeCallable DeleteApiAppCallable(const Model::DeleteApiAppRequest& request);
 
                 /**
                  *This API is used to delete an API key pair.
@@ -443,6 +650,15 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
                 DeleteIPStrategyOutcome DeleteIPStrategy(const Model::DeleteIPStrategyRequest &request);
                 void DeleteIPStrategyAsync(const Model::DeleteIPStrategyRequest& request, const DeleteIPStrategyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteIPStrategyOutcomeCallable DeleteIPStrategyCallable(const Model::DeleteIPStrategyRequest& request);
+
+                /**
+                 *This API is used to delete an API Gateway plugin.
+                 * @param req DeletePluginRequest
+                 * @return DeletePluginOutcome
+                 */
+                DeletePluginOutcome DeletePlugin(const Model::DeletePluginRequest &request);
+                void DeletePluginAsync(const Model::DeletePluginRequest& request, const DeletePluginAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeletePluginOutcomeCallable DeletePluginCallable(const Model::DeletePluginRequest& request);
 
                 /**
                  *This API is used to delete a service in API Gateway.
@@ -484,13 +700,76 @@ This operation will also be denied if the current environment has not been publi
                 DemoteServiceUsagePlanOutcomeCallable DemoteServiceUsagePlanCallable(const Model::DemoteServiceUsagePlanRequest& request);
 
                 /**
-                 *This API is used to query the details of an API deployed in API Gateway.
+                 *This API is used to query the details of an API document.
+                 * @param req DescribeAPIDocDetailRequest
+                 * @return DescribeAPIDocDetailOutcome
+                 */
+                DescribeAPIDocDetailOutcome DescribeAPIDocDetail(const Model::DescribeAPIDocDetailRequest &request);
+                void DescribeAPIDocDetailAsync(const Model::DescribeAPIDocDetailRequest& request, const DescribeAPIDocDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAPIDocDetailOutcomeCallable DescribeAPIDocDetailCallable(const Model::DescribeAPIDocDetailRequest& request);
+
+                /**
+                 *This API is used to query the list of API documents.
+                 * @param req DescribeAPIDocsRequest
+                 * @return DescribeAPIDocsOutcome
+                 */
+                DescribeAPIDocsOutcome DescribeAPIDocs(const Model::DescribeAPIDocsRequest &request);
+                void DescribeAPIDocsAsync(const Model::DescribeAPIDocsRequest& request, const DescribeAPIDocsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAPIDocsOutcomeCallable DescribeAPIDocsCallable(const Model::DescribeAPIDocsRequest& request);
+
+                /**
+                 *This API is used to list all APIs that can use this plugin, no matter whether the API is bound with the plugin.
+                 * @param req DescribeAllPluginApisRequest
+                 * @return DescribeAllPluginApisOutcome
+                 */
+                DescribeAllPluginApisOutcome DescribeAllPluginApis(const Model::DescribeAllPluginApisRequest &request);
+                void DescribeAllPluginApisAsync(const Model::DescribeAllPluginApisRequest& request, const DescribeAllPluginApisAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAllPluginApisOutcomeCallable DescribeAllPluginApisCallable(const Model::DescribeAllPluginApisRequest& request);
+
+                /**
+                 *This API (`DescribeApi`) is used to query the details of the APIs users manage via Tencent Cloud API Gateway.
                  * @param req DescribeApiRequest
                  * @return DescribeApiOutcome
                  */
                 DescribeApiOutcome DescribeApi(const Model::DescribeApiRequest &request);
                 void DescribeApiAsync(const Model::DescribeApiRequest& request, const DescribeApiAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeApiOutcomeCallable DescribeApiCallable(const Model::DescribeApiRequest& request);
+
+                /**
+                 *This API is used to search for an application by application ID.
+                 * @param req DescribeApiAppRequest
+                 * @return DescribeApiAppOutcome
+                 */
+                DescribeApiAppOutcome DescribeApiApp(const Model::DescribeApiAppRequest &request);
+                void DescribeApiAppAsync(const Model::DescribeApiAppRequest& request, const DescribeApiAppAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeApiAppOutcomeCallable DescribeApiAppCallable(const Model::DescribeApiAppRequest& request);
+
+                /**
+                 *This API is used to query the list of APIs bound to an application.
+                 * @param req DescribeApiAppBindApisStatusRequest
+                 * @return DescribeApiAppBindApisStatusOutcome
+                 */
+                DescribeApiAppBindApisStatusOutcome DescribeApiAppBindApisStatus(const Model::DescribeApiAppBindApisStatusRequest &request);
+                void DescribeApiAppBindApisStatusAsync(const Model::DescribeApiAppBindApisStatusRequest& request, const DescribeApiAppBindApisStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeApiAppBindApisStatusOutcomeCallable DescribeApiAppBindApisStatusCallable(const Model::DescribeApiAppBindApisStatusRequest& request);
+
+                /**
+                 *This API is used to query the application list.
+                 * @param req DescribeApiAppsStatusRequest
+                 * @return DescribeApiAppsStatusOutcome
+                 */
+                DescribeApiAppsStatusOutcome DescribeApiAppsStatus(const Model::DescribeApiAppsStatusRequest &request);
+                void DescribeApiAppsStatusAsync(const Model::DescribeApiAppsStatusRequest& request, const DescribeApiAppsStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeApiAppsStatusOutcomeCallable DescribeApiAppsStatusCallable(const Model::DescribeApiAppsStatusRequest& request);
+
+                /**
+                 *This API is used to query the list of applications bound to an API.
+                 * @param req DescribeApiBindApiAppsStatusRequest
+                 * @return DescribeApiBindApiAppsStatusOutcome
+                 */
+                DescribeApiBindApiAppsStatusOutcome DescribeApiBindApiAppsStatus(const Model::DescribeApiBindApiAppsStatusRequest &request);
+                void DescribeApiBindApiAppsStatusAsync(const Model::DescribeApiBindApiAppsStatusRequest& request, const DescribeApiBindApiAppsStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeApiBindApiAppsStatusOutcomeCallable DescribeApiBindApiAppsStatusCallable(const Model::DescribeApiBindApiAppsStatusRequest& request);
 
                 /**
                  *This API is used to display the throttling policies bound to an API.
@@ -500,6 +779,15 @@ This operation will also be denied if the current environment has not been publi
                 DescribeApiEnvironmentStrategyOutcome DescribeApiEnvironmentStrategy(const Model::DescribeApiEnvironmentStrategyRequest &request);
                 void DescribeApiEnvironmentStrategyAsync(const Model::DescribeApiEnvironmentStrategyRequest& request, const DescribeApiEnvironmentStrategyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeApiEnvironmentStrategyOutcomeCallable DescribeApiEnvironmentStrategyCallable(const Model::DescribeApiEnvironmentStrategyRequest& request);
+
+                /**
+                 *This API is used to query the details of an API deployed at API Gateway.
+                 * @param req DescribeApiForApiAppRequest
+                 * @return DescribeApiForApiAppOutcome
+                 */
+                DescribeApiForApiAppOutcome DescribeApiForApiApp(const Model::DescribeApiForApiAppRequest &request);
+                void DescribeApiForApiAppAsync(const Model::DescribeApiForApiAppRequest& request, const DescribeApiForApiAppAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeApiForApiAppOutcomeCallable DescribeApiForApiAppCallable(const Model::DescribeApiForApiAppRequest& request);
 
                 /**
                  *This API is used to query the details of a key.
@@ -577,6 +865,24 @@ To make authentication and throttling for a service take effect, you need to bin
                 DescribeLogSearchOutcomeCallable DescribeLogSearchCallable(const Model::DescribeLogSearchRequest& request);
 
                 /**
+                 *This API is used to query the plugin details by plugin ID.
+                 * @param req DescribePluginRequest
+                 * @return DescribePluginOutcome
+                 */
+                DescribePluginOutcome DescribePlugin(const Model::DescribePluginRequest &request);
+                void DescribePluginAsync(const Model::DescribePluginRequest& request, const DescribePluginAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePluginOutcomeCallable DescribePluginCallable(const Model::DescribePluginRequest& request);
+
+                /**
+                 *This API is used to query APIs bound with a specified plugin.
+                 * @param req DescribePluginApisRequest
+                 * @return DescribePluginApisOutcome
+                 */
+                DescribePluginApisOutcome DescribePluginApis(const Model::DescribePluginApisRequest &request);
+                void DescribePluginApisAsync(const Model::DescribePluginApisRequest& request, const DescribePluginApisAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePluginApisOutcomeCallable DescribePluginApisCallable(const Model::DescribePluginApisRequest& request);
+
+                /**
                  *This API is used to query the details of a service, such as its description, domain name, protocol, creation time, and releases.
                  * @param req DescribeServiceRequest
                  * @return DescribeServiceOutcome
@@ -612,6 +918,15 @@ A service can only be used when it is published to an environment after creation
                 DescribeServiceEnvironmentStrategyOutcome DescribeServiceEnvironmentStrategy(const Model::DescribeServiceEnvironmentStrategyRequest &request);
                 void DescribeServiceEnvironmentStrategyAsync(const Model::DescribeServiceEnvironmentStrategyRequest& request, const DescribeServiceEnvironmentStrategyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeServiceEnvironmentStrategyOutcomeCallable DescribeServiceEnvironmentStrategyCallable(const Model::DescribeServiceEnvironmentStrategyRequest& request);
+
+                /**
+                 *This API is used to query the details of a service, such as its description, domain name, and protocol.
+                 * @param req DescribeServiceForApiAppRequest
+                 * @return DescribeServiceForApiAppOutcome
+                 */
+                DescribeServiceForApiAppOutcome DescribeServiceForApiApp(const Model::DescribeServiceForApiAppRequest &request);
+                void DescribeServiceForApiAppAsync(const Model::DescribeServiceForApiAppRequest& request, const DescribeServiceForApiAppAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeServiceForApiAppOutcomeCallable DescribeServiceForApiAppCallable(const Model::DescribeServiceForApiAppRequest& request);
 
                 /**
                  *This API is used to query the list of all published versions under a service.
@@ -701,6 +1016,15 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
                 DescribeUsagePlansStatusOutcomeCallable DescribeUsagePlansStatusCallable(const Model::DescribeUsagePlansStatusRequest& request);
 
                 /**
+                 *This API is used to unbind an API from the plugin.
+                 * @param req DetachPluginRequest
+                 * @return DetachPluginOutcome
+                 */
+                DetachPluginOutcome DetachPlugin(const Model::DetachPluginRequest &request);
+                void DetachPluginAsync(const Model::DetachPluginRequest& request, const DetachPluginAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DetachPluginOutcomeCallable DetachPluginCallable(const Model::DetachPluginRequest& request);
+
+                /**
                  *This API is used to disable an API key.
                  * @param req DisableApiKeyRequest
                  * @return DisableApiKeyOutcome
@@ -728,6 +1052,15 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
                 GenerateApiDocumentOutcomeCallable GenerateApiDocumentCallable(const Model::GenerateApiDocumentRequest& request);
 
                 /**
+                 *This API is used to modify an API document.
+                 * @param req ModifyAPIDocRequest
+                 * @return ModifyAPIDocOutcome
+                 */
+                ModifyAPIDocOutcome ModifyAPIDoc(const Model::ModifyAPIDocRequest &request);
+                void ModifyAPIDocAsync(const Model::ModifyAPIDocRequest& request, const ModifyAPIDocAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyAPIDocOutcomeCallable ModifyAPIDocCallable(const Model::ModifyAPIDocRequest& request);
+
+                /**
                  *This API is used to modify an API. You can call this API to edit/modify a configured API. The modified API takes effect only after its service is published to the corresponding environment again.
                  * @param req ModifyApiRequest
                  * @return ModifyApiOutcome
@@ -735,6 +1068,15 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
                 ModifyApiOutcome ModifyApi(const Model::ModifyApiRequest &request);
                 void ModifyApiAsync(const Model::ModifyApiRequest& request, const ModifyApiAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyApiOutcomeCallable ModifyApiCallable(const Model::ModifyApiRequest& request);
+
+                /**
+                 *This API is used to modify a created API.
+                 * @param req ModifyApiAppRequest
+                 * @return ModifyApiAppOutcome
+                 */
+                ModifyApiAppOutcome ModifyApiApp(const Model::ModifyApiAppRequest &request);
+                void ModifyApiAppAsync(const Model::ModifyApiAppRequest& request, const ModifyApiAppAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyApiAppOutcomeCallable ModifyApiAppCallable(const Model::ModifyApiAppRequest& request);
 
                 /**
                  *This API is used to modify an API throttling policy.
@@ -762,6 +1104,15 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
                 ModifyIPStrategyOutcome ModifyIPStrategy(const Model::ModifyIPStrategyRequest &request);
                 void ModifyIPStrategyAsync(const Model::ModifyIPStrategyRequest& request, const ModifyIPStrategyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyIPStrategyOutcomeCallable ModifyIPStrategyCallable(const Model::ModifyIPStrategyRequest& request);
+
+                /**
+                 *This API is used to modify a plugin.
+                 * @param req ModifyPluginRequest
+                 * @return ModifyPluginOutcome
+                 */
+                ModifyPluginOutcome ModifyPlugin(const Model::ModifyPluginRequest &request);
+                void ModifyPluginAsync(const Model::ModifyPluginRequest& request, const ModifyPluginAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyPluginOutcomeCallable ModifyPluginCallable(const Model::ModifyPluginRequest& request);
 
                 /**
                  *This API is used to modify the relevant information of a service. After a service is created, its name, description, and service type can be modified.
@@ -810,6 +1161,15 @@ An API Gateway service can only be called when it is published to an environment
                 ReleaseServiceOutcomeCallable ReleaseServiceCallable(const Model::ReleaseServiceRequest& request);
 
                 /**
+                 *This API is used to reset the password of an API document.
+                 * @param req ResetAPIDocPasswordRequest
+                 * @return ResetAPIDocPasswordOutcome
+                 */
+                ResetAPIDocPasswordOutcome ResetAPIDocPassword(const Model::ResetAPIDocPasswordRequest &request);
+                void ResetAPIDocPasswordAsync(const Model::ResetAPIDocPasswordRequest& request, const ResetAPIDocPasswordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ResetAPIDocPasswordOutcomeCallable ResetAPIDocPasswordCallable(const Model::ResetAPIDocPasswordRequest& request);
+
+                /**
                  *This API is used to unbind a usage plan from a specified environment.
                  * @param req UnBindEnvironmentRequest
                  * @return UnBindEnvironmentOutcome
@@ -855,6 +1215,24 @@ Only after a service is published to an environment can its APIs be called. You 
                 UnReleaseServiceOutcome UnReleaseService(const Model::UnReleaseServiceRequest &request);
                 void UnReleaseServiceAsync(const Model::UnReleaseServiceRequest& request, const UnReleaseServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UnReleaseServiceOutcomeCallable UnReleaseServiceCallable(const Model::UnReleaseServiceRequest& request);
+
+                /**
+                 *This API is used to unbind an application from an API.
+                 * @param req UnbindApiAppRequest
+                 * @return UnbindApiAppOutcome
+                 */
+                UnbindApiAppOutcome UnbindApiApp(const Model::UnbindApiAppRequest &request);
+                void UnbindApiAppAsync(const Model::UnbindApiAppRequest& request, const UnbindApiAppAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UnbindApiAppOutcomeCallable UnbindApiAppCallable(const Model::UnbindApiAppRequest& request);
+
+                /**
+                 *This API is used to update an application key.
+                 * @param req UpdateApiAppKeyRequest
+                 * @return UpdateApiAppKeyOutcome
+                 */
+                UpdateApiAppKeyOutcome UpdateApiAppKey(const Model::UpdateApiAppKeyRequest &request);
+                void UpdateApiAppKeyAsync(const Model::UpdateApiAppKeyRequest& request, const UpdateApiAppKeyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateApiAppKeyOutcomeCallable UpdateApiAppKeyCallable(const Model::UpdateApiAppKeyRequest& request);
 
                 /**
                  *This API is used to update a created API key pair.

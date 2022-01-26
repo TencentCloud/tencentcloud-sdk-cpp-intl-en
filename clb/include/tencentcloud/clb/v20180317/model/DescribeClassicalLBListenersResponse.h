@@ -41,13 +41,14 @@ namespace TencentCloud
                     DescribeClassicalLBListenersResponse();
                     ~DescribeClassicalLBListenersResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取List of listeners
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Listeners List of listeners
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Listener list
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Listeners Listener list
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<ClassicalListener> GetListeners() const;
 
@@ -60,8 +61,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * List of listeners
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Listener list
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<ClassicalListener> m_listeners;
                     bool m_listenersHasBeenSet;

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mdl::V20200326::Model;
-using namespace rapidjson;
 using namespace std;
 
 DashRemuxSettingsInfo::DashRemuxSettingsInfo() :
@@ -28,7 +27,7 @@ DashRemuxSettingsInfo::DashRemuxSettingsInfo() :
 {
 }
 
-CoreInternalOutcome DashRemuxSettingsInfo::Deserialize(const Value &value)
+CoreInternalOutcome DashRemuxSettingsInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome DashRemuxSettingsInfo::Deserialize(const Value &value)
     {
         if (!value["SegmentDuration"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DashRemuxSettingsInfo.SegmentDuration` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DashRemuxSettingsInfo.SegmentDuration` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_segmentDuration = value["SegmentDuration"].GetUint64();
         m_segmentDurationHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome DashRemuxSettingsInfo::Deserialize(const Value &value)
     {
         if (!value["SegmentNumber"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DashRemuxSettingsInfo.SegmentNumber` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DashRemuxSettingsInfo.SegmentNumber` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_segmentNumber = value["SegmentNumber"].GetUint64();
         m_segmentNumberHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome DashRemuxSettingsInfo::Deserialize(const Value &value)
     {
         if (!value["PeriodTriggers"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DashRemuxSettingsInfo.PeriodTriggers` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DashRemuxSettingsInfo.PeriodTriggers` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_periodTriggers = string(value["PeriodTriggers"].GetString());
         m_periodTriggersHasBeenSet = true;
@@ -67,12 +66,12 @@ CoreInternalOutcome DashRemuxSettingsInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void DashRemuxSettingsInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DashRemuxSettingsInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_segmentDurationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SegmentDuration";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_segmentDuration, allocator);
@@ -80,7 +79,7 @@ void DashRemuxSettingsInfo::ToJsonObject(Value &value, Document::AllocatorType& 
 
     if (m_segmentNumberHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SegmentNumber";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_segmentNumber, allocator);
@@ -88,10 +87,10 @@ void DashRemuxSettingsInfo::ToJsonObject(Value &value, Document::AllocatorType& 
 
     if (m_periodTriggersHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PeriodTriggers";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_periodTriggers.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_periodTriggers.c_str(), allocator).Move(), allocator);
     }
 
 }

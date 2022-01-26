@@ -43,34 +43,34 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Pulled figure type. Valid values:
-<li>UserDefine: custom figure library;</li>
-<li>Default: default figure library.</li>
+                     * 获取Type of samples to pull. Valid values:
+<li>UserDefine: custom sample library</li>
+<li>Default: default sample library</li>
 
-Default value: UserDefine (the custom figure library will be pulled.)
-Note: the default figure library can be pulled only through "figure name" or "figure ID + figure name", and only one face image will be returned.
-                     * @return Type Pulled figure type. Valid values:
-<li>UserDefine: custom figure library;</li>
-<li>Default: default figure library.</li>
+Default value: UserDefine. Samples in the custom sample library will be pulled.
+Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
+                     * @return Type Type of samples to pull. Valid values:
+<li>UserDefine: custom sample library</li>
+<li>Default: default sample library</li>
 
-Default value: UserDefine (the custom figure library will be pulled.)
-Note: the default figure library can be pulled only through "figure name" or "figure ID + figure name", and only one face image will be returned.
+Default value: UserDefine. Samples in the custom sample library will be pulled.
+Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Pulled figure type. Valid values:
-<li>UserDefine: custom figure library;</li>
-<li>Default: default figure library.</li>
+                     * 设置Type of samples to pull. Valid values:
+<li>UserDefine: custom sample library</li>
+<li>Default: default sample library</li>
 
-Default value: UserDefine (the custom figure library will be pulled.)
-Note: the default figure library can be pulled only through "figure name" or "figure ID + figure name", and only one face image will be returned.
-                     * @param Type Pulled figure type. Valid values:
-<li>UserDefine: custom figure library;</li>
-<li>Default: default figure library.</li>
+Default value: UserDefine. Samples in the custom sample library will be pulled.
+Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
+                     * @param Type Type of samples to pull. Valid values:
+<li>UserDefine: custom sample library</li>
+<li>Default: default sample library</li>
 
-Default value: UserDefine (the custom figure library will be pulled.)
-Note: the default figure library can be pulled only through "figure name" or "figure ID + figure name", and only one face image will be returned.
+Default value: UserDefine. Samples in the custom sample library will be pulled.
+Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
                      */
                     void SetType(const std::string& _type);
 
@@ -81,14 +81,14 @@ Note: the default figure library can be pulled only through "figure name" or "fi
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Figure ID. Array length limit: 100.
-                     * @return PersonIds Figure ID. Array length limit: 100.
+                     * 获取IDs of samples. Array length limit: 100.
+                     * @return PersonIds IDs of samples. Array length limit: 100.
                      */
                     std::vector<std::string> GetPersonIds() const;
 
                     /**
-                     * 设置Figure ID. Array length limit: 100.
-                     * @param PersonIds Figure ID. Array length limit: 100.
+                     * 设置IDs of samples. Array length limit: 100.
+                     * @param PersonIds IDs of samples. Array length limit: 100.
                      */
                     void SetPersonIds(const std::vector<std::string>& _personIds);
 
@@ -99,14 +99,14 @@ Note: the default figure library can be pulled only through "figure name" or "fi
                     bool PersonIdsHasBeenSet() const;
 
                     /**
-                     * 获取Figure name. Array length limit: 20.
-                     * @return Names Figure name. Array length limit: 20.
+                     * 获取Names of samples. Array length limit: 20.
+                     * @return Names Names of samples. Array length limit: 20.
                      */
                     std::vector<std::string> GetNames() const;
 
                     /**
-                     * 设置Figure name. Array length limit: 20.
-                     * @param Names Figure name. Array length limit: 20.
+                     * 设置Names of samples. Array length limit: 20.
+                     * @param Names Names of samples. Array length limit: 20.
                      */
                     void SetNames(const std::vector<std::string>& _names);
 
@@ -117,14 +117,14 @@ Note: the default figure library can be pulled only through "figure name" or "fi
                     bool NamesHasBeenSet() const;
 
                     /**
-                     * 获取Figure tag. Array length limit: 20.
-                     * @return Tags Figure tag. Array length limit: 20.
+                     * 获取Tags of a sample. Array length limit: 20.
+                     * @return Tags Tags of a sample. Array length limit: 20.
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
-                     * 设置Figure tag. Array length limit: 20.
-                     * @param Tags Figure tag. Array length limit: 20.
+                     * 设置Tags of a sample. Array length limit: 20.
+                     * @param Tags Tags of a sample. Array length limit: 20.
                      */
                     void SetTags(const std::vector<std::string>& _tags);
 
@@ -171,14 +171,14 @@ Note: the default figure library can be pulled only through "figure name" or "fi
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取[Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     * @return SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * 获取[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置[Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     * @param SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * 设置[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
@@ -191,30 +191,30 @@ Note: the default figure library can be pulled only through "figure name" or "fi
                 private:
 
                     /**
-                     * Pulled figure type. Valid values:
-<li>UserDefine: custom figure library;</li>
-<li>Default: default figure library.</li>
+                     * Type of samples to pull. Valid values:
+<li>UserDefine: custom sample library</li>
+<li>Default: default sample library</li>
 
-Default value: UserDefine (the custom figure library will be pulled.)
-Note: the default figure library can be pulled only through "figure name" or "figure ID + figure name", and only one face image will be returned.
+Default value: UserDefine. Samples in the custom sample library will be pulled.
+Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Figure ID. Array length limit: 100.
+                     * IDs of samples. Array length limit: 100.
                      */
                     std::vector<std::string> m_personIds;
                     bool m_personIdsHasBeenSet;
 
                     /**
-                     * Figure name. Array length limit: 20.
+                     * Names of samples. Array length limit: 20.
                      */
                     std::vector<std::string> m_names;
                     bool m_namesHasBeenSet;
 
                     /**
-                     * Figure tag. Array length limit: 20.
+                     * Tags of a sample. Array length limit: 20.
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;
@@ -232,7 +232,7 @@ Note: the default figure library can be pulled only through "figure name" or "fi
                     bool m_limitHasBeenSet;
 
                     /**
-                     * [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;

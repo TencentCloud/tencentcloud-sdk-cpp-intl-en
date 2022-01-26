@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 ClsLogObject::ClsLogObject() :
@@ -31,7 +30,7 @@ ClsLogObject::ClsLogObject() :
 {
 }
 
-CoreInternalOutcome ClsLogObject::Deserialize(const Value &value)
+CoreInternalOutcome ClsLogObject::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome ClsLogObject::Deserialize(const Value &value)
     {
         if (!value["TopicId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClsLogObject.TopicId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClsLogObject.TopicId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_topicId = string(value["TopicId"].GetString());
         m_topicIdHasBeenSet = true;
@@ -50,7 +49,7 @@ CoreInternalOutcome ClsLogObject::Deserialize(const Value &value)
     {
         if (!value["TopicName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClsLogObject.TopicName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClsLogObject.TopicName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_topicName = string(value["TopicName"].GetString());
         m_topicNameHasBeenSet = true;
@@ -60,7 +59,7 @@ CoreInternalOutcome ClsLogObject::Deserialize(const Value &value)
     {
         if (!value["Timestamp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClsLogObject.Timestamp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClsLogObject.Timestamp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_timestamp = string(value["Timestamp"].GetString());
         m_timestampHasBeenSet = true;
@@ -70,7 +69,7 @@ CoreInternalOutcome ClsLogObject::Deserialize(const Value &value)
     {
         if (!value["Content"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClsLogObject.Content` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClsLogObject.Content` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_content = string(value["Content"].GetString());
         m_contentHasBeenSet = true;
@@ -80,7 +79,7 @@ CoreInternalOutcome ClsLogObject::Deserialize(const Value &value)
     {
         if (!value["Filename"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClsLogObject.Filename` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClsLogObject.Filename` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_filename = string(value["Filename"].GetString());
         m_filenameHasBeenSet = true;
@@ -90,7 +89,7 @@ CoreInternalOutcome ClsLogObject::Deserialize(const Value &value)
     {
         if (!value["Source"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClsLogObject.Source` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClsLogObject.Source` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_source = string(value["Source"].GetString());
         m_sourceHasBeenSet = true;
@@ -100,55 +99,55 @@ CoreInternalOutcome ClsLogObject::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ClsLogObject::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ClsLogObject::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_topicIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TopicId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_topicId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_topicId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_topicNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TopicName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_topicName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_topicName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_timestampHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Timestamp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_timestamp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_timestamp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_contentHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Content";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_content.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_content.c_str(), allocator).Move(), allocator);
     }
 
     if (m_filenameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Filename";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_filename.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_filename.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sourceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Source";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_source.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_source.c_str(), allocator).Move(), allocator);
     }
 
 }

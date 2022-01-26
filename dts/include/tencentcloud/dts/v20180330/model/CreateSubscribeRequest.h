@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/dts/v20180330/model/TagItem.h>
 
 
 namespace TencentCloud
@@ -132,6 +133,24 @@ namespace TencentCloud
                      */
                     bool AutoRenewHasBeenSet() const;
 
+                    /**
+                     * 获取Instance resource tags
+                     * @return Tags Instance resource tags
+                     */
+                    std::vector<TagItem> GetTags() const;
+
+                    /**
+                     * 设置Instance resource tags
+                     * @param Tags Instance resource tags
+                     */
+                    void SetTags(const std::vector<TagItem>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -163,6 +182,12 @@ namespace TencentCloud
                      */
                     int64_t m_autoRenew;
                     bool m_autoRenewHasBeenSet;
+
+                    /**
+                     * Instance resource tags
+                     */
+                    std::vector<TagItem> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

@@ -44,20 +44,20 @@ namespace TencentCloud
 
                     /**
                      * 获取Watermark ID.
-Watermark ID obtained in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Watermark ID obtained in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
 Watermark ID returned by the `DescribeLiveWatermarks` API.
                      * @return WatermarkId Watermark ID.
-Watermark ID obtained in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Watermark ID obtained in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
 Watermark ID returned by the `DescribeLiveWatermarks` API.
                      */
                     int64_t GetWatermarkId() const;
 
                     /**
                      * 设置Watermark ID.
-Watermark ID obtained in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Watermark ID obtained in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
 Watermark ID returned by the `DescribeLiveWatermarks` API.
                      * @param WatermarkId Watermark ID.
-Watermark ID obtained in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Watermark ID obtained in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
 Watermark ID returned by the `DescribeLiveWatermarks` API.
                      */
                     void SetWatermarkId(const int64_t& _watermarkId);
@@ -72,7 +72,7 @@ Watermark ID returned by the `DescribeLiveWatermarks` API.
 
                     /**
                      * Watermark ID.
-Watermark ID obtained in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Watermark ID obtained in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
 Watermark ID returned by the `DescribeLiveWatermarks` API.
                      */
                     int64_t m_watermarkId;

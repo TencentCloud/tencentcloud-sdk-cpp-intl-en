@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Monitor::V20180724::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribePolicyGroupInfoEventCondition::DescribePolicyGroupInfoEventCondition() :
@@ -30,7 +29,7 @@ DescribePolicyGroupInfoEventCondition::DescribePolicyGroupInfoEventCondition() :
 {
 }
 
-CoreInternalOutcome DescribePolicyGroupInfoEventCondition::Deserialize(const Value &value)
+CoreInternalOutcome DescribePolicyGroupInfoEventCondition::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome DescribePolicyGroupInfoEventCondition::Deserialize(const Val
     {
         if (!value["EventId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoEventCondition.EventId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoEventCondition.EventId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_eventId = value["EventId"].GetInt64();
         m_eventIdHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome DescribePolicyGroupInfoEventCondition::Deserialize(const Val
     {
         if (!value["RuleId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoEventCondition.RuleId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoEventCondition.RuleId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_ruleId = value["RuleId"].GetInt64();
         m_ruleIdHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome DescribePolicyGroupInfoEventCondition::Deserialize(const Val
     {
         if (!value["EventShowName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoEventCondition.EventShowName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoEventCondition.EventShowName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_eventShowName = string(value["EventShowName"].GetString());
         m_eventShowNameHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome DescribePolicyGroupInfoEventCondition::Deserialize(const Val
     {
         if (!value["AlarmNotifyPeriod"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoEventCondition.AlarmNotifyPeriod` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoEventCondition.AlarmNotifyPeriod` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_alarmNotifyPeriod = value["AlarmNotifyPeriod"].GetInt64();
         m_alarmNotifyPeriodHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome DescribePolicyGroupInfoEventCondition::Deserialize(const Val
     {
         if (!value["AlarmNotifyType"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoEventCondition.AlarmNotifyType` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoEventCondition.AlarmNotifyType` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_alarmNotifyType = value["AlarmNotifyType"].GetInt64();
         m_alarmNotifyTypeHasBeenSet = true;
@@ -89,12 +88,12 @@ CoreInternalOutcome DescribePolicyGroupInfoEventCondition::Deserialize(const Val
     return CoreInternalOutcome(true);
 }
 
-void DescribePolicyGroupInfoEventCondition::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DescribePolicyGroupInfoEventCondition::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_eventIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EventId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_eventId, allocator);
@@ -102,7 +101,7 @@ void DescribePolicyGroupInfoEventCondition::ToJsonObject(Value &value, Document:
 
     if (m_ruleIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RuleId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_ruleId, allocator);
@@ -110,15 +109,15 @@ void DescribePolicyGroupInfoEventCondition::ToJsonObject(Value &value, Document:
 
     if (m_eventShowNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EventShowName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_eventShowName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_eventShowName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_alarmNotifyPeriodHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AlarmNotifyPeriod";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_alarmNotifyPeriod, allocator);
@@ -126,7 +125,7 @@ void DescribePolicyGroupInfoEventCondition::ToJsonObject(Value &value, Document:
 
     if (m_alarmNotifyTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AlarmNotifyType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_alarmNotifyType, allocator);

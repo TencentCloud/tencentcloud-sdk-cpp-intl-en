@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 MediaVideoStreamItem::MediaVideoStreamItem() :
@@ -30,7 +29,7 @@ MediaVideoStreamItem::MediaVideoStreamItem() :
 {
 }
 
-CoreInternalOutcome MediaVideoStreamItem::Deserialize(const Value &value)
+CoreInternalOutcome MediaVideoStreamItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome MediaVideoStreamItem::Deserialize(const Value &value)
     {
         if (!value["Bitrate"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaVideoStreamItem.Bitrate` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaVideoStreamItem.Bitrate` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_bitrate = value["Bitrate"].GetInt64();
         m_bitrateHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome MediaVideoStreamItem::Deserialize(const Value &value)
     {
         if (!value["Height"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaVideoStreamItem.Height` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaVideoStreamItem.Height` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_height = value["Height"].GetInt64();
         m_heightHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome MediaVideoStreamItem::Deserialize(const Value &value)
     {
         if (!value["Width"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaVideoStreamItem.Width` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaVideoStreamItem.Width` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_width = value["Width"].GetInt64();
         m_widthHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome MediaVideoStreamItem::Deserialize(const Value &value)
     {
         if (!value["Codec"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaVideoStreamItem.Codec` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaVideoStreamItem.Codec` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_codec = string(value["Codec"].GetString());
         m_codecHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome MediaVideoStreamItem::Deserialize(const Value &value)
     {
         if (!value["Fps"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaVideoStreamItem.Fps` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaVideoStreamItem.Fps` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_fps = value["Fps"].GetInt64();
         m_fpsHasBeenSet = true;
@@ -89,12 +88,12 @@ CoreInternalOutcome MediaVideoStreamItem::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void MediaVideoStreamItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MediaVideoStreamItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_bitrateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Bitrate";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_bitrate, allocator);
@@ -102,7 +101,7 @@ void MediaVideoStreamItem::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_heightHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Height";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_height, allocator);
@@ -110,7 +109,7 @@ void MediaVideoStreamItem::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_widthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Width";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_width, allocator);
@@ -118,15 +117,15 @@ void MediaVideoStreamItem::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_codecHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Codec";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_codec.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_codec.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fpsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Fps";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_fps, allocator);

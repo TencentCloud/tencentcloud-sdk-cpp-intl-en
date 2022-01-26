@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Scf::V20180416::Model;
-using namespace rapidjson;
 using namespace std;
 
 LayerVersionInfo::LayerVersionInfo() :
@@ -32,7 +31,7 @@ LayerVersionInfo::LayerVersionInfo() :
 {
 }
 
-CoreInternalOutcome LayerVersionInfo::Deserialize(const Value &value)
+CoreInternalOutcome LayerVersionInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,10 +39,10 @@ CoreInternalOutcome LayerVersionInfo::Deserialize(const Value &value)
     if (value.HasMember("CompatibleRuntimes") && !value["CompatibleRuntimes"].IsNull())
     {
         if (!value["CompatibleRuntimes"].IsArray())
-            return CoreInternalOutcome(Error("response `LayerVersionInfo.CompatibleRuntimes` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `LayerVersionInfo.CompatibleRuntimes` is not array type"));
 
-        const Value &tmpValue = value["CompatibleRuntimes"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["CompatibleRuntimes"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_compatibleRuntimes.push_back((*itr).GetString());
         }
@@ -54,7 +53,7 @@ CoreInternalOutcome LayerVersionInfo::Deserialize(const Value &value)
     {
         if (!value["AddTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LayerVersionInfo.AddTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LayerVersionInfo.AddTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_addTime = string(value["AddTime"].GetString());
         m_addTimeHasBeenSet = true;
@@ -64,7 +63,7 @@ CoreInternalOutcome LayerVersionInfo::Deserialize(const Value &value)
     {
         if (!value["Description"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LayerVersionInfo.Description` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LayerVersionInfo.Description` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_description = string(value["Description"].GetString());
         m_descriptionHasBeenSet = true;
@@ -74,7 +73,7 @@ CoreInternalOutcome LayerVersionInfo::Deserialize(const Value &value)
     {
         if (!value["LicenseInfo"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LayerVersionInfo.LicenseInfo` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LayerVersionInfo.LicenseInfo` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_licenseInfo = string(value["LicenseInfo"].GetString());
         m_licenseInfoHasBeenSet = true;
@@ -84,7 +83,7 @@ CoreInternalOutcome LayerVersionInfo::Deserialize(const Value &value)
     {
         if (!value["LayerVersion"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `LayerVersionInfo.LayerVersion` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LayerVersionInfo.LayerVersion` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_layerVersion = value["LayerVersion"].GetInt64();
         m_layerVersionHasBeenSet = true;
@@ -94,7 +93,7 @@ CoreInternalOutcome LayerVersionInfo::Deserialize(const Value &value)
     {
         if (!value["LayerName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LayerVersionInfo.LayerName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LayerVersionInfo.LayerName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_layerName = string(value["LayerName"].GetString());
         m_layerNameHasBeenSet = true;
@@ -104,7 +103,7 @@ CoreInternalOutcome LayerVersionInfo::Deserialize(const Value &value)
     {
         if (!value["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LayerVersionInfo.Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LayerVersionInfo.Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(value["Status"].GetString());
         m_statusHasBeenSet = true;
@@ -114,49 +113,49 @@ CoreInternalOutcome LayerVersionInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void LayerVersionInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void LayerVersionInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_compatibleRuntimesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CompatibleRuntimes";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_compatibleRuntimes.begin(); itr != m_compatibleRuntimes.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_addTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AddTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_addTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_addTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_descriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Description";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_description.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
     }
 
     if (m_licenseInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LicenseInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_licenseInfo.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_licenseInfo.c_str(), allocator).Move(), allocator);
     }
 
     if (m_layerVersionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LayerVersion";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_layerVersion, allocator);
@@ -164,18 +163,18 @@ void LayerVersionInfo::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_layerNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LayerName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_layerName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_layerName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_status.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
     }
 
 }

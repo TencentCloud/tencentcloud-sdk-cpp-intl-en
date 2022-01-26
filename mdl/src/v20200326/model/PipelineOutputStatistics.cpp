@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mdl::V20200326::Model;
-using namespace rapidjson;
 using namespace std;
 
 PipelineOutputStatistics::PipelineOutputStatistics() :
@@ -27,7 +26,7 @@ PipelineOutputStatistics::PipelineOutputStatistics() :
 {
 }
 
-CoreInternalOutcome PipelineOutputStatistics::Deserialize(const Value &value)
+CoreInternalOutcome PipelineOutputStatistics::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome PipelineOutputStatistics::Deserialize(const Value &value)
     {
         if (!value["Timestamp"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `PipelineOutputStatistics.Timestamp` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PipelineOutputStatistics.Timestamp` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_timestamp = value["Timestamp"].GetUint64();
         m_timestampHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome PipelineOutputStatistics::Deserialize(const Value &value)
     {
         if (!value["NetworkOut"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `PipelineOutputStatistics.NetworkOut` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PipelineOutputStatistics.NetworkOut` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_networkOut = value["NetworkOut"].GetUint64();
         m_networkOutHasBeenSet = true;
@@ -56,12 +55,12 @@ CoreInternalOutcome PipelineOutputStatistics::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void PipelineOutputStatistics::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void PipelineOutputStatistics::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_timestampHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Timestamp";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_timestamp, allocator);
@@ -69,7 +68,7 @@ void PipelineOutputStatistics::ToJsonObject(Value &value, Document::AllocatorTyp
 
     if (m_networkOutHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetworkOut";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_networkOut, allocator);

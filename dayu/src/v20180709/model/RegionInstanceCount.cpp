@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dayu::V20180709::Model;
-using namespace rapidjson;
 using namespace std;
 
 RegionInstanceCount::RegionInstanceCount() :
@@ -28,7 +27,7 @@ RegionInstanceCount::RegionInstanceCount() :
 {
 }
 
-CoreInternalOutcome RegionInstanceCount::Deserialize(const Value &value)
+CoreInternalOutcome RegionInstanceCount::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome RegionInstanceCount::Deserialize(const Value &value)
     {
         if (!value["Region"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RegionInstanceCount.Region` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RegionInstanceCount.Region` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_region = string(value["Region"].GetString());
         m_regionHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome RegionInstanceCount::Deserialize(const Value &value)
     {
         if (!value["RegionV3"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RegionInstanceCount.RegionV3` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RegionInstanceCount.RegionV3` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_regionV3 = string(value["RegionV3"].GetString());
         m_regionV3HasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome RegionInstanceCount::Deserialize(const Value &value)
     {
         if (!value["Count"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `RegionInstanceCount.Count` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RegionInstanceCount.Count` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_count = value["Count"].GetUint64();
         m_countHasBeenSet = true;
@@ -67,28 +66,28 @@ CoreInternalOutcome RegionInstanceCount::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void RegionInstanceCount::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void RegionInstanceCount::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_regionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Region";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_region.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_region.c_str(), allocator).Move(), allocator);
     }
 
     if (m_regionV3HasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RegionV3";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_regionV3.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_regionV3.c_str(), allocator).Move(), allocator);
     }
 
     if (m_countHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Count";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_count, allocator);

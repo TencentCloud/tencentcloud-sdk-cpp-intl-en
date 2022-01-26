@@ -204,6 +204,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool MaxMessageBytesHasBeenSet() const;
 
+                    /**
+                     * 获取Message retention file size.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return RetentionBytes Message retention file size.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetRetentionBytes() const;
+
+                    /**
+                     * 设置Message retention file size.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param RetentionBytes Message retention file size.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetRetentionBytes(const int64_t& _retentionBytes);
+
+                    /**
+                     * 判断参数 RetentionBytes 是否已赋值
+                     * @return RetentionBytes 是否已赋值
+                     */
+                    bool RetentionBytesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -255,6 +277,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_maxMessageBytes;
                     bool m_maxMessageBytesHasBeenSet;
+
+                    /**
+                     * Message retention file size.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_retentionBytes;
+                    bool m_retentionBytesHasBeenSet;
 
                 };
             }

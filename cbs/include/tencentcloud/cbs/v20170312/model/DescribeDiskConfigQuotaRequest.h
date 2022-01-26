@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InquiryTypeHasBeenSet() const;
 
                     /**
-                     * 获取Query configuration under one or more [availability zone](/document/product/213/15753#ZoneInfo).
-                     * @return Zones Query configuration under one or more [availability zone](/document/product/213/15753#ZoneInfo).
+                     * 获取Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
+                     * @return Zones Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
                      */
                     std::vector<std::string> GetZones() const;
 
                     /**
-                     * 设置Query configuration under one or more [availability zone](/document/product/213/15753#ZoneInfo).
-                     * @param Zones Query configuration under one or more [availability zone](/document/product/213/15753#ZoneInfo).
+                     * 设置Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
+                     * @param Zones Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
                      */
                     void SetZones(const std::vector<std::string>& _zones);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool DiskChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Type of hard disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-                     * @return DiskTypes Type of hard disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+                     * 获取Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD
+                     * @return DiskTypes Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD
                      */
                     std::vector<std::string> GetDiskTypes() const;
 
                     /**
-                     * 设置Type of hard disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-                     * @param DiskTypes Type of hard disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+                     * 设置Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD
+                     * @param DiskTypes Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD
                      */
                     void SetDiskTypes(const std::vector<std::string>& _diskTypes);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool DiskUsageHasBeenSet() const;
 
                     /**
-                     * 获取Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://cloud.tencent.com/document/product/213/11518)
-                     * @return InstanceFamilies Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://cloud.tencent.com/document/product/213/11518)
+                     * 获取Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
+                     * @return InstanceFamilies Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
                      */
                     std::vector<std::string> GetInstanceFamilies() const;
 
                     /**
-                     * 设置Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://cloud.tencent.com/document/product/213/11518)
-                     * @param InstanceFamilies Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://cloud.tencent.com/document/product/213/11518)
+                     * 设置Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
+                     * @param InstanceFamilies Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
                      */
                     void SetInstanceFamilies(const std::vector<std::string>& _instanceFamilies);
 
@@ -195,7 +195,7 @@ namespace TencentCloud
                     bool m_inquiryTypeHasBeenSet;
 
                     /**
-                     * Query configuration under one or more [availability zone](/document/product/213/15753#ZoneInfo).
+                     * Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
                      */
                     std::vector<std::string> m_zones;
                     bool m_zonesHasBeenSet;
@@ -207,7 +207,7 @@ namespace TencentCloud
                     bool m_diskChargeTypeHasBeenSet;
 
                     /**
-                     * Type of hard disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+                     * Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD
                      */
                     std::vector<std::string> m_diskTypes;
                     bool m_diskTypesHasBeenSet;
@@ -219,7 +219,7 @@ namespace TencentCloud
                     bool m_diskUsageHasBeenSet;
 
                     /**
-                     * Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://cloud.tencent.com/document/product/213/11518)
+                     * Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
                      */
                     std::vector<std::string> m_instanceFamilies;
                     bool m_instanceFamiliesHasBeenSet;

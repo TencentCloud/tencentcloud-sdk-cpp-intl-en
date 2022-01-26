@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool MigrateNameHasBeenSet() const;
 
                     /**
-                     * 获取Number of results per page. Value range: 1–100. Default value: 100
-                     * @return Limit Number of results per page. Value range: 1–100. Default value: 100
+                     * 获取Number of results per page. Value range: 1-100. Default value: 100
+                     * @return Limit Number of results per page. Value range: 1-100. Default value: 100
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results per page. Value range: 1–100. Default value: 100
-                     * @param Limit Number of results per page. Value range: 1–100. Default value: 100
+                     * 设置Number of results per page. Value range: 1-100. Default value: 100
+                     * @param Limit Number of results per page. Value range: 1-100. Default value: 100
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -165,7 +165,7 @@ namespace TencentCloud
                     bool m_migrateNameHasBeenSet;
 
                     /**
-                     * Number of results per page. Value range: 1–100. Default value: 100
+                     * Number of results per page. Value range: 1-100. Default value: 100
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 MediaProcessTaskResult::MediaProcessTaskResult() :
@@ -32,7 +31,7 @@ MediaProcessTaskResult::MediaProcessTaskResult() :
 {
 }
 
-CoreInternalOutcome MediaProcessTaskResult::Deserialize(const Value &value)
+CoreInternalOutcome MediaProcessTaskResult::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +40,7 @@ CoreInternalOutcome MediaProcessTaskResult::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaProcessTaskResult.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaProcessTaskResult.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -51,7 +50,7 @@ CoreInternalOutcome MediaProcessTaskResult::Deserialize(const Value &value)
     {
         if (!value["TranscodeTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaProcessTaskResult.TranscodeTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaProcessTaskResult.TranscodeTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_transcodeTask.Deserialize(value["TranscodeTask"]);
@@ -68,7 +67,7 @@ CoreInternalOutcome MediaProcessTaskResult::Deserialize(const Value &value)
     {
         if (!value["AnimatedGraphicTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaProcessTaskResult.AnimatedGraphicTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaProcessTaskResult.AnimatedGraphicTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_animatedGraphicTask.Deserialize(value["AnimatedGraphicTask"]);
@@ -85,7 +84,7 @@ CoreInternalOutcome MediaProcessTaskResult::Deserialize(const Value &value)
     {
         if (!value["SnapshotByTimeOffsetTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaProcessTaskResult.SnapshotByTimeOffsetTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaProcessTaskResult.SnapshotByTimeOffsetTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_snapshotByTimeOffsetTask.Deserialize(value["SnapshotByTimeOffsetTask"]);
@@ -102,7 +101,7 @@ CoreInternalOutcome MediaProcessTaskResult::Deserialize(const Value &value)
     {
         if (!value["SampleSnapshotTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaProcessTaskResult.SampleSnapshotTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaProcessTaskResult.SampleSnapshotTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_sampleSnapshotTask.Deserialize(value["SampleSnapshotTask"]);
@@ -119,7 +118,7 @@ CoreInternalOutcome MediaProcessTaskResult::Deserialize(const Value &value)
     {
         if (!value["ImageSpriteTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaProcessTaskResult.ImageSpriteTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaProcessTaskResult.ImageSpriteTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_imageSpriteTask.Deserialize(value["ImageSpriteTask"]);
@@ -136,7 +135,7 @@ CoreInternalOutcome MediaProcessTaskResult::Deserialize(const Value &value)
     {
         if (!value["AdaptiveDynamicStreamingTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaProcessTaskResult.AdaptiveDynamicStreamingTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaProcessTaskResult.AdaptiveDynamicStreamingTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_adaptiveDynamicStreamingTask.Deserialize(value["AdaptiveDynamicStreamingTask"]);
@@ -153,68 +152,68 @@ CoreInternalOutcome MediaProcessTaskResult::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void MediaProcessTaskResult::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MediaProcessTaskResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_transcodeTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TranscodeTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_transcodeTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_animatedGraphicTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AnimatedGraphicTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_animatedGraphicTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_snapshotByTimeOffsetTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SnapshotByTimeOffsetTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_snapshotByTimeOffsetTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_sampleSnapshotTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SampleSnapshotTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_sampleSnapshotTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_imageSpriteTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ImageSpriteTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_imageSpriteTask.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_adaptiveDynamicStreamingTaskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AdaptiveDynamicStreamingTask";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_adaptiveDynamicStreamingTask.ToJsonObject(value[key.c_str()], allocator);
     }
 

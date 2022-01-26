@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 CosFileUploadTrigger::CosFileUploadTrigger() :
@@ -29,7 +28,7 @@ CosFileUploadTrigger::CosFileUploadTrigger() :
 {
 }
 
-CoreInternalOutcome CosFileUploadTrigger::Deserialize(const Value &value)
+CoreInternalOutcome CosFileUploadTrigger::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome CosFileUploadTrigger::Deserialize(const Value &value)
     {
         if (!value["Bucket"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CosFileUploadTrigger.Bucket` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CosFileUploadTrigger.Bucket` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_bucket = string(value["Bucket"].GetString());
         m_bucketHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome CosFileUploadTrigger::Deserialize(const Value &value)
     {
         if (!value["Region"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CosFileUploadTrigger.Region` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CosFileUploadTrigger.Region` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_region = string(value["Region"].GetString());
         m_regionHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome CosFileUploadTrigger::Deserialize(const Value &value)
     {
         if (!value["Dir"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CosFileUploadTrigger.Dir` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CosFileUploadTrigger.Dir` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_dir = string(value["Dir"].GetString());
         m_dirHasBeenSet = true;
@@ -67,10 +66,10 @@ CoreInternalOutcome CosFileUploadTrigger::Deserialize(const Value &value)
     if (value.HasMember("Formats") && !value["Formats"].IsNull())
     {
         if (!value["Formats"].IsArray())
-            return CoreInternalOutcome(Error("response `CosFileUploadTrigger.Formats` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `CosFileUploadTrigger.Formats` is not array type"));
 
-        const Value &tmpValue = value["Formats"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Formats"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_formats.push_back((*itr).GetString());
         }
@@ -81,43 +80,43 @@ CoreInternalOutcome CosFileUploadTrigger::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void CosFileUploadTrigger::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void CosFileUploadTrigger::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_bucketHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Bucket";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_bucket.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_bucket.c_str(), allocator).Move(), allocator);
     }
 
     if (m_regionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Region";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_region.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_region.c_str(), allocator).Move(), allocator);
     }
 
     if (m_dirHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Dir";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_dir.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_dir.c_str(), allocator).Move(), allocator);
     }
 
     if (m_formatsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Formats";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_formats.begin(); itr != m_formats.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 

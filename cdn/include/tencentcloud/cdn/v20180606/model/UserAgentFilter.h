@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * `UserAgent` blacklist/whitelist configuration
+                * `UserAgent` blocklist/allowlist configuration
                 */
                 class UserAgentFilter : public AbstractModel
                 {
@@ -70,17 +70,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取UA blacklist/whitelist effect rule list
+                     * 获取UA blocklist/allowlist effect rule list
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return FilterRules UA blacklist/whitelist effect rule list
+                     * @return FilterRules UA blocklist/allowlist effect rule list
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<UserAgentFilterRule> GetFilterRules() const;
 
                     /**
-                     * 设置UA blacklist/whitelist effect rule list
+                     * 设置UA blocklist/allowlist effect rule list
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FilterRules UA blacklist/whitelist effect rule list
+                     * @param FilterRules UA blocklist/allowlist effect rule list
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetFilterRules(const std::vector<UserAgentFilterRule>& _filterRules);
@@ -101,7 +101,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_switchHasBeenSet;
 
                     /**
-                     * UA blacklist/whitelist effect rule list
+                     * UA blocklist/allowlist effect rule list
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<UserAgentFilterRule> m_filterRules;

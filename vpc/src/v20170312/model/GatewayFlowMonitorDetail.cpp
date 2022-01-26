@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 GatewayFlowMonitorDetail::GatewayFlowMonitorDetail() :
@@ -30,7 +29,7 @@ GatewayFlowMonitorDetail::GatewayFlowMonitorDetail() :
 {
 }
 
-CoreInternalOutcome GatewayFlowMonitorDetail::Deserialize(const Value &value)
+CoreInternalOutcome GatewayFlowMonitorDetail::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome GatewayFlowMonitorDetail::Deserialize(const Value &value)
     {
         if (!value["PrivateIpAddress"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GatewayFlowMonitorDetail.PrivateIpAddress` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GatewayFlowMonitorDetail.PrivateIpAddress` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_privateIpAddress = string(value["PrivateIpAddress"].GetString());
         m_privateIpAddressHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome GatewayFlowMonitorDetail::Deserialize(const Value &value)
     {
         if (!value["InPkg"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `GatewayFlowMonitorDetail.InPkg` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GatewayFlowMonitorDetail.InPkg` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_inPkg = value["InPkg"].GetUint64();
         m_inPkgHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome GatewayFlowMonitorDetail::Deserialize(const Value &value)
     {
         if (!value["OutPkg"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `GatewayFlowMonitorDetail.OutPkg` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GatewayFlowMonitorDetail.OutPkg` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_outPkg = value["OutPkg"].GetUint64();
         m_outPkgHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome GatewayFlowMonitorDetail::Deserialize(const Value &value)
     {
         if (!value["InTraffic"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `GatewayFlowMonitorDetail.InTraffic` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GatewayFlowMonitorDetail.InTraffic` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_inTraffic = value["InTraffic"].GetUint64();
         m_inTrafficHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome GatewayFlowMonitorDetail::Deserialize(const Value &value)
     {
         if (!value["OutTraffic"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `GatewayFlowMonitorDetail.OutTraffic` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GatewayFlowMonitorDetail.OutTraffic` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_outTraffic = value["OutTraffic"].GetUint64();
         m_outTrafficHasBeenSet = true;
@@ -89,20 +88,20 @@ CoreInternalOutcome GatewayFlowMonitorDetail::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void GatewayFlowMonitorDetail::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void GatewayFlowMonitorDetail::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_privateIpAddressHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PrivateIpAddress";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_privateIpAddress.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_privateIpAddress.c_str(), allocator).Move(), allocator);
     }
 
     if (m_inPkgHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InPkg";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_inPkg, allocator);
@@ -110,7 +109,7 @@ void GatewayFlowMonitorDetail::ToJsonObject(Value &value, Document::AllocatorTyp
 
     if (m_outPkgHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OutPkg";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_outPkg, allocator);
@@ -118,7 +117,7 @@ void GatewayFlowMonitorDetail::ToJsonObject(Value &value, Document::AllocatorTyp
 
     if (m_inTrafficHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InTraffic";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_inTraffic, allocator);
@@ -126,7 +125,7 @@ void GatewayFlowMonitorDetail::ToJsonObject(Value &value, Document::AllocatorTyp
 
     if (m_outTrafficHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OutTraffic";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_outTraffic, allocator);

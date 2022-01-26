@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool ModuleHasBeenSet() const;
 
                     /**
-                     * 获取Policy group ID.
-                     * @return GroupId Policy group ID.
+                     * 获取Policy group ID. If the ID is in the format of “policy-xxxx”, please enter it in the `PolicyId` field. Enter 0 in this field.
+                     * @return GroupId Policy group ID. If the ID is in the format of “policy-xxxx”, please enter it in the `PolicyId` field. Enter 0 in this field.
                      */
                     int64_t GetGroupId() const;
 
                     /**
-                     * 设置Policy group ID.
-                     * @param GroupId Policy group ID.
+                     * 设置Policy group ID. If the ID is in the format of “policy-xxxx”, please enter it in the `PolicyId` field. Enter 0 in this field.
+                     * @param GroupId Policy group ID. If the ID is in the format of “policy-xxxx”, please enter it in the `PolicyId` field. Enter 0 in this field.
                      */
                     void SetGroupId(const int64_t& _groupId);
 
@@ -80,14 +80,32 @@ namespace TencentCloud
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of parameters that can be returned on each page. Value range: 1 - 100. Default value: 20.
-                     * @return Limit Number of parameters that can be returned on each page. Value range: 1 - 100. Default value: 20.
+                     * 获取Alarm policy ID in the format of “policy-xxxx”. If a value has been entered in this field, you can enter 0 in the `GroupId` field.
+                     * @return PolicyId Alarm policy ID in the format of “policy-xxxx”. If a value has been entered in this field, you can enter 0 in the `GroupId` field.
+                     */
+                    std::string GetPolicyId() const;
+
+                    /**
+                     * 设置Alarm policy ID in the format of “policy-xxxx”. If a value has been entered in this field, you can enter 0 in the `GroupId` field.
+                     * @param PolicyId Alarm policy ID in the format of “policy-xxxx”. If a value has been entered in this field, you can enter 0 in the `GroupId` field.
+                     */
+                    void SetPolicyId(const std::string& _policyId);
+
+                    /**
+                     * 判断参数 PolicyId 是否已赋值
+                     * @return PolicyId 是否已赋值
+                     */
+                    bool PolicyIdHasBeenSet() const;
+
+                    /**
+                     * 获取The number of alarm objects returned each time. Value range: 1-100. Default value: 20.
+                     * @return Limit The number of alarm objects returned each time. Value range: 1-100. Default value: 20.
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of parameters that can be returned on each page. Value range: 1 - 100. Default value: 20.
-                     * @param Limit Number of parameters that can be returned on each page. Value range: 1 - 100. Default value: 20.
+                     * 设置The number of alarm objects returned each time. Value range: 1-100. Default value: 20.
+                     * @param Limit The number of alarm objects returned each time. Value range: 1-100. Default value: 20.
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -98,14 +116,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Parameter offset on each page. The value starts from 0 and the default value is 0.
-                     * @return Offset Parameter offset on each page. The value starts from 0 and the default value is 0.
+                     * 获取Offset, which starts from 0 and is set to 0 by default. For example, the parameter `Offset=0&Limit=20` returns the zeroth to 19th alarm objects, and `Offset=20&Limit=20` returns the 20th to 39th alarm objects, and so on.
+                     * @return Offset Offset, which starts from 0 and is set to 0 by default. For example, the parameter `Offset=0&Limit=20` returns the zeroth to 19th alarm objects, and `Offset=20&Limit=20` returns the 20th to 39th alarm objects, and so on.
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Parameter offset on each page. The value starts from 0 and the default value is 0.
-                     * @param Offset Parameter offset on each page. The value starts from 0 and the default value is 0.
+                     * 设置Offset, which starts from 0 and is set to 0 by default. For example, the parameter `Offset=0&Limit=20` returns the zeroth to 19th alarm objects, and `Offset=20&Limit=20` returns the 20th to 39th alarm objects, and so on.
+                     * @param Offset Offset, which starts from 0 and is set to 0 by default. For example, the parameter `Offset=0&Limit=20` returns the zeroth to 19th alarm objects, and `Offset=20&Limit=20` returns the 20th to 39th alarm objects, and so on.
                      */
                     void SetOffset(const int64_t& _offset);
 
@@ -142,19 +160,25 @@ namespace TencentCloud
                     bool m_moduleHasBeenSet;
 
                     /**
-                     * Policy group ID.
+                     * Policy group ID. If the ID is in the format of “policy-xxxx”, please enter it in the `PolicyId` field. Enter 0 in this field.
                      */
                     int64_t m_groupId;
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * Number of parameters that can be returned on each page. Value range: 1 - 100. Default value: 20.
+                     * Alarm policy ID in the format of “policy-xxxx”. If a value has been entered in this field, you can enter 0 in the `GroupId` field.
+                     */
+                    std::string m_policyId;
+                    bool m_policyIdHasBeenSet;
+
+                    /**
+                     * The number of alarm objects returned each time. Value range: 1-100. Default value: 20.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Parameter offset on each page. The value starts from 0 and the default value is 0.
+                     * Offset, which starts from 0 and is set to 0 by default. For example, the parameter `Offset=0&Limit=20` returns the zeroth to 19th alarm objects, and `Offset=20&Limit=20` returns the 20th to 39th alarm objects, and so on.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

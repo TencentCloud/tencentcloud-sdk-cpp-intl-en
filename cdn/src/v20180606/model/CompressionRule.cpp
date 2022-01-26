@@ -18,19 +18,20 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 CompressionRule::CompressionRule() :
     m_compressHasBeenSet(false),
-    m_fileExtensionsHasBeenSet(false),
     m_minLengthHasBeenSet(false),
     m_maxLengthHasBeenSet(false),
-    m_algorithmsHasBeenSet(false)
+    m_algorithmsHasBeenSet(false),
+    m_fileExtensionsHasBeenSet(false),
+    m_ruleTypeHasBeenSet(false),
+    m_rulePathsHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome CompressionRule::Deserialize(const Value &value)
+CoreInternalOutcome CompressionRule::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,30 +40,17 @@ CoreInternalOutcome CompressionRule::Deserialize(const Value &value)
     {
         if (!value["Compress"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `CompressionRule.Compress` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CompressionRule.Compress` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_compress = value["Compress"].GetBool();
         m_compressHasBeenSet = true;
-    }
-
-    if (value.HasMember("FileExtensions") && !value["FileExtensions"].IsNull())
-    {
-        if (!value["FileExtensions"].IsArray())
-            return CoreInternalOutcome(Error("response `CompressionRule.FileExtensions` is not array type"));
-
-        const Value &tmpValue = value["FileExtensions"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
-        {
-            m_fileExtensions.push_back((*itr).GetString());
-        }
-        m_fileExtensionsHasBeenSet = true;
     }
 
     if (value.HasMember("MinLength") && !value["MinLength"].IsNull())
     {
         if (!value["MinLength"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `CompressionRule.MinLength` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CompressionRule.MinLength` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_minLength = value["MinLength"].GetInt64();
         m_minLengthHasBeenSet = true;
@@ -72,7 +60,7 @@ CoreInternalOutcome CompressionRule::Deserialize(const Value &value)
     {
         if (!value["MaxLength"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `CompressionRule.MaxLength` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CompressionRule.MaxLength` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_maxLength = value["MaxLength"].GetInt64();
         m_maxLengthHasBeenSet = true;
@@ -81,47 +69,70 @@ CoreInternalOutcome CompressionRule::Deserialize(const Value &value)
     if (value.HasMember("Algorithms") && !value["Algorithms"].IsNull())
     {
         if (!value["Algorithms"].IsArray())
-            return CoreInternalOutcome(Error("response `CompressionRule.Algorithms` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `CompressionRule.Algorithms` is not array type"));
 
-        const Value &tmpValue = value["Algorithms"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Algorithms"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_algorithms.push_back((*itr).GetString());
         }
         m_algorithmsHasBeenSet = true;
     }
 
+    if (value.HasMember("FileExtensions") && !value["FileExtensions"].IsNull())
+    {
+        if (!value["FileExtensions"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `CompressionRule.FileExtensions` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["FileExtensions"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_fileExtensions.push_back((*itr).GetString());
+        }
+        m_fileExtensionsHasBeenSet = true;
+    }
+
+    if (value.HasMember("RuleType") && !value["RuleType"].IsNull())
+    {
+        if (!value["RuleType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CompressionRule.RuleType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_ruleType = string(value["RuleType"].GetString());
+        m_ruleTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("RulePaths") && !value["RulePaths"].IsNull())
+    {
+        if (!value["RulePaths"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `CompressionRule.RulePaths` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["RulePaths"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_rulePaths.push_back((*itr).GetString());
+        }
+        m_rulePathsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void CompressionRule::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void CompressionRule::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_compressHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Compress";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_compress, allocator);
     }
 
-    if (m_fileExtensionsHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "FileExtensions";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
-
-        for (auto itr = m_fileExtensions.begin(); itr != m_fileExtensions.end(); ++itr)
-        {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
-        }
-    }
-
     if (m_minLengthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MinLength";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_minLength, allocator);
@@ -129,7 +140,7 @@ void CompressionRule::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_maxLengthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaxLength";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_maxLength, allocator);
@@ -137,14 +148,48 @@ void CompressionRule::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_algorithmsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Algorithms";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_algorithms.begin(); itr != m_algorithms.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_fileExtensionsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FileExtensions";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_fileExtensions.begin(); itr != m_fileExtensions.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_ruleTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RuleType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ruleType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_rulePathsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RulePaths";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_rulePaths.begin(); itr != m_rulePaths.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
@@ -165,22 +210,6 @@ void CompressionRule::SetCompress(const bool& _compress)
 bool CompressionRule::CompressHasBeenSet() const
 {
     return m_compressHasBeenSet;
-}
-
-vector<string> CompressionRule::GetFileExtensions() const
-{
-    return m_fileExtensions;
-}
-
-void CompressionRule::SetFileExtensions(const vector<string>& _fileExtensions)
-{
-    m_fileExtensions = _fileExtensions;
-    m_fileExtensionsHasBeenSet = true;
-}
-
-bool CompressionRule::FileExtensionsHasBeenSet() const
-{
-    return m_fileExtensionsHasBeenSet;
 }
 
 int64_t CompressionRule::GetMinLength() const
@@ -229,5 +258,53 @@ void CompressionRule::SetAlgorithms(const vector<string>& _algorithms)
 bool CompressionRule::AlgorithmsHasBeenSet() const
 {
     return m_algorithmsHasBeenSet;
+}
+
+vector<string> CompressionRule::GetFileExtensions() const
+{
+    return m_fileExtensions;
+}
+
+void CompressionRule::SetFileExtensions(const vector<string>& _fileExtensions)
+{
+    m_fileExtensions = _fileExtensions;
+    m_fileExtensionsHasBeenSet = true;
+}
+
+bool CompressionRule::FileExtensionsHasBeenSet() const
+{
+    return m_fileExtensionsHasBeenSet;
+}
+
+string CompressionRule::GetRuleType() const
+{
+    return m_ruleType;
+}
+
+void CompressionRule::SetRuleType(const string& _ruleType)
+{
+    m_ruleType = _ruleType;
+    m_ruleTypeHasBeenSet = true;
+}
+
+bool CompressionRule::RuleTypeHasBeenSet() const
+{
+    return m_ruleTypeHasBeenSet;
+}
+
+vector<string> CompressionRule::GetRulePaths() const
+{
+    return m_rulePaths;
+}
+
+void CompressionRule::SetRulePaths(const vector<string>& _rulePaths)
+{
+    m_rulePaths = _rulePaths;
+    m_rulePathsHasBeenSet = true;
+}
+
+bool CompressionRule::RulePathsHasBeenSet() const
+{
+    return m_rulePathsHasBeenSet;
 }
 

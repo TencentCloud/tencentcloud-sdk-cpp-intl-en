@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Scf::V20180416::Model;
-using namespace rapidjson;
 using namespace std;
 
 GetLayerVersionResponse::GetLayerVersionResponse() :
@@ -39,20 +38,20 @@ GetLayerVersionResponse::GetLayerVersionResponse() :
 
 CoreInternalOutcome GetLayerVersionResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -63,21 +62,21 @@ CoreInternalOutcome GetLayerVersionResponse::Deserialize(const string &payload)
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
     if (rsp.HasMember("CompatibleRuntimes") && !rsp["CompatibleRuntimes"].IsNull())
     {
         if (!rsp["CompatibleRuntimes"].IsArray())
-            return CoreInternalOutcome(Error("response `CompatibleRuntimes` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `CompatibleRuntimes` is not array type"));
 
-        const Value &tmpValue = rsp["CompatibleRuntimes"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["CompatibleRuntimes"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_compatibleRuntimes.push_back((*itr).GetString());
         }
@@ -88,7 +87,7 @@ CoreInternalOutcome GetLayerVersionResponse::Deserialize(const string &payload)
     {
         if (!rsp["CodeSha256"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CodeSha256` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CodeSha256` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_codeSha256 = string(rsp["CodeSha256"].GetString());
         m_codeSha256HasBeenSet = true;
@@ -98,7 +97,7 @@ CoreInternalOutcome GetLayerVersionResponse::Deserialize(const string &payload)
     {
         if (!rsp["Location"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Location` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Location` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_location = string(rsp["Location"].GetString());
         m_locationHasBeenSet = true;
@@ -108,7 +107,7 @@ CoreInternalOutcome GetLayerVersionResponse::Deserialize(const string &payload)
     {
         if (!rsp["AddTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AddTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AddTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_addTime = string(rsp["AddTime"].GetString());
         m_addTimeHasBeenSet = true;
@@ -118,7 +117,7 @@ CoreInternalOutcome GetLayerVersionResponse::Deserialize(const string &payload)
     {
         if (!rsp["Description"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Description` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Description` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_description = string(rsp["Description"].GetString());
         m_descriptionHasBeenSet = true;
@@ -128,7 +127,7 @@ CoreInternalOutcome GetLayerVersionResponse::Deserialize(const string &payload)
     {
         if (!rsp["LicenseInfo"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LicenseInfo` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LicenseInfo` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_licenseInfo = string(rsp["LicenseInfo"].GetString());
         m_licenseInfoHasBeenSet = true;
@@ -138,7 +137,7 @@ CoreInternalOutcome GetLayerVersionResponse::Deserialize(const string &payload)
     {
         if (!rsp["LayerVersion"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `LayerVersion` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LayerVersion` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_layerVersion = rsp["LayerVersion"].GetInt64();
         m_layerVersionHasBeenSet = true;
@@ -148,7 +147,7 @@ CoreInternalOutcome GetLayerVersionResponse::Deserialize(const string &payload)
     {
         if (!rsp["LayerName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LayerName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LayerName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_layerName = string(rsp["LayerName"].GetString());
         m_layerNameHasBeenSet = true;
@@ -158,7 +157,7 @@ CoreInternalOutcome GetLayerVersionResponse::Deserialize(const string &payload)
     {
         if (!rsp["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(rsp["Status"].GetString());
         m_statusHasBeenSet = true;
@@ -166,6 +165,100 @@ CoreInternalOutcome GetLayerVersionResponse::Deserialize(const string &payload)
 
 
     return CoreInternalOutcome(true);
+}
+
+string GetLayerVersionResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_compatibleRuntimesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CompatibleRuntimes";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_compatibleRuntimes.begin(); itr != m_compatibleRuntimes.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_codeSha256HasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CodeSha256";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_codeSha256.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_locationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Location";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_location.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_addTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AddTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_addTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_descriptionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Description";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_licenseInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LicenseInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_licenseInfo.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_layerVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LayerVersion";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_layerVersion, allocator);
+    }
+
+    if (m_layerNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LayerName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_layerName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_statusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Status";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

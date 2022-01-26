@@ -66,20 +66,20 @@ This parameter is used to control the number of faces in the image to be detecte
 
                     /**
                      * 获取Minimum height and width of face in px.
-Default value: 34. You are recommended to keep it at or above 34.
+Default value: 34. We recommend keeping it at or above 34.
 Faces below the `MinFaceSize` value will not be detected.
                      * @return MinFaceSize Minimum height and width of face in px.
-Default value: 34. You are recommended to keep it at or above 34.
+Default value: 34. We recommend keeping it at or above 34.
 Faces below the `MinFaceSize` value will not be detected.
                      */
                     uint64_t GetMinFaceSize() const;
 
                     /**
                      * 设置Minimum height and width of face in px.
-Default value: 34. You are recommended to keep it at or above 34.
+Default value: 34. We recommend keeping it at or above 34.
 Faces below the `MinFaceSize` value will not be detected.
                      * @param MinFaceSize Minimum height and width of face in px.
-Default value: 34. You are recommended to keep it at or above 34.
+Default value: 34. We recommend keeping it at or above 34.
 Faces below the `MinFaceSize` value will not be detected.
                      */
                     void SetMinFaceSize(const uint64_t& _minFaceSize);
@@ -92,17 +92,21 @@ Faces below the `MinFaceSize` value will not be detected.
 
                     /**
                      * 获取Base64-encoded image data, which cannot exceed 5 MB.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      * @return Image Base64-encoded image data, which cannot exceed 5 MB.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     std::string GetImage() const;
 
                     /**
                      * 设置Base64-encoded image data, which cannot exceed 5 MB.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      * @param Image Base64-encoded image data, which cannot exceed 5 MB.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     void SetImage(const std::string& _image);
 
@@ -114,29 +118,33 @@ Faces below the `MinFaceSize` value will not be detected.
 
                     /**
                      * 获取Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      * @return Url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      * @param Url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     void SetUrl(const std::string& _url);
 
@@ -150,11 +158,11 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
                      * 获取Whether the face attribute information (FaceAttributesInfo) needs to be returned. 0: no; 1: yes. Default value: 0. 
 If the value is not 1, it will be deemed as no need to return, and `FaceAttributesInfo` is meaningless in this case.  
 The face attribute information of up to 5 largest faces in the image will be returned, and `FaceAttributesInfo` of the 6th and rest faces is meaningless.  
-Extracting face attribute information is quite time-consuming. If face attribute information is not required, you are recommended to disable this feature to speed up face detection.
+Extracting face attribute information is quite time-consuming. If face attribute information is not required, we recommend disabling this feature to speed up face detection.
                      * @return NeedFaceAttributes Whether the face attribute information (FaceAttributesInfo) needs to be returned. 0: no; 1: yes. Default value: 0. 
 If the value is not 1, it will be deemed as no need to return, and `FaceAttributesInfo` is meaningless in this case.  
 The face attribute information of up to 5 largest faces in the image will be returned, and `FaceAttributesInfo` of the 6th and rest faces is meaningless.  
-Extracting face attribute information is quite time-consuming. If face attribute information is not required, you are recommended to disable this feature to speed up face detection.
+Extracting face attribute information is quite time-consuming. If face attribute information is not required, we recommend disabling this feature to speed up face detection.
                      */
                     uint64_t GetNeedFaceAttributes() const;
 
@@ -162,11 +170,11 @@ Extracting face attribute information is quite time-consuming. If face attribute
                      * 设置Whether the face attribute information (FaceAttributesInfo) needs to be returned. 0: no; 1: yes. Default value: 0. 
 If the value is not 1, it will be deemed as no need to return, and `FaceAttributesInfo` is meaningless in this case.  
 The face attribute information of up to 5 largest faces in the image will be returned, and `FaceAttributesInfo` of the 6th and rest faces is meaningless.  
-Extracting face attribute information is quite time-consuming. If face attribute information is not required, you are recommended to disable this feature to speed up face detection.
+Extracting face attribute information is quite time-consuming. If face attribute information is not required, we recommend disabling this feature to speed up face detection.
                      * @param NeedFaceAttributes Whether the face attribute information (FaceAttributesInfo) needs to be returned. 0: no; 1: yes. Default value: 0. 
 If the value is not 1, it will be deemed as no need to return, and `FaceAttributesInfo` is meaningless in this case.  
 The face attribute information of up to 5 largest faces in the image will be returned, and `FaceAttributesInfo` of the 6th and rest faces is meaningless.  
-Extracting face attribute information is quite time-consuming. If face attribute information is not required, you are recommended to disable this feature to speed up face detection.
+Extracting face attribute information is quite time-consuming. If face attribute information is not required, we recommend disabling this feature to speed up face detection.
                      */
                     void SetNeedFaceAttributes(const uint64_t& _needFaceAttributes);
 
@@ -180,11 +188,11 @@ Extracting face attribute information is quite time-consuming. If face attribute
                      * 获取Whether to enable quality detection. 0: no; 1: yes. Default value: 0. 
 If the value is not 1, it will be deemed not to perform quality detection.
 The face quality score information of up to 30 largest faces in the image will be returned, and `FaceQualityInfo` of the 31st and rest faces is meaningless.  
-You are recommended to enable this feature for the face adding operation.
+We recommend enabling this feature for the face adding operation.
                      * @return NeedQualityDetection Whether to enable quality detection. 0: no; 1: yes. Default value: 0. 
 If the value is not 1, it will be deemed not to perform quality detection.
 The face quality score information of up to 30 largest faces in the image will be returned, and `FaceQualityInfo` of the 31st and rest faces is meaningless.  
-You are recommended to enable this feature for the face adding operation.
+We recommend enabling this feature for the face adding operation.
                      */
                     uint64_t GetNeedQualityDetection() const;
 
@@ -192,11 +200,11 @@ You are recommended to enable this feature for the face adding operation.
                      * 设置Whether to enable quality detection. 0: no; 1: yes. Default value: 0. 
 If the value is not 1, it will be deemed not to perform quality detection.
 The face quality score information of up to 30 largest faces in the image will be returned, and `FaceQualityInfo` of the 31st and rest faces is meaningless.  
-You are recommended to enable this feature for the face adding operation.
+We recommend enabling this feature for the face adding operation.
                      * @param NeedQualityDetection Whether to enable quality detection. 0: no; 1: yes. Default value: 0. 
 If the value is not 1, it will be deemed not to perform quality detection.
 The face quality score information of up to 30 largest faces in the image will be returned, and `FaceQualityInfo` of the 31st and rest faces is meaningless.  
-You are recommended to enable this feature for the face adding operation.
+We recommend enabling this feature for the face adding operation.
                      */
                     void SetNeedQualityDetection(const uint64_t& _needQualityDetection);
 
@@ -261,7 +269,7 @@ This parameter is used to control the number of faces in the image to be detecte
 
                     /**
                      * Minimum height and width of face in px.
-Default value: 34. You are recommended to keep it at or above 34.
+Default value: 34. We recommend keeping it at or above 34.
 Faces below the `MinFaceSize` value will not be detected.
                      */
                     uint64_t m_minFaceSize;
@@ -269,17 +277,19 @@ Faces below the `MinFaceSize` value will not be detected.
 
                     /**
                      * Base64-encoded image data, which cannot exceed 5 MB.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     std::string m_image;
                     bool m_imageHasBeenSet;
 
                     /**
                      * Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
@@ -288,7 +298,7 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
                      * Whether the face attribute information (FaceAttributesInfo) needs to be returned. 0: no; 1: yes. Default value: 0. 
 If the value is not 1, it will be deemed as no need to return, and `FaceAttributesInfo` is meaningless in this case.  
 The face attribute information of up to 5 largest faces in the image will be returned, and `FaceAttributesInfo` of the 6th and rest faces is meaningless.  
-Extracting face attribute information is quite time-consuming. If face attribute information is not required, you are recommended to disable this feature to speed up face detection.
+Extracting face attribute information is quite time-consuming. If face attribute information is not required, we recommend disabling this feature to speed up face detection.
                      */
                     uint64_t m_needFaceAttributes;
                     bool m_needFaceAttributesHasBeenSet;
@@ -297,7 +307,7 @@ Extracting face attribute information is quite time-consuming. If face attribute
                      * Whether to enable quality detection. 0: no; 1: yes. Default value: 0. 
 If the value is not 1, it will be deemed not to perform quality detection.
 The face quality score information of up to 30 largest faces in the image will be returned, and `FaceQualityInfo` of the 31st and rest faces is meaningless.  
-You are recommended to enable this feature for the face adding operation.
+We recommend enabling this feature for the face adding operation.
                      */
                     uint64_t m_needQualityDetection;
                     bool m_needQualityDetectionHasBeenSet;

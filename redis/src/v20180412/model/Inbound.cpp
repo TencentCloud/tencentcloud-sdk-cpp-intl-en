@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Redis::V20180412::Model;
-using namespace rapidjson;
 using namespace std;
 
 Inbound::Inbound() :
@@ -33,7 +32,7 @@ Inbound::Inbound() :
 {
 }
 
-CoreInternalOutcome Inbound::Deserialize(const Value &value)
+CoreInternalOutcome Inbound::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +41,7 @@ CoreInternalOutcome Inbound::Deserialize(const Value &value)
     {
         if (!value["Action"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Inbound.Action` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Inbound.Action` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_action = string(value["Action"].GetString());
         m_actionHasBeenSet = true;
@@ -52,7 +51,7 @@ CoreInternalOutcome Inbound::Deserialize(const Value &value)
     {
         if (!value["AddressModule"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Inbound.AddressModule` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Inbound.AddressModule` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_addressModule = string(value["AddressModule"].GetString());
         m_addressModuleHasBeenSet = true;
@@ -62,7 +61,7 @@ CoreInternalOutcome Inbound::Deserialize(const Value &value)
     {
         if (!value["CidrIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Inbound.CidrIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Inbound.CidrIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cidrIp = string(value["CidrIp"].GetString());
         m_cidrIpHasBeenSet = true;
@@ -72,7 +71,7 @@ CoreInternalOutcome Inbound::Deserialize(const Value &value)
     {
         if (!value["Desc"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Inbound.Desc` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Inbound.Desc` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_desc = string(value["Desc"].GetString());
         m_descHasBeenSet = true;
@@ -82,7 +81,7 @@ CoreInternalOutcome Inbound::Deserialize(const Value &value)
     {
         if (!value["IpProtocol"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Inbound.IpProtocol` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Inbound.IpProtocol` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ipProtocol = string(value["IpProtocol"].GetString());
         m_ipProtocolHasBeenSet = true;
@@ -92,7 +91,7 @@ CoreInternalOutcome Inbound::Deserialize(const Value &value)
     {
         if (!value["PortRange"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Inbound.PortRange` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Inbound.PortRange` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_portRange = string(value["PortRange"].GetString());
         m_portRangeHasBeenSet = true;
@@ -102,7 +101,7 @@ CoreInternalOutcome Inbound::Deserialize(const Value &value)
     {
         if (!value["ServiceModule"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Inbound.ServiceModule` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Inbound.ServiceModule` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_serviceModule = string(value["ServiceModule"].GetString());
         m_serviceModuleHasBeenSet = true;
@@ -112,7 +111,7 @@ CoreInternalOutcome Inbound::Deserialize(const Value &value)
     {
         if (!value["Id"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Inbound.Id` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Inbound.Id` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_id = string(value["Id"].GetString());
         m_idHasBeenSet = true;
@@ -122,71 +121,71 @@ CoreInternalOutcome Inbound::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Inbound::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Inbound::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_actionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Action";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_action.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_action.c_str(), allocator).Move(), allocator);
     }
 
     if (m_addressModuleHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AddressModule";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_addressModule.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_addressModule.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cidrIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CidrIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cidrIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cidrIp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_descHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Desc";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_desc.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_desc.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ipProtocolHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IpProtocol";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ipProtocol.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ipProtocol.c_str(), allocator).Move(), allocator);
     }
 
     if (m_portRangeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PortRange";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_portRange.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_portRange.c_str(), allocator).Move(), allocator);
     }
 
     if (m_serviceModuleHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceModule";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_serviceModule.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_serviceModule.c_str(), allocator).Move(), allocator);
     }
 
     if (m_idHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Id";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_id.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_id.c_str(), allocator).Move(), allocator);
     }
 
 }

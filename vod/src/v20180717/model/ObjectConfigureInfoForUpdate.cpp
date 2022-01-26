@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 ObjectConfigureInfoForUpdate::ObjectConfigureInfoForUpdate() :
@@ -27,7 +26,7 @@ ObjectConfigureInfoForUpdate::ObjectConfigureInfoForUpdate() :
 {
 }
 
-CoreInternalOutcome ObjectConfigureInfoForUpdate::Deserialize(const Value &value)
+CoreInternalOutcome ObjectConfigureInfoForUpdate::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome ObjectConfigureInfoForUpdate::Deserialize(const Value &value
     {
         if (!value["Switch"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ObjectConfigureInfoForUpdate.Switch` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ObjectConfigureInfoForUpdate.Switch` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_switch = string(value["Switch"].GetString());
         m_switchHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome ObjectConfigureInfoForUpdate::Deserialize(const Value &value
     {
         if (!value["ObjectLibrary"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ObjectConfigureInfoForUpdate.ObjectLibrary` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ObjectConfigureInfoForUpdate.ObjectLibrary` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_objectLibrary = string(value["ObjectLibrary"].GetString());
         m_objectLibraryHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome ObjectConfigureInfoForUpdate::Deserialize(const Value &value
     return CoreInternalOutcome(true);
 }
 
-void ObjectConfigureInfoForUpdate::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ObjectConfigureInfoForUpdate::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_switchHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Switch";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_switch.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_switch.c_str(), allocator).Move(), allocator);
     }
 
     if (m_objectLibraryHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ObjectLibrary";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_objectLibrary.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_objectLibrary.c_str(), allocator).Move(), allocator);
     }
 
 }

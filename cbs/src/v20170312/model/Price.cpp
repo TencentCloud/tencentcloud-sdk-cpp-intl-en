@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cbs::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 Price::Price() :
@@ -26,20 +25,24 @@ Price::Price() :
     m_discountPriceHasBeenSet(false),
     m_unitPriceHasBeenSet(false),
     m_chargeUnitHasBeenSet(false),
-    m_unitPriceDiscountHasBeenSet(false)
+    m_unitPriceDiscountHasBeenSet(false),
+    m_originalPriceHighHasBeenSet(false),
+    m_discountPriceHighHasBeenSet(false),
+    m_unitPriceHighHasBeenSet(false),
+    m_unitPriceDiscountHighHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome Price::Deserialize(const Value &value)
+CoreInternalOutcome Price::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
 
     if (value.HasMember("OriginalPrice") && !value["OriginalPrice"].IsNull())
     {
-        if (!value["OriginalPrice"].IsDouble())
+        if (!value["OriginalPrice"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `Price.OriginalPrice` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Price.OriginalPrice` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_originalPrice = value["OriginalPrice"].GetDouble();
         m_originalPriceHasBeenSet = true;
@@ -47,9 +50,9 @@ CoreInternalOutcome Price::Deserialize(const Value &value)
 
     if (value.HasMember("DiscountPrice") && !value["DiscountPrice"].IsNull())
     {
-        if (!value["DiscountPrice"].IsDouble())
+        if (!value["DiscountPrice"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `Price.DiscountPrice` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Price.DiscountPrice` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_discountPrice = value["DiscountPrice"].GetDouble();
         m_discountPriceHasBeenSet = true;
@@ -57,9 +60,9 @@ CoreInternalOutcome Price::Deserialize(const Value &value)
 
     if (value.HasMember("UnitPrice") && !value["UnitPrice"].IsNull())
     {
-        if (!value["UnitPrice"].IsDouble())
+        if (!value["UnitPrice"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `Price.UnitPrice` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Price.UnitPrice` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_unitPrice = value["UnitPrice"].GetDouble();
         m_unitPriceHasBeenSet = true;
@@ -69,7 +72,7 @@ CoreInternalOutcome Price::Deserialize(const Value &value)
     {
         if (!value["ChargeUnit"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Price.ChargeUnit` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Price.ChargeUnit` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_chargeUnit = string(value["ChargeUnit"].GetString());
         m_chargeUnitHasBeenSet = true;
@@ -77,24 +80,64 @@ CoreInternalOutcome Price::Deserialize(const Value &value)
 
     if (value.HasMember("UnitPriceDiscount") && !value["UnitPriceDiscount"].IsNull())
     {
-        if (!value["UnitPriceDiscount"].IsDouble())
+        if (!value["UnitPriceDiscount"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `Price.UnitPriceDiscount` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Price.UnitPriceDiscount` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_unitPriceDiscount = value["UnitPriceDiscount"].GetDouble();
         m_unitPriceDiscountHasBeenSet = true;
+    }
+
+    if (value.HasMember("OriginalPriceHigh") && !value["OriginalPriceHigh"].IsNull())
+    {
+        if (!value["OriginalPriceHigh"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Price.OriginalPriceHigh` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_originalPriceHigh = string(value["OriginalPriceHigh"].GetString());
+        m_originalPriceHighHasBeenSet = true;
+    }
+
+    if (value.HasMember("DiscountPriceHigh") && !value["DiscountPriceHigh"].IsNull())
+    {
+        if (!value["DiscountPriceHigh"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Price.DiscountPriceHigh` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_discountPriceHigh = string(value["DiscountPriceHigh"].GetString());
+        m_discountPriceHighHasBeenSet = true;
+    }
+
+    if (value.HasMember("UnitPriceHigh") && !value["UnitPriceHigh"].IsNull())
+    {
+        if (!value["UnitPriceHigh"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Price.UnitPriceHigh` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_unitPriceHigh = string(value["UnitPriceHigh"].GetString());
+        m_unitPriceHighHasBeenSet = true;
+    }
+
+    if (value.HasMember("UnitPriceDiscountHigh") && !value["UnitPriceDiscountHigh"].IsNull())
+    {
+        if (!value["UnitPriceDiscountHigh"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Price.UnitPriceDiscountHigh` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_unitPriceDiscountHigh = string(value["UnitPriceDiscountHigh"].GetString());
+        m_unitPriceDiscountHighHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void Price::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Price::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_originalPriceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OriginalPrice";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_originalPrice, allocator);
@@ -102,7 +145,7 @@ void Price::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
 
     if (m_discountPriceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiscountPrice";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_discountPrice, allocator);
@@ -110,7 +153,7 @@ void Price::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
 
     if (m_unitPriceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UnitPrice";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_unitPrice, allocator);
@@ -118,18 +161,50 @@ void Price::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
 
     if (m_chargeUnitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ChargeUnit";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_chargeUnit.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_chargeUnit.c_str(), allocator).Move(), allocator);
     }
 
     if (m_unitPriceDiscountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UnitPriceDiscount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_unitPriceDiscount, allocator);
+    }
+
+    if (m_originalPriceHighHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OriginalPriceHigh";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_originalPriceHigh.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_discountPriceHighHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DiscountPriceHigh";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_discountPriceHigh.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_unitPriceHighHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UnitPriceHigh";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_unitPriceHigh.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_unitPriceDiscountHighHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UnitPriceDiscountHigh";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_unitPriceDiscountHigh.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -213,5 +288,69 @@ void Price::SetUnitPriceDiscount(const double& _unitPriceDiscount)
 bool Price::UnitPriceDiscountHasBeenSet() const
 {
     return m_unitPriceDiscountHasBeenSet;
+}
+
+string Price::GetOriginalPriceHigh() const
+{
+    return m_originalPriceHigh;
+}
+
+void Price::SetOriginalPriceHigh(const string& _originalPriceHigh)
+{
+    m_originalPriceHigh = _originalPriceHigh;
+    m_originalPriceHighHasBeenSet = true;
+}
+
+bool Price::OriginalPriceHighHasBeenSet() const
+{
+    return m_originalPriceHighHasBeenSet;
+}
+
+string Price::GetDiscountPriceHigh() const
+{
+    return m_discountPriceHigh;
+}
+
+void Price::SetDiscountPriceHigh(const string& _discountPriceHigh)
+{
+    m_discountPriceHigh = _discountPriceHigh;
+    m_discountPriceHighHasBeenSet = true;
+}
+
+bool Price::DiscountPriceHighHasBeenSet() const
+{
+    return m_discountPriceHighHasBeenSet;
+}
+
+string Price::GetUnitPriceHigh() const
+{
+    return m_unitPriceHigh;
+}
+
+void Price::SetUnitPriceHigh(const string& _unitPriceHigh)
+{
+    m_unitPriceHigh = _unitPriceHigh;
+    m_unitPriceHighHasBeenSet = true;
+}
+
+bool Price::UnitPriceHighHasBeenSet() const
+{
+    return m_unitPriceHighHasBeenSet;
+}
+
+string Price::GetUnitPriceDiscountHigh() const
+{
+    return m_unitPriceDiscountHigh;
+}
+
+void Price::SetUnitPriceDiscountHigh(const string& _unitPriceDiscountHigh)
+{
+    m_unitPriceDiscountHigh = _unitPriceDiscountHigh;
+    m_unitPriceDiscountHighHasBeenSet = true;
+}
+
+bool Price::UnitPriceDiscountHighHasBeenSet() const
+{
+    return m_unitPriceDiscountHighHasBeenSet;
 }
 

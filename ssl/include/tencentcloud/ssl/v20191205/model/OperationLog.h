@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Certificate operation logs.
+                * Certificate operation logs
                 */
                 class OperationLog : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Action performed on logs.
-                     * @return Action Action performed on logs.
+                     * 获取Action performed on logs
+                     * @return Action Action performed on logs
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Action performed on logs.
-                     * @param Action Action performed on logs.
+                     * 设置Action performed on logs
+                     * @param Action Action performed on logs
                      */
                     void SetAction(const std::string& _action);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取Time when the action is performed.
-                     * @return CreatedOn Time when the action is performed.
+                     * 获取Time when the action is performed
+                     * @return CreatedOn Time when the action is performed
                      */
                     std::string GetCreatedOn() const;
 
                     /**
-                     * 设置Time when the action is performed.
-                     * @param CreatedOn Time when the action is performed.
+                     * 设置Time when the action is performed
+                     * @param CreatedOn Time when the action is performed
                      */
                     void SetCreatedOn(const std::string& _createdOn);
 
@@ -85,13 +85,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Action performed on logs.
+                     * Action performed on logs
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * Time when the action is performed.
+                     * Time when the action is performed
                      */
                     std::string m_createdOn;
                     bool m_createdOnHasBeenSet;

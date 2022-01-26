@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Batch::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 ItemPrice::ItemPrice() :
@@ -31,20 +30,29 @@ ItemPrice::ItemPrice() :
     m_unitPriceSecondStepHasBeenSet(false),
     m_unitPriceDiscountSecondStepHasBeenSet(false),
     m_unitPriceThirdStepHasBeenSet(false),
-    m_unitPriceDiscountThirdStepHasBeenSet(false)
+    m_unitPriceDiscountThirdStepHasBeenSet(false),
+    m_originalPriceThreeYearHasBeenSet(false),
+    m_discountPriceThreeYearHasBeenSet(false),
+    m_discountThreeYearHasBeenSet(false),
+    m_originalPriceFiveYearHasBeenSet(false),
+    m_discountPriceFiveYearHasBeenSet(false),
+    m_discountFiveYearHasBeenSet(false),
+    m_originalPriceOneYearHasBeenSet(false),
+    m_discountPriceOneYearHasBeenSet(false),
+    m_discountOneYearHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ItemPrice::Deserialize(const Value &value)
+CoreInternalOutcome ItemPrice::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
 
     if (value.HasMember("UnitPrice") && !value["UnitPrice"].IsNull())
     {
-        if (!value["UnitPrice"].IsDouble())
+        if (!value["UnitPrice"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `ItemPrice.UnitPrice` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ItemPrice.UnitPrice` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_unitPrice = value["UnitPrice"].GetDouble();
         m_unitPriceHasBeenSet = true;
@@ -54,7 +62,7 @@ CoreInternalOutcome ItemPrice::Deserialize(const Value &value)
     {
         if (!value["ChargeUnit"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ItemPrice.ChargeUnit` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ItemPrice.ChargeUnit` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_chargeUnit = string(value["ChargeUnit"].GetString());
         m_chargeUnitHasBeenSet = true;
@@ -62,9 +70,9 @@ CoreInternalOutcome ItemPrice::Deserialize(const Value &value)
 
     if (value.HasMember("OriginalPrice") && !value["OriginalPrice"].IsNull())
     {
-        if (!value["OriginalPrice"].IsDouble())
+        if (!value["OriginalPrice"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `ItemPrice.OriginalPrice` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ItemPrice.OriginalPrice` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_originalPrice = value["OriginalPrice"].GetDouble();
         m_originalPriceHasBeenSet = true;
@@ -72,9 +80,9 @@ CoreInternalOutcome ItemPrice::Deserialize(const Value &value)
 
     if (value.HasMember("DiscountPrice") && !value["DiscountPrice"].IsNull())
     {
-        if (!value["DiscountPrice"].IsDouble())
+        if (!value["DiscountPrice"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `ItemPrice.DiscountPrice` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ItemPrice.DiscountPrice` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_discountPrice = value["DiscountPrice"].GetDouble();
         m_discountPriceHasBeenSet = true;
@@ -82,9 +90,9 @@ CoreInternalOutcome ItemPrice::Deserialize(const Value &value)
 
     if (value.HasMember("Discount") && !value["Discount"].IsNull())
     {
-        if (!value["Discount"].IsDouble())
+        if (!value["Discount"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `ItemPrice.Discount` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ItemPrice.Discount` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_discount = value["Discount"].GetDouble();
         m_discountHasBeenSet = true;
@@ -92,9 +100,9 @@ CoreInternalOutcome ItemPrice::Deserialize(const Value &value)
 
     if (value.HasMember("UnitPriceDiscount") && !value["UnitPriceDiscount"].IsNull())
     {
-        if (!value["UnitPriceDiscount"].IsDouble())
+        if (!value["UnitPriceDiscount"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `ItemPrice.UnitPriceDiscount` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ItemPrice.UnitPriceDiscount` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_unitPriceDiscount = value["UnitPriceDiscount"].GetDouble();
         m_unitPriceDiscountHasBeenSet = true;
@@ -102,9 +110,9 @@ CoreInternalOutcome ItemPrice::Deserialize(const Value &value)
 
     if (value.HasMember("UnitPriceSecondStep") && !value["UnitPriceSecondStep"].IsNull())
     {
-        if (!value["UnitPriceSecondStep"].IsDouble())
+        if (!value["UnitPriceSecondStep"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `ItemPrice.UnitPriceSecondStep` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ItemPrice.UnitPriceSecondStep` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_unitPriceSecondStep = value["UnitPriceSecondStep"].GetDouble();
         m_unitPriceSecondStepHasBeenSet = true;
@@ -112,9 +120,9 @@ CoreInternalOutcome ItemPrice::Deserialize(const Value &value)
 
     if (value.HasMember("UnitPriceDiscountSecondStep") && !value["UnitPriceDiscountSecondStep"].IsNull())
     {
-        if (!value["UnitPriceDiscountSecondStep"].IsDouble())
+        if (!value["UnitPriceDiscountSecondStep"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `ItemPrice.UnitPriceDiscountSecondStep` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ItemPrice.UnitPriceDiscountSecondStep` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_unitPriceDiscountSecondStep = value["UnitPriceDiscountSecondStep"].GetDouble();
         m_unitPriceDiscountSecondStepHasBeenSet = true;
@@ -122,9 +130,9 @@ CoreInternalOutcome ItemPrice::Deserialize(const Value &value)
 
     if (value.HasMember("UnitPriceThirdStep") && !value["UnitPriceThirdStep"].IsNull())
     {
-        if (!value["UnitPriceThirdStep"].IsDouble())
+        if (!value["UnitPriceThirdStep"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `ItemPrice.UnitPriceThirdStep` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ItemPrice.UnitPriceThirdStep` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_unitPriceThirdStep = value["UnitPriceThirdStep"].GetDouble();
         m_unitPriceThirdStepHasBeenSet = true;
@@ -132,24 +140,114 @@ CoreInternalOutcome ItemPrice::Deserialize(const Value &value)
 
     if (value.HasMember("UnitPriceDiscountThirdStep") && !value["UnitPriceDiscountThirdStep"].IsNull())
     {
-        if (!value["UnitPriceDiscountThirdStep"].IsDouble())
+        if (!value["UnitPriceDiscountThirdStep"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `ItemPrice.UnitPriceDiscountThirdStep` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ItemPrice.UnitPriceDiscountThirdStep` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_unitPriceDiscountThirdStep = value["UnitPriceDiscountThirdStep"].GetDouble();
         m_unitPriceDiscountThirdStepHasBeenSet = true;
+    }
+
+    if (value.HasMember("OriginalPriceThreeYear") && !value["OriginalPriceThreeYear"].IsNull())
+    {
+        if (!value["OriginalPriceThreeYear"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `ItemPrice.OriginalPriceThreeYear` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_originalPriceThreeYear = value["OriginalPriceThreeYear"].GetDouble();
+        m_originalPriceThreeYearHasBeenSet = true;
+    }
+
+    if (value.HasMember("DiscountPriceThreeYear") && !value["DiscountPriceThreeYear"].IsNull())
+    {
+        if (!value["DiscountPriceThreeYear"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `ItemPrice.DiscountPriceThreeYear` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_discountPriceThreeYear = value["DiscountPriceThreeYear"].GetDouble();
+        m_discountPriceThreeYearHasBeenSet = true;
+    }
+
+    if (value.HasMember("DiscountThreeYear") && !value["DiscountThreeYear"].IsNull())
+    {
+        if (!value["DiscountThreeYear"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `ItemPrice.DiscountThreeYear` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_discountThreeYear = value["DiscountThreeYear"].GetDouble();
+        m_discountThreeYearHasBeenSet = true;
+    }
+
+    if (value.HasMember("OriginalPriceFiveYear") && !value["OriginalPriceFiveYear"].IsNull())
+    {
+        if (!value["OriginalPriceFiveYear"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `ItemPrice.OriginalPriceFiveYear` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_originalPriceFiveYear = value["OriginalPriceFiveYear"].GetDouble();
+        m_originalPriceFiveYearHasBeenSet = true;
+    }
+
+    if (value.HasMember("DiscountPriceFiveYear") && !value["DiscountPriceFiveYear"].IsNull())
+    {
+        if (!value["DiscountPriceFiveYear"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `ItemPrice.DiscountPriceFiveYear` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_discountPriceFiveYear = value["DiscountPriceFiveYear"].GetDouble();
+        m_discountPriceFiveYearHasBeenSet = true;
+    }
+
+    if (value.HasMember("DiscountFiveYear") && !value["DiscountFiveYear"].IsNull())
+    {
+        if (!value["DiscountFiveYear"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `ItemPrice.DiscountFiveYear` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_discountFiveYear = value["DiscountFiveYear"].GetDouble();
+        m_discountFiveYearHasBeenSet = true;
+    }
+
+    if (value.HasMember("OriginalPriceOneYear") && !value["OriginalPriceOneYear"].IsNull())
+    {
+        if (!value["OriginalPriceOneYear"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `ItemPrice.OriginalPriceOneYear` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_originalPriceOneYear = value["OriginalPriceOneYear"].GetDouble();
+        m_originalPriceOneYearHasBeenSet = true;
+    }
+
+    if (value.HasMember("DiscountPriceOneYear") && !value["DiscountPriceOneYear"].IsNull())
+    {
+        if (!value["DiscountPriceOneYear"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `ItemPrice.DiscountPriceOneYear` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_discountPriceOneYear = value["DiscountPriceOneYear"].GetDouble();
+        m_discountPriceOneYearHasBeenSet = true;
+    }
+
+    if (value.HasMember("DiscountOneYear") && !value["DiscountOneYear"].IsNull())
+    {
+        if (!value["DiscountOneYear"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `ItemPrice.DiscountOneYear` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_discountOneYear = value["DiscountOneYear"].GetDouble();
+        m_discountOneYearHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void ItemPrice::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ItemPrice::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_unitPriceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UnitPrice";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_unitPrice, allocator);
@@ -157,15 +255,15 @@ void ItemPrice::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_chargeUnitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ChargeUnit";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_chargeUnit.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_chargeUnit.c_str(), allocator).Move(), allocator);
     }
 
     if (m_originalPriceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OriginalPrice";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_originalPrice, allocator);
@@ -173,7 +271,7 @@ void ItemPrice::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_discountPriceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiscountPrice";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_discountPrice, allocator);
@@ -181,7 +279,7 @@ void ItemPrice::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_discountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Discount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_discount, allocator);
@@ -189,7 +287,7 @@ void ItemPrice::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_unitPriceDiscountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UnitPriceDiscount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_unitPriceDiscount, allocator);
@@ -197,7 +295,7 @@ void ItemPrice::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_unitPriceSecondStepHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UnitPriceSecondStep";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_unitPriceSecondStep, allocator);
@@ -205,7 +303,7 @@ void ItemPrice::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_unitPriceDiscountSecondStepHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UnitPriceDiscountSecondStep";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_unitPriceDiscountSecondStep, allocator);
@@ -213,7 +311,7 @@ void ItemPrice::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_unitPriceThirdStepHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UnitPriceThirdStep";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_unitPriceThirdStep, allocator);
@@ -221,10 +319,82 @@ void ItemPrice::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_unitPriceDiscountThirdStepHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UnitPriceDiscountThirdStep";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_unitPriceDiscountThirdStep, allocator);
+    }
+
+    if (m_originalPriceThreeYearHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OriginalPriceThreeYear";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_originalPriceThreeYear, allocator);
+    }
+
+    if (m_discountPriceThreeYearHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DiscountPriceThreeYear";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_discountPriceThreeYear, allocator);
+    }
+
+    if (m_discountThreeYearHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DiscountThreeYear";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_discountThreeYear, allocator);
+    }
+
+    if (m_originalPriceFiveYearHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OriginalPriceFiveYear";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_originalPriceFiveYear, allocator);
+    }
+
+    if (m_discountPriceFiveYearHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DiscountPriceFiveYear";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_discountPriceFiveYear, allocator);
+    }
+
+    if (m_discountFiveYearHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DiscountFiveYear";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_discountFiveYear, allocator);
+    }
+
+    if (m_originalPriceOneYearHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OriginalPriceOneYear";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_originalPriceOneYear, allocator);
+    }
+
+    if (m_discountPriceOneYearHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DiscountPriceOneYear";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_discountPriceOneYear, allocator);
+    }
+
+    if (m_discountOneYearHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DiscountOneYear";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_discountOneYear, allocator);
     }
 
 }
@@ -388,5 +558,149 @@ void ItemPrice::SetUnitPriceDiscountThirdStep(const double& _unitPriceDiscountTh
 bool ItemPrice::UnitPriceDiscountThirdStepHasBeenSet() const
 {
     return m_unitPriceDiscountThirdStepHasBeenSet;
+}
+
+double ItemPrice::GetOriginalPriceThreeYear() const
+{
+    return m_originalPriceThreeYear;
+}
+
+void ItemPrice::SetOriginalPriceThreeYear(const double& _originalPriceThreeYear)
+{
+    m_originalPriceThreeYear = _originalPriceThreeYear;
+    m_originalPriceThreeYearHasBeenSet = true;
+}
+
+bool ItemPrice::OriginalPriceThreeYearHasBeenSet() const
+{
+    return m_originalPriceThreeYearHasBeenSet;
+}
+
+double ItemPrice::GetDiscountPriceThreeYear() const
+{
+    return m_discountPriceThreeYear;
+}
+
+void ItemPrice::SetDiscountPriceThreeYear(const double& _discountPriceThreeYear)
+{
+    m_discountPriceThreeYear = _discountPriceThreeYear;
+    m_discountPriceThreeYearHasBeenSet = true;
+}
+
+bool ItemPrice::DiscountPriceThreeYearHasBeenSet() const
+{
+    return m_discountPriceThreeYearHasBeenSet;
+}
+
+double ItemPrice::GetDiscountThreeYear() const
+{
+    return m_discountThreeYear;
+}
+
+void ItemPrice::SetDiscountThreeYear(const double& _discountThreeYear)
+{
+    m_discountThreeYear = _discountThreeYear;
+    m_discountThreeYearHasBeenSet = true;
+}
+
+bool ItemPrice::DiscountThreeYearHasBeenSet() const
+{
+    return m_discountThreeYearHasBeenSet;
+}
+
+double ItemPrice::GetOriginalPriceFiveYear() const
+{
+    return m_originalPriceFiveYear;
+}
+
+void ItemPrice::SetOriginalPriceFiveYear(const double& _originalPriceFiveYear)
+{
+    m_originalPriceFiveYear = _originalPriceFiveYear;
+    m_originalPriceFiveYearHasBeenSet = true;
+}
+
+bool ItemPrice::OriginalPriceFiveYearHasBeenSet() const
+{
+    return m_originalPriceFiveYearHasBeenSet;
+}
+
+double ItemPrice::GetDiscountPriceFiveYear() const
+{
+    return m_discountPriceFiveYear;
+}
+
+void ItemPrice::SetDiscountPriceFiveYear(const double& _discountPriceFiveYear)
+{
+    m_discountPriceFiveYear = _discountPriceFiveYear;
+    m_discountPriceFiveYearHasBeenSet = true;
+}
+
+bool ItemPrice::DiscountPriceFiveYearHasBeenSet() const
+{
+    return m_discountPriceFiveYearHasBeenSet;
+}
+
+double ItemPrice::GetDiscountFiveYear() const
+{
+    return m_discountFiveYear;
+}
+
+void ItemPrice::SetDiscountFiveYear(const double& _discountFiveYear)
+{
+    m_discountFiveYear = _discountFiveYear;
+    m_discountFiveYearHasBeenSet = true;
+}
+
+bool ItemPrice::DiscountFiveYearHasBeenSet() const
+{
+    return m_discountFiveYearHasBeenSet;
+}
+
+double ItemPrice::GetOriginalPriceOneYear() const
+{
+    return m_originalPriceOneYear;
+}
+
+void ItemPrice::SetOriginalPriceOneYear(const double& _originalPriceOneYear)
+{
+    m_originalPriceOneYear = _originalPriceOneYear;
+    m_originalPriceOneYearHasBeenSet = true;
+}
+
+bool ItemPrice::OriginalPriceOneYearHasBeenSet() const
+{
+    return m_originalPriceOneYearHasBeenSet;
+}
+
+double ItemPrice::GetDiscountPriceOneYear() const
+{
+    return m_discountPriceOneYear;
+}
+
+void ItemPrice::SetDiscountPriceOneYear(const double& _discountPriceOneYear)
+{
+    m_discountPriceOneYear = _discountPriceOneYear;
+    m_discountPriceOneYearHasBeenSet = true;
+}
+
+bool ItemPrice::DiscountPriceOneYearHasBeenSet() const
+{
+    return m_discountPriceOneYearHasBeenSet;
+}
+
+double ItemPrice::GetDiscountOneYear() const
+{
+    return m_discountOneYear;
+}
+
+void ItemPrice::SetDiscountOneYear(const double& _discountOneYear)
+{
+    m_discountOneYear = _discountOneYear;
+    m_discountOneYearHasBeenSet = true;
+}
+
+bool ItemPrice::DiscountOneYearHasBeenSet() const
+{
+    return m_discountOneYearHasBeenSet;
 }
 

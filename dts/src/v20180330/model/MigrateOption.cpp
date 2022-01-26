@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dts::V20180330::Model;
-using namespace rapidjson;
 using namespace std;
 
 MigrateOption::MigrateOption() :
@@ -33,7 +32,7 @@ MigrateOption::MigrateOption() :
 {
 }
 
-CoreInternalOutcome MigrateOption::Deserialize(const Value &value)
+CoreInternalOutcome MigrateOption::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +41,7 @@ CoreInternalOutcome MigrateOption::Deserialize(const Value &value)
     {
         if (!value["RunMode"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MigrateOption.RunMode` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MigrateOption.RunMode` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_runMode = value["RunMode"].GetInt64();
         m_runModeHasBeenSet = true;
@@ -52,7 +51,7 @@ CoreInternalOutcome MigrateOption::Deserialize(const Value &value)
     {
         if (!value["ExpectTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MigrateOption.ExpectTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MigrateOption.ExpectTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_expectTime = string(value["ExpectTime"].GetString());
         m_expectTimeHasBeenSet = true;
@@ -62,7 +61,7 @@ CoreInternalOutcome MigrateOption::Deserialize(const Value &value)
     {
         if (!value["MigrateType"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MigrateOption.MigrateType` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MigrateOption.MigrateType` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_migrateType = value["MigrateType"].GetInt64();
         m_migrateTypeHasBeenSet = true;
@@ -72,7 +71,7 @@ CoreInternalOutcome MigrateOption::Deserialize(const Value &value)
     {
         if (!value["MigrateObject"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MigrateOption.MigrateObject` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MigrateOption.MigrateObject` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_migrateObject = value["MigrateObject"].GetInt64();
         m_migrateObjectHasBeenSet = true;
@@ -82,7 +81,7 @@ CoreInternalOutcome MigrateOption::Deserialize(const Value &value)
     {
         if (!value["ConsistencyType"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MigrateOption.ConsistencyType` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MigrateOption.ConsistencyType` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_consistencyType = value["ConsistencyType"].GetInt64();
         m_consistencyTypeHasBeenSet = true;
@@ -92,7 +91,7 @@ CoreInternalOutcome MigrateOption::Deserialize(const Value &value)
     {
         if (!value["IsOverrideRoot"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MigrateOption.IsOverrideRoot` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MigrateOption.IsOverrideRoot` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_isOverrideRoot = value["IsOverrideRoot"].GetInt64();
         m_isOverrideRootHasBeenSet = true;
@@ -102,7 +101,7 @@ CoreInternalOutcome MigrateOption::Deserialize(const Value &value)
     {
         if (!value["ExternParams"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MigrateOption.ExternParams` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MigrateOption.ExternParams` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_externParams = string(value["ExternParams"].GetString());
         m_externParamsHasBeenSet = true;
@@ -112,7 +111,7 @@ CoreInternalOutcome MigrateOption::Deserialize(const Value &value)
     {
         if (!value["ConsistencyParams"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MigrateOption.ConsistencyParams` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MigrateOption.ConsistencyParams` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_consistencyParams.Deserialize(value["ConsistencyParams"]);
@@ -129,12 +128,12 @@ CoreInternalOutcome MigrateOption::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void MigrateOption::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MigrateOption::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_runModeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RunMode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_runMode, allocator);
@@ -142,15 +141,15 @@ void MigrateOption::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_expectTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ExpectTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_expectTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_expectTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_migrateTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MigrateType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_migrateType, allocator);
@@ -158,7 +157,7 @@ void MigrateOption::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_migrateObjectHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MigrateObject";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_migrateObject, allocator);
@@ -166,7 +165,7 @@ void MigrateOption::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_consistencyTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ConsistencyType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_consistencyType, allocator);
@@ -174,7 +173,7 @@ void MigrateOption::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_isOverrideRootHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsOverrideRoot";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isOverrideRoot, allocator);
@@ -182,18 +181,18 @@ void MigrateOption::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_externParamsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ExternParams";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_externParams.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_externParams.c_str(), allocator).Move(), allocator);
     }
 
     if (m_consistencyParamsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ConsistencyParams";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_consistencyParams.ToJsonObject(value[key.c_str()], allocator);
     }
 

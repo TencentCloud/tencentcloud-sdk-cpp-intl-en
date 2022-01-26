@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 LiveStreamAsrWordsRecognitionResult::LiveStreamAsrWordsRecognitionResult() :
@@ -29,7 +28,7 @@ LiveStreamAsrWordsRecognitionResult::LiveStreamAsrWordsRecognitionResult() :
 {
 }
 
-CoreInternalOutcome LiveStreamAsrWordsRecognitionResult::Deserialize(const Value &value)
+CoreInternalOutcome LiveStreamAsrWordsRecognitionResult::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome LiveStreamAsrWordsRecognitionResult::Deserialize(const Value
     {
         if (!value["Word"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamAsrWordsRecognitionResult.Word` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamAsrWordsRecognitionResult.Word` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_word = string(value["Word"].GetString());
         m_wordHasBeenSet = true;
@@ -46,9 +45,9 @@ CoreInternalOutcome LiveStreamAsrWordsRecognitionResult::Deserialize(const Value
 
     if (value.HasMember("StartPtsTime") && !value["StartPtsTime"].IsNull())
     {
-        if (!value["StartPtsTime"].IsDouble())
+        if (!value["StartPtsTime"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamAsrWordsRecognitionResult.StartPtsTime` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamAsrWordsRecognitionResult.StartPtsTime` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_startPtsTime = value["StartPtsTime"].GetDouble();
         m_startPtsTimeHasBeenSet = true;
@@ -56,9 +55,9 @@ CoreInternalOutcome LiveStreamAsrWordsRecognitionResult::Deserialize(const Value
 
     if (value.HasMember("EndPtsTime") && !value["EndPtsTime"].IsNull())
     {
-        if (!value["EndPtsTime"].IsDouble())
+        if (!value["EndPtsTime"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamAsrWordsRecognitionResult.EndPtsTime` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamAsrWordsRecognitionResult.EndPtsTime` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_endPtsTime = value["EndPtsTime"].GetDouble();
         m_endPtsTimeHasBeenSet = true;
@@ -66,9 +65,9 @@ CoreInternalOutcome LiveStreamAsrWordsRecognitionResult::Deserialize(const Value
 
     if (value.HasMember("Confidence") && !value["Confidence"].IsNull())
     {
-        if (!value["Confidence"].IsDouble())
+        if (!value["Confidence"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamAsrWordsRecognitionResult.Confidence` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamAsrWordsRecognitionResult.Confidence` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_confidence = value["Confidence"].GetDouble();
         m_confidenceHasBeenSet = true;
@@ -78,20 +77,20 @@ CoreInternalOutcome LiveStreamAsrWordsRecognitionResult::Deserialize(const Value
     return CoreInternalOutcome(true);
 }
 
-void LiveStreamAsrWordsRecognitionResult::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void LiveStreamAsrWordsRecognitionResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_wordHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Word";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_word.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_word.c_str(), allocator).Move(), allocator);
     }
 
     if (m_startPtsTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartPtsTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_startPtsTime, allocator);
@@ -99,7 +98,7 @@ void LiveStreamAsrWordsRecognitionResult::ToJsonObject(Value &value, Document::A
 
     if (m_endPtsTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndPtsTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_endPtsTime, allocator);
@@ -107,7 +106,7 @@ void LiveStreamAsrWordsRecognitionResult::ToJsonObject(Value &value, Document::A
 
     if (m_confidenceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Confidence";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_confidence, allocator);

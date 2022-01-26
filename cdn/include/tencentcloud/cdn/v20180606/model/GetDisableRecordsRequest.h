@@ -43,6 +43,24 @@ namespace TencentCloud
 
 
                     /**
+                     * 获取Specifies the URL to be queried
+                     * @return Url Specifies the URL to be queried
+                     */
+                    std::string GetUrl() const;
+
+                    /**
+                     * 设置Specifies the URL to be queried
+                     * @param Url Specifies the URL to be queried
+                     */
+                    void SetUrl(const std::string& _url);
+
+                    /**
+                     * 判断参数 Url 是否已赋值
+                     * @return Url 是否已赋值
+                     */
+                    bool UrlHasBeenSet() const;
+
+                    /**
                      * 获取Starting time, such as `2018-12-12 10:24:00`
                      * @return StartTime Starting time, such as `2018-12-12 10:24:00`
                      */
@@ -77,24 +95,6 @@ namespace TencentCloud
                      * @return EndTime 是否已赋值
                      */
                     bool EndTimeHasBeenSet() const;
-
-                    /**
-                     * 获取Specifies the URL to be queried
-                     * @return Url Specifies the URL to be queried
-                     */
-                    std::string GetUrl() const;
-
-                    /**
-                     * 设置Specifies the URL to be queried
-                     * @param Url Specifies the URL to be queried
-                     */
-                    void SetUrl(const std::string& _url);
-
-                    /**
-                     * 判断参数 Url 是否已赋值
-                     * @return Url 是否已赋值
-                     */
-                    bool UrlHasBeenSet() const;
 
                     /**
                      * 获取Current URL status
@@ -158,7 +158,31 @@ enable: The URL is enabled (unblocked) and can be normally accessed
                      */
                     bool LimitHasBeenSet() const;
 
+                    /**
+                     * 获取Task ID. The task ID and start time cannot be both left empty.
+                     * @return TaskId Task ID. The task ID and start time cannot be both left empty.
+                     */
+                    std::string GetTaskId() const;
+
+                    /**
+                     * 设置Task ID. The task ID and start time cannot be both left empty.
+                     * @param TaskId Task ID. The task ID and start time cannot be both left empty.
+                     */
+                    void SetTaskId(const std::string& _taskId);
+
+                    /**
+                     * 判断参数 TaskId 是否已赋值
+                     * @return TaskId 是否已赋值
+                     */
+                    bool TaskIdHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * Specifies the URL to be queried
+                     */
+                    std::string m_url;
+                    bool m_urlHasBeenSet;
 
                     /**
                      * Starting time, such as `2018-12-12 10:24:00`
@@ -171,12 +195,6 @@ enable: The URL is enabled (unblocked) and can be normally accessed
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
-
-                    /**
-                     * Specifies the URL to be queried
-                     */
-                    std::string m_url;
-                    bool m_urlHasBeenSet;
 
                     /**
                      * Current URL status
@@ -197,6 +215,12 @@ enable: The URL is enabled (unblocked) and can be normally accessed
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
+
+                    /**
+                     * Task ID. The task ID and start time cannot be both left empty.
+                     */
+                    std::string m_taskId;
+                    bool m_taskIdHasBeenSet;
 
                 };
             }

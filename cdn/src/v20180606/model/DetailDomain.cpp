@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 DetailDomain::DetailDomain() :
@@ -65,11 +64,27 @@ DetailDomain::DetailDomain() :
     m_securityConfigHasBeenSet(false),
     m_imageOptimizationHasBeenSet(false),
     m_userAgentFilterHasBeenSet(false),
-    m_accessControlHasBeenSet(false)
+    m_accessControlHasBeenSet(false),
+    m_advanceHasBeenSet(false),
+    m_urlRedirectHasBeenSet(false),
+    m_accessPortHasBeenSet(false),
+    m_tagHasBeenSet(false),
+    m_advancedAuthenticationHasBeenSet(false),
+    m_originAuthenticationHasBeenSet(false),
+    m_ipv6AccessHasBeenSet(false),
+    m_advanceSetHasBeenSet(false),
+    m_offlineCacheHasBeenSet(false),
+    m_originCombineHasBeenSet(false),
+    m_postMaxSizeHasBeenSet(false),
+    m_quicHasBeenSet(false),
+    m_ossPrivateAccessHasBeenSet(false),
+    m_webSocketHasBeenSet(false),
+    m_remoteAuthenticationHasBeenSet(false),
+    m_shareCnameHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
+CoreInternalOutcome DetailDomain::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -78,7 +93,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["ResourceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.ResourceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.ResourceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_resourceId = string(value["ResourceId"].GetString());
         m_resourceIdHasBeenSet = true;
@@ -88,7 +103,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["AppId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.AppId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.AppId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_appId = value["AppId"].GetInt64();
         m_appIdHasBeenSet = true;
@@ -98,7 +113,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["Domain"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.Domain` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.Domain` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_domain = string(value["Domain"].GetString());
         m_domainHasBeenSet = true;
@@ -108,7 +123,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["Cname"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.Cname` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.Cname` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cname = string(value["Cname"].GetString());
         m_cnameHasBeenSet = true;
@@ -118,7 +133,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(value["Status"].GetString());
         m_statusHasBeenSet = true;
@@ -128,7 +143,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["ProjectId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.ProjectId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.ProjectId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_projectId = value["ProjectId"].GetInt64();
         m_projectIdHasBeenSet = true;
@@ -138,7 +153,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["ServiceType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.ServiceType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.ServiceType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_serviceType = string(value["ServiceType"].GetString());
         m_serviceTypeHasBeenSet = true;
@@ -148,7 +163,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -158,7 +173,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["UpdateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_updateTime = string(value["UpdateTime"].GetString());
         m_updateTimeHasBeenSet = true;
@@ -168,7 +183,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["Origin"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.Origin` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.Origin` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_origin.Deserialize(value["Origin"]);
@@ -185,7 +200,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["IpFilter"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.IpFilter` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.IpFilter` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_ipFilter.Deserialize(value["IpFilter"]);
@@ -202,7 +217,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["IpFreqLimit"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.IpFreqLimit` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.IpFreqLimit` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_ipFreqLimit.Deserialize(value["IpFreqLimit"]);
@@ -219,7 +234,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["StatusCodeCache"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.StatusCodeCache` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.StatusCodeCache` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_statusCodeCache.Deserialize(value["StatusCodeCache"]);
@@ -236,7 +251,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["Compression"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.Compression` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.Compression` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_compression.Deserialize(value["Compression"]);
@@ -253,7 +268,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["BandwidthAlert"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.BandwidthAlert` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.BandwidthAlert` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_bandwidthAlert.Deserialize(value["BandwidthAlert"]);
@@ -270,7 +285,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["RangeOriginPull"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.RangeOriginPull` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.RangeOriginPull` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_rangeOriginPull.Deserialize(value["RangeOriginPull"]);
@@ -287,7 +302,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["FollowRedirect"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.FollowRedirect` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.FollowRedirect` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_followRedirect.Deserialize(value["FollowRedirect"]);
@@ -304,7 +319,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["ErrorPage"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.ErrorPage` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.ErrorPage` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_errorPage.Deserialize(value["ErrorPage"]);
@@ -321,7 +336,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["RequestHeader"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.RequestHeader` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.RequestHeader` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_requestHeader.Deserialize(value["RequestHeader"]);
@@ -338,7 +353,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["ResponseHeader"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.ResponseHeader` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.ResponseHeader` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_responseHeader.Deserialize(value["ResponseHeader"]);
@@ -355,7 +370,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["DownstreamCapping"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.DownstreamCapping` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.DownstreamCapping` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_downstreamCapping.Deserialize(value["DownstreamCapping"]);
@@ -372,7 +387,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["CacheKey"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.CacheKey` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.CacheKey` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_cacheKey.Deserialize(value["CacheKey"]);
@@ -389,7 +404,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["ResponseHeaderCache"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.ResponseHeaderCache` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.ResponseHeaderCache` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_responseHeaderCache.Deserialize(value["ResponseHeaderCache"]);
@@ -406,7 +421,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["VideoSeek"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.VideoSeek` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.VideoSeek` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_videoSeek.Deserialize(value["VideoSeek"]);
@@ -423,7 +438,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["Cache"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.Cache` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.Cache` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_cache.Deserialize(value["Cache"]);
@@ -440,7 +455,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["OriginPullOptimization"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.OriginPullOptimization` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.OriginPullOptimization` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_originPullOptimization.Deserialize(value["OriginPullOptimization"]);
@@ -457,7 +472,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["Https"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.Https` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.Https` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_https.Deserialize(value["Https"]);
@@ -474,7 +489,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["Authentication"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.Authentication` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.Authentication` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_authentication.Deserialize(value["Authentication"]);
@@ -491,7 +506,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["Seo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.Seo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.Seo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_seo.Deserialize(value["Seo"]);
@@ -508,7 +523,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["Disable"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.Disable` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.Disable` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_disable = string(value["Disable"].GetString());
         m_disableHasBeenSet = true;
@@ -518,7 +533,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["ForceRedirect"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.ForceRedirect` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.ForceRedirect` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_forceRedirect.Deserialize(value["ForceRedirect"]);
@@ -535,7 +550,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["Referer"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.Referer` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.Referer` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_referer.Deserialize(value["Referer"]);
@@ -552,7 +567,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["MaxAge"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.MaxAge` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.MaxAge` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_maxAge.Deserialize(value["MaxAge"]);
@@ -569,7 +584,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["Ipv6"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.Ipv6` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.Ipv6` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_ipv6.Deserialize(value["Ipv6"]);
@@ -586,7 +601,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["Compatibility"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.Compatibility` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.Compatibility` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_compatibility.Deserialize(value["Compatibility"]);
@@ -603,7 +618,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["SpecificConfig"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.SpecificConfig` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.SpecificConfig` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_specificConfig.Deserialize(value["SpecificConfig"]);
@@ -620,7 +635,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["Area"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.Area` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.Area` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_area = string(value["Area"].GetString());
         m_areaHasBeenSet = true;
@@ -630,7 +645,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["Readonly"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.Readonly` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.Readonly` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_readonly = string(value["Readonly"].GetString());
         m_readonlyHasBeenSet = true;
@@ -640,7 +655,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["OriginPullTimeout"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.OriginPullTimeout` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.OriginPullTimeout` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_originPullTimeout.Deserialize(value["OriginPullTimeout"]);
@@ -657,7 +672,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["AwsPrivateAccess"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.AwsPrivateAccess` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.AwsPrivateAccess` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_awsPrivateAccess.Deserialize(value["AwsPrivateAccess"]);
@@ -674,7 +689,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["SecurityConfig"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.SecurityConfig` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.SecurityConfig` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_securityConfig.Deserialize(value["SecurityConfig"]);
@@ -691,7 +706,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["ImageOptimization"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.ImageOptimization` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.ImageOptimization` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_imageOptimization.Deserialize(value["ImageOptimization"]);
@@ -708,7 +723,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["UserAgentFilter"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.UserAgentFilter` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.UserAgentFilter` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_userAgentFilter.Deserialize(value["UserAgentFilter"]);
@@ -725,7 +740,7 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
     {
         if (!value["AccessControl"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DetailDomain.AccessControl` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.AccessControl` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_accessControl.Deserialize(value["AccessControl"]);
@@ -738,24 +753,291 @@ CoreInternalOutcome DetailDomain::Deserialize(const Value &value)
         m_accessControlHasBeenSet = true;
     }
 
+    if (value.HasMember("Advance") && !value["Advance"].IsNull())
+    {
+        if (!value["Advance"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.Advance` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_advance = string(value["Advance"].GetString());
+        m_advanceHasBeenSet = true;
+    }
+
+    if (value.HasMember("UrlRedirect") && !value["UrlRedirect"].IsNull())
+    {
+        if (!value["UrlRedirect"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.UrlRedirect` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_urlRedirect.Deserialize(value["UrlRedirect"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_urlRedirectHasBeenSet = true;
+    }
+
+    if (value.HasMember("AccessPort") && !value["AccessPort"].IsNull())
+    {
+        if (!value["AccessPort"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.AccessPort` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["AccessPort"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_accessPort.push_back((*itr).GetInt64());
+        }
+        m_accessPortHasBeenSet = true;
+    }
+
+    if (value.HasMember("Tag") && !value["Tag"].IsNull())
+    {
+        if (!value["Tag"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.Tag` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["Tag"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            Tag item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_tag.push_back(item);
+        }
+        m_tagHasBeenSet = true;
+    }
+
+    if (value.HasMember("AdvancedAuthentication") && !value["AdvancedAuthentication"].IsNull())
+    {
+        if (!value["AdvancedAuthentication"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.AdvancedAuthentication` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_advancedAuthentication.Deserialize(value["AdvancedAuthentication"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_advancedAuthenticationHasBeenSet = true;
+    }
+
+    if (value.HasMember("OriginAuthentication") && !value["OriginAuthentication"].IsNull())
+    {
+        if (!value["OriginAuthentication"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.OriginAuthentication` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_originAuthentication.Deserialize(value["OriginAuthentication"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_originAuthenticationHasBeenSet = true;
+    }
+
+    if (value.HasMember("Ipv6Access") && !value["Ipv6Access"].IsNull())
+    {
+        if (!value["Ipv6Access"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.Ipv6Access` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_ipv6Access.Deserialize(value["Ipv6Access"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_ipv6AccessHasBeenSet = true;
+    }
+
+    if (value.HasMember("AdvanceSet") && !value["AdvanceSet"].IsNull())
+    {
+        if (!value["AdvanceSet"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.AdvanceSet` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["AdvanceSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            AdvanceConfig item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_advanceSet.push_back(item);
+        }
+        m_advanceSetHasBeenSet = true;
+    }
+
+    if (value.HasMember("OfflineCache") && !value["OfflineCache"].IsNull())
+    {
+        if (!value["OfflineCache"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.OfflineCache` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_offlineCache.Deserialize(value["OfflineCache"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_offlineCacheHasBeenSet = true;
+    }
+
+    if (value.HasMember("OriginCombine") && !value["OriginCombine"].IsNull())
+    {
+        if (!value["OriginCombine"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.OriginCombine` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_originCombine.Deserialize(value["OriginCombine"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_originCombineHasBeenSet = true;
+    }
+
+    if (value.HasMember("PostMaxSize") && !value["PostMaxSize"].IsNull())
+    {
+        if (!value["PostMaxSize"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.PostMaxSize` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_postMaxSize.Deserialize(value["PostMaxSize"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_postMaxSizeHasBeenSet = true;
+    }
+
+    if (value.HasMember("Quic") && !value["Quic"].IsNull())
+    {
+        if (!value["Quic"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.Quic` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_quic.Deserialize(value["Quic"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_quicHasBeenSet = true;
+    }
+
+    if (value.HasMember("OssPrivateAccess") && !value["OssPrivateAccess"].IsNull())
+    {
+        if (!value["OssPrivateAccess"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.OssPrivateAccess` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_ossPrivateAccess.Deserialize(value["OssPrivateAccess"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_ossPrivateAccessHasBeenSet = true;
+    }
+
+    if (value.HasMember("WebSocket") && !value["WebSocket"].IsNull())
+    {
+        if (!value["WebSocket"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.WebSocket` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_webSocket.Deserialize(value["WebSocket"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_webSocketHasBeenSet = true;
+    }
+
+    if (value.HasMember("RemoteAuthentication") && !value["RemoteAuthentication"].IsNull())
+    {
+        if (!value["RemoteAuthentication"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.RemoteAuthentication` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_remoteAuthentication.Deserialize(value["RemoteAuthentication"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_remoteAuthenticationHasBeenSet = true;
+    }
+
+    if (value.HasMember("ShareCname") && !value["ShareCname"].IsNull())
+    {
+        if (!value["ShareCname"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.ShareCname` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_shareCname.Deserialize(value["ShareCname"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_shareCnameHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void DetailDomain::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DetailDomain::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_resourceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResourceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_resourceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resourceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_appIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AppId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_appId, allocator);
@@ -763,31 +1045,31 @@ void DetailDomain::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_domainHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Domain";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_domain.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_domain.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cnameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Cname";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cname.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cname.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_status.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
     }
 
     if (m_projectIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProjectId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_projectId, allocator);
@@ -795,338 +1077,497 @@ void DetailDomain::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_serviceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_serviceType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_serviceType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_updateTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UpdateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_updateTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_updateTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_originHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Origin";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_origin.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_ipFilterHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IpFilter";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_ipFilter.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_ipFreqLimitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IpFreqLimit";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_ipFreqLimit.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_statusCodeCacheHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StatusCodeCache";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_statusCodeCache.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_compressionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Compression";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_compression.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_bandwidthAlertHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BandwidthAlert";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_bandwidthAlert.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_rangeOriginPullHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RangeOriginPull";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_rangeOriginPull.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_followRedirectHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FollowRedirect";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_followRedirect.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_errorPageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ErrorPage";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_errorPage.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_requestHeaderHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RequestHeader";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_requestHeader.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_responseHeaderHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResponseHeader";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_responseHeader.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_downstreamCappingHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DownstreamCapping";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_downstreamCapping.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_cacheKeyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CacheKey";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_cacheKey.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_responseHeaderCacheHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResponseHeaderCache";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_responseHeaderCache.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_videoSeekHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VideoSeek";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_videoSeek.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_cacheHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Cache";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_cache.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_originPullOptimizationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OriginPullOptimization";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_originPullOptimization.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_httpsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Https";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_https.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_authenticationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Authentication";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_authentication.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_seoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Seo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_seo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_disableHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Disable";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_disable.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_disable.c_str(), allocator).Move(), allocator);
     }
 
     if (m_forceRedirectHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ForceRedirect";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_forceRedirect.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_refererHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Referer";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_referer.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_maxAgeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaxAge";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_maxAge.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_ipv6HasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Ipv6";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_ipv6.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_compatibilityHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Compatibility";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_compatibility.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_specificConfigHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SpecificConfig";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_specificConfig.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_areaHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Area";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_area.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_area.c_str(), allocator).Move(), allocator);
     }
 
     if (m_readonlyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Readonly";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_readonly.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_readonly.c_str(), allocator).Move(), allocator);
     }
 
     if (m_originPullTimeoutHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OriginPullTimeout";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_originPullTimeout.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_awsPrivateAccessHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AwsPrivateAccess";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_awsPrivateAccess.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_securityConfigHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SecurityConfig";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_securityConfig.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_imageOptimizationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ImageOptimization";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_imageOptimization.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_userAgentFilterHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UserAgentFilter";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_userAgentFilter.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_accessControlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AccessControl";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_accessControl.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_advanceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Advance";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_advance.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_urlRedirectHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UrlRedirect";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_urlRedirect.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_accessPortHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AccessPort";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_accessPort.begin(); itr != m_accessPort.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
+        }
+    }
+
+    if (m_tagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tag";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tag.begin(); itr != m_tag.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_advancedAuthenticationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AdvancedAuthentication";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_advancedAuthentication.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_originAuthenticationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OriginAuthentication";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_originAuthentication.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_ipv6AccessHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Ipv6Access";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_ipv6Access.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_advanceSetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AdvanceSet";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_advanceSet.begin(); itr != m_advanceSet.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_offlineCacheHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OfflineCache";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_offlineCache.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_originCombineHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OriginCombine";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_originCombine.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_postMaxSizeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PostMaxSize";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_postMaxSize.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_quicHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Quic";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_quic.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_ossPrivateAccessHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OssPrivateAccess";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_ossPrivateAccess.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_webSocketHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WebSocket";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_webSocket.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_remoteAuthenticationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RemoteAuthentication";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_remoteAuthentication.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_shareCnameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ShareCname";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_shareCname.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -1834,5 +2275,261 @@ void DetailDomain::SetAccessControl(const AccessControl& _accessControl)
 bool DetailDomain::AccessControlHasBeenSet() const
 {
     return m_accessControlHasBeenSet;
+}
+
+string DetailDomain::GetAdvance() const
+{
+    return m_advance;
+}
+
+void DetailDomain::SetAdvance(const string& _advance)
+{
+    m_advance = _advance;
+    m_advanceHasBeenSet = true;
+}
+
+bool DetailDomain::AdvanceHasBeenSet() const
+{
+    return m_advanceHasBeenSet;
+}
+
+UrlRedirect DetailDomain::GetUrlRedirect() const
+{
+    return m_urlRedirect;
+}
+
+void DetailDomain::SetUrlRedirect(const UrlRedirect& _urlRedirect)
+{
+    m_urlRedirect = _urlRedirect;
+    m_urlRedirectHasBeenSet = true;
+}
+
+bool DetailDomain::UrlRedirectHasBeenSet() const
+{
+    return m_urlRedirectHasBeenSet;
+}
+
+vector<int64_t> DetailDomain::GetAccessPort() const
+{
+    return m_accessPort;
+}
+
+void DetailDomain::SetAccessPort(const vector<int64_t>& _accessPort)
+{
+    m_accessPort = _accessPort;
+    m_accessPortHasBeenSet = true;
+}
+
+bool DetailDomain::AccessPortHasBeenSet() const
+{
+    return m_accessPortHasBeenSet;
+}
+
+vector<Tag> DetailDomain::GetTag() const
+{
+    return m_tag;
+}
+
+void DetailDomain::SetTag(const vector<Tag>& _tag)
+{
+    m_tag = _tag;
+    m_tagHasBeenSet = true;
+}
+
+bool DetailDomain::TagHasBeenSet() const
+{
+    return m_tagHasBeenSet;
+}
+
+AdvancedAuthentication DetailDomain::GetAdvancedAuthentication() const
+{
+    return m_advancedAuthentication;
+}
+
+void DetailDomain::SetAdvancedAuthentication(const AdvancedAuthentication& _advancedAuthentication)
+{
+    m_advancedAuthentication = _advancedAuthentication;
+    m_advancedAuthenticationHasBeenSet = true;
+}
+
+bool DetailDomain::AdvancedAuthenticationHasBeenSet() const
+{
+    return m_advancedAuthenticationHasBeenSet;
+}
+
+OriginAuthentication DetailDomain::GetOriginAuthentication() const
+{
+    return m_originAuthentication;
+}
+
+void DetailDomain::SetOriginAuthentication(const OriginAuthentication& _originAuthentication)
+{
+    m_originAuthentication = _originAuthentication;
+    m_originAuthenticationHasBeenSet = true;
+}
+
+bool DetailDomain::OriginAuthenticationHasBeenSet() const
+{
+    return m_originAuthenticationHasBeenSet;
+}
+
+Ipv6Access DetailDomain::GetIpv6Access() const
+{
+    return m_ipv6Access;
+}
+
+void DetailDomain::SetIpv6Access(const Ipv6Access& _ipv6Access)
+{
+    m_ipv6Access = _ipv6Access;
+    m_ipv6AccessHasBeenSet = true;
+}
+
+bool DetailDomain::Ipv6AccessHasBeenSet() const
+{
+    return m_ipv6AccessHasBeenSet;
+}
+
+vector<AdvanceConfig> DetailDomain::GetAdvanceSet() const
+{
+    return m_advanceSet;
+}
+
+void DetailDomain::SetAdvanceSet(const vector<AdvanceConfig>& _advanceSet)
+{
+    m_advanceSet = _advanceSet;
+    m_advanceSetHasBeenSet = true;
+}
+
+bool DetailDomain::AdvanceSetHasBeenSet() const
+{
+    return m_advanceSetHasBeenSet;
+}
+
+OfflineCache DetailDomain::GetOfflineCache() const
+{
+    return m_offlineCache;
+}
+
+void DetailDomain::SetOfflineCache(const OfflineCache& _offlineCache)
+{
+    m_offlineCache = _offlineCache;
+    m_offlineCacheHasBeenSet = true;
+}
+
+bool DetailDomain::OfflineCacheHasBeenSet() const
+{
+    return m_offlineCacheHasBeenSet;
+}
+
+OriginCombine DetailDomain::GetOriginCombine() const
+{
+    return m_originCombine;
+}
+
+void DetailDomain::SetOriginCombine(const OriginCombine& _originCombine)
+{
+    m_originCombine = _originCombine;
+    m_originCombineHasBeenSet = true;
+}
+
+bool DetailDomain::OriginCombineHasBeenSet() const
+{
+    return m_originCombineHasBeenSet;
+}
+
+PostSize DetailDomain::GetPostMaxSize() const
+{
+    return m_postMaxSize;
+}
+
+void DetailDomain::SetPostMaxSize(const PostSize& _postMaxSize)
+{
+    m_postMaxSize = _postMaxSize;
+    m_postMaxSizeHasBeenSet = true;
+}
+
+bool DetailDomain::PostMaxSizeHasBeenSet() const
+{
+    return m_postMaxSizeHasBeenSet;
+}
+
+Quic DetailDomain::GetQuic() const
+{
+    return m_quic;
+}
+
+void DetailDomain::SetQuic(const Quic& _quic)
+{
+    m_quic = _quic;
+    m_quicHasBeenSet = true;
+}
+
+bool DetailDomain::QuicHasBeenSet() const
+{
+    return m_quicHasBeenSet;
+}
+
+OssPrivateAccess DetailDomain::GetOssPrivateAccess() const
+{
+    return m_ossPrivateAccess;
+}
+
+void DetailDomain::SetOssPrivateAccess(const OssPrivateAccess& _ossPrivateAccess)
+{
+    m_ossPrivateAccess = _ossPrivateAccess;
+    m_ossPrivateAccessHasBeenSet = true;
+}
+
+bool DetailDomain::OssPrivateAccessHasBeenSet() const
+{
+    return m_ossPrivateAccessHasBeenSet;
+}
+
+WebSocket DetailDomain::GetWebSocket() const
+{
+    return m_webSocket;
+}
+
+void DetailDomain::SetWebSocket(const WebSocket& _webSocket)
+{
+    m_webSocket = _webSocket;
+    m_webSocketHasBeenSet = true;
+}
+
+bool DetailDomain::WebSocketHasBeenSet() const
+{
+    return m_webSocketHasBeenSet;
+}
+
+RemoteAuthentication DetailDomain::GetRemoteAuthentication() const
+{
+    return m_remoteAuthentication;
+}
+
+void DetailDomain::SetRemoteAuthentication(const RemoteAuthentication& _remoteAuthentication)
+{
+    m_remoteAuthentication = _remoteAuthentication;
+    m_remoteAuthenticationHasBeenSet = true;
+}
+
+bool DetailDomain::RemoteAuthenticationHasBeenSet() const
+{
+    return m_remoteAuthenticationHasBeenSet;
+}
+
+ShareCname DetailDomain::GetShareCname() const
+{
+    return m_shareCname;
+}
+
+void DetailDomain::SetShareCname(const ShareCname& _shareCname)
+{
+    m_shareCname = _shareCname;
+    m_shareCnameHasBeenSet = true;
+}
+
+bool DetailDomain::ShareCnameHasBeenSet() const
+{
+    return m_shareCnameHasBeenSet;
 }
 

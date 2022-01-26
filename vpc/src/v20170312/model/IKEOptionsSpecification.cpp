@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 IKEOptionsSpecification::IKEOptionsSpecification() :
@@ -37,7 +36,7 @@ IKEOptionsSpecification::IKEOptionsSpecification() :
 {
 }
 
-CoreInternalOutcome IKEOptionsSpecification::Deserialize(const Value &value)
+CoreInternalOutcome IKEOptionsSpecification::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -46,7 +45,7 @@ CoreInternalOutcome IKEOptionsSpecification::Deserialize(const Value &value)
     {
         if (!value["PropoEncryAlgorithm"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IKEOptionsSpecification.PropoEncryAlgorithm` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IKEOptionsSpecification.PropoEncryAlgorithm` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_propoEncryAlgorithm = string(value["PropoEncryAlgorithm"].GetString());
         m_propoEncryAlgorithmHasBeenSet = true;
@@ -56,7 +55,7 @@ CoreInternalOutcome IKEOptionsSpecification::Deserialize(const Value &value)
     {
         if (!value["PropoAuthenAlgorithm"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IKEOptionsSpecification.PropoAuthenAlgorithm` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IKEOptionsSpecification.PropoAuthenAlgorithm` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_propoAuthenAlgorithm = string(value["PropoAuthenAlgorithm"].GetString());
         m_propoAuthenAlgorithmHasBeenSet = true;
@@ -66,7 +65,7 @@ CoreInternalOutcome IKEOptionsSpecification::Deserialize(const Value &value)
     {
         if (!value["ExchangeMode"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IKEOptionsSpecification.ExchangeMode` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IKEOptionsSpecification.ExchangeMode` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_exchangeMode = string(value["ExchangeMode"].GetString());
         m_exchangeModeHasBeenSet = true;
@@ -76,7 +75,7 @@ CoreInternalOutcome IKEOptionsSpecification::Deserialize(const Value &value)
     {
         if (!value["LocalIdentity"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IKEOptionsSpecification.LocalIdentity` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IKEOptionsSpecification.LocalIdentity` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_localIdentity = string(value["LocalIdentity"].GetString());
         m_localIdentityHasBeenSet = true;
@@ -86,7 +85,7 @@ CoreInternalOutcome IKEOptionsSpecification::Deserialize(const Value &value)
     {
         if (!value["RemoteIdentity"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IKEOptionsSpecification.RemoteIdentity` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IKEOptionsSpecification.RemoteIdentity` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_remoteIdentity = string(value["RemoteIdentity"].GetString());
         m_remoteIdentityHasBeenSet = true;
@@ -96,7 +95,7 @@ CoreInternalOutcome IKEOptionsSpecification::Deserialize(const Value &value)
     {
         if (!value["LocalAddress"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IKEOptionsSpecification.LocalAddress` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IKEOptionsSpecification.LocalAddress` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_localAddress = string(value["LocalAddress"].GetString());
         m_localAddressHasBeenSet = true;
@@ -106,7 +105,7 @@ CoreInternalOutcome IKEOptionsSpecification::Deserialize(const Value &value)
     {
         if (!value["RemoteAddress"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IKEOptionsSpecification.RemoteAddress` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IKEOptionsSpecification.RemoteAddress` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_remoteAddress = string(value["RemoteAddress"].GetString());
         m_remoteAddressHasBeenSet = true;
@@ -116,7 +115,7 @@ CoreInternalOutcome IKEOptionsSpecification::Deserialize(const Value &value)
     {
         if (!value["LocalFqdnName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IKEOptionsSpecification.LocalFqdnName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IKEOptionsSpecification.LocalFqdnName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_localFqdnName = string(value["LocalFqdnName"].GetString());
         m_localFqdnNameHasBeenSet = true;
@@ -126,7 +125,7 @@ CoreInternalOutcome IKEOptionsSpecification::Deserialize(const Value &value)
     {
         if (!value["RemoteFqdnName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IKEOptionsSpecification.RemoteFqdnName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IKEOptionsSpecification.RemoteFqdnName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_remoteFqdnName = string(value["RemoteFqdnName"].GetString());
         m_remoteFqdnNameHasBeenSet = true;
@@ -136,7 +135,7 @@ CoreInternalOutcome IKEOptionsSpecification::Deserialize(const Value &value)
     {
         if (!value["DhGroupName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IKEOptionsSpecification.DhGroupName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IKEOptionsSpecification.DhGroupName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_dhGroupName = string(value["DhGroupName"].GetString());
         m_dhGroupNameHasBeenSet = true;
@@ -146,7 +145,7 @@ CoreInternalOutcome IKEOptionsSpecification::Deserialize(const Value &value)
     {
         if (!value["IKESaLifetimeSeconds"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `IKEOptionsSpecification.IKESaLifetimeSeconds` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IKEOptionsSpecification.IKESaLifetimeSeconds` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_iKESaLifetimeSeconds = value["IKESaLifetimeSeconds"].GetUint64();
         m_iKESaLifetimeSecondsHasBeenSet = true;
@@ -156,7 +155,7 @@ CoreInternalOutcome IKEOptionsSpecification::Deserialize(const Value &value)
     {
         if (!value["IKEVersion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IKEOptionsSpecification.IKEVersion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IKEOptionsSpecification.IKEVersion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_iKEVersion = string(value["IKEVersion"].GetString());
         m_iKEVersionHasBeenSet = true;
@@ -166,92 +165,92 @@ CoreInternalOutcome IKEOptionsSpecification::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void IKEOptionsSpecification::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void IKEOptionsSpecification::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_propoEncryAlgorithmHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PropoEncryAlgorithm";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_propoEncryAlgorithm.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_propoEncryAlgorithm.c_str(), allocator).Move(), allocator);
     }
 
     if (m_propoAuthenAlgorithmHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PropoAuthenAlgorithm";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_propoAuthenAlgorithm.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_propoAuthenAlgorithm.c_str(), allocator).Move(), allocator);
     }
 
     if (m_exchangeModeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ExchangeMode";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_exchangeMode.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_exchangeMode.c_str(), allocator).Move(), allocator);
     }
 
     if (m_localIdentityHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LocalIdentity";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_localIdentity.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_localIdentity.c_str(), allocator).Move(), allocator);
     }
 
     if (m_remoteIdentityHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RemoteIdentity";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_remoteIdentity.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_remoteIdentity.c_str(), allocator).Move(), allocator);
     }
 
     if (m_localAddressHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LocalAddress";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_localAddress.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_localAddress.c_str(), allocator).Move(), allocator);
     }
 
     if (m_remoteAddressHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RemoteAddress";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_remoteAddress.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_remoteAddress.c_str(), allocator).Move(), allocator);
     }
 
     if (m_localFqdnNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LocalFqdnName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_localFqdnName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_localFqdnName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_remoteFqdnNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RemoteFqdnName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_remoteFqdnName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_remoteFqdnName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_dhGroupNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DhGroupName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_dhGroupName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_dhGroupName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_iKESaLifetimeSecondsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IKESaLifetimeSeconds";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_iKESaLifetimeSeconds, allocator);
@@ -259,10 +258,10 @@ void IKEOptionsSpecification::ToJsonObject(Value &value, Document::AllocatorType
 
     if (m_iKEVersionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IKEVersion";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_iKEVersion.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_iKEVersion.c_str(), allocator).Move(), allocator);
     }
 
 }

@@ -399,6 +399,50 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool CbsEncryptHasBeenSet() const;
 
+                    /**
+                     * 获取Custom application role
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @return ApplicationRole Custom application role
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetApplicationRole() const;
+
+                    /**
+                     * 设置Custom application role
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @param ApplicationRole Custom application role
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetApplicationRole(const std::string& _applicationRole);
+
+                    /**
+                     * 判断参数 ApplicationRole 是否已赋值
+                     * @return ApplicationRole 是否已赋值
+                     */
+                    bool ApplicationRoleHasBeenSet() const;
+
+                    /**
+                     * 获取Security groups
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @return SecurityGroups Security groups
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<std::string> GetSecurityGroups() const;
+
+                    /**
+                     * 设置Security groups
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @param SecurityGroups Security groups
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetSecurityGroups(const std::vector<std::string>& _securityGroups);
+
+                    /**
+                     * 判断参数 SecurityGroups 是否已赋值
+                     * @return SecurityGroups 是否已赋值
+                     */
+                    bool SecurityGroupsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -512,6 +556,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_cbsEncrypt;
                     bool m_cbsEncryptHasBeenSet;
+
+                    /**
+                     * Custom application role
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_applicationRole;
+                    bool m_applicationRoleHasBeenSet;
+
+                    /**
+                     * Security groups
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<std::string> m_securityGroups;
+                    bool m_securityGroupsHasBeenSet;
 
                 };
             }

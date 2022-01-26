@@ -1459,6 +1459,49 @@ LiveClient::DescribeAllStreamPlayInfoListOutcomeCallable LiveClient::DescribeAll
     return task->get_future();
 }
 
+LiveClient::DescribeAreaBillBandwidthAndFluxListOutcome LiveClient::DescribeAreaBillBandwidthAndFluxList(const DescribeAreaBillBandwidthAndFluxListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAreaBillBandwidthAndFluxList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAreaBillBandwidthAndFluxListResponse rsp = DescribeAreaBillBandwidthAndFluxListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAreaBillBandwidthAndFluxListOutcome(rsp);
+        else
+            return DescribeAreaBillBandwidthAndFluxListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAreaBillBandwidthAndFluxListOutcome(outcome.GetError());
+    }
+}
+
+void LiveClient::DescribeAreaBillBandwidthAndFluxListAsync(const DescribeAreaBillBandwidthAndFluxListRequest& request, const DescribeAreaBillBandwidthAndFluxListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeAreaBillBandwidthAndFluxList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+LiveClient::DescribeAreaBillBandwidthAndFluxListOutcomeCallable LiveClient::DescribeAreaBillBandwidthAndFluxListCallable(const DescribeAreaBillBandwidthAndFluxListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeAreaBillBandwidthAndFluxListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeAreaBillBandwidthAndFluxList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 LiveClient::DescribeBillBandwidthAndFluxListOutcome LiveClient::DescribeBillBandwidthAndFluxList(const DescribeBillBandwidthAndFluxListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeBillBandwidthAndFluxList");
@@ -1538,6 +1581,49 @@ LiveClient::DescribeConcurrentRecordStreamNumOutcomeCallable LiveClient::Describ
         [this, request]()
         {
             return this->DescribeConcurrentRecordStreamNum(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+LiveClient::DescribeDeliverBandwidthListOutcome LiveClient::DescribeDeliverBandwidthList(const DescribeDeliverBandwidthListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDeliverBandwidthList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDeliverBandwidthListResponse rsp = DescribeDeliverBandwidthListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDeliverBandwidthListOutcome(rsp);
+        else
+            return DescribeDeliverBandwidthListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDeliverBandwidthListOutcome(outcome.GetError());
+    }
+}
+
+void LiveClient::DescribeDeliverBandwidthListAsync(const DescribeDeliverBandwidthListRequest& request, const DescribeDeliverBandwidthListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDeliverBandwidthList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+LiveClient::DescribeDeliverBandwidthListOutcomeCallable LiveClient::DescribeDeliverBandwidthListCallable(const DescribeDeliverBandwidthListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDeliverBandwidthListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDeliverBandwidthList(request);
         }
     );
 
@@ -2011,6 +2097,49 @@ LiveClient::DescribeLiveDomainPlayInfoListOutcomeCallable LiveClient::DescribeLi
         [this, request]()
         {
             return this->DescribeLiveDomainPlayInfoList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+LiveClient::DescribeLiveDomainRefererOutcome LiveClient::DescribeLiveDomainReferer(const DescribeLiveDomainRefererRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeLiveDomainReferer");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeLiveDomainRefererResponse rsp = DescribeLiveDomainRefererResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeLiveDomainRefererOutcome(rsp);
+        else
+            return DescribeLiveDomainRefererOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeLiveDomainRefererOutcome(outcome.GetError());
+    }
+}
+
+void LiveClient::DescribeLiveDomainRefererAsync(const DescribeLiveDomainRefererRequest& request, const DescribeLiveDomainRefererAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeLiveDomainReferer(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+LiveClient::DescribeLiveDomainRefererOutcomeCallable LiveClient::DescribeLiveDomainRefererCallable(const DescribeLiveDomainRefererRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeLiveDomainRefererOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeLiveDomainReferer(request);
         }
     );
 
@@ -2835,6 +2964,49 @@ LiveClient::DescribeLiveTranscodeTemplatesOutcomeCallable LiveClient::DescribeLi
     return task->get_future();
 }
 
+LiveClient::DescribeLiveTranscodeTotalInfoOutcome LiveClient::DescribeLiveTranscodeTotalInfo(const DescribeLiveTranscodeTotalInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeLiveTranscodeTotalInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeLiveTranscodeTotalInfoResponse rsp = DescribeLiveTranscodeTotalInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeLiveTranscodeTotalInfoOutcome(rsp);
+        else
+            return DescribeLiveTranscodeTotalInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeLiveTranscodeTotalInfoOutcome(outcome.GetError());
+    }
+}
+
+void LiveClient::DescribeLiveTranscodeTotalInfoAsync(const DescribeLiveTranscodeTotalInfoRequest& request, const DescribeLiveTranscodeTotalInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeLiveTranscodeTotalInfo(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+LiveClient::DescribeLiveTranscodeTotalInfoOutcomeCallable LiveClient::DescribeLiveTranscodeTotalInfoCallable(const DescribeLiveTranscodeTotalInfoRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeLiveTranscodeTotalInfoOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeLiveTranscodeTotalInfo(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 LiveClient::DescribeLiveWatermarkOutcome LiveClient::DescribeLiveWatermark(const DescribeLiveWatermarkRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeLiveWatermark");
@@ -3351,6 +3523,49 @@ LiveClient::DescribeTopClientIpSumInfoListOutcomeCallable LiveClient::DescribeTo
     return task->get_future();
 }
 
+LiveClient::DescribeUploadStreamNumsOutcome LiveClient::DescribeUploadStreamNums(const DescribeUploadStreamNumsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeUploadStreamNums");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeUploadStreamNumsResponse rsp = DescribeUploadStreamNumsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeUploadStreamNumsOutcome(rsp);
+        else
+            return DescribeUploadStreamNumsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeUploadStreamNumsOutcome(outcome.GetError());
+    }
+}
+
+void LiveClient::DescribeUploadStreamNumsAsync(const DescribeUploadStreamNumsRequest& request, const DescribeUploadStreamNumsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeUploadStreamNums(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+LiveClient::DescribeUploadStreamNumsOutcomeCallable LiveClient::DescribeUploadStreamNumsCallable(const DescribeUploadStreamNumsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeUploadStreamNumsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeUploadStreamNums(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 LiveClient::DescribeVisitTopSumInfoListOutcome LiveClient::DescribeVisitTopSumInfoList(const DescribeVisitTopSumInfoListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeVisitTopSumInfoList");
@@ -3688,6 +3903,49 @@ LiveClient::ModifyLiveDomainCertOutcomeCallable LiveClient::ModifyLiveDomainCert
         [this, request]()
         {
             return this->ModifyLiveDomainCert(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+LiveClient::ModifyLiveDomainRefererOutcome LiveClient::ModifyLiveDomainReferer(const ModifyLiveDomainRefererRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyLiveDomainReferer");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyLiveDomainRefererResponse rsp = ModifyLiveDomainRefererResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyLiveDomainRefererOutcome(rsp);
+        else
+            return ModifyLiveDomainRefererOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyLiveDomainRefererOutcome(outcome.GetError());
+    }
+}
+
+void LiveClient::ModifyLiveDomainRefererAsync(const ModifyLiveDomainRefererRequest& request, const ModifyLiveDomainRefererAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyLiveDomainReferer(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+LiveClient::ModifyLiveDomainRefererOutcomeCallable LiveClient::ModifyLiveDomainRefererCallable(const ModifyLiveDomainRefererRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyLiveDomainRefererOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyLiveDomainReferer(request);
         }
     );
 

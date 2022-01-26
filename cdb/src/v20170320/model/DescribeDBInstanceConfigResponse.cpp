@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeDBInstanceConfigResponse::DescribeDBInstanceConfigResponse() :
@@ -29,26 +28,27 @@ DescribeDBInstanceConfigResponse::DescribeDBInstanceConfigResponse() :
     m_deployModeHasBeenSet(false),
     m_zoneHasBeenSet(false),
     m_slaveConfigHasBeenSet(false),
-    m_backupConfigHasBeenSet(false)
+    m_backupConfigHasBeenSet(false),
+    m_switchedHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome DescribeDBInstanceConfigResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -59,11 +59,11 @@ CoreInternalOutcome DescribeDBInstanceConfigResponse::Deserialize(const string &
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -71,7 +71,7 @@ CoreInternalOutcome DescribeDBInstanceConfigResponse::Deserialize(const string &
     {
         if (!rsp["ProtectMode"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ProtectMode` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProtectMode` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_protectMode = rsp["ProtectMode"].GetInt64();
         m_protectModeHasBeenSet = true;
@@ -81,7 +81,7 @@ CoreInternalOutcome DescribeDBInstanceConfigResponse::Deserialize(const string &
     {
         if (!rsp["DeployMode"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DeployMode` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DeployMode` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_deployMode = rsp["DeployMode"].GetInt64();
         m_deployModeHasBeenSet = true;
@@ -91,7 +91,7 @@ CoreInternalOutcome DescribeDBInstanceConfigResponse::Deserialize(const string &
     {
         if (!rsp["Zone"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Zone` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Zone` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_zone = string(rsp["Zone"].GetString());
         m_zoneHasBeenSet = true;
@@ -101,7 +101,7 @@ CoreInternalOutcome DescribeDBInstanceConfigResponse::Deserialize(const string &
     {
         if (!rsp["SlaveConfig"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `SlaveConfig` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SlaveConfig` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_slaveConfig.Deserialize(rsp["SlaveConfig"]);
@@ -118,7 +118,7 @@ CoreInternalOutcome DescribeDBInstanceConfigResponse::Deserialize(const string &
     {
         if (!rsp["BackupConfig"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `BackupConfig` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupConfig` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_backupConfig.Deserialize(rsp["BackupConfig"]);
@@ -131,8 +131,85 @@ CoreInternalOutcome DescribeDBInstanceConfigResponse::Deserialize(const string &
         m_backupConfigHasBeenSet = true;
     }
 
+    if (rsp.HasMember("Switched") && !rsp["Switched"].IsNull())
+    {
+        if (!rsp["Switched"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `Switched` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_switched = rsp["Switched"].GetBool();
+        m_switchedHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeDBInstanceConfigResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_protectModeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProtectMode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_protectMode, allocator);
+    }
+
+    if (m_deployModeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DeployMode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_deployMode, allocator);
+    }
+
+    if (m_zoneHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Zone";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_zone.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_slaveConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SlaveConfig";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_slaveConfig.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_backupConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BackupConfig";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_backupConfig.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_switchedHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Switched";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_switched, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 
@@ -184,6 +261,16 @@ BackupConfig DescribeDBInstanceConfigResponse::GetBackupConfig() const
 bool DescribeDBInstanceConfigResponse::BackupConfigHasBeenSet() const
 {
     return m_backupConfigHasBeenSet;
+}
+
+bool DescribeDBInstanceConfigResponse::GetSwitched() const
+{
+    return m_switched;
+}
+
+bool DescribeDBInstanceConfigResponse::SwitchedHasBeenSet() const
+{
+    return m_switchedHasBeenSet;
 }
 
 

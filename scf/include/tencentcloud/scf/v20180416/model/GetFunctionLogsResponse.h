@@ -42,6 +42,7 @@ namespace TencentCloud
                     GetFunctionLogsResponse();
                     ~GetFunctionLogsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -69,8 +70,8 @@ namespace TencentCloud
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取Parameter on the log service page
-                     * @return SearchContext Parameter on the log service page
+                     * 获取This field is disused.
+                     * @return SearchContext This field is disused.
                      */
                     LogSearchContext GetSearchContext() const;
 
@@ -95,7 +96,7 @@ namespace TencentCloud
                     bool m_dataHasBeenSet;
 
                     /**
-                     * Parameter on the log service page
+                     * This field is disused.
                      */
                     LogSearchContext m_searchContext;
                     bool m_searchContextHasBeenSet;

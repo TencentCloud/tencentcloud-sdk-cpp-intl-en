@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 RuleCheckParams::RuleCheckParams() :
@@ -27,11 +26,14 @@ RuleCheckParams::RuleCheckParams() :
     m_pathHasBeenSet(false),
     m_methodHasBeenSet(false),
     m_statusCodeHasBeenSet(false),
-    m_domainHasBeenSet(false)
+    m_domainHasBeenSet(false),
+    m_failedCountInterHasBeenSet(false),
+    m_failedThresholdHasBeenSet(false),
+    m_blockInterHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome RuleCheckParams::Deserialize(const Value &value)
+CoreInternalOutcome RuleCheckParams::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +42,7 @@ CoreInternalOutcome RuleCheckParams::Deserialize(const Value &value)
     {
         if (!value["DelayLoop"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `RuleCheckParams.DelayLoop` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RuleCheckParams.DelayLoop` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_delayLoop = value["DelayLoop"].GetUint64();
         m_delayLoopHasBeenSet = true;
@@ -50,7 +52,7 @@ CoreInternalOutcome RuleCheckParams::Deserialize(const Value &value)
     {
         if (!value["ConnectTimeout"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `RuleCheckParams.ConnectTimeout` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RuleCheckParams.ConnectTimeout` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_connectTimeout = value["ConnectTimeout"].GetUint64();
         m_connectTimeoutHasBeenSet = true;
@@ -60,7 +62,7 @@ CoreInternalOutcome RuleCheckParams::Deserialize(const Value &value)
     {
         if (!value["Path"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RuleCheckParams.Path` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RuleCheckParams.Path` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_path = string(value["Path"].GetString());
         m_pathHasBeenSet = true;
@@ -70,7 +72,7 @@ CoreInternalOutcome RuleCheckParams::Deserialize(const Value &value)
     {
         if (!value["Method"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RuleCheckParams.Method` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RuleCheckParams.Method` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_method = string(value["Method"].GetString());
         m_methodHasBeenSet = true;
@@ -79,10 +81,10 @@ CoreInternalOutcome RuleCheckParams::Deserialize(const Value &value)
     if (value.HasMember("StatusCode") && !value["StatusCode"].IsNull())
     {
         if (!value["StatusCode"].IsArray())
-            return CoreInternalOutcome(Error("response `RuleCheckParams.StatusCode` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `RuleCheckParams.StatusCode` is not array type"));
 
-        const Value &tmpValue = value["StatusCode"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["StatusCode"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_statusCode.push_back((*itr).GetUint64());
         }
@@ -93,22 +95,52 @@ CoreInternalOutcome RuleCheckParams::Deserialize(const Value &value)
     {
         if (!value["Domain"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RuleCheckParams.Domain` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RuleCheckParams.Domain` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_domain = string(value["Domain"].GetString());
         m_domainHasBeenSet = true;
+    }
+
+    if (value.HasMember("FailedCountInter") && !value["FailedCountInter"].IsNull())
+    {
+        if (!value["FailedCountInter"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `RuleCheckParams.FailedCountInter` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_failedCountInter = value["FailedCountInter"].GetUint64();
+        m_failedCountInterHasBeenSet = true;
+    }
+
+    if (value.HasMember("FailedThreshold") && !value["FailedThreshold"].IsNull())
+    {
+        if (!value["FailedThreshold"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `RuleCheckParams.FailedThreshold` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_failedThreshold = value["FailedThreshold"].GetUint64();
+        m_failedThresholdHasBeenSet = true;
+    }
+
+    if (value.HasMember("BlockInter") && !value["BlockInter"].IsNull())
+    {
+        if (!value["BlockInter"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `RuleCheckParams.BlockInter` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_blockInter = value["BlockInter"].GetUint64();
+        m_blockInterHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void RuleCheckParams::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void RuleCheckParams::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_delayLoopHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DelayLoop";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_delayLoop, allocator);
@@ -116,7 +148,7 @@ void RuleCheckParams::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_connectTimeoutHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ConnectTimeout";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_connectTimeout, allocator);
@@ -124,39 +156,63 @@ void RuleCheckParams::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_pathHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Path";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_path.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_path.c_str(), allocator).Move(), allocator);
     }
 
     if (m_methodHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Method";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_method.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_method.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StatusCode";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_statusCode.begin(); itr != m_statusCode.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetUint64(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetUint64(*itr), allocator);
         }
     }
 
     if (m_domainHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Domain";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_domain.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_domain.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_failedCountInterHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FailedCountInter";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_failedCountInter, allocator);
+    }
+
+    if (m_failedThresholdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FailedThreshold";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_failedThreshold, allocator);
+    }
+
+    if (m_blockInterHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BlockInter";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_blockInter, allocator);
     }
 
 }
@@ -256,5 +312,53 @@ void RuleCheckParams::SetDomain(const string& _domain)
 bool RuleCheckParams::DomainHasBeenSet() const
 {
     return m_domainHasBeenSet;
+}
+
+uint64_t RuleCheckParams::GetFailedCountInter() const
+{
+    return m_failedCountInter;
+}
+
+void RuleCheckParams::SetFailedCountInter(const uint64_t& _failedCountInter)
+{
+    m_failedCountInter = _failedCountInter;
+    m_failedCountInterHasBeenSet = true;
+}
+
+bool RuleCheckParams::FailedCountInterHasBeenSet() const
+{
+    return m_failedCountInterHasBeenSet;
+}
+
+uint64_t RuleCheckParams::GetFailedThreshold() const
+{
+    return m_failedThreshold;
+}
+
+void RuleCheckParams::SetFailedThreshold(const uint64_t& _failedThreshold)
+{
+    m_failedThreshold = _failedThreshold;
+    m_failedThresholdHasBeenSet = true;
+}
+
+bool RuleCheckParams::FailedThresholdHasBeenSet() const
+{
+    return m_failedThresholdHasBeenSet;
+}
+
+uint64_t RuleCheckParams::GetBlockInter() const
+{
+    return m_blockInter;
+}
+
+void RuleCheckParams::SetBlockInter(const uint64_t& _blockInter)
+{
+    m_blockInter = _blockInter;
+    m_blockInterHasBeenSet = true;
+}
+
+bool RuleCheckParams::BlockInterHasBeenSet() const
+{
+    return m_blockInterHasBeenSet;
 }
 

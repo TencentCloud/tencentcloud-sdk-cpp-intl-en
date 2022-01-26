@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Yunjing::V20180228::Model;
-using namespace rapidjson;
 using namespace std;
 
 Vul::Vul() :
@@ -31,7 +30,7 @@ Vul::Vul() :
 {
 }
 
-CoreInternalOutcome Vul::Deserialize(const Value &value)
+CoreInternalOutcome Vul::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome Vul::Deserialize(const Value &value)
     {
         if (!value["VulId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Vul.VulId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Vul.VulId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_vulId = value["VulId"].GetUint64();
         m_vulIdHasBeenSet = true;
@@ -50,7 +49,7 @@ CoreInternalOutcome Vul::Deserialize(const Value &value)
     {
         if (!value["VulName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Vul.VulName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Vul.VulName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vulName = string(value["VulName"].GetString());
         m_vulNameHasBeenSet = true;
@@ -60,7 +59,7 @@ CoreInternalOutcome Vul::Deserialize(const Value &value)
     {
         if (!value["VulLevel"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Vul.VulLevel` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Vul.VulLevel` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vulLevel = string(value["VulLevel"].GetString());
         m_vulLevelHasBeenSet = true;
@@ -70,7 +69,7 @@ CoreInternalOutcome Vul::Deserialize(const Value &value)
     {
         if (!value["LastScanTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Vul.LastScanTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Vul.LastScanTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_lastScanTime = string(value["LastScanTime"].GetString());
         m_lastScanTimeHasBeenSet = true;
@@ -80,7 +79,7 @@ CoreInternalOutcome Vul::Deserialize(const Value &value)
     {
         if (!value["ImpactedHostNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Vul.ImpactedHostNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Vul.ImpactedHostNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_impactedHostNum = value["ImpactedHostNum"].GetUint64();
         m_impactedHostNumHasBeenSet = true;
@@ -90,7 +89,7 @@ CoreInternalOutcome Vul::Deserialize(const Value &value)
     {
         if (!value["VulStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Vul.VulStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Vul.VulStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vulStatus = string(value["VulStatus"].GetString());
         m_vulStatusHasBeenSet = true;
@@ -100,12 +99,12 @@ CoreInternalOutcome Vul::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Vul::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Vul::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_vulIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VulId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_vulId, allocator);
@@ -113,31 +112,31 @@ void Vul::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
 
     if (m_vulNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VulName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vulName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vulName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vulLevelHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VulLevel";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vulLevel.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vulLevel.c_str(), allocator).Move(), allocator);
     }
 
     if (m_lastScanTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LastScanTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_lastScanTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_lastScanTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_impactedHostNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ImpactedHostNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_impactedHostNum, allocator);
@@ -145,10 +144,10 @@ void Vul::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
 
     if (m_vulStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VulStatus";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vulStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vulStatus.c_str(), allocator).Move(), allocator);
     }
 
 }

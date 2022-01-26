@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 AdaptiveDynamicStreamingTaskInput::AdaptiveDynamicStreamingTaskInput() :
@@ -31,7 +30,7 @@ AdaptiveDynamicStreamingTaskInput::AdaptiveDynamicStreamingTaskInput() :
 {
 }
 
-CoreInternalOutcome AdaptiveDynamicStreamingTaskInput::Deserialize(const Value &value)
+CoreInternalOutcome AdaptiveDynamicStreamingTaskInput::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome AdaptiveDynamicStreamingTaskInput::Deserialize(const Value &
     {
         if (!value["Definition"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AdaptiveDynamicStreamingTaskInput.Definition` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingTaskInput.Definition` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_definition = value["Definition"].GetUint64();
         m_definitionHasBeenSet = true;
@@ -49,10 +48,10 @@ CoreInternalOutcome AdaptiveDynamicStreamingTaskInput::Deserialize(const Value &
     if (value.HasMember("WatermarkSet") && !value["WatermarkSet"].IsNull())
     {
         if (!value["WatermarkSet"].IsArray())
-            return CoreInternalOutcome(Error("response `AdaptiveDynamicStreamingTaskInput.WatermarkSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingTaskInput.WatermarkSet` is not array type"));
 
-        const Value &tmpValue = value["WatermarkSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["WatermarkSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             WatermarkInput item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -70,7 +69,7 @@ CoreInternalOutcome AdaptiveDynamicStreamingTaskInput::Deserialize(const Value &
     {
         if (!value["OutputStorage"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AdaptiveDynamicStreamingTaskInput.OutputStorage` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingTaskInput.OutputStorage` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_outputStorage.Deserialize(value["OutputStorage"]);
@@ -87,7 +86,7 @@ CoreInternalOutcome AdaptiveDynamicStreamingTaskInput::Deserialize(const Value &
     {
         if (!value["OutputObjectPath"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AdaptiveDynamicStreamingTaskInput.OutputObjectPath` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingTaskInput.OutputObjectPath` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_outputObjectPath = string(value["OutputObjectPath"].GetString());
         m_outputObjectPathHasBeenSet = true;
@@ -97,7 +96,7 @@ CoreInternalOutcome AdaptiveDynamicStreamingTaskInput::Deserialize(const Value &
     {
         if (!value["SubStreamObjectName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AdaptiveDynamicStreamingTaskInput.SubStreamObjectName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingTaskInput.SubStreamObjectName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_subStreamObjectName = string(value["SubStreamObjectName"].GetString());
         m_subStreamObjectNameHasBeenSet = true;
@@ -107,7 +106,7 @@ CoreInternalOutcome AdaptiveDynamicStreamingTaskInput::Deserialize(const Value &
     {
         if (!value["SegmentObjectName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AdaptiveDynamicStreamingTaskInput.SegmentObjectName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingTaskInput.SegmentObjectName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_segmentObjectName = string(value["SegmentObjectName"].GetString());
         m_segmentObjectNameHasBeenSet = true;
@@ -117,12 +116,12 @@ CoreInternalOutcome AdaptiveDynamicStreamingTaskInput::Deserialize(const Value &
     return CoreInternalOutcome(true);
 }
 
-void AdaptiveDynamicStreamingTaskInput::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AdaptiveDynamicStreamingTaskInput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_definitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Definition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_definition, allocator);
@@ -130,50 +129,50 @@ void AdaptiveDynamicStreamingTaskInput::ToJsonObject(Value &value, Document::All
 
     if (m_watermarkSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "WatermarkSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_watermarkSet.begin(); itr != m_watermarkSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_outputStorageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OutputStorage";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_outputStorage.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_outputObjectPathHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OutputObjectPath";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_outputObjectPath.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_outputObjectPath.c_str(), allocator).Move(), allocator);
     }
 
     if (m_subStreamObjectNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubStreamObjectName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_subStreamObjectName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_subStreamObjectName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_segmentObjectNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SegmentObjectName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_segmentObjectName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_segmentObjectName.c_str(), allocator).Move(), allocator);
     }
 
 }

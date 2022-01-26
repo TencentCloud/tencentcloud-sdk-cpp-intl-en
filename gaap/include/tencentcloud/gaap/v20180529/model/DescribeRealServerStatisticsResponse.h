@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/gaap/v20180529/model/StatisticsDataInfo.h>
+#include <tencentcloud/gaap/v20180529/model/MetricStatisticsInfo.h>
 
 
 namespace TencentCloud
@@ -41,11 +42,12 @@ namespace TencentCloud
                     DescribeRealServerStatisticsResponse();
                     ~DescribeRealServerStatisticsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Origin server status statistics
-                     * @return StatisticsData Origin server status statistics
+                     * 获取Origin server status statistics of specified listener
+                     * @return StatisticsData Origin server status statistics of specified listener
                      */
                     std::vector<StatisticsDataInfo> GetStatisticsData() const;
 
@@ -55,13 +57,31 @@ namespace TencentCloud
                      */
                     bool StatisticsDataHasBeenSet() const;
 
+                    /**
+                     * 获取Status statistics of multiple origin servers
+                     * @return RsStatisticsData Status statistics of multiple origin servers
+                     */
+                    std::vector<MetricStatisticsInfo> GetRsStatisticsData() const;
+
+                    /**
+                     * 判断参数 RsStatisticsData 是否已赋值
+                     * @return RsStatisticsData 是否已赋值
+                     */
+                    bool RsStatisticsDataHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Origin server status statistics
+                     * Origin server status statistics of specified listener
                      */
                     std::vector<StatisticsDataInfo> m_statisticsData;
                     bool m_statisticsDataHasBeenSet;
+
+                    /**
+                     * Status statistics of multiple origin servers
+                     */
+                    std::vector<MetricStatisticsInfo> m_rsStatisticsData;
+                    bool m_rsStatisticsDataHasBeenSet;
 
                 };
             }

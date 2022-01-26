@@ -117,14 +117,14 @@ namespace TencentCloud
                     bool SessionExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners.
-                     * @return HealthCheck Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners.
+                     * 获取Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
+                     * @return HealthCheck Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
                      */
                     HealthCheck GetHealthCheck() const;
 
                     /**
-                     * 设置Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners.
-                     * @param HealthCheck Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners.
+                     * 设置Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
+                     * @param HealthCheck Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
                      */
                     void SetHealthCheck(const HealthCheck& _healthCheck);
 
@@ -135,14 +135,14 @@ namespace TencentCloud
                     bool HealthCheckHasBeenSet() const;
 
                     /**
-                     * 获取Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
-                     * @return Certificate Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
+                     * 获取Certificate information. This parameter is applicable only to HTTPS and TCP_SSL listeners.
+                     * @return Certificate Certificate information. This parameter is applicable only to HTTPS and TCP_SSL listeners.
                      */
                     CertificateInput GetCertificate() const;
 
                     /**
-                     * 设置Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
-                     * @param Certificate Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
+                     * 设置Certificate information. This parameter is applicable only to HTTPS and TCP_SSL listeners.
+                     * @param Certificate Certificate information. This parameter is applicable only to HTTPS and TCP_SSL listeners.
                      */
                     void SetCertificate(const CertificateInput& _certificate);
 
@@ -192,6 +192,60 @@ They represent weighted round robin and least connections, respectively. Default
                      */
                     bool SniSwitchHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
+                     * @return KeepaliveEnable Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
+                     */
+                    int64_t GetKeepaliveEnable() const;
+
+                    /**
+                     * 设置Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
+                     * @param KeepaliveEnable Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
+                     */
+                    void SetKeepaliveEnable(const int64_t& _keepaliveEnable);
+
+                    /**
+                     * 判断参数 KeepaliveEnable 是否已赋值
+                     * @return KeepaliveEnable 是否已赋值
+                     */
+                    bool KeepaliveEnableHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+                     * @return DeregisterTargetRst Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+                     */
+                    bool GetDeregisterTargetRst() const;
+
+                    /**
+                     * 设置Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+                     * @param DeregisterTargetRst Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+                     */
+                    void SetDeregisterTargetRst(const bool& _deregisterTargetRst);
+
+                    /**
+                     * 判断参数 DeregisterTargetRst 是否已赋值
+                     * @return DeregisterTargetRst 是否已赋值
+                     */
+                    bool DeregisterTargetRstHasBeenSet() const;
+
+                    /**
+                     * 获取Session persistence type. `NORMAL`: default session persistence type (L4/L7 session persistence); `QUIC_CID`: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners.
+                     * @return SessionType Session persistence type. `NORMAL`: default session persistence type (L4/L7 session persistence); `QUIC_CID`: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners.
+                     */
+                    std::string GetSessionType() const;
+
+                    /**
+                     * 设置Session persistence type. `NORMAL`: default session persistence type (L4/L7 session persistence); `QUIC_CID`: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners.
+                     * @param SessionType Session persistence type. `NORMAL`: default session persistence type (L4/L7 session persistence); `QUIC_CID`: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners.
+                     */
+                    void SetSessionType(const std::string& _sessionType);
+
+                    /**
+                     * 判断参数 SessionType 是否已赋值
+                     * @return SessionType 是否已赋值
+                     */
+                    bool SessionTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -219,13 +273,13 @@ They represent weighted round robin and least connections, respectively. Default
                     bool m_sessionExpireTimeHasBeenSet;
 
                     /**
-                     * Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners.
+                     * Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
                      */
                     HealthCheck m_healthCheck;
                     bool m_healthCheckHasBeenSet;
 
                     /**
-                     * Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
+                     * Certificate information. This parameter is applicable only to HTTPS and TCP_SSL listeners.
                      */
                     CertificateInput m_certificate;
                     bool m_certificateHasBeenSet;
@@ -242,6 +296,24 @@ They represent weighted round robin and least connections, respectively. Default
                      */
                     int64_t m_sniSwitch;
                     bool m_sniSwitchHasBeenSet;
+
+                    /**
+                     * Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
+                     */
+                    int64_t m_keepaliveEnable;
+                    bool m_keepaliveEnableHasBeenSet;
+
+                    /**
+                     * Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+                     */
+                    bool m_deregisterTargetRst;
+                    bool m_deregisterTargetRstHasBeenSet;
+
+                    /**
+                     * Session persistence type. `NORMAL`: default session persistence type (L4/L7 session persistence); `QUIC_CID`: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners.
+                     */
+                    std::string m_sessionType;
+                    bool m_sessionTypeHasBeenSet;
 
                 };
             }

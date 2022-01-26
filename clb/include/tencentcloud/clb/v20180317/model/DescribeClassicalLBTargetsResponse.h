@@ -41,13 +41,14 @@ namespace TencentCloud
                     DescribeClassicalLBTargetsResponse();
                     ~DescribeClassicalLBTargetsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取List of real servers
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Targets List of real servers
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Real server list
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Targets Real server list
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<ClassicalTarget> GetTargets() const;
 
@@ -60,8 +61,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * List of real servers
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Real server list
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<ClassicalTarget> m_targets;
                     bool m_targetsHasBeenSet;

@@ -44,21 +44,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Template ID.
-1. Get from the returned value of the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
-2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](/document/product/267/32619) API.
+1. Get from the returned value of the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API call.
+2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](https://intl.cloud.tencent.com/document/product/267/32619?from_cn_redirect=1) API.
                      * @return TemplateId Template ID.
-1. Get from the returned value of the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
-2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](/document/product/267/32619) API.
+1. Get from the returned value of the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API call.
+2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](https://intl.cloud.tencent.com/document/product/267/32619?from_cn_redirect=1) API.
                      */
                     int64_t GetTemplateId() const;
 
                     /**
                      * 设置Template ID.
-1. Get from the returned value of the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
-2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](/document/product/267/32619) API.
+1. Get from the returned value of the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API call.
+2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](https://intl.cloud.tencent.com/document/product/267/32619?from_cn_redirect=1) API.
                      * @param TemplateId Template ID.
-1. Get from the returned value of the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
-2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](/document/product/267/32619) API.
+1. Get from the returned value of the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API call.
+2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](https://intl.cloud.tencent.com/document/product/267/32619?from_cn_redirect=1) API.
                      */
                     void SetTemplateId(const int64_t& _templateId);
 
@@ -72,8 +72,8 @@ namespace TencentCloud
 
                     /**
                      * Template ID.
-1. Get from the returned value of the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
-2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](/document/product/267/32619) API.
+1. Get from the returned value of the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API call.
+2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](https://intl.cloud.tencent.com/document/product/267/32619?from_cn_redirect=1) API.
                      */
                     int64_t m_templateId;
                     bool m_templateIdHasBeenSet;

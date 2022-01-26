@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Batch::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 ComputeNode::ComputeNode() :
@@ -31,11 +30,13 @@ ComputeNode::ComputeNode() :
     m_taskInstanceNumAvailableHasBeenSet(false),
     m_agentVersionHasBeenSet(false),
     m_privateIpAddressesHasBeenSet(false),
-    m_publicIpAddressesHasBeenSet(false)
+    m_publicIpAddressesHasBeenSet(false),
+    m_resourceTypeHasBeenSet(false),
+    m_resourceOriginHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ComputeNode::Deserialize(const Value &value)
+CoreInternalOutcome ComputeNode::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -44,7 +45,7 @@ CoreInternalOutcome ComputeNode::Deserialize(const Value &value)
     {
         if (!value["ComputeNodeId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ComputeNode.ComputeNodeId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComputeNode.ComputeNodeId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_computeNodeId = string(value["ComputeNodeId"].GetString());
         m_computeNodeIdHasBeenSet = true;
@@ -54,7 +55,7 @@ CoreInternalOutcome ComputeNode::Deserialize(const Value &value)
     {
         if (!value["ComputeNodeInstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ComputeNode.ComputeNodeInstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComputeNode.ComputeNodeInstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_computeNodeInstanceId = string(value["ComputeNodeInstanceId"].GetString());
         m_computeNodeInstanceIdHasBeenSet = true;
@@ -64,7 +65,7 @@ CoreInternalOutcome ComputeNode::Deserialize(const Value &value)
     {
         if (!value["ComputeNodeState"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ComputeNode.ComputeNodeState` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComputeNode.ComputeNodeState` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_computeNodeState = string(value["ComputeNodeState"].GetString());
         m_computeNodeStateHasBeenSet = true;
@@ -74,7 +75,7 @@ CoreInternalOutcome ComputeNode::Deserialize(const Value &value)
     {
         if (!value["Cpu"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ComputeNode.Cpu` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComputeNode.Cpu` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_cpu = value["Cpu"].GetUint64();
         m_cpuHasBeenSet = true;
@@ -84,7 +85,7 @@ CoreInternalOutcome ComputeNode::Deserialize(const Value &value)
     {
         if (!value["Mem"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ComputeNode.Mem` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComputeNode.Mem` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_mem = value["Mem"].GetUint64();
         m_memHasBeenSet = true;
@@ -94,7 +95,7 @@ CoreInternalOutcome ComputeNode::Deserialize(const Value &value)
     {
         if (!value["ResourceCreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ComputeNode.ResourceCreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComputeNode.ResourceCreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_resourceCreatedTime = string(value["ResourceCreatedTime"].GetString());
         m_resourceCreatedTimeHasBeenSet = true;
@@ -104,7 +105,7 @@ CoreInternalOutcome ComputeNode::Deserialize(const Value &value)
     {
         if (!value["TaskInstanceNumAvailable"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ComputeNode.TaskInstanceNumAvailable` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComputeNode.TaskInstanceNumAvailable` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_taskInstanceNumAvailable = value["TaskInstanceNumAvailable"].GetUint64();
         m_taskInstanceNumAvailableHasBeenSet = true;
@@ -114,7 +115,7 @@ CoreInternalOutcome ComputeNode::Deserialize(const Value &value)
     {
         if (!value["AgentVersion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ComputeNode.AgentVersion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComputeNode.AgentVersion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_agentVersion = string(value["AgentVersion"].GetString());
         m_agentVersionHasBeenSet = true;
@@ -123,10 +124,10 @@ CoreInternalOutcome ComputeNode::Deserialize(const Value &value)
     if (value.HasMember("PrivateIpAddresses") && !value["PrivateIpAddresses"].IsNull())
     {
         if (!value["PrivateIpAddresses"].IsArray())
-            return CoreInternalOutcome(Error("response `ComputeNode.PrivateIpAddresses` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ComputeNode.PrivateIpAddresses` is not array type"));
 
-        const Value &tmpValue = value["PrivateIpAddresses"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["PrivateIpAddresses"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_privateIpAddresses.push_back((*itr).GetString());
         }
@@ -136,50 +137,70 @@ CoreInternalOutcome ComputeNode::Deserialize(const Value &value)
     if (value.HasMember("PublicIpAddresses") && !value["PublicIpAddresses"].IsNull())
     {
         if (!value["PublicIpAddresses"].IsArray())
-            return CoreInternalOutcome(Error("response `ComputeNode.PublicIpAddresses` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ComputeNode.PublicIpAddresses` is not array type"));
 
-        const Value &tmpValue = value["PublicIpAddresses"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["PublicIpAddresses"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_publicIpAddresses.push_back((*itr).GetString());
         }
         m_publicIpAddressesHasBeenSet = true;
     }
 
+    if (value.HasMember("ResourceType") && !value["ResourceType"].IsNull())
+    {
+        if (!value["ResourceType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ComputeNode.ResourceType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_resourceType = string(value["ResourceType"].GetString());
+        m_resourceTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("ResourceOrigin") && !value["ResourceOrigin"].IsNull())
+    {
+        if (!value["ResourceOrigin"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ComputeNode.ResourceOrigin` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_resourceOrigin = string(value["ResourceOrigin"].GetString());
+        m_resourceOriginHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void ComputeNode::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ComputeNode::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_computeNodeIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ComputeNodeId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_computeNodeId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_computeNodeId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_computeNodeInstanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ComputeNodeInstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_computeNodeInstanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_computeNodeInstanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_computeNodeStateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ComputeNodeState";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_computeNodeState.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_computeNodeState.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cpuHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Cpu";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cpu, allocator);
@@ -187,7 +208,7 @@ void ComputeNode::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_memHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Mem";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_mem, allocator);
@@ -195,15 +216,15 @@ void ComputeNode::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_resourceCreatedTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResourceCreatedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_resourceCreatedTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resourceCreatedTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_taskInstanceNumAvailableHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TaskInstanceNumAvailable";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_taskInstanceNumAvailable, allocator);
@@ -211,36 +232,52 @@ void ComputeNode::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_agentVersionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AgentVersion";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_agentVersion.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_agentVersion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_privateIpAddressesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PrivateIpAddresses";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_privateIpAddresses.begin(); itr != m_privateIpAddresses.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_publicIpAddressesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PublicIpAddresses";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_publicIpAddresses.begin(); itr != m_publicIpAddresses.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
+    }
+
+    if (m_resourceTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ResourceType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resourceType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_resourceOriginHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ResourceOrigin";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resourceOrigin.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -404,5 +441,37 @@ void ComputeNode::SetPublicIpAddresses(const vector<string>& _publicIpAddresses)
 bool ComputeNode::PublicIpAddressesHasBeenSet() const
 {
     return m_publicIpAddressesHasBeenSet;
+}
+
+string ComputeNode::GetResourceType() const
+{
+    return m_resourceType;
+}
+
+void ComputeNode::SetResourceType(const string& _resourceType)
+{
+    m_resourceType = _resourceType;
+    m_resourceTypeHasBeenSet = true;
+}
+
+bool ComputeNode::ResourceTypeHasBeenSet() const
+{
+    return m_resourceTypeHasBeenSet;
+}
+
+string ComputeNode::GetResourceOrigin() const
+{
+    return m_resourceOrigin;
+}
+
+void ComputeNode::SetResourceOrigin(const string& _resourceOrigin)
+{
+    m_resourceOrigin = _resourceOrigin;
+    m_resourceOriginHasBeenSet = true;
+}
+
+bool ComputeNode::ResourceOriginHasBeenSet() const
+{
+    return m_resourceOriginHasBeenSet;
 }
 

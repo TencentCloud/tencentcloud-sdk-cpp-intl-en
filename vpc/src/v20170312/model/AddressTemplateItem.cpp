@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 AddressTemplateItem::AddressTemplateItem() :
@@ -27,7 +26,7 @@ AddressTemplateItem::AddressTemplateItem() :
 {
 }
 
-CoreInternalOutcome AddressTemplateItem::Deserialize(const Value &value)
+CoreInternalOutcome AddressTemplateItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome AddressTemplateItem::Deserialize(const Value &value)
     {
         if (!value["From"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AddressTemplateItem.From` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AddressTemplateItem.From` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_from = string(value["From"].GetString());
         m_fromHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome AddressTemplateItem::Deserialize(const Value &value)
     {
         if (!value["To"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AddressTemplateItem.To` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AddressTemplateItem.To` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_to = string(value["To"].GetString());
         m_toHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome AddressTemplateItem::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void AddressTemplateItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AddressTemplateItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_fromHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "From";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_from.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_from.c_str(), allocator).Move(), allocator);
     }
 
     if (m_toHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "To";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_to.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_to.c_str(), allocator).Move(), allocator);
     }
 
 }

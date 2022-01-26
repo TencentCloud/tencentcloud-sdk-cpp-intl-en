@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 DocumentSDK::DocumentSDK() :
@@ -27,7 +26,7 @@ DocumentSDK::DocumentSDK() :
 {
 }
 
-CoreInternalOutcome DocumentSDK::Deserialize(const Value &value)
+CoreInternalOutcome DocumentSDK::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome DocumentSDK::Deserialize(const Value &value)
     {
         if (!value["DocumentURL"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DocumentSDK.DocumentURL` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DocumentSDK.DocumentURL` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_documentURL = string(value["DocumentURL"].GetString());
         m_documentURLHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome DocumentSDK::Deserialize(const Value &value)
     {
         if (!value["SdkURL"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DocumentSDK.SdkURL` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DocumentSDK.SdkURL` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_sdkURL = string(value["SdkURL"].GetString());
         m_sdkURLHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome DocumentSDK::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void DocumentSDK::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DocumentSDK::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_documentURLHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DocumentURL";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_documentURL.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_documentURL.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sdkURLHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SdkURL";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_sdkURL.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sdkURL.c_str(), allocator).Move(), allocator);
     }
 
 }

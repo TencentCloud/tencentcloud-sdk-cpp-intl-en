@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取IP whitelist list
-                     * @return IpWhiteList IP whitelist list
+                     * 获取IP allowlist list
+                     * @return IpWhiteList IP allowlist list
                      */
                     std::vector<std::string> GetIpWhiteList() const;
 
                     /**
-                     * 设置IP whitelist list
-                     * @param IpWhiteList IP whitelist list
+                     * 设置IP allowlist list
+                     * @param IpWhiteList IP allowlist list
                      */
                     void SetIpWhiteList(const std::vector<std::string>& _ipWhiteList);
 
@@ -111,7 +111,7 @@ namespace TencentCloud
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * IP whitelist list
+                     * IP allowlist list
                      */
                     std::vector<std::string> m_ipWhiteList;
                     bool m_ipWhiteListHasBeenSet;

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cvm::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 DataDisk::DataDisk() :
@@ -28,11 +27,13 @@ DataDisk::DataDisk() :
     m_deleteWithInstanceHasBeenSet(false),
     m_snapshotIdHasBeenSet(false),
     m_encryptHasBeenSet(false),
-    m_kmsKeyIdHasBeenSet(false)
+    m_kmsKeyIdHasBeenSet(false),
+    m_throughputPerformanceHasBeenSet(false),
+    m_cdcIdHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DataDisk::Deserialize(const Value &value)
+CoreInternalOutcome DataDisk::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +42,7 @@ CoreInternalOutcome DataDisk::Deserialize(const Value &value)
     {
         if (!value["DiskSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DataDisk.DiskSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DataDisk.DiskSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_diskSize = value["DiskSize"].GetInt64();
         m_diskSizeHasBeenSet = true;
@@ -51,7 +52,7 @@ CoreInternalOutcome DataDisk::Deserialize(const Value &value)
     {
         if (!value["DiskType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DataDisk.DiskType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DataDisk.DiskType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_diskType = string(value["DiskType"].GetString());
         m_diskTypeHasBeenSet = true;
@@ -61,7 +62,7 @@ CoreInternalOutcome DataDisk::Deserialize(const Value &value)
     {
         if (!value["DiskId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DataDisk.DiskId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DataDisk.DiskId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_diskId = string(value["DiskId"].GetString());
         m_diskIdHasBeenSet = true;
@@ -71,7 +72,7 @@ CoreInternalOutcome DataDisk::Deserialize(const Value &value)
     {
         if (!value["DeleteWithInstance"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `DataDisk.DeleteWithInstance` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DataDisk.DeleteWithInstance` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_deleteWithInstance = value["DeleteWithInstance"].GetBool();
         m_deleteWithInstanceHasBeenSet = true;
@@ -81,7 +82,7 @@ CoreInternalOutcome DataDisk::Deserialize(const Value &value)
     {
         if (!value["SnapshotId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DataDisk.SnapshotId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DataDisk.SnapshotId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_snapshotId = string(value["SnapshotId"].GetString());
         m_snapshotIdHasBeenSet = true;
@@ -91,7 +92,7 @@ CoreInternalOutcome DataDisk::Deserialize(const Value &value)
     {
         if (!value["Encrypt"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `DataDisk.Encrypt` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DataDisk.Encrypt` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_encrypt = value["Encrypt"].GetBool();
         m_encryptHasBeenSet = true;
@@ -101,22 +102,42 @@ CoreInternalOutcome DataDisk::Deserialize(const Value &value)
     {
         if (!value["KmsKeyId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DataDisk.KmsKeyId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DataDisk.KmsKeyId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_kmsKeyId = string(value["KmsKeyId"].GetString());
         m_kmsKeyIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("ThroughputPerformance") && !value["ThroughputPerformance"].IsNull())
+    {
+        if (!value["ThroughputPerformance"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `DataDisk.ThroughputPerformance` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_throughputPerformance = value["ThroughputPerformance"].GetInt64();
+        m_throughputPerformanceHasBeenSet = true;
+    }
+
+    if (value.HasMember("CdcId") && !value["CdcId"].IsNull())
+    {
+        if (!value["CdcId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DataDisk.CdcId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_cdcId = string(value["CdcId"].GetString());
+        m_cdcIdHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void DataDisk::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DataDisk::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_diskSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_diskSize, allocator);
@@ -124,23 +145,23 @@ void DataDisk::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_diskTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_diskType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_diskType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_diskIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_diskId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_diskId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_deleteWithInstanceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DeleteWithInstance";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_deleteWithInstance, allocator);
@@ -148,15 +169,15 @@ void DataDisk::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_snapshotIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SnapshotId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_snapshotId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_snapshotId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_encryptHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Encrypt";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_encrypt, allocator);
@@ -164,10 +185,26 @@ void DataDisk::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_kmsKeyIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "KmsKeyId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_kmsKeyId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_kmsKeyId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_throughputPerformanceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ThroughputPerformance";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_throughputPerformance, allocator);
+    }
+
+    if (m_cdcIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CdcId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cdcId.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -283,5 +320,37 @@ void DataDisk::SetKmsKeyId(const string& _kmsKeyId)
 bool DataDisk::KmsKeyIdHasBeenSet() const
 {
     return m_kmsKeyIdHasBeenSet;
+}
+
+int64_t DataDisk::GetThroughputPerformance() const
+{
+    return m_throughputPerformance;
+}
+
+void DataDisk::SetThroughputPerformance(const int64_t& _throughputPerformance)
+{
+    m_throughputPerformance = _throughputPerformance;
+    m_throughputPerformanceHasBeenSet = true;
+}
+
+bool DataDisk::ThroughputPerformanceHasBeenSet() const
+{
+    return m_throughputPerformanceHasBeenSet;
+}
+
+string DataDisk::GetCdcId() const
+{
+    return m_cdcId;
+}
+
+void DataDisk::SetCdcId(const string& _cdcId)
+{
+    m_cdcId = _cdcId;
+    m_cdcIdHasBeenSet = true;
+}
+
+bool DataDisk::CdcIdHasBeenSet() const
+{
+    return m_cdcIdHasBeenSet;
 }
 

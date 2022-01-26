@@ -41,11 +41,12 @@ namespace TencentCloud
                     GetAliasResponse();
                     ~GetAliasResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Master version of alias
-                     * @return FunctionVersion Master version of alias
+                     * 获取Master version pointed to by the alias
+                     * @return FunctionVersion Master version pointed to by the alias
                      */
                     std::string GetFunctionVersion() const;
 
@@ -124,7 +125,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Master version of alias
+                     * Master version pointed to by the alias
                      */
                     std::string m_functionVersion;
                     bool m_functionVersionHasBeenSet;

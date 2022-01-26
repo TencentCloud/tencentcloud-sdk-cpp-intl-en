@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mdl::V20200326::Model;
-using namespace rapidjson;
 using namespace std;
 
 ChannelPipelineAlerts::ChannelPipelineAlerts() :
@@ -29,7 +28,7 @@ ChannelPipelineAlerts::ChannelPipelineAlerts() :
 {
 }
 
-CoreInternalOutcome ChannelPipelineAlerts::Deserialize(const Value &value)
+CoreInternalOutcome ChannelPipelineAlerts::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome ChannelPipelineAlerts::Deserialize(const Value &value)
     {
         if (!value["SetTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ChannelPipelineAlerts.SetTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ChannelPipelineAlerts.SetTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_setTime = string(value["SetTime"].GetString());
         m_setTimeHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome ChannelPipelineAlerts::Deserialize(const Value &value)
     {
         if (!value["ClearTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ChannelPipelineAlerts.ClearTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ChannelPipelineAlerts.ClearTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_clearTime = string(value["ClearTime"].GetString());
         m_clearTimeHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome ChannelPipelineAlerts::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ChannelPipelineAlerts.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ChannelPipelineAlerts.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome ChannelPipelineAlerts::Deserialize(const Value &value)
     {
         if (!value["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ChannelPipelineAlerts.Message` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ChannelPipelineAlerts.Message` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_message = string(value["Message"].GetString());
         m_messageHasBeenSet = true;
@@ -78,39 +77,39 @@ CoreInternalOutcome ChannelPipelineAlerts::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ChannelPipelineAlerts::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ChannelPipelineAlerts::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_setTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SetTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_setTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_setTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_clearTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClearTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_clearTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clearTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_messageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Message";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_message.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_message.c_str(), allocator).Move(), allocator);
     }
 
 }

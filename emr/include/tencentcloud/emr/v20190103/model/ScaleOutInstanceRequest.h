@@ -23,6 +23,8 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/emr/v20190103/model/PreExecuteFileSettings.h>
 #include <tencentcloud/emr/v20190103/model/Tag.h>
+#include <tencentcloud/emr/v20190103/model/PodSpec.h>
+#include <tencentcloud/emr/v20190103/model/PodParameter.h>
 
 
 namespace TencentCloud
@@ -316,6 +318,162 @@ namespace TencentCloud
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Resource type selected for scaling. Valid values: `host` (general CVM resource), `pod` (resource provided by TKE or EKS cluster)
+                     * @return HardwareResourceType Resource type selected for scaling. Valid values: `host` (general CVM resource), `pod` (resource provided by TKE or EKS cluster)
+                     */
+                    std::string GetHardwareResourceType() const;
+
+                    /**
+                     * 设置Resource type selected for scaling. Valid values: `host` (general CVM resource), `pod` (resource provided by TKE or EKS cluster)
+                     * @param HardwareResourceType Resource type selected for scaling. Valid values: `host` (general CVM resource), `pod` (resource provided by TKE or EKS cluster)
+                     */
+                    void SetHardwareResourceType(const std::string& _hardwareResourceType);
+
+                    /**
+                     * 判断参数 HardwareResourceType 是否已赋值
+                     * @return HardwareResourceType 是否已赋值
+                     */
+                    bool HardwareResourceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Specified information such as pod specification and source for expansion with pod resources
+                     * @return PodSpec Specified information such as pod specification and source for expansion with pod resources
+                     */
+                    PodSpec GetPodSpec() const;
+
+                    /**
+                     * 设置Specified information such as pod specification and source for expansion with pod resources
+                     * @param PodSpec Specified information such as pod specification and source for expansion with pod resources
+                     */
+                    void SetPodSpec(const PodSpec& _podSpec);
+
+                    /**
+                     * 判断参数 PodSpec 是否已赋值
+                     * @return PodSpec 是否已赋值
+                     */
+                    bool PodSpecHasBeenSet() const;
+
+                    /**
+                     * 获取Machine group name selected for ClickHouse cluster scaling-out
+                     * @return ClickHouseClusterName Machine group name selected for ClickHouse cluster scaling-out
+                     */
+                    std::string GetClickHouseClusterName() const;
+
+                    /**
+                     * 设置Machine group name selected for ClickHouse cluster scaling-out
+                     * @param ClickHouseClusterName Machine group name selected for ClickHouse cluster scaling-out
+                     */
+                    void SetClickHouseClusterName(const std::string& _clickHouseClusterName);
+
+                    /**
+                     * 判断参数 ClickHouseClusterName 是否已赋值
+                     * @return ClickHouseClusterName 是否已赋值
+                     */
+                    bool ClickHouseClusterNameHasBeenSet() const;
+
+                    /**
+                     * 获取Machine group type selected for ClickHouse cluster scaling-out. new: creates a group; old: selects an existing group
+                     * @return ClickHouseClusterType Machine group type selected for ClickHouse cluster scaling-out. new: creates a group; old: selects an existing group
+                     */
+                    std::string GetClickHouseClusterType() const;
+
+                    /**
+                     * 设置Machine group type selected for ClickHouse cluster scaling-out. new: creates a group; old: selects an existing group
+                     * @param ClickHouseClusterType Machine group type selected for ClickHouse cluster scaling-out. new: creates a group; old: selects an existing group
+                     */
+                    void SetClickHouseClusterType(const std::string& _clickHouseClusterType);
+
+                    /**
+                     * 判断参数 ClickHouseClusterType 是否已赋值
+                     * @return ClickHouseClusterType 是否已赋值
+                     */
+                    bool ClickHouseClusterTypeHasBeenSet() const;
+
+                    /**
+                     * 获取YARN node label specified for rule-based scaling-out
+                     * @return YarnNodeLabel YARN node label specified for rule-based scaling-out
+                     */
+                    std::string GetYarnNodeLabel() const;
+
+                    /**
+                     * 设置YARN node label specified for rule-based scaling-out
+                     * @param YarnNodeLabel YARN node label specified for rule-based scaling-out
+                     */
+                    void SetYarnNodeLabel(const std::string& _yarnNodeLabel);
+
+                    /**
+                     * 判断参数 YarnNodeLabel 是否已赋值
+                     * @return YarnNodeLabel 是否已赋值
+                     */
+                    bool YarnNodeLabelHasBeenSet() const;
+
+                    /**
+                     * 获取Custom pod permission and parameter
+                     * @return PodParameter Custom pod permission and parameter
+                     */
+                    PodParameter GetPodParameter() const;
+
+                    /**
+                     * 设置Custom pod permission and parameter
+                     * @param PodParameter Custom pod permission and parameter
+                     */
+                    void SetPodParameter(const PodParameter& _podParameter);
+
+                    /**
+                     * 判断参数 PodParameter 是否已赋值
+                     * @return PodParameter 是否已赋值
+                     */
+                    bool PodParameterHasBeenSet() const;
+
+                    /**
+                     * 获取Number of master nodes to be added
+When a ClickHouse cluster is scaled, this parameter does not take effect.
+When a Kafka cluster is scaled, this parameter does not take effect.
+When `HardwareResourceType` is `pod`, this parameter does not take effect.
+                     * @return MasterCount Number of master nodes to be added
+When a ClickHouse cluster is scaled, this parameter does not take effect.
+When a Kafka cluster is scaled, this parameter does not take effect.
+When `HardwareResourceType` is `pod`, this parameter does not take effect.
+                     */
+                    uint64_t GetMasterCount() const;
+
+                    /**
+                     * 设置Number of master nodes to be added
+When a ClickHouse cluster is scaled, this parameter does not take effect.
+When a Kafka cluster is scaled, this parameter does not take effect.
+When `HardwareResourceType` is `pod`, this parameter does not take effect.
+                     * @param MasterCount Number of master nodes to be added
+When a ClickHouse cluster is scaled, this parameter does not take effect.
+When a Kafka cluster is scaled, this parameter does not take effect.
+When `HardwareResourceType` is `pod`, this parameter does not take effect.
+                     */
+                    void SetMasterCount(const uint64_t& _masterCount);
+
+                    /**
+                     * 判断参数 MasterCount 是否已赋值
+                     * @return MasterCount 是否已赋值
+                     */
+                    bool MasterCountHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to start the service after scaling. `true`: yes; `false`: no
+                     * @return StartServiceAfterScaleOut Whether to start the service after scaling. `true`: yes; `false`: no
+                     */
+                    std::string GetStartServiceAfterScaleOut() const;
+
+                    /**
+                     * 设置Whether to start the service after scaling. `true`: yes; `false`: no
+                     * @param StartServiceAfterScaleOut Whether to start the service after scaling. `true`: yes; `false`: no
+                     */
+                    void SetStartServiceAfterScaleOut(const std::string& _startServiceAfterScaleOut);
+
+                    /**
+                     * 判断参数 StartServiceAfterScaleOut 是否已赋值
+                     * @return StartServiceAfterScaleOut 是否已赋值
+                     */
+                    bool StartServiceAfterScaleOutHasBeenSet() const;
+
                 private:
 
                     /**
@@ -406,6 +564,57 @@ namespace TencentCloud
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Resource type selected for scaling. Valid values: `host` (general CVM resource), `pod` (resource provided by TKE or EKS cluster)
+                     */
+                    std::string m_hardwareResourceType;
+                    bool m_hardwareResourceTypeHasBeenSet;
+
+                    /**
+                     * Specified information such as pod specification and source for expansion with pod resources
+                     */
+                    PodSpec m_podSpec;
+                    bool m_podSpecHasBeenSet;
+
+                    /**
+                     * Machine group name selected for ClickHouse cluster scaling-out
+                     */
+                    std::string m_clickHouseClusterName;
+                    bool m_clickHouseClusterNameHasBeenSet;
+
+                    /**
+                     * Machine group type selected for ClickHouse cluster scaling-out. new: creates a group; old: selects an existing group
+                     */
+                    std::string m_clickHouseClusterType;
+                    bool m_clickHouseClusterTypeHasBeenSet;
+
+                    /**
+                     * YARN node label specified for rule-based scaling-out
+                     */
+                    std::string m_yarnNodeLabel;
+                    bool m_yarnNodeLabelHasBeenSet;
+
+                    /**
+                     * Custom pod permission and parameter
+                     */
+                    PodParameter m_podParameter;
+                    bool m_podParameterHasBeenSet;
+
+                    /**
+                     * Number of master nodes to be added
+When a ClickHouse cluster is scaled, this parameter does not take effect.
+When a Kafka cluster is scaled, this parameter does not take effect.
+When `HardwareResourceType` is `pod`, this parameter does not take effect.
+                     */
+                    uint64_t m_masterCount;
+                    bool m_masterCountHasBeenSet;
+
+                    /**
+                     * Whether to start the service after scaling. `true`: yes; `false`: no
+                     */
+                    std::string m_startServiceAfterScaleOut;
+                    bool m_startServiceAfterScaleOutHasBeenSet;
 
                 };
             }

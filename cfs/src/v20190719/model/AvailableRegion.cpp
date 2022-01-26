@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cfs::V20190719::Model;
-using namespace rapidjson;
 using namespace std;
 
 AvailableRegion::AvailableRegion() :
@@ -30,7 +29,7 @@ AvailableRegion::AvailableRegion() :
 {
 }
 
-CoreInternalOutcome AvailableRegion::Deserialize(const Value &value)
+CoreInternalOutcome AvailableRegion::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome AvailableRegion::Deserialize(const Value &value)
     {
         if (!value["Region"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AvailableRegion.Region` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AvailableRegion.Region` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_region = string(value["Region"].GetString());
         m_regionHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome AvailableRegion::Deserialize(const Value &value)
     {
         if (!value["RegionName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AvailableRegion.RegionName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AvailableRegion.RegionName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_regionName = string(value["RegionName"].GetString());
         m_regionNameHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome AvailableRegion::Deserialize(const Value &value)
     {
         if (!value["RegionStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AvailableRegion.RegionStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AvailableRegion.RegionStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_regionStatus = string(value["RegionStatus"].GetString());
         m_regionStatusHasBeenSet = true;
@@ -68,10 +67,10 @@ CoreInternalOutcome AvailableRegion::Deserialize(const Value &value)
     if (value.HasMember("Zones") && !value["Zones"].IsNull())
     {
         if (!value["Zones"].IsArray())
-            return CoreInternalOutcome(Error("response `AvailableRegion.Zones` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `AvailableRegion.Zones` is not array type"));
 
-        const Value &tmpValue = value["Zones"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Zones"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             AvailableZone item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -89,7 +88,7 @@ CoreInternalOutcome AvailableRegion::Deserialize(const Value &value)
     {
         if (!value["RegionCnName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AvailableRegion.RegionCnName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AvailableRegion.RegionCnName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_regionCnName = string(value["RegionCnName"].GetString());
         m_regionCnNameHasBeenSet = true;
@@ -99,54 +98,54 @@ CoreInternalOutcome AvailableRegion::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void AvailableRegion::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AvailableRegion::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_regionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Region";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_region.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_region.c_str(), allocator).Move(), allocator);
     }
 
     if (m_regionNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RegionName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_regionName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_regionName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_regionStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RegionStatus";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_regionStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_regionStatus.c_str(), allocator).Move(), allocator);
     }
 
     if (m_zonesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Zones";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_zones.begin(); itr != m_zones.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_regionCnNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RegionCnName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_regionCnName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_regionCnName.c_str(), allocator).Move(), allocator);
     }
 
 }

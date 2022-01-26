@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/scf/v20180416/model/Tag.h>
+#include <tencentcloud/scf/v20180416/model/StatusReason.h>
 
 
 namespace TencentCloud
@@ -156,14 +157,14 @@ namespace TencentCloud
                     bool NamespaceHasBeenSet() const;
 
                     /**
-                     * 获取Function status
-                     * @return Status Function status
+                     * 获取Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
+                     * @return Status Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Function status
-                     * @param Status Function status
+                     * 设置Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
+                     * @param Status Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
                      */
                     void SetStatus(const std::string& _status);
 
@@ -245,6 +246,104 @@ namespace TencentCloud
                      */
                     bool TypeHasBeenSet() const;
 
+                    /**
+                     * 获取Cause of function failure
+                     * @return StatusReasons Cause of function failure
+                     */
+                    std::vector<StatusReason> GetStatusReasons() const;
+
+                    /**
+                     * 设置Cause of function failure
+                     * @param StatusReasons Cause of function failure
+                     */
+                    void SetStatusReasons(const std::vector<StatusReason>& _statusReasons);
+
+                    /**
+                     * 判断参数 StatusReasons 是否已赋值
+                     * @return StatusReasons 是否已赋值
+                     */
+                    bool StatusReasonsHasBeenSet() const;
+
+                    /**
+                     * 获取Sum of provisioned concurrence memory for all function versions
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return TotalProvisionedConcurrencyMem Sum of provisioned concurrence memory for all function versions
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetTotalProvisionedConcurrencyMem() const;
+
+                    /**
+                     * 设置Sum of provisioned concurrence memory for all function versions
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param TotalProvisionedConcurrencyMem Sum of provisioned concurrence memory for all function versions
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetTotalProvisionedConcurrencyMem(const uint64_t& _totalProvisionedConcurrencyMem);
+
+                    /**
+                     * 判断参数 TotalProvisionedConcurrencyMem 是否已赋值
+                     * @return TotalProvisionedConcurrencyMem 是否已赋值
+                     */
+                    bool TotalProvisionedConcurrencyMemHasBeenSet() const;
+
+                    /**
+                     * 获取Reserved memory for function concurrence
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return ReservedConcurrencyMem Reserved memory for function concurrence
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetReservedConcurrencyMem() const;
+
+                    /**
+                     * 设置Reserved memory for function concurrence
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param ReservedConcurrencyMem Reserved memory for function concurrence
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetReservedConcurrencyMem(const uint64_t& _reservedConcurrencyMem);
+
+                    /**
+                     * 判断参数 ReservedConcurrencyMem 是否已赋值
+                     * @return ReservedConcurrencyMem 是否已赋值
+                     */
+                    bool ReservedConcurrencyMemHasBeenSet() const;
+
+                    /**
+                     * 获取Asynchronization attribute of the function. Values: `TRUE` and `FALSE`.
+                     * @return AsyncRunEnable Asynchronization attribute of the function. Values: `TRUE` and `FALSE`.
+                     */
+                    std::string GetAsyncRunEnable() const;
+
+                    /**
+                     * 设置Asynchronization attribute of the function. Values: `TRUE` and `FALSE`.
+                     * @param AsyncRunEnable Asynchronization attribute of the function. Values: `TRUE` and `FALSE`.
+                     */
+                    void SetAsyncRunEnable(const std::string& _asyncRunEnable);
+
+                    /**
+                     * 判断参数 AsyncRunEnable 是否已赋值
+                     * @return AsyncRunEnable 是否已赋值
+                     */
+                    bool AsyncRunEnableHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable call tracing for ansynchronized functions. Values: `TRUE` and `FALSE`.
+                     * @return TraceEnable Whether to enable call tracing for ansynchronized functions. Values: `TRUE` and `FALSE`.
+                     */
+                    std::string GetTraceEnable() const;
+
+                    /**
+                     * 设置Whether to enable call tracing for ansynchronized functions. Values: `TRUE` and `FALSE`.
+                     * @param TraceEnable Whether to enable call tracing for ansynchronized functions. Values: `TRUE` and `FALSE`.
+                     */
+                    void SetTraceEnable(const std::string& _traceEnable);
+
+                    /**
+                     * 判断参数 TraceEnable 是否已赋值
+                     * @return TraceEnable 是否已赋值
+                     */
+                    bool TraceEnableHasBeenSet() const;
+
                 private:
 
                     /**
@@ -284,7 +383,7 @@ namespace TencentCloud
                     bool m_namespaceHasBeenSet;
 
                     /**
-                     * Function status
+                     * Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -312,6 +411,38 @@ namespace TencentCloud
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
+
+                    /**
+                     * Cause of function failure
+                     */
+                    std::vector<StatusReason> m_statusReasons;
+                    bool m_statusReasonsHasBeenSet;
+
+                    /**
+                     * Sum of provisioned concurrence memory for all function versions
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_totalProvisionedConcurrencyMem;
+                    bool m_totalProvisionedConcurrencyMemHasBeenSet;
+
+                    /**
+                     * Reserved memory for function concurrence
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_reservedConcurrencyMem;
+                    bool m_reservedConcurrencyMemHasBeenSet;
+
+                    /**
+                     * Asynchronization attribute of the function. Values: `TRUE` and `FALSE`.
+                     */
+                    std::string m_asyncRunEnable;
+                    bool m_asyncRunEnableHasBeenSet;
+
+                    /**
+                     * Whether to enable call tracing for ansynchronized functions. Values: `TRUE` and `FALSE`.
+                     */
+                    std::string m_traceEnable;
+                    bool m_traceEnableHasBeenSet;
 
                 };
             }

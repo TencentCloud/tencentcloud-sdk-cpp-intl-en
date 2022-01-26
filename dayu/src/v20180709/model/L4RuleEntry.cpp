@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dayu::V20180709::Model;
-using namespace rapidjson;
 using namespace std;
 
 L4RuleEntry::L4RuleEntry() :
@@ -36,7 +35,7 @@ L4RuleEntry::L4RuleEntry() :
 {
 }
 
-CoreInternalOutcome L4RuleEntry::Deserialize(const Value &value)
+CoreInternalOutcome L4RuleEntry::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -45,7 +44,7 @@ CoreInternalOutcome L4RuleEntry::Deserialize(const Value &value)
     {
         if (!value["Protocol"].IsString())
         {
-            return CoreInternalOutcome(Error("response `L4RuleEntry.Protocol` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L4RuleEntry.Protocol` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_protocol = string(value["Protocol"].GetString());
         m_protocolHasBeenSet = true;
@@ -55,7 +54,7 @@ CoreInternalOutcome L4RuleEntry::Deserialize(const Value &value)
     {
         if (!value["VirtualPort"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L4RuleEntry.VirtualPort` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L4RuleEntry.VirtualPort` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_virtualPort = value["VirtualPort"].GetUint64();
         m_virtualPortHasBeenSet = true;
@@ -65,7 +64,7 @@ CoreInternalOutcome L4RuleEntry::Deserialize(const Value &value)
     {
         if (!value["SourcePort"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L4RuleEntry.SourcePort` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L4RuleEntry.SourcePort` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_sourcePort = value["SourcePort"].GetUint64();
         m_sourcePortHasBeenSet = true;
@@ -75,7 +74,7 @@ CoreInternalOutcome L4RuleEntry::Deserialize(const Value &value)
     {
         if (!value["SourceType"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L4RuleEntry.SourceType` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L4RuleEntry.SourceType` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_sourceType = value["SourceType"].GetUint64();
         m_sourceTypeHasBeenSet = true;
@@ -85,7 +84,7 @@ CoreInternalOutcome L4RuleEntry::Deserialize(const Value &value)
     {
         if (!value["KeepTime"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L4RuleEntry.KeepTime` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L4RuleEntry.KeepTime` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_keepTime = value["KeepTime"].GetUint64();
         m_keepTimeHasBeenSet = true;
@@ -94,10 +93,10 @@ CoreInternalOutcome L4RuleEntry::Deserialize(const Value &value)
     if (value.HasMember("SourceList") && !value["SourceList"].IsNull())
     {
         if (!value["SourceList"].IsArray())
-            return CoreInternalOutcome(Error("response `L4RuleEntry.SourceList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `L4RuleEntry.SourceList` is not array type"));
 
-        const Value &tmpValue = value["SourceList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["SourceList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             L4RuleSource item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -115,7 +114,7 @@ CoreInternalOutcome L4RuleEntry::Deserialize(const Value &value)
     {
         if (!value["LbType"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L4RuleEntry.LbType` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L4RuleEntry.LbType` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_lbType = value["LbType"].GetUint64();
         m_lbTypeHasBeenSet = true;
@@ -125,7 +124,7 @@ CoreInternalOutcome L4RuleEntry::Deserialize(const Value &value)
     {
         if (!value["KeepEnable"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L4RuleEntry.KeepEnable` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L4RuleEntry.KeepEnable` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_keepEnable = value["KeepEnable"].GetUint64();
         m_keepEnableHasBeenSet = true;
@@ -135,7 +134,7 @@ CoreInternalOutcome L4RuleEntry::Deserialize(const Value &value)
     {
         if (!value["RuleId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `L4RuleEntry.RuleId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L4RuleEntry.RuleId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ruleId = string(value["RuleId"].GetString());
         m_ruleIdHasBeenSet = true;
@@ -145,7 +144,7 @@ CoreInternalOutcome L4RuleEntry::Deserialize(const Value &value)
     {
         if (!value["RuleName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `L4RuleEntry.RuleName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L4RuleEntry.RuleName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ruleName = string(value["RuleName"].GetString());
         m_ruleNameHasBeenSet = true;
@@ -155,7 +154,7 @@ CoreInternalOutcome L4RuleEntry::Deserialize(const Value &value)
     {
         if (!value["RemoveSwitch"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L4RuleEntry.RemoveSwitch` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L4RuleEntry.RemoveSwitch` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_removeSwitch = value["RemoveSwitch"].GetUint64();
         m_removeSwitchHasBeenSet = true;
@@ -165,20 +164,20 @@ CoreInternalOutcome L4RuleEntry::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void L4RuleEntry::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void L4RuleEntry::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_protocolHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Protocol";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_protocol.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
     }
 
     if (m_virtualPortHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VirtualPort";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_virtualPort, allocator);
@@ -186,7 +185,7 @@ void L4RuleEntry::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_sourcePortHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SourcePort";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_sourcePort, allocator);
@@ -194,7 +193,7 @@ void L4RuleEntry::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_sourceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SourceType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_sourceType, allocator);
@@ -202,7 +201,7 @@ void L4RuleEntry::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_keepTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "KeepTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_keepTime, allocator);
@@ -210,22 +209,22 @@ void L4RuleEntry::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_sourceListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SourceList";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_sourceList.begin(); itr != m_sourceList.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_lbTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LbType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_lbType, allocator);
@@ -233,7 +232,7 @@ void L4RuleEntry::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_keepEnableHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "KeepEnable";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_keepEnable, allocator);
@@ -241,23 +240,23 @@ void L4RuleEntry::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_ruleIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RuleId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ruleId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ruleId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ruleNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RuleName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ruleName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ruleName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_removeSwitchHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RemoveSwitch";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_removeSwitch, allocator);

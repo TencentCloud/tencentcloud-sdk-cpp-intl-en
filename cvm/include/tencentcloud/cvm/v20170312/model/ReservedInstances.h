@@ -65,18 +65,18 @@ namespace TencentCloud
                     bool ReservedInstancesIdHasBeenSet() const;
 
                     /**
-                     * 获取The type of the reserved instance. For example, S3.MEDIUM4.
-Returned value: <a href="https://cloud.tencent.com/document/product/213/11518">list of reserved instance types</a>
-                     * @return InstanceType The type of the reserved instance. For example, S3.MEDIUM4.
-Returned value: <a href="https://cloud.tencent.com/document/product/213/11518">list of reserved instance types</a>
+                     * 获取Reserved instance specification, such as `S3.MEDIUM4`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Specifications</a>
+                     * @return InstanceType Reserved instance specification, such as `S3.MEDIUM4`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Specifications</a>
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置The type of the reserved instance. For example, S3.MEDIUM4.
-Returned value: <a href="https://cloud.tencent.com/document/product/213/11518">list of reserved instance types</a>
-                     * @param InstanceType The type of the reserved instance. For example, S3.MEDIUM4.
-Returned value: <a href="https://cloud.tencent.com/document/product/213/11518">list of reserved instance types</a>
+                     * 设置Reserved instance specification, such as `S3.MEDIUM4`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Specifications</a>
+                     * @param InstanceType Reserved instance specification, such as `S3.MEDIUM4`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Specifications</a>
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
@@ -88,17 +88,17 @@ Returned value: <a href="https://cloud.tencent.com/document/product/213/11518">l
 
                     /**
                      * 获取Availability zones in which the reserved instance can be purchased. For example, "ap-guangzhou-1".
-Returned values: <a href="https://cloud.tencent.com/document/product/213/6091">list of availability zones</a>
+Returned values: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">list of availability zones</a>
                      * @return Zone Availability zones in which the reserved instance can be purchased. For example, "ap-guangzhou-1".
-Returned values: <a href="https://cloud.tencent.com/document/product/213/6091">list of availability zones</a>
+Returned values: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">list of availability zones</a>
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置Availability zones in which the reserved instance can be purchased. For example, "ap-guangzhou-1".
-Returned values: <a href="https://cloud.tencent.com/document/product/213/6091">list of availability zones</a>
+Returned values: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">list of availability zones</a>
                      * @param Zone Availability zones in which the reserved instance can be purchased. For example, "ap-guangzhou-1".
-Returned values: <a href="https://cloud.tencent.com/document/product/213/6091">list of availability zones</a>
+Returned values: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">list of availability zones</a>
                      */
                     void SetZone(const std::string& _zone);
 
@@ -272,6 +272,28 @@ Returned value: All Upfront.
                      */
                     bool OfferingTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Reserved instance type, such as `S3`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Types</a>
+                     * @return InstanceFamily Reserved instance type, such as `S3`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Types</a>
+                     */
+                    std::string GetInstanceFamily() const;
+
+                    /**
+                     * 设置Reserved instance type, such as `S3`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Types</a>
+                     * @param InstanceFamily Reserved instance type, such as `S3`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Types</a>
+                     */
+                    void SetInstanceFamily(const std::string& _instanceFamily);
+
+                    /**
+                     * 判断参数 InstanceFamily 是否已赋值
+                     * @return InstanceFamily 是否已赋值
+                     */
+                    bool InstanceFamilyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -281,15 +303,15 @@ Returned value: All Upfront.
                     bool m_reservedInstancesIdHasBeenSet;
 
                     /**
-                     * The type of the reserved instance. For example, S3.MEDIUM4.
-Returned value: <a href="https://cloud.tencent.com/document/product/213/11518">list of reserved instance types</a>
+                     * Reserved instance specification, such as `S3.MEDIUM4`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Specifications</a>
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
                      * Availability zones in which the reserved instance can be purchased. For example, "ap-guangzhou-1".
-Returned values: <a href="https://cloud.tencent.com/document/product/213/6091">list of availability zones</a>
+Returned values: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">list of availability zones</a>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
@@ -346,6 +368,13 @@ Returned value: All Upfront.
                      */
                     std::string m_offeringType;
                     bool m_offeringTypeHasBeenSet;
+
+                    /**
+                     * Reserved instance type, such as `S3`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Types</a>
+                     */
+                    std::string m_instanceFamily;
+                    bool m_instanceFamilyHasBeenSet;
 
                 };
             }

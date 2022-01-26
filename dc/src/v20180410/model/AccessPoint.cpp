@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dc::V20180410::Model;
-using namespace rapidjson;
 using namespace std;
 
 AccessPoint::AccessPoint() :
@@ -27,11 +26,16 @@ AccessPoint::AccessPoint() :
     m_stateHasBeenSet(false),
     m_locationHasBeenSet(false),
     m_lineOperatorHasBeenSet(false),
-    m_regionIdHasBeenSet(false)
+    m_regionIdHasBeenSet(false),
+    m_availablePortTypeHasBeenSet(false),
+    m_coordinateHasBeenSet(false),
+    m_cityHasBeenSet(false),
+    m_areaHasBeenSet(false),
+    m_accessPointTypeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome AccessPoint::Deserialize(const Value &value)
+CoreInternalOutcome AccessPoint::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +44,7 @@ CoreInternalOutcome AccessPoint::Deserialize(const Value &value)
     {
         if (!value["AccessPointName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccessPoint.AccessPointName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccessPoint.AccessPointName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_accessPointName = string(value["AccessPointName"].GetString());
         m_accessPointNameHasBeenSet = true;
@@ -50,7 +54,7 @@ CoreInternalOutcome AccessPoint::Deserialize(const Value &value)
     {
         if (!value["AccessPointId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccessPoint.AccessPointId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccessPoint.AccessPointId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_accessPointId = string(value["AccessPointId"].GetString());
         m_accessPointIdHasBeenSet = true;
@@ -60,7 +64,7 @@ CoreInternalOutcome AccessPoint::Deserialize(const Value &value)
     {
         if (!value["State"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccessPoint.State` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccessPoint.State` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_state = string(value["State"].GetString());
         m_stateHasBeenSet = true;
@@ -70,7 +74,7 @@ CoreInternalOutcome AccessPoint::Deserialize(const Value &value)
     {
         if (!value["Location"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccessPoint.Location` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccessPoint.Location` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_location = string(value["Location"].GetString());
         m_locationHasBeenSet = true;
@@ -79,10 +83,10 @@ CoreInternalOutcome AccessPoint::Deserialize(const Value &value)
     if (value.HasMember("LineOperator") && !value["LineOperator"].IsNull())
     {
         if (!value["LineOperator"].IsArray())
-            return CoreInternalOutcome(Error("response `AccessPoint.LineOperator` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `AccessPoint.LineOperator` is not array type"));
 
-        const Value &tmpValue = value["LineOperator"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["LineOperator"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_lineOperator.push_back((*itr).GetString());
         }
@@ -93,70 +97,176 @@ CoreInternalOutcome AccessPoint::Deserialize(const Value &value)
     {
         if (!value["RegionId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccessPoint.RegionId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccessPoint.RegionId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_regionId = string(value["RegionId"].GetString());
         m_regionIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("AvailablePortType") && !value["AvailablePortType"].IsNull())
+    {
+        if (!value["AvailablePortType"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `AccessPoint.AvailablePortType` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["AvailablePortType"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_availablePortType.push_back((*itr).GetString());
+        }
+        m_availablePortTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("Coordinate") && !value["Coordinate"].IsNull())
+    {
+        if (!value["Coordinate"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `AccessPoint.Coordinate` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_coordinate.Deserialize(value["Coordinate"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_coordinateHasBeenSet = true;
+    }
+
+    if (value.HasMember("City") && !value["City"].IsNull())
+    {
+        if (!value["City"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AccessPoint.City` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_city = string(value["City"].GetString());
+        m_cityHasBeenSet = true;
+    }
+
+    if (value.HasMember("Area") && !value["Area"].IsNull())
+    {
+        if (!value["Area"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AccessPoint.Area` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_area = string(value["Area"].GetString());
+        m_areaHasBeenSet = true;
+    }
+
+    if (value.HasMember("AccessPointType") && !value["AccessPointType"].IsNull())
+    {
+        if (!value["AccessPointType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AccessPoint.AccessPointType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_accessPointType = string(value["AccessPointType"].GetString());
+        m_accessPointTypeHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void AccessPoint::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AccessPoint::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_accessPointNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AccessPointName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_accessPointName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_accessPointName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_accessPointIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AccessPointId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_accessPointId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_accessPointId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_stateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "State";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_state.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_state.c_str(), allocator).Move(), allocator);
     }
 
     if (m_locationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Location";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_location.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_location.c_str(), allocator).Move(), allocator);
     }
 
     if (m_lineOperatorHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LineOperator";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_lineOperator.begin(); itr != m_lineOperator.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_regionIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RegionId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_regionId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_regionId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_availablePortTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AvailablePortType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_availablePortType.begin(); itr != m_availablePortType.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_coordinateHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Coordinate";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_coordinate.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_cityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "City";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_city.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_areaHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Area";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_area.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_accessPointTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AccessPointType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_accessPointType.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -256,5 +366,85 @@ void AccessPoint::SetRegionId(const string& _regionId)
 bool AccessPoint::RegionIdHasBeenSet() const
 {
     return m_regionIdHasBeenSet;
+}
+
+vector<string> AccessPoint::GetAvailablePortType() const
+{
+    return m_availablePortType;
+}
+
+void AccessPoint::SetAvailablePortType(const vector<string>& _availablePortType)
+{
+    m_availablePortType = _availablePortType;
+    m_availablePortTypeHasBeenSet = true;
+}
+
+bool AccessPoint::AvailablePortTypeHasBeenSet() const
+{
+    return m_availablePortTypeHasBeenSet;
+}
+
+Coordinate AccessPoint::GetCoordinate() const
+{
+    return m_coordinate;
+}
+
+void AccessPoint::SetCoordinate(const Coordinate& _coordinate)
+{
+    m_coordinate = _coordinate;
+    m_coordinateHasBeenSet = true;
+}
+
+bool AccessPoint::CoordinateHasBeenSet() const
+{
+    return m_coordinateHasBeenSet;
+}
+
+string AccessPoint::GetCity() const
+{
+    return m_city;
+}
+
+void AccessPoint::SetCity(const string& _city)
+{
+    m_city = _city;
+    m_cityHasBeenSet = true;
+}
+
+bool AccessPoint::CityHasBeenSet() const
+{
+    return m_cityHasBeenSet;
+}
+
+string AccessPoint::GetArea() const
+{
+    return m_area;
+}
+
+void AccessPoint::SetArea(const string& _area)
+{
+    m_area = _area;
+    m_areaHasBeenSet = true;
+}
+
+bool AccessPoint::AreaHasBeenSet() const
+{
+    return m_areaHasBeenSet;
+}
+
+string AccessPoint::GetAccessPointType() const
+{
+    return m_accessPointType;
+}
+
+void AccessPoint::SetAccessPointType(const string& _accessPointType)
+{
+    m_accessPointType = _accessPointType;
+    m_accessPointTypeHasBeenSet = true;
+}
+
+bool AccessPoint::AccessPointTypeHasBeenSet() const
+{
+    return m_accessPointTypeHasBeenSet;
 }
 

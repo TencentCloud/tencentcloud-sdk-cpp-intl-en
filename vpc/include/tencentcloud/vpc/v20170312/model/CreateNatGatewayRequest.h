@@ -187,6 +187,24 @@ namespace TencentCloud
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Subnet of the NAT gateway
+                     * @return SubnetId Subnet of the NAT gateway
+                     */
+                    std::string GetSubnetId() const;
+
+                    /**
+                     * 设置Subnet of the NAT gateway
+                     * @param SubnetId Subnet of the NAT gateway
+                     */
+                    void SetSubnetId(const std::string& _subnetId);
+
+                    /**
+                     * 判断参数 SubnetId 是否已赋值
+                     * @return SubnetId 是否已赋值
+                     */
+                    bool SubnetIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -236,6 +254,12 @@ namespace TencentCloud
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Subnet of the NAT gateway
+                     */
+                    std::string m_subnetId;
+                    bool m_subnetIdHasBeenSet;
 
                 };
             }

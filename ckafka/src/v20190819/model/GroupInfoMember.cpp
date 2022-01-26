@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ckafka::V20190819::Model;
-using namespace rapidjson;
 using namespace std;
 
 GroupInfoMember::GroupInfoMember() :
@@ -29,7 +28,7 @@ GroupInfoMember::GroupInfoMember() :
 {
 }
 
-CoreInternalOutcome GroupInfoMember::Deserialize(const Value &value)
+CoreInternalOutcome GroupInfoMember::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome GroupInfoMember::Deserialize(const Value &value)
     {
         if (!value["MemberId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GroupInfoMember.MemberId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupInfoMember.MemberId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_memberId = string(value["MemberId"].GetString());
         m_memberIdHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome GroupInfoMember::Deserialize(const Value &value)
     {
         if (!value["ClientId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GroupInfoMember.ClientId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupInfoMember.ClientId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_clientId = string(value["ClientId"].GetString());
         m_clientIdHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome GroupInfoMember::Deserialize(const Value &value)
     {
         if (!value["ClientHost"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GroupInfoMember.ClientHost` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupInfoMember.ClientHost` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_clientHost = string(value["ClientHost"].GetString());
         m_clientHostHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome GroupInfoMember::Deserialize(const Value &value)
     {
         if (!value["Assignment"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `GroupInfoMember.Assignment` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupInfoMember.Assignment` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_assignment.Deserialize(value["Assignment"]);
@@ -85,39 +84,39 @@ CoreInternalOutcome GroupInfoMember::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void GroupInfoMember::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void GroupInfoMember::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_memberIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MemberId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_memberId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_memberId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_clientIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClientId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_clientId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clientId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_clientHostHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClientHost";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_clientHost.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clientHost.c_str(), allocator).Move(), allocator);
     }
 
     if (m_assignmentHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Assignment";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_assignment.ToJsonObject(value[key.c_str()], allocator);
     }
 

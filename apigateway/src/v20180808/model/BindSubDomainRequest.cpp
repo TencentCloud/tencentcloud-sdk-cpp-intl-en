@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 BindSubDomainRequest::BindSubDomainRequest() :
@@ -31,52 +30,53 @@ BindSubDomainRequest::BindSubDomainRequest() :
     m_isDefaultMappingHasBeenSet(false),
     m_netSubDomainHasBeenSet(false),
     m_certificateIdHasBeenSet(false),
-    m_pathMappingSetHasBeenSet(false)
+    m_pathMappingSetHasBeenSet(false),
+    m_isForcedHttpsHasBeenSet(false)
 {
 }
 
 string BindSubDomainRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_serviceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_serviceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_serviceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_subDomainHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubDomain";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_subDomain.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_subDomain.c_str(), allocator).Move(), allocator);
     }
 
     if (m_protocolHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Protocol";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_protocol.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
     }
 
     if (m_netTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetType";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_netType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_netType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_isDefaultMappingHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsDefaultMapping";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_isDefaultMapping, allocator);
@@ -84,38 +84,46 @@ string BindSubDomainRequest::ToJsonString() const
 
     if (m_netSubDomainHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetSubDomain";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_netSubDomain.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_netSubDomain.c_str(), allocator).Move(), allocator);
     }
 
     if (m_certificateIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CertificateId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_certificateId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_certificateId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_pathMappingSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PathMappingSet";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_pathMappingSet.begin(); itr != m_pathMappingSet.end(); ++itr, ++i)
         {
-            d[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
     }
 
+    if (m_isForcedHttpsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsForcedHttps";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_isForcedHttps, allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -247,6 +255,22 @@ void BindSubDomainRequest::SetPathMappingSet(const vector<PathMapping>& _pathMap
 bool BindSubDomainRequest::PathMappingSetHasBeenSet() const
 {
     return m_pathMappingSetHasBeenSet;
+}
+
+bool BindSubDomainRequest::GetIsForcedHttps() const
+{
+    return m_isForcedHttps;
+}
+
+void BindSubDomainRequest::SetIsForcedHttps(const bool& _isForcedHttps)
+{
+    m_isForcedHttps = _isForcedHttps;
+    m_isForcedHttpsHasBeenSet = true;
+}
+
+bool BindSubDomainRequest::IsForcedHttpsHasBeenSet() const
+{
+    return m_isForcedHttpsHasBeenSet;
 }
 
 

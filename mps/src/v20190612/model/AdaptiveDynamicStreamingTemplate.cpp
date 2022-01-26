@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 AdaptiveDynamicStreamingTemplate::AdaptiveDynamicStreamingTemplate() :
@@ -35,7 +34,7 @@ AdaptiveDynamicStreamingTemplate::AdaptiveDynamicStreamingTemplate() :
 {
 }
 
-CoreInternalOutcome AdaptiveDynamicStreamingTemplate::Deserialize(const Value &value)
+CoreInternalOutcome AdaptiveDynamicStreamingTemplate::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -44,7 +43,7 @@ CoreInternalOutcome AdaptiveDynamicStreamingTemplate::Deserialize(const Value &v
     {
         if (!value["Definition"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AdaptiveDynamicStreamingTemplate.Definition` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingTemplate.Definition` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_definition = value["Definition"].GetUint64();
         m_definitionHasBeenSet = true;
@@ -54,7 +53,7 @@ CoreInternalOutcome AdaptiveDynamicStreamingTemplate::Deserialize(const Value &v
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AdaptiveDynamicStreamingTemplate.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingTemplate.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -64,7 +63,7 @@ CoreInternalOutcome AdaptiveDynamicStreamingTemplate::Deserialize(const Value &v
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AdaptiveDynamicStreamingTemplate.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingTemplate.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -74,7 +73,7 @@ CoreInternalOutcome AdaptiveDynamicStreamingTemplate::Deserialize(const Value &v
     {
         if (!value["Comment"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AdaptiveDynamicStreamingTemplate.Comment` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingTemplate.Comment` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_comment = string(value["Comment"].GetString());
         m_commentHasBeenSet = true;
@@ -84,7 +83,7 @@ CoreInternalOutcome AdaptiveDynamicStreamingTemplate::Deserialize(const Value &v
     {
         if (!value["Format"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AdaptiveDynamicStreamingTemplate.Format` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingTemplate.Format` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_format = string(value["Format"].GetString());
         m_formatHasBeenSet = true;
@@ -93,10 +92,10 @@ CoreInternalOutcome AdaptiveDynamicStreamingTemplate::Deserialize(const Value &v
     if (value.HasMember("StreamInfos") && !value["StreamInfos"].IsNull())
     {
         if (!value["StreamInfos"].IsArray())
-            return CoreInternalOutcome(Error("response `AdaptiveDynamicStreamingTemplate.StreamInfos` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingTemplate.StreamInfos` is not array type"));
 
-        const Value &tmpValue = value["StreamInfos"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["StreamInfos"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             AdaptiveStreamTemplate item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -114,7 +113,7 @@ CoreInternalOutcome AdaptiveDynamicStreamingTemplate::Deserialize(const Value &v
     {
         if (!value["DisableHigherVideoBitrate"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AdaptiveDynamicStreamingTemplate.DisableHigherVideoBitrate` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingTemplate.DisableHigherVideoBitrate` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_disableHigherVideoBitrate = value["DisableHigherVideoBitrate"].GetUint64();
         m_disableHigherVideoBitrateHasBeenSet = true;
@@ -124,7 +123,7 @@ CoreInternalOutcome AdaptiveDynamicStreamingTemplate::Deserialize(const Value &v
     {
         if (!value["DisableHigherVideoResolution"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AdaptiveDynamicStreamingTemplate.DisableHigherVideoResolution` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingTemplate.DisableHigherVideoResolution` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_disableHigherVideoResolution = value["DisableHigherVideoResolution"].GetUint64();
         m_disableHigherVideoResolutionHasBeenSet = true;
@@ -134,7 +133,7 @@ CoreInternalOutcome AdaptiveDynamicStreamingTemplate::Deserialize(const Value &v
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AdaptiveDynamicStreamingTemplate.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingTemplate.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -144,7 +143,7 @@ CoreInternalOutcome AdaptiveDynamicStreamingTemplate::Deserialize(const Value &v
     {
         if (!value["UpdateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AdaptiveDynamicStreamingTemplate.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AdaptiveDynamicStreamingTemplate.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_updateTime = string(value["UpdateTime"].GetString());
         m_updateTimeHasBeenSet = true;
@@ -154,12 +153,12 @@ CoreInternalOutcome AdaptiveDynamicStreamingTemplate::Deserialize(const Value &v
     return CoreInternalOutcome(true);
 }
 
-void AdaptiveDynamicStreamingTemplate::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AdaptiveDynamicStreamingTemplate::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_definitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Definition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_definition, allocator);
@@ -167,54 +166,54 @@ void AdaptiveDynamicStreamingTemplate::ToJsonObject(Value &value, Document::Allo
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_commentHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Comment";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_comment.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_comment.c_str(), allocator).Move(), allocator);
     }
 
     if (m_formatHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Format";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_format.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_format.c_str(), allocator).Move(), allocator);
     }
 
     if (m_streamInfosHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StreamInfos";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_streamInfos.begin(); itr != m_streamInfos.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_disableHigherVideoBitrateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DisableHigherVideoBitrate";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_disableHigherVideoBitrate, allocator);
@@ -222,7 +221,7 @@ void AdaptiveDynamicStreamingTemplate::ToJsonObject(Value &value, Document::Allo
 
     if (m_disableHigherVideoResolutionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DisableHigherVideoResolution";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_disableHigherVideoResolution, allocator);
@@ -230,18 +229,18 @@ void AdaptiveDynamicStreamingTemplate::ToJsonObject(Value &value, Document::Allo
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_updateTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UpdateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_updateTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_updateTime.c_str(), allocator).Move(), allocator);
     }
 
 }

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 DBSwitchInfo::DBSwitchInfo() :
@@ -27,7 +26,7 @@ DBSwitchInfo::DBSwitchInfo() :
 {
 }
 
-CoreInternalOutcome DBSwitchInfo::Deserialize(const Value &value)
+CoreInternalOutcome DBSwitchInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome DBSwitchInfo::Deserialize(const Value &value)
     {
         if (!value["SwitchTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBSwitchInfo.SwitchTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBSwitchInfo.SwitchTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_switchTime = string(value["SwitchTime"].GetString());
         m_switchTimeHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome DBSwitchInfo::Deserialize(const Value &value)
     {
         if (!value["SwitchType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBSwitchInfo.SwitchType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBSwitchInfo.SwitchType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_switchType = string(value["SwitchType"].GetString());
         m_switchTypeHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome DBSwitchInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void DBSwitchInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DBSwitchInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_switchTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SwitchTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_switchTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_switchTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_switchTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SwitchType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_switchType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_switchType.c_str(), allocator).Move(), allocator);
     }
 
 }

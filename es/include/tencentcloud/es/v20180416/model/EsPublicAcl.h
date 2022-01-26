@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Access blacklist
-                     * @return BlackIpList Access blacklist
+                     * 获取Access blocklist
+                     * @return BlackIpList Access blocklist
                      */
                     std::vector<std::string> GetBlackIpList() const;
 
                     /**
-                     * 设置Access blacklist
-                     * @param BlackIpList Access blacklist
+                     * 设置Access blocklist
+                     * @param BlackIpList Access blocklist
                      */
                     void SetBlackIpList(const std::vector<std::string>& _blackIpList);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool BlackIpListHasBeenSet() const;
 
                     /**
-                     * 获取Access whitelist
-                     * @return WhiteIpList Access whitelist
+                     * 获取Access allowlist
+                     * @return WhiteIpList Access allowlist
                      */
                     std::vector<std::string> GetWhiteIpList() const;
 
                     /**
-                     * 设置Access whitelist
-                     * @param WhiteIpList Access whitelist
+                     * 设置Access allowlist
+                     * @param WhiteIpList Access allowlist
                      */
                     void SetWhiteIpList(const std::vector<std::string>& _whiteIpList);
 
@@ -85,13 +85,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Access blacklist
+                     * Access blocklist
                      */
                     std::vector<std::string> m_blackIpList;
                     bool m_blackIpListHasBeenSet;
 
                     /**
-                     * Access whitelist
+                     * Access allowlist
                      */
                     std::vector<std::string> m_whiteIpList;
                     bool m_whiteIpListHasBeenSet;

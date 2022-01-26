@@ -21,31 +21,29 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gme::V20180711::Model;
-using namespace rapidjson;
 using namespace std;
 
 ModifyAppStatusResponse::ModifyAppStatusResponse() :
-    m_bizIdHasBeenSet(false),
-    m_statusHasBeenSet(false)
+    m_dataHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome ModifyAppStatusResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -56,57 +54,70 @@ CoreInternalOutcome ModifyAppStatusResponse::Deserialize(const string &payload)
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
-    if (rsp.HasMember("BizId") && !rsp["BizId"].IsNull())
+    if (rsp.HasMember("Data") && !rsp["Data"].IsNull())
     {
-        if (!rsp["BizId"].IsUint64())
+        if (!rsp["Data"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `BizId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Data` is not object type").SetRequestId(requestId));
         }
-        m_bizId = rsp["BizId"].GetUint64();
-        m_bizIdHasBeenSet = true;
-    }
 
-    if (rsp.HasMember("Status") && !rsp["Status"].IsNull())
-    {
-        if (!rsp["Status"].IsString())
+        CoreInternalOutcome outcome = m_data.Deserialize(rsp["Data"]);
+        if (!outcome.IsSuccess())
         {
-            return CoreInternalOutcome(Error("response `Status` IsString=false incorrectly").SetRequestId(requestId));
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
         }
-        m_status = string(rsp["Status"].GetString());
-        m_statusHasBeenSet = true;
+
+        m_dataHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-
-uint64_t ModifyAppStatusResponse::GetBizId() const
+string ModifyAppStatusResponse::ToJsonString() const
 {
-    return m_bizId;
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_dataHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Data";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_data.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
-bool ModifyAppStatusResponse::BizIdHasBeenSet() const
+
+ModifyAppStatusResp ModifyAppStatusResponse::GetData() const
 {
-    return m_bizIdHasBeenSet;
+    return m_data;
 }
 
-string ModifyAppStatusResponse::GetStatus() const
+bool ModifyAppStatusResponse::DataHasBeenSet() const
 {
-    return m_status;
-}
-
-bool ModifyAppStatusResponse::StatusHasBeenSet() const
-{
-    return m_statusHasBeenSet;
+    return m_dataHasBeenSet;
 }
 
 

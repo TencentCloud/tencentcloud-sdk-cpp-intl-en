@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dayu::V20180709::Model;
-using namespace rapidjson;
 using namespace std;
 
 BaradData::BaradData() :
@@ -28,7 +27,7 @@ BaradData::BaradData() :
 {
 }
 
-CoreInternalOutcome BaradData::Deserialize(const Value &value)
+CoreInternalOutcome BaradData::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome BaradData::Deserialize(const Value &value)
     {
         if (!value["MetricName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BaradData.MetricName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BaradData.MetricName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_metricName = string(value["MetricName"].GetString());
         m_metricNameHasBeenSet = true;
@@ -46,10 +45,10 @@ CoreInternalOutcome BaradData::Deserialize(const Value &value)
     if (value.HasMember("Data") && !value["Data"].IsNull())
     {
         if (!value["Data"].IsArray())
-            return CoreInternalOutcome(Error("response `BaradData.Data` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `BaradData.Data` is not array type"));
 
-        const Value &tmpValue = value["Data"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Data"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_data.push_back((*itr).GetDouble());
         }
@@ -60,7 +59,7 @@ CoreInternalOutcome BaradData::Deserialize(const Value &value)
     {
         if (!value["Count"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `BaradData.Count` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BaradData.Count` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_count = value["Count"].GetUint64();
         m_countHasBeenSet = true;
@@ -70,33 +69,33 @@ CoreInternalOutcome BaradData::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void BaradData::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void BaradData::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_metricNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MetricName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_metricName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_metricName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_dataHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Data";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_data.begin(); itr != m_data.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetDouble(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetDouble(*itr), allocator);
         }
     }
 
     if (m_countHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Count";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_count, allocator);

@@ -556,6 +556,49 @@ CamClient::CreateServiceLinkedRoleOutcomeCallable CamClient::CreateServiceLinked
     return task->get_future();
 }
 
+CamClient::CreateUserSAMLConfigOutcome CamClient::CreateUserSAMLConfig(const CreateUserSAMLConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateUserSAMLConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateUserSAMLConfigResponse rsp = CreateUserSAMLConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateUserSAMLConfigOutcome(rsp);
+        else
+            return CreateUserSAMLConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateUserSAMLConfigOutcome(outcome.GetError());
+    }
+}
+
+void CamClient::CreateUserSAMLConfigAsync(const CreateUserSAMLConfigRequest& request, const CreateUserSAMLConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateUserSAMLConfig(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CamClient::CreateUserSAMLConfigOutcomeCallable CamClient::CreateUserSAMLConfigCallable(const CreateUserSAMLConfigRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateUserSAMLConfigOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateUserSAMLConfig(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CamClient::DeleteGroupOutcome CamClient::DeleteGroup(const DeleteGroupRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteGroup");
@@ -728,6 +771,49 @@ CamClient::DeleteRoleOutcomeCallable CamClient::DeleteRoleCallable(const DeleteR
     return task->get_future();
 }
 
+CamClient::DeleteRolePermissionsBoundaryOutcome CamClient::DeleteRolePermissionsBoundary(const DeleteRolePermissionsBoundaryRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteRolePermissionsBoundary");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteRolePermissionsBoundaryResponse rsp = DeleteRolePermissionsBoundaryResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteRolePermissionsBoundaryOutcome(rsp);
+        else
+            return DeleteRolePermissionsBoundaryOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteRolePermissionsBoundaryOutcome(outcome.GetError());
+    }
+}
+
+void CamClient::DeleteRolePermissionsBoundaryAsync(const DeleteRolePermissionsBoundaryRequest& request, const DeleteRolePermissionsBoundaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteRolePermissionsBoundary(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CamClient::DeleteRolePermissionsBoundaryOutcomeCallable CamClient::DeleteRolePermissionsBoundaryCallable(const DeleteRolePermissionsBoundaryRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteRolePermissionsBoundaryOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteRolePermissionsBoundary(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CamClient::DeleteSAMLProviderOutcome CamClient::DeleteSAMLProvider(const DeleteSAMLProviderRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteSAMLProvider");
@@ -857,6 +943,49 @@ CamClient::DeleteUserOutcomeCallable CamClient::DeleteUserCallable(const DeleteU
     return task->get_future();
 }
 
+CamClient::DeleteUserPermissionsBoundaryOutcome CamClient::DeleteUserPermissionsBoundary(const DeleteUserPermissionsBoundaryRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteUserPermissionsBoundary");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteUserPermissionsBoundaryResponse rsp = DeleteUserPermissionsBoundaryResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteUserPermissionsBoundaryOutcome(rsp);
+        else
+            return DeleteUserPermissionsBoundaryOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteUserPermissionsBoundaryOutcome(outcome.GetError());
+    }
+}
+
+void CamClient::DeleteUserPermissionsBoundaryAsync(const DeleteUserPermissionsBoundaryRequest& request, const DeleteUserPermissionsBoundaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteUserPermissionsBoundary(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CamClient::DeleteUserPermissionsBoundaryOutcomeCallable CamClient::DeleteUserPermissionsBoundaryCallable(const DeleteUserPermissionsBoundaryRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteUserPermissionsBoundaryOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteUserPermissionsBoundary(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CamClient::DescribeRoleListOutcome CamClient::DescribeRoleList(const DescribeRoleListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeRoleList");
@@ -893,6 +1022,221 @@ CamClient::DescribeRoleListOutcomeCallable CamClient::DescribeRoleListCallable(c
         [this, request]()
         {
             return this->DescribeRoleList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CamClient::DescribeSafeAuthFlagOutcome CamClient::DescribeSafeAuthFlag(const DescribeSafeAuthFlagRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSafeAuthFlag");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSafeAuthFlagResponse rsp = DescribeSafeAuthFlagResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSafeAuthFlagOutcome(rsp);
+        else
+            return DescribeSafeAuthFlagOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSafeAuthFlagOutcome(outcome.GetError());
+    }
+}
+
+void CamClient::DescribeSafeAuthFlagAsync(const DescribeSafeAuthFlagRequest& request, const DescribeSafeAuthFlagAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeSafeAuthFlag(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CamClient::DescribeSafeAuthFlagOutcomeCallable CamClient::DescribeSafeAuthFlagCallable(const DescribeSafeAuthFlagRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeSafeAuthFlagOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeSafeAuthFlag(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CamClient::DescribeSafeAuthFlagCollOutcome CamClient::DescribeSafeAuthFlagColl(const DescribeSafeAuthFlagCollRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSafeAuthFlagColl");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSafeAuthFlagCollResponse rsp = DescribeSafeAuthFlagCollResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSafeAuthFlagCollOutcome(rsp);
+        else
+            return DescribeSafeAuthFlagCollOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSafeAuthFlagCollOutcome(outcome.GetError());
+    }
+}
+
+void CamClient::DescribeSafeAuthFlagCollAsync(const DescribeSafeAuthFlagCollRequest& request, const DescribeSafeAuthFlagCollAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeSafeAuthFlagColl(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CamClient::DescribeSafeAuthFlagCollOutcomeCallable CamClient::DescribeSafeAuthFlagCollCallable(const DescribeSafeAuthFlagCollRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeSafeAuthFlagCollOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeSafeAuthFlagColl(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CamClient::DescribeSafeAuthFlagIntlOutcome CamClient::DescribeSafeAuthFlagIntl(const DescribeSafeAuthFlagIntlRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSafeAuthFlagIntl");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSafeAuthFlagIntlResponse rsp = DescribeSafeAuthFlagIntlResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSafeAuthFlagIntlOutcome(rsp);
+        else
+            return DescribeSafeAuthFlagIntlOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSafeAuthFlagIntlOutcome(outcome.GetError());
+    }
+}
+
+void CamClient::DescribeSafeAuthFlagIntlAsync(const DescribeSafeAuthFlagIntlRequest& request, const DescribeSafeAuthFlagIntlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeSafeAuthFlagIntl(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CamClient::DescribeSafeAuthFlagIntlOutcomeCallable CamClient::DescribeSafeAuthFlagIntlCallable(const DescribeSafeAuthFlagIntlRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeSafeAuthFlagIntlOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeSafeAuthFlagIntl(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CamClient::DescribeSubAccountsOutcome CamClient::DescribeSubAccounts(const DescribeSubAccountsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSubAccounts");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSubAccountsResponse rsp = DescribeSubAccountsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSubAccountsOutcome(rsp);
+        else
+            return DescribeSubAccountsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSubAccountsOutcome(outcome.GetError());
+    }
+}
+
+void CamClient::DescribeSubAccountsAsync(const DescribeSubAccountsRequest& request, const DescribeSubAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeSubAccounts(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CamClient::DescribeSubAccountsOutcomeCallable CamClient::DescribeSubAccountsCallable(const DescribeSubAccountsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeSubAccountsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeSubAccounts(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CamClient::DescribeUserSAMLConfigOutcome CamClient::DescribeUserSAMLConfig(const DescribeUserSAMLConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeUserSAMLConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeUserSAMLConfigResponse rsp = DescribeUserSAMLConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeUserSAMLConfigOutcome(rsp);
+        else
+            return DescribeUserSAMLConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeUserSAMLConfigOutcome(outcome.GetError());
+    }
+}
+
+void CamClient::DescribeUserSAMLConfigAsync(const DescribeUserSAMLConfigRequest& request, const DescribeUserSAMLConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeUserSAMLConfig(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CamClient::DescribeUserSAMLConfigOutcomeCallable CamClient::DescribeUserSAMLConfigCallable(const DescribeUserSAMLConfigRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeUserSAMLConfigOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeUserSAMLConfig(request);
         }
     );
 
@@ -1022,6 +1366,49 @@ CamClient::DetachUserPolicyOutcomeCallable CamClient::DetachUserPolicyCallable(c
         [this, request]()
         {
             return this->DetachUserPolicy(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CamClient::GetAccountSummaryOutcome CamClient::GetAccountSummary(const GetAccountSummaryRequest &request)
+{
+    auto outcome = MakeRequest(request, "GetAccountSummary");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GetAccountSummaryResponse rsp = GetAccountSummaryResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GetAccountSummaryOutcome(rsp);
+        else
+            return GetAccountSummaryOutcome(o.GetError());
+    }
+    else
+    {
+        return GetAccountSummaryOutcome(outcome.GetError());
+    }
+}
+
+void CamClient::GetAccountSummaryAsync(const GetAccountSummaryRequest& request, const GetAccountSummaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->GetAccountSummary(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CamClient::GetAccountSummaryOutcomeCallable CamClient::GetAccountSummaryCallable(const GetAccountSummaryRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<GetAccountSummaryOutcome()>>(
+        [this, request]()
+        {
+            return this->GetAccountSummary(request);
         }
     );
 
@@ -1287,6 +1674,49 @@ CamClient::GetSAMLProviderOutcomeCallable CamClient::GetSAMLProviderCallable(con
     return task->get_future();
 }
 
+CamClient::GetSecurityLastUsedOutcome CamClient::GetSecurityLastUsed(const GetSecurityLastUsedRequest &request)
+{
+    auto outcome = MakeRequest(request, "GetSecurityLastUsed");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GetSecurityLastUsedResponse rsp = GetSecurityLastUsedResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GetSecurityLastUsedOutcome(rsp);
+        else
+            return GetSecurityLastUsedOutcome(o.GetError());
+    }
+    else
+    {
+        return GetSecurityLastUsedOutcome(outcome.GetError());
+    }
+}
+
+void CamClient::GetSecurityLastUsedAsync(const GetSecurityLastUsedRequest& request, const GetSecurityLastUsedAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->GetSecurityLastUsed(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CamClient::GetSecurityLastUsedOutcomeCallable CamClient::GetSecurityLastUsedCallable(const GetSecurityLastUsedRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<GetSecurityLastUsedOutcome()>>(
+        [this, request]()
+        {
+            return this->GetSecurityLastUsed(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CamClient::GetServiceLinkedRoleDeletionStatusOutcome CamClient::GetServiceLinkedRoleDeletionStatus(const GetServiceLinkedRoleDeletionStatusRequest &request)
 {
     auto outcome = MakeRequest(request, "GetServiceLinkedRoleDeletionStatus");
@@ -1495,6 +1925,49 @@ CamClient::ListAttachedRolePoliciesOutcomeCallable CamClient::ListAttachedRolePo
         [this, request]()
         {
             return this->ListAttachedRolePolicies(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CamClient::ListAttachedUserAllPoliciesOutcome CamClient::ListAttachedUserAllPolicies(const ListAttachedUserAllPoliciesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListAttachedUserAllPolicies");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListAttachedUserAllPoliciesResponse rsp = ListAttachedUserAllPoliciesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListAttachedUserAllPoliciesOutcome(rsp);
+        else
+            return ListAttachedUserAllPoliciesOutcome(o.GetError());
+    }
+    else
+    {
+        return ListAttachedUserAllPoliciesOutcome(outcome.GetError());
+    }
+}
+
+void CamClient::ListAttachedUserAllPoliciesAsync(const ListAttachedUserAllPoliciesRequest& request, const ListAttachedUserAllPoliciesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ListAttachedUserAllPolicies(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CamClient::ListAttachedUserAllPoliciesOutcomeCallable CamClient::ListAttachedUserAllPoliciesCallable(const ListAttachedUserAllPoliciesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ListAttachedUserAllPoliciesOutcome()>>(
+        [this, request]()
+        {
+            return this->ListAttachedUserAllPolicies(request);
         }
     );
 
@@ -1932,6 +2405,92 @@ CamClient::ListUsersForGroupOutcomeCallable CamClient::ListUsersForGroupCallable
     return task->get_future();
 }
 
+CamClient::PutRolePermissionsBoundaryOutcome CamClient::PutRolePermissionsBoundary(const PutRolePermissionsBoundaryRequest &request)
+{
+    auto outcome = MakeRequest(request, "PutRolePermissionsBoundary");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        PutRolePermissionsBoundaryResponse rsp = PutRolePermissionsBoundaryResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return PutRolePermissionsBoundaryOutcome(rsp);
+        else
+            return PutRolePermissionsBoundaryOutcome(o.GetError());
+    }
+    else
+    {
+        return PutRolePermissionsBoundaryOutcome(outcome.GetError());
+    }
+}
+
+void CamClient::PutRolePermissionsBoundaryAsync(const PutRolePermissionsBoundaryRequest& request, const PutRolePermissionsBoundaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->PutRolePermissionsBoundary(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CamClient::PutRolePermissionsBoundaryOutcomeCallable CamClient::PutRolePermissionsBoundaryCallable(const PutRolePermissionsBoundaryRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<PutRolePermissionsBoundaryOutcome()>>(
+        [this, request]()
+        {
+            return this->PutRolePermissionsBoundary(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CamClient::PutUserPermissionsBoundaryOutcome CamClient::PutUserPermissionsBoundary(const PutUserPermissionsBoundaryRequest &request)
+{
+    auto outcome = MakeRequest(request, "PutUserPermissionsBoundary");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        PutUserPermissionsBoundaryResponse rsp = PutUserPermissionsBoundaryResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return PutUserPermissionsBoundaryOutcome(rsp);
+        else
+            return PutUserPermissionsBoundaryOutcome(o.GetError());
+    }
+    else
+    {
+        return PutUserPermissionsBoundaryOutcome(outcome.GetError());
+    }
+}
+
+void CamClient::PutUserPermissionsBoundaryAsync(const PutUserPermissionsBoundaryRequest& request, const PutUserPermissionsBoundaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->PutUserPermissionsBoundary(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CamClient::PutUserPermissionsBoundaryOutcomeCallable CamClient::PutUserPermissionsBoundaryCallable(const PutUserPermissionsBoundaryRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<PutUserPermissionsBoundaryOutcome()>>(
+        [this, request]()
+        {
+            return this->PutUserPermissionsBoundary(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CamClient::RemoveUserFromGroupOutcome CamClient::RemoveUserFromGroup(const RemoveUserFromGroupRequest &request)
 {
     auto outcome = MakeRequest(request, "RemoveUserFromGroup");
@@ -2355,6 +2914,49 @@ CamClient::UpdateUserOutcomeCallable CamClient::UpdateUserCallable(const UpdateU
         [this, request]()
         {
             return this->UpdateUser(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CamClient::UpdateUserSAMLConfigOutcome CamClient::UpdateUserSAMLConfig(const UpdateUserSAMLConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateUserSAMLConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateUserSAMLConfigResponse rsp = UpdateUserSAMLConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateUserSAMLConfigOutcome(rsp);
+        else
+            return UpdateUserSAMLConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateUserSAMLConfigOutcome(outcome.GetError());
+    }
+}
+
+void CamClient::UpdateUserSAMLConfigAsync(const UpdateUserSAMLConfigRequest& request, const UpdateUserSAMLConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpdateUserSAMLConfig(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CamClient::UpdateUserSAMLConfigOutcomeCallable CamClient::UpdateUserSAMLConfigCallable(const UpdateUserSAMLConfigRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpdateUserSAMLConfigOutcome()>>(
+        [this, request]()
+        {
+            return this->UpdateUserSAMLConfig(request);
         }
     );
 

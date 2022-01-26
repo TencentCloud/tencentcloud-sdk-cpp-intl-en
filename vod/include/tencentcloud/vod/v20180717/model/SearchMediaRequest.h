@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vod/v20180717/model/TimeRange.h>
 #include <tencentcloud/vod/v20180717/model/SortBy.h>
 
 
@@ -44,22 +45,130 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
-                     * @return Text Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
+                     * 获取File ID set. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
+<li>ID length limit: 40 characters.</li>
+                     * @return FileIds File ID set. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
+<li>ID length limit: 40 characters.</li>
                      */
-                    std::string GetText() const;
+                    std::vector<std::string> GetFileIds() const;
 
                     /**
-                     * 设置Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
-                     * @param Text Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
+                     * 设置File ID set. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
+<li>ID length limit: 40 characters.</li>
+                     * @param FileIds File ID set. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
+<li>ID length limit: 40 characters.</li>
                      */
-                    void SetText(const std::string& _text);
+                    void SetFileIds(const std::vector<std::string>& _fileIds);
 
                     /**
-                     * 判断参数 Text 是否已赋值
-                     * @return Text 是否已赋值
+                     * 判断参数 FileIds 是否已赋值
+                     * @return FileIds 是否已赋值
                      */
-                    bool TextHasBeenSet() const;
+                    bool FileIdsHasBeenSet() const;
+
+                    /**
+                     * 获取Filename set. Filenames of media files are fuzzily matched. The higher the match rate, the higher-ranked the result.
+<li>Filename length limit: 40 characters.</li>
+<li>Array length limit: 10.</li>
+                     * @return Names Filename set. Filenames of media files are fuzzily matched. The higher the match rate, the higher-ranked the result.
+<li>Filename length limit: 40 characters.</li>
+<li>Array length limit: 10.</li>
+                     */
+                    std::vector<std::string> GetNames() const;
+
+                    /**
+                     * 设置Filename set. Filenames of media files are fuzzily matched. The higher the match rate, the higher-ranked the result.
+<li>Filename length limit: 40 characters.</li>
+<li>Array length limit: 10.</li>
+                     * @param Names Filename set. Filenames of media files are fuzzily matched. The higher the match rate, the higher-ranked the result.
+<li>Filename length limit: 40 characters.</li>
+<li>Array length limit: 10.</li>
+                     */
+                    void SetNames(const std::vector<std::string>& _names);
+
+                    /**
+                     * 判断参数 Names 是否已赋值
+                     * @return Names 是否已赋值
+                     */
+                    bool NamesHasBeenSet() const;
+
+                    /**
+                     * 获取Filename prefix, which matches the filenames of media files.
+<li>Filename prefix length limit: 20 characters.</li>
+<li>Array length limit: 10.</li>
+                     * @return NamePrefixes Filename prefix, which matches the filenames of media files.
+<li>Filename prefix length limit: 20 characters.</li>
+<li>Array length limit: 10.</li>
+                     */
+                    std::vector<std::string> GetNamePrefixes() const;
+
+                    /**
+                     * 设置Filename prefix, which matches the filenames of media files.
+<li>Filename prefix length limit: 20 characters.</li>
+<li>Array length limit: 10.</li>
+                     * @param NamePrefixes Filename prefix, which matches the filenames of media files.
+<li>Filename prefix length limit: 20 characters.</li>
+<li>Array length limit: 10.</li>
+                     */
+                    void SetNamePrefixes(const std::vector<std::string>& _namePrefixes);
+
+                    /**
+                     * 判断参数 NamePrefixes 是否已赋值
+                     * @return NamePrefixes 是否已赋值
+                     */
+                    bool NamePrefixesHasBeenSet() const;
+
+                    /**
+                     * 获取File description set. Media file descriptions are fuzzily matched. The higher the match rate, the higher-ranked the result.
+<li>Length limit for a single description: 100 characters</li>
+<li>Array length limit: 10</li>
+                     * @return Descriptions File description set. Media file descriptions are fuzzily matched. The higher the match rate, the higher-ranked the result.
+<li>Length limit for a single description: 100 characters</li>
+<li>Array length limit: 10</li>
+                     */
+                    std::vector<std::string> GetDescriptions() const;
+
+                    /**
+                     * 设置File description set. Media file descriptions are fuzzily matched. The higher the match rate, the higher-ranked the result.
+<li>Length limit for a single description: 100 characters</li>
+<li>Array length limit: 10</li>
+                     * @param Descriptions File description set. Media file descriptions are fuzzily matched. The higher the match rate, the higher-ranked the result.
+<li>Length limit for a single description: 100 characters</li>
+<li>Array length limit: 10</li>
+                     */
+                    void SetDescriptions(const std::vector<std::string>& _descriptions);
+
+                    /**
+                     * 判断参数 Descriptions 是否已赋值
+                     * @return Descriptions 是否已赋值
+                     */
+                    bool DescriptionsHasBeenSet() const;
+
+                    /**
+                     * 获取Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
+<li>Array length limit: 10.</li>
+                     * @return ClassIds Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
+<li>Array length limit: 10.</li>
+                     */
+                    std::vector<int64_t> GetClassIds() const;
+
+                    /**
+                     * 设置Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
+<li>Array length limit: 10.</li>
+                     * @param ClassIds Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
+<li>Array length limit: 10.</li>
+                     */
+                    void SetClassIds(const std::vector<int64_t>& _classIds);
+
+                    /**
+                     * 判断参数 ClassIds 是否已赋值
+                     * @return ClassIds 是否已赋值
+                     */
+                    bool ClassIdsHasBeenSet() const;
 
                     /**
                      * 获取Tag set, which matches any element in the set.
@@ -88,146 +197,162 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Category ID set, which matches the categories of the specified IDs and all subcategories. Array length limit: 10.
-                     * @return ClassIds Category ID set, which matches the categories of the specified IDs and all subcategories. Array length limit: 10.
+                     * 获取File type. Any element in the set can be matched.
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
+                     * @return Categories File type. Any element in the set can be matched.
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
                      */
-                    std::vector<int64_t> GetClassIds() const;
+                    std::vector<std::string> GetCategories() const;
 
                     /**
-                     * 设置Category ID set, which matches the categories of the specified IDs and all subcategories. Array length limit: 10.
-                     * @param ClassIds Category ID set, which matches the categories of the specified IDs and all subcategories. Array length limit: 10.
+                     * 设置File type. Any element in the set can be matched.
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
+                     * @param Categories File type. Any element in the set can be matched.
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
                      */
-                    void SetClassIds(const std::vector<int64_t>& _classIds);
+                    void SetCategories(const std::vector<std::string>& _categories);
 
                     /**
-                     * 判断参数 ClassIds 是否已赋值
-                     * @return ClassIds 是否已赋值
+                     * 判断参数 Categories 是否已赋值
+                     * @return Categories 是否已赋值
                      */
-                    bool ClassIdsHasBeenSet() const;
+                    bool CategoriesHasBeenSet() const;
 
                     /**
-                     * 获取Start time in the creation time range.
-<li>After or at the start time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
-                     * @return StartTime Start time in the creation time range.
-<li>After or at the start time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
+                     * 获取Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+<li>Array length limit: 10.</li>
+                     * @return SourceTypes Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+<li>Array length limit: 10.</li>
                      */
-                    std::string GetStartTime() const;
+                    std::vector<std::string> GetSourceTypes() const;
 
                     /**
-                     * 设置Start time in the creation time range.
-<li>After or at the start time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
-                     * @param StartTime Start time in the creation time range.
-<li>After or at the start time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
+                     * 设置Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+<li>Array length limit: 10.</li>
+                     * @param SourceTypes Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+<li>Array length limit: 10.</li>
                      */
-                    void SetStartTime(const std::string& _startTime);
+                    void SetSourceTypes(const std::vector<std::string>& _sourceTypes);
 
                     /**
-                     * 判断参数 StartTime 是否已赋值
-                     * @return StartTime 是否已赋值
+                     * 判断参数 SourceTypes 是否已赋值
+                     * @return SourceTypes 是否已赋值
                      */
-                    bool StartTimeHasBeenSet() const;
+                    bool SourceTypesHasBeenSet() const;
 
                     /**
-                     * 获取End time in the creation time range.
-<li>Before the end time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
-                     * @return EndTime End time in the creation time range.
-<li>Before the end time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
+                     * 获取[Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
+                     * @return StreamIds [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
                      */
-                    std::string GetEndTime() const;
+                    std::vector<std::string> GetStreamIds() const;
 
                     /**
-                     * 设置End time in the creation time range.
-<li>Before the end time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
-                     * @param EndTime End time in the creation time range.
-<li>Before the end time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
+                     * 设置[Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
+                     * @param StreamIds [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
                      */
-                    void SetEndTime(const std::string& _endTime);
+                    void SetStreamIds(const std::vector<std::string>& _streamIds);
 
                     /**
-                     * 判断参数 EndTime 是否已赋值
-                     * @return EndTime 是否已赋值
+                     * 判断参数 StreamIds 是否已赋值
+                     * @return StreamIds 是否已赋值
                      */
-                    bool EndTimeHasBeenSet() const;
+                    bool StreamIdsHasBeenSet() const;
 
                     /**
-                     * 获取Media file source. For valid values, please see [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData).
-                     * @return SourceType Media file source. For valid values, please see [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData).
+                     * 获取Unique ID of LVB recording file. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
+                     * @return Vids Unique ID of LVB recording file. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
                      */
-                    std::string GetSourceType() const;
+                    std::vector<std::string> GetVids() const;
 
                     /**
-                     * 设置Media file source. For valid values, please see [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData).
-                     * @param SourceType Media file source. For valid values, please see [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData).
+                     * 设置Unique ID of LVB recording file. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
+                     * @param Vids Unique ID of LVB recording file. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
                      */
-                    void SetSourceType(const std::string& _sourceType);
+                    void SetVids(const std::vector<std::string>& _vids);
 
                     /**
-                     * 判断参数 SourceType 是否已赋值
-                     * @return SourceType 是否已赋值
+                     * 判断参数 Vids 是否已赋值
+                     * @return Vids 是否已赋值
                      */
-                    bool SourceTypeHasBeenSet() const;
+                    bool VidsHasBeenSet() const;
 
                     /**
-                     * 获取[LVB code](https://cloud.tencent.com/document/product/267/5959) of a stream.
-                     * @return StreamId [LVB code](https://cloud.tencent.com/document/product/267/5959) of a stream.
+                     * 获取Matches files created within the time period.
+<li>Includes specified start and end points in time.</li>
+                     * @return CreateTime Matches files created within the time period.
+<li>Includes specified start and end points in time.</li>
                      */
-                    std::string GetStreamId() const;
+                    TimeRange GetCreateTime() const;
 
                     /**
-                     * 设置[LVB code](https://cloud.tencent.com/document/product/267/5959) of a stream.
-                     * @param StreamId [LVB code](https://cloud.tencent.com/document/product/267/5959) of a stream.
+                     * 设置Matches files created within the time period.
+<li>Includes specified start and end points in time.</li>
+                     * @param CreateTime Matches files created within the time period.
+<li>Includes specified start and end points in time.</li>
                      */
-                    void SetStreamId(const std::string& _streamId);
+                    void SetCreateTime(const TimeRange& _createTime);
 
                     /**
-                     * 判断参数 StreamId 是否已赋值
-                     * @return StreamId 是否已赋值
+                     * 判断参数 CreateTime 是否已赋值
+                     * @return CreateTime 是否已赋值
                      */
-                    bool StreamIdHasBeenSet() const;
+                    bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Unique ID of LVB recording file.
-                     * @return Vid Unique ID of LVB recording file.
+                     * 获取Files whose expiration time points are within the specified time range will be returned. Expired files will not be returned.
+<li>The files whose expiration time points are on the start or end time of the specified range will also be returned.</li>
+                     * @return ExpireTime Files whose expiration time points are within the specified time range will be returned. Expired files will not be returned.
+<li>The files whose expiration time points are on the start or end time of the specified range will also be returned.</li>
                      */
-                    std::string GetVid() const;
+                    TimeRange GetExpireTime() const;
 
                     /**
-                     * 设置Unique ID of LVB recording file.
-                     * @param Vid Unique ID of LVB recording file.
+                     * 设置Files whose expiration time points are within the specified time range will be returned. Expired files will not be returned.
+<li>The files whose expiration time points are on the start or end time of the specified range will also be returned.</li>
+                     * @param ExpireTime Files whose expiration time points are within the specified time range will be returned. Expired files will not be returned.
+<li>The files whose expiration time points are on the start or end time of the specified range will also be returned.</li>
                      */
-                    void SetVid(const std::string& _vid);
+                    void SetExpireTime(const TimeRange& _expireTime);
 
                     /**
-                     * 判断参数 Vid 是否已赋值
-                     * @return Vid 是否已赋值
+                     * 判断参数 ExpireTime 是否已赋值
+                     * @return ExpireTime 是否已赋值
                      */
-                    bool VidHasBeenSet() const;
+                    bool ExpireTimeHasBeenSet() const;
 
                     /**
                      * 获取Sorting order.
-<li>Valid value of `Sort.Field`: CreateTime</li>
-<li>If `Text` is specified for the search, the results will be sorted by the match rate, and this field will not take effect</li>
+<li>Valid value of `Sort.Field`: CreateTime.</li>
+<li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
                      * @return Sort Sorting order.
-<li>Valid value of `Sort.Field`: CreateTime</li>
-<li>If `Text` is specified for the search, the results will be sorted by the match rate, and this field will not take effect</li>
+<li>Valid value of `Sort.Field`: CreateTime.</li>
+<li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
                      */
                     SortBy GetSort() const;
 
                     /**
                      * 设置Sorting order.
-<li>Valid value of `Sort.Field`: CreateTime</li>
-<li>If `Text` is specified for the search, the results will be sorted by the match rate, and this field will not take effect</li>
+<li>Valid value of `Sort.Field`: CreateTime.</li>
+<li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
                      * @param Sort Sorting order.
-<li>Valid value of `Sort.Field`: CreateTime</li>
-<li>If `Text` is specified for the search, the results will be sorted by the match rate, and this field will not take effect</li>
+<li>Valid value of `Sort.Field`: CreateTime.</li>
+<li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
                      */
                     void SetSort(const SortBy& _sort);
 
@@ -282,44 +407,98 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取File type:
-<li>Video: video file</li>
-<li>Audio: audio file</li>
-<li>Image: image file</li>
-                     * @return Categories File type:
-<li>Video: video file</li>
-<li>Audio: audio file</li>
-<li>Image: image file</li>
+                     * 获取Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
+<li>basicInfo (basic video information).</li>
+<li>metaData (video metadata).</li>
+<li>transcodeInfo (result information of video transcoding).</li>
+<li>animatedGraphicsInfo (result information of animated image generating task).</li>
+<li>imageSpriteInfo (image sprite information).</li>
+<li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
+<li>sampleSnapshotInfo (sampled screenshot information).</li>
+<li>keyFrameDescInfo (timestamp information).</li>
+<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
+<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
+                     * @return Filters Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
+<li>basicInfo (basic video information).</li>
+<li>metaData (video metadata).</li>
+<li>transcodeInfo (result information of video transcoding).</li>
+<li>animatedGraphicsInfo (result information of animated image generating task).</li>
+<li>imageSpriteInfo (image sprite information).</li>
+<li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
+<li>sampleSnapshotInfo (sampled screenshot information).</li>
+<li>keyFrameDescInfo (timestamp information).</li>
+<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
+<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
                      */
-                    std::vector<std::string> GetCategories() const;
+                    std::vector<std::string> GetFilters() const;
 
                     /**
-                     * 设置File type:
-<li>Video: video file</li>
-<li>Audio: audio file</li>
-<li>Image: image file</li>
-                     * @param Categories File type:
-<li>Video: video file</li>
-<li>Audio: audio file</li>
-<li>Image: image file</li>
+                     * 设置Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
+<li>basicInfo (basic video information).</li>
+<li>metaData (video metadata).</li>
+<li>transcodeInfo (result information of video transcoding).</li>
+<li>animatedGraphicsInfo (result information of animated image generating task).</li>
+<li>imageSpriteInfo (image sprite information).</li>
+<li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
+<li>sampleSnapshotInfo (sampled screenshot information).</li>
+<li>keyFrameDescInfo (timestamp information).</li>
+<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
+<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
+                     * @param Filters Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
+<li>basicInfo (basic video information).</li>
+<li>metaData (video metadata).</li>
+<li>transcodeInfo (result information of video transcoding).</li>
+<li>animatedGraphicsInfo (result information of animated image generating task).</li>
+<li>imageSpriteInfo (image sprite information).</li>
+<li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
+<li>sampleSnapshotInfo (sampled screenshot information).</li>
+<li>keyFrameDescInfo (timestamp information).</li>
+<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
+<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
                      */
-                    void SetCategories(const std::vector<std::string>& _categories);
+                    void SetFilters(const std::vector<std::string>& _filters);
 
                     /**
-                     * 判断参数 Categories 是否已赋值
-                     * @return Categories 是否已赋值
+                     * 判断参数 Filters 是否已赋值
+                     * @return Filters 是否已赋值
                      */
-                    bool CategoriesHasBeenSet() const;
+                    bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取[Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     * @return SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * 获取Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Regions](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+<li>Length limit for a single region: 20 characters</li>
+<li>Array length limit: 20</li>
+                     * @return StorageRegions Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Regions](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+<li>Length limit for a single region: 20 characters</li>
+<li>Array length limit: 20</li>
+                     */
+                    std::vector<std::string> GetStorageRegions() const;
+
+                    /**
+                     * 设置Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Regions](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+<li>Length limit for a single region: 20 characters</li>
+<li>Array length limit: 20</li>
+                     * @param StorageRegions Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Regions](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+<li>Length limit for a single region: 20 characters</li>
+<li>Array length limit: 20</li>
+                     */
+                    void SetStorageRegions(const std::vector<std::string>& _storageRegions);
+
+                    /**
+                     * 判断参数 StorageRegions 是否已赋值
+                     * @return StorageRegions 是否已赋值
+                     */
+                    bool StorageRegionsHasBeenSet() const;
+
+                    /**
+                     * 获取[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置[Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     * @param SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * 设置[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
@@ -329,13 +508,236 @@ namespace TencentCloud
                      */
                     bool SubAppIdHasBeenSet() const;
 
+                    /**
+                     * 获取An array of storage classes. Valid values:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
+<li>ARCHIVE</li>
+<li>DEEP_ARCHIVE</li>
+                     * @return StorageClasses An array of storage classes. Valid values:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
+<li>ARCHIVE</li>
+<li>DEEP_ARCHIVE</li>
+                     */
+                    std::vector<std::string> GetStorageClasses() const;
+
+                    /**
+                     * 设置An array of storage classes. Valid values:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
+<li>ARCHIVE</li>
+<li>DEEP_ARCHIVE</li>
+                     * @param StorageClasses An array of storage classes. Valid values:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
+<li>ARCHIVE</li>
+<li>DEEP_ARCHIVE</li>
+                     */
+                    void SetStorageClasses(const std::vector<std::string>& _storageClasses);
+
+                    /**
+                     * 判断参数 StorageClasses 是否已赋值
+                     * @return StorageClasses 是否已赋值
+                     */
+                    bool StorageClassesHasBeenSet() const;
+
+                    /**
+                     * 获取(This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
+Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
+                     * @return Text (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
+Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
+                     */
+                    std::string GetText() const;
+
+                    /**
+                     * 设置(This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
+Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
+                     * @param Text (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
+Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
+                     */
+                    void SetText(const std::string& _text);
+
+                    /**
+                     * 判断参数 Text 是否已赋值
+                     * @return Text 是否已赋值
+                     */
+                    bool TextHasBeenSet() const;
+
+                    /**
+                     * 获取(This is not recommended. `SourceTypes` should be used instead)
+Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+                     * @return SourceType (This is not recommended. `SourceTypes` should be used instead)
+Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+                     */
+                    std::string GetSourceType() const;
+
+                    /**
+                     * 设置(This is not recommended. `SourceTypes` should be used instead)
+Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+                     * @param SourceType (This is not recommended. `SourceTypes` should be used instead)
+Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+                     */
+                    void SetSourceType(const std::string& _sourceType);
+
+                    /**
+                     * 判断参数 SourceType 是否已赋值
+                     * @return SourceType 是否已赋值
+                     */
+                    bool SourceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取(This is not recommended. `StreamIds` should be used instead)
+[Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1).
+                     * @return StreamId (This is not recommended. `StreamIds` should be used instead)
+[Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1).
+                     */
+                    std::string GetStreamId() const;
+
+                    /**
+                     * 设置(This is not recommended. `StreamIds` should be used instead)
+[Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1).
+                     * @param StreamId (This is not recommended. `StreamIds` should be used instead)
+[Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1).
+                     */
+                    void SetStreamId(const std::string& _streamId);
+
+                    /**
+                     * 判断参数 StreamId 是否已赋值
+                     * @return StreamId 是否已赋值
+                     */
+                    bool StreamIdHasBeenSet() const;
+
+                    /**
+                     * 获取(This is not recommended. `Vids` should be used instead)
+Unique ID of LVB recording file.
+                     * @return Vid (This is not recommended. `Vids` should be used instead)
+Unique ID of LVB recording file.
+                     */
+                    std::string GetVid() const;
+
+                    /**
+                     * 设置(This is not recommended. `Vids` should be used instead)
+Unique ID of LVB recording file.
+                     * @param Vid (This is not recommended. `Vids` should be used instead)
+Unique ID of LVB recording file.
+                     */
+                    void SetVid(const std::string& _vid);
+
+                    /**
+                     * 判断参数 Vid 是否已赋值
+                     * @return Vid 是否已赋值
+                     */
+                    bool VidHasBeenSet() const;
+
+                    /**
+                     * 获取(This is not recommended. `CreateTime` should be used instead)
+Start time in the creation time range.
+<li>After or at the start time.</li>
+<li>If `CreateTime.After` also exists, it will be used first.</li>
+<li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+                     * @return StartTime (This is not recommended. `CreateTime` should be used instead)
+Start time in the creation time range.
+<li>After or at the start time.</li>
+<li>If `CreateTime.After` also exists, it will be used first.</li>
+<li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+                     */
+                    std::string GetStartTime() const;
+
+                    /**
+                     * 设置(This is not recommended. `CreateTime` should be used instead)
+Start time in the creation time range.
+<li>After or at the start time.</li>
+<li>If `CreateTime.After` also exists, it will be used first.</li>
+<li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+                     * @param StartTime (This is not recommended. `CreateTime` should be used instead)
+Start time in the creation time range.
+<li>After or at the start time.</li>
+<li>If `CreateTime.After` also exists, it will be used first.</li>
+<li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+                     */
+                    void SetStartTime(const std::string& _startTime);
+
+                    /**
+                     * 判断参数 StartTime 是否已赋值
+                     * @return StartTime 是否已赋值
+                     */
+                    bool StartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取(This is not recommended. `CreateTime` should be used instead)
+End time in the creation time range.
+<li>Before the end time.</li>
+<li>If `CreateTime.Before` also exists, it will be used first.</li>
+<li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+                     * @return EndTime (This is not recommended. `CreateTime` should be used instead)
+End time in the creation time range.
+<li>Before the end time.</li>
+<li>If `CreateTime.Before` also exists, it will be used first.</li>
+<li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+                     */
+                    std::string GetEndTime() const;
+
+                    /**
+                     * 设置(This is not recommended. `CreateTime` should be used instead)
+End time in the creation time range.
+<li>Before the end time.</li>
+<li>If `CreateTime.Before` also exists, it will be used first.</li>
+<li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+                     * @param EndTime (This is not recommended. `CreateTime` should be used instead)
+End time in the creation time range.
+<li>Before the end time.</li>
+<li>If `CreateTime.Before` also exists, it will be used first.</li>
+<li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+                     */
+                    void SetEndTime(const std::string& _endTime);
+
+                    /**
+                     * 判断参数 EndTime 是否已赋值
+                     * @return EndTime 是否已赋值
+                     */
+                    bool EndTimeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
+                     * File ID set. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
+<li>ID length limit: 40 characters.</li>
                      */
-                    std::string m_text;
-                    bool m_textHasBeenSet;
+                    std::vector<std::string> m_fileIds;
+                    bool m_fileIdsHasBeenSet;
+
+                    /**
+                     * Filename set. Filenames of media files are fuzzily matched. The higher the match rate, the higher-ranked the result.
+<li>Filename length limit: 40 characters.</li>
+<li>Array length limit: 10.</li>
+                     */
+                    std::vector<std::string> m_names;
+                    bool m_namesHasBeenSet;
+
+                    /**
+                     * Filename prefix, which matches the filenames of media files.
+<li>Filename prefix length limit: 20 characters.</li>
+<li>Array length limit: 10.</li>
+                     */
+                    std::vector<std::string> m_namePrefixes;
+                    bool m_namePrefixesHasBeenSet;
+
+                    /**
+                     * File description set. Media file descriptions are fuzzily matched. The higher the match rate, the higher-ranked the result.
+<li>Length limit for a single description: 100 characters</li>
+<li>Array length limit: 10</li>
+                     */
+                    std::vector<std::string> m_descriptions;
+                    bool m_descriptionsHasBeenSet;
+
+                    /**
+                     * Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
+<li>Array length limit: 10.</li>
+                     */
+                    std::vector<int64_t> m_classIds;
+                    bool m_classIdsHasBeenSet;
 
                     /**
                      * Tag set, which matches any element in the set.
@@ -346,49 +748,53 @@ namespace TencentCloud
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Category ID set, which matches the categories of the specified IDs and all subcategories. Array length limit: 10.
+                     * File type. Any element in the set can be matched.
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
                      */
-                    std::vector<int64_t> m_classIds;
-                    bool m_classIdsHasBeenSet;
+                    std::vector<std::string> m_categories;
+                    bool m_categoriesHasBeenSet;
 
                     /**
-                     * Start time in the creation time range.
-<li>After or at the start time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
+                     * Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+<li>Array length limit: 10.</li>
                      */
-                    std::string m_startTime;
-                    bool m_startTimeHasBeenSet;
+                    std::vector<std::string> m_sourceTypes;
+                    bool m_sourceTypesHasBeenSet;
 
                     /**
-                     * End time in the creation time range.
-<li>Before the end time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
+                     * [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
                      */
-                    std::string m_endTime;
-                    bool m_endTimeHasBeenSet;
+                    std::vector<std::string> m_streamIds;
+                    bool m_streamIdsHasBeenSet;
 
                     /**
-                     * Media file source. For valid values, please see [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData).
+                     * Unique ID of LVB recording file. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
                      */
-                    std::string m_sourceType;
-                    bool m_sourceTypeHasBeenSet;
+                    std::vector<std::string> m_vids;
+                    bool m_vidsHasBeenSet;
 
                     /**
-                     * [LVB code](https://cloud.tencent.com/document/product/267/5959) of a stream.
+                     * Matches files created within the time period.
+<li>Includes specified start and end points in time.</li>
                      */
-                    std::string m_streamId;
-                    bool m_streamIdHasBeenSet;
+                    TimeRange m_createTime;
+                    bool m_createTimeHasBeenSet;
 
                     /**
-                     * Unique ID of LVB recording file.
+                     * Files whose expiration time points are within the specified time range will be returned. Expired files will not be returned.
+<li>The files whose expiration time points are on the start or end time of the specified range will also be returned.</li>
                      */
-                    std::string m_vid;
-                    bool m_vidHasBeenSet;
+                    TimeRange m_expireTime;
+                    bool m_expireTimeHasBeenSet;
 
                     /**
                      * Sorting order.
-<li>Valid value of `Sort.Field`: CreateTime</li>
-<li>If `Text` is specified for the search, the results will be sorted by the match rate, and this field will not take effect</li>
+<li>Valid value of `Sort.Field`: CreateTime.</li>
+<li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
                      */
                     SortBy m_sort;
                     bool m_sortHasBeenSet;
@@ -408,19 +814,92 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * File type:
-<li>Video: video file</li>
-<li>Audio: audio file</li>
-<li>Image: image file</li>
+                     * Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
+<li>basicInfo (basic video information).</li>
+<li>metaData (video metadata).</li>
+<li>transcodeInfo (result information of video transcoding).</li>
+<li>animatedGraphicsInfo (result information of animated image generating task).</li>
+<li>imageSpriteInfo (image sprite information).</li>
+<li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
+<li>sampleSnapshotInfo (sampled screenshot information).</li>
+<li>keyFrameDescInfo (timestamp information).</li>
+<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
+<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
                      */
-                    std::vector<std::string> m_categories;
-                    bool m_categoriesHasBeenSet;
+                    std::vector<std::string> m_filters;
+                    bool m_filtersHasBeenSet;
 
                     /**
-                     * [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Regions](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+<li>Length limit for a single region: 20 characters</li>
+<li>Array length limit: 20</li>
+                     */
+                    std::vector<std::string> m_storageRegions;
+                    bool m_storageRegionsHasBeenSet;
+
+                    /**
+                     * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
+
+                    /**
+                     * An array of storage classes. Valid values:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
+<li>ARCHIVE</li>
+<li>DEEP_ARCHIVE</li>
+                     */
+                    std::vector<std::string> m_storageClasses;
+                    bool m_storageClassesHasBeenSet;
+
+                    /**
+                     * (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
+Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
+                     */
+                    std::string m_text;
+                    bool m_textHasBeenSet;
+
+                    /**
+                     * (This is not recommended. `SourceTypes` should be used instead)
+Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+                     */
+                    std::string m_sourceType;
+                    bool m_sourceTypeHasBeenSet;
+
+                    /**
+                     * (This is not recommended. `StreamIds` should be used instead)
+[Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1).
+                     */
+                    std::string m_streamId;
+                    bool m_streamIdHasBeenSet;
+
+                    /**
+                     * (This is not recommended. `Vids` should be used instead)
+Unique ID of LVB recording file.
+                     */
+                    std::string m_vid;
+                    bool m_vidHasBeenSet;
+
+                    /**
+                     * (This is not recommended. `CreateTime` should be used instead)
+Start time in the creation time range.
+<li>After or at the start time.</li>
+<li>If `CreateTime.After` also exists, it will be used first.</li>
+<li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+                     */
+                    std::string m_startTime;
+                    bool m_startTimeHasBeenSet;
+
+                    /**
+                     * (This is not recommended. `CreateTime` should be used instead)
+End time in the creation time range.
+<li>Before the end time.</li>
+<li>If `CreateTime.Before` also exists, it will be used first.</li>
+<li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+                     */
+                    std::string m_endTime;
+                    bool m_endTimeHasBeenSet;
 
                 };
             }

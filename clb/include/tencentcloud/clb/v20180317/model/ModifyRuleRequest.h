@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool LocationIdHasBeenSet() const;
 
                     /**
-                     * 获取New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified
-                     * @return Url New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified
+                     * 获取New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified.
+                     * @return Url New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified.
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified
-                     * @param Url New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified
+                     * 设置New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified.
+                     * @param Url New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified.
                      */
                     void SetUrl(const std::string& _url);
 
@@ -174,14 +174,14 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                     bool SessionExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, TRPC.
-                     * @return ForwardType Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, TRPC.
+                     * 获取Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
+                     * @return ForwardType Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
                      */
                     std::string GetForwardType() const;
 
                     /**
-                     * 设置Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, TRPC.
-                     * @param ForwardType Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, TRPC.
+                     * 设置Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
+                     * @param ForwardType Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
                      */
                     void SetForwardType(const std::string& _forwardType);
 
@@ -192,14 +192,14 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                     bool ForwardTypeHasBeenSet() const;
 
                     /**
-                     * 获取TRPC callee server route, which is required when `ForwardType` is `TRPC`.
-                     * @return TrpcCallee TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+                     * 获取TRPC callee server route, which is required when `ForwardType` is "TRPC".
+                     * @return TrpcCallee TRPC callee server route, which is required when `ForwardType` is "TRPC".
                      */
                     std::string GetTrpcCallee() const;
 
                     /**
-                     * 设置TRPC callee server route, which is required when `ForwardType` is `TRPC`.
-                     * @param TrpcCallee TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+                     * 设置TRPC callee server route, which is required when `ForwardType` is "TRPC".
+                     * @param TrpcCallee TRPC callee server route, which is required when `ForwardType` is "TRPC".
                      */
                     void SetTrpcCallee(const std::string& _trpcCallee);
 
@@ -210,14 +210,14 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                     bool TrpcCalleeHasBeenSet() const;
 
                     /**
-                     * 获取TRPC calling service API, which is required when `ForwardType` is `TRPC`.
-                     * @return TrpcFunc TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+                     * 获取TRPC calling service API, which is required when `ForwardType` is "TRPC".
+                     * @return TrpcFunc TRPC calling service API, which is required when `ForwardType` is "TRPC".
                      */
                     std::string GetTrpcFunc() const;
 
                     /**
-                     * 设置TRPC calling service API, which is required when `ForwardType` is `TRPC`.
-                     * @param TrpcFunc TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+                     * 设置TRPC calling service API, which is required when `ForwardType` is "TRPC".
+                     * @param TrpcFunc TRPC calling service API, which is required when `ForwardType` is "TRPC".
                      */
                     void SetTrpcFunc(const std::string& _trpcFunc);
 
@@ -248,7 +248,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                     bool m_locationIdHasBeenSet;
 
                     /**
-                     * New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified
+                     * New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
@@ -273,19 +273,19 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                     bool m_sessionExpireTimeHasBeenSet;
 
                     /**
-                     * Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, TRPC.
+                     * Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
                      */
                     std::string m_forwardType;
                     bool m_forwardTypeHasBeenSet;
 
                     /**
-                     * TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+                     * TRPC callee server route, which is required when `ForwardType` is "TRPC".
                      */
                     std::string m_trpcCallee;
                     bool m_trpcCalleeHasBeenSet;
 
                     /**
-                     * TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+                     * TRPC calling service API, which is required when `ForwardType` is "TRPC".
                      */
                     std::string m_trpcFunc;
                     bool m_trpcFuncHasBeenSet;

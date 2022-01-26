@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * IP blacklist/whitelist.
+                * IP blocklist/allowlist.
                 */
                 class IpFilter : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取IP blacklist/whitelist switch. Valid values: on, off.
-                     * @return Switch IP blacklist/whitelist switch. Valid values: on, off.
+                     * 获取IP blocklist/allowlist switch. Valid values: on, off.
+                     * @return Switch IP blocklist/allowlist switch. Valid values: on, off.
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置IP blacklist/whitelist switch. Valid values: on, off.
-                     * @param Switch IP blacklist/whitelist switch. Valid values: on, off.
+                     * 设置IP blocklist/allowlist switch. Valid values: on, off.
+                     * @param Switch IP blocklist/allowlist switch. Valid values: on, off.
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -65,17 +65,17 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取IP blacklist/whitelist type. Valid values: whitelist, blacklist.
+                     * 获取IP blocklist/allowlist type. Valid values: whitelist, blacklist.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return FilterType IP blacklist/whitelist type. Valid values: whitelist, blacklist.
+                     * @return FilterType IP blocklist/allowlist type. Valid values: whitelist, blacklist.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetFilterType() const;
 
                     /**
-                     * 设置IP blacklist/whitelist type. Valid values: whitelist, blacklist.
+                     * 设置IP blocklist/allowlist type. Valid values: whitelist, blacklist.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FilterType IP blacklist/whitelist type. Valid values: whitelist, blacklist.
+                     * @param FilterType IP blocklist/allowlist type. Valid values: whitelist, blacklist.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetFilterType(const std::string& _filterType);
@@ -87,17 +87,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool FilterTypeHasBeenSet() const;
 
                     /**
-                     * 获取IP blacklist/whitelist list.
+                     * 获取IP blocklist/allowlist list.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Filters IP blacklist/whitelist list.
+                     * @return Filters IP blocklist/allowlist list.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetFilters() const;
 
                     /**
-                     * 设置IP blacklist/whitelist list.
+                     * 设置IP blocklist/allowlist list.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Filters IP blacklist/whitelist list.
+                     * @param Filters IP blocklist/allowlist list.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetFilters(const std::vector<std::string>& _filters);
@@ -111,20 +111,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * IP blacklist/whitelist switch. Valid values: on, off.
+                     * IP blocklist/allowlist switch. Valid values: on, off.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * IP blacklist/whitelist type. Valid values: whitelist, blacklist.
+                     * IP blocklist/allowlist type. Valid values: whitelist, blacklist.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_filterType;
                     bool m_filterTypeHasBeenSet;
 
                     /**
-                     * IP blacklist/whitelist list.
+                     * IP blocklist/allowlist list.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_filters;

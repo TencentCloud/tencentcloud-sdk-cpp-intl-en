@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Emr::V20190103::Model;
-using namespace rapidjson;
 using namespace std;
 
 ScaleOutInstanceRequest::ScaleOutInstanceRequest() :
@@ -37,28 +36,36 @@ ScaleOutInstanceRequest::ScaleOutInstanceRequest() :
     m_softDeployInfoHasBeenSet(false),
     m_serviceNodeInfoHasBeenSet(false),
     m_disasterRecoverGroupIdsHasBeenSet(false),
-    m_tagsHasBeenSet(false)
+    m_tagsHasBeenSet(false),
+    m_hardwareResourceTypeHasBeenSet(false),
+    m_podSpecHasBeenSet(false),
+    m_clickHouseClusterNameHasBeenSet(false),
+    m_clickHouseClusterTypeHasBeenSet(false),
+    m_yarnNodeLabelHasBeenSet(false),
+    m_podParameterHasBeenSet(false),
+    m_masterCountHasBeenSet(false),
+    m_startServiceAfterScaleOutHasBeenSet(false)
 {
 }
 
 string ScaleOutInstanceRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_timeUnitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TimeUnit";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_timeUnit.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_timeUnit.c_str(), allocator).Move(), allocator);
     }
 
     if (m_timeSpanHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TimeSpan";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_timeSpan, allocator);
@@ -66,15 +73,15 @@ string ScaleOutInstanceRequest::ToJsonString() const
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_payModeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PayMode";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_payMode, allocator);
@@ -82,30 +89,30 @@ string ScaleOutInstanceRequest::ToJsonString() const
 
     if (m_clientTokenHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClientToken";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_clientToken.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_clientToken.c_str(), allocator).Move(), allocator);
     }
 
     if (m_preExecutedFileSettingsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PreExecutedFileSettings";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_preExecutedFileSettings.begin(); itr != m_preExecutedFileSettings.end(); ++itr, ++i)
         {
-            d[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
     }
 
     if (m_taskCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TaskCount";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_taskCount, allocator);
@@ -113,7 +120,7 @@ string ScaleOutInstanceRequest::ToJsonString() const
 
     if (m_coreCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CoreCount";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_coreCount, allocator);
@@ -121,20 +128,20 @@ string ScaleOutInstanceRequest::ToJsonString() const
 
     if (m_unNecessaryNodeListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UnNecessaryNodeList";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_unNecessaryNodeList.begin(); itr != m_unNecessaryNodeList.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetUint64(*itr), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetUint64(*itr), allocator);
         }
     }
 
     if (m_routerCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RouterCount";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_routerCount, allocator);
@@ -142,61 +149,127 @@ string ScaleOutInstanceRequest::ToJsonString() const
 
     if (m_softDeployInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SoftDeployInfo";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_softDeployInfo.begin(); itr != m_softDeployInfo.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetUint64(*itr), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetUint64(*itr), allocator);
         }
     }
 
     if (m_serviceNodeInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceNodeInfo";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_serviceNodeInfo.begin(); itr != m_serviceNodeInfo.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetUint64(*itr), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetUint64(*itr), allocator);
         }
     }
 
     if (m_disasterRecoverGroupIdsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DisasterRecoverGroupIds";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_disasterRecoverGroupIds.begin(); itr != m_disasterRecoverGroupIds.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_tagsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Tags";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
         {
-            d[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
     }
 
+    if (m_hardwareResourceTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HardwareResourceType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_hardwareResourceType.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    if (m_podSpecHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PodSpec";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_podSpec.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_clickHouseClusterNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClickHouseClusterName";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_clickHouseClusterName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_clickHouseClusterTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClickHouseClusterType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_clickHouseClusterType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_yarnNodeLabelHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "YarnNodeLabel";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_yarnNodeLabel.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_podParameterHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PodParameter";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_podParameter.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_masterCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MasterCount";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_masterCount, allocator);
+    }
+
+    if (m_startServiceAfterScaleOutHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StartServiceAfterScaleOut";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_startServiceAfterScaleOut.c_str(), allocator).Move(), allocator);
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -424,6 +497,134 @@ void ScaleOutInstanceRequest::SetTags(const vector<Tag>& _tags)
 bool ScaleOutInstanceRequest::TagsHasBeenSet() const
 {
     return m_tagsHasBeenSet;
+}
+
+string ScaleOutInstanceRequest::GetHardwareResourceType() const
+{
+    return m_hardwareResourceType;
+}
+
+void ScaleOutInstanceRequest::SetHardwareResourceType(const string& _hardwareResourceType)
+{
+    m_hardwareResourceType = _hardwareResourceType;
+    m_hardwareResourceTypeHasBeenSet = true;
+}
+
+bool ScaleOutInstanceRequest::HardwareResourceTypeHasBeenSet() const
+{
+    return m_hardwareResourceTypeHasBeenSet;
+}
+
+PodSpec ScaleOutInstanceRequest::GetPodSpec() const
+{
+    return m_podSpec;
+}
+
+void ScaleOutInstanceRequest::SetPodSpec(const PodSpec& _podSpec)
+{
+    m_podSpec = _podSpec;
+    m_podSpecHasBeenSet = true;
+}
+
+bool ScaleOutInstanceRequest::PodSpecHasBeenSet() const
+{
+    return m_podSpecHasBeenSet;
+}
+
+string ScaleOutInstanceRequest::GetClickHouseClusterName() const
+{
+    return m_clickHouseClusterName;
+}
+
+void ScaleOutInstanceRequest::SetClickHouseClusterName(const string& _clickHouseClusterName)
+{
+    m_clickHouseClusterName = _clickHouseClusterName;
+    m_clickHouseClusterNameHasBeenSet = true;
+}
+
+bool ScaleOutInstanceRequest::ClickHouseClusterNameHasBeenSet() const
+{
+    return m_clickHouseClusterNameHasBeenSet;
+}
+
+string ScaleOutInstanceRequest::GetClickHouseClusterType() const
+{
+    return m_clickHouseClusterType;
+}
+
+void ScaleOutInstanceRequest::SetClickHouseClusterType(const string& _clickHouseClusterType)
+{
+    m_clickHouseClusterType = _clickHouseClusterType;
+    m_clickHouseClusterTypeHasBeenSet = true;
+}
+
+bool ScaleOutInstanceRequest::ClickHouseClusterTypeHasBeenSet() const
+{
+    return m_clickHouseClusterTypeHasBeenSet;
+}
+
+string ScaleOutInstanceRequest::GetYarnNodeLabel() const
+{
+    return m_yarnNodeLabel;
+}
+
+void ScaleOutInstanceRequest::SetYarnNodeLabel(const string& _yarnNodeLabel)
+{
+    m_yarnNodeLabel = _yarnNodeLabel;
+    m_yarnNodeLabelHasBeenSet = true;
+}
+
+bool ScaleOutInstanceRequest::YarnNodeLabelHasBeenSet() const
+{
+    return m_yarnNodeLabelHasBeenSet;
+}
+
+PodParameter ScaleOutInstanceRequest::GetPodParameter() const
+{
+    return m_podParameter;
+}
+
+void ScaleOutInstanceRequest::SetPodParameter(const PodParameter& _podParameter)
+{
+    m_podParameter = _podParameter;
+    m_podParameterHasBeenSet = true;
+}
+
+bool ScaleOutInstanceRequest::PodParameterHasBeenSet() const
+{
+    return m_podParameterHasBeenSet;
+}
+
+uint64_t ScaleOutInstanceRequest::GetMasterCount() const
+{
+    return m_masterCount;
+}
+
+void ScaleOutInstanceRequest::SetMasterCount(const uint64_t& _masterCount)
+{
+    m_masterCount = _masterCount;
+    m_masterCountHasBeenSet = true;
+}
+
+bool ScaleOutInstanceRequest::MasterCountHasBeenSet() const
+{
+    return m_masterCountHasBeenSet;
+}
+
+string ScaleOutInstanceRequest::GetStartServiceAfterScaleOut() const
+{
+    return m_startServiceAfterScaleOut;
+}
+
+void ScaleOutInstanceRequest::SetStartServiceAfterScaleOut(const string& _startServiceAfterScaleOut)
+{
+    m_startServiceAfterScaleOut = _startServiceAfterScaleOut;
+    m_startServiceAfterScaleOutHasBeenSet = true;
+}
+
+bool ScaleOutInstanceRequest::StartServiceAfterScaleOutHasBeenSet() const
+{
+    return m_startServiceAfterScaleOutHasBeenSet;
 }
 
 

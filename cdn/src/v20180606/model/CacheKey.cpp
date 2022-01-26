@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 CacheKey::CacheKey() :
@@ -28,11 +27,12 @@ CacheKey::CacheKey() :
     m_cookieHasBeenSet(false),
     m_headerHasBeenSet(false),
     m_cacheTagHasBeenSet(false),
-    m_schemeHasBeenSet(false)
+    m_schemeHasBeenSet(false),
+    m_keyRulesHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome CacheKey::Deserialize(const Value &value)
+CoreInternalOutcome CacheKey::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +41,7 @@ CoreInternalOutcome CacheKey::Deserialize(const Value &value)
     {
         if (!value["FullUrlCache"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CacheKey.FullUrlCache` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CacheKey.FullUrlCache` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fullUrlCache = string(value["FullUrlCache"].GetString());
         m_fullUrlCacheHasBeenSet = true;
@@ -51,7 +51,7 @@ CoreInternalOutcome CacheKey::Deserialize(const Value &value)
     {
         if (!value["IgnoreCase"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CacheKey.IgnoreCase` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CacheKey.IgnoreCase` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ignoreCase = string(value["IgnoreCase"].GetString());
         m_ignoreCaseHasBeenSet = true;
@@ -61,7 +61,7 @@ CoreInternalOutcome CacheKey::Deserialize(const Value &value)
     {
         if (!value["QueryString"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `CacheKey.QueryString` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CacheKey.QueryString` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_queryString.Deserialize(value["QueryString"]);
@@ -78,7 +78,7 @@ CoreInternalOutcome CacheKey::Deserialize(const Value &value)
     {
         if (!value["Cookie"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `CacheKey.Cookie` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CacheKey.Cookie` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_cookie.Deserialize(value["Cookie"]);
@@ -95,7 +95,7 @@ CoreInternalOutcome CacheKey::Deserialize(const Value &value)
     {
         if (!value["Header"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `CacheKey.Header` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CacheKey.Header` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_header.Deserialize(value["Header"]);
@@ -112,7 +112,7 @@ CoreInternalOutcome CacheKey::Deserialize(const Value &value)
     {
         if (!value["CacheTag"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `CacheKey.CacheTag` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CacheKey.CacheTag` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_cacheTag.Deserialize(value["CacheTag"]);
@@ -129,7 +129,7 @@ CoreInternalOutcome CacheKey::Deserialize(const Value &value)
     {
         if (!value["Scheme"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `CacheKey.Scheme` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CacheKey.Scheme` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_scheme.Deserialize(value["Scheme"]);
@@ -142,72 +142,107 @@ CoreInternalOutcome CacheKey::Deserialize(const Value &value)
         m_schemeHasBeenSet = true;
     }
 
+    if (value.HasMember("KeyRules") && !value["KeyRules"].IsNull())
+    {
+        if (!value["KeyRules"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `CacheKey.KeyRules` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["KeyRules"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            KeyRule item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_keyRules.push_back(item);
+        }
+        m_keyRulesHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void CacheKey::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void CacheKey::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_fullUrlCacheHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FullUrlCache";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fullUrlCache.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fullUrlCache.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ignoreCaseHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IgnoreCase";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ignoreCase.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ignoreCase.c_str(), allocator).Move(), allocator);
     }
 
     if (m_queryStringHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "QueryString";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_queryString.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_cookieHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Cookie";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_cookie.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_headerHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Header";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_header.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_cacheTagHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CacheTag";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_cacheTag.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_schemeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Scheme";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_scheme.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_keyRulesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "KeyRules";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_keyRules.begin(); itr != m_keyRules.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
 }
@@ -323,5 +358,21 @@ void CacheKey::SetScheme(const SchemeKey& _scheme)
 bool CacheKey::SchemeHasBeenSet() const
 {
     return m_schemeHasBeenSet;
+}
+
+vector<KeyRule> CacheKey::GetKeyRules() const
+{
+    return m_keyRules;
+}
+
+void CacheKey::SetKeyRules(const vector<KeyRule>& _keyRules)
+{
+    m_keyRules = _keyRules;
+    m_keyRulesHasBeenSet = true;
+}
+
+bool CacheKey::KeyRulesHasBeenSet() const
+{
+    return m_keyRulesHasBeenSet;
 }
 

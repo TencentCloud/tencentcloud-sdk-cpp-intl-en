@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 ErrorPageRule::ErrorPageRule() :
@@ -28,7 +27,7 @@ ErrorPageRule::ErrorPageRule() :
 {
 }
 
-CoreInternalOutcome ErrorPageRule::Deserialize(const Value &value)
+CoreInternalOutcome ErrorPageRule::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome ErrorPageRule::Deserialize(const Value &value)
     {
         if (!value["StatusCode"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ErrorPageRule.StatusCode` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ErrorPageRule.StatusCode` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_statusCode = value["StatusCode"].GetInt64();
         m_statusCodeHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome ErrorPageRule::Deserialize(const Value &value)
     {
         if (!value["RedirectCode"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ErrorPageRule.RedirectCode` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ErrorPageRule.RedirectCode` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_redirectCode = value["RedirectCode"].GetInt64();
         m_redirectCodeHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome ErrorPageRule::Deserialize(const Value &value)
     {
         if (!value["RedirectUrl"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ErrorPageRule.RedirectUrl` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ErrorPageRule.RedirectUrl` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_redirectUrl = string(value["RedirectUrl"].GetString());
         m_redirectUrlHasBeenSet = true;
@@ -67,12 +66,12 @@ CoreInternalOutcome ErrorPageRule::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ErrorPageRule::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ErrorPageRule::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_statusCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StatusCode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_statusCode, allocator);
@@ -80,7 +79,7 @@ void ErrorPageRule::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_redirectCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RedirectCode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_redirectCode, allocator);
@@ -88,10 +87,10 @@ void ErrorPageRule::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_redirectUrlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RedirectUrl";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_redirectUrl.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_redirectUrl.c_str(), allocator).Move(), allocator);
     }
 
 }

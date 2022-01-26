@@ -21,32 +21,37 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ocr::V20181119::Model;
-using namespace rapidjson;
 using namespace std;
 
 BankCardOCRResponse::BankCardOCRResponse() :
     m_cardNoHasBeenSet(false),
     m_bankInfoHasBeenSet(false),
-    m_validDateHasBeenSet(false)
+    m_validDateHasBeenSet(false),
+    m_cardTypeHasBeenSet(false),
+    m_cardNameHasBeenSet(false),
+    m_borderCutImageHasBeenSet(false),
+    m_cardNoImageHasBeenSet(false),
+    m_warningCodeHasBeenSet(false),
+    m_qualityValueHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome BankCardOCRResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -57,11 +62,11 @@ CoreInternalOutcome BankCardOCRResponse::Deserialize(const string &payload)
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -69,7 +74,7 @@ CoreInternalOutcome BankCardOCRResponse::Deserialize(const string &payload)
     {
         if (!rsp["CardNo"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CardNo` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CardNo` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cardNo = string(rsp["CardNo"].GetString());
         m_cardNoHasBeenSet = true;
@@ -79,7 +84,7 @@ CoreInternalOutcome BankCardOCRResponse::Deserialize(const string &payload)
     {
         if (!rsp["BankInfo"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BankInfo` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BankInfo` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_bankInfo = string(rsp["BankInfo"].GetString());
         m_bankInfoHasBeenSet = true;
@@ -89,14 +94,171 @@ CoreInternalOutcome BankCardOCRResponse::Deserialize(const string &payload)
     {
         if (!rsp["ValidDate"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ValidDate` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ValidDate` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_validDate = string(rsp["ValidDate"].GetString());
         m_validDateHasBeenSet = true;
     }
 
+    if (rsp.HasMember("CardType") && !rsp["CardType"].IsNull())
+    {
+        if (!rsp["CardType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CardType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_cardType = string(rsp["CardType"].GetString());
+        m_cardTypeHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("CardName") && !rsp["CardName"].IsNull())
+    {
+        if (!rsp["CardName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CardName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_cardName = string(rsp["CardName"].GetString());
+        m_cardNameHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("BorderCutImage") && !rsp["BorderCutImage"].IsNull())
+    {
+        if (!rsp["BorderCutImage"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `BorderCutImage` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_borderCutImage = string(rsp["BorderCutImage"].GetString());
+        m_borderCutImageHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("CardNoImage") && !rsp["CardNoImage"].IsNull())
+    {
+        if (!rsp["CardNoImage"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CardNoImage` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_cardNoImage = string(rsp["CardNoImage"].GetString());
+        m_cardNoImageHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("WarningCode") && !rsp["WarningCode"].IsNull())
+    {
+        if (!rsp["WarningCode"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `WarningCode` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["WarningCode"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_warningCode.push_back((*itr).GetInt64());
+        }
+        m_warningCodeHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("QualityValue") && !rsp["QualityValue"].IsNull())
+    {
+        if (!rsp["QualityValue"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `QualityValue` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_qualityValue = rsp["QualityValue"].GetInt64();
+        m_qualityValueHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
+}
+
+string BankCardOCRResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_cardNoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CardNo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cardNo.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_bankInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BankInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_bankInfo.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_validDateHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ValidDate";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_validDate.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_cardTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CardType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cardType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_cardNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CardName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cardName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_borderCutImageHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BorderCutImage";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_borderCutImage.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_cardNoImageHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CardNoImage";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cardNoImage.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_warningCodeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WarningCode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_warningCode.begin(); itr != m_warningCode.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
+        }
+    }
+
+    if (m_qualityValueHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "QualityValue";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_qualityValue, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 
@@ -128,6 +290,66 @@ string BankCardOCRResponse::GetValidDate() const
 bool BankCardOCRResponse::ValidDateHasBeenSet() const
 {
     return m_validDateHasBeenSet;
+}
+
+string BankCardOCRResponse::GetCardType() const
+{
+    return m_cardType;
+}
+
+bool BankCardOCRResponse::CardTypeHasBeenSet() const
+{
+    return m_cardTypeHasBeenSet;
+}
+
+string BankCardOCRResponse::GetCardName() const
+{
+    return m_cardName;
+}
+
+bool BankCardOCRResponse::CardNameHasBeenSet() const
+{
+    return m_cardNameHasBeenSet;
+}
+
+string BankCardOCRResponse::GetBorderCutImage() const
+{
+    return m_borderCutImage;
+}
+
+bool BankCardOCRResponse::BorderCutImageHasBeenSet() const
+{
+    return m_borderCutImageHasBeenSet;
+}
+
+string BankCardOCRResponse::GetCardNoImage() const
+{
+    return m_cardNoImage;
+}
+
+bool BankCardOCRResponse::CardNoImageHasBeenSet() const
+{
+    return m_cardNoImageHasBeenSet;
+}
+
+vector<int64_t> BankCardOCRResponse::GetWarningCode() const
+{
+    return m_warningCode;
+}
+
+bool BankCardOCRResponse::WarningCodeHasBeenSet() const
+{
+    return m_warningCodeHasBeenSet;
+}
+
+int64_t BankCardOCRResponse::GetQualityValue() const
+{
+    return m_qualityValue;
+}
+
+bool BankCardOCRResponse::QualityValueHasBeenSet() const
+{
+    return m_qualityValueHasBeenSet;
 }
 
 

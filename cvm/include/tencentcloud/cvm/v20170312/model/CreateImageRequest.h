@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool ImageNameHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID used to create an image.
-                     * @return InstanceId Instance ID used to create an image.
+                     * 获取ID of the instance from which an image will be created. This parameter is required when using instance to create an image.
+                     * @return InstanceId ID of the instance from which an image will be created. This parameter is required when using instance to create an image.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID used to create an image.
-                     * @param InstanceId Instance ID used to create an image.
+                     * 设置ID of the instance from which an image will be created. This parameter is required when using instance to create an image.
+                     * @param InstanceId ID of the instance from which an image will be created. This parameter is required when using instance to create an image.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -115,14 +115,26 @@ namespace TencentCloud
                     bool ForcePoweroffHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable Sysprep when creating a Windows image
-                     * @return Sysprep Whether to enable Sysprep when creating a Windows image
+                     * 获取Whether to enable Sysprep when creating a Windows image.
+Valid values: `TRUE` and `FALSE`; default value: `FALSE`.
+
+Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_redirect=1) to learn more about Sysprep.
+                     * @return Sysprep Whether to enable Sysprep when creating a Windows image.
+Valid values: `TRUE` and `FALSE`; default value: `FALSE`.
+
+Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_redirect=1) to learn more about Sysprep.
                      */
                     std::string GetSysprep() const;
 
                     /**
-                     * 设置Whether to enable Sysprep when creating a Windows image
-                     * @param Sysprep Whether to enable Sysprep when creating a Windows image
+                     * 设置Whether to enable Sysprep when creating a Windows image.
+Valid values: `TRUE` and `FALSE`; default value: `FALSE`.
+
+Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_redirect=1) to learn more about Sysprep.
+                     * @param Sysprep Whether to enable Sysprep when creating a Windows image.
+Valid values: `TRUE` and `FALSE`; default value: `FALSE`.
+
+Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_redirect=1) to learn more about Sysprep.
                      */
                     void SetSysprep(const std::string& _sysprep);
 
@@ -195,7 +207,7 @@ namespace TencentCloud
                     bool m_imageNameHasBeenSet;
 
                     /**
-                     * Instance ID used to create an image.
+                     * ID of the instance from which an image will be created. This parameter is required when using instance to create an image.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -213,7 +225,10 @@ namespace TencentCloud
                     bool m_forcePoweroffHasBeenSet;
 
                     /**
-                     * Whether to enable Sysprep when creating a Windows image
+                     * Whether to enable Sysprep when creating a Windows image.
+Valid values: `TRUE` and `FALSE`; default value: `FALSE`.
+
+Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_redirect=1) to learn more about Sysprep.
                      */
                     std::string m_sysprep;
                     bool m_sysprepHasBeenSet;

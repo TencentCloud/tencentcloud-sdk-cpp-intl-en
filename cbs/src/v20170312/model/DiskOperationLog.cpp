@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cbs::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 DiskOperationLog::DiskOperationLog() :
@@ -31,7 +30,7 @@ DiskOperationLog::DiskOperationLog() :
 {
 }
 
-CoreInternalOutcome DiskOperationLog::Deserialize(const Value &value)
+CoreInternalOutcome DiskOperationLog::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome DiskOperationLog::Deserialize(const Value &value)
     {
         if (!value["Operator"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DiskOperationLog.Operator` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DiskOperationLog.Operator` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_operator = string(value["Operator"].GetString());
         m_operatorHasBeenSet = true;
@@ -50,7 +49,7 @@ CoreInternalOutcome DiskOperationLog::Deserialize(const Value &value)
     {
         if (!value["Operation"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DiskOperationLog.Operation` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DiskOperationLog.Operation` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_operation = string(value["Operation"].GetString());
         m_operationHasBeenSet = true;
@@ -60,7 +59,7 @@ CoreInternalOutcome DiskOperationLog::Deserialize(const Value &value)
     {
         if (!value["DiskId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DiskOperationLog.DiskId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DiskOperationLog.DiskId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_diskId = string(value["DiskId"].GetString());
         m_diskIdHasBeenSet = true;
@@ -70,7 +69,7 @@ CoreInternalOutcome DiskOperationLog::Deserialize(const Value &value)
     {
         if (!value["OperationState"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DiskOperationLog.OperationState` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DiskOperationLog.OperationState` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_operationState = string(value["OperationState"].GetString());
         m_operationStateHasBeenSet = true;
@@ -80,7 +79,7 @@ CoreInternalOutcome DiskOperationLog::Deserialize(const Value &value)
     {
         if (!value["StartTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DiskOperationLog.StartTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DiskOperationLog.StartTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_startTime = string(value["StartTime"].GetString());
         m_startTimeHasBeenSet = true;
@@ -90,7 +89,7 @@ CoreInternalOutcome DiskOperationLog::Deserialize(const Value &value)
     {
         if (!value["EndTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DiskOperationLog.EndTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DiskOperationLog.EndTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_endTime = string(value["EndTime"].GetString());
         m_endTimeHasBeenSet = true;
@@ -100,55 +99,55 @@ CoreInternalOutcome DiskOperationLog::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void DiskOperationLog::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DiskOperationLog::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_operatorHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Operator";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_operator.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_operator.c_str(), allocator).Move(), allocator);
     }
 
     if (m_operationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Operation";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_operation.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_operation.c_str(), allocator).Move(), allocator);
     }
 
     if (m_diskIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_diskId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_diskId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_operationStateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OperationState";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_operationState.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_operationState.c_str(), allocator).Move(), allocator);
     }
 
     if (m_startTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_startTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_startTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_endTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_endTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_endTime.c_str(), allocator).Move(), allocator);
     }
 
 }

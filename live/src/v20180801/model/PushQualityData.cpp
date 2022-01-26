@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Live::V20180801::Model;
-using namespace rapidjson;
 using namespace std;
 
 PushQualityData::PushQualityData() :
@@ -40,11 +39,12 @@ PushQualityData::PushQualityData() :
     m_audioTsHasBeenSet(false),
     m_metaVideoRateHasBeenSet(false),
     m_metaAudioRateHasBeenSet(false),
-    m_mateFpsHasBeenSet(false)
+    m_mateFpsHasBeenSet(false),
+    m_streamParamHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome PushQualityData::Deserialize(const Value &value)
+CoreInternalOutcome PushQualityData::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -53,7 +53,7 @@ CoreInternalOutcome PushQualityData::Deserialize(const Value &value)
     {
         if (!value["Time"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PushQualityData.Time` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PushQualityData.Time` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_time = string(value["Time"].GetString());
         m_timeHasBeenSet = true;
@@ -63,7 +63,7 @@ CoreInternalOutcome PushQualityData::Deserialize(const Value &value)
     {
         if (!value["PushDomain"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PushQualityData.PushDomain` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PushQualityData.PushDomain` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_pushDomain = string(value["PushDomain"].GetString());
         m_pushDomainHasBeenSet = true;
@@ -73,7 +73,7 @@ CoreInternalOutcome PushQualityData::Deserialize(const Value &value)
     {
         if (!value["AppName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PushQualityData.AppName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PushQualityData.AppName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_appName = string(value["AppName"].GetString());
         m_appNameHasBeenSet = true;
@@ -83,7 +83,7 @@ CoreInternalOutcome PushQualityData::Deserialize(const Value &value)
     {
         if (!value["ClientIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PushQualityData.ClientIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PushQualityData.ClientIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_clientIp = string(value["ClientIp"].GetString());
         m_clientIpHasBeenSet = true;
@@ -93,7 +93,7 @@ CoreInternalOutcome PushQualityData::Deserialize(const Value &value)
     {
         if (!value["BeginPushTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PushQualityData.BeginPushTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PushQualityData.BeginPushTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_beginPushTime = string(value["BeginPushTime"].GetString());
         m_beginPushTimeHasBeenSet = true;
@@ -103,7 +103,7 @@ CoreInternalOutcome PushQualityData::Deserialize(const Value &value)
     {
         if (!value["Resolution"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PushQualityData.Resolution` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PushQualityData.Resolution` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_resolution = string(value["Resolution"].GetString());
         m_resolutionHasBeenSet = true;
@@ -113,7 +113,7 @@ CoreInternalOutcome PushQualityData::Deserialize(const Value &value)
     {
         if (!value["VCodec"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PushQualityData.VCodec` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PushQualityData.VCodec` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vCodec = string(value["VCodec"].GetString());
         m_vCodecHasBeenSet = true;
@@ -123,7 +123,7 @@ CoreInternalOutcome PushQualityData::Deserialize(const Value &value)
     {
         if (!value["ACodec"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PushQualityData.ACodec` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PushQualityData.ACodec` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_aCodec = string(value["ACodec"].GetString());
         m_aCodecHasBeenSet = true;
@@ -133,7 +133,7 @@ CoreInternalOutcome PushQualityData::Deserialize(const Value &value)
     {
         if (!value["Sequence"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PushQualityData.Sequence` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PushQualityData.Sequence` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_sequence = string(value["Sequence"].GetString());
         m_sequenceHasBeenSet = true;
@@ -143,7 +143,7 @@ CoreInternalOutcome PushQualityData::Deserialize(const Value &value)
     {
         if (!value["VideoFps"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `PushQualityData.VideoFps` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PushQualityData.VideoFps` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_videoFps = value["VideoFps"].GetUint64();
         m_videoFpsHasBeenSet = true;
@@ -153,7 +153,7 @@ CoreInternalOutcome PushQualityData::Deserialize(const Value &value)
     {
         if (!value["VideoRate"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `PushQualityData.VideoRate` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PushQualityData.VideoRate` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_videoRate = value["VideoRate"].GetUint64();
         m_videoRateHasBeenSet = true;
@@ -163,7 +163,7 @@ CoreInternalOutcome PushQualityData::Deserialize(const Value &value)
     {
         if (!value["AudioFps"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `PushQualityData.AudioFps` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PushQualityData.AudioFps` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_audioFps = value["AudioFps"].GetUint64();
         m_audioFpsHasBeenSet = true;
@@ -173,7 +173,7 @@ CoreInternalOutcome PushQualityData::Deserialize(const Value &value)
     {
         if (!value["AudioRate"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `PushQualityData.AudioRate` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PushQualityData.AudioRate` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_audioRate = value["AudioRate"].GetUint64();
         m_audioRateHasBeenSet = true;
@@ -183,7 +183,7 @@ CoreInternalOutcome PushQualityData::Deserialize(const Value &value)
     {
         if (!value["LocalTs"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `PushQualityData.LocalTs` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PushQualityData.LocalTs` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_localTs = value["LocalTs"].GetUint64();
         m_localTsHasBeenSet = true;
@@ -193,7 +193,7 @@ CoreInternalOutcome PushQualityData::Deserialize(const Value &value)
     {
         if (!value["VideoTs"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `PushQualityData.VideoTs` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PushQualityData.VideoTs` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_videoTs = value["VideoTs"].GetUint64();
         m_videoTsHasBeenSet = true;
@@ -203,7 +203,7 @@ CoreInternalOutcome PushQualityData::Deserialize(const Value &value)
     {
         if (!value["AudioTs"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `PushQualityData.AudioTs` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PushQualityData.AudioTs` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_audioTs = value["AudioTs"].GetUint64();
         m_audioTsHasBeenSet = true;
@@ -213,7 +213,7 @@ CoreInternalOutcome PushQualityData::Deserialize(const Value &value)
     {
         if (!value["MetaVideoRate"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `PushQualityData.MetaVideoRate` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PushQualityData.MetaVideoRate` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_metaVideoRate = value["MetaVideoRate"].GetUint64();
         m_metaVideoRateHasBeenSet = true;
@@ -223,7 +223,7 @@ CoreInternalOutcome PushQualityData::Deserialize(const Value &value)
     {
         if (!value["MetaAudioRate"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `PushQualityData.MetaAudioRate` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PushQualityData.MetaAudioRate` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_metaAudioRate = value["MetaAudioRate"].GetUint64();
         m_metaAudioRateHasBeenSet = true;
@@ -233,94 +233,104 @@ CoreInternalOutcome PushQualityData::Deserialize(const Value &value)
     {
         if (!value["MateFps"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `PushQualityData.MateFps` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PushQualityData.MateFps` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_mateFps = value["MateFps"].GetUint64();
         m_mateFpsHasBeenSet = true;
+    }
+
+    if (value.HasMember("StreamParam") && !value["StreamParam"].IsNull())
+    {
+        if (!value["StreamParam"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `PushQualityData.StreamParam` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_streamParam = string(value["StreamParam"].GetString());
+        m_streamParamHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void PushQualityData::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void PushQualityData::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_timeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Time";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_time.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_time.c_str(), allocator).Move(), allocator);
     }
 
     if (m_pushDomainHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PushDomain";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_pushDomain.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_pushDomain.c_str(), allocator).Move(), allocator);
     }
 
     if (m_appNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AppName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_appName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_appName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_clientIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClientIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_clientIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clientIp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_beginPushTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BeginPushTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_beginPushTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_beginPushTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_resolutionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Resolution";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_resolution.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resolution.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vCodecHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VCodec";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vCodec.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vCodec.c_str(), allocator).Move(), allocator);
     }
 
     if (m_aCodecHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ACodec";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_aCodec.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_aCodec.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sequenceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Sequence";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_sequence.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sequence.c_str(), allocator).Move(), allocator);
     }
 
     if (m_videoFpsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VideoFps";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_videoFps, allocator);
@@ -328,7 +338,7 @@ void PushQualityData::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_videoRateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VideoRate";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_videoRate, allocator);
@@ -336,7 +346,7 @@ void PushQualityData::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_audioFpsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AudioFps";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_audioFps, allocator);
@@ -344,7 +354,7 @@ void PushQualityData::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_audioRateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AudioRate";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_audioRate, allocator);
@@ -352,7 +362,7 @@ void PushQualityData::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_localTsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LocalTs";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_localTs, allocator);
@@ -360,7 +370,7 @@ void PushQualityData::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_videoTsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VideoTs";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_videoTs, allocator);
@@ -368,7 +378,7 @@ void PushQualityData::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_audioTsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AudioTs";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_audioTs, allocator);
@@ -376,7 +386,7 @@ void PushQualityData::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_metaVideoRateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MetaVideoRate";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_metaVideoRate, allocator);
@@ -384,7 +394,7 @@ void PushQualityData::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_metaAudioRateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MetaAudioRate";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_metaAudioRate, allocator);
@@ -392,10 +402,18 @@ void PushQualityData::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_mateFpsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MateFps";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_mateFps, allocator);
+    }
+
+    if (m_streamParamHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StreamParam";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_streamParam.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -703,5 +721,21 @@ void PushQualityData::SetMateFps(const uint64_t& _mateFps)
 bool PushQualityData::MateFpsHasBeenSet() const
 {
     return m_mateFpsHasBeenSet;
+}
+
+string PushQualityData::GetStreamParam() const
+{
+    return m_streamParam;
+}
+
+void PushQualityData::SetStreamParam(const string& _streamParam)
+{
+    m_streamParam = _streamParam;
+    m_streamParamHasBeenSet = true;
+}
+
+bool PushQualityData::StreamParamHasBeenSet() const
+{
+    return m_streamParamHasBeenSet;
 }
 

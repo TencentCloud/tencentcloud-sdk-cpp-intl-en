@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cbs::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 AttachDetail::AttachDetail() :
@@ -28,7 +27,7 @@ AttachDetail::AttachDetail() :
 {
 }
 
-CoreInternalOutcome AttachDetail::Deserialize(const Value &value)
+CoreInternalOutcome AttachDetail::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome AttachDetail::Deserialize(const Value &value)
     {
         if (!value["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AttachDetail.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AttachDetail.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(value["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome AttachDetail::Deserialize(const Value &value)
     {
         if (!value["AttachedDiskCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AttachDetail.AttachedDiskCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AttachDetail.AttachedDiskCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_attachedDiskCount = value["AttachedDiskCount"].GetUint64();
         m_attachedDiskCountHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome AttachDetail::Deserialize(const Value &value)
     {
         if (!value["MaxAttachCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AttachDetail.MaxAttachCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AttachDetail.MaxAttachCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_maxAttachCount = value["MaxAttachCount"].GetUint64();
         m_maxAttachCountHasBeenSet = true;
@@ -67,20 +66,20 @@ CoreInternalOutcome AttachDetail::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void AttachDetail::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AttachDetail::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_attachedDiskCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AttachedDiskCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_attachedDiskCount, allocator);
@@ -88,7 +87,7 @@ void AttachDetail::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_maxAttachCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaxAttachCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_maxAttachCount, allocator);

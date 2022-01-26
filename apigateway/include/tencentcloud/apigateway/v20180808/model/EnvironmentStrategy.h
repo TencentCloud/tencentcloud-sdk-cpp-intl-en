@@ -82,6 +82,28 @@ namespace TencentCloud
                      */
                     bool QuotaHasBeenSet() const;
 
+                    /**
+                     * 获取Maximum quota value
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return MaxQuota Maximum quota value
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetMaxQuota() const;
+
+                    /**
+                     * 设置Maximum quota value
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param MaxQuota Maximum quota value
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetMaxQuota(const int64_t& _maxQuota);
+
+                    /**
+                     * 判断参数 MaxQuota 是否已赋值
+                     * @return MaxQuota 是否已赋值
+                     */
+                    bool MaxQuotaHasBeenSet() const;
+
                 private:
 
                     /**
@@ -95,6 +117,13 @@ namespace TencentCloud
                      */
                     int64_t m_quota;
                     bool m_quotaHasBeenSet;
+
+                    /**
+                     * Maximum quota value
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_maxQuota;
+                    bool m_maxQuotaHasBeenSet;
 
                 };
             }

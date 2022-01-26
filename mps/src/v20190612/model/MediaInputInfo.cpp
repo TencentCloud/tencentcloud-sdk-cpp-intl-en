@@ -18,16 +18,16 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 MediaInputInfo::MediaInputInfo() :
     m_typeHasBeenSet(false),
-    m_cosInputInfoHasBeenSet(false)
+    m_cosInputInfoHasBeenSet(false),
+    m_urlInputInfoHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome MediaInputInfo::Deserialize(const Value &value)
+CoreInternalOutcome MediaInputInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +36,7 @@ CoreInternalOutcome MediaInputInfo::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaInputInfo.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaInputInfo.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -46,7 +46,7 @@ CoreInternalOutcome MediaInputInfo::Deserialize(const Value &value)
     {
         if (!value["CosInputInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaInputInfo.CosInputInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaInputInfo.CosInputInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_cosInputInfo.Deserialize(value["CosInputInfo"]);
@@ -59,28 +59,54 @@ CoreInternalOutcome MediaInputInfo::Deserialize(const Value &value)
         m_cosInputInfoHasBeenSet = true;
     }
 
+    if (value.HasMember("UrlInputInfo") && !value["UrlInputInfo"].IsNull())
+    {
+        if (!value["UrlInputInfo"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `MediaInputInfo.UrlInputInfo` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_urlInputInfo.Deserialize(value["UrlInputInfo"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_urlInputInfoHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void MediaInputInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MediaInputInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cosInputInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CosInputInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_cosInputInfo.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_urlInputInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UrlInputInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_urlInputInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -116,5 +142,21 @@ void MediaInputInfo::SetCosInputInfo(const CosInputInfo& _cosInputInfo)
 bool MediaInputInfo::CosInputInfoHasBeenSet() const
 {
     return m_cosInputInfoHasBeenSet;
+}
+
+UrlInputInfo MediaInputInfo::GetUrlInputInfo() const
+{
+    return m_urlInputInfo;
+}
+
+void MediaInputInfo::SetUrlInputInfo(const UrlInputInfo& _urlInputInfo)
+{
+    m_urlInputInfo = _urlInputInfo;
+    m_urlInputInfoHasBeenSet = true;
+}
+
+bool MediaInputInfo::UrlInputInfoHasBeenSet() const
+{
+    return m_urlInputInfoHasBeenSet;
 }
 

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Emr::V20190103::Model;
-using namespace rapidjson;
 using namespace std;
 
 COSSettings::COSSettings() :
@@ -28,7 +27,7 @@ COSSettings::COSSettings() :
 {
 }
 
-CoreInternalOutcome COSSettings::Deserialize(const Value &value)
+CoreInternalOutcome COSSettings::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome COSSettings::Deserialize(const Value &value)
     {
         if (!value["CosSecretId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `COSSettings.CosSecretId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `COSSettings.CosSecretId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cosSecretId = string(value["CosSecretId"].GetString());
         m_cosSecretIdHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome COSSettings::Deserialize(const Value &value)
     {
         if (!value["CosSecretKey"].IsString())
         {
-            return CoreInternalOutcome(Error("response `COSSettings.CosSecretKey` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `COSSettings.CosSecretKey` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cosSecretKey = string(value["CosSecretKey"].GetString());
         m_cosSecretKeyHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome COSSettings::Deserialize(const Value &value)
     {
         if (!value["LogOnCosPath"].IsString())
         {
-            return CoreInternalOutcome(Error("response `COSSettings.LogOnCosPath` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `COSSettings.LogOnCosPath` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_logOnCosPath = string(value["LogOnCosPath"].GetString());
         m_logOnCosPathHasBeenSet = true;
@@ -67,31 +66,31 @@ CoreInternalOutcome COSSettings::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void COSSettings::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void COSSettings::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_cosSecretIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CosSecretId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cosSecretId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cosSecretId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cosSecretKeyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CosSecretKey";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cosSecretKey.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cosSecretKey.c_str(), allocator).Move(), allocator);
     }
 
     if (m_logOnCosPathHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LogOnCosPath";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_logOnCosPath.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_logOnCosPath.c_str(), allocator).Move(), allocator);
     }
 
 }

@@ -41,6 +41,7 @@ namespace TencentCloud
                     DisableCachesResponse();
                     ~DisableCachesResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -57,6 +58,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool CacheOptResultHasBeenSet() const;
 
+                    /**
+                     * 获取Task ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return TaskId Task ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetTaskId() const;
+
+                    /**
+                     * 判断参数 TaskId 是否已赋值
+                     * @return TaskId 是否已赋值
+                     */
+                    bool TaskIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -65,6 +80,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     CacheOptResult m_cacheOptResult;
                     bool m_cacheOptResultHasBeenSet;
+
+                    /**
+                     * Task ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_taskId;
+                    bool m_taskIdHasBeenSet;
 
                 };
             }

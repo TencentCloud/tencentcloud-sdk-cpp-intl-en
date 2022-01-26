@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 Quota::Quota() :
@@ -28,7 +27,7 @@ Quota::Quota() :
 {
 }
 
-CoreInternalOutcome Quota::Deserialize(const Value &value)
+CoreInternalOutcome Quota::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome Quota::Deserialize(const Value &value)
     {
         if (!value["QuotaId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Quota.QuotaId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Quota.QuotaId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_quotaId = string(value["QuotaId"].GetString());
         m_quotaIdHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome Quota::Deserialize(const Value &value)
     {
         if (!value["QuotaCurrent"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Quota.QuotaCurrent` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Quota.QuotaCurrent` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_quotaCurrent = value["QuotaCurrent"].GetInt64();
         m_quotaCurrentHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome Quota::Deserialize(const Value &value)
     {
         if (!value["QuotaLimit"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Quota.QuotaLimit` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Quota.QuotaLimit` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_quotaLimit = value["QuotaLimit"].GetInt64();
         m_quotaLimitHasBeenSet = true;
@@ -67,20 +66,20 @@ CoreInternalOutcome Quota::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Quota::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Quota::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_quotaIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "QuotaId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_quotaId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_quotaId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_quotaCurrentHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "QuotaCurrent";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_quotaCurrent, allocator);
@@ -88,7 +87,7 @@ void Quota::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
 
     if (m_quotaLimitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "QuotaLimit";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_quotaLimit, allocator);

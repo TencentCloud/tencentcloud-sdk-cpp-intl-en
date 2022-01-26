@@ -158,17 +158,17 @@ Note: this field may return null, indicating that no valid value was found.
                     bool RenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取The information of bandwidth regions and bandwidth caps.
+                     * 获取The information of the bandwidth regions and bandwidth caps. The parameter is only returned for the cross-region limit mode, but not for egress limit.
 Note: this field may return null, indicating that no valid value was found.
-                     * @return CcnRegionBandwidthLimit The information of bandwidth regions and bandwidth caps.
+                     * @return CcnRegionBandwidthLimit The information of the bandwidth regions and bandwidth caps. The parameter is only returned for the cross-region limit mode, but not for egress limit.
 Note: this field may return null, indicating that no valid value was found.
                      */
                     CcnRegionBandwidthLimit GetCcnRegionBandwidthLimit() const;
 
                     /**
-                     * 设置The information of bandwidth regions and bandwidth caps.
+                     * 设置The information of the bandwidth regions and bandwidth caps. The parameter is only returned for the cross-region limit mode, but not for egress limit.
 Note: this field may return null, indicating that no valid value was found.
-                     * @param CcnRegionBandwidthLimit The information of bandwidth regions and bandwidth caps.
+                     * @param CcnRegionBandwidthLimit The information of the bandwidth regions and bandwidth caps. The parameter is only returned for the cross-region limit mode, but not for egress limit.
 Note: this field may return null, indicating that no valid value was found.
                      */
                     void SetCcnRegionBandwidthLimit(const CcnRegionBandwidthLimit& _ccnRegionBandwidthLimit);
@@ -217,7 +217,7 @@ Note: this field may return null, indicating that no valid value was found.
                     bool m_renewFlagHasBeenSet;
 
                     /**
-                     * The information of bandwidth regions and bandwidth caps.
+                     * The information of the bandwidth regions and bandwidth caps. The parameter is only returned for the cross-region limit mode, but not for egress limit.
 Note: this field may return null, indicating that no valid value was found.
                      */
                     CcnRegionBandwidthLimit m_ccnRegionBandwidthLimit;

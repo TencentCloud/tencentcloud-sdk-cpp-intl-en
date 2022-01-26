@@ -211,14 +211,14 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TagSpecification 
+                     * 获取Tag description list.
+                     * @return TagSpecification Tag description list.
                      */
                     std::vector<TagSpecification> GetTagSpecification() const;
 
                     /**
-                     * 设置
-                     * @param TagSpecification 
+                     * 设置Tag description list.
+                     * @param TagSpecification Tag description list.
                      */
                     void SetTagSpecification(const std::vector<TagSpecification>& _tagSpecification);
 
@@ -229,14 +229,14 @@ namespace TencentCloud
                     bool TagSpecificationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClusterStatus 
+                     * 获取Cluster status (Running, Creating, or Abnormal)
+                     * @return ClusterStatus Cluster status (Running, Creating, or Abnormal)
                      */
                     std::string GetClusterStatus() const;
 
                     /**
-                     * 设置
-                     * @param ClusterStatus 
+                     * 设置Cluster status (Running, Creating, or Abnormal)
+                     * @param ClusterStatus Cluster status (Running, Creating, or Abnormal)
                      */
                     void SetClusterStatus(const std::string& _clusterStatus);
 
@@ -247,14 +247,14 @@ namespace TencentCloud
                     bool ClusterStatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Property 
+                     * 获取Cluster attributes (including a map of different cluster attributes, with attribute fields including NodeNameType (lan-ip mode and hostname mode, with lan-ip mode as default))
+                     * @return Property Cluster attributes (including a map of different cluster attributes, with attribute fields including NodeNameType (lan-ip mode and hostname mode, with lan-ip mode as default))
                      */
                     std::string GetProperty() const;
 
                     /**
-                     * 设置
-                     * @param Property 
+                     * 设置Cluster attributes (including a map of different cluster attributes, with attribute fields including NodeNameType (lan-ip mode and hostname mode, with lan-ip mode as default))
+                     * @param Property Cluster attributes (including a map of different cluster attributes, with attribute fields including NodeNameType (lan-ip mode and hostname mode, with lan-ip mode as default))
                      */
                     void SetProperty(const std::string& _property);
 
@@ -265,14 +265,14 @@ namespace TencentCloud
                     bool PropertyHasBeenSet() const;
 
                     /**
-                     * 获取Number of master nodes currently in the cluster
-                     * @return ClusterMaterNodeNum Number of master nodes currently in the cluster
+                     * 获取Number of primary nodes currently in the cluster
+                     * @return ClusterMaterNodeNum Number of primary nodes currently in the cluster
                      */
                     uint64_t GetClusterMaterNodeNum() const;
 
                     /**
-                     * 设置Number of master nodes currently in the cluster
-                     * @param ClusterMaterNodeNum Number of master nodes currently in the cluster
+                     * 设置Number of primary nodes currently in the cluster
+                     * @param ClusterMaterNodeNum Number of primary nodes currently in the cluster
                      */
                     void SetClusterMaterNodeNum(const uint64_t& _clusterMaterNodeNum);
 
@@ -392,6 +392,28 @@ Note: this field may return null, indicating that no valid value is obtained.
                      */
                     bool DeletionProtectionHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies whether the cluster supports external nodes.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @return EnableExternalNode Specifies whether the cluster supports external nodes.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    bool GetEnableExternalNode() const;
+
+                    /**
+                     * 设置Specifies whether the cluster supports external nodes.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @param EnableExternalNode Specifies whether the cluster supports external nodes.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetEnableExternalNode(const bool& _enableExternalNode);
+
+                    /**
+                     * 判断参数 EnableExternalNode 是否已赋值
+                     * @return EnableExternalNode 是否已赋值
+                     */
+                    bool EnableExternalNodeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -449,25 +471,25 @@ Note: this field may return null, indicating that no valid value is obtained.
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * 
+                     * Tag description list.
                      */
                     std::vector<TagSpecification> m_tagSpecification;
                     bool m_tagSpecificationHasBeenSet;
 
                     /**
-                     * 
+                     * Cluster status (Running, Creating, or Abnormal)
                      */
                     std::string m_clusterStatus;
                     bool m_clusterStatusHasBeenSet;
 
                     /**
-                     * 
+                     * Cluster attributes (including a map of different cluster attributes, with attribute fields including NodeNameType (lan-ip mode and hostname mode, with lan-ip mode as default))
                      */
                     std::string m_property;
                     bool m_propertyHasBeenSet;
 
                     /**
-                     * Number of master nodes currently in the cluster
+                     * Number of primary nodes currently in the cluster
                      */
                     uint64_t m_clusterMaterNodeNum;
                     bool m_clusterMaterNodeNumHasBeenSet;
@@ -506,6 +528,13 @@ Note: this field may return null, indicating that no valid value is obtained.
                      */
                     bool m_deletionProtection;
                     bool m_deletionProtectionHasBeenSet;
+
+                    /**
+                     * Specifies whether the cluster supports external nodes.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    bool m_enableExternalNode;
+                    bool m_enableExternalNodeHasBeenSet;
 
                 };
             }

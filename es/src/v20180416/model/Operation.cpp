@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Es::V20180416::Model;
-using namespace rapidjson;
 using namespace std;
 
 Operation::Operation() :
@@ -32,7 +31,7 @@ Operation::Operation() :
 {
 }
 
-CoreInternalOutcome Operation::Deserialize(const Value &value)
+CoreInternalOutcome Operation::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +40,7 @@ CoreInternalOutcome Operation::Deserialize(const Value &value)
     {
         if (!value["Id"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Operation.Id` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Operation.Id` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_id = value["Id"].GetUint64();
         m_idHasBeenSet = true;
@@ -51,7 +50,7 @@ CoreInternalOutcome Operation::Deserialize(const Value &value)
     {
         if (!value["StartTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Operation.StartTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Operation.StartTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_startTime = string(value["StartTime"].GetString());
         m_startTimeHasBeenSet = true;
@@ -61,7 +60,7 @@ CoreInternalOutcome Operation::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Operation.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Operation.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -71,7 +70,7 @@ CoreInternalOutcome Operation::Deserialize(const Value &value)
     {
         if (!value["Detail"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `Operation.Detail` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Operation.Detail` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_detail.Deserialize(value["Detail"]);
@@ -88,7 +87,7 @@ CoreInternalOutcome Operation::Deserialize(const Value &value)
     {
         if (!value["Result"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Operation.Result` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Operation.Result` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_result = string(value["Result"].GetString());
         m_resultHasBeenSet = true;
@@ -97,10 +96,10 @@ CoreInternalOutcome Operation::Deserialize(const Value &value)
     if (value.HasMember("Tasks") && !value["Tasks"].IsNull())
     {
         if (!value["Tasks"].IsArray())
-            return CoreInternalOutcome(Error("response `Operation.Tasks` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Operation.Tasks` is not array type"));
 
-        const Value &tmpValue = value["Tasks"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Tasks"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             TaskDetail item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -116,9 +115,9 @@ CoreInternalOutcome Operation::Deserialize(const Value &value)
 
     if (value.HasMember("Progress") && !value["Progress"].IsNull())
     {
-        if (!value["Progress"].IsDouble())
+        if (!value["Progress"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `Operation.Progress` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Operation.Progress` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_progress = value["Progress"].GetDouble();
         m_progressHasBeenSet = true;
@@ -128,12 +127,12 @@ CoreInternalOutcome Operation::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Operation::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Operation::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_idHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Id";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_id, allocator);
@@ -141,55 +140,55 @@ void Operation::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_startTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_startTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_startTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_detailHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Detail";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_detail.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_resultHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Result";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_result.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_result.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tasksHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Tasks";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_tasks.begin(); itr != m_tasks.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_progressHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Progress";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_progress, allocator);

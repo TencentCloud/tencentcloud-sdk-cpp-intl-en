@@ -25,10 +25,12 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/RawTranscodeParameter.h>
+#include <tencentcloud/mps/v20190612/model/OverrideTranscodeParameter.h>
 #include <tencentcloud/mps/v20190612/model/WatermarkInput.h>
 #include <tencentcloud/mps/v20190612/model/MosaicInput.h>
 #include <tencentcloud/mps/v20190612/model/TaskOutputStorage.h>
 #include <tencentcloud/mps/v20190612/model/NumberFormat.h>
+#include <tencentcloud/mps/v20190612/model/HeadTailParameter.h>
 
 
 namespace TencentCloud
@@ -70,14 +72,18 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RawParameter 
+                     * 获取Custom video transcoding parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
+                     * @return RawParameter Custom video transcoding parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
                      */
                     RawTranscodeParameter GetRawParameter() const;
 
                     /**
-                     * 设置
-                     * @param RawParameter 
+                     * 设置Custom video transcoding parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
+                     * @param RawParameter Custom video transcoding parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
                      */
                     void SetRawParameter(const RawTranscodeParameter& _rawParameter);
 
@@ -86,6 +92,36 @@ namespace TencentCloud
                      * @return RawParameter 是否已赋值
                      */
                     bool RawParameterHasBeenSet() const;
+
+                    /**
+                     * 获取Video transcoding custom parameter, which is valid when `Definition` is not 0.
+When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
+This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @return OverrideParameter Video transcoding custom parameter, which is valid when `Definition` is not 0.
+When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
+This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    OverrideTranscodeParameter GetOverrideParameter() const;
+
+                    /**
+                     * 设置Video transcoding custom parameter, which is valid when `Definition` is not 0.
+When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
+This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @param OverrideParameter Video transcoding custom parameter, which is valid when `Definition` is not 0.
+When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
+This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetOverrideParameter(const OverrideTranscodeParameter& _overrideParameter);
+
+                    /**
+                     * 判断参数 OverrideParameter 是否已赋值
+                     * @return OverrideParameter 是否已赋值
+                     */
+                    bool OverrideParameterHasBeenSet() const;
 
                     /**
                      * 获取List of up to 10 image or text watermarks.
@@ -110,14 +146,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WatermarkSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MosaicSet 
+                     * 获取List of blurs. Up to 10 ones can be supported.
+                     * @return MosaicSet List of blurs. Up to 10 ones can be supported.
                      */
                     std::vector<MosaicInput> GetMosaicSet() const;
 
                     /**
-                     * 设置
-                     * @param MosaicSet 
+                     * 设置List of blurs. Up to 10 ones can be supported.
+                     * @param MosaicSet List of blurs. Up to 10 ones can be supported.
                      */
                     void SetMosaicSet(const std::vector<MosaicInput>& _mosaicSet);
 
@@ -126,6 +162,66 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return MosaicSet 是否已赋值
                      */
                     bool MosaicSetHasBeenSet() const;
+
+                    /**
+                     * 获取Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+                     * @return StartTimeOffset Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+                     */
+                    double GetStartTimeOffset() const;
+
+                    /**
+                     * 设置Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+                     * @param StartTimeOffset Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+                     */
+                    void SetStartTimeOffset(const double& _startTimeOffset);
+
+                    /**
+                     * 判断参数 StartTimeOffset 是否已赋值
+                     * @return StartTimeOffset 是否已赋值
+                     */
+                    bool StartTimeOffsetHasBeenSet() const;
+
+                    /**
+                     * 获取End time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+                     * @return EndTimeOffset End time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+                     */
+                    double GetEndTimeOffset() const;
+
+                    /**
+                     * 设置End time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+                     * @param EndTimeOffset End time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+                     */
+                    void SetEndTimeOffset(const double& _endTimeOffset);
+
+                    /**
+                     * 判断参数 EndTimeOffset 是否已赋值
+                     * @return EndTimeOffset 是否已赋值
+                     */
+                    bool EndTimeOffsetHasBeenSet() const;
 
                     /**
                      * 获取Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
@@ -150,14 +246,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取Path to a master output file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}.{format}`.
-                     * @return OutputObjectPath Path to a master output file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}.{format}`.
+                     * 获取Path to a primary output file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}.{format}`.
+                     * @return OutputObjectPath Path to a primary output file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}.{format}`.
                      */
                     std::string GetOutputObjectPath() const;
 
                     /**
-                     * 设置Path to a master output file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}.{format}`.
-                     * @param OutputObjectPath Path to a master output file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}.{format}`.
+                     * 设置Path to a primary output file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}.{format}`.
+                     * @param OutputObjectPath Path to a primary output file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}.{format}`.
                      */
                     void SetOutputObjectPath(const std::string& _outputObjectPath);
 
@@ -207,6 +303,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ObjectNumberFormatHasBeenSet() const;
 
+                    /**
+                     * 获取Opening and closing credits parameters
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @return HeadTailParameter Opening and closing credits parameters
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    HeadTailParameter GetHeadTailParameter() const;
+
+                    /**
+                     * 设置Opening and closing credits parameters
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @param HeadTailParameter Opening and closing credits parameters
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetHeadTailParameter(const HeadTailParameter& _headTailParameter);
+
+                    /**
+                     * 判断参数 HeadTailParameter 是否已赋值
+                     * @return HeadTailParameter 是否已赋值
+                     */
+                    bool HeadTailParameterHasBeenSet() const;
+
                 private:
 
                     /**
@@ -216,10 +334,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * Custom video transcoding parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
                      */
                     RawTranscodeParameter m_rawParameter;
                     bool m_rawParameterHasBeenSet;
+
+                    /**
+                     * Video transcoding custom parameter, which is valid when `Definition` is not 0.
+When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
+This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    OverrideTranscodeParameter m_overrideParameter;
+                    bool m_overrideParameterHasBeenSet;
 
                     /**
                      * List of up to 10 image or text watermarks.
@@ -229,10 +357,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_watermarkSetHasBeenSet;
 
                     /**
-                     * 
+                     * List of blurs. Up to 10 ones can be supported.
                      */
                     std::vector<MosaicInput> m_mosaicSet;
                     bool m_mosaicSetHasBeenSet;
+
+                    /**
+                     * Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+                     */
+                    double m_startTimeOffset;
+                    bool m_startTimeOffsetHasBeenSet;
+
+                    /**
+                     * End time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+                     */
+                    double m_endTimeOffset;
+                    bool m_endTimeOffsetHasBeenSet;
 
                     /**
                      * Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
@@ -242,7 +388,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_outputStorageHasBeenSet;
 
                     /**
-                     * Path to a master output file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}.{format}`.
+                     * Path to a primary output file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}.{format}`.
                      */
                     std::string m_outputObjectPath;
                     bool m_outputObjectPathHasBeenSet;
@@ -259,6 +405,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     NumberFormat m_objectNumberFormat;
                     bool m_objectNumberFormatHasBeenSet;
+
+                    /**
+                     * Opening and closing credits parameters
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    HeadTailParameter m_headTailParameter;
+                    bool m_headTailParameterHasBeenSet;
 
                 };
             }

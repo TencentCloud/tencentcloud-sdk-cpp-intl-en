@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID filter of content audit templates. Array length limit: 50.
-                     * @return Definitions Unique ID filter of content audit templates. Array length limit: 50.
+                     * 获取Unique ID of intelligent content recognition templates as the filter. Array length limit: 50
+                     * @return Definitions Unique ID of intelligent content recognition templates as the filter. Array length limit: 50
                      */
                     std::vector<int64_t> GetDefinitions() const;
 
                     /**
-                     * 设置Unique ID filter of content audit templates. Array length limit: 50.
-                     * @param Definitions Unique ID filter of content audit templates. Array length limit: 50.
+                     * 设置Unique ID of intelligent content recognition templates as the filter. Array length limit: 50
+                     * @param Definitions Unique ID of intelligent content recognition templates as the filter. Array length limit: 50
                      */
                     void SetDefinitions(const std::vector<int64_t>& _definitions);
 
@@ -99,7 +99,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique ID filter of content audit templates. Array length limit: 50.
+                     * Unique ID of intelligent content recognition templates as the filter. Array length limit: 50
                      */
                     std::vector<int64_t> m_definitions;
                     bool m_definitionsHasBeenSet;

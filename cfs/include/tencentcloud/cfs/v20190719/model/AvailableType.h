@@ -66,14 +66,14 @@ namespace TencentCloud
                     bool ProtocolsHasBeenSet() const;
 
                     /**
-                     * 获取Storage class. Valid values: SD (standard), HP (high-performance)
-                     * @return Type Storage class. Valid values: SD (standard), HP (high-performance)
+                     * 获取Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
+                     * @return Type Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Storage class. Valid values: SD (standard), HP (high-performance)
-                     * @param Type Storage class. Valid values: SD (standard), HP (high-performance)
+                     * 设置Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
+                     * @param Type Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
                      */
                     void SetType(const std::string& _type);
 
@@ -82,6 +82,24 @@ namespace TencentCloud
                      * @return Type 是否已赋值
                      */
                     bool TypeHasBeenSet() const;
+
+                    /**
+                     * 获取Indicates whether prepaid is supported. `true`: yes; `false`: no
+                     * @return Prepayment Indicates whether prepaid is supported. `true`: yes; `false`: no
+                     */
+                    bool GetPrepayment() const;
+
+                    /**
+                     * 设置Indicates whether prepaid is supported. `true`: yes; `false`: no
+                     * @param Prepayment Indicates whether prepaid is supported. `true`: yes; `false`: no
+                     */
+                    void SetPrepayment(const bool& _prepayment);
+
+                    /**
+                     * 判断参数 Prepayment 是否已赋值
+                     * @return Prepayment 是否已赋值
+                     */
+                    bool PrepaymentHasBeenSet() const;
 
                 private:
 
@@ -92,10 +110,16 @@ namespace TencentCloud
                     bool m_protocolsHasBeenSet;
 
                     /**
-                     * Storage class. Valid values: SD (standard), HP (high-performance)
+                     * Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
+
+                    /**
+                     * Indicates whether prepaid is supported. `true`: yes; `false`: no
+                     */
+                    bool m_prepayment;
+                    bool m_prepaymentHasBeenSet;
 
                 };
             }

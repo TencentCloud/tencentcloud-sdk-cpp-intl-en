@@ -18,18 +18,18 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Postgres::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 RegionInfo::RegionInfo() :
     m_regionHasBeenSet(false),
     m_regionNameHasBeenSet(false),
     m_regionIdHasBeenSet(false),
-    m_regionStateHasBeenSet(false)
+    m_regionStateHasBeenSet(false),
+    m_supportInternationalHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome RegionInfo::Deserialize(const Value &value)
+CoreInternalOutcome RegionInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +38,7 @@ CoreInternalOutcome RegionInfo::Deserialize(const Value &value)
     {
         if (!value["Region"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RegionInfo.Region` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RegionInfo.Region` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_region = string(value["Region"].GetString());
         m_regionHasBeenSet = true;
@@ -48,7 +48,7 @@ CoreInternalOutcome RegionInfo::Deserialize(const Value &value)
     {
         if (!value["RegionName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RegionInfo.RegionName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RegionInfo.RegionName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_regionName = string(value["RegionName"].GetString());
         m_regionNameHasBeenSet = true;
@@ -58,7 +58,7 @@ CoreInternalOutcome RegionInfo::Deserialize(const Value &value)
     {
         if (!value["RegionId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `RegionInfo.RegionId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RegionInfo.RegionId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_regionId = value["RegionId"].GetUint64();
         m_regionIdHasBeenSet = true;
@@ -68,38 +68,48 @@ CoreInternalOutcome RegionInfo::Deserialize(const Value &value)
     {
         if (!value["RegionState"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RegionInfo.RegionState` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RegionInfo.RegionState` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_regionState = string(value["RegionState"].GetString());
         m_regionStateHasBeenSet = true;
+    }
+
+    if (value.HasMember("SupportInternational") && !value["SupportInternational"].IsNull())
+    {
+        if (!value["SupportInternational"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `RegionInfo.SupportInternational` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_supportInternational = value["SupportInternational"].GetUint64();
+        m_supportInternationalHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void RegionInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void RegionInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_regionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Region";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_region.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_region.c_str(), allocator).Move(), allocator);
     }
 
     if (m_regionNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RegionName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_regionName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_regionName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_regionIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RegionId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_regionId, allocator);
@@ -107,10 +117,18 @@ void RegionInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_regionStateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RegionState";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_regionState.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_regionState.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_supportInternationalHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SupportInternational";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_supportInternational, allocator);
     }
 
 }
@@ -178,5 +196,21 @@ void RegionInfo::SetRegionState(const string& _regionState)
 bool RegionInfo::RegionStateHasBeenSet() const
 {
     return m_regionStateHasBeenSet;
+}
+
+uint64_t RegionInfo::GetSupportInternational() const
+{
+    return m_supportInternational;
+}
+
+void RegionInfo::SetSupportInternational(const uint64_t& _supportInternational)
+{
+    m_supportInternational = _supportInternational;
+    m_supportInternationalHasBeenSet = true;
+}
+
+bool RegionInfo::SupportInternationalHasBeenSet() const
+{
+    return m_supportInternationalHasBeenSet;
 }
 

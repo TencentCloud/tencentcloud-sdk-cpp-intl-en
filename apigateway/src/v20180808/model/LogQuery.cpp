@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 LogQuery::LogQuery() :
@@ -28,7 +27,7 @@ LogQuery::LogQuery() :
 {
 }
 
-CoreInternalOutcome LogQuery::Deserialize(const Value &value)
+CoreInternalOutcome LogQuery::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome LogQuery::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LogQuery.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LogQuery.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome LogQuery::Deserialize(const Value &value)
     {
         if (!value["Operator"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LogQuery.Operator` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LogQuery.Operator` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_operator = string(value["Operator"].GetString());
         m_operatorHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome LogQuery::Deserialize(const Value &value)
     {
         if (!value["Value"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LogQuery.Value` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LogQuery.Value` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_value = string(value["Value"].GetString());
         m_valueHasBeenSet = true;
@@ -67,31 +66,31 @@ CoreInternalOutcome LogQuery::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void LogQuery::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void LogQuery::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_operatorHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Operator";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_operator.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_operator.c_str(), allocator).Move(), allocator);
     }
 
     if (m_valueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Value";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_value.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_value.c_str(), allocator).Move(), allocator);
     }
 
 }

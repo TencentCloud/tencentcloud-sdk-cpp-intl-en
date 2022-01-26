@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool InstanceDeleteModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ForceDelete 
+                     * 获取Whether or not there is forced deletion (when a node is initialized, the parameters can be specified as TRUE)
+                     * @return ForceDelete Whether or not there is forced deletion (when a node is initialized, the parameters can be specified as TRUE)
                      */
                     bool GetForceDelete() const;
 
                     /**
-                     * 设置
-                     * @param ForceDelete 
+                     * 设置Whether or not there is forced deletion (when a node is initialized, the parameters can be specified as TRUE)
+                     * @param ForceDelete Whether or not there is forced deletion (when a node is initialized, the parameters can be specified as TRUE)
                      */
                     void SetForceDelete(const bool& _forceDelete);
 
@@ -135,7 +135,7 @@ namespace TencentCloud
                     bool m_instanceDeleteModeHasBeenSet;
 
                     /**
-                     * 
+                     * Whether or not there is forced deletion (when a node is initialized, the parameters can be specified as TRUE)
                      */
                     bool m_forceDelete;
                     bool m_forceDeleteHasBeenSet;

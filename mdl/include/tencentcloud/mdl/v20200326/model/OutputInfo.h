@@ -131,6 +131,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool Scte35SettingsHasBeenSet() const;
 
+                    /**
+                     * 获取Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @return AVTemplateNames Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<std::string> GetAVTemplateNames() const;
+
+                    /**
+                     * 设置Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @param AVTemplateNames Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetAVTemplateNames(const std::vector<std::string>& _aVTemplateNames);
+
+                    /**
+                     * 判断参数 AVTemplateNames 是否已赋值
+                     * @return AVTemplateNames 是否已赋值
+                     */
+                    bool AVTemplateNamesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -159,6 +181,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     Scte35SettingsInfo m_scte35Settings;
                     bool m_scte35SettingsHasBeenSet;
+
+                    /**
+                     * Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<std::string> m_aVTemplateNames;
+                    bool m_aVTemplateNamesHasBeenSet;
 
                 };
             }

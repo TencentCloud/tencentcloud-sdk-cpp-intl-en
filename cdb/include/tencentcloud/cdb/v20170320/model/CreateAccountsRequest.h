@@ -115,6 +115,24 @@ namespace TencentCloud
                      */
                     bool DescriptionHasBeenSet() const;
 
+                    /**
+                     * 获取Maximum connections of the new account. Default value: `10240`. Maximum value: `10240`.
+                     * @return MaxUserConnections Maximum connections of the new account. Default value: `10240`. Maximum value: `10240`.
+                     */
+                    int64_t GetMaxUserConnections() const;
+
+                    /**
+                     * 设置Maximum connections of the new account. Default value: `10240`. Maximum value: `10240`.
+                     * @param MaxUserConnections Maximum connections of the new account. Default value: `10240`. Maximum value: `10240`.
+                     */
+                    void SetMaxUserConnections(const int64_t& _maxUserConnections);
+
+                    /**
+                     * 判断参数 MaxUserConnections 是否已赋值
+                     * @return MaxUserConnections 是否已赋值
+                     */
+                    bool MaxUserConnectionsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -140,6 +158,12 @@ namespace TencentCloud
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
+
+                    /**
+                     * Maximum connections of the new account. Default value: `10240`. Maximum value: `10240`.
+                     */
+                    int64_t m_maxUserConnections;
+                    bool m_maxUserConnectionsHasBeenSet;
 
                 };
             }

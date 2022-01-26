@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 InstanceRebootTime::InstanceRebootTime() :
@@ -27,7 +26,7 @@ InstanceRebootTime::InstanceRebootTime() :
 {
 }
 
-CoreInternalOutcome InstanceRebootTime::Deserialize(const Value &value)
+CoreInternalOutcome InstanceRebootTime::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome InstanceRebootTime::Deserialize(const Value &value)
     {
         if (!value["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceRebootTime.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceRebootTime.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(value["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome InstanceRebootTime::Deserialize(const Value &value)
     {
         if (!value["TimeInSeconds"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `InstanceRebootTime.TimeInSeconds` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceRebootTime.TimeInSeconds` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_timeInSeconds = value["TimeInSeconds"].GetInt64();
         m_timeInSecondsHasBeenSet = true;
@@ -56,20 +55,20 @@ CoreInternalOutcome InstanceRebootTime::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void InstanceRebootTime::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void InstanceRebootTime::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_timeInSecondsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TimeInSeconds";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_timeInSeconds, allocator);

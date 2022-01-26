@@ -32,6 +32,7 @@
 #include <tencentcloud/apigateway/v20180808/model/ServiceParameter.h>
 #include <tencentcloud/apigateway/v20180808/model/OauthConfig.h>
 #include <tencentcloud/apigateway/v20180808/model/ResponseErrorCodeReq.h>
+#include <tencentcloud/apigateway/v20180808/model/Base64EncodedTriggerRule.h>
 
 
 namespace TencentCloud
@@ -180,14 +181,14 @@ namespace TencentCloud
                     bool ApiTypeHasBeenSet() const;
 
                     /**
-                     * 获取API authentication type. Valid values: SECRET, NONE, OAUTH. Default value: NONE.
-                     * @return AuthType API authentication type. Valid values: SECRET, NONE, OAUTH. Default value: NONE.
+                     * 获取API authentication type. Valid values: SECRET, NONE, OAUTH, APP. Default value: NONE.
+                     * @return AuthType API authentication type. Valid values: SECRET, NONE, OAUTH, APP. Default value: NONE.
                      */
                     std::string GetAuthType() const;
 
                     /**
-                     * 设置API authentication type. Valid values: SECRET, NONE, OAUTH. Default value: NONE.
-                     * @param AuthType API authentication type. Valid values: SECRET, NONE, OAUTH. Default value: NONE.
+                     * 设置API authentication type. Valid values: SECRET, NONE, OAUTH, APP. Default value: NONE.
+                     * @param AuthType API authentication type. Valid values: SECRET, NONE, OAUTH, APP. Default value: NONE.
                      */
                     void SetAuthType(const std::string& _authType);
 
@@ -863,6 +864,60 @@ namespace TencentCloud
                      */
                     bool ResponseErrorCodesHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+                     * @return IsBase64Encoded Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+                     */
+                    bool GetIsBase64Encoded() const;
+
+                    /**
+                     * 设置Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+                     * @param IsBase64Encoded Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+                     */
+                    void SetIsBase64Encoded(const bool& _isBase64Encoded);
+
+                    /**
+                     * 判断参数 IsBase64Encoded 是否已赋值
+                     * @return IsBase64Encoded 是否已赋值
+                     */
+                    bool IsBase64EncodedHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+                     * @return IsBase64Trigger Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+                     */
+                    bool GetIsBase64Trigger() const;
+
+                    /**
+                     * 设置Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+                     * @param IsBase64Trigger Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+                     */
+                    void SetIsBase64Trigger(const bool& _isBase64Trigger);
+
+                    /**
+                     * 判断参数 IsBase64Trigger 是否已赋值
+                     * @return IsBase64Trigger 是否已赋值
+                     */
+                    bool IsBase64TriggerHasBeenSet() const;
+
+                    /**
+                     * 获取Header trigger rules. The number of rules cannot exceed 10.
+                     * @return Base64EncodedTriggerRules Header trigger rules. The number of rules cannot exceed 10.
+                     */
+                    std::vector<Base64EncodedTriggerRule> GetBase64EncodedTriggerRules() const;
+
+                    /**
+                     * 设置Header trigger rules. The number of rules cannot exceed 10.
+                     * @param Base64EncodedTriggerRules Header trigger rules. The number of rules cannot exceed 10.
+                     */
+                    void SetBase64EncodedTriggerRules(const std::vector<Base64EncodedTriggerRule>& _base64EncodedTriggerRules);
+
+                    /**
+                     * 判断参数 Base64EncodedTriggerRules 是否已赋值
+                     * @return Base64EncodedTriggerRules 是否已赋值
+                     */
+                    bool Base64EncodedTriggerRulesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -908,7 +963,7 @@ namespace TencentCloud
                     bool m_apiTypeHasBeenSet;
 
                     /**
-                     * API authentication type. Valid values: SECRET, NONE, OAUTH. Default value: NONE.
+                     * API authentication type. Valid values: SECRET, NONE, OAUTH, APP. Default value: NONE.
                      */
                     std::string m_authType;
                     bool m_authTypeHasBeenSet;
@@ -1134,6 +1189,24 @@ namespace TencentCloud
                      */
                     std::vector<ResponseErrorCodeReq> m_responseErrorCodes;
                     bool m_responseErrorCodesHasBeenSet;
+
+                    /**
+                     * Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+                     */
+                    bool m_isBase64Encoded;
+                    bool m_isBase64EncodedHasBeenSet;
+
+                    /**
+                     * Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+                     */
+                    bool m_isBase64Trigger;
+                    bool m_isBase64TriggerHasBeenSet;
+
+                    /**
+                     * Header trigger rules. The number of rules cannot exceed 10.
+                     */
+                    std::vector<Base64EncodedTriggerRule> m_base64EncodedTriggerRules;
+                    bool m_base64EncodedTriggerRulesHasBeenSet;
 
                 };
             }

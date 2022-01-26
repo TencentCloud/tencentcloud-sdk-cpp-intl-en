@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Live::V20180801::Model;
-using namespace rapidjson;
 using namespace std;
 
 HttpStatusData::HttpStatusData() :
@@ -27,7 +26,7 @@ HttpStatusData::HttpStatusData() :
 {
 }
 
-CoreInternalOutcome HttpStatusData::Deserialize(const Value &value)
+CoreInternalOutcome HttpStatusData::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome HttpStatusData::Deserialize(const Value &value)
     {
         if (!value["Time"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HttpStatusData.Time` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HttpStatusData.Time` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_time = string(value["Time"].GetString());
         m_timeHasBeenSet = true;
@@ -45,10 +44,10 @@ CoreInternalOutcome HttpStatusData::Deserialize(const Value &value)
     if (value.HasMember("HttpStatusInfoList") && !value["HttpStatusInfoList"].IsNull())
     {
         if (!value["HttpStatusInfoList"].IsArray())
-            return CoreInternalOutcome(Error("response `HttpStatusData.HttpStatusInfoList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `HttpStatusData.HttpStatusInfoList` is not array type"));
 
-        const Value &tmpValue = value["HttpStatusInfoList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["HttpStatusInfoList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             HttpStatusInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -66,28 +65,28 @@ CoreInternalOutcome HttpStatusData::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void HttpStatusData::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void HttpStatusData::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_timeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Time";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_time.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_time.c_str(), allocator).Move(), allocator);
     }
 
     if (m_httpStatusInfoListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HttpStatusInfoList";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_httpStatusInfoList.begin(); itr != m_httpStatusInfoList.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }

@@ -21,32 +21,32 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ocr::V20181119::Model;
-using namespace rapidjson;
 using namespace std;
 
 GeneralBasicOCRResponse::GeneralBasicOCRResponse() :
     m_textDetectionsHasBeenSet(false),
     m_languageHasBeenSet(false),
-    m_angelHasBeenSet(false)
+    m_angelHasBeenSet(false),
+    m_pdfPageSizeHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome GeneralBasicOCRResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -57,21 +57,21 @@ CoreInternalOutcome GeneralBasicOCRResponse::Deserialize(const string &payload)
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
     if (rsp.HasMember("TextDetections") && !rsp["TextDetections"].IsNull())
     {
         if (!rsp["TextDetections"].IsArray())
-            return CoreInternalOutcome(Error("response `TextDetections` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `TextDetections` is not array type"));
 
-        const Value &tmpValue = rsp["TextDetections"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["TextDetections"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             TextDetection item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -89,7 +89,7 @@ CoreInternalOutcome GeneralBasicOCRResponse::Deserialize(const string &payload)
     {
         if (!rsp["Language"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Language` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Language` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_language = string(rsp["Language"].GetString());
         m_languageHasBeenSet = true;
@@ -97,16 +97,82 @@ CoreInternalOutcome GeneralBasicOCRResponse::Deserialize(const string &payload)
 
     if (rsp.HasMember("Angel") && !rsp["Angel"].IsNull())
     {
-        if (!rsp["Angel"].IsDouble())
+        if (!rsp["Angel"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `Angel` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Angel` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_angel = rsp["Angel"].GetDouble();
         m_angelHasBeenSet = true;
     }
 
+    if (rsp.HasMember("PdfPageSize") && !rsp["PdfPageSize"].IsNull())
+    {
+        if (!rsp["PdfPageSize"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `PdfPageSize` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_pdfPageSize = rsp["PdfPageSize"].GetInt64();
+        m_pdfPageSizeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
+}
+
+string GeneralBasicOCRResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_textDetectionsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TextDetections";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_textDetections.begin(); itr != m_textDetections.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_languageHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Language";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_language.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_angelHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Angel";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_angel, allocator);
+    }
+
+    if (m_pdfPageSizeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PdfPageSize";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_pdfPageSize, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 
@@ -138,6 +204,16 @@ double GeneralBasicOCRResponse::GetAngel() const
 bool GeneralBasicOCRResponse::AngelHasBeenSet() const
 {
     return m_angelHasBeenSet;
+}
+
+int64_t GeneralBasicOCRResponse::GetPdfPageSize() const
+{
+    return m_pdfPageSize;
+}
+
+bool GeneralBasicOCRResponse::PdfPageSizeHasBeenSet() const
+{
+    return m_pdfPageSizeHasBeenSet;
 }
 
 

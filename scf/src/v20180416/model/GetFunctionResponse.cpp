@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Scf::V20180416::Model;
-using namespace rapidjson;
 using namespace std;
 
 GetFunctionResponse::GetFunctionResponse() :
@@ -59,26 +58,35 @@ GetFunctionResponse::GetFunctionResponse() :
     m_deadLetterConfigHasBeenSet(false),
     m_addTimeHasBeenSet(false),
     m_publicNetConfigHasBeenSet(false),
-    m_onsEnableHasBeenSet(false)
+    m_onsEnableHasBeenSet(false),
+    m_cfsConfigHasBeenSet(false),
+    m_availableStatusHasBeenSet(false),
+    m_qualifierHasBeenSet(false),
+    m_initTimeoutHasBeenSet(false),
+    m_statusReasonsHasBeenSet(false),
+    m_asyncRunEnableHasBeenSet(false),
+    m_traceEnableHasBeenSet(false),
+    m_protocolTypeHasBeenSet(false),
+    m_protocolParamsHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -89,11 +97,11 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -101,7 +109,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["ModTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ModTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ModTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_modTime = string(rsp["ModTime"].GetString());
         m_modTimeHasBeenSet = true;
@@ -111,7 +119,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["CodeInfo"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CodeInfo` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CodeInfo` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_codeInfo = string(rsp["CodeInfo"].GetString());
         m_codeInfoHasBeenSet = true;
@@ -121,7 +129,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["Description"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Description` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Description` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_description = string(rsp["Description"].GetString());
         m_descriptionHasBeenSet = true;
@@ -130,10 +138,10 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     if (rsp.HasMember("Triggers") && !rsp["Triggers"].IsNull())
     {
         if (!rsp["Triggers"].IsArray())
-            return CoreInternalOutcome(Error("response `Triggers` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Triggers` is not array type"));
 
-        const Value &tmpValue = rsp["Triggers"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["Triggers"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             Trigger item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -151,7 +159,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["Handler"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Handler` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Handler` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_handler = string(rsp["Handler"].GetString());
         m_handlerHasBeenSet = true;
@@ -161,7 +169,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["CodeSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `CodeSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CodeSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_codeSize = rsp["CodeSize"].GetInt64();
         m_codeSizeHasBeenSet = true;
@@ -171,7 +179,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["Timeout"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Timeout` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Timeout` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_timeout = rsp["Timeout"].GetInt64();
         m_timeoutHasBeenSet = true;
@@ -181,7 +189,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["FunctionVersion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FunctionVersion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FunctionVersion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_functionVersion = string(rsp["FunctionVersion"].GetString());
         m_functionVersionHasBeenSet = true;
@@ -191,7 +199,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["MemorySize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MemorySize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MemorySize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_memorySize = rsp["MemorySize"].GetInt64();
         m_memorySizeHasBeenSet = true;
@@ -201,7 +209,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["Runtime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Runtime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Runtime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_runtime = string(rsp["Runtime"].GetString());
         m_runtimeHasBeenSet = true;
@@ -211,7 +219,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["FunctionName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FunctionName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FunctionName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_functionName = string(rsp["FunctionName"].GetString());
         m_functionNameHasBeenSet = true;
@@ -221,7 +229,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["VpcConfig"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `VpcConfig` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpcConfig` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_vpcConfig.Deserialize(rsp["VpcConfig"]);
@@ -238,7 +246,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["UseGpu"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UseGpu` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UseGpu` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_useGpu = string(rsp["UseGpu"].GetString());
         m_useGpuHasBeenSet = true;
@@ -248,7 +256,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["Environment"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `Environment` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Environment` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_environment.Deserialize(rsp["Environment"]);
@@ -265,7 +273,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["CodeResult"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CodeResult` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CodeResult` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_codeResult = string(rsp["CodeResult"].GetString());
         m_codeResultHasBeenSet = true;
@@ -275,7 +283,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["CodeError"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CodeError` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CodeError` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_codeError = string(rsp["CodeError"].GetString());
         m_codeErrorHasBeenSet = true;
@@ -285,7 +293,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["ErrNo"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ErrNo` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ErrNo` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_errNo = rsp["ErrNo"].GetInt64();
         m_errNoHasBeenSet = true;
@@ -295,7 +303,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["Namespace"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Namespace` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Namespace` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_namespace = string(rsp["Namespace"].GetString());
         m_namespaceHasBeenSet = true;
@@ -305,7 +313,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["Role"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Role` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Role` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_role = string(rsp["Role"].GetString());
         m_roleHasBeenSet = true;
@@ -315,7 +323,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["InstallDependency"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstallDependency` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstallDependency` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_installDependency = string(rsp["InstallDependency"].GetString());
         m_installDependencyHasBeenSet = true;
@@ -325,7 +333,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(rsp["Status"].GetString());
         m_statusHasBeenSet = true;
@@ -335,7 +343,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["StatusDesc"].IsString())
         {
-            return CoreInternalOutcome(Error("response `StatusDesc` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `StatusDesc` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_statusDesc = string(rsp["StatusDesc"].GetString());
         m_statusDescHasBeenSet = true;
@@ -345,7 +353,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["ClsLogsetId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClsLogsetId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClsLogsetId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_clsLogsetId = string(rsp["ClsLogsetId"].GetString());
         m_clsLogsetIdHasBeenSet = true;
@@ -355,7 +363,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["ClsTopicId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClsTopicId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClsTopicId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_clsTopicId = string(rsp["ClsTopicId"].GetString());
         m_clsTopicIdHasBeenSet = true;
@@ -365,7 +373,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["FunctionId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FunctionId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FunctionId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_functionId = string(rsp["FunctionId"].GetString());
         m_functionIdHasBeenSet = true;
@@ -374,10 +382,10 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     if (rsp.HasMember("Tags") && !rsp["Tags"].IsNull())
     {
         if (!rsp["Tags"].IsArray())
-            return CoreInternalOutcome(Error("response `Tags` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Tags` is not array type"));
 
-        const Value &tmpValue = rsp["Tags"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["Tags"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             Tag item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -395,7 +403,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["EipConfig"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `EipConfig` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EipConfig` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_eipConfig.Deserialize(rsp["EipConfig"]);
@@ -412,7 +420,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["AccessInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AccessInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccessInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_accessInfo.Deserialize(rsp["AccessInfo"]);
@@ -429,7 +437,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(rsp["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -439,7 +447,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["L5Enable"].IsString())
         {
-            return CoreInternalOutcome(Error("response `L5Enable` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L5Enable` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_l5Enable = string(rsp["L5Enable"].GetString());
         m_l5EnableHasBeenSet = true;
@@ -448,10 +456,10 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     if (rsp.HasMember("Layers") && !rsp["Layers"].IsNull())
     {
         if (!rsp["Layers"].IsArray())
-            return CoreInternalOutcome(Error("response `Layers` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Layers` is not array type"));
 
-        const Value &tmpValue = rsp["Layers"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["Layers"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             LayerVersionInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -469,7 +477,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["DeadLetterConfig"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DeadLetterConfig` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DeadLetterConfig` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_deadLetterConfig.Deserialize(rsp["DeadLetterConfig"]);
@@ -486,7 +494,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["AddTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AddTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AddTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_addTime = string(rsp["AddTime"].GetString());
         m_addTimeHasBeenSet = true;
@@ -496,7 +504,7 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["PublicNetConfig"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `PublicNetConfig` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PublicNetConfig` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_publicNetConfig.Deserialize(rsp["PublicNetConfig"]);
@@ -513,14 +521,533 @@ CoreInternalOutcome GetFunctionResponse::Deserialize(const string &payload)
     {
         if (!rsp["OnsEnable"].IsString())
         {
-            return CoreInternalOutcome(Error("response `OnsEnable` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OnsEnable` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_onsEnable = string(rsp["OnsEnable"].GetString());
         m_onsEnableHasBeenSet = true;
     }
 
+    if (rsp.HasMember("CfsConfig") && !rsp["CfsConfig"].IsNull())
+    {
+        if (!rsp["CfsConfig"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `CfsConfig` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_cfsConfig.Deserialize(rsp["CfsConfig"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_cfsConfigHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("AvailableStatus") && !rsp["AvailableStatus"].IsNull())
+    {
+        if (!rsp["AvailableStatus"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AvailableStatus` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_availableStatus = string(rsp["AvailableStatus"].GetString());
+        m_availableStatusHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("Qualifier") && !rsp["Qualifier"].IsNull())
+    {
+        if (!rsp["Qualifier"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Qualifier` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_qualifier = string(rsp["Qualifier"].GetString());
+        m_qualifierHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("InitTimeout") && !rsp["InitTimeout"].IsNull())
+    {
+        if (!rsp["InitTimeout"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `InitTimeout` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_initTimeout = rsp["InitTimeout"].GetInt64();
+        m_initTimeoutHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("StatusReasons") && !rsp["StatusReasons"].IsNull())
+    {
+        if (!rsp["StatusReasons"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `StatusReasons` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["StatusReasons"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            StatusReason item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_statusReasons.push_back(item);
+        }
+        m_statusReasonsHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("AsyncRunEnable") && !rsp["AsyncRunEnable"].IsNull())
+    {
+        if (!rsp["AsyncRunEnable"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AsyncRunEnable` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_asyncRunEnable = string(rsp["AsyncRunEnable"].GetString());
+        m_asyncRunEnableHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("TraceEnable") && !rsp["TraceEnable"].IsNull())
+    {
+        if (!rsp["TraceEnable"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `TraceEnable` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_traceEnable = string(rsp["TraceEnable"].GetString());
+        m_traceEnableHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("ProtocolType") && !rsp["ProtocolType"].IsNull())
+    {
+        if (!rsp["ProtocolType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ProtocolType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_protocolType = string(rsp["ProtocolType"].GetString());
+        m_protocolTypeHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("ProtocolParams") && !rsp["ProtocolParams"].IsNull())
+    {
+        if (!rsp["ProtocolParams"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `ProtocolParams` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_protocolParams.Deserialize(rsp["ProtocolParams"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_protocolParamsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
+}
+
+string GetFunctionResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_modTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ModTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_modTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_codeInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CodeInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_codeInfo.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_descriptionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Description";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_triggersHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Triggers";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_triggers.begin(); itr != m_triggers.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_handlerHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Handler";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_handler.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_codeSizeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CodeSize";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_codeSize, allocator);
+    }
+
+    if (m_timeoutHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Timeout";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_timeout, allocator);
+    }
+
+    if (m_functionVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FunctionVersion";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_functionVersion.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_memorySizeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MemorySize";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_memorySize, allocator);
+    }
+
+    if (m_runtimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Runtime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_runtime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_functionNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FunctionName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_functionName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_vpcConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VpcConfig";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_vpcConfig.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_useGpuHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UseGpu";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_useGpu.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_environmentHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Environment";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_environment.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_codeResultHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CodeResult";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_codeResult.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_codeErrorHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CodeError";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_codeError.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_errNoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ErrNo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_errNo, allocator);
+    }
+
+    if (m_namespaceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Namespace";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_namespace.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_roleHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Role";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_role.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_installDependencyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstallDependency";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_installDependency.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_statusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Status";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_statusDescHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StatusDesc";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_statusDesc.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_clsLogsetIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClsLogsetId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clsLogsetId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_clsTopicIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClsTopicId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clsTopicId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_functionIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FunctionId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_functionId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_eipConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EipConfig";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_eipConfig.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_accessInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AccessInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_accessInfo.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_typeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Type";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_l5EnableHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "L5Enable";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_l5Enable.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_layersHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Layers";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_layers.begin(); itr != m_layers.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_deadLetterConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DeadLetterConfig";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_deadLetterConfig.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_addTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AddTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_addTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_publicNetConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PublicNetConfig";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_publicNetConfig.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_onsEnableHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OnsEnable";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_onsEnable.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_cfsConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CfsConfig";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_cfsConfig.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_availableStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AvailableStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_availableStatus.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_qualifierHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Qualifier";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_qualifier.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_initTimeoutHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InitTimeout";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_initTimeout, allocator);
+    }
+
+    if (m_statusReasonsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StatusReasons";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_statusReasons.begin(); itr != m_statusReasons.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_asyncRunEnableHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AsyncRunEnable";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_asyncRunEnable.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_traceEnableHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TraceEnable";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_traceEnable.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_protocolTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProtocolType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_protocolType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_protocolParamsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProtocolParams";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_protocolParams.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 
@@ -872,6 +1399,96 @@ string GetFunctionResponse::GetOnsEnable() const
 bool GetFunctionResponse::OnsEnableHasBeenSet() const
 {
     return m_onsEnableHasBeenSet;
+}
+
+CfsConfig GetFunctionResponse::GetCfsConfig() const
+{
+    return m_cfsConfig;
+}
+
+bool GetFunctionResponse::CfsConfigHasBeenSet() const
+{
+    return m_cfsConfigHasBeenSet;
+}
+
+string GetFunctionResponse::GetAvailableStatus() const
+{
+    return m_availableStatus;
+}
+
+bool GetFunctionResponse::AvailableStatusHasBeenSet() const
+{
+    return m_availableStatusHasBeenSet;
+}
+
+string GetFunctionResponse::GetQualifier() const
+{
+    return m_qualifier;
+}
+
+bool GetFunctionResponse::QualifierHasBeenSet() const
+{
+    return m_qualifierHasBeenSet;
+}
+
+int64_t GetFunctionResponse::GetInitTimeout() const
+{
+    return m_initTimeout;
+}
+
+bool GetFunctionResponse::InitTimeoutHasBeenSet() const
+{
+    return m_initTimeoutHasBeenSet;
+}
+
+vector<StatusReason> GetFunctionResponse::GetStatusReasons() const
+{
+    return m_statusReasons;
+}
+
+bool GetFunctionResponse::StatusReasonsHasBeenSet() const
+{
+    return m_statusReasonsHasBeenSet;
+}
+
+string GetFunctionResponse::GetAsyncRunEnable() const
+{
+    return m_asyncRunEnable;
+}
+
+bool GetFunctionResponse::AsyncRunEnableHasBeenSet() const
+{
+    return m_asyncRunEnableHasBeenSet;
+}
+
+string GetFunctionResponse::GetTraceEnable() const
+{
+    return m_traceEnable;
+}
+
+bool GetFunctionResponse::TraceEnableHasBeenSet() const
+{
+    return m_traceEnableHasBeenSet;
+}
+
+string GetFunctionResponse::GetProtocolType() const
+{
+    return m_protocolType;
+}
+
+bool GetFunctionResponse::ProtocolTypeHasBeenSet() const
+{
+    return m_protocolTypeHasBeenSet;
+}
+
+ProtocolParams GetFunctionResponse::GetProtocolParams() const
+{
+    return m_protocolParams;
+}
+
+bool GetFunctionResponse::ProtocolParamsHasBeenSet() const
+{
+    return m_protocolParamsHasBeenSet;
 }
 
 

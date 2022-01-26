@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 ParameterDetail::ParameterDetail() :
@@ -34,7 +33,7 @@ ParameterDetail::ParameterDetail() :
 {
 }
 
-CoreInternalOutcome ParameterDetail::Deserialize(const Value &value)
+CoreInternalOutcome ParameterDetail::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -43,7 +42,7 @@ CoreInternalOutcome ParameterDetail::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ParameterDetail.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParameterDetail.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -53,7 +52,7 @@ CoreInternalOutcome ParameterDetail::Deserialize(const Value &value)
     {
         if (!value["ParamType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ParameterDetail.ParamType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParameterDetail.ParamType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_paramType = string(value["ParamType"].GetString());
         m_paramTypeHasBeenSet = true;
@@ -63,7 +62,7 @@ CoreInternalOutcome ParameterDetail::Deserialize(const Value &value)
     {
         if (!value["Default"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ParameterDetail.Default` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParameterDetail.Default` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_default = string(value["Default"].GetString());
         m_defaultHasBeenSet = true;
@@ -73,7 +72,7 @@ CoreInternalOutcome ParameterDetail::Deserialize(const Value &value)
     {
         if (!value["Description"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ParameterDetail.Description` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParameterDetail.Description` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_description = string(value["Description"].GetString());
         m_descriptionHasBeenSet = true;
@@ -83,7 +82,7 @@ CoreInternalOutcome ParameterDetail::Deserialize(const Value &value)
     {
         if (!value["CurrentValue"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ParameterDetail.CurrentValue` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParameterDetail.CurrentValue` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_currentValue = string(value["CurrentValue"].GetString());
         m_currentValueHasBeenSet = true;
@@ -93,7 +92,7 @@ CoreInternalOutcome ParameterDetail::Deserialize(const Value &value)
     {
         if (!value["NeedReboot"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ParameterDetail.NeedReboot` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParameterDetail.NeedReboot` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_needReboot = value["NeedReboot"].GetInt64();
         m_needRebootHasBeenSet = true;
@@ -103,7 +102,7 @@ CoreInternalOutcome ParameterDetail::Deserialize(const Value &value)
     {
         if (!value["Max"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ParameterDetail.Max` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParameterDetail.Max` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_max = value["Max"].GetInt64();
         m_maxHasBeenSet = true;
@@ -113,7 +112,7 @@ CoreInternalOutcome ParameterDetail::Deserialize(const Value &value)
     {
         if (!value["Min"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ParameterDetail.Min` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ParameterDetail.Min` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_min = value["Min"].GetInt64();
         m_minHasBeenSet = true;
@@ -122,10 +121,10 @@ CoreInternalOutcome ParameterDetail::Deserialize(const Value &value)
     if (value.HasMember("EnumValue") && !value["EnumValue"].IsNull())
     {
         if (!value["EnumValue"].IsArray())
-            return CoreInternalOutcome(Error("response `ParameterDetail.EnumValue` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ParameterDetail.EnumValue` is not array type"));
 
-        const Value &tmpValue = value["EnumValue"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["EnumValue"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_enumValue.push_back((*itr).GetString());
         }
@@ -136,52 +135,52 @@ CoreInternalOutcome ParameterDetail::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ParameterDetail::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ParameterDetail::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_paramTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ParamType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_paramType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_paramType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_defaultHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Default";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_default.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_default.c_str(), allocator).Move(), allocator);
     }
 
     if (m_descriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Description";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_description.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
     }
 
     if (m_currentValueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CurrentValue";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_currentValue.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_currentValue.c_str(), allocator).Move(), allocator);
     }
 
     if (m_needRebootHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NeedReboot";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_needReboot, allocator);
@@ -189,7 +188,7 @@ void ParameterDetail::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_maxHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Max";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_max, allocator);
@@ -197,7 +196,7 @@ void ParameterDetail::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_minHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Min";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_min, allocator);
@@ -205,14 +204,14 @@ void ParameterDetail::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_enumValueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EnumValue";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_enumValue.begin(); itr != m_enumValue.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 

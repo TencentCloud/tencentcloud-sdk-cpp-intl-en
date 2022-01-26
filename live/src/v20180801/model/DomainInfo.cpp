@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Live::V20180801::Model;
-using namespace rapidjson;
 using namespace std;
 
 DomainInfo::DomainInfo() :
@@ -37,7 +36,7 @@ DomainInfo::DomainInfo() :
 {
 }
 
-CoreInternalOutcome DomainInfo::Deserialize(const Value &value)
+CoreInternalOutcome DomainInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -46,7 +45,7 @@ CoreInternalOutcome DomainInfo::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DomainInfo.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainInfo.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -56,7 +55,7 @@ CoreInternalOutcome DomainInfo::Deserialize(const Value &value)
     {
         if (!value["Type"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DomainInfo.Type` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainInfo.Type` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_type = value["Type"].GetUint64();
         m_typeHasBeenSet = true;
@@ -66,7 +65,7 @@ CoreInternalOutcome DomainInfo::Deserialize(const Value &value)
     {
         if (!value["Status"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DomainInfo.Status` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainInfo.Status` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_status = value["Status"].GetUint64();
         m_statusHasBeenSet = true;
@@ -76,7 +75,7 @@ CoreInternalOutcome DomainInfo::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DomainInfo.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainInfo.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -86,7 +85,7 @@ CoreInternalOutcome DomainInfo::Deserialize(const Value &value)
     {
         if (!value["BCName"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DomainInfo.BCName` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainInfo.BCName` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_bCName = value["BCName"].GetUint64();
         m_bCNameHasBeenSet = true;
@@ -96,7 +95,7 @@ CoreInternalOutcome DomainInfo::Deserialize(const Value &value)
     {
         if (!value["TargetDomain"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DomainInfo.TargetDomain` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainInfo.TargetDomain` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_targetDomain = string(value["TargetDomain"].GetString());
         m_targetDomainHasBeenSet = true;
@@ -106,7 +105,7 @@ CoreInternalOutcome DomainInfo::Deserialize(const Value &value)
     {
         if (!value["PlayType"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DomainInfo.PlayType` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainInfo.PlayType` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_playType = value["PlayType"].GetInt64();
         m_playTypeHasBeenSet = true;
@@ -116,7 +115,7 @@ CoreInternalOutcome DomainInfo::Deserialize(const Value &value)
     {
         if (!value["IsDelayLive"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DomainInfo.IsDelayLive` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainInfo.IsDelayLive` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_isDelayLive = value["IsDelayLive"].GetInt64();
         m_isDelayLiveHasBeenSet = true;
@@ -126,7 +125,7 @@ CoreInternalOutcome DomainInfo::Deserialize(const Value &value)
     {
         if (!value["CurrentCName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DomainInfo.CurrentCName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainInfo.CurrentCName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_currentCName = string(value["CurrentCName"].GetString());
         m_currentCNameHasBeenSet = true;
@@ -136,7 +135,7 @@ CoreInternalOutcome DomainInfo::Deserialize(const Value &value)
     {
         if (!value["RentTag"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DomainInfo.RentTag` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainInfo.RentTag` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_rentTag = value["RentTag"].GetInt64();
         m_rentTagHasBeenSet = true;
@@ -146,7 +145,7 @@ CoreInternalOutcome DomainInfo::Deserialize(const Value &value)
     {
         if (!value["RentExpireTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DomainInfo.RentExpireTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainInfo.RentExpireTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_rentExpireTime = string(value["RentExpireTime"].GetString());
         m_rentExpireTimeHasBeenSet = true;
@@ -156,7 +155,7 @@ CoreInternalOutcome DomainInfo::Deserialize(const Value &value)
     {
         if (!value["IsMiniProgramLive"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DomainInfo.IsMiniProgramLive` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DomainInfo.IsMiniProgramLive` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_isMiniProgramLive = value["IsMiniProgramLive"].GetInt64();
         m_isMiniProgramLiveHasBeenSet = true;
@@ -166,20 +165,20 @@ CoreInternalOutcome DomainInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void DomainInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DomainInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_type, allocator);
@@ -187,7 +186,7 @@ void DomainInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);
@@ -195,15 +194,15 @@ void DomainInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_bCNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BCName";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_bCName, allocator);
@@ -211,15 +210,15 @@ void DomainInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_targetDomainHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TargetDomain";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_targetDomain.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_targetDomain.c_str(), allocator).Move(), allocator);
     }
 
     if (m_playTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PlayType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_playType, allocator);
@@ -227,7 +226,7 @@ void DomainInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_isDelayLiveHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsDelayLive";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isDelayLive, allocator);
@@ -235,15 +234,15 @@ void DomainInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_currentCNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CurrentCName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_currentCName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_currentCName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_rentTagHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RentTag";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_rentTag, allocator);
@@ -251,15 +250,15 @@ void DomainInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_rentExpireTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RentExpireTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_rentExpireTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_rentExpireTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_isMiniProgramLiveHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsMiniProgramLive";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isMiniProgramLive, allocator);

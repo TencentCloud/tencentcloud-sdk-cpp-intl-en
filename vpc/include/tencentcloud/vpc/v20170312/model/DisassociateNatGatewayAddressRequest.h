@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool NatGatewayIdHasBeenSet() const;
 
                     /**
-                     * 获取The array of EIPs bound to the NAT gateway.
-                     * @return PublicIpAddresses The array of EIPs bound to the NAT gateway.
+                     * 获取Array of the EIPs to be unbound from the NAT gateway.
+                     * @return PublicIpAddresses Array of the EIPs to be unbound from the NAT gateway.
                      */
                     std::vector<std::string> GetPublicIpAddresses() const;
 
                     /**
-                     * 设置The array of EIPs bound to the NAT gateway.
-                     * @param PublicIpAddresses The array of EIPs bound to the NAT gateway.
+                     * 设置Array of the EIPs to be unbound from the NAT gateway.
+                     * @param PublicIpAddresses Array of the EIPs to be unbound from the NAT gateway.
                      */
                     void SetPublicIpAddresses(const std::vector<std::string>& _publicIpAddresses);
 
@@ -87,7 +87,7 @@ namespace TencentCloud
                     bool m_natGatewayIdHasBeenSet;
 
                     /**
-                     * The array of EIPs bound to the NAT gateway.
+                     * Array of the EIPs to be unbound from the NAT gateway.
                      */
                     std::vector<std::string> m_publicIpAddresses;
                     bool m_publicIpAddressesHasBeenSet;

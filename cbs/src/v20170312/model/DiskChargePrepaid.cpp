@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cbs::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 DiskChargePrepaid::DiskChargePrepaid() :
@@ -28,7 +27,7 @@ DiskChargePrepaid::DiskChargePrepaid() :
 {
 }
 
-CoreInternalOutcome DiskChargePrepaid::Deserialize(const Value &value)
+CoreInternalOutcome DiskChargePrepaid::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome DiskChargePrepaid::Deserialize(const Value &value)
     {
         if (!value["Period"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DiskChargePrepaid.Period` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DiskChargePrepaid.Period` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_period = value["Period"].GetUint64();
         m_periodHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome DiskChargePrepaid::Deserialize(const Value &value)
     {
         if (!value["RenewFlag"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DiskChargePrepaid.RenewFlag` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DiskChargePrepaid.RenewFlag` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_renewFlag = string(value["RenewFlag"].GetString());
         m_renewFlagHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome DiskChargePrepaid::Deserialize(const Value &value)
     {
         if (!value["CurInstanceDeadline"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DiskChargePrepaid.CurInstanceDeadline` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DiskChargePrepaid.CurInstanceDeadline` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_curInstanceDeadline = string(value["CurInstanceDeadline"].GetString());
         m_curInstanceDeadlineHasBeenSet = true;
@@ -67,12 +66,12 @@ CoreInternalOutcome DiskChargePrepaid::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void DiskChargePrepaid::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DiskChargePrepaid::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_periodHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Period";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_period, allocator);
@@ -80,18 +79,18 @@ void DiskChargePrepaid::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_renewFlagHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RenewFlag";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_renewFlag.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_renewFlag.c_str(), allocator).Move(), allocator);
     }
 
     if (m_curInstanceDeadlineHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CurInstanceDeadline";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_curInstanceDeadline.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_curInstanceDeadline.c_str(), allocator).Move(), allocator);
     }
 
 }

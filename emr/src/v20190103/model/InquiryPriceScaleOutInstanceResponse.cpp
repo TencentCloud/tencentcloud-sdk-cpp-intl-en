@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Emr::V20190103::Model;
-using namespace rapidjson;
 using namespace std;
 
 InquiryPriceScaleOutInstanceResponse::InquiryPriceScaleOutInstanceResponse() :
@@ -34,20 +33,20 @@ InquiryPriceScaleOutInstanceResponse::InquiryPriceScaleOutInstanceResponse() :
 
 CoreInternalOutcome InquiryPriceScaleOutInstanceResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -58,11 +57,11 @@ CoreInternalOutcome InquiryPriceScaleOutInstanceResponse::Deserialize(const stri
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -70,7 +69,7 @@ CoreInternalOutcome InquiryPriceScaleOutInstanceResponse::Deserialize(const stri
     {
         if (!rsp["OriginalCost"].IsString())
         {
-            return CoreInternalOutcome(Error("response `OriginalCost` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OriginalCost` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_originalCost = string(rsp["OriginalCost"].GetString());
         m_originalCostHasBeenSet = true;
@@ -80,7 +79,7 @@ CoreInternalOutcome InquiryPriceScaleOutInstanceResponse::Deserialize(const stri
     {
         if (!rsp["DiscountCost"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DiscountCost` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DiscountCost` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_discountCost = string(rsp["DiscountCost"].GetString());
         m_discountCostHasBeenSet = true;
@@ -90,7 +89,7 @@ CoreInternalOutcome InquiryPriceScaleOutInstanceResponse::Deserialize(const stri
     {
         if (!rsp["Unit"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Unit` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Unit` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_unit = string(rsp["Unit"].GetString());
         m_unitHasBeenSet = true;
@@ -100,7 +99,7 @@ CoreInternalOutcome InquiryPriceScaleOutInstanceResponse::Deserialize(const stri
     {
         if (!rsp["PriceSpec"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `PriceSpec` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PriceSpec` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_priceSpec.Deserialize(rsp["PriceSpec"]);
@@ -115,6 +114,56 @@ CoreInternalOutcome InquiryPriceScaleOutInstanceResponse::Deserialize(const stri
 
 
     return CoreInternalOutcome(true);
+}
+
+string InquiryPriceScaleOutInstanceResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_originalCostHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OriginalCost";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_originalCost.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_discountCostHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DiscountCost";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_discountCost.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_unitHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Unit";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_unit.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_priceSpecHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PriceSpec";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_priceSpec.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

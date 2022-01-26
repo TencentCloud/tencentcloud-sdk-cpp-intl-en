@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Game server session ID
-                     * @return GameServerSessionId Game server session ID
+                     * 获取Game server session ID. It should contain 1 to 256 ASCII characters.
+                     * @return GameServerSessionId Game server session ID. It should contain 1 to 256 ASCII characters.
                      */
                     std::string GetGameServerSessionId() const;
 
                     /**
-                     * 设置Game server session ID
-                     * @param GameServerSessionId Game server session ID
+                     * 设置Game server session ID. It should contain 1 to 256 ASCII characters.
+                     * @param GameServerSessionId Game server session ID. It should contain 1 to 256 ASCII characters.
                      */
                     void SetGameServerSessionId(const std::string& _gameServerSessionId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool GameServerSessionIdHasBeenSet() const;
 
                     /**
-                     * 获取Player ID
-                     * @return PlayerId Player ID
+                     * 获取Player ID. Up to 1024 ASCII characters are allowed.
+                     * @return PlayerId Player ID. Up to 1024 ASCII characters are allowed.
                      */
                     std::string GetPlayerId() const;
 
                     /**
-                     * 设置Player ID
-                     * @param PlayerId Player ID
+                     * 设置Player ID. Up to 1024 ASCII characters are allowed.
+                     * @param PlayerId Player ID. Up to 1024 ASCII characters are allowed.
                      */
                     void SetPlayerId(const std::string& _playerId);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool PlayerIdHasBeenSet() const;
 
                     /**
-                     * 获取Custom player information
-                     * @return PlayerData Custom player information
+                     * 获取Player custom data. Up to 2048 ASCII characters are allowed.
+                     * @return PlayerData Player custom data. Up to 2048 ASCII characters are allowed.
                      */
                     std::string GetPlayerData() const;
 
                     /**
-                     * 设置Custom player information
-                     * @param PlayerData Custom player information
+                     * 设置Player custom data. Up to 2048 ASCII characters are allowed.
+                     * @param PlayerData Player custom data. Up to 2048 ASCII characters are allowed.
                      */
                     void SetPlayerData(const std::string& _playerData);
 
@@ -99,19 +99,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Game server session ID
+                     * Game server session ID. It should contain 1 to 256 ASCII characters.
                      */
                     std::string m_gameServerSessionId;
                     bool m_gameServerSessionIdHasBeenSet;
 
                     /**
-                     * Player ID
+                     * Player ID. Up to 1024 ASCII characters are allowed.
                      */
                     std::string m_playerId;
                     bool m_playerIdHasBeenSet;
 
                     /**
-                     * Custom player information
+                     * Player custom data. Up to 2048 ASCII characters are allowed.
                      */
                     std::string m_playerData;
                     bool m_playerDataHasBeenSet;

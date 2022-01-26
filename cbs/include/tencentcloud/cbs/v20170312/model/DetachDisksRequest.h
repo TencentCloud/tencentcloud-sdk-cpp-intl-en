@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the cloud disk to be unmounted, which can be queried through the API [DescribeDisks](/document/product/362/16315). A maximum of 10 elastic cloud disks can be unmounted in a single request.
-                     * @return DiskIds ID of the cloud disk to be unmounted, which can be queried through the API [DescribeDisks](/document/product/362/16315). A maximum of 10 elastic cloud disks can be unmounted in a single request.
+                     * 获取IDs of the cloud disks to be unmounted, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API. Up to 10 elastic cloud disks can be unmounted in a single request.
+                     * @return DiskIds IDs of the cloud disks to be unmounted, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API. Up to 10 elastic cloud disks can be unmounted in a single request.
                      */
                     std::vector<std::string> GetDiskIds() const;
 
                     /**
-                     * 设置ID of the cloud disk to be unmounted, which can be queried through the API [DescribeDisks](/document/product/362/16315). A maximum of 10 elastic cloud disks can be unmounted in a single request.
-                     * @param DiskIds ID of the cloud disk to be unmounted, which can be queried through the API [DescribeDisks](/document/product/362/16315). A maximum of 10 elastic cloud disks can be unmounted in a single request.
+                     * 设置IDs of the cloud disks to be unmounted, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API. Up to 10 elastic cloud disks can be unmounted in a single request.
+                     * @param DiskIds IDs of the cloud disks to be unmounted, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API. Up to 10 elastic cloud disks can be unmounted in a single request.
                      */
                     void SetDiskIds(const std::vector<std::string>& _diskIds);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool DiskIdsHasBeenSet() const;
 
                     /**
-                     * 获取For a cloud disk that is not shared, this parameter is ignored. For a shared cloud disk, this parameter indicates which CVM instance the cloud disk is to be unmounted from.
-                     * @return InstanceId For a cloud disk that is not shared, this parameter is ignored. For a shared cloud disk, this parameter indicates which CVM instance the cloud disk is to be unmounted from.
+                     * 获取Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
+                     * @return InstanceId Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置For a cloud disk that is not shared, this parameter is ignored. For a shared cloud disk, this parameter indicates which CVM instance the cloud disk is to be unmounted from.
-                     * @param InstanceId For a cloud disk that is not shared, this parameter is ignored. For a shared cloud disk, this parameter indicates which CVM instance the cloud disk is to be unmounted from.
+                     * 设置Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
+                     * @param InstanceId Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the cloud disk to be unmounted, which can be queried through the API [DescribeDisks](/document/product/362/16315). A maximum of 10 elastic cloud disks can be unmounted in a single request.
+                     * IDs of the cloud disks to be unmounted, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API. Up to 10 elastic cloud disks can be unmounted in a single request.
                      */
                     std::vector<std::string> m_diskIds;
                     bool m_diskIdsHasBeenSet;
 
                     /**
-                     * For a cloud disk that is not shared, this parameter is ignored. For a shared cloud disk, this parameter indicates which CVM instance the cloud disk is to be unmounted from.
+                     * Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

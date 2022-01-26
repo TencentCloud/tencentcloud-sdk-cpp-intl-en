@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Redis::V20180412::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeInstanceDTSInstanceInfo::DescribeInstanceDTSInstanceInfo() :
@@ -33,7 +32,7 @@ DescribeInstanceDTSInstanceInfo::DescribeInstanceDTSInstanceInfo() :
 {
 }
 
-CoreInternalOutcome DescribeInstanceDTSInstanceInfo::Deserialize(const Value &value)
+CoreInternalOutcome DescribeInstanceDTSInstanceInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +41,7 @@ CoreInternalOutcome DescribeInstanceDTSInstanceInfo::Deserialize(const Value &va
     {
         if (!value["RegionId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribeInstanceDTSInstanceInfo.RegionId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeInstanceDTSInstanceInfo.RegionId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_regionId = value["RegionId"].GetInt64();
         m_regionIdHasBeenSet = true;
@@ -52,7 +51,7 @@ CoreInternalOutcome DescribeInstanceDTSInstanceInfo::Deserialize(const Value &va
     {
         if (!value["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeInstanceDTSInstanceInfo.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeInstanceDTSInstanceInfo.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(value["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -62,7 +61,7 @@ CoreInternalOutcome DescribeInstanceDTSInstanceInfo::Deserialize(const Value &va
     {
         if (!value["SetId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribeInstanceDTSInstanceInfo.SetId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeInstanceDTSInstanceInfo.SetId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_setId = value["SetId"].GetInt64();
         m_setIdHasBeenSet = true;
@@ -72,7 +71,7 @@ CoreInternalOutcome DescribeInstanceDTSInstanceInfo::Deserialize(const Value &va
     {
         if (!value["ZoneId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribeInstanceDTSInstanceInfo.ZoneId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeInstanceDTSInstanceInfo.ZoneId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_zoneId = value["ZoneId"].GetInt64();
         m_zoneIdHasBeenSet = true;
@@ -82,7 +81,7 @@ CoreInternalOutcome DescribeInstanceDTSInstanceInfo::Deserialize(const Value &va
     {
         if (!value["Type"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribeInstanceDTSInstanceInfo.Type` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeInstanceDTSInstanceInfo.Type` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_type = value["Type"].GetInt64();
         m_typeHasBeenSet = true;
@@ -92,7 +91,7 @@ CoreInternalOutcome DescribeInstanceDTSInstanceInfo::Deserialize(const Value &va
     {
         if (!value["InstanceName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeInstanceDTSInstanceInfo.InstanceName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeInstanceDTSInstanceInfo.InstanceName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceName = string(value["InstanceName"].GetString());
         m_instanceNameHasBeenSet = true;
@@ -102,7 +101,7 @@ CoreInternalOutcome DescribeInstanceDTSInstanceInfo::Deserialize(const Value &va
     {
         if (!value["Vip"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeInstanceDTSInstanceInfo.Vip` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeInstanceDTSInstanceInfo.Vip` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vip = string(value["Vip"].GetString());
         m_vipHasBeenSet = true;
@@ -112,7 +111,7 @@ CoreInternalOutcome DescribeInstanceDTSInstanceInfo::Deserialize(const Value &va
     {
         if (!value["Status"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribeInstanceDTSInstanceInfo.Status` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeInstanceDTSInstanceInfo.Status` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_status = value["Status"].GetInt64();
         m_statusHasBeenSet = true;
@@ -122,12 +121,12 @@ CoreInternalOutcome DescribeInstanceDTSInstanceInfo::Deserialize(const Value &va
     return CoreInternalOutcome(true);
 }
 
-void DescribeInstanceDTSInstanceInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DescribeInstanceDTSInstanceInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_regionIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RegionId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_regionId, allocator);
@@ -135,15 +134,15 @@ void DescribeInstanceDTSInstanceInfo::ToJsonObject(Value &value, Document::Alloc
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_setIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SetId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_setId, allocator);
@@ -151,7 +150,7 @@ void DescribeInstanceDTSInstanceInfo::ToJsonObject(Value &value, Document::Alloc
 
     if (m_zoneIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ZoneId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_zoneId, allocator);
@@ -159,7 +158,7 @@ void DescribeInstanceDTSInstanceInfo::ToJsonObject(Value &value, Document::Alloc
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_type, allocator);
@@ -167,23 +166,23 @@ void DescribeInstanceDTSInstanceInfo::ToJsonObject(Value &value, Document::Alloc
 
     if (m_instanceNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vipHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Vip";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vip.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vip.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);

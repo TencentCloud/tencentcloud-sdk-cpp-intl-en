@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool TemplateNameHasBeenSet() const;
 
                     /**
-                     * 获取Screencapturing interval. Value range: 5–300s.
-                     * @return SnapshotInterval Screencapturing interval. Value range: 5–300s.
+                     * 获取Screencapturing interval. Value range: 5-300s.
+                     * @return SnapshotInterval Screencapturing interval. Value range: 5-300s.
                      */
                     int64_t GetSnapshotInterval() const;
 
                     /**
-                     * 设置Screencapturing interval. Value range: 5–300s.
-                     * @param SnapshotInterval Screencapturing interval. Value range: 5–300s.
+                     * 设置Screencapturing interval. Value range: 5-300s.
+                     * @param SnapshotInterval Screencapturing interval. Value range: 5-300s.
                      */
                     void SetSnapshotInterval(const int64_t& _snapshotInterval);
 
@@ -101,17 +101,17 @@ namespace TencentCloud
                     bool SnapshotIntervalHasBeenSet() const;
 
                     /**
-                     * 获取Screenshot width. Value range: 0–3000. 
+                     * 获取Screenshot width. Value range: 0-3000. 
 0: original width and fit to the original ratio.
-                     * @return Width Screenshot width. Value range: 0–3000. 
+                     * @return Width Screenshot width. Value range: 0-3000. 
 0: original width and fit to the original ratio.
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置Screenshot width. Value range: 0–3000. 
+                     * 设置Screenshot width. Value range: 0-3000. 
 0: original width and fit to the original ratio.
-                     * @param Width Screenshot width. Value range: 0–3000. 
+                     * @param Width Screenshot width. Value range: 0-3000. 
 0: original width and fit to the original ratio.
                      */
                     void SetWidth(const int64_t& _width);
@@ -123,17 +123,17 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Screenshot height. Value range: 0–2000.
+                     * 获取Screenshot height. Value range: 0-2000.
 0: original height and fit to the original ratio.
-                     * @return Height Screenshot height. Value range: 0–2000.
+                     * @return Height Screenshot height. Value range: 0-2000.
 0: original height and fit to the original ratio.
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置Screenshot height. Value range: 0–2000.
+                     * 设置Screenshot height. Value range: 0-2000.
 0: original height and fit to the original ratio.
-                     * @param Height Screenshot height. Value range: 0–2000.
+                     * @param Height Screenshot height. Value range: 0-2000.
 0: original height and fit to the original ratio.
                      */
                     void SetHeight(const int64_t& _height);
@@ -293,20 +293,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_templateNameHasBeenSet;
 
                     /**
-                     * Screencapturing interval. Value range: 5–300s.
+                     * Screencapturing interval. Value range: 5-300s.
                      */
                     int64_t m_snapshotInterval;
                     bool m_snapshotIntervalHasBeenSet;
 
                     /**
-                     * Screenshot width. Value range: 0–3000. 
+                     * Screenshot width. Value range: 0-3000. 
 0: original width and fit to the original ratio.
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Screenshot height. Value range: 0–2000.
+                     * Screenshot height. Value range: 0-2000.
 0: original height and fit to the original ratio.
                      */
                     int64_t m_height;

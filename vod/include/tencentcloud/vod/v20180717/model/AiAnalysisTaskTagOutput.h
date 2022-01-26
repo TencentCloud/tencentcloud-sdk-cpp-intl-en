@@ -48,14 +48,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of intelligently generated video tags.
-                     * @return TagSet List of intelligently generated video tags.
+                     * 获取List of intelligently generated video tags
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `TagSetFileUrl`.
+                     * @return TagSet List of intelligently generated video tags
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `TagSetFileUrl`.
                      */
                     std::vector<MediaAiAnalysisTagItem> GetTagSet() const;
 
                     /**
-                     * 设置List of intelligently generated video tags.
-                     * @param TagSet List of intelligently generated video tags.
+                     * 设置List of intelligently generated video tags
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `TagSetFileUrl`.
+                     * @param TagSet List of intelligently generated video tags
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `TagSetFileUrl`.
                      */
                     void SetTagSet(const std::vector<MediaAiAnalysisTagItem>& _tagSet);
 
@@ -65,13 +69,62 @@ namespace TencentCloud
                      */
                     bool TagSetHasBeenSet() const;
 
+                    /**
+                     * 获取URL to the file for intelligently generated video tags. The file is in JSON format and has the same data structure as `TagSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `TagSetFileUrlExpireTime`.
+                     * @return TagSetFileUrl URL to the file for intelligently generated video tags. The file is in JSON format and has the same data structure as `TagSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `TagSetFileUrlExpireTime`.
+                     */
+                    std::string GetTagSetFileUrl() const;
+
+                    /**
+                     * 设置URL to the file for intelligently generated video tags. The file is in JSON format and has the same data structure as `TagSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `TagSetFileUrlExpireTime`.
+                     * @param TagSetFileUrl URL to the file for intelligently generated video tags. The file is in JSON format and has the same data structure as `TagSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `TagSetFileUrlExpireTime`.
+                     */
+                    void SetTagSetFileUrl(const std::string& _tagSetFileUrl);
+
+                    /**
+                     * 判断参数 TagSetFileUrl 是否已赋值
+                     * @return TagSetFileUrl 是否已赋值
+                     */
+                    bool TagSetFileUrlHasBeenSet() const;
+
+                    /**
+                     * 获取Expiration time of the URL to the file for intelligently generated video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     * @return TagSetFileUrlExpireTime Expiration time of the URL to the file for intelligently generated video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     */
+                    std::string GetTagSetFileUrlExpireTime() const;
+
+                    /**
+                     * 设置Expiration time of the URL to the file for intelligently generated video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     * @param TagSetFileUrlExpireTime Expiration time of the URL to the file for intelligently generated video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     */
+                    void SetTagSetFileUrlExpireTime(const std::string& _tagSetFileUrlExpireTime);
+
+                    /**
+                     * 判断参数 TagSetFileUrlExpireTime 是否已赋值
+                     * @return TagSetFileUrlExpireTime 是否已赋值
+                     */
+                    bool TagSetFileUrlExpireTimeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * List of intelligently generated video tags.
+                     * List of intelligently generated video tags
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `TagSetFileUrl`.
                      */
                     std::vector<MediaAiAnalysisTagItem> m_tagSet;
                     bool m_tagSetHasBeenSet;
+
+                    /**
+                     * URL to the file for intelligently generated video tags. The file is in JSON format and has the same data structure as `TagSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `TagSetFileUrlExpireTime`.
+                     */
+                    std::string m_tagSetFileUrl;
+                    bool m_tagSetFileUrlHasBeenSet;
+
+                    /**
+                     * Expiration time of the URL to the file for intelligently generated video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     */
+                    std::string m_tagSetFileUrlExpireTime;
+                    bool m_tagSetFileUrlExpireTimeHasBeenSet;
 
                 };
             }

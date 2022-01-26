@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 Route::Route() :
@@ -31,11 +30,13 @@ Route::Route() :
     m_routeTypeHasBeenSet(false),
     m_routeTableIdHasBeenSet(false),
     m_destinationIpv6CidrBlockHasBeenSet(false),
-    m_routeItemIdHasBeenSet(false)
+    m_routeItemIdHasBeenSet(false),
+    m_publishedToVbcHasBeenSet(false),
+    m_createdTimeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome Route::Deserialize(const Value &value)
+CoreInternalOutcome Route::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -44,7 +45,7 @@ CoreInternalOutcome Route::Deserialize(const Value &value)
     {
         if (!value["DestinationCidrBlock"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Route.DestinationCidrBlock` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Route.DestinationCidrBlock` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_destinationCidrBlock = string(value["DestinationCidrBlock"].GetString());
         m_destinationCidrBlockHasBeenSet = true;
@@ -54,7 +55,7 @@ CoreInternalOutcome Route::Deserialize(const Value &value)
     {
         if (!value["GatewayType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Route.GatewayType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Route.GatewayType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_gatewayType = string(value["GatewayType"].GetString());
         m_gatewayTypeHasBeenSet = true;
@@ -64,7 +65,7 @@ CoreInternalOutcome Route::Deserialize(const Value &value)
     {
         if (!value["GatewayId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Route.GatewayId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Route.GatewayId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_gatewayId = string(value["GatewayId"].GetString());
         m_gatewayIdHasBeenSet = true;
@@ -74,7 +75,7 @@ CoreInternalOutcome Route::Deserialize(const Value &value)
     {
         if (!value["RouteId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Route.RouteId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Route.RouteId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_routeId = value["RouteId"].GetUint64();
         m_routeIdHasBeenSet = true;
@@ -84,7 +85,7 @@ CoreInternalOutcome Route::Deserialize(const Value &value)
     {
         if (!value["RouteDescription"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Route.RouteDescription` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Route.RouteDescription` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_routeDescription = string(value["RouteDescription"].GetString());
         m_routeDescriptionHasBeenSet = true;
@@ -94,7 +95,7 @@ CoreInternalOutcome Route::Deserialize(const Value &value)
     {
         if (!value["Enabled"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `Route.Enabled` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Route.Enabled` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_enabled = value["Enabled"].GetBool();
         m_enabledHasBeenSet = true;
@@ -104,7 +105,7 @@ CoreInternalOutcome Route::Deserialize(const Value &value)
     {
         if (!value["RouteType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Route.RouteType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Route.RouteType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_routeType = string(value["RouteType"].GetString());
         m_routeTypeHasBeenSet = true;
@@ -114,7 +115,7 @@ CoreInternalOutcome Route::Deserialize(const Value &value)
     {
         if (!value["RouteTableId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Route.RouteTableId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Route.RouteTableId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_routeTableId = string(value["RouteTableId"].GetString());
         m_routeTableIdHasBeenSet = true;
@@ -124,7 +125,7 @@ CoreInternalOutcome Route::Deserialize(const Value &value)
     {
         if (!value["DestinationIpv6CidrBlock"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Route.DestinationIpv6CidrBlock` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Route.DestinationIpv6CidrBlock` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_destinationIpv6CidrBlock = string(value["DestinationIpv6CidrBlock"].GetString());
         m_destinationIpv6CidrBlockHasBeenSet = true;
@@ -134,46 +135,66 @@ CoreInternalOutcome Route::Deserialize(const Value &value)
     {
         if (!value["RouteItemId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Route.RouteItemId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Route.RouteItemId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_routeItemId = string(value["RouteItemId"].GetString());
         m_routeItemIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("PublishedToVbc") && !value["PublishedToVbc"].IsNull())
+    {
+        if (!value["PublishedToVbc"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `Route.PublishedToVbc` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_publishedToVbc = value["PublishedToVbc"].GetBool();
+        m_publishedToVbcHasBeenSet = true;
+    }
+
+    if (value.HasMember("CreatedTime") && !value["CreatedTime"].IsNull())
+    {
+        if (!value["CreatedTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Route.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_createdTime = string(value["CreatedTime"].GetString());
+        m_createdTimeHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void Route::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Route::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_destinationCidrBlockHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DestinationCidrBlock";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_destinationCidrBlock.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_destinationCidrBlock.c_str(), allocator).Move(), allocator);
     }
 
     if (m_gatewayTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "GatewayType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_gatewayType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_gatewayType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_gatewayIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "GatewayId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_gatewayId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_gatewayId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_routeIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RouteId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_routeId, allocator);
@@ -181,15 +202,15 @@ void Route::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
 
     if (m_routeDescriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RouteDescription";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_routeDescription.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_routeDescription.c_str(), allocator).Move(), allocator);
     }
 
     if (m_enabledHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Enabled";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_enabled, allocator);
@@ -197,34 +218,50 @@ void Route::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
 
     if (m_routeTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RouteType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_routeType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_routeType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_routeTableIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RouteTableId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_routeTableId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_routeTableId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_destinationIpv6CidrBlockHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DestinationIpv6CidrBlock";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_destinationIpv6CidrBlock.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_destinationIpv6CidrBlock.c_str(), allocator).Move(), allocator);
     }
 
     if (m_routeItemIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RouteItemId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_routeItemId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_routeItemId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_publishedToVbcHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PublishedToVbc";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_publishedToVbc, allocator);
+    }
+
+    if (m_createdTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CreatedTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -388,5 +425,37 @@ void Route::SetRouteItemId(const string& _routeItemId)
 bool Route::RouteItemIdHasBeenSet() const
 {
     return m_routeItemIdHasBeenSet;
+}
+
+bool Route::GetPublishedToVbc() const
+{
+    return m_publishedToVbc;
+}
+
+void Route::SetPublishedToVbc(const bool& _publishedToVbc)
+{
+    m_publishedToVbc = _publishedToVbc;
+    m_publishedToVbcHasBeenSet = true;
+}
+
+bool Route::PublishedToVbcHasBeenSet() const
+{
+    return m_publishedToVbcHasBeenSet;
+}
+
+string Route::GetCreatedTime() const
+{
+    return m_createdTime;
+}
+
+void Route::SetCreatedTime(const string& _createdTime)
+{
+    m_createdTime = _createdTime;
+    m_createdTimeHasBeenSet = true;
+}
+
+bool Route::CreatedTimeHasBeenSet() const
+{
+    return m_createdTimeHasBeenSet;
 }
 

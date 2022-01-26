@@ -65,18 +65,18 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Text content of up to 100 characters. This needs to be entered only when the watermark type is text.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TextContent Text content of up to 100 characters. This needs to be entered only when the watermark type is text.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
+VOD does not support adding text watermarks on screenshots.
+                     * @return TextContent Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
+VOD does not support adding text watermarks on screenshots.
                      */
                     std::string GetTextContent() const;
 
                     /**
-                     * 设置Text content of up to 100 characters. This needs to be entered only when the watermark type is text.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TextContent Text content of up to 100 characters. This needs to be entered only when the watermark type is text.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
+VOD does not support adding text watermarks on screenshots.
+                     * @param TextContent Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
+VOD does not support adding text watermarks on screenshots.
                      */
                     void SetTextContent(const std::string& _textContent);
 
@@ -87,18 +87,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TextContentHasBeenSet() const;
 
                     /**
-                     * 获取SVG content of up to 2,000,000 characters. This needs to be entered only when the watermark type is `SVG`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SvgContent SVG content of up to 2,000,000 characters. This needs to be entered only when the watermark type is `SVG`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
+VOD does not support adding SVG watermarks on screenshots.
+                     * @return SvgContent SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
+VOD does not support adding SVG watermarks on screenshots.
                      */
                     std::string GetSvgContent() const;
 
                     /**
-                     * 设置SVG content of up to 2,000,000 characters. This needs to be entered only when the watermark type is `SVG`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SvgContent SVG content of up to 2,000,000 characters. This needs to be entered only when the watermark type is `SVG`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
+VOD does not support adding SVG watermarks on screenshots.
+                     * @param SvgContent SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
+VOD does not support adding SVG watermarks on screenshots.
                      */
                     void SetSvgContent(const std::string& _svgContent);
 
@@ -177,15 +177,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Text content of up to 100 characters. This needs to be entered only when the watermark type is text.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
+VOD does not support adding text watermarks on screenshots.
                      */
                     std::string m_textContent;
                     bool m_textContentHasBeenSet;
 
                     /**
-                     * SVG content of up to 2,000,000 characters. This needs to be entered only when the watermark type is `SVG`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
+VOD does not support adding SVG watermarks on screenshots.
                      */
                     std::string m_svgContent;
                     bool m_svgContentHasBeenSet;

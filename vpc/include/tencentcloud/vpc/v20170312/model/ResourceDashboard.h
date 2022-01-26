@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Vpc instance ID, e.g. vpc-f1xjkw1b.
-                     * @return VpcId Vpc instance ID, e.g. vpc-f1xjkw1b.
+                     * 获取VPC instance ID, such as `vpc-bq4bzxpj`.
+                     * @return VpcId VPC instance ID, such as `vpc-bq4bzxpj`.
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置Vpc instance ID, e.g. vpc-f1xjkw1b.
-                     * @param VpcId Vpc instance ID, e.g. vpc-f1xjkw1b.
+                     * 设置VPC instance ID, such as `vpc-bq4bzxpj`.
+                     * @param VpcId VPC instance ID, such as `vpc-bq4bzxpj`.
                      */
                     void SetVpcId(const std::string& _vpcId);
 
@@ -137,14 +137,14 @@ namespace TencentCloud
                     bool PcxHasBeenSet() const;
 
                     /**
-                     * 获取The total number of used IP addresses.
-                     * @return Ip The total number of used IP addresses.
+                     * 获取Total number of used IPs except for CVM IP, EIP and network probe IP. The three IP types will be independently counted.
+                     * @return Ip Total number of used IPs except for CVM IP, EIP and network probe IP. The three IP types will be independently counted.
                      */
                     uint64_t GetIp() const;
 
                     /**
-                     * 设置The total number of used IP addresses.
-                     * @param Ip The total number of used IP addresses.
+                     * 设置Total number of used IPs except for CVM IP, EIP and network probe IP. The three IP types will be independently counted.
+                     * @param Ip Total number of used IPs except for CVM IP, EIP and network probe IP. The three IP types will be independently counted.
                      */
                     void SetIp(const uint64_t& _ip);
 
@@ -605,14 +605,14 @@ namespace TencentCloud
                     bool OracleHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ElasticSearch 
+                     * 获取ElasticSearch Service.
+                     * @return ElasticSearch ElasticSearch Service.
                      */
                     uint64_t GetElasticSearch() const;
 
                     /**
-                     * 设置
-                     * @param ElasticSearch 
+                     * 设置ElasticSearch Service.
+                     * @param ElasticSearch ElasticSearch Service.
                      */
                     void SetElasticSearch(const uint64_t& _elasticSearch);
 
@@ -805,7 +805,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Vpc instance ID, e.g. vpc-f1xjkw1b.
+                     * VPC instance ID, such as `vpc-bq4bzxpj`.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
@@ -835,7 +835,7 @@ namespace TencentCloud
                     bool m_pcxHasBeenSet;
 
                     /**
-                     * The total number of used IP addresses.
+                     * Total number of used IPs except for CVM IP, EIP and network probe IP. The three IP types will be independently counted.
                      */
                     uint64_t m_ip;
                     bool m_ipHasBeenSet;
@@ -991,7 +991,7 @@ namespace TencentCloud
                     bool m_oracleHasBeenSet;
 
                     /**
-                     * 
+                     * ElasticSearch Service.
                      */
                     uint64_t m_elasticSearch;
                     bool m_elasticSearchHasBeenSet;

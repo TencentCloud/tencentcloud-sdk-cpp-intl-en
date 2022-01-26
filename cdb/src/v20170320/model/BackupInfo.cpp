@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 BackupInfo::BackupInfo() :
@@ -34,11 +33,12 @@ BackupInfo::BackupInfo() :
     m_creatorHasBeenSet(false),
     m_startTimeHasBeenSet(false),
     m_methodHasBeenSet(false),
-    m_wayHasBeenSet(false)
+    m_wayHasBeenSet(false),
+    m_manualBackupNameHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome BackupInfo::Deserialize(const Value &value)
+CoreInternalOutcome BackupInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -47,7 +47,7 @@ CoreInternalOutcome BackupInfo::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BackupInfo.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -57,7 +57,7 @@ CoreInternalOutcome BackupInfo::Deserialize(const Value &value)
     {
         if (!value["Size"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `BackupInfo.Size` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.Size` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_size = value["Size"].GetInt64();
         m_sizeHasBeenSet = true;
@@ -67,7 +67,7 @@ CoreInternalOutcome BackupInfo::Deserialize(const Value &value)
     {
         if (!value["Date"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BackupInfo.Date` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.Date` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_date = string(value["Date"].GetString());
         m_dateHasBeenSet = true;
@@ -77,7 +77,7 @@ CoreInternalOutcome BackupInfo::Deserialize(const Value &value)
     {
         if (!value["IntranetUrl"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BackupInfo.IntranetUrl` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.IntranetUrl` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_intranetUrl = string(value["IntranetUrl"].GetString());
         m_intranetUrlHasBeenSet = true;
@@ -87,7 +87,7 @@ CoreInternalOutcome BackupInfo::Deserialize(const Value &value)
     {
         if (!value["InternetUrl"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BackupInfo.InternetUrl` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.InternetUrl` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_internetUrl = string(value["InternetUrl"].GetString());
         m_internetUrlHasBeenSet = true;
@@ -97,7 +97,7 @@ CoreInternalOutcome BackupInfo::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BackupInfo.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -107,7 +107,7 @@ CoreInternalOutcome BackupInfo::Deserialize(const Value &value)
     {
         if (!value["BackupId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `BackupInfo.BackupId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.BackupId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_backupId = value["BackupId"].GetInt64();
         m_backupIdHasBeenSet = true;
@@ -117,7 +117,7 @@ CoreInternalOutcome BackupInfo::Deserialize(const Value &value)
     {
         if (!value["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BackupInfo.Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(value["Status"].GetString());
         m_statusHasBeenSet = true;
@@ -127,7 +127,7 @@ CoreInternalOutcome BackupInfo::Deserialize(const Value &value)
     {
         if (!value["FinishTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BackupInfo.FinishTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.FinishTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_finishTime = string(value["FinishTime"].GetString());
         m_finishTimeHasBeenSet = true;
@@ -137,7 +137,7 @@ CoreInternalOutcome BackupInfo::Deserialize(const Value &value)
     {
         if (!value["Creator"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BackupInfo.Creator` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.Creator` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_creator = string(value["Creator"].GetString());
         m_creatorHasBeenSet = true;
@@ -147,7 +147,7 @@ CoreInternalOutcome BackupInfo::Deserialize(const Value &value)
     {
         if (!value["StartTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BackupInfo.StartTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.StartTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_startTime = string(value["StartTime"].GetString());
         m_startTimeHasBeenSet = true;
@@ -157,7 +157,7 @@ CoreInternalOutcome BackupInfo::Deserialize(const Value &value)
     {
         if (!value["Method"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BackupInfo.Method` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.Method` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_method = string(value["Method"].GetString());
         m_methodHasBeenSet = true;
@@ -167,30 +167,40 @@ CoreInternalOutcome BackupInfo::Deserialize(const Value &value)
     {
         if (!value["Way"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BackupInfo.Way` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.Way` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_way = string(value["Way"].GetString());
         m_wayHasBeenSet = true;
+    }
+
+    if (value.HasMember("ManualBackupName") && !value["ManualBackupName"].IsNull())
+    {
+        if (!value["ManualBackupName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.ManualBackupName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_manualBackupName = string(value["ManualBackupName"].GetString());
+        m_manualBackupNameHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void BackupInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void BackupInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Size";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_size, allocator);
@@ -198,39 +208,39 @@ void BackupInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_dateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Date";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_date.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_date.c_str(), allocator).Move(), allocator);
     }
 
     if (m_intranetUrlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IntranetUrl";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_intranetUrl.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_intranetUrl.c_str(), allocator).Move(), allocator);
     }
 
     if (m_internetUrlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InternetUrl";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_internetUrl.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_internetUrl.c_str(), allocator).Move(), allocator);
     }
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_backupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BackupId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_backupId, allocator);
@@ -238,50 +248,58 @@ void BackupInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_status.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
     }
 
     if (m_finishTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FinishTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_finishTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_finishTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_creatorHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Creator";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_creator.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_creator.c_str(), allocator).Move(), allocator);
     }
 
     if (m_startTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_startTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_startTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_methodHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Method";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_method.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_method.c_str(), allocator).Move(), allocator);
     }
 
     if (m_wayHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Way";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_way.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_way.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_manualBackupNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ManualBackupName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_manualBackupName.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -493,5 +511,21 @@ void BackupInfo::SetWay(const string& _way)
 bool BackupInfo::WayHasBeenSet() const
 {
     return m_wayHasBeenSet;
+}
+
+string BackupInfo::GetManualBackupName() const
+{
+    return m_manualBackupName;
+}
+
+void BackupInfo::SetManualBackupName(const string& _manualBackupName)
+{
+    m_manualBackupName = _manualBackupName;
+    m_manualBackupNameHasBeenSet = true;
+}
+
+bool BackupInfo::ManualBackupNameHasBeenSet() const
+{
+    return m_manualBackupNameHasBeenSet;
 }
 

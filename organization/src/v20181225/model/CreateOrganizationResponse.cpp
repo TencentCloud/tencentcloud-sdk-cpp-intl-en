@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Organization::V20181225::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateOrganizationResponse::CreateOrganizationResponse() :
@@ -34,20 +33,20 @@ CreateOrganizationResponse::CreateOrganizationResponse() :
 
 CoreInternalOutcome CreateOrganizationResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -58,11 +57,11 @@ CoreInternalOutcome CreateOrganizationResponse::Deserialize(const string &payloa
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -70,7 +69,7 @@ CoreInternalOutcome CreateOrganizationResponse::Deserialize(const string &payloa
     {
         if (!rsp["OrgId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `OrgId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OrgId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_orgId = rsp["OrgId"].GetUint64();
         m_orgIdHasBeenSet = true;
@@ -80,7 +79,7 @@ CoreInternalOutcome CreateOrganizationResponse::Deserialize(const string &payloa
     {
         if (!rsp["Nickname"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Nickname` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Nickname` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_nickname = string(rsp["Nickname"].GetString());
         m_nicknameHasBeenSet = true;
@@ -90,7 +89,7 @@ CoreInternalOutcome CreateOrganizationResponse::Deserialize(const string &payloa
     {
         if (!rsp["Mail"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Mail` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Mail` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_mail = string(rsp["Mail"].GetString());
         m_mailHasBeenSet = true;
@@ -100,7 +99,7 @@ CoreInternalOutcome CreateOrganizationResponse::Deserialize(const string &payloa
     {
         if (!rsp["OrgType"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `OrgType` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OrgType` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_orgType = rsp["OrgType"].GetUint64();
         m_orgTypeHasBeenSet = true;
@@ -108,6 +107,55 @@ CoreInternalOutcome CreateOrganizationResponse::Deserialize(const string &payloa
 
 
     return CoreInternalOutcome(true);
+}
+
+string CreateOrganizationResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_orgIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OrgId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_orgId, allocator);
+    }
+
+    if (m_nicknameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Nickname";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_nickname.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_mailHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Mail";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_mail.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_orgTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OrgType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_orgType, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

@@ -374,6 +374,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool ExampleSqlHasBeenSet() const;
 
+                    /**
+                     * 获取Host address of the account
+                     * @return Host Host address of the account
+                     */
+                    std::string GetHost() const;
+
+                    /**
+                     * 设置Host address of the account
+                     * @param Host Host address of the account
+                     */
+                    void SetHost(const std::string& _host);
+
+                    /**
+                     * 判断参数 Host 是否已赋值
+                     * @return Host 是否已赋值
+                     */
+                    bool HostHasBeenSet() const;
+
                 private:
 
                     /**
@@ -484,6 +502,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_exampleSql;
                     bool m_exampleSqlHasBeenSet;
+
+                    /**
+                     * Host address of the account
+                     */
+                    std::string m_host;
+                    bool m_hostHasBeenSet;
 
                 };
             }

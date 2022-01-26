@@ -506,14 +506,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostNameSettingsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceNameSettings 
+                     * 获取Settings of CVM instance names.
+                     * @return InstanceNameSettings Settings of CVM instance names.
                      */
                     InstanceNameSettings GetInstanceNameSettings() const;
 
                     /**
-                     * 设置
-                     * @param InstanceNameSettings 
+                     * 设置Settings of CVM instance names.
+                     * @param InstanceNameSettings Settings of CVM instance names.
                      */
                     void SetInstanceNameSettings(const InstanceNameSettings& _instanceNameSettings);
 
@@ -524,14 +524,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceNameSettingsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceChargePrepaid 
+                     * 获取Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
+                     * @return InstanceChargePrepaid Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
                      */
                     InstanceChargePrepaid GetInstanceChargePrepaid() const;
 
                     /**
-                     * 设置
-                     * @param InstanceChargePrepaid 
+                     * 设置Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
+                     * @param InstanceChargePrepaid Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
                      */
                     void SetInstanceChargePrepaid(const InstanceChargePrepaid& _instanceChargePrepaid);
 
@@ -540,6 +540,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return InstanceChargePrepaid 是否已赋值
                      */
                     bool InstanceChargePrepaidHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies how to select the cloud disk type. 
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
+                     * @return DiskTypePolicy Specifies how to select the cloud disk type. 
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
+                     */
+                    std::string GetDiskTypePolicy() const;
+
+                    /**
+                     * 设置Specifies how to select the cloud disk type. 
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
+                     * @param DiskTypePolicy Specifies how to select the cloud disk type. 
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
+                     */
+                    void SetDiskTypePolicy(const std::string& _diskTypePolicy);
+
+                    /**
+                     * 判断参数 DiskTypePolicy 是否已赋值
+                     * @return DiskTypePolicy 是否已赋值
+                     */
+                    bool DiskTypePolicyHasBeenSet() const;
 
                 private:
 
@@ -692,16 +718,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_hostNameSettingsHasBeenSet;
 
                     /**
-                     * 
+                     * Settings of CVM instance names.
                      */
                     InstanceNameSettings m_instanceNameSettings;
                     bool m_instanceNameSettingsHasBeenSet;
 
                     /**
-                     * 
+                     * Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
                      */
                     InstanceChargePrepaid m_instanceChargePrepaid;
                     bool m_instanceChargePrepaidHasBeenSet;
+
+                    /**
+                     * Specifies how to select the cloud disk type. 
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
+                     */
+                    std::string m_diskTypePolicy;
+                    bool m_diskTypePolicyHasBeenSet;
 
                 };
             }

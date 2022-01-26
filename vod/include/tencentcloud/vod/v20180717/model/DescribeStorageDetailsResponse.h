@@ -41,11 +41,12 @@ namespace TencentCloud
                     DescribeStorageDetailsResponse();
                     ~DescribeStorageDetailsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Storage statistics. One data entry per minute/hour/day.
-                     * @return Data Storage statistics. One data entry per minute/hour/day.
+                     * 获取Storage statistics with one piece of data for every 5 minutes or 1 day.
+                     * @return Data Storage statistics with one piece of data for every 5 minutes or 1 day.
                      */
                     std::vector<StatDataItem> GetData() const;
 
@@ -58,7 +59,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Storage statistics. One data entry per minute/hour/day.
+                     * Storage statistics with one piece of data for every 5 minutes or 1 day.
                      */
                     std::vector<StatDataItem> m_data;
                     bool m_dataHasBeenSet;

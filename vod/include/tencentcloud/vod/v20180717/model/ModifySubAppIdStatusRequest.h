@@ -64,9 +64,13 @@ namespace TencentCloud
                      * 获取Subapplication status. Valid values:
 <li>On: enabled</li>
 <li>Off: disabled</li>
+<li>Destroyed: terminated</li>
+You cannot enable a subapplication whose status is “Destroying”. You can enable it after it was terminated.
                      * @return Status Subapplication status. Valid values:
 <li>On: enabled</li>
 <li>Off: disabled</li>
+<li>Destroyed: terminated</li>
+You cannot enable a subapplication whose status is “Destroying”. You can enable it after it was terminated.
                      */
                     std::string GetStatus() const;
 
@@ -74,9 +78,13 @@ namespace TencentCloud
                      * 设置Subapplication status. Valid values:
 <li>On: enabled</li>
 <li>Off: disabled</li>
+<li>Destroyed: terminated</li>
+You cannot enable a subapplication whose status is “Destroying”. You can enable it after it was terminated.
                      * @param Status Subapplication status. Valid values:
 <li>On: enabled</li>
 <li>Off: disabled</li>
+<li>Destroyed: terminated</li>
+You cannot enable a subapplication whose status is “Destroying”. You can enable it after it was terminated.
                      */
                     void SetStatus(const std::string& _status);
 
@@ -98,6 +106,8 @@ namespace TencentCloud
                      * Subapplication status. Valid values:
 <li>On: enabled</li>
 <li>Off: disabled</li>
+<li>Destroyed: terminated</li>
+You cannot enable a subapplication whose status is “Destroying”. You can enable it after it was terminated.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

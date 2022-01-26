@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Tag::V20180813::Model;
-using namespace rapidjson;
 using namespace std;
 
 TagFilter::TagFilter() :
@@ -27,7 +26,7 @@ TagFilter::TagFilter() :
 {
 }
 
-CoreInternalOutcome TagFilter::Deserialize(const Value &value)
+CoreInternalOutcome TagFilter::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome TagFilter::Deserialize(const Value &value)
     {
         if (!value["TagKey"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TagFilter.TagKey` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TagFilter.TagKey` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tagKey = string(value["TagKey"].GetString());
         m_tagKeyHasBeenSet = true;
@@ -45,10 +44,10 @@ CoreInternalOutcome TagFilter::Deserialize(const Value &value)
     if (value.HasMember("TagValue") && !value["TagValue"].IsNull())
     {
         if (!value["TagValue"].IsArray())
-            return CoreInternalOutcome(Error("response `TagFilter.TagValue` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `TagFilter.TagValue` is not array type"));
 
-        const Value &tmpValue = value["TagValue"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["TagValue"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_tagValue.push_back((*itr).GetString());
         }
@@ -59,27 +58,27 @@ CoreInternalOutcome TagFilter::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void TagFilter::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TagFilter::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_tagKeyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TagKey";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_tagKey.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tagKey.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tagValueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TagValue";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_tagValue.begin(); itr != m_tagValue.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 

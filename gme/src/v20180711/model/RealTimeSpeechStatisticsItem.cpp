@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gme::V20180711::Model;
-using namespace rapidjson;
 using namespace std;
 
 RealTimeSpeechStatisticsItem::RealTimeSpeechStatisticsItem() :
@@ -31,7 +30,7 @@ RealTimeSpeechStatisticsItem::RealTimeSpeechStatisticsItem() :
 {
 }
 
-CoreInternalOutcome RealTimeSpeechStatisticsItem::Deserialize(const Value &value)
+CoreInternalOutcome RealTimeSpeechStatisticsItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome RealTimeSpeechStatisticsItem::Deserialize(const Value &value
     {
         if (!value["MainLandDau"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `RealTimeSpeechStatisticsItem.MainLandDau` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RealTimeSpeechStatisticsItem.MainLandDau` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_mainLandDau = value["MainLandDau"].GetUint64();
         m_mainLandDauHasBeenSet = true;
@@ -50,7 +49,7 @@ CoreInternalOutcome RealTimeSpeechStatisticsItem::Deserialize(const Value &value
     {
         if (!value["MainLandPcu"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `RealTimeSpeechStatisticsItem.MainLandPcu` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RealTimeSpeechStatisticsItem.MainLandPcu` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_mainLandPcu = value["MainLandPcu"].GetUint64();
         m_mainLandPcuHasBeenSet = true;
@@ -60,7 +59,7 @@ CoreInternalOutcome RealTimeSpeechStatisticsItem::Deserialize(const Value &value
     {
         if (!value["MainLandDuration"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `RealTimeSpeechStatisticsItem.MainLandDuration` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RealTimeSpeechStatisticsItem.MainLandDuration` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_mainLandDuration = value["MainLandDuration"].GetUint64();
         m_mainLandDurationHasBeenSet = true;
@@ -70,7 +69,7 @@ CoreInternalOutcome RealTimeSpeechStatisticsItem::Deserialize(const Value &value
     {
         if (!value["OverseaDau"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `RealTimeSpeechStatisticsItem.OverseaDau` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RealTimeSpeechStatisticsItem.OverseaDau` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_overseaDau = value["OverseaDau"].GetUint64();
         m_overseaDauHasBeenSet = true;
@@ -80,7 +79,7 @@ CoreInternalOutcome RealTimeSpeechStatisticsItem::Deserialize(const Value &value
     {
         if (!value["OverseaPcu"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `RealTimeSpeechStatisticsItem.OverseaPcu` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RealTimeSpeechStatisticsItem.OverseaPcu` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_overseaPcu = value["OverseaPcu"].GetUint64();
         m_overseaPcuHasBeenSet = true;
@@ -90,7 +89,7 @@ CoreInternalOutcome RealTimeSpeechStatisticsItem::Deserialize(const Value &value
     {
         if (!value["OverseaDuration"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `RealTimeSpeechStatisticsItem.OverseaDuration` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RealTimeSpeechStatisticsItem.OverseaDuration` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_overseaDuration = value["OverseaDuration"].GetUint64();
         m_overseaDurationHasBeenSet = true;
@@ -100,12 +99,12 @@ CoreInternalOutcome RealTimeSpeechStatisticsItem::Deserialize(const Value &value
     return CoreInternalOutcome(true);
 }
 
-void RealTimeSpeechStatisticsItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void RealTimeSpeechStatisticsItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_mainLandDauHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MainLandDau";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_mainLandDau, allocator);
@@ -113,7 +112,7 @@ void RealTimeSpeechStatisticsItem::ToJsonObject(Value &value, Document::Allocato
 
     if (m_mainLandPcuHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MainLandPcu";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_mainLandPcu, allocator);
@@ -121,7 +120,7 @@ void RealTimeSpeechStatisticsItem::ToJsonObject(Value &value, Document::Allocato
 
     if (m_mainLandDurationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MainLandDuration";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_mainLandDuration, allocator);
@@ -129,7 +128,7 @@ void RealTimeSpeechStatisticsItem::ToJsonObject(Value &value, Document::Allocato
 
     if (m_overseaDauHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OverseaDau";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_overseaDau, allocator);
@@ -137,7 +136,7 @@ void RealTimeSpeechStatisticsItem::ToJsonObject(Value &value, Document::Allocato
 
     if (m_overseaPcuHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OverseaPcu";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_overseaPcu, allocator);
@@ -145,7 +144,7 @@ void RealTimeSpeechStatisticsItem::ToJsonObject(Value &value, Document::Allocato
 
     if (m_overseaDurationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OverseaDuration";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_overseaDuration, allocator);

@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/batch/v20170312/model/Task.h>
 #include <tencentcloud/batch/v20170312/model/Dependence.h>
+#include <tencentcloud/batch/v20170312/model/Tag.h>
 
 
 namespace TencentCloud
@@ -42,6 +43,7 @@ namespace TencentCloud
                     DescribeJobSubmitInfoResponse();
                     ~DescribeJobSubmitInfoResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -116,6 +118,20 @@ namespace TencentCloud
                      */
                     bool DependencesHasBeenSet() const;
 
+                    /**
+                     * 获取Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return Tags Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -153,6 +169,13 @@ namespace TencentCloud
                      */
                     std::vector<Dependence> m_dependences;
                     bool m_dependencesHasBeenSet;
+
+                    /**
+                     * Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

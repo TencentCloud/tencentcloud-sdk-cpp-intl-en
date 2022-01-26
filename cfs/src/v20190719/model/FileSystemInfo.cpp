@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cfs::V20190719::Model;
-using namespace rapidjson;
 using namespace std;
 
 FileSystemInfo::FileSystemInfo() :
@@ -38,11 +37,13 @@ FileSystemInfo::FileSystemInfo() :
     m_fsNameHasBeenSet(false),
     m_encryptedHasBeenSet(false),
     m_kmsKeyIdHasBeenSet(false),
-    m_appIdHasBeenSet(false)
+    m_appIdHasBeenSet(false),
+    m_bandwidthLimitHasBeenSet(false),
+    m_capacityHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome FileSystemInfo::Deserialize(const Value &value)
+CoreInternalOutcome FileSystemInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -51,7 +52,7 @@ CoreInternalOutcome FileSystemInfo::Deserialize(const Value &value)
     {
         if (!value["CreationTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FileSystemInfo.CreationTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.CreationTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_creationTime = string(value["CreationTime"].GetString());
         m_creationTimeHasBeenSet = true;
@@ -61,7 +62,7 @@ CoreInternalOutcome FileSystemInfo::Deserialize(const Value &value)
     {
         if (!value["CreationToken"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FileSystemInfo.CreationToken` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.CreationToken` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_creationToken = string(value["CreationToken"].GetString());
         m_creationTokenHasBeenSet = true;
@@ -71,7 +72,7 @@ CoreInternalOutcome FileSystemInfo::Deserialize(const Value &value)
     {
         if (!value["FileSystemId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FileSystemInfo.FileSystemId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.FileSystemId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fileSystemId = string(value["FileSystemId"].GetString());
         m_fileSystemIdHasBeenSet = true;
@@ -81,7 +82,7 @@ CoreInternalOutcome FileSystemInfo::Deserialize(const Value &value)
     {
         if (!value["LifeCycleState"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FileSystemInfo.LifeCycleState` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.LifeCycleState` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_lifeCycleState = string(value["LifeCycleState"].GetString());
         m_lifeCycleStateHasBeenSet = true;
@@ -91,7 +92,7 @@ CoreInternalOutcome FileSystemInfo::Deserialize(const Value &value)
     {
         if (!value["SizeByte"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `FileSystemInfo.SizeByte` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.SizeByte` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_sizeByte = value["SizeByte"].GetUint64();
         m_sizeByteHasBeenSet = true;
@@ -101,7 +102,7 @@ CoreInternalOutcome FileSystemInfo::Deserialize(const Value &value)
     {
         if (!value["SizeLimit"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `FileSystemInfo.SizeLimit` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.SizeLimit` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_sizeLimit = value["SizeLimit"].GetUint64();
         m_sizeLimitHasBeenSet = true;
@@ -111,7 +112,7 @@ CoreInternalOutcome FileSystemInfo::Deserialize(const Value &value)
     {
         if (!value["ZoneId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `FileSystemInfo.ZoneId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.ZoneId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_zoneId = value["ZoneId"].GetUint64();
         m_zoneIdHasBeenSet = true;
@@ -121,7 +122,7 @@ CoreInternalOutcome FileSystemInfo::Deserialize(const Value &value)
     {
         if (!value["Zone"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FileSystemInfo.Zone` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.Zone` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_zone = string(value["Zone"].GetString());
         m_zoneHasBeenSet = true;
@@ -131,7 +132,7 @@ CoreInternalOutcome FileSystemInfo::Deserialize(const Value &value)
     {
         if (!value["Protocol"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FileSystemInfo.Protocol` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.Protocol` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_protocol = string(value["Protocol"].GetString());
         m_protocolHasBeenSet = true;
@@ -141,7 +142,7 @@ CoreInternalOutcome FileSystemInfo::Deserialize(const Value &value)
     {
         if (!value["StorageType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FileSystemInfo.StorageType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.StorageType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_storageType = string(value["StorageType"].GetString());
         m_storageTypeHasBeenSet = true;
@@ -151,7 +152,7 @@ CoreInternalOutcome FileSystemInfo::Deserialize(const Value &value)
     {
         if (!value["StorageResourcePkg"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FileSystemInfo.StorageResourcePkg` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.StorageResourcePkg` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_storageResourcePkg = string(value["StorageResourcePkg"].GetString());
         m_storageResourcePkgHasBeenSet = true;
@@ -161,7 +162,7 @@ CoreInternalOutcome FileSystemInfo::Deserialize(const Value &value)
     {
         if (!value["BandwidthResourcePkg"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FileSystemInfo.BandwidthResourcePkg` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.BandwidthResourcePkg` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_bandwidthResourcePkg = string(value["BandwidthResourcePkg"].GetString());
         m_bandwidthResourcePkgHasBeenSet = true;
@@ -171,7 +172,7 @@ CoreInternalOutcome FileSystemInfo::Deserialize(const Value &value)
     {
         if (!value["PGroup"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `FileSystemInfo.PGroup` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.PGroup` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_pGroup.Deserialize(value["PGroup"]);
@@ -188,7 +189,7 @@ CoreInternalOutcome FileSystemInfo::Deserialize(const Value &value)
     {
         if (!value["FsName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FileSystemInfo.FsName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.FsName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fsName = string(value["FsName"].GetString());
         m_fsNameHasBeenSet = true;
@@ -198,7 +199,7 @@ CoreInternalOutcome FileSystemInfo::Deserialize(const Value &value)
     {
         if (!value["Encrypted"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `FileSystemInfo.Encrypted` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.Encrypted` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_encrypted = value["Encrypted"].GetBool();
         m_encryptedHasBeenSet = true;
@@ -208,7 +209,7 @@ CoreInternalOutcome FileSystemInfo::Deserialize(const Value &value)
     {
         if (!value["KmsKeyId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FileSystemInfo.KmsKeyId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.KmsKeyId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_kmsKeyId = string(value["KmsKeyId"].GetString());
         m_kmsKeyIdHasBeenSet = true;
@@ -218,54 +219,74 @@ CoreInternalOutcome FileSystemInfo::Deserialize(const Value &value)
     {
         if (!value["AppId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `FileSystemInfo.AppId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.AppId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_appId = value["AppId"].GetInt64();
         m_appIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("BandwidthLimit") && !value["BandwidthLimit"].IsNull())
+    {
+        if (!value["BandwidthLimit"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.BandwidthLimit` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_bandwidthLimit = value["BandwidthLimit"].GetDouble();
+        m_bandwidthLimitHasBeenSet = true;
+    }
+
+    if (value.HasMember("Capacity") && !value["Capacity"].IsNull())
+    {
+        if (!value["Capacity"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.Capacity` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_capacity = value["Capacity"].GetUint64();
+        m_capacityHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void FileSystemInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void FileSystemInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_creationTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreationTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_creationTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_creationTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_creationTokenHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreationToken";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_creationToken.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_creationToken.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fileSystemIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileSystemId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fileSystemId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fileSystemId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_lifeCycleStateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LifeCycleState";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_lifeCycleState.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_lifeCycleState.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sizeByteHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SizeByte";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_sizeByte, allocator);
@@ -273,7 +294,7 @@ void FileSystemInfo::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_sizeLimitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SizeLimit";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_sizeLimit, allocator);
@@ -281,7 +302,7 @@ void FileSystemInfo::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_zoneIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ZoneId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_zoneId, allocator);
@@ -289,64 +310,64 @@ void FileSystemInfo::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_zoneHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Zone";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_zone.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_zone.c_str(), allocator).Move(), allocator);
     }
 
     if (m_protocolHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Protocol";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_protocol.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
     }
 
     if (m_storageTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StorageType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_storageType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_storageType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_storageResourcePkgHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StorageResourcePkg";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_storageResourcePkg.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_storageResourcePkg.c_str(), allocator).Move(), allocator);
     }
 
     if (m_bandwidthResourcePkgHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BandwidthResourcePkg";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_bandwidthResourcePkg.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_bandwidthResourcePkg.c_str(), allocator).Move(), allocator);
     }
 
     if (m_pGroupHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PGroup";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_pGroup.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_fsNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FsName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fsName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fsName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_encryptedHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Encrypted";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_encrypted, allocator);
@@ -354,18 +375,34 @@ void FileSystemInfo::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_kmsKeyIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "KmsKeyId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_kmsKeyId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_kmsKeyId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_appIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AppId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_appId, allocator);
+    }
+
+    if (m_bandwidthLimitHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BandwidthLimit";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_bandwidthLimit, allocator);
+    }
+
+    if (m_capacityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Capacity";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_capacity, allocator);
     }
 
 }
@@ -641,5 +678,37 @@ void FileSystemInfo::SetAppId(const int64_t& _appId)
 bool FileSystemInfo::AppIdHasBeenSet() const
 {
     return m_appIdHasBeenSet;
+}
+
+double FileSystemInfo::GetBandwidthLimit() const
+{
+    return m_bandwidthLimit;
+}
+
+void FileSystemInfo::SetBandwidthLimit(const double& _bandwidthLimit)
+{
+    m_bandwidthLimit = _bandwidthLimit;
+    m_bandwidthLimitHasBeenSet = true;
+}
+
+bool FileSystemInfo::BandwidthLimitHasBeenSet() const
+{
+    return m_bandwidthLimitHasBeenSet;
+}
+
+uint64_t FileSystemInfo::GetCapacity() const
+{
+    return m_capacity;
+}
+
+void FileSystemInfo::SetCapacity(const uint64_t& _capacity)
+{
+    m_capacity = _capacity;
+    m_capacityHasBeenSet = true;
+}
+
+bool FileSystemInfo::CapacityHasBeenSet() const
+{
+    return m_capacityHasBeenSet;
 }
 

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 MediaAiAnalysisCoverItem::MediaAiAnalysisCoverItem() :
@@ -27,7 +26,7 @@ MediaAiAnalysisCoverItem::MediaAiAnalysisCoverItem() :
 {
 }
 
-CoreInternalOutcome MediaAiAnalysisCoverItem::Deserialize(const Value &value)
+CoreInternalOutcome MediaAiAnalysisCoverItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome MediaAiAnalysisCoverItem::Deserialize(const Value &value)
     {
         if (!value["CoverUrl"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaAiAnalysisCoverItem.CoverUrl` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaAiAnalysisCoverItem.CoverUrl` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_coverUrl = string(value["CoverUrl"].GetString());
         m_coverUrlHasBeenSet = true;
@@ -44,9 +43,9 @@ CoreInternalOutcome MediaAiAnalysisCoverItem::Deserialize(const Value &value)
 
     if (value.HasMember("Confidence") && !value["Confidence"].IsNull())
     {
-        if (!value["Confidence"].IsDouble())
+        if (!value["Confidence"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `MediaAiAnalysisCoverItem.Confidence` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaAiAnalysisCoverItem.Confidence` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_confidence = value["Confidence"].GetDouble();
         m_confidenceHasBeenSet = true;
@@ -56,20 +55,20 @@ CoreInternalOutcome MediaAiAnalysisCoverItem::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void MediaAiAnalysisCoverItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MediaAiAnalysisCoverItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_coverUrlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CoverUrl";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_coverUrl.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_coverUrl.c_str(), allocator).Move(), allocator);
     }
 
     if (m_confidenceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Confidence";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_confidence, allocator);

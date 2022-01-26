@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Sms::V20190711::Model;
-using namespace rapidjson;
 using namespace std;
 
 CallbackStatusStatistics::CallbackStatusStatistics() :
@@ -34,7 +33,7 @@ CallbackStatusStatistics::CallbackStatusStatistics() :
 {
 }
 
-CoreInternalOutcome CallbackStatusStatistics::Deserialize(const Value &value)
+CoreInternalOutcome CallbackStatusStatistics::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -43,7 +42,7 @@ CoreInternalOutcome CallbackStatusStatistics::Deserialize(const Value &value)
     {
         if (!value["CallbackCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CallbackStatusStatistics.CallbackCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CallbackStatusStatistics.CallbackCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_callbackCount = value["CallbackCount"].GetUint64();
         m_callbackCountHasBeenSet = true;
@@ -53,7 +52,7 @@ CoreInternalOutcome CallbackStatusStatistics::Deserialize(const Value &value)
     {
         if (!value["RequestSuccessCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CallbackStatusStatistics.RequestSuccessCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CallbackStatusStatistics.RequestSuccessCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_requestSuccessCount = value["RequestSuccessCount"].GetUint64();
         m_requestSuccessCountHasBeenSet = true;
@@ -63,7 +62,7 @@ CoreInternalOutcome CallbackStatusStatistics::Deserialize(const Value &value)
     {
         if (!value["CallbackFailCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CallbackStatusStatistics.CallbackFailCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CallbackStatusStatistics.CallbackFailCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_callbackFailCount = value["CallbackFailCount"].GetUint64();
         m_callbackFailCountHasBeenSet = true;
@@ -73,7 +72,7 @@ CoreInternalOutcome CallbackStatusStatistics::Deserialize(const Value &value)
     {
         if (!value["CallbackSuccessCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CallbackStatusStatistics.CallbackSuccessCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CallbackStatusStatistics.CallbackSuccessCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_callbackSuccessCount = value["CallbackSuccessCount"].GetUint64();
         m_callbackSuccessCountHasBeenSet = true;
@@ -83,7 +82,7 @@ CoreInternalOutcome CallbackStatusStatistics::Deserialize(const Value &value)
     {
         if (!value["InternalErrorCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CallbackStatusStatistics.InternalErrorCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CallbackStatusStatistics.InternalErrorCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_internalErrorCount = value["InternalErrorCount"].GetUint64();
         m_internalErrorCountHasBeenSet = true;
@@ -93,7 +92,7 @@ CoreInternalOutcome CallbackStatusStatistics::Deserialize(const Value &value)
     {
         if (!value["InvalidNumberCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CallbackStatusStatistics.InvalidNumberCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CallbackStatusStatistics.InvalidNumberCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_invalidNumberCount = value["InvalidNumberCount"].GetUint64();
         m_invalidNumberCountHasBeenSet = true;
@@ -103,7 +102,7 @@ CoreInternalOutcome CallbackStatusStatistics::Deserialize(const Value &value)
     {
         if (!value["ShutdownErrorCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CallbackStatusStatistics.ShutdownErrorCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CallbackStatusStatistics.ShutdownErrorCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_shutdownErrorCount = value["ShutdownErrorCount"].GetUint64();
         m_shutdownErrorCountHasBeenSet = true;
@@ -113,7 +112,7 @@ CoreInternalOutcome CallbackStatusStatistics::Deserialize(const Value &value)
     {
         if (!value["BlackListCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CallbackStatusStatistics.BlackListCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CallbackStatusStatistics.BlackListCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_blackListCount = value["BlackListCount"].GetUint64();
         m_blackListCountHasBeenSet = true;
@@ -123,7 +122,7 @@ CoreInternalOutcome CallbackStatusStatistics::Deserialize(const Value &value)
     {
         if (!value["FrequencyLimitCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CallbackStatusStatistics.FrequencyLimitCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CallbackStatusStatistics.FrequencyLimitCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_frequencyLimitCount = value["FrequencyLimitCount"].GetUint64();
         m_frequencyLimitCountHasBeenSet = true;
@@ -133,12 +132,12 @@ CoreInternalOutcome CallbackStatusStatistics::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void CallbackStatusStatistics::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void CallbackStatusStatistics::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_callbackCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CallbackCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_callbackCount, allocator);
@@ -146,7 +145,7 @@ void CallbackStatusStatistics::ToJsonObject(Value &value, Document::AllocatorTyp
 
     if (m_requestSuccessCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RequestSuccessCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_requestSuccessCount, allocator);
@@ -154,7 +153,7 @@ void CallbackStatusStatistics::ToJsonObject(Value &value, Document::AllocatorTyp
 
     if (m_callbackFailCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CallbackFailCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_callbackFailCount, allocator);
@@ -162,7 +161,7 @@ void CallbackStatusStatistics::ToJsonObject(Value &value, Document::AllocatorTyp
 
     if (m_callbackSuccessCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CallbackSuccessCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_callbackSuccessCount, allocator);
@@ -170,7 +169,7 @@ void CallbackStatusStatistics::ToJsonObject(Value &value, Document::AllocatorTyp
 
     if (m_internalErrorCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InternalErrorCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_internalErrorCount, allocator);
@@ -178,7 +177,7 @@ void CallbackStatusStatistics::ToJsonObject(Value &value, Document::AllocatorTyp
 
     if (m_invalidNumberCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InvalidNumberCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_invalidNumberCount, allocator);
@@ -186,7 +185,7 @@ void CallbackStatusStatistics::ToJsonObject(Value &value, Document::AllocatorTyp
 
     if (m_shutdownErrorCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ShutdownErrorCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_shutdownErrorCount, allocator);
@@ -194,7 +193,7 @@ void CallbackStatusStatistics::ToJsonObject(Value &value, Document::AllocatorTyp
 
     if (m_blackListCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BlackListCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_blackListCount, allocator);
@@ -202,7 +201,7 @@ void CallbackStatusStatistics::ToJsonObject(Value &value, Document::AllocatorTyp
 
     if (m_frequencyLimitCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FrequencyLimitCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_frequencyLimitCount, allocator);

@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/dts/v20180330/model/TagItem.h>
 
 
 namespace TencentCloud
@@ -424,6 +425,72 @@ namespace TencentCloud
                      */
                     bool SdkConsumedTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Tags Tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<TagItem> GetTags() const;
+
+                    /**
+                     * 设置Tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param Tags Tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetTags(const std::vector<TagItem>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取Whether auto-renewal is enabled. 0: do not enable; 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return AutoRenewFlag Whether auto-renewal is enabled. 0: do not enable; 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetAutoRenewFlag() const;
+
+                    /**
+                     * 设置Whether auto-renewal is enabled. 0: do not enable; 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param AutoRenewFlag Whether auto-renewal is enabled. 0: do not enable; 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
+
+                    /**
+                     * 判断参数 AutoRenewFlag 是否已赋值
+                     * @return AutoRenewFlag 是否已赋值
+                     */
+                    bool AutoRenewFlagHasBeenSet() const;
+
+                    /**
+                     * 获取Subscription instance edition. ·`txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return SubscribeVersion Subscription instance edition. ·`txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetSubscribeVersion() const;
+
+                    /**
+                     * 设置Subscription instance edition. ·`txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param SubscribeVersion Subscription instance edition. ·`txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetSubscribeVersion(const std::string& _subscribeVersion);
+
+                    /**
+                     * 判断参数 SubscribeVersion 是否已赋值
+                     * @return SubscribeVersion 是否已赋值
+                     */
+                    bool SubscribeVersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -551,6 +618,27 @@ namespace TencentCloud
                      */
                     std::string m_sdkConsumedTime;
                     bool m_sdkConsumedTimeHasBeenSet;
+
+                    /**
+                     * Tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<TagItem> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * Whether auto-renewal is enabled. 0: do not enable; 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_autoRenewFlag;
+                    bool m_autoRenewFlagHasBeenSet;
+
+                    /**
+                     * Subscription instance edition. ·`txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_subscribeVersion;
+                    bool m_subscribeVersionHasBeenSet;
 
                 };
             }

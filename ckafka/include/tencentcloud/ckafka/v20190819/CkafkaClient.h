@@ -23,6 +23,12 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/ckafka/v20190819/model/BatchCreateAclRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/BatchCreateAclResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/BatchModifyGroupOffsetsRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/BatchModifyGroupOffsetsResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/BatchModifyTopicAttributesRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/BatchModifyTopicAttributesResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/CreateAclRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/CreateAclResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/CreatePartitionRequest.h>
@@ -35,6 +41,8 @@
 #include <tencentcloud/ckafka/v20190819/model/CreateUserResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteAclRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteAclResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/DeleteRouteTriggerTimeRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/DeleteRouteTriggerTimeResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteTopicRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteTopicResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteTopicIpWhiteListRequest.h>
@@ -45,6 +53,8 @@
 #include <tencentcloud/ckafka/v20190819/model/DescribeACLResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeAppInfoRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeAppInfoResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeCkafkaZoneRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeCkafkaZoneResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeConsumerGroupRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeConsumerGroupResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeGroupRequest.h>
@@ -59,6 +69,8 @@
 #include <tencentcloud/ckafka/v20190819/model/DescribeInstancesResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeInstancesDetailRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeInstancesDetailResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeRegionRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeRegionResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeRouteRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeRouteResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeTopicRequest.h>
@@ -67,8 +79,14 @@
 #include <tencentcloud/ckafka/v20190819/model/DescribeTopicAttributesResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeTopicDetailRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeTopicDetailResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeTopicSubscribeGroupRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeTopicSubscribeGroupResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeTopicSyncReplicaRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeTopicSyncReplicaResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeUserRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeUserResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/FetchMessageByOffsetRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/FetchMessageByOffsetResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyGroupOffsetsRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyGroupOffsetsResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyInstanceAttributesRequest.h>
@@ -77,6 +95,8 @@
 #include <tencentcloud/ckafka/v20190819/model/ModifyPasswordResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyTopicAttributesRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyTopicAttributesResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/SendMessageRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/SendMessageResponse.h>
 
 
 namespace TencentCloud
@@ -91,89 +111,146 @@ namespace TencentCloud
                 CkafkaClient(const Credential &credential, const std::string &region);
                 CkafkaClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::CreateAclResponse> CreateAclOutcome;
+                typedef Outcome<Core::Error, Model::BatchCreateAclResponse> BatchCreateAclOutcome;
+                typedef std::future<BatchCreateAclOutcome> BatchCreateAclOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::BatchCreateAclRequest&, BatchCreateAclOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BatchCreateAclAsyncHandler;
+                typedef Outcome<Core::Error, Model::BatchModifyGroupOffsetsResponse> BatchModifyGroupOffsetsOutcome;
+                typedef std::future<BatchModifyGroupOffsetsOutcome> BatchModifyGroupOffsetsOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::BatchModifyGroupOffsetsRequest&, BatchModifyGroupOffsetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BatchModifyGroupOffsetsAsyncHandler;
+                typedef Outcome<Core::Error, Model::BatchModifyTopicAttributesResponse> BatchModifyTopicAttributesOutcome;
+                typedef std::future<BatchModifyTopicAttributesOutcome> BatchModifyTopicAttributesOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::BatchModifyTopicAttributesRequest&, BatchModifyTopicAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BatchModifyTopicAttributesAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateAclResponse> CreateAclOutcome;
                 typedef std::future<CreateAclOutcome> CreateAclOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::CreateAclRequest&, CreateAclOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAclAsyncHandler;
-                typedef Outcome<Error, Model::CreatePartitionResponse> CreatePartitionOutcome;
+                typedef Outcome<Core::Error, Model::CreatePartitionResponse> CreatePartitionOutcome;
                 typedef std::future<CreatePartitionOutcome> CreatePartitionOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::CreatePartitionRequest&, CreatePartitionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePartitionAsyncHandler;
-                typedef Outcome<Error, Model::CreateTopicResponse> CreateTopicOutcome;
+                typedef Outcome<Core::Error, Model::CreateTopicResponse> CreateTopicOutcome;
                 typedef std::future<CreateTopicOutcome> CreateTopicOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::CreateTopicRequest&, CreateTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateTopicAsyncHandler;
-                typedef Outcome<Error, Model::CreateTopicIpWhiteListResponse> CreateTopicIpWhiteListOutcome;
+                typedef Outcome<Core::Error, Model::CreateTopicIpWhiteListResponse> CreateTopicIpWhiteListOutcome;
                 typedef std::future<CreateTopicIpWhiteListOutcome> CreateTopicIpWhiteListOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::CreateTopicIpWhiteListRequest&, CreateTopicIpWhiteListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateTopicIpWhiteListAsyncHandler;
-                typedef Outcome<Error, Model::CreateUserResponse> CreateUserOutcome;
+                typedef Outcome<Core::Error, Model::CreateUserResponse> CreateUserOutcome;
                 typedef std::future<CreateUserOutcome> CreateUserOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::CreateUserRequest&, CreateUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateUserAsyncHandler;
-                typedef Outcome<Error, Model::DeleteAclResponse> DeleteAclOutcome;
+                typedef Outcome<Core::Error, Model::DeleteAclResponse> DeleteAclOutcome;
                 typedef std::future<DeleteAclOutcome> DeleteAclOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DeleteAclRequest&, DeleteAclOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAclAsyncHandler;
-                typedef Outcome<Error, Model::DeleteTopicResponse> DeleteTopicOutcome;
+                typedef Outcome<Core::Error, Model::DeleteRouteTriggerTimeResponse> DeleteRouteTriggerTimeOutcome;
+                typedef std::future<DeleteRouteTriggerTimeOutcome> DeleteRouteTriggerTimeOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::DeleteRouteTriggerTimeRequest&, DeleteRouteTriggerTimeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRouteTriggerTimeAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteTopicResponse> DeleteTopicOutcome;
                 typedef std::future<DeleteTopicOutcome> DeleteTopicOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DeleteTopicRequest&, DeleteTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTopicAsyncHandler;
-                typedef Outcome<Error, Model::DeleteTopicIpWhiteListResponse> DeleteTopicIpWhiteListOutcome;
+                typedef Outcome<Core::Error, Model::DeleteTopicIpWhiteListResponse> DeleteTopicIpWhiteListOutcome;
                 typedef std::future<DeleteTopicIpWhiteListOutcome> DeleteTopicIpWhiteListOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DeleteTopicIpWhiteListRequest&, DeleteTopicIpWhiteListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTopicIpWhiteListAsyncHandler;
-                typedef Outcome<Error, Model::DeleteUserResponse> DeleteUserOutcome;
+                typedef Outcome<Core::Error, Model::DeleteUserResponse> DeleteUserOutcome;
                 typedef std::future<DeleteUserOutcome> DeleteUserOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DeleteUserRequest&, DeleteUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteUserAsyncHandler;
-                typedef Outcome<Error, Model::DescribeACLResponse> DescribeACLOutcome;
+                typedef Outcome<Core::Error, Model::DescribeACLResponse> DescribeACLOutcome;
                 typedef std::future<DescribeACLOutcome> DescribeACLOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeACLRequest&, DescribeACLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeACLAsyncHandler;
-                typedef Outcome<Error, Model::DescribeAppInfoResponse> DescribeAppInfoOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAppInfoResponse> DescribeAppInfoOutcome;
                 typedef std::future<DescribeAppInfoOutcome> DescribeAppInfoOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeAppInfoRequest&, DescribeAppInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAppInfoAsyncHandler;
-                typedef Outcome<Error, Model::DescribeConsumerGroupResponse> DescribeConsumerGroupOutcome;
+                typedef Outcome<Core::Error, Model::DescribeCkafkaZoneResponse> DescribeCkafkaZoneOutcome;
+                typedef std::future<DescribeCkafkaZoneOutcome> DescribeCkafkaZoneOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::DescribeCkafkaZoneRequest&, DescribeCkafkaZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCkafkaZoneAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeConsumerGroupResponse> DescribeConsumerGroupOutcome;
                 typedef std::future<DescribeConsumerGroupOutcome> DescribeConsumerGroupOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeConsumerGroupRequest&, DescribeConsumerGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeConsumerGroupAsyncHandler;
-                typedef Outcome<Error, Model::DescribeGroupResponse> DescribeGroupOutcome;
+                typedef Outcome<Core::Error, Model::DescribeGroupResponse> DescribeGroupOutcome;
                 typedef std::future<DescribeGroupOutcome> DescribeGroupOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeGroupRequest&, DescribeGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGroupAsyncHandler;
-                typedef Outcome<Error, Model::DescribeGroupInfoResponse> DescribeGroupInfoOutcome;
+                typedef Outcome<Core::Error, Model::DescribeGroupInfoResponse> DescribeGroupInfoOutcome;
                 typedef std::future<DescribeGroupInfoOutcome> DescribeGroupInfoOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeGroupInfoRequest&, DescribeGroupInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGroupInfoAsyncHandler;
-                typedef Outcome<Error, Model::DescribeGroupOffsetsResponse> DescribeGroupOffsetsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeGroupOffsetsResponse> DescribeGroupOffsetsOutcome;
                 typedef std::future<DescribeGroupOffsetsOutcome> DescribeGroupOffsetsOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeGroupOffsetsRequest&, DescribeGroupOffsetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGroupOffsetsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeInstanceAttributesResponse> DescribeInstanceAttributesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeInstanceAttributesResponse> DescribeInstanceAttributesOutcome;
                 typedef std::future<DescribeInstanceAttributesOutcome> DescribeInstanceAttributesOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeInstanceAttributesRequest&, DescribeInstanceAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceAttributesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeInstancesResponse> DescribeInstancesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeInstancesResponse> DescribeInstancesOutcome;
                 typedef std::future<DescribeInstancesOutcome> DescribeInstancesOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeInstancesRequest&, DescribeInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstancesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeInstancesDetailResponse> DescribeInstancesDetailOutcome;
+                typedef Outcome<Core::Error, Model::DescribeInstancesDetailResponse> DescribeInstancesDetailOutcome;
                 typedef std::future<DescribeInstancesDetailOutcome> DescribeInstancesDetailOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeInstancesDetailRequest&, DescribeInstancesDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstancesDetailAsyncHandler;
-                typedef Outcome<Error, Model::DescribeRouteResponse> DescribeRouteOutcome;
+                typedef Outcome<Core::Error, Model::DescribeRegionResponse> DescribeRegionOutcome;
+                typedef std::future<DescribeRegionOutcome> DescribeRegionOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::DescribeRegionRequest&, DescribeRegionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRegionAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRouteResponse> DescribeRouteOutcome;
                 typedef std::future<DescribeRouteOutcome> DescribeRouteOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeRouteRequest&, DescribeRouteOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRouteAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTopicResponse> DescribeTopicOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTopicResponse> DescribeTopicOutcome;
                 typedef std::future<DescribeTopicOutcome> DescribeTopicOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeTopicRequest&, DescribeTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTopicAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTopicAttributesResponse> DescribeTopicAttributesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTopicAttributesResponse> DescribeTopicAttributesOutcome;
                 typedef std::future<DescribeTopicAttributesOutcome> DescribeTopicAttributesOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeTopicAttributesRequest&, DescribeTopicAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTopicAttributesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTopicDetailResponse> DescribeTopicDetailOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTopicDetailResponse> DescribeTopicDetailOutcome;
                 typedef std::future<DescribeTopicDetailOutcome> DescribeTopicDetailOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeTopicDetailRequest&, DescribeTopicDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTopicDetailAsyncHandler;
-                typedef Outcome<Error, Model::DescribeUserResponse> DescribeUserOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTopicSubscribeGroupResponse> DescribeTopicSubscribeGroupOutcome;
+                typedef std::future<DescribeTopicSubscribeGroupOutcome> DescribeTopicSubscribeGroupOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::DescribeTopicSubscribeGroupRequest&, DescribeTopicSubscribeGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTopicSubscribeGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTopicSyncReplicaResponse> DescribeTopicSyncReplicaOutcome;
+                typedef std::future<DescribeTopicSyncReplicaOutcome> DescribeTopicSyncReplicaOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::DescribeTopicSyncReplicaRequest&, DescribeTopicSyncReplicaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTopicSyncReplicaAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeUserResponse> DescribeUserOutcome;
                 typedef std::future<DescribeUserOutcome> DescribeUserOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeUserRequest&, DescribeUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUserAsyncHandler;
-                typedef Outcome<Error, Model::ModifyGroupOffsetsResponse> ModifyGroupOffsetsOutcome;
+                typedef Outcome<Core::Error, Model::FetchMessageByOffsetResponse> FetchMessageByOffsetOutcome;
+                typedef std::future<FetchMessageByOffsetOutcome> FetchMessageByOffsetOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::FetchMessageByOffsetRequest&, FetchMessageByOffsetOutcome, const std::shared_ptr<const AsyncCallerContext>&)> FetchMessageByOffsetAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyGroupOffsetsResponse> ModifyGroupOffsetsOutcome;
                 typedef std::future<ModifyGroupOffsetsOutcome> ModifyGroupOffsetsOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::ModifyGroupOffsetsRequest&, ModifyGroupOffsetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyGroupOffsetsAsyncHandler;
-                typedef Outcome<Error, Model::ModifyInstanceAttributesResponse> ModifyInstanceAttributesOutcome;
+                typedef Outcome<Core::Error, Model::ModifyInstanceAttributesResponse> ModifyInstanceAttributesOutcome;
                 typedef std::future<ModifyInstanceAttributesOutcome> ModifyInstanceAttributesOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::ModifyInstanceAttributesRequest&, ModifyInstanceAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceAttributesAsyncHandler;
-                typedef Outcome<Error, Model::ModifyPasswordResponse> ModifyPasswordOutcome;
+                typedef Outcome<Core::Error, Model::ModifyPasswordResponse> ModifyPasswordOutcome;
                 typedef std::future<ModifyPasswordOutcome> ModifyPasswordOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::ModifyPasswordRequest&, ModifyPasswordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyPasswordAsyncHandler;
-                typedef Outcome<Error, Model::ModifyTopicAttributesResponse> ModifyTopicAttributesOutcome;
+                typedef Outcome<Core::Error, Model::ModifyTopicAttributesResponse> ModifyTopicAttributesOutcome;
                 typedef std::future<ModifyTopicAttributesOutcome> ModifyTopicAttributesOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::ModifyTopicAttributesRequest&, ModifyTopicAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyTopicAttributesAsyncHandler;
+                typedef Outcome<Core::Error, Model::SendMessageResponse> SendMessageOutcome;
+                typedef std::future<SendMessageOutcome> SendMessageOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::SendMessageRequest&, SendMessageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SendMessageAsyncHandler;
 
 
+
+                /**
+                 *This API is used to create ACL policies in batches.
+                 * @param req BatchCreateAclRequest
+                 * @return BatchCreateAclOutcome
+                 */
+                BatchCreateAclOutcome BatchCreateAcl(const Model::BatchCreateAclRequest &request);
+                void BatchCreateAclAsync(const Model::BatchCreateAclRequest& request, const BatchCreateAclAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                BatchCreateAclOutcomeCallable BatchCreateAclCallable(const Model::BatchCreateAclRequest& request);
+
+                /**
+                 *This API is used to batch modify consumer group offsets.
+                 * @param req BatchModifyGroupOffsetsRequest
+                 * @return BatchModifyGroupOffsetsOutcome
+                 */
+                BatchModifyGroupOffsetsOutcome BatchModifyGroupOffsets(const Model::BatchModifyGroupOffsetsRequest &request);
+                void BatchModifyGroupOffsetsAsync(const Model::BatchModifyGroupOffsetsRequest& request, const BatchModifyGroupOffsetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                BatchModifyGroupOffsetsOutcomeCallable BatchModifyGroupOffsetsCallable(const Model::BatchModifyGroupOffsetsRequest& request);
+
+                /**
+                 *This API is used to batch set topic attributes.
+                 * @param req BatchModifyTopicAttributesRequest
+                 * @return BatchModifyTopicAttributesOutcome
+                 */
+                BatchModifyTopicAttributesOutcome BatchModifyTopicAttributes(const Model::BatchModifyTopicAttributesRequest &request);
+                void BatchModifyTopicAttributesAsync(const Model::BatchModifyTopicAttributesRequest& request, const BatchModifyTopicAttributesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                BatchModifyTopicAttributesOutcomeCallable BatchModifyTopicAttributesCallable(const Model::BatchModifyTopicAttributesRequest& request);
 
                 /**
                  *This API is used to add an ACL policy.
@@ -203,7 +280,7 @@ namespace TencentCloud
                 CreateTopicOutcomeCallable CreateTopicCallable(const Model::CreateTopicRequest& request);
 
                 /**
-                 *This API is used to create a topic IP whitelist.
+                 *This API is used to create a topic IP allowlist.
                  * @param req CreateTopicIpWhiteListRequest
                  * @return CreateTopicIpWhiteListOutcome
                  */
@@ -230,6 +307,15 @@ namespace TencentCloud
                 DeleteAclOutcomeCallable DeleteAclCallable(const Model::DeleteAclRequest& request);
 
                 /**
+                 *This API is used to modify the delayed trigger time of route deletion.
+                 * @param req DeleteRouteTriggerTimeRequest
+                 * @return DeleteRouteTriggerTimeOutcome
+                 */
+                DeleteRouteTriggerTimeOutcome DeleteRouteTriggerTime(const Model::DeleteRouteTriggerTimeRequest &request);
+                void DeleteRouteTriggerTimeAsync(const Model::DeleteRouteTriggerTimeRequest& request, const DeleteRouteTriggerTimeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteRouteTriggerTimeOutcomeCallable DeleteRouteTriggerTimeCallable(const Model::DeleteRouteTriggerTimeRequest& request);
+
+                /**
                  *This API is used to delete a CKafka topic.
                  * @param req DeleteTopicRequest
                  * @return DeleteTopicOutcome
@@ -239,7 +325,7 @@ namespace TencentCloud
                 DeleteTopicOutcomeCallable DeleteTopicCallable(const Model::DeleteTopicRequest& request);
 
                 /**
-                 *This API is used to delete a topic IP whitelist.
+                 *This API is used to delete a topic IP allowlist.
                  * @param req DeleteTopicIpWhiteListRequest
                  * @return DeleteTopicIpWhiteListOutcome
                  */
@@ -273,6 +359,15 @@ namespace TencentCloud
                 DescribeAppInfoOutcome DescribeAppInfo(const Model::DescribeAppInfoRequest &request);
                 void DescribeAppInfoAsync(const Model::DescribeAppInfoRequest& request, const DescribeAppInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAppInfoOutcomeCallable DescribeAppInfoCallable(const Model::DescribeAppInfoRequest& request);
+
+                /**
+                 *This API is used to view the AZ list of Ckafka.
+                 * @param req DescribeCkafkaZoneRequest
+                 * @return DescribeCkafkaZoneOutcome
+                 */
+                DescribeCkafkaZoneOutcome DescribeCkafkaZone(const Model::DescribeCkafkaZoneRequest &request);
+                void DescribeCkafkaZoneAsync(const Model::DescribeCkafkaZoneRequest& request, const DescribeCkafkaZoneAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCkafkaZoneOutcomeCallable DescribeCkafkaZoneCallable(const Model::DescribeCkafkaZoneRequest& request);
 
                 /**
                  *This API is used to query consumer group information.
@@ -311,7 +406,7 @@ namespace TencentCloud
                 DescribeGroupOffsetsOutcomeCallable DescribeGroupOffsetsCallable(const Model::DescribeGroupOffsetsRequest& request);
 
                 /**
-                 *This API is used to get instance attributes.
+                 *This API is used to get instance attributes. 
                  * @param req DescribeInstanceAttributesRequest
                  * @return DescribeInstanceAttributesOutcome
                  */
@@ -336,6 +431,15 @@ namespace TencentCloud
                 DescribeInstancesDetailOutcome DescribeInstancesDetail(const Model::DescribeInstancesDetailRequest &request);
                 void DescribeInstancesDetailAsync(const Model::DescribeInstancesDetailRequest& request, const DescribeInstancesDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeInstancesDetailOutcomeCallable DescribeInstancesDetailCallable(const Model::DescribeInstancesDetailRequest& request);
+
+                /**
+                 *This API is used to enumerate regions, and can be called only in Guangzhou.
+                 * @param req DescribeRegionRequest
+                 * @return DescribeRegionOutcome
+                 */
+                DescribeRegionOutcome DescribeRegion(const Model::DescribeRegionRequest &request);
+                void DescribeRegionAsync(const Model::DescribeRegionRequest& request, const DescribeRegionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRegionOutcomeCallable DescribeRegionCallable(const Model::DescribeRegionRequest& request);
 
                 /**
                  *This API is used to view route information.
@@ -376,6 +480,24 @@ This API is used to get the list of topics in a CKafka instance of a user.
                 DescribeTopicDetailOutcomeCallable DescribeTopicDetailCallable(const Model::DescribeTopicDetailRequest& request);
 
                 /**
+                 *This API is used to search and subscribe the message group information of a topic.
+                 * @param req DescribeTopicSubscribeGroupRequest
+                 * @return DescribeTopicSubscribeGroupOutcome
+                 */
+                DescribeTopicSubscribeGroupOutcome DescribeTopicSubscribeGroup(const Model::DescribeTopicSubscribeGroupRequest &request);
+                void DescribeTopicSubscribeGroupAsync(const Model::DescribeTopicSubscribeGroupRequest& request, const DescribeTopicSubscribeGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTopicSubscribeGroupOutcomeCallable DescribeTopicSubscribeGroupCallable(const Model::DescribeTopicSubscribeGroupRequest& request);
+
+                /**
+                 *This API is used to get the details of a synced topic replica.
+                 * @param req DescribeTopicSyncReplicaRequest
+                 * @return DescribeTopicSyncReplicaOutcome
+                 */
+                DescribeTopicSyncReplicaOutcome DescribeTopicSyncReplica(const Model::DescribeTopicSyncReplicaRequest &request);
+                void DescribeTopicSyncReplicaAsync(const Model::DescribeTopicSyncReplicaRequest& request, const DescribeTopicSyncReplicaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTopicSyncReplicaOutcomeCallable DescribeTopicSyncReplicaCallable(const Model::DescribeTopicSyncReplicaRequest& request);
+
+                /**
                  *This API is used to query user information.
                  * @param req DescribeUserRequest
                  * @return DescribeUserOutcome
@@ -383,6 +505,15 @@ This API is used to get the list of topics in a CKafka instance of a user.
                 DescribeUserOutcome DescribeUser(const Model::DescribeUserRequest &request);
                 void DescribeUserAsync(const Model::DescribeUserRequest& request, const DescribeUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeUserOutcomeCallable DescribeUserCallable(const Model::DescribeUserRequest& request);
+
+                /**
+                 *This API is used to query messages based on a specified offset position.
+                 * @param req FetchMessageByOffsetRequest
+                 * @return FetchMessageByOffsetOutcome
+                 */
+                FetchMessageByOffsetOutcome FetchMessageByOffset(const Model::FetchMessageByOffsetRequest &request);
+                void FetchMessageByOffsetAsync(const Model::FetchMessageByOffsetRequest& request, const FetchMessageByOffsetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                FetchMessageByOffsetOutcomeCallable FetchMessageByOffsetCallable(const Model::FetchMessageByOffsetRequest& request);
 
                 /**
                  *This API is used to set the consumer group (Groups) offset.
@@ -419,6 +550,15 @@ This API is used to get the list of topics in a CKafka instance of a user.
                 ModifyTopicAttributesOutcome ModifyTopicAttributes(const Model::ModifyTopicAttributesRequest &request);
                 void ModifyTopicAttributesAsync(const Model::ModifyTopicAttributesRequest& request, const ModifyTopicAttributesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyTopicAttributesOutcomeCallable ModifyTopicAttributesCallable(const Model::ModifyTopicAttributesRequest& request);
+
+                /**
+                 *This API is used to send messages through the HTTP access layer.
+                 * @param req SendMessageRequest
+                 * @return SendMessageOutcome
+                 */
+                SendMessageOutcome SendMessage(const Model::SendMessageRequest &request);
+                void SendMessageAsync(const Model::SendMessageRequest& request, const SendMessageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SendMessageOutcomeCallable SendMessageCallable(const Model::SendMessageRequest& request);
 
             };
         }

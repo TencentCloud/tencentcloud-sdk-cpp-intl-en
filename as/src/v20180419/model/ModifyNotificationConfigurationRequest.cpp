@@ -20,60 +20,77 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::As::V20180419::Model;
-using namespace rapidjson;
 using namespace std;
 
 ModifyNotificationConfigurationRequest::ModifyNotificationConfigurationRequest() :
     m_autoScalingNotificationIdHasBeenSet(false),
     m_notificationTypesHasBeenSet(false),
-    m_notificationUserGroupIdsHasBeenSet(false)
+    m_notificationUserGroupIdsHasBeenSet(false),
+    m_queueNameHasBeenSet(false),
+    m_topicNameHasBeenSet(false)
 {
 }
 
 string ModifyNotificationConfigurationRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_autoScalingNotificationIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AutoScalingNotificationId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_autoScalingNotificationId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_autoScalingNotificationId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_notificationTypesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NotificationTypes";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_notificationTypes.begin(); itr != m_notificationTypes.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_notificationUserGroupIdsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NotificationUserGroupIds";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_notificationUserGroupIds.begin(); itr != m_notificationUserGroupIds.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
+    if (m_queueNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "QueueName";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_queueName.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    if (m_topicNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TopicName";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_topicName.c_str(), allocator).Move(), allocator);
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -125,6 +142,38 @@ void ModifyNotificationConfigurationRequest::SetNotificationUserGroupIds(const v
 bool ModifyNotificationConfigurationRequest::NotificationUserGroupIdsHasBeenSet() const
 {
     return m_notificationUserGroupIdsHasBeenSet;
+}
+
+string ModifyNotificationConfigurationRequest::GetQueueName() const
+{
+    return m_queueName;
+}
+
+void ModifyNotificationConfigurationRequest::SetQueueName(const string& _queueName)
+{
+    m_queueName = _queueName;
+    m_queueNameHasBeenSet = true;
+}
+
+bool ModifyNotificationConfigurationRequest::QueueNameHasBeenSet() const
+{
+    return m_queueNameHasBeenSet;
+}
+
+string ModifyNotificationConfigurationRequest::GetTopicName() const
+{
+    return m_topicName;
+}
+
+void ModifyNotificationConfigurationRequest::SetTopicName(const string& _topicName)
+{
+    m_topicName = _topicName;
+    m_topicNameHasBeenSet = true;
+}
+
+bool ModifyNotificationConfigurationRequest::TopicNameHasBeenSet() const
+{
+    return m_topicNameHasBeenSet;
 }
 
 

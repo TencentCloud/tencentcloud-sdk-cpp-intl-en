@@ -48,14 +48,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Intelligent face recognition result set.
-                     * @return ResultSet Intelligent face recognition result set.
+                     * 获取Intelligent face recognition result set
+<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
+                     * @return ResultSet Intelligent face recognition result set
+<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
                      */
                     std::vector<AiRecognitionTaskFaceResultItem> GetResultSet() const;
 
                     /**
-                     * 设置Intelligent face recognition result set.
-                     * @param ResultSet Intelligent face recognition result set.
+                     * 设置Intelligent face recognition result set
+<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
+                     * @param ResultSet Intelligent face recognition result set
+<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
                      */
                     void SetResultSet(const std::vector<AiRecognitionTaskFaceResultItem>& _resultSet);
 
@@ -65,13 +69,62 @@ namespace TencentCloud
                      */
                     bool ResultSetHasBeenSet() const;
 
+                    /**
+                     * 获取URL to the file of the intelligent face recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+                     * @return ResultSetFileUrl URL to the file of the intelligent face recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+                     */
+                    std::string GetResultSetFileUrl() const;
+
+                    /**
+                     * 设置URL to the file of the intelligent face recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+                     * @param ResultSetFileUrl URL to the file of the intelligent face recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+                     */
+                    void SetResultSetFileUrl(const std::string& _resultSetFileUrl);
+
+                    /**
+                     * 判断参数 ResultSetFileUrl 是否已赋值
+                     * @return ResultSetFileUrl 是否已赋值
+                     */
+                    bool ResultSetFileUrlHasBeenSet() const;
+
+                    /**
+                     * 获取Expiration time of the URL to the file of the intelligent face recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+                     * @return ResultSetFileUrlExpireTime Expiration time of the URL to the file of the intelligent face recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+                     */
+                    std::string GetResultSetFileUrlExpireTime() const;
+
+                    /**
+                     * 设置Expiration time of the URL to the file of the intelligent face recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+                     * @param ResultSetFileUrlExpireTime Expiration time of the URL to the file of the intelligent face recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+                     */
+                    void SetResultSetFileUrlExpireTime(const std::string& _resultSetFileUrlExpireTime);
+
+                    /**
+                     * 判断参数 ResultSetFileUrlExpireTime 是否已赋值
+                     * @return ResultSetFileUrlExpireTime 是否已赋值
+                     */
+                    bool ResultSetFileUrlExpireTimeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Intelligent face recognition result set.
+                     * Intelligent face recognition result set
+<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
                      */
                     std::vector<AiRecognitionTaskFaceResultItem> m_resultSet;
                     bool m_resultSetHasBeenSet;
+
+                    /**
+                     * URL to the file of the intelligent face recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+                     */
+                    std::string m_resultSetFileUrl;
+                    bool m_resultSetFileUrlHasBeenSet;
+
+                    /**
+                     * Expiration time of the URL to the file of the intelligent face recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+                     */
+                    std::string m_resultSetFileUrlExpireTime;
+                    bool m_resultSetFileUrlExpireTimeHasBeenSet;
 
                 };
             }

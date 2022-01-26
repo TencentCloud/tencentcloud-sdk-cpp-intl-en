@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Trtc::V20190722::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeHistoryScaleResponse::DescribeHistoryScaleResponse() :
@@ -32,20 +31,20 @@ DescribeHistoryScaleResponse::DescribeHistoryScaleResponse() :
 
 CoreInternalOutcome DescribeHistoryScaleResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -56,11 +55,11 @@ CoreInternalOutcome DescribeHistoryScaleResponse::Deserialize(const string &payl
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -68,7 +67,7 @@ CoreInternalOutcome DescribeHistoryScaleResponse::Deserialize(const string &payl
     {
         if (!rsp["Total"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Total` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Total` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_total = rsp["Total"].GetUint64();
         m_totalHasBeenSet = true;
@@ -77,10 +76,10 @@ CoreInternalOutcome DescribeHistoryScaleResponse::Deserialize(const string &payl
     if (rsp.HasMember("ScaleList") && !rsp["ScaleList"].IsNull())
     {
         if (!rsp["ScaleList"].IsArray())
-            return CoreInternalOutcome(Error("response `ScaleList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ScaleList` is not array type"));
 
-        const Value &tmpValue = rsp["ScaleList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["ScaleList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             ScaleInfomation item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -96,6 +95,46 @@ CoreInternalOutcome DescribeHistoryScaleResponse::Deserialize(const string &payl
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeHistoryScaleResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_totalHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Total";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_total, allocator);
+    }
+
+    if (m_scaleListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ScaleList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_scaleList.begin(); itr != m_scaleList.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

@@ -20,43 +20,43 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 UpgradeDBInstanceEngineVersionRequest::UpgradeDBInstanceEngineVersionRequest() :
     m_instanceIdHasBeenSet(false),
     m_engineVersionHasBeenSet(false),
     m_waitSwitchHasBeenSet(false),
-    m_upgradeSubversionHasBeenSet(false)
+    m_upgradeSubversionHasBeenSet(false),
+    m_maxDelayTimeHasBeenSet(false)
 {
 }
 
 string UpgradeDBInstanceEngineVersionRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_engineVersionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EngineVersion";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_engineVersion.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_engineVersion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_waitSwitchHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "WaitSwitch";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_waitSwitch, allocator);
@@ -64,15 +64,23 @@ string UpgradeDBInstanceEngineVersionRequest::ToJsonString() const
 
     if (m_upgradeSubversionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UpgradeSubversion";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_upgradeSubversion, allocator);
     }
 
+    if (m_maxDelayTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MaxDelayTime";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_maxDelayTime, allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -140,6 +148,22 @@ void UpgradeDBInstanceEngineVersionRequest::SetUpgradeSubversion(const int64_t& 
 bool UpgradeDBInstanceEngineVersionRequest::UpgradeSubversionHasBeenSet() const
 {
     return m_upgradeSubversionHasBeenSet;
+}
+
+int64_t UpgradeDBInstanceEngineVersionRequest::GetMaxDelayTime() const
+{
+    return m_maxDelayTime;
+}
+
+void UpgradeDBInstanceEngineVersionRequest::SetMaxDelayTime(const int64_t& _maxDelayTime)
+{
+    m_maxDelayTime = _maxDelayTime;
+    m_maxDelayTimeHasBeenSet = true;
+}
+
+bool UpgradeDBInstanceEngineVersionRequest::MaxDelayTimeHasBeenSet() const
+{
+    return m_maxDelayTimeHasBeenSet;
 }
 
 

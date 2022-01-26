@@ -47,17 +47,17 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The security group whitelist in CIDR format.
+                     * 获取The security group allowlist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return WhiteIpList The security group whitelist in CIDR format.
+                     * @return WhiteIpList The security group allowlist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetWhiteIpList() const;
 
                     /**
-                     * 设置The security group whitelist in CIDR format.
+                     * 设置The security group allowlist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param WhiteIpList The security group whitelist in CIDR format.
+                     * @param WhiteIpList The security group allowlist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetWhiteIpList(const std::vector<std::string>& _whiteIpList);
@@ -69,17 +69,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool WhiteIpListHasBeenSet() const;
 
                     /**
-                     * 获取The security group blacklist in CIDR format.
+                     * 获取The security group blocklist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return BlackIpList The security group blacklist in CIDR format.
+                     * @return BlackIpList The security group blocklist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetBlackIpList() const;
 
                     /**
-                     * 设置The security group blacklist in CIDR format.
+                     * 设置The security group blocklist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param BlackIpList The security group blacklist in CIDR format.
+                     * @param BlackIpList The security group blocklist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetBlackIpList(const std::vector<std::string>& _blackIpList);
@@ -115,14 +115,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The security group whitelist in CIDR format.
+                     * The security group allowlist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_whiteIpList;
                     bool m_whiteIpListHasBeenSet;
 
                     /**
-                     * The security group blacklist in CIDR format.
+                     * The security group blocklist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_blackIpList;

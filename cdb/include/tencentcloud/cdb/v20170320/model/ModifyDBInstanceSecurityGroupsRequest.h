@@ -78,6 +78,24 @@ namespace TencentCloud
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 
+                    /**
+                     * 获取This parameter takes effect only when the ID of read-only replica is passed in. If this parameter is set to `False` or left empty, the security groups bound with the RO group of the read-only replicas will be modified. If this parameter is set to `True`, the security groups bound with the read-only replica itself will be modified.
+                     * @return ForReadonlyInstance This parameter takes effect only when the ID of read-only replica is passed in. If this parameter is set to `False` or left empty, the security groups bound with the RO group of the read-only replicas will be modified. If this parameter is set to `True`, the security groups bound with the read-only replica itself will be modified.
+                     */
+                    bool GetForReadonlyInstance() const;
+
+                    /**
+                     * 设置This parameter takes effect only when the ID of read-only replica is passed in. If this parameter is set to `False` or left empty, the security groups bound with the RO group of the read-only replicas will be modified. If this parameter is set to `True`, the security groups bound with the read-only replica itself will be modified.
+                     * @param ForReadonlyInstance This parameter takes effect only when the ID of read-only replica is passed in. If this parameter is set to `False` or left empty, the security groups bound with the RO group of the read-only replicas will be modified. If this parameter is set to `True`, the security groups bound with the read-only replica itself will be modified.
+                     */
+                    void SetForReadonlyInstance(const bool& _forReadonlyInstance);
+
+                    /**
+                     * 判断参数 ForReadonlyInstance 是否已赋值
+                     * @return ForReadonlyInstance 是否已赋值
+                     */
+                    bool ForReadonlyInstanceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -91,6 +109,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
+
+                    /**
+                     * This parameter takes effect only when the ID of read-only replica is passed in. If this parameter is set to `False` or left empty, the security groups bound with the RO group of the read-only replicas will be modified. If this parameter is set to `True`, the security groups bound with the read-only replica itself will be modified.
+                     */
+                    bool m_forReadonlyInstance;
+                    bool m_forReadonlyInstanceHasBeenSet;
 
                 };
             }

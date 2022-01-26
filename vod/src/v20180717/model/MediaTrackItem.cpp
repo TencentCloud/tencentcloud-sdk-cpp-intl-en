@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 MediaTrackItem::MediaTrackItem() :
@@ -31,7 +30,7 @@ MediaTrackItem::MediaTrackItem() :
 {
 }
 
-CoreInternalOutcome MediaTrackItem::Deserialize(const Value &value)
+CoreInternalOutcome MediaTrackItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome MediaTrackItem::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaTrackItem.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaTrackItem.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -50,7 +49,7 @@ CoreInternalOutcome MediaTrackItem::Deserialize(const Value &value)
     {
         if (!value["VideoItem"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaTrackItem.VideoItem` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaTrackItem.VideoItem` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_videoItem.Deserialize(value["VideoItem"]);
@@ -67,7 +66,7 @@ CoreInternalOutcome MediaTrackItem::Deserialize(const Value &value)
     {
         if (!value["AudioItem"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaTrackItem.AudioItem` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaTrackItem.AudioItem` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_audioItem.Deserialize(value["AudioItem"]);
@@ -84,7 +83,7 @@ CoreInternalOutcome MediaTrackItem::Deserialize(const Value &value)
     {
         if (!value["StickerItem"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaTrackItem.StickerItem` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaTrackItem.StickerItem` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_stickerItem.Deserialize(value["StickerItem"]);
@@ -101,7 +100,7 @@ CoreInternalOutcome MediaTrackItem::Deserialize(const Value &value)
     {
         if (!value["TransitionItem"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaTrackItem.TransitionItem` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaTrackItem.TransitionItem` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_transitionItem.Deserialize(value["TransitionItem"]);
@@ -118,7 +117,7 @@ CoreInternalOutcome MediaTrackItem::Deserialize(const Value &value)
     {
         if (!value["EmptyItem"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaTrackItem.EmptyItem` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaTrackItem.EmptyItem` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_emptyItem.Deserialize(value["EmptyItem"]);
@@ -135,59 +134,59 @@ CoreInternalOutcome MediaTrackItem::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void MediaTrackItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MediaTrackItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_videoItemHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VideoItem";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_videoItem.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_audioItemHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AudioItem";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_audioItem.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_stickerItemHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StickerItem";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_stickerItem.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_transitionItemHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TransitionItem";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_transitionItem.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_emptyItemHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EmptyItem";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_emptyItem.ToJsonObject(value[key.c_str()], allocator);
     }
 

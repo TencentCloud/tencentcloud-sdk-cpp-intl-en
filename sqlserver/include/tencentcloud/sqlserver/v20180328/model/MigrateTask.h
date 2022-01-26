@@ -192,14 +192,14 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded)
-                     * @return Status Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded)
+                     * 获取Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded, 7: suspended, 8: deleted, 9: suspending, 10: completing, 11: suspension failed, 12: completion failed)
+                     * @return Status Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded, 7: suspended, 8: deleted, 9: suspending, 10: completing, 11: suspension failed, 12: completion failed)
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded)
-                     * @param Status Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded)
+                     * 设置Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded, 7: suspended, 8: deleted, 9: suspending, 10: completing, 11: suspension failed, 12: completion failed)
+                     * @param Status Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded, 7: suspended, 8: deleted, 9: suspending, 10: completing, 11: suspension failed, 12: completion failed)
                      */
                     void SetStatus(const uint64_t& _status);
 
@@ -332,7 +332,7 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded)
+                     * Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded, 7: suspended, 8: deleted, 9: suspending, 10: completing, 11: suspension failed, 12: completion failed)
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;

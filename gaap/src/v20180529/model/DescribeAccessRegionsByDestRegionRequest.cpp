@@ -20,32 +20,49 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeAccessRegionsByDestRegionRequest::DescribeAccessRegionsByDestRegionRequest() :
-    m_destRegionHasBeenSet(false)
+    m_destRegionHasBeenSet(false),
+    m_iPAddressVersionHasBeenSet(false),
+    m_packageTypeHasBeenSet(false)
 {
 }
 
 string DescribeAccessRegionsByDestRegionRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_destRegionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DestRegion";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_destRegion.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_destRegion.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_iPAddressVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IPAddressVersion";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_iPAddressVersion.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_packageTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PackageType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_packageType.c_str(), allocator).Move(), allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -65,6 +82,38 @@ void DescribeAccessRegionsByDestRegionRequest::SetDestRegion(const string& _dest
 bool DescribeAccessRegionsByDestRegionRequest::DestRegionHasBeenSet() const
 {
     return m_destRegionHasBeenSet;
+}
+
+string DescribeAccessRegionsByDestRegionRequest::GetIPAddressVersion() const
+{
+    return m_iPAddressVersion;
+}
+
+void DescribeAccessRegionsByDestRegionRequest::SetIPAddressVersion(const string& _iPAddressVersion)
+{
+    m_iPAddressVersion = _iPAddressVersion;
+    m_iPAddressVersionHasBeenSet = true;
+}
+
+bool DescribeAccessRegionsByDestRegionRequest::IPAddressVersionHasBeenSet() const
+{
+    return m_iPAddressVersionHasBeenSet;
+}
+
+string DescribeAccessRegionsByDestRegionRequest::GetPackageType() const
+{
+    return m_packageType;
+}
+
+void DescribeAccessRegionsByDestRegionRequest::SetPackageType(const string& _packageType)
+{
+    m_packageType = _packageType;
+    m_packageTypeHasBeenSet = true;
+}
+
+bool DescribeAccessRegionsByDestRegionRequest::PackageTypeHasBeenSet() const
+{
+    return m_packageTypeHasBeenSet;
 }
 
 

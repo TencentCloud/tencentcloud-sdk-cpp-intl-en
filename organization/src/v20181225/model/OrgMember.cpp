@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Organization::V20181225::Model;
-using namespace rapidjson;
 using namespace std;
 
 OrgMember::OrgMember() :
@@ -29,7 +28,7 @@ OrgMember::OrgMember() :
 {
 }
 
-CoreInternalOutcome OrgMember::Deserialize(const Value &value)
+CoreInternalOutcome OrgMember::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome OrgMember::Deserialize(const Value &value)
     {
         if (!value["Uin"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `OrgMember.Uin` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OrgMember.Uin` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_uin = value["Uin"].GetUint64();
         m_uinHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome OrgMember::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `OrgMember.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OrgMember.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome OrgMember::Deserialize(const Value &value)
     {
         if (!value["Remark"].IsString())
         {
-            return CoreInternalOutcome(Error("response `OrgMember.Remark` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OrgMember.Remark` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_remark = string(value["Remark"].GetString());
         m_remarkHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome OrgMember::Deserialize(const Value &value)
     {
         if (!value["JoinTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `OrgMember.JoinTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OrgMember.JoinTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_joinTime = string(value["JoinTime"].GetString());
         m_joinTimeHasBeenSet = true;
@@ -78,12 +77,12 @@ CoreInternalOutcome OrgMember::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void OrgMember::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void OrgMember::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_uinHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Uin";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_uin, allocator);
@@ -91,26 +90,26 @@ void OrgMember::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_remarkHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Remark";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_remark.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_remark.c_str(), allocator).Move(), allocator);
     }
 
     if (m_joinTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "JoinTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_joinTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_joinTime.c_str(), allocator).Move(), allocator);
     }
 
 }

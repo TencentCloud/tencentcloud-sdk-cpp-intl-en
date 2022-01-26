@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 MediaImageSpriteItem::MediaImageSpriteItem() :
@@ -31,7 +30,7 @@ MediaImageSpriteItem::MediaImageSpriteItem() :
 {
 }
 
-CoreInternalOutcome MediaImageSpriteItem::Deserialize(const Value &value)
+CoreInternalOutcome MediaImageSpriteItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome MediaImageSpriteItem::Deserialize(const Value &value)
     {
         if (!value["Definition"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaImageSpriteItem.Definition` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaImageSpriteItem.Definition` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_definition = value["Definition"].GetInt64();
         m_definitionHasBeenSet = true;
@@ -50,7 +49,7 @@ CoreInternalOutcome MediaImageSpriteItem::Deserialize(const Value &value)
     {
         if (!value["Height"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaImageSpriteItem.Height` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaImageSpriteItem.Height` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_height = value["Height"].GetInt64();
         m_heightHasBeenSet = true;
@@ -60,7 +59,7 @@ CoreInternalOutcome MediaImageSpriteItem::Deserialize(const Value &value)
     {
         if (!value["Width"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaImageSpriteItem.Width` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaImageSpriteItem.Width` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_width = value["Width"].GetInt64();
         m_widthHasBeenSet = true;
@@ -70,7 +69,7 @@ CoreInternalOutcome MediaImageSpriteItem::Deserialize(const Value &value)
     {
         if (!value["TotalCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaImageSpriteItem.TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaImageSpriteItem.TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_totalCount = value["TotalCount"].GetInt64();
         m_totalCountHasBeenSet = true;
@@ -79,10 +78,10 @@ CoreInternalOutcome MediaImageSpriteItem::Deserialize(const Value &value)
     if (value.HasMember("ImageUrlSet") && !value["ImageUrlSet"].IsNull())
     {
         if (!value["ImageUrlSet"].IsArray())
-            return CoreInternalOutcome(Error("response `MediaImageSpriteItem.ImageUrlSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `MediaImageSpriteItem.ImageUrlSet` is not array type"));
 
-        const Value &tmpValue = value["ImageUrlSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["ImageUrlSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_imageUrlSet.push_back((*itr).GetString());
         }
@@ -93,7 +92,7 @@ CoreInternalOutcome MediaImageSpriteItem::Deserialize(const Value &value)
     {
         if (!value["WebVttUrl"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaImageSpriteItem.WebVttUrl` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaImageSpriteItem.WebVttUrl` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_webVttUrl = string(value["WebVttUrl"].GetString());
         m_webVttUrlHasBeenSet = true;
@@ -103,12 +102,12 @@ CoreInternalOutcome MediaImageSpriteItem::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void MediaImageSpriteItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MediaImageSpriteItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_definitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Definition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_definition, allocator);
@@ -116,7 +115,7 @@ void MediaImageSpriteItem::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_heightHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Height";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_height, allocator);
@@ -124,7 +123,7 @@ void MediaImageSpriteItem::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_widthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Width";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_width, allocator);
@@ -132,7 +131,7 @@ void MediaImageSpriteItem::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_totalCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TotalCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_totalCount, allocator);
@@ -140,23 +139,23 @@ void MediaImageSpriteItem::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_imageUrlSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ImageUrlSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_imageUrlSet.begin(); itr != m_imageUrlSet.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_webVttUrlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "WebVttUrl";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_webVttUrl.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_webVttUrl.c_str(), allocator).Move(), allocator);
     }
 
 }

@@ -79,17 +79,17 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Blacklist or whitelist. Valid value: [white (whitelist)]. Currently, only whitelist is supported.
+                     * 获取Blocklist or allowlist. Valid value: [white (allowlist)]. Currently, only allowlist is supported.
 Note: this array can only have one value which can only be `white`
-                     * @return Type Blacklist or whitelist. Valid value: [white (whitelist)]. Currently, only whitelist is supported.
+                     * @return Type Blocklist or allowlist. Valid value: [white (allowlist)]. Currently, only allowlist is supported.
 Note: this array can only have one value which can only be `white`
                      */
                     std::vector<std::string> GetType() const;
 
                     /**
-                     * 设置Blacklist or whitelist. Valid value: [white (whitelist)]. Currently, only whitelist is supported.
+                     * 设置Blocklist or allowlist. Valid value: [white (allowlist)]. Currently, only allowlist is supported.
 Note: this array can only have one value which can only be `white`
-                     * @param Type Blacklist or whitelist. Valid value: [white (whitelist)]. Currently, only whitelist is supported.
+                     * @param Type Blocklist or allowlist. Valid value: [white (allowlist)]. Currently, only allowlist is supported.
 Note: this array can only have one value which can only be `white`
                      */
                     void SetType(const std::vector<std::string>& _type);
@@ -169,7 +169,7 @@ Note: this array can only have one value which can only be `white`
                     bool m_idHasBeenSet;
 
                     /**
-                     * Blacklist or whitelist. Valid value: [white (whitelist)]. Currently, only whitelist is supported.
+                     * Blocklist or allowlist. Valid value: [white (allowlist)]. Currently, only allowlist is supported.
 Note: this array can only have one value which can only be `white`
                      */
                     std::vector<std::string> m_type;

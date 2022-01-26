@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Monitor::V20180724::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribePolicyConditionListConfigManualCalcValue::DescribePolicyConditionListConfigManualCalcValue() :
@@ -30,7 +29,7 @@ DescribePolicyConditionListConfigManualCalcValue::DescribePolicyConditionListCon
 {
 }
 
-CoreInternalOutcome DescribePolicyConditionListConfigManualCalcValue::Deserialize(const Value &value)
+CoreInternalOutcome DescribePolicyConditionListConfigManualCalcValue::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome DescribePolicyConditionListConfigManualCalcValue::Deserializ
     {
         if (!value["Default"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyConditionListConfigManualCalcValue.Default` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyConditionListConfigManualCalcValue.Default` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_default = string(value["Default"].GetString());
         m_defaultHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome DescribePolicyConditionListConfigManualCalcValue::Deserializ
     {
         if (!value["Fixed"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyConditionListConfigManualCalcValue.Fixed` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyConditionListConfigManualCalcValue.Fixed` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fixed = string(value["Fixed"].GetString());
         m_fixedHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome DescribePolicyConditionListConfigManualCalcValue::Deserializ
     {
         if (!value["Max"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyConditionListConfigManualCalcValue.Max` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyConditionListConfigManualCalcValue.Max` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_max = string(value["Max"].GetString());
         m_maxHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome DescribePolicyConditionListConfigManualCalcValue::Deserializ
     {
         if (!value["Min"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyConditionListConfigManualCalcValue.Min` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyConditionListConfigManualCalcValue.Min` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_min = string(value["Min"].GetString());
         m_minHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome DescribePolicyConditionListConfigManualCalcValue::Deserializ
     {
         if (!value["Need"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyConditionListConfigManualCalcValue.Need` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyConditionListConfigManualCalcValue.Need` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_need = value["Need"].GetBool();
         m_needHasBeenSet = true;
@@ -89,44 +88,44 @@ CoreInternalOutcome DescribePolicyConditionListConfigManualCalcValue::Deserializ
     return CoreInternalOutcome(true);
 }
 
-void DescribePolicyConditionListConfigManualCalcValue::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DescribePolicyConditionListConfigManualCalcValue::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_defaultHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Default";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_default.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_default.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fixedHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Fixed";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fixed.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fixed.c_str(), allocator).Move(), allocator);
     }
 
     if (m_maxHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Max";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_max.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_max.c_str(), allocator).Move(), allocator);
     }
 
     if (m_minHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Min";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_min.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_min.c_str(), allocator).Move(), allocator);
     }
 
     if (m_needHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Need";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_need, allocator);

@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cfs::V20190719::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateCfsRuleResponse::CreateCfsRuleResponse() :
@@ -36,20 +35,20 @@ CreateCfsRuleResponse::CreateCfsRuleResponse() :
 
 CoreInternalOutcome CreateCfsRuleResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -60,11 +59,11 @@ CoreInternalOutcome CreateCfsRuleResponse::Deserialize(const string &payload)
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -72,7 +71,7 @@ CoreInternalOutcome CreateCfsRuleResponse::Deserialize(const string &payload)
     {
         if (!rsp["RuleId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RuleId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RuleId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ruleId = string(rsp["RuleId"].GetString());
         m_ruleIdHasBeenSet = true;
@@ -82,7 +81,7 @@ CoreInternalOutcome CreateCfsRuleResponse::Deserialize(const string &payload)
     {
         if (!rsp["PGroupId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PGroupId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PGroupId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_pGroupId = string(rsp["PGroupId"].GetString());
         m_pGroupIdHasBeenSet = true;
@@ -92,7 +91,7 @@ CoreInternalOutcome CreateCfsRuleResponse::Deserialize(const string &payload)
     {
         if (!rsp["AuthClientIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AuthClientIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AuthClientIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_authClientIp = string(rsp["AuthClientIp"].GetString());
         m_authClientIpHasBeenSet = true;
@@ -102,7 +101,7 @@ CoreInternalOutcome CreateCfsRuleResponse::Deserialize(const string &payload)
     {
         if (!rsp["RWPermission"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RWPermission` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RWPermission` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_rWPermission = string(rsp["RWPermission"].GetString());
         m_rWPermissionHasBeenSet = true;
@@ -112,7 +111,7 @@ CoreInternalOutcome CreateCfsRuleResponse::Deserialize(const string &payload)
     {
         if (!rsp["UserPermission"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UserPermission` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UserPermission` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_userPermission = string(rsp["UserPermission"].GetString());
         m_userPermissionHasBeenSet = true;
@@ -122,7 +121,7 @@ CoreInternalOutcome CreateCfsRuleResponse::Deserialize(const string &payload)
     {
         if (!rsp["Priority"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Priority` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Priority` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_priority = rsp["Priority"].GetInt64();
         m_priorityHasBeenSet = true;
@@ -130,6 +129,71 @@ CoreInternalOutcome CreateCfsRuleResponse::Deserialize(const string &payload)
 
 
     return CoreInternalOutcome(true);
+}
+
+string CreateCfsRuleResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_ruleIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RuleId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ruleId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_pGroupIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PGroupId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_pGroupId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_authClientIpHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AuthClientIp";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_authClientIp.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_rWPermissionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RWPermission";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_rWPermission.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_userPermissionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UserPermission";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_userPermission.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_priorityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Priority";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_priority, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

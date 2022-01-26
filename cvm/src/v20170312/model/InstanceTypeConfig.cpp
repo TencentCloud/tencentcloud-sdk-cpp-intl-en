@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cvm::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 InstanceTypeConfig::InstanceTypeConfig() :
@@ -32,7 +31,7 @@ InstanceTypeConfig::InstanceTypeConfig() :
 {
 }
 
-CoreInternalOutcome InstanceTypeConfig::Deserialize(const Value &value)
+CoreInternalOutcome InstanceTypeConfig::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +40,7 @@ CoreInternalOutcome InstanceTypeConfig::Deserialize(const Value &value)
     {
         if (!value["Zone"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceTypeConfig.Zone` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceTypeConfig.Zone` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_zone = string(value["Zone"].GetString());
         m_zoneHasBeenSet = true;
@@ -51,7 +50,7 @@ CoreInternalOutcome InstanceTypeConfig::Deserialize(const Value &value)
     {
         if (!value["InstanceType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceTypeConfig.InstanceType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceTypeConfig.InstanceType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceType = string(value["InstanceType"].GetString());
         m_instanceTypeHasBeenSet = true;
@@ -61,7 +60,7 @@ CoreInternalOutcome InstanceTypeConfig::Deserialize(const Value &value)
     {
         if (!value["InstanceFamily"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceTypeConfig.InstanceFamily` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceTypeConfig.InstanceFamily` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceFamily = string(value["InstanceFamily"].GetString());
         m_instanceFamilyHasBeenSet = true;
@@ -71,7 +70,7 @@ CoreInternalOutcome InstanceTypeConfig::Deserialize(const Value &value)
     {
         if (!value["GPU"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `InstanceTypeConfig.GPU` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceTypeConfig.GPU` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_gPU = value["GPU"].GetInt64();
         m_gPUHasBeenSet = true;
@@ -81,7 +80,7 @@ CoreInternalOutcome InstanceTypeConfig::Deserialize(const Value &value)
     {
         if (!value["CPU"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `InstanceTypeConfig.CPU` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceTypeConfig.CPU` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_cPU = value["CPU"].GetInt64();
         m_cPUHasBeenSet = true;
@@ -91,7 +90,7 @@ CoreInternalOutcome InstanceTypeConfig::Deserialize(const Value &value)
     {
         if (!value["Memory"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `InstanceTypeConfig.Memory` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceTypeConfig.Memory` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_memory = value["Memory"].GetInt64();
         m_memoryHasBeenSet = true;
@@ -101,7 +100,7 @@ CoreInternalOutcome InstanceTypeConfig::Deserialize(const Value &value)
     {
         if (!value["FPGA"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `InstanceTypeConfig.FPGA` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceTypeConfig.FPGA` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_fPGA = value["FPGA"].GetInt64();
         m_fPGAHasBeenSet = true;
@@ -111,36 +110,36 @@ CoreInternalOutcome InstanceTypeConfig::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void InstanceTypeConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void InstanceTypeConfig::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_zoneHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Zone";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_zone.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_zone.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceFamilyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceFamily";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceFamily.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceFamily.c_str(), allocator).Move(), allocator);
     }
 
     if (m_gPUHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "GPU";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_gPU, allocator);
@@ -148,7 +147,7 @@ void InstanceTypeConfig::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_cPUHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CPU";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cPU, allocator);
@@ -156,7 +155,7 @@ void InstanceTypeConfig::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_memoryHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Memory";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_memory, allocator);
@@ -164,7 +163,7 @@ void InstanceTypeConfig::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_fPGAHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FPGA";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_fPGA, allocator);

@@ -41,6 +41,7 @@ namespace TencentCloud
                     DescribeDirectConnectsResponse();
                     ~DescribeDirectConnectsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -67,6 +68,20 @@ namespace TencentCloud
                      */
                     bool TotalCountHasBeenSet() const;
 
+                    /**
+                     * 获取Whether all connections under the account have the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return AllSignLaw Whether all connections under the account have the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    bool GetAllSignLaw() const;
+
+                    /**
+                     * 判断参数 AllSignLaw 是否已赋值
+                     * @return AllSignLaw 是否已赋值
+                     */
+                    bool AllSignLawHasBeenSet() const;
+
                 private:
 
                     /**
@@ -80,6 +95,13 @@ namespace TencentCloud
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
+
+                    /**
+                     * Whether all connections under the account have the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    bool m_allSignLaw;
+                    bool m_allSignLawHasBeenSet;
 
                 };
             }

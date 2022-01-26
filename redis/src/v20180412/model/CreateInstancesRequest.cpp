@@ -20,16 +20,15 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Redis::V20180412::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateInstancesRequest::CreateInstancesRequest() :
-    m_zoneIdHasBeenSet(false),
     m_typeIdHasBeenSet(false),
     m_memSizeHasBeenSet(false),
     m_goodsNumHasBeenSet(false),
     m_periodHasBeenSet(false),
     m_billingModeHasBeenSet(false),
+    m_zoneIdHasBeenSet(false),
     m_passwordHasBeenSet(false),
     m_vpcIdHasBeenSet(false),
     m_subnetIdHasBeenSet(false),
@@ -41,28 +40,24 @@ CreateInstancesRequest::CreateInstancesRequest() :
     m_redisReplicasNumHasBeenSet(false),
     m_replicasReadonlyHasBeenSet(false),
     m_instanceNameHasBeenSet(false),
-    m_noAuthHasBeenSet(false)
+    m_noAuthHasBeenSet(false),
+    m_nodeSetHasBeenSet(false),
+    m_resourceTagsHasBeenSet(false),
+    m_zoneNameHasBeenSet(false),
+    m_templateIdHasBeenSet(false)
 {
 }
 
 string CreateInstancesRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
-
-    if (m_zoneIdHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "ZoneId";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_zoneId, allocator);
-    }
 
     if (m_typeIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TypeId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_typeId, allocator);
@@ -70,7 +65,7 @@ string CreateInstancesRequest::ToJsonString() const
 
     if (m_memSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MemSize";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_memSize, allocator);
@@ -78,7 +73,7 @@ string CreateInstancesRequest::ToJsonString() const
 
     if (m_goodsNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "GoodsNum";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_goodsNum, allocator);
@@ -86,7 +81,7 @@ string CreateInstancesRequest::ToJsonString() const
 
     if (m_periodHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Period";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_period, allocator);
@@ -94,39 +89,47 @@ string CreateInstancesRequest::ToJsonString() const
 
     if (m_billingModeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BillingMode";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_billingMode, allocator);
     }
 
+    if (m_zoneIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ZoneId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_zoneId, allocator);
+    }
+
     if (m_passwordHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Password";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_password.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_password.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_vpcId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_vpcId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_subnetIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubnetId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_subnetId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_subnetId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_projectIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProjectId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_projectId, allocator);
@@ -134,7 +137,7 @@ string CreateInstancesRequest::ToJsonString() const
 
     if (m_autoRenewHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AutoRenew";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_autoRenew, allocator);
@@ -142,20 +145,20 @@ string CreateInstancesRequest::ToJsonString() const
 
     if (m_securityGroupIdListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SecurityGroupIdList";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_securityGroupIdList.begin(); itr != m_securityGroupIdList.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_vPortHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VPort";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_vPort, allocator);
@@ -163,7 +166,7 @@ string CreateInstancesRequest::ToJsonString() const
 
     if (m_redisShardNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RedisShardNum";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_redisShardNum, allocator);
@@ -171,7 +174,7 @@ string CreateInstancesRequest::ToJsonString() const
 
     if (m_redisReplicasNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RedisReplicasNum";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_redisReplicasNum, allocator);
@@ -179,7 +182,7 @@ string CreateInstancesRequest::ToJsonString() const
 
     if (m_replicasReadonlyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReplicasReadonly";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_replicasReadonly, allocator);
@@ -187,43 +190,73 @@ string CreateInstancesRequest::ToJsonString() const
 
     if (m_instanceNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_noAuthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NoAuth";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_noAuth, allocator);
     }
 
+    if (m_nodeSetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NodeSet";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+        int i=0;
+        for (auto itr = m_nodeSet.begin(); itr != m_nodeSet.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_resourceTagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ResourceTags";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_resourceTags.begin(); itr != m_resourceTags.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_zoneNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ZoneName";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_zoneName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_templateIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TemplateId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_templateId.c_str(), allocator).Move(), allocator);
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
 
-
-uint64_t CreateInstancesRequest::GetZoneId() const
-{
-    return m_zoneId;
-}
-
-void CreateInstancesRequest::SetZoneId(const uint64_t& _zoneId)
-{
-    m_zoneId = _zoneId;
-    m_zoneIdHasBeenSet = true;
-}
-
-bool CreateInstancesRequest::ZoneIdHasBeenSet() const
-{
-    return m_zoneIdHasBeenSet;
-}
 
 uint64_t CreateInstancesRequest::GetTypeId() const
 {
@@ -303,6 +336,22 @@ void CreateInstancesRequest::SetBillingMode(const int64_t& _billingMode)
 bool CreateInstancesRequest::BillingModeHasBeenSet() const
 {
     return m_billingModeHasBeenSet;
+}
+
+uint64_t CreateInstancesRequest::GetZoneId() const
+{
+    return m_zoneId;
+}
+
+void CreateInstancesRequest::SetZoneId(const uint64_t& _zoneId)
+{
+    m_zoneId = _zoneId;
+    m_zoneIdHasBeenSet = true;
+}
+
+bool CreateInstancesRequest::ZoneIdHasBeenSet() const
+{
+    return m_zoneIdHasBeenSet;
 }
 
 string CreateInstancesRequest::GetPassword() const
@@ -495,6 +544,70 @@ void CreateInstancesRequest::SetNoAuth(const bool& _noAuth)
 bool CreateInstancesRequest::NoAuthHasBeenSet() const
 {
     return m_noAuthHasBeenSet;
+}
+
+vector<RedisNodeInfo> CreateInstancesRequest::GetNodeSet() const
+{
+    return m_nodeSet;
+}
+
+void CreateInstancesRequest::SetNodeSet(const vector<RedisNodeInfo>& _nodeSet)
+{
+    m_nodeSet = _nodeSet;
+    m_nodeSetHasBeenSet = true;
+}
+
+bool CreateInstancesRequest::NodeSetHasBeenSet() const
+{
+    return m_nodeSetHasBeenSet;
+}
+
+vector<ResourceTag> CreateInstancesRequest::GetResourceTags() const
+{
+    return m_resourceTags;
+}
+
+void CreateInstancesRequest::SetResourceTags(const vector<ResourceTag>& _resourceTags)
+{
+    m_resourceTags = _resourceTags;
+    m_resourceTagsHasBeenSet = true;
+}
+
+bool CreateInstancesRequest::ResourceTagsHasBeenSet() const
+{
+    return m_resourceTagsHasBeenSet;
+}
+
+string CreateInstancesRequest::GetZoneName() const
+{
+    return m_zoneName;
+}
+
+void CreateInstancesRequest::SetZoneName(const string& _zoneName)
+{
+    m_zoneName = _zoneName;
+    m_zoneNameHasBeenSet = true;
+}
+
+bool CreateInstancesRequest::ZoneNameHasBeenSet() const
+{
+    return m_zoneNameHasBeenSet;
+}
+
+string CreateInstancesRequest::GetTemplateId() const
+{
+    return m_templateId;
+}
+
+void CreateInstancesRequest::SetTemplateId(const string& _templateId)
+{
+    m_templateId = _templateId;
+    m_templateIdHasBeenSet = true;
+}
+
+bool CreateInstancesRequest::TemplateIdHasBeenSet() const
+{
+    return m_templateIdHasBeenSet;
 }
 
 

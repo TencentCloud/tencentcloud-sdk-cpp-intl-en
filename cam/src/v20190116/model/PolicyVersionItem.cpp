@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cam::V20190116::Model;
-using namespace rapidjson;
 using namespace std;
 
 PolicyVersionItem::PolicyVersionItem() :
@@ -28,7 +27,7 @@ PolicyVersionItem::PolicyVersionItem() :
 {
 }
 
-CoreInternalOutcome PolicyVersionItem::Deserialize(const Value &value)
+CoreInternalOutcome PolicyVersionItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome PolicyVersionItem::Deserialize(const Value &value)
     {
         if (!value["VersionId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `PolicyVersionItem.VersionId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PolicyVersionItem.VersionId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_versionId = value["VersionId"].GetUint64();
         m_versionIdHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome PolicyVersionItem::Deserialize(const Value &value)
     {
         if (!value["CreateDate"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PolicyVersionItem.CreateDate` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PolicyVersionItem.CreateDate` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createDate = string(value["CreateDate"].GetString());
         m_createDateHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome PolicyVersionItem::Deserialize(const Value &value)
     {
         if (!value["IsDefaultVersion"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `PolicyVersionItem.IsDefaultVersion` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PolicyVersionItem.IsDefaultVersion` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_isDefaultVersion = value["IsDefaultVersion"].GetInt64();
         m_isDefaultVersionHasBeenSet = true;
@@ -67,12 +66,12 @@ CoreInternalOutcome PolicyVersionItem::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void PolicyVersionItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void PolicyVersionItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_versionIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VersionId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_versionId, allocator);
@@ -80,15 +79,15 @@ void PolicyVersionItem::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_createDateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateDate";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createDate.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createDate.c_str(), allocator).Move(), allocator);
     }
 
     if (m_isDefaultVersionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsDefaultVersion";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isDefaultVersion, allocator);

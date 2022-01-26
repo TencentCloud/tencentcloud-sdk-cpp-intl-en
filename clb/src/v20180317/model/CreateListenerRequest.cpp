@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Clb::V20180317::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateListenerRequest::CreateListenerRequest() :
@@ -33,80 +32,84 @@ CreateListenerRequest::CreateListenerRequest() :
     m_sessionExpireTimeHasBeenSet(false),
     m_schedulerHasBeenSet(false),
     m_sniSwitchHasBeenSet(false),
-    m_targetTypeHasBeenSet(false)
+    m_targetTypeHasBeenSet(false),
+    m_sessionTypeHasBeenSet(false),
+    m_keepaliveEnableHasBeenSet(false),
+    m_endPortHasBeenSet(false),
+    m_deregisterTargetRstHasBeenSet(false)
 {
 }
 
 string CreateListenerRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_loadBalancerIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LoadBalancerId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_loadBalancerId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_loadBalancerId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_portsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Ports";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_ports.begin(); itr != m_ports.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 
     if (m_protocolHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Protocol";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_protocol.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
     }
 
     if (m_listenerNamesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ListenerNames";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_listenerNames.begin(); itr != m_listenerNames.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_healthCheckHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HealthCheck";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_healthCheck.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_certificateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Certificate";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_certificate.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_sessionExpireTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SessionExpireTime";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_sessionExpireTime, allocator);
@@ -114,15 +117,15 @@ string CreateListenerRequest::ToJsonString() const
 
     if (m_schedulerHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Scheduler";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_scheduler.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_scheduler.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sniSwitchHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SniSwitch";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_sniSwitch, allocator);
@@ -130,15 +133,47 @@ string CreateListenerRequest::ToJsonString() const
 
     if (m_targetTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TargetType";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_targetType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_targetType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_sessionTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SessionType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_sessionType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_keepaliveEnableHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "KeepaliveEnable";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_keepaliveEnable, allocator);
+    }
+
+    if (m_endPortHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EndPort";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_endPort, allocator);
+    }
+
+    if (m_deregisterTargetRstHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DeregisterTargetRst";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_deregisterTargetRst, allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -302,6 +337,70 @@ void CreateListenerRequest::SetTargetType(const string& _targetType)
 bool CreateListenerRequest::TargetTypeHasBeenSet() const
 {
     return m_targetTypeHasBeenSet;
+}
+
+string CreateListenerRequest::GetSessionType() const
+{
+    return m_sessionType;
+}
+
+void CreateListenerRequest::SetSessionType(const string& _sessionType)
+{
+    m_sessionType = _sessionType;
+    m_sessionTypeHasBeenSet = true;
+}
+
+bool CreateListenerRequest::SessionTypeHasBeenSet() const
+{
+    return m_sessionTypeHasBeenSet;
+}
+
+int64_t CreateListenerRequest::GetKeepaliveEnable() const
+{
+    return m_keepaliveEnable;
+}
+
+void CreateListenerRequest::SetKeepaliveEnable(const int64_t& _keepaliveEnable)
+{
+    m_keepaliveEnable = _keepaliveEnable;
+    m_keepaliveEnableHasBeenSet = true;
+}
+
+bool CreateListenerRequest::KeepaliveEnableHasBeenSet() const
+{
+    return m_keepaliveEnableHasBeenSet;
+}
+
+uint64_t CreateListenerRequest::GetEndPort() const
+{
+    return m_endPort;
+}
+
+void CreateListenerRequest::SetEndPort(const uint64_t& _endPort)
+{
+    m_endPort = _endPort;
+    m_endPortHasBeenSet = true;
+}
+
+bool CreateListenerRequest::EndPortHasBeenSet() const
+{
+    return m_endPortHasBeenSet;
+}
+
+bool CreateListenerRequest::GetDeregisterTargetRst() const
+{
+    return m_deregisterTargetRst;
+}
+
+void CreateListenerRequest::SetDeregisterTargetRst(const bool& _deregisterTargetRst)
+{
+    m_deregisterTargetRst = _deregisterTargetRst;
+    m_deregisterTargetRstHasBeenSet = true;
+}
+
+bool CreateListenerRequest::DeregisterTargetRstHasBeenSet() const
+{
+    return m_deregisterTargetRstHasBeenSet;
 }
 
 

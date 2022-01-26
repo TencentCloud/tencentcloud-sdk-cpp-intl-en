@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 UserDefineConfigureInfoForUpdate::UserDefineConfigureInfoForUpdate() :
@@ -28,7 +27,7 @@ UserDefineConfigureInfoForUpdate::UserDefineConfigureInfoForUpdate() :
 {
 }
 
-CoreInternalOutcome UserDefineConfigureInfoForUpdate::Deserialize(const Value &value)
+CoreInternalOutcome UserDefineConfigureInfoForUpdate::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome UserDefineConfigureInfoForUpdate::Deserialize(const Value &v
     {
         if (!value["FaceReviewInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `UserDefineConfigureInfoForUpdate.FaceReviewInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UserDefineConfigureInfoForUpdate.FaceReviewInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_faceReviewInfo.Deserialize(value["FaceReviewInfo"]);
@@ -54,7 +53,7 @@ CoreInternalOutcome UserDefineConfigureInfoForUpdate::Deserialize(const Value &v
     {
         if (!value["AsrReviewInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `UserDefineConfigureInfoForUpdate.AsrReviewInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UserDefineConfigureInfoForUpdate.AsrReviewInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_asrReviewInfo.Deserialize(value["AsrReviewInfo"]);
@@ -71,7 +70,7 @@ CoreInternalOutcome UserDefineConfigureInfoForUpdate::Deserialize(const Value &v
     {
         if (!value["OcrReviewInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `UserDefineConfigureInfoForUpdate.OcrReviewInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UserDefineConfigureInfoForUpdate.OcrReviewInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_ocrReviewInfo.Deserialize(value["OcrReviewInfo"]);
@@ -88,33 +87,33 @@ CoreInternalOutcome UserDefineConfigureInfoForUpdate::Deserialize(const Value &v
     return CoreInternalOutcome(true);
 }
 
-void UserDefineConfigureInfoForUpdate::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void UserDefineConfigureInfoForUpdate::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_faceReviewInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FaceReviewInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_faceReviewInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_asrReviewInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AsrReviewInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_asrReviewInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_ocrReviewInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OcrReviewInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_ocrReviewInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 

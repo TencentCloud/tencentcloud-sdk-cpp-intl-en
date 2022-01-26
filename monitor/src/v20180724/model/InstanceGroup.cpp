@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Monitor::V20180724::Model;
-using namespace rapidjson;
 using namespace std;
 
 InstanceGroup::InstanceGroup() :
@@ -27,7 +26,7 @@ InstanceGroup::InstanceGroup() :
 {
 }
 
-CoreInternalOutcome InstanceGroup::Deserialize(const Value &value)
+CoreInternalOutcome InstanceGroup::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome InstanceGroup::Deserialize(const Value &value)
     {
         if (!value["InstanceGroupId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `InstanceGroup.InstanceGroupId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceGroup.InstanceGroupId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_instanceGroupId = value["InstanceGroupId"].GetInt64();
         m_instanceGroupIdHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome InstanceGroup::Deserialize(const Value &value)
     {
         if (!value["InstanceGroupName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceGroup.InstanceGroupName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceGroup.InstanceGroupName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceGroupName = string(value["InstanceGroupName"].GetString());
         m_instanceGroupNameHasBeenSet = true;
@@ -56,12 +55,12 @@ CoreInternalOutcome InstanceGroup::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void InstanceGroup::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void InstanceGroup::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_instanceGroupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceGroupId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_instanceGroupId, allocator);
@@ -69,10 +68,10 @@ void InstanceGroup::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_instanceGroupNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceGroupName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceGroupName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceGroupName.c_str(), allocator).Move(), allocator);
     }
 
 }

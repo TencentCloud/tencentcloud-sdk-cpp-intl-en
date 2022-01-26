@@ -48,17 +48,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Listening port of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this parameter is required when binding a CVM or ENI.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Port Listening port of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this parameter is required when binding a CVM or ENI.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     int64_t GetPort() const;
 
                     /**
                      * 设置Listening port of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this parameter is required when binding a CVM or ENI.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @param Port Listening port of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this parameter is required when binding a CVM or ENI.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetPort(const int64_t& _port);
 
@@ -91,22 +95,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Unique ID of a CVM instance, which needs to be passed in when binding a CVM instance and can be obtained from the InstanceId field in the return of the DescribeInstances API.
-Note: Either InstanceId or EniIp must be passed in.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceId Unique ID of a CVM instance, which needs to be passed in when binding a CVM instance and can be obtained from the InstanceId field in the return of the DescribeInstances API.
-Note: Either InstanceId or EniIp must be passed in.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
+Note: either `InstanceId` or `EniIp` must be passed in.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return InstanceId Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
+Note: either `InstanceId` or `EniIp` must be passed in.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Unique ID of a CVM instance, which needs to be passed in when binding a CVM instance and can be obtained from the InstanceId field in the return of the DescribeInstances API.
-Note: Either InstanceId or EniIp must be passed in.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceId Unique ID of a CVM instance, which needs to be passed in when binding a CVM instance and can be obtained from the InstanceId field in the return of the DescribeInstances API.
-Note: Either InstanceId or EniIp must be passed in.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
+Note: either `InstanceId` or `EniIp` must be passed in.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param InstanceId Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
+Note: either `InstanceId` or `EniIp` must be passed in.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -117,14 +121,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
-                     * @return Weight Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
+                     * 获取The new forwarding weight of the real server. Value range: [0, 100]. Default: 10. This parameter takes priority over `Weight` in [`RsWeightRule`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#RsWeightRule). If it’s left empty, the value of `Weight` in `RsWeightRule` will be used.
+                     * @return Weight The new forwarding weight of the real server. Value range: [0, 100]. Default: 10. This parameter takes priority over `Weight` in [`RsWeightRule`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#RsWeightRule). If it’s left empty, the value of `Weight` in `RsWeightRule` will be used.
                      */
                     int64_t GetWeight() const;
 
                     /**
-                     * 设置Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
-                     * @param Weight Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
+                     * 设置The new forwarding weight of the real server. Value range: [0, 100]. Default: 10. This parameter takes priority over `Weight` in [`RsWeightRule`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#RsWeightRule). If it’s left empty, the value of `Weight` in `RsWeightRule` will be used.
+                     * @param Weight The new forwarding weight of the real server. Value range: [0, 100]. Default: 10. This parameter takes priority over `Weight` in [`RsWeightRule`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#RsWeightRule). If it’s left empty, the value of `Weight` in `RsWeightRule` will be used.
                      */
                     void SetWeight(const int64_t& _weight);
 
@@ -135,18 +139,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WeightHasBeenSet() const;
 
                     /**
-                     * 获取This parameter must be passed in when you bind an ENI, which represents the IP address of the ENI. The ENI has to be bound to a CVM instance first before it can be bound to a CLB instance. Note: Either InstanceId or EniIp must be passed in. To bind an ENI, you need to submit a ticket for application first.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EniIp This parameter must be passed in when you bind an ENI, which represents the IP address of the ENI. The ENI has to be bound to a CVM instance first before it can be bound to a CLB instance. Note: Either InstanceId or EniIp must be passed in. To bind an ENI, you need to submit a ticket for application first.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
+Note: either `InstanceId` or `EniIp` must be passed in. It is required when binding a dual-stack IPv6 CVM instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return EniIp It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
+Note: either `InstanceId` or `EniIp` must be passed in. It is required when binding a dual-stack IPv6 CVM instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetEniIp() const;
 
                     /**
-                     * 设置This parameter must be passed in when you bind an ENI, which represents the IP address of the ENI. The ENI has to be bound to a CVM instance first before it can be bound to a CLB instance. Note: Either InstanceId or EniIp must be passed in. To bind an ENI, you need to submit a ticket for application first.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EniIp This parameter must be passed in when you bind an ENI, which represents the IP address of the ENI. The ENI has to be bound to a CVM instance first before it can be bound to a CLB instance. Note: Either InstanceId or EniIp must be passed in. To bind an ENI, you need to submit a ticket for application first.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
+Note: either `InstanceId` or `EniIp` must be passed in. It is required when binding a dual-stack IPv6 CVM instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param EniIp It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
+Note: either `InstanceId` or `EniIp` must be passed in. It is required when binding a dual-stack IPv6 CVM instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetEniIp(const std::string& _eniIp);
 
@@ -160,7 +168,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Listening port of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this parameter is required when binding a CVM or ENI.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;
@@ -173,22 +182,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Unique ID of a CVM instance, which needs to be passed in when binding a CVM instance and can be obtained from the InstanceId field in the return of the DescribeInstances API.
-Note: Either InstanceId or EniIp must be passed in.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
+Note: either `InstanceId` or `EniIp` must be passed in.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
+                     * The new forwarding weight of the real server. Value range: [0, 100]. Default: 10. This parameter takes priority over `Weight` in [`RsWeightRule`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#RsWeightRule). If it’s left empty, the value of `Weight` in `RsWeightRule` will be used.
                      */
                     int64_t m_weight;
                     bool m_weightHasBeenSet;
 
                     /**
-                     * This parameter must be passed in when you bind an ENI, which represents the IP address of the ENI. The ENI has to be bound to a CVM instance first before it can be bound to a CLB instance. Note: Either InstanceId or EniIp must be passed in. To bind an ENI, you need to submit a ticket for application first.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
+Note: either `InstanceId` or `EniIp` must be passed in. It is required when binding a dual-stack IPv6 CVM instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_eniIp;
                     bool m_eniIpHasBeenSet;

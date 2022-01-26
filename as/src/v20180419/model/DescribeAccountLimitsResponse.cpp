@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::As::V20180419::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeAccountLimitsResponse::DescribeAccountLimitsResponse() :
@@ -34,20 +33,20 @@ DescribeAccountLimitsResponse::DescribeAccountLimitsResponse() :
 
 CoreInternalOutcome DescribeAccountLimitsResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -58,11 +57,11 @@ CoreInternalOutcome DescribeAccountLimitsResponse::Deserialize(const string &pay
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -70,7 +69,7 @@ CoreInternalOutcome DescribeAccountLimitsResponse::Deserialize(const string &pay
     {
         if (!rsp["MaxNumberOfLaunchConfigurations"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MaxNumberOfLaunchConfigurations` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MaxNumberOfLaunchConfigurations` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_maxNumberOfLaunchConfigurations = rsp["MaxNumberOfLaunchConfigurations"].GetInt64();
         m_maxNumberOfLaunchConfigurationsHasBeenSet = true;
@@ -80,7 +79,7 @@ CoreInternalOutcome DescribeAccountLimitsResponse::Deserialize(const string &pay
     {
         if (!rsp["NumberOfLaunchConfigurations"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `NumberOfLaunchConfigurations` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NumberOfLaunchConfigurations` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_numberOfLaunchConfigurations = rsp["NumberOfLaunchConfigurations"].GetInt64();
         m_numberOfLaunchConfigurationsHasBeenSet = true;
@@ -90,7 +89,7 @@ CoreInternalOutcome DescribeAccountLimitsResponse::Deserialize(const string &pay
     {
         if (!rsp["MaxNumberOfAutoScalingGroups"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MaxNumberOfAutoScalingGroups` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MaxNumberOfAutoScalingGroups` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_maxNumberOfAutoScalingGroups = rsp["MaxNumberOfAutoScalingGroups"].GetInt64();
         m_maxNumberOfAutoScalingGroupsHasBeenSet = true;
@@ -100,7 +99,7 @@ CoreInternalOutcome DescribeAccountLimitsResponse::Deserialize(const string &pay
     {
         if (!rsp["NumberOfAutoScalingGroups"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `NumberOfAutoScalingGroups` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NumberOfAutoScalingGroups` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_numberOfAutoScalingGroups = rsp["NumberOfAutoScalingGroups"].GetInt64();
         m_numberOfAutoScalingGroupsHasBeenSet = true;
@@ -108,6 +107,55 @@ CoreInternalOutcome DescribeAccountLimitsResponse::Deserialize(const string &pay
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeAccountLimitsResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_maxNumberOfLaunchConfigurationsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MaxNumberOfLaunchConfigurations";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_maxNumberOfLaunchConfigurations, allocator);
+    }
+
+    if (m_numberOfLaunchConfigurationsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NumberOfLaunchConfigurations";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_numberOfLaunchConfigurations, allocator);
+    }
+
+    if (m_maxNumberOfAutoScalingGroupsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MaxNumberOfAutoScalingGroups";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_maxNumberOfAutoScalingGroups, allocator);
+    }
+
+    if (m_numberOfAutoScalingGroupsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NumberOfAutoScalingGroups";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_numberOfAutoScalingGroups, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

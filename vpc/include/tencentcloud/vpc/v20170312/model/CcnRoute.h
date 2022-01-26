@@ -208,6 +208,78 @@ namespace TencentCloud
                      */
                     bool InstanceUinHasBeenSet() const;
 
+                    /**
+                     * 获取Additional status of the route
+                     * @return ExtraState Additional status of the route
+                     */
+                    std::string GetExtraState() const;
+
+                    /**
+                     * 设置Additional status of the route
+                     * @param ExtraState Additional status of the route
+                     */
+                    void SetExtraState(const std::string& _extraState);
+
+                    /**
+                     * 判断参数 ExtraState 是否已赋值
+                     * @return ExtraState 是否已赋值
+                     */
+                    bool ExtraStateHasBeenSet() const;
+
+                    /**
+                     * 获取Whether it is a dynamic route
+                     * @return IsBgp Whether it is a dynamic route
+                     */
+                    bool GetIsBgp() const;
+
+                    /**
+                     * 设置Whether it is a dynamic route
+                     * @param IsBgp Whether it is a dynamic route
+                     */
+                    void SetIsBgp(const bool& _isBgp);
+
+                    /**
+                     * 判断参数 IsBgp 是否已赋值
+                     * @return IsBgp 是否已赋值
+                     */
+                    bool IsBgpHasBeenSet() const;
+
+                    /**
+                     * 获取Route priority
+                     * @return RoutePriority Route priority
+                     */
+                    uint64_t GetRoutePriority() const;
+
+                    /**
+                     * 设置Route priority
+                     * @param RoutePriority Route priority
+                     */
+                    void SetRoutePriority(const uint64_t& _routePriority);
+
+                    /**
+                     * 判断参数 RoutePriority 是否已赋值
+                     * @return RoutePriority 是否已赋值
+                     */
+                    bool RoutePriorityHasBeenSet() const;
+
+                    /**
+                     * 获取Next hop port name (associated instance’s port name)
+                     * @return InstanceExtraName Next hop port name (associated instance’s port name)
+                     */
+                    std::string GetInstanceExtraName() const;
+
+                    /**
+                     * 设置Next hop port name (associated instance’s port name)
+                     * @param InstanceExtraName Next hop port name (associated instance’s port name)
+                     */
+                    void SetInstanceExtraName(const std::string& _instanceExtraName);
+
+                    /**
+                     * 判断参数 InstanceExtraName 是否已赋值
+                     * @return InstanceExtraName 是否已赋值
+                     */
+                    bool InstanceExtraNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -263,6 +335,30 @@ namespace TencentCloud
                      */
                     std::string m_instanceUin;
                     bool m_instanceUinHasBeenSet;
+
+                    /**
+                     * Additional status of the route
+                     */
+                    std::string m_extraState;
+                    bool m_extraStateHasBeenSet;
+
+                    /**
+                     * Whether it is a dynamic route
+                     */
+                    bool m_isBgp;
+                    bool m_isBgpHasBeenSet;
+
+                    /**
+                     * Route priority
+                     */
+                    uint64_t m_routePriority;
+                    bool m_routePriorityHasBeenSet;
+
+                    /**
+                     * Next hop port name (associated instance’s port name)
+                     */
+                    std::string m_instanceExtraName;
+                    bool m_instanceExtraNameHasBeenSet;
 
                 };
             }

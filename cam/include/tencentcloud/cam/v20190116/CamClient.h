@@ -47,6 +47,8 @@
 #include <tencentcloud/cam/v20190116/model/CreateSAMLProviderResponse.h>
 #include <tencentcloud/cam/v20190116/model/CreateServiceLinkedRoleRequest.h>
 #include <tencentcloud/cam/v20190116/model/CreateServiceLinkedRoleResponse.h>
+#include <tencentcloud/cam/v20190116/model/CreateUserSAMLConfigRequest.h>
+#include <tencentcloud/cam/v20190116/model/CreateUserSAMLConfigResponse.h>
 #include <tencentcloud/cam/v20190116/model/DeleteGroupRequest.h>
 #include <tencentcloud/cam/v20190116/model/DeleteGroupResponse.h>
 #include <tencentcloud/cam/v20190116/model/DeletePolicyRequest.h>
@@ -55,20 +57,36 @@
 #include <tencentcloud/cam/v20190116/model/DeletePolicyVersionResponse.h>
 #include <tencentcloud/cam/v20190116/model/DeleteRoleRequest.h>
 #include <tencentcloud/cam/v20190116/model/DeleteRoleResponse.h>
+#include <tencentcloud/cam/v20190116/model/DeleteRolePermissionsBoundaryRequest.h>
+#include <tencentcloud/cam/v20190116/model/DeleteRolePermissionsBoundaryResponse.h>
 #include <tencentcloud/cam/v20190116/model/DeleteSAMLProviderRequest.h>
 #include <tencentcloud/cam/v20190116/model/DeleteSAMLProviderResponse.h>
 #include <tencentcloud/cam/v20190116/model/DeleteServiceLinkedRoleRequest.h>
 #include <tencentcloud/cam/v20190116/model/DeleteServiceLinkedRoleResponse.h>
 #include <tencentcloud/cam/v20190116/model/DeleteUserRequest.h>
 #include <tencentcloud/cam/v20190116/model/DeleteUserResponse.h>
+#include <tencentcloud/cam/v20190116/model/DeleteUserPermissionsBoundaryRequest.h>
+#include <tencentcloud/cam/v20190116/model/DeleteUserPermissionsBoundaryResponse.h>
 #include <tencentcloud/cam/v20190116/model/DescribeRoleListRequest.h>
 #include <tencentcloud/cam/v20190116/model/DescribeRoleListResponse.h>
+#include <tencentcloud/cam/v20190116/model/DescribeSafeAuthFlagRequest.h>
+#include <tencentcloud/cam/v20190116/model/DescribeSafeAuthFlagResponse.h>
+#include <tencentcloud/cam/v20190116/model/DescribeSafeAuthFlagCollRequest.h>
+#include <tencentcloud/cam/v20190116/model/DescribeSafeAuthFlagCollResponse.h>
+#include <tencentcloud/cam/v20190116/model/DescribeSafeAuthFlagIntlRequest.h>
+#include <tencentcloud/cam/v20190116/model/DescribeSafeAuthFlagIntlResponse.h>
+#include <tencentcloud/cam/v20190116/model/DescribeSubAccountsRequest.h>
+#include <tencentcloud/cam/v20190116/model/DescribeSubAccountsResponse.h>
+#include <tencentcloud/cam/v20190116/model/DescribeUserSAMLConfigRequest.h>
+#include <tencentcloud/cam/v20190116/model/DescribeUserSAMLConfigResponse.h>
 #include <tencentcloud/cam/v20190116/model/DetachGroupPolicyRequest.h>
 #include <tencentcloud/cam/v20190116/model/DetachGroupPolicyResponse.h>
 #include <tencentcloud/cam/v20190116/model/DetachRolePolicyRequest.h>
 #include <tencentcloud/cam/v20190116/model/DetachRolePolicyResponse.h>
 #include <tencentcloud/cam/v20190116/model/DetachUserPolicyRequest.h>
 #include <tencentcloud/cam/v20190116/model/DetachUserPolicyResponse.h>
+#include <tencentcloud/cam/v20190116/model/GetAccountSummaryRequest.h>
+#include <tencentcloud/cam/v20190116/model/GetAccountSummaryResponse.h>
 #include <tencentcloud/cam/v20190116/model/GetCustomMFATokenInfoRequest.h>
 #include <tencentcloud/cam/v20190116/model/GetCustomMFATokenInfoResponse.h>
 #include <tencentcloud/cam/v20190116/model/GetGroupRequest.h>
@@ -81,6 +99,8 @@
 #include <tencentcloud/cam/v20190116/model/GetRoleResponse.h>
 #include <tencentcloud/cam/v20190116/model/GetSAMLProviderRequest.h>
 #include <tencentcloud/cam/v20190116/model/GetSAMLProviderResponse.h>
+#include <tencentcloud/cam/v20190116/model/GetSecurityLastUsedRequest.h>
+#include <tencentcloud/cam/v20190116/model/GetSecurityLastUsedResponse.h>
 #include <tencentcloud/cam/v20190116/model/GetServiceLinkedRoleDeletionStatusRequest.h>
 #include <tencentcloud/cam/v20190116/model/GetServiceLinkedRoleDeletionStatusResponse.h>
 #include <tencentcloud/cam/v20190116/model/GetUserRequest.h>
@@ -91,6 +111,8 @@
 #include <tencentcloud/cam/v20190116/model/ListAttachedGroupPoliciesResponse.h>
 #include <tencentcloud/cam/v20190116/model/ListAttachedRolePoliciesRequest.h>
 #include <tencentcloud/cam/v20190116/model/ListAttachedRolePoliciesResponse.h>
+#include <tencentcloud/cam/v20190116/model/ListAttachedUserAllPoliciesRequest.h>
+#include <tencentcloud/cam/v20190116/model/ListAttachedUserAllPoliciesResponse.h>
 #include <tencentcloud/cam/v20190116/model/ListAttachedUserPoliciesRequest.h>
 #include <tencentcloud/cam/v20190116/model/ListAttachedUserPoliciesResponse.h>
 #include <tencentcloud/cam/v20190116/model/ListCollaboratorsRequest.h>
@@ -111,6 +133,10 @@
 #include <tencentcloud/cam/v20190116/model/ListUsersResponse.h>
 #include <tencentcloud/cam/v20190116/model/ListUsersForGroupRequest.h>
 #include <tencentcloud/cam/v20190116/model/ListUsersForGroupResponse.h>
+#include <tencentcloud/cam/v20190116/model/PutRolePermissionsBoundaryRequest.h>
+#include <tencentcloud/cam/v20190116/model/PutRolePermissionsBoundaryResponse.h>
+#include <tencentcloud/cam/v20190116/model/PutUserPermissionsBoundaryRequest.h>
+#include <tencentcloud/cam/v20190116/model/PutUserPermissionsBoundaryResponse.h>
 #include <tencentcloud/cam/v20190116/model/RemoveUserFromGroupRequest.h>
 #include <tencentcloud/cam/v20190116/model/RemoveUserFromGroupResponse.h>
 #include <tencentcloud/cam/v20190116/model/SetDefaultPolicyVersionRequest.h>
@@ -131,6 +157,8 @@
 #include <tencentcloud/cam/v20190116/model/UpdateSAMLProviderResponse.h>
 #include <tencentcloud/cam/v20190116/model/UpdateUserRequest.h>
 #include <tencentcloud/cam/v20190116/model/UpdateUserResponse.h>
+#include <tencentcloud/cam/v20190116/model/UpdateUserSAMLConfigRequest.h>
+#include <tencentcloud/cam/v20190116/model/UpdateUserSAMLConfigResponse.h>
 
 
 namespace TencentCloud
@@ -145,168 +173,210 @@ namespace TencentCloud
                 CamClient(const Credential &credential, const std::string &region);
                 CamClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::AddUserResponse> AddUserOutcome;
+                typedef Outcome<Core::Error, Model::AddUserResponse> AddUserOutcome;
                 typedef std::future<AddUserOutcome> AddUserOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::AddUserRequest&, AddUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddUserAsyncHandler;
-                typedef Outcome<Error, Model::AddUserToGroupResponse> AddUserToGroupOutcome;
+                typedef Outcome<Core::Error, Model::AddUserToGroupResponse> AddUserToGroupOutcome;
                 typedef std::future<AddUserToGroupOutcome> AddUserToGroupOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::AddUserToGroupRequest&, AddUserToGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddUserToGroupAsyncHandler;
-                typedef Outcome<Error, Model::AttachGroupPolicyResponse> AttachGroupPolicyOutcome;
+                typedef Outcome<Core::Error, Model::AttachGroupPolicyResponse> AttachGroupPolicyOutcome;
                 typedef std::future<AttachGroupPolicyOutcome> AttachGroupPolicyOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::AttachGroupPolicyRequest&, AttachGroupPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AttachGroupPolicyAsyncHandler;
-                typedef Outcome<Error, Model::AttachRolePolicyResponse> AttachRolePolicyOutcome;
+                typedef Outcome<Core::Error, Model::AttachRolePolicyResponse> AttachRolePolicyOutcome;
                 typedef std::future<AttachRolePolicyOutcome> AttachRolePolicyOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::AttachRolePolicyRequest&, AttachRolePolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AttachRolePolicyAsyncHandler;
-                typedef Outcome<Error, Model::AttachUserPolicyResponse> AttachUserPolicyOutcome;
+                typedef Outcome<Core::Error, Model::AttachUserPolicyResponse> AttachUserPolicyOutcome;
                 typedef std::future<AttachUserPolicyOutcome> AttachUserPolicyOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::AttachUserPolicyRequest&, AttachUserPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AttachUserPolicyAsyncHandler;
-                typedef Outcome<Error, Model::ConsumeCustomMFATokenResponse> ConsumeCustomMFATokenOutcome;
+                typedef Outcome<Core::Error, Model::ConsumeCustomMFATokenResponse> ConsumeCustomMFATokenOutcome;
                 typedef std::future<ConsumeCustomMFATokenOutcome> ConsumeCustomMFATokenOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::ConsumeCustomMFATokenRequest&, ConsumeCustomMFATokenOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ConsumeCustomMFATokenAsyncHandler;
-                typedef Outcome<Error, Model::CreateGroupResponse> CreateGroupOutcome;
+                typedef Outcome<Core::Error, Model::CreateGroupResponse> CreateGroupOutcome;
                 typedef std::future<CreateGroupOutcome> CreateGroupOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::CreateGroupRequest&, CreateGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateGroupAsyncHandler;
-                typedef Outcome<Error, Model::CreatePolicyResponse> CreatePolicyOutcome;
+                typedef Outcome<Core::Error, Model::CreatePolicyResponse> CreatePolicyOutcome;
                 typedef std::future<CreatePolicyOutcome> CreatePolicyOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::CreatePolicyRequest&, CreatePolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePolicyAsyncHandler;
-                typedef Outcome<Error, Model::CreatePolicyVersionResponse> CreatePolicyVersionOutcome;
+                typedef Outcome<Core::Error, Model::CreatePolicyVersionResponse> CreatePolicyVersionOutcome;
                 typedef std::future<CreatePolicyVersionOutcome> CreatePolicyVersionOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::CreatePolicyVersionRequest&, CreatePolicyVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePolicyVersionAsyncHandler;
-                typedef Outcome<Error, Model::CreateRoleResponse> CreateRoleOutcome;
+                typedef Outcome<Core::Error, Model::CreateRoleResponse> CreateRoleOutcome;
                 typedef std::future<CreateRoleOutcome> CreateRoleOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::CreateRoleRequest&, CreateRoleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRoleAsyncHandler;
-                typedef Outcome<Error, Model::CreateSAMLProviderResponse> CreateSAMLProviderOutcome;
+                typedef Outcome<Core::Error, Model::CreateSAMLProviderResponse> CreateSAMLProviderOutcome;
                 typedef std::future<CreateSAMLProviderOutcome> CreateSAMLProviderOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::CreateSAMLProviderRequest&, CreateSAMLProviderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSAMLProviderAsyncHandler;
-                typedef Outcome<Error, Model::CreateServiceLinkedRoleResponse> CreateServiceLinkedRoleOutcome;
+                typedef Outcome<Core::Error, Model::CreateServiceLinkedRoleResponse> CreateServiceLinkedRoleOutcome;
                 typedef std::future<CreateServiceLinkedRoleOutcome> CreateServiceLinkedRoleOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::CreateServiceLinkedRoleRequest&, CreateServiceLinkedRoleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateServiceLinkedRoleAsyncHandler;
-                typedef Outcome<Error, Model::DeleteGroupResponse> DeleteGroupOutcome;
+                typedef Outcome<Core::Error, Model::CreateUserSAMLConfigResponse> CreateUserSAMLConfigOutcome;
+                typedef std::future<CreateUserSAMLConfigOutcome> CreateUserSAMLConfigOutcomeCallable;
+                typedef std::function<void(const CamClient*, const Model::CreateUserSAMLConfigRequest&, CreateUserSAMLConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateUserSAMLConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteGroupResponse> DeleteGroupOutcome;
                 typedef std::future<DeleteGroupOutcome> DeleteGroupOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::DeleteGroupRequest&, DeleteGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteGroupAsyncHandler;
-                typedef Outcome<Error, Model::DeletePolicyResponse> DeletePolicyOutcome;
+                typedef Outcome<Core::Error, Model::DeletePolicyResponse> DeletePolicyOutcome;
                 typedef std::future<DeletePolicyOutcome> DeletePolicyOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::DeletePolicyRequest&, DeletePolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeletePolicyAsyncHandler;
-                typedef Outcome<Error, Model::DeletePolicyVersionResponse> DeletePolicyVersionOutcome;
+                typedef Outcome<Core::Error, Model::DeletePolicyVersionResponse> DeletePolicyVersionOutcome;
                 typedef std::future<DeletePolicyVersionOutcome> DeletePolicyVersionOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::DeletePolicyVersionRequest&, DeletePolicyVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeletePolicyVersionAsyncHandler;
-                typedef Outcome<Error, Model::DeleteRoleResponse> DeleteRoleOutcome;
+                typedef Outcome<Core::Error, Model::DeleteRoleResponse> DeleteRoleOutcome;
                 typedef std::future<DeleteRoleOutcome> DeleteRoleOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::DeleteRoleRequest&, DeleteRoleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRoleAsyncHandler;
-                typedef Outcome<Error, Model::DeleteSAMLProviderResponse> DeleteSAMLProviderOutcome;
+                typedef Outcome<Core::Error, Model::DeleteRolePermissionsBoundaryResponse> DeleteRolePermissionsBoundaryOutcome;
+                typedef std::future<DeleteRolePermissionsBoundaryOutcome> DeleteRolePermissionsBoundaryOutcomeCallable;
+                typedef std::function<void(const CamClient*, const Model::DeleteRolePermissionsBoundaryRequest&, DeleteRolePermissionsBoundaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRolePermissionsBoundaryAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteSAMLProviderResponse> DeleteSAMLProviderOutcome;
                 typedef std::future<DeleteSAMLProviderOutcome> DeleteSAMLProviderOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::DeleteSAMLProviderRequest&, DeleteSAMLProviderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteSAMLProviderAsyncHandler;
-                typedef Outcome<Error, Model::DeleteServiceLinkedRoleResponse> DeleteServiceLinkedRoleOutcome;
+                typedef Outcome<Core::Error, Model::DeleteServiceLinkedRoleResponse> DeleteServiceLinkedRoleOutcome;
                 typedef std::future<DeleteServiceLinkedRoleOutcome> DeleteServiceLinkedRoleOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::DeleteServiceLinkedRoleRequest&, DeleteServiceLinkedRoleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteServiceLinkedRoleAsyncHandler;
-                typedef Outcome<Error, Model::DeleteUserResponse> DeleteUserOutcome;
+                typedef Outcome<Core::Error, Model::DeleteUserResponse> DeleteUserOutcome;
                 typedef std::future<DeleteUserOutcome> DeleteUserOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::DeleteUserRequest&, DeleteUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteUserAsyncHandler;
-                typedef Outcome<Error, Model::DescribeRoleListResponse> DescribeRoleListOutcome;
+                typedef Outcome<Core::Error, Model::DeleteUserPermissionsBoundaryResponse> DeleteUserPermissionsBoundaryOutcome;
+                typedef std::future<DeleteUserPermissionsBoundaryOutcome> DeleteUserPermissionsBoundaryOutcomeCallable;
+                typedef std::function<void(const CamClient*, const Model::DeleteUserPermissionsBoundaryRequest&, DeleteUserPermissionsBoundaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteUserPermissionsBoundaryAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRoleListResponse> DescribeRoleListOutcome;
                 typedef std::future<DescribeRoleListOutcome> DescribeRoleListOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::DescribeRoleListRequest&, DescribeRoleListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRoleListAsyncHandler;
-                typedef Outcome<Error, Model::DetachGroupPolicyResponse> DetachGroupPolicyOutcome;
+                typedef Outcome<Core::Error, Model::DescribeSafeAuthFlagResponse> DescribeSafeAuthFlagOutcome;
+                typedef std::future<DescribeSafeAuthFlagOutcome> DescribeSafeAuthFlagOutcomeCallable;
+                typedef std::function<void(const CamClient*, const Model::DescribeSafeAuthFlagRequest&, DescribeSafeAuthFlagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSafeAuthFlagAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSafeAuthFlagCollResponse> DescribeSafeAuthFlagCollOutcome;
+                typedef std::future<DescribeSafeAuthFlagCollOutcome> DescribeSafeAuthFlagCollOutcomeCallable;
+                typedef std::function<void(const CamClient*, const Model::DescribeSafeAuthFlagCollRequest&, DescribeSafeAuthFlagCollOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSafeAuthFlagCollAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSafeAuthFlagIntlResponse> DescribeSafeAuthFlagIntlOutcome;
+                typedef std::future<DescribeSafeAuthFlagIntlOutcome> DescribeSafeAuthFlagIntlOutcomeCallable;
+                typedef std::function<void(const CamClient*, const Model::DescribeSafeAuthFlagIntlRequest&, DescribeSafeAuthFlagIntlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSafeAuthFlagIntlAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSubAccountsResponse> DescribeSubAccountsOutcome;
+                typedef std::future<DescribeSubAccountsOutcome> DescribeSubAccountsOutcomeCallable;
+                typedef std::function<void(const CamClient*, const Model::DescribeSubAccountsRequest&, DescribeSubAccountsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSubAccountsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeUserSAMLConfigResponse> DescribeUserSAMLConfigOutcome;
+                typedef std::future<DescribeUserSAMLConfigOutcome> DescribeUserSAMLConfigOutcomeCallable;
+                typedef std::function<void(const CamClient*, const Model::DescribeUserSAMLConfigRequest&, DescribeUserSAMLConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUserSAMLConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::DetachGroupPolicyResponse> DetachGroupPolicyOutcome;
                 typedef std::future<DetachGroupPolicyOutcome> DetachGroupPolicyOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::DetachGroupPolicyRequest&, DetachGroupPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DetachGroupPolicyAsyncHandler;
-                typedef Outcome<Error, Model::DetachRolePolicyResponse> DetachRolePolicyOutcome;
+                typedef Outcome<Core::Error, Model::DetachRolePolicyResponse> DetachRolePolicyOutcome;
                 typedef std::future<DetachRolePolicyOutcome> DetachRolePolicyOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::DetachRolePolicyRequest&, DetachRolePolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DetachRolePolicyAsyncHandler;
-                typedef Outcome<Error, Model::DetachUserPolicyResponse> DetachUserPolicyOutcome;
+                typedef Outcome<Core::Error, Model::DetachUserPolicyResponse> DetachUserPolicyOutcome;
                 typedef std::future<DetachUserPolicyOutcome> DetachUserPolicyOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::DetachUserPolicyRequest&, DetachUserPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DetachUserPolicyAsyncHandler;
-                typedef Outcome<Error, Model::GetCustomMFATokenInfoResponse> GetCustomMFATokenInfoOutcome;
+                typedef Outcome<Core::Error, Model::GetAccountSummaryResponse> GetAccountSummaryOutcome;
+                typedef std::future<GetAccountSummaryOutcome> GetAccountSummaryOutcomeCallable;
+                typedef std::function<void(const CamClient*, const Model::GetAccountSummaryRequest&, GetAccountSummaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetAccountSummaryAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetCustomMFATokenInfoResponse> GetCustomMFATokenInfoOutcome;
                 typedef std::future<GetCustomMFATokenInfoOutcome> GetCustomMFATokenInfoOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::GetCustomMFATokenInfoRequest&, GetCustomMFATokenInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetCustomMFATokenInfoAsyncHandler;
-                typedef Outcome<Error, Model::GetGroupResponse> GetGroupOutcome;
+                typedef Outcome<Core::Error, Model::GetGroupResponse> GetGroupOutcome;
                 typedef std::future<GetGroupOutcome> GetGroupOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::GetGroupRequest&, GetGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetGroupAsyncHandler;
-                typedef Outcome<Error, Model::GetPolicyResponse> GetPolicyOutcome;
+                typedef Outcome<Core::Error, Model::GetPolicyResponse> GetPolicyOutcome;
                 typedef std::future<GetPolicyOutcome> GetPolicyOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::GetPolicyRequest&, GetPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetPolicyAsyncHandler;
-                typedef Outcome<Error, Model::GetPolicyVersionResponse> GetPolicyVersionOutcome;
+                typedef Outcome<Core::Error, Model::GetPolicyVersionResponse> GetPolicyVersionOutcome;
                 typedef std::future<GetPolicyVersionOutcome> GetPolicyVersionOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::GetPolicyVersionRequest&, GetPolicyVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetPolicyVersionAsyncHandler;
-                typedef Outcome<Error, Model::GetRoleResponse> GetRoleOutcome;
+                typedef Outcome<Core::Error, Model::GetRoleResponse> GetRoleOutcome;
                 typedef std::future<GetRoleOutcome> GetRoleOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::GetRoleRequest&, GetRoleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetRoleAsyncHandler;
-                typedef Outcome<Error, Model::GetSAMLProviderResponse> GetSAMLProviderOutcome;
+                typedef Outcome<Core::Error, Model::GetSAMLProviderResponse> GetSAMLProviderOutcome;
                 typedef std::future<GetSAMLProviderOutcome> GetSAMLProviderOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::GetSAMLProviderRequest&, GetSAMLProviderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetSAMLProviderAsyncHandler;
-                typedef Outcome<Error, Model::GetServiceLinkedRoleDeletionStatusResponse> GetServiceLinkedRoleDeletionStatusOutcome;
+                typedef Outcome<Core::Error, Model::GetSecurityLastUsedResponse> GetSecurityLastUsedOutcome;
+                typedef std::future<GetSecurityLastUsedOutcome> GetSecurityLastUsedOutcomeCallable;
+                typedef std::function<void(const CamClient*, const Model::GetSecurityLastUsedRequest&, GetSecurityLastUsedOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetSecurityLastUsedAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetServiceLinkedRoleDeletionStatusResponse> GetServiceLinkedRoleDeletionStatusOutcome;
                 typedef std::future<GetServiceLinkedRoleDeletionStatusOutcome> GetServiceLinkedRoleDeletionStatusOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::GetServiceLinkedRoleDeletionStatusRequest&, GetServiceLinkedRoleDeletionStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetServiceLinkedRoleDeletionStatusAsyncHandler;
-                typedef Outcome<Error, Model::GetUserResponse> GetUserOutcome;
+                typedef Outcome<Core::Error, Model::GetUserResponse> GetUserOutcome;
                 typedef std::future<GetUserOutcome> GetUserOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::GetUserRequest&, GetUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetUserAsyncHandler;
-                typedef Outcome<Error, Model::ListAccessKeysResponse> ListAccessKeysOutcome;
+                typedef Outcome<Core::Error, Model::ListAccessKeysResponse> ListAccessKeysOutcome;
                 typedef std::future<ListAccessKeysOutcome> ListAccessKeysOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::ListAccessKeysRequest&, ListAccessKeysOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListAccessKeysAsyncHandler;
-                typedef Outcome<Error, Model::ListAttachedGroupPoliciesResponse> ListAttachedGroupPoliciesOutcome;
+                typedef Outcome<Core::Error, Model::ListAttachedGroupPoliciesResponse> ListAttachedGroupPoliciesOutcome;
                 typedef std::future<ListAttachedGroupPoliciesOutcome> ListAttachedGroupPoliciesOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::ListAttachedGroupPoliciesRequest&, ListAttachedGroupPoliciesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListAttachedGroupPoliciesAsyncHandler;
-                typedef Outcome<Error, Model::ListAttachedRolePoliciesResponse> ListAttachedRolePoliciesOutcome;
+                typedef Outcome<Core::Error, Model::ListAttachedRolePoliciesResponse> ListAttachedRolePoliciesOutcome;
                 typedef std::future<ListAttachedRolePoliciesOutcome> ListAttachedRolePoliciesOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::ListAttachedRolePoliciesRequest&, ListAttachedRolePoliciesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListAttachedRolePoliciesAsyncHandler;
-                typedef Outcome<Error, Model::ListAttachedUserPoliciesResponse> ListAttachedUserPoliciesOutcome;
+                typedef Outcome<Core::Error, Model::ListAttachedUserAllPoliciesResponse> ListAttachedUserAllPoliciesOutcome;
+                typedef std::future<ListAttachedUserAllPoliciesOutcome> ListAttachedUserAllPoliciesOutcomeCallable;
+                typedef std::function<void(const CamClient*, const Model::ListAttachedUserAllPoliciesRequest&, ListAttachedUserAllPoliciesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListAttachedUserAllPoliciesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ListAttachedUserPoliciesResponse> ListAttachedUserPoliciesOutcome;
                 typedef std::future<ListAttachedUserPoliciesOutcome> ListAttachedUserPoliciesOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::ListAttachedUserPoliciesRequest&, ListAttachedUserPoliciesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListAttachedUserPoliciesAsyncHandler;
-                typedef Outcome<Error, Model::ListCollaboratorsResponse> ListCollaboratorsOutcome;
+                typedef Outcome<Core::Error, Model::ListCollaboratorsResponse> ListCollaboratorsOutcome;
                 typedef std::future<ListCollaboratorsOutcome> ListCollaboratorsOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::ListCollaboratorsRequest&, ListCollaboratorsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListCollaboratorsAsyncHandler;
-                typedef Outcome<Error, Model::ListEntitiesForPolicyResponse> ListEntitiesForPolicyOutcome;
+                typedef Outcome<Core::Error, Model::ListEntitiesForPolicyResponse> ListEntitiesForPolicyOutcome;
                 typedef std::future<ListEntitiesForPolicyOutcome> ListEntitiesForPolicyOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::ListEntitiesForPolicyRequest&, ListEntitiesForPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListEntitiesForPolicyAsyncHandler;
-                typedef Outcome<Error, Model::ListGroupsResponse> ListGroupsOutcome;
+                typedef Outcome<Core::Error, Model::ListGroupsResponse> ListGroupsOutcome;
                 typedef std::future<ListGroupsOutcome> ListGroupsOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::ListGroupsRequest&, ListGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListGroupsAsyncHandler;
-                typedef Outcome<Error, Model::ListGroupsForUserResponse> ListGroupsForUserOutcome;
+                typedef Outcome<Core::Error, Model::ListGroupsForUserResponse> ListGroupsForUserOutcome;
                 typedef std::future<ListGroupsForUserOutcome> ListGroupsForUserOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::ListGroupsForUserRequest&, ListGroupsForUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListGroupsForUserAsyncHandler;
-                typedef Outcome<Error, Model::ListPoliciesResponse> ListPoliciesOutcome;
+                typedef Outcome<Core::Error, Model::ListPoliciesResponse> ListPoliciesOutcome;
                 typedef std::future<ListPoliciesOutcome> ListPoliciesOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::ListPoliciesRequest&, ListPoliciesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListPoliciesAsyncHandler;
-                typedef Outcome<Error, Model::ListPolicyVersionsResponse> ListPolicyVersionsOutcome;
+                typedef Outcome<Core::Error, Model::ListPolicyVersionsResponse> ListPolicyVersionsOutcome;
                 typedef std::future<ListPolicyVersionsOutcome> ListPolicyVersionsOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::ListPolicyVersionsRequest&, ListPolicyVersionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListPolicyVersionsAsyncHandler;
-                typedef Outcome<Error, Model::ListSAMLProvidersResponse> ListSAMLProvidersOutcome;
+                typedef Outcome<Core::Error, Model::ListSAMLProvidersResponse> ListSAMLProvidersOutcome;
                 typedef std::future<ListSAMLProvidersOutcome> ListSAMLProvidersOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::ListSAMLProvidersRequest&, ListSAMLProvidersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListSAMLProvidersAsyncHandler;
-                typedef Outcome<Error, Model::ListUsersResponse> ListUsersOutcome;
+                typedef Outcome<Core::Error, Model::ListUsersResponse> ListUsersOutcome;
                 typedef std::future<ListUsersOutcome> ListUsersOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::ListUsersRequest&, ListUsersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListUsersAsyncHandler;
-                typedef Outcome<Error, Model::ListUsersForGroupResponse> ListUsersForGroupOutcome;
+                typedef Outcome<Core::Error, Model::ListUsersForGroupResponse> ListUsersForGroupOutcome;
                 typedef std::future<ListUsersForGroupOutcome> ListUsersForGroupOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::ListUsersForGroupRequest&, ListUsersForGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListUsersForGroupAsyncHandler;
-                typedef Outcome<Error, Model::RemoveUserFromGroupResponse> RemoveUserFromGroupOutcome;
+                typedef Outcome<Core::Error, Model::PutRolePermissionsBoundaryResponse> PutRolePermissionsBoundaryOutcome;
+                typedef std::future<PutRolePermissionsBoundaryOutcome> PutRolePermissionsBoundaryOutcomeCallable;
+                typedef std::function<void(const CamClient*, const Model::PutRolePermissionsBoundaryRequest&, PutRolePermissionsBoundaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PutRolePermissionsBoundaryAsyncHandler;
+                typedef Outcome<Core::Error, Model::PutUserPermissionsBoundaryResponse> PutUserPermissionsBoundaryOutcome;
+                typedef std::future<PutUserPermissionsBoundaryOutcome> PutUserPermissionsBoundaryOutcomeCallable;
+                typedef std::function<void(const CamClient*, const Model::PutUserPermissionsBoundaryRequest&, PutUserPermissionsBoundaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PutUserPermissionsBoundaryAsyncHandler;
+                typedef Outcome<Core::Error, Model::RemoveUserFromGroupResponse> RemoveUserFromGroupOutcome;
                 typedef std::future<RemoveUserFromGroupOutcome> RemoveUserFromGroupOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::RemoveUserFromGroupRequest&, RemoveUserFromGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RemoveUserFromGroupAsyncHandler;
-                typedef Outcome<Error, Model::SetDefaultPolicyVersionResponse> SetDefaultPolicyVersionOutcome;
+                typedef Outcome<Core::Error, Model::SetDefaultPolicyVersionResponse> SetDefaultPolicyVersionOutcome;
                 typedef std::future<SetDefaultPolicyVersionOutcome> SetDefaultPolicyVersionOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::SetDefaultPolicyVersionRequest&, SetDefaultPolicyVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetDefaultPolicyVersionAsyncHandler;
-                typedef Outcome<Error, Model::SetMfaFlagResponse> SetMfaFlagOutcome;
+                typedef Outcome<Core::Error, Model::SetMfaFlagResponse> SetMfaFlagOutcome;
                 typedef std::future<SetMfaFlagOutcome> SetMfaFlagOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::SetMfaFlagRequest&, SetMfaFlagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetMfaFlagAsyncHandler;
-                typedef Outcome<Error, Model::UpdateAssumeRolePolicyResponse> UpdateAssumeRolePolicyOutcome;
+                typedef Outcome<Core::Error, Model::UpdateAssumeRolePolicyResponse> UpdateAssumeRolePolicyOutcome;
                 typedef std::future<UpdateAssumeRolePolicyOutcome> UpdateAssumeRolePolicyOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::UpdateAssumeRolePolicyRequest&, UpdateAssumeRolePolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateAssumeRolePolicyAsyncHandler;
-                typedef Outcome<Error, Model::UpdateGroupResponse> UpdateGroupOutcome;
+                typedef Outcome<Core::Error, Model::UpdateGroupResponse> UpdateGroupOutcome;
                 typedef std::future<UpdateGroupOutcome> UpdateGroupOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::UpdateGroupRequest&, UpdateGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateGroupAsyncHandler;
-                typedef Outcome<Error, Model::UpdatePolicyResponse> UpdatePolicyOutcome;
+                typedef Outcome<Core::Error, Model::UpdatePolicyResponse> UpdatePolicyOutcome;
                 typedef std::future<UpdatePolicyOutcome> UpdatePolicyOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::UpdatePolicyRequest&, UpdatePolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdatePolicyAsyncHandler;
-                typedef Outcome<Error, Model::UpdateRoleConsoleLoginResponse> UpdateRoleConsoleLoginOutcome;
+                typedef Outcome<Core::Error, Model::UpdateRoleConsoleLoginResponse> UpdateRoleConsoleLoginOutcome;
                 typedef std::future<UpdateRoleConsoleLoginOutcome> UpdateRoleConsoleLoginOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::UpdateRoleConsoleLoginRequest&, UpdateRoleConsoleLoginOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateRoleConsoleLoginAsyncHandler;
-                typedef Outcome<Error, Model::UpdateRoleDescriptionResponse> UpdateRoleDescriptionOutcome;
+                typedef Outcome<Core::Error, Model::UpdateRoleDescriptionResponse> UpdateRoleDescriptionOutcome;
                 typedef std::future<UpdateRoleDescriptionOutcome> UpdateRoleDescriptionOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::UpdateRoleDescriptionRequest&, UpdateRoleDescriptionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateRoleDescriptionAsyncHandler;
-                typedef Outcome<Error, Model::UpdateSAMLProviderResponse> UpdateSAMLProviderOutcome;
+                typedef Outcome<Core::Error, Model::UpdateSAMLProviderResponse> UpdateSAMLProviderOutcome;
                 typedef std::future<UpdateSAMLProviderOutcome> UpdateSAMLProviderOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::UpdateSAMLProviderRequest&, UpdateSAMLProviderOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateSAMLProviderAsyncHandler;
-                typedef Outcome<Error, Model::UpdateUserResponse> UpdateUserOutcome;
+                typedef Outcome<Core::Error, Model::UpdateUserResponse> UpdateUserOutcome;
                 typedef std::future<UpdateUserOutcome> UpdateUserOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::UpdateUserRequest&, UpdateUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateUserAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateUserSAMLConfigResponse> UpdateUserSAMLConfigOutcome;
+                typedef std::future<UpdateUserSAMLConfigOutcome> UpdateUserSAMLConfigOutcomeCallable;
+                typedef std::function<void(const CamClient*, const Model::UpdateUserSAMLConfigRequest&, UpdateUserSAMLConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateUserSAMLConfigAsyncHandler;
 
 
 
@@ -419,6 +489,15 @@ namespace TencentCloud
                 CreateServiceLinkedRoleOutcomeCallable CreateServiceLinkedRoleCallable(const Model::CreateServiceLinkedRoleRequest& request);
 
                 /**
+                 *This API is used to create user SAML configurations.
+                 * @param req CreateUserSAMLConfigRequest
+                 * @return CreateUserSAMLConfigOutcome
+                 */
+                CreateUserSAMLConfigOutcome CreateUserSAMLConfig(const Model::CreateUserSAMLConfigRequest &request);
+                void CreateUserSAMLConfigAsync(const Model::CreateUserSAMLConfigRequest& request, const CreateUserSAMLConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateUserSAMLConfigOutcomeCallable CreateUserSAMLConfigCallable(const Model::CreateUserSAMLConfigRequest& request);
+
+                /**
                  *This API is used to delete a user group.
                  * @param req DeleteGroupRequest
                  * @return DeleteGroupOutcome
@@ -455,6 +534,15 @@ namespace TencentCloud
                 DeleteRoleOutcomeCallable DeleteRoleCallable(const Model::DeleteRoleRequest& request);
 
                 /**
+                 *This API is used to delete a role permission boundary.
+                 * @param req DeleteRolePermissionsBoundaryRequest
+                 * @return DeleteRolePermissionsBoundaryOutcome
+                 */
+                DeleteRolePermissionsBoundaryOutcome DeleteRolePermissionsBoundary(const Model::DeleteRolePermissionsBoundaryRequest &request);
+                void DeleteRolePermissionsBoundaryAsync(const Model::DeleteRolePermissionsBoundaryRequest& request, const DeleteRolePermissionsBoundaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteRolePermissionsBoundaryOutcomeCallable DeleteRolePermissionsBoundaryCallable(const Model::DeleteRolePermissionsBoundaryRequest& request);
+
+                /**
                  *This API is used to delete a SAML identity provider.
                  * @param req DeleteSAMLProviderRequest
                  * @return DeleteSAMLProviderOutcome
@@ -482,6 +570,15 @@ namespace TencentCloud
                 DeleteUserOutcomeCallable DeleteUserCallable(const Model::DeleteUserRequest& request);
 
                 /**
+                 *This API is used to delete a user permission boundary.
+                 * @param req DeleteUserPermissionsBoundaryRequest
+                 * @return DeleteUserPermissionsBoundaryOutcome
+                 */
+                DeleteUserPermissionsBoundaryOutcome DeleteUserPermissionsBoundary(const Model::DeleteUserPermissionsBoundaryRequest &request);
+                void DeleteUserPermissionsBoundaryAsync(const Model::DeleteUserPermissionsBoundaryRequest& request, const DeleteUserPermissionsBoundaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteUserPermissionsBoundaryOutcomeCallable DeleteUserPermissionsBoundaryCallable(const Model::DeleteUserPermissionsBoundaryRequest& request);
+
+                /**
                  *This API (DescribeRoleList) is used to get the role list under the account.
                  * @param req DescribeRoleListRequest
                  * @return DescribeRoleListOutcome
@@ -489,6 +586,51 @@ namespace TencentCloud
                 DescribeRoleListOutcome DescribeRoleList(const Model::DescribeRoleListRequest &request);
                 void DescribeRoleListAsync(const Model::DescribeRoleListRequest& request, const DescribeRoleListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeRoleListOutcomeCallable DescribeRoleListCallable(const Model::DescribeRoleListRequest& request);
+
+                /**
+                 *This API is used to query security settings.
+                 * @param req DescribeSafeAuthFlagRequest
+                 * @return DescribeSafeAuthFlagOutcome
+                 */
+                DescribeSafeAuthFlagOutcome DescribeSafeAuthFlag(const Model::DescribeSafeAuthFlagRequest &request);
+                void DescribeSafeAuthFlagAsync(const Model::DescribeSafeAuthFlagRequest& request, const DescribeSafeAuthFlagAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSafeAuthFlagOutcomeCallable DescribeSafeAuthFlagCallable(const Model::DescribeSafeAuthFlagRequest& request);
+
+                /**
+                 *This API is used to query security settings.
+                 * @param req DescribeSafeAuthFlagCollRequest
+                 * @return DescribeSafeAuthFlagCollOutcome
+                 */
+                DescribeSafeAuthFlagCollOutcome DescribeSafeAuthFlagColl(const Model::DescribeSafeAuthFlagCollRequest &request);
+                void DescribeSafeAuthFlagCollAsync(const Model::DescribeSafeAuthFlagCollRequest& request, const DescribeSafeAuthFlagCollAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSafeAuthFlagCollOutcomeCallable DescribeSafeAuthFlagCollCallable(const Model::DescribeSafeAuthFlagCollRequest& request);
+
+                /**
+                 *This API is used to query security settings.
+                 * @param req DescribeSafeAuthFlagIntlRequest
+                 * @return DescribeSafeAuthFlagIntlOutcome
+                 */
+                DescribeSafeAuthFlagIntlOutcome DescribeSafeAuthFlagIntl(const Model::DescribeSafeAuthFlagIntlRequest &request);
+                void DescribeSafeAuthFlagIntlAsync(const Model::DescribeSafeAuthFlagIntlRequest& request, const DescribeSafeAuthFlagIntlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSafeAuthFlagIntlOutcomeCallable DescribeSafeAuthFlagIntlCallable(const Model::DescribeSafeAuthFlagIntlRequest& request);
+
+                /**
+                 *This API is used to query sub-users through the sub-user UIN list.
+                 * @param req DescribeSubAccountsRequest
+                 * @return DescribeSubAccountsOutcome
+                 */
+                DescribeSubAccountsOutcome DescribeSubAccounts(const Model::DescribeSubAccountsRequest &request);
+                void DescribeSubAccountsAsync(const Model::DescribeSubAccountsRequest& request, const DescribeSubAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSubAccountsOutcomeCallable DescribeSubAccountsCallable(const Model::DescribeSubAccountsRequest& request);
+
+                /**
+                 *This API is used to query user SAML configurations.
+                 * @param req DescribeUserSAMLConfigRequest
+                 * @return DescribeUserSAMLConfigOutcome
+                 */
+                DescribeUserSAMLConfigOutcome DescribeUserSAMLConfig(const Model::DescribeUserSAMLConfigRequest &request);
+                void DescribeUserSAMLConfigAsync(const Model::DescribeUserSAMLConfigRequest& request, const DescribeUserSAMLConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeUserSAMLConfigOutcomeCallable DescribeUserSAMLConfigCallable(const Model::DescribeUserSAMLConfigRequest& request);
 
                 /**
                  *This API (DetachGroupPolicy) is used to unassociate a policy and a user group.
@@ -516,6 +658,15 @@ namespace TencentCloud
                 DetachUserPolicyOutcome DetachUserPolicy(const Model::DetachUserPolicyRequest &request);
                 void DetachUserPolicyAsync(const Model::DetachUserPolicyRequest& request, const DetachUserPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DetachUserPolicyOutcomeCallable DetachUserPolicyCallable(const Model::DetachUserPolicyRequest& request);
+
+                /**
+                 *This API is used to query account summary. 
+                 * @param req GetAccountSummaryRequest
+                 * @return GetAccountSummaryOutcome
+                 */
+                GetAccountSummaryOutcome GetAccountSummary(const Model::GetAccountSummaryRequest &request);
+                void GetAccountSummaryAsync(const Model::GetAccountSummaryRequest& request, const GetAccountSummaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetAccountSummaryOutcomeCallable GetAccountSummaryCallable(const Model::GetAccountSummaryRequest& request);
 
                 /**
                  *This API is used to get information associated with a custom multi-factor Token
@@ -572,6 +723,15 @@ namespace TencentCloud
                 GetSAMLProviderOutcomeCallable GetSAMLProviderCallable(const Model::GetSAMLProviderRequest& request);
 
                 /**
+                 *This API is used to get a key’s recent usage details.
+                 * @param req GetSecurityLastUsedRequest
+                 * @return GetSecurityLastUsedOutcome
+                 */
+                GetSecurityLastUsedOutcome GetSecurityLastUsed(const Model::GetSecurityLastUsedRequest &request);
+                void GetSecurityLastUsedAsync(const Model::GetSecurityLastUsedRequest& request, const GetSecurityLastUsedAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetSecurityLastUsedOutcomeCallable GetSecurityLastUsedCallable(const Model::GetSecurityLastUsedRequest& request);
+
+                /**
                  *This API is used to get the status of the service-linked role deletion based on the `TaskId`
                  * @param req GetServiceLinkedRoleDeletionStatusRequest
                  * @return GetServiceLinkedRoleDeletionStatusOutcome
@@ -615,6 +775,15 @@ namespace TencentCloud
                 ListAttachedRolePoliciesOutcome ListAttachedRolePolicies(const Model::ListAttachedRolePoliciesRequest &request);
                 void ListAttachedRolePoliciesAsync(const Model::ListAttachedRolePoliciesRequest& request, const ListAttachedRolePoliciesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ListAttachedRolePoliciesOutcomeCallable ListAttachedRolePoliciesCallable(const Model::ListAttachedRolePoliciesRequest& request);
+
+                /**
+                 *This API is used to list policies associated with the user (including those inherited from the user group).
+                 * @param req ListAttachedUserAllPoliciesRequest
+                 * @return ListAttachedUserAllPoliciesOutcome
+                 */
+                ListAttachedUserAllPoliciesOutcome ListAttachedUserAllPolicies(const Model::ListAttachedUserAllPoliciesRequest &request);
+                void ListAttachedUserAllPoliciesAsync(const Model::ListAttachedUserAllPoliciesRequest& request, const ListAttachedUserAllPoliciesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListAttachedUserAllPoliciesOutcomeCallable ListAttachedUserAllPoliciesCallable(const Model::ListAttachedUserAllPoliciesRequest& request);
 
                 /**
                  *This API (ListAttachedUserPolicies) is used to query the list of policies associated with a sub-account.
@@ -707,6 +876,24 @@ namespace TencentCloud
                 ListUsersForGroupOutcomeCallable ListUsersForGroupCallable(const Model::ListUsersForGroupRequest& request);
 
                 /**
+                 *This API is used to set a role permission boundary.
+                 * @param req PutRolePermissionsBoundaryRequest
+                 * @return PutRolePermissionsBoundaryOutcome
+                 */
+                PutRolePermissionsBoundaryOutcome PutRolePermissionsBoundary(const Model::PutRolePermissionsBoundaryRequest &request);
+                void PutRolePermissionsBoundaryAsync(const Model::PutRolePermissionsBoundaryRequest& request, const PutRolePermissionsBoundaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                PutRolePermissionsBoundaryOutcomeCallable PutRolePermissionsBoundaryCallable(const Model::PutRolePermissionsBoundaryRequest& request);
+
+                /**
+                 *This API is used to set a user permission boundary.
+                 * @param req PutUserPermissionsBoundaryRequest
+                 * @return PutUserPermissionsBoundaryOutcome
+                 */
+                PutUserPermissionsBoundaryOutcome PutUserPermissionsBoundary(const Model::PutUserPermissionsBoundaryRequest &request);
+                void PutUserPermissionsBoundaryAsync(const Model::PutUserPermissionsBoundaryRequest& request, const PutUserPermissionsBoundaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                PutUserPermissionsBoundaryOutcomeCallable PutUserPermissionsBoundaryCallable(const Model::PutUserPermissionsBoundaryRequest& request);
+
+                /**
                  *This API is used to delete users from a user group.
                  * @param req RemoveUserFromGroupRequest
                  * @return RemoveUserFromGroupOutcome
@@ -762,7 +949,7 @@ This API will update the default version of an existing policy instead of creati
                 UpdatePolicyOutcomeCallable UpdatePolicyCallable(const Model::UpdatePolicyRequest& request);
 
                 /**
-                 *This API is used to modify a role’s login permissions.
+                 *This API is used to modify a role's login permissions.
                  * @param req UpdateRoleConsoleLoginRequest
                  * @return UpdateRoleConsoleLoginOutcome
                  */
@@ -796,6 +983,15 @@ This API will update the default version of an existing policy instead of creati
                 UpdateUserOutcome UpdateUser(const Model::UpdateUserRequest &request);
                 void UpdateUserAsync(const Model::UpdateUserRequest& request, const UpdateUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UpdateUserOutcomeCallable UpdateUserCallable(const Model::UpdateUserRequest& request);
+
+                /**
+                 *This API is used to modify user SAML configurations.
+                 * @param req UpdateUserSAMLConfigRequest
+                 * @return UpdateUserSAMLConfigOutcome
+                 */
+                UpdateUserSAMLConfigOutcome UpdateUserSAMLConfig(const Model::UpdateUserSAMLConfigRequest &request);
+                void UpdateUserSAMLConfigAsync(const Model::UpdateUserSAMLConfigRequest& request, const UpdateUserSAMLConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateUserSAMLConfigOutcomeCallable UpdateUserSAMLConfigCallable(const Model::UpdateUserSAMLConfigRequest& request);
 
             };
         }

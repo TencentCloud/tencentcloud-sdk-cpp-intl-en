@@ -66,14 +66,14 @@ namespace TencentCloud
                     bool BusinessCodeNameHasBeenSet() const;
 
                     /**
-                     * 获取Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, “-” is returned.
-                     * @return ProductCodeName Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, “-” is returned.
+                     * 获取Subproduct name, which is the subcategory of a Tencent Cloud product, such as CVM-Standard S1. If no subproduct name can be obtained, `-` is returned.
+                     * @return ProductCodeName Subproduct name, which is the subcategory of a Tencent Cloud product, such as CVM-Standard S1. If no subproduct name can be obtained, `-` is returned.
                      */
                     std::string GetProductCodeName() const;
 
                     /**
-                     * 设置Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, “-” is returned.
-                     * @param ProductCodeName Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, “-” is returned.
+                     * 设置Subproduct name, which is the subcategory of a Tencent Cloud product, such as CVM-Standard S1. If no subproduct name can be obtained, `-` is returned.
+                     * @param ProductCodeName Subproduct name, which is the subcategory of a Tencent Cloud product, such as CVM-Standard S1. If no subproduct name can be obtained, `-` is returned.
                      */
                     void SetProductCodeName(const std::string& _productCodeName);
 
@@ -354,14 +354,18 @@ namespace TencentCloud
                     bool TotalCostHasBeenSet() const;
 
                     /**
-                     * 获取Discount rate
-                     * @return Discount Discount rate
+                     * 获取Discount
+If different discounts or contract prices are applied, `-` will be returned for this parameter.
+                     * @return Discount Discount
+If different discounts or contract prices are applied, `-` will be returned for this parameter.
                      */
                     std::string GetDiscount() const;
 
                     /**
-                     * 设置Discount rate
-                     * @param Discount Discount rate
+                     * 设置Discount
+If different discounts or contract prices are applied, `-` will be returned for this parameter.
+                     * @param Discount Discount
+If different discounts or contract prices are applied, `-` will be returned for this parameter.
                      */
                     void SetDiscount(const std::string& _discount);
 
@@ -556,14 +560,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PayerUinHasBeenSet() const;
 
                     /**
-                     * 获取Resource owner UIN; “-” is returned if no value is obtained
-                     * @return OwnerUin Resource owner UIN; “-” is returned if no value is obtained
+                     * 获取Resource owner UIN; '-' is returned if no value is obtained
+                     * @return OwnerUin Resource owner UIN; '-' is returned if no value is obtained
                      */
                     std::string GetOwnerUin() const;
 
                     /**
-                     * 设置Resource owner UIN; “-” is returned if no value is obtained
-                     * @param OwnerUin Resource owner UIN; “-” is returned if no value is obtained
+                     * 设置Resource owner UIN; '-' is returned if no value is obtained
+                     * @param OwnerUin Resource owner UIN; '-' is returned if no value is obtained
                      */
                     void SetOwnerUin(const std::string& _ownerUin);
 
@@ -574,14 +578,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OwnerUinHasBeenSet() const;
 
                     /**
-                     * 获取Operator UIN; “-” is returned if no value is obtained
-                     * @return OperateUin Operator UIN; “-” is returned if no value is obtained
+                     * 获取Operator UIN; '-' is returned if no value is obtained
+                     * @return OperateUin Operator UIN; '-' is returned if no value is obtained
                      */
                     std::string GetOperateUin() const;
 
                     /**
-                     * 设置Operator UIN; “-” is returned if no value is obtained
-                     * @param OperateUin Operator UIN; “-” is returned if no value is obtained
+                     * 设置Operator UIN; '-' is returned if no value is obtained
+                     * @param OperateUin Operator UIN; '-' is returned if no value is obtained
                      */
                     void SetOperateUin(const std::string& _operateUin);
 
@@ -590,6 +594,60 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return OperateUin 是否已赋值
                      */
                     bool OperateUinHasBeenSet() const;
+
+                    /**
+                     * 获取Product code
+                     * @return BusinessCode Product code
+                     */
+                    std::string GetBusinessCode() const;
+
+                    /**
+                     * 设置Product code
+                     * @param BusinessCode Product code
+                     */
+                    void SetBusinessCode(const std::string& _businessCode);
+
+                    /**
+                     * 判断参数 BusinessCode 是否已赋值
+                     * @return BusinessCode 是否已赋值
+                     */
+                    bool BusinessCodeHasBeenSet() const;
+
+                    /**
+                     * 获取Subproduct code
+                     * @return ProductCode Subproduct code
+                     */
+                    std::string GetProductCode() const;
+
+                    /**
+                     * 设置Subproduct code
+                     * @param ProductCode Subproduct code
+                     */
+                    void SetProductCode(const std::string& _productCode);
+
+                    /**
+                     * 判断参数 ProductCode 是否已赋值
+                     * @return ProductCode 是否已赋值
+                     */
+                    bool ProductCodeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return RegionId 
+                     */
+                    int64_t GetRegionId() const;
+
+                    /**
+                     * 设置
+                     * @param RegionId 
+                     */
+                    void SetRegionId(const int64_t& _regionId);
+
+                    /**
+                     * 判断参数 RegionId 是否已赋值
+                     * @return RegionId 是否已赋值
+                     */
+                    bool RegionIdHasBeenSet() const;
 
                 private:
 
@@ -600,7 +658,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_businessCodeNameHasBeenSet;
 
                     /**
-                     * Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, “-” is returned.
+                     * Subproduct name, which is the subcategory of a Tencent Cloud product, such as CVM-Standard S1. If no subproduct name can be obtained, `-` is returned.
                      */
                     std::string m_productCodeName;
                     bool m_productCodeNameHasBeenSet;
@@ -696,7 +754,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalCostHasBeenSet;
 
                     /**
-                     * Discount rate
+                     * Discount
+If different discounts or contract prices are applied, `-` will be returned for this parameter.
                      */
                     std::string m_discount;
                     bool m_discountHasBeenSet;
@@ -763,16 +822,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_payerUinHasBeenSet;
 
                     /**
-                     * Resource owner UIN; “-” is returned if no value is obtained
+                     * Resource owner UIN; '-' is returned if no value is obtained
                      */
                     std::string m_ownerUin;
                     bool m_ownerUinHasBeenSet;
 
                     /**
-                     * Operator UIN; “-” is returned if no value is obtained
+                     * Operator UIN; '-' is returned if no value is obtained
                      */
                     std::string m_operateUin;
                     bool m_operateUinHasBeenSet;
+
+                    /**
+                     * Product code
+                     */
+                    std::string m_businessCode;
+                    bool m_businessCodeHasBeenSet;
+
+                    /**
+                     * Subproduct code
+                     */
+                    std::string m_productCode;
+                    bool m_productCodeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_regionId;
+                    bool m_regionIdHasBeenSet;
 
                 };
             }

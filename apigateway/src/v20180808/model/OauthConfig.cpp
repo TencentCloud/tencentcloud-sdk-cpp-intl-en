@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 OauthConfig::OauthConfig() :
@@ -28,7 +27,7 @@ OauthConfig::OauthConfig() :
 {
 }
 
-CoreInternalOutcome OauthConfig::Deserialize(const Value &value)
+CoreInternalOutcome OauthConfig::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome OauthConfig::Deserialize(const Value &value)
     {
         if (!value["PublicKey"].IsString())
         {
-            return CoreInternalOutcome(Error("response `OauthConfig.PublicKey` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OauthConfig.PublicKey` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_publicKey = string(value["PublicKey"].GetString());
         m_publicKeyHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome OauthConfig::Deserialize(const Value &value)
     {
         if (!value["TokenLocation"].IsString())
         {
-            return CoreInternalOutcome(Error("response `OauthConfig.TokenLocation` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OauthConfig.TokenLocation` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tokenLocation = string(value["TokenLocation"].GetString());
         m_tokenLocationHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome OauthConfig::Deserialize(const Value &value)
     {
         if (!value["LoginRedirectUrl"].IsString())
         {
-            return CoreInternalOutcome(Error("response `OauthConfig.LoginRedirectUrl` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OauthConfig.LoginRedirectUrl` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_loginRedirectUrl = string(value["LoginRedirectUrl"].GetString());
         m_loginRedirectUrlHasBeenSet = true;
@@ -67,31 +66,31 @@ CoreInternalOutcome OauthConfig::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void OauthConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void OauthConfig::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_publicKeyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PublicKey";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_publicKey.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_publicKey.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tokenLocationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TokenLocation";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_tokenLocation.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tokenLocation.c_str(), allocator).Move(), allocator);
     }
 
     if (m_loginRedirectUrlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LoginRedirectUrl";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_loginRedirectUrl.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_loginRedirectUrl.c_str(), allocator).Move(), allocator);
     }
 
 }

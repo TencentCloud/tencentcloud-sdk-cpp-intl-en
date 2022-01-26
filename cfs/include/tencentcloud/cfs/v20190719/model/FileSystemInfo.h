@@ -228,14 +228,14 @@ namespace TencentCloud
                     bool StorageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Prepaid storage pack bound to a file system (not supported currently)
-                     * @return StorageResourcePkg Prepaid storage pack bound to a file system (not supported currently)
+                     * 获取Prepaid storage pack bound with the file system
+                     * @return StorageResourcePkg Prepaid storage pack bound with the file system
                      */
                     std::string GetStorageResourcePkg() const;
 
                     /**
-                     * 设置Prepaid storage pack bound to a file system (not supported currently)
-                     * @param StorageResourcePkg Prepaid storage pack bound to a file system (not supported currently)
+                     * 设置Prepaid storage pack bound with the file system
+                     * @param StorageResourcePkg Prepaid storage pack bound with the file system
                      */
                     void SetStorageResourcePkg(const std::string& _storageResourcePkg);
 
@@ -353,6 +353,42 @@ namespace TencentCloud
                      */
                     bool AppIdHasBeenSet() const;
 
+                    /**
+                     * 获取The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
+                     * @return BandwidthLimit The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
+                     */
+                    double GetBandwidthLimit() const;
+
+                    /**
+                     * 设置The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
+                     * @param BandwidthLimit The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
+                     */
+                    void SetBandwidthLimit(const double& _bandwidthLimit);
+
+                    /**
+                     * 判断参数 BandwidthLimit 是否已赋值
+                     * @return BandwidthLimit 是否已赋值
+                     */
+                    bool BandwidthLimitHasBeenSet() const;
+
+                    /**
+                     * 获取Total capacity of the file system
+                     * @return Capacity Total capacity of the file system
+                     */
+                    uint64_t GetCapacity() const;
+
+                    /**
+                     * 设置Total capacity of the file system
+                     * @param Capacity Total capacity of the file system
+                     */
+                    void SetCapacity(const uint64_t& _capacity);
+
+                    /**
+                     * 判断参数 Capacity 是否已赋值
+                     * @return Capacity 是否已赋值
+                     */
+                    bool CapacityHasBeenSet() const;
+
                 private:
 
                     /**
@@ -416,7 +452,7 @@ namespace TencentCloud
                     bool m_storageTypeHasBeenSet;
 
                     /**
-                     * Prepaid storage pack bound to a file system (not supported currently)
+                     * Prepaid storage pack bound with the file system
                      */
                     std::string m_storageResourcePkg;
                     bool m_storageResourcePkgHasBeenSet;
@@ -456,6 +492,18 @@ namespace TencentCloud
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
+
+                    /**
+                     * The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
+                     */
+                    double m_bandwidthLimit;
+                    bool m_bandwidthLimitHasBeenSet;
+
+                    /**
+                     * Total capacity of the file system
+                     */
+                    uint64_t m_capacity;
+                    bool m_capacityHasBeenSet;
 
                 };
             }

@@ -83,6 +83,49 @@ VodClient::ApplyUploadOutcomeCallable VodClient::ApplyUploadCallable(const Apply
     return task->get_future();
 }
 
+VodClient::AttachMediaSubtitlesOutcome VodClient::AttachMediaSubtitles(const AttachMediaSubtitlesRequest &request)
+{
+    auto outcome = MakeRequest(request, "AttachMediaSubtitles");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AttachMediaSubtitlesResponse rsp = AttachMediaSubtitlesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AttachMediaSubtitlesOutcome(rsp);
+        else
+            return AttachMediaSubtitlesOutcome(o.GetError());
+    }
+    else
+    {
+        return AttachMediaSubtitlesOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::AttachMediaSubtitlesAsync(const AttachMediaSubtitlesRequest& request, const AttachMediaSubtitlesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->AttachMediaSubtitles(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VodClient::AttachMediaSubtitlesOutcomeCallable VodClient::AttachMediaSubtitlesCallable(const AttachMediaSubtitlesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<AttachMediaSubtitlesOutcome()>>(
+        [this, request]()
+        {
+            return this->AttachMediaSubtitles(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VodClient::CommitUploadOutcome VodClient::CommitUpload(const CommitUploadRequest &request)
 {
     auto outcome = MakeRequest(request, "CommitUpload");
@@ -814,6 +857,49 @@ VodClient::CreateTranscodeTemplateOutcomeCallable VodClient::CreateTranscodeTemp
     return task->get_future();
 }
 
+VodClient::CreateVodDomainOutcome VodClient::CreateVodDomain(const CreateVodDomainRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateVodDomain");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateVodDomainResponse rsp = CreateVodDomainResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateVodDomainOutcome(rsp);
+        else
+            return CreateVodDomainOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateVodDomainOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::CreateVodDomainAsync(const CreateVodDomainRequest& request, const CreateVodDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateVodDomain(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VodClient::CreateVodDomainOutcomeCallable VodClient::CreateVodDomainCallable(const CreateVodDomainRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateVodDomainOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateVodDomain(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VodClient::CreateWatermarkTemplateOutcome VodClient::CreateWatermarkTemplate(const CreateWatermarkTemplateRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateWatermarkTemplate");
@@ -1502,6 +1588,49 @@ VodClient::DeleteTranscodeTemplateOutcomeCallable VodClient::DeleteTranscodeTemp
     return task->get_future();
 }
 
+VodClient::DeleteVodDomainOutcome VodClient::DeleteVodDomain(const DeleteVodDomainRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteVodDomain");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteVodDomainResponse rsp = DeleteVodDomainResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteVodDomainOutcome(rsp);
+        else
+            return DeleteVodDomainOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteVodDomainOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::DeleteVodDomainAsync(const DeleteVodDomainRequest& request, const DeleteVodDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteVodDomain(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VodClient::DeleteVodDomainOutcomeCallable VodClient::DeleteVodDomainCallable(const DeleteVodDomainRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteVodDomainOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteVodDomain(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VodClient::DeleteWatermarkTemplateOutcome VodClient::DeleteWatermarkTemplate(const DeleteWatermarkTemplateRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteWatermarkTemplate");
@@ -1803,6 +1932,49 @@ VodClient::DescribeAnimatedGraphicsTemplatesOutcomeCallable VodClient::DescribeA
     return task->get_future();
 }
 
+VodClient::DescribeCDNStatDetailsOutcome VodClient::DescribeCDNStatDetails(const DescribeCDNStatDetailsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCDNStatDetails");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCDNStatDetailsResponse rsp = DescribeCDNStatDetailsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCDNStatDetailsOutcome(rsp);
+        else
+            return DescribeCDNStatDetailsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCDNStatDetailsOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::DescribeCDNStatDetailsAsync(const DescribeCDNStatDetailsRequest& request, const DescribeCDNStatDetailsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCDNStatDetails(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VodClient::DescribeCDNStatDetailsOutcomeCallable VodClient::DescribeCDNStatDetailsCallable(const DescribeCDNStatDetailsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCDNStatDetailsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCDNStatDetails(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VodClient::DescribeCDNUsageDataOutcome VodClient::DescribeCDNUsageData(const DescribeCDNUsageDataRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeCDNUsageData");
@@ -1846,6 +2018,49 @@ VodClient::DescribeCDNUsageDataOutcomeCallable VodClient::DescribeCDNUsageDataCa
     return task->get_future();
 }
 
+VodClient::DescribeCdnLogsOutcome VodClient::DescribeCdnLogs(const DescribeCdnLogsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCdnLogs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCdnLogsResponse rsp = DescribeCdnLogsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCdnLogsOutcome(rsp);
+        else
+            return DescribeCdnLogsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCdnLogsOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::DescribeCdnLogsAsync(const DescribeCdnLogsRequest& request, const DescribeCdnLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCdnLogs(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VodClient::DescribeCdnLogsOutcomeCallable VodClient::DescribeCdnLogsCallable(const DescribeCdnLogsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCdnLogsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCdnLogs(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VodClient::DescribeContentReviewTemplatesOutcome VodClient::DescribeContentReviewTemplates(const DescribeContentReviewTemplatesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeContentReviewTemplates");
@@ -1882,6 +2097,49 @@ VodClient::DescribeContentReviewTemplatesOutcomeCallable VodClient::DescribeCont
         [this, request]()
         {
             return this->DescribeContentReviewTemplates(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VodClient::DescribeDailyPlayStatFileListOutcome VodClient::DescribeDailyPlayStatFileList(const DescribeDailyPlayStatFileListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDailyPlayStatFileList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDailyPlayStatFileListResponse rsp = DescribeDailyPlayStatFileListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDailyPlayStatFileListOutcome(rsp);
+        else
+            return DescribeDailyPlayStatFileListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDailyPlayStatFileListOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::DescribeDailyPlayStatFileListAsync(const DescribeDailyPlayStatFileListRequest& request, const DescribeDailyPlayStatFileListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDailyPlayStatFileList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VodClient::DescribeDailyPlayStatFileListOutcomeCallable VodClient::DescribeDailyPlayStatFileListCallable(const DescribeDailyPlayStatFileListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDailyPlayStatFileListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDailyPlayStatFileList(request);
         }
     );
 
@@ -2534,6 +2792,49 @@ VodClient::DescribeTranscodeTemplatesOutcomeCallable VodClient::DescribeTranscod
     return task->get_future();
 }
 
+VodClient::DescribeVodDomainsOutcome VodClient::DescribeVodDomains(const DescribeVodDomainsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVodDomains");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVodDomainsResponse rsp = DescribeVodDomainsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVodDomainsOutcome(rsp);
+        else
+            return DescribeVodDomainsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVodDomainsOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::DescribeVodDomainsAsync(const DescribeVodDomainsRequest& request, const DescribeVodDomainsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeVodDomains(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VodClient::DescribeVodDomainsOutcomeCallable VodClient::DescribeVodDomainsCallable(const DescribeVodDomainsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeVodDomainsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeVodDomains(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VodClient::DescribeWatermarkTemplatesOutcome VodClient::DescribeWatermarkTemplates(const DescribeWatermarkTemplatesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeWatermarkTemplates");
@@ -2785,6 +3086,49 @@ VodClient::LiveRealTimeClipOutcomeCallable VodClient::LiveRealTimeClipCallable(c
         [this, request]()
         {
             return this->LiveRealTimeClip(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VodClient::ManageTaskOutcome VodClient::ManageTask(const ManageTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "ManageTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ManageTaskResponse rsp = ManageTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ManageTaskOutcome(rsp);
+        else
+            return ManageTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return ManageTaskOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::ManageTaskAsync(const ManageTaskRequest& request, const ManageTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ManageTask(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VodClient::ManageTaskOutcomeCallable VodClient::ManageTaskCallable(const ManageTaskRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ManageTaskOutcome()>>(
+        [this, request]()
+        {
+            return this->ManageTask(request);
         }
     );
 
@@ -3430,6 +3774,92 @@ VodClient::ModifyTranscodeTemplateOutcomeCallable VodClient::ModifyTranscodeTemp
         [this, request]()
         {
             return this->ModifyTranscodeTemplate(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VodClient::ModifyVodDomainAccelerateConfigOutcome VodClient::ModifyVodDomainAccelerateConfig(const ModifyVodDomainAccelerateConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyVodDomainAccelerateConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyVodDomainAccelerateConfigResponse rsp = ModifyVodDomainAccelerateConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyVodDomainAccelerateConfigOutcome(rsp);
+        else
+            return ModifyVodDomainAccelerateConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyVodDomainAccelerateConfigOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::ModifyVodDomainAccelerateConfigAsync(const ModifyVodDomainAccelerateConfigRequest& request, const ModifyVodDomainAccelerateConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyVodDomainAccelerateConfig(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VodClient::ModifyVodDomainAccelerateConfigOutcomeCallable VodClient::ModifyVodDomainAccelerateConfigCallable(const ModifyVodDomainAccelerateConfigRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyVodDomainAccelerateConfigOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyVodDomainAccelerateConfig(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VodClient::ModifyVodDomainConfigOutcome VodClient::ModifyVodDomainConfig(const ModifyVodDomainConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyVodDomainConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyVodDomainConfigResponse rsp = ModifyVodDomainConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyVodDomainConfigOutcome(rsp);
+        else
+            return ModifyVodDomainConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyVodDomainConfigOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::ModifyVodDomainConfigAsync(const ModifyVodDomainConfigRequest& request, const ModifyVodDomainConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyVodDomainConfig(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VodClient::ModifyVodDomainConfigOutcomeCallable VodClient::ModifyVodDomainConfigCallable(const ModifyVodDomainConfigRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyVodDomainConfigOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyVodDomainConfig(request);
         }
     );
 

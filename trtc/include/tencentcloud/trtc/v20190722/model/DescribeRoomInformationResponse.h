@@ -41,11 +41,12 @@ namespace TencentCloud
                     DescribeRoomInformationResponse();
                     ~DescribeRoomInformationResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Total number of returned data entries.
-                     * @return Total Total number of returned data entries.
+                     * 获取Total number of data entries displayed on the current page
+                     * @return Total Total number of data entries displayed on the current page
                      */
                     int64_t GetTotal() const;
 
@@ -70,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of returned data entries.
+                     * Total number of data entries displayed on the current page
                      */
                     int64_t m_total;
                     bool m_totalHasBeenSet;

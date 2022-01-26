@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Postgres::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 DBInstanceNetInfo::DBInstanceNetInfo() :
@@ -26,11 +25,13 @@ DBInstanceNetInfo::DBInstanceNetInfo() :
     m_ipHasBeenSet(false),
     m_portHasBeenSet(false),
     m_netTypeHasBeenSet(false),
-    m_statusHasBeenSet(false)
+    m_statusHasBeenSet(false),
+    m_vpcIdHasBeenSet(false),
+    m_subnetIdHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DBInstanceNetInfo::Deserialize(const Value &value)
+CoreInternalOutcome DBInstanceNetInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +40,7 @@ CoreInternalOutcome DBInstanceNetInfo::Deserialize(const Value &value)
     {
         if (!value["Address"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBInstanceNetInfo.Address` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstanceNetInfo.Address` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_address = string(value["Address"].GetString());
         m_addressHasBeenSet = true;
@@ -49,7 +50,7 @@ CoreInternalOutcome DBInstanceNetInfo::Deserialize(const Value &value)
     {
         if (!value["Ip"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBInstanceNetInfo.Ip` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstanceNetInfo.Ip` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ip = string(value["Ip"].GetString());
         m_ipHasBeenSet = true;
@@ -59,7 +60,7 @@ CoreInternalOutcome DBInstanceNetInfo::Deserialize(const Value &value)
     {
         if (!value["Port"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DBInstanceNetInfo.Port` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstanceNetInfo.Port` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_port = value["Port"].GetUint64();
         m_portHasBeenSet = true;
@@ -69,7 +70,7 @@ CoreInternalOutcome DBInstanceNetInfo::Deserialize(const Value &value)
     {
         if (!value["NetType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBInstanceNetInfo.NetType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstanceNetInfo.NetType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_netType = string(value["NetType"].GetString());
         m_netTypeHasBeenSet = true;
@@ -79,38 +80,58 @@ CoreInternalOutcome DBInstanceNetInfo::Deserialize(const Value &value)
     {
         if (!value["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBInstanceNetInfo.Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBInstanceNetInfo.Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(value["Status"].GetString());
         m_statusHasBeenSet = true;
+    }
+
+    if (value.HasMember("VpcId") && !value["VpcId"].IsNull())
+    {
+        if (!value["VpcId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DBInstanceNetInfo.VpcId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_vpcId = string(value["VpcId"].GetString());
+        m_vpcIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("SubnetId") && !value["SubnetId"].IsNull())
+    {
+        if (!value["SubnetId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DBInstanceNetInfo.SubnetId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_subnetId = string(value["SubnetId"].GetString());
+        m_subnetIdHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void DBInstanceNetInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DBInstanceNetInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_addressHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Address";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_address.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_address.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ipHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Ip";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ip.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ip.c_str(), allocator).Move(), allocator);
     }
 
     if (m_portHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Port";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_port, allocator);
@@ -118,18 +139,34 @@ void DBInstanceNetInfo::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_netTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_netType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_netType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_status.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_vpcIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VpcId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpcId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_subnetIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubnetId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_subnetId.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -213,5 +250,37 @@ void DBInstanceNetInfo::SetStatus(const string& _status)
 bool DBInstanceNetInfo::StatusHasBeenSet() const
 {
     return m_statusHasBeenSet;
+}
+
+string DBInstanceNetInfo::GetVpcId() const
+{
+    return m_vpcId;
+}
+
+void DBInstanceNetInfo::SetVpcId(const string& _vpcId)
+{
+    m_vpcId = _vpcId;
+    m_vpcIdHasBeenSet = true;
+}
+
+bool DBInstanceNetInfo::VpcIdHasBeenSet() const
+{
+    return m_vpcIdHasBeenSet;
+}
+
+string DBInstanceNetInfo::GetSubnetId() const
+{
+    return m_subnetId;
+}
+
+void DBInstanceNetInfo::SetSubnetId(const string& _subnetId)
+{
+    m_subnetId = _subnetId;
+    m_subnetIdHasBeenSet = true;
+}
+
+bool DBInstanceNetInfo::SubnetIdHasBeenSet() const
+{
+    return m_subnetIdHasBeenSet;
 }
 

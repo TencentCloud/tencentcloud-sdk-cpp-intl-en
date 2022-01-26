@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vpc/v20170312/model/AddressChargePrepaid.h>
 #include <tencentcloud/vpc/v20170312/model/Tag.h>
 
 
@@ -63,11 +64,11 @@ namespace TencentCloud
 
                     /**
                      * 获取The EIP line type. Default: BGP.
-<ul style="margin:0"><li>For a user who has activated the static single-line IP whitelist, possible values are:<ul><li>CMCC: China Mobile</li>
+<ul style="margin:0"><li>For a user who has activated the static single-line IP allowlist, possible values are:<ul><li>CMCC: China Mobile</li>
 <li>CTCC: China Telecom</li>
 <li>CUCC: China Unicom</li></ul>Note: Only certain regions support static single-line IP addresses.</li></ul>
                      * @return InternetServiceProvider The EIP line type. Default: BGP.
-<ul style="margin:0"><li>For a user who has activated the static single-line IP whitelist, possible values are:<ul><li>CMCC: China Mobile</li>
+<ul style="margin:0"><li>For a user who has activated the static single-line IP allowlist, possible values are:<ul><li>CMCC: China Mobile</li>
 <li>CTCC: China Telecom</li>
 <li>CUCC: China Unicom</li></ul>Note: Only certain regions support static single-line IP addresses.</li></ul>
                      */
@@ -75,11 +76,11 @@ namespace TencentCloud
 
                     /**
                      * 设置The EIP line type. Default: BGP.
-<ul style="margin:0"><li>For a user who has activated the static single-line IP whitelist, possible values are:<ul><li>CMCC: China Mobile</li>
+<ul style="margin:0"><li>For a user who has activated the static single-line IP allowlist, possible values are:<ul><li>CMCC: China Mobile</li>
 <li>CTCC: China Telecom</li>
 <li>CUCC: China Unicom</li></ul>Note: Only certain regions support static single-line IP addresses.</li></ul>
                      * @param InternetServiceProvider The EIP line type. Default: BGP.
-<ul style="margin:0"><li>For a user who has activated the static single-line IP whitelist, possible values are:<ul><li>CMCC: China Mobile</li>
+<ul style="margin:0"><li>For a user who has activated the static single-line IP allowlist, possible values are:<ul><li>CMCC: China Mobile</li>
 <li>CTCC: China Telecom</li>
 <li>CUCC: China Unicom</li></ul>Note: Only certain regions support static single-line IP addresses.</li></ul>
                      */
@@ -93,29 +94,33 @@ namespace TencentCloud
 
                     /**
                      * 获取The EIP billing method.
-<ul style="margin:0"><li>For a user who has activated bandwidth billing by IP whitelist, possible values are:<ul><li>BANDWIDTH_PACKAGE: paid by the [bandwidth package](https://cloud.tencent.com/document/product/684/15255) (The bandwidth sharing whitelist must be activated additionally.)</li>
-<li>BANDWIDTH_POSTPAID_BY_HOUR: bandwidth postpaid by hour</li>
-<li>TRAFFIC_POSTPAID_BY_HOUR: traffic postpaid by hour</li></ul>Default: TRAFFIC_POSTPAID_BY_HOUR</li>.
-<li>For users who do not use bill-by-bandwidth billing mode, InternetChargeType is consistent with that of the instance bound to the EIP. Therefore, it is unnecessary to pass in this parameter.</li></ul>
+<ul style="margin:0"><li>For bill-by-IP account beta users, valid values: <ul><li>BANDWIDTH_PACKAGE: paid by the [bandwidth package](https://intl.cloud.tencent.com/document/product/684/15255?from_cn_redirect=1)(who must also be bandwidth package beta users)</li>
+<li>BANDWIDTH_POSTPAID_BY_HOUR: billed by hourly bandwidth on a pay-as-you-go basis</li>
+<li>BANDWIDTH_PREPAID_BY_MONTH: monthly bandwidth subscription</li>
+<li>TRAFFIC_POSTPAID_BY_HOUR: billed by hourly traffic on a pay-as-you-go basis</li></ul>Default value: TRAFFIC_POSTPAID_BY_HOUR</li>
+<li>If you are not a bill-by-IP account beta user, the EIP billing is the same as that for the instance bound to the EIP. Therefore, you do not need to pass in this parameter.</li></ul>
                      * @return InternetChargeType The EIP billing method.
-<ul style="margin:0"><li>For a user who has activated bandwidth billing by IP whitelist, possible values are:<ul><li>BANDWIDTH_PACKAGE: paid by the [bandwidth package](https://cloud.tencent.com/document/product/684/15255) (The bandwidth sharing whitelist must be activated additionally.)</li>
-<li>BANDWIDTH_POSTPAID_BY_HOUR: bandwidth postpaid by hour</li>
-<li>TRAFFIC_POSTPAID_BY_HOUR: traffic postpaid by hour</li></ul>Default: TRAFFIC_POSTPAID_BY_HOUR</li>.
-<li>For users who do not use bill-by-bandwidth billing mode, InternetChargeType is consistent with that of the instance bound to the EIP. Therefore, it is unnecessary to pass in this parameter.</li></ul>
+<ul style="margin:0"><li>For bill-by-IP account beta users, valid values: <ul><li>BANDWIDTH_PACKAGE: paid by the [bandwidth package](https://intl.cloud.tencent.com/document/product/684/15255?from_cn_redirect=1)(who must also be bandwidth package beta users)</li>
+<li>BANDWIDTH_POSTPAID_BY_HOUR: billed by hourly bandwidth on a pay-as-you-go basis</li>
+<li>BANDWIDTH_PREPAID_BY_MONTH: monthly bandwidth subscription</li>
+<li>TRAFFIC_POSTPAID_BY_HOUR: billed by hourly traffic on a pay-as-you-go basis</li></ul>Default value: TRAFFIC_POSTPAID_BY_HOUR</li>
+<li>If you are not a bill-by-IP account beta user, the EIP billing is the same as that for the instance bound to the EIP. Therefore, you do not need to pass in this parameter.</li></ul>
                      */
                     std::string GetInternetChargeType() const;
 
                     /**
                      * 设置The EIP billing method.
-<ul style="margin:0"><li>For a user who has activated bandwidth billing by IP whitelist, possible values are:<ul><li>BANDWIDTH_PACKAGE: paid by the [bandwidth package](https://cloud.tencent.com/document/product/684/15255) (The bandwidth sharing whitelist must be activated additionally.)</li>
-<li>BANDWIDTH_POSTPAID_BY_HOUR: bandwidth postpaid by hour</li>
-<li>TRAFFIC_POSTPAID_BY_HOUR: traffic postpaid by hour</li></ul>Default: TRAFFIC_POSTPAID_BY_HOUR</li>.
-<li>For users who do not use bill-by-bandwidth billing mode, InternetChargeType is consistent with that of the instance bound to the EIP. Therefore, it is unnecessary to pass in this parameter.</li></ul>
+<ul style="margin:0"><li>For bill-by-IP account beta users, valid values: <ul><li>BANDWIDTH_PACKAGE: paid by the [bandwidth package](https://intl.cloud.tencent.com/document/product/684/15255?from_cn_redirect=1)(who must also be bandwidth package beta users)</li>
+<li>BANDWIDTH_POSTPAID_BY_HOUR: billed by hourly bandwidth on a pay-as-you-go basis</li>
+<li>BANDWIDTH_PREPAID_BY_MONTH: monthly bandwidth subscription</li>
+<li>TRAFFIC_POSTPAID_BY_HOUR: billed by hourly traffic on a pay-as-you-go basis</li></ul>Default value: TRAFFIC_POSTPAID_BY_HOUR</li>
+<li>If you are not a bill-by-IP account beta user, the EIP billing is the same as that for the instance bound to the EIP. Therefore, you do not need to pass in this parameter.</li></ul>
                      * @param InternetChargeType The EIP billing method.
-<ul style="margin:0"><li>For a user who has activated bandwidth billing by IP whitelist, possible values are:<ul><li>BANDWIDTH_PACKAGE: paid by the [bandwidth package](https://cloud.tencent.com/document/product/684/15255) (The bandwidth sharing whitelist must be activated additionally.)</li>
-<li>BANDWIDTH_POSTPAID_BY_HOUR: bandwidth postpaid by hour</li>
-<li>TRAFFIC_POSTPAID_BY_HOUR: traffic postpaid by hour</li></ul>Default: TRAFFIC_POSTPAID_BY_HOUR</li>.
-<li>For users who do not use bill-by-bandwidth billing mode, InternetChargeType is consistent with that of the instance bound to the EIP. Therefore, it is unnecessary to pass in this parameter.</li></ul>
+<ul style="margin:0"><li>For bill-by-IP account beta users, valid values: <ul><li>BANDWIDTH_PACKAGE: paid by the [bandwidth package](https://intl.cloud.tencent.com/document/product/684/15255?from_cn_redirect=1)(who must also be bandwidth package beta users)</li>
+<li>BANDWIDTH_POSTPAID_BY_HOUR: billed by hourly bandwidth on a pay-as-you-go basis</li>
+<li>BANDWIDTH_PREPAID_BY_MONTH: monthly bandwidth subscription</li>
+<li>TRAFFIC_POSTPAID_BY_HOUR: billed by hourly traffic on a pay-as-you-go basis</li></ul>Default value: TRAFFIC_POSTPAID_BY_HOUR</li>
+<li>If you are not a bill-by-IP account beta user, the EIP billing is the same as that for the instance bound to the EIP. Therefore, you do not need to pass in this parameter.</li></ul>
                      */
                     void SetInternetChargeType(const std::string& _internetChargeType);
 
@@ -126,30 +131,34 @@ namespace TencentCloud
                     bool InternetChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取The maximum EIP outbound bandwidth. Unit: Mbps.
-<ul style="margin:0"><li>For a user who has activated bandwidth billing by IP whitelist, the value range is determined by the EIP billing method:<ul><li>BANDWIDTH_PACKAGE: 1 Mbps to 1,000 Mbps</li>
+                     * 获取The EIP outbound bandwidth cap, in Mbps.
+<ul style="margin:0"><li>For bill-by-IP account beta users, valid values:<ul><li>BANDWIDTH_PACKAGE: 1 Mbps to 1000 Mbps</li>
 <li>BANDWIDTH_POSTPAID_BY_HOUR: 1 Mbps to 100 Mbps</li>
-<li>TRAFFIC_POSTPAID_BY_HOUR: 1 Mbps to 100 Mbps</li></ul>Default: 1 Mbps</li>.
-<li>For a user who has not activated bandwidth billing by IP whitelist, InternetMaxBandwidthOut is consistent with that of the instance bound to the EIP. Therefore, it is unnecessary to pass in this parameter.</li></ul>
-                     * @return InternetMaxBandwidthOut The maximum EIP outbound bandwidth. Unit: Mbps.
-<ul style="margin:0"><li>For a user who has activated bandwidth billing by IP whitelist, the value range is determined by the EIP billing method:<ul><li>BANDWIDTH_PACKAGE: 1 Mbps to 1,000 Mbps</li>
+<li>BANDWIDTH_PREPAID_BY_MONTH: 1 Mbps to 200 Mbps</li>
+<li>TRAFFIC_POSTPAID_BY_HOUR: 1 Mbps to 100 Mbps</li></ul>Default value: 1 Mbps</li>
+<li>If you are not a bill-by-IP account beta user, the EIP outbound bandwidth cap is subject to that of the instance bound to the EIP. Therefore, you do not need to pass in this parameter.</li></ul>
+                     * @return InternetMaxBandwidthOut The EIP outbound bandwidth cap, in Mbps.
+<ul style="margin:0"><li>For bill-by-IP account beta users, valid values:<ul><li>BANDWIDTH_PACKAGE: 1 Mbps to 1000 Mbps</li>
 <li>BANDWIDTH_POSTPAID_BY_HOUR: 1 Mbps to 100 Mbps</li>
-<li>TRAFFIC_POSTPAID_BY_HOUR: 1 Mbps to 100 Mbps</li></ul>Default: 1 Mbps</li>.
-<li>For a user who has not activated bandwidth billing by IP whitelist, InternetMaxBandwidthOut is consistent with that of the instance bound to the EIP. Therefore, it is unnecessary to pass in this parameter.</li></ul>
+<li>BANDWIDTH_PREPAID_BY_MONTH: 1 Mbps to 200 Mbps</li>
+<li>TRAFFIC_POSTPAID_BY_HOUR: 1 Mbps to 100 Mbps</li></ul>Default value: 1 Mbps</li>
+<li>If you are not a bill-by-IP account beta user, the EIP outbound bandwidth cap is subject to that of the instance bound to the EIP. Therefore, you do not need to pass in this parameter.</li></ul>
                      */
                     int64_t GetInternetMaxBandwidthOut() const;
 
                     /**
-                     * 设置The maximum EIP outbound bandwidth. Unit: Mbps.
-<ul style="margin:0"><li>For a user who has activated bandwidth billing by IP whitelist, the value range is determined by the EIP billing method:<ul><li>BANDWIDTH_PACKAGE: 1 Mbps to 1,000 Mbps</li>
+                     * 设置The EIP outbound bandwidth cap, in Mbps.
+<ul style="margin:0"><li>For bill-by-IP account beta users, valid values:<ul><li>BANDWIDTH_PACKAGE: 1 Mbps to 1000 Mbps</li>
 <li>BANDWIDTH_POSTPAID_BY_HOUR: 1 Mbps to 100 Mbps</li>
-<li>TRAFFIC_POSTPAID_BY_HOUR: 1 Mbps to 100 Mbps</li></ul>Default: 1 Mbps</li>.
-<li>For a user who has not activated bandwidth billing by IP whitelist, InternetMaxBandwidthOut is consistent with that of the instance bound to the EIP. Therefore, it is unnecessary to pass in this parameter.</li></ul>
-                     * @param InternetMaxBandwidthOut The maximum EIP outbound bandwidth. Unit: Mbps.
-<ul style="margin:0"><li>For a user who has activated bandwidth billing by IP whitelist, the value range is determined by the EIP billing method:<ul><li>BANDWIDTH_PACKAGE: 1 Mbps to 1,000 Mbps</li>
+<li>BANDWIDTH_PREPAID_BY_MONTH: 1 Mbps to 200 Mbps</li>
+<li>TRAFFIC_POSTPAID_BY_HOUR: 1 Mbps to 100 Mbps</li></ul>Default value: 1 Mbps</li>
+<li>If you are not a bill-by-IP account beta user, the EIP outbound bandwidth cap is subject to that of the instance bound to the EIP. Therefore, you do not need to pass in this parameter.</li></ul>
+                     * @param InternetMaxBandwidthOut The EIP outbound bandwidth cap, in Mbps.
+<ul style="margin:0"><li>For bill-by-IP account beta users, valid values:<ul><li>BANDWIDTH_PACKAGE: 1 Mbps to 1000 Mbps</li>
 <li>BANDWIDTH_POSTPAID_BY_HOUR: 1 Mbps to 100 Mbps</li>
-<li>TRAFFIC_POSTPAID_BY_HOUR: 1 Mbps to 100 Mbps</li></ul>Default: 1 Mbps</li>.
-<li>For a user who has not activated bandwidth billing by IP whitelist, InternetMaxBandwidthOut is consistent with that of the instance bound to the EIP. Therefore, it is unnecessary to pass in this parameter.</li></ul>
+<li>BANDWIDTH_PREPAID_BY_MONTH: 1 Mbps to 200 Mbps</li>
+<li>TRAFFIC_POSTPAID_BY_HOUR: 1 Mbps to 100 Mbps</li></ul>Default value: 1 Mbps</li>
+<li>If you are not a bill-by-IP account beta user, the EIP outbound bandwidth cap is subject to that of the instance bound to the EIP. Therefore, you do not need to pass in this parameter.</li></ul>
                      */
                     void SetInternetMaxBandwidthOut(const int64_t& _internetMaxBandwidthOut);
 
@@ -160,18 +169,40 @@ namespace TencentCloud
                     bool InternetMaxBandwidthOutHasBeenSet() const;
 
                     /**
-                     * 获取The EIP type. Default: EIP.
-<ul style="margin:0"><li>For a user who has activated the AIA whitelist, possible values are:<ul><li>AnycastEIP: an Anycast EIP address. For more information, see [Anycast Internet Acceleration](https://cloud.tencent.com/document/product/644).</li></ul>Note: Only certain regions support Anycast EIPs.</li></ul>
-                     * @return AddressType The EIP type. Default: EIP.
-<ul style="margin:0"><li>For a user who has activated the AIA whitelist, possible values are:<ul><li>AnycastEIP: an Anycast EIP address. For more information, see [Anycast Internet Acceleration](https://cloud.tencent.com/document/product/644).</li></ul>Note: Only certain regions support Anycast EIPs.</li></ul>
+                     * 获取A required billing parameter for an EIP billed by monthly bandwidth subscription. For EIPs using other billing modes, it can be ignored.
+                     * @return AddressChargePrepaid A required billing parameter for an EIP billed by monthly bandwidth subscription. For EIPs using other billing modes, it can be ignored.
+                     */
+                    AddressChargePrepaid GetAddressChargePrepaid() const;
+
+                    /**
+                     * 设置A required billing parameter for an EIP billed by monthly bandwidth subscription. For EIPs using other billing modes, it can be ignored.
+                     * @param AddressChargePrepaid A required billing parameter for an EIP billed by monthly bandwidth subscription. For EIPs using other billing modes, it can be ignored.
+                     */
+                    void SetAddressChargePrepaid(const AddressChargePrepaid& _addressChargePrepaid);
+
+                    /**
+                     * 判断参数 AddressChargePrepaid 是否已赋值
+                     * @return AddressChargePrepaid 是否已赋值
+                     */
+                    bool AddressChargePrepaidHasBeenSet() const;
+
+                    /**
+                     * 获取The EIP type. Default: `EIP`.
+<ul style="margin:0"><li>For AIA beta users, the value should be:<ul><li>`AnycastEIP`: an AIA IP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Anycast EIPs are only supported in some of the regions.</li></ul>
+<ul style="margin:0"><li>For high-quality IP beta users, the value should be: <ul><li>`HighQualityEIP`: high-quality IP</li></ul>Note: High-quality IPs are only supported in some of the regions.</li></ul>
+                     * @return AddressType The EIP type. Default: `EIP`.
+<ul style="margin:0"><li>For AIA beta users, the value should be:<ul><li>`AnycastEIP`: an AIA IP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Anycast EIPs are only supported in some of the regions.</li></ul>
+<ul style="margin:0"><li>For high-quality IP beta users, the value should be: <ul><li>`HighQualityEIP`: high-quality IP</li></ul>Note: High-quality IPs are only supported in some of the regions.</li></ul>
                      */
                     std::string GetAddressType() const;
 
                     /**
-                     * 设置The EIP type. Default: EIP.
-<ul style="margin:0"><li>For a user who has activated the AIA whitelist, possible values are:<ul><li>AnycastEIP: an Anycast EIP address. For more information, see [Anycast Internet Acceleration](https://cloud.tencent.com/document/product/644).</li></ul>Note: Only certain regions support Anycast EIPs.</li></ul>
-                     * @param AddressType The EIP type. Default: EIP.
-<ul style="margin:0"><li>For a user who has activated the AIA whitelist, possible values are:<ul><li>AnycastEIP: an Anycast EIP address. For more information, see [Anycast Internet Acceleration](https://cloud.tencent.com/document/product/644).</li></ul>Note: Only certain regions support Anycast EIPs.</li></ul>
+                     * 设置The EIP type. Default: `EIP`.
+<ul style="margin:0"><li>For AIA beta users, the value should be:<ul><li>`AnycastEIP`: an AIA IP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Anycast EIPs are only supported in some of the regions.</li></ul>
+<ul style="margin:0"><li>For high-quality IP beta users, the value should be: <ul><li>`HighQualityEIP`: high-quality IP</li></ul>Note: High-quality IPs are only supported in some of the regions.</li></ul>
+                     * @param AddressType The EIP type. Default: `EIP`.
+<ul style="margin:0"><li>For AIA beta users, the value should be:<ul><li>`AnycastEIP`: an AIA IP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Anycast EIPs are only supported in some of the regions.</li></ul>
+<ul style="margin:0"><li>For high-quality IP beta users, the value should be: <ul><li>`HighQualityEIP`: high-quality IP</li></ul>Note: High-quality IPs are only supported in some of the regions.</li></ul>
                      */
                     void SetAddressType(const std::string& _addressType);
 
@@ -269,6 +300,24 @@ Whether the Anycast EIP can be bound to CLB instances.
                      */
                     bool BandwidthPackageIdHasBeenSet() const;
 
+                    /**
+                     * 获取EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
+                     * @return AddressName EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
+                     */
+                    std::string GetAddressName() const;
+
+                    /**
+                     * 设置EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
+                     * @param AddressName EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
+                     */
+                    void SetAddressName(const std::string& _addressName);
+
+                    /**
+                     * 判断参数 AddressName 是否已赋值
+                     * @return AddressName 是否已赋值
+                     */
+                    bool AddressNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -279,7 +328,7 @@ Whether the Anycast EIP can be bound to CLB instances.
 
                     /**
                      * The EIP line type. Default: BGP.
-<ul style="margin:0"><li>For a user who has activated the static single-line IP whitelist, possible values are:<ul><li>CMCC: China Mobile</li>
+<ul style="margin:0"><li>For a user who has activated the static single-line IP allowlist, possible values are:<ul><li>CMCC: China Mobile</li>
 <li>CTCC: China Telecom</li>
 <li>CUCC: China Unicom</li></ul>Note: Only certain regions support static single-line IP addresses.</li></ul>
                      */
@@ -288,27 +337,36 @@ Whether the Anycast EIP can be bound to CLB instances.
 
                     /**
                      * The EIP billing method.
-<ul style="margin:0"><li>For a user who has activated bandwidth billing by IP whitelist, possible values are:<ul><li>BANDWIDTH_PACKAGE: paid by the [bandwidth package](https://cloud.tencent.com/document/product/684/15255) (The bandwidth sharing whitelist must be activated additionally.)</li>
-<li>BANDWIDTH_POSTPAID_BY_HOUR: bandwidth postpaid by hour</li>
-<li>TRAFFIC_POSTPAID_BY_HOUR: traffic postpaid by hour</li></ul>Default: TRAFFIC_POSTPAID_BY_HOUR</li>.
-<li>For users who do not use bill-by-bandwidth billing mode, InternetChargeType is consistent with that of the instance bound to the EIP. Therefore, it is unnecessary to pass in this parameter.</li></ul>
+<ul style="margin:0"><li>For bill-by-IP account beta users, valid values: <ul><li>BANDWIDTH_PACKAGE: paid by the [bandwidth package](https://intl.cloud.tencent.com/document/product/684/15255?from_cn_redirect=1)(who must also be bandwidth package beta users)</li>
+<li>BANDWIDTH_POSTPAID_BY_HOUR: billed by hourly bandwidth on a pay-as-you-go basis</li>
+<li>BANDWIDTH_PREPAID_BY_MONTH: monthly bandwidth subscription</li>
+<li>TRAFFIC_POSTPAID_BY_HOUR: billed by hourly traffic on a pay-as-you-go basis</li></ul>Default value: TRAFFIC_POSTPAID_BY_HOUR</li>
+<li>If you are not a bill-by-IP account beta user, the EIP billing is the same as that for the instance bound to the EIP. Therefore, you do not need to pass in this parameter.</li></ul>
                      */
                     std::string m_internetChargeType;
                     bool m_internetChargeTypeHasBeenSet;
 
                     /**
-                     * The maximum EIP outbound bandwidth. Unit: Mbps.
-<ul style="margin:0"><li>For a user who has activated bandwidth billing by IP whitelist, the value range is determined by the EIP billing method:<ul><li>BANDWIDTH_PACKAGE: 1 Mbps to 1,000 Mbps</li>
+                     * The EIP outbound bandwidth cap, in Mbps.
+<ul style="margin:0"><li>For bill-by-IP account beta users, valid values:<ul><li>BANDWIDTH_PACKAGE: 1 Mbps to 1000 Mbps</li>
 <li>BANDWIDTH_POSTPAID_BY_HOUR: 1 Mbps to 100 Mbps</li>
-<li>TRAFFIC_POSTPAID_BY_HOUR: 1 Mbps to 100 Mbps</li></ul>Default: 1 Mbps</li>.
-<li>For a user who has not activated bandwidth billing by IP whitelist, InternetMaxBandwidthOut is consistent with that of the instance bound to the EIP. Therefore, it is unnecessary to pass in this parameter.</li></ul>
+<li>BANDWIDTH_PREPAID_BY_MONTH: 1 Mbps to 200 Mbps</li>
+<li>TRAFFIC_POSTPAID_BY_HOUR: 1 Mbps to 100 Mbps</li></ul>Default value: 1 Mbps</li>
+<li>If you are not a bill-by-IP account beta user, the EIP outbound bandwidth cap is subject to that of the instance bound to the EIP. Therefore, you do not need to pass in this parameter.</li></ul>
                      */
                     int64_t m_internetMaxBandwidthOut;
                     bool m_internetMaxBandwidthOutHasBeenSet;
 
                     /**
-                     * The EIP type. Default: EIP.
-<ul style="margin:0"><li>For a user who has activated the AIA whitelist, possible values are:<ul><li>AnycastEIP: an Anycast EIP address. For more information, see [Anycast Internet Acceleration](https://cloud.tencent.com/document/product/644).</li></ul>Note: Only certain regions support Anycast EIPs.</li></ul>
+                     * A required billing parameter for an EIP billed by monthly bandwidth subscription. For EIPs using other billing modes, it can be ignored.
+                     */
+                    AddressChargePrepaid m_addressChargePrepaid;
+                    bool m_addressChargePrepaidHasBeenSet;
+
+                    /**
+                     * The EIP type. Default: `EIP`.
+<ul style="margin:0"><li>For AIA beta users, the value should be:<ul><li>`AnycastEIP`: an AIA IP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Anycast EIPs are only supported in some of the regions.</li></ul>
+<ul style="margin:0"><li>For high-quality IP beta users, the value should be: <ul><li>`HighQualityEIP`: high-quality IP</li></ul>Note: High-quality IPs are only supported in some of the regions.</li></ul>
                      */
                     std::string m_addressType;
                     bool m_addressTypeHasBeenSet;
@@ -340,6 +398,12 @@ Whether the Anycast EIP can be bound to CLB instances.
                      */
                     std::string m_bandwidthPackageId;
                     bool m_bandwidthPackageIdHasBeenSet;
+
+                    /**
+                     * EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
+                     */
+                    std::string m_addressName;
+                    bool m_addressNameHasBeenSet;
 
                 };
             }

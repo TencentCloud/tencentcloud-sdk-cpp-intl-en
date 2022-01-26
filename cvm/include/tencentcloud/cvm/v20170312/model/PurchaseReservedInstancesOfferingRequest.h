@@ -114,6 +114,24 @@ namespace TencentCloud
                      */
                     bool ClientTokenHasBeenSet() const;
 
+                    /**
+                     * 获取Reserved instance name.<br><li>The RI name defaults to “unnamed” if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
+                     * @return ReservedInstanceName Reserved instance name.<br><li>The RI name defaults to “unnamed” if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
+                     */
+                    std::string GetReservedInstanceName() const;
+
+                    /**
+                     * 设置Reserved instance name.<br><li>The RI name defaults to “unnamed” if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
+                     * @param ReservedInstanceName Reserved instance name.<br><li>The RI name defaults to “unnamed” if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
+                     */
+                    void SetReservedInstanceName(const std::string& _reservedInstanceName);
+
+                    /**
+                     * 判断参数 ReservedInstanceName 是否已赋值
+                     * @return ReservedInstanceName 是否已赋值
+                     */
+                    bool ReservedInstanceNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -139,6 +157,12 @@ namespace TencentCloud
                      */
                     std::string m_clientToken;
                     bool m_clientTokenHasBeenSet;
+
+                    /**
+                     * Reserved instance name.<br><li>The RI name defaults to “unnamed” if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
+                     */
+                    std::string m_reservedInstanceName;
+                    bool m_reservedInstanceNameHasBeenSet;
 
                 };
             }

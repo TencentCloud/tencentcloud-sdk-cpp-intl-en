@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeSupportedPrivilegesResponse::DescribeSupportedPrivilegesResponse() :
@@ -34,20 +33,20 @@ DescribeSupportedPrivilegesResponse::DescribeSupportedPrivilegesResponse() :
 
 CoreInternalOutcome DescribeSupportedPrivilegesResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -58,21 +57,21 @@ CoreInternalOutcome DescribeSupportedPrivilegesResponse::Deserialize(const strin
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
     if (rsp.HasMember("GlobalSupportedPrivileges") && !rsp["GlobalSupportedPrivileges"].IsNull())
     {
         if (!rsp["GlobalSupportedPrivileges"].IsArray())
-            return CoreInternalOutcome(Error("response `GlobalSupportedPrivileges` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `GlobalSupportedPrivileges` is not array type"));
 
-        const Value &tmpValue = rsp["GlobalSupportedPrivileges"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["GlobalSupportedPrivileges"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_globalSupportedPrivileges.push_back((*itr).GetString());
         }
@@ -82,10 +81,10 @@ CoreInternalOutcome DescribeSupportedPrivilegesResponse::Deserialize(const strin
     if (rsp.HasMember("DatabaseSupportedPrivileges") && !rsp["DatabaseSupportedPrivileges"].IsNull())
     {
         if (!rsp["DatabaseSupportedPrivileges"].IsArray())
-            return CoreInternalOutcome(Error("response `DatabaseSupportedPrivileges` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DatabaseSupportedPrivileges` is not array type"));
 
-        const Value &tmpValue = rsp["DatabaseSupportedPrivileges"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["DatabaseSupportedPrivileges"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_databaseSupportedPrivileges.push_back((*itr).GetString());
         }
@@ -95,10 +94,10 @@ CoreInternalOutcome DescribeSupportedPrivilegesResponse::Deserialize(const strin
     if (rsp.HasMember("TableSupportedPrivileges") && !rsp["TableSupportedPrivileges"].IsNull())
     {
         if (!rsp["TableSupportedPrivileges"].IsArray())
-            return CoreInternalOutcome(Error("response `TableSupportedPrivileges` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `TableSupportedPrivileges` is not array type"));
 
-        const Value &tmpValue = rsp["TableSupportedPrivileges"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["TableSupportedPrivileges"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_tableSupportedPrivileges.push_back((*itr).GetString());
         }
@@ -108,10 +107,10 @@ CoreInternalOutcome DescribeSupportedPrivilegesResponse::Deserialize(const strin
     if (rsp.HasMember("ColumnSupportedPrivileges") && !rsp["ColumnSupportedPrivileges"].IsNull())
     {
         if (!rsp["ColumnSupportedPrivileges"].IsArray())
-            return CoreInternalOutcome(Error("response `ColumnSupportedPrivileges` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ColumnSupportedPrivileges` is not array type"));
 
-        const Value &tmpValue = rsp["ColumnSupportedPrivileges"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["ColumnSupportedPrivileges"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_columnSupportedPrivileges.push_back((*itr).GetString());
         }
@@ -120,6 +119,75 @@ CoreInternalOutcome DescribeSupportedPrivilegesResponse::Deserialize(const strin
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeSupportedPrivilegesResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_globalSupportedPrivilegesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GlobalSupportedPrivileges";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_globalSupportedPrivileges.begin(); itr != m_globalSupportedPrivileges.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_databaseSupportedPrivilegesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DatabaseSupportedPrivileges";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_databaseSupportedPrivileges.begin(); itr != m_databaseSupportedPrivileges.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_tableSupportedPrivilegesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TableSupportedPrivileges";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_tableSupportedPrivileges.begin(); itr != m_tableSupportedPrivileges.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_columnSupportedPrivilegesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ColumnSupportedPrivileges";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_columnSupportedPrivileges.begin(); itr != m_columnSupportedPrivileges.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

@@ -78,6 +78,24 @@ namespace TencentCloud
                      */
                     bool ForceRestartHasBeenSet() const;
 
+                    /**
+                     * 获取Restart mode. `0`: rolling restart; `1`: full restart
+                     * @return RestartMode Restart mode. `0`: rolling restart; `1`: full restart
+                     */
+                    int64_t GetRestartMode() const;
+
+                    /**
+                     * 设置Restart mode. `0`: rolling restart; `1`: full restart
+                     * @param RestartMode Restart mode. `0`: rolling restart; `1`: full restart
+                     */
+                    void SetRestartMode(const int64_t& _restartMode);
+
+                    /**
+                     * 判断参数 RestartMode 是否已赋值
+                     * @return RestartMode 是否已赋值
+                     */
+                    bool RestartModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -91,6 +109,12 @@ namespace TencentCloud
                      */
                     bool m_forceRestart;
                     bool m_forceRestartHasBeenSet;
+
+                    /**
+                     * Restart mode. `0`: rolling restart; `1`: full restart
+                     */
+                    int64_t m_restartMode;
+                    bool m_restartModeHasBeenSet;
 
                 };
             }

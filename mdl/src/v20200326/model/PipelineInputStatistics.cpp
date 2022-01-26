@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mdl::V20200326::Model;
-using namespace rapidjson;
 using namespace std;
 
 PipelineInputStatistics::PipelineInputStatistics() :
@@ -29,7 +28,7 @@ PipelineInputStatistics::PipelineInputStatistics() :
 {
 }
 
-CoreInternalOutcome PipelineInputStatistics::Deserialize(const Value &value)
+CoreInternalOutcome PipelineInputStatistics::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome PipelineInputStatistics::Deserialize(const Value &value)
     {
         if (!value["Timestamp"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `PipelineInputStatistics.Timestamp` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PipelineInputStatistics.Timestamp` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_timestamp = value["Timestamp"].GetUint64();
         m_timestampHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome PipelineInputStatistics::Deserialize(const Value &value)
     {
         if (!value["NetworkIn"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `PipelineInputStatistics.NetworkIn` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PipelineInputStatistics.NetworkIn` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_networkIn = value["NetworkIn"].GetUint64();
         m_networkInHasBeenSet = true;
@@ -57,10 +56,10 @@ CoreInternalOutcome PipelineInputStatistics::Deserialize(const Value &value)
     if (value.HasMember("Video") && !value["Video"].IsNull())
     {
         if (!value["Video"].IsArray())
-            return CoreInternalOutcome(Error("response `PipelineInputStatistics.Video` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `PipelineInputStatistics.Video` is not array type"));
 
-        const Value &tmpValue = value["Video"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Video"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             VideoPipelineInputStatistics item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -77,10 +76,10 @@ CoreInternalOutcome PipelineInputStatistics::Deserialize(const Value &value)
     if (value.HasMember("Audio") && !value["Audio"].IsNull())
     {
         if (!value["Audio"].IsArray())
-            return CoreInternalOutcome(Error("response `PipelineInputStatistics.Audio` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `PipelineInputStatistics.Audio` is not array type"));
 
-        const Value &tmpValue = value["Audio"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Audio"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             AudioPipelineInputStatistics item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -98,12 +97,12 @@ CoreInternalOutcome PipelineInputStatistics::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void PipelineInputStatistics::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void PipelineInputStatistics::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_timestampHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Timestamp";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_timestamp, allocator);
@@ -111,7 +110,7 @@ void PipelineInputStatistics::ToJsonObject(Value &value, Document::AllocatorType
 
     if (m_networkInHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetworkIn";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_networkIn, allocator);
@@ -119,30 +118,30 @@ void PipelineInputStatistics::ToJsonObject(Value &value, Document::AllocatorType
 
     if (m_videoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Video";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_video.begin(); itr != m_video.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_audioHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Audio";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_audio.begin(); itr != m_audio.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }

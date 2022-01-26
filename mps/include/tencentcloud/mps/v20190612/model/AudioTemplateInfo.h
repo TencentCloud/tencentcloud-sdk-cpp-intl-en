@@ -181,12 +181,14 @@ In Hz.
 <li>1: Mono</li>
 <li>2: Dual</li>
 <li>6: Stereo</li>
-Default value: 2.
+When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
+Default value: 2
                      * @return AudioChannel Audio channel system. Valid values:
 <li>1: Mono</li>
 <li>2: Dual</li>
 <li>6: Stereo</li>
-Default value: 2.
+When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
+Default value: 2
                      */
                     int64_t GetAudioChannel() const;
 
@@ -195,12 +197,14 @@ Default value: 2.
 <li>1: Mono</li>
 <li>2: Dual</li>
 <li>6: Stereo</li>
-Default value: 2.
+When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
+Default value: 2
                      * @param AudioChannel Audio channel system. Valid values:
 <li>1: Mono</li>
 <li>2: Dual</li>
 <li>6: Stereo</li>
-Default value: 2.
+When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
+Default value: 2
                      */
                     void SetAudioChannel(const int64_t& _audioChannel);
 
@@ -254,7 +258,8 @@ In Hz.
 <li>1: Mono</li>
 <li>2: Dual</li>
 <li>6: Stereo</li>
-Default value: 2.
+When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
+Default value: 2
                      */
                     int64_t m_audioChannel;
                     bool m_audioChannelHasBeenSet;

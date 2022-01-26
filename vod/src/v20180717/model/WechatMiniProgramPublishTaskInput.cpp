@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 WechatMiniProgramPublishTaskInput::WechatMiniProgramPublishTaskInput() :
@@ -26,7 +25,7 @@ WechatMiniProgramPublishTaskInput::WechatMiniProgramPublishTaskInput() :
 {
 }
 
-CoreInternalOutcome WechatMiniProgramPublishTaskInput::Deserialize(const Value &value)
+CoreInternalOutcome WechatMiniProgramPublishTaskInput::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -35,7 +34,7 @@ CoreInternalOutcome WechatMiniProgramPublishTaskInput::Deserialize(const Value &
     {
         if (!value["SourceDefinition"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `WechatMiniProgramPublishTaskInput.SourceDefinition` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WechatMiniProgramPublishTaskInput.SourceDefinition` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_sourceDefinition = value["SourceDefinition"].GetUint64();
         m_sourceDefinitionHasBeenSet = true;
@@ -45,12 +44,12 @@ CoreInternalOutcome WechatMiniProgramPublishTaskInput::Deserialize(const Value &
     return CoreInternalOutcome(true);
 }
 
-void WechatMiniProgramPublishTaskInput::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void WechatMiniProgramPublishTaskInput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_sourceDefinitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SourceDefinition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_sourceDefinition, allocator);

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 HttpHeaderPathRule::HttpHeaderPathRule() :
@@ -30,7 +29,7 @@ HttpHeaderPathRule::HttpHeaderPathRule() :
 {
 }
 
-CoreInternalOutcome HttpHeaderPathRule::Deserialize(const Value &value)
+CoreInternalOutcome HttpHeaderPathRule::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome HttpHeaderPathRule::Deserialize(const Value &value)
     {
         if (!value["HeaderMode"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HttpHeaderPathRule.HeaderMode` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HttpHeaderPathRule.HeaderMode` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_headerMode = string(value["HeaderMode"].GetString());
         m_headerModeHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome HttpHeaderPathRule::Deserialize(const Value &value)
     {
         if (!value["HeaderName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HttpHeaderPathRule.HeaderName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HttpHeaderPathRule.HeaderName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_headerName = string(value["HeaderName"].GetString());
         m_headerNameHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome HttpHeaderPathRule::Deserialize(const Value &value)
     {
         if (!value["HeaderValue"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HttpHeaderPathRule.HeaderValue` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HttpHeaderPathRule.HeaderValue` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_headerValue = string(value["HeaderValue"].GetString());
         m_headerValueHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome HttpHeaderPathRule::Deserialize(const Value &value)
     {
         if (!value["RuleType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HttpHeaderPathRule.RuleType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HttpHeaderPathRule.RuleType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ruleType = string(value["RuleType"].GetString());
         m_ruleTypeHasBeenSet = true;
@@ -78,10 +77,10 @@ CoreInternalOutcome HttpHeaderPathRule::Deserialize(const Value &value)
     if (value.HasMember("RulePaths") && !value["RulePaths"].IsNull())
     {
         if (!value["RulePaths"].IsArray())
-            return CoreInternalOutcome(Error("response `HttpHeaderPathRule.RulePaths` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `HttpHeaderPathRule.RulePaths` is not array type"));
 
-        const Value &tmpValue = value["RulePaths"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["RulePaths"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_rulePaths.push_back((*itr).GetString());
         }
@@ -92,51 +91,51 @@ CoreInternalOutcome HttpHeaderPathRule::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void HttpHeaderPathRule::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void HttpHeaderPathRule::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_headerModeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HeaderMode";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_headerMode.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_headerMode.c_str(), allocator).Move(), allocator);
     }
 
     if (m_headerNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HeaderName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_headerName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_headerName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_headerValueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HeaderValue";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_headerValue.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_headerValue.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ruleTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RuleType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ruleType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ruleType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_rulePathsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RulePaths";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_rulePaths.begin(); itr != m_rulePaths.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 

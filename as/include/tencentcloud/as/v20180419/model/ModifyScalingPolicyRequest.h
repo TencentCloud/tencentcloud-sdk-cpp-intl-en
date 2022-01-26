@@ -152,17 +152,17 @@ namespace TencentCloud
                     bool MetricAlarmHasBeenSet() const;
 
                     /**
-                     * 获取Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://cloud.tencent.com/document/product/598/34589) API.
+                     * 获取Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
 If you want to clear the user group, you need to pass in the specific string "NULL" to the list.
-                     * @return NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://cloud.tencent.com/document/product/598/34589) API.
+                     * @return NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
 If you want to clear the user group, you need to pass in the specific string "NULL" to the list.
                      */
                     std::vector<std::string> GetNotificationUserGroupIds() const;
 
                     /**
-                     * 设置Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://cloud.tencent.com/document/product/598/34589) API.
+                     * 设置Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
 If you want to clear the user group, you need to pass in the specific string "NULL" to the list.
-                     * @param NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://cloud.tencent.com/document/product/598/34589) API.
+                     * @param NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
 If you want to clear the user group, you need to pass in the specific string "NULL" to the list.
                      */
                     void SetNotificationUserGroupIds(const std::vector<std::string>& _notificationUserGroupIds);
@@ -212,7 +212,7 @@ If you want to clear the user group, you need to pass in the specific string "NU
                     bool m_metricAlarmHasBeenSet;
 
                     /**
-                     * Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://cloud.tencent.com/document/product/598/34589) API.
+                     * Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
 If you want to clear the user group, you need to pass in the specific string "NULL" to the list.
                      */
                     std::vector<std::string> m_notificationUserGroupIds;

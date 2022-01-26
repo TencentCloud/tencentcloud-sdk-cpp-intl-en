@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Clb::V20180317::Model;
-using namespace rapidjson;
 using namespace std;
 
 HealthCheck::HealthCheck() :
@@ -36,11 +35,12 @@ HealthCheck::HealthCheck() :
     m_sendContextHasBeenSet(false),
     m_recvContextHasBeenSet(false),
     m_checkTypeHasBeenSet(false),
-    m_httpVersionHasBeenSet(false)
+    m_httpVersionHasBeenSet(false),
+    m_sourceIpTypeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome HealthCheck::Deserialize(const Value &value)
+CoreInternalOutcome HealthCheck::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -49,7 +49,7 @@ CoreInternalOutcome HealthCheck::Deserialize(const Value &value)
     {
         if (!value["HealthSwitch"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `HealthCheck.HealthSwitch` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HealthCheck.HealthSwitch` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_healthSwitch = value["HealthSwitch"].GetInt64();
         m_healthSwitchHasBeenSet = true;
@@ -59,7 +59,7 @@ CoreInternalOutcome HealthCheck::Deserialize(const Value &value)
     {
         if (!value["TimeOut"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `HealthCheck.TimeOut` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HealthCheck.TimeOut` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_timeOut = value["TimeOut"].GetInt64();
         m_timeOutHasBeenSet = true;
@@ -69,7 +69,7 @@ CoreInternalOutcome HealthCheck::Deserialize(const Value &value)
     {
         if (!value["IntervalTime"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `HealthCheck.IntervalTime` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HealthCheck.IntervalTime` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_intervalTime = value["IntervalTime"].GetInt64();
         m_intervalTimeHasBeenSet = true;
@@ -79,7 +79,7 @@ CoreInternalOutcome HealthCheck::Deserialize(const Value &value)
     {
         if (!value["HealthNum"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `HealthCheck.HealthNum` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HealthCheck.HealthNum` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_healthNum = value["HealthNum"].GetInt64();
         m_healthNumHasBeenSet = true;
@@ -89,7 +89,7 @@ CoreInternalOutcome HealthCheck::Deserialize(const Value &value)
     {
         if (!value["UnHealthNum"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `HealthCheck.UnHealthNum` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HealthCheck.UnHealthNum` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_unHealthNum = value["UnHealthNum"].GetInt64();
         m_unHealthNumHasBeenSet = true;
@@ -99,7 +99,7 @@ CoreInternalOutcome HealthCheck::Deserialize(const Value &value)
     {
         if (!value["HttpCode"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `HealthCheck.HttpCode` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HealthCheck.HttpCode` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_httpCode = value["HttpCode"].GetInt64();
         m_httpCodeHasBeenSet = true;
@@ -109,7 +109,7 @@ CoreInternalOutcome HealthCheck::Deserialize(const Value &value)
     {
         if (!value["HttpCheckPath"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HealthCheck.HttpCheckPath` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HealthCheck.HttpCheckPath` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_httpCheckPath = string(value["HttpCheckPath"].GetString());
         m_httpCheckPathHasBeenSet = true;
@@ -119,7 +119,7 @@ CoreInternalOutcome HealthCheck::Deserialize(const Value &value)
     {
         if (!value["HttpCheckDomain"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HealthCheck.HttpCheckDomain` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HealthCheck.HttpCheckDomain` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_httpCheckDomain = string(value["HttpCheckDomain"].GetString());
         m_httpCheckDomainHasBeenSet = true;
@@ -129,7 +129,7 @@ CoreInternalOutcome HealthCheck::Deserialize(const Value &value)
     {
         if (!value["HttpCheckMethod"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HealthCheck.HttpCheckMethod` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HealthCheck.HttpCheckMethod` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_httpCheckMethod = string(value["HttpCheckMethod"].GetString());
         m_httpCheckMethodHasBeenSet = true;
@@ -139,7 +139,7 @@ CoreInternalOutcome HealthCheck::Deserialize(const Value &value)
     {
         if (!value["CheckPort"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `HealthCheck.CheckPort` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HealthCheck.CheckPort` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_checkPort = value["CheckPort"].GetInt64();
         m_checkPortHasBeenSet = true;
@@ -149,7 +149,7 @@ CoreInternalOutcome HealthCheck::Deserialize(const Value &value)
     {
         if (!value["ContextType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HealthCheck.ContextType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HealthCheck.ContextType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_contextType = string(value["ContextType"].GetString());
         m_contextTypeHasBeenSet = true;
@@ -159,7 +159,7 @@ CoreInternalOutcome HealthCheck::Deserialize(const Value &value)
     {
         if (!value["SendContext"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HealthCheck.SendContext` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HealthCheck.SendContext` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_sendContext = string(value["SendContext"].GetString());
         m_sendContextHasBeenSet = true;
@@ -169,7 +169,7 @@ CoreInternalOutcome HealthCheck::Deserialize(const Value &value)
     {
         if (!value["RecvContext"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HealthCheck.RecvContext` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HealthCheck.RecvContext` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_recvContext = string(value["RecvContext"].GetString());
         m_recvContextHasBeenSet = true;
@@ -179,7 +179,7 @@ CoreInternalOutcome HealthCheck::Deserialize(const Value &value)
     {
         if (!value["CheckType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HealthCheck.CheckType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HealthCheck.CheckType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_checkType = string(value["CheckType"].GetString());
         m_checkTypeHasBeenSet = true;
@@ -189,22 +189,32 @@ CoreInternalOutcome HealthCheck::Deserialize(const Value &value)
     {
         if (!value["HttpVersion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HealthCheck.HttpVersion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HealthCheck.HttpVersion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_httpVersion = string(value["HttpVersion"].GetString());
         m_httpVersionHasBeenSet = true;
+    }
+
+    if (value.HasMember("SourceIpType") && !value["SourceIpType"].IsNull())
+    {
+        if (!value["SourceIpType"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `HealthCheck.SourceIpType` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_sourceIpType = value["SourceIpType"].GetInt64();
+        m_sourceIpTypeHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void HealthCheck::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void HealthCheck::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_healthSwitchHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HealthSwitch";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_healthSwitch, allocator);
@@ -212,7 +222,7 @@ void HealthCheck::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_timeOutHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TimeOut";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_timeOut, allocator);
@@ -220,7 +230,7 @@ void HealthCheck::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_intervalTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IntervalTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_intervalTime, allocator);
@@ -228,7 +238,7 @@ void HealthCheck::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_healthNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HealthNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_healthNum, allocator);
@@ -236,7 +246,7 @@ void HealthCheck::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_unHealthNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UnHealthNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_unHealthNum, allocator);
@@ -244,7 +254,7 @@ void HealthCheck::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_httpCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HttpCode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_httpCode, allocator);
@@ -252,31 +262,31 @@ void HealthCheck::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_httpCheckPathHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HttpCheckPath";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_httpCheckPath.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_httpCheckPath.c_str(), allocator).Move(), allocator);
     }
 
     if (m_httpCheckDomainHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HttpCheckDomain";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_httpCheckDomain.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_httpCheckDomain.c_str(), allocator).Move(), allocator);
     }
 
     if (m_httpCheckMethodHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HttpCheckMethod";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_httpCheckMethod.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_httpCheckMethod.c_str(), allocator).Move(), allocator);
     }
 
     if (m_checkPortHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CheckPort";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_checkPort, allocator);
@@ -284,42 +294,50 @@ void HealthCheck::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_contextTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ContextType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_contextType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_contextType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sendContextHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SendContext";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_sendContext.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sendContext.c_str(), allocator).Move(), allocator);
     }
 
     if (m_recvContextHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RecvContext";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_recvContext.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_recvContext.c_str(), allocator).Move(), allocator);
     }
 
     if (m_checkTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CheckType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_checkType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_checkType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_httpVersionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HttpVersion";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_httpVersion.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_httpVersion.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_sourceIpTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SourceIpType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_sourceIpType, allocator);
     }
 
 }
@@ -563,5 +581,21 @@ void HealthCheck::SetHttpVersion(const string& _httpVersion)
 bool HealthCheck::HttpVersionHasBeenSet() const
 {
     return m_httpVersionHasBeenSet;
+}
+
+int64_t HealthCheck::GetSourceIpType() const
+{
+    return m_sourceIpType;
+}
+
+void HealthCheck::SetSourceIpType(const int64_t& _sourceIpType)
+{
+    m_sourceIpType = _sourceIpType;
+    m_sourceIpTypeHasBeenSet = true;
+}
+
+bool HealthCheck::SourceIpTypeHasBeenSet() const
+{
+    return m_sourceIpTypeHasBeenSet;
 }
 

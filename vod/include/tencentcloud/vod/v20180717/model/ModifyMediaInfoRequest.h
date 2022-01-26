@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vod/v20180717/model/MediaKeyFrameDescItem.h>
+#include <tencentcloud/vod/v20180717/model/MediaSubtitleInput.h>
 
 
 namespace TencentCloud
@@ -116,14 +117,14 @@ namespace TencentCloud
                     bool ClassIdHasBeenSet() const;
 
                     /**
-                     * 获取Media file expiration time in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The value `9999-12-31T23:59:59Z` indicates that the media file never expires. After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted.
-                     * @return ExpireTime Media file expiration time in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The value `9999-12-31T23:59:59Z` indicates that the media file never expires. After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted.
+                     * 获取Media file expiration time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The value `9999-12-31T23:59:59Z` indicates that the media file never expires. After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted.
+                     * @return ExpireTime Media file expiration time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The value `9999-12-31T23:59:59Z` indicates that the media file never expires. After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted.
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置Media file expiration time in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The value `9999-12-31T23:59:59Z` indicates that the media file never expires. After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted.
-                     * @param ExpireTime Media file expiration time in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The value `9999-12-31T23:59:59Z` indicates that the media file never expires. After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted.
+                     * 设置Media file expiration time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The value `9999-12-31T23:59:59Z` indicates that the media file never expires. After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted.
+                     * @param ExpireTime Media file expiration time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The value `9999-12-31T23:59:59Z` indicates that the media file never expires. After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted.
                      */
                     void SetExpireTime(const std::string& _expireTime);
 
@@ -268,14 +269,72 @@ In the same request, `ClearTags` and `AddTags` cannot be present at the same tim
                     bool ClearTagsHasBeenSet() const;
 
                     /**
-                     * 获取[Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     * @return SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * 获取Information of multiple subtitles to be added. A single media file can have up to 16 subtitles. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+                     * @return AddSubtitles Information of multiple subtitles to be added. A single media file can have up to 16 subtitles. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+                     */
+                    std::vector<MediaSubtitleInput> GetAddSubtitles() const;
+
+                    /**
+                     * 设置Information of multiple subtitles to be added. A single media file can have up to 16 subtitles. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+                     * @param AddSubtitles Information of multiple subtitles to be added. A single media file can have up to 16 subtitles. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+                     */
+                    void SetAddSubtitles(const std::vector<MediaSubtitleInput>& _addSubtitles);
+
+                    /**
+                     * 判断参数 AddSubtitles 是否已赋值
+                     * @return AddSubtitles 是否已赋值
+                     */
+                    bool AddSubtitlesHasBeenSet() const;
+
+                    /**
+                     * 获取Unique IDs of the subtitles to be deleted. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+                     * @return DeleteSubtitleIds Unique IDs of the subtitles to be deleted. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+                     */
+                    std::vector<std::string> GetDeleteSubtitleIds() const;
+
+                    /**
+                     * 设置Unique IDs of the subtitles to be deleted. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+                     * @param DeleteSubtitleIds Unique IDs of the subtitles to be deleted. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+                     */
+                    void SetDeleteSubtitleIds(const std::vector<std::string>& _deleteSubtitleIds);
+
+                    /**
+                     * 判断参数 DeleteSubtitleIds 是否已赋值
+                     * @return DeleteSubtitleIds 是否已赋值
+                     */
+                    bool DeleteSubtitleIdsHasBeenSet() const;
+
+                    /**
+                     * 获取The value `1` indicates to delete all subtitle information of the media file. Other values are meaningless.
+`ClearSubtitles` and `AddSubtitles` cannot co-exist in the same request.
+                     * @return ClearSubtitles The value `1` indicates to delete all subtitle information of the media file. Other values are meaningless.
+`ClearSubtitles` and `AddSubtitles` cannot co-exist in the same request.
+                     */
+                    int64_t GetClearSubtitles() const;
+
+                    /**
+                     * 设置The value `1` indicates to delete all subtitle information of the media file. Other values are meaningless.
+`ClearSubtitles` and `AddSubtitles` cannot co-exist in the same request.
+                     * @param ClearSubtitles The value `1` indicates to delete all subtitle information of the media file. Other values are meaningless.
+`ClearSubtitles` and `AddSubtitles` cannot co-exist in the same request.
+                     */
+                    void SetClearSubtitles(const int64_t& _clearSubtitles);
+
+                    /**
+                     * 判断参数 ClearSubtitles 是否已赋值
+                     * @return ClearSubtitles 是否已赋值
+                     */
+                    bool ClearSubtitlesHasBeenSet() const;
+
+                    /**
+                     * 获取[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置[Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     * @param SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * 设置[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
@@ -312,7 +371,7 @@ In the same request, `ClearTags` and `AddTags` cannot be present at the same tim
                     bool m_classIdHasBeenSet;
 
                     /**
-                     * Media file expiration time in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The value `9999-12-31T23:59:59Z` indicates that the media file never expires. After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted.
+                     * Media file expiration time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The value `9999-12-31T23:59:59Z` indicates that the media file never expires. After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted.
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
@@ -362,7 +421,26 @@ In the same request, `ClearTags` and `AddTags` cannot be present at the same tim
                     bool m_clearTagsHasBeenSet;
 
                     /**
-                     * [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * Information of multiple subtitles to be added. A single media file can have up to 16 subtitles. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+                     */
+                    std::vector<MediaSubtitleInput> m_addSubtitles;
+                    bool m_addSubtitlesHasBeenSet;
+
+                    /**
+                     * Unique IDs of the subtitles to be deleted. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+                     */
+                    std::vector<std::string> m_deleteSubtitleIds;
+                    bool m_deleteSubtitleIdsHasBeenSet;
+
+                    /**
+                     * The value `1` indicates to delete all subtitle information of the media file. Other values are meaningless.
+`ClearSubtitles` and `AddSubtitles` cannot co-exist in the same request.
+                     */
+                    int64_t m_clearSubtitles;
+                    bool m_clearSubtitlesHasBeenSet;
+
+                    /**
+                     * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;

@@ -44,17 +44,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Template ID.
-Template ID returned by the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
+Template ID returned by the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API call.
                      * @return TemplateId Template ID.
-Template ID returned by the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
+Template ID returned by the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API call.
                      */
                     int64_t GetTemplateId() const;
 
                     /**
                      * 设置Template ID.
-Template ID returned by the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
+Template ID returned by the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API call.
                      * @param TemplateId Template ID.
-Template ID returned by the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
+Template ID returned by the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API call.
                      */
                     void SetTemplateId(const int64_t& _templateId);
 
@@ -68,7 +68,7 @@ Template ID returned by the [CreateLiveSnapshotTemplate](/document/product/267/3
 
                     /**
                      * Template ID.
-Template ID returned by the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
+Template ID returned by the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API call.
                      */
                     int64_t m_templateId;
                     bool m_templateIdHasBeenSet;

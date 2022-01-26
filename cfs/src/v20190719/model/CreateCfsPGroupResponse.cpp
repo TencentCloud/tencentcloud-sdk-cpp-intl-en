@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cfs::V20190719::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateCfsPGroupResponse::CreateCfsPGroupResponse() :
@@ -35,20 +34,20 @@ CreateCfsPGroupResponse::CreateCfsPGroupResponse() :
 
 CoreInternalOutcome CreateCfsPGroupResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -59,11 +58,11 @@ CoreInternalOutcome CreateCfsPGroupResponse::Deserialize(const string &payload)
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -71,7 +70,7 @@ CoreInternalOutcome CreateCfsPGroupResponse::Deserialize(const string &payload)
     {
         if (!rsp["PGroupId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PGroupId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PGroupId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_pGroupId = string(rsp["PGroupId"].GetString());
         m_pGroupIdHasBeenSet = true;
@@ -81,7 +80,7 @@ CoreInternalOutcome CreateCfsPGroupResponse::Deserialize(const string &payload)
     {
         if (!rsp["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(rsp["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -91,7 +90,7 @@ CoreInternalOutcome CreateCfsPGroupResponse::Deserialize(const string &payload)
     {
         if (!rsp["DescInfo"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescInfo` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescInfo` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_descInfo = string(rsp["DescInfo"].GetString());
         m_descInfoHasBeenSet = true;
@@ -101,7 +100,7 @@ CoreInternalOutcome CreateCfsPGroupResponse::Deserialize(const string &payload)
     {
         if (!rsp["BindCfsNum"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `BindCfsNum` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BindCfsNum` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_bindCfsNum = rsp["BindCfsNum"].GetInt64();
         m_bindCfsNumHasBeenSet = true;
@@ -111,7 +110,7 @@ CoreInternalOutcome CreateCfsPGroupResponse::Deserialize(const string &payload)
     {
         if (!rsp["CDate"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CDate` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CDate` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cDate = string(rsp["CDate"].GetString());
         m_cDateHasBeenSet = true;
@@ -119,6 +118,63 @@ CoreInternalOutcome CreateCfsPGroupResponse::Deserialize(const string &payload)
 
 
     return CoreInternalOutcome(true);
+}
+
+string CreateCfsPGroupResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_pGroupIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PGroupId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_pGroupId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_nameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Name";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_descInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DescInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_descInfo.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_bindCfsNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BindCfsNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_bindCfsNum, allocator);
+    }
+
+    if (m_cDateHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CDate";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cDate.c_str(), allocator).Move(), allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

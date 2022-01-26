@@ -18,14 +18,13 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Live::V20180801::Model;
-using namespace rapidjson;
 using namespace std;
 
 CommonMixLayoutParams::CommonMixLayoutParams() :
     m_imageLayerHasBeenSet(false),
     m_inputTypeHasBeenSet(false),
-    m_imageWidthHasBeenSet(false),
     m_imageHeightHasBeenSet(false),
+    m_imageWidthHasBeenSet(false),
     m_locationXHasBeenSet(false),
     m_locationYHasBeenSet(false),
     m_colorHasBeenSet(false),
@@ -33,7 +32,7 @@ CommonMixLayoutParams::CommonMixLayoutParams() :
 {
 }
 
-CoreInternalOutcome CommonMixLayoutParams::Deserialize(const Value &value)
+CoreInternalOutcome CommonMixLayoutParams::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +41,7 @@ CoreInternalOutcome CommonMixLayoutParams::Deserialize(const Value &value)
     {
         if (!value["ImageLayer"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `CommonMixLayoutParams.ImageLayer` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CommonMixLayoutParams.ImageLayer` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_imageLayer = value["ImageLayer"].GetInt64();
         m_imageLayerHasBeenSet = true;
@@ -52,37 +51,37 @@ CoreInternalOutcome CommonMixLayoutParams::Deserialize(const Value &value)
     {
         if (!value["InputType"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `CommonMixLayoutParams.InputType` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CommonMixLayoutParams.InputType` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_inputType = value["InputType"].GetInt64();
         m_inputTypeHasBeenSet = true;
     }
 
-    if (value.HasMember("ImageWidth") && !value["ImageWidth"].IsNull())
-    {
-        if (!value["ImageWidth"].IsDouble())
-        {
-            return CoreInternalOutcome(Error("response `CommonMixLayoutParams.ImageWidth` IsDouble=false incorrectly").SetRequestId(requestId));
-        }
-        m_imageWidth = value["ImageWidth"].GetDouble();
-        m_imageWidthHasBeenSet = true;
-    }
-
     if (value.HasMember("ImageHeight") && !value["ImageHeight"].IsNull())
     {
-        if (!value["ImageHeight"].IsDouble())
+        if (!value["ImageHeight"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `CommonMixLayoutParams.ImageHeight` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CommonMixLayoutParams.ImageHeight` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_imageHeight = value["ImageHeight"].GetDouble();
         m_imageHeightHasBeenSet = true;
     }
 
+    if (value.HasMember("ImageWidth") && !value["ImageWidth"].IsNull())
+    {
+        if (!value["ImageWidth"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `CommonMixLayoutParams.ImageWidth` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_imageWidth = value["ImageWidth"].GetDouble();
+        m_imageWidthHasBeenSet = true;
+    }
+
     if (value.HasMember("LocationX") && !value["LocationX"].IsNull())
     {
-        if (!value["LocationX"].IsDouble())
+        if (!value["LocationX"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `CommonMixLayoutParams.LocationX` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CommonMixLayoutParams.LocationX` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_locationX = value["LocationX"].GetDouble();
         m_locationXHasBeenSet = true;
@@ -90,9 +89,9 @@ CoreInternalOutcome CommonMixLayoutParams::Deserialize(const Value &value)
 
     if (value.HasMember("LocationY") && !value["LocationY"].IsNull())
     {
-        if (!value["LocationY"].IsDouble())
+        if (!value["LocationY"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `CommonMixLayoutParams.LocationY` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CommonMixLayoutParams.LocationY` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_locationY = value["LocationY"].GetDouble();
         m_locationYHasBeenSet = true;
@@ -102,7 +101,7 @@ CoreInternalOutcome CommonMixLayoutParams::Deserialize(const Value &value)
     {
         if (!value["Color"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CommonMixLayoutParams.Color` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CommonMixLayoutParams.Color` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_color = string(value["Color"].GetString());
         m_colorHasBeenSet = true;
@@ -112,7 +111,7 @@ CoreInternalOutcome CommonMixLayoutParams::Deserialize(const Value &value)
     {
         if (!value["WatermarkId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `CommonMixLayoutParams.WatermarkId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CommonMixLayoutParams.WatermarkId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_watermarkId = value["WatermarkId"].GetInt64();
         m_watermarkIdHasBeenSet = true;
@@ -122,12 +121,12 @@ CoreInternalOutcome CommonMixLayoutParams::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void CommonMixLayoutParams::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void CommonMixLayoutParams::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_imageLayerHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ImageLayer";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_imageLayer, allocator);
@@ -135,31 +134,31 @@ void CommonMixLayoutParams::ToJsonObject(Value &value, Document::AllocatorType& 
 
     if (m_inputTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InputType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_inputType, allocator);
     }
 
-    if (m_imageWidthHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "ImageWidth";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_imageWidth, allocator);
-    }
-
     if (m_imageHeightHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ImageHeight";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_imageHeight, allocator);
     }
 
+    if (m_imageWidthHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ImageWidth";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_imageWidth, allocator);
+    }
+
     if (m_locationXHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LocationX";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_locationX, allocator);
@@ -167,7 +166,7 @@ void CommonMixLayoutParams::ToJsonObject(Value &value, Document::AllocatorType& 
 
     if (m_locationYHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LocationY";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_locationY, allocator);
@@ -175,15 +174,15 @@ void CommonMixLayoutParams::ToJsonObject(Value &value, Document::AllocatorType& 
 
     if (m_colorHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Color";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_color.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_color.c_str(), allocator).Move(), allocator);
     }
 
     if (m_watermarkIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "WatermarkId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_watermarkId, allocator);
@@ -224,22 +223,6 @@ bool CommonMixLayoutParams::InputTypeHasBeenSet() const
     return m_inputTypeHasBeenSet;
 }
 
-double CommonMixLayoutParams::GetImageWidth() const
-{
-    return m_imageWidth;
-}
-
-void CommonMixLayoutParams::SetImageWidth(const double& _imageWidth)
-{
-    m_imageWidth = _imageWidth;
-    m_imageWidthHasBeenSet = true;
-}
-
-bool CommonMixLayoutParams::ImageWidthHasBeenSet() const
-{
-    return m_imageWidthHasBeenSet;
-}
-
 double CommonMixLayoutParams::GetImageHeight() const
 {
     return m_imageHeight;
@@ -254,6 +237,22 @@ void CommonMixLayoutParams::SetImageHeight(const double& _imageHeight)
 bool CommonMixLayoutParams::ImageHeightHasBeenSet() const
 {
     return m_imageHeightHasBeenSet;
+}
+
+double CommonMixLayoutParams::GetImageWidth() const
+{
+    return m_imageWidth;
+}
+
+void CommonMixLayoutParams::SetImageWidth(const double& _imageWidth)
+{
+    m_imageWidth = _imageWidth;
+    m_imageWidthHasBeenSet = true;
+}
+
+bool CommonMixLayoutParams::ImageWidthHasBeenSet() const
+{
+    return m_imageWidthHasBeenSet;
 }
 
 double CommonMixLayoutParams::GetLocationX() const

@@ -40,12 +40,13 @@ namespace TencentCloud
                     ModifyCertificateProjectResponse();
                     ~ModifyCertificateProjectResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取List of certificates whose projects were modified successfully.
+                     * 获取List of certificates whose projects were modified successfully
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SuccessCertificates List of certificates whose projects were modified successfully.
+                     * @return SuccessCertificates List of certificates whose projects were modified successfully
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetSuccessCertificates() const;
@@ -57,9 +58,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SuccessCertificatesHasBeenSet() const;
 
                     /**
-                     * 获取List of certificates whose projects failed to be modified.
+                     * 获取List of certificates whose projects failed to be modified
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return FailCertificates List of certificates whose projects failed to be modified.
+                     * @return FailCertificates List of certificates whose projects failed to be modified
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetFailCertificates() const;
@@ -73,14 +74,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * List of certificates whose projects were modified successfully.
+                     * List of certificates whose projects were modified successfully
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_successCertificates;
                     bool m_successCertificatesHasBeenSet;
 
                     /**
-                     * List of certificates whose projects failed to be modified.
+                     * List of certificates whose projects failed to be modified
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_failCertificates;

@@ -47,14 +47,16 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Availability zone name, such as ap-guangzhou-3.
+                     * 获取Availability zone name, such as `ap-guangzhou-3`.
 The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
+<li> ap-seoul-2 </li>
 <li> ap-chengdu-1 </li>
 <li> ap-chengdu-2 </li>
-<li> ap-hongkong-1 </li>
+<li> ap-hongkong-1 (sold out)</li>
 <li> ap-hongkong-2 </li>
+<li> ap-hongkong-3 </li>
 <li> ap-shenzhen-fsi-1 </li>
 <li> ap-shenzhen-fsi-2 </li>
 <li> ap-shenzhen-fsi-3 </li>
@@ -62,16 +64,23 @@ The following is a list of all availability zones:
 <li> ap-guangzhou-2 (sold out)</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
+<li> ap-guangzhou-6 </li>
+<li> ap-guangzhou-7 </li>
 <li> ap-tokyo-1 </li>
+<li> ap-tokyo-2 </li>
 <li> ap-singapore-1 </li>
+<li> ap-singapore-2 </li>
+<li> ap-singapore-3 </li>
 <li> ap-shanghai-fsi-1 </li>
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
 <li> ap-bangkok-1 </li>
+<li> ap-bangkok-2 </li>
 <li> ap-shanghai-1 (sold out) </li>
 <li> ap-shanghai-2 </li>
 <li> ap-shanghai-3 </li>
 <li> ap-shanghai-4 </li>
+<li> ap-shanghai-5 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
@@ -79,22 +88,28 @@ The following is a list of all availability zones:
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
+<li> ap-beijing-5 </li>
+<li> ap-beijing-6 </li>
+<li> ap-beijing-7 </li>
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
+<li> eu-frankfurt-2 </li>
 <li> na-toronto-1 </li>
 <li> na-ashburn-1 </li>
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
-                     * @return Zone Availability zone name, such as ap-guangzhou-3.
+                     * @return Zone Availability zone name, such as `ap-guangzhou-3`.
 The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
+<li> ap-seoul-2 </li>
 <li> ap-chengdu-1 </li>
 <li> ap-chengdu-2 </li>
-<li> ap-hongkong-1 </li>
+<li> ap-hongkong-1 (sold out)</li>
 <li> ap-hongkong-2 </li>
+<li> ap-hongkong-3 </li>
 <li> ap-shenzhen-fsi-1 </li>
 <li> ap-shenzhen-fsi-2 </li>
 <li> ap-shenzhen-fsi-3 </li>
@@ -102,16 +117,23 @@ The following is a list of all availability zones:
 <li> ap-guangzhou-2 (sold out)</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
+<li> ap-guangzhou-6 </li>
+<li> ap-guangzhou-7 </li>
 <li> ap-tokyo-1 </li>
+<li> ap-tokyo-2 </li>
 <li> ap-singapore-1 </li>
+<li> ap-singapore-2 </li>
+<li> ap-singapore-3 </li>
 <li> ap-shanghai-fsi-1 </li>
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
 <li> ap-bangkok-1 </li>
+<li> ap-bangkok-2 </li>
 <li> ap-shanghai-1 (sold out) </li>
 <li> ap-shanghai-2 </li>
 <li> ap-shanghai-3 </li>
 <li> ap-shanghai-4 </li>
+<li> ap-shanghai-5 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
@@ -119,9 +141,13 @@ The following is a list of all availability zones:
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
+<li> ap-beijing-5 </li>
+<li> ap-beijing-6 </li>
+<li> ap-beijing-7 </li>
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
+<li> eu-frankfurt-2 </li>
 <li> na-toronto-1 </li>
 <li> na-ashburn-1 </li>
 <li> na-ashburn-2 </li>
@@ -131,14 +157,16 @@ The following is a list of all availability zones:
                     std::string GetZone() const;
 
                     /**
-                     * 设置Availability zone name, such as ap-guangzhou-3.
+                     * 设置Availability zone name, such as `ap-guangzhou-3`.
 The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
+<li> ap-seoul-2 </li>
 <li> ap-chengdu-1 </li>
 <li> ap-chengdu-2 </li>
-<li> ap-hongkong-1 </li>
+<li> ap-hongkong-1 (sold out)</li>
 <li> ap-hongkong-2 </li>
+<li> ap-hongkong-3 </li>
 <li> ap-shenzhen-fsi-1 </li>
 <li> ap-shenzhen-fsi-2 </li>
 <li> ap-shenzhen-fsi-3 </li>
@@ -146,16 +174,23 @@ The following is a list of all availability zones:
 <li> ap-guangzhou-2 (sold out)</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
+<li> ap-guangzhou-6 </li>
+<li> ap-guangzhou-7 </li>
 <li> ap-tokyo-1 </li>
+<li> ap-tokyo-2 </li>
 <li> ap-singapore-1 </li>
+<li> ap-singapore-2 </li>
+<li> ap-singapore-3 </li>
 <li> ap-shanghai-fsi-1 </li>
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
 <li> ap-bangkok-1 </li>
+<li> ap-bangkok-2 </li>
 <li> ap-shanghai-1 (sold out) </li>
 <li> ap-shanghai-2 </li>
 <li> ap-shanghai-3 </li>
 <li> ap-shanghai-4 </li>
+<li> ap-shanghai-5 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
@@ -163,22 +198,28 @@ The following is a list of all availability zones:
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
+<li> ap-beijing-5 </li>
+<li> ap-beijing-6 </li>
+<li> ap-beijing-7 </li>
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
+<li> eu-frankfurt-2 </li>
 <li> na-toronto-1 </li>
 <li> na-ashburn-1 </li>
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
-                     * @param Zone Availability zone name, such as ap-guangzhou-3.
+                     * @param Zone Availability zone name, such as `ap-guangzhou-3`.
 The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
+<li> ap-seoul-2 </li>
 <li> ap-chengdu-1 </li>
 <li> ap-chengdu-2 </li>
-<li> ap-hongkong-1 </li>
+<li> ap-hongkong-1 (sold out)</li>
 <li> ap-hongkong-2 </li>
+<li> ap-hongkong-3 </li>
 <li> ap-shenzhen-fsi-1 </li>
 <li> ap-shenzhen-fsi-2 </li>
 <li> ap-shenzhen-fsi-3 </li>
@@ -186,16 +227,23 @@ The following is a list of all availability zones:
 <li> ap-guangzhou-2 (sold out)</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
+<li> ap-guangzhou-6 </li>
+<li> ap-guangzhou-7 </li>
 <li> ap-tokyo-1 </li>
+<li> ap-tokyo-2 </li>
 <li> ap-singapore-1 </li>
+<li> ap-singapore-2 </li>
+<li> ap-singapore-3 </li>
 <li> ap-shanghai-fsi-1 </li>
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
 <li> ap-bangkok-1 </li>
+<li> ap-bangkok-2 </li>
 <li> ap-shanghai-1 (sold out) </li>
 <li> ap-shanghai-2 </li>
 <li> ap-shanghai-3 </li>
 <li> ap-shanghai-4 </li>
+<li> ap-shanghai-5 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
@@ -203,9 +251,13 @@ The following is a list of all availability zones:
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
+<li> ap-beijing-5 </li>
+<li> ap-beijing-6 </li>
+<li> ap-beijing-7 </li>
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
+<li> eu-frankfurt-2 </li>
 <li> na-toronto-1 </li>
 <li> na-ashburn-1 </li>
 <li> na-ashburn-2 </li>
@@ -239,14 +291,14 @@ The following is a list of all availability zones:
                     bool ZoneNameHasBeenSet() const;
 
                     /**
-                     * 获取Availability zone ID
-                     * @return ZoneId Availability zone ID
+                     * 获取Availability zone ID.
+                     * @return ZoneId Availability zone ID.
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Availability zone ID
-                     * @param ZoneId Availability zone ID
+                     * 设置Availability zone ID.
+                     * @param ZoneId Availability zone ID.
                      */
                     void SetZoneId(const std::string& _zoneId);
 
@@ -277,14 +329,16 @@ The following is a list of all availability zones:
                 private:
 
                     /**
-                     * Availability zone name, such as ap-guangzhou-3.
+                     * Availability zone name, such as `ap-guangzhou-3`.
 The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
+<li> ap-seoul-2 </li>
 <li> ap-chengdu-1 </li>
 <li> ap-chengdu-2 </li>
-<li> ap-hongkong-1 </li>
+<li> ap-hongkong-1 (sold out)</li>
 <li> ap-hongkong-2 </li>
+<li> ap-hongkong-3 </li>
 <li> ap-shenzhen-fsi-1 </li>
 <li> ap-shenzhen-fsi-2 </li>
 <li> ap-shenzhen-fsi-3 </li>
@@ -292,16 +346,23 @@ The following is a list of all availability zones:
 <li> ap-guangzhou-2 (sold out)</li>
 <li> ap-guangzhou-3 </li>
 <li> ap-guangzhou-4 </li>
+<li> ap-guangzhou-6 </li>
+<li> ap-guangzhou-7 </li>
 <li> ap-tokyo-1 </li>
+<li> ap-tokyo-2 </li>
 <li> ap-singapore-1 </li>
+<li> ap-singapore-2 </li>
+<li> ap-singapore-3 </li>
 <li> ap-shanghai-fsi-1 </li>
 <li> ap-shanghai-fsi-2 </li>
 <li> ap-shanghai-fsi-3 </li>
 <li> ap-bangkok-1 </li>
+<li> ap-bangkok-2 </li>
 <li> ap-shanghai-1 (sold out) </li>
 <li> ap-shanghai-2 </li>
 <li> ap-shanghai-3 </li>
 <li> ap-shanghai-4 </li>
+<li> ap-shanghai-5 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
@@ -309,9 +370,13 @@ The following is a list of all availability zones:
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
+<li> ap-beijing-5 </li>
+<li> ap-beijing-6 </li>
+<li> ap-beijing-7 </li>
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
+<li> eu-frankfurt-2 </li>
 <li> na-toronto-1 </li>
 <li> na-ashburn-1 </li>
 <li> na-ashburn-2 </li>
@@ -328,7 +393,7 @@ The following is a list of all availability zones:
                     bool m_zoneNameHasBeenSet;
 
                     /**
-                     * Availability zone ID
+                     * Availability zone ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;

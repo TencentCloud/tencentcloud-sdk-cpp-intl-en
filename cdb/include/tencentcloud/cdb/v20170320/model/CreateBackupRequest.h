@@ -101,6 +101,24 @@ For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you sh
                      */
                     bool BackupDBTableListHasBeenSet() const;
 
+                    /**
+                     * 获取Manual backup alias
+                     * @return ManualBackupName Manual backup alias
+                     */
+                    std::string GetManualBackupName() const;
+
+                    /**
+                     * 设置Manual backup alias
+                     * @param ManualBackupName Manual backup alias
+                     */
+                    void SetManualBackupName(const std::string& _manualBackupName);
+
+                    /**
+                     * 判断参数 ManualBackupName 是否已赋值
+                     * @return ManualBackupName 是否已赋值
+                     */
+                    bool ManualBackupNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -121,6 +139,12 @@ For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you sh
                      */
                     std::vector<BackupItem> m_backupDBTableList;
                     bool m_backupDBTableListHasBeenSet;
+
+                    /**
+                     * Manual backup alias
+                     */
+                    std::string m_manualBackupName;
+                    bool m_manualBackupNameHasBeenSet;
 
                 };
             }

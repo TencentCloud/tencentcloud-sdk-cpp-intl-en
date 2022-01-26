@@ -40,11 +40,12 @@ namespace TencentCloud
                     DescribeClusterSecurityResponse();
                     ~DescribeClusterSecurityResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Cluster’s account name
-                     * @return UserName Cluster’s account name
+                     * 获取Cluster's account name
+                     * @return UserName Cluster's account name
                      */
                     std::string GetUserName() const;
 
@@ -55,8 +56,8 @@ namespace TencentCloud
                     bool UserNameHasBeenSet() const;
 
                     /**
-                     * 获取Cluster’s password
-                     * @return Password Cluster’s password
+                     * 获取Cluster's password
+                     * @return Password Cluster's password
                      */
                     std::string GetPassword() const;
 
@@ -67,8 +68,8 @@ namespace TencentCloud
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取Cluster’s access CA certificate
-                     * @return CertificationAuthority Cluster’s access CA certificate
+                     * 获取Cluster's access CA certificate
+                     * @return CertificationAuthority Cluster's access CA certificate
                      */
                     std::string GetCertificationAuthority() const;
 
@@ -79,8 +80,8 @@ namespace TencentCloud
                     bool CertificationAuthorityHasBeenSet() const;
 
                     /**
-                     * 获取Cluster’s access address
-                     * @return ClusterExternalEndpoint Cluster’s access address
+                     * 获取Cluster's access address
+                     * @return ClusterExternalEndpoint Cluster's access address
                      */
                     std::string GetClusterExternalEndpoint() const;
 
@@ -103,8 +104,8 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Cluster’s endpoint address
-                     * @return PgwEndpoint Cluster’s endpoint address
+                     * 获取Cluster's endpoint address
+                     * @return PgwEndpoint Cluster's endpoint address
                      */
                     std::string GetPgwEndpoint() const;
 
@@ -115,9 +116,9 @@ namespace TencentCloud
                     bool PgwEndpointHasBeenSet() const;
 
                     /**
-                     * 获取Cluster’s access policy group
+                     * 获取Cluster's access policy group
 Note: This field may return null, indicating that no valid value was found.
-                     * @return SecurityPolicy Cluster’s access policy group
+                     * @return SecurityPolicy Cluster's access policy group
 Note: This field may return null, indicating that no valid value was found.
                      */
                     std::vector<std::string> GetSecurityPolicy() const;
@@ -159,25 +160,25 @@ Note: This field may return null, indicating that no valid value was found.
                 private:
 
                     /**
-                     * Cluster’s account name
+                     * Cluster's account name
                      */
                     std::string m_userName;
                     bool m_userNameHasBeenSet;
 
                     /**
-                     * Cluster’s password
+                     * Cluster's password
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * Cluster’s access CA certificate
+                     * Cluster's access CA certificate
                      */
                     std::string m_certificationAuthority;
                     bool m_certificationAuthorityHasBeenSet;
 
                     /**
-                     * Cluster’s access address
+                     * Cluster's access address
                      */
                     std::string m_clusterExternalEndpoint;
                     bool m_clusterExternalEndpointHasBeenSet;
@@ -189,13 +190,13 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Cluster’s endpoint address
+                     * Cluster's endpoint address
                      */
                     std::string m_pgwEndpoint;
                     bool m_pgwEndpointHasBeenSet;
 
                     /**
-                     * Cluster’s access policy group
+                     * Cluster's access policy group
 Note: This field may return null, indicating that no valid value was found.
                      */
                     std::vector<std::string> m_securityPolicy;

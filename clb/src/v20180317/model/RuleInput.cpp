@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Clb::V20180317::Model;
-using namespace rapidjson;
 using namespace std;
 
 RuleInput::RuleInput() :
@@ -38,7 +37,7 @@ RuleInput::RuleInput() :
 {
 }
 
-CoreInternalOutcome RuleInput::Deserialize(const Value &value)
+CoreInternalOutcome RuleInput::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -47,7 +46,7 @@ CoreInternalOutcome RuleInput::Deserialize(const Value &value)
     {
         if (!value["Domain"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RuleInput.Domain` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RuleInput.Domain` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_domain = string(value["Domain"].GetString());
         m_domainHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome RuleInput::Deserialize(const Value &value)
     {
         if (!value["Url"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RuleInput.Url` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RuleInput.Url` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_url = string(value["Url"].GetString());
         m_urlHasBeenSet = true;
@@ -67,7 +66,7 @@ CoreInternalOutcome RuleInput::Deserialize(const Value &value)
     {
         if (!value["SessionExpireTime"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `RuleInput.SessionExpireTime` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RuleInput.SessionExpireTime` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_sessionExpireTime = value["SessionExpireTime"].GetInt64();
         m_sessionExpireTimeHasBeenSet = true;
@@ -77,7 +76,7 @@ CoreInternalOutcome RuleInput::Deserialize(const Value &value)
     {
         if (!value["HealthCheck"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `RuleInput.HealthCheck` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RuleInput.HealthCheck` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_healthCheck.Deserialize(value["HealthCheck"]);
@@ -94,7 +93,7 @@ CoreInternalOutcome RuleInput::Deserialize(const Value &value)
     {
         if (!value["Certificate"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `RuleInput.Certificate` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RuleInput.Certificate` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_certificate.Deserialize(value["Certificate"]);
@@ -111,7 +110,7 @@ CoreInternalOutcome RuleInput::Deserialize(const Value &value)
     {
         if (!value["Scheduler"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RuleInput.Scheduler` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RuleInput.Scheduler` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_scheduler = string(value["Scheduler"].GetString());
         m_schedulerHasBeenSet = true;
@@ -121,7 +120,7 @@ CoreInternalOutcome RuleInput::Deserialize(const Value &value)
     {
         if (!value["ForwardType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RuleInput.ForwardType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RuleInput.ForwardType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_forwardType = string(value["ForwardType"].GetString());
         m_forwardTypeHasBeenSet = true;
@@ -131,7 +130,7 @@ CoreInternalOutcome RuleInput::Deserialize(const Value &value)
     {
         if (!value["DefaultServer"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `RuleInput.DefaultServer` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RuleInput.DefaultServer` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_defaultServer = value["DefaultServer"].GetBool();
         m_defaultServerHasBeenSet = true;
@@ -141,7 +140,7 @@ CoreInternalOutcome RuleInput::Deserialize(const Value &value)
     {
         if (!value["Http2"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `RuleInput.Http2` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RuleInput.Http2` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_http2 = value["Http2"].GetBool();
         m_http2HasBeenSet = true;
@@ -151,7 +150,7 @@ CoreInternalOutcome RuleInput::Deserialize(const Value &value)
     {
         if (!value["TargetType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RuleInput.TargetType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RuleInput.TargetType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_targetType = string(value["TargetType"].GetString());
         m_targetTypeHasBeenSet = true;
@@ -161,7 +160,7 @@ CoreInternalOutcome RuleInput::Deserialize(const Value &value)
     {
         if (!value["TrpcCallee"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RuleInput.TrpcCallee` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RuleInput.TrpcCallee` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_trpcCallee = string(value["TrpcCallee"].GetString());
         m_trpcCalleeHasBeenSet = true;
@@ -171,7 +170,7 @@ CoreInternalOutcome RuleInput::Deserialize(const Value &value)
     {
         if (!value["TrpcFunc"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RuleInput.TrpcFunc` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RuleInput.TrpcFunc` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_trpcFunc = string(value["TrpcFunc"].GetString());
         m_trpcFuncHasBeenSet = true;
@@ -181,7 +180,7 @@ CoreInternalOutcome RuleInput::Deserialize(const Value &value)
     {
         if (!value["Quic"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `RuleInput.Quic` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RuleInput.Quic` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_quic = value["Quic"].GetBool();
         m_quicHasBeenSet = true;
@@ -191,28 +190,28 @@ CoreInternalOutcome RuleInput::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void RuleInput::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void RuleInput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_domainHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Domain";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_domain.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_domain.c_str(), allocator).Move(), allocator);
     }
 
     if (m_urlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Url";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_url.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_url.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sessionExpireTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SessionExpireTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_sessionExpireTime, allocator);
@@ -220,41 +219,41 @@ void RuleInput::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_healthCheckHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HealthCheck";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_healthCheck.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_certificateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Certificate";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_certificate.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_schedulerHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Scheduler";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_scheduler.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_scheduler.c_str(), allocator).Move(), allocator);
     }
 
     if (m_forwardTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ForwardType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_forwardType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_forwardType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_defaultServerHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DefaultServer";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_defaultServer, allocator);
@@ -262,7 +261,7 @@ void RuleInput::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_http2HasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Http2";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_http2, allocator);
@@ -270,31 +269,31 @@ void RuleInput::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_targetTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TargetType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_targetType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_targetType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_trpcCalleeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TrpcCallee";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_trpcCallee.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_trpcCallee.c_str(), allocator).Move(), allocator);
     }
 
     if (m_trpcFuncHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TrpcFunc";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_trpcFunc.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_trpcFunc.c_str(), allocator).Move(), allocator);
     }
 
     if (m_quicHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Quic";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_quic, allocator);

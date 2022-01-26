@@ -67,56 +67,52 @@ namespace TencentCloud
                     /**
                      * 获取Connection status.
 Valid values:
-RUNNING: running;
-CREATING: creating;
-DESTROYING: terminating;
-OPENING: enabling;
-CLOSING: disabling;
-CLOSED: disabled;
-ADJUSTING: adjusting configuration;
-ISOLATING: isolating;
-ISOLATED: isolated;
-UNKNOWN: unknown status.
+`RUNNING`: running
+`CREATING`: creating
+`DESTROYING`: terminating
+`OPENING`: enabling
+`CLOSING`: disabling
+`CLOSED`: disabled
+`ADJUSTING`: adjusting configuration
+`ISOLATING`: isolating
+`ISOLATED`: isolated
                      * @return Status Connection status.
 Valid values:
-RUNNING: running;
-CREATING: creating;
-DESTROYING: terminating;
-OPENING: enabling;
-CLOSING: disabling;
-CLOSED: disabled;
-ADJUSTING: adjusting configuration;
-ISOLATING: isolating;
-ISOLATED: isolated;
-UNKNOWN: unknown status.
+`RUNNING`: running
+`CREATING`: creating
+`DESTROYING`: terminating
+`OPENING`: enabling
+`CLOSING`: disabling
+`CLOSED`: disabled
+`ADJUSTING`: adjusting configuration
+`ISOLATING`: isolating
+`ISOLATED`: isolated
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Connection status.
 Valid values:
-RUNNING: running;
-CREATING: creating;
-DESTROYING: terminating;
-OPENING: enabling;
-CLOSING: disabling;
-CLOSED: disabled;
-ADJUSTING: adjusting configuration;
-ISOLATING: isolating;
-ISOLATED: isolated;
-UNKNOWN: unknown status.
+`RUNNING`: running
+`CREATING`: creating
+`DESTROYING`: terminating
+`OPENING`: enabling
+`CLOSING`: disabling
+`CLOSED`: disabled
+`ADJUSTING`: adjusting configuration
+`ISOLATING`: isolating
+`ISOLATED`: isolated
                      * @param Status Connection status.
 Valid values:
-RUNNING: running;
-CREATING: creating;
-DESTROYING: terminating;
-OPENING: enabling;
-CLOSING: disabling;
-CLOSED: disabled;
-ADJUSTING: adjusting configuration;
-ISOLATING: isolating;
-ISOLATED: isolated;
-UNKNOWN: unknown status.
+`RUNNING`: running
+`CREATING`: creating
+`DESTROYING`: terminating
+`OPENING`: enabling
+`CLOSING`: disabling
+`CLOSED`: disabled
+`ADJUSTING`: adjusting configuration
+`ISOLATING`: isolating
+`ISOLATED`: isolated
                      */
                     void SetStatus(const std::string& _status);
 
@@ -137,16 +133,15 @@ UNKNOWN: unknown status.
                     /**
                      * Connection status.
 Valid values:
-RUNNING: running;
-CREATING: creating;
-DESTROYING: terminating;
-OPENING: enabling;
-CLOSING: disabling;
-CLOSED: disabled;
-ADJUSTING: adjusting configuration;
-ISOLATING: isolating;
-ISOLATED: isolated;
-UNKNOWN: unknown status.
+`RUNNING`: running
+`CREATING`: creating
+`DESTROYING`: terminating
+`OPENING`: enabling
+`CLOSING`: disabling
+`CLOSED`: disabled
+`ADJUSTING`: adjusting configuration
+`ISOLATING`: isolating
+`ISOLATED`: isolated
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

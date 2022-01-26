@@ -37,6 +37,8 @@
 #include <tencentcloud/ecdn/v20191012/model/DescribeEcdnDomainStatisticsResponse.h>
 #include <tencentcloud/ecdn/v20191012/model/DescribeEcdnStatisticsRequest.h>
 #include <tencentcloud/ecdn/v20191012/model/DescribeEcdnStatisticsResponse.h>
+#include <tencentcloud/ecdn/v20191012/model/DescribeIpStatusRequest.h>
+#include <tencentcloud/ecdn/v20191012/model/DescribeIpStatusResponse.h>
 #include <tencentcloud/ecdn/v20191012/model/DescribePurgeQuotaRequest.h>
 #include <tencentcloud/ecdn/v20191012/model/DescribePurgeQuotaResponse.h>
 #include <tencentcloud/ecdn/v20191012/model/DescribePurgeTasksRequest.h>
@@ -65,46 +67,49 @@ namespace TencentCloud
                 EcdnClient(const Credential &credential, const std::string &region);
                 EcdnClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::AddEcdnDomainResponse> AddEcdnDomainOutcome;
+                typedef Outcome<Core::Error, Model::AddEcdnDomainResponse> AddEcdnDomainOutcome;
                 typedef std::future<AddEcdnDomainOutcome> AddEcdnDomainOutcomeCallable;
                 typedef std::function<void(const EcdnClient*, const Model::AddEcdnDomainRequest&, AddEcdnDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddEcdnDomainAsyncHandler;
-                typedef Outcome<Error, Model::DeleteEcdnDomainResponse> DeleteEcdnDomainOutcome;
+                typedef Outcome<Core::Error, Model::DeleteEcdnDomainResponse> DeleteEcdnDomainOutcome;
                 typedef std::future<DeleteEcdnDomainOutcome> DeleteEcdnDomainOutcomeCallable;
                 typedef std::function<void(const EcdnClient*, const Model::DeleteEcdnDomainRequest&, DeleteEcdnDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteEcdnDomainAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDomainsResponse> DescribeDomainsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDomainsResponse> DescribeDomainsOutcome;
                 typedef std::future<DescribeDomainsOutcome> DescribeDomainsOutcomeCallable;
                 typedef std::function<void(const EcdnClient*, const Model::DescribeDomainsRequest&, DescribeDomainsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDomainsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDomainsConfigResponse> DescribeDomainsConfigOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDomainsConfigResponse> DescribeDomainsConfigOutcome;
                 typedef std::future<DescribeDomainsConfigOutcome> DescribeDomainsConfigOutcomeCallable;
                 typedef std::function<void(const EcdnClient*, const Model::DescribeDomainsConfigRequest&, DescribeDomainsConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDomainsConfigAsyncHandler;
-                typedef Outcome<Error, Model::DescribeEcdnDomainLogsResponse> DescribeEcdnDomainLogsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeEcdnDomainLogsResponse> DescribeEcdnDomainLogsOutcome;
                 typedef std::future<DescribeEcdnDomainLogsOutcome> DescribeEcdnDomainLogsOutcomeCallable;
                 typedef std::function<void(const EcdnClient*, const Model::DescribeEcdnDomainLogsRequest&, DescribeEcdnDomainLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEcdnDomainLogsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeEcdnDomainStatisticsResponse> DescribeEcdnDomainStatisticsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeEcdnDomainStatisticsResponse> DescribeEcdnDomainStatisticsOutcome;
                 typedef std::future<DescribeEcdnDomainStatisticsOutcome> DescribeEcdnDomainStatisticsOutcomeCallable;
                 typedef std::function<void(const EcdnClient*, const Model::DescribeEcdnDomainStatisticsRequest&, DescribeEcdnDomainStatisticsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEcdnDomainStatisticsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeEcdnStatisticsResponse> DescribeEcdnStatisticsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeEcdnStatisticsResponse> DescribeEcdnStatisticsOutcome;
                 typedef std::future<DescribeEcdnStatisticsOutcome> DescribeEcdnStatisticsOutcomeCallable;
                 typedef std::function<void(const EcdnClient*, const Model::DescribeEcdnStatisticsRequest&, DescribeEcdnStatisticsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEcdnStatisticsAsyncHandler;
-                typedef Outcome<Error, Model::DescribePurgeQuotaResponse> DescribePurgeQuotaOutcome;
+                typedef Outcome<Core::Error, Model::DescribeIpStatusResponse> DescribeIpStatusOutcome;
+                typedef std::future<DescribeIpStatusOutcome> DescribeIpStatusOutcomeCallable;
+                typedef std::function<void(const EcdnClient*, const Model::DescribeIpStatusRequest&, DescribeIpStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIpStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePurgeQuotaResponse> DescribePurgeQuotaOutcome;
                 typedef std::future<DescribePurgeQuotaOutcome> DescribePurgeQuotaOutcomeCallable;
                 typedef std::function<void(const EcdnClient*, const Model::DescribePurgeQuotaRequest&, DescribePurgeQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePurgeQuotaAsyncHandler;
-                typedef Outcome<Error, Model::DescribePurgeTasksResponse> DescribePurgeTasksOutcome;
+                typedef Outcome<Core::Error, Model::DescribePurgeTasksResponse> DescribePurgeTasksOutcome;
                 typedef std::future<DescribePurgeTasksOutcome> DescribePurgeTasksOutcomeCallable;
                 typedef std::function<void(const EcdnClient*, const Model::DescribePurgeTasksRequest&, DescribePurgeTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePurgeTasksAsyncHandler;
-                typedef Outcome<Error, Model::PurgePathCacheResponse> PurgePathCacheOutcome;
+                typedef Outcome<Core::Error, Model::PurgePathCacheResponse> PurgePathCacheOutcome;
                 typedef std::future<PurgePathCacheOutcome> PurgePathCacheOutcomeCallable;
                 typedef std::function<void(const EcdnClient*, const Model::PurgePathCacheRequest&, PurgePathCacheOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PurgePathCacheAsyncHandler;
-                typedef Outcome<Error, Model::PurgeUrlsCacheResponse> PurgeUrlsCacheOutcome;
+                typedef Outcome<Core::Error, Model::PurgeUrlsCacheResponse> PurgeUrlsCacheOutcome;
                 typedef std::future<PurgeUrlsCacheOutcome> PurgeUrlsCacheOutcomeCallable;
                 typedef std::function<void(const EcdnClient*, const Model::PurgeUrlsCacheRequest&, PurgeUrlsCacheOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PurgeUrlsCacheAsyncHandler;
-                typedef Outcome<Error, Model::StartEcdnDomainResponse> StartEcdnDomainOutcome;
+                typedef Outcome<Core::Error, Model::StartEcdnDomainResponse> StartEcdnDomainOutcome;
                 typedef std::future<StartEcdnDomainOutcome> StartEcdnDomainOutcomeCallable;
                 typedef std::function<void(const EcdnClient*, const Model::StartEcdnDomainRequest&, StartEcdnDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartEcdnDomainAsyncHandler;
-                typedef Outcome<Error, Model::StopEcdnDomainResponse> StopEcdnDomainOutcome;
+                typedef Outcome<Core::Error, Model::StopEcdnDomainResponse> StopEcdnDomainOutcome;
                 typedef std::future<StopEcdnDomainOutcome> StopEcdnDomainOutcomeCallable;
                 typedef std::function<void(const EcdnClient*, const Model::StopEcdnDomainRequest&, StopEcdnDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopEcdnDomainAsyncHandler;
-                typedef Outcome<Error, Model::UpdateDomainConfigResponse> UpdateDomainConfigOutcome;
+                typedef Outcome<Core::Error, Model::UpdateDomainConfigResponse> UpdateDomainConfigOutcome;
                 typedef std::future<UpdateDomainConfigOutcome> UpdateDomainConfigOutcomeCallable;
                 typedef std::function<void(const EcdnClient*, const Model::UpdateDomainConfigRequest&, UpdateDomainConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateDomainConfigAsyncHandler;
 
@@ -170,7 +175,6 @@ namespace TencentCloud
 + Traffic (in bytes)
 + Bandwidth (in bps)
 + Number of requests
-+ Response time (in ms)
 + Number of 2xx status codes and details of status codes starting with 2
 + Number of 3xx status codes and details of status codes starting with 3
 + Number of 4xx status codes and details of status codes starting with 4
@@ -181,6 +185,15 @@ namespace TencentCloud
                 DescribeEcdnStatisticsOutcome DescribeEcdnStatistics(const Model::DescribeEcdnStatisticsRequest &request);
                 void DescribeEcdnStatisticsAsync(const Model::DescribeEcdnStatisticsRequest& request, const DescribeEcdnStatisticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeEcdnStatisticsOutcomeCallable DescribeEcdnStatisticsCallable(const Model::DescribeEcdnStatisticsRequest& request);
+
+                /**
+                 *This API is used to query the detailed node information of the acceleration platform to which the domain name is connected.
+                 * @param req DescribeIpStatusRequest
+                 * @return DescribeIpStatusOutcome
+                 */
+                DescribeIpStatusOutcome DescribeIpStatus(const Model::DescribeIpStatusRequest &request);
+                void DescribeIpStatusAsync(const Model::DescribeIpStatusRequest& request, const DescribeIpStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeIpStatusOutcomeCallable DescribeIpStatusCallable(const Model::DescribeIpStatusRequest& request);
 
                 /**
                  *This API is used to query the usage quota of the purge API.
@@ -201,7 +214,7 @@ namespace TencentCloud
                 DescribePurgeTasksOutcomeCallable DescribePurgeTasksCallable(const Model::DescribePurgeTasksRequest& request);
 
                 /**
-                 *This API is used to batch purge cache directories. One purge task ID will be returned for each submission.
+                 *This API is used to purge cache directories in batches. One purge task ID will be returned for each submission.
                  * @param req PurgePathCacheRequest
                  * @return PurgePathCacheOutcome
                  */

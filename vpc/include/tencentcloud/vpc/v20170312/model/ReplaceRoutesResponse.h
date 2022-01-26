@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vpc/v20170312/model/Route.h>
 
 
 namespace TencentCloud
@@ -40,9 +41,46 @@ namespace TencentCloud
                     ReplaceRoutesResponse();
                     ~ReplaceRoutesResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
+
+                    /**
+                     * 获取Old routing policy
+                     * @return OldRouteSet Old routing policy
+                     */
+                    std::vector<Route> GetOldRouteSet() const;
+
+                    /**
+                     * 判断参数 OldRouteSet 是否已赋值
+                     * @return OldRouteSet 是否已赋值
+                     */
+                    bool OldRouteSetHasBeenSet() const;
+
+                    /**
+                     * 获取New routing policy
+                     * @return NewRouteSet New routing policy
+                     */
+                    std::vector<Route> GetNewRouteSet() const;
+
+                    /**
+                     * 判断参数 NewRouteSet 是否已赋值
+                     * @return NewRouteSet 是否已赋值
+                     */
+                    bool NewRouteSetHasBeenSet() const;
 
                 private:
+
+                    /**
+                     * Old routing policy
+                     */
+                    std::vector<Route> m_oldRouteSet;
+                    bool m_oldRouteSetHasBeenSet;
+
+                    /**
+                     * New routing policy
+                     */
+                    std::vector<Route> m_newRouteSet;
+                    bool m_newRouteSetHasBeenSet;
 
                 };
             }

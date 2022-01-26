@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 SnapshotByTimeOffsetTemplate::SnapshotByTimeOffsetTemplate() :
@@ -36,7 +35,7 @@ SnapshotByTimeOffsetTemplate::SnapshotByTimeOffsetTemplate() :
 {
 }
 
-CoreInternalOutcome SnapshotByTimeOffsetTemplate::Deserialize(const Value &value)
+CoreInternalOutcome SnapshotByTimeOffsetTemplate::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -45,7 +44,7 @@ CoreInternalOutcome SnapshotByTimeOffsetTemplate::Deserialize(const Value &value
     {
         if (!value["Definition"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `SnapshotByTimeOffsetTemplate.Definition` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotByTimeOffsetTemplate.Definition` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_definition = value["Definition"].GetUint64();
         m_definitionHasBeenSet = true;
@@ -55,7 +54,7 @@ CoreInternalOutcome SnapshotByTimeOffsetTemplate::Deserialize(const Value &value
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SnapshotByTimeOffsetTemplate.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotByTimeOffsetTemplate.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -65,7 +64,7 @@ CoreInternalOutcome SnapshotByTimeOffsetTemplate::Deserialize(const Value &value
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SnapshotByTimeOffsetTemplate.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotByTimeOffsetTemplate.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -75,7 +74,7 @@ CoreInternalOutcome SnapshotByTimeOffsetTemplate::Deserialize(const Value &value
     {
         if (!value["Comment"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SnapshotByTimeOffsetTemplate.Comment` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotByTimeOffsetTemplate.Comment` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_comment = string(value["Comment"].GetString());
         m_commentHasBeenSet = true;
@@ -85,7 +84,7 @@ CoreInternalOutcome SnapshotByTimeOffsetTemplate::Deserialize(const Value &value
     {
         if (!value["Width"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `SnapshotByTimeOffsetTemplate.Width` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotByTimeOffsetTemplate.Width` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_width = value["Width"].GetUint64();
         m_widthHasBeenSet = true;
@@ -95,7 +94,7 @@ CoreInternalOutcome SnapshotByTimeOffsetTemplate::Deserialize(const Value &value
     {
         if (!value["Height"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `SnapshotByTimeOffsetTemplate.Height` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotByTimeOffsetTemplate.Height` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_height = value["Height"].GetUint64();
         m_heightHasBeenSet = true;
@@ -105,7 +104,7 @@ CoreInternalOutcome SnapshotByTimeOffsetTemplate::Deserialize(const Value &value
     {
         if (!value["ResolutionAdaptive"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SnapshotByTimeOffsetTemplate.ResolutionAdaptive` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotByTimeOffsetTemplate.ResolutionAdaptive` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_resolutionAdaptive = string(value["ResolutionAdaptive"].GetString());
         m_resolutionAdaptiveHasBeenSet = true;
@@ -115,7 +114,7 @@ CoreInternalOutcome SnapshotByTimeOffsetTemplate::Deserialize(const Value &value
     {
         if (!value["Format"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SnapshotByTimeOffsetTemplate.Format` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotByTimeOffsetTemplate.Format` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_format = string(value["Format"].GetString());
         m_formatHasBeenSet = true;
@@ -125,7 +124,7 @@ CoreInternalOutcome SnapshotByTimeOffsetTemplate::Deserialize(const Value &value
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SnapshotByTimeOffsetTemplate.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotByTimeOffsetTemplate.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -135,7 +134,7 @@ CoreInternalOutcome SnapshotByTimeOffsetTemplate::Deserialize(const Value &value
     {
         if (!value["UpdateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SnapshotByTimeOffsetTemplate.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotByTimeOffsetTemplate.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_updateTime = string(value["UpdateTime"].GetString());
         m_updateTimeHasBeenSet = true;
@@ -145,7 +144,7 @@ CoreInternalOutcome SnapshotByTimeOffsetTemplate::Deserialize(const Value &value
     {
         if (!value["FillType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SnapshotByTimeOffsetTemplate.FillType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotByTimeOffsetTemplate.FillType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fillType = string(value["FillType"].GetString());
         m_fillTypeHasBeenSet = true;
@@ -155,12 +154,12 @@ CoreInternalOutcome SnapshotByTimeOffsetTemplate::Deserialize(const Value &value
     return CoreInternalOutcome(true);
 }
 
-void SnapshotByTimeOffsetTemplate::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SnapshotByTimeOffsetTemplate::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_definitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Definition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_definition, allocator);
@@ -168,31 +167,31 @@ void SnapshotByTimeOffsetTemplate::ToJsonObject(Value &value, Document::Allocato
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_commentHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Comment";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_comment.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_comment.c_str(), allocator).Move(), allocator);
     }
 
     if (m_widthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Width";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_width, allocator);
@@ -200,7 +199,7 @@ void SnapshotByTimeOffsetTemplate::ToJsonObject(Value &value, Document::Allocato
 
     if (m_heightHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Height";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_height, allocator);
@@ -208,42 +207,42 @@ void SnapshotByTimeOffsetTemplate::ToJsonObject(Value &value, Document::Allocato
 
     if (m_resolutionAdaptiveHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResolutionAdaptive";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_resolutionAdaptive.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resolutionAdaptive.c_str(), allocator).Move(), allocator);
     }
 
     if (m_formatHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Format";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_format.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_format.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_updateTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UpdateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_updateTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_updateTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fillTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FillType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fillType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fillType.c_str(), allocator).Move(), allocator);
     }
 
 }

@@ -41,6 +41,7 @@ namespace TencentCloud
                     DescribeGameServerSessionDetailsResponse();
                     ~DescribeGameServerSessionDetailsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -58,10 +59,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool GameServerSessionDetailsHasBeenSet() const;
 
                     /**
-                     * 获取Pagination offset, which is used for querying the next page
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return NextToken Pagination offset, which is used for querying the next page
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return NextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string GetNextToken() const;
 
@@ -81,8 +82,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_gameServerSessionDetailsHasBeenSet;
 
                     /**
-                     * Pagination offset, which is used for querying the next page
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string m_nextToken;
                     bool m_nextTokenHasBeenSet;

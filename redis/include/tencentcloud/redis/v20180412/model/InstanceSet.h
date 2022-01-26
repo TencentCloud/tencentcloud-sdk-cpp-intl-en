@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/redis/v20180412/model/InstanceNode.h>
 #include <tencentcloud/redis/v20180412/model/InstanceTagInfo.h>
+#include <tencentcloud/redis/v20180412/model/RedisNodeInfo.h>
 
 
 namespace TencentCloud
@@ -301,14 +302,14 @@ namespace TencentCloud
                     bool SizeUsedHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. 1: Redis 2.8 cluster edition; 2: Redis 2.8 master-slave edition; 3: CKV master-slave edition (Redis 3.2); 4: CKV cluster edition (Redis 3.2); 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
-                     * @return Type Instance type. 1: Redis 2.8 cluster edition; 2: Redis 2.8 master-slave edition; 3: CKV master-slave edition (Redis 3.2); 4: CKV cluster edition (Redis 3.2); 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
+                     * 获取Instance type. Valid values: 1 (Redis 2.8 Memory Edition in cluster architecture), 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 5 (Redis 2.8 Memory Edition in standalone architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
+                     * @return Type Instance type. Valid values: 1 (Redis 2.8 Memory Edition in cluster architecture), 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 5 (Redis 2.8 Memory Edition in standalone architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
                      */
                     int64_t GetType() const;
 
                     /**
-                     * 设置Instance type. 1: Redis 2.8 cluster edition; 2: Redis 2.8 master-slave edition; 3: CKV master-slave edition (Redis 3.2); 4: CKV cluster edition (Redis 3.2); 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
-                     * @param Type Instance type. 1: Redis 2.8 cluster edition; 2: Redis 2.8 master-slave edition; 3: CKV master-slave edition (Redis 3.2); 4: CKV cluster edition (Redis 3.2); 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
+                     * 设置Instance type. Valid values: 1 (Redis 2.8 Memory Edition in cluster architecture), 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 5 (Redis 2.8 Memory Edition in standalone architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
+                     * @param Type Instance type. Valid values: 1 (Redis 2.8 Memory Edition in cluster architecture), 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 5 (Redis 2.8 Memory Edition in standalone architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
                      */
                     void SetType(const int64_t& _type);
 
@@ -373,14 +374,14 @@ namespace TencentCloud
                     bool EngineHasBeenSet() const;
 
                     /**
-                     * 获取Product type: Redis 2.8 cluster edition, Redis 2.8 master-slave edition, Redis 3.2 master-slave edition (CKV master-slave edition), Redis 3.2 cluster edition (CKV cluster edition), Redis 2.8 standalone edition, Redis 4.0 cluster edition
-                     * @return ProductType Product type: Redis 2.8 cluster edition, Redis 2.8 master-slave edition, Redis 3.2 master-slave edition (CKV master-slave edition), Redis 3.2 cluster edition (CKV cluster edition), Redis 2.8 standalone edition, Redis 4.0 cluster edition
+                     * 获取Instance type. Valid values: standalone (standard edition), cluster (cluster edition)
+                     * @return ProductType Instance type. Valid values: standalone (standard edition), cluster (cluster edition)
                      */
                     std::string GetProductType() const;
 
                     /**
-                     * 设置Product type: Redis 2.8 cluster edition, Redis 2.8 master-slave edition, Redis 3.2 master-slave edition (CKV master-slave edition), Redis 3.2 cluster edition (CKV cluster edition), Redis 2.8 standalone edition, Redis 4.0 cluster edition
-                     * @param ProductType Product type: Redis 2.8 cluster edition, Redis 2.8 master-slave edition, Redis 3.2 master-slave edition (CKV master-slave edition), Redis 3.2 cluster edition (CKV cluster edition), Redis 2.8 standalone edition, Redis 4.0 cluster edition
+                     * 设置Instance type. Valid values: standalone (standard edition), cluster (cluster edition)
+                     * @param ProductType Instance type. Valid values: standalone (standard edition), cluster (cluster edition)
                      */
                     void SetProductType(const std::string& _productType);
 
@@ -625,14 +626,14 @@ namespace TencentCloud
                     bool CloseTimeHasBeenSet() const;
 
                     /**
-                     * 获取Read weight of a slave node
-                     * @return SlaveReadWeight Read weight of a slave node
+                     * 获取Read weight of a secondary node
+                     * @return SlaveReadWeight Read weight of a secondary node
                      */
                     int64_t GetSlaveReadWeight() const;
 
                     /**
-                     * 设置Read weight of a slave node
-                     * @param SlaveReadWeight Read weight of a slave node
+                     * 设置Read weight of a secondary node
+                     * @param SlaveReadWeight Read weight of a secondary node
                      */
                     void SetSlaveReadWeight(const int64_t& _slaveReadWeight);
 
@@ -862,6 +863,138 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool RemainBandwidthDurationHasBeenSet() const;
 
+                    /**
+                     * 获取Disk size of the Tendis instance
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return DiskSize Disk size of the Tendis instance
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetDiskSize() const;
+
+                    /**
+                     * 设置Disk size of the Tendis instance
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param DiskSize Disk size of the Tendis instance
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDiskSize(const int64_t& _diskSize);
+
+                    /**
+                     * 判断参数 DiskSize 是否已赋值
+                     * @return DiskSize 是否已赋值
+                     */
+                    bool DiskSizeHasBeenSet() const;
+
+                    /**
+                     * 获取Monitoring granularity type. Valid values: 1m (monitoring at 1-minute granularity), 5s (monitoring at 5-second granularity)
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return MonitorVersion Monitoring granularity type. Valid values: 1m (monitoring at 1-minute granularity), 5s (monitoring at 5-second granularity)
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetMonitorVersion() const;
+
+                    /**
+                     * 设置Monitoring granularity type. Valid values: 1m (monitoring at 1-minute granularity), 5s (monitoring at 5-second granularity)
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param MonitorVersion Monitoring granularity type. Valid values: 1m (monitoring at 1-minute granularity), 5s (monitoring at 5-second granularity)
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetMonitorVersion(const std::string& _monitorVersion);
+
+                    /**
+                     * 判断参数 MonitorVersion 是否已赋值
+                     * @return MonitorVersion 是否已赋值
+                     */
+                    bool MonitorVersionHasBeenSet() const;
+
+                    /**
+                     * 获取The minimum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return ClientLimitMin The minimum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetClientLimitMin() const;
+
+                    /**
+                     * 设置The minimum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param ClientLimitMin The minimum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetClientLimitMin(const int64_t& _clientLimitMin);
+
+                    /**
+                     * 判断参数 ClientLimitMin 是否已赋值
+                     * @return ClientLimitMin 是否已赋值
+                     */
+                    bool ClientLimitMinHasBeenSet() const;
+
+                    /**
+                     * 获取The maximum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return ClientLimitMax The maximum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetClientLimitMax() const;
+
+                    /**
+                     * 设置The maximum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param ClientLimitMax The maximum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetClientLimitMax(const int64_t& _clientLimitMax);
+
+                    /**
+                     * 判断参数 ClientLimitMax 是否已赋值
+                     * @return ClientLimitMax 是否已赋值
+                     */
+                    bool ClientLimitMaxHasBeenSet() const;
+
+                    /**
+                     * 获取Instance node details
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return NodeSet Instance node details
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<RedisNodeInfo> GetNodeSet() const;
+
+                    /**
+                     * 设置Instance node details
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param NodeSet Instance node details
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetNodeSet(const std::vector<RedisNodeInfo>& _nodeSet);
+
+                    /**
+                     * 判断参数 NodeSet 是否已赋值
+                     * @return NodeSet 是否已赋值
+                     */
+                    bool NodeSetHasBeenSet() const;
+
+                    /**
+                     * 获取Region where the instance is deployed
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Region Region where the instance is deployed
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetRegion() const;
+
+                    /**
+                     * 设置Region where the instance is deployed
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param Region Region where the instance is deployed
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetRegion(const std::string& _region);
+
+                    /**
+                     * 判断参数 Region 是否已赋值
+                     * @return Region 是否已赋值
+                     */
+                    bool RegionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -949,7 +1082,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_sizeUsedHasBeenSet;
 
                     /**
-                     * Instance type. 1: Redis 2.8 cluster edition; 2: Redis 2.8 master-slave edition; 3: CKV master-slave edition (Redis 3.2); 4: CKV cluster edition (Redis 3.2); 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
+                     * Instance type. Valid values: 1 (Redis 2.8 Memory Edition in cluster architecture), 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 5 (Redis 2.8 Memory Edition in standalone architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
                      */
                     int64_t m_type;
                     bool m_typeHasBeenSet;
@@ -973,7 +1106,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_engineHasBeenSet;
 
                     /**
-                     * Product type: Redis 2.8 cluster edition, Redis 2.8 master-slave edition, Redis 3.2 master-slave edition (CKV master-slave edition), Redis 3.2 cluster edition (CKV cluster edition), Redis 2.8 standalone edition, Redis 4.0 cluster edition
+                     * Instance type. Valid values: standalone (standard edition), cluster (cluster edition)
                      */
                     std::string m_productType;
                     bool m_productTypeHasBeenSet;
@@ -1057,7 +1190,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_closeTimeHasBeenSet;
 
                     /**
-                     * Read weight of a slave node
+                     * Read weight of a secondary node
                      */
                     int64_t m_slaveReadWeight;
                     bool m_slaveReadWeightHasBeenSet;
@@ -1131,6 +1264,48 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_remainBandwidthDuration;
                     bool m_remainBandwidthDurationHasBeenSet;
+
+                    /**
+                     * Disk size of the Tendis instance
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_diskSize;
+                    bool m_diskSizeHasBeenSet;
+
+                    /**
+                     * Monitoring granularity type. Valid values: 1m (monitoring at 1-minute granularity), 5s (monitoring at 5-second granularity)
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_monitorVersion;
+                    bool m_monitorVersionHasBeenSet;
+
+                    /**
+                     * The minimum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_clientLimitMin;
+                    bool m_clientLimitMinHasBeenSet;
+
+                    /**
+                     * The maximum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_clientLimitMax;
+                    bool m_clientLimitMaxHasBeenSet;
+
+                    /**
+                     * Instance node details
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<RedisNodeInfo> m_nodeSet;
+                    bool m_nodeSetHasBeenSet;
+
+                    /**
+                     * Region where the instance is deployed
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_region;
+                    bool m_regionHasBeenSet;
 
                 };
             }

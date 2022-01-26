@@ -27,6 +27,8 @@
 #include <tencentcloud/cdn/v20180606/model/AddCdnDomainResponse.h>
 #include <tencentcloud/cdn/v20180606/model/CreateClsLogTopicRequest.h>
 #include <tencentcloud/cdn/v20180606/model/CreateClsLogTopicResponse.h>
+#include <tencentcloud/cdn/v20180606/model/CreateScdnFailedLogTaskRequest.h>
+#include <tencentcloud/cdn/v20180606/model/CreateScdnFailedLogTaskResponse.h>
 #include <tencentcloud/cdn/v20180606/model/DeleteCdnDomainRequest.h>
 #include <tencentcloud/cdn/v20180606/model/DeleteCdnDomainResponse.h>
 #include <tencentcloud/cdn/v20180606/model/DeleteClsLogTopicRequest.h>
@@ -39,6 +41,8 @@
 #include <tencentcloud/cdn/v20180606/model/DescribeCdnDomainLogsResponse.h>
 #include <tencentcloud/cdn/v20180606/model/DescribeCdnIpRequest.h>
 #include <tencentcloud/cdn/v20180606/model/DescribeCdnIpResponse.h>
+#include <tencentcloud/cdn/v20180606/model/DescribeCdnOriginIpRequest.h>
+#include <tencentcloud/cdn/v20180606/model/DescribeCdnOriginIpResponse.h>
 #include <tencentcloud/cdn/v20180606/model/DescribeCertDomainsRequest.h>
 #include <tencentcloud/cdn/v20180606/model/DescribeCertDomainsResponse.h>
 #include <tencentcloud/cdn/v20180606/model/DescribeDomainsRequest.h>
@@ -101,6 +105,8 @@
 #include <tencentcloud/cdn/v20180606/model/UpdateDomainConfigResponse.h>
 #include <tencentcloud/cdn/v20180606/model/UpdatePayTypeRequest.h>
 #include <tencentcloud/cdn/v20180606/model/UpdatePayTypeResponse.h>
+#include <tencentcloud/cdn/v20180606/model/UpdateScdnDomainRequest.h>
+#include <tencentcloud/cdn/v20180606/model/UpdateScdnDomainResponse.h>
 
 
 namespace TencentCloud
@@ -115,123 +121,132 @@ namespace TencentCloud
                 CdnClient(const Credential &credential, const std::string &region);
                 CdnClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::AddCdnDomainResponse> AddCdnDomainOutcome;
+                typedef Outcome<Core::Error, Model::AddCdnDomainResponse> AddCdnDomainOutcome;
                 typedef std::future<AddCdnDomainOutcome> AddCdnDomainOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::AddCdnDomainRequest&, AddCdnDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddCdnDomainAsyncHandler;
-                typedef Outcome<Error, Model::CreateClsLogTopicResponse> CreateClsLogTopicOutcome;
+                typedef Outcome<Core::Error, Model::CreateClsLogTopicResponse> CreateClsLogTopicOutcome;
                 typedef std::future<CreateClsLogTopicOutcome> CreateClsLogTopicOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::CreateClsLogTopicRequest&, CreateClsLogTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateClsLogTopicAsyncHandler;
-                typedef Outcome<Error, Model::DeleteCdnDomainResponse> DeleteCdnDomainOutcome;
+                typedef Outcome<Core::Error, Model::CreateScdnFailedLogTaskResponse> CreateScdnFailedLogTaskOutcome;
+                typedef std::future<CreateScdnFailedLogTaskOutcome> CreateScdnFailedLogTaskOutcomeCallable;
+                typedef std::function<void(const CdnClient*, const Model::CreateScdnFailedLogTaskRequest&, CreateScdnFailedLogTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateScdnFailedLogTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteCdnDomainResponse> DeleteCdnDomainOutcome;
                 typedef std::future<DeleteCdnDomainOutcome> DeleteCdnDomainOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::DeleteCdnDomainRequest&, DeleteCdnDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCdnDomainAsyncHandler;
-                typedef Outcome<Error, Model::DeleteClsLogTopicResponse> DeleteClsLogTopicOutcome;
+                typedef Outcome<Core::Error, Model::DeleteClsLogTopicResponse> DeleteClsLogTopicOutcome;
                 typedef std::future<DeleteClsLogTopicOutcome> DeleteClsLogTopicOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::DeleteClsLogTopicRequest&, DeleteClsLogTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteClsLogTopicAsyncHandler;
-                typedef Outcome<Error, Model::DescribeBillingDataResponse> DescribeBillingDataOutcome;
+                typedef Outcome<Core::Error, Model::DescribeBillingDataResponse> DescribeBillingDataOutcome;
                 typedef std::future<DescribeBillingDataOutcome> DescribeBillingDataOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::DescribeBillingDataRequest&, DescribeBillingDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillingDataAsyncHandler;
-                typedef Outcome<Error, Model::DescribeCdnDataResponse> DescribeCdnDataOutcome;
+                typedef Outcome<Core::Error, Model::DescribeCdnDataResponse> DescribeCdnDataOutcome;
                 typedef std::future<DescribeCdnDataOutcome> DescribeCdnDataOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::DescribeCdnDataRequest&, DescribeCdnDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCdnDataAsyncHandler;
-                typedef Outcome<Error, Model::DescribeCdnDomainLogsResponse> DescribeCdnDomainLogsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeCdnDomainLogsResponse> DescribeCdnDomainLogsOutcome;
                 typedef std::future<DescribeCdnDomainLogsOutcome> DescribeCdnDomainLogsOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::DescribeCdnDomainLogsRequest&, DescribeCdnDomainLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCdnDomainLogsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeCdnIpResponse> DescribeCdnIpOutcome;
+                typedef Outcome<Core::Error, Model::DescribeCdnIpResponse> DescribeCdnIpOutcome;
                 typedef std::future<DescribeCdnIpOutcome> DescribeCdnIpOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::DescribeCdnIpRequest&, DescribeCdnIpOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCdnIpAsyncHandler;
-                typedef Outcome<Error, Model::DescribeCertDomainsResponse> DescribeCertDomainsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeCdnOriginIpResponse> DescribeCdnOriginIpOutcome;
+                typedef std::future<DescribeCdnOriginIpOutcome> DescribeCdnOriginIpOutcomeCallable;
+                typedef std::function<void(const CdnClient*, const Model::DescribeCdnOriginIpRequest&, DescribeCdnOriginIpOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCdnOriginIpAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCertDomainsResponse> DescribeCertDomainsOutcome;
                 typedef std::future<DescribeCertDomainsOutcome> DescribeCertDomainsOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::DescribeCertDomainsRequest&, DescribeCertDomainsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCertDomainsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDomainsResponse> DescribeDomainsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDomainsResponse> DescribeDomainsOutcome;
                 typedef std::future<DescribeDomainsOutcome> DescribeDomainsOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::DescribeDomainsRequest&, DescribeDomainsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDomainsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDomainsConfigResponse> DescribeDomainsConfigOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDomainsConfigResponse> DescribeDomainsConfigOutcome;
                 typedef std::future<DescribeDomainsConfigOutcome> DescribeDomainsConfigOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::DescribeDomainsConfigRequest&, DescribeDomainsConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDomainsConfigAsyncHandler;
-                typedef Outcome<Error, Model::DescribeIpStatusResponse> DescribeIpStatusOutcome;
+                typedef Outcome<Core::Error, Model::DescribeIpStatusResponse> DescribeIpStatusOutcome;
                 typedef std::future<DescribeIpStatusOutcome> DescribeIpStatusOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::DescribeIpStatusRequest&, DescribeIpStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIpStatusAsyncHandler;
-                typedef Outcome<Error, Model::DescribeIpVisitResponse> DescribeIpVisitOutcome;
+                typedef Outcome<Core::Error, Model::DescribeIpVisitResponse> DescribeIpVisitOutcome;
                 typedef std::future<DescribeIpVisitOutcome> DescribeIpVisitOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::DescribeIpVisitRequest&, DescribeIpVisitOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIpVisitAsyncHandler;
-                typedef Outcome<Error, Model::DescribeMapInfoResponse> DescribeMapInfoOutcome;
+                typedef Outcome<Core::Error, Model::DescribeMapInfoResponse> DescribeMapInfoOutcome;
                 typedef std::future<DescribeMapInfoOutcome> DescribeMapInfoOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::DescribeMapInfoRequest&, DescribeMapInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMapInfoAsyncHandler;
-                typedef Outcome<Error, Model::DescribeOriginDataResponse> DescribeOriginDataOutcome;
+                typedef Outcome<Core::Error, Model::DescribeOriginDataResponse> DescribeOriginDataOutcome;
                 typedef std::future<DescribeOriginDataOutcome> DescribeOriginDataOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::DescribeOriginDataRequest&, DescribeOriginDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOriginDataAsyncHandler;
-                typedef Outcome<Error, Model::DescribePayTypeResponse> DescribePayTypeOutcome;
+                typedef Outcome<Core::Error, Model::DescribePayTypeResponse> DescribePayTypeOutcome;
                 typedef std::future<DescribePayTypeOutcome> DescribePayTypeOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::DescribePayTypeRequest&, DescribePayTypeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePayTypeAsyncHandler;
-                typedef Outcome<Error, Model::DescribePurgeQuotaResponse> DescribePurgeQuotaOutcome;
+                typedef Outcome<Core::Error, Model::DescribePurgeQuotaResponse> DescribePurgeQuotaOutcome;
                 typedef std::future<DescribePurgeQuotaOutcome> DescribePurgeQuotaOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::DescribePurgeQuotaRequest&, DescribePurgeQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePurgeQuotaAsyncHandler;
-                typedef Outcome<Error, Model::DescribePurgeTasksResponse> DescribePurgeTasksOutcome;
+                typedef Outcome<Core::Error, Model::DescribePurgeTasksResponse> DescribePurgeTasksOutcome;
                 typedef std::future<DescribePurgeTasksOutcome> DescribePurgeTasksOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::DescribePurgeTasksRequest&, DescribePurgeTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePurgeTasksAsyncHandler;
-                typedef Outcome<Error, Model::DescribePushQuotaResponse> DescribePushQuotaOutcome;
+                typedef Outcome<Core::Error, Model::DescribePushQuotaResponse> DescribePushQuotaOutcome;
                 typedef std::future<DescribePushQuotaOutcome> DescribePushQuotaOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::DescribePushQuotaRequest&, DescribePushQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePushQuotaAsyncHandler;
-                typedef Outcome<Error, Model::DescribePushTasksResponse> DescribePushTasksOutcome;
+                typedef Outcome<Core::Error, Model::DescribePushTasksResponse> DescribePushTasksOutcome;
                 typedef std::future<DescribePushTasksOutcome> DescribePushTasksOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::DescribePushTasksRequest&, DescribePushTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePushTasksAsyncHandler;
-                typedef Outcome<Error, Model::DescribeReportDataResponse> DescribeReportDataOutcome;
+                typedef Outcome<Core::Error, Model::DescribeReportDataResponse> DescribeReportDataOutcome;
                 typedef std::future<DescribeReportDataOutcome> DescribeReportDataOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::DescribeReportDataRequest&, DescribeReportDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeReportDataAsyncHandler;
-                typedef Outcome<Error, Model::DescribeUrlViolationsResponse> DescribeUrlViolationsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeUrlViolationsResponse> DescribeUrlViolationsOutcome;
                 typedef std::future<DescribeUrlViolationsOutcome> DescribeUrlViolationsOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::DescribeUrlViolationsRequest&, DescribeUrlViolationsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUrlViolationsAsyncHandler;
-                typedef Outcome<Error, Model::DisableCachesResponse> DisableCachesOutcome;
+                typedef Outcome<Core::Error, Model::DisableCachesResponse> DisableCachesOutcome;
                 typedef std::future<DisableCachesOutcome> DisableCachesOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::DisableCachesRequest&, DisableCachesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableCachesAsyncHandler;
-                typedef Outcome<Error, Model::DisableClsLogTopicResponse> DisableClsLogTopicOutcome;
+                typedef Outcome<Core::Error, Model::DisableClsLogTopicResponse> DisableClsLogTopicOutcome;
                 typedef std::future<DisableClsLogTopicOutcome> DisableClsLogTopicOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::DisableClsLogTopicRequest&, DisableClsLogTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableClsLogTopicAsyncHandler;
-                typedef Outcome<Error, Model::EnableCachesResponse> EnableCachesOutcome;
+                typedef Outcome<Core::Error, Model::EnableCachesResponse> EnableCachesOutcome;
                 typedef std::future<EnableCachesOutcome> EnableCachesOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::EnableCachesRequest&, EnableCachesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableCachesAsyncHandler;
-                typedef Outcome<Error, Model::EnableClsLogTopicResponse> EnableClsLogTopicOutcome;
+                typedef Outcome<Core::Error, Model::EnableClsLogTopicResponse> EnableClsLogTopicOutcome;
                 typedef std::future<EnableClsLogTopicOutcome> EnableClsLogTopicOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::EnableClsLogTopicRequest&, EnableClsLogTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableClsLogTopicAsyncHandler;
-                typedef Outcome<Error, Model::GetDisableRecordsResponse> GetDisableRecordsOutcome;
+                typedef Outcome<Core::Error, Model::GetDisableRecordsResponse> GetDisableRecordsOutcome;
                 typedef std::future<GetDisableRecordsOutcome> GetDisableRecordsOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::GetDisableRecordsRequest&, GetDisableRecordsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetDisableRecordsAsyncHandler;
-                typedef Outcome<Error, Model::ListClsLogTopicsResponse> ListClsLogTopicsOutcome;
+                typedef Outcome<Core::Error, Model::ListClsLogTopicsResponse> ListClsLogTopicsOutcome;
                 typedef std::future<ListClsLogTopicsOutcome> ListClsLogTopicsOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::ListClsLogTopicsRequest&, ListClsLogTopicsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListClsLogTopicsAsyncHandler;
-                typedef Outcome<Error, Model::ListClsTopicDomainsResponse> ListClsTopicDomainsOutcome;
+                typedef Outcome<Core::Error, Model::ListClsTopicDomainsResponse> ListClsTopicDomainsOutcome;
                 typedef std::future<ListClsTopicDomainsOutcome> ListClsTopicDomainsOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::ListClsTopicDomainsRequest&, ListClsTopicDomainsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListClsTopicDomainsAsyncHandler;
-                typedef Outcome<Error, Model::ListTopDataResponse> ListTopDataOutcome;
+                typedef Outcome<Core::Error, Model::ListTopDataResponse> ListTopDataOutcome;
                 typedef std::future<ListTopDataOutcome> ListTopDataOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::ListTopDataRequest&, ListTopDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListTopDataAsyncHandler;
-                typedef Outcome<Error, Model::ManageClsTopicDomainsResponse> ManageClsTopicDomainsOutcome;
+                typedef Outcome<Core::Error, Model::ManageClsTopicDomainsResponse> ManageClsTopicDomainsOutcome;
                 typedef std::future<ManageClsTopicDomainsOutcome> ManageClsTopicDomainsOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::ManageClsTopicDomainsRequest&, ManageClsTopicDomainsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ManageClsTopicDomainsAsyncHandler;
-                typedef Outcome<Error, Model::PurgePathCacheResponse> PurgePathCacheOutcome;
+                typedef Outcome<Core::Error, Model::PurgePathCacheResponse> PurgePathCacheOutcome;
                 typedef std::future<PurgePathCacheOutcome> PurgePathCacheOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::PurgePathCacheRequest&, PurgePathCacheOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PurgePathCacheAsyncHandler;
-                typedef Outcome<Error, Model::PurgeUrlsCacheResponse> PurgeUrlsCacheOutcome;
+                typedef Outcome<Core::Error, Model::PurgeUrlsCacheResponse> PurgeUrlsCacheOutcome;
                 typedef std::future<PurgeUrlsCacheOutcome> PurgeUrlsCacheOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::PurgeUrlsCacheRequest&, PurgeUrlsCacheOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PurgeUrlsCacheAsyncHandler;
-                typedef Outcome<Error, Model::PushUrlsCacheResponse> PushUrlsCacheOutcome;
+                typedef Outcome<Core::Error, Model::PushUrlsCacheResponse> PushUrlsCacheOutcome;
                 typedef std::future<PushUrlsCacheOutcome> PushUrlsCacheOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::PushUrlsCacheRequest&, PushUrlsCacheOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PushUrlsCacheAsyncHandler;
-                typedef Outcome<Error, Model::SearchClsLogResponse> SearchClsLogOutcome;
+                typedef Outcome<Core::Error, Model::SearchClsLogResponse> SearchClsLogOutcome;
                 typedef std::future<SearchClsLogOutcome> SearchClsLogOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::SearchClsLogRequest&, SearchClsLogOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SearchClsLogAsyncHandler;
-                typedef Outcome<Error, Model::StartCdnDomainResponse> StartCdnDomainOutcome;
+                typedef Outcome<Core::Error, Model::StartCdnDomainResponse> StartCdnDomainOutcome;
                 typedef std::future<StartCdnDomainOutcome> StartCdnDomainOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::StartCdnDomainRequest&, StartCdnDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartCdnDomainAsyncHandler;
-                typedef Outcome<Error, Model::StopCdnDomainResponse> StopCdnDomainOutcome;
+                typedef Outcome<Core::Error, Model::StopCdnDomainResponse> StopCdnDomainOutcome;
                 typedef std::future<StopCdnDomainOutcome> StopCdnDomainOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::StopCdnDomainRequest&, StopCdnDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopCdnDomainAsyncHandler;
-                typedef Outcome<Error, Model::UpdateDomainConfigResponse> UpdateDomainConfigOutcome;
+                typedef Outcome<Core::Error, Model::UpdateDomainConfigResponse> UpdateDomainConfigOutcome;
                 typedef std::future<UpdateDomainConfigOutcome> UpdateDomainConfigOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::UpdateDomainConfigRequest&, UpdateDomainConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateDomainConfigAsyncHandler;
-                typedef Outcome<Error, Model::UpdatePayTypeResponse> UpdatePayTypeOutcome;
+                typedef Outcome<Core::Error, Model::UpdatePayTypeResponse> UpdatePayTypeOutcome;
                 typedef std::future<UpdatePayTypeOutcome> UpdatePayTypeOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::UpdatePayTypeRequest&, UpdatePayTypeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdatePayTypeAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateScdnDomainResponse> UpdateScdnDomainOutcome;
+                typedef std::future<UpdateScdnDomainOutcome> UpdateScdnDomainOutcomeCallable;
+                typedef std::function<void(const CdnClient*, const Model::UpdateScdnDomainRequest&, UpdateScdnDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateScdnDomainAsyncHandler;
 
 
 
@@ -245,13 +260,22 @@ namespace TencentCloud
                 AddCdnDomainOutcomeCallable AddCdnDomainCallable(const Model::AddCdnDomainRequest& request);
 
                 /**
-                 *This API is used to create a log topic. Note: up to 10 log topics can be created under one logset.
+                 *This API is used to create a log topic. Up to 10 log topics can be created under one logset.
                  * @param req CreateClsLogTopicRequest
                  * @return CreateClsLogTopicOutcome
                  */
                 CreateClsLogTopicOutcome CreateClsLogTopic(const Model::CreateClsLogTopicRequest &request);
                 void CreateClsLogTopicAsync(const Model::CreateClsLogTopicRequest& request, const CreateClsLogTopicAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateClsLogTopicOutcomeCallable CreateClsLogTopicCallable(const Model::CreateClsLogTopicRequest& request);
+
+                /**
+                 *This API is used to recreate a failed event log task.
+                 * @param req CreateScdnFailedLogTaskRequest
+                 * @return CreateScdnFailedLogTaskOutcome
+                 */
+                CreateScdnFailedLogTaskOutcome CreateScdnFailedLogTask(const Model::CreateScdnFailedLogTaskRequest &request);
+                void CreateScdnFailedLogTaskAsync(const Model::CreateScdnFailedLogTaskRequest& request, const CreateScdnFailedLogTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateScdnFailedLogTaskOutcomeCallable CreateScdnFailedLogTaskCallable(const Model::CreateScdnFailedLogTaskRequest& request);
 
                 /**
                  *This API is used to delete a specified acceleration domain name.
@@ -263,7 +287,7 @@ namespace TencentCloud
                 DeleteCdnDomainOutcomeCallable DeleteCdnDomainCallable(const Model::DeleteCdnDomainRequest& request);
 
                 /**
-                 *This API is used to delete a log topic. Note: when a log topic is deleted, all logs of the domain names bound to it will no longer be published to the topic, and the logs previously published to the topic will be deleted. This action will take effect within 5–15 minutes.
+                 *This API is used to delete a log topic. Note: when a log topic is deleted, all logs of the domain names bound to it will no longer be published to the topic, and the logs previously published to the topic will be deleted. This action will take effect within 5-15 minutes.
                  * @param req DeleteClsLogTopicRequest
                  * @return DeleteClsLogTopicOutcome
                  */
@@ -286,7 +310,10 @@ namespace TencentCloud
 + Traffic (in bytes)
 + Bandwidth (in bps)
 + Number of requests
-+ Traffic hit rate (in % with two decimal digits)
++ Number of hit requests
++ Request hit rate (in %)
++ Hit traffic (in bytes)
++ Traffic hit rate (in %)
 + Aggregate list of 2xx status codes and the details of status codes starting with 2 (in entries)
 + Aggregate list of 3xx status codes and the details of status codes starting with 3 (in entries)
 + Aggregate list of 4xx status codes and the details of status codes starting with 4 (in entries)
@@ -309,12 +336,22 @@ namespace TencentCloud
 
                 /**
                  *This API is used to query CDN IP ownership.
+(Note: the request rate limit of this API is subject to the limit in CDN, which is 200 calls/10 minutes).  
                  * @param req DescribeCdnIpRequest
                  * @return DescribeCdnIpOutcome
                  */
                 DescribeCdnIpOutcome DescribeCdnIp(const Model::DescribeCdnIpRequest &request);
                 void DescribeCdnIpAsync(const Model::DescribeCdnIpRequest& request, const DescribeCdnIpAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCdnIpOutcomeCallable DescribeCdnIpCallable(const Model::DescribeCdnIpRequest& request);
+
+                /**
+                 *This API is used to query the IP information of CDN intermediate nodes. Note: this API will be deactivated soon. Please call `DescribeIpStatus` instead.
+                 * @param req DescribeCdnOriginIpRequest
+                 * @return DescribeCdnOriginIpOutcome
+                 */
+                DescribeCdnOriginIpOutcome DescribeCdnOriginIp(const Model::DescribeCdnOriginIpRequest &request);
+                void DescribeCdnOriginIpAsync(const Model::DescribeCdnOriginIpRequest& request, const DescribeCdnOriginIpAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCdnOriginIpOutcomeCallable DescribeCdnOriginIpCallable(const Model::DescribeCdnOriginIpRequest& request);
 
                 /**
                  *This API is used to verify an SSL certificate and extract the domain names. It will then return the list of domain names connected to CDN and the list of domain names with the certificate configured.
@@ -344,7 +381,7 @@ namespace TencentCloud
                 DescribeDomainsConfigOutcomeCallable DescribeDomainsConfigCallable(const Model::DescribeDomainsConfigRequest& request);
 
                 /**
-                 *This API is used to query the status of the edge servers and intermediate nodes on the domain name acceleration platform. Note: edge servers are not generally available. This API can only be used by whitelisted accounts.
+                 *This API is used to query the status of the edge servers and intermediate nodes on the domain name acceleration platform. Note: edge servers are not generally available. This API can only be used by allowlisted accounts.
                  * @param req DescribeIpStatusRequest
                  * @return DescribeIpStatusOutcome
                  */
@@ -458,7 +495,7 @@ It corresponds to the **Pornography Detection** page on the CDN Console.
                 DescribeUrlViolationsOutcomeCallable DescribeUrlViolationsCallable(const Model::DescribeUrlViolationsRequest& request);
 
                 /**
-                 *This API (DisableCaches) is used to block access to a specific URL on CDN. After a URL is blocked, error 403 will be returned for all access requests to it. (This API is during beta test and not fully available now.)
+                 *This API is used to block access to a specific URL on CDN. When a URL is blocked, error 403 will be returned for requests from the Chinese mainland. URL blocking is not permanent. Note that this API is only available to beta users now. 
                  * @param req DisableCachesRequest
                  * @return DisableCachesOutcome
                  */
@@ -467,7 +504,7 @@ It corresponds to the **Pornography Detection** page on the CDN Console.
                 DisableCachesOutcomeCallable DisableCachesCallable(const Model::DisableCachesRequest& request);
 
                 /**
-                 *This API is used to stop publishing to a log topic. Note: after a log topic is disabled, all logs of the domain names bound to it will no longer be published to the topic, and the logs that have already been published will be retained. This action will take effect within 5–15 minutes.
+                 *This API is used to stop publishing to a log topic. Note: after a log topic is disabled, all logs of the domain names bound to it will no longer be published to the topic, and the logs that have already been published will be retained. This action will take effect within 5-15 minutes.
 
                  * @param req DisableClsLogTopicRequest
                  * @return DisableClsLogTopicOutcome
@@ -486,7 +523,7 @@ It corresponds to the **Pornography Detection** page on the CDN Console.
                 EnableCachesOutcomeCallable EnableCachesCallable(const Model::EnableCachesRequest& request);
 
                 /**
-                 *This API is used to start publishing to a log topic. Note: after a log topic is enabled, all logs of the domain names bound to the topic will be published to it. This action will take effect within 5–15 minutes.
+                 *This API is used to start publishing to a log topic. Note: after a log topic is enabled, all logs of the domain names bound to the topic will be published to it. This action will take effect within 5-15 minutes.
                  * @param req EnableClsLogTopicRequest
                  * @return EnableClsLogTopicOutcome
                  */
@@ -569,8 +606,7 @@ By default, a maximum of 10,000 URLs can be purged per day for acceleration regi
 
                 /**
                  *This API is used to cache specified URL resources to CDN nodes. You can specify acceleration regions for the prefetch.
-By default, a maximum of 1,000 URLs can be prefetched per day either within or outside Mainland China, and up to 20 tasks can be submitted at a time.
-This API is in beta test and not fully available yet. Please stay tuned.
+By default, a maximum of 1000 URLs can be prefetched per day either within or outside the Chinese mainland, and up to 20 tasks can be submitted at a time. Note that resources prefetched outside the Chinese mainland will be cached to CDN nodes outside the Chinese mainland and the traffic generated will incur costs.
                  * @param req PushUrlsCacheRequest
                  * @return PushUrlsCacheOutcome
                  */
@@ -624,6 +660,15 @@ Note: if you need to update complex configuration items, you must pass all the a
                 UpdatePayTypeOutcome UpdatePayType(const Model::UpdatePayTypeRequest &request);
                 void UpdatePayTypeAsync(const Model::UpdatePayTypeRequest& request, const UpdatePayTypeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UpdatePayTypeOutcomeCallable UpdatePayTypeCallable(const Model::UpdatePayTypeRequest& request);
+
+                /**
+                 *This API is used to modify security configurations of SCDN acceleration domain names.
+                 * @param req UpdateScdnDomainRequest
+                 * @return UpdateScdnDomainOutcome
+                 */
+                UpdateScdnDomainOutcome UpdateScdnDomain(const Model::UpdateScdnDomainRequest &request);
+                void UpdateScdnDomainAsync(const Model::UpdateScdnDomainRequest& request, const UpdateScdnDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateScdnDomainOutcomeCallable UpdateScdnDomainCallable(const Model::UpdateScdnDomainRequest& request);
 
             };
         }

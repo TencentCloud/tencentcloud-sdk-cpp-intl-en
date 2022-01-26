@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 VpnConnection::VpnConnection() :
@@ -36,11 +35,15 @@ VpnConnection::VpnConnection() :
     m_netStatusHasBeenSet(false),
     m_securityPolicyDatabaseSetHasBeenSet(false),
     m_iKEOptionsSpecificationHasBeenSet(false),
-    m_iPSECOptionsSpecificationHasBeenSet(false)
+    m_iPSECOptionsSpecificationHasBeenSet(false),
+    m_enableHealthCheckHasBeenSet(false),
+    m_healthCheckLocalIpHasBeenSet(false),
+    m_healthCheckRemoteIpHasBeenSet(false),
+    m_healthCheckStatusHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome VpnConnection::Deserialize(const Value &value)
+CoreInternalOutcome VpnConnection::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -49,7 +52,7 @@ CoreInternalOutcome VpnConnection::Deserialize(const Value &value)
     {
         if (!value["VpnConnectionId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnConnection.VpnConnectionId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnConnection.VpnConnectionId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpnConnectionId = string(value["VpnConnectionId"].GetString());
         m_vpnConnectionIdHasBeenSet = true;
@@ -59,7 +62,7 @@ CoreInternalOutcome VpnConnection::Deserialize(const Value &value)
     {
         if (!value["VpnConnectionName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnConnection.VpnConnectionName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnConnection.VpnConnectionName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpnConnectionName = string(value["VpnConnectionName"].GetString());
         m_vpnConnectionNameHasBeenSet = true;
@@ -69,7 +72,7 @@ CoreInternalOutcome VpnConnection::Deserialize(const Value &value)
     {
         if (!value["VpcId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnConnection.VpcId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnConnection.VpcId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpcId = string(value["VpcId"].GetString());
         m_vpcIdHasBeenSet = true;
@@ -79,7 +82,7 @@ CoreInternalOutcome VpnConnection::Deserialize(const Value &value)
     {
         if (!value["VpnGatewayId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnConnection.VpnGatewayId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnConnection.VpnGatewayId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpnGatewayId = string(value["VpnGatewayId"].GetString());
         m_vpnGatewayIdHasBeenSet = true;
@@ -89,7 +92,7 @@ CoreInternalOutcome VpnConnection::Deserialize(const Value &value)
     {
         if (!value["CustomerGatewayId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnConnection.CustomerGatewayId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnConnection.CustomerGatewayId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_customerGatewayId = string(value["CustomerGatewayId"].GetString());
         m_customerGatewayIdHasBeenSet = true;
@@ -99,7 +102,7 @@ CoreInternalOutcome VpnConnection::Deserialize(const Value &value)
     {
         if (!value["PreShareKey"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnConnection.PreShareKey` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnConnection.PreShareKey` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_preShareKey = string(value["PreShareKey"].GetString());
         m_preShareKeyHasBeenSet = true;
@@ -109,7 +112,7 @@ CoreInternalOutcome VpnConnection::Deserialize(const Value &value)
     {
         if (!value["VpnProto"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnConnection.VpnProto` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnConnection.VpnProto` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpnProto = string(value["VpnProto"].GetString());
         m_vpnProtoHasBeenSet = true;
@@ -119,7 +122,7 @@ CoreInternalOutcome VpnConnection::Deserialize(const Value &value)
     {
         if (!value["EncryptProto"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnConnection.EncryptProto` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnConnection.EncryptProto` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_encryptProto = string(value["EncryptProto"].GetString());
         m_encryptProtoHasBeenSet = true;
@@ -129,7 +132,7 @@ CoreInternalOutcome VpnConnection::Deserialize(const Value &value)
     {
         if (!value["RouteType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnConnection.RouteType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnConnection.RouteType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_routeType = string(value["RouteType"].GetString());
         m_routeTypeHasBeenSet = true;
@@ -139,7 +142,7 @@ CoreInternalOutcome VpnConnection::Deserialize(const Value &value)
     {
         if (!value["CreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnConnection.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnConnection.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createdTime = string(value["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
@@ -149,7 +152,7 @@ CoreInternalOutcome VpnConnection::Deserialize(const Value &value)
     {
         if (!value["State"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnConnection.State` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnConnection.State` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_state = string(value["State"].GetString());
         m_stateHasBeenSet = true;
@@ -159,7 +162,7 @@ CoreInternalOutcome VpnConnection::Deserialize(const Value &value)
     {
         if (!value["NetStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpnConnection.NetStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnConnection.NetStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_netStatus = string(value["NetStatus"].GetString());
         m_netStatusHasBeenSet = true;
@@ -168,10 +171,10 @@ CoreInternalOutcome VpnConnection::Deserialize(const Value &value)
     if (value.HasMember("SecurityPolicyDatabaseSet") && !value["SecurityPolicyDatabaseSet"].IsNull())
     {
         if (!value["SecurityPolicyDatabaseSet"].IsArray())
-            return CoreInternalOutcome(Error("response `VpnConnection.SecurityPolicyDatabaseSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `VpnConnection.SecurityPolicyDatabaseSet` is not array type"));
 
-        const Value &tmpValue = value["SecurityPolicyDatabaseSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["SecurityPolicyDatabaseSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             SecurityPolicyDatabase item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -189,7 +192,7 @@ CoreInternalOutcome VpnConnection::Deserialize(const Value &value)
     {
         if (!value["IKEOptionsSpecification"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `VpnConnection.IKEOptionsSpecification` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnConnection.IKEOptionsSpecification` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_iKEOptionsSpecification.Deserialize(value["IKEOptionsSpecification"]);
@@ -206,7 +209,7 @@ CoreInternalOutcome VpnConnection::Deserialize(const Value &value)
     {
         if (!value["IPSECOptionsSpecification"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `VpnConnection.IPSECOptionsSpecification` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpnConnection.IPSECOptionsSpecification` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_iPSECOptionsSpecification.Deserialize(value["IPSECOptionsSpecification"]);
@@ -219,140 +222,212 @@ CoreInternalOutcome VpnConnection::Deserialize(const Value &value)
         m_iPSECOptionsSpecificationHasBeenSet = true;
     }
 
+    if (value.HasMember("EnableHealthCheck") && !value["EnableHealthCheck"].IsNull())
+    {
+        if (!value["EnableHealthCheck"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `VpnConnection.EnableHealthCheck` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_enableHealthCheck = value["EnableHealthCheck"].GetBool();
+        m_enableHealthCheckHasBeenSet = true;
+    }
+
+    if (value.HasMember("HealthCheckLocalIp") && !value["HealthCheckLocalIp"].IsNull())
+    {
+        if (!value["HealthCheckLocalIp"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `VpnConnection.HealthCheckLocalIp` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_healthCheckLocalIp = string(value["HealthCheckLocalIp"].GetString());
+        m_healthCheckLocalIpHasBeenSet = true;
+    }
+
+    if (value.HasMember("HealthCheckRemoteIp") && !value["HealthCheckRemoteIp"].IsNull())
+    {
+        if (!value["HealthCheckRemoteIp"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `VpnConnection.HealthCheckRemoteIp` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_healthCheckRemoteIp = string(value["HealthCheckRemoteIp"].GetString());
+        m_healthCheckRemoteIpHasBeenSet = true;
+    }
+
+    if (value.HasMember("HealthCheckStatus") && !value["HealthCheckStatus"].IsNull())
+    {
+        if (!value["HealthCheckStatus"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `VpnConnection.HealthCheckStatus` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_healthCheckStatus = string(value["HealthCheckStatus"].GetString());
+        m_healthCheckStatusHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void VpnConnection::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void VpnConnection::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_vpnConnectionIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpnConnectionId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vpnConnectionId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpnConnectionId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vpnConnectionNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpnConnectionName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vpnConnectionName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpnConnectionName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vpcId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpcId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vpnGatewayIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpnGatewayId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vpnGatewayId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpnGatewayId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_customerGatewayIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CustomerGatewayId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_customerGatewayId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_customerGatewayId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_preShareKeyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PreShareKey";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_preShareKey.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_preShareKey.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vpnProtoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpnProto";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vpnProto.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpnProto.c_str(), allocator).Move(), allocator);
     }
 
     if (m_encryptProtoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EncryptProto";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_encryptProto.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_encryptProto.c_str(), allocator).Move(), allocator);
     }
 
     if (m_routeTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RouteType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_routeType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_routeType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createdTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createdTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_stateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "State";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_state.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_state.c_str(), allocator).Move(), allocator);
     }
 
     if (m_netStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetStatus";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_netStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_netStatus.c_str(), allocator).Move(), allocator);
     }
 
     if (m_securityPolicyDatabaseSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SecurityPolicyDatabaseSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_securityPolicyDatabaseSet.begin(); itr != m_securityPolicyDatabaseSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_iKEOptionsSpecificationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IKEOptionsSpecification";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_iKEOptionsSpecification.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_iPSECOptionsSpecificationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IPSECOptionsSpecification";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_iPSECOptionsSpecification.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_enableHealthCheckHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableHealthCheck";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_enableHealthCheck, allocator);
+    }
+
+    if (m_healthCheckLocalIpHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HealthCheckLocalIp";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_healthCheckLocalIp.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_healthCheckRemoteIpHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HealthCheckRemoteIp";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_healthCheckRemoteIp.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_healthCheckStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HealthCheckStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_healthCheckStatus.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -596,5 +671,69 @@ void VpnConnection::SetIPSECOptionsSpecification(const IPSECOptionsSpecification
 bool VpnConnection::IPSECOptionsSpecificationHasBeenSet() const
 {
     return m_iPSECOptionsSpecificationHasBeenSet;
+}
+
+bool VpnConnection::GetEnableHealthCheck() const
+{
+    return m_enableHealthCheck;
+}
+
+void VpnConnection::SetEnableHealthCheck(const bool& _enableHealthCheck)
+{
+    m_enableHealthCheck = _enableHealthCheck;
+    m_enableHealthCheckHasBeenSet = true;
+}
+
+bool VpnConnection::EnableHealthCheckHasBeenSet() const
+{
+    return m_enableHealthCheckHasBeenSet;
+}
+
+string VpnConnection::GetHealthCheckLocalIp() const
+{
+    return m_healthCheckLocalIp;
+}
+
+void VpnConnection::SetHealthCheckLocalIp(const string& _healthCheckLocalIp)
+{
+    m_healthCheckLocalIp = _healthCheckLocalIp;
+    m_healthCheckLocalIpHasBeenSet = true;
+}
+
+bool VpnConnection::HealthCheckLocalIpHasBeenSet() const
+{
+    return m_healthCheckLocalIpHasBeenSet;
+}
+
+string VpnConnection::GetHealthCheckRemoteIp() const
+{
+    return m_healthCheckRemoteIp;
+}
+
+void VpnConnection::SetHealthCheckRemoteIp(const string& _healthCheckRemoteIp)
+{
+    m_healthCheckRemoteIp = _healthCheckRemoteIp;
+    m_healthCheckRemoteIpHasBeenSet = true;
+}
+
+bool VpnConnection::HealthCheckRemoteIpHasBeenSet() const
+{
+    return m_healthCheckRemoteIpHasBeenSet;
+}
+
+string VpnConnection::GetHealthCheckStatus() const
+{
+    return m_healthCheckStatus;
+}
+
+void VpnConnection::SetHealthCheckStatus(const string& _healthCheckStatus)
+{
+    m_healthCheckStatus = _healthCheckStatus;
+    m_healthCheckStatusHasBeenSet = true;
+}
+
+bool VpnConnection::HealthCheckStatusHasBeenSet() const
+{
+    return m_healthCheckStatusHasBeenSet;
 }
 

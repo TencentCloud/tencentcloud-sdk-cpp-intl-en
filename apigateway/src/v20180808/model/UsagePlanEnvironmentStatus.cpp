@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 UsagePlanEnvironmentStatus::UsagePlanEnvironmentStatus() :
@@ -27,7 +26,7 @@ UsagePlanEnvironmentStatus::UsagePlanEnvironmentStatus() :
 {
 }
 
-CoreInternalOutcome UsagePlanEnvironmentStatus::Deserialize(const Value &value)
+CoreInternalOutcome UsagePlanEnvironmentStatus::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome UsagePlanEnvironmentStatus::Deserialize(const Value &value)
     {
         if (!value["TotalCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `UsagePlanEnvironmentStatus.TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UsagePlanEnvironmentStatus.TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_totalCount = value["TotalCount"].GetInt64();
         m_totalCountHasBeenSet = true;
@@ -45,10 +44,10 @@ CoreInternalOutcome UsagePlanEnvironmentStatus::Deserialize(const Value &value)
     if (value.HasMember("EnvironmentList") && !value["EnvironmentList"].IsNull())
     {
         if (!value["EnvironmentList"].IsArray())
-            return CoreInternalOutcome(Error("response `UsagePlanEnvironmentStatus.EnvironmentList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `UsagePlanEnvironmentStatus.EnvironmentList` is not array type"));
 
-        const Value &tmpValue = value["EnvironmentList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["EnvironmentList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             UsagePlanEnvironment item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -66,12 +65,12 @@ CoreInternalOutcome UsagePlanEnvironmentStatus::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void UsagePlanEnvironmentStatus::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void UsagePlanEnvironmentStatus::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_totalCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TotalCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_totalCount, allocator);
@@ -79,15 +78,15 @@ void UsagePlanEnvironmentStatus::ToJsonObject(Value &value, Document::AllocatorT
 
     if (m_environmentListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EnvironmentList";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_environmentList.begin(); itr != m_environmentList.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Live::V20180801::Model;
-using namespace rapidjson;
 using namespace std;
 
 HttpStatusInfo::HttpStatusInfo() :
@@ -27,7 +26,7 @@ HttpStatusInfo::HttpStatusInfo() :
 {
 }
 
-CoreInternalOutcome HttpStatusInfo::Deserialize(const Value &value)
+CoreInternalOutcome HttpStatusInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome HttpStatusInfo::Deserialize(const Value &value)
     {
         if (!value["HttpStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `HttpStatusInfo.HttpStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HttpStatusInfo.HttpStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_httpStatus = string(value["HttpStatus"].GetString());
         m_httpStatusHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome HttpStatusInfo::Deserialize(const Value &value)
     {
         if (!value["Num"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `HttpStatusInfo.Num` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `HttpStatusInfo.Num` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_num = value["Num"].GetUint64();
         m_numHasBeenSet = true;
@@ -56,20 +55,20 @@ CoreInternalOutcome HttpStatusInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void HttpStatusInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void HttpStatusInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_httpStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HttpStatus";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_httpStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_httpStatus.c_str(), allocator).Move(), allocator);
     }
 
     if (m_numHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Num";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_num, allocator);

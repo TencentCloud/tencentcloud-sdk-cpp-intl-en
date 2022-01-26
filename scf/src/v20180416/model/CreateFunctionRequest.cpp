@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Scf::V20180416::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateFunctionRequest::CreateFunctionRequest() :
@@ -35,59 +34,67 @@ CreateFunctionRequest::CreateFunctionRequest() :
     m_vpcConfigHasBeenSet(false),
     m_namespaceHasBeenSet(false),
     m_roleHasBeenSet(false),
+    m_installDependencyHasBeenSet(false),
     m_clsLogsetIdHasBeenSet(false),
     m_clsTopicIdHasBeenSet(false),
     m_typeHasBeenSet(false),
     m_codeSourceHasBeenSet(false),
     m_layersHasBeenSet(false),
     m_deadLetterConfigHasBeenSet(false),
-    m_publicNetConfigHasBeenSet(false)
+    m_publicNetConfigHasBeenSet(false),
+    m_cfsConfigHasBeenSet(false),
+    m_initTimeoutHasBeenSet(false),
+    m_tagsHasBeenSet(false),
+    m_asyncRunEnableHasBeenSet(false),
+    m_traceEnableHasBeenSet(false),
+    m_protocolTypeHasBeenSet(false),
+    m_protocolParamsHasBeenSet(false)
 {
 }
 
 string CreateFunctionRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_functionNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FunctionName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_functionName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_functionName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_codeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Code";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_code.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_handlerHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Handler";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_handler.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_handler.c_str(), allocator).Move(), allocator);
     }
 
     if (m_descriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Description";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_description.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
     }
 
     if (m_memorySizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MemorySize";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_memorySize, allocator);
@@ -95,7 +102,7 @@ string CreateFunctionRequest::ToJsonString() const
 
     if (m_timeoutHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Timeout";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_timeout, allocator);
@@ -103,114 +110,187 @@ string CreateFunctionRequest::ToJsonString() const
 
     if (m_environmentHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Environment";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_environment.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_runtimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Runtime";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_runtime.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_runtime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vpcConfigHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcConfig";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_vpcConfig.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_namespaceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Namespace";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_namespace.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_namespace.c_str(), allocator).Move(), allocator);
     }
 
     if (m_roleHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Role";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_role.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_role.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_installDependencyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstallDependency";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_installDependency.c_str(), allocator).Move(), allocator);
     }
 
     if (m_clsLogsetIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClsLogsetId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_clsLogsetId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_clsLogsetId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_clsTopicIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClsTopicId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_clsTopicId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_clsTopicId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_codeSourceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CodeSource";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_codeSource.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_codeSource.c_str(), allocator).Move(), allocator);
     }
 
     if (m_layersHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Layers";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_layers.begin(); itr != m_layers.end(); ++itr, ++i)
         {
-            d[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
     }
 
     if (m_deadLetterConfigHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DeadLetterConfig";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_deadLetterConfig.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_publicNetConfigHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PublicNetConfig";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_publicNetConfig.ToJsonObject(d[key.c_str()], allocator);
     }
 
+    if (m_cfsConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CfsConfig";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_cfsConfig.ToJsonObject(d[key.c_str()], allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    if (m_initTimeoutHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InitTimeout";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_initTimeout, allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_asyncRunEnableHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AsyncRunEnable";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_asyncRunEnable.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_traceEnableHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TraceEnable";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_traceEnable.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_protocolTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProtocolType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_protocolType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_protocolParamsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProtocolParams";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_protocolParams.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -392,6 +472,22 @@ bool CreateFunctionRequest::RoleHasBeenSet() const
     return m_roleHasBeenSet;
 }
 
+string CreateFunctionRequest::GetInstallDependency() const
+{
+    return m_installDependency;
+}
+
+void CreateFunctionRequest::SetInstallDependency(const string& _installDependency)
+{
+    m_installDependency = _installDependency;
+    m_installDependencyHasBeenSet = true;
+}
+
+bool CreateFunctionRequest::InstallDependencyHasBeenSet() const
+{
+    return m_installDependencyHasBeenSet;
+}
+
 string CreateFunctionRequest::GetClsLogsetId() const
 {
     return m_clsLogsetId;
@@ -502,6 +598,118 @@ void CreateFunctionRequest::SetPublicNetConfig(const PublicNetConfigIn& _publicN
 bool CreateFunctionRequest::PublicNetConfigHasBeenSet() const
 {
     return m_publicNetConfigHasBeenSet;
+}
+
+CfsConfig CreateFunctionRequest::GetCfsConfig() const
+{
+    return m_cfsConfig;
+}
+
+void CreateFunctionRequest::SetCfsConfig(const CfsConfig& _cfsConfig)
+{
+    m_cfsConfig = _cfsConfig;
+    m_cfsConfigHasBeenSet = true;
+}
+
+bool CreateFunctionRequest::CfsConfigHasBeenSet() const
+{
+    return m_cfsConfigHasBeenSet;
+}
+
+int64_t CreateFunctionRequest::GetInitTimeout() const
+{
+    return m_initTimeout;
+}
+
+void CreateFunctionRequest::SetInitTimeout(const int64_t& _initTimeout)
+{
+    m_initTimeout = _initTimeout;
+    m_initTimeoutHasBeenSet = true;
+}
+
+bool CreateFunctionRequest::InitTimeoutHasBeenSet() const
+{
+    return m_initTimeoutHasBeenSet;
+}
+
+vector<Tag> CreateFunctionRequest::GetTags() const
+{
+    return m_tags;
+}
+
+void CreateFunctionRequest::SetTags(const vector<Tag>& _tags)
+{
+    m_tags = _tags;
+    m_tagsHasBeenSet = true;
+}
+
+bool CreateFunctionRequest::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
+}
+
+string CreateFunctionRequest::GetAsyncRunEnable() const
+{
+    return m_asyncRunEnable;
+}
+
+void CreateFunctionRequest::SetAsyncRunEnable(const string& _asyncRunEnable)
+{
+    m_asyncRunEnable = _asyncRunEnable;
+    m_asyncRunEnableHasBeenSet = true;
+}
+
+bool CreateFunctionRequest::AsyncRunEnableHasBeenSet() const
+{
+    return m_asyncRunEnableHasBeenSet;
+}
+
+string CreateFunctionRequest::GetTraceEnable() const
+{
+    return m_traceEnable;
+}
+
+void CreateFunctionRequest::SetTraceEnable(const string& _traceEnable)
+{
+    m_traceEnable = _traceEnable;
+    m_traceEnableHasBeenSet = true;
+}
+
+bool CreateFunctionRequest::TraceEnableHasBeenSet() const
+{
+    return m_traceEnableHasBeenSet;
+}
+
+string CreateFunctionRequest::GetProtocolType() const
+{
+    return m_protocolType;
+}
+
+void CreateFunctionRequest::SetProtocolType(const string& _protocolType)
+{
+    m_protocolType = _protocolType;
+    m_protocolTypeHasBeenSet = true;
+}
+
+bool CreateFunctionRequest::ProtocolTypeHasBeenSet() const
+{
+    return m_protocolTypeHasBeenSet;
+}
+
+ProtocolParams CreateFunctionRequest::GetProtocolParams() const
+{
+    return m_protocolParams;
+}
+
+void CreateFunctionRequest::SetProtocolParams(const ProtocolParams& _protocolParams)
+{
+    m_protocolParams = _protocolParams;
+    m_protocolParamsHasBeenSet = true;
+}
+
+bool CreateFunctionRequest::ProtocolParamsHasBeenSet() const
+{
+    return m_protocolParamsHasBeenSet;
 }
 
 

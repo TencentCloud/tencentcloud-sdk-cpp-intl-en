@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mdl::V20200326::Model;
-using namespace rapidjson;
 using namespace std;
 
 Scte35SettingsInfo::Scte35SettingsInfo() :
@@ -26,7 +25,7 @@ Scte35SettingsInfo::Scte35SettingsInfo() :
 {
 }
 
-CoreInternalOutcome Scte35SettingsInfo::Deserialize(const Value &value)
+CoreInternalOutcome Scte35SettingsInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -35,7 +34,7 @@ CoreInternalOutcome Scte35SettingsInfo::Deserialize(const Value &value)
     {
         if (!value["Behavior"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Scte35SettingsInfo.Behavior` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Scte35SettingsInfo.Behavior` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_behavior = string(value["Behavior"].GetString());
         m_behaviorHasBeenSet = true;
@@ -45,15 +44,15 @@ CoreInternalOutcome Scte35SettingsInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Scte35SettingsInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Scte35SettingsInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_behaviorHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Behavior";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_behavior.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_behavior.c_str(), allocator).Move(), allocator);
     }
 
 }

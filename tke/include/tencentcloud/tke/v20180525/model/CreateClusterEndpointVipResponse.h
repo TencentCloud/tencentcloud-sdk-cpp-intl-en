@@ -40,11 +40,12 @@ namespace TencentCloud
                     CreateClusterEndpointVipResponse();
                     ~CreateClusterEndpointVipResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Request job’s FlowId
-                     * @return RequestFlowId Request job’s FlowId
+                     * 获取Request job's FlowId
+                     * @return RequestFlowId Request job's FlowId
                      */
                     int64_t GetRequestFlowId() const;
 
@@ -57,7 +58,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Request job’s FlowId
+                     * Request job's FlowId
                      */
                     int64_t m_requestFlowId;
                     bool m_requestFlowIdHasBeenSet;

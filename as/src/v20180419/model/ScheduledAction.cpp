@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::As::V20180419::Model;
-using namespace rapidjson;
 using namespace std;
 
 ScheduledAction::ScheduledAction() :
@@ -35,7 +34,7 @@ ScheduledAction::ScheduledAction() :
 {
 }
 
-CoreInternalOutcome ScheduledAction::Deserialize(const Value &value)
+CoreInternalOutcome ScheduledAction::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -44,7 +43,7 @@ CoreInternalOutcome ScheduledAction::Deserialize(const Value &value)
     {
         if (!value["ScheduledActionId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ScheduledAction.ScheduledActionId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScheduledAction.ScheduledActionId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_scheduledActionId = string(value["ScheduledActionId"].GetString());
         m_scheduledActionIdHasBeenSet = true;
@@ -54,7 +53,7 @@ CoreInternalOutcome ScheduledAction::Deserialize(const Value &value)
     {
         if (!value["ScheduledActionName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ScheduledAction.ScheduledActionName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScheduledAction.ScheduledActionName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_scheduledActionName = string(value["ScheduledActionName"].GetString());
         m_scheduledActionNameHasBeenSet = true;
@@ -64,7 +63,7 @@ CoreInternalOutcome ScheduledAction::Deserialize(const Value &value)
     {
         if (!value["AutoScalingGroupId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ScheduledAction.AutoScalingGroupId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScheduledAction.AutoScalingGroupId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_autoScalingGroupId = string(value["AutoScalingGroupId"].GetString());
         m_autoScalingGroupIdHasBeenSet = true;
@@ -74,7 +73,7 @@ CoreInternalOutcome ScheduledAction::Deserialize(const Value &value)
     {
         if (!value["StartTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ScheduledAction.StartTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScheduledAction.StartTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_startTime = string(value["StartTime"].GetString());
         m_startTimeHasBeenSet = true;
@@ -84,7 +83,7 @@ CoreInternalOutcome ScheduledAction::Deserialize(const Value &value)
     {
         if (!value["Recurrence"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ScheduledAction.Recurrence` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScheduledAction.Recurrence` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_recurrence = string(value["Recurrence"].GetString());
         m_recurrenceHasBeenSet = true;
@@ -94,7 +93,7 @@ CoreInternalOutcome ScheduledAction::Deserialize(const Value &value)
     {
         if (!value["EndTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ScheduledAction.EndTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScheduledAction.EndTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_endTime = string(value["EndTime"].GetString());
         m_endTimeHasBeenSet = true;
@@ -104,7 +103,7 @@ CoreInternalOutcome ScheduledAction::Deserialize(const Value &value)
     {
         if (!value["MaxSize"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ScheduledAction.MaxSize` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScheduledAction.MaxSize` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_maxSize = value["MaxSize"].GetUint64();
         m_maxSizeHasBeenSet = true;
@@ -114,7 +113,7 @@ CoreInternalOutcome ScheduledAction::Deserialize(const Value &value)
     {
         if (!value["DesiredCapacity"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ScheduledAction.DesiredCapacity` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScheduledAction.DesiredCapacity` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_desiredCapacity = value["DesiredCapacity"].GetUint64();
         m_desiredCapacityHasBeenSet = true;
@@ -124,7 +123,7 @@ CoreInternalOutcome ScheduledAction::Deserialize(const Value &value)
     {
         if (!value["MinSize"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ScheduledAction.MinSize` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScheduledAction.MinSize` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_minSize = value["MinSize"].GetUint64();
         m_minSizeHasBeenSet = true;
@@ -134,7 +133,7 @@ CoreInternalOutcome ScheduledAction::Deserialize(const Value &value)
     {
         if (!value["CreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ScheduledAction.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScheduledAction.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createdTime = string(value["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
@@ -144,60 +143,60 @@ CoreInternalOutcome ScheduledAction::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ScheduledAction::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ScheduledAction::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_scheduledActionIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ScheduledActionId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_scheduledActionId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_scheduledActionId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_scheduledActionNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ScheduledActionName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_scheduledActionName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_scheduledActionName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_autoScalingGroupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AutoScalingGroupId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_autoScalingGroupId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_autoScalingGroupId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_startTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_startTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_startTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_recurrenceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Recurrence";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_recurrence.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_recurrence.c_str(), allocator).Move(), allocator);
     }
 
     if (m_endTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_endTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_endTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_maxSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaxSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_maxSize, allocator);
@@ -205,7 +204,7 @@ void ScheduledAction::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_desiredCapacityHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DesiredCapacity";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_desiredCapacity, allocator);
@@ -213,7 +212,7 @@ void ScheduledAction::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_minSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MinSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_minSize, allocator);
@@ -221,10 +220,10 @@ void ScheduledAction::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_createdTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createdTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
     }
 
 }

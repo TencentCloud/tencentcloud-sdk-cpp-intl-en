@@ -110,6 +110,32 @@ namespace TencentCloud
                      */
                     bool RemoveAudioHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to remove a video stream. Valid values:
+<li>0: no</li>
+<li>1: yes</li>
+                     * @return RemoveVideo Whether to remove a video stream. Valid values:
+<li>0: no</li>
+<li>1: yes</li>
+                     */
+                    uint64_t GetRemoveVideo() const;
+
+                    /**
+                     * 设置Whether to remove a video stream. Valid values:
+<li>0: no</li>
+<li>1: yes</li>
+                     * @param RemoveVideo Whether to remove a video stream. Valid values:
+<li>0: no</li>
+<li>1: yes</li>
+                     */
+                    void SetRemoveVideo(const uint64_t& _removeVideo);
+
+                    /**
+                     * 判断参数 RemoveVideo 是否已赋值
+                     * @return RemoveVideo 是否已赋值
+                     */
+                    bool RemoveVideoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -131,6 +157,14 @@ namespace TencentCloud
                      */
                     uint64_t m_removeAudio;
                     bool m_removeAudioHasBeenSet;
+
+                    /**
+                     * Whether to remove a video stream. Valid values:
+<li>0: no</li>
+<li>1: yes</li>
+                     */
+                    uint64_t m_removeVideo;
+                    bool m_removeVideoHasBeenSet;
 
                 };
             }

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cam::V20190116::Model;
-using namespace rapidjson;
 using namespace std;
 
 StrategyInfo::StrategyInfo() :
@@ -33,11 +32,14 @@ StrategyInfo::StrategyInfo() :
     m_isAttachedHasBeenSet(false),
     m_deactivedHasBeenSet(false),
     m_deactivedDetailHasBeenSet(false),
-    m_isServiceLinkedPolicyHasBeenSet(false)
+    m_isServiceLinkedPolicyHasBeenSet(false),
+    m_attachEntityCountHasBeenSet(false),
+    m_attachEntityBoundaryCountHasBeenSet(false),
+    m_updateTimeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome StrategyInfo::Deserialize(const Value &value)
+CoreInternalOutcome StrategyInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -46,7 +48,7 @@ CoreInternalOutcome StrategyInfo::Deserialize(const Value &value)
     {
         if (!value["PolicyId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `StrategyInfo.PolicyId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `StrategyInfo.PolicyId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_policyId = value["PolicyId"].GetUint64();
         m_policyIdHasBeenSet = true;
@@ -56,7 +58,7 @@ CoreInternalOutcome StrategyInfo::Deserialize(const Value &value)
     {
         if (!value["PolicyName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `StrategyInfo.PolicyName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `StrategyInfo.PolicyName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_policyName = string(value["PolicyName"].GetString());
         m_policyNameHasBeenSet = true;
@@ -66,7 +68,7 @@ CoreInternalOutcome StrategyInfo::Deserialize(const Value &value)
     {
         if (!value["AddTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `StrategyInfo.AddTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `StrategyInfo.AddTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_addTime = string(value["AddTime"].GetString());
         m_addTimeHasBeenSet = true;
@@ -76,7 +78,7 @@ CoreInternalOutcome StrategyInfo::Deserialize(const Value &value)
     {
         if (!value["Type"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `StrategyInfo.Type` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `StrategyInfo.Type` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_type = value["Type"].GetUint64();
         m_typeHasBeenSet = true;
@@ -86,7 +88,7 @@ CoreInternalOutcome StrategyInfo::Deserialize(const Value &value)
     {
         if (!value["Description"].IsString())
         {
-            return CoreInternalOutcome(Error("response `StrategyInfo.Description` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `StrategyInfo.Description` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_description = string(value["Description"].GetString());
         m_descriptionHasBeenSet = true;
@@ -96,7 +98,7 @@ CoreInternalOutcome StrategyInfo::Deserialize(const Value &value)
     {
         if (!value["CreateMode"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `StrategyInfo.CreateMode` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `StrategyInfo.CreateMode` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_createMode = value["CreateMode"].GetUint64();
         m_createModeHasBeenSet = true;
@@ -106,7 +108,7 @@ CoreInternalOutcome StrategyInfo::Deserialize(const Value &value)
     {
         if (!value["Attachments"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `StrategyInfo.Attachments` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `StrategyInfo.Attachments` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_attachments = value["Attachments"].GetUint64();
         m_attachmentsHasBeenSet = true;
@@ -116,7 +118,7 @@ CoreInternalOutcome StrategyInfo::Deserialize(const Value &value)
     {
         if (!value["ServiceType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `StrategyInfo.ServiceType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `StrategyInfo.ServiceType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_serviceType = string(value["ServiceType"].GetString());
         m_serviceTypeHasBeenSet = true;
@@ -126,7 +128,7 @@ CoreInternalOutcome StrategyInfo::Deserialize(const Value &value)
     {
         if (!value["IsAttached"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `StrategyInfo.IsAttached` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `StrategyInfo.IsAttached` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_isAttached = value["IsAttached"].GetUint64();
         m_isAttachedHasBeenSet = true;
@@ -136,7 +138,7 @@ CoreInternalOutcome StrategyInfo::Deserialize(const Value &value)
     {
         if (!value["Deactived"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `StrategyInfo.Deactived` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `StrategyInfo.Deactived` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_deactived = value["Deactived"].GetUint64();
         m_deactivedHasBeenSet = true;
@@ -145,10 +147,10 @@ CoreInternalOutcome StrategyInfo::Deserialize(const Value &value)
     if (value.HasMember("DeactivedDetail") && !value["DeactivedDetail"].IsNull())
     {
         if (!value["DeactivedDetail"].IsArray())
-            return CoreInternalOutcome(Error("response `StrategyInfo.DeactivedDetail` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `StrategyInfo.DeactivedDetail` is not array type"));
 
-        const Value &tmpValue = value["DeactivedDetail"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["DeactivedDetail"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_deactivedDetail.push_back((*itr).GetString());
         }
@@ -159,22 +161,52 @@ CoreInternalOutcome StrategyInfo::Deserialize(const Value &value)
     {
         if (!value["IsServiceLinkedPolicy"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `StrategyInfo.IsServiceLinkedPolicy` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `StrategyInfo.IsServiceLinkedPolicy` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_isServiceLinkedPolicy = value["IsServiceLinkedPolicy"].GetUint64();
         m_isServiceLinkedPolicyHasBeenSet = true;
+    }
+
+    if (value.HasMember("AttachEntityCount") && !value["AttachEntityCount"].IsNull())
+    {
+        if (!value["AttachEntityCount"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `StrategyInfo.AttachEntityCount` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_attachEntityCount = value["AttachEntityCount"].GetInt64();
+        m_attachEntityCountHasBeenSet = true;
+    }
+
+    if (value.HasMember("AttachEntityBoundaryCount") && !value["AttachEntityBoundaryCount"].IsNull())
+    {
+        if (!value["AttachEntityBoundaryCount"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `StrategyInfo.AttachEntityBoundaryCount` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_attachEntityBoundaryCount = value["AttachEntityBoundaryCount"].GetInt64();
+        m_attachEntityBoundaryCountHasBeenSet = true;
+    }
+
+    if (value.HasMember("UpdateTime") && !value["UpdateTime"].IsNull())
+    {
+        if (!value["UpdateTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `StrategyInfo.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_updateTime = string(value["UpdateTime"].GetString());
+        m_updateTimeHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void StrategyInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void StrategyInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_policyIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PolicyId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_policyId, allocator);
@@ -182,23 +214,23 @@ void StrategyInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_policyNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PolicyName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_policyName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_policyName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_addTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AddTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_addTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_addTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_type, allocator);
@@ -206,15 +238,15 @@ void StrategyInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_descriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Description";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_description.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createModeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateMode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_createMode, allocator);
@@ -222,7 +254,7 @@ void StrategyInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_attachmentsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Attachments";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_attachments, allocator);
@@ -230,15 +262,15 @@ void StrategyInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_serviceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_serviceType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_serviceType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_isAttachedHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsAttached";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isAttached, allocator);
@@ -246,7 +278,7 @@ void StrategyInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_deactivedHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Deactived";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_deactived, allocator);
@@ -254,23 +286,47 @@ void StrategyInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_deactivedDetailHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DeactivedDetail";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_deactivedDetail.begin(); itr != m_deactivedDetail.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_isServiceLinkedPolicyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsServiceLinkedPolicy";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isServiceLinkedPolicy, allocator);
+    }
+
+    if (m_attachEntityCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AttachEntityCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_attachEntityCount, allocator);
+    }
+
+    if (m_attachEntityBoundaryCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AttachEntityBoundaryCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_attachEntityBoundaryCount, allocator);
+    }
+
+    if (m_updateTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UpdateTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_updateTime.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -466,5 +522,53 @@ void StrategyInfo::SetIsServiceLinkedPolicy(const uint64_t& _isServiceLinkedPoli
 bool StrategyInfo::IsServiceLinkedPolicyHasBeenSet() const
 {
     return m_isServiceLinkedPolicyHasBeenSet;
+}
+
+int64_t StrategyInfo::GetAttachEntityCount() const
+{
+    return m_attachEntityCount;
+}
+
+void StrategyInfo::SetAttachEntityCount(const int64_t& _attachEntityCount)
+{
+    m_attachEntityCount = _attachEntityCount;
+    m_attachEntityCountHasBeenSet = true;
+}
+
+bool StrategyInfo::AttachEntityCountHasBeenSet() const
+{
+    return m_attachEntityCountHasBeenSet;
+}
+
+int64_t StrategyInfo::GetAttachEntityBoundaryCount() const
+{
+    return m_attachEntityBoundaryCount;
+}
+
+void StrategyInfo::SetAttachEntityBoundaryCount(const int64_t& _attachEntityBoundaryCount)
+{
+    m_attachEntityBoundaryCount = _attachEntityBoundaryCount;
+    m_attachEntityBoundaryCountHasBeenSet = true;
+}
+
+bool StrategyInfo::AttachEntityBoundaryCountHasBeenSet() const
+{
+    return m_attachEntityBoundaryCountHasBeenSet;
+}
+
+string StrategyInfo::GetUpdateTime() const
+{
+    return m_updateTime;
+}
+
+void StrategyInfo::SetUpdateTime(const string& _updateTime)
+{
+    m_updateTime = _updateTime;
+    m_updateTimeHasBeenSet = true;
+}
+
+bool StrategyInfo::UpdateTimeHasBeenSet() const
+{
+    return m_updateTimeHasBeenSet;
 }
 

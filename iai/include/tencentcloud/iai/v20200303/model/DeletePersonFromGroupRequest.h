@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Person ID
-                     * @return PersonId Person ID
+                     * 获取Person ID, which is the `PersonId` in the `CreatePerson` API.
+                     * @return PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
                      */
                     std::string GetPersonId() const;
 
                     /**
-                     * 设置Person ID
-                     * @param PersonId Person ID
+                     * 设置Person ID, which is the `PersonId` in the `CreatePerson` API.
+                     * @param PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
                      */
                     void SetPersonId(const std::string& _personId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool PersonIdHasBeenSet() const;
 
                     /**
-                     * 获取Group ID
-                     * @return GroupId Group ID
+                     * 获取Group ID, which is the `GroupId` in the `CreateGroup` API.
+                     * @return GroupId Group ID, which is the `GroupId` in the `CreateGroup` API.
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置Group ID
-                     * @param GroupId Group ID
+                     * 设置Group ID, which is the `GroupId` in the `CreateGroup` API.
+                     * @param GroupId Group ID, which is the `GroupId` in the `CreateGroup` API.
                      */
                     void SetGroupId(const std::string& _groupId);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Person ID
+                     * Person ID, which is the `PersonId` in the `CreatePerson` API.
                      */
                     std::string m_personId;
                     bool m_personIdHasBeenSet;
 
                     /**
-                     * Group ID
+                     * Group ID, which is the `GroupId` in the `CreateGroup` API.
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;

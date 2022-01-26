@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Sms::V20190711::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeSignListStatus::DescribeSignListStatus() :
@@ -31,7 +30,7 @@ DescribeSignListStatus::DescribeSignListStatus() :
 {
 }
 
-CoreInternalOutcome DescribeSignListStatus::Deserialize(const Value &value)
+CoreInternalOutcome DescribeSignListStatus::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome DescribeSignListStatus::Deserialize(const Value &value)
     {
         if (!value["SignId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DescribeSignListStatus.SignId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeSignListStatus.SignId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_signId = value["SignId"].GetUint64();
         m_signIdHasBeenSet = true;
@@ -50,7 +49,7 @@ CoreInternalOutcome DescribeSignListStatus::Deserialize(const Value &value)
     {
         if (!value["International"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DescribeSignListStatus.International` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeSignListStatus.International` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_international = value["International"].GetUint64();
         m_internationalHasBeenSet = true;
@@ -60,7 +59,7 @@ CoreInternalOutcome DescribeSignListStatus::Deserialize(const Value &value)
     {
         if (!value["StatusCode"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribeSignListStatus.StatusCode` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeSignListStatus.StatusCode` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_statusCode = value["StatusCode"].GetInt64();
         m_statusCodeHasBeenSet = true;
@@ -70,7 +69,7 @@ CoreInternalOutcome DescribeSignListStatus::Deserialize(const Value &value)
     {
         if (!value["ReviewReply"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeSignListStatus.ReviewReply` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeSignListStatus.ReviewReply` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_reviewReply = string(value["ReviewReply"].GetString());
         m_reviewReplyHasBeenSet = true;
@@ -80,7 +79,7 @@ CoreInternalOutcome DescribeSignListStatus::Deserialize(const Value &value)
     {
         if (!value["SignName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeSignListStatus.SignName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeSignListStatus.SignName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_signName = string(value["SignName"].GetString());
         m_signNameHasBeenSet = true;
@@ -90,7 +89,7 @@ CoreInternalOutcome DescribeSignListStatus::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DescribeSignListStatus.CreateTime` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeSignListStatus.CreateTime` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = value["CreateTime"].GetUint64();
         m_createTimeHasBeenSet = true;
@@ -100,12 +99,12 @@ CoreInternalOutcome DescribeSignListStatus::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void DescribeSignListStatus::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DescribeSignListStatus::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_signIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SignId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_signId, allocator);
@@ -113,7 +112,7 @@ void DescribeSignListStatus::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_internationalHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "International";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_international, allocator);
@@ -121,7 +120,7 @@ void DescribeSignListStatus::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_statusCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StatusCode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_statusCode, allocator);
@@ -129,23 +128,23 @@ void DescribeSignListStatus::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_reviewReplyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReviewReply";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_reviewReply.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_reviewReply.c_str(), allocator).Move(), allocator);
     }
 
     if (m_signNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SignName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_signName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_signName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_createTime, allocator);

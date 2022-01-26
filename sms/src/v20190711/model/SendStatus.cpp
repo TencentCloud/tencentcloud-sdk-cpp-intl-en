@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Sms::V20190711::Model;
-using namespace rapidjson;
 using namespace std;
 
 SendStatus::SendStatus() :
@@ -32,7 +31,7 @@ SendStatus::SendStatus() :
 {
 }
 
-CoreInternalOutcome SendStatus::Deserialize(const Value &value)
+CoreInternalOutcome SendStatus::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +40,7 @@ CoreInternalOutcome SendStatus::Deserialize(const Value &value)
     {
         if (!value["SerialNo"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SendStatus.SerialNo` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SendStatus.SerialNo` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_serialNo = string(value["SerialNo"].GetString());
         m_serialNoHasBeenSet = true;
@@ -51,7 +50,7 @@ CoreInternalOutcome SendStatus::Deserialize(const Value &value)
     {
         if (!value["PhoneNumber"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SendStatus.PhoneNumber` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SendStatus.PhoneNumber` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_phoneNumber = string(value["PhoneNumber"].GetString());
         m_phoneNumberHasBeenSet = true;
@@ -61,7 +60,7 @@ CoreInternalOutcome SendStatus::Deserialize(const Value &value)
     {
         if (!value["Fee"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `SendStatus.Fee` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SendStatus.Fee` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_fee = value["Fee"].GetUint64();
         m_feeHasBeenSet = true;
@@ -71,7 +70,7 @@ CoreInternalOutcome SendStatus::Deserialize(const Value &value)
     {
         if (!value["SessionContext"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SendStatus.SessionContext` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SendStatus.SessionContext` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_sessionContext = string(value["SessionContext"].GetString());
         m_sessionContextHasBeenSet = true;
@@ -81,7 +80,7 @@ CoreInternalOutcome SendStatus::Deserialize(const Value &value)
     {
         if (!value["Code"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SendStatus.Code` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SendStatus.Code` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_code = string(value["Code"].GetString());
         m_codeHasBeenSet = true;
@@ -91,7 +90,7 @@ CoreInternalOutcome SendStatus::Deserialize(const Value &value)
     {
         if (!value["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SendStatus.Message` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SendStatus.Message` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_message = string(value["Message"].GetString());
         m_messageHasBeenSet = true;
@@ -101,7 +100,7 @@ CoreInternalOutcome SendStatus::Deserialize(const Value &value)
     {
         if (!value["IsoCode"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SendStatus.IsoCode` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SendStatus.IsoCode` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_isoCode = string(value["IsoCode"].GetString());
         m_isoCodeHasBeenSet = true;
@@ -111,28 +110,28 @@ CoreInternalOutcome SendStatus::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void SendStatus::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SendStatus::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_serialNoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SerialNo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_serialNo.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_serialNo.c_str(), allocator).Move(), allocator);
     }
 
     if (m_phoneNumberHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PhoneNumber";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_phoneNumber.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_phoneNumber.c_str(), allocator).Move(), allocator);
     }
 
     if (m_feeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Fee";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_fee, allocator);
@@ -140,34 +139,34 @@ void SendStatus::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_sessionContextHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SessionContext";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_sessionContext.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sessionContext.c_str(), allocator).Move(), allocator);
     }
 
     if (m_codeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Code";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_code.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_code.c_str(), allocator).Move(), allocator);
     }
 
     if (m_messageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Message";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_message.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_message.c_str(), allocator).Move(), allocator);
     }
 
     if (m_isoCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsoCode";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_isoCode.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_isoCode.c_str(), allocator).Move(), allocator);
     }
 
 }

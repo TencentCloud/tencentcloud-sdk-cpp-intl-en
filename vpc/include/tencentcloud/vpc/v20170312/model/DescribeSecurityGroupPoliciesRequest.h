@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vpc/v20170312/model/Filter.h>
 
 
 namespace TencentCloud
@@ -60,6 +61,60 @@ namespace TencentCloud
                      */
                     bool SecurityGroupIdHasBeenSet() const;
 
+                    /**
+                     * 获取Filter conditions. `SecurityGroupId` and `Filters` cannot be specified at the same time.
+<li>security-group-id - String - Security group ID.</li>
+<li>ip - String - IP. IPV4 and IPV6 fuzzy matching is supported.</li>
+<li>address-module - String - IP address or address group template ID.</li>
+<li>service-module - String - Protocol port or port group template ID.</li>
+<li>protocol-type - String - Protocol supported by the security group policy. Valid values: `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, `ALL`.</li>
+<li>port - String - Optional - Protocol port. Fuzzy matching is supported. Query all ports when the protocol value is `ALL`.</li>
+<li>poly - String - Protocol policy. Valid values: `ALL` (means "all policies"), `ACCEPT` (means "allow") and `DROP` (means "reject").</li>
+<li>direction - String - Protocol rule. Valid values: `ALL` (means "all rules"), `INBOUND`(means "inbound rules") and `OUTBOUND` (means "outbound rules").</li>
+<li>description - String - Protocol description. Fuzzy matching is supported in this filter condition.</li>
+                     * @return Filters Filter conditions. `SecurityGroupId` and `Filters` cannot be specified at the same time.
+<li>security-group-id - String - Security group ID.</li>
+<li>ip - String - IP. IPV4 and IPV6 fuzzy matching is supported.</li>
+<li>address-module - String - IP address or address group template ID.</li>
+<li>service-module - String - Protocol port or port group template ID.</li>
+<li>protocol-type - String - Protocol supported by the security group policy. Valid values: `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, `ALL`.</li>
+<li>port - String - Optional - Protocol port. Fuzzy matching is supported. Query all ports when the protocol value is `ALL`.</li>
+<li>poly - String - Protocol policy. Valid values: `ALL` (means "all policies"), `ACCEPT` (means "allow") and `DROP` (means "reject").</li>
+<li>direction - String - Protocol rule. Valid values: `ALL` (means "all rules"), `INBOUND`(means "inbound rules") and `OUTBOUND` (means "outbound rules").</li>
+<li>description - String - Protocol description. Fuzzy matching is supported in this filter condition.</li>
+                     */
+                    std::vector<Filter> GetFilters() const;
+
+                    /**
+                     * 设置Filter conditions. `SecurityGroupId` and `Filters` cannot be specified at the same time.
+<li>security-group-id - String - Security group ID.</li>
+<li>ip - String - IP. IPV4 and IPV6 fuzzy matching is supported.</li>
+<li>address-module - String - IP address or address group template ID.</li>
+<li>service-module - String - Protocol port or port group template ID.</li>
+<li>protocol-type - String - Protocol supported by the security group policy. Valid values: `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, `ALL`.</li>
+<li>port - String - Optional - Protocol port. Fuzzy matching is supported. Query all ports when the protocol value is `ALL`.</li>
+<li>poly - String - Protocol policy. Valid values: `ALL` (means "all policies"), `ACCEPT` (means "allow") and `DROP` (means "reject").</li>
+<li>direction - String - Protocol rule. Valid values: `ALL` (means "all rules"), `INBOUND`(means "inbound rules") and `OUTBOUND` (means "outbound rules").</li>
+<li>description - String - Protocol description. Fuzzy matching is supported in this filter condition.</li>
+                     * @param Filters Filter conditions. `SecurityGroupId` and `Filters` cannot be specified at the same time.
+<li>security-group-id - String - Security group ID.</li>
+<li>ip - String - IP. IPV4 and IPV6 fuzzy matching is supported.</li>
+<li>address-module - String - IP address or address group template ID.</li>
+<li>service-module - String - Protocol port or port group template ID.</li>
+<li>protocol-type - String - Protocol supported by the security group policy. Valid values: `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, `ALL`.</li>
+<li>port - String - Optional - Protocol port. Fuzzy matching is supported. Query all ports when the protocol value is `ALL`.</li>
+<li>poly - String - Protocol policy. Valid values: `ALL` (means "all policies"), `ACCEPT` (means "allow") and `DROP` (means "reject").</li>
+<li>direction - String - Protocol rule. Valid values: `ALL` (means "all rules"), `INBOUND`(means "inbound rules") and `OUTBOUND` (means "outbound rules").</li>
+<li>description - String - Protocol description. Fuzzy matching is supported in this filter condition.</li>
+                     */
+                    void SetFilters(const std::vector<Filter>& _filters);
+
+                    /**
+                     * 判断参数 Filters 是否已赋值
+                     * @return Filters 是否已赋值
+                     */
+                    bool FiltersHasBeenSet() const;
+
                 private:
 
                     /**
@@ -67,6 +122,21 @@ namespace TencentCloud
                      */
                     std::string m_securityGroupId;
                     bool m_securityGroupIdHasBeenSet;
+
+                    /**
+                     * Filter conditions. `SecurityGroupId` and `Filters` cannot be specified at the same time.
+<li>security-group-id - String - Security group ID.</li>
+<li>ip - String - IP. IPV4 and IPV6 fuzzy matching is supported.</li>
+<li>address-module - String - IP address or address group template ID.</li>
+<li>service-module - String - Protocol port or port group template ID.</li>
+<li>protocol-type - String - Protocol supported by the security group policy. Valid values: `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, `ALL`.</li>
+<li>port - String - Optional - Protocol port. Fuzzy matching is supported. Query all ports when the protocol value is `ALL`.</li>
+<li>poly - String - Protocol policy. Valid values: `ALL` (means "all policies"), `ACCEPT` (means "allow") and `DROP` (means "reject").</li>
+<li>direction - String - Protocol rule. Valid values: `ALL` (means "all rules"), `INBOUND`(means "inbound rules") and `OUTBOUND` (means "outbound rules").</li>
+<li>description - String - Protocol description. Fuzzy matching is supported in this filter condition.</li>
+                     */
+                    std::vector<Filter> m_filters;
+                    bool m_filtersHasBeenSet;
 
                 };
             }

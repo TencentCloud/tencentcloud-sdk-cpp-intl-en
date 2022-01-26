@@ -299,14 +299,14 @@ namespace TencentCloud
                     bool PeriodEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Number of nodes. 2: one master and one slave; 3: one master and two slaves
-                     * @return NodeCount Number of nodes. 2: one master and one slave; 3: one master and two slaves
+                     * 获取Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
+                     * @return NodeCount Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
                      */
                     int64_t GetNodeCount() const;
 
                     /**
-                     * 设置Number of nodes. 2: one master and one slave; 3: one master and two slaves
-                     * @param NodeCount Number of nodes. 2: one master and one slave; 3: one master and two slaves
+                     * 设置Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
+                     * @param NodeCount Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
                      */
                     void SetNodeCount(const int64_t& _nodeCount);
 
@@ -451,17 +451,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ShardMasterZoneHasBeenSet() const;
 
                     /**
-                     * 获取List of slave AZs of a shard
+                     * 获取List of secondary AZs of a shard
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ShardSlaveZones List of slave AZs of a shard
+                     * @return ShardSlaveZones List of secondary AZs of a shard
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetShardSlaveZones() const;
 
                     /**
-                     * 设置List of slave AZs of a shard
+                     * 设置List of secondary AZs of a shard
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ShardSlaveZones List of slave AZs of a shard
+                     * @param ShardSlaveZones List of secondary AZs of a shard
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetShardSlaveZones(const std::vector<std::string>& _shardSlaveZones);
@@ -489,6 +489,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return Cpu 是否已赋值
                      */
                     bool CpuHasBeenSet() const;
+
+                    /**
+                     * 获取The value range of shardkey, which includes 64 hash values, such as 0-31, 32-63.
+                     * @return Range The value range of shardkey, which includes 64 hash values, such as 0-31, 32-63.
+                     */
+                    std::string GetRange() const;
+
+                    /**
+                     * 设置The value range of shardkey, which includes 64 hash values, such as 0-31, 32-63.
+                     * @param Range The value range of shardkey, which includes 64 hash values, such as 0-31, 32-63.
+                     */
+                    void SetRange(const std::string& _range);
+
+                    /**
+                     * 判断参数 Range 是否已赋值
+                     * @return Range 是否已赋值
+                     */
+                    bool RangeHasBeenSet() const;
 
                 private:
 
@@ -577,7 +595,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_periodEndTimeHasBeenSet;
 
                     /**
-                     * Number of nodes. 2: one master and one slave; 3: one master and two slaves
+                     * Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
                      */
                     int64_t m_nodeCount;
                     bool m_nodeCountHasBeenSet;
@@ -627,7 +645,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_shardMasterZoneHasBeenSet;
 
                     /**
-                     * List of slave AZs of a shard
+                     * List of secondary AZs of a shard
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_shardSlaveZones;
@@ -638,6 +656,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
+
+                    /**
+                     * The value range of shardkey, which includes 64 hash values, such as 0-31, 32-63.
+                     */
+                    std::string m_range;
+                    bool m_rangeHasBeenSet;
 
                 };
             }

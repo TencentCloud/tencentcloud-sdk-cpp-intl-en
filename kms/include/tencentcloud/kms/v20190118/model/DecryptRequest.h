@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool CiphertextBlobHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EncryptionContext 
+                     * 获取JSON string of key-value pair. If this parameter is specified for `Encrypt`, the same parameter needs to be provided when the `Decrypt` API is called. The maximum length is 1,024 bytes.
+                     * @return EncryptionContext JSON string of key-value pair. If this parameter is specified for `Encrypt`, the same parameter needs to be provided when the `Decrypt` API is called. The maximum length is 1,024 bytes.
                      */
                     std::string GetEncryptionContext() const;
 
                     /**
-                     * 设置
-                     * @param EncryptionContext 
+                     * 设置JSON string of key-value pair. If this parameter is specified for `Encrypt`, the same parameter needs to be provided when the `Decrypt` API is called. The maximum length is 1,024 bytes.
+                     * @param EncryptionContext JSON string of key-value pair. If this parameter is specified for `Encrypt`, the same parameter needs to be provided when the `Decrypt` API is called. The maximum length is 1,024 bytes.
                      */
                     void SetEncryptionContext(const std::string& _encryptionContext);
 
@@ -77,6 +77,42 @@ namespace TencentCloud
                      * @return EncryptionContext 是否已赋值
                      */
                     bool EncryptionContextHasBeenSet() const;
+
+                    /**
+                     * 获取PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+                     * @return EncryptionPublicKey PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+                     */
+                    std::string GetEncryptionPublicKey() const;
+
+                    /**
+                     * 设置PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+                     * @param EncryptionPublicKey PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+                     */
+                    void SetEncryptionPublicKey(const std::string& _encryptionPublicKey);
+
+                    /**
+                     * 判断参数 EncryptionPublicKey 是否已赋值
+                     * @return EncryptionPublicKey 是否已赋值
+                     */
+                    bool EncryptionPublicKeyHasBeenSet() const;
+
+                    /**
+                     * 获取Asymmetric encryption algorithm. Valid values: `SM2(C1C3C2)`, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used in combination with `EncryptionPublicKey` for encryption. If it is left empty, a SM2 public key will be used by default.
+                     * @return EncryptionAlgorithm Asymmetric encryption algorithm. Valid values: `SM2(C1C3C2)`, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used in combination with `EncryptionPublicKey` for encryption. If it is left empty, a SM2 public key will be used by default.
+                     */
+                    std::string GetEncryptionAlgorithm() const;
+
+                    /**
+                     * 设置Asymmetric encryption algorithm. Valid values: `SM2(C1C3C2)`, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used in combination with `EncryptionPublicKey` for encryption. If it is left empty, a SM2 public key will be used by default.
+                     * @param EncryptionAlgorithm Asymmetric encryption algorithm. Valid values: `SM2(C1C3C2)`, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used in combination with `EncryptionPublicKey` for encryption. If it is left empty, a SM2 public key will be used by default.
+                     */
+                    void SetEncryptionAlgorithm(const std::string& _encryptionAlgorithm);
+
+                    /**
+                     * 判断参数 EncryptionAlgorithm 是否已赋值
+                     * @return EncryptionAlgorithm 是否已赋值
+                     */
+                    bool EncryptionAlgorithmHasBeenSet() const;
 
                 private:
 
@@ -87,10 +123,22 @@ namespace TencentCloud
                     bool m_ciphertextBlobHasBeenSet;
 
                     /**
-                     * 
+                     * JSON string of key-value pair. If this parameter is specified for `Encrypt`, the same parameter needs to be provided when the `Decrypt` API is called. The maximum length is 1,024 bytes.
                      */
                     std::string m_encryptionContext;
                     bool m_encryptionContextHasBeenSet;
+
+                    /**
+                     * PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+                     */
+                    std::string m_encryptionPublicKey;
+                    bool m_encryptionPublicKeyHasBeenSet;
+
+                    /**
+                     * Asymmetric encryption algorithm. Valid values: `SM2(C1C3C2)`, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used in combination with `EncryptionPublicKey` for encryption. If it is left empty, a SM2 public key will be used by default.
+                     */
+                    std::string m_encryptionAlgorithm;
+                    bool m_encryptionAlgorithmHasBeenSet;
 
                 };
             }

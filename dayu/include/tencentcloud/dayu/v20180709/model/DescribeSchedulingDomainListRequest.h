@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of items in a page. Returned results are not paged if you enter “0”.
-                     * @return Limit Number of items in a page. Returned results are not paged if you enter “0”.
+                     * 获取Number of items in a page. Returned results are not paged if you enter '0'.
+                     * @return Limit Number of items in a page. Returned results are not paged if you enter '0'.
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of items in a page. Returned results are not paged if you enter “0”.
-                     * @param Limit Number of items in a page. Returned results are not paged if you enter “0”.
+                     * 设置Number of items in a page. Returned results are not paged if you enter '0'.
+                     * @param Limit Number of items in a page. Returned results are not paged if you enter '0'.
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -99,7 +99,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of items in a page. Returned results are not paged if you enter “0”.
+                     * Number of items in a page. Returned results are not paged if you enter '0'.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

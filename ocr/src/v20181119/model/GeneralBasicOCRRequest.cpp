@@ -20,59 +20,85 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Ocr::V20181119::Model;
-using namespace rapidjson;
 using namespace std;
 
 GeneralBasicOCRRequest::GeneralBasicOCRRequest() :
     m_imageBase64HasBeenSet(false),
     m_imageUrlHasBeenSet(false),
     m_sceneHasBeenSet(false),
-    m_languageTypeHasBeenSet(false)
+    m_languageTypeHasBeenSet(false),
+    m_isPdfHasBeenSet(false),
+    m_pdfPageNumberHasBeenSet(false),
+    m_isWordsHasBeenSet(false)
 {
 }
 
 string GeneralBasicOCRRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_imageBase64HasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ImageBase64";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_imageBase64.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_imageBase64.c_str(), allocator).Move(), allocator);
     }
 
     if (m_imageUrlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ImageUrl";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_imageUrl.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_imageUrl.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sceneHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Scene";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_scene.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_scene.c_str(), allocator).Move(), allocator);
     }
 
     if (m_languageTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LanguageType";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_languageType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_languageType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_isPdfHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsPdf";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_isPdf, allocator);
+    }
+
+    if (m_pdfPageNumberHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PdfPageNumber";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_pdfPageNumber, allocator);
+    }
+
+    if (m_isWordsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsWords";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_isWords, allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -140,6 +166,54 @@ void GeneralBasicOCRRequest::SetLanguageType(const string& _languageType)
 bool GeneralBasicOCRRequest::LanguageTypeHasBeenSet() const
 {
     return m_languageTypeHasBeenSet;
+}
+
+bool GeneralBasicOCRRequest::GetIsPdf() const
+{
+    return m_isPdf;
+}
+
+void GeneralBasicOCRRequest::SetIsPdf(const bool& _isPdf)
+{
+    m_isPdf = _isPdf;
+    m_isPdfHasBeenSet = true;
+}
+
+bool GeneralBasicOCRRequest::IsPdfHasBeenSet() const
+{
+    return m_isPdfHasBeenSet;
+}
+
+uint64_t GeneralBasicOCRRequest::GetPdfPageNumber() const
+{
+    return m_pdfPageNumber;
+}
+
+void GeneralBasicOCRRequest::SetPdfPageNumber(const uint64_t& _pdfPageNumber)
+{
+    m_pdfPageNumber = _pdfPageNumber;
+    m_pdfPageNumberHasBeenSet = true;
+}
+
+bool GeneralBasicOCRRequest::PdfPageNumberHasBeenSet() const
+{
+    return m_pdfPageNumberHasBeenSet;
+}
+
+bool GeneralBasicOCRRequest::GetIsWords() const
+{
+    return m_isWords;
+}
+
+void GeneralBasicOCRRequest::SetIsWords(const bool& _isWords)
+{
+    m_isWords = _isWords;
+    m_isWordsHasBeenSet = true;
+}
+
+bool GeneralBasicOCRRequest::IsWordsHasBeenSet() const
+{
+    return m_isWordsHasBeenSet;
 }
 
 

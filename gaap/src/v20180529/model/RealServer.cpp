@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 RealServer::RealServer() :
@@ -29,7 +28,7 @@ RealServer::RealServer() :
 {
 }
 
-CoreInternalOutcome RealServer::Deserialize(const Value &value)
+CoreInternalOutcome RealServer::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome RealServer::Deserialize(const Value &value)
     {
         if (!value["RealServerIP"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RealServer.RealServerIP` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RealServer.RealServerIP` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_realServerIP = string(value["RealServerIP"].GetString());
         m_realServerIPHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome RealServer::Deserialize(const Value &value)
     {
         if (!value["RealServerId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RealServer.RealServerId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RealServer.RealServerId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_realServerId = string(value["RealServerId"].GetString());
         m_realServerIdHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome RealServer::Deserialize(const Value &value)
     {
         if (!value["RealServerName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RealServer.RealServerName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RealServer.RealServerName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_realServerName = string(value["RealServerName"].GetString());
         m_realServerNameHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome RealServer::Deserialize(const Value &value)
     {
         if (!value["ProjectId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `RealServer.ProjectId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RealServer.ProjectId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_projectId = value["ProjectId"].GetUint64();
         m_projectIdHasBeenSet = true;
@@ -78,36 +77,36 @@ CoreInternalOutcome RealServer::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void RealServer::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void RealServer::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_realServerIPHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RealServerIP";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_realServerIP.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_realServerIP.c_str(), allocator).Move(), allocator);
     }
 
     if (m_realServerIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RealServerId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_realServerId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_realServerId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_realServerNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RealServerName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_realServerName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_realServerName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_projectIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProjectId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_projectId, allocator);

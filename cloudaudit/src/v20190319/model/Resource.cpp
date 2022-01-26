@@ -18,81 +18,64 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cloudaudit::V20190319::Model;
-using namespace rapidjson;
 using namespace std;
 
 Resource::Resource() :
-    m_resourceNameHasBeenSet(false),
-    m_resourceTypeHasBeenSet(false)
+    m_resourceTypeHasBeenSet(false),
+    m_resourceNameHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome Resource::Deserialize(const Value &value)
+CoreInternalOutcome Resource::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
-
-    if (value.HasMember("ResourceName") && !value["ResourceName"].IsNull())
-    {
-        if (!value["ResourceName"].IsString())
-        {
-            return CoreInternalOutcome(Error("response `Resource.ResourceName` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_resourceName = string(value["ResourceName"].GetString());
-        m_resourceNameHasBeenSet = true;
-    }
 
     if (value.HasMember("ResourceType") && !value["ResourceType"].IsNull())
     {
         if (!value["ResourceType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Resource.ResourceType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Resource.ResourceType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_resourceType = string(value["ResourceType"].GetString());
         m_resourceTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("ResourceName") && !value["ResourceName"].IsNull())
+    {
+        if (!value["ResourceName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Resource.ResourceName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_resourceName = string(value["ResourceName"].GetString());
+        m_resourceNameHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void Resource::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Resource::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
-
-    if (m_resourceNameHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "ResourceName";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_resourceName.c_str(), allocator).Move(), allocator);
-    }
 
     if (m_resourceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResourceType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_resourceType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resourceType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_resourceNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ResourceName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resourceName.c_str(), allocator).Move(), allocator);
     }
 
 }
 
-
-string Resource::GetResourceName() const
-{
-    return m_resourceName;
-}
-
-void Resource::SetResourceName(const string& _resourceName)
-{
-    m_resourceName = _resourceName;
-    m_resourceNameHasBeenSet = true;
-}
-
-bool Resource::ResourceNameHasBeenSet() const
-{
-    return m_resourceNameHasBeenSet;
-}
 
 string Resource::GetResourceType() const
 {
@@ -108,5 +91,21 @@ void Resource::SetResourceType(const string& _resourceType)
 bool Resource::ResourceTypeHasBeenSet() const
 {
     return m_resourceTypeHasBeenSet;
+}
+
+string Resource::GetResourceName() const
+{
+    return m_resourceName;
+}
+
+void Resource::SetResourceName(const string& _resourceName)
+{
+    m_resourceName = _resourceName;
+    m_resourceNameHasBeenSet = true;
+}
+
+bool Resource::ResourceNameHasBeenSet() const
+{
+    return m_resourceNameHasBeenSet;
 }
 

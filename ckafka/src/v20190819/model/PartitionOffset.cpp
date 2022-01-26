@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ckafka::V20190819::Model;
-using namespace rapidjson;
 using namespace std;
 
 PartitionOffset::PartitionOffset() :
@@ -27,7 +26,7 @@ PartitionOffset::PartitionOffset() :
 {
 }
 
-CoreInternalOutcome PartitionOffset::Deserialize(const Value &value)
+CoreInternalOutcome PartitionOffset::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome PartitionOffset::Deserialize(const Value &value)
     {
         if (!value["Partition"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PartitionOffset.Partition` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PartitionOffset.Partition` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_partition = string(value["Partition"].GetString());
         m_partitionHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome PartitionOffset::Deserialize(const Value &value)
     {
         if (!value["Offset"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `PartitionOffset.Offset` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PartitionOffset.Offset` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_offset = value["Offset"].GetInt64();
         m_offsetHasBeenSet = true;
@@ -56,20 +55,20 @@ CoreInternalOutcome PartitionOffset::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void PartitionOffset::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void PartitionOffset::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_partitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Partition";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_partition.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_partition.c_str(), allocator).Move(), allocator);
     }
 
     if (m_offsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Offset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_offset, allocator);

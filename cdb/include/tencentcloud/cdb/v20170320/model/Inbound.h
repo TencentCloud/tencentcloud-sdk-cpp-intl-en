@@ -136,6 +136,24 @@ namespace TencentCloud
                      */
                     bool DirHasBeenSet() const;
 
+                    /**
+                     * 获取Rule description
+                     * @return Desc Rule description
+                     */
+                    std::string GetDesc() const;
+
+                    /**
+                     * 设置Rule description
+                     * @param Desc Rule description
+                     */
+                    void SetDesc(const std::string& _desc);
+
+                    /**
+                     * 判断参数 Desc 是否已赋值
+                     * @return Desc 是否已赋值
+                     */
+                    bool DescHasBeenSet() const;
+
                 private:
 
                     /**
@@ -167,6 +185,12 @@ namespace TencentCloud
                      */
                     std::string m_dir;
                     bool m_dirHasBeenSet;
+
+                    /**
+                     * Rule description
+                     */
+                    std::string m_desc;
+                    bool m_descHasBeenSet;
 
                 };
             }

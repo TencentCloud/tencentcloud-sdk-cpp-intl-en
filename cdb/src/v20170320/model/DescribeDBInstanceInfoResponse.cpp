@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeDBInstanceInfoResponse::DescribeDBInstanceInfoResponse() :
@@ -29,26 +28,27 @@ DescribeDBInstanceInfoResponse::DescribeDBInstanceInfoResponse() :
     m_instanceNameHasBeenSet(false),
     m_encryptionHasBeenSet(false),
     m_keyIdHasBeenSet(false),
-    m_keyRegionHasBeenSet(false)
+    m_keyRegionHasBeenSet(false),
+    m_defaultKmsRegionHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome DescribeDBInstanceInfoResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -59,11 +59,11 @@ CoreInternalOutcome DescribeDBInstanceInfoResponse::Deserialize(const string &pa
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -71,7 +71,7 @@ CoreInternalOutcome DescribeDBInstanceInfoResponse::Deserialize(const string &pa
     {
         if (!rsp["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(rsp["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -81,7 +81,7 @@ CoreInternalOutcome DescribeDBInstanceInfoResponse::Deserialize(const string &pa
     {
         if (!rsp["InstanceName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceName = string(rsp["InstanceName"].GetString());
         m_instanceNameHasBeenSet = true;
@@ -91,7 +91,7 @@ CoreInternalOutcome DescribeDBInstanceInfoResponse::Deserialize(const string &pa
     {
         if (!rsp["Encryption"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Encryption` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Encryption` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_encryption = string(rsp["Encryption"].GetString());
         m_encryptionHasBeenSet = true;
@@ -101,7 +101,7 @@ CoreInternalOutcome DescribeDBInstanceInfoResponse::Deserialize(const string &pa
     {
         if (!rsp["KeyId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `KeyId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `KeyId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_keyId = string(rsp["KeyId"].GetString());
         m_keyIdHasBeenSet = true;
@@ -111,14 +111,89 @@ CoreInternalOutcome DescribeDBInstanceInfoResponse::Deserialize(const string &pa
     {
         if (!rsp["KeyRegion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `KeyRegion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `KeyRegion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_keyRegion = string(rsp["KeyRegion"].GetString());
         m_keyRegionHasBeenSet = true;
     }
 
+    if (rsp.HasMember("DefaultKmsRegion") && !rsp["DefaultKmsRegion"].IsNull())
+    {
+        if (!rsp["DefaultKmsRegion"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DefaultKmsRegion` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_defaultKmsRegion = string(rsp["DefaultKmsRegion"].GetString());
+        m_defaultKmsRegionHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeDBInstanceInfoResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_instanceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_instanceNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_encryptionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Encryption";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_encryption.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_keyIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "KeyId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_keyId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_keyRegionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "KeyRegion";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_keyRegion.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_defaultKmsRegionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DefaultKmsRegion";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_defaultKmsRegion.c_str(), allocator).Move(), allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 
@@ -170,6 +245,16 @@ string DescribeDBInstanceInfoResponse::GetKeyRegion() const
 bool DescribeDBInstanceInfoResponse::KeyRegionHasBeenSet() const
 {
     return m_keyRegionHasBeenSet;
+}
+
+string DescribeDBInstanceInfoResponse::GetDefaultKmsRegion() const
+{
+    return m_defaultKmsRegion;
+}
+
+bool DescribeDBInstanceInfoResponse::DefaultKmsRegionHasBeenSet() const
+{
+    return m_defaultKmsRegionHasBeenSet;
 }
 
 

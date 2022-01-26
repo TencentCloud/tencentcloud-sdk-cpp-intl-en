@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Es::V20180416::Model;
-using namespace rapidjson;
 using namespace std;
 
 UpgradeInstanceRequest::UpgradeInstanceRequest() :
@@ -28,36 +27,37 @@ UpgradeInstanceRequest::UpgradeInstanceRequest() :
     m_esVersionHasBeenSet(false),
     m_checkOnlyHasBeenSet(false),
     m_licenseTypeHasBeenSet(false),
-    m_basicSecurityTypeHasBeenSet(false)
+    m_basicSecurityTypeHasBeenSet(false),
+    m_upgradeModeHasBeenSet(false)
 {
 }
 
 string UpgradeInstanceRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_esVersionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EsVersion";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_esVersion.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_esVersion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_checkOnlyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CheckOnly";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_checkOnly, allocator);
@@ -65,23 +65,31 @@ string UpgradeInstanceRequest::ToJsonString() const
 
     if (m_licenseTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LicenseType";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_licenseType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_licenseType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_basicSecurityTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BasicSecurityType";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_basicSecurityType, allocator);
     }
 
+    if (m_upgradeModeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UpgradeMode";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_upgradeMode.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -165,6 +173,22 @@ void UpgradeInstanceRequest::SetBasicSecurityType(const uint64_t& _basicSecurity
 bool UpgradeInstanceRequest::BasicSecurityTypeHasBeenSet() const
 {
     return m_basicSecurityTypeHasBeenSet;
+}
+
+string UpgradeInstanceRequest::GetUpgradeMode() const
+{
+    return m_upgradeMode;
+}
+
+void UpgradeInstanceRequest::SetUpgradeMode(const string& _upgradeMode)
+{
+    m_upgradeMode = _upgradeMode;
+    m_upgradeModeHasBeenSet = true;
+}
+
+bool UpgradeInstanceRequest::UpgradeModeHasBeenSet() const
+{
+    return m_upgradeModeHasBeenSet;
 }
 
 

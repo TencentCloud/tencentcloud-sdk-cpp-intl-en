@@ -18,18 +18,18 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 RealServerBindSetReq::RealServerBindSetReq() :
     m_realServerIdHasBeenSet(false),
     m_realServerPortHasBeenSet(false),
     m_realServerIPHasBeenSet(false),
-    m_realServerWeightHasBeenSet(false)
+    m_realServerWeightHasBeenSet(false),
+    m_realServerFailoverRoleHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome RealServerBindSetReq::Deserialize(const Value &value)
+CoreInternalOutcome RealServerBindSetReq::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +38,7 @@ CoreInternalOutcome RealServerBindSetReq::Deserialize(const Value &value)
     {
         if (!value["RealServerId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RealServerBindSetReq.RealServerId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RealServerBindSetReq.RealServerId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_realServerId = string(value["RealServerId"].GetString());
         m_realServerIdHasBeenSet = true;
@@ -48,7 +48,7 @@ CoreInternalOutcome RealServerBindSetReq::Deserialize(const Value &value)
     {
         if (!value["RealServerPort"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `RealServerBindSetReq.RealServerPort` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RealServerBindSetReq.RealServerPort` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_realServerPort = value["RealServerPort"].GetUint64();
         m_realServerPortHasBeenSet = true;
@@ -58,7 +58,7 @@ CoreInternalOutcome RealServerBindSetReq::Deserialize(const Value &value)
     {
         if (!value["RealServerIP"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RealServerBindSetReq.RealServerIP` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RealServerBindSetReq.RealServerIP` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_realServerIP = string(value["RealServerIP"].GetString());
         m_realServerIPHasBeenSet = true;
@@ -68,30 +68,40 @@ CoreInternalOutcome RealServerBindSetReq::Deserialize(const Value &value)
     {
         if (!value["RealServerWeight"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `RealServerBindSetReq.RealServerWeight` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RealServerBindSetReq.RealServerWeight` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_realServerWeight = value["RealServerWeight"].GetUint64();
         m_realServerWeightHasBeenSet = true;
+    }
+
+    if (value.HasMember("RealServerFailoverRole") && !value["RealServerFailoverRole"].IsNull())
+    {
+        if (!value["RealServerFailoverRole"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `RealServerBindSetReq.RealServerFailoverRole` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_realServerFailoverRole = string(value["RealServerFailoverRole"].GetString());
+        m_realServerFailoverRoleHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void RealServerBindSetReq::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void RealServerBindSetReq::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_realServerIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RealServerId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_realServerId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_realServerId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_realServerPortHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RealServerPort";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_realServerPort, allocator);
@@ -99,18 +109,26 @@ void RealServerBindSetReq::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_realServerIPHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RealServerIP";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_realServerIP.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_realServerIP.c_str(), allocator).Move(), allocator);
     }
 
     if (m_realServerWeightHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RealServerWeight";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_realServerWeight, allocator);
+    }
+
+    if (m_realServerFailoverRoleHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RealServerFailoverRole";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_realServerFailoverRole.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -178,5 +196,21 @@ void RealServerBindSetReq::SetRealServerWeight(const uint64_t& _realServerWeight
 bool RealServerBindSetReq::RealServerWeightHasBeenSet() const
 {
     return m_realServerWeightHasBeenSet;
+}
+
+string RealServerBindSetReq::GetRealServerFailoverRole() const
+{
+    return m_realServerFailoverRole;
+}
+
+void RealServerBindSetReq::SetRealServerFailoverRole(const string& _realServerFailoverRole)
+{
+    m_realServerFailoverRole = _realServerFailoverRole;
+    m_realServerFailoverRoleHasBeenSet = true;
+}
+
+bool RealServerBindSetReq::RealServerFailoverRoleHasBeenSet() const
+{
+    return m_realServerFailoverRoleHasBeenSet;
 }
 

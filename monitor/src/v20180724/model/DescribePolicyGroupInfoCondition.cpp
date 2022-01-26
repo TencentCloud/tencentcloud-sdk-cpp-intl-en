@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Monitor::V20180724::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribePolicyGroupInfoCondition::DescribePolicyGroupInfoCondition() :
@@ -36,7 +35,7 @@ DescribePolicyGroupInfoCondition::DescribePolicyGroupInfoCondition() :
 {
 }
 
-CoreInternalOutcome DescribePolicyGroupInfoCondition::Deserialize(const Value &value)
+CoreInternalOutcome DescribePolicyGroupInfoCondition::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -45,7 +44,7 @@ CoreInternalOutcome DescribePolicyGroupInfoCondition::Deserialize(const Value &v
     {
         if (!value["MetricShowName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoCondition.MetricShowName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoCondition.MetricShowName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_metricShowName = string(value["MetricShowName"].GetString());
         m_metricShowNameHasBeenSet = true;
@@ -55,7 +54,7 @@ CoreInternalOutcome DescribePolicyGroupInfoCondition::Deserialize(const Value &v
     {
         if (!value["Period"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoCondition.Period` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoCondition.Period` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_period = value["Period"].GetInt64();
         m_periodHasBeenSet = true;
@@ -65,7 +64,7 @@ CoreInternalOutcome DescribePolicyGroupInfoCondition::Deserialize(const Value &v
     {
         if (!value["MetricId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoCondition.MetricId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoCondition.MetricId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_metricId = value["MetricId"].GetInt64();
         m_metricIdHasBeenSet = true;
@@ -75,7 +74,7 @@ CoreInternalOutcome DescribePolicyGroupInfoCondition::Deserialize(const Value &v
     {
         if (!value["RuleId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoCondition.RuleId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoCondition.RuleId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_ruleId = value["RuleId"].GetInt64();
         m_ruleIdHasBeenSet = true;
@@ -85,7 +84,7 @@ CoreInternalOutcome DescribePolicyGroupInfoCondition::Deserialize(const Value &v
     {
         if (!value["Unit"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoCondition.Unit` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoCondition.Unit` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_unit = string(value["Unit"].GetString());
         m_unitHasBeenSet = true;
@@ -95,7 +94,7 @@ CoreInternalOutcome DescribePolicyGroupInfoCondition::Deserialize(const Value &v
     {
         if (!value["AlarmNotifyType"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoCondition.AlarmNotifyType` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoCondition.AlarmNotifyType` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_alarmNotifyType = value["AlarmNotifyType"].GetInt64();
         m_alarmNotifyTypeHasBeenSet = true;
@@ -105,7 +104,7 @@ CoreInternalOutcome DescribePolicyGroupInfoCondition::Deserialize(const Value &v
     {
         if (!value["AlarmNotifyPeriod"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoCondition.AlarmNotifyPeriod` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoCondition.AlarmNotifyPeriod` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_alarmNotifyPeriod = value["AlarmNotifyPeriod"].GetInt64();
         m_alarmNotifyPeriodHasBeenSet = true;
@@ -115,7 +114,7 @@ CoreInternalOutcome DescribePolicyGroupInfoCondition::Deserialize(const Value &v
     {
         if (!value["CalcType"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoCondition.CalcType` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoCondition.CalcType` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_calcType = value["CalcType"].GetInt64();
         m_calcTypeHasBeenSet = true;
@@ -125,7 +124,7 @@ CoreInternalOutcome DescribePolicyGroupInfoCondition::Deserialize(const Value &v
     {
         if (!value["CalcValue"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoCondition.CalcValue` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoCondition.CalcValue` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_calcValue = string(value["CalcValue"].GetString());
         m_calcValueHasBeenSet = true;
@@ -135,7 +134,7 @@ CoreInternalOutcome DescribePolicyGroupInfoCondition::Deserialize(const Value &v
     {
         if (!value["ContinueTime"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoCondition.ContinueTime` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoCondition.ContinueTime` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_continueTime = value["ContinueTime"].GetInt64();
         m_continueTimeHasBeenSet = true;
@@ -145,7 +144,7 @@ CoreInternalOutcome DescribePolicyGroupInfoCondition::Deserialize(const Value &v
     {
         if (!value["MetricName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoCondition.MetricName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoCondition.MetricName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_metricName = string(value["MetricName"].GetString());
         m_metricNameHasBeenSet = true;
@@ -155,20 +154,20 @@ CoreInternalOutcome DescribePolicyGroupInfoCondition::Deserialize(const Value &v
     return CoreInternalOutcome(true);
 }
 
-void DescribePolicyGroupInfoCondition::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DescribePolicyGroupInfoCondition::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_metricShowNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MetricShowName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_metricShowName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_metricShowName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_periodHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Period";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_period, allocator);
@@ -176,7 +175,7 @@ void DescribePolicyGroupInfoCondition::ToJsonObject(Value &value, Document::Allo
 
     if (m_metricIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MetricId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_metricId, allocator);
@@ -184,7 +183,7 @@ void DescribePolicyGroupInfoCondition::ToJsonObject(Value &value, Document::Allo
 
     if (m_ruleIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RuleId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_ruleId, allocator);
@@ -192,15 +191,15 @@ void DescribePolicyGroupInfoCondition::ToJsonObject(Value &value, Document::Allo
 
     if (m_unitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Unit";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_unit.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_unit.c_str(), allocator).Move(), allocator);
     }
 
     if (m_alarmNotifyTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AlarmNotifyType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_alarmNotifyType, allocator);
@@ -208,7 +207,7 @@ void DescribePolicyGroupInfoCondition::ToJsonObject(Value &value, Document::Allo
 
     if (m_alarmNotifyPeriodHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AlarmNotifyPeriod";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_alarmNotifyPeriod, allocator);
@@ -216,7 +215,7 @@ void DescribePolicyGroupInfoCondition::ToJsonObject(Value &value, Document::Allo
 
     if (m_calcTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CalcType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_calcType, allocator);
@@ -224,15 +223,15 @@ void DescribePolicyGroupInfoCondition::ToJsonObject(Value &value, Document::Allo
 
     if (m_calcValueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CalcValue";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_calcValue.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_calcValue.c_str(), allocator).Move(), allocator);
     }
 
     if (m_continueTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ContinueTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_continueTime, allocator);
@@ -240,10 +239,10 @@ void DescribePolicyGroupInfoCondition::ToJsonObject(Value &value, Document::Allo
 
     if (m_metricNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MetricName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_metricName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_metricName.c_str(), allocator).Move(), allocator);
     }
 
 }

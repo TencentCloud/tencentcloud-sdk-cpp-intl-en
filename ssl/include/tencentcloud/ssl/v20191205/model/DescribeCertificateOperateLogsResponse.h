@@ -41,11 +41,12 @@ namespace TencentCloud
                     DescribeCertificateOperateLogsResponse();
                     ~DescribeCertificateOperateLogsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Total number of logs that meet query conditions.
-                     * @return AllTotal Total number of logs that meet query conditions.
+                     * 获取Total number of logs that meet query conditions
+                     * @return AllTotal Total number of logs that meet query conditions
                      */
                     uint64_t GetAllTotal() const;
 
@@ -56,8 +57,8 @@ namespace TencentCloud
                     bool AllTotalHasBeenSet() const;
 
                     /**
-                     * 获取Number of logs returned for this request.
-                     * @return TotalCount Number of logs returned for this request.
+                     * 获取Number of logs returned for this request
+                     * @return TotalCount Number of logs returned for this request
                      */
                     uint64_t GetTotalCount() const;
 
@@ -68,9 +69,9 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Certificate operation log list.
+                     * 获取Certificate operation log list
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return OperateLogs Certificate operation log list.
+                     * @return OperateLogs Certificate operation log list
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<OperationLog> GetOperateLogs() const;
@@ -84,19 +85,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Total number of logs that meet query conditions.
+                     * Total number of logs that meet query conditions
                      */
                     uint64_t m_allTotal;
                     bool m_allTotalHasBeenSet;
 
                     /**
-                     * Number of logs returned for this request.
+                     * Number of logs returned for this request
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Certificate operation log list.
+                     * Certificate operation log list
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<OperationLog> m_operateLogs;

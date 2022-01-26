@@ -26,6 +26,7 @@
 #include <tencentcloud/batch/v20170312/model/InputMapping.h>
 #include <tencentcloud/batch/v20170312/model/Authentication.h>
 #include <tencentcloud/batch/v20170312/model/Notification.h>
+#include <tencentcloud/batch/v20170312/model/Tag.h>
 
 
 namespace TencentCloud
@@ -45,6 +46,7 @@ namespace TencentCloud
                     DescribeComputeEnvCreateInfoResponse();
                     ~DescribeComputeEnvCreateInfoResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -169,6 +171,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool DesiredComputeNodeCountHasBeenSet() const;
 
+                    /**
+                     * 获取Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return Tags Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -231,6 +247,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_desiredComputeNodeCount;
                     bool m_desiredComputeNodeCountHasBeenSet;
+
+                    /**
+                     * Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

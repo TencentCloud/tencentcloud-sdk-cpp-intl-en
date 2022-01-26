@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Batch::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeComputeEnvResponse::DescribeComputeEnvResponse() :
@@ -32,26 +31,30 @@ DescribeComputeEnvResponse::DescribeComputeEnvResponse() :
     m_computeNodeSetHasBeenSet(false),
     m_computeNodeMetricsHasBeenSet(false),
     m_desiredComputeNodeCountHasBeenSet(false),
-    m_envTypeHasBeenSet(false)
+    m_envTypeHasBeenSet(false),
+    m_resourceTypeHasBeenSet(false),
+    m_nextActionHasBeenSet(false),
+    m_attachedComputeNodeCountHasBeenSet(false),
+    m_tagsHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome DescribeComputeEnvResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -62,11 +65,11 @@ CoreInternalOutcome DescribeComputeEnvResponse::Deserialize(const string &payloa
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -74,7 +77,7 @@ CoreInternalOutcome DescribeComputeEnvResponse::Deserialize(const string &payloa
     {
         if (!rsp["EnvId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `EnvId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EnvId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_envId = string(rsp["EnvId"].GetString());
         m_envIdHasBeenSet = true;
@@ -84,7 +87,7 @@ CoreInternalOutcome DescribeComputeEnvResponse::Deserialize(const string &payloa
     {
         if (!rsp["EnvName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `EnvName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EnvName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_envName = string(rsp["EnvName"].GetString());
         m_envNameHasBeenSet = true;
@@ -94,7 +97,7 @@ CoreInternalOutcome DescribeComputeEnvResponse::Deserialize(const string &payloa
     {
         if (!rsp["Placement"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `Placement` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Placement` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_placement.Deserialize(rsp["Placement"]);
@@ -111,7 +114,7 @@ CoreInternalOutcome DescribeComputeEnvResponse::Deserialize(const string &payloa
     {
         if (!rsp["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(rsp["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -120,10 +123,10 @@ CoreInternalOutcome DescribeComputeEnvResponse::Deserialize(const string &payloa
     if (rsp.HasMember("ComputeNodeSet") && !rsp["ComputeNodeSet"].IsNull())
     {
         if (!rsp["ComputeNodeSet"].IsArray())
-            return CoreInternalOutcome(Error("response `ComputeNodeSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ComputeNodeSet` is not array type"));
 
-        const Value &tmpValue = rsp["ComputeNodeSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["ComputeNodeSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             ComputeNode item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -141,7 +144,7 @@ CoreInternalOutcome DescribeComputeEnvResponse::Deserialize(const string &payloa
     {
         if (!rsp["ComputeNodeMetrics"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `ComputeNodeMetrics` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComputeNodeMetrics` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_computeNodeMetrics.Deserialize(rsp["ComputeNodeMetrics"]);
@@ -158,7 +161,7 @@ CoreInternalOutcome DescribeComputeEnvResponse::Deserialize(const string &payloa
     {
         if (!rsp["DesiredComputeNodeCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DesiredComputeNodeCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DesiredComputeNodeCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_desiredComputeNodeCount = rsp["DesiredComputeNodeCount"].GetUint64();
         m_desiredComputeNodeCountHasBeenSet = true;
@@ -168,14 +171,193 @@ CoreInternalOutcome DescribeComputeEnvResponse::Deserialize(const string &payloa
     {
         if (!rsp["EnvType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `EnvType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EnvType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_envType = string(rsp["EnvType"].GetString());
         m_envTypeHasBeenSet = true;
     }
 
+    if (rsp.HasMember("ResourceType") && !rsp["ResourceType"].IsNull())
+    {
+        if (!rsp["ResourceType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ResourceType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_resourceType = string(rsp["ResourceType"].GetString());
+        m_resourceTypeHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("NextAction") && !rsp["NextAction"].IsNull())
+    {
+        if (!rsp["NextAction"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `NextAction` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_nextAction = string(rsp["NextAction"].GetString());
+        m_nextActionHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("AttachedComputeNodeCount") && !rsp["AttachedComputeNodeCount"].IsNull())
+    {
+        if (!rsp["AttachedComputeNodeCount"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AttachedComputeNodeCount` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_attachedComputeNodeCount = rsp["AttachedComputeNodeCount"].GetUint64();
+        m_attachedComputeNodeCountHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("Tags") && !rsp["Tags"].IsNull())
+    {
+        if (!rsp["Tags"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Tags` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["Tags"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            Tag item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_tags.push_back(item);
+        }
+        m_tagsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeComputeEnvResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_envIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnvId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_envId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_envNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnvName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_envName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_placementHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Placement";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_placement.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_createTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CreateTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_computeNodeSetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ComputeNodeSet";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_computeNodeSet.begin(); itr != m_computeNodeSet.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_computeNodeMetricsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ComputeNodeMetrics";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_computeNodeMetrics.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_desiredComputeNodeCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DesiredComputeNodeCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_desiredComputeNodeCount, allocator);
+    }
+
+    if (m_envTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnvType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_envType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_resourceTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ResourceType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resourceType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_nextActionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NextAction";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_nextAction.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_attachedComputeNodeCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AttachedComputeNodeCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_attachedComputeNodeCount, allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 
@@ -257,6 +439,46 @@ string DescribeComputeEnvResponse::GetEnvType() const
 bool DescribeComputeEnvResponse::EnvTypeHasBeenSet() const
 {
     return m_envTypeHasBeenSet;
+}
+
+string DescribeComputeEnvResponse::GetResourceType() const
+{
+    return m_resourceType;
+}
+
+bool DescribeComputeEnvResponse::ResourceTypeHasBeenSet() const
+{
+    return m_resourceTypeHasBeenSet;
+}
+
+string DescribeComputeEnvResponse::GetNextAction() const
+{
+    return m_nextAction;
+}
+
+bool DescribeComputeEnvResponse::NextActionHasBeenSet() const
+{
+    return m_nextActionHasBeenSet;
+}
+
+uint64_t DescribeComputeEnvResponse::GetAttachedComputeNodeCount() const
+{
+    return m_attachedComputeNodeCount;
+}
+
+bool DescribeComputeEnvResponse::AttachedComputeNodeCountHasBeenSet() const
+{
+    return m_attachedComputeNodeCountHasBeenSet;
+}
+
+vector<Tag> DescribeComputeEnvResponse::GetTags() const
+{
+    return m_tags;
+}
+
+bool DescribeComputeEnvResponse::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
 }
 
 

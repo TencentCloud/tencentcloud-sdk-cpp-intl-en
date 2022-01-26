@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 EventContent::EventContent() :
@@ -29,18 +28,20 @@ EventContent::EventContent() :
     m_fileDeleteEventHasBeenSet(false),
     m_pullCompleteEventHasBeenSet(false),
     m_editMediaCompleteEventHasBeenSet(false),
-    m_wechatPublishCompleteEventHasBeenSet(false),
-    m_transcodeCompleteEventHasBeenSet(false),
-    m_concatCompleteEventHasBeenSet(false),
-    m_clipCompleteEventHasBeenSet(false),
-    m_createImageSpriteCompleteEventHasBeenSet(false),
-    m_snapshotByTimeOffsetCompleteEventHasBeenSet(false),
+    m_splitMediaCompleteEventHasBeenSet(false),
     m_composeMediaCompleteEventHasBeenSet(false),
-    m_wechatMiniProgramPublishCompleteEventHasBeenSet(false)
+    m_clipCompleteEventHasBeenSet(false),
+    m_transcodeCompleteEventHasBeenSet(false),
+    m_createImageSpriteCompleteEventHasBeenSet(false),
+    m_concatCompleteEventHasBeenSet(false),
+    m_snapshotByTimeOffsetCompleteEventHasBeenSet(false),
+    m_wechatPublishCompleteEventHasBeenSet(false),
+    m_wechatMiniProgramPublishCompleteEventHasBeenSet(false),
+    m_restoreMediaCompleteEventHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome EventContent::Deserialize(const Value &value)
+CoreInternalOutcome EventContent::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -49,7 +50,7 @@ CoreInternalOutcome EventContent::Deserialize(const Value &value)
     {
         if (!value["EventHandle"].IsString())
         {
-            return CoreInternalOutcome(Error("response `EventContent.EventHandle` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EventContent.EventHandle` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_eventHandle = string(value["EventHandle"].GetString());
         m_eventHandleHasBeenSet = true;
@@ -59,7 +60,7 @@ CoreInternalOutcome EventContent::Deserialize(const Value &value)
     {
         if (!value["EventType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `EventContent.EventType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EventContent.EventType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_eventType = string(value["EventType"].GetString());
         m_eventTypeHasBeenSet = true;
@@ -69,7 +70,7 @@ CoreInternalOutcome EventContent::Deserialize(const Value &value)
     {
         if (!value["FileUploadEvent"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `EventContent.FileUploadEvent` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EventContent.FileUploadEvent` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_fileUploadEvent.Deserialize(value["FileUploadEvent"]);
@@ -86,7 +87,7 @@ CoreInternalOutcome EventContent::Deserialize(const Value &value)
     {
         if (!value["ProcedureStateChangeEvent"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `EventContent.ProcedureStateChangeEvent` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EventContent.ProcedureStateChangeEvent` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_procedureStateChangeEvent.Deserialize(value["ProcedureStateChangeEvent"]);
@@ -103,7 +104,7 @@ CoreInternalOutcome EventContent::Deserialize(const Value &value)
     {
         if (!value["FileDeleteEvent"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `EventContent.FileDeleteEvent` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EventContent.FileDeleteEvent` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_fileDeleteEvent.Deserialize(value["FileDeleteEvent"]);
@@ -120,7 +121,7 @@ CoreInternalOutcome EventContent::Deserialize(const Value &value)
     {
         if (!value["PullCompleteEvent"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `EventContent.PullCompleteEvent` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EventContent.PullCompleteEvent` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_pullCompleteEvent.Deserialize(value["PullCompleteEvent"]);
@@ -137,7 +138,7 @@ CoreInternalOutcome EventContent::Deserialize(const Value &value)
     {
         if (!value["EditMediaCompleteEvent"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `EventContent.EditMediaCompleteEvent` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EventContent.EditMediaCompleteEvent` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_editMediaCompleteEvent.Deserialize(value["EditMediaCompleteEvent"]);
@@ -150,113 +151,28 @@ CoreInternalOutcome EventContent::Deserialize(const Value &value)
         m_editMediaCompleteEventHasBeenSet = true;
     }
 
-    if (value.HasMember("WechatPublishCompleteEvent") && !value["WechatPublishCompleteEvent"].IsNull())
+    if (value.HasMember("SplitMediaCompleteEvent") && !value["SplitMediaCompleteEvent"].IsNull())
     {
-        if (!value["WechatPublishCompleteEvent"].IsObject())
+        if (!value["SplitMediaCompleteEvent"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `EventContent.WechatPublishCompleteEvent` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EventContent.SplitMediaCompleteEvent` is not object type").SetRequestId(requestId));
         }
 
-        CoreInternalOutcome outcome = m_wechatPublishCompleteEvent.Deserialize(value["WechatPublishCompleteEvent"]);
+        CoreInternalOutcome outcome = m_splitMediaCompleteEvent.Deserialize(value["SplitMediaCompleteEvent"]);
         if (!outcome.IsSuccess())
         {
             outcome.GetError().SetRequestId(requestId);
             return outcome;
         }
 
-        m_wechatPublishCompleteEventHasBeenSet = true;
-    }
-
-    if (value.HasMember("TranscodeCompleteEvent") && !value["TranscodeCompleteEvent"].IsNull())
-    {
-        if (!value["TranscodeCompleteEvent"].IsObject())
-        {
-            return CoreInternalOutcome(Error("response `EventContent.TranscodeCompleteEvent` is not object type").SetRequestId(requestId));
-        }
-
-        CoreInternalOutcome outcome = m_transcodeCompleteEvent.Deserialize(value["TranscodeCompleteEvent"]);
-        if (!outcome.IsSuccess())
-        {
-            outcome.GetError().SetRequestId(requestId);
-            return outcome;
-        }
-
-        m_transcodeCompleteEventHasBeenSet = true;
-    }
-
-    if (value.HasMember("ConcatCompleteEvent") && !value["ConcatCompleteEvent"].IsNull())
-    {
-        if (!value["ConcatCompleteEvent"].IsObject())
-        {
-            return CoreInternalOutcome(Error("response `EventContent.ConcatCompleteEvent` is not object type").SetRequestId(requestId));
-        }
-
-        CoreInternalOutcome outcome = m_concatCompleteEvent.Deserialize(value["ConcatCompleteEvent"]);
-        if (!outcome.IsSuccess())
-        {
-            outcome.GetError().SetRequestId(requestId);
-            return outcome;
-        }
-
-        m_concatCompleteEventHasBeenSet = true;
-    }
-
-    if (value.HasMember("ClipCompleteEvent") && !value["ClipCompleteEvent"].IsNull())
-    {
-        if (!value["ClipCompleteEvent"].IsObject())
-        {
-            return CoreInternalOutcome(Error("response `EventContent.ClipCompleteEvent` is not object type").SetRequestId(requestId));
-        }
-
-        CoreInternalOutcome outcome = m_clipCompleteEvent.Deserialize(value["ClipCompleteEvent"]);
-        if (!outcome.IsSuccess())
-        {
-            outcome.GetError().SetRequestId(requestId);
-            return outcome;
-        }
-
-        m_clipCompleteEventHasBeenSet = true;
-    }
-
-    if (value.HasMember("CreateImageSpriteCompleteEvent") && !value["CreateImageSpriteCompleteEvent"].IsNull())
-    {
-        if (!value["CreateImageSpriteCompleteEvent"].IsObject())
-        {
-            return CoreInternalOutcome(Error("response `EventContent.CreateImageSpriteCompleteEvent` is not object type").SetRequestId(requestId));
-        }
-
-        CoreInternalOutcome outcome = m_createImageSpriteCompleteEvent.Deserialize(value["CreateImageSpriteCompleteEvent"]);
-        if (!outcome.IsSuccess())
-        {
-            outcome.GetError().SetRequestId(requestId);
-            return outcome;
-        }
-
-        m_createImageSpriteCompleteEventHasBeenSet = true;
-    }
-
-    if (value.HasMember("SnapshotByTimeOffsetCompleteEvent") && !value["SnapshotByTimeOffsetCompleteEvent"].IsNull())
-    {
-        if (!value["SnapshotByTimeOffsetCompleteEvent"].IsObject())
-        {
-            return CoreInternalOutcome(Error("response `EventContent.SnapshotByTimeOffsetCompleteEvent` is not object type").SetRequestId(requestId));
-        }
-
-        CoreInternalOutcome outcome = m_snapshotByTimeOffsetCompleteEvent.Deserialize(value["SnapshotByTimeOffsetCompleteEvent"]);
-        if (!outcome.IsSuccess())
-        {
-            outcome.GetError().SetRequestId(requestId);
-            return outcome;
-        }
-
-        m_snapshotByTimeOffsetCompleteEventHasBeenSet = true;
+        m_splitMediaCompleteEventHasBeenSet = true;
     }
 
     if (value.HasMember("ComposeMediaCompleteEvent") && !value["ComposeMediaCompleteEvent"].IsNull())
     {
         if (!value["ComposeMediaCompleteEvent"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `EventContent.ComposeMediaCompleteEvent` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EventContent.ComposeMediaCompleteEvent` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_composeMediaCompleteEvent.Deserialize(value["ComposeMediaCompleteEvent"]);
@@ -269,11 +185,113 @@ CoreInternalOutcome EventContent::Deserialize(const Value &value)
         m_composeMediaCompleteEventHasBeenSet = true;
     }
 
+    if (value.HasMember("ClipCompleteEvent") && !value["ClipCompleteEvent"].IsNull())
+    {
+        if (!value["ClipCompleteEvent"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `EventContent.ClipCompleteEvent` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_clipCompleteEvent.Deserialize(value["ClipCompleteEvent"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_clipCompleteEventHasBeenSet = true;
+    }
+
+    if (value.HasMember("TranscodeCompleteEvent") && !value["TranscodeCompleteEvent"].IsNull())
+    {
+        if (!value["TranscodeCompleteEvent"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `EventContent.TranscodeCompleteEvent` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_transcodeCompleteEvent.Deserialize(value["TranscodeCompleteEvent"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_transcodeCompleteEventHasBeenSet = true;
+    }
+
+    if (value.HasMember("CreateImageSpriteCompleteEvent") && !value["CreateImageSpriteCompleteEvent"].IsNull())
+    {
+        if (!value["CreateImageSpriteCompleteEvent"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `EventContent.CreateImageSpriteCompleteEvent` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_createImageSpriteCompleteEvent.Deserialize(value["CreateImageSpriteCompleteEvent"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_createImageSpriteCompleteEventHasBeenSet = true;
+    }
+
+    if (value.HasMember("ConcatCompleteEvent") && !value["ConcatCompleteEvent"].IsNull())
+    {
+        if (!value["ConcatCompleteEvent"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `EventContent.ConcatCompleteEvent` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_concatCompleteEvent.Deserialize(value["ConcatCompleteEvent"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_concatCompleteEventHasBeenSet = true;
+    }
+
+    if (value.HasMember("SnapshotByTimeOffsetCompleteEvent") && !value["SnapshotByTimeOffsetCompleteEvent"].IsNull())
+    {
+        if (!value["SnapshotByTimeOffsetCompleteEvent"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `EventContent.SnapshotByTimeOffsetCompleteEvent` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_snapshotByTimeOffsetCompleteEvent.Deserialize(value["SnapshotByTimeOffsetCompleteEvent"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_snapshotByTimeOffsetCompleteEventHasBeenSet = true;
+    }
+
+    if (value.HasMember("WechatPublishCompleteEvent") && !value["WechatPublishCompleteEvent"].IsNull())
+    {
+        if (!value["WechatPublishCompleteEvent"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `EventContent.WechatPublishCompleteEvent` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_wechatPublishCompleteEvent.Deserialize(value["WechatPublishCompleteEvent"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_wechatPublishCompleteEventHasBeenSet = true;
+    }
+
     if (value.HasMember("WechatMiniProgramPublishCompleteEvent") && !value["WechatMiniProgramPublishCompleteEvent"].IsNull())
     {
         if (!value["WechatMiniProgramPublishCompleteEvent"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `EventContent.WechatMiniProgramPublishCompleteEvent` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EventContent.WechatMiniProgramPublishCompleteEvent` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_wechatMiniProgramPublishCompleteEvent.Deserialize(value["WechatMiniProgramPublishCompleteEvent"]);
@@ -286,144 +304,179 @@ CoreInternalOutcome EventContent::Deserialize(const Value &value)
         m_wechatMiniProgramPublishCompleteEventHasBeenSet = true;
     }
 
+    if (value.HasMember("RestoreMediaCompleteEvent") && !value["RestoreMediaCompleteEvent"].IsNull())
+    {
+        if (!value["RestoreMediaCompleteEvent"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `EventContent.RestoreMediaCompleteEvent` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_restoreMediaCompleteEvent.Deserialize(value["RestoreMediaCompleteEvent"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_restoreMediaCompleteEventHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void EventContent::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void EventContent::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_eventHandleHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EventHandle";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_eventHandle.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_eventHandle.c_str(), allocator).Move(), allocator);
     }
 
     if (m_eventTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EventType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_eventType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_eventType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fileUploadEventHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileUploadEvent";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_fileUploadEvent.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_procedureStateChangeEventHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProcedureStateChangeEvent";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_procedureStateChangeEvent.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_fileDeleteEventHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileDeleteEvent";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_fileDeleteEvent.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_pullCompleteEventHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PullCompleteEvent";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_pullCompleteEvent.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_editMediaCompleteEventHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EditMediaCompleteEvent";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_editMediaCompleteEvent.ToJsonObject(value[key.c_str()], allocator);
     }
 
-    if (m_wechatPublishCompleteEventHasBeenSet)
+    if (m_splitMediaCompleteEventHasBeenSet)
     {
-        Value iKey(kStringType);
-        string key = "WechatPublishCompleteEvent";
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SplitMediaCompleteEvent";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
-        m_wechatPublishCompleteEvent.ToJsonObject(value[key.c_str()], allocator);
-    }
-
-    if (m_transcodeCompleteEventHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "TranscodeCompleteEvent";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
-        m_transcodeCompleteEvent.ToJsonObject(value[key.c_str()], allocator);
-    }
-
-    if (m_concatCompleteEventHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "ConcatCompleteEvent";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
-        m_concatCompleteEvent.ToJsonObject(value[key.c_str()], allocator);
-    }
-
-    if (m_clipCompleteEventHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "ClipCompleteEvent";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
-        m_clipCompleteEvent.ToJsonObject(value[key.c_str()], allocator);
-    }
-
-    if (m_createImageSpriteCompleteEventHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "CreateImageSpriteCompleteEvent";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
-        m_createImageSpriteCompleteEvent.ToJsonObject(value[key.c_str()], allocator);
-    }
-
-    if (m_snapshotByTimeOffsetCompleteEventHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "SnapshotByTimeOffsetCompleteEvent";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
-        m_snapshotByTimeOffsetCompleteEvent.ToJsonObject(value[key.c_str()], allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_splitMediaCompleteEvent.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_composeMediaCompleteEventHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ComposeMediaCompleteEvent";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_composeMediaCompleteEvent.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_clipCompleteEventHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClipCompleteEvent";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_clipCompleteEvent.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_transcodeCompleteEventHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TranscodeCompleteEvent";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_transcodeCompleteEvent.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_createImageSpriteCompleteEventHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CreateImageSpriteCompleteEvent";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_createImageSpriteCompleteEvent.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_concatCompleteEventHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ConcatCompleteEvent";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_concatCompleteEvent.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_snapshotByTimeOffsetCompleteEventHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SnapshotByTimeOffsetCompleteEvent";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_snapshotByTimeOffsetCompleteEvent.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_wechatPublishCompleteEventHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WechatPublishCompleteEvent";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_wechatPublishCompleteEvent.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_wechatMiniProgramPublishCompleteEventHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "WechatMiniProgramPublishCompleteEvent";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_wechatMiniProgramPublishCompleteEvent.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_restoreMediaCompleteEventHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RestoreMediaCompleteEvent";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_restoreMediaCompleteEvent.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -541,100 +594,20 @@ bool EventContent::EditMediaCompleteEventHasBeenSet() const
     return m_editMediaCompleteEventHasBeenSet;
 }
 
-WechatPublishTask EventContent::GetWechatPublishCompleteEvent() const
+SplitMediaTask EventContent::GetSplitMediaCompleteEvent() const
 {
-    return m_wechatPublishCompleteEvent;
+    return m_splitMediaCompleteEvent;
 }
 
-void EventContent::SetWechatPublishCompleteEvent(const WechatPublishTask& _wechatPublishCompleteEvent)
+void EventContent::SetSplitMediaCompleteEvent(const SplitMediaTask& _splitMediaCompleteEvent)
 {
-    m_wechatPublishCompleteEvent = _wechatPublishCompleteEvent;
-    m_wechatPublishCompleteEventHasBeenSet = true;
+    m_splitMediaCompleteEvent = _splitMediaCompleteEvent;
+    m_splitMediaCompleteEventHasBeenSet = true;
 }
 
-bool EventContent::WechatPublishCompleteEventHasBeenSet() const
+bool EventContent::SplitMediaCompleteEventHasBeenSet() const
 {
-    return m_wechatPublishCompleteEventHasBeenSet;
-}
-
-TranscodeTask2017 EventContent::GetTranscodeCompleteEvent() const
-{
-    return m_transcodeCompleteEvent;
-}
-
-void EventContent::SetTranscodeCompleteEvent(const TranscodeTask2017& _transcodeCompleteEvent)
-{
-    m_transcodeCompleteEvent = _transcodeCompleteEvent;
-    m_transcodeCompleteEventHasBeenSet = true;
-}
-
-bool EventContent::TranscodeCompleteEventHasBeenSet() const
-{
-    return m_transcodeCompleteEventHasBeenSet;
-}
-
-ConcatTask2017 EventContent::GetConcatCompleteEvent() const
-{
-    return m_concatCompleteEvent;
-}
-
-void EventContent::SetConcatCompleteEvent(const ConcatTask2017& _concatCompleteEvent)
-{
-    m_concatCompleteEvent = _concatCompleteEvent;
-    m_concatCompleteEventHasBeenSet = true;
-}
-
-bool EventContent::ConcatCompleteEventHasBeenSet() const
-{
-    return m_concatCompleteEventHasBeenSet;
-}
-
-ClipTask2017 EventContent::GetClipCompleteEvent() const
-{
-    return m_clipCompleteEvent;
-}
-
-void EventContent::SetClipCompleteEvent(const ClipTask2017& _clipCompleteEvent)
-{
-    m_clipCompleteEvent = _clipCompleteEvent;
-    m_clipCompleteEventHasBeenSet = true;
-}
-
-bool EventContent::ClipCompleteEventHasBeenSet() const
-{
-    return m_clipCompleteEventHasBeenSet;
-}
-
-CreateImageSpriteTask2017 EventContent::GetCreateImageSpriteCompleteEvent() const
-{
-    return m_createImageSpriteCompleteEvent;
-}
-
-void EventContent::SetCreateImageSpriteCompleteEvent(const CreateImageSpriteTask2017& _createImageSpriteCompleteEvent)
-{
-    m_createImageSpriteCompleteEvent = _createImageSpriteCompleteEvent;
-    m_createImageSpriteCompleteEventHasBeenSet = true;
-}
-
-bool EventContent::CreateImageSpriteCompleteEventHasBeenSet() const
-{
-    return m_createImageSpriteCompleteEventHasBeenSet;
-}
-
-SnapshotByTimeOffsetTask2017 EventContent::GetSnapshotByTimeOffsetCompleteEvent() const
-{
-    return m_snapshotByTimeOffsetCompleteEvent;
-}
-
-void EventContent::SetSnapshotByTimeOffsetCompleteEvent(const SnapshotByTimeOffsetTask2017& _snapshotByTimeOffsetCompleteEvent)
-{
-    m_snapshotByTimeOffsetCompleteEvent = _snapshotByTimeOffsetCompleteEvent;
-    m_snapshotByTimeOffsetCompleteEventHasBeenSet = true;
-}
-
-bool EventContent::SnapshotByTimeOffsetCompleteEventHasBeenSet() const
-{
-    return m_snapshotByTimeOffsetCompleteEventHasBeenSet;
+    return m_splitMediaCompleteEventHasBeenSet;
 }
 
 ComposeMediaTask EventContent::GetComposeMediaCompleteEvent() const
@@ -653,6 +626,102 @@ bool EventContent::ComposeMediaCompleteEventHasBeenSet() const
     return m_composeMediaCompleteEventHasBeenSet;
 }
 
+ClipTask2017 EventContent::GetClipCompleteEvent() const
+{
+    return m_clipCompleteEvent;
+}
+
+void EventContent::SetClipCompleteEvent(const ClipTask2017& _clipCompleteEvent)
+{
+    m_clipCompleteEvent = _clipCompleteEvent;
+    m_clipCompleteEventHasBeenSet = true;
+}
+
+bool EventContent::ClipCompleteEventHasBeenSet() const
+{
+    return m_clipCompleteEventHasBeenSet;
+}
+
+TranscodeTask2017 EventContent::GetTranscodeCompleteEvent() const
+{
+    return m_transcodeCompleteEvent;
+}
+
+void EventContent::SetTranscodeCompleteEvent(const TranscodeTask2017& _transcodeCompleteEvent)
+{
+    m_transcodeCompleteEvent = _transcodeCompleteEvent;
+    m_transcodeCompleteEventHasBeenSet = true;
+}
+
+bool EventContent::TranscodeCompleteEventHasBeenSet() const
+{
+    return m_transcodeCompleteEventHasBeenSet;
+}
+
+CreateImageSpriteTask2017 EventContent::GetCreateImageSpriteCompleteEvent() const
+{
+    return m_createImageSpriteCompleteEvent;
+}
+
+void EventContent::SetCreateImageSpriteCompleteEvent(const CreateImageSpriteTask2017& _createImageSpriteCompleteEvent)
+{
+    m_createImageSpriteCompleteEvent = _createImageSpriteCompleteEvent;
+    m_createImageSpriteCompleteEventHasBeenSet = true;
+}
+
+bool EventContent::CreateImageSpriteCompleteEventHasBeenSet() const
+{
+    return m_createImageSpriteCompleteEventHasBeenSet;
+}
+
+ConcatTask2017 EventContent::GetConcatCompleteEvent() const
+{
+    return m_concatCompleteEvent;
+}
+
+void EventContent::SetConcatCompleteEvent(const ConcatTask2017& _concatCompleteEvent)
+{
+    m_concatCompleteEvent = _concatCompleteEvent;
+    m_concatCompleteEventHasBeenSet = true;
+}
+
+bool EventContent::ConcatCompleteEventHasBeenSet() const
+{
+    return m_concatCompleteEventHasBeenSet;
+}
+
+SnapshotByTimeOffsetTask2017 EventContent::GetSnapshotByTimeOffsetCompleteEvent() const
+{
+    return m_snapshotByTimeOffsetCompleteEvent;
+}
+
+void EventContent::SetSnapshotByTimeOffsetCompleteEvent(const SnapshotByTimeOffsetTask2017& _snapshotByTimeOffsetCompleteEvent)
+{
+    m_snapshotByTimeOffsetCompleteEvent = _snapshotByTimeOffsetCompleteEvent;
+    m_snapshotByTimeOffsetCompleteEventHasBeenSet = true;
+}
+
+bool EventContent::SnapshotByTimeOffsetCompleteEventHasBeenSet() const
+{
+    return m_snapshotByTimeOffsetCompleteEventHasBeenSet;
+}
+
+WechatPublishTask EventContent::GetWechatPublishCompleteEvent() const
+{
+    return m_wechatPublishCompleteEvent;
+}
+
+void EventContent::SetWechatPublishCompleteEvent(const WechatPublishTask& _wechatPublishCompleteEvent)
+{
+    m_wechatPublishCompleteEvent = _wechatPublishCompleteEvent;
+    m_wechatPublishCompleteEventHasBeenSet = true;
+}
+
+bool EventContent::WechatPublishCompleteEventHasBeenSet() const
+{
+    return m_wechatPublishCompleteEventHasBeenSet;
+}
+
 WechatMiniProgramPublishTask EventContent::GetWechatMiniProgramPublishCompleteEvent() const
 {
     return m_wechatMiniProgramPublishCompleteEvent;
@@ -667,5 +736,21 @@ void EventContent::SetWechatMiniProgramPublishCompleteEvent(const WechatMiniProg
 bool EventContent::WechatMiniProgramPublishCompleteEventHasBeenSet() const
 {
     return m_wechatMiniProgramPublishCompleteEventHasBeenSet;
+}
+
+RestoreMediaTask EventContent::GetRestoreMediaCompleteEvent() const
+{
+    return m_restoreMediaCompleteEvent;
+}
+
+void EventContent::SetRestoreMediaCompleteEvent(const RestoreMediaTask& _restoreMediaCompleteEvent)
+{
+    m_restoreMediaCompleteEvent = _restoreMediaCompleteEvent;
+    m_restoreMediaCompleteEventHasBeenSet = true;
+}
+
+bool EventContent::RestoreMediaCompleteEventHasBeenSet() const
+{
+    return m_restoreMediaCompleteEventHasBeenSet;
 }
 

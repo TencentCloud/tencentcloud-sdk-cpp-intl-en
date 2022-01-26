@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/billing/v20180709/model/TagSummaryOverviewItem.h>
+#include <tencentcloud/billing/v20180709/model/SummaryTotal.h>
 
 
 namespace TencentCloud
@@ -41,6 +42,7 @@ namespace TencentCloud
                     DescribeBillSummaryByTagResponse();
                     ~DescribeBillSummaryByTagResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -69,6 +71,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool SummaryOverviewHasBeenSet() const;
 
+                    /**
+                     * 获取Total cost
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return SummaryTotal Total cost
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    SummaryTotal GetSummaryTotal() const;
+
+                    /**
+                     * 判断参数 SummaryTotal 是否已赋值
+                     * @return SummaryTotal 是否已赋值
+                     */
+                    bool SummaryTotalHasBeenSet() const;
+
                 private:
 
                     /**
@@ -83,6 +99,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<TagSummaryOverviewItem> m_summaryOverview;
                     bool m_summaryOverviewHasBeenSet;
+
+                    /**
+                     * Total cost
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    SummaryTotal m_summaryTotal;
+                    bool m_summaryTotalHasBeenSet;
 
                 };
             }

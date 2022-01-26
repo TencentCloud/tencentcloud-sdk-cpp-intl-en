@@ -65,6 +65,42 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
+                     * 获取Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+                     * @return Status Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+                     */
+                    std::string GetStatus() const;
+
+                    /**
+                     * 设置Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+                     * @param Status Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+                     */
+                    void SetStatus(const std::string& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     */
+                    bool StatusHasBeenSet() const;
+
+                    /**
+                     * 获取Video ID
+                     * @return FileId Video ID
+                     */
+                    std::string GetFileId() const;
+
+                    /**
+                     * 设置Video ID
+                     * @param FileId Video ID
+                     */
+                    void SetFileId(const std::string& _fileId);
+
+                    /**
+                     * 判断参数 FileId 是否已赋值
+                     * @return FileId 是否已赋值
+                     */
+                    bool FileIdHasBeenSet() const;
+
+                    /**
                      * 获取Task type. Valid values:
 <li>Procedure: video processing task;</li>
 <li>EditMedia: video editing task</li>
@@ -119,14 +155,14 @@ Task types compatible with v2017:
                     bool TaskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-                     * @return CreateTime Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * 获取Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return CreateTime Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-                     * @param CreateTime Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * 设置Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param CreateTime Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     void SetCreateTime(const std::string& _createTime);
 
@@ -137,14 +173,14 @@ Task types compatible with v2017:
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been started yet, this field will be empty.
-                     * @return BeginProcessTime Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been started yet, this field will be empty.
+                     * 获取Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty.
+                     * @return BeginProcessTime Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty.
                      */
                     std::string GetBeginProcessTime() const;
 
                     /**
-                     * 设置Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been started yet, this field will be empty.
-                     * @param BeginProcessTime Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been started yet, this field will be empty.
+                     * 设置Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty.
+                     * @param BeginProcessTime Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty.
                      */
                     void SetBeginProcessTime(const std::string& _beginProcessTime);
 
@@ -155,14 +191,14 @@ Task types compatible with v2017:
                     bool BeginProcessTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been completed yet, this field will be empty.
-                     * @return FinishTime End time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been completed yet, this field will be empty.
+                     * 获取End time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been completed yet, this field will be empty.
+                     * @return FinishTime End time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been completed yet, this field will be empty.
                      */
                     std::string GetFinishTime() const;
 
                     /**
-                     * 设置End time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been completed yet, this field will be empty.
-                     * @param FinishTime End time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been completed yet, this field will be empty.
+                     * 设置End time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been completed yet, this field will be empty.
+                     * @param FinishTime End time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been completed yet, this field will be empty.
                      */
                     void SetFinishTime(const std::string& _finishTime);
 
@@ -217,6 +253,18 @@ Task types compatible with v2017:
                     bool m_taskIdHasBeenSet;
 
                     /**
+                     * Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+                     */
+                    std::string m_status;
+                    bool m_statusHasBeenSet;
+
+                    /**
+                     * Video ID
+                     */
+                    std::string m_fileId;
+                    bool m_fileIdHasBeenSet;
+
+                    /**
                      * Task type. Valid values:
 <li>Procedure: video processing task;</li>
 <li>EditMedia: video editing task</li>
@@ -232,19 +280,19 @@ Task types compatible with v2017:
                     bool m_taskTypeHasBeenSet;
 
                     /**
-                     * Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been started yet, this field will be empty.
+                     * Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty.
                      */
                     std::string m_beginProcessTime;
                     bool m_beginProcessTimeHasBeenSet;
 
                     /**
-                     * End time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been completed yet, this field will be empty.
+                     * End time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been completed yet, this field will be empty.
                      */
                     std::string m_finishTime;
                     bool m_finishTimeHasBeenSet;

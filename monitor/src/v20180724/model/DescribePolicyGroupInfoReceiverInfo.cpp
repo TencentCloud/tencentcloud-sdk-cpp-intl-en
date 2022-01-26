@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Monitor::V20180724::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribePolicyGroupInfoReceiverInfo::DescribePolicyGroupInfoReceiverInfo() :
@@ -39,7 +38,7 @@ DescribePolicyGroupInfoReceiverInfo::DescribePolicyGroupInfoReceiverInfo() :
 {
 }
 
-CoreInternalOutcome DescribePolicyGroupInfoReceiverInfo::Deserialize(const Value &value)
+CoreInternalOutcome DescribePolicyGroupInfoReceiverInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -47,10 +46,10 @@ CoreInternalOutcome DescribePolicyGroupInfoReceiverInfo::Deserialize(const Value
     if (value.HasMember("ReceiverGroupList") && !value["ReceiverGroupList"].IsNull())
     {
         if (!value["ReceiverGroupList"].IsArray())
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoReceiverInfo.ReceiverGroupList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoReceiverInfo.ReceiverGroupList` is not array type"));
 
-        const Value &tmpValue = value["ReceiverGroupList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["ReceiverGroupList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_receiverGroupList.push_back((*itr).GetInt64());
         }
@@ -60,10 +59,10 @@ CoreInternalOutcome DescribePolicyGroupInfoReceiverInfo::Deserialize(const Value
     if (value.HasMember("ReceiverUserList") && !value["ReceiverUserList"].IsNull())
     {
         if (!value["ReceiverUserList"].IsArray())
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoReceiverInfo.ReceiverUserList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoReceiverInfo.ReceiverUserList` is not array type"));
 
-        const Value &tmpValue = value["ReceiverUserList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["ReceiverUserList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_receiverUserList.push_back((*itr).GetInt64());
         }
@@ -74,7 +73,7 @@ CoreInternalOutcome DescribePolicyGroupInfoReceiverInfo::Deserialize(const Value
     {
         if (!value["StartTime"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoReceiverInfo.StartTime` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoReceiverInfo.StartTime` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_startTime = value["StartTime"].GetInt64();
         m_startTimeHasBeenSet = true;
@@ -84,7 +83,7 @@ CoreInternalOutcome DescribePolicyGroupInfoReceiverInfo::Deserialize(const Value
     {
         if (!value["EndTime"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoReceiverInfo.EndTime` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoReceiverInfo.EndTime` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_endTime = value["EndTime"].GetInt64();
         m_endTimeHasBeenSet = true;
@@ -94,7 +93,7 @@ CoreInternalOutcome DescribePolicyGroupInfoReceiverInfo::Deserialize(const Value
     {
         if (!value["ReceiverType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoReceiverInfo.ReceiverType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoReceiverInfo.ReceiverType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_receiverType = string(value["ReceiverType"].GetString());
         m_receiverTypeHasBeenSet = true;
@@ -103,10 +102,10 @@ CoreInternalOutcome DescribePolicyGroupInfoReceiverInfo::Deserialize(const Value
     if (value.HasMember("NotifyWay") && !value["NotifyWay"].IsNull())
     {
         if (!value["NotifyWay"].IsArray())
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoReceiverInfo.NotifyWay` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoReceiverInfo.NotifyWay` is not array type"));
 
-        const Value &tmpValue = value["NotifyWay"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["NotifyWay"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_notifyWay.push_back((*itr).GetString());
         }
@@ -116,10 +115,10 @@ CoreInternalOutcome DescribePolicyGroupInfoReceiverInfo::Deserialize(const Value
     if (value.HasMember("UidList") && !value["UidList"].IsNull())
     {
         if (!value["UidList"].IsArray())
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoReceiverInfo.UidList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoReceiverInfo.UidList` is not array type"));
 
-        const Value &tmpValue = value["UidList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["UidList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_uidList.push_back((*itr).GetInt64());
         }
@@ -130,7 +129,7 @@ CoreInternalOutcome DescribePolicyGroupInfoReceiverInfo::Deserialize(const Value
     {
         if (!value["RoundNumber"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoReceiverInfo.RoundNumber` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoReceiverInfo.RoundNumber` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_roundNumber = value["RoundNumber"].GetInt64();
         m_roundNumberHasBeenSet = true;
@@ -140,7 +139,7 @@ CoreInternalOutcome DescribePolicyGroupInfoReceiverInfo::Deserialize(const Value
     {
         if (!value["RoundInterval"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoReceiverInfo.RoundInterval` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoReceiverInfo.RoundInterval` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_roundInterval = value["RoundInterval"].GetInt64();
         m_roundIntervalHasBeenSet = true;
@@ -150,7 +149,7 @@ CoreInternalOutcome DescribePolicyGroupInfoReceiverInfo::Deserialize(const Value
     {
         if (!value["PersonInterval"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoReceiverInfo.PersonInterval` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoReceiverInfo.PersonInterval` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_personInterval = value["PersonInterval"].GetInt64();
         m_personIntervalHasBeenSet = true;
@@ -160,7 +159,7 @@ CoreInternalOutcome DescribePolicyGroupInfoReceiverInfo::Deserialize(const Value
     {
         if (!value["NeedSendNotice"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoReceiverInfo.NeedSendNotice` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoReceiverInfo.NeedSendNotice` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_needSendNotice = value["NeedSendNotice"].GetInt64();
         m_needSendNoticeHasBeenSet = true;
@@ -169,10 +168,10 @@ CoreInternalOutcome DescribePolicyGroupInfoReceiverInfo::Deserialize(const Value
     if (value.HasMember("SendFor") && !value["SendFor"].IsNull())
     {
         if (!value["SendFor"].IsArray())
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoReceiverInfo.SendFor` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoReceiverInfo.SendFor` is not array type"));
 
-        const Value &tmpValue = value["SendFor"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["SendFor"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_sendFor.push_back((*itr).GetString());
         }
@@ -182,10 +181,10 @@ CoreInternalOutcome DescribePolicyGroupInfoReceiverInfo::Deserialize(const Value
     if (value.HasMember("RecoverNotify") && !value["RecoverNotify"].IsNull())
     {
         if (!value["RecoverNotify"].IsArray())
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoReceiverInfo.RecoverNotify` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoReceiverInfo.RecoverNotify` is not array type"));
 
-        const Value &tmpValue = value["RecoverNotify"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["RecoverNotify"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_recoverNotify.push_back((*itr).GetString());
         }
@@ -196,7 +195,7 @@ CoreInternalOutcome DescribePolicyGroupInfoReceiverInfo::Deserialize(const Value
     {
         if (!value["ReceiveLanguage"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoReceiverInfo.ReceiveLanguage` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoReceiverInfo.ReceiveLanguage` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_receiveLanguage = string(value["ReceiveLanguage"].GetString());
         m_receiveLanguageHasBeenSet = true;
@@ -206,38 +205,38 @@ CoreInternalOutcome DescribePolicyGroupInfoReceiverInfo::Deserialize(const Value
     return CoreInternalOutcome(true);
 }
 
-void DescribePolicyGroupInfoReceiverInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DescribePolicyGroupInfoReceiverInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_receiverGroupListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReceiverGroupList";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_receiverGroupList.begin(); itr != m_receiverGroupList.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 
     if (m_receiverUserListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReceiverUserList";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_receiverUserList.begin(); itr != m_receiverUserList.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 
     if (m_startTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_startTime, allocator);
@@ -245,7 +244,7 @@ void DescribePolicyGroupInfoReceiverInfo::ToJsonObject(Value &value, Document::A
 
     if (m_endTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_endTime, allocator);
@@ -253,41 +252,41 @@ void DescribePolicyGroupInfoReceiverInfo::ToJsonObject(Value &value, Document::A
 
     if (m_receiverTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReceiverType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_receiverType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_receiverType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_notifyWayHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NotifyWay";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_notifyWay.begin(); itr != m_notifyWay.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_uidListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UidList";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_uidList.begin(); itr != m_uidList.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 
     if (m_roundNumberHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RoundNumber";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_roundNumber, allocator);
@@ -295,7 +294,7 @@ void DescribePolicyGroupInfoReceiverInfo::ToJsonObject(Value &value, Document::A
 
     if (m_roundIntervalHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RoundInterval";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_roundInterval, allocator);
@@ -303,7 +302,7 @@ void DescribePolicyGroupInfoReceiverInfo::ToJsonObject(Value &value, Document::A
 
     if (m_personIntervalHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PersonInterval";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_personInterval, allocator);
@@ -311,7 +310,7 @@ void DescribePolicyGroupInfoReceiverInfo::ToJsonObject(Value &value, Document::A
 
     if (m_needSendNoticeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NeedSendNotice";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_needSendNotice, allocator);
@@ -319,36 +318,36 @@ void DescribePolicyGroupInfoReceiverInfo::ToJsonObject(Value &value, Document::A
 
     if (m_sendForHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SendFor";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_sendFor.begin(); itr != m_sendFor.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_recoverNotifyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RecoverNotify";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_recoverNotify.begin(); itr != m_recoverNotify.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_receiveLanguageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReceiveLanguage";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_receiveLanguage.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_receiveLanguage.c_str(), allocator).Move(), allocator);
     }
 
 }

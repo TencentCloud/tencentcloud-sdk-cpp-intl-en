@@ -149,7 +149,7 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+                     * 获取Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
 violation_photo:
 <li>violation_photo: violating photo.</li>
 politician:
@@ -158,7 +158,8 @@ politician:
 <li>bureau_politician: ministry leader;</li>
 <li>county_politician: county/city leader;</li>
 <li>rural_politician: town leader;</li>
-<li>sensitive_politician: politically sensitive figure.</li>
+<li>sensitive_politician: politically sensitive figure;</li>
+<li>foreign_politician: head of a foreign country/government.</li>
 entertainment:
 <li>sensitive_entertainment: sensitive entertainment celebrity.</li>
 sport:
@@ -168,10 +169,11 @@ entrepreneur:
 scholar:
 <li>sensitive_scholar: sensitive educator.</li>
 celebrity:
-<li>sensitive_celebrity: sensitive well-known figure.</li>
+<li>sensitive_celebrity: sensitive well-known figure;</li>
+<li>historical_celebrity: well-known historical figures.</li>
 military:
 <li>sensitive_military: militarily sensitive figure.</li>
-                     * @return Label Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+                     * @return Label Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
 violation_photo:
 <li>violation_photo: violating photo.</li>
 politician:
@@ -180,7 +182,8 @@ politician:
 <li>bureau_politician: ministry leader;</li>
 <li>county_politician: county/city leader;</li>
 <li>rural_politician: town leader;</li>
-<li>sensitive_politician: politically sensitive figure.</li>
+<li>sensitive_politician: politically sensitive figure;</li>
+<li>foreign_politician: head of a foreign country/government.</li>
 entertainment:
 <li>sensitive_entertainment: sensitive entertainment celebrity.</li>
 sport:
@@ -190,14 +193,15 @@ entrepreneur:
 scholar:
 <li>sensitive_scholar: sensitive educator.</li>
 celebrity:
-<li>sensitive_celebrity: sensitive well-known figure.</li>
+<li>sensitive_celebrity: sensitive well-known figure;</li>
+<li>historical_celebrity: well-known historical figures.</li>
 military:
 <li>sensitive_military: militarily sensitive figure.</li>
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+                     * 设置Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
 violation_photo:
 <li>violation_photo: violating photo.</li>
 politician:
@@ -206,7 +210,8 @@ politician:
 <li>bureau_politician: ministry leader;</li>
 <li>county_politician: county/city leader;</li>
 <li>rural_politician: town leader;</li>
-<li>sensitive_politician: politically sensitive figure.</li>
+<li>sensitive_politician: politically sensitive figure;</li>
+<li>foreign_politician: head of a foreign country/government.</li>
 entertainment:
 <li>sensitive_entertainment: sensitive entertainment celebrity.</li>
 sport:
@@ -216,10 +221,11 @@ entrepreneur:
 scholar:
 <li>sensitive_scholar: sensitive educator.</li>
 celebrity:
-<li>sensitive_celebrity: sensitive well-known figure.</li>
+<li>sensitive_celebrity: sensitive well-known figure;</li>
+<li>historical_celebrity: well-known historical figures.</li>
 military:
 <li>sensitive_military: militarily sensitive figure.</li>
-                     * @param Label Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+                     * @param Label Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
 violation_photo:
 <li>violation_photo: violating photo.</li>
 politician:
@@ -228,7 +234,8 @@ politician:
 <li>bureau_politician: ministry leader;</li>
 <li>county_politician: county/city leader;</li>
 <li>rural_politician: town leader;</li>
-<li>sensitive_politician: politically sensitive figure.</li>
+<li>sensitive_politician: politically sensitive figure;</li>
+<li>foreign_politician: head of a foreign country/government.</li>
 entertainment:
 <li>sensitive_entertainment: sensitive entertainment celebrity.</li>
 sport:
@@ -238,7 +245,8 @@ entrepreneur:
 scholar:
 <li>sensitive_scholar: sensitive educator.</li>
 celebrity:
-<li>sensitive_celebrity: sensitive well-known figure.</li>
+<li>sensitive_celebrity: sensitive well-known figure;</li>
+<li>historical_celebrity: well-known historical figures.</li>
 military:
 <li>sensitive_military: militarily sensitive figure.</li>
                      */
@@ -309,14 +317,14 @@ military:
                     bool PicUrlExpireTimeStampHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-                     * @return PicUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * 获取Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return PicUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string GetPicUrlExpireTime() const;
 
                     /**
-                     * 设置Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-                     * @param PicUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * 设置Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param PicUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     void SetPicUrlExpireTime(const std::string& _picUrlExpireTime);
 
@@ -362,7 +370,7 @@ military:
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+                     * Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
 violation_photo:
 <li>violation_photo: violating photo.</li>
 politician:
@@ -371,7 +379,8 @@ politician:
 <li>bureau_politician: ministry leader;</li>
 <li>county_politician: county/city leader;</li>
 <li>rural_politician: town leader;</li>
-<li>sensitive_politician: politically sensitive figure.</li>
+<li>sensitive_politician: politically sensitive figure;</li>
+<li>foreign_politician: head of a foreign country/government.</li>
 entertainment:
 <li>sensitive_entertainment: sensitive entertainment celebrity.</li>
 sport:
@@ -381,7 +390,8 @@ entrepreneur:
 scholar:
 <li>sensitive_scholar: sensitive educator.</li>
 celebrity:
-<li>sensitive_celebrity: sensitive well-known figure.</li>
+<li>sensitive_celebrity: sensitive well-known figure;</li>
+<li>historical_celebrity: well-known historical figures.</li>
 military:
 <li>sensitive_military: militarily sensitive figure.</li>
                      */
@@ -408,7 +418,7 @@ military:
                     bool m_picUrlExpireTimeStampHasBeenSet;
 
                     /**
-                     * Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_picUrlExpireTime;
                     bool m_picUrlExpireTimeHasBeenSet;

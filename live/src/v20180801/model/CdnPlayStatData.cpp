@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Live::V20180801::Model;
-using namespace rapidjson;
 using namespace std;
 
 CdnPlayStatData::CdnPlayStatData() :
@@ -30,7 +29,7 @@ CdnPlayStatData::CdnPlayStatData() :
 {
 }
 
-CoreInternalOutcome CdnPlayStatData::Deserialize(const Value &value)
+CoreInternalOutcome CdnPlayStatData::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome CdnPlayStatData::Deserialize(const Value &value)
     {
         if (!value["Time"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CdnPlayStatData.Time` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CdnPlayStatData.Time` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_time = string(value["Time"].GetString());
         m_timeHasBeenSet = true;
@@ -47,9 +46,9 @@ CoreInternalOutcome CdnPlayStatData::Deserialize(const Value &value)
 
     if (value.HasMember("Bandwidth") && !value["Bandwidth"].IsNull())
     {
-        if (!value["Bandwidth"].IsDouble())
+        if (!value["Bandwidth"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `CdnPlayStatData.Bandwidth` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CdnPlayStatData.Bandwidth` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_bandwidth = value["Bandwidth"].GetDouble();
         m_bandwidthHasBeenSet = true;
@@ -57,9 +56,9 @@ CoreInternalOutcome CdnPlayStatData::Deserialize(const Value &value)
 
     if (value.HasMember("Flux") && !value["Flux"].IsNull())
     {
-        if (!value["Flux"].IsDouble())
+        if (!value["Flux"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `CdnPlayStatData.Flux` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CdnPlayStatData.Flux` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_flux = value["Flux"].GetDouble();
         m_fluxHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome CdnPlayStatData::Deserialize(const Value &value)
     {
         if (!value["Request"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CdnPlayStatData.Request` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CdnPlayStatData.Request` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_request = value["Request"].GetUint64();
         m_requestHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome CdnPlayStatData::Deserialize(const Value &value)
     {
         if (!value["Online"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CdnPlayStatData.Online` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CdnPlayStatData.Online` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_online = value["Online"].GetUint64();
         m_onlineHasBeenSet = true;
@@ -89,20 +88,20 @@ CoreInternalOutcome CdnPlayStatData::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void CdnPlayStatData::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void CdnPlayStatData::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_timeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Time";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_time.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_time.c_str(), allocator).Move(), allocator);
     }
 
     if (m_bandwidthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Bandwidth";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_bandwidth, allocator);
@@ -110,7 +109,7 @@ void CdnPlayStatData::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_fluxHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Flux";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_flux, allocator);
@@ -118,7 +117,7 @@ void CdnPlayStatData::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_requestHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Request";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_request, allocator);
@@ -126,7 +125,7 @@ void CdnPlayStatData::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_onlineHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Online";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_online, allocator);

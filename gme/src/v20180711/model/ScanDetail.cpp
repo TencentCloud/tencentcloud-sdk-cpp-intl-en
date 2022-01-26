@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gme::V20180711::Model;
-using namespace rapidjson;
 using namespace std;
 
 ScanDetail::ScanDetail() :
@@ -30,7 +29,7 @@ ScanDetail::ScanDetail() :
 {
 }
 
-CoreInternalOutcome ScanDetail::Deserialize(const Value &value)
+CoreInternalOutcome ScanDetail::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome ScanDetail::Deserialize(const Value &value)
     {
         if (!value["Label"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ScanDetail.Label` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScanDetail.Label` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_label = string(value["Label"].GetString());
         m_labelHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome ScanDetail::Deserialize(const Value &value)
     {
         if (!value["Rate"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ScanDetail.Rate` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScanDetail.Rate` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_rate = string(value["Rate"].GetString());
         m_rateHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome ScanDetail::Deserialize(const Value &value)
     {
         if (!value["KeyWord"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ScanDetail.KeyWord` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScanDetail.KeyWord` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_keyWord = string(value["KeyWord"].GetString());
         m_keyWordHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome ScanDetail::Deserialize(const Value &value)
     {
         if (!value["StartTime"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ScanDetail.StartTime` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScanDetail.StartTime` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_startTime = value["StartTime"].GetUint64();
         m_startTimeHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome ScanDetail::Deserialize(const Value &value)
     {
         if (!value["EndTime"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ScanDetail.EndTime` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScanDetail.EndTime` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_endTime = value["EndTime"].GetUint64();
         m_endTimeHasBeenSet = true;
@@ -89,36 +88,36 @@ CoreInternalOutcome ScanDetail::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ScanDetail::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ScanDetail::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_labelHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Label";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_label.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_label.c_str(), allocator).Move(), allocator);
     }
 
     if (m_rateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Rate";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_rate.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_rate.c_str(), allocator).Move(), allocator);
     }
 
     if (m_keyWordHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "KeyWord";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_keyWord.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_keyWord.c_str(), allocator).Move(), allocator);
     }
 
     if (m_startTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_startTime, allocator);
@@ -126,7 +125,7 @@ void ScanDetail::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_endTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_endTime, allocator);

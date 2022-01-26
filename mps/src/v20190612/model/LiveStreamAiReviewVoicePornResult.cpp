@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 LiveStreamAiReviewVoicePornResult::LiveStreamAiReviewVoicePornResult() :
@@ -30,16 +29,16 @@ LiveStreamAiReviewVoicePornResult::LiveStreamAiReviewVoicePornResult() :
 {
 }
 
-CoreInternalOutcome LiveStreamAiReviewVoicePornResult::Deserialize(const Value &value)
+CoreInternalOutcome LiveStreamAiReviewVoicePornResult::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
 
     if (value.HasMember("StartPtsTime") && !value["StartPtsTime"].IsNull())
     {
-        if (!value["StartPtsTime"].IsDouble())
+        if (!value["StartPtsTime"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamAiReviewVoicePornResult.StartPtsTime` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamAiReviewVoicePornResult.StartPtsTime` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_startPtsTime = value["StartPtsTime"].GetDouble();
         m_startPtsTimeHasBeenSet = true;
@@ -47,9 +46,9 @@ CoreInternalOutcome LiveStreamAiReviewVoicePornResult::Deserialize(const Value &
 
     if (value.HasMember("EndPtsTime") && !value["EndPtsTime"].IsNull())
     {
-        if (!value["EndPtsTime"].IsDouble())
+        if (!value["EndPtsTime"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamAiReviewVoicePornResult.EndPtsTime` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamAiReviewVoicePornResult.EndPtsTime` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_endPtsTime = value["EndPtsTime"].GetDouble();
         m_endPtsTimeHasBeenSet = true;
@@ -57,9 +56,9 @@ CoreInternalOutcome LiveStreamAiReviewVoicePornResult::Deserialize(const Value &
 
     if (value.HasMember("Confidence") && !value["Confidence"].IsNull())
     {
-        if (!value["Confidence"].IsDouble())
+        if (!value["Confidence"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamAiReviewVoicePornResult.Confidence` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamAiReviewVoicePornResult.Confidence` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_confidence = value["Confidence"].GetDouble();
         m_confidenceHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome LiveStreamAiReviewVoicePornResult::Deserialize(const Value &
     {
         if (!value["Suggestion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamAiReviewVoicePornResult.Suggestion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamAiReviewVoicePornResult.Suggestion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_suggestion = string(value["Suggestion"].GetString());
         m_suggestionHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome LiveStreamAiReviewVoicePornResult::Deserialize(const Value &
     {
         if (!value["Label"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamAiReviewVoicePornResult.Label` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamAiReviewVoicePornResult.Label` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_label = string(value["Label"].GetString());
         m_labelHasBeenSet = true;
@@ -89,12 +88,12 @@ CoreInternalOutcome LiveStreamAiReviewVoicePornResult::Deserialize(const Value &
     return CoreInternalOutcome(true);
 }
 
-void LiveStreamAiReviewVoicePornResult::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void LiveStreamAiReviewVoicePornResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_startPtsTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartPtsTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_startPtsTime, allocator);
@@ -102,7 +101,7 @@ void LiveStreamAiReviewVoicePornResult::ToJsonObject(Value &value, Document::All
 
     if (m_endPtsTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndPtsTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_endPtsTime, allocator);
@@ -110,7 +109,7 @@ void LiveStreamAiReviewVoicePornResult::ToJsonObject(Value &value, Document::All
 
     if (m_confidenceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Confidence";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_confidence, allocator);
@@ -118,18 +117,18 @@ void LiveStreamAiReviewVoicePornResult::ToJsonObject(Value &value, Document::All
 
     if (m_suggestionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Suggestion";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_suggestion.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_suggestion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_labelHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Label";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_label.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_label.c_str(), allocator).Move(), allocator);
     }
 
 }

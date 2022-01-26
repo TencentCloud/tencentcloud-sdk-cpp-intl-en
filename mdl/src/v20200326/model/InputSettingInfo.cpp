@@ -18,18 +18,18 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mdl::V20200326::Model;
-using namespace rapidjson;
 using namespace std;
 
 InputSettingInfo::InputSettingInfo() :
     m_appNameHasBeenSet(false),
     m_streamNameHasBeenSet(false),
     m_sourceUrlHasBeenSet(false),
-    m_inputAddressHasBeenSet(false)
+    m_inputAddressHasBeenSet(false),
+    m_sourceTypeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome InputSettingInfo::Deserialize(const Value &value)
+CoreInternalOutcome InputSettingInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +38,7 @@ CoreInternalOutcome InputSettingInfo::Deserialize(const Value &value)
     {
         if (!value["AppName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InputSettingInfo.AppName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InputSettingInfo.AppName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_appName = string(value["AppName"].GetString());
         m_appNameHasBeenSet = true;
@@ -48,7 +48,7 @@ CoreInternalOutcome InputSettingInfo::Deserialize(const Value &value)
     {
         if (!value["StreamName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InputSettingInfo.StreamName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InputSettingInfo.StreamName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_streamName = string(value["StreamName"].GetString());
         m_streamNameHasBeenSet = true;
@@ -58,7 +58,7 @@ CoreInternalOutcome InputSettingInfo::Deserialize(const Value &value)
     {
         if (!value["SourceUrl"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InputSettingInfo.SourceUrl` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InputSettingInfo.SourceUrl` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_sourceUrl = string(value["SourceUrl"].GetString());
         m_sourceUrlHasBeenSet = true;
@@ -68,49 +68,67 @@ CoreInternalOutcome InputSettingInfo::Deserialize(const Value &value)
     {
         if (!value["InputAddress"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InputSettingInfo.InputAddress` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InputSettingInfo.InputAddress` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_inputAddress = string(value["InputAddress"].GetString());
         m_inputAddressHasBeenSet = true;
+    }
+
+    if (value.HasMember("SourceType") && !value["SourceType"].IsNull())
+    {
+        if (!value["SourceType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `InputSettingInfo.SourceType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_sourceType = string(value["SourceType"].GetString());
+        m_sourceTypeHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void InputSettingInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void InputSettingInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_appNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AppName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_appName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_appName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_streamNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StreamName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_streamName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_streamName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sourceUrlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SourceUrl";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_sourceUrl.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sourceUrl.c_str(), allocator).Move(), allocator);
     }
 
     if (m_inputAddressHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InputAddress";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_inputAddress.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_inputAddress.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_sourceTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SourceType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sourceType.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -178,5 +196,21 @@ void InputSettingInfo::SetInputAddress(const string& _inputAddress)
 bool InputSettingInfo::InputAddressHasBeenSet() const
 {
     return m_inputAddressHasBeenSet;
+}
+
+string InputSettingInfo::GetSourceType() const
+{
+    return m_sourceType;
+}
+
+void InputSettingInfo::SetSourceType(const string& _sourceType)
+{
+    m_sourceType = _sourceType;
+    m_sourceTypeHasBeenSet = true;
+}
+
+bool InputSettingInfo::SourceTypeHasBeenSet() const
+{
+    return m_sourceTypeHasBeenSet;
 }
 

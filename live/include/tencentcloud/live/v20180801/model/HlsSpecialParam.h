@@ -47,14 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取HLS timeout period.
-                     * @return FlowContinueDuration HLS timeout period.
+                     * 获取Timeout period for restarting an interrupted HLS push.
+Value range: [0, 1,800].
+                     * @return FlowContinueDuration Timeout period for restarting an interrupted HLS push.
+Value range: [0, 1,800].
                      */
                     uint64_t GetFlowContinueDuration() const;
 
                     /**
-                     * 设置HLS timeout period.
-                     * @param FlowContinueDuration HLS timeout period.
+                     * 设置Timeout period for restarting an interrupted HLS push.
+Value range: [0, 1,800].
+                     * @param FlowContinueDuration Timeout period for restarting an interrupted HLS push.
+Value range: [0, 1,800].
                      */
                     void SetFlowContinueDuration(const uint64_t& _flowContinueDuration);
 
@@ -67,7 +71,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * HLS timeout period.
+                     * Timeout period for restarting an interrupted HLS push.
+Value range: [0, 1,800].
                      */
                     uint64_t m_flowContinueDuration;
                     bool m_flowContinueDurationHasBeenSet;

@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Monitor::V20180724::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribePolicyGroupListRequest::DescribePolicyGroupListRequest() :
@@ -37,28 +36,29 @@ DescribePolicyGroupListRequest::DescribePolicyGroupListRequest() :
     m_receiverUserListHasBeenSet(false),
     m_dimensionsHasBeenSet(false),
     m_conditionTempGroupIdHasBeenSet(false),
-    m_receiverTypeHasBeenSet(false)
+    m_receiverTypeHasBeenSet(false),
+    m_isOpenHasBeenSet(false)
 {
 }
 
 string DescribePolicyGroupListRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_moduleHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Module";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_module.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_module.c_str(), allocator).Move(), allocator);
     }
 
     if (m_limitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Limit";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_limit, allocator);
@@ -66,7 +66,7 @@ string DescribePolicyGroupListRequest::ToJsonString() const
 
     if (m_offsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Offset";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_offset, allocator);
@@ -74,15 +74,15 @@ string DescribePolicyGroupListRequest::ToJsonString() const
 
     if (m_likeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Like";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_like.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_like.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceGroupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceGroupId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_instanceGroupId, allocator);
@@ -90,41 +90,41 @@ string DescribePolicyGroupListRequest::ToJsonString() const
 
     if (m_updateTimeOrderHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UpdateTimeOrder";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_updateTimeOrder.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_updateTimeOrder.c_str(), allocator).Move(), allocator);
     }
 
     if (m_projectIdsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProjectIds";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_projectIds.begin(); itr != m_projectIds.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 
     if (m_viewNamesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ViewNames";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_viewNames.begin(); itr != m_viewNames.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_filterUnuseReceiverHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FilterUnuseReceiver";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_filterUnuseReceiver, allocator);
@@ -132,57 +132,65 @@ string DescribePolicyGroupListRequest::ToJsonString() const
 
     if (m_receiversHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Receivers";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_receivers.begin(); itr != m_receivers.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_receiverUserListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReceiverUserList";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_receiverUserList.begin(); itr != m_receiverUserList.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_dimensionsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Dimensions";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_dimensions.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_dimensions.c_str(), allocator).Move(), allocator);
     }
 
     if (m_conditionTempGroupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ConditionTempGroupId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_conditionTempGroupId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_conditionTempGroupId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_receiverTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReceiverType";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_receiverType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_receiverType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_isOpenHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsOpen";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_isOpen, allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -410,6 +418,22 @@ void DescribePolicyGroupListRequest::SetReceiverType(const string& _receiverType
 bool DescribePolicyGroupListRequest::ReceiverTypeHasBeenSet() const
 {
     return m_receiverTypeHasBeenSet;
+}
+
+bool DescribePolicyGroupListRequest::GetIsOpen() const
+{
+    return m_isOpen;
+}
+
+void DescribePolicyGroupListRequest::SetIsOpen(const bool& _isOpen)
+{
+    m_isOpen = _isOpen;
+    m_isOpenHasBeenSet = true;
+}
+
+bool DescribePolicyGroupListRequest::IsOpenHasBeenSet() const
+{
+    return m_isOpenHasBeenSet;
 }
 
 

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Batch::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 OutputMappingConfig::OutputMappingConfig() :
@@ -28,7 +27,7 @@ OutputMappingConfig::OutputMappingConfig() :
 {
 }
 
-CoreInternalOutcome OutputMappingConfig::Deserialize(const Value &value)
+CoreInternalOutcome OutputMappingConfig::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome OutputMappingConfig::Deserialize(const Value &value)
     {
         if (!value["Scene"].IsString())
         {
-            return CoreInternalOutcome(Error("response `OutputMappingConfig.Scene` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OutputMappingConfig.Scene` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_scene = string(value["Scene"].GetString());
         m_sceneHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome OutputMappingConfig::Deserialize(const Value &value)
     {
         if (!value["WorkerNum"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `OutputMappingConfig.WorkerNum` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OutputMappingConfig.WorkerNum` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_workerNum = value["WorkerNum"].GetInt64();
         m_workerNumHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome OutputMappingConfig::Deserialize(const Value &value)
     {
         if (!value["WorkerPartSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `OutputMappingConfig.WorkerPartSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OutputMappingConfig.WorkerPartSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_workerPartSize = value["WorkerPartSize"].GetInt64();
         m_workerPartSizeHasBeenSet = true;
@@ -67,20 +66,20 @@ CoreInternalOutcome OutputMappingConfig::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void OutputMappingConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void OutputMappingConfig::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_sceneHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Scene";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_scene.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_scene.c_str(), allocator).Move(), allocator);
     }
 
     if (m_workerNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "WorkerNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_workerNum, allocator);
@@ -88,7 +87,7 @@ void OutputMappingConfig::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_workerPartSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "WorkerPartSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_workerPartSize, allocator);

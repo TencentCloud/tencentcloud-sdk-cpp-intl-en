@@ -51,14 +51,34 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Task type. Valid values:
+<li>Classification: intelligent categorization</li>
+<li>Cover: intelligent cover generating</li>
+<li>Tag: intelligent tagging</li>
+<li>FrameTag: intelligent frame-specific tagging</li>
+<li>Highlight: intelligent highlight generating</li>
+                     * @return Type Task type. Valid values:
+<li>Classification: intelligent categorization</li>
+<li>Cover: intelligent cover generating</li>
+<li>Tag: intelligent tagging</li>
+<li>FrameTag: intelligent frame-specific tagging</li>
+<li>Highlight: intelligent highlight generating</li>
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param Type 
+                     * 设置Task type. Valid values:
+<li>Classification: intelligent categorization</li>
+<li>Cover: intelligent cover generating</li>
+<li>Tag: intelligent tagging</li>
+<li>FrameTag: intelligent frame-specific tagging</li>
+<li>Highlight: intelligent highlight generating</li>
+                     * @param Type Task type. Valid values:
+<li>Classification: intelligent categorization</li>
+<li>Cover: intelligent cover generating</li>
+<li>Tag: intelligent tagging</li>
+<li>FrameTag: intelligent frame-specific tagging</li>
+<li>Highlight: intelligent highlight generating</li>
                      */
                     void SetType(const std::string& _type);
 
@@ -69,14 +89,14 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClassificationTask 
+                     * 获取Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
+                     * @return ClassificationTask Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
                      */
                     AiAnalysisTaskClassificationResult GetClassificationTask() const;
 
                     /**
-                     * 设置
-                     * @param ClassificationTask 
+                     * 设置Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
+                     * @param ClassificationTask Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
                      */
                     void SetClassificationTask(const AiAnalysisTaskClassificationResult& _classificationTask);
 
@@ -87,14 +107,14 @@ namespace TencentCloud
                     bool ClassificationTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CoverTask 
+                     * 获取Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
+                     * @return CoverTask Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
                      */
                     AiAnalysisTaskCoverResult GetCoverTask() const;
 
                     /**
-                     * 设置
-                     * @param CoverTask 
+                     * 设置Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
+                     * @param CoverTask Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
                      */
                     void SetCoverTask(const AiAnalysisTaskCoverResult& _coverTask);
 
@@ -105,14 +125,14 @@ namespace TencentCloud
                     bool CoverTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TagTask 
+                     * 获取Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
+                     * @return TagTask Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
                      */
                     AiAnalysisTaskTagResult GetTagTask() const;
 
                     /**
-                     * 设置
-                     * @param TagTask 
+                     * 设置Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
+                     * @param TagTask Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
                      */
                     void SetTagTask(const AiAnalysisTaskTagResult& _tagTask);
 
@@ -123,14 +143,14 @@ namespace TencentCloud
                     bool TagTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FrameTagTask 
+                     * 获取Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
+                     * @return FrameTagTask Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
                      */
                     AiAnalysisTaskFrameTagResult GetFrameTagTask() const;
 
                     /**
-                     * 设置
-                     * @param FrameTagTask 
+                     * 设置Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
+                     * @param FrameTagTask Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
                      */
                     void SetFrameTagTask(const AiAnalysisTaskFrameTagResult& _frameTagTask);
 
@@ -143,31 +163,36 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Task type. Valid values:
+<li>Classification: intelligent categorization</li>
+<li>Cover: intelligent cover generating</li>
+<li>Tag: intelligent tagging</li>
+<li>FrameTag: intelligent frame-specific tagging</li>
+<li>Highlight: intelligent highlight generating</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
                      */
                     AiAnalysisTaskClassificationResult m_classificationTask;
                     bool m_classificationTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
                      */
                     AiAnalysisTaskCoverResult m_coverTask;
                     bool m_coverTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
                      */
                     AiAnalysisTaskTagResult m_tagTask;
                     bool m_tagTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
                      */
                     AiAnalysisTaskFrameTagResult m_frameTagTask;
                     bool m_frameTagTaskHasBeenSet;

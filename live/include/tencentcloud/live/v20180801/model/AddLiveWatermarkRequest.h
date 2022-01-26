@@ -44,13 +44,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
                      * @return PictureUrl Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
                      */
                     std::string GetPictureUrl() const;
 
                     /**
                      * 设置Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
                      * @param PictureUrl Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
                      */
                     void SetPictureUrl(const std::string& _pictureUrl);
 
@@ -137,14 +145,14 @@ Up to 16 bytes.
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original height is used by default.
-                     * @return Height Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original height is used by default.
+                     * 获取Watermark height, which is set by entering a percentage of the live stream image’s original height. You are advised to set either the height or width as the other will be scaled proportionally to avoid distortions. Default value: original height.
+                     * @return Height Watermark height, which is set by entering a percentage of the live stream image’s original height. You are advised to set either the height or width as the other will be scaled proportionally to avoid distortions. Default value: original height.
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original height is used by default.
-                     * @param Height Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original height is used by default.
+                     * 设置Watermark height, which is set by entering a percentage of the live stream image’s original height. You are advised to set either the height or width as the other will be scaled proportionally to avoid distortions. Default value: original height.
+                     * @param Height Watermark height, which is set by entering a percentage of the live stream image’s original height. You are advised to set either the height or width as the other will be scaled proportionally to avoid distortions. Default value: original height.
                      */
                     void SetHeight(const int64_t& _height);
 
@@ -158,6 +166,8 @@ Up to 16 bytes.
 
                     /**
                      * Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
                      */
                     std::string m_pictureUrl;
                     bool m_pictureUrlHasBeenSet;
@@ -188,7 +198,7 @@ Up to 16 bytes.
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original height is used by default.
+                     * Watermark height, which is set by entering a percentage of the live stream image’s original height. You are advised to set either the height or width as the other will be scaled proportionally to avoid distortions. Default value: original height.
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;

@@ -47,22 +47,30 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Target type. Value range: `CMQ_QUEUE`, `CMQ_TOPIC`.
-<li> CMQ_QUEUE: CMQ_QUEUE: CMQ queue model.</li>
-<li> CMQ_TOPIC: CMQ topic model.</li>
-                     * @return TargetType Target type. Value range: `CMQ_QUEUE`, `CMQ_TOPIC`.
-<li> CMQ_QUEUE: CMQ_QUEUE: CMQ queue model.</li>
-<li> CMQ_TOPIC: CMQ topic model.</li>
+                     * 获取Target type. Valid values: `CMQ_QUEUE`, `CMQ_TOPIC`, `TDMQ_CMQ_QUEUE` and `TDMQ_CMQ_TOPIC`.
+<li> CMQ_QUEUE: Tencent Cloud message queue - queue model.</li>
+<li> CMQ_TOPIC: Tencent Cloud message queue - topic model.</li>
+<li> TDMQ_CMQ_QUEUE: Tencent Cloud TDMQ message queue - queue model.</li>
+<li> TDMQ_CMQ_TOPIC: Tencent Cloud TDMQ message queue - topic model.</li>
+                     * @return TargetType Target type. Valid values: `CMQ_QUEUE`, `CMQ_TOPIC`, `TDMQ_CMQ_QUEUE` and `TDMQ_CMQ_TOPIC`.
+<li> CMQ_QUEUE: Tencent Cloud message queue - queue model.</li>
+<li> CMQ_TOPIC: Tencent Cloud message queue - topic model.</li>
+<li> TDMQ_CMQ_QUEUE: Tencent Cloud TDMQ message queue - queue model.</li>
+<li> TDMQ_CMQ_TOPIC: Tencent Cloud TDMQ message queue - topic model.</li>
                      */
                     std::string GetTargetType() const;
 
                     /**
-                     * 设置Target type. Value range: `CMQ_QUEUE`, `CMQ_TOPIC`.
-<li> CMQ_QUEUE: CMQ_QUEUE: CMQ queue model.</li>
-<li> CMQ_TOPIC: CMQ topic model.</li>
-                     * @param TargetType Target type. Value range: `CMQ_QUEUE`, `CMQ_TOPIC`.
-<li> CMQ_QUEUE: CMQ_QUEUE: CMQ queue model.</li>
-<li> CMQ_TOPIC: CMQ topic model.</li>
+                     * 设置Target type. Valid values: `CMQ_QUEUE`, `CMQ_TOPIC`, `TDMQ_CMQ_QUEUE` and `TDMQ_CMQ_TOPIC`.
+<li> CMQ_QUEUE: Tencent Cloud message queue - queue model.</li>
+<li> CMQ_TOPIC: Tencent Cloud message queue - topic model.</li>
+<li> TDMQ_CMQ_QUEUE: Tencent Cloud TDMQ message queue - queue model.</li>
+<li> TDMQ_CMQ_TOPIC: Tencent Cloud TDMQ message queue - topic model.</li>
+                     * @param TargetType Target type. Valid values: `CMQ_QUEUE`, `CMQ_TOPIC`, `TDMQ_CMQ_QUEUE` and `TDMQ_CMQ_TOPIC`.
+<li> CMQ_QUEUE: Tencent Cloud message queue - queue model.</li>
+<li> CMQ_TOPIC: Tencent Cloud message queue - topic model.</li>
+<li> TDMQ_CMQ_QUEUE: Tencent Cloud TDMQ message queue - queue model.</li>
+<li> TDMQ_CMQ_TOPIC: Tencent Cloud TDMQ message queue - topic model.</li>
                      */
                     void SetTargetType(const std::string& _targetType);
 
@@ -73,14 +81,14 @@ namespace TencentCloud
                     bool TargetTypeHasBeenSet() const;
 
                     /**
-                     * 获取Queue name. If `TargetType` is `CMQ_QUEUE`, this parameter is required.
-                     * @return QueueName Queue name. If `TargetType` is `CMQ_QUEUE`, this parameter is required.
+                     * 获取Queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
+                     * @return QueueName Queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
                      */
                     std::string GetQueueName() const;
 
                     /**
-                     * 设置Queue name. If `TargetType` is `CMQ_QUEUE`, this parameter is required.
-                     * @param QueueName Queue name. If `TargetType` is `CMQ_QUEUE`, this parameter is required.
+                     * 设置Queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
+                     * @param QueueName Queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
                      */
                     void SetQueueName(const std::string& _queueName);
 
@@ -91,14 +99,14 @@ namespace TencentCloud
                     bool QueueNameHasBeenSet() const;
 
                     /**
-                     * 获取Topic name. If `TargetType` is `CMQ_TOPIC`, this parameter is required.
-                     * @return TopicName Topic name. If `TargetType` is `CMQ_TOPIC`, this parameter is required.
+                     * 获取Topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
+                     * @return TopicName Topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置Topic name. If `TargetType` is `CMQ_TOPIC`, this parameter is required.
-                     * @param TopicName Topic name. If `TargetType` is `CMQ_TOPIC`, this parameter is required.
+                     * 设置Topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
+                     * @param TopicName Topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
                      */
                     void SetTopicName(const std::string& _topicName);
 
@@ -111,21 +119,23 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Target type. Value range: `CMQ_QUEUE`, `CMQ_TOPIC`.
-<li> CMQ_QUEUE: CMQ_QUEUE: CMQ queue model.</li>
-<li> CMQ_TOPIC: CMQ topic model.</li>
+                     * Target type. Valid values: `CMQ_QUEUE`, `CMQ_TOPIC`, `TDMQ_CMQ_QUEUE` and `TDMQ_CMQ_TOPIC`.
+<li> CMQ_QUEUE: Tencent Cloud message queue - queue model.</li>
+<li> CMQ_TOPIC: Tencent Cloud message queue - topic model.</li>
+<li> TDMQ_CMQ_QUEUE: Tencent Cloud TDMQ message queue - queue model.</li>
+<li> TDMQ_CMQ_TOPIC: Tencent Cloud TDMQ message queue - topic model.</li>
                      */
                     std::string m_targetType;
                     bool m_targetTypeHasBeenSet;
 
                     /**
-                     * Queue name. If `TargetType` is `CMQ_QUEUE`, this parameter is required.
+                     * Queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
                      */
                     std::string m_queueName;
                     bool m_queueNameHasBeenSet;
 
                     /**
-                     * Topic name. If `TargetType` is `CMQ_TOPIC`, this parameter is required.
+                     * Topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;

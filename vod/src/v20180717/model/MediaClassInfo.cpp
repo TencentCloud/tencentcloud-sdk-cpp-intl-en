@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 MediaClassInfo::MediaClassInfo() :
@@ -30,7 +29,7 @@ MediaClassInfo::MediaClassInfo() :
 {
 }
 
-CoreInternalOutcome MediaClassInfo::Deserialize(const Value &value)
+CoreInternalOutcome MediaClassInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome MediaClassInfo::Deserialize(const Value &value)
     {
         if (!value["ClassId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaClassInfo.ClassId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaClassInfo.ClassId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_classId = value["ClassId"].GetInt64();
         m_classIdHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome MediaClassInfo::Deserialize(const Value &value)
     {
         if (!value["ParentId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaClassInfo.ParentId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaClassInfo.ParentId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_parentId = value["ParentId"].GetInt64();
         m_parentIdHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome MediaClassInfo::Deserialize(const Value &value)
     {
         if (!value["ClassName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaClassInfo.ClassName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaClassInfo.ClassName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_className = string(value["ClassName"].GetString());
         m_classNameHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome MediaClassInfo::Deserialize(const Value &value)
     {
         if (!value["Level"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `MediaClassInfo.Level` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaClassInfo.Level` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_level = value["Level"].GetUint64();
         m_levelHasBeenSet = true;
@@ -78,10 +77,10 @@ CoreInternalOutcome MediaClassInfo::Deserialize(const Value &value)
     if (value.HasMember("SubClassIdSet") && !value["SubClassIdSet"].IsNull())
     {
         if (!value["SubClassIdSet"].IsArray())
-            return CoreInternalOutcome(Error("response `MediaClassInfo.SubClassIdSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `MediaClassInfo.SubClassIdSet` is not array type"));
 
-        const Value &tmpValue = value["SubClassIdSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["SubClassIdSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_subClassIdSet.push_back((*itr).GetInt64());
         }
@@ -92,12 +91,12 @@ CoreInternalOutcome MediaClassInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void MediaClassInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MediaClassInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_classIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClassId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_classId, allocator);
@@ -105,7 +104,7 @@ void MediaClassInfo::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_parentIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ParentId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_parentId, allocator);
@@ -113,15 +112,15 @@ void MediaClassInfo::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_classNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClassName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_className.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_className.c_str(), allocator).Move(), allocator);
     }
 
     if (m_levelHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Level";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_level, allocator);
@@ -129,14 +128,14 @@ void MediaClassInfo::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_subClassIdSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubClassIdSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_subClassIdSet.begin(); itr != m_subClassIdSet.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 

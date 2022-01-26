@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
-                     * @return WeekDays Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+                     * 获取Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid.
+                     * @return WeekDays Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid.
                      */
                     std::vector<std::string> GetWeekDays() const;
 
                     /**
-                     * 设置Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
-                     * @param WeekDays Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+                     * 设置Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid.
+                     * @param WeekDays Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid.
                      */
                     void SetWeekDays(const std::vector<std::string>& _weekDays);
 
@@ -123,7 +123,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+                     * Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid.
                      */
                     std::vector<std::string> m_weekDays;
                     bool m_weekDaysHasBeenSet;

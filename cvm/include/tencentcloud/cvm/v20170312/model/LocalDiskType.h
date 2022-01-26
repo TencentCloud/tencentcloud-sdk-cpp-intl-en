@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool MaxSizeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Required 
+                     * 获取Whether a local disk is required during purchase. Valid values:<br><li>REQUIRED: required<br><li>OPTIONAL: optional
+                     * @return Required Whether a local disk is required during purchase. Valid values:<br><li>REQUIRED: required<br><li>OPTIONAL: optional
                      */
                     std::string GetRequired() const;
 
                     /**
-                     * 设置
-                     * @param Required 
+                     * 设置Whether a local disk is required during purchase. Valid values:<br><li>REQUIRED: required<br><li>OPTIONAL: optional
+                     * @param Required Whether a local disk is required during purchase. Valid values:<br><li>REQUIRED: required<br><li>OPTIONAL: optional
                      */
                     void SetRequired(const std::string& _required);
 
@@ -163,7 +163,7 @@ namespace TencentCloud
                     bool m_maxSizeHasBeenSet;
 
                     /**
-                     * 
+                     * Whether a local disk is required during purchase. Valid values:<br><li>REQUIRED: required<br><li>OPTIONAL: optional
                      */
                     std::string m_required;
                     bool m_requiredHasBeenSet;

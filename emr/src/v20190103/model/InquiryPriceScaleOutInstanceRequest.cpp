@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Emr::V20190103::Model;
-using namespace rapidjson;
 using namespace std;
 
 InquiryPriceScaleOutInstanceRequest::InquiryPriceScaleOutInstanceRequest() :
@@ -32,28 +31,29 @@ InquiryPriceScaleOutInstanceRequest::InquiryPriceScaleOutInstanceRequest() :
     m_coreCountHasBeenSet(false),
     m_taskCountHasBeenSet(false),
     m_currencyHasBeenSet(false),
-    m_routerCountHasBeenSet(false)
+    m_routerCountHasBeenSet(false),
+    m_masterCountHasBeenSet(false)
 {
 }
 
 string InquiryPriceScaleOutInstanceRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_timeUnitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TimeUnit";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_timeUnit.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_timeUnit.c_str(), allocator).Move(), allocator);
     }
 
     if (m_timeSpanHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TimeSpan";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_timeSpan, allocator);
@@ -61,7 +61,7 @@ string InquiryPriceScaleOutInstanceRequest::ToJsonString() const
 
     if (m_zoneIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ZoneId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_zoneId, allocator);
@@ -69,7 +69,7 @@ string InquiryPriceScaleOutInstanceRequest::ToJsonString() const
 
     if (m_payModeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PayMode";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_payMode, allocator);
@@ -77,15 +77,15 @@ string InquiryPriceScaleOutInstanceRequest::ToJsonString() const
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_coreCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CoreCount";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_coreCount, allocator);
@@ -93,7 +93,7 @@ string InquiryPriceScaleOutInstanceRequest::ToJsonString() const
 
     if (m_taskCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TaskCount";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_taskCount, allocator);
@@ -101,23 +101,31 @@ string InquiryPriceScaleOutInstanceRequest::ToJsonString() const
 
     if (m_currencyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Currency";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_currency.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_currency.c_str(), allocator).Move(), allocator);
     }
 
     if (m_routerCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RouterCount";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_routerCount, allocator);
     }
 
+    if (m_masterCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MasterCount";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_masterCount, allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -265,6 +273,22 @@ void InquiryPriceScaleOutInstanceRequest::SetRouterCount(const uint64_t& _router
 bool InquiryPriceScaleOutInstanceRequest::RouterCountHasBeenSet() const
 {
     return m_routerCountHasBeenSet;
+}
+
+uint64_t InquiryPriceScaleOutInstanceRequest::GetMasterCount() const
+{
+    return m_masterCount;
+}
+
+void InquiryPriceScaleOutInstanceRequest::SetMasterCount(const uint64_t& _masterCount)
+{
+    m_masterCount = _masterCount;
+    m_masterCountHasBeenSet = true;
+}
+
+bool InquiryPriceScaleOutInstanceRequest::MasterCountHasBeenSet() const
+{
+    return m_masterCountHasBeenSet;
 }
 
 

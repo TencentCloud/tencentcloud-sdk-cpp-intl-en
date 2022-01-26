@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/sqlserver/v20180328/model/RenameRestoreDatabase.h>
 
 
 namespace TencentCloud
@@ -78,6 +79,60 @@ namespace TencentCloud
                      */
                     bool BackupIdHasBeenSet() const;
 
+                    /**
+                     * 获取ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+                     * @return TargetInstanceId ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+                     */
+                    std::string GetTargetInstanceId() const;
+
+                    /**
+                     * 设置ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+                     * @param TargetInstanceId ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+                     */
+                    void SetTargetInstanceId(const std::string& _targetInstanceId);
+
+                    /**
+                     * 判断参数 TargetInstanceId 是否已赋值
+                     * @return TargetInstanceId 是否已赋值
+                     */
+                    bool TargetInstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format.
+                     * @return RenameRestore Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format.
+                     */
+                    std::vector<RenameRestoreDatabase> GetRenameRestore() const;
+
+                    /**
+                     * 设置Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format.
+                     * @param RenameRestore Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format.
+                     */
+                    void SetRenameRestore(const std::vector<RenameRestoreDatabase>& _renameRestore);
+
+                    /**
+                     * 判断参数 RenameRestore 是否已赋值
+                     * @return RenameRestore 是否已赋值
+                     */
+                    bool RenameRestoreHasBeenSet() const;
+
+                    /**
+                     * 获取Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API.
+                     * @return GroupId Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API.
+                     */
+                    std::string GetGroupId() const;
+
+                    /**
+                     * 设置Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API.
+                     * @param GroupId Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API.
+                     */
+                    void SetGroupId(const std::string& _groupId);
+
+                    /**
+                     * 判断参数 GroupId 是否已赋值
+                     * @return GroupId 是否已赋值
+                     */
+                    bool GroupIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -91,6 +146,24 @@ namespace TencentCloud
                      */
                     int64_t m_backupId;
                     bool m_backupIdHasBeenSet;
+
+                    /**
+                     * ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+                     */
+                    std::string m_targetInstanceId;
+                    bool m_targetInstanceIdHasBeenSet;
+
+                    /**
+                     * Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format.
+                     */
+                    std::vector<RenameRestoreDatabase> m_renameRestore;
+                    bool m_renameRestoreHasBeenSet;
+
+                    /**
+                     * Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API.
+                     */
+                    std::string m_groupId;
+                    bool m_groupIdHasBeenSet;
 
                 };
             }

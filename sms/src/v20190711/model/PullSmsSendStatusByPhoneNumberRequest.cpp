@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Sms::V20190711::Model;
-using namespace rapidjson;
 using namespace std;
 
 PullSmsSendStatusByPhoneNumberRequest::PullSmsSendStatusByPhoneNumberRequest() :
@@ -28,20 +27,21 @@ PullSmsSendStatusByPhoneNumberRequest::PullSmsSendStatusByPhoneNumberRequest() :
     m_offsetHasBeenSet(false),
     m_limitHasBeenSet(false),
     m_phoneNumberHasBeenSet(false),
-    m_smsSdkAppidHasBeenSet(false)
+    m_smsSdkAppidHasBeenSet(false),
+    m_endDateTimeHasBeenSet(false)
 {
 }
 
 string PullSmsSendStatusByPhoneNumberRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_sendDateTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SendDateTime";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_sendDateTime, allocator);
@@ -49,7 +49,7 @@ string PullSmsSendStatusByPhoneNumberRequest::ToJsonString() const
 
     if (m_offsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Offset";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_offset, allocator);
@@ -57,7 +57,7 @@ string PullSmsSendStatusByPhoneNumberRequest::ToJsonString() const
 
     if (m_limitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Limit";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_limit, allocator);
@@ -65,23 +65,31 @@ string PullSmsSendStatusByPhoneNumberRequest::ToJsonString() const
 
     if (m_phoneNumberHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PhoneNumber";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_phoneNumber.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_phoneNumber.c_str(), allocator).Move(), allocator);
     }
 
     if (m_smsSdkAppidHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SmsSdkAppid";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_smsSdkAppid.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_smsSdkAppid.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_endDateTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EndDateTime";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_endDateTime, allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -165,6 +173,22 @@ void PullSmsSendStatusByPhoneNumberRequest::SetSmsSdkAppid(const string& _smsSdk
 bool PullSmsSendStatusByPhoneNumberRequest::SmsSdkAppidHasBeenSet() const
 {
     return m_smsSdkAppidHasBeenSet;
+}
+
+uint64_t PullSmsSendStatusByPhoneNumberRequest::GetEndDateTime() const
+{
+    return m_endDateTime;
+}
+
+void PullSmsSendStatusByPhoneNumberRequest::SetEndDateTime(const uint64_t& _endDateTime)
+{
+    m_endDateTime = _endDateTime;
+    m_endDateTimeHasBeenSet = true;
+}
+
+bool PullSmsSendStatusByPhoneNumberRequest::EndDateTimeHasBeenSet() const
+{
+    return m_endDateTimeHasBeenSet;
 }
 
 

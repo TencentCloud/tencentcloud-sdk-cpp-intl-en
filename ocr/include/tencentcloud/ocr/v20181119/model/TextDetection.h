@@ -26,6 +26,8 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/ocr/v20181119/model/Coord.h>
 #include <tencentcloud/ocr/v20181119/model/ItemCoord.h>
+#include <tencentcloud/ocr/v20181119/model/DetectedWords.h>
+#include <tencentcloud/ocr/v20181119/model/DetectedWordCoordPoint.h>
 
 
 namespace TencentCloud
@@ -37,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * OCR result
+                * OCR result.
                 */
                 class TextDetection : public AbstractModel
                 {
@@ -49,14 +51,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Recognized text line content
-                     * @return DetectedText Recognized text line content
+                     * 获取Recognized text line content.
+                     * @return DetectedText Recognized text line content.
                      */
                     std::string GetDetectedText() const;
 
                     /**
-                     * 设置Recognized text line content
-                     * @param DetectedText Recognized text line content
+                     * 设置Recognized text line content.
+                     * @param DetectedText Recognized text line content.
                      */
                     void SetDetectedText(const std::string& _detectedText);
 
@@ -67,14 +69,14 @@ namespace TencentCloud
                     bool DetectedTextHasBeenSet() const;
 
                     /**
-                     * 获取Confidence. Value range: 0–100
-                     * @return Confidence Confidence. Value range: 0–100
+                     * 获取Confidence. Value range: 0–100.
+                     * @return Confidence Confidence. Value range: 0–100.
                      */
                     int64_t GetConfidence() const;
 
                     /**
-                     * 设置Confidence. Value range: 0–100
-                     * @param Confidence Confidence. Value range: 0–100
+                     * 设置Confidence. Value range: 0–100.
+                     * @param Confidence Confidence. Value range: 0–100.
                      */
                     void SetConfidence(const int64_t& _confidence);
 
@@ -85,17 +87,17 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Text line coordinates, which are represented as 4 vertex coordinates
+                     * 获取Text line coordinates, which are represented as 4 vertex coordinates.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Polygon Text line coordinates, which are represented as 4 vertex coordinates
+                     * @return Polygon Text line coordinates, which are represented as 4 vertex coordinates.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Coord> GetPolygon() const;
 
                     /**
-                     * 设置Text line coordinates, which are represented as 4 vertex coordinates
+                     * 设置Text line coordinates, which are represented as 4 vertex coordinates.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Polygon Text line coordinates, which are represented as 4 vertex coordinates
+                     * @param Polygon Text line coordinates, which are represented as 4 vertex coordinates.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetPolygon(const std::vector<Coord>& _polygon);
@@ -129,14 +131,14 @@ The paragraph information `Parag` returned by the `GeneralBasicOcr` API contains
                     bool AdvancedInfoHasBeenSet() const;
 
                     /**
-                     * 获取Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`
-                     * @return ItemPolygon Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`
+                     * 获取Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`.
+                     * @return ItemPolygon Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`.
                      */
                     ItemCoord GetItemPolygon() const;
 
                     /**
-                     * 设置Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`
-                     * @param ItemPolygon Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`
+                     * 设置Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`.
+                     * @param ItemPolygon Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`.
                      */
                     void SetItemPolygon(const ItemCoord& _itemPolygon);
 
@@ -146,22 +148,58 @@ The paragraph information `Parag` returned by the `GeneralBasicOcr` API contains
                      */
                     bool ItemPolygonHasBeenSet() const;
 
+                    /**
+                     * 获取Information about a character, including the character itself and its confidence. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+                     * @return Words Information about a character, including the character itself and its confidence. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+                     */
+                    std::vector<DetectedWords> GetWords() const;
+
+                    /**
+                     * 设置Information about a character, including the character itself and its confidence. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+                     * @param Words Information about a character, including the character itself and its confidence. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+                     */
+                    void SetWords(const std::vector<DetectedWords>& _words);
+
+                    /**
+                     * 判断参数 Words 是否已赋值
+                     * @return Words 是否已赋值
+                     */
+                    bool WordsHasBeenSet() const;
+
+                    /**
+                     * 获取Coordinates of a word’s four corners on the input image. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+                     * @return WordCoordPoint Coordinates of a word’s four corners on the input image. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+                     */
+                    std::vector<DetectedWordCoordPoint> GetWordCoordPoint() const;
+
+                    /**
+                     * 设置Coordinates of a word’s four corners on the input image. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+                     * @param WordCoordPoint Coordinates of a word’s four corners on the input image. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+                     */
+                    void SetWordCoordPoint(const std::vector<DetectedWordCoordPoint>& _wordCoordPoint);
+
+                    /**
+                     * 判断参数 WordCoordPoint 是否已赋值
+                     * @return WordCoordPoint 是否已赋值
+                     */
+                    bool WordCoordPointHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Recognized text line content
+                     * Recognized text line content.
                      */
                     std::string m_detectedText;
                     bool m_detectedTextHasBeenSet;
 
                     /**
-                     * Confidence. Value range: 0–100
+                     * Confidence. Value range: 0–100.
                      */
                     int64_t m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Text line coordinates, which are represented as 4 vertex coordinates
+                     * Text line coordinates, which are represented as 4 vertex coordinates.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Coord> m_polygon;
@@ -175,10 +213,22 @@ The paragraph information `Parag` returned by the `GeneralBasicOcr` API contains
                     bool m_advancedInfoHasBeenSet;
 
                     /**
-                     * Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`
+                     * Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`.
                      */
                     ItemCoord m_itemPolygon;
                     bool m_itemPolygonHasBeenSet;
+
+                    /**
+                     * Information about a character, including the character itself and its confidence. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+                     */
+                    std::vector<DetectedWords> m_words;
+                    bool m_wordsHasBeenSet;
+
+                    /**
+                     * Coordinates of a word’s four corners on the input image. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+                     */
+                    std::vector<DetectedWordCoordPoint> m_wordCoordPoint;
+                    bool m_wordCoordPointHasBeenSet;
 
                 };
             }

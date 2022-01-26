@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Monitor::V20180724::Model;
-using namespace rapidjson;
 using namespace std;
 
 MetricSet::MetricSet() :
@@ -29,11 +28,13 @@ MetricSet::MetricSet() :
     m_periodHasBeenSet(false),
     m_periodsHasBeenSet(false),
     m_meaningHasBeenSet(false),
-    m_dimensionsHasBeenSet(false)
+    m_dimensionsHasBeenSet(false),
+    m_metricCNameHasBeenSet(false),
+    m_metricENameHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome MetricSet::Deserialize(const Value &value)
+CoreInternalOutcome MetricSet::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +43,7 @@ CoreInternalOutcome MetricSet::Deserialize(const Value &value)
     {
         if (!value["Namespace"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MetricSet.Namespace` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MetricSet.Namespace` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_namespace = string(value["Namespace"].GetString());
         m_namespaceHasBeenSet = true;
@@ -52,7 +53,7 @@ CoreInternalOutcome MetricSet::Deserialize(const Value &value)
     {
         if (!value["MetricName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MetricSet.MetricName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MetricSet.MetricName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_metricName = string(value["MetricName"].GetString());
         m_metricNameHasBeenSet = true;
@@ -62,7 +63,7 @@ CoreInternalOutcome MetricSet::Deserialize(const Value &value)
     {
         if (!value["Unit"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MetricSet.Unit` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MetricSet.Unit` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_unit = string(value["Unit"].GetString());
         m_unitHasBeenSet = true;
@@ -72,7 +73,7 @@ CoreInternalOutcome MetricSet::Deserialize(const Value &value)
     {
         if (!value["UnitCname"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MetricSet.UnitCname` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MetricSet.UnitCname` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_unitCname = string(value["UnitCname"].GetString());
         m_unitCnameHasBeenSet = true;
@@ -81,10 +82,10 @@ CoreInternalOutcome MetricSet::Deserialize(const Value &value)
     if (value.HasMember("Period") && !value["Period"].IsNull())
     {
         if (!value["Period"].IsArray())
-            return CoreInternalOutcome(Error("response `MetricSet.Period` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `MetricSet.Period` is not array type"));
 
-        const Value &tmpValue = value["Period"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Period"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_period.push_back((*itr).GetInt64());
         }
@@ -94,10 +95,10 @@ CoreInternalOutcome MetricSet::Deserialize(const Value &value)
     if (value.HasMember("Periods") && !value["Periods"].IsNull())
     {
         if (!value["Periods"].IsArray())
-            return CoreInternalOutcome(Error("response `MetricSet.Periods` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `MetricSet.Periods` is not array type"));
 
-        const Value &tmpValue = value["Periods"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Periods"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             PeriodsSt item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -115,7 +116,7 @@ CoreInternalOutcome MetricSet::Deserialize(const Value &value)
     {
         if (!value["Meaning"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MetricSet.Meaning` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MetricSet.Meaning` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_meaning.Deserialize(value["Meaning"]);
@@ -131,10 +132,10 @@ CoreInternalOutcome MetricSet::Deserialize(const Value &value)
     if (value.HasMember("Dimensions") && !value["Dimensions"].IsNull())
     {
         if (!value["Dimensions"].IsArray())
-            return CoreInternalOutcome(Error("response `MetricSet.Dimensions` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `MetricSet.Dimensions` is not array type"));
 
-        const Value &tmpValue = value["Dimensions"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Dimensions"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             DimensionsDesc item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -148,95 +149,131 @@ CoreInternalOutcome MetricSet::Deserialize(const Value &value)
         m_dimensionsHasBeenSet = true;
     }
 
+    if (value.HasMember("MetricCName") && !value["MetricCName"].IsNull())
+    {
+        if (!value["MetricCName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `MetricSet.MetricCName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_metricCName = string(value["MetricCName"].GetString());
+        m_metricCNameHasBeenSet = true;
+    }
+
+    if (value.HasMember("MetricEName") && !value["MetricEName"].IsNull())
+    {
+        if (!value["MetricEName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `MetricSet.MetricEName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_metricEName = string(value["MetricEName"].GetString());
+        m_metricENameHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void MetricSet::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MetricSet::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_namespaceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Namespace";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_namespace.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_namespace.c_str(), allocator).Move(), allocator);
     }
 
     if (m_metricNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MetricName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_metricName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_metricName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_unitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Unit";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_unit.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_unit.c_str(), allocator).Move(), allocator);
     }
 
     if (m_unitCnameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UnitCname";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_unitCname.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_unitCname.c_str(), allocator).Move(), allocator);
     }
 
     if (m_periodHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Period";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_period.begin(); itr != m_period.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 
     if (m_periodsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Periods";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_periods.begin(); itr != m_periods.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_meaningHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Meaning";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_meaning.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_dimensionsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Dimensions";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_dimensions.begin(); itr != m_dimensions.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_metricCNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MetricCName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_metricCName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_metricENameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MetricEName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_metricEName.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -368,5 +405,37 @@ void MetricSet::SetDimensions(const vector<DimensionsDesc>& _dimensions)
 bool MetricSet::DimensionsHasBeenSet() const
 {
     return m_dimensionsHasBeenSet;
+}
+
+string MetricSet::GetMetricCName() const
+{
+    return m_metricCName;
+}
+
+void MetricSet::SetMetricCName(const string& _metricCName)
+{
+    m_metricCName = _metricCName;
+    m_metricCNameHasBeenSet = true;
+}
+
+bool MetricSet::MetricCNameHasBeenSet() const
+{
+    return m_metricCNameHasBeenSet;
+}
+
+string MetricSet::GetMetricEName() const
+{
+    return m_metricEName;
+}
+
+void MetricSet::SetMetricEName(const string& _metricEName)
+{
+    m_metricEName = _metricEName;
+    m_metricENameHasBeenSet = true;
+}
+
+bool MetricSet::MetricENameHasBeenSet() const
+{
+    return m_metricENameHasBeenSet;
 }
 

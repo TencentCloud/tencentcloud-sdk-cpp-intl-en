@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Cam::V20190116::Model;
-using namespace rapidjson;
 using namespace std;
 
 ListAttachedRolePoliciesRequest::ListAttachedRolePoliciesRequest() :
@@ -28,20 +27,21 @@ ListAttachedRolePoliciesRequest::ListAttachedRolePoliciesRequest() :
     m_rpHasBeenSet(false),
     m_roleIdHasBeenSet(false),
     m_roleNameHasBeenSet(false),
-    m_policyTypeHasBeenSet(false)
+    m_policyTypeHasBeenSet(false),
+    m_keywordHasBeenSet(false)
 {
 }
 
 string ListAttachedRolePoliciesRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_pageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Page";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_page, allocator);
@@ -49,7 +49,7 @@ string ListAttachedRolePoliciesRequest::ToJsonString() const
 
     if (m_rpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Rp";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_rp, allocator);
@@ -57,31 +57,39 @@ string ListAttachedRolePoliciesRequest::ToJsonString() const
 
     if (m_roleIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RoleId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_roleId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_roleId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_roleNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RoleName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_roleName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_roleName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_policyTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PolicyType";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_policyType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_policyType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_keywordHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Keyword";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_keyword.c_str(), allocator).Move(), allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -165,6 +173,22 @@ void ListAttachedRolePoliciesRequest::SetPolicyType(const string& _policyType)
 bool ListAttachedRolePoliciesRequest::PolicyTypeHasBeenSet() const
 {
     return m_policyTypeHasBeenSet;
+}
+
+string ListAttachedRolePoliciesRequest::GetKeyword() const
+{
+    return m_keyword;
+}
+
+void ListAttachedRolePoliciesRequest::SetKeyword(const string& _keyword)
+{
+    m_keyword = _keyword;
+    m_keywordHasBeenSet = true;
+}
+
+bool ListAttachedRolePoliciesRequest::KeywordHasBeenSet() const
+{
+    return m_keywordHasBeenSet;
 }
 
 

@@ -18,18 +18,19 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 TopicInfo::TopicInfo() :
     m_topicIdHasBeenSet(false),
     m_topicNameHasBeenSet(false),
     m_enabledHasBeenSet(false),
-    m_createTimeHasBeenSet(false)
+    m_createTimeHasBeenSet(false),
+    m_channelHasBeenSet(false),
+    m_deletedHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome TopicInfo::Deserialize(const Value &value)
+CoreInternalOutcome TopicInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +39,7 @@ CoreInternalOutcome TopicInfo::Deserialize(const Value &value)
     {
         if (!value["TopicId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TopicInfo.TopicId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicInfo.TopicId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_topicId = string(value["TopicId"].GetString());
         m_topicIdHasBeenSet = true;
@@ -48,7 +49,7 @@ CoreInternalOutcome TopicInfo::Deserialize(const Value &value)
     {
         if (!value["TopicName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TopicInfo.TopicName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicInfo.TopicName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_topicName = string(value["TopicName"].GetString());
         m_topicNameHasBeenSet = true;
@@ -58,7 +59,7 @@ CoreInternalOutcome TopicInfo::Deserialize(const Value &value)
     {
         if (!value["Enabled"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TopicInfo.Enabled` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicInfo.Enabled` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_enabled = value["Enabled"].GetInt64();
         m_enabledHasBeenSet = true;
@@ -68,38 +69,58 @@ CoreInternalOutcome TopicInfo::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TopicInfo.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicInfo.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("Channel") && !value["Channel"].IsNull())
+    {
+        if (!value["Channel"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `TopicInfo.Channel` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_channel = string(value["Channel"].GetString());
+        m_channelHasBeenSet = true;
+    }
+
+    if (value.HasMember("Deleted") && !value["Deleted"].IsNull())
+    {
+        if (!value["Deleted"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `TopicInfo.Deleted` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_deleted = string(value["Deleted"].GetString());
+        m_deletedHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void TopicInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TopicInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_topicIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TopicId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_topicId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_topicId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_topicNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TopicName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_topicName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_topicName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_enabledHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Enabled";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_enabled, allocator);
@@ -107,10 +128,26 @@ void TopicInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_channelHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Channel";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_channel.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_deletedHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Deleted";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_deleted.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -178,5 +215,37 @@ void TopicInfo::SetCreateTime(const string& _createTime)
 bool TopicInfo::CreateTimeHasBeenSet() const
 {
     return m_createTimeHasBeenSet;
+}
+
+string TopicInfo::GetChannel() const
+{
+    return m_channel;
+}
+
+void TopicInfo::SetChannel(const string& _channel)
+{
+    m_channel = _channel;
+    m_channelHasBeenSet = true;
+}
+
+bool TopicInfo::ChannelHasBeenSet() const
+{
+    return m_channelHasBeenSet;
+}
+
+string TopicInfo::GetDeleted() const
+{
+    return m_deleted;
+}
+
+void TopicInfo::SetDeleted(const string& _deleted)
+{
+    m_deleted = _deleted;
+    m_deletedHasBeenSet = true;
+}
+
+bool TopicInfo::DeletedHasBeenSet() const
+{
+    return m_deletedHasBeenSet;
 }
 

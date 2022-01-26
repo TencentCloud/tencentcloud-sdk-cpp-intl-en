@@ -18,16 +18,18 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Es::V20180416::Model;
-using namespace rapidjson;
 using namespace std;
 
 EsDictionaryInfo::EsDictionaryInfo() :
     m_mainDictHasBeenSet(false),
-    m_stopwordsHasBeenSet(false)
+    m_stopwordsHasBeenSet(false),
+    m_qQDictHasBeenSet(false),
+    m_synonymHasBeenSet(false),
+    m_updateTypeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome EsDictionaryInfo::Deserialize(const Value &value)
+CoreInternalOutcome EsDictionaryInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -35,10 +37,10 @@ CoreInternalOutcome EsDictionaryInfo::Deserialize(const Value &value)
     if (value.HasMember("MainDict") && !value["MainDict"].IsNull())
     {
         if (!value["MainDict"].IsArray())
-            return CoreInternalOutcome(Error("response `EsDictionaryInfo.MainDict` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `EsDictionaryInfo.MainDict` is not array type"));
 
-        const Value &tmpValue = value["MainDict"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["MainDict"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             DictInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -55,10 +57,10 @@ CoreInternalOutcome EsDictionaryInfo::Deserialize(const Value &value)
     if (value.HasMember("Stopwords") && !value["Stopwords"].IsNull())
     {
         if (!value["Stopwords"].IsArray())
-            return CoreInternalOutcome(Error("response `EsDictionaryInfo.Stopwords` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `EsDictionaryInfo.Stopwords` is not array type"));
 
-        const Value &tmpValue = value["Stopwords"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Stopwords"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             DictInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -72,41 +74,129 @@ CoreInternalOutcome EsDictionaryInfo::Deserialize(const Value &value)
         m_stopwordsHasBeenSet = true;
     }
 
+    if (value.HasMember("QQDict") && !value["QQDict"].IsNull())
+    {
+        if (!value["QQDict"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `EsDictionaryInfo.QQDict` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["QQDict"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            DictInfo item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_qQDict.push_back(item);
+        }
+        m_qQDictHasBeenSet = true;
+    }
+
+    if (value.HasMember("Synonym") && !value["Synonym"].IsNull())
+    {
+        if (!value["Synonym"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `EsDictionaryInfo.Synonym` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["Synonym"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            DictInfo item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_synonym.push_back(item);
+        }
+        m_synonymHasBeenSet = true;
+    }
+
+    if (value.HasMember("UpdateType") && !value["UpdateType"].IsNull())
+    {
+        if (!value["UpdateType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `EsDictionaryInfo.UpdateType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_updateType = string(value["UpdateType"].GetString());
+        m_updateTypeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void EsDictionaryInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void EsDictionaryInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_mainDictHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MainDict";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_mainDict.begin(); itr != m_mainDict.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_stopwordsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Stopwords";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_stopwords.begin(); itr != m_stopwords.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_qQDictHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "QQDict";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_qQDict.begin(); itr != m_qQDict.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_synonymHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Synonym";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_synonym.begin(); itr != m_synonym.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_updateTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UpdateType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_updateType.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -142,5 +232,53 @@ void EsDictionaryInfo::SetStopwords(const vector<DictInfo>& _stopwords)
 bool EsDictionaryInfo::StopwordsHasBeenSet() const
 {
     return m_stopwordsHasBeenSet;
+}
+
+vector<DictInfo> EsDictionaryInfo::GetQQDict() const
+{
+    return m_qQDict;
+}
+
+void EsDictionaryInfo::SetQQDict(const vector<DictInfo>& _qQDict)
+{
+    m_qQDict = _qQDict;
+    m_qQDictHasBeenSet = true;
+}
+
+bool EsDictionaryInfo::QQDictHasBeenSet() const
+{
+    return m_qQDictHasBeenSet;
+}
+
+vector<DictInfo> EsDictionaryInfo::GetSynonym() const
+{
+    return m_synonym;
+}
+
+void EsDictionaryInfo::SetSynonym(const vector<DictInfo>& _synonym)
+{
+    m_synonym = _synonym;
+    m_synonymHasBeenSet = true;
+}
+
+bool EsDictionaryInfo::SynonymHasBeenSet() const
+{
+    return m_synonymHasBeenSet;
+}
+
+string EsDictionaryInfo::GetUpdateType() const
+{
+    return m_updateType;
+}
+
+void EsDictionaryInfo::SetUpdateType(const string& _updateType)
+{
+    m_updateType = _updateType;
+    m_updateTypeHasBeenSet = true;
+}
+
+bool EsDictionaryInfo::UpdateTypeHasBeenSet() const
+{
+    return m_updateTypeHasBeenSet;
 }
 

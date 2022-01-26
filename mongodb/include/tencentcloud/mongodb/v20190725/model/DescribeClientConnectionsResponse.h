@@ -41,6 +41,7 @@ namespace TencentCloud
                     DescribeClientConnectionsResponse();
                     ~DescribeClientConnectionsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -55,6 +56,18 @@ namespace TencentCloud
                      */
                     bool ClientsHasBeenSet() const;
 
+                    /**
+                     * 获取The total number of records that meet the query condition, which can be used for paginated queries.
+                     * @return TotalCount The total number of records that meet the query condition, which can be used for paginated queries.
+                     */
+                    uint64_t GetTotalCount() const;
+
+                    /**
+                     * 判断参数 TotalCount 是否已赋值
+                     * @return TotalCount 是否已赋值
+                     */
+                    bool TotalCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -62,6 +75,12 @@ namespace TencentCloud
                      */
                     std::vector<ClientConnection> m_clients;
                     bool m_clientsHasBeenSet;
+
+                    /**
+                     * The total number of records that meet the query condition, which can be used for paginated queries.
+                     */
+                    uint64_t m_totalCount;
+                    bool m_totalCountHasBeenSet;
 
                 };
             }

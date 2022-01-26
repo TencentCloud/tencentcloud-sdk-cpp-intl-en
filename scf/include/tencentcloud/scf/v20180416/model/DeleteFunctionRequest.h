@@ -78,6 +78,24 @@ namespace TencentCloud
                      */
                     bool NamespaceHasBeenSet() const;
 
+                    /**
+                     * 获取Function version. Enter the number of the version that needs to be deleted, otherwise all versions of the function will be deleted.
+                     * @return Qualifier Function version. Enter the number of the version that needs to be deleted, otherwise all versions of the function will be deleted.
+                     */
+                    std::string GetQualifier() const;
+
+                    /**
+                     * 设置Function version. Enter the number of the version that needs to be deleted, otherwise all versions of the function will be deleted.
+                     * @param Qualifier Function version. Enter the number of the version that needs to be deleted, otherwise all versions of the function will be deleted.
+                     */
+                    void SetQualifier(const std::string& _qualifier);
+
+                    /**
+                     * 判断参数 Qualifier 是否已赋值
+                     * @return Qualifier 是否已赋值
+                     */
+                    bool QualifierHasBeenSet() const;
+
                 private:
 
                     /**
@@ -91,6 +109,12 @@ namespace TencentCloud
                      */
                     std::string m_namespace;
                     bool m_namespaceHasBeenSet;
+
+                    /**
+                     * Function version. Enter the number of the version that needs to be deleted, otherwise all versions of the function will be deleted.
+                     */
+                    std::string m_qualifier;
+                    bool m_qualifierHasBeenSet;
 
                 };
             }

@@ -20,37 +20,45 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Cbs::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 TerminateDisksRequest::TerminateDisksRequest() :
-    m_diskIdsHasBeenSet(false)
+    m_diskIdsHasBeenSet(false),
+    m_deleteSnapshotHasBeenSet(false)
 {
 }
 
 string TerminateDisksRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_diskIdsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskIds";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_diskIds.begin(); itr != m_diskIds.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
+    if (m_deleteSnapshotHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DeleteSnapshot";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_deleteSnapshot, allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -70,6 +78,22 @@ void TerminateDisksRequest::SetDiskIds(const vector<string>& _diskIds)
 bool TerminateDisksRequest::DiskIdsHasBeenSet() const
 {
     return m_diskIdsHasBeenSet;
+}
+
+int64_t TerminateDisksRequest::GetDeleteSnapshot() const
+{
+    return m_deleteSnapshot;
+}
+
+void TerminateDisksRequest::SetDeleteSnapshot(const int64_t& _deleteSnapshot)
+{
+    m_deleteSnapshot = _deleteSnapshot;
+    m_deleteSnapshotHasBeenSet = true;
+}
+
+bool TerminateDisksRequest::DeleteSnapshotHasBeenSet() const
+{
+    return m_deleteSnapshotHasBeenSet;
 }
 
 

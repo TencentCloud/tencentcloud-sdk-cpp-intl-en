@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Sqlserver::V20180328::Model;
-using namespace rapidjson;
 using namespace std;
 
 DBDetail::DBDetail() :
@@ -32,7 +31,7 @@ DBDetail::DBDetail() :
 {
 }
 
-CoreInternalOutcome DBDetail::Deserialize(const Value &value)
+CoreInternalOutcome DBDetail::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +40,7 @@ CoreInternalOutcome DBDetail::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBDetail.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBDetail.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -51,7 +50,7 @@ CoreInternalOutcome DBDetail::Deserialize(const Value &value)
     {
         if (!value["Charset"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBDetail.Charset` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBDetail.Charset` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_charset = string(value["Charset"].GetString());
         m_charsetHasBeenSet = true;
@@ -61,7 +60,7 @@ CoreInternalOutcome DBDetail::Deserialize(const Value &value)
     {
         if (!value["Remark"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBDetail.Remark` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBDetail.Remark` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_remark = string(value["Remark"].GetString());
         m_remarkHasBeenSet = true;
@@ -71,7 +70,7 @@ CoreInternalOutcome DBDetail::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBDetail.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBDetail.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -81,7 +80,7 @@ CoreInternalOutcome DBDetail::Deserialize(const Value &value)
     {
         if (!value["Status"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DBDetail.Status` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBDetail.Status` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_status = value["Status"].GetInt64();
         m_statusHasBeenSet = true;
@@ -90,10 +89,10 @@ CoreInternalOutcome DBDetail::Deserialize(const Value &value)
     if (value.HasMember("Accounts") && !value["Accounts"].IsNull())
     {
         if (!value["Accounts"].IsArray())
-            return CoreInternalOutcome(Error("response `DBDetail.Accounts` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DBDetail.Accounts` is not array type"));
 
-        const Value &tmpValue = value["Accounts"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Accounts"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             AccountPrivilege item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -111,7 +110,7 @@ CoreInternalOutcome DBDetail::Deserialize(const Value &value)
     {
         if (!value["InternalStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBDetail.InternalStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBDetail.InternalStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_internalStatus = string(value["InternalStatus"].GetString());
         m_internalStatusHasBeenSet = true;
@@ -121,44 +120,44 @@ CoreInternalOutcome DBDetail::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void DBDetail::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DBDetail::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_charsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Charset";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_charset.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_charset.c_str(), allocator).Move(), allocator);
     }
 
     if (m_remarkHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Remark";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_remark.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_remark.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);
@@ -166,25 +165,25 @@ void DBDetail::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_accountsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Accounts";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_accounts.begin(); itr != m_accounts.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_internalStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InternalStatus";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_internalStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_internalStatus.c_str(), allocator).Move(), allocator);
     }
 
 }

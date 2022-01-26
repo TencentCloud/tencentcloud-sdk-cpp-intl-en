@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取File system capacity limit in GB. Value range: 0–1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
-                     * @return FsLimit File system capacity limit in GB. Value range: 0–1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
+                     * 获取File system capacity limit in GB. Value range: 0-1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
+                     * @return FsLimit File system capacity limit in GB. Value range: 0-1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
                      */
                     uint64_t GetFsLimit() const;
 
                     /**
-                     * 设置File system capacity limit in GB. Value range: 0–1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
-                     * @param FsLimit File system capacity limit in GB. Value range: 0–1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
+                     * 设置File system capacity limit in GB. Value range: 0-1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
+                     * @param FsLimit File system capacity limit in GB. Value range: 0-1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
                      */
                     void SetFsLimit(const uint64_t& _fsLimit);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool FsLimitHasBeenSet() const;
 
                     /**
-                     * 获取File system ID
-                     * @return FileSystemId File system ID
+                     * 获取File system ID. Currently, only Standard file systems are supported.
+                     * @return FileSystemId File system ID. Currently, only Standard file systems are supported.
                      */
                     std::string GetFileSystemId() const;
 
                     /**
-                     * 设置File system ID
-                     * @param FileSystemId File system ID
+                     * 设置File system ID. Currently, only Standard file systems are supported.
+                     * @param FileSystemId File system ID. Currently, only Standard file systems are supported.
                      */
                     void SetFileSystemId(const std::string& _fileSystemId);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * File system capacity limit in GB. Value range: 0–1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
+                     * File system capacity limit in GB. Value range: 0-1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
                      */
                     uint64_t m_fsLimit;
                     bool m_fsLimitHasBeenSet;
 
                     /**
-                     * File system ID
+                     * File system ID. Currently, only Standard file systems are supported.
                      */
                     std::string m_fileSystemId;
                     bool m_fileSystemIdHasBeenSet;

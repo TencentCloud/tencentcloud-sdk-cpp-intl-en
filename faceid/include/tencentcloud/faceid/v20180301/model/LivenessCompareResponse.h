@@ -40,6 +40,7 @@ namespace TencentCloud
                     LivenessCompareResponse();
                     ~LivenessCompareResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -90,6 +91,18 @@ namespace TencentCloud
                      */
                     bool DescriptionHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return BestFrameList 
+                     */
+                    std::vector<std::string> GetBestFrameList() const;
+
+                    /**
+                     * 判断参数 BestFrameList 是否已赋值
+                     * @return BestFrameList 是否已赋值
+                     */
+                    bool BestFrameListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +128,12 @@ namespace TencentCloud
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<std::string> m_bestFrameList;
+                    bool m_bestFrameListHasBeenSet;
 
                 };
             }

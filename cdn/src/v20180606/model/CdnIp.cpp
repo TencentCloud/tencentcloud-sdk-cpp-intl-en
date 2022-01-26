@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 CdnIp::CdnIp() :
@@ -26,11 +25,12 @@ CdnIp::CdnIp() :
     m_platformHasBeenSet(false),
     m_locationHasBeenSet(false),
     m_historyHasBeenSet(false),
-    m_areaHasBeenSet(false)
+    m_areaHasBeenSet(false),
+    m_cityHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome CdnIp::Deserialize(const Value &value)
+CoreInternalOutcome CdnIp::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +39,7 @@ CoreInternalOutcome CdnIp::Deserialize(const Value &value)
     {
         if (!value["Ip"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CdnIp.Ip` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CdnIp.Ip` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ip = string(value["Ip"].GetString());
         m_ipHasBeenSet = true;
@@ -49,7 +49,7 @@ CoreInternalOutcome CdnIp::Deserialize(const Value &value)
     {
         if (!value["Platform"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CdnIp.Platform` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CdnIp.Platform` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_platform = string(value["Platform"].GetString());
         m_platformHasBeenSet = true;
@@ -59,7 +59,7 @@ CoreInternalOutcome CdnIp::Deserialize(const Value &value)
     {
         if (!value["Location"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CdnIp.Location` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CdnIp.Location` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_location = string(value["Location"].GetString());
         m_locationHasBeenSet = true;
@@ -68,10 +68,10 @@ CoreInternalOutcome CdnIp::Deserialize(const Value &value)
     if (value.HasMember("History") && !value["History"].IsNull())
     {
         if (!value["History"].IsArray())
-            return CoreInternalOutcome(Error("response `CdnIp.History` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `CdnIp.History` is not array type"));
 
-        const Value &tmpValue = value["History"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["History"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             CdnIpHistory item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -89,64 +89,82 @@ CoreInternalOutcome CdnIp::Deserialize(const Value &value)
     {
         if (!value["Area"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CdnIp.Area` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CdnIp.Area` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_area = string(value["Area"].GetString());
         m_areaHasBeenSet = true;
+    }
+
+    if (value.HasMember("City") && !value["City"].IsNull())
+    {
+        if (!value["City"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CdnIp.City` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_city = string(value["City"].GetString());
+        m_cityHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void CdnIp::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void CdnIp::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_ipHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Ip";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ip.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ip.c_str(), allocator).Move(), allocator);
     }
 
     if (m_platformHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Platform";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_platform.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_platform.c_str(), allocator).Move(), allocator);
     }
 
     if (m_locationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Location";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_location.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_location.c_str(), allocator).Move(), allocator);
     }
 
     if (m_historyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "History";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_history.begin(); itr != m_history.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_areaHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Area";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_area.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_area.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_cityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "City";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_city.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -230,5 +248,21 @@ void CdnIp::SetArea(const string& _area)
 bool CdnIp::AreaHasBeenSet() const
 {
     return m_areaHasBeenSet;
+}
+
+string CdnIp::GetCity() const
+{
+    return m_city;
+}
+
+void CdnIp::SetCity(const string& _city)
+{
+    m_city = _city;
+    m_cityHasBeenSet = true;
+}
+
+bool CdnIp::CityHasBeenSet() const
+{
+    return m_cityHasBeenSet;
 }
 

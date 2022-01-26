@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ocr::V20181119::Model;
-using namespace rapidjson;
 using namespace std;
 
 TextDetection::TextDetection() :
@@ -26,11 +25,13 @@ TextDetection::TextDetection() :
     m_confidenceHasBeenSet(false),
     m_polygonHasBeenSet(false),
     m_advancedInfoHasBeenSet(false),
-    m_itemPolygonHasBeenSet(false)
+    m_itemPolygonHasBeenSet(false),
+    m_wordsHasBeenSet(false),
+    m_wordCoordPointHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome TextDetection::Deserialize(const Value &value)
+CoreInternalOutcome TextDetection::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +40,7 @@ CoreInternalOutcome TextDetection::Deserialize(const Value &value)
     {
         if (!value["DetectedText"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TextDetection.DetectedText` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TextDetection.DetectedText` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_detectedText = string(value["DetectedText"].GetString());
         m_detectedTextHasBeenSet = true;
@@ -49,7 +50,7 @@ CoreInternalOutcome TextDetection::Deserialize(const Value &value)
     {
         if (!value["Confidence"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TextDetection.Confidence` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TextDetection.Confidence` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_confidence = value["Confidence"].GetInt64();
         m_confidenceHasBeenSet = true;
@@ -58,10 +59,10 @@ CoreInternalOutcome TextDetection::Deserialize(const Value &value)
     if (value.HasMember("Polygon") && !value["Polygon"].IsNull())
     {
         if (!value["Polygon"].IsArray())
-            return CoreInternalOutcome(Error("response `TextDetection.Polygon` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `TextDetection.Polygon` is not array type"));
 
-        const Value &tmpValue = value["Polygon"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Polygon"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             Coord item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -79,7 +80,7 @@ CoreInternalOutcome TextDetection::Deserialize(const Value &value)
     {
         if (!value["AdvancedInfo"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TextDetection.AdvancedInfo` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TextDetection.AdvancedInfo` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_advancedInfo = string(value["AdvancedInfo"].GetString());
         m_advancedInfoHasBeenSet = true;
@@ -89,7 +90,7 @@ CoreInternalOutcome TextDetection::Deserialize(const Value &value)
     {
         if (!value["ItemPolygon"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `TextDetection.ItemPolygon` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TextDetection.ItemPolygon` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_itemPolygon.Deserialize(value["ItemPolygon"]);
@@ -102,24 +103,64 @@ CoreInternalOutcome TextDetection::Deserialize(const Value &value)
         m_itemPolygonHasBeenSet = true;
     }
 
+    if (value.HasMember("Words") && !value["Words"].IsNull())
+    {
+        if (!value["Words"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `TextDetection.Words` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["Words"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            DetectedWords item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_words.push_back(item);
+        }
+        m_wordsHasBeenSet = true;
+    }
+
+    if (value.HasMember("WordCoordPoint") && !value["WordCoordPoint"].IsNull())
+    {
+        if (!value["WordCoordPoint"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `TextDetection.WordCoordPoint` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["WordCoordPoint"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            DetectedWordCoordPoint item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_wordCoordPoint.push_back(item);
+        }
+        m_wordCoordPointHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void TextDetection::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TextDetection::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_detectedTextHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DetectedText";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_detectedText.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_detectedText.c_str(), allocator).Move(), allocator);
     }
 
     if (m_confidenceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Confidence";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_confidence, allocator);
@@ -127,34 +168,64 @@ void TextDetection::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_polygonHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Polygon";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_polygon.begin(); itr != m_polygon.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_advancedInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AdvancedInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_advancedInfo.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_advancedInfo.c_str(), allocator).Move(), allocator);
     }
 
     if (m_itemPolygonHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ItemPolygon";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_itemPolygon.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_wordsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Words";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_words.begin(); itr != m_words.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_wordCoordPointHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WordCoordPoint";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_wordCoordPoint.begin(); itr != m_wordCoordPoint.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
 }
@@ -238,5 +309,37 @@ void TextDetection::SetItemPolygon(const ItemCoord& _itemPolygon)
 bool TextDetection::ItemPolygonHasBeenSet() const
 {
     return m_itemPolygonHasBeenSet;
+}
+
+vector<DetectedWords> TextDetection::GetWords() const
+{
+    return m_words;
+}
+
+void TextDetection::SetWords(const vector<DetectedWords>& _words)
+{
+    m_words = _words;
+    m_wordsHasBeenSet = true;
+}
+
+bool TextDetection::WordsHasBeenSet() const
+{
+    return m_wordsHasBeenSet;
+}
+
+vector<DetectedWordCoordPoint> TextDetection::GetWordCoordPoint() const
+{
+    return m_wordCoordPoint;
+}
+
+void TextDetection::SetWordCoordPoint(const vector<DetectedWordCoordPoint>& _wordCoordPoint)
+{
+    m_wordCoordPoint = _wordCoordPoint;
+    m_wordCoordPointHasBeenSet = true;
+}
+
+bool TextDetection::WordCoordPointHasBeenSet() const
+{
+    return m_wordCoordPointHasBeenSet;
 }
 

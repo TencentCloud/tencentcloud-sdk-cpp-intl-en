@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ecdn::V20191012::Model;
-using namespace rapidjson;
 using namespace std;
 
 ClientCert::ClientCert() :
@@ -29,7 +28,7 @@ ClientCert::ClientCert() :
 {
 }
 
-CoreInternalOutcome ClientCert::Deserialize(const Value &value)
+CoreInternalOutcome ClientCert::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome ClientCert::Deserialize(const Value &value)
     {
         if (!value["Certificate"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClientCert.Certificate` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClientCert.Certificate` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_certificate = string(value["Certificate"].GetString());
         m_certificateHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome ClientCert::Deserialize(const Value &value)
     {
         if (!value["CertName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClientCert.CertName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClientCert.CertName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_certName = string(value["CertName"].GetString());
         m_certNameHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome ClientCert::Deserialize(const Value &value)
     {
         if (!value["ExpireTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClientCert.ExpireTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClientCert.ExpireTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_expireTime = string(value["ExpireTime"].GetString());
         m_expireTimeHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome ClientCert::Deserialize(const Value &value)
     {
         if (!value["DeployTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClientCert.DeployTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClientCert.DeployTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_deployTime = string(value["DeployTime"].GetString());
         m_deployTimeHasBeenSet = true;
@@ -78,39 +77,39 @@ CoreInternalOutcome ClientCert::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ClientCert::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ClientCert::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_certificateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Certificate";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_certificate.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_certificate.c_str(), allocator).Move(), allocator);
     }
 
     if (m_certNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CertName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_certName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_certName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_expireTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ExpireTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_expireTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_expireTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_deployTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DeployTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_deployTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_deployTime.c_str(), allocator).Move(), allocator);
     }
 
 }

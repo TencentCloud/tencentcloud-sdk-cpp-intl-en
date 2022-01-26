@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mdl::V20200326::Model;
-using namespace rapidjson;
 using namespace std;
 
 DrmKey::DrmKey() :
@@ -29,7 +28,7 @@ DrmKey::DrmKey() :
 {
 }
 
-CoreInternalOutcome DrmKey::Deserialize(const Value &value)
+CoreInternalOutcome DrmKey::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome DrmKey::Deserialize(const Value &value)
     {
         if (!value["Key"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DrmKey.Key` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DrmKey.Key` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_key = string(value["Key"].GetString());
         m_keyHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome DrmKey::Deserialize(const Value &value)
     {
         if (!value["Track"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DrmKey.Track` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DrmKey.Track` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_track = string(value["Track"].GetString());
         m_trackHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome DrmKey::Deserialize(const Value &value)
     {
         if (!value["KeyId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DrmKey.KeyId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DrmKey.KeyId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_keyId = string(value["KeyId"].GetString());
         m_keyIdHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome DrmKey::Deserialize(const Value &value)
     {
         if (!value["Iv"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DrmKey.Iv` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DrmKey.Iv` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_iv = string(value["Iv"].GetString());
         m_ivHasBeenSet = true;
@@ -78,39 +77,39 @@ CoreInternalOutcome DrmKey::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void DrmKey::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DrmKey::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_keyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Key";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_key.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_key.c_str(), allocator).Move(), allocator);
     }
 
     if (m_trackHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Track";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_track.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_track.c_str(), allocator).Move(), allocator);
     }
 
     if (m_keyIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "KeyId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_keyId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_keyId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ivHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Iv";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_iv.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_iv.c_str(), allocator).Move(), allocator);
     }
 
 }

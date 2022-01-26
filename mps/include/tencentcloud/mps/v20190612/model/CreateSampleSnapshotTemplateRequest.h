@@ -149,14 +149,26 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResolutionAdaptive 
+                     * 获取Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
+                     * @return ResolutionAdaptive Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
                      */
                     std::string GetResolutionAdaptive() const;
 
                     /**
-                     * 设置
-                     * @param ResolutionAdaptive 
+                     * 设置Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
+                     * @param ResolutionAdaptive Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
                      */
                     void SetResolutionAdaptive(const std::string& _resolutionAdaptive);
 
@@ -203,14 +215,34 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FillType 
+                     * 获取Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
+<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
+<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+Default value: black.
+                     * @return FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
+<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
+<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+Default value: black.
                      */
                     std::string GetFillType() const;
 
                     /**
-                     * 设置
-                     * @param FillType 
+                     * 设置Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
+<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
+<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+Default value: black.
+                     * @param FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
+<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
+<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+Default value: black.
                      */
                     void SetFillType(const std::string& _fillType);
 
@@ -257,7 +289,10 @@ namespace TencentCloud
                     bool m_heightHasBeenSet;
 
                     /**
-                     * 
+                     * Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
                      */
                     std::string m_resolutionAdaptive;
                     bool m_resolutionAdaptiveHasBeenSet;
@@ -275,7 +310,12 @@ namespace TencentCloud
                     bool m_commentHasBeenSet;
 
                     /**
-                     * 
+                     * Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
+<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
+<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+Default value: black.
                      */
                     std::string m_fillType;
                     bool m_fillTypeHasBeenSet;

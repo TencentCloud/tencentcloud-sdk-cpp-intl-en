@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 ConstantParameter::ConstantParameter() :
@@ -29,7 +28,7 @@ ConstantParameter::ConstantParameter() :
 {
 }
 
-CoreInternalOutcome ConstantParameter::Deserialize(const Value &value)
+CoreInternalOutcome ConstantParameter::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome ConstantParameter::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ConstantParameter.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ConstantParameter.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome ConstantParameter::Deserialize(const Value &value)
     {
         if (!value["Desc"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ConstantParameter.Desc` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ConstantParameter.Desc` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_desc = string(value["Desc"].GetString());
         m_descHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome ConstantParameter::Deserialize(const Value &value)
     {
         if (!value["Position"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ConstantParameter.Position` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ConstantParameter.Position` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_position = string(value["Position"].GetString());
         m_positionHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome ConstantParameter::Deserialize(const Value &value)
     {
         if (!value["DefaultValue"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ConstantParameter.DefaultValue` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ConstantParameter.DefaultValue` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_defaultValue = string(value["DefaultValue"].GetString());
         m_defaultValueHasBeenSet = true;
@@ -78,39 +77,39 @@ CoreInternalOutcome ConstantParameter::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ConstantParameter::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ConstantParameter::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_descHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Desc";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_desc.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_desc.c_str(), allocator).Move(), allocator);
     }
 
     if (m_positionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Position";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_position.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_position.c_str(), allocator).Move(), allocator);
     }
 
     if (m_defaultValueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DefaultValue";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_defaultValue.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_defaultValue.c_str(), allocator).Move(), allocator);
     }
 
 }

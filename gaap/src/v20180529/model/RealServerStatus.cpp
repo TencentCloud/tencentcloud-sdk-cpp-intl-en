@@ -18,17 +18,17 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 RealServerStatus::RealServerStatus() :
     m_realServerIdHasBeenSet(false),
     m_bindStatusHasBeenSet(false),
-    m_proxyIdHasBeenSet(false)
+    m_proxyIdHasBeenSet(false),
+    m_groupIdHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome RealServerStatus::Deserialize(const Value &value)
+CoreInternalOutcome RealServerStatus::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +37,7 @@ CoreInternalOutcome RealServerStatus::Deserialize(const Value &value)
     {
         if (!value["RealServerId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RealServerStatus.RealServerId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RealServerStatus.RealServerId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_realServerId = string(value["RealServerId"].GetString());
         m_realServerIdHasBeenSet = true;
@@ -47,7 +47,7 @@ CoreInternalOutcome RealServerStatus::Deserialize(const Value &value)
     {
         if (!value["BindStatus"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `RealServerStatus.BindStatus` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RealServerStatus.BindStatus` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_bindStatus = value["BindStatus"].GetInt64();
         m_bindStatusHasBeenSet = true;
@@ -57,30 +57,40 @@ CoreInternalOutcome RealServerStatus::Deserialize(const Value &value)
     {
         if (!value["ProxyId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RealServerStatus.ProxyId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RealServerStatus.ProxyId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_proxyId = string(value["ProxyId"].GetString());
         m_proxyIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("GroupId") && !value["GroupId"].IsNull())
+    {
+        if (!value["GroupId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `RealServerStatus.GroupId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_groupId = string(value["GroupId"].GetString());
+        m_groupIdHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void RealServerStatus::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void RealServerStatus::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_realServerIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RealServerId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_realServerId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_realServerId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_bindStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BindStatus";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_bindStatus, allocator);
@@ -88,10 +98,18 @@ void RealServerStatus::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_proxyIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProxyId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_proxyId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_proxyId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_groupIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GroupId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_groupId.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -143,5 +161,21 @@ void RealServerStatus::SetProxyId(const string& _proxyId)
 bool RealServerStatus::ProxyIdHasBeenSet() const
 {
     return m_proxyIdHasBeenSet;
+}
+
+string RealServerStatus::GetGroupId() const
+{
+    return m_groupId;
+}
+
+void RealServerStatus::SetGroupId(const string& _groupId)
+{
+    m_groupId = _groupId;
+    m_groupIdHasBeenSet = true;
+}
+
+bool RealServerStatus::GroupIdHasBeenSet() const
+{
+    return m_groupIdHasBeenSet;
 }
 

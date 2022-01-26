@@ -21,31 +21,34 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Kms::V20190118::Model;
-using namespace rapidjson;
 using namespace std;
 
 GetServiceStatusResponse::GetServiceStatusResponse() :
     m_serviceEnabledHasBeenSet(false),
-    m_invalidTypeHasBeenSet(false)
+    m_invalidTypeHasBeenSet(false),
+    m_userLevelHasBeenSet(false),
+    m_proExpireTimeHasBeenSet(false),
+    m_proRenewFlagHasBeenSet(false),
+    m_proResourceIdHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome GetServiceStatusResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -56,11 +59,11 @@ CoreInternalOutcome GetServiceStatusResponse::Deserialize(const string &payload)
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -68,7 +71,7 @@ CoreInternalOutcome GetServiceStatusResponse::Deserialize(const string &payload)
     {
         if (!rsp["ServiceEnabled"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `ServiceEnabled` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceEnabled` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_serviceEnabled = rsp["ServiceEnabled"].GetBool();
         m_serviceEnabledHasBeenSet = true;
@@ -78,14 +81,119 @@ CoreInternalOutcome GetServiceStatusResponse::Deserialize(const string &payload)
     {
         if (!rsp["InvalidType"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `InvalidType` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InvalidType` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_invalidType = rsp["InvalidType"].GetInt64();
         m_invalidTypeHasBeenSet = true;
     }
 
+    if (rsp.HasMember("UserLevel") && !rsp["UserLevel"].IsNull())
+    {
+        if (!rsp["UserLevel"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `UserLevel` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_userLevel = rsp["UserLevel"].GetUint64();
+        m_userLevelHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("ProExpireTime") && !rsp["ProExpireTime"].IsNull())
+    {
+        if (!rsp["ProExpireTime"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ProExpireTime` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_proExpireTime = rsp["ProExpireTime"].GetUint64();
+        m_proExpireTimeHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("ProRenewFlag") && !rsp["ProRenewFlag"].IsNull())
+    {
+        if (!rsp["ProRenewFlag"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ProRenewFlag` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_proRenewFlag = rsp["ProRenewFlag"].GetUint64();
+        m_proRenewFlagHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("ProResourceId") && !rsp["ProResourceId"].IsNull())
+    {
+        if (!rsp["ProResourceId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ProResourceId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_proResourceId = string(rsp["ProResourceId"].GetString());
+        m_proResourceIdHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
+}
+
+string GetServiceStatusResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_serviceEnabledHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ServiceEnabled";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_serviceEnabled, allocator);
+    }
+
+    if (m_invalidTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InvalidType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_invalidType, allocator);
+    }
+
+    if (m_userLevelHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UserLevel";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_userLevel, allocator);
+    }
+
+    if (m_proExpireTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProExpireTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_proExpireTime, allocator);
+    }
+
+    if (m_proRenewFlagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProRenewFlag";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_proRenewFlag, allocator);
+    }
+
+    if (m_proResourceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProResourceId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_proResourceId.c_str(), allocator).Move(), allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 
@@ -107,6 +215,46 @@ int64_t GetServiceStatusResponse::GetInvalidType() const
 bool GetServiceStatusResponse::InvalidTypeHasBeenSet() const
 {
     return m_invalidTypeHasBeenSet;
+}
+
+uint64_t GetServiceStatusResponse::GetUserLevel() const
+{
+    return m_userLevel;
+}
+
+bool GetServiceStatusResponse::UserLevelHasBeenSet() const
+{
+    return m_userLevelHasBeenSet;
+}
+
+uint64_t GetServiceStatusResponse::GetProExpireTime() const
+{
+    return m_proExpireTime;
+}
+
+bool GetServiceStatusResponse::ProExpireTimeHasBeenSet() const
+{
+    return m_proExpireTimeHasBeenSet;
+}
+
+uint64_t GetServiceStatusResponse::GetProRenewFlag() const
+{
+    return m_proRenewFlag;
+}
+
+bool GetServiceStatusResponse::ProRenewFlagHasBeenSet() const
+{
+    return m_proRenewFlagHasBeenSet;
+}
+
+string GetServiceStatusResponse::GetProResourceId() const
+{
+    return m_proResourceId;
+}
+
+bool GetServiceStatusResponse::ProResourceIdHasBeenSet() const
+{
+    return m_proResourceIdHasBeenSet;
 }
 
 

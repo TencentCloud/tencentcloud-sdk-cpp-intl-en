@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Sqlserver::V20180328::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateDBInstancesRequest::CreateDBInstancesRequest() :
@@ -36,28 +35,35 @@ CreateDBInstancesRequest::CreateDBInstancesRequest() :
     m_autoVoucherHasBeenSet(false),
     m_voucherIdsHasBeenSet(false),
     m_dBVersionHasBeenSet(false),
-    m_autoRenewFlagHasBeenSet(false)
+    m_autoRenewFlagHasBeenSet(false),
+    m_securityGroupListHasBeenSet(false),
+    m_weeklyHasBeenSet(false),
+    m_startTimeHasBeenSet(false),
+    m_spanHasBeenSet(false),
+    m_hATypeHasBeenSet(false),
+    m_multiZonesHasBeenSet(false),
+    m_resourceTagsHasBeenSet(false)
 {
 }
 
 string CreateDBInstancesRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_zoneHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Zone";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_zone.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_zone.c_str(), allocator).Move(), allocator);
     }
 
     if (m_memoryHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Memory";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_memory, allocator);
@@ -65,7 +71,7 @@ string CreateDBInstancesRequest::ToJsonString() const
 
     if (m_storageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Storage";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_storage, allocator);
@@ -73,15 +79,15 @@ string CreateDBInstancesRequest::ToJsonString() const
 
     if (m_instanceChargeTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceChargeType";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceChargeType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceChargeType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_projectIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProjectId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_projectId, allocator);
@@ -89,7 +95,7 @@ string CreateDBInstancesRequest::ToJsonString() const
 
     if (m_goodsNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "GoodsNum";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_goodsNum, allocator);
@@ -97,23 +103,23 @@ string CreateDBInstancesRequest::ToJsonString() const
 
     if (m_subnetIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubnetId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_subnetId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_subnetId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_vpcId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_vpcId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_periodHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Period";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_period, allocator);
@@ -121,7 +127,7 @@ string CreateDBInstancesRequest::ToJsonString() const
 
     if (m_autoVoucherHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AutoVoucher";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_autoVoucher, allocator);
@@ -129,36 +135,109 @@ string CreateDBInstancesRequest::ToJsonString() const
 
     if (m_voucherIdsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VoucherIds";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_voucherIds.begin(); itr != m_voucherIds.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_dBVersionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DBVersion";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_dBVersion.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_dBVersion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_autoRenewFlagHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AutoRenewFlag";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_autoRenewFlag, allocator);
     }
 
+    if (m_securityGroupListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SecurityGroupList";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+        for (auto itr = m_securityGroupList.begin(); itr != m_securityGroupList.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_weeklyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Weekly";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_weekly.begin(); itr != m_weekly.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
+        }
+    }
+
+    if (m_startTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StartTime";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_startTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_spanHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Span";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_span, allocator);
+    }
+
+    if (m_hATypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HAType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_hAType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_multiZonesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MultiZones";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_multiZones, allocator);
+    }
+
+    if (m_resourceTagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ResourceTags";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_resourceTags.begin(); itr != m_resourceTags.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -370,6 +449,118 @@ void CreateDBInstancesRequest::SetAutoRenewFlag(const int64_t& _autoRenewFlag)
 bool CreateDBInstancesRequest::AutoRenewFlagHasBeenSet() const
 {
     return m_autoRenewFlagHasBeenSet;
+}
+
+vector<string> CreateDBInstancesRequest::GetSecurityGroupList() const
+{
+    return m_securityGroupList;
+}
+
+void CreateDBInstancesRequest::SetSecurityGroupList(const vector<string>& _securityGroupList)
+{
+    m_securityGroupList = _securityGroupList;
+    m_securityGroupListHasBeenSet = true;
+}
+
+bool CreateDBInstancesRequest::SecurityGroupListHasBeenSet() const
+{
+    return m_securityGroupListHasBeenSet;
+}
+
+vector<int64_t> CreateDBInstancesRequest::GetWeekly() const
+{
+    return m_weekly;
+}
+
+void CreateDBInstancesRequest::SetWeekly(const vector<int64_t>& _weekly)
+{
+    m_weekly = _weekly;
+    m_weeklyHasBeenSet = true;
+}
+
+bool CreateDBInstancesRequest::WeeklyHasBeenSet() const
+{
+    return m_weeklyHasBeenSet;
+}
+
+string CreateDBInstancesRequest::GetStartTime() const
+{
+    return m_startTime;
+}
+
+void CreateDBInstancesRequest::SetStartTime(const string& _startTime)
+{
+    m_startTime = _startTime;
+    m_startTimeHasBeenSet = true;
+}
+
+bool CreateDBInstancesRequest::StartTimeHasBeenSet() const
+{
+    return m_startTimeHasBeenSet;
+}
+
+int64_t CreateDBInstancesRequest::GetSpan() const
+{
+    return m_span;
+}
+
+void CreateDBInstancesRequest::SetSpan(const int64_t& _span)
+{
+    m_span = _span;
+    m_spanHasBeenSet = true;
+}
+
+bool CreateDBInstancesRequest::SpanHasBeenSet() const
+{
+    return m_spanHasBeenSet;
+}
+
+string CreateDBInstancesRequest::GetHAType() const
+{
+    return m_hAType;
+}
+
+void CreateDBInstancesRequest::SetHAType(const string& _hAType)
+{
+    m_hAType = _hAType;
+    m_hATypeHasBeenSet = true;
+}
+
+bool CreateDBInstancesRequest::HATypeHasBeenSet() const
+{
+    return m_hATypeHasBeenSet;
+}
+
+bool CreateDBInstancesRequest::GetMultiZones() const
+{
+    return m_multiZones;
+}
+
+void CreateDBInstancesRequest::SetMultiZones(const bool& _multiZones)
+{
+    m_multiZones = _multiZones;
+    m_multiZonesHasBeenSet = true;
+}
+
+bool CreateDBInstancesRequest::MultiZonesHasBeenSet() const
+{
+    return m_multiZonesHasBeenSet;
+}
+
+vector<ResourceTag> CreateDBInstancesRequest::GetResourceTags() const
+{
+    return m_resourceTags;
+}
+
+void CreateDBInstancesRequest::SetResourceTags(const vector<ResourceTag>& _resourceTags)
+{
+    m_resourceTags = _resourceTags;
+    m_resourceTagsHasBeenSet = true;
+}
+
+bool CreateDBInstancesRequest::ResourceTagsHasBeenSet() const
+{
+    return m_resourceTagsHasBeenSet;
 }
 
 

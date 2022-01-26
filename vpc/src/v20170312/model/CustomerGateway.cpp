@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 CustomerGateway::CustomerGateway() :
@@ -29,7 +28,7 @@ CustomerGateway::CustomerGateway() :
 {
 }
 
-CoreInternalOutcome CustomerGateway::Deserialize(const Value &value)
+CoreInternalOutcome CustomerGateway::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome CustomerGateway::Deserialize(const Value &value)
     {
         if (!value["CustomerGatewayId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CustomerGateway.CustomerGatewayId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CustomerGateway.CustomerGatewayId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_customerGatewayId = string(value["CustomerGatewayId"].GetString());
         m_customerGatewayIdHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome CustomerGateway::Deserialize(const Value &value)
     {
         if (!value["CustomerGatewayName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CustomerGateway.CustomerGatewayName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CustomerGateway.CustomerGatewayName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_customerGatewayName = string(value["CustomerGatewayName"].GetString());
         m_customerGatewayNameHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome CustomerGateway::Deserialize(const Value &value)
     {
         if (!value["IpAddress"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CustomerGateway.IpAddress` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CustomerGateway.IpAddress` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ipAddress = string(value["IpAddress"].GetString());
         m_ipAddressHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome CustomerGateway::Deserialize(const Value &value)
     {
         if (!value["CreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CustomerGateway.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CustomerGateway.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createdTime = string(value["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
@@ -78,39 +77,39 @@ CoreInternalOutcome CustomerGateway::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void CustomerGateway::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void CustomerGateway::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_customerGatewayIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CustomerGatewayId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_customerGatewayId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_customerGatewayId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_customerGatewayNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CustomerGatewayName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_customerGatewayName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_customerGatewayName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ipAddressHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IpAddress";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ipAddress.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ipAddress.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createdTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createdTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
     }
 
 }

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 Address::Address() :
@@ -36,11 +35,15 @@ Address::Address() :
     m_addressTypeHasBeenSet(false),
     m_cascadeReleaseHasBeenSet(false),
     m_eipAlgTypeHasBeenSet(false),
-    m_internetServiceProviderHasBeenSet(false)
+    m_internetServiceProviderHasBeenSet(false),
+    m_localBgpHasBeenSet(false),
+    m_bandwidthHasBeenSet(false),
+    m_internetChargeTypeHasBeenSet(false),
+    m_tagSetHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome Address::Deserialize(const Value &value)
+CoreInternalOutcome Address::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -49,7 +52,7 @@ CoreInternalOutcome Address::Deserialize(const Value &value)
     {
         if (!value["AddressId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Address.AddressId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Address.AddressId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_addressId = string(value["AddressId"].GetString());
         m_addressIdHasBeenSet = true;
@@ -59,7 +62,7 @@ CoreInternalOutcome Address::Deserialize(const Value &value)
     {
         if (!value["AddressName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Address.AddressName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Address.AddressName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_addressName = string(value["AddressName"].GetString());
         m_addressNameHasBeenSet = true;
@@ -69,7 +72,7 @@ CoreInternalOutcome Address::Deserialize(const Value &value)
     {
         if (!value["AddressStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Address.AddressStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Address.AddressStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_addressStatus = string(value["AddressStatus"].GetString());
         m_addressStatusHasBeenSet = true;
@@ -79,7 +82,7 @@ CoreInternalOutcome Address::Deserialize(const Value &value)
     {
         if (!value["AddressIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Address.AddressIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Address.AddressIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_addressIp = string(value["AddressIp"].GetString());
         m_addressIpHasBeenSet = true;
@@ -89,7 +92,7 @@ CoreInternalOutcome Address::Deserialize(const Value &value)
     {
         if (!value["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Address.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Address.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(value["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -99,7 +102,7 @@ CoreInternalOutcome Address::Deserialize(const Value &value)
     {
         if (!value["CreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Address.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Address.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createdTime = string(value["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
@@ -109,7 +112,7 @@ CoreInternalOutcome Address::Deserialize(const Value &value)
     {
         if (!value["NetworkInterfaceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Address.NetworkInterfaceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Address.NetworkInterfaceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_networkInterfaceId = string(value["NetworkInterfaceId"].GetString());
         m_networkInterfaceIdHasBeenSet = true;
@@ -119,7 +122,7 @@ CoreInternalOutcome Address::Deserialize(const Value &value)
     {
         if (!value["PrivateAddressIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Address.PrivateAddressIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Address.PrivateAddressIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_privateAddressIp = string(value["PrivateAddressIp"].GetString());
         m_privateAddressIpHasBeenSet = true;
@@ -129,7 +132,7 @@ CoreInternalOutcome Address::Deserialize(const Value &value)
     {
         if (!value["IsArrears"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `Address.IsArrears` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Address.IsArrears` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_isArrears = value["IsArrears"].GetBool();
         m_isArrearsHasBeenSet = true;
@@ -139,7 +142,7 @@ CoreInternalOutcome Address::Deserialize(const Value &value)
     {
         if (!value["IsBlocked"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `Address.IsBlocked` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Address.IsBlocked` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_isBlocked = value["IsBlocked"].GetBool();
         m_isBlockedHasBeenSet = true;
@@ -149,7 +152,7 @@ CoreInternalOutcome Address::Deserialize(const Value &value)
     {
         if (!value["IsEipDirectConnection"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `Address.IsEipDirectConnection` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Address.IsEipDirectConnection` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_isEipDirectConnection = value["IsEipDirectConnection"].GetBool();
         m_isEipDirectConnectionHasBeenSet = true;
@@ -159,7 +162,7 @@ CoreInternalOutcome Address::Deserialize(const Value &value)
     {
         if (!value["AddressType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Address.AddressType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Address.AddressType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_addressType = string(value["AddressType"].GetString());
         m_addressTypeHasBeenSet = true;
@@ -169,7 +172,7 @@ CoreInternalOutcome Address::Deserialize(const Value &value)
     {
         if (!value["CascadeRelease"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `Address.CascadeRelease` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Address.CascadeRelease` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_cascadeRelease = value["CascadeRelease"].GetBool();
         m_cascadeReleaseHasBeenSet = true;
@@ -179,7 +182,7 @@ CoreInternalOutcome Address::Deserialize(const Value &value)
     {
         if (!value["EipAlgType"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `Address.EipAlgType` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Address.EipAlgType` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_eipAlgType.Deserialize(value["EipAlgType"]);
@@ -196,86 +199,136 @@ CoreInternalOutcome Address::Deserialize(const Value &value)
     {
         if (!value["InternetServiceProvider"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Address.InternetServiceProvider` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Address.InternetServiceProvider` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_internetServiceProvider = string(value["InternetServiceProvider"].GetString());
         m_internetServiceProviderHasBeenSet = true;
+    }
+
+    if (value.HasMember("LocalBgp") && !value["LocalBgp"].IsNull())
+    {
+        if (!value["LocalBgp"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `Address.LocalBgp` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_localBgp = value["LocalBgp"].GetBool();
+        m_localBgpHasBeenSet = true;
+    }
+
+    if (value.HasMember("Bandwidth") && !value["Bandwidth"].IsNull())
+    {
+        if (!value["Bandwidth"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `Address.Bandwidth` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_bandwidth = value["Bandwidth"].GetUint64();
+        m_bandwidthHasBeenSet = true;
+    }
+
+    if (value.HasMember("InternetChargeType") && !value["InternetChargeType"].IsNull())
+    {
+        if (!value["InternetChargeType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Address.InternetChargeType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_internetChargeType = string(value["InternetChargeType"].GetString());
+        m_internetChargeTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("TagSet") && !value["TagSet"].IsNull())
+    {
+        if (!value["TagSet"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Address.TagSet` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["TagSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            Tag item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_tagSet.push_back(item);
+        }
+        m_tagSetHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void Address::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Address::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_addressIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AddressId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_addressId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_addressId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_addressNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AddressName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_addressName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_addressName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_addressStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AddressStatus";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_addressStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_addressStatus.c_str(), allocator).Move(), allocator);
     }
 
     if (m_addressIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AddressIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_addressIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_addressIp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createdTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createdTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_networkInterfaceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetworkInterfaceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_networkInterfaceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_networkInterfaceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_privateAddressIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PrivateAddressIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_privateAddressIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_privateAddressIp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_isArrearsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsArrears";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isArrears, allocator);
@@ -283,7 +336,7 @@ void Address::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_isBlockedHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsBlocked";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isBlocked, allocator);
@@ -291,7 +344,7 @@ void Address::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_isEipDirectConnectionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsEipDirectConnection";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isEipDirectConnection, allocator);
@@ -299,15 +352,15 @@ void Address::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_addressTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AddressType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_addressType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_addressType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cascadeReleaseHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CascadeRelease";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cascadeRelease, allocator);
@@ -315,19 +368,58 @@ void Address::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_eipAlgTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EipAlgType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_eipAlgType.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_internetServiceProviderHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InternetServiceProvider";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_internetServiceProvider.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_internetServiceProvider.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_localBgpHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LocalBgp";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_localBgp, allocator);
+    }
+
+    if (m_bandwidthHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Bandwidth";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_bandwidth, allocator);
+    }
+
+    if (m_internetChargeTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InternetChargeType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_internetChargeType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_tagSetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TagSet";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tagSet.begin(); itr != m_tagSet.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
 }
@@ -571,5 +663,69 @@ void Address::SetInternetServiceProvider(const string& _internetServiceProvider)
 bool Address::InternetServiceProviderHasBeenSet() const
 {
     return m_internetServiceProviderHasBeenSet;
+}
+
+bool Address::GetLocalBgp() const
+{
+    return m_localBgp;
+}
+
+void Address::SetLocalBgp(const bool& _localBgp)
+{
+    m_localBgp = _localBgp;
+    m_localBgpHasBeenSet = true;
+}
+
+bool Address::LocalBgpHasBeenSet() const
+{
+    return m_localBgpHasBeenSet;
+}
+
+uint64_t Address::GetBandwidth() const
+{
+    return m_bandwidth;
+}
+
+void Address::SetBandwidth(const uint64_t& _bandwidth)
+{
+    m_bandwidth = _bandwidth;
+    m_bandwidthHasBeenSet = true;
+}
+
+bool Address::BandwidthHasBeenSet() const
+{
+    return m_bandwidthHasBeenSet;
+}
+
+string Address::GetInternetChargeType() const
+{
+    return m_internetChargeType;
+}
+
+void Address::SetInternetChargeType(const string& _internetChargeType)
+{
+    m_internetChargeType = _internetChargeType;
+    m_internetChargeTypeHasBeenSet = true;
+}
+
+bool Address::InternetChargeTypeHasBeenSet() const
+{
+    return m_internetChargeTypeHasBeenSet;
+}
+
+vector<Tag> Address::GetTagSet() const
+{
+    return m_tagSet;
+}
+
+void Address::SetTagSet(const vector<Tag>& _tagSet)
+{
+    m_tagSet = _tagSet;
+    m_tagSetHasBeenSet = true;
+}
+
+bool Address::TagSetHasBeenSet() const
+{
+    return m_tagSetHasBeenSet;
 }
 

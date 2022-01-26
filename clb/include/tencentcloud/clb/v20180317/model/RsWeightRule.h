@@ -48,14 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CLB listener ID
-                     * @return ListenerId CLB listener ID
+                     * 获取CLB listener ID.
+                     * @return ListenerId CLB listener ID.
                      */
                     std::string GetListenerId() const;
 
                     /**
-                     * 设置CLB listener ID
-                     * @param ListenerId CLB listener ID
+                     * 设置CLB listener ID.
+                     * @param ListenerId CLB listener ID.
                      */
                     void SetListenerId(const std::string& _listenerId);
 
@@ -66,14 +66,14 @@ namespace TencentCloud
                     bool ListenerIdHasBeenSet() const;
 
                     /**
-                     * 获取List of real servers for which to modify the weight
-                     * @return Targets List of real servers for which to modify the weight
+                     * 获取List of real servers whose weights to modify.
+                     * @return Targets List of real servers whose weights to modify.
                      */
                     std::vector<Target> GetTargets() const;
 
                     /**
-                     * 设置List of real servers for which to modify the weight
-                     * @param Targets List of real servers for which to modify the weight
+                     * 设置List of real servers whose weights to modify.
+                     * @param Targets List of real servers whose weights to modify.
                      */
                     void SetTargets(const std::vector<Target>& _targets);
 
@@ -84,14 +84,14 @@ namespace TencentCloud
                     bool TargetsHasBeenSet() const;
 
                     /**
-                     * 获取Forwarding rule ID
-                     * @return LocationId Forwarding rule ID
+                     * 获取Forwarding rule ID, which is required only for layer-7 rules.
+                     * @return LocationId Forwarding rule ID, which is required only for layer-7 rules.
                      */
                     std::string GetLocationId() const;
 
                     /**
-                     * 设置Forwarding rule ID
-                     * @param LocationId Forwarding rule ID
+                     * 设置Forwarding rule ID, which is required only for layer-7 rules.
+                     * @param LocationId Forwarding rule ID, which is required only for layer-7 rules.
                      */
                     void SetLocationId(const std::string& _locationId);
 
@@ -138,14 +138,14 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取New forwarding weight of a real server. Value range: 0-100.
-                     * @return Weight New forwarding weight of a real server. Value range: 0-100.
+                     * 获取The new forwarding weight of the real server. Value range: [0, 100]. This parameter takes lower precedence than `Weight` in [`Targets`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#Target), which means that this parameter only takes effect when the `Weight` in `RsWeightRule` is left empty.
+                     * @return Weight The new forwarding weight of the real server. Value range: [0, 100]. This parameter takes lower precedence than `Weight` in [`Targets`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#Target), which means that this parameter only takes effect when the `Weight` in `RsWeightRule` is left empty.
                      */
                     int64_t GetWeight() const;
 
                     /**
-                     * 设置New forwarding weight of a real server. Value range: 0-100.
-                     * @param Weight New forwarding weight of a real server. Value range: 0-100.
+                     * 设置The new forwarding weight of the real server. Value range: [0, 100]. This parameter takes lower precedence than `Weight` in [`Targets`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#Target), which means that this parameter only takes effect when the `Weight` in `RsWeightRule` is left empty.
+                     * @param Weight The new forwarding weight of the real server. Value range: [0, 100]. This parameter takes lower precedence than `Weight` in [`Targets`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#Target), which means that this parameter only takes effect when the `Weight` in `RsWeightRule` is left empty.
                      */
                     void SetWeight(const int64_t& _weight);
 
@@ -158,19 +158,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * CLB listener ID
+                     * CLB listener ID.
                      */
                     std::string m_listenerId;
                     bool m_listenerIdHasBeenSet;
 
                     /**
-                     * List of real servers for which to modify the weight
+                     * List of real servers whose weights to modify.
                      */
                     std::vector<Target> m_targets;
                     bool m_targetsHasBeenSet;
 
                     /**
-                     * Forwarding rule ID
+                     * Forwarding rule ID, which is required only for layer-7 rules.
                      */
                     std::string m_locationId;
                     bool m_locationIdHasBeenSet;
@@ -188,7 +188,7 @@ namespace TencentCloud
                     bool m_urlHasBeenSet;
 
                     /**
-                     * New forwarding weight of a real server. Value range: 0-100.
+                     * The new forwarding weight of the real server. Value range: [0, 100]. This parameter takes lower precedence than `Weight` in [`Targets`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#Target), which means that this parameter only takes effect when the `Weight` in `RsWeightRule` is left empty.
                      */
                     int64_t m_weight;
                     bool m_weightHasBeenSet;

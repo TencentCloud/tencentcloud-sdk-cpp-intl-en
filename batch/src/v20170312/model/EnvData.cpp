@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Batch::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 EnvData::EnvData() :
@@ -41,7 +40,7 @@ EnvData::EnvData() :
 {
 }
 
-CoreInternalOutcome EnvData::Deserialize(const Value &value)
+CoreInternalOutcome EnvData::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -50,7 +49,7 @@ CoreInternalOutcome EnvData::Deserialize(const Value &value)
     {
         if (!value["InstanceType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `EnvData.InstanceType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EnvData.InstanceType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceType = string(value["InstanceType"].GetString());
         m_instanceTypeHasBeenSet = true;
@@ -60,7 +59,7 @@ CoreInternalOutcome EnvData::Deserialize(const Value &value)
     {
         if (!value["ImageId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `EnvData.ImageId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EnvData.ImageId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_imageId = string(value["ImageId"].GetString());
         m_imageIdHasBeenSet = true;
@@ -70,7 +69,7 @@ CoreInternalOutcome EnvData::Deserialize(const Value &value)
     {
         if (!value["SystemDisk"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `EnvData.SystemDisk` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EnvData.SystemDisk` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_systemDisk.Deserialize(value["SystemDisk"]);
@@ -86,10 +85,10 @@ CoreInternalOutcome EnvData::Deserialize(const Value &value)
     if (value.HasMember("DataDisks") && !value["DataDisks"].IsNull())
     {
         if (!value["DataDisks"].IsArray())
-            return CoreInternalOutcome(Error("response `EnvData.DataDisks` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `EnvData.DataDisks` is not array type"));
 
-        const Value &tmpValue = value["DataDisks"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["DataDisks"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             DataDisk item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -107,7 +106,7 @@ CoreInternalOutcome EnvData::Deserialize(const Value &value)
     {
         if (!value["VirtualPrivateCloud"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `EnvData.VirtualPrivateCloud` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EnvData.VirtualPrivateCloud` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_virtualPrivateCloud.Deserialize(value["VirtualPrivateCloud"]);
@@ -124,7 +123,7 @@ CoreInternalOutcome EnvData::Deserialize(const Value &value)
     {
         if (!value["InternetAccessible"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `EnvData.InternetAccessible` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EnvData.InternetAccessible` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_internetAccessible.Deserialize(value["InternetAccessible"]);
@@ -141,7 +140,7 @@ CoreInternalOutcome EnvData::Deserialize(const Value &value)
     {
         if (!value["InstanceName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `EnvData.InstanceName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EnvData.InstanceName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceName = string(value["InstanceName"].GetString());
         m_instanceNameHasBeenSet = true;
@@ -151,7 +150,7 @@ CoreInternalOutcome EnvData::Deserialize(const Value &value)
     {
         if (!value["LoginSettings"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `EnvData.LoginSettings` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EnvData.LoginSettings` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_loginSettings.Deserialize(value["LoginSettings"]);
@@ -167,10 +166,10 @@ CoreInternalOutcome EnvData::Deserialize(const Value &value)
     if (value.HasMember("SecurityGroupIds") && !value["SecurityGroupIds"].IsNull())
     {
         if (!value["SecurityGroupIds"].IsArray())
-            return CoreInternalOutcome(Error("response `EnvData.SecurityGroupIds` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `EnvData.SecurityGroupIds` is not array type"));
 
-        const Value &tmpValue = value["SecurityGroupIds"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["SecurityGroupIds"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_securityGroupIds.push_back((*itr).GetString());
         }
@@ -181,7 +180,7 @@ CoreInternalOutcome EnvData::Deserialize(const Value &value)
     {
         if (!value["EnhancedService"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `EnvData.EnhancedService` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EnvData.EnhancedService` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_enhancedService.Deserialize(value["EnhancedService"]);
@@ -198,7 +197,7 @@ CoreInternalOutcome EnvData::Deserialize(const Value &value)
     {
         if (!value["InstanceChargeType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `EnvData.InstanceChargeType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EnvData.InstanceChargeType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceChargeType = string(value["InstanceChargeType"].GetString());
         m_instanceChargeTypeHasBeenSet = true;
@@ -208,7 +207,7 @@ CoreInternalOutcome EnvData::Deserialize(const Value &value)
     {
         if (!value["InstanceMarketOptions"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `EnvData.InstanceMarketOptions` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EnvData.InstanceMarketOptions` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_instanceMarketOptions.Deserialize(value["InstanceMarketOptions"]);
@@ -224,10 +223,10 @@ CoreInternalOutcome EnvData::Deserialize(const Value &value)
     if (value.HasMember("InstanceTypes") && !value["InstanceTypes"].IsNull())
     {
         if (!value["InstanceTypes"].IsArray())
-            return CoreInternalOutcome(Error("response `EnvData.InstanceTypes` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `EnvData.InstanceTypes` is not array type"));
 
-        const Value &tmpValue = value["InstanceTypes"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["InstanceTypes"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_instanceTypes.push_back((*itr).GetString());
         }
@@ -238,7 +237,7 @@ CoreInternalOutcome EnvData::Deserialize(const Value &value)
     {
         if (!value["InstanceTypeOptions"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `EnvData.InstanceTypeOptions` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EnvData.InstanceTypeOptions` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_instanceTypeOptions.Deserialize(value["InstanceTypeOptions"]);
@@ -254,10 +253,10 @@ CoreInternalOutcome EnvData::Deserialize(const Value &value)
     if (value.HasMember("Zones") && !value["Zones"].IsNull())
     {
         if (!value["Zones"].IsArray())
-            return CoreInternalOutcome(Error("response `EnvData.Zones` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `EnvData.Zones` is not array type"));
 
-        const Value &tmpValue = value["Zones"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Zones"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_zones.push_back((*itr).GetString());
         }
@@ -267,10 +266,10 @@ CoreInternalOutcome EnvData::Deserialize(const Value &value)
     if (value.HasMember("VirtualPrivateClouds") && !value["VirtualPrivateClouds"].IsNull())
     {
         if (!value["VirtualPrivateClouds"].IsArray())
-            return CoreInternalOutcome(Error("response `EnvData.VirtualPrivateClouds` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `EnvData.VirtualPrivateClouds` is not array type"));
 
-        const Value &tmpValue = value["VirtualPrivateClouds"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["VirtualPrivateClouds"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             VirtualPrivateCloud item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -288,169 +287,169 @@ CoreInternalOutcome EnvData::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void EnvData::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void EnvData::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_instanceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_imageIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ImageId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_imageId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_imageId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_systemDiskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SystemDisk";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_systemDisk.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_dataDisksHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DataDisks";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_dataDisks.begin(); itr != m_dataDisks.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_virtualPrivateCloudHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VirtualPrivateCloud";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_virtualPrivateCloud.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_internetAccessibleHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InternetAccessible";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_internetAccessible.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_instanceNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_loginSettingsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LoginSettings";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_loginSettings.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_securityGroupIdsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SecurityGroupIds";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_securityGroupIds.begin(); itr != m_securityGroupIds.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_enhancedServiceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EnhancedService";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_enhancedService.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_instanceChargeTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceChargeType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceChargeType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceChargeType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceMarketOptionsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceMarketOptions";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_instanceMarketOptions.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_instanceTypesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceTypes";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_instanceTypes.begin(); itr != m_instanceTypes.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_instanceTypeOptionsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceTypeOptions";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_instanceTypeOptions.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_zonesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Zones";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_zones.begin(); itr != m_zones.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_virtualPrivateCloudsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VirtualPrivateClouds";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_virtualPrivateClouds.begin(); itr != m_virtualPrivateClouds.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }

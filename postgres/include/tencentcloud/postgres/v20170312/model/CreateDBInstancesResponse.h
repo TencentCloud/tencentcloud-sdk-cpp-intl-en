@@ -40,6 +40,7 @@ namespace TencentCloud
                     CreateDBInstancesResponse();
                     ~CreateDBInstancesResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -55,8 +56,8 @@ namespace TencentCloud
                     bool DealNamesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BillId 
+                     * 获取Bill ID of frozen fees
+                     * @return BillId Bill ID of frozen fees
                      */
                     std::string GetBillId() const;
 
@@ -67,8 +68,8 @@ namespace TencentCloud
                     bool BillIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DBInstanceIdSet 
+                     * 获取ID set of instances which have been created successfully. The parameter value will be returned only when the billing mode is postpaid.
+                     * @return DBInstanceIdSet ID set of instances which have been created successfully. The parameter value will be returned only when the billing mode is postpaid.
                      */
                     std::vector<std::string> GetDBInstanceIdSet() const;
 
@@ -87,13 +88,13 @@ namespace TencentCloud
                     bool m_dealNamesHasBeenSet;
 
                     /**
-                     * 
+                     * Bill ID of frozen fees
                      */
                     std::string m_billId;
                     bool m_billIdHasBeenSet;
 
                     /**
-                     * 
+                     * ID set of instances which have been created successfully. The parameter value will be returned only when the billing mode is postpaid.
                      */
                     std::vector<std::string> m_dBInstanceIdSet;
                     bool m_dBInstanceIdSetHasBeenSet;

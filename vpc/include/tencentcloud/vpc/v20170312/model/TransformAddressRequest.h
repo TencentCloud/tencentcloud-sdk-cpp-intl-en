@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of the instance with a common public IP to be operated on, such as `ins-11112222`. You can query the instance ID by logging into the [Console](https://console.cloud.tencent.com/cvm). You can also obtain the parameter value from the `InstanceId` field in the returned result of [DescribeInstances](https://cloud.tencent.com/document/api/213/9389) API.
-                     * @return InstanceId The ID of the instance with a common public IP to be operated on, such as `ins-11112222`. You can query the instance ID by logging into the [Console](https://console.cloud.tencent.com/cvm). You can also obtain the parameter value from the `InstanceId` field in the returned result of [DescribeInstances](https://cloud.tencent.com/document/api/213/9389) API.
+                     * 获取The ID of the instance with a common public IP to be operated on, such as `ins-11112222`. You can query the instance ID by logging into the [CVM console](https://console.cloud.tencent.com/cvm). You can also obtain the parameter value from the `InstanceId` field in the returned result of the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/33256).
+                     * @return InstanceId The ID of the instance with a common public IP to be operated on, such as `ins-11112222`. You can query the instance ID by logging into the [CVM console](https://console.cloud.tencent.com/cvm). You can also obtain the parameter value from the `InstanceId` field in the returned result of the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/33256).
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置The ID of the instance with a common public IP to be operated on, such as `ins-11112222`. You can query the instance ID by logging into the [Console](https://console.cloud.tencent.com/cvm). You can also obtain the parameter value from the `InstanceId` field in the returned result of [DescribeInstances](https://cloud.tencent.com/document/api/213/9389) API.
-                     * @param InstanceId The ID of the instance with a common public IP to be operated on, such as `ins-11112222`. You can query the instance ID by logging into the [Console](https://console.cloud.tencent.com/cvm). You can also obtain the parameter value from the `InstanceId` field in the returned result of [DescribeInstances](https://cloud.tencent.com/document/api/213/9389) API.
+                     * 设置The ID of the instance with a common public IP to be operated on, such as `ins-11112222`. You can query the instance ID by logging into the [CVM console](https://console.cloud.tencent.com/cvm). You can also obtain the parameter value from the `InstanceId` field in the returned result of the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/33256).
+                     * @param InstanceId The ID of the instance with a common public IP to be operated on, such as `ins-11112222`. You can query the instance ID by logging into the [CVM console](https://console.cloud.tencent.com/cvm). You can also obtain the parameter value from the `InstanceId` field in the returned result of the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/33256).
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -63,7 +63,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ID of the instance with a common public IP to be operated on, such as `ins-11112222`. You can query the instance ID by logging into the [Console](https://console.cloud.tencent.com/cvm). You can also obtain the parameter value from the `InstanceId` field in the returned result of [DescribeInstances](https://cloud.tencent.com/document/api/213/9389) API.
+                     * The ID of the instance with a common public IP to be operated on, such as `ins-11112222`. You can query the instance ID by logging into the [CVM console](https://console.cloud.tencent.com/cvm). You can also obtain the parameter value from the `InstanceId` field in the returned result of the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/33256).
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

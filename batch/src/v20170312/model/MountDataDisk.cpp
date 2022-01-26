@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Batch::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 MountDataDisk::MountDataDisk() :
@@ -27,7 +26,7 @@ MountDataDisk::MountDataDisk() :
 {
 }
 
-CoreInternalOutcome MountDataDisk::Deserialize(const Value &value)
+CoreInternalOutcome MountDataDisk::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome MountDataDisk::Deserialize(const Value &value)
     {
         if (!value["LocalPath"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MountDataDisk.LocalPath` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MountDataDisk.LocalPath` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_localPath = string(value["LocalPath"].GetString());
         m_localPathHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome MountDataDisk::Deserialize(const Value &value)
     {
         if (!value["FileSystemType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MountDataDisk.FileSystemType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MountDataDisk.FileSystemType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fileSystemType = string(value["FileSystemType"].GetString());
         m_fileSystemTypeHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome MountDataDisk::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void MountDataDisk::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MountDataDisk::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_localPathHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LocalPath";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_localPath.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_localPath.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fileSystemTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileSystemType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fileSystemType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fileSystemType.c_str(), allocator).Move(), allocator);
     }
 
 }

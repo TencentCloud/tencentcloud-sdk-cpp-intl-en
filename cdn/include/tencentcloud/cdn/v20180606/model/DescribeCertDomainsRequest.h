@@ -60,6 +60,42 @@ namespace TencentCloud
                      */
                     bool CertHasBeenSet() const;
 
+                    /**
+                     * 获取Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+                     * @return CertId Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+                     */
+                    std::string GetCertId() const;
+
+                    /**
+                     * 设置Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+                     * @param CertId Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+                     */
+                    void SetCertId(const std::string& _certId);
+
+                    /**
+                     * 判断参数 CertId 是否已赋值
+                     * @return CertId 是否已赋值
+                     */
+                    bool CertIdHasBeenSet() const;
+
+                    /**
+                     * 获取Product of the domain name, either `cdn` (default) or `ecdn`.
+                     * @return Product Product of the domain name, either `cdn` (default) or `ecdn`.
+                     */
+                    std::string GetProduct() const;
+
+                    /**
+                     * 设置Product of the domain name, either `cdn` (default) or `ecdn`.
+                     * @param Product Product of the domain name, either `cdn` (default) or `ecdn`.
+                     */
+                    void SetProduct(const std::string& _product);
+
+                    /**
+                     * 判断参数 Product 是否已赋值
+                     * @return Product 是否已赋值
+                     */
+                    bool ProductHasBeenSet() const;
+
                 private:
 
                     /**
@@ -67,6 +103,18 @@ namespace TencentCloud
                      */
                     std::string m_cert;
                     bool m_certHasBeenSet;
+
+                    /**
+                     * Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+                     */
+                    std::string m_certId;
+                    bool m_certIdHasBeenSet;
+
+                    /**
+                     * Product of the domain name, either `cdn` (default) or `ecdn`.
+                     */
+                    std::string m_product;
+                    bool m_productHasBeenSet;
 
                 };
             }

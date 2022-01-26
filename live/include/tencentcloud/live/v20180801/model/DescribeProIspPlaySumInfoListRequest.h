@@ -91,14 +91,14 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Statistics type. Valid values: Province, Isp, CountryOrArea.
-                     * @return StatType Statistics type. Valid values: Province, Isp, CountryOrArea.
+                     * 获取Statistics type. Valid values: Province (district), Isp (ISP), CountryOrArea (country or region).
+                     * @return StatType Statistics type. Valid values: Province (district), Isp (ISP), CountryOrArea (country or region).
                      */
                     std::string GetStatType() const;
 
                     /**
-                     * 设置Statistics type. Valid values: Province, Isp, CountryOrArea.
-                     * @param StatType Statistics type. Valid values: Province, Isp, CountryOrArea.
+                     * 设置Statistics type. Valid values: Province (district), Isp (ISP), CountryOrArea (country or region).
+                     * @param StatType Statistics type. Valid values: Province (district), Isp (ISP), CountryOrArea (country or region).
                      */
                     void SetStatType(const std::string& _statType);
 
@@ -109,14 +109,14 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
                     bool StatTypeHasBeenSet() const;
 
                     /**
-                     * 获取If this parameter is left empty, full data will be queried.
-                     * @return PlayDomains If this parameter is left empty, full data will be queried.
+                     * 获取Playback domain name list. If it is left empty, it refers to all playback domain names.
+                     * @return PlayDomains Playback domain name list. If it is left empty, it refers to all playback domain names.
                      */
                     std::vector<std::string> GetPlayDomains() const;
 
                     /**
-                     * 设置If this parameter is left empty, full data will be queried.
-                     * @param PlayDomains If this parameter is left empty, full data will be queried.
+                     * 设置Playback domain name list. If it is left empty, it refers to all playback domain names.
+                     * @param PlayDomains Playback domain name list. If it is left empty, it refers to all playback domain names.
                      */
                     void SetPlayDomains(const std::vector<std::string>& _playDomains);
 
@@ -216,13 +216,13 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Statistics type. Valid values: Province, Isp, CountryOrArea.
+                     * Statistics type. Valid values: Province (district), Isp (ISP), CountryOrArea (country or region).
                      */
                     std::string m_statType;
                     bool m_statTypeHasBeenSet;
 
                     /**
-                     * If this parameter is left empty, full data will be queried.
+                     * Playback domain name list. If it is left empty, it refers to all playback domain names.
                      */
                     std::vector<std::string> m_playDomains;
                     bool m_playDomainsHasBeenSet;

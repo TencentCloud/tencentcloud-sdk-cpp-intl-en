@@ -18,18 +18,18 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mdl::V20200326::Model;
-using namespace rapidjson;
 using namespace std;
 
 OutputInfo::OutputInfo() :
     m_nameHasBeenSet(false),
     m_audioTemplateNamesHasBeenSet(false),
     m_videoTemplateNamesHasBeenSet(false),
-    m_scte35SettingsHasBeenSet(false)
+    m_scte35SettingsHasBeenSet(false),
+    m_aVTemplateNamesHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome OutputInfo::Deserialize(const Value &value)
+CoreInternalOutcome OutputInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +38,7 @@ CoreInternalOutcome OutputInfo::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `OutputInfo.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OutputInfo.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -47,10 +47,10 @@ CoreInternalOutcome OutputInfo::Deserialize(const Value &value)
     if (value.HasMember("AudioTemplateNames") && !value["AudioTemplateNames"].IsNull())
     {
         if (!value["AudioTemplateNames"].IsArray())
-            return CoreInternalOutcome(Error("response `OutputInfo.AudioTemplateNames` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `OutputInfo.AudioTemplateNames` is not array type"));
 
-        const Value &tmpValue = value["AudioTemplateNames"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["AudioTemplateNames"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_audioTemplateNames.push_back((*itr).GetString());
         }
@@ -60,10 +60,10 @@ CoreInternalOutcome OutputInfo::Deserialize(const Value &value)
     if (value.HasMember("VideoTemplateNames") && !value["VideoTemplateNames"].IsNull())
     {
         if (!value["VideoTemplateNames"].IsArray())
-            return CoreInternalOutcome(Error("response `OutputInfo.VideoTemplateNames` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `OutputInfo.VideoTemplateNames` is not array type"));
 
-        const Value &tmpValue = value["VideoTemplateNames"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["VideoTemplateNames"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_videoTemplateNames.push_back((*itr).GetString());
         }
@@ -74,7 +74,7 @@ CoreInternalOutcome OutputInfo::Deserialize(const Value &value)
     {
         if (!value["Scte35Settings"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `OutputInfo.Scte35Settings` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OutputInfo.Scte35Settings` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_scte35Settings.Deserialize(value["Scte35Settings"]);
@@ -87,54 +87,80 @@ CoreInternalOutcome OutputInfo::Deserialize(const Value &value)
         m_scte35SettingsHasBeenSet = true;
     }
 
+    if (value.HasMember("AVTemplateNames") && !value["AVTemplateNames"].IsNull())
+    {
+        if (!value["AVTemplateNames"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `OutputInfo.AVTemplateNames` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["AVTemplateNames"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_aVTemplateNames.push_back((*itr).GetString());
+        }
+        m_aVTemplateNamesHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void OutputInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void OutputInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_audioTemplateNamesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AudioTemplateNames";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_audioTemplateNames.begin(); itr != m_audioTemplateNames.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_videoTemplateNamesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VideoTemplateNames";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_videoTemplateNames.begin(); itr != m_videoTemplateNames.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_scte35SettingsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Scte35Settings";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_scte35Settings.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_aVTemplateNamesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AVTemplateNames";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_aVTemplateNames.begin(); itr != m_aVTemplateNames.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
 }
@@ -202,5 +228,21 @@ void OutputInfo::SetScte35Settings(const Scte35SettingsInfo& _scte35Settings)
 bool OutputInfo::Scte35SettingsHasBeenSet() const
 {
     return m_scte35SettingsHasBeenSet;
+}
+
+vector<string> OutputInfo::GetAVTemplateNames() const
+{
+    return m_aVTemplateNames;
+}
+
+void OutputInfo::SetAVTemplateNames(const vector<string>& _aVTemplateNames)
+{
+    m_aVTemplateNames = _aVTemplateNames;
+    m_aVTemplateNamesHasBeenSet = true;
+}
+
+bool OutputInfo::AVTemplateNamesHasBeenSet() const
+{
+    return m_aVTemplateNamesHasBeenSet;
 }
 

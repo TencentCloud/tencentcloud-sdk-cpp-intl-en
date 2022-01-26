@@ -121,18 +121,18 @@ namespace TencentCloud
                     bool DefaultLibraryLabelSetHasBeenSet() const;
 
                     /**
-                     * 获取Custom figure filter tag, which specifies the custom figure tag that needs to be returned. If this parameter is left empty or an empty value is entered, all results of the custom figures will be returned. Valid values:
-There can be up to 10 tags, each with a length limit of 16 characters.
-                     * @return UserDefineLibraryLabelSet Custom figure filter tag, which specifies the custom figure tag that needs to be returned. If this parameter is left empty or an empty value is entered, all results of the custom figures will be returned. Valid values:
-There can be up to 10 tags, each with a length limit of 16 characters.
+                     * 获取Custom face tags for filter, which specify the face recognition results to return. If this parameter is not specified or left empty, the recognition results for all custom face tags are returned.
+Up to 100 tags are allowed, each containing no more than 16 characters.
+                     * @return UserDefineLibraryLabelSet Custom face tags for filter, which specify the face recognition results to return. If this parameter is not specified or left empty, the recognition results for all custom face tags are returned.
+Up to 100 tags are allowed, each containing no more than 16 characters.
                      */
                     std::vector<std::string> GetUserDefineLibraryLabelSet() const;
 
                     /**
-                     * 设置Custom figure filter tag, which specifies the custom figure tag that needs to be returned. If this parameter is left empty or an empty value is entered, all results of the custom figures will be returned. Valid values:
-There can be up to 10 tags, each with a length limit of 16 characters.
-                     * @param UserDefineLibraryLabelSet Custom figure filter tag, which specifies the custom figure tag that needs to be returned. If this parameter is left empty or an empty value is entered, all results of the custom figures will be returned. Valid values:
-There can be up to 10 tags, each with a length limit of 16 characters.
+                     * 设置Custom face tags for filter, which specify the face recognition results to return. If this parameter is not specified or left empty, the recognition results for all custom face tags are returned.
+Up to 100 tags are allowed, each containing no more than 16 characters.
+                     * @param UserDefineLibraryLabelSet Custom face tags for filter, which specify the face recognition results to return. If this parameter is not specified or left empty, the recognition results for all custom face tags are returned.
+Up to 100 tags are allowed, each containing no more than 16 characters.
                      */
                     void SetUserDefineLibraryLabelSet(const std::vector<std::string>& _userDefineLibraryLabelSet);
 
@@ -202,8 +202,8 @@ Default value: All (both default and custom figure libraries will be used.)
                     bool m_defaultLibraryLabelSetHasBeenSet;
 
                     /**
-                     * Custom figure filter tag, which specifies the custom figure tag that needs to be returned. If this parameter is left empty or an empty value is entered, all results of the custom figures will be returned. Valid values:
-There can be up to 10 tags, each with a length limit of 16 characters.
+                     * Custom face tags for filter, which specify the face recognition results to return. If this parameter is not specified or left empty, the recognition results for all custom face tags are returned.
+Up to 100 tags are allowed, each containing no more than 16 characters.
                      */
                     std::vector<std::string> m_userDefineLibraryLabelSet;
                     bool m_userDefineLibraryLabelSetHasBeenSet;

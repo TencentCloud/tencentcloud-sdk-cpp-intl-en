@@ -21,6 +21,8 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/redis/v20180412/model/RedisNodeInfo.h>
+#include <tencentcloud/redis/v20180412/model/ResourceTag.h>
 
 
 namespace TencentCloud
@@ -43,32 +45,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取AZ ID of instance
-                     * @return ZoneId AZ ID of instance
-                     */
-                    uint64_t GetZoneId() const;
-
-                    /**
-                     * 设置AZ ID of instance
-                     * @param ZoneId AZ ID of instance
-                     */
-                    void SetZoneId(const uint64_t& _zoneId);
-
-                    /**
-                     * 判断参数 ZoneId 是否已赋值
-                     * @return ZoneId 是否已赋值
-                     */
-                    bool ZoneIdHasBeenSet() const;
-
-                    /**
-                     * 获取Instance type. Valid values: 2 (Redis 2.8 memory edition in standard architecture), 3 (Redis 3.2 memory edition in standard architecture), 4 (CKV 3.2 memory edition in standard architecture), 6 (Redis 4.0 memory edition in standard architecture), 7 (Redis 4.0 memory edition in cluster architecture), 8 (Redis 5.0 memory edition in standard architecture), 9 (Redis 5.0 memory edition in cluster architecture).
-                     * @return TypeId Instance type. Valid values: 2 (Redis 2.8 memory edition in standard architecture), 3 (Redis 3.2 memory edition in standard architecture), 4 (CKV 3.2 memory edition in standard architecture), 6 (Redis 4.0 memory edition in standard architecture), 7 (Redis 4.0 memory edition in cluster architecture), 8 (Redis 5.0 memory edition in standard architecture), 9 (Redis 5.0 memory edition in cluster architecture).
+                     * 获取Instance type. Valid values: 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
+                     * @return TypeId Instance type. Valid values: 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
                      */
                     uint64_t GetTypeId() const;
 
                     /**
-                     * 设置Instance type. Valid values: 2 (Redis 2.8 memory edition in standard architecture), 3 (Redis 3.2 memory edition in standard architecture), 4 (CKV 3.2 memory edition in standard architecture), 6 (Redis 4.0 memory edition in standard architecture), 7 (Redis 4.0 memory edition in cluster architecture), 8 (Redis 5.0 memory edition in standard architecture), 9 (Redis 5.0 memory edition in cluster architecture).
-                     * @param TypeId Instance type. Valid values: 2 (Redis 2.8 memory edition in standard architecture), 3 (Redis 3.2 memory edition in standard architecture), 4 (CKV 3.2 memory edition in standard architecture), 6 (Redis 4.0 memory edition in standard architecture), 7 (Redis 4.0 memory edition in cluster architecture), 8 (Redis 5.0 memory edition in standard architecture), 9 (Redis 5.0 memory edition in cluster architecture).
+                     * 设置Instance type. Valid values: 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
+                     * @param TypeId Instance type. Valid values: 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
                      */
                     void SetTypeId(const uint64_t& _typeId);
 
@@ -79,14 +63,14 @@ namespace TencentCloud
                     bool TypeIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance capacity in MB. The actual value is subject to the specifications returned by the purchasable specification querying API |
-                     * @return MemSize Instance capacity in MB. The actual value is subject to the specifications returned by the purchasable specification querying API |
+                     * 获取Instance capacity in MB. The value should be a multiple of 1,024 and is subject to the specifications returned by the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
+                     * @return MemSize Instance capacity in MB. The value should be a multiple of 1,024 and is subject to the specifications returned by the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
                      */
                     uint64_t GetMemSize() const;
 
                     /**
-                     * 设置Instance capacity in MB. The actual value is subject to the specifications returned by the purchasable specification querying API |
-                     * @param MemSize Instance capacity in MB. The actual value is subject to the specifications returned by the purchasable specification querying API |
+                     * 设置Instance capacity in MB. The value should be a multiple of 1,024 and is subject to the specifications returned by the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
+                     * @param MemSize Instance capacity in MB. The value should be a multiple of 1,024 and is subject to the specifications returned by the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
                      */
                     void SetMemSize(const uint64_t& _memSize);
 
@@ -97,14 +81,14 @@ namespace TencentCloud
                     bool MemSizeHasBeenSet() const;
 
                     /**
-                     * 获取Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the purchasable specification querying API
-                     * @return GoodsNum Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the purchasable specification querying API
+                     * 获取Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
+                     * @return GoodsNum Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
                      */
                     uint64_t GetGoodsNum() const;
 
                     /**
-                     * 设置Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the purchasable specification querying API
-                     * @param GoodsNum Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the purchasable specification querying API
+                     * 设置Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
+                     * @param GoodsNum Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
                      */
                     void SetGoodsNum(const uint64_t& _goodsNum);
 
@@ -115,14 +99,14 @@ namespace TencentCloud
                     bool GoodsNumHasBeenSet() const;
 
                     /**
-                     * 获取Length of purchase in months, which is required when creating a monthly subscribed instances. Value range: [1,2,3,4,5,6,7,8,9,10,11,12,24,36]. For pay-as-you-go instances, enter 1
-                     * @return Period Length of purchase in months, which is required when creating a monthly subscribed instances. Value range: [1,2,3,4,5,6,7,8,9,10,11,12,24,36]. For pay-as-you-go instances, enter 1
+                     * 获取Purchased usage period in months. which is required when creating an instance. For pay-as-you-go instances, the valid value is 1; for monthly subscription instances, the value range is [1,2,3,4,5,6,7,8,9,10,11,12,24,36].
+                     * @return Period Purchased usage period in months. which is required when creating an instance. For pay-as-you-go instances, the valid value is 1; for monthly subscription instances, the value range is [1,2,3,4,5,6,7,8,9,10,11,12,24,36].
                      */
                     uint64_t GetPeriod() const;
 
                     /**
-                     * 设置Length of purchase in months, which is required when creating a monthly subscribed instances. Value range: [1,2,3,4,5,6,7,8,9,10,11,12,24,36]. For pay-as-you-go instances, enter 1
-                     * @param Period Length of purchase in months, which is required when creating a monthly subscribed instances. Value range: [1,2,3,4,5,6,7,8,9,10,11,12,24,36]. For pay-as-you-go instances, enter 1
+                     * 设置Purchased usage period in months. which is required when creating an instance. For pay-as-you-go instances, the valid value is 1; for monthly subscription instances, the value range is [1,2,3,4,5,6,7,8,9,10,11,12,24,36].
+                     * @param Period Purchased usage period in months. which is required when creating an instance. For pay-as-you-go instances, the valid value is 1; for monthly subscription instances, the value range is [1,2,3,4,5,6,7,8,9,10,11,12,24,36].
                      */
                     void SetPeriod(const uint64_t& _period);
 
@@ -151,14 +135,40 @@ namespace TencentCloud
                     bool BillingModeHasBeenSet() const;
 
                     /**
-                     * 获取Instance password. It can contain 8-30 characters and must contain at least two of the following types of characters: lowercase letters, uppercase letters, digits, and special symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/). It cannot stat with the symbol (/).
-                     * @return Password Instance password. It can contain 8-30 characters and must contain at least two of the following types of characters: lowercase letters, uppercase letters, digits, and special symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/). It cannot stat with the symbol (/).
+                     * 获取Availability zone ID of the instance. For more information, please see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+                     * @return ZoneId Availability zone ID of the instance. For more information, please see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+                     */
+                    uint64_t GetZoneId() const;
+
+                    /**
+                     * 设置Availability zone ID of the instance. For more information, please see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+                     * @param ZoneId Availability zone ID of the instance. For more information, please see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+                     */
+                    void SetZoneId(const uint64_t& _zoneId);
+
+                    /**
+                     * 判断参数 ZoneId 是否已赋值
+                     * @return ZoneId 是否已赋值
+                     */
+                    bool ZoneIdHasBeenSet() const;
+
+                    /**
+                     * 获取Instance password. If the input parameter `NoAuth` is `true` and a VPC is used, the `Password` is optional; otherwise, it is required.
+If the instance type parameter `TypeId` indicates Redis 2.8, 4.0, or 5.0, the password cannot start with "/" and must contain 8-30 characters which are comprised of at least two of the following: lowercase letters, uppercase letters, digits, and special symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
+If the instance type parameter `TypeId` indicates CKV 3.2, the password contains 8-30 characters which must be comprised of only letters and digits.
+                     * @return Password Instance password. If the input parameter `NoAuth` is `true` and a VPC is used, the `Password` is optional; otherwise, it is required.
+If the instance type parameter `TypeId` indicates Redis 2.8, 4.0, or 5.0, the password cannot start with "/" and must contain 8-30 characters which are comprised of at least two of the following: lowercase letters, uppercase letters, digits, and special symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
+If the instance type parameter `TypeId` indicates CKV 3.2, the password contains 8-30 characters which must be comprised of only letters and digits.
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置Instance password. It can contain 8-30 characters and must contain at least two of the following types of characters: lowercase letters, uppercase letters, digits, and special symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/). It cannot stat with the symbol (/).
-                     * @param Password Instance password. It can contain 8-30 characters and must contain at least two of the following types of characters: lowercase letters, uppercase letters, digits, and special symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/). It cannot stat with the symbol (/).
+                     * 设置Instance password. If the input parameter `NoAuth` is `true` and a VPC is used, the `Password` is optional; otherwise, it is required.
+If the instance type parameter `TypeId` indicates Redis 2.8, 4.0, or 5.0, the password cannot start with "/" and must contain 8-30 characters which are comprised of at least two of the following: lowercase letters, uppercase letters, digits, and special symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
+If the instance type parameter `TypeId` indicates CKV 3.2, the password contains 8-30 characters which must be comprised of only letters and digits.
+                     * @param Password Instance password. If the input parameter `NoAuth` is `true` and a VPC is used, the `Password` is optional; otherwise, it is required.
+If the instance type parameter `TypeId` indicates Redis 2.8, 4.0, or 5.0, the password cannot start with "/" and must contain 8-30 characters which are comprised of at least two of the following: lowercase letters, uppercase letters, digits, and special symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
+If the instance type parameter `TypeId` indicates CKV 3.2, the password contains 8-30 characters which must be comprised of only letters and digits.
                      */
                     void SetPassword(const std::string& _password);
 
@@ -169,14 +179,14 @@ namespace TencentCloud
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID such as vpc-sad23jfdfk. If this parameter is not passed in, the basic network will be selected by default. Please use the VPC list querying API to query.
-                     * @return VpcId VPC ID such as vpc-sad23jfdfk. If this parameter is not passed in, the basic network will be selected by default. Please use the VPC list querying API to query.
+                     * 获取VPC ID, such as "vpc-sad23jfdfk". If this parameter is not passed in, the classic network will be selected by default. The parameter value can be queried by the `DescribeVpcs` API.
+                     * @return VpcId VPC ID, such as "vpc-sad23jfdfk". If this parameter is not passed in, the classic network will be selected by default. The parameter value can be queried by the `DescribeVpcs` API.
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID such as vpc-sad23jfdfk. If this parameter is not passed in, the basic network will be selected by default. Please use the VPC list querying API to query.
-                     * @param VpcId VPC ID such as vpc-sad23jfdfk. If this parameter is not passed in, the basic network will be selected by default. Please use the VPC list querying API to query.
+                     * 设置VPC ID, such as "vpc-sad23jfdfk". If this parameter is not passed in, the classic network will be selected by default. The parameter value can be queried by the `DescribeVpcs` API.
+                     * @param VpcId VPC ID, such as "vpc-sad23jfdfk". If this parameter is not passed in, the classic network will be selected by default. The parameter value can be queried by the `DescribeVpcs` API.
                      */
                     void SetVpcId(const std::string& _vpcId);
 
@@ -187,14 +197,14 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取In a basic network, subnetId is invalid. In a VPC subnet, the value is the subnet ID, such as subnet-fdj24n34j2
-                     * @return SubnetId In a basic network, subnetId is invalid. In a VPC subnet, the value is the subnet ID, such as subnet-fdj24n34j2
+                     * 获取In a classic network, `subnetId` is invalid. In a VPC subnet, the value can be queried by the `DescribeSubnets` API, such as "subnet-fdj24n34j2".
+                     * @return SubnetId In a classic network, `subnetId` is invalid. In a VPC subnet, the value can be queried by the `DescribeSubnets` API, such as "subnet-fdj24n34j2".
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置In a basic network, subnetId is invalid. In a VPC subnet, the value is the subnet ID, such as subnet-fdj24n34j2
-                     * @param SubnetId In a basic network, subnetId is invalid. In a VPC subnet, the value is the subnet ID, such as subnet-fdj24n34j2
+                     * 设置In a classic network, `subnetId` is invalid. In a VPC subnet, the value can be queried by the `DescribeSubnets` API, such as "subnet-fdj24n34j2".
+                     * @param SubnetId In a classic network, `subnetId` is invalid. In a VPC subnet, the value can be queried by the `DescribeSubnets` API, such as "subnet-fdj24n34j2".
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
@@ -205,14 +215,14 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Project ID. The value is subject to the projectId returned by user account > user account-related querying APIs > project list
-                     * @return ProjectId Project ID. The value is subject to the projectId returned by user account > user account-related querying APIs > project list
+                     * 获取Project ID. The value is subject to the `projectId` returned by the `DescribeProject` API.
+                     * @return ProjectId Project ID. The value is subject to the `projectId` returned by the `DescribeProject` API.
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID. The value is subject to the projectId returned by user account > user account-related querying APIs > project list
-                     * @param ProjectId Project ID. The value is subject to the projectId returned by user account > user account-related querying APIs > project list
+                     * 设置Project ID. The value is subject to the `projectId` returned by the `DescribeProject` API.
+                     * @param ProjectId Project ID. The value is subject to the `projectId` returned by the `DescribeProject` API.
                      */
                     void SetProjectId(const int64_t& _projectId);
 
@@ -223,14 +233,14 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
-                     * @return AutoRenew Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+                     * 获取Auto-renewal flag. Valid values: 0 (default status, indicating manual renewal), 1 (auto-renewal enabled), 2 (auto-renewal disabled)
+                     * @return AutoRenew Auto-renewal flag. Valid values: 0 (default status, indicating manual renewal), 1 (auto-renewal enabled), 2 (auto-renewal disabled)
                      */
                     uint64_t GetAutoRenew() const;
 
                     /**
-                     * 设置Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
-                     * @param AutoRenew Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+                     * 设置Auto-renewal flag. Valid values: 0 (default status, indicating manual renewal), 1 (auto-renewal enabled), 2 (auto-renewal disabled)
+                     * @param AutoRenew Auto-renewal flag. Valid values: 0 (default status, indicating manual renewal), 1 (auto-renewal enabled), 2 (auto-renewal disabled)
                      */
                     void SetAutoRenew(const uint64_t& _autoRenew);
 
@@ -259,14 +269,14 @@ namespace TencentCloud
                     bool SecurityGroupIdListHasBeenSet() const;
 
                     /**
-                     * 获取User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535]
-                     * @return VPort User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535]
+                     * 获取User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024, 65535].
+                     * @return VPort User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024, 65535].
                      */
                     uint64_t GetVPort() const;
 
                     /**
-                     * 设置User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535]
-                     * @param VPort User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535]
+                     * 设置User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024, 65535].
+                     * @param VPort User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024, 65535].
                      */
                     void SetVPort(const uint64_t& _vPort);
 
@@ -277,14 +287,14 @@ namespace TencentCloud
                     bool VPortHasBeenSet() const;
 
                     /**
-                     * 获取Number of shards in an instance. This parameter is required for cluster edition instances. Valid values: 3, 5, 8, 12, 16, 24, 32, 64, 96, 128.
-                     * @return RedisShardNum Number of shards in an instance. This parameter is required for cluster edition instances. Valid values: 3, 5, 8, 12, 16, 24, 32, 64, 96, 128.
+                     * 获取Number of shards in an instance. This parameter is required for instances in cluster architecture. Value range: [3,5,8,12,16,24,32,64,96,128].
+                     * @return RedisShardNum Number of shards in an instance. This parameter is required for instances in cluster architecture. Value range: [3,5,8,12,16,24,32,64,96,128].
                      */
                     int64_t GetRedisShardNum() const;
 
                     /**
-                     * 设置Number of shards in an instance. This parameter is required for cluster edition instances. Valid values: 3, 5, 8, 12, 16, 24, 32, 64, 96, 128.
-                     * @param RedisShardNum Number of shards in an instance. This parameter is required for cluster edition instances. Valid values: 3, 5, 8, 12, 16, 24, 32, 64, 96, 128.
+                     * 设置Number of shards in an instance. This parameter is required for instances in cluster architecture. Value range: [3,5,8,12,16,24,32,64,96,128].
+                     * @param RedisShardNum Number of shards in an instance. This parameter is required for instances in cluster architecture. Value range: [3,5,8,12,16,24,32,64,96,128].
                      */
                     void SetRedisShardNum(const int64_t& _redisShardNum);
 
@@ -313,14 +323,14 @@ namespace TencentCloud
                     bool RedisReplicasNumHasBeenSet() const;
 
                     /**
-                     * 获取Whether to support read-only replicas. Neither Redis 2.8 standard edition nor CKV standard edition supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed on slave nodes. To enable read-only replicas, we recommend you create 2 or more replicas.
-                     * @return ReplicasReadonly Whether to support read-only replicas. Neither Redis 2.8 standard edition nor CKV standard edition supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed on slave nodes. To enable read-only replicas, we recommend you create 2 or more replicas.
+                     * 获取Whether to support read-only replicas. Neither Redis 2.8 in standard architecture nor CKV in standard architecture supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed on the replica nodes. To enable read-only replicas, we recommend that you create 2 or more replicas.
+                     * @return ReplicasReadonly Whether to support read-only replicas. Neither Redis 2.8 in standard architecture nor CKV in standard architecture supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed on the replica nodes. To enable read-only replicas, we recommend that you create 2 or more replicas.
                      */
                     bool GetReplicasReadonly() const;
 
                     /**
-                     * 设置Whether to support read-only replicas. Neither Redis 2.8 standard edition nor CKV standard edition supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed on slave nodes. To enable read-only replicas, we recommend you create 2 or more replicas.
-                     * @param ReplicasReadonly Whether to support read-only replicas. Neither Redis 2.8 standard edition nor CKV standard edition supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed on slave nodes. To enable read-only replicas, we recommend you create 2 or more replicas.
+                     * 设置Whether to support read-only replicas. Neither Redis 2.8 in standard architecture nor CKV in standard architecture supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed on the replica nodes. To enable read-only replicas, we recommend that you create 2 or more replicas.
+                     * @param ReplicasReadonly Whether to support read-only replicas. Neither Redis 2.8 in standard architecture nor CKV in standard architecture supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed on the replica nodes. To enable read-only replicas, we recommend that you create 2 or more replicas.
                      */
                     void SetReplicasReadonly(const bool& _replicasReadonly);
 
@@ -331,14 +341,14 @@ namespace TencentCloud
                     bool ReplicasReadonlyHasBeenSet() const;
 
                     /**
-                     * 获取Instance name. It contains only letters, digits, underscores, and dashes with a length of up to 60 characters.
-                     * @return InstanceName Instance name. It contains only letters, digits, underscores, and dashes with a length of up to 60 characters.
+                     * 获取Instance name. It contains only letters, digits, and symbols (-_) with a length of up to 60 characters.
+                     * @return InstanceName Instance name. It contains only letters, digits, and symbols (-_) with a length of up to 60 characters.
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name. It contains only letters, digits, underscores, and dashes with a length of up to 60 characters.
-                     * @param InstanceName Instance name. It contains only letters, digits, underscores, and dashes with a length of up to 60 characters.
+                     * 设置Instance name. It contains only letters, digits, and symbols (-_) with a length of up to 60 characters.
+                     * @param InstanceName Instance name. It contains only letters, digits, and symbols (-_) with a length of up to 60 characters.
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
@@ -366,34 +376,100 @@ namespace TencentCloud
                      */
                     bool NoAuthHasBeenSet() const;
 
+                    /**
+                     * 获取Node information of an instance. Currently, information about the node type (master or replica) and node availability zone can be passed in. This parameter is not required for instances deployed in a single availability zone.
+                     * @return NodeSet Node information of an instance. Currently, information about the node type (master or replica) and node availability zone can be passed in. This parameter is not required for instances deployed in a single availability zone.
+                     */
+                    std::vector<RedisNodeInfo> GetNodeSet() const;
+
+                    /**
+                     * 设置Node information of an instance. Currently, information about the node type (master or replica) and node availability zone can be passed in. This parameter is not required for instances deployed in a single availability zone.
+                     * @param NodeSet Node information of an instance. Currently, information about the node type (master or replica) and node availability zone can be passed in. This parameter is not required for instances deployed in a single availability zone.
+                     */
+                    void SetNodeSet(const std::vector<RedisNodeInfo>& _nodeSet);
+
+                    /**
+                     * 判断参数 NodeSet 是否已赋值
+                     * @return NodeSet 是否已赋值
+                     */
+                    bool NodeSetHasBeenSet() const;
+
+                    /**
+                     * 获取The tag bound with the instance to be purchased
+                     * @return ResourceTags The tag bound with the instance to be purchased
+                     */
+                    std::vector<ResourceTag> GetResourceTags() const;
+
+                    /**
+                     * 设置The tag bound with the instance to be purchased
+                     * @param ResourceTags The tag bound with the instance to be purchased
+                     */
+                    void SetResourceTags(const std::vector<ResourceTag>& _resourceTags);
+
+                    /**
+                     * 判断参数 ResourceTags 是否已赋值
+                     * @return ResourceTags 是否已赋值
+                     */
+                    bool ResourceTagsHasBeenSet() const;
+
+                    /**
+                     * 获取Name of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+                     * @return ZoneName Name of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+                     */
+                    std::string GetZoneName() const;
+
+                    /**
+                     * 设置Name of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+                     * @param ZoneName Name of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+                     */
+                    void SetZoneName(const std::string& _zoneName);
+
+                    /**
+                     * 判断参数 ZoneName 是否已赋值
+                     * @return ZoneName 是否已赋值
+                     */
+                    bool ZoneNameHasBeenSet() const;
+
+                    /**
+                     * 获取ID of the parameter template applied to the created instance. If this parameter is left blank, the default parameter template will be applied.
+                     * @return TemplateId ID of the parameter template applied to the created instance. If this parameter is left blank, the default parameter template will be applied.
+                     */
+                    std::string GetTemplateId() const;
+
+                    /**
+                     * 设置ID of the parameter template applied to the created instance. If this parameter is left blank, the default parameter template will be applied.
+                     * @param TemplateId ID of the parameter template applied to the created instance. If this parameter is left blank, the default parameter template will be applied.
+                     */
+                    void SetTemplateId(const std::string& _templateId);
+
+                    /**
+                     * 判断参数 TemplateId 是否已赋值
+                     * @return TemplateId 是否已赋值
+                     */
+                    bool TemplateIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * AZ ID of instance
-                     */
-                    uint64_t m_zoneId;
-                    bool m_zoneIdHasBeenSet;
-
-                    /**
-                     * Instance type. Valid values: 2 (Redis 2.8 memory edition in standard architecture), 3 (Redis 3.2 memory edition in standard architecture), 4 (CKV 3.2 memory edition in standard architecture), 6 (Redis 4.0 memory edition in standard architecture), 7 (Redis 4.0 memory edition in cluster architecture), 8 (Redis 5.0 memory edition in standard architecture), 9 (Redis 5.0 memory edition in cluster architecture).
+                     * Instance type. Valid values: 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
                      */
                     uint64_t m_typeId;
                     bool m_typeIdHasBeenSet;
 
                     /**
-                     * Instance capacity in MB. The actual value is subject to the specifications returned by the purchasable specification querying API |
+                     * Instance capacity in MB. The value should be a multiple of 1,024 and is subject to the specifications returned by the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
                      */
                     uint64_t m_memSize;
                     bool m_memSizeHasBeenSet;
 
                     /**
-                     * Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the purchasable specification querying API
+                     * Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
                      */
                     uint64_t m_goodsNum;
                     bool m_goodsNumHasBeenSet;
 
                     /**
-                     * Length of purchase in months, which is required when creating a monthly subscribed instances. Value range: [1,2,3,4,5,6,7,8,9,10,11,12,24,36]. For pay-as-you-go instances, enter 1
+                     * Purchased usage period in months. which is required when creating an instance. For pay-as-you-go instances, the valid value is 1; for monthly subscription instances, the value range is [1,2,3,4,5,6,7,8,9,10,11,12,24,36].
                      */
                     uint64_t m_period;
                     bool m_periodHasBeenSet;
@@ -405,31 +481,39 @@ namespace TencentCloud
                     bool m_billingModeHasBeenSet;
 
                     /**
-                     * Instance password. It can contain 8-30 characters and must contain at least two of the following types of characters: lowercase letters, uppercase letters, digits, and special symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/). It cannot stat with the symbol (/).
+                     * Availability zone ID of the instance. For more information, please see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+                     */
+                    uint64_t m_zoneId;
+                    bool m_zoneIdHasBeenSet;
+
+                    /**
+                     * Instance password. If the input parameter `NoAuth` is `true` and a VPC is used, the `Password` is optional; otherwise, it is required.
+If the instance type parameter `TypeId` indicates Redis 2.8, 4.0, or 5.0, the password cannot start with "/" and must contain 8-30 characters which are comprised of at least two of the following: lowercase letters, uppercase letters, digits, and special symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
+If the instance type parameter `TypeId` indicates CKV 3.2, the password contains 8-30 characters which must be comprised of only letters and digits.
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * VPC ID such as vpc-sad23jfdfk. If this parameter is not passed in, the basic network will be selected by default. Please use the VPC list querying API to query.
+                     * VPC ID, such as "vpc-sad23jfdfk". If this parameter is not passed in, the classic network will be selected by default. The parameter value can be queried by the `DescribeVpcs` API.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * In a basic network, subnetId is invalid. In a VPC subnet, the value is the subnet ID, such as subnet-fdj24n34j2
+                     * In a classic network, `subnetId` is invalid. In a VPC subnet, the value can be queried by the `DescribeSubnets` API, such as "subnet-fdj24n34j2".
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Project ID. The value is subject to the projectId returned by user account > user account-related querying APIs > project list
+                     * Project ID. The value is subject to the `projectId` returned by the `DescribeProject` API.
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+                     * Auto-renewal flag. Valid values: 0 (default status, indicating manual renewal), 1 (auto-renewal enabled), 2 (auto-renewal disabled)
                      */
                     uint64_t m_autoRenew;
                     bool m_autoRenewHasBeenSet;
@@ -441,13 +525,13 @@ namespace TencentCloud
                     bool m_securityGroupIdListHasBeenSet;
 
                     /**
-                     * User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535]
+                     * User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024, 65535].
                      */
                     uint64_t m_vPort;
                     bool m_vPortHasBeenSet;
 
                     /**
-                     * Number of shards in an instance. This parameter is required for cluster edition instances. Valid values: 3, 5, 8, 12, 16, 24, 32, 64, 96, 128.
+                     * Number of shards in an instance. This parameter is required for instances in cluster architecture. Value range: [3,5,8,12,16,24,32,64,96,128].
                      */
                     int64_t m_redisShardNum;
                     bool m_redisShardNumHasBeenSet;
@@ -459,13 +543,13 @@ namespace TencentCloud
                     bool m_redisReplicasNumHasBeenSet;
 
                     /**
-                     * Whether to support read-only replicas. Neither Redis 2.8 standard edition nor CKV standard edition supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed on slave nodes. To enable read-only replicas, we recommend you create 2 or more replicas.
+                     * Whether to support read-only replicas. Neither Redis 2.8 in standard architecture nor CKV in standard architecture supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed on the replica nodes. To enable read-only replicas, we recommend that you create 2 or more replicas.
                      */
                     bool m_replicasReadonly;
                     bool m_replicasReadonlyHasBeenSet;
 
                     /**
-                     * Instance name. It contains only letters, digits, underscores, and dashes with a length of up to 60 characters.
+                     * Instance name. It contains only letters, digits, and symbols (-_) with a length of up to 60 characters.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
@@ -475,6 +559,30 @@ namespace TencentCloud
                      */
                     bool m_noAuth;
                     bool m_noAuthHasBeenSet;
+
+                    /**
+                     * Node information of an instance. Currently, information about the node type (master or replica) and node availability zone can be passed in. This parameter is not required for instances deployed in a single availability zone.
+                     */
+                    std::vector<RedisNodeInfo> m_nodeSet;
+                    bool m_nodeSetHasBeenSet;
+
+                    /**
+                     * The tag bound with the instance to be purchased
+                     */
+                    std::vector<ResourceTag> m_resourceTags;
+                    bool m_resourceTagsHasBeenSet;
+
+                    /**
+                     * Name of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+                     */
+                    std::string m_zoneName;
+                    bool m_zoneNameHasBeenSet;
+
+                    /**
+                     * ID of the parameter template applied to the created instance. If this parameter is left blank, the default parameter template will be applied.
+                     */
+                    std::string m_templateId;
+                    bool m_templateIdHasBeenSet;
 
                 };
             }

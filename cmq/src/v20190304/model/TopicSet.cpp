@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cmq::V20190304::Model;
-using namespace rapidjson;
 using namespace std;
 
 TopicSet::TopicSet() :
@@ -37,7 +36,7 @@ TopicSet::TopicSet() :
 {
 }
 
-CoreInternalOutcome TopicSet::Deserialize(const Value &value)
+CoreInternalOutcome TopicSet::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -46,7 +45,7 @@ CoreInternalOutcome TopicSet::Deserialize(const Value &value)
     {
         if (!value["TopicId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TopicSet.TopicId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicSet.TopicId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_topicId = string(value["TopicId"].GetString());
         m_topicIdHasBeenSet = true;
@@ -56,7 +55,7 @@ CoreInternalOutcome TopicSet::Deserialize(const Value &value)
     {
         if (!value["TopicName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TopicSet.TopicName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicSet.TopicName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_topicName = string(value["TopicName"].GetString());
         m_topicNameHasBeenSet = true;
@@ -66,7 +65,7 @@ CoreInternalOutcome TopicSet::Deserialize(const Value &value)
     {
         if (!value["MsgRetentionSeconds"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TopicSet.MsgRetentionSeconds` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicSet.MsgRetentionSeconds` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_msgRetentionSeconds = value["MsgRetentionSeconds"].GetUint64();
         m_msgRetentionSecondsHasBeenSet = true;
@@ -76,7 +75,7 @@ CoreInternalOutcome TopicSet::Deserialize(const Value &value)
     {
         if (!value["MaxMsgSize"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TopicSet.MaxMsgSize` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicSet.MaxMsgSize` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_maxMsgSize = value["MaxMsgSize"].GetUint64();
         m_maxMsgSizeHasBeenSet = true;
@@ -86,7 +85,7 @@ CoreInternalOutcome TopicSet::Deserialize(const Value &value)
     {
         if (!value["Qps"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TopicSet.Qps` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicSet.Qps` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_qps = value["Qps"].GetUint64();
         m_qpsHasBeenSet = true;
@@ -96,7 +95,7 @@ CoreInternalOutcome TopicSet::Deserialize(const Value &value)
     {
         if (!value["FilterType"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TopicSet.FilterType` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicSet.FilterType` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_filterType = value["FilterType"].GetUint64();
         m_filterTypeHasBeenSet = true;
@@ -106,7 +105,7 @@ CoreInternalOutcome TopicSet::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TopicSet.CreateTime` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicSet.CreateTime` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = value["CreateTime"].GetUint64();
         m_createTimeHasBeenSet = true;
@@ -116,7 +115,7 @@ CoreInternalOutcome TopicSet::Deserialize(const Value &value)
     {
         if (!value["LastModifyTime"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TopicSet.LastModifyTime` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicSet.LastModifyTime` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_lastModifyTime = value["LastModifyTime"].GetUint64();
         m_lastModifyTimeHasBeenSet = true;
@@ -126,7 +125,7 @@ CoreInternalOutcome TopicSet::Deserialize(const Value &value)
     {
         if (!value["MsgCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TopicSet.MsgCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicSet.MsgCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_msgCount = value["MsgCount"].GetUint64();
         m_msgCountHasBeenSet = true;
@@ -136,7 +135,7 @@ CoreInternalOutcome TopicSet::Deserialize(const Value &value)
     {
         if (!value["CreateUin"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TopicSet.CreateUin` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicSet.CreateUin` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_createUin = value["CreateUin"].GetUint64();
         m_createUinHasBeenSet = true;
@@ -145,10 +144,10 @@ CoreInternalOutcome TopicSet::Deserialize(const Value &value)
     if (value.HasMember("Tags") && !value["Tags"].IsNull())
     {
         if (!value["Tags"].IsArray())
-            return CoreInternalOutcome(Error("response `TopicSet.Tags` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `TopicSet.Tags` is not array type"));
 
-        const Value &tmpValue = value["Tags"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Tags"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             Tag item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -166,7 +165,7 @@ CoreInternalOutcome TopicSet::Deserialize(const Value &value)
     {
         if (!value["Trace"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `TopicSet.Trace` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicSet.Trace` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_trace = value["Trace"].GetBool();
         m_traceHasBeenSet = true;
@@ -176,28 +175,28 @@ CoreInternalOutcome TopicSet::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void TopicSet::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TopicSet::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_topicIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TopicId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_topicId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_topicId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_topicNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TopicName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_topicName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_topicName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_msgRetentionSecondsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MsgRetentionSeconds";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_msgRetentionSeconds, allocator);
@@ -205,7 +204,7 @@ void TopicSet::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_maxMsgSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaxMsgSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_maxMsgSize, allocator);
@@ -213,7 +212,7 @@ void TopicSet::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_qpsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Qps";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_qps, allocator);
@@ -221,7 +220,7 @@ void TopicSet::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_filterTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FilterType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_filterType, allocator);
@@ -229,7 +228,7 @@ void TopicSet::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_createTime, allocator);
@@ -237,7 +236,7 @@ void TopicSet::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_lastModifyTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LastModifyTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_lastModifyTime, allocator);
@@ -245,7 +244,7 @@ void TopicSet::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_msgCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MsgCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_msgCount, allocator);
@@ -253,7 +252,7 @@ void TopicSet::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_createUinHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateUin";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_createUin, allocator);
@@ -261,22 +260,22 @@ void TopicSet::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_tagsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Tags";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_traceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Trace";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_trace, allocator);

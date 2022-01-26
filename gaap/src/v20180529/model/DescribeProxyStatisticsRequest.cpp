@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeProxyStatisticsRequest::DescribeProxyStatisticsRequest() :
@@ -28,65 +27,74 @@ DescribeProxyStatisticsRequest::DescribeProxyStatisticsRequest() :
     m_startTimeHasBeenSet(false),
     m_endTimeHasBeenSet(false),
     m_metricNamesHasBeenSet(false),
-    m_granularityHasBeenSet(false)
+    m_granularityHasBeenSet(false),
+    m_ispHasBeenSet(false)
 {
 }
 
 string DescribeProxyStatisticsRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_proxyIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProxyId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_proxyId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_proxyId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_startTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTime";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_startTime.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_startTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_endTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndTime";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_endTime.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_endTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_metricNamesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MetricNames";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_metricNames.begin(); itr != m_metricNames.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_granularityHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Granularity";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_granularity, allocator);
     }
 
+    if (m_ispHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Isp";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_isp.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -170,6 +178,22 @@ void DescribeProxyStatisticsRequest::SetGranularity(const uint64_t& _granularity
 bool DescribeProxyStatisticsRequest::GranularityHasBeenSet() const
 {
     return m_granularityHasBeenSet;
+}
+
+string DescribeProxyStatisticsRequest::GetIsp() const
+{
+    return m_isp;
+}
+
+void DescribeProxyStatisticsRequest::SetIsp(const string& _isp)
+{
+    m_isp = _isp;
+    m_ispHasBeenSet = true;
+}
+
+bool DescribeProxyStatisticsRequest::IspHasBeenSet() const
+{
+    return m_ispHasBeenSet;
 }
 
 

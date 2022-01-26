@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool SwitchTimeHasBeenSet() const;
 
                     /**
-                     * 获取Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (master/slave switch), RECOVERY (master/slave recovery)
-                     * @return SwitchType Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (master/slave switch), RECOVERY (master/slave recovery)
+                     * 获取Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (primary/secondary switch), RECOVERY (primary/secondary recovery)
+                     * @return SwitchType Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (primary/secondary switch), RECOVERY (primary/secondary recovery)
                      */
                     std::string GetSwitchType() const;
 
                     /**
-                     * 设置Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (master/slave switch), RECOVERY (master/slave recovery)
-                     * @param SwitchType Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (master/slave switch), RECOVERY (master/slave recovery)
+                     * 设置Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (primary/secondary switch), RECOVERY (primary/secondary recovery)
+                     * @param SwitchType Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (primary/secondary switch), RECOVERY (primary/secondary recovery)
                      */
                     void SetSwitchType(const std::string& _switchType);
 
@@ -91,7 +91,7 @@ namespace TencentCloud
                     bool m_switchTimeHasBeenSet;
 
                     /**
-                     * Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (master/slave switch), RECOVERY (master/slave recovery)
+                     * Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (primary/secondary switch), RECOVERY (primary/secondary recovery)
                      */
                     std::string m_switchType;
                     bool m_switchTypeHasBeenSet;

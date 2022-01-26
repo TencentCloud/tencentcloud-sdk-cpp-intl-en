@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-                     * @return StartTime Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * 获取Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return StartTime Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-                     * @param StartTime Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * 设置Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param StartTime Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     void SetStartTime(const std::string& _startTime);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
-                     * @return EndTime End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
+                     * 获取End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
+                     * @return EndTime End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
-                     * @param EndTime End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
+                     * 设置End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
+                     * @param EndTime End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
                      */
                     void SetEndTime(const std::string& _endTime);
 
@@ -106,33 +106,29 @@ namespace TencentCloud
 
                     /**
                      * 获取Time granularity of usage data in minutes. Valid values:
-<li>5: 5-minute granularity, which returns the details at the 5-minute granularity within the specified time range.</li>
-<li>60: 1-hour granularity, which returns the details at the 1-hour granularity within the specified time range.</li>
-<li>1440: 1-day granularity, which returns the details at the 1-day granularity within the specified time range.</li>
-Default value: 1440. Data at the 1-day granularity will be returned.
-When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin.
+<li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
+<li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
+<li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned.</li>
+Default value: 1440. Data at 1-day granularity will be returned.
                      * @return DataInterval Time granularity of usage data in minutes. Valid values:
-<li>5: 5-minute granularity, which returns the details at the 5-minute granularity within the specified time range.</li>
-<li>60: 1-hour granularity, which returns the details at the 1-hour granularity within the specified time range.</li>
-<li>1440: 1-day granularity, which returns the details at the 1-day granularity within the specified time range.</li>
-Default value: 1440. Data at the 1-day granularity will be returned.
-When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin.
+<li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
+<li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
+<li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned.</li>
+Default value: 1440. Data at 1-day granularity will be returned.
                      */
                     uint64_t GetDataInterval() const;
 
                     /**
                      * 设置Time granularity of usage data in minutes. Valid values:
-<li>5: 5-minute granularity, which returns the details at the 5-minute granularity within the specified time range.</li>
-<li>60: 1-hour granularity, which returns the details at the 1-hour granularity within the specified time range.</li>
-<li>1440: 1-day granularity, which returns the details at the 1-day granularity within the specified time range.</li>
-Default value: 1440. Data at the 1-day granularity will be returned.
-When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin.
+<li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
+<li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
+<li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned.</li>
+Default value: 1440. Data at 1-day granularity will be returned.
                      * @param DataInterval Time granularity of usage data in minutes. Valid values:
-<li>5: 5-minute granularity, which returns the details at the 5-minute granularity within the specified time range.</li>
-<li>60: 1-hour granularity, which returns the details at the 1-hour granularity within the specified time range.</li>
-<li>1440: 1-day granularity, which returns the details at the 1-day granularity within the specified time range.</li>
-Default value: 1440. Data at the 1-day granularity will be returned.
-When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin.
+<li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
+<li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
+<li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned.</li>
+Default value: 1440. Data at 1-day granularity will be returned.
                      */
                     void SetDataInterval(const uint64_t& _dataInterval);
 
@@ -161,17 +157,17 @@ When the value of this field is 1, the total usage of all subapplications (inclu
                     bool DomainNamesHasBeenSet() const;
 
                     /**
-                     * 获取ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * 获取ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
 When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin. In this case, only 1-day granularity is supported.
-                     * @return SubAppId ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * @return SubAppId ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
 When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin. In this case, only 1-day granularity is supported.
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * 设置ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
 When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin. In this case, only 1-day granularity is supported.
-                     * @param SubAppId ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * @param SubAppId ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
 When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin. In this case, only 1-day granularity is supported.
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -185,13 +181,13 @@ When the value of this field is 1, the total usage of all subapplications (inclu
                 private:
 
                     /**
-                     * Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
+                     * End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
@@ -206,11 +202,10 @@ When the value of this field is 1, the total usage of all subapplications (inclu
 
                     /**
                      * Time granularity of usage data in minutes. Valid values:
-<li>5: 5-minute granularity, which returns the details at the 5-minute granularity within the specified time range.</li>
-<li>60: 1-hour granularity, which returns the details at the 1-hour granularity within the specified time range.</li>
-<li>1440: 1-day granularity, which returns the details at the 1-day granularity within the specified time range.</li>
-Default value: 1440. Data at the 1-day granularity will be returned.
-When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin.
+<li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
+<li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
+<li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned.</li>
+Default value: 1440. Data at 1-day granularity will be returned.
                      */
                     uint64_t m_dataInterval;
                     bool m_dataIntervalHasBeenSet;
@@ -222,7 +217,7 @@ When the value of this field is 1, the total usage of all subapplications (inclu
                     bool m_domainNamesHasBeenSet;
 
                     /**
-                     * ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
 When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin. In this case, only 1-day granularity is supported.
                      */
                     uint64_t m_subAppId;

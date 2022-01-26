@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vod/v20180717/model/EditMediaTaskInput.h>
 #include <tencentcloud/vod/v20180717/model/EditMediaTaskOutput.h>
+#include <tencentcloud/vod/v20180717/model/MediaMetaData.h>
 
 
 namespace TencentCloud
@@ -131,6 +132,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ErrCodeHasBeenSet() const;
 
                     /**
+                     * 获取Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+                     * @return ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+                     */
+                    std::string GetErrCodeExt() const;
+
+                    /**
+                     * 设置Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+                     * @param ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+                     */
+                    void SetErrCodeExt(const std::string& _errCodeExt);
+
+                    /**
+                     * 判断参数 ErrCodeExt 是否已赋值
+                     * @return ErrCodeExt 是否已赋值
+                     */
+                    bool ErrCodeExtHasBeenSet() const;
+
+                    /**
                      * 获取Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Message Error message.
@@ -151,6 +170,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return Message 是否已赋值
                      */
                     bool MessageHasBeenSet() const;
+
+                    /**
+                     * 获取Progress of a video editing task. Value range: [0, 100]
+                     * @return Progress Progress of a video editing task. Value range: [0, 100]
+                     */
+                    int64_t GetProgress() const;
+
+                    /**
+                     * 设置Progress of a video editing task. Value range: [0, 100]
+                     * @param Progress Progress of a video editing task. Value range: [0, 100]
+                     */
+                    void SetProgress(const int64_t& _progress);
+
+                    /**
+                     * 判断参数 Progress 是否已赋值
+                     * @return Progress 是否已赋值
+                     */
+                    bool ProgressHasBeenSet() const;
 
                     /**
                      * 获取Input of video editing task.
@@ -197,6 +234,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool OutputHasBeenSet() const;
 
                     /**
+                     * 获取Metadata of a source video
+                     * @return MetaData Metadata of a source video
+                     */
+                    MediaMetaData GetMetaData() const;
+
+                    /**
+                     * 设置Metadata of a source video
+                     * @param MetaData Metadata of a source video
+                     */
+                    void SetMetaData(const MediaMetaData& _metaData);
+
+                    /**
+                     * 判断参数 MetaData 是否已赋值
+                     * @return MetaData 是否已赋值
+                     */
+                    bool MetaDataHasBeenSet() const;
+
+                    /**
                      * 获取If a video processing flow is specified when a video editing task is initiated, this field will be the ID of the task flow.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ProcedureTaskId If a video processing flow is specified when a video editing task is initiated, this field will be the ID of the task flow.
@@ -219,28 +274,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ProcedureTaskIdHasBeenSet() const;
 
                     /**
-                     * 获取The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    std::string GetSessionContext() const;
-
-                    /**
-                     * 设置The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    void SetSessionContext(const std::string& _sessionContext);
-
-                    /**
-                     * 判断参数 SessionContext 是否已赋值
-                     * @return SessionContext 是否已赋值
-                     */
-                    bool SessionContextHasBeenSet() const;
-
-                    /**
                      * 获取The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
@@ -261,6 +294,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return SessionId 是否已赋值
                      */
                     bool SessionIdHasBeenSet() const;
+
+                    /**
+                     * 获取The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetSessionContext() const;
+
+                    /**
+                     * 设置The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetSessionContext(const std::string& _sessionContext);
+
+                    /**
+                     * 判断参数 SessionContext 是否已赋值
+                     * @return SessionContext 是否已赋值
+                     */
+                    bool SessionContextHasBeenSet() const;
 
                 private:
 
@@ -290,11 +345,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_errCodeHasBeenSet;
 
                     /**
+                     * Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+                     */
+                    std::string m_errCodeExt;
+                    bool m_errCodeExtHasBeenSet;
+
+                    /**
                      * Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
+
+                    /**
+                     * Progress of a video editing task. Value range: [0, 100]
+                     */
+                    int64_t m_progress;
+                    bool m_progressHasBeenSet;
 
                     /**
                      * Input of video editing task.
@@ -311,6 +378,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_outputHasBeenSet;
 
                     /**
+                     * Metadata of a source video
+                     */
+                    MediaMetaData m_metaData;
+                    bool m_metaDataHasBeenSet;
+
+                    /**
                      * If a video processing flow is specified when a video editing task is initiated, this field will be the ID of the task flow.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
@@ -318,18 +391,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_procedureTaskIdHasBeenSet;
 
                     /**
-                     * The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    std::string m_sessionContext;
-                    bool m_sessionContextHasBeenSet;
-
-                    /**
                      * The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
+
+                    /**
+                     * The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_sessionContext;
+                    bool m_sessionContextHasBeenSet;
 
                 };
             }

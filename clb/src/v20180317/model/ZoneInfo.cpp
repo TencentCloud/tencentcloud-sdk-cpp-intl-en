@@ -18,17 +18,18 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Clb::V20180317::Model;
-using namespace rapidjson;
 using namespace std;
 
 ZoneInfo::ZoneInfo() :
     m_zoneIdHasBeenSet(false),
     m_zoneHasBeenSet(false),
-    m_zoneNameHasBeenSet(false)
+    m_zoneNameHasBeenSet(false),
+    m_zoneRegionHasBeenSet(false),
+    m_localZoneHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ZoneInfo::Deserialize(const Value &value)
+CoreInternalOutcome ZoneInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +38,7 @@ CoreInternalOutcome ZoneInfo::Deserialize(const Value &value)
     {
         if (!value["ZoneId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ZoneInfo.ZoneId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ZoneInfo.ZoneId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_zoneId = value["ZoneId"].GetUint64();
         m_zoneIdHasBeenSet = true;
@@ -47,7 +48,7 @@ CoreInternalOutcome ZoneInfo::Deserialize(const Value &value)
     {
         if (!value["Zone"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ZoneInfo.Zone` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ZoneInfo.Zone` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_zone = string(value["Zone"].GetString());
         m_zoneHasBeenSet = true;
@@ -57,22 +58,42 @@ CoreInternalOutcome ZoneInfo::Deserialize(const Value &value)
     {
         if (!value["ZoneName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ZoneInfo.ZoneName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ZoneInfo.ZoneName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_zoneName = string(value["ZoneName"].GetString());
         m_zoneNameHasBeenSet = true;
+    }
+
+    if (value.HasMember("ZoneRegion") && !value["ZoneRegion"].IsNull())
+    {
+        if (!value["ZoneRegion"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ZoneInfo.ZoneRegion` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_zoneRegion = string(value["ZoneRegion"].GetString());
+        m_zoneRegionHasBeenSet = true;
+    }
+
+    if (value.HasMember("LocalZone") && !value["LocalZone"].IsNull())
+    {
+        if (!value["LocalZone"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `ZoneInfo.LocalZone` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_localZone = value["LocalZone"].GetBool();
+        m_localZoneHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void ZoneInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ZoneInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_zoneIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ZoneId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_zoneId, allocator);
@@ -80,18 +101,34 @@ void ZoneInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_zoneHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Zone";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_zone.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_zone.c_str(), allocator).Move(), allocator);
     }
 
     if (m_zoneNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ZoneName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_zoneName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_zoneName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_zoneRegionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ZoneRegion";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_zoneRegion.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_localZoneHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LocalZone";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_localZone, allocator);
     }
 
 }
@@ -143,5 +180,37 @@ void ZoneInfo::SetZoneName(const string& _zoneName)
 bool ZoneInfo::ZoneNameHasBeenSet() const
 {
     return m_zoneNameHasBeenSet;
+}
+
+string ZoneInfo::GetZoneRegion() const
+{
+    return m_zoneRegion;
+}
+
+void ZoneInfo::SetZoneRegion(const string& _zoneRegion)
+{
+    m_zoneRegion = _zoneRegion;
+    m_zoneRegionHasBeenSet = true;
+}
+
+bool ZoneInfo::ZoneRegionHasBeenSet() const
+{
+    return m_zoneRegionHasBeenSet;
+}
+
+bool ZoneInfo::GetLocalZone() const
+{
+    return m_localZone;
+}
+
+void ZoneInfo::SetLocalZone(const bool& _localZone)
+{
+    m_localZone = _localZone;
+    m_localZoneHasBeenSet = true;
+}
+
+bool ZoneInfo::LocalZoneHasBeenSet() const
+{
+    return m_localZoneHasBeenSet;
 }
 

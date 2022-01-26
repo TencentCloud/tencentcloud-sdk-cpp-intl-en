@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * HTTP domain name–related information
+                * HTTP domain name-related information
                 */
                 class AccessInfo : public AbstractModel
                 {

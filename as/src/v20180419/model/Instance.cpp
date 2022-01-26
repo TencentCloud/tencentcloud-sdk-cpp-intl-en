@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::As::V20180419::Model;
-using namespace rapidjson;
 using namespace std;
 
 Instance::Instance() :
@@ -38,7 +37,7 @@ Instance::Instance() :
 {
 }
 
-CoreInternalOutcome Instance::Deserialize(const Value &value)
+CoreInternalOutcome Instance::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -47,7 +46,7 @@ CoreInternalOutcome Instance::Deserialize(const Value &value)
     {
         if (!value["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Instance.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Instance.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(value["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome Instance::Deserialize(const Value &value)
     {
         if (!value["AutoScalingGroupId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Instance.AutoScalingGroupId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Instance.AutoScalingGroupId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_autoScalingGroupId = string(value["AutoScalingGroupId"].GetString());
         m_autoScalingGroupIdHasBeenSet = true;
@@ -67,7 +66,7 @@ CoreInternalOutcome Instance::Deserialize(const Value &value)
     {
         if (!value["LaunchConfigurationId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Instance.LaunchConfigurationId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Instance.LaunchConfigurationId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_launchConfigurationId = string(value["LaunchConfigurationId"].GetString());
         m_launchConfigurationIdHasBeenSet = true;
@@ -77,7 +76,7 @@ CoreInternalOutcome Instance::Deserialize(const Value &value)
     {
         if (!value["LaunchConfigurationName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Instance.LaunchConfigurationName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Instance.LaunchConfigurationName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_launchConfigurationName = string(value["LaunchConfigurationName"].GetString());
         m_launchConfigurationNameHasBeenSet = true;
@@ -87,7 +86,7 @@ CoreInternalOutcome Instance::Deserialize(const Value &value)
     {
         if (!value["LifeCycleState"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Instance.LifeCycleState` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Instance.LifeCycleState` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_lifeCycleState = string(value["LifeCycleState"].GetString());
         m_lifeCycleStateHasBeenSet = true;
@@ -97,7 +96,7 @@ CoreInternalOutcome Instance::Deserialize(const Value &value)
     {
         if (!value["HealthStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Instance.HealthStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Instance.HealthStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_healthStatus = string(value["HealthStatus"].GetString());
         m_healthStatusHasBeenSet = true;
@@ -107,7 +106,7 @@ CoreInternalOutcome Instance::Deserialize(const Value &value)
     {
         if (!value["ProtectedFromScaleIn"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `Instance.ProtectedFromScaleIn` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Instance.ProtectedFromScaleIn` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_protectedFromScaleIn = value["ProtectedFromScaleIn"].GetBool();
         m_protectedFromScaleInHasBeenSet = true;
@@ -117,7 +116,7 @@ CoreInternalOutcome Instance::Deserialize(const Value &value)
     {
         if (!value["Zone"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Instance.Zone` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Instance.Zone` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_zone = string(value["Zone"].GetString());
         m_zoneHasBeenSet = true;
@@ -127,7 +126,7 @@ CoreInternalOutcome Instance::Deserialize(const Value &value)
     {
         if (!value["CreationType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Instance.CreationType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Instance.CreationType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_creationType = string(value["CreationType"].GetString());
         m_creationTypeHasBeenSet = true;
@@ -137,7 +136,7 @@ CoreInternalOutcome Instance::Deserialize(const Value &value)
     {
         if (!value["AddTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Instance.AddTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Instance.AddTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_addTime = string(value["AddTime"].GetString());
         m_addTimeHasBeenSet = true;
@@ -147,7 +146,7 @@ CoreInternalOutcome Instance::Deserialize(const Value &value)
     {
         if (!value["InstanceType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Instance.InstanceType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Instance.InstanceType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceType = string(value["InstanceType"].GetString());
         m_instanceTypeHasBeenSet = true;
@@ -157,7 +156,7 @@ CoreInternalOutcome Instance::Deserialize(const Value &value)
     {
         if (!value["VersionNumber"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Instance.VersionNumber` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Instance.VersionNumber` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_versionNumber = value["VersionNumber"].GetInt64();
         m_versionNumberHasBeenSet = true;
@@ -167,7 +166,7 @@ CoreInternalOutcome Instance::Deserialize(const Value &value)
     {
         if (!value["AutoScalingGroupName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Instance.AutoScalingGroupName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Instance.AutoScalingGroupName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_autoScalingGroupName = string(value["AutoScalingGroupName"].GetString());
         m_autoScalingGroupNameHasBeenSet = true;
@@ -177,60 +176,60 @@ CoreInternalOutcome Instance::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Instance::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Instance::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_autoScalingGroupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AutoScalingGroupId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_autoScalingGroupId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_autoScalingGroupId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_launchConfigurationIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LaunchConfigurationId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_launchConfigurationId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_launchConfigurationId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_launchConfigurationNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LaunchConfigurationName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_launchConfigurationName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_launchConfigurationName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_lifeCycleStateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LifeCycleState";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_lifeCycleState.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_lifeCycleState.c_str(), allocator).Move(), allocator);
     }
 
     if (m_healthStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HealthStatus";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_healthStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_healthStatus.c_str(), allocator).Move(), allocator);
     }
 
     if (m_protectedFromScaleInHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProtectedFromScaleIn";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_protectedFromScaleIn, allocator);
@@ -238,39 +237,39 @@ void Instance::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_zoneHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Zone";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_zone.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_zone.c_str(), allocator).Move(), allocator);
     }
 
     if (m_creationTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreationType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_creationType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_creationType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_addTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AddTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_addTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_addTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_versionNumberHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VersionNumber";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_versionNumber, allocator);
@@ -278,10 +277,10 @@ void Instance::ToJsonObject(Value &value, Document::AllocatorType& allocator) co
 
     if (m_autoScalingGroupNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AutoScalingGroupName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_autoScalingGroupName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_autoScalingGroupName.c_str(), allocator).Move(), allocator);
     }
 
 }

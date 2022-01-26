@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mdl::V20200326::Model;
-using namespace rapidjson;
 using namespace std;
 
 InputSecurityGroupInfo::InputSecurityGroupInfo() :
@@ -30,7 +29,7 @@ InputSecurityGroupInfo::InputSecurityGroupInfo() :
 {
 }
 
-CoreInternalOutcome InputSecurityGroupInfo::Deserialize(const Value &value)
+CoreInternalOutcome InputSecurityGroupInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome InputSecurityGroupInfo::Deserialize(const Value &value)
     {
         if (!value["Id"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InputSecurityGroupInfo.Id` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InputSecurityGroupInfo.Id` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_id = string(value["Id"].GetString());
         m_idHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome InputSecurityGroupInfo::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InputSecurityGroupInfo.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InputSecurityGroupInfo.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -58,10 +57,10 @@ CoreInternalOutcome InputSecurityGroupInfo::Deserialize(const Value &value)
     if (value.HasMember("Whitelist") && !value["Whitelist"].IsNull())
     {
         if (!value["Whitelist"].IsArray())
-            return CoreInternalOutcome(Error("response `InputSecurityGroupInfo.Whitelist` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `InputSecurityGroupInfo.Whitelist` is not array type"));
 
-        const Value &tmpValue = value["Whitelist"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Whitelist"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_whitelist.push_back((*itr).GetString());
         }
@@ -71,10 +70,10 @@ CoreInternalOutcome InputSecurityGroupInfo::Deserialize(const Value &value)
     if (value.HasMember("OccupiedInputs") && !value["OccupiedInputs"].IsNull())
     {
         if (!value["OccupiedInputs"].IsArray())
-            return CoreInternalOutcome(Error("response `InputSecurityGroupInfo.OccupiedInputs` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `InputSecurityGroupInfo.OccupiedInputs` is not array type"));
 
-        const Value &tmpValue = value["OccupiedInputs"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["OccupiedInputs"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_occupiedInputs.push_back((*itr).GetString());
         }
@@ -85,7 +84,7 @@ CoreInternalOutcome InputSecurityGroupInfo::Deserialize(const Value &value)
     {
         if (!value["Region"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InputSecurityGroupInfo.Region` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InputSecurityGroupInfo.Region` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_region = string(value["Region"].GetString());
         m_regionHasBeenSet = true;
@@ -95,57 +94,57 @@ CoreInternalOutcome InputSecurityGroupInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void InputSecurityGroupInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void InputSecurityGroupInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_idHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Id";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_id.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_id.c_str(), allocator).Move(), allocator);
     }
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_whitelistHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Whitelist";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_whitelist.begin(); itr != m_whitelist.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_occupiedInputsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OccupiedInputs";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_occupiedInputs.begin(); itr != m_occupiedInputs.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_regionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Region";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_region.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_region.c_str(), allocator).Move(), allocator);
     }
 
 }

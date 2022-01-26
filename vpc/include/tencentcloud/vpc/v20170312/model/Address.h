@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vpc/v20170312/model/AlgType.h>
+#include <tencentcloud/vpc/v20170312/model/Tag.h>
 
 
 namespace TencentCloud
@@ -317,6 +318,90 @@ namespace TencentCloud
                      */
                     bool InternetServiceProviderHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the EIP is in a local BGP.
+                     * @return LocalBgp Whether the EIP is in a local BGP.
+                     */
+                    bool GetLocalBgp() const;
+
+                    /**
+                     * 设置Whether the EIP is in a local BGP.
+                     * @param LocalBgp Whether the EIP is in a local BGP.
+                     */
+                    void SetLocalBgp(const bool& _localBgp);
+
+                    /**
+                     * 判断参数 LocalBgp 是否已赋值
+                     * @return LocalBgp 是否已赋值
+                     */
+                    bool LocalBgpHasBeenSet() const;
+
+                    /**
+                     * 获取Bandwidth value of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @return Bandwidth Bandwidth value of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    uint64_t GetBandwidth() const;
+
+                    /**
+                     * 设置Bandwidth value of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @param Bandwidth Bandwidth value of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetBandwidth(const uint64_t& _bandwidth);
+
+                    /**
+                     * 判断参数 Bandwidth 是否已赋值
+                     * @return Bandwidth 是否已赋值
+                     */
+                    bool BandwidthHasBeenSet() const;
+
+                    /**
+                     * 获取Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @return InternetChargeType Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetInternetChargeType() const;
+
+                    /**
+                     * 设置Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @param InternetChargeType Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetInternetChargeType(const std::string& _internetChargeType);
+
+                    /**
+                     * 判断参数 InternetChargeType 是否已赋值
+                     * @return InternetChargeType 是否已赋值
+                     */
+                    bool InternetChargeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取List of tags associated with the EIP
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return TagSet List of tags associated with the EIP
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Tag> GetTagSet() const;
+
+                    /**
+                     * 设置List of tags associated with the EIP
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param TagSet List of tags associated with the EIP
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetTagSet(const std::vector<Tag>& _tagSet);
+
+                    /**
+                     * 判断参数 TagSet 是否已赋值
+                     * @return TagSet 是否已赋值
+                     */
+                    bool TagSetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -408,6 +493,33 @@ namespace TencentCloud
                      */
                     std::string m_internetServiceProvider;
                     bool m_internetServiceProviderHasBeenSet;
+
+                    /**
+                     * Whether the EIP is in a local BGP.
+                     */
+                    bool m_localBgp;
+                    bool m_localBgpHasBeenSet;
+
+                    /**
+                     * Bandwidth value of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    uint64_t m_bandwidth;
+                    bool m_bandwidthHasBeenSet;
+
+                    /**
+                     * Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_internetChargeType;
+                    bool m_internetChargeTypeHasBeenSet;
+
+                    /**
+                     * List of tags associated with the EIP
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Tag> m_tagSet;
+                    bool m_tagSetHasBeenSet;
 
                 };
             }

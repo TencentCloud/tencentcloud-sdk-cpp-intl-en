@@ -20,37 +20,45 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 EnableCachesRequest::EnableCachesRequest() :
-    m_urlsHasBeenSet(false)
+    m_urlsHasBeenSet(false),
+    m_dateHasBeenSet(false)
 {
 }
 
 string EnableCachesRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_urlsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Urls";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_urls.begin(); itr != m_urls.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
+    if (m_dateHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Date";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_date.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -70,6 +78,22 @@ void EnableCachesRequest::SetUrls(const vector<string>& _urls)
 bool EnableCachesRequest::UrlsHasBeenSet() const
 {
     return m_urlsHasBeenSet;
+}
+
+string EnableCachesRequest::GetDate() const
+{
+    return m_date;
+}
+
+void EnableCachesRequest::SetDate(const string& _date)
+{
+    m_date = _date;
+    m_dateHasBeenSet = true;
+}
+
+bool EnableCachesRequest::DateHasBeenSet() const
+{
+    return m_dateHasBeenSet;
 }
 
 

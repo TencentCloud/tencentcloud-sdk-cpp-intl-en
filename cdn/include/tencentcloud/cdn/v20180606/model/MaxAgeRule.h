@@ -48,29 +48,33 @@ namespace TencentCloud
 
                     /**
                      * 获取Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`index`: effective for specified homepages.
                      * @return MaxAgeType Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`index`: effective for specified homepages.
                      */
                     std::string GetMaxAgeType() const;
 
                     /**
                      * 设置Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`index`: effective for specified homepages.
                      * @param MaxAgeType Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`index`: effective for specified homepages.
                      */
                     void SetMaxAgeType(const std::string& _maxAgeType);
 
@@ -81,30 +85,38 @@ namespace TencentCloud
                     bool MaxAgeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Content for each MaxAgeType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-                     * @return MaxAgeContents Content for each MaxAgeType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+                     * 获取Content for each `MaxAgeType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
+Note: the rule `all` cannot be deleted. It follows origin by default and can be modified.
+                     * @return MaxAgeContents Content for each `MaxAgeType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
+Note: the rule `all` cannot be deleted. It follows origin by default and can be modified.
                      */
                     std::vector<std::string> GetMaxAgeContents() const;
 
                     /**
-                     * 设置Content for each MaxAgeType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-                     * @param MaxAgeContents Content for each MaxAgeType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+                     * 设置Content for each `MaxAgeType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
+Note: the rule `all` cannot be deleted. It follows origin by default and can be modified.
+                     * @param MaxAgeContents Content for each `MaxAgeType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
+Note: the rule `all` cannot be deleted. It follows origin by default and can be modified.
                      */
                     void SetMaxAgeContents(const std::vector<std::string>& _maxAgeContents);
 
@@ -116,13 +128,17 @@ For `path`, enter the corresponding absolute path, such as /xxx/test.html.
 
                     /**
                      * 获取MaxAge time (in seconds)
+Note: the value `0` means not to cache.
                      * @return MaxAgeTime MaxAge time (in seconds)
+Note: the value `0` means not to cache.
                      */
                     int64_t GetMaxAgeTime() const;
 
                     /**
                      * 设置MaxAge time (in seconds)
+Note: the value `0` means not to cache.
                      * @param MaxAgeTime MaxAge time (in seconds)
+Note: the value `0` means not to cache.
                      */
                     void SetMaxAgeTime(const int64_t& _maxAgeTime);
 
@@ -132,33 +148,66 @@ For `path`, enter the corresponding absolute path, such as /xxx/test.html.
                      */
                     bool MaxAgeTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to follow the origin server. Valid values: `on` and `off`. If it's on, `MaxAgeTime` is ignored.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return FollowOrigin Whether to follow the origin server. Valid values: `on` and `off`. If it's on, `MaxAgeTime` is ignored.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetFollowOrigin() const;
+
+                    /**
+                     * 设置Whether to follow the origin server. Valid values: `on` and `off`. If it's on, `MaxAgeTime` is ignored.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param FollowOrigin Whether to follow the origin server. Valid values: `on` and `off`. If it's on, `MaxAgeTime` is ignored.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetFollowOrigin(const std::string& _followOrigin);
+
+                    /**
+                     * 判断参数 FollowOrigin 是否已赋值
+                     * @return FollowOrigin 是否已赋值
+                     */
+                    bool FollowOriginHasBeenSet() const;
+
                 private:
 
                     /**
                      * Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`index`: effective for specified homepages.
                      */
                     std::string m_maxAgeType;
                     bool m_maxAgeTypeHasBeenSet;
 
                     /**
-                     * Content for each MaxAgeType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+                     * Content for each `MaxAgeType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
+Note: the rule `all` cannot be deleted. It follows origin by default and can be modified.
                      */
                     std::vector<std::string> m_maxAgeContents;
                     bool m_maxAgeContentsHasBeenSet;
 
                     /**
                      * MaxAge time (in seconds)
+Note: the value `0` means not to cache.
                      */
                     int64_t m_maxAgeTime;
                     bool m_maxAgeTimeHasBeenSet;
+
+                    /**
+                     * Whether to follow the origin server. Valid values: `on` and `off`. If it's on, `MaxAgeTime` is ignored.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_followOrigin;
+                    bool m_followOriginHasBeenSet;
 
                 };
             }

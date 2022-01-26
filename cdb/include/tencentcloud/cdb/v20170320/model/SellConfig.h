@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Device type
-                     * @return Device Device type
+                     * 获取(Disused) Device type
+                     * @return Device (Disused) Device type
                      */
                     std::string GetDevice() const;
 
                     /**
-                     * 设置Device type
-                     * @param Device Device type
+                     * 设置(Disused) Device type
+                     * @param Device (Disused) Device type
                      */
                     void SetDevice(const std::string& _device);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool DeviceHasBeenSet() const;
 
                     /**
-                     * 获取Purchasable specification description
-                     * @return Type Purchasable specification description
+                     * 获取(Disused) Purchasable specification description 
+                     * @return Type (Disused) Purchasable specification description 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Purchasable specification description
-                     * @param Type Purchasable specification description
+                     * 设置(Disused) Purchasable specification description 
+                     * @param Type (Disused) Purchasable specification description 
                      */
                     void SetType(const std::string& _type);
 
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance type
-                     * @return CdbType Instance type
+                     * 获取(Disused) Instance type 
+                     * @return CdbType (Disused) Instance type 
                      */
                     std::string GetCdbType() const;
 
                     /**
-                     * 设置Instance type
-                     * @param CdbType Instance type
+                     * 设置(Disused) Instance type 
+                     * @param CdbType (Disused) Instance type 
                      */
                     void SetCdbType(const std::string& _cdbType);
 
@@ -263,14 +263,14 @@ namespace TencentCloud
                     bool InfoHasBeenSet() const;
 
                     /**
-                     * 获取Status value
-                     * @return Status Status value
+                     * 获取Status. Value `0` indicates that this specification is purchasable.
+                     * @return Status Status. Value `0` indicates that this specification is purchasable.
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Status value
-                     * @param Status Status value
+                     * 设置Status. Value `0` indicates that this specification is purchasable.
+                     * @param Status Status. Value `0` indicates that this specification is purchasable.
                      */
                     void SetStatus(const int64_t& _status);
 
@@ -281,14 +281,14 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Tag value
-                     * @return Tag Tag value
+                     * 获取(Disused) Tag value
+                     * @return Tag (Disused) Tag value
                      */
                     int64_t GetTag() const;
 
                     /**
-                     * 设置Tag value
-                     * @param Tag Tag value
+                     * 设置(Disused) Tag value
+                     * @param Tag (Disused) Tag value
                      */
                     void SetTag(const int64_t& _tag);
 
@@ -298,22 +298,66 @@ namespace TencentCloud
                      */
                     bool TagHasBeenSet() const;
 
+                    /**
+                     * 获取Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @return DeviceType Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDeviceType() const;
+
+                    /**
+                     * 设置Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @param DeviceType Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    void SetDeviceType(const std::string& _deviceType);
+
+                    /**
+                     * 判断参数 DeviceType 是否已赋值
+                     * @return DeviceType 是否已赋值
+                     */
+                    bool DeviceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @return DeviceTypeName Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDeviceTypeName() const;
+
+                    /**
+                     * 设置Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @param DeviceTypeName Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    void SetDeviceTypeName(const std::string& _deviceTypeName);
+
+                    /**
+                     * 判断参数 DeviceTypeName 是否已赋值
+                     * @return DeviceTypeName 是否已赋值
+                     */
+                    bool DeviceTypeNameHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Device type
+                     * (Disused) Device type
                      */
                     std::string m_device;
                     bool m_deviceHasBeenSet;
 
                     /**
-                     * Purchasable specification description
+                     * (Disused) Purchasable specification description 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Instance type
+                     * (Disused) Instance type 
                      */
                     std::string m_cdbType;
                     bool m_cdbTypeHasBeenSet;
@@ -373,16 +417,30 @@ namespace TencentCloud
                     bool m_infoHasBeenSet;
 
                     /**
-                     * Status value
+                     * Status. Value `0` indicates that this specification is purchasable.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Tag value
+                     * (Disused) Tag value
                      */
                     int64_t m_tag;
                     bool m_tagHasBeenSet;
+
+                    /**
+                     * Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    std::string m_deviceType;
+                    bool m_deviceTypeHasBeenSet;
+
+                    /**
+                     * Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    std::string m_deviceTypeName;
+                    bool m_deviceTypeNameHasBeenSet;
 
                 };
             }

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 MediaTranscodeItem::MediaTranscodeItem() :
@@ -37,7 +36,7 @@ MediaTranscodeItem::MediaTranscodeItem() :
 {
 }
 
-CoreInternalOutcome MediaTranscodeItem::Deserialize(const Value &value)
+CoreInternalOutcome MediaTranscodeItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -46,7 +45,7 @@ CoreInternalOutcome MediaTranscodeItem::Deserialize(const Value &value)
     {
         if (!value["OutputStorage"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaTranscodeItem.OutputStorage` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaTranscodeItem.OutputStorage` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_outputStorage.Deserialize(value["OutputStorage"]);
@@ -63,7 +62,7 @@ CoreInternalOutcome MediaTranscodeItem::Deserialize(const Value &value)
     {
         if (!value["Path"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaTranscodeItem.Path` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaTranscodeItem.Path` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_path = string(value["Path"].GetString());
         m_pathHasBeenSet = true;
@@ -73,7 +72,7 @@ CoreInternalOutcome MediaTranscodeItem::Deserialize(const Value &value)
     {
         if (!value["Definition"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaTranscodeItem.Definition` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaTranscodeItem.Definition` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_definition = value["Definition"].GetInt64();
         m_definitionHasBeenSet = true;
@@ -83,7 +82,7 @@ CoreInternalOutcome MediaTranscodeItem::Deserialize(const Value &value)
     {
         if (!value["Bitrate"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaTranscodeItem.Bitrate` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaTranscodeItem.Bitrate` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_bitrate = value["Bitrate"].GetInt64();
         m_bitrateHasBeenSet = true;
@@ -93,7 +92,7 @@ CoreInternalOutcome MediaTranscodeItem::Deserialize(const Value &value)
     {
         if (!value["Height"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaTranscodeItem.Height` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaTranscodeItem.Height` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_height = value["Height"].GetInt64();
         m_heightHasBeenSet = true;
@@ -103,7 +102,7 @@ CoreInternalOutcome MediaTranscodeItem::Deserialize(const Value &value)
     {
         if (!value["Width"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaTranscodeItem.Width` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaTranscodeItem.Width` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_width = value["Width"].GetInt64();
         m_widthHasBeenSet = true;
@@ -113,7 +112,7 @@ CoreInternalOutcome MediaTranscodeItem::Deserialize(const Value &value)
     {
         if (!value["Size"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaTranscodeItem.Size` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaTranscodeItem.Size` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_size = value["Size"].GetInt64();
         m_sizeHasBeenSet = true;
@@ -121,9 +120,9 @@ CoreInternalOutcome MediaTranscodeItem::Deserialize(const Value &value)
 
     if (value.HasMember("Duration") && !value["Duration"].IsNull())
     {
-        if (!value["Duration"].IsDouble())
+        if (!value["Duration"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `MediaTranscodeItem.Duration` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaTranscodeItem.Duration` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_duration = value["Duration"].GetDouble();
         m_durationHasBeenSet = true;
@@ -133,7 +132,7 @@ CoreInternalOutcome MediaTranscodeItem::Deserialize(const Value &value)
     {
         if (!value["Container"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaTranscodeItem.Container` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaTranscodeItem.Container` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_container = string(value["Container"].GetString());
         m_containerHasBeenSet = true;
@@ -143,7 +142,7 @@ CoreInternalOutcome MediaTranscodeItem::Deserialize(const Value &value)
     {
         if (!value["Md5"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaTranscodeItem.Md5` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaTranscodeItem.Md5` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_md5 = string(value["Md5"].GetString());
         m_md5HasBeenSet = true;
@@ -152,10 +151,10 @@ CoreInternalOutcome MediaTranscodeItem::Deserialize(const Value &value)
     if (value.HasMember("AudioStreamSet") && !value["AudioStreamSet"].IsNull())
     {
         if (!value["AudioStreamSet"].IsArray())
-            return CoreInternalOutcome(Error("response `MediaTranscodeItem.AudioStreamSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `MediaTranscodeItem.AudioStreamSet` is not array type"));
 
-        const Value &tmpValue = value["AudioStreamSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["AudioStreamSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             MediaAudioStreamItem item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -172,10 +171,10 @@ CoreInternalOutcome MediaTranscodeItem::Deserialize(const Value &value)
     if (value.HasMember("VideoStreamSet") && !value["VideoStreamSet"].IsNull())
     {
         if (!value["VideoStreamSet"].IsArray())
-            return CoreInternalOutcome(Error("response `MediaTranscodeItem.VideoStreamSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `MediaTranscodeItem.VideoStreamSet` is not array type"));
 
-        const Value &tmpValue = value["VideoStreamSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["VideoStreamSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             MediaVideoStreamItem item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -193,29 +192,29 @@ CoreInternalOutcome MediaTranscodeItem::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void MediaTranscodeItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MediaTranscodeItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_outputStorageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OutputStorage";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_outputStorage.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_pathHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Path";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_path.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_path.c_str(), allocator).Move(), allocator);
     }
 
     if (m_definitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Definition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_definition, allocator);
@@ -223,7 +222,7 @@ void MediaTranscodeItem::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_bitrateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Bitrate";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_bitrate, allocator);
@@ -231,7 +230,7 @@ void MediaTranscodeItem::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_heightHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Height";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_height, allocator);
@@ -239,7 +238,7 @@ void MediaTranscodeItem::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_widthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Width";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_width, allocator);
@@ -247,7 +246,7 @@ void MediaTranscodeItem::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_sizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Size";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_size, allocator);
@@ -255,7 +254,7 @@ void MediaTranscodeItem::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_durationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Duration";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_duration, allocator);
@@ -263,46 +262,46 @@ void MediaTranscodeItem::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_containerHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Container";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_container.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_container.c_str(), allocator).Move(), allocator);
     }
 
     if (m_md5HasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Md5";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_md5.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_md5.c_str(), allocator).Move(), allocator);
     }
 
     if (m_audioStreamSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AudioStreamSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_audioStreamSet.begin(); itr != m_audioStreamSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_videoStreamSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VideoStreamSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_videoStreamSet.begin(); itr != m_videoStreamSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }

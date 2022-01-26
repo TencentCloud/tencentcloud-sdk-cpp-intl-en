@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 MediaSnapshotByTimeOffsetItem::MediaSnapshotByTimeOffsetItem() :
@@ -28,7 +27,7 @@ MediaSnapshotByTimeOffsetItem::MediaSnapshotByTimeOffsetItem() :
 {
 }
 
-CoreInternalOutcome MediaSnapshotByTimeOffsetItem::Deserialize(const Value &value)
+CoreInternalOutcome MediaSnapshotByTimeOffsetItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome MediaSnapshotByTimeOffsetItem::Deserialize(const Value &valu
     {
         if (!value["Definition"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaSnapshotByTimeOffsetItem.Definition` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaSnapshotByTimeOffsetItem.Definition` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_definition = value["Definition"].GetInt64();
         m_definitionHasBeenSet = true;
@@ -46,10 +45,10 @@ CoreInternalOutcome MediaSnapshotByTimeOffsetItem::Deserialize(const Value &valu
     if (value.HasMember("PicInfoSet") && !value["PicInfoSet"].IsNull())
     {
         if (!value["PicInfoSet"].IsArray())
-            return CoreInternalOutcome(Error("response `MediaSnapshotByTimeOffsetItem.PicInfoSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `MediaSnapshotByTimeOffsetItem.PicInfoSet` is not array type"));
 
-        const Value &tmpValue = value["PicInfoSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["PicInfoSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             MediaSnapshotByTimePicInfoItem item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -67,7 +66,7 @@ CoreInternalOutcome MediaSnapshotByTimeOffsetItem::Deserialize(const Value &valu
     {
         if (!value["Storage"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaSnapshotByTimeOffsetItem.Storage` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaSnapshotByTimeOffsetItem.Storage` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_storage.Deserialize(value["Storage"]);
@@ -84,12 +83,12 @@ CoreInternalOutcome MediaSnapshotByTimeOffsetItem::Deserialize(const Value &valu
     return CoreInternalOutcome(true);
 }
 
-void MediaSnapshotByTimeOffsetItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MediaSnapshotByTimeOffsetItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_definitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Definition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_definition, allocator);
@@ -97,25 +96,25 @@ void MediaSnapshotByTimeOffsetItem::ToJsonObject(Value &value, Document::Allocat
 
     if (m_picInfoSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PicInfoSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_picInfoSet.begin(); itr != m_picInfoSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_storageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Storage";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_storage.ToJsonObject(value[key.c_str()], allocator);
     }
 

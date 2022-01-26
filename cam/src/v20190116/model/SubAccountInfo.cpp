@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cam::V20190116::Model;
-using namespace rapidjson;
 using namespace std;
 
 SubAccountInfo::SubAccountInfo() :
@@ -29,11 +28,12 @@ SubAccountInfo::SubAccountInfo() :
     m_consoleLoginHasBeenSet(false),
     m_phoneNumHasBeenSet(false),
     m_countryCodeHasBeenSet(false),
-    m_emailHasBeenSet(false)
+    m_emailHasBeenSet(false),
+    m_createTimeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome SubAccountInfo::Deserialize(const Value &value)
+CoreInternalOutcome SubAccountInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +42,7 @@ CoreInternalOutcome SubAccountInfo::Deserialize(const Value &value)
     {
         if (!value["Uin"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `SubAccountInfo.Uin` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SubAccountInfo.Uin` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_uin = value["Uin"].GetUint64();
         m_uinHasBeenSet = true;
@@ -52,7 +52,7 @@ CoreInternalOutcome SubAccountInfo::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SubAccountInfo.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SubAccountInfo.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -62,7 +62,7 @@ CoreInternalOutcome SubAccountInfo::Deserialize(const Value &value)
     {
         if (!value["Uid"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `SubAccountInfo.Uid` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SubAccountInfo.Uid` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_uid = value["Uid"].GetUint64();
         m_uidHasBeenSet = true;
@@ -72,7 +72,7 @@ CoreInternalOutcome SubAccountInfo::Deserialize(const Value &value)
     {
         if (!value["Remark"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SubAccountInfo.Remark` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SubAccountInfo.Remark` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_remark = string(value["Remark"].GetString());
         m_remarkHasBeenSet = true;
@@ -82,7 +82,7 @@ CoreInternalOutcome SubAccountInfo::Deserialize(const Value &value)
     {
         if (!value["ConsoleLogin"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `SubAccountInfo.ConsoleLogin` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SubAccountInfo.ConsoleLogin` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_consoleLogin = value["ConsoleLogin"].GetUint64();
         m_consoleLoginHasBeenSet = true;
@@ -92,7 +92,7 @@ CoreInternalOutcome SubAccountInfo::Deserialize(const Value &value)
     {
         if (!value["PhoneNum"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SubAccountInfo.PhoneNum` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SubAccountInfo.PhoneNum` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_phoneNum = string(value["PhoneNum"].GetString());
         m_phoneNumHasBeenSet = true;
@@ -102,7 +102,7 @@ CoreInternalOutcome SubAccountInfo::Deserialize(const Value &value)
     {
         if (!value["CountryCode"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SubAccountInfo.CountryCode` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SubAccountInfo.CountryCode` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_countryCode = string(value["CountryCode"].GetString());
         m_countryCodeHasBeenSet = true;
@@ -112,22 +112,32 @@ CoreInternalOutcome SubAccountInfo::Deserialize(const Value &value)
     {
         if (!value["Email"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SubAccountInfo.Email` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SubAccountInfo.Email` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_email = string(value["Email"].GetString());
         m_emailHasBeenSet = true;
+    }
+
+    if (value.HasMember("CreateTime") && !value["CreateTime"].IsNull())
+    {
+        if (!value["CreateTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SubAccountInfo.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_createTime = string(value["CreateTime"].GetString());
+        m_createTimeHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void SubAccountInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SubAccountInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_uinHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Uin";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_uin, allocator);
@@ -135,15 +145,15 @@ void SubAccountInfo::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_uidHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Uid";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_uid, allocator);
@@ -151,15 +161,15 @@ void SubAccountInfo::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_remarkHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Remark";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_remark.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_remark.c_str(), allocator).Move(), allocator);
     }
 
     if (m_consoleLoginHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ConsoleLogin";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_consoleLogin, allocator);
@@ -167,26 +177,34 @@ void SubAccountInfo::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_phoneNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PhoneNum";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_phoneNum.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_phoneNum.c_str(), allocator).Move(), allocator);
     }
 
     if (m_countryCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CountryCode";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_countryCode.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_countryCode.c_str(), allocator).Move(), allocator);
     }
 
     if (m_emailHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Email";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_email.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_email.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_createTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CreateTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -318,5 +336,21 @@ void SubAccountInfo::SetEmail(const string& _email)
 bool SubAccountInfo::EmailHasBeenSet() const
 {
     return m_emailHasBeenSet;
+}
+
+string SubAccountInfo::GetCreateTime() const
+{
+    return m_createTime;
+}
+
+void SubAccountInfo::SetCreateTime(const string& _createTime)
+{
+    m_createTime = _createTime;
+    m_createTimeHasBeenSet = true;
+}
+
+bool SubAccountInfo::CreateTimeHasBeenSet() const
+{
+    return m_createTimeHasBeenSet;
 }
 

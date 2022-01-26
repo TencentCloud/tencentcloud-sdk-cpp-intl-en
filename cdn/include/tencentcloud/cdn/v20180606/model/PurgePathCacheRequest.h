@@ -86,6 +86,24 @@ namespace TencentCloud
                      */
                     bool FlushTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to encode Chinese characters before purge.
+                     * @return UrlEncode Whether to encode Chinese characters before purge.
+                     */
+                    bool GetUrlEncode() const;
+
+                    /**
+                     * 设置Whether to encode Chinese characters before purge.
+                     * @param UrlEncode Whether to encode Chinese characters before purge.
+                     */
+                    void SetUrlEncode(const bool& _urlEncode);
+
+                    /**
+                     * 判断参数 UrlEncode 是否已赋值
+                     * @return UrlEncode 是否已赋值
+                     */
+                    bool UrlEncodeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -101,6 +119,12 @@ namespace TencentCloud
                      */
                     std::string m_flushType;
                     bool m_flushTypeHasBeenSet;
+
+                    /**
+                     * Whether to encode Chinese characters before purge.
+                     */
+                    bool m_urlEncode;
+                    bool m_urlEncodeHasBeenSet;
 
                 };
             }

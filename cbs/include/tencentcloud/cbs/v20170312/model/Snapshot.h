@@ -139,14 +139,14 @@ namespace TencentCloud
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Status of the snapshot. Value range: <br><li>NORMAL: Normal <br><li>CREATING: Creating <br><li>ROLLBACKING: Rolling backing <br><li>COPYING_FROM_REMOTE: Copying snapshot across regions.
-                     * @return SnapshotState Status of the snapshot. Value range: <br><li>NORMAL: Normal <br><li>CREATING: Creating <br><li>ROLLBACKING: Rolling backing <br><li>COPYING_FROM_REMOTE: Copying snapshot across regions.
+                     * 获取Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
+                     * @return SnapshotState Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
                      */
                     std::string GetSnapshotState() const;
 
                     /**
-                     * 设置Status of the snapshot. Value range: <br><li>NORMAL: Normal <br><li>CREATING: Creating <br><li>ROLLBACKING: Rolling backing <br><li>COPYING_FROM_REMOTE: Copying snapshot across regions.
-                     * @param SnapshotState Status of the snapshot. Value range: <br><li>NORMAL: Normal <br><li>CREATING: Creating <br><li>ROLLBACKING: Rolling backing <br><li>COPYING_FROM_REMOTE: Copying snapshot across regions.
+                     * 设置Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
+                     * @param SnapshotState Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
                      */
                     void SetSnapshotState(const std::string& _snapshotState);
 
@@ -157,14 +157,14 @@ namespace TencentCloud
                     bool SnapshotStateHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](/document/product/362/15650) to modify this field.
-                     * @return SnapshotName Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](/document/product/362/15650) to modify this field.
+                     * 获取Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](https://intl.cloud.tencent.com/document/product/362/15650?from_cn_redirect=1) to modify this field.
+                     * @return SnapshotName Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](https://intl.cloud.tencent.com/document/product/362/15650?from_cn_redirect=1) to modify this field.
                      */
                     std::string GetSnapshotName() const;
 
                     /**
-                     * 设置Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](/document/product/362/15650) to modify this field.
-                     * @param SnapshotName Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](/document/product/362/15650) to modify this field.
+                     * 设置Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](https://intl.cloud.tencent.com/document/product/362/15650?from_cn_redirect=1) to modify this field.
+                     * @param SnapshotName Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](https://intl.cloud.tencent.com/document/product/362/15650?from_cn_redirect=1) to modify this field.
                      */
                     void SetSnapshotName(const std::string& _snapshotName);
 
@@ -372,6 +372,24 @@ namespace TencentCloud
                      */
                     bool ShareReferenceHasBeenSet() const;
 
+                    /**
+                     * 获取The time when the snapshot sharing starts
+                     * @return TimeStartShare The time when the snapshot sharing starts
+                     */
+                    std::string GetTimeStartShare() const;
+
+                    /**
+                     * 设置The time when the snapshot sharing starts
+                     * @param TimeStartShare The time when the snapshot sharing starts
+                     */
+                    void SetTimeStartShare(const std::string& _timeStartShare);
+
+                    /**
+                     * 判断参数 TimeStartShare 是否已赋值
+                     * @return TimeStartShare 是否已赋值
+                     */
+                    bool TimeStartShareHasBeenSet() const;
+
                 private:
 
                     /**
@@ -405,13 +423,13 @@ namespace TencentCloud
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * Status of the snapshot. Value range: <br><li>NORMAL: Normal <br><li>CREATING: Creating <br><li>ROLLBACKING: Rolling backing <br><li>COPYING_FROM_REMOTE: Copying snapshot across regions.
+                     * Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
                      */
                     std::string m_snapshotState;
                     bool m_snapshotStateHasBeenSet;
 
                     /**
-                     * Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](/document/product/362/15650) to modify this field.
+                     * Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](https://intl.cloud.tencent.com/document/product/362/15650?from_cn_redirect=1) to modify this field.
                      */
                     std::string m_snapshotName;
                     bool m_snapshotNameHasBeenSet;
@@ -481,6 +499,12 @@ namespace TencentCloud
                      */
                     uint64_t m_shareReference;
                     bool m_shareReferenceHasBeenSet;
+
+                    /**
+                     * The time when the snapshot sharing starts
+                     */
+                    std::string m_timeStartShare;
+                    bool m_timeStartShareHasBeenSet;
 
                 };
             }

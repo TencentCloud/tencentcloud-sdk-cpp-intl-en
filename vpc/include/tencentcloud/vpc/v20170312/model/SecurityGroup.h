@@ -173,6 +173,28 @@ namespace TencentCloud
                      */
                     bool TagSetHasBeenSet() const;
 
+                    /**
+                     * 获取Security group update time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return UpdateTime Security group update time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetUpdateTime() const;
+
+                    /**
+                     * 设置Security group update time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param UpdateTime Security group update time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetUpdateTime(const std::string& _updateTime);
+
+                    /**
+                     * 判断参数 UpdateTime 是否已赋值
+                     * @return UpdateTime 是否已赋值
+                     */
+                    bool UpdateTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -216,6 +238,13 @@ namespace TencentCloud
                      */
                     std::vector<Tag> m_tagSet;
                     bool m_tagSetHasBeenSet;
+
+                    /**
+                     * Security group update time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_updateTime;
+                    bool m_updateTimeHasBeenSet;
 
                 };
             }

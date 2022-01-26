@@ -41,6 +41,7 @@ namespace TencentCloud
                     DescribeLoginWhiteListResponse();
                     ~DescribeLoginWhiteListResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -56,8 +57,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Login whitelist array
-                     * @return LoginWhiteLists Login whitelist array
+                     * 获取Login allowlist array
+                     * @return LoginWhiteLists Login allowlist array
                      */
                     std::vector<LoginWhiteLists> GetLoginWhiteLists() const;
 
@@ -76,7 +77,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Login whitelist array
+                     * Login allowlist array
                      */
                     std::vector<LoginWhiteLists> m_loginWhiteLists;
                     bool m_loginWhiteListsHasBeenSet;

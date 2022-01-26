@@ -362,6 +362,72 @@ Note: This field may return null, indicating no valid value.
                      */
                     bool EniTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Type of the resource bound with an ENI. Valid values: cvm, eks.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Business Type of the resource bound with an ENI. Valid values: cvm, eks.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetBusiness() const;
+
+                    /**
+                     * 设置Type of the resource bound with an ENI. Valid values: cvm, eks.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param Business Type of the resource bound with an ENI. Valid values: cvm, eks.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetBusiness(const std::string& _business);
+
+                    /**
+                     * 判断参数 Business 是否已赋值
+                     * @return Business 是否已赋值
+                     */
+                    bool BusinessHasBeenSet() const;
+
+                    /**
+                     * 获取ID of the CDC instance associated with the ENI
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return CdcId ID of the CDC instance associated with the ENI
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetCdcId() const;
+
+                    /**
+                     * 设置ID of the CDC instance associated with the ENI
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param CdcId ID of the CDC instance associated with the ENI
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetCdcId(const std::string& _cdcId);
+
+                    /**
+                     * 判断参数 CdcId 是否已赋值
+                     * @return CdcId 是否已赋值
+                     */
+                    bool CdcIdHasBeenSet() const;
+
+                    /**
+                     * 获取ENI type. Valid values: `0` (standard); `1` (extension). Default value: `0`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return AttachType ENI type. Valid values: `0` (standard); `1` (extension). Default value: `0`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetAttachType() const;
+
+                    /**
+                     * 设置ENI type. Valid values: `0` (standard); `1` (extension). Default value: `0`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param AttachType ENI type. Valid values: `0` (standard); `1` (extension). Default value: `0`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetAttachType(const uint64_t& _attachType);
+
+                    /**
+                     * 判断参数 AttachType 是否已赋值
+                     * @return AttachType 是否已赋值
+                     */
+                    bool AttachTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -465,6 +531,27 @@ Note: This field may return null, indicating no valid value.
                      */
                     uint64_t m_eniType;
                     bool m_eniTypeHasBeenSet;
+
+                    /**
+                     * Type of the resource bound with an ENI. Valid values: cvm, eks.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_business;
+                    bool m_businessHasBeenSet;
+
+                    /**
+                     * ID of the CDC instance associated with the ENI
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_cdcId;
+                    bool m_cdcIdHasBeenSet;
+
+                    /**
+                     * ENI type. Valid values: `0` (standard); `1` (extension). Default value: `0`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_attachType;
+                    bool m_attachTypeHasBeenSet;
 
                 };
             }

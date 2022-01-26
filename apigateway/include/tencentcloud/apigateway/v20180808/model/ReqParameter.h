@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取API frontend parameter position, such as `head`. Valid values: head, query, path.
-                     * @return Position API frontend parameter position, such as `head`. Valid values: head, query, path.
+                     * 获取Position of the API frontend parameter, such as the header. Supported values: `header`, `query`, and `path`.
+                     * @return Position Position of the API frontend parameter, such as the header. Supported values: `header`, `query`, and `path`.
                      */
                     std::string GetPosition() const;
 
                     /**
-                     * 设置API frontend parameter position, such as `head`. Valid values: head, query, path.
-                     * @param Position API frontend parameter position, such as `head`. Valid values: head, query, path.
+                     * 设置Position of the API frontend parameter, such as the header. Supported values: `header`, `query`, and `path`.
+                     * @param Position Position of the API frontend parameter, such as the header. Supported values: `header`, `query`, and `path`.
                      */
                     void SetPosition(const std::string& _position);
 
@@ -163,7 +163,7 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * API frontend parameter position, such as `head`. Valid values: head, query, path.
+                     * Position of the API frontend parameter, such as the header. Supported values: `header`, `query`, and `path`.
                      */
                     std::string m_position;
                     bool m_positionHasBeenSet;

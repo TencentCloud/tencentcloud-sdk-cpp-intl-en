@@ -20,43 +20,44 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Live::V20180801::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeStreamDayPlayInfoListRequest::DescribeStreamDayPlayInfoListRequest() :
     m_dayTimeHasBeenSet(false),
     m_playDomainHasBeenSet(false),
     m_pageNumHasBeenSet(false),
-    m_pageSizeHasBeenSet(false)
+    m_pageSizeHasBeenSet(false),
+    m_mainlandOrOverseaHasBeenSet(false),
+    m_serviceNameHasBeenSet(false)
 {
 }
 
 string DescribeStreamDayPlayInfoListRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_dayTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DayTime";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_dayTime.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_dayTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_playDomainHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PlayDomain";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_playDomain.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_playDomain.c_str(), allocator).Move(), allocator);
     }
 
     if (m_pageNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PageNum";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_pageNum, allocator);
@@ -64,15 +65,31 @@ string DescribeStreamDayPlayInfoListRequest::ToJsonString() const
 
     if (m_pageSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PageSize";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_pageSize, allocator);
     }
 
+    if (m_mainlandOrOverseaHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MainlandOrOversea";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_mainlandOrOversea.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    if (m_serviceNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ServiceName";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_serviceName.c_str(), allocator).Move(), allocator);
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -140,6 +157,38 @@ void DescribeStreamDayPlayInfoListRequest::SetPageSize(const uint64_t& _pageSize
 bool DescribeStreamDayPlayInfoListRequest::PageSizeHasBeenSet() const
 {
     return m_pageSizeHasBeenSet;
+}
+
+string DescribeStreamDayPlayInfoListRequest::GetMainlandOrOversea() const
+{
+    return m_mainlandOrOversea;
+}
+
+void DescribeStreamDayPlayInfoListRequest::SetMainlandOrOversea(const string& _mainlandOrOversea)
+{
+    m_mainlandOrOversea = _mainlandOrOversea;
+    m_mainlandOrOverseaHasBeenSet = true;
+}
+
+bool DescribeStreamDayPlayInfoListRequest::MainlandOrOverseaHasBeenSet() const
+{
+    return m_mainlandOrOverseaHasBeenSet;
+}
+
+string DescribeStreamDayPlayInfoListRequest::GetServiceName() const
+{
+    return m_serviceName;
+}
+
+void DescribeStreamDayPlayInfoListRequest::SetServiceName(const string& _serviceName)
+{
+    m_serviceName = _serviceName;
+    m_serviceNameHasBeenSet = true;
+}
+
+bool DescribeStreamDayPlayInfoListRequest::ServiceNameHasBeenSet() const
+{
+    return m_serviceNameHasBeenSet;
 }
 
 

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dayu::V20180709::Model;
-using namespace rapidjson;
 using namespace std;
 
 DDoSPolicyPacketFilter::DDoSPolicyPacketFilter() :
@@ -39,7 +38,7 @@ DDoSPolicyPacketFilter::DDoSPolicyPacketFilter() :
 {
 }
 
-CoreInternalOutcome DDoSPolicyPacketFilter::Deserialize(const Value &value)
+CoreInternalOutcome DDoSPolicyPacketFilter::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -48,7 +47,7 @@ CoreInternalOutcome DDoSPolicyPacketFilter::Deserialize(const Value &value)
     {
         if (!value["Protocol"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyPacketFilter.Protocol` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyPacketFilter.Protocol` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_protocol = string(value["Protocol"].GetString());
         m_protocolHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome DDoSPolicyPacketFilter::Deserialize(const Value &value)
     {
         if (!value["SportStart"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyPacketFilter.SportStart` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyPacketFilter.SportStart` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_sportStart = value["SportStart"].GetUint64();
         m_sportStartHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome DDoSPolicyPacketFilter::Deserialize(const Value &value)
     {
         if (!value["SportEnd"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyPacketFilter.SportEnd` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyPacketFilter.SportEnd` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_sportEnd = value["SportEnd"].GetUint64();
         m_sportEndHasBeenSet = true;
@@ -78,7 +77,7 @@ CoreInternalOutcome DDoSPolicyPacketFilter::Deserialize(const Value &value)
     {
         if (!value["DportStart"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyPacketFilter.DportStart` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyPacketFilter.DportStart` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_dportStart = value["DportStart"].GetUint64();
         m_dportStartHasBeenSet = true;
@@ -88,7 +87,7 @@ CoreInternalOutcome DDoSPolicyPacketFilter::Deserialize(const Value &value)
     {
         if (!value["DportEnd"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyPacketFilter.DportEnd` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyPacketFilter.DportEnd` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_dportEnd = value["DportEnd"].GetUint64();
         m_dportEndHasBeenSet = true;
@@ -98,7 +97,7 @@ CoreInternalOutcome DDoSPolicyPacketFilter::Deserialize(const Value &value)
     {
         if (!value["PktlenMin"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyPacketFilter.PktlenMin` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyPacketFilter.PktlenMin` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_pktlenMin = value["PktlenMin"].GetUint64();
         m_pktlenMinHasBeenSet = true;
@@ -108,7 +107,7 @@ CoreInternalOutcome DDoSPolicyPacketFilter::Deserialize(const Value &value)
     {
         if (!value["PktlenMax"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyPacketFilter.PktlenMax` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyPacketFilter.PktlenMax` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_pktlenMax = value["PktlenMax"].GetUint64();
         m_pktlenMaxHasBeenSet = true;
@@ -118,7 +117,7 @@ CoreInternalOutcome DDoSPolicyPacketFilter::Deserialize(const Value &value)
     {
         if (!value["MatchBegin"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyPacketFilter.MatchBegin` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyPacketFilter.MatchBegin` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_matchBegin = string(value["MatchBegin"].GetString());
         m_matchBeginHasBeenSet = true;
@@ -128,7 +127,7 @@ CoreInternalOutcome DDoSPolicyPacketFilter::Deserialize(const Value &value)
     {
         if (!value["MatchType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyPacketFilter.MatchType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyPacketFilter.MatchType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_matchType = string(value["MatchType"].GetString());
         m_matchTypeHasBeenSet = true;
@@ -138,7 +137,7 @@ CoreInternalOutcome DDoSPolicyPacketFilter::Deserialize(const Value &value)
     {
         if (!value["Str"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyPacketFilter.Str` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyPacketFilter.Str` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_str = string(value["Str"].GetString());
         m_strHasBeenSet = true;
@@ -148,7 +147,7 @@ CoreInternalOutcome DDoSPolicyPacketFilter::Deserialize(const Value &value)
     {
         if (!value["Depth"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyPacketFilter.Depth` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyPacketFilter.Depth` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_depth = value["Depth"].GetUint64();
         m_depthHasBeenSet = true;
@@ -158,7 +157,7 @@ CoreInternalOutcome DDoSPolicyPacketFilter::Deserialize(const Value &value)
     {
         if (!value["Offset"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyPacketFilter.Offset` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyPacketFilter.Offset` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_offset = value["Offset"].GetUint64();
         m_offsetHasBeenSet = true;
@@ -168,7 +167,7 @@ CoreInternalOutcome DDoSPolicyPacketFilter::Deserialize(const Value &value)
     {
         if (!value["IsNot"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyPacketFilter.IsNot` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyPacketFilter.IsNot` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_isNot = value["IsNot"].GetUint64();
         m_isNotHasBeenSet = true;
@@ -178,7 +177,7 @@ CoreInternalOutcome DDoSPolicyPacketFilter::Deserialize(const Value &value)
     {
         if (!value["Action"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyPacketFilter.Action` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyPacketFilter.Action` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_action = string(value["Action"].GetString());
         m_actionHasBeenSet = true;
@@ -188,20 +187,20 @@ CoreInternalOutcome DDoSPolicyPacketFilter::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void DDoSPolicyPacketFilter::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DDoSPolicyPacketFilter::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_protocolHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Protocol";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_protocol.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sportStartHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SportStart";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_sportStart, allocator);
@@ -209,7 +208,7 @@ void DDoSPolicyPacketFilter::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_sportEndHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SportEnd";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_sportEnd, allocator);
@@ -217,7 +216,7 @@ void DDoSPolicyPacketFilter::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_dportStartHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DportStart";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_dportStart, allocator);
@@ -225,7 +224,7 @@ void DDoSPolicyPacketFilter::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_dportEndHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DportEnd";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_dportEnd, allocator);
@@ -233,7 +232,7 @@ void DDoSPolicyPacketFilter::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_pktlenMinHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PktlenMin";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_pktlenMin, allocator);
@@ -241,7 +240,7 @@ void DDoSPolicyPacketFilter::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_pktlenMaxHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PktlenMax";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_pktlenMax, allocator);
@@ -249,31 +248,31 @@ void DDoSPolicyPacketFilter::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_matchBeginHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MatchBegin";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_matchBegin.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_matchBegin.c_str(), allocator).Move(), allocator);
     }
 
     if (m_matchTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MatchType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_matchType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_matchType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_strHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Str";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_str.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_str.c_str(), allocator).Move(), allocator);
     }
 
     if (m_depthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Depth";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_depth, allocator);
@@ -281,7 +280,7 @@ void DDoSPolicyPacketFilter::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_offsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Offset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_offset, allocator);
@@ -289,7 +288,7 @@ void DDoSPolicyPacketFilter::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_isNotHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsNot";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isNot, allocator);
@@ -297,10 +296,10 @@ void DDoSPolicyPacketFilter::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_actionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Action";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_action.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_action.c_str(), allocator).Move(), allocator);
     }
 
 }

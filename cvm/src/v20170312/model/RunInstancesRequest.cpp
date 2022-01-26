@@ -20,15 +20,14 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Cvm::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 RunInstancesRequest::RunInstancesRequest() :
-    m_placementHasBeenSet(false),
-    m_imageIdHasBeenSet(false),
     m_instanceChargeTypeHasBeenSet(false),
     m_instanceChargePrepaidHasBeenSet(false),
+    m_placementHasBeenSet(false),
     m_instanceTypeHasBeenSet(false),
+    m_imageIdHasBeenSet(false),
     m_systemDiskHasBeenSet(false),
     m_dataDisksHasBeenSet(false),
     m_virtualPrivateCloudHasBeenSet(false),
@@ -45,104 +44,106 @@ RunInstancesRequest::RunInstancesRequest() :
     m_tagSpecificationHasBeenSet(false),
     m_instanceMarketOptionsHasBeenSet(false),
     m_userDataHasBeenSet(false),
-    m_dryRunHasBeenSet(false)
+    m_dryRunHasBeenSet(false),
+    m_camRoleNameHasBeenSet(false),
+    m_hpcClusterIdHasBeenSet(false)
 {
 }
 
 string RunInstancesRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
-
-    if (m_placementHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "Placement";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
-        m_placement.ToJsonObject(d[key.c_str()], allocator);
-    }
-
-    if (m_imageIdHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "ImageId";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_imageId.c_str(), allocator).Move(), allocator);
-    }
 
     if (m_instanceChargeTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceChargeType";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceChargeType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceChargeType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceChargePrepaidHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceChargePrepaid";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_instanceChargePrepaid.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_placementHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Placement";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_placement.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_instanceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceType";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_imageIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ImageId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_imageId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_systemDiskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SystemDisk";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_systemDisk.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_dataDisksHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DataDisks";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_dataDisks.begin(); itr != m_dataDisks.end(); ++itr, ++i)
         {
-            d[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
     }
 
     if (m_virtualPrivateCloudHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VirtualPrivateCloud";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_virtualPrivateCloud.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_internetAccessibleHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InternetAccessible";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_internetAccessible.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_instanceCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceCount";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_instanceCount, allocator);
@@ -150,160 +151,144 @@ string RunInstancesRequest::ToJsonString() const
 
     if (m_instanceNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_loginSettingsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LoginSettings";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_loginSettings.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_securityGroupIdsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SecurityGroupIds";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_securityGroupIds.begin(); itr != m_securityGroupIds.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_enhancedServiceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EnhancedService";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_enhancedService.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_clientTokenHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClientToken";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_clientToken.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_clientToken.c_str(), allocator).Move(), allocator);
     }
 
     if (m_hostNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HostName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_hostName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_hostName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_actionTimerHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ActionTimer";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_actionTimer.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_disasterRecoverGroupIdsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DisasterRecoverGroupIds";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_disasterRecoverGroupIds.begin(); itr != m_disasterRecoverGroupIds.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_tagSpecificationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TagSpecification";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_tagSpecification.begin(); itr != m_tagSpecification.end(); ++itr, ++i)
         {
-            d[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
     }
 
     if (m_instanceMarketOptionsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceMarketOptions";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_instanceMarketOptions.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_userDataHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UserData";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_userData.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_userData.c_str(), allocator).Move(), allocator);
     }
 
     if (m_dryRunHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DryRun";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_dryRun, allocator);
     }
 
+    if (m_camRoleNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CamRoleName";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_camRoleName.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    if (m_hpcClusterIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HpcClusterId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_hpcClusterId.c_str(), allocator).Move(), allocator);
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
 
-
-Placement RunInstancesRequest::GetPlacement() const
-{
-    return m_placement;
-}
-
-void RunInstancesRequest::SetPlacement(const Placement& _placement)
-{
-    m_placement = _placement;
-    m_placementHasBeenSet = true;
-}
-
-bool RunInstancesRequest::PlacementHasBeenSet() const
-{
-    return m_placementHasBeenSet;
-}
-
-string RunInstancesRequest::GetImageId() const
-{
-    return m_imageId;
-}
-
-void RunInstancesRequest::SetImageId(const string& _imageId)
-{
-    m_imageId = _imageId;
-    m_imageIdHasBeenSet = true;
-}
-
-bool RunInstancesRequest::ImageIdHasBeenSet() const
-{
-    return m_imageIdHasBeenSet;
-}
 
 string RunInstancesRequest::GetInstanceChargeType() const
 {
@@ -337,6 +322,22 @@ bool RunInstancesRequest::InstanceChargePrepaidHasBeenSet() const
     return m_instanceChargePrepaidHasBeenSet;
 }
 
+Placement RunInstancesRequest::GetPlacement() const
+{
+    return m_placement;
+}
+
+void RunInstancesRequest::SetPlacement(const Placement& _placement)
+{
+    m_placement = _placement;
+    m_placementHasBeenSet = true;
+}
+
+bool RunInstancesRequest::PlacementHasBeenSet() const
+{
+    return m_placementHasBeenSet;
+}
+
 string RunInstancesRequest::GetInstanceType() const
 {
     return m_instanceType;
@@ -351,6 +352,22 @@ void RunInstancesRequest::SetInstanceType(const string& _instanceType)
 bool RunInstancesRequest::InstanceTypeHasBeenSet() const
 {
     return m_instanceTypeHasBeenSet;
+}
+
+string RunInstancesRequest::GetImageId() const
+{
+    return m_imageId;
+}
+
+void RunInstancesRequest::SetImageId(const string& _imageId)
+{
+    m_imageId = _imageId;
+    m_imageIdHasBeenSet = true;
+}
+
+bool RunInstancesRequest::ImageIdHasBeenSet() const
+{
+    return m_imageIdHasBeenSet;
 }
 
 SystemDisk RunInstancesRequest::GetSystemDisk() const
@@ -623,6 +640,38 @@ void RunInstancesRequest::SetDryRun(const bool& _dryRun)
 bool RunInstancesRequest::DryRunHasBeenSet() const
 {
     return m_dryRunHasBeenSet;
+}
+
+string RunInstancesRequest::GetCamRoleName() const
+{
+    return m_camRoleName;
+}
+
+void RunInstancesRequest::SetCamRoleName(const string& _camRoleName)
+{
+    m_camRoleName = _camRoleName;
+    m_camRoleNameHasBeenSet = true;
+}
+
+bool RunInstancesRequest::CamRoleNameHasBeenSet() const
+{
+    return m_camRoleNameHasBeenSet;
+}
+
+string RunInstancesRequest::GetHpcClusterId() const
+{
+    return m_hpcClusterId;
+}
+
+void RunInstancesRequest::SetHpcClusterId(const string& _hpcClusterId)
+{
+    m_hpcClusterId = _hpcClusterId;
+    m_hpcClusterIdHasBeenSet = true;
+}
+
+bool RunInstancesRequest::HpcClusterIdHasBeenSet() const
+{
+    return m_hpcClusterIdHasBeenSet;
 }
 
 

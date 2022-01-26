@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Yunjing::V20180228::Model;
-using namespace rapidjson;
 using namespace std;
 
 UsualPlace::UsualPlace() :
@@ -30,7 +29,7 @@ UsualPlace::UsualPlace() :
 {
 }
 
-CoreInternalOutcome UsualPlace::Deserialize(const Value &value)
+CoreInternalOutcome UsualPlace::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome UsualPlace::Deserialize(const Value &value)
     {
         if (!value["Id"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `UsualPlace.Id` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UsualPlace.Id` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_id = value["Id"].GetUint64();
         m_idHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome UsualPlace::Deserialize(const Value &value)
     {
         if (!value["Uuid"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UsualPlace.Uuid` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UsualPlace.Uuid` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_uuid = string(value["Uuid"].GetString());
         m_uuidHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome UsualPlace::Deserialize(const Value &value)
     {
         if (!value["CountryId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `UsualPlace.CountryId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UsualPlace.CountryId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_countryId = value["CountryId"].GetUint64();
         m_countryIdHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome UsualPlace::Deserialize(const Value &value)
     {
         if (!value["ProvinceId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `UsualPlace.ProvinceId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UsualPlace.ProvinceId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_provinceId = value["ProvinceId"].GetUint64();
         m_provinceIdHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome UsualPlace::Deserialize(const Value &value)
     {
         if (!value["CityId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `UsualPlace.CityId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UsualPlace.CityId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_cityId = value["CityId"].GetUint64();
         m_cityIdHasBeenSet = true;
@@ -89,12 +88,12 @@ CoreInternalOutcome UsualPlace::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void UsualPlace::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void UsualPlace::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_idHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Id";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_id, allocator);
@@ -102,15 +101,15 @@ void UsualPlace::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_uuidHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Uuid";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_uuid.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_uuid.c_str(), allocator).Move(), allocator);
     }
 
     if (m_countryIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CountryId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_countryId, allocator);
@@ -118,7 +117,7 @@ void UsualPlace::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_provinceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProvinceId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_provinceId, allocator);
@@ -126,7 +125,7 @@ void UsualPlace::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_cityIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CityId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cityId, allocator);

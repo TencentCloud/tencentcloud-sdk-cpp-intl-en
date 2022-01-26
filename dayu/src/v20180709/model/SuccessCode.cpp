@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dayu::V20180709::Model;
-using namespace rapidjson;
 using namespace std;
 
 SuccessCode::SuccessCode() :
@@ -27,7 +26,7 @@ SuccessCode::SuccessCode() :
 {
 }
 
-CoreInternalOutcome SuccessCode::Deserialize(const Value &value)
+CoreInternalOutcome SuccessCode::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome SuccessCode::Deserialize(const Value &value)
     {
         if (!value["Code"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SuccessCode.Code` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SuccessCode.Code` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_code = string(value["Code"].GetString());
         m_codeHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome SuccessCode::Deserialize(const Value &value)
     {
         if (!value["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SuccessCode.Message` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SuccessCode.Message` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_message = string(value["Message"].GetString());
         m_messageHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome SuccessCode::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void SuccessCode::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SuccessCode::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_codeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Code";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_code.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_code.c_str(), allocator).Move(), allocator);
     }
 
     if (m_messageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Message";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_message.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_message.c_str(), allocator).Move(), allocator);
     }
 
 }

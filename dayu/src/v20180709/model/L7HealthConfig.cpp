@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dayu::V20180709::Model;
-using namespace rapidjson;
 using namespace std;
 
 L7HealthConfig::L7HealthConfig() :
@@ -34,7 +33,7 @@ L7HealthConfig::L7HealthConfig() :
 {
 }
 
-CoreInternalOutcome L7HealthConfig::Deserialize(const Value &value)
+CoreInternalOutcome L7HealthConfig::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -43,7 +42,7 @@ CoreInternalOutcome L7HealthConfig::Deserialize(const Value &value)
     {
         if (!value["Protocol"].IsString())
         {
-            return CoreInternalOutcome(Error("response `L7HealthConfig.Protocol` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7HealthConfig.Protocol` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_protocol = string(value["Protocol"].GetString());
         m_protocolHasBeenSet = true;
@@ -53,7 +52,7 @@ CoreInternalOutcome L7HealthConfig::Deserialize(const Value &value)
     {
         if (!value["Domain"].IsString())
         {
-            return CoreInternalOutcome(Error("response `L7HealthConfig.Domain` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7HealthConfig.Domain` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_domain = string(value["Domain"].GetString());
         m_domainHasBeenSet = true;
@@ -63,7 +62,7 @@ CoreInternalOutcome L7HealthConfig::Deserialize(const Value &value)
     {
         if (!value["Enable"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L7HealthConfig.Enable` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7HealthConfig.Enable` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_enable = value["Enable"].GetUint64();
         m_enableHasBeenSet = true;
@@ -73,7 +72,7 @@ CoreInternalOutcome L7HealthConfig::Deserialize(const Value &value)
     {
         if (!value["Interval"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L7HealthConfig.Interval` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7HealthConfig.Interval` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_interval = value["Interval"].GetUint64();
         m_intervalHasBeenSet = true;
@@ -83,7 +82,7 @@ CoreInternalOutcome L7HealthConfig::Deserialize(const Value &value)
     {
         if (!value["KickNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L7HealthConfig.KickNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7HealthConfig.KickNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_kickNum = value["KickNum"].GetUint64();
         m_kickNumHasBeenSet = true;
@@ -93,7 +92,7 @@ CoreInternalOutcome L7HealthConfig::Deserialize(const Value &value)
     {
         if (!value["AliveNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L7HealthConfig.AliveNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7HealthConfig.AliveNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_aliveNum = value["AliveNum"].GetUint64();
         m_aliveNumHasBeenSet = true;
@@ -103,7 +102,7 @@ CoreInternalOutcome L7HealthConfig::Deserialize(const Value &value)
     {
         if (!value["Method"].IsString())
         {
-            return CoreInternalOutcome(Error("response `L7HealthConfig.Method` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7HealthConfig.Method` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_method = string(value["Method"].GetString());
         m_methodHasBeenSet = true;
@@ -113,7 +112,7 @@ CoreInternalOutcome L7HealthConfig::Deserialize(const Value &value)
     {
         if (!value["StatusCode"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `L7HealthConfig.StatusCode` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7HealthConfig.StatusCode` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_statusCode = value["StatusCode"].GetUint64();
         m_statusCodeHasBeenSet = true;
@@ -123,7 +122,7 @@ CoreInternalOutcome L7HealthConfig::Deserialize(const Value &value)
     {
         if (!value["Url"].IsString())
         {
-            return CoreInternalOutcome(Error("response `L7HealthConfig.Url` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `L7HealthConfig.Url` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_url = string(value["Url"].GetString());
         m_urlHasBeenSet = true;
@@ -133,28 +132,28 @@ CoreInternalOutcome L7HealthConfig::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void L7HealthConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void L7HealthConfig::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_protocolHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Protocol";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_protocol.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
     }
 
     if (m_domainHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Domain";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_domain.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_domain.c_str(), allocator).Move(), allocator);
     }
 
     if (m_enableHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Enable";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_enable, allocator);
@@ -162,7 +161,7 @@ void L7HealthConfig::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_intervalHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Interval";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_interval, allocator);
@@ -170,7 +169,7 @@ void L7HealthConfig::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_kickNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "KickNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_kickNum, allocator);
@@ -178,7 +177,7 @@ void L7HealthConfig::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_aliveNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AliveNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_aliveNum, allocator);
@@ -186,15 +185,15 @@ void L7HealthConfig::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_methodHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Method";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_method.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_method.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StatusCode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_statusCode, allocator);
@@ -202,10 +201,10 @@ void L7HealthConfig::ToJsonObject(Value &value, Document::AllocatorType& allocat
 
     if (m_urlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Url";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_url.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_url.c_str(), allocator).Move(), allocator);
     }
 
 }

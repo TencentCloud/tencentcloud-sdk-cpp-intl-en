@@ -137,14 +137,14 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
-                     * @return ReadOnly Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
+                     * 获取Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
+                     * @return ReadOnly Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
                      */
                     int64_t GetReadOnly() const;
 
                     /**
-                     * 设置Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
-                     * @param ReadOnly Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
+                     * 设置Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
+                     * @param ReadOnly Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
                      */
                     void SetReadOnly(const int64_t& _readOnly);
 
@@ -155,17 +155,17 @@ namespace TencentCloud
                     bool ReadOnlyHasBeenSet() const;
 
                     /**
-                     * 获取If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
+                     * 获取If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
-                     * @return DelayThresh If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
+                     * @return DelayThresh If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
                      */
                     int64_t GetDelayThresh() const;
 
                     /**
-                     * 设置If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
+                     * 设置If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
-                     * @param DelayThresh If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
+                     * @param DelayThresh If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
                      */
                     void SetDelayThresh(const int64_t& _delayThresh);
@@ -209,13 +209,13 @@ It is recommended that this parameter be set to a value greater than 10. This pa
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
+                     * Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
                      */
                     int64_t m_readOnly;
                     bool m_readOnlyHasBeenSet;
 
                     /**
-                     * If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
+                     * If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
                      */
                     int64_t m_delayThresh;

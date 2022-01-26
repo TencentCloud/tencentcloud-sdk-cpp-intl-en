@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 NatGateway::NatGateway() :
@@ -32,11 +31,18 @@ NatGateway::NatGateway() :
     m_networkStateHasBeenSet(false),
     m_destinationIpPortTranslationNatRuleSetHasBeenSet(false),
     m_vpcIdHasBeenSet(false),
-    m_zoneHasBeenSet(false)
+    m_zoneHasBeenSet(false),
+    m_directConnectGatewayIdsHasBeenSet(false),
+    m_subnetIdHasBeenSet(false),
+    m_tagSetHasBeenSet(false),
+    m_securityGroupSetHasBeenSet(false),
+    m_sourceIpTranslationNatRuleSetHasBeenSet(false),
+    m_isExclusiveHasBeenSet(false),
+    m_exclusiveGatewayBandwidthHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome NatGateway::Deserialize(const Value &value)
+CoreInternalOutcome NatGateway::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -45,7 +51,7 @@ CoreInternalOutcome NatGateway::Deserialize(const Value &value)
     {
         if (!value["NatGatewayId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NatGateway.NatGatewayId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NatGateway.NatGatewayId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_natGatewayId = string(value["NatGatewayId"].GetString());
         m_natGatewayIdHasBeenSet = true;
@@ -55,7 +61,7 @@ CoreInternalOutcome NatGateway::Deserialize(const Value &value)
     {
         if (!value["NatGatewayName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NatGateway.NatGatewayName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NatGateway.NatGatewayName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_natGatewayName = string(value["NatGatewayName"].GetString());
         m_natGatewayNameHasBeenSet = true;
@@ -65,7 +71,7 @@ CoreInternalOutcome NatGateway::Deserialize(const Value &value)
     {
         if (!value["CreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NatGateway.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NatGateway.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createdTime = string(value["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
@@ -75,7 +81,7 @@ CoreInternalOutcome NatGateway::Deserialize(const Value &value)
     {
         if (!value["State"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NatGateway.State` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NatGateway.State` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_state = string(value["State"].GetString());
         m_stateHasBeenSet = true;
@@ -85,7 +91,7 @@ CoreInternalOutcome NatGateway::Deserialize(const Value &value)
     {
         if (!value["InternetMaxBandwidthOut"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `NatGateway.InternetMaxBandwidthOut` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NatGateway.InternetMaxBandwidthOut` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_internetMaxBandwidthOut = value["InternetMaxBandwidthOut"].GetUint64();
         m_internetMaxBandwidthOutHasBeenSet = true;
@@ -95,7 +101,7 @@ CoreInternalOutcome NatGateway::Deserialize(const Value &value)
     {
         if (!value["MaxConcurrentConnection"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `NatGateway.MaxConcurrentConnection` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NatGateway.MaxConcurrentConnection` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_maxConcurrentConnection = value["MaxConcurrentConnection"].GetUint64();
         m_maxConcurrentConnectionHasBeenSet = true;
@@ -104,10 +110,10 @@ CoreInternalOutcome NatGateway::Deserialize(const Value &value)
     if (value.HasMember("PublicIpAddressSet") && !value["PublicIpAddressSet"].IsNull())
     {
         if (!value["PublicIpAddressSet"].IsArray())
-            return CoreInternalOutcome(Error("response `NatGateway.PublicIpAddressSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `NatGateway.PublicIpAddressSet` is not array type"));
 
-        const Value &tmpValue = value["PublicIpAddressSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["PublicIpAddressSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             NatGatewayAddress item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -125,7 +131,7 @@ CoreInternalOutcome NatGateway::Deserialize(const Value &value)
     {
         if (!value["NetworkState"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NatGateway.NetworkState` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NatGateway.NetworkState` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_networkState = string(value["NetworkState"].GetString());
         m_networkStateHasBeenSet = true;
@@ -134,10 +140,10 @@ CoreInternalOutcome NatGateway::Deserialize(const Value &value)
     if (value.HasMember("DestinationIpPortTranslationNatRuleSet") && !value["DestinationIpPortTranslationNatRuleSet"].IsNull())
     {
         if (!value["DestinationIpPortTranslationNatRuleSet"].IsArray())
-            return CoreInternalOutcome(Error("response `NatGateway.DestinationIpPortTranslationNatRuleSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `NatGateway.DestinationIpPortTranslationNatRuleSet` is not array type"));
 
-        const Value &tmpValue = value["DestinationIpPortTranslationNatRuleSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["DestinationIpPortTranslationNatRuleSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             DestinationIpPortTranslationNatRule item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -155,7 +161,7 @@ CoreInternalOutcome NatGateway::Deserialize(const Value &value)
     {
         if (!value["VpcId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NatGateway.VpcId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NatGateway.VpcId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpcId = string(value["VpcId"].GetString());
         m_vpcIdHasBeenSet = true;
@@ -165,54 +171,150 @@ CoreInternalOutcome NatGateway::Deserialize(const Value &value)
     {
         if (!value["Zone"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NatGateway.Zone` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NatGateway.Zone` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_zone = string(value["Zone"].GetString());
         m_zoneHasBeenSet = true;
+    }
+
+    if (value.HasMember("DirectConnectGatewayIds") && !value["DirectConnectGatewayIds"].IsNull())
+    {
+        if (!value["DirectConnectGatewayIds"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `NatGateway.DirectConnectGatewayIds` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["DirectConnectGatewayIds"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_directConnectGatewayIds.push_back((*itr).GetString());
+        }
+        m_directConnectGatewayIdsHasBeenSet = true;
+    }
+
+    if (value.HasMember("SubnetId") && !value["SubnetId"].IsNull())
+    {
+        if (!value["SubnetId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `NatGateway.SubnetId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_subnetId = string(value["SubnetId"].GetString());
+        m_subnetIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("TagSet") && !value["TagSet"].IsNull())
+    {
+        if (!value["TagSet"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `NatGateway.TagSet` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["TagSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            Tag item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_tagSet.push_back(item);
+        }
+        m_tagSetHasBeenSet = true;
+    }
+
+    if (value.HasMember("SecurityGroupSet") && !value["SecurityGroupSet"].IsNull())
+    {
+        if (!value["SecurityGroupSet"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `NatGateway.SecurityGroupSet` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["SecurityGroupSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_securityGroupSet.push_back((*itr).GetString());
+        }
+        m_securityGroupSetHasBeenSet = true;
+    }
+
+    if (value.HasMember("SourceIpTranslationNatRuleSet") && !value["SourceIpTranslationNatRuleSet"].IsNull())
+    {
+        if (!value["SourceIpTranslationNatRuleSet"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `NatGateway.SourceIpTranslationNatRuleSet` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["SourceIpTranslationNatRuleSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            SourceIpTranslationNatRule item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_sourceIpTranslationNatRuleSet.push_back(item);
+        }
+        m_sourceIpTranslationNatRuleSetHasBeenSet = true;
+    }
+
+    if (value.HasMember("IsExclusive") && !value["IsExclusive"].IsNull())
+    {
+        if (!value["IsExclusive"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `NatGateway.IsExclusive` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_isExclusive = value["IsExclusive"].GetBool();
+        m_isExclusiveHasBeenSet = true;
+    }
+
+    if (value.HasMember("ExclusiveGatewayBandwidth") && !value["ExclusiveGatewayBandwidth"].IsNull())
+    {
+        if (!value["ExclusiveGatewayBandwidth"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `NatGateway.ExclusiveGatewayBandwidth` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_exclusiveGatewayBandwidth = value["ExclusiveGatewayBandwidth"].GetUint64();
+        m_exclusiveGatewayBandwidthHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void NatGateway::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void NatGateway::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_natGatewayIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NatGatewayId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_natGatewayId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_natGatewayId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_natGatewayNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NatGatewayName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_natGatewayName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_natGatewayName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createdTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createdTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_stateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "State";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_state.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_state.c_str(), allocator).Move(), allocator);
     }
 
     if (m_internetMaxBandwidthOutHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InternetMaxBandwidthOut";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_internetMaxBandwidthOut, allocator);
@@ -220,7 +322,7 @@ void NatGateway::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_maxConcurrentConnectionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaxConcurrentConnection";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_maxConcurrentConnection, allocator);
@@ -228,56 +330,136 @@ void NatGateway::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_publicIpAddressSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PublicIpAddressSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_publicIpAddressSet.begin(); itr != m_publicIpAddressSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_networkStateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetworkState";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_networkState.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_networkState.c_str(), allocator).Move(), allocator);
     }
 
     if (m_destinationIpPortTranslationNatRuleSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DestinationIpPortTranslationNatRuleSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_destinationIpPortTranslationNatRuleSet.begin(); itr != m_destinationIpPortTranslationNatRuleSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_vpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vpcId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpcId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_zoneHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Zone";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_zone.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_zone.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_directConnectGatewayIdsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DirectConnectGatewayIds";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_directConnectGatewayIds.begin(); itr != m_directConnectGatewayIds.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_subnetIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubnetId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_subnetId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_tagSetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TagSet";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tagSet.begin(); itr != m_tagSet.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_securityGroupSetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SecurityGroupSet";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_securityGroupSet.begin(); itr != m_securityGroupSet.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_sourceIpTranslationNatRuleSetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SourceIpTranslationNatRuleSet";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_sourceIpTranslationNatRuleSet.begin(); itr != m_sourceIpTranslationNatRuleSet.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_isExclusiveHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsExclusive";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isExclusive, allocator);
+    }
+
+    if (m_exclusiveGatewayBandwidthHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExclusiveGatewayBandwidth";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_exclusiveGatewayBandwidth, allocator);
     }
 
 }
@@ -457,5 +639,117 @@ void NatGateway::SetZone(const string& _zone)
 bool NatGateway::ZoneHasBeenSet() const
 {
     return m_zoneHasBeenSet;
+}
+
+vector<string> NatGateway::GetDirectConnectGatewayIds() const
+{
+    return m_directConnectGatewayIds;
+}
+
+void NatGateway::SetDirectConnectGatewayIds(const vector<string>& _directConnectGatewayIds)
+{
+    m_directConnectGatewayIds = _directConnectGatewayIds;
+    m_directConnectGatewayIdsHasBeenSet = true;
+}
+
+bool NatGateway::DirectConnectGatewayIdsHasBeenSet() const
+{
+    return m_directConnectGatewayIdsHasBeenSet;
+}
+
+string NatGateway::GetSubnetId() const
+{
+    return m_subnetId;
+}
+
+void NatGateway::SetSubnetId(const string& _subnetId)
+{
+    m_subnetId = _subnetId;
+    m_subnetIdHasBeenSet = true;
+}
+
+bool NatGateway::SubnetIdHasBeenSet() const
+{
+    return m_subnetIdHasBeenSet;
+}
+
+vector<Tag> NatGateway::GetTagSet() const
+{
+    return m_tagSet;
+}
+
+void NatGateway::SetTagSet(const vector<Tag>& _tagSet)
+{
+    m_tagSet = _tagSet;
+    m_tagSetHasBeenSet = true;
+}
+
+bool NatGateway::TagSetHasBeenSet() const
+{
+    return m_tagSetHasBeenSet;
+}
+
+vector<string> NatGateway::GetSecurityGroupSet() const
+{
+    return m_securityGroupSet;
+}
+
+void NatGateway::SetSecurityGroupSet(const vector<string>& _securityGroupSet)
+{
+    m_securityGroupSet = _securityGroupSet;
+    m_securityGroupSetHasBeenSet = true;
+}
+
+bool NatGateway::SecurityGroupSetHasBeenSet() const
+{
+    return m_securityGroupSetHasBeenSet;
+}
+
+vector<SourceIpTranslationNatRule> NatGateway::GetSourceIpTranslationNatRuleSet() const
+{
+    return m_sourceIpTranslationNatRuleSet;
+}
+
+void NatGateway::SetSourceIpTranslationNatRuleSet(const vector<SourceIpTranslationNatRule>& _sourceIpTranslationNatRuleSet)
+{
+    m_sourceIpTranslationNatRuleSet = _sourceIpTranslationNatRuleSet;
+    m_sourceIpTranslationNatRuleSetHasBeenSet = true;
+}
+
+bool NatGateway::SourceIpTranslationNatRuleSetHasBeenSet() const
+{
+    return m_sourceIpTranslationNatRuleSetHasBeenSet;
+}
+
+bool NatGateway::GetIsExclusive() const
+{
+    return m_isExclusive;
+}
+
+void NatGateway::SetIsExclusive(const bool& _isExclusive)
+{
+    m_isExclusive = _isExclusive;
+    m_isExclusiveHasBeenSet = true;
+}
+
+bool NatGateway::IsExclusiveHasBeenSet() const
+{
+    return m_isExclusiveHasBeenSet;
+}
+
+uint64_t NatGateway::GetExclusiveGatewayBandwidth() const
+{
+    return m_exclusiveGatewayBandwidth;
+}
+
+void NatGateway::SetExclusiveGatewayBandwidth(const uint64_t& _exclusiveGatewayBandwidth)
+{
+    m_exclusiveGatewayBandwidth = _exclusiveGatewayBandwidth;
+    m_exclusiveGatewayBandwidthHasBeenSet = true;
+}
+
+bool NatGateway::ExclusiveGatewayBandwidthHasBeenSet() const
+{
+    return m_exclusiveGatewayBandwidthHasBeenSet;
 }
 

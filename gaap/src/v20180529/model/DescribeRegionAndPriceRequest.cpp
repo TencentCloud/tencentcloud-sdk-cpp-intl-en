@@ -20,26 +20,75 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
-DescribeRegionAndPriceRequest::DescribeRegionAndPriceRequest()
+DescribeRegionAndPriceRequest::DescribeRegionAndPriceRequest() :
+    m_iPAddressVersionHasBeenSet(false),
+    m_packageTypeHasBeenSet(false)
 {
 }
 
 string DescribeRegionAndPriceRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
+    if (m_iPAddressVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IPAddressVersion";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_iPAddressVersion.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    if (m_packageTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PackageType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_packageType.c_str(), allocator).Move(), allocator);
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
 
+
+string DescribeRegionAndPriceRequest::GetIPAddressVersion() const
+{
+    return m_iPAddressVersion;
+}
+
+void DescribeRegionAndPriceRequest::SetIPAddressVersion(const string& _iPAddressVersion)
+{
+    m_iPAddressVersion = _iPAddressVersion;
+    m_iPAddressVersionHasBeenSet = true;
+}
+
+bool DescribeRegionAndPriceRequest::IPAddressVersionHasBeenSet() const
+{
+    return m_iPAddressVersionHasBeenSet;
+}
+
+string DescribeRegionAndPriceRequest::GetPackageType() const
+{
+    return m_packageType;
+}
+
+void DescribeRegionAndPriceRequest::SetPackageType(const string& _packageType)
+{
+    m_packageType = _packageType;
+    m_packageTypeHasBeenSet = true;
+}
+
+bool DescribeRegionAndPriceRequest::PackageTypeHasBeenSet() const
+{
+    return m_packageTypeHasBeenSet;
+}
 
 

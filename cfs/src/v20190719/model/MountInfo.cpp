@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cfs::V20190719::Model;
-using namespace rapidjson;
 using namespace std;
 
 MountInfo::MountInfo() :
@@ -31,11 +30,13 @@ MountInfo::MountInfo() :
     m_vpcIdHasBeenSet(false),
     m_vpcNameHasBeenSet(false),
     m_subnetIdHasBeenSet(false),
-    m_subnetNameHasBeenSet(false)
+    m_subnetNameHasBeenSet(false),
+    m_ccnIDHasBeenSet(false),
+    m_cidrBlockHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome MountInfo::Deserialize(const Value &value)
+CoreInternalOutcome MountInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -44,7 +45,7 @@ CoreInternalOutcome MountInfo::Deserialize(const Value &value)
     {
         if (!value["FileSystemId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MountInfo.FileSystemId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MountInfo.FileSystemId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fileSystemId = string(value["FileSystemId"].GetString());
         m_fileSystemIdHasBeenSet = true;
@@ -54,7 +55,7 @@ CoreInternalOutcome MountInfo::Deserialize(const Value &value)
     {
         if (!value["MountTargetId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MountInfo.MountTargetId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MountInfo.MountTargetId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_mountTargetId = string(value["MountTargetId"].GetString());
         m_mountTargetIdHasBeenSet = true;
@@ -64,7 +65,7 @@ CoreInternalOutcome MountInfo::Deserialize(const Value &value)
     {
         if (!value["IpAddress"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MountInfo.IpAddress` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MountInfo.IpAddress` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ipAddress = string(value["IpAddress"].GetString());
         m_ipAddressHasBeenSet = true;
@@ -74,7 +75,7 @@ CoreInternalOutcome MountInfo::Deserialize(const Value &value)
     {
         if (!value["FSID"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MountInfo.FSID` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MountInfo.FSID` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fSID = string(value["FSID"].GetString());
         m_fSIDHasBeenSet = true;
@@ -84,7 +85,7 @@ CoreInternalOutcome MountInfo::Deserialize(const Value &value)
     {
         if (!value["LifeCycleState"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MountInfo.LifeCycleState` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MountInfo.LifeCycleState` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_lifeCycleState = string(value["LifeCycleState"].GetString());
         m_lifeCycleStateHasBeenSet = true;
@@ -94,7 +95,7 @@ CoreInternalOutcome MountInfo::Deserialize(const Value &value)
     {
         if (!value["NetworkInterface"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MountInfo.NetworkInterface` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MountInfo.NetworkInterface` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_networkInterface = string(value["NetworkInterface"].GetString());
         m_networkInterfaceHasBeenSet = true;
@@ -104,7 +105,7 @@ CoreInternalOutcome MountInfo::Deserialize(const Value &value)
     {
         if (!value["VpcId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MountInfo.VpcId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MountInfo.VpcId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpcId = string(value["VpcId"].GetString());
         m_vpcIdHasBeenSet = true;
@@ -114,7 +115,7 @@ CoreInternalOutcome MountInfo::Deserialize(const Value &value)
     {
         if (!value["VpcName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MountInfo.VpcName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MountInfo.VpcName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpcName = string(value["VpcName"].GetString());
         m_vpcNameHasBeenSet = true;
@@ -124,7 +125,7 @@ CoreInternalOutcome MountInfo::Deserialize(const Value &value)
     {
         if (!value["SubnetId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MountInfo.SubnetId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MountInfo.SubnetId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_subnetId = string(value["SubnetId"].GetString());
         m_subnetIdHasBeenSet = true;
@@ -134,97 +135,133 @@ CoreInternalOutcome MountInfo::Deserialize(const Value &value)
     {
         if (!value["SubnetName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MountInfo.SubnetName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MountInfo.SubnetName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_subnetName = string(value["SubnetName"].GetString());
         m_subnetNameHasBeenSet = true;
+    }
+
+    if (value.HasMember("CcnID") && !value["CcnID"].IsNull())
+    {
+        if (!value["CcnID"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `MountInfo.CcnID` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_ccnID = string(value["CcnID"].GetString());
+        m_ccnIDHasBeenSet = true;
+    }
+
+    if (value.HasMember("CidrBlock") && !value["CidrBlock"].IsNull())
+    {
+        if (!value["CidrBlock"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `MountInfo.CidrBlock` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_cidrBlock = string(value["CidrBlock"].GetString());
+        m_cidrBlockHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void MountInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MountInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_fileSystemIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileSystemId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fileSystemId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fileSystemId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_mountTargetIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MountTargetId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_mountTargetId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_mountTargetId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ipAddressHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IpAddress";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ipAddress.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ipAddress.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fSIDHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FSID";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fSID.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fSID.c_str(), allocator).Move(), allocator);
     }
 
     if (m_lifeCycleStateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LifeCycleState";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_lifeCycleState.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_lifeCycleState.c_str(), allocator).Move(), allocator);
     }
 
     if (m_networkInterfaceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetworkInterface";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_networkInterface.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_networkInterface.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vpcId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpcId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vpcNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vpcName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpcName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_subnetIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubnetId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_subnetId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_subnetId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_subnetNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubnetName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_subnetName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_subnetName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_ccnIDHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CcnID";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ccnID.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_cidrBlockHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CidrBlock";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cidrBlock.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -388,5 +425,37 @@ void MountInfo::SetSubnetName(const string& _subnetName)
 bool MountInfo::SubnetNameHasBeenSet() const
 {
     return m_subnetNameHasBeenSet;
+}
+
+string MountInfo::GetCcnID() const
+{
+    return m_ccnID;
+}
+
+void MountInfo::SetCcnID(const string& _ccnID)
+{
+    m_ccnID = _ccnID;
+    m_ccnIDHasBeenSet = true;
+}
+
+bool MountInfo::CcnIDHasBeenSet() const
+{
+    return m_ccnIDHasBeenSet;
+}
+
+string MountInfo::GetCidrBlock() const
+{
+    return m_cidrBlock;
+}
+
+void MountInfo::SetCidrBlock(const string& _cidrBlock)
+{
+    m_cidrBlock = _cidrBlock;
+    m_cidrBlockHasBeenSet = true;
+}
+
+bool MountInfo::CidrBlockHasBeenSet() const
+{
+    return m_cidrBlockHasBeenSet;
 }
 

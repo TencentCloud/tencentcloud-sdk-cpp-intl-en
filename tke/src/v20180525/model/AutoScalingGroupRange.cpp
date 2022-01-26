@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Tke::V20180525::Model;
-using namespace rapidjson;
 using namespace std;
 
 AutoScalingGroupRange::AutoScalingGroupRange() :
@@ -27,7 +26,7 @@ AutoScalingGroupRange::AutoScalingGroupRange() :
 {
 }
 
-CoreInternalOutcome AutoScalingGroupRange::Deserialize(const Value &value)
+CoreInternalOutcome AutoScalingGroupRange::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome AutoScalingGroupRange::Deserialize(const Value &value)
     {
         if (!value["MinSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `AutoScalingGroupRange.MinSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroupRange.MinSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_minSize = value["MinSize"].GetInt64();
         m_minSizeHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome AutoScalingGroupRange::Deserialize(const Value &value)
     {
         if (!value["MaxSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `AutoScalingGroupRange.MaxSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroupRange.MaxSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_maxSize = value["MaxSize"].GetInt64();
         m_maxSizeHasBeenSet = true;
@@ -56,12 +55,12 @@ CoreInternalOutcome AutoScalingGroupRange::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void AutoScalingGroupRange::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AutoScalingGroupRange::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_minSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MinSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_minSize, allocator);
@@ -69,7 +68,7 @@ void AutoScalingGroupRange::ToJsonObject(Value &value, Document::AllocatorType& 
 
     if (m_maxSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaxSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_maxSize, allocator);

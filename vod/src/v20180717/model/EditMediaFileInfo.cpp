@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 EditMediaFileInfo::EditMediaFileInfo() :
@@ -28,7 +27,7 @@ EditMediaFileInfo::EditMediaFileInfo() :
 {
 }
 
-CoreInternalOutcome EditMediaFileInfo::Deserialize(const Value &value)
+CoreInternalOutcome EditMediaFileInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome EditMediaFileInfo::Deserialize(const Value &value)
     {
         if (!value["FileId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `EditMediaFileInfo.FileId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EditMediaFileInfo.FileId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fileId = string(value["FileId"].GetString());
         m_fileIdHasBeenSet = true;
@@ -45,9 +44,9 @@ CoreInternalOutcome EditMediaFileInfo::Deserialize(const Value &value)
 
     if (value.HasMember("StartTimeOffset") && !value["StartTimeOffset"].IsNull())
     {
-        if (!value["StartTimeOffset"].IsDouble())
+        if (!value["StartTimeOffset"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `EditMediaFileInfo.StartTimeOffset` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EditMediaFileInfo.StartTimeOffset` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_startTimeOffset = value["StartTimeOffset"].GetDouble();
         m_startTimeOffsetHasBeenSet = true;
@@ -55,9 +54,9 @@ CoreInternalOutcome EditMediaFileInfo::Deserialize(const Value &value)
 
     if (value.HasMember("EndTimeOffset") && !value["EndTimeOffset"].IsNull())
     {
-        if (!value["EndTimeOffset"].IsDouble())
+        if (!value["EndTimeOffset"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `EditMediaFileInfo.EndTimeOffset` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EditMediaFileInfo.EndTimeOffset` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_endTimeOffset = value["EndTimeOffset"].GetDouble();
         m_endTimeOffsetHasBeenSet = true;
@@ -67,20 +66,20 @@ CoreInternalOutcome EditMediaFileInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void EditMediaFileInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void EditMediaFileInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_fileIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fileId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fileId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_startTimeOffsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTimeOffset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_startTimeOffset, allocator);
@@ -88,7 +87,7 @@ void EditMediaFileInfo::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_endTimeOffsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndTimeOffset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_endTimeOffset, allocator);

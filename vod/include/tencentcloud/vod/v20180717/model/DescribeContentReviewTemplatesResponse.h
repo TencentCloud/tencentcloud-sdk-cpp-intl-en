@@ -41,6 +41,7 @@ namespace TencentCloud
                     DescribeContentReviewTemplatesResponse();
                     ~DescribeContentReviewTemplatesResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -56,8 +57,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of content audit template details.
-                     * @return ContentReviewTemplateSet List of content audit template details.
+                     * 获取List of intelligent content recognition template details.
+                     * @return ContentReviewTemplateSet List of intelligent content recognition template details.
                      */
                     std::vector<ContentReviewTemplateItem> GetContentReviewTemplateSet() const;
 
@@ -76,7 +77,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of content audit template details.
+                     * List of intelligent content recognition template details.
                      */
                     std::vector<ContentReviewTemplateItem> m_contentReviewTemplateSet;
                     bool m_contentReviewTemplateSetHasBeenSet;

@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Person ID
-                     * @return PersonId Person ID
+                     * 获取Person ID, which is the `PersonId` in the `CreatePerson` API.
+                     * @return PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
                      */
                     std::string GetPersonId() const;
 
                     /**
-                     * 设置Person ID
-                     * @param PersonId Person ID
+                     * 设置Person ID, which is the `PersonId` in the `CreatePerson` API.
+                     * @param PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
                      */
                     void SetPersonId(const std::string& _personId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool PersonIdHasBeenSet() const;
 
                     /**
-                     * 获取Starting number. Default value: 0
-                     * @return Offset Starting number. Default value: 0
+                     * 获取Starting number. Default value: 0.
+                     * @return Offset Starting number. Default value: 0.
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Starting number. Default value: 0
-                     * @param Offset Starting number. Default value: 0
+                     * 设置Starting number. Default value: 0.
+                     * @param Offset Starting number. Default value: 0.
                      */
                     void SetOffset(const uint64_t& _offset);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of returned results. Default value: 10. Maximum value: 100
-                     * @return Limit Number of returned results. Default value: 10. Maximum value: 100
+                     * 获取Number of returned results. Default value: 10. Maximum value: 100.
+                     * @return Limit Number of returned results. Default value: 10. Maximum value: 100.
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned results. Default value: 10. Maximum value: 100
-                     * @param Limit Number of returned results. Default value: 10. Maximum value: 100
+                     * 设置Number of returned results. Default value: 10. Maximum value: 100.
+                     * @param Limit Number of returned results. Default value: 10. Maximum value: 100.
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -99,19 +99,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Person ID
+                     * Person ID, which is the `PersonId` in the `CreatePerson` API.
                      */
                     std::string m_personId;
                     bool m_personIdHasBeenSet;
 
                     /**
-                     * Starting number. Default value: 0
+                     * Starting number. Default value: 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of returned results. Default value: 10. Maximum value: 100
+                     * Number of returned results. Default value: 10. Maximum value: 100.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

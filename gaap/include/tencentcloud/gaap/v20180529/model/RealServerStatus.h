@@ -100,6 +100,28 @@ namespace TencentCloud
                      */
                     bool ProxyIdHasBeenSet() const;
 
+                    /**
+                     * 获取ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return GroupId ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetGroupId() const;
+
+                    /**
+                     * 设置ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param GroupId ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetGroupId(const std::string& _groupId);
+
+                    /**
+                     * 判断参数 GroupId 是否已赋值
+                     * @return GroupId 是否已赋值
+                     */
+                    bool GroupIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -119,6 +141,13 @@ namespace TencentCloud
                      */
                     std::string m_proxyId;
                     bool m_proxyIdHasBeenSet;
+
+                    /**
+                     * ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_groupId;
+                    bool m_groupIdHasBeenSet;
 
                 };
             }

@@ -25,6 +25,9 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/postgres/v20170312/model/DBInstanceNetInfo.h>
+#include <tencentcloud/postgres/v20170312/model/Tag.h>
+#include <tencentcloud/postgres/v20170312/model/NetworkAccess.h>
+#include <tencentcloud/postgres/v20170312/model/DBNode.h>
 
 
 namespace TencentCloud
@@ -120,14 +123,14 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Subnet ID
-                     * @return SubnetId Subnet ID
+                     * 获取SubnetId
+                     * @return SubnetId SubnetId
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Subnet ID
-                     * @param SubnetId Subnet ID
+                     * 设置SubnetId
+                     * @param SubnetId SubnetId
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
@@ -174,14 +177,14 @@ namespace TencentCloud
                     bool DBInstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Instance status. Valid values: applying, init (to be initialized), initing (initializing), running, limited run, isolated, recycling, recycled, job running, offline, migrating, expanding, readonly, restarting
-                     * @return DBInstanceStatus Instance status. Valid values: applying, init (to be initialized), initing (initializing), running, limited run, isolated, recycling, recycled, job running, offline, migrating, expanding, readonly, restarting
+                     * 获取Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing`
+                     * @return DBInstanceStatus Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing`
                      */
                     std::string GetDBInstanceStatus() const;
 
                     /**
-                     * 设置Instance status. Valid values: applying, init (to be initialized), initing (initializing), running, limited run, isolated, recycling, recycled, job running, offline, migrating, expanding, readonly, restarting
-                     * @param DBInstanceStatus Instance status. Valid values: applying, init (to be initialized), initing (initializing), running, limited run, isolated, recycling, recycled, job running, offline, migrating, expanding, readonly, restarting
+                     * 设置Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing`
+                     * @param DBInstanceStatus Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing`
                      */
                     void SetDBInstanceStatus(const std::string& _dBInstanceStatus);
 
@@ -318,14 +321,14 @@ namespace TencentCloud
                     bool DBCharsetHasBeenSet() const;
 
                     /**
-                     * 获取PostgreSQL kernel version
-                     * @return DBVersion PostgreSQL kernel version
+                     * 获取PostgreSQL version number
+                     * @return DBVersion PostgreSQL version number
                      */
                     std::string GetDBVersion() const;
 
                     /**
-                     * 设置PostgreSQL kernel version
-                     * @param DBVersion PostgreSQL kernel version
+                     * 设置PostgreSQL version number
+                     * @param DBVersion PostgreSQL version number
                      */
                     void SetDBVersion(const std::string& _dBVersion);
 
@@ -480,14 +483,14 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AppId 
+                     * 获取User `AppId`
+                     * @return AppId User `AppId`
                      */
                     uint64_t GetAppId() const;
 
                     /**
-                     * 设置
-                     * @param AppId 
+                     * 设置User `AppId`
+                     * @param AppId User `AppId`
                      */
                     void SetAppId(const uint64_t& _appId);
 
@@ -498,14 +501,14 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Uid 
+                     * 获取Instance `Uid`
+                     * @return Uid Instance `Uid`
                      */
                     uint64_t GetUid() const;
 
                     /**
-                     * 设置
-                     * @param Uid 
+                     * 设置Instance `Uid`
+                     * @param Uid Instance `Uid`
                      */
                     void SetUid(const uint64_t& _uid);
 
@@ -532,6 +535,200 @@ namespace TencentCloud
                      * @return SupportIpv6 是否已赋值
                      */
                     bool SupportIpv6HasBeenSet() const;
+
+                    /**
+                     * 获取The information of tags associated with instances.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return TagList The information of tags associated with instances.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Tag> GetTagList() const;
+
+                    /**
+                     * 设置The information of tags associated with instances.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param TagList The information of tags associated with instances.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetTagList(const std::vector<Tag>& _tagList);
+
+                    /**
+                     * 判断参数 TagList 是否已赋值
+                     * @return TagList 是否已赋值
+                     */
+                    bool TagListHasBeenSet() const;
+
+                    /**
+                     * 获取Primary instance information, which is returned only when the instance is read-only
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return MasterDBInstanceId Primary instance information, which is returned only when the instance is read-only
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetMasterDBInstanceId() const;
+
+                    /**
+                     * 设置Primary instance information, which is returned only when the instance is read-only
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param MasterDBInstanceId Primary instance information, which is returned only when the instance is read-only
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetMasterDBInstanceId(const std::string& _masterDBInstanceId);
+
+                    /**
+                     * 判断参数 MasterDBInstanceId 是否已赋值
+                     * @return MasterDBInstanceId 是否已赋值
+                     */
+                    bool MasterDBInstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Number of read-only instances
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return ReadOnlyInstanceNum Number of read-only instances
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetReadOnlyInstanceNum() const;
+
+                    /**
+                     * 设置Number of read-only instances
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param ReadOnlyInstanceNum Number of read-only instances
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetReadOnlyInstanceNum(const int64_t& _readOnlyInstanceNum);
+
+                    /**
+                     * 判断参数 ReadOnlyInstanceNum 是否已赋值
+                     * @return ReadOnlyInstanceNum 是否已赋值
+                     */
+                    bool ReadOnlyInstanceNumHasBeenSet() const;
+
+                    /**
+                     * 获取The status of a instance in a read-only group
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return StatusInReadonlyGroup The status of a instance in a read-only group
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetStatusInReadonlyGroup() const;
+
+                    /**
+                     * 设置The status of a instance in a read-only group
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param StatusInReadonlyGroup The status of a instance in a read-only group
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetStatusInReadonlyGroup(const std::string& _statusInReadonlyGroup);
+
+                    /**
+                     * 判断参数 StatusInReadonlyGroup 是否已赋值
+                     * @return StatusInReadonlyGroup 是否已赋值
+                     */
+                    bool StatusInReadonlyGroupHasBeenSet() const;
+
+                    /**
+                     * 获取Elimination time
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return OfflineTime Elimination time
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetOfflineTime() const;
+
+                    /**
+                     * 设置Elimination time
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param OfflineTime Elimination time
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetOfflineTime(const std::string& _offlineTime);
+
+                    /**
+                     * 判断参数 OfflineTime 是否已赋值
+                     * @return OfflineTime 是否已赋值
+                     */
+                    bool OfflineTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Database kernel version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return DBKernelVersion Database kernel version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDBKernelVersion() const;
+
+                    /**
+                     * 设置Database kernel version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param DBKernelVersion Database kernel version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetDBKernelVersion(const std::string& _dBKernelVersion);
+
+                    /**
+                     * 判断参数 DBKernelVersion 是否已赋值
+                     * @return DBKernelVersion 是否已赋值
+                     */
+                    bool DBKernelVersionHasBeenSet() const;
+
+                    /**
+                     * 获取Network access list of the instance (this field has been deprecated)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return NetworkAccessList Network access list of the instance (this field has been deprecated)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<NetworkAccess> GetNetworkAccessList() const;
+
+                    /**
+                     * 设置Network access list of the instance (this field has been deprecated)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param NetworkAccessList Network access list of the instance (this field has been deprecated)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetNetworkAccessList(const std::vector<NetworkAccess>& _networkAccessList);
+
+                    /**
+                     * 判断参数 NetworkAccessList 是否已赋值
+                     * @return NetworkAccessList 是否已赋值
+                     */
+                    bool NetworkAccessListHasBeenSet() const;
+
+                    /**
+                     * 获取PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return DBMajorVersion PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDBMajorVersion() const;
+
+                    /**
+                     * 设置PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param DBMajorVersion PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetDBMajorVersion(const std::string& _dBMajorVersion);
+
+                    /**
+                     * 判断参数 DBMajorVersion 是否已赋值
+                     * @return DBMajorVersion 是否已赋值
+                     */
+                    bool DBMajorVersionHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return DBNodeSet 
+                     */
+                    std::vector<DBNode> GetDBNodeSet() const;
+
+                    /**
+                     * 设置
+                     * @param DBNodeSet 
+                     */
+                    void SetDBNodeSet(const std::vector<DBNode>& _dBNodeSet);
+
+                    /**
+                     * 判断参数 DBNodeSet 是否已赋值
+                     * @return DBNodeSet 是否已赋值
+                     */
+                    bool DBNodeSetHasBeenSet() const;
 
                 private:
 
@@ -560,7 +757,7 @@ namespace TencentCloud
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Subnet ID
+                     * SubnetId
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
@@ -578,7 +775,7 @@ namespace TencentCloud
                     bool m_dBInstanceNameHasBeenSet;
 
                     /**
-                     * Instance status. Valid values: applying, init (to be initialized), initing (initializing), running, limited run, isolated, recycling, recycled, job running, offline, migrating, expanding, readonly, restarting
+                     * Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing`
                      */
                     std::string m_dBInstanceStatus;
                     bool m_dBInstanceStatusHasBeenSet;
@@ -626,7 +823,7 @@ namespace TencentCloud
                     bool m_dBCharsetHasBeenSet;
 
                     /**
-                     * PostgreSQL kernel version
+                     * PostgreSQL version number
                      */
                     std::string m_dBVersion;
                     bool m_dBVersionHasBeenSet;
@@ -680,13 +877,13 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * User `AppId`
                      */
                     uint64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * 
+                     * Instance `Uid`
                      */
                     uint64_t m_uid;
                     bool m_uidHasBeenSet;
@@ -696,6 +893,68 @@ namespace TencentCloud
                      */
                     uint64_t m_supportIpv6;
                     bool m_supportIpv6HasBeenSet;
+
+                    /**
+                     * The information of tags associated with instances.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Tag> m_tagList;
+                    bool m_tagListHasBeenSet;
+
+                    /**
+                     * Primary instance information, which is returned only when the instance is read-only
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_masterDBInstanceId;
+                    bool m_masterDBInstanceIdHasBeenSet;
+
+                    /**
+                     * Number of read-only instances
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_readOnlyInstanceNum;
+                    bool m_readOnlyInstanceNumHasBeenSet;
+
+                    /**
+                     * The status of a instance in a read-only group
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_statusInReadonlyGroup;
+                    bool m_statusInReadonlyGroupHasBeenSet;
+
+                    /**
+                     * Elimination time
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_offlineTime;
+                    bool m_offlineTimeHasBeenSet;
+
+                    /**
+                     * Database kernel version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_dBKernelVersion;
+                    bool m_dBKernelVersionHasBeenSet;
+
+                    /**
+                     * Network access list of the instance (this field has been deprecated)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<NetworkAccess> m_networkAccessList;
+                    bool m_networkAccessListHasBeenSet;
+
+                    /**
+                     * PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_dBMajorVersion;
+                    bool m_dBMajorVersionHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<DBNode> m_dBNodeSet;
+                    bool m_dBNodeSetHasBeenSet;
 
                 };
             }

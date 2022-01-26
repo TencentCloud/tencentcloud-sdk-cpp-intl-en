@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Login username, which can contain 1–32 letters, digits, underscores, and hyphens.
-                     * @return UserName Login username, which can contain 1–32 letters, digits, underscores, and hyphens.
+                     * 获取Login username, which can contain 1-32 letters, digits, underscores, and hyphens.
+                     * @return UserName Login username, which can contain 1-32 letters, digits, underscores, and hyphens.
                      */
                     std::string GetUserName() const;
 
                     /**
-                     * 设置Login username, which can contain 1–32 letters, digits, underscores, and hyphens.
-                     * @param UserName Login username, which can contain 1–32 letters, digits, underscores, and hyphens.
+                     * 设置Login username, which can contain 1-32 letters, digits, underscores, and hyphens.
+                     * @param UserName Login username, which can contain 1-32 letters, digits, underscores, and hyphens.
                      */
                     void SetUserName(const std::string& _userName);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool HostHasBeenSet() const;
 
                     /**
-                     * 获取Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
-                     * @return Password Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+                     * 获取Account password. It must contain 8-32 characters in all of the following four types: lowercase letters, uppercase letters, digits, and symbols (()~!@#$%^&*-+=_|{}[]:<>,.?/), and cannot start with a slash (/).
+                     * @return Password Account password. It must contain 8-32 characters in all of the following four types: lowercase letters, uppercase letters, digits, and symbols (()~!@#$%^&*-+=_|{}[]:<>,.?/), and cannot start with a slash (/).
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
-                     * @param Password Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+                     * 设置Account password. It must contain 8-32 characters in all of the following four types: lowercase letters, uppercase letters, digits, and symbols (()~!@#$%^&*-+=_|{}[]:<>,.?/), and cannot start with a slash (/).
+                     * @param Password Account password. It must contain 8-32 characters in all of the following four types: lowercase letters, uppercase letters, digits, and symbols (()~!@#$%^&*-+=_|{}[]:<>,.?/), and cannot start with a slash (/).
                      */
                     void SetPassword(const std::string& _password);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
-                     * @return ReadOnly Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
+                     * 获取Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
+                     * @return ReadOnly Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
                      */
                     int64_t GetReadOnly() const;
 
                     /**
-                     * 设置Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
-                     * @param ReadOnly Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
+                     * 设置Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
+                     * @param ReadOnly Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
                      */
                     void SetReadOnly(const int64_t& _readOnly);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool ReadOnlyHasBeenSet() const;
 
                     /**
-                     * 获取Account remarks, which can contain 0–256 letters, digits, and common symbols.
-                     * @return Description Account remarks, which can contain 0–256 letters, digits, and common symbols.
+                     * 获取Account remarks, which can contain 0-256 letters, digits, and common symbols.
+                     * @return Description Account remarks, which can contain 0-256 letters, digits, and common symbols.
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Account remarks, which can contain 0–256 letters, digits, and common symbols.
-                     * @param Description Account remarks, which can contain 0–256 letters, digits, and common symbols.
+                     * 设置Account remarks, which can contain 0-256 letters, digits, and common symbols.
+                     * @param Description Account remarks, which can contain 0-256 letters, digits, and common symbols.
                      */
                     void SetDescription(const std::string& _description);
 
@@ -151,14 +151,14 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Determines whether the slave is unavailable based on the passed-in time
-                     * @return DelayThresh Determines whether the slave is unavailable based on the passed-in time
+                     * 获取Determines whether the secondary is unavailable based on the passed-in time
+                     * @return DelayThresh Determines whether the secondary is unavailable based on the passed-in time
                      */
                     int64_t GetDelayThresh() const;
 
                     /**
-                     * 设置Determines whether the slave is unavailable based on the passed-in time
-                     * @param DelayThresh Determines whether the slave is unavailable based on the passed-in time
+                     * 设置Determines whether the secondary is unavailable based on the passed-in time
+                     * @param DelayThresh Determines whether the secondary is unavailable based on the passed-in time
                      */
                     void SetDelayThresh(const int64_t& _delayThresh);
 
@@ -177,7 +177,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Login username, which can contain 1–32 letters, digits, underscores, and hyphens.
+                     * Login username, which can contain 1-32 letters, digits, underscores, and hyphens.
                      */
                     std::string m_userName;
                     bool m_userNameHasBeenSet;
@@ -189,25 +189,25 @@ namespace TencentCloud
                     bool m_hostHasBeenSet;
 
                     /**
-                     * Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+                     * Account password. It must contain 8-32 characters in all of the following four types: lowercase letters, uppercase letters, digits, and symbols (()~!@#$%^&*-+=_|{}[]:<>,.?/), and cannot start with a slash (/).
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
+                     * Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
                      */
                     int64_t m_readOnly;
                     bool m_readOnlyHasBeenSet;
 
                     /**
-                     * Account remarks, which can contain 0–256 letters, digits, and common symbols.
+                     * Account remarks, which can contain 0-256 letters, digits, and common symbols.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Determines whether the slave is unavailable based on the passed-in time
+                     * Determines whether the secondary is unavailable based on the passed-in time
                      */
                     int64_t m_delayThresh;
                     bool m_delayThreshHasBeenSet;

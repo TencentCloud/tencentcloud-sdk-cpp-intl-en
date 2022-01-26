@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Trtc::V20190722::Model;
-using namespace rapidjson;
 using namespace std;
 
 UserInformation::UserInformation() :
@@ -33,7 +32,7 @@ UserInformation::UserInformation() :
 {
 }
 
-CoreInternalOutcome UserInformation::Deserialize(const Value &value)
+CoreInternalOutcome UserInformation::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +41,7 @@ CoreInternalOutcome UserInformation::Deserialize(const Value &value)
     {
         if (!value["RoomStr"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UserInformation.RoomStr` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UserInformation.RoomStr` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_roomStr = string(value["RoomStr"].GetString());
         m_roomStrHasBeenSet = true;
@@ -52,7 +51,7 @@ CoreInternalOutcome UserInformation::Deserialize(const Value &value)
     {
         if (!value["UserId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UserInformation.UserId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UserInformation.UserId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_userId = string(value["UserId"].GetString());
         m_userIdHasBeenSet = true;
@@ -62,7 +61,7 @@ CoreInternalOutcome UserInformation::Deserialize(const Value &value)
     {
         if (!value["JoinTs"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `UserInformation.JoinTs` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UserInformation.JoinTs` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_joinTs = value["JoinTs"].GetUint64();
         m_joinTsHasBeenSet = true;
@@ -72,7 +71,7 @@ CoreInternalOutcome UserInformation::Deserialize(const Value &value)
     {
         if (!value["LeaveTs"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `UserInformation.LeaveTs` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UserInformation.LeaveTs` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_leaveTs = value["LeaveTs"].GetUint64();
         m_leaveTsHasBeenSet = true;
@@ -82,7 +81,7 @@ CoreInternalOutcome UserInformation::Deserialize(const Value &value)
     {
         if (!value["DeviceType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UserInformation.DeviceType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UserInformation.DeviceType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_deviceType = string(value["DeviceType"].GetString());
         m_deviceTypeHasBeenSet = true;
@@ -92,7 +91,7 @@ CoreInternalOutcome UserInformation::Deserialize(const Value &value)
     {
         if (!value["SdkVersion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UserInformation.SdkVersion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UserInformation.SdkVersion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_sdkVersion = string(value["SdkVersion"].GetString());
         m_sdkVersionHasBeenSet = true;
@@ -102,7 +101,7 @@ CoreInternalOutcome UserInformation::Deserialize(const Value &value)
     {
         if (!value["ClientIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `UserInformation.ClientIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UserInformation.ClientIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_clientIp = string(value["ClientIp"].GetString());
         m_clientIpHasBeenSet = true;
@@ -112,7 +111,7 @@ CoreInternalOutcome UserInformation::Deserialize(const Value &value)
     {
         if (!value["Finished"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `UserInformation.Finished` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UserInformation.Finished` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_finished = value["Finished"].GetBool();
         m_finishedHasBeenSet = true;
@@ -122,28 +121,28 @@ CoreInternalOutcome UserInformation::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void UserInformation::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void UserInformation::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_roomStrHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RoomStr";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_roomStr.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_roomStr.c_str(), allocator).Move(), allocator);
     }
 
     if (m_userIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UserId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_userId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_userId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_joinTsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "JoinTs";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_joinTs, allocator);
@@ -151,7 +150,7 @@ void UserInformation::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_leaveTsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LeaveTs";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_leaveTs, allocator);
@@ -159,31 +158,31 @@ void UserInformation::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_deviceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DeviceType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_deviceType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_deviceType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sdkVersionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SdkVersion";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_sdkVersion.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sdkVersion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_clientIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClientIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_clientIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clientIp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_finishedHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Finished";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_finished, allocator);

@@ -116,14 +116,14 @@ namespace TencentCloud
                     bool NewPortHasBeenSet() const;
 
                     /**
-                     * 获取Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
-                     * @return LocationId Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
+                     * 获取Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
+                     * @return LocationId Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
                      */
                     std::string GetLocationId() const;
 
                     /**
-                     * 设置Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
-                     * @param LocationId Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
+                     * 设置Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
+                     * @param LocationId Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
                      */
                     void SetLocationId(const std::string& _locationId);
 
@@ -134,14 +134,14 @@ namespace TencentCloud
                     bool LocationIdHasBeenSet() const;
 
                     /**
-                     * 获取Target rule domain name. This parameter does not take effect if LocationId is specified
-                     * @return Domain Target rule domain name. This parameter does not take effect if LocationId is specified
+                     * 获取Target rule domain name. This parameter does not take effect if LocationId is specified.
+                     * @return Domain Target rule domain name. This parameter does not take effect if LocationId is specified.
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置Target rule domain name. This parameter does not take effect if LocationId is specified
-                     * @param Domain Target rule domain name. This parameter does not take effect if LocationId is specified
+                     * 设置Target rule domain name. This parameter does not take effect if LocationId is specified.
+                     * @param Domain Target rule domain name. This parameter does not take effect if LocationId is specified.
                      */
                     void SetDomain(const std::string& _domain);
 
@@ -152,14 +152,14 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Target rule URL. This parameter does not take effect if LocationId is specified
-                     * @return Url Target rule URL. This parameter does not take effect if LocationId is specified
+                     * 获取Target rule URL. This parameter does not take effect if LocationId is specified.
+                     * @return Url Target rule URL. This parameter does not take effect if LocationId is specified.
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Target rule URL. This parameter does not take effect if LocationId is specified
-                     * @param Url Target rule URL. This parameter does not take effect if LocationId is specified
+                     * 设置Target rule URL. This parameter does not take effect if LocationId is specified.
+                     * @param Url Target rule URL. This parameter does not take effect if LocationId is specified.
                      */
                     void SetUrl(const std::string& _url);
 
@@ -196,19 +196,19 @@ namespace TencentCloud
                     bool m_newPortHasBeenSet;
 
                     /**
-                     * Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
+                     * Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
                      */
                     std::string m_locationId;
                     bool m_locationIdHasBeenSet;
 
                     /**
-                     * Target rule domain name. This parameter does not take effect if LocationId is specified
+                     * Target rule domain name. This parameter does not take effect if LocationId is specified.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Target rule URL. This parameter does not take effect if LocationId is specified
+                     * Target rule URL. This parameter does not take effect if LocationId is specified.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

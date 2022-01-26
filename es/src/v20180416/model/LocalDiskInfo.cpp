@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Es::V20180416::Model;
-using namespace rapidjson;
 using namespace std;
 
 LocalDiskInfo::LocalDiskInfo() :
@@ -28,7 +27,7 @@ LocalDiskInfo::LocalDiskInfo() :
 {
 }
 
-CoreInternalOutcome LocalDiskInfo::Deserialize(const Value &value)
+CoreInternalOutcome LocalDiskInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome LocalDiskInfo::Deserialize(const Value &value)
     {
         if (!value["LocalDiskType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LocalDiskInfo.LocalDiskType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LocalDiskInfo.LocalDiskType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_localDiskType = string(value["LocalDiskType"].GetString());
         m_localDiskTypeHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome LocalDiskInfo::Deserialize(const Value &value)
     {
         if (!value["LocalDiskSize"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `LocalDiskInfo.LocalDiskSize` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LocalDiskInfo.LocalDiskSize` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_localDiskSize = value["LocalDiskSize"].GetUint64();
         m_localDiskSizeHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome LocalDiskInfo::Deserialize(const Value &value)
     {
         if (!value["LocalDiskCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `LocalDiskInfo.LocalDiskCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LocalDiskInfo.LocalDiskCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_localDiskCount = value["LocalDiskCount"].GetUint64();
         m_localDiskCountHasBeenSet = true;
@@ -67,20 +66,20 @@ CoreInternalOutcome LocalDiskInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void LocalDiskInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void LocalDiskInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_localDiskTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LocalDiskType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_localDiskType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_localDiskType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_localDiskSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LocalDiskSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_localDiskSize, allocator);
@@ -88,7 +87,7 @@ void LocalDiskInfo::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_localDiskCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LocalDiskCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_localDiskCount, allocator);

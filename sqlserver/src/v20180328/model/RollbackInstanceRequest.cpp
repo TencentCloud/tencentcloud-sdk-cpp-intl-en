@@ -20,35 +20,36 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Sqlserver::V20180328::Model;
-using namespace rapidjson;
 using namespace std;
 
 RollbackInstanceRequest::RollbackInstanceRequest() :
     m_instanceIdHasBeenSet(false),
     m_typeHasBeenSet(false),
     m_dBsHasBeenSet(false),
-    m_timeHasBeenSet(false)
+    m_timeHasBeenSet(false),
+    m_targetInstanceIdHasBeenSet(false),
+    m_renameRestoreHasBeenSet(false)
 {
 }
 
 string RollbackInstanceRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_type, allocator);
@@ -56,28 +57,51 @@ string RollbackInstanceRequest::ToJsonString() const
 
     if (m_dBsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DBs";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_dBs.begin(); itr != m_dBs.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_timeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Time";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_time.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_time.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_targetInstanceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TargetInstanceId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_targetInstanceId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_renameRestoreHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RenameRestore";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_renameRestore.begin(); itr != m_renameRestore.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -145,6 +169,38 @@ void RollbackInstanceRequest::SetTime(const string& _time)
 bool RollbackInstanceRequest::TimeHasBeenSet() const
 {
     return m_timeHasBeenSet;
+}
+
+string RollbackInstanceRequest::GetTargetInstanceId() const
+{
+    return m_targetInstanceId;
+}
+
+void RollbackInstanceRequest::SetTargetInstanceId(const string& _targetInstanceId)
+{
+    m_targetInstanceId = _targetInstanceId;
+    m_targetInstanceIdHasBeenSet = true;
+}
+
+bool RollbackInstanceRequest::TargetInstanceIdHasBeenSet() const
+{
+    return m_targetInstanceIdHasBeenSet;
+}
+
+vector<RenameRestoreDatabase> RollbackInstanceRequest::GetRenameRestore() const
+{
+    return m_renameRestore;
+}
+
+void RollbackInstanceRequest::SetRenameRestore(const vector<RenameRestoreDatabase>& _renameRestore)
+{
+    m_renameRestore = _renameRestore;
+    m_renameRestoreHasBeenSet = true;
+}
+
+bool RollbackInstanceRequest::RenameRestoreHasBeenSet() const
+{
+    return m_renameRestoreHasBeenSet;
 }
 
 

@@ -103,14 +103,14 @@ beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will b
                     bool ExpressionHasBeenSet() const;
 
                     /**
-                     * 获取Whether glasses are present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
-                     * @return Glass Whether glasses are present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 获取Whether glasses are present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * @return Glass Whether glasses are present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
                      */
                     bool GetGlass() const;
 
                     /**
-                     * 设置Whether glasses are present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
-                     * @param Glass Whether glasses are present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 设置Whether glasses are present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * @param Glass Whether glasses are present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
                      */
                     void SetGlass(const bool& _glass);
 
@@ -122,17 +122,17 @@ beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will b
 
                     /**
                      * 获取Vertical offset in degrees. Value range: [-30,30]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
-You are recommended to select images in the [-10,10] range for adding faces.
+We recommend selecting images in the [-10,10] range for adding faces.
                      * @return Pitch Vertical offset in degrees. Value range: [-30,30]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
-You are recommended to select images in the [-10,10] range for adding faces.
+We recommend selecting images in the [-10,10] range for adding faces.
                      */
                     int64_t GetPitch() const;
 
                     /**
                      * 设置Vertical offset in degrees. Value range: [-30,30]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
-You are recommended to select images in the [-10,10] range for adding faces.
+We recommend selecting images in the [-10,10] range for adding faces.
                      * @param Pitch Vertical offset in degrees. Value range: [-30,30]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
-You are recommended to select images in the [-10,10] range for adding faces.
+We recommend selecting images in the [-10,10] range for adding faces.
                      */
                     void SetPitch(const int64_t& _pitch);
 
@@ -144,17 +144,17 @@ You are recommended to select images in the [-10,10] range for adding faces.
 
                     /**
                      * 获取Horizontal offset in degrees. Value range: [-30,30]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
-You are recommended to select images in the [-10,10] range for adding faces.
+We recommend selecting images in the [-10,10] range for adding faces.
                      * @return Yaw Horizontal offset in degrees. Value range: [-30,30]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
-You are recommended to select images in the [-10,10] range for adding faces.
+We recommend selecting images in the [-10,10] range for adding faces.
                      */
                     int64_t GetYaw() const;
 
                     /**
                      * 设置Horizontal offset in degrees. Value range: [-30,30]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
-You are recommended to select images in the [-10,10] range for adding faces.
+We recommend selecting images in the [-10,10] range for adding faces.
                      * @param Yaw Horizontal offset in degrees. Value range: [-30,30]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
-You are recommended to select images in the [-10,10] range for adding faces.
+We recommend selecting images in the [-10,10] range for adding faces.
                      */
                     void SetYaw(const int64_t& _yaw);
 
@@ -166,17 +166,17 @@ You are recommended to select images in the [-10,10] range for adding faces.
 
                     /**
                      * 获取Horizontal rotation in degrees. Value range: [-180,180]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.  
-You are recommended to select images in the [-20,20] range for adding faces.
+We recommend selecting images in the [-20,20] range for adding faces.
                      * @return Roll Horizontal rotation in degrees. Value range: [-180,180]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.  
-You are recommended to select images in the [-20,20] range for adding faces.
+We recommend selecting images in the [-20,20] range for adding faces.
                      */
                     int64_t GetRoll() const;
 
                     /**
                      * 设置Horizontal rotation in degrees. Value range: [-180,180]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.  
-You are recommended to select images in the [-20,20] range for adding faces.
+We recommend selecting images in the [-20,20] range for adding faces.
                      * @param Roll Horizontal rotation in degrees. Value range: [-180,180]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.  
-You are recommended to select images in the [-20,20] range for adding faces.
+We recommend selecting images in the [-20,20] range for adding faces.
                      */
                     void SetRoll(const int64_t& _roll);
 
@@ -187,14 +187,14 @@ You are recommended to select images in the [-20,20] range for adding faces.
                     bool RollHasBeenSet() const;
 
                     /**
-                     * 获取Beauty. Value range: [0–100]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
-                     * @return Beauty Beauty. Value range: [0–100]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 获取Beauty. Value range: [0,100]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * @return Beauty Beauty. Value range: [0,100]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
                      */
                     int64_t GetBeauty() const;
 
                     /**
-                     * 设置Beauty. Value range: [0–100]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
-                     * @param Beauty Beauty. Value range: [0–100]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 设置Beauty. Value range: [0,100]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * @param Beauty Beauty. Value range: [0,100]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
                      */
                     void SetBeauty(const int64_t& _beauty);
 
@@ -205,17 +205,17 @@ You are recommended to select images in the [-20,20] range for adding faces.
                     bool BeautyHasBeenSet() const;
 
                     /**
-                     * 获取Whether hat is present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 获取Whether hat is present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Hat Whether hat is present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * @return Hat Whether hat is present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     bool GetHat() const;
 
                     /**
-                     * 设置Whether hat is present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 设置Whether hat is present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Hat Whether hat is present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * @param Hat Whether hat is present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetHat(const bool& _hat);
@@ -227,17 +227,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool HatHasBeenSet() const;
 
                     /**
-                     * 获取Whether mask is present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 获取Whether mask is present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Mask Whether mask is present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * @return Mask Whether mask is present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     bool GetMask() const;
 
                     /**
-                     * 设置Whether mask is present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 设置Whether mask is present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Mask Whether mask is present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * @param Mask Whether mask is present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetMask(const bool& _mask);
@@ -271,17 +271,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool HairHasBeenSet() const;
 
                     /**
-                     * 获取Whether the eyes are open. Valid values: [true,false]. As long as there is more than one eye closed, `false` will be returned. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 获取Whether the eyes are open. Valid values: true, false. As long as there is more than one eye closed, `false` will be returned. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return EyeOpen Whether the eyes are open. Valid values: [true,false]. As long as there is more than one eye closed, `false` will be returned. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * @return EyeOpen Whether the eyes are open. Valid values: true, false. As long as there is more than one eye closed, `false` will be returned. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     bool GetEyeOpen() const;
 
                     /**
-                     * 设置Whether the eyes are open. Valid values: [true,false]. As long as there is more than one eye closed, `false` will be returned. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 设置Whether the eyes are open. Valid values: true, false. As long as there is more than one eye closed, `false` will be returned. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param EyeOpen Whether the eyes are open. Valid values: [true,false]. As long as there is more than one eye closed, `false` will be returned. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * @param EyeOpen Whether the eyes are open. Valid values: true, false. As long as there is more than one eye closed, `false` will be returned. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetEyeOpen(const bool& _eyeOpen);
@@ -313,47 +313,47 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_expressionHasBeenSet;
 
                     /**
-                     * Whether glasses are present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * Whether glasses are present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
                      */
                     bool m_glass;
                     bool m_glassHasBeenSet;
 
                     /**
                      * Vertical offset in degrees. Value range: [-30,30]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
-You are recommended to select images in the [-10,10] range for adding faces.
+We recommend selecting images in the [-10,10] range for adding faces.
                      */
                     int64_t m_pitch;
                     bool m_pitchHasBeenSet;
 
                     /**
                      * Horizontal offset in degrees. Value range: [-30,30]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
-You are recommended to select images in the [-10,10] range for adding faces.
+We recommend selecting images in the [-10,10] range for adding faces.
                      */
                     int64_t m_yaw;
                     bool m_yawHasBeenSet;
 
                     /**
                      * Horizontal rotation in degrees. Value range: [-180,180]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.  
-You are recommended to select images in the [-20,20] range for adding faces.
+We recommend selecting images in the [-20,20] range for adding faces.
                      */
                     int64_t m_roll;
                     bool m_rollHasBeenSet;
 
                     /**
-                     * Beauty. Value range: [0–100]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * Beauty. Value range: [0,100]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
                      */
                     int64_t m_beauty;
                     bool m_beautyHasBeenSet;
 
                     /**
-                     * Whether hat is present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * Whether hat is present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_hat;
                     bool m_hatHasBeenSet;
 
                     /**
-                     * Whether mask is present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * Whether mask is present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_mask;
@@ -367,7 +367,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_hairHasBeenSet;
 
                     /**
-                     * Whether the eyes are open. Valid values: [true,false]. As long as there is more than one eye closed, `false` will be returned. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * Whether the eyes are open. Valid values: true, false. As long as there is more than one eye closed, `false` will be returned. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_eyeOpen;

@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Ckafka::V20190819::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeInstancesDetailRequest::DescribeInstancesDetailRequest() :
@@ -30,49 +29,50 @@ DescribeInstancesDetailRequest::DescribeInstancesDetailRequest() :
     m_offsetHasBeenSet(false),
     m_limitHasBeenSet(false),
     m_tagKeyHasBeenSet(false),
-    m_filtersHasBeenSet(false)
+    m_filtersHasBeenSet(false),
+    m_instanceIdsHasBeenSet(false)
 {
 }
 
 string DescribeInstancesDetailRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_searchWordHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SearchWord";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_searchWord.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_searchWord.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_status.begin(); itr != m_status.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 
     if (m_offsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Offset";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_offset, allocator);
@@ -80,7 +80,7 @@ string DescribeInstancesDetailRequest::ToJsonString() const
 
     if (m_limitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Limit";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_limit, allocator);
@@ -88,30 +88,38 @@ string DescribeInstancesDetailRequest::ToJsonString() const
 
     if (m_tagKeyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TagKey";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_tagKey.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_tagKey.c_str(), allocator).Move(), allocator);
     }
 
     if (m_filtersHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Filters";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_filters.begin(); itr != m_filters.end(); ++itr, ++i)
         {
-            d[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
     }
 
+    if (m_instanceIdsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceIds";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceIds.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -227,6 +235,22 @@ void DescribeInstancesDetailRequest::SetFilters(const vector<Filter>& _filters)
 bool DescribeInstancesDetailRequest::FiltersHasBeenSet() const
 {
     return m_filtersHasBeenSet;
+}
+
+string DescribeInstancesDetailRequest::GetInstanceIds() const
+{
+    return m_instanceIds;
+}
+
+void DescribeInstancesDetailRequest::SetInstanceIds(const string& _instanceIds)
+{
+    m_instanceIds = _instanceIds;
+    m_instanceIdsHasBeenSet = true;
+}
+
+bool DescribeInstancesDetailRequest::InstanceIdsHasBeenSet() const
+{
+    return m_instanceIdsHasBeenSet;
 }
 
 

@@ -40,42 +40,42 @@ MdlClient::MdlClient(const Credential &credential, const string &region, const C
 }
 
 
-MdlClient::CreateMediaLiveChannelOutcome MdlClient::CreateMediaLiveChannel(const CreateMediaLiveChannelRequest &request)
+MdlClient::CreateStreamLiveChannelOutcome MdlClient::CreateStreamLiveChannel(const CreateStreamLiveChannelRequest &request)
 {
-    auto outcome = MakeRequest(request, "CreateMediaLiveChannel");
+    auto outcome = MakeRequest(request, "CreateStreamLiveChannel");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        CreateMediaLiveChannelResponse rsp = CreateMediaLiveChannelResponse();
+        CreateStreamLiveChannelResponse rsp = CreateStreamLiveChannelResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return CreateMediaLiveChannelOutcome(rsp);
+            return CreateStreamLiveChannelOutcome(rsp);
         else
-            return CreateMediaLiveChannelOutcome(o.GetError());
+            return CreateStreamLiveChannelOutcome(o.GetError());
     }
     else
     {
-        return CreateMediaLiveChannelOutcome(outcome.GetError());
+        return CreateStreamLiveChannelOutcome(outcome.GetError());
     }
 }
 
-void MdlClient::CreateMediaLiveChannelAsync(const CreateMediaLiveChannelRequest& request, const CreateMediaLiveChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdlClient::CreateStreamLiveChannelAsync(const CreateStreamLiveChannelRequest& request, const CreateStreamLiveChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->CreateMediaLiveChannel(request), context);
+        handler(this, request, this->CreateStreamLiveChannel(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdlClient::CreateMediaLiveChannelOutcomeCallable MdlClient::CreateMediaLiveChannelCallable(const CreateMediaLiveChannelRequest &request)
+MdlClient::CreateStreamLiveChannelOutcomeCallable MdlClient::CreateStreamLiveChannelCallable(const CreateStreamLiveChannelRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateMediaLiveChannelOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<CreateStreamLiveChannelOutcome()>>(
         [this, request]()
         {
-            return this->CreateMediaLiveChannel(request);
+            return this->CreateStreamLiveChannel(request);
         }
     );
 
@@ -83,42 +83,42 @@ MdlClient::CreateMediaLiveChannelOutcomeCallable MdlClient::CreateMediaLiveChann
     return task->get_future();
 }
 
-MdlClient::CreateMediaLiveInputOutcome MdlClient::CreateMediaLiveInput(const CreateMediaLiveInputRequest &request)
+MdlClient::CreateStreamLiveInputOutcome MdlClient::CreateStreamLiveInput(const CreateStreamLiveInputRequest &request)
 {
-    auto outcome = MakeRequest(request, "CreateMediaLiveInput");
+    auto outcome = MakeRequest(request, "CreateStreamLiveInput");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        CreateMediaLiveInputResponse rsp = CreateMediaLiveInputResponse();
+        CreateStreamLiveInputResponse rsp = CreateStreamLiveInputResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return CreateMediaLiveInputOutcome(rsp);
+            return CreateStreamLiveInputOutcome(rsp);
         else
-            return CreateMediaLiveInputOutcome(o.GetError());
+            return CreateStreamLiveInputOutcome(o.GetError());
     }
     else
     {
-        return CreateMediaLiveInputOutcome(outcome.GetError());
+        return CreateStreamLiveInputOutcome(outcome.GetError());
     }
 }
 
-void MdlClient::CreateMediaLiveInputAsync(const CreateMediaLiveInputRequest& request, const CreateMediaLiveInputAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdlClient::CreateStreamLiveInputAsync(const CreateStreamLiveInputRequest& request, const CreateStreamLiveInputAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->CreateMediaLiveInput(request), context);
+        handler(this, request, this->CreateStreamLiveInput(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdlClient::CreateMediaLiveInputOutcomeCallable MdlClient::CreateMediaLiveInputCallable(const CreateMediaLiveInputRequest &request)
+MdlClient::CreateStreamLiveInputOutcomeCallable MdlClient::CreateStreamLiveInputCallable(const CreateStreamLiveInputRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateMediaLiveInputOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<CreateStreamLiveInputOutcome()>>(
         [this, request]()
         {
-            return this->CreateMediaLiveInput(request);
+            return this->CreateStreamLiveInput(request);
         }
     );
 
@@ -126,42 +126,42 @@ MdlClient::CreateMediaLiveInputOutcomeCallable MdlClient::CreateMediaLiveInputCa
     return task->get_future();
 }
 
-MdlClient::CreateMediaLiveInputSecurityGroupOutcome MdlClient::CreateMediaLiveInputSecurityGroup(const CreateMediaLiveInputSecurityGroupRequest &request)
+MdlClient::CreateStreamLiveInputSecurityGroupOutcome MdlClient::CreateStreamLiveInputSecurityGroup(const CreateStreamLiveInputSecurityGroupRequest &request)
 {
-    auto outcome = MakeRequest(request, "CreateMediaLiveInputSecurityGroup");
+    auto outcome = MakeRequest(request, "CreateStreamLiveInputSecurityGroup");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        CreateMediaLiveInputSecurityGroupResponse rsp = CreateMediaLiveInputSecurityGroupResponse();
+        CreateStreamLiveInputSecurityGroupResponse rsp = CreateStreamLiveInputSecurityGroupResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return CreateMediaLiveInputSecurityGroupOutcome(rsp);
+            return CreateStreamLiveInputSecurityGroupOutcome(rsp);
         else
-            return CreateMediaLiveInputSecurityGroupOutcome(o.GetError());
+            return CreateStreamLiveInputSecurityGroupOutcome(o.GetError());
     }
     else
     {
-        return CreateMediaLiveInputSecurityGroupOutcome(outcome.GetError());
+        return CreateStreamLiveInputSecurityGroupOutcome(outcome.GetError());
     }
 }
 
-void MdlClient::CreateMediaLiveInputSecurityGroupAsync(const CreateMediaLiveInputSecurityGroupRequest& request, const CreateMediaLiveInputSecurityGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdlClient::CreateStreamLiveInputSecurityGroupAsync(const CreateStreamLiveInputSecurityGroupRequest& request, const CreateStreamLiveInputSecurityGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->CreateMediaLiveInputSecurityGroup(request), context);
+        handler(this, request, this->CreateStreamLiveInputSecurityGroup(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdlClient::CreateMediaLiveInputSecurityGroupOutcomeCallable MdlClient::CreateMediaLiveInputSecurityGroupCallable(const CreateMediaLiveInputSecurityGroupRequest &request)
+MdlClient::CreateStreamLiveInputSecurityGroupOutcomeCallable MdlClient::CreateStreamLiveInputSecurityGroupCallable(const CreateStreamLiveInputSecurityGroupRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<CreateMediaLiveInputSecurityGroupOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<CreateStreamLiveInputSecurityGroupOutcome()>>(
         [this, request]()
         {
-            return this->CreateMediaLiveInputSecurityGroup(request);
+            return this->CreateStreamLiveInputSecurityGroup(request);
         }
     );
 
@@ -169,42 +169,42 @@ MdlClient::CreateMediaLiveInputSecurityGroupOutcomeCallable MdlClient::CreateMed
     return task->get_future();
 }
 
-MdlClient::DeleteMediaLiveChannelOutcome MdlClient::DeleteMediaLiveChannel(const DeleteMediaLiveChannelRequest &request)
+MdlClient::CreateStreamLivePlanOutcome MdlClient::CreateStreamLivePlan(const CreateStreamLivePlanRequest &request)
 {
-    auto outcome = MakeRequest(request, "DeleteMediaLiveChannel");
+    auto outcome = MakeRequest(request, "CreateStreamLivePlan");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        DeleteMediaLiveChannelResponse rsp = DeleteMediaLiveChannelResponse();
+        CreateStreamLivePlanResponse rsp = CreateStreamLivePlanResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return DeleteMediaLiveChannelOutcome(rsp);
+            return CreateStreamLivePlanOutcome(rsp);
         else
-            return DeleteMediaLiveChannelOutcome(o.GetError());
+            return CreateStreamLivePlanOutcome(o.GetError());
     }
     else
     {
-        return DeleteMediaLiveChannelOutcome(outcome.GetError());
+        return CreateStreamLivePlanOutcome(outcome.GetError());
     }
 }
 
-void MdlClient::DeleteMediaLiveChannelAsync(const DeleteMediaLiveChannelRequest& request, const DeleteMediaLiveChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdlClient::CreateStreamLivePlanAsync(const CreateStreamLivePlanRequest& request, const CreateStreamLivePlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->DeleteMediaLiveChannel(request), context);
+        handler(this, request, this->CreateStreamLivePlan(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdlClient::DeleteMediaLiveChannelOutcomeCallable MdlClient::DeleteMediaLiveChannelCallable(const DeleteMediaLiveChannelRequest &request)
+MdlClient::CreateStreamLivePlanOutcomeCallable MdlClient::CreateStreamLivePlanCallable(const CreateStreamLivePlanRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteMediaLiveChannelOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<CreateStreamLivePlanOutcome()>>(
         [this, request]()
         {
-            return this->DeleteMediaLiveChannel(request);
+            return this->CreateStreamLivePlan(request);
         }
     );
 
@@ -212,42 +212,42 @@ MdlClient::DeleteMediaLiveChannelOutcomeCallable MdlClient::DeleteMediaLiveChann
     return task->get_future();
 }
 
-MdlClient::DeleteMediaLiveInputOutcome MdlClient::DeleteMediaLiveInput(const DeleteMediaLiveInputRequest &request)
+MdlClient::DeleteStreamLiveChannelOutcome MdlClient::DeleteStreamLiveChannel(const DeleteStreamLiveChannelRequest &request)
 {
-    auto outcome = MakeRequest(request, "DeleteMediaLiveInput");
+    auto outcome = MakeRequest(request, "DeleteStreamLiveChannel");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        DeleteMediaLiveInputResponse rsp = DeleteMediaLiveInputResponse();
+        DeleteStreamLiveChannelResponse rsp = DeleteStreamLiveChannelResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return DeleteMediaLiveInputOutcome(rsp);
+            return DeleteStreamLiveChannelOutcome(rsp);
         else
-            return DeleteMediaLiveInputOutcome(o.GetError());
+            return DeleteStreamLiveChannelOutcome(o.GetError());
     }
     else
     {
-        return DeleteMediaLiveInputOutcome(outcome.GetError());
+        return DeleteStreamLiveChannelOutcome(outcome.GetError());
     }
 }
 
-void MdlClient::DeleteMediaLiveInputAsync(const DeleteMediaLiveInputRequest& request, const DeleteMediaLiveInputAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdlClient::DeleteStreamLiveChannelAsync(const DeleteStreamLiveChannelRequest& request, const DeleteStreamLiveChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->DeleteMediaLiveInput(request), context);
+        handler(this, request, this->DeleteStreamLiveChannel(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdlClient::DeleteMediaLiveInputOutcomeCallable MdlClient::DeleteMediaLiveInputCallable(const DeleteMediaLiveInputRequest &request)
+MdlClient::DeleteStreamLiveChannelOutcomeCallable MdlClient::DeleteStreamLiveChannelCallable(const DeleteStreamLiveChannelRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteMediaLiveInputOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<DeleteStreamLiveChannelOutcome()>>(
         [this, request]()
         {
-            return this->DeleteMediaLiveInput(request);
+            return this->DeleteStreamLiveChannel(request);
         }
     );
 
@@ -255,42 +255,42 @@ MdlClient::DeleteMediaLiveInputOutcomeCallable MdlClient::DeleteMediaLiveInputCa
     return task->get_future();
 }
 
-MdlClient::DeleteMediaLiveInputSecurityGroupOutcome MdlClient::DeleteMediaLiveInputSecurityGroup(const DeleteMediaLiveInputSecurityGroupRequest &request)
+MdlClient::DeleteStreamLiveInputOutcome MdlClient::DeleteStreamLiveInput(const DeleteStreamLiveInputRequest &request)
 {
-    auto outcome = MakeRequest(request, "DeleteMediaLiveInputSecurityGroup");
+    auto outcome = MakeRequest(request, "DeleteStreamLiveInput");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        DeleteMediaLiveInputSecurityGroupResponse rsp = DeleteMediaLiveInputSecurityGroupResponse();
+        DeleteStreamLiveInputResponse rsp = DeleteStreamLiveInputResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return DeleteMediaLiveInputSecurityGroupOutcome(rsp);
+            return DeleteStreamLiveInputOutcome(rsp);
         else
-            return DeleteMediaLiveInputSecurityGroupOutcome(o.GetError());
+            return DeleteStreamLiveInputOutcome(o.GetError());
     }
     else
     {
-        return DeleteMediaLiveInputSecurityGroupOutcome(outcome.GetError());
+        return DeleteStreamLiveInputOutcome(outcome.GetError());
     }
 }
 
-void MdlClient::DeleteMediaLiveInputSecurityGroupAsync(const DeleteMediaLiveInputSecurityGroupRequest& request, const DeleteMediaLiveInputSecurityGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdlClient::DeleteStreamLiveInputAsync(const DeleteStreamLiveInputRequest& request, const DeleteStreamLiveInputAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->DeleteMediaLiveInputSecurityGroup(request), context);
+        handler(this, request, this->DeleteStreamLiveInput(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdlClient::DeleteMediaLiveInputSecurityGroupOutcomeCallable MdlClient::DeleteMediaLiveInputSecurityGroupCallable(const DeleteMediaLiveInputSecurityGroupRequest &request)
+MdlClient::DeleteStreamLiveInputOutcomeCallable MdlClient::DeleteStreamLiveInputCallable(const DeleteStreamLiveInputRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DeleteMediaLiveInputSecurityGroupOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<DeleteStreamLiveInputOutcome()>>(
         [this, request]()
         {
-            return this->DeleteMediaLiveInputSecurityGroup(request);
+            return this->DeleteStreamLiveInput(request);
         }
     );
 
@@ -298,42 +298,42 @@ MdlClient::DeleteMediaLiveInputSecurityGroupOutcomeCallable MdlClient::DeleteMed
     return task->get_future();
 }
 
-MdlClient::DescribeMediaLiveChannelOutcome MdlClient::DescribeMediaLiveChannel(const DescribeMediaLiveChannelRequest &request)
+MdlClient::DeleteStreamLiveInputSecurityGroupOutcome MdlClient::DeleteStreamLiveInputSecurityGroup(const DeleteStreamLiveInputSecurityGroupRequest &request)
 {
-    auto outcome = MakeRequest(request, "DescribeMediaLiveChannel");
+    auto outcome = MakeRequest(request, "DeleteStreamLiveInputSecurityGroup");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        DescribeMediaLiveChannelResponse rsp = DescribeMediaLiveChannelResponse();
+        DeleteStreamLiveInputSecurityGroupResponse rsp = DeleteStreamLiveInputSecurityGroupResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return DescribeMediaLiveChannelOutcome(rsp);
+            return DeleteStreamLiveInputSecurityGroupOutcome(rsp);
         else
-            return DescribeMediaLiveChannelOutcome(o.GetError());
+            return DeleteStreamLiveInputSecurityGroupOutcome(o.GetError());
     }
     else
     {
-        return DescribeMediaLiveChannelOutcome(outcome.GetError());
+        return DeleteStreamLiveInputSecurityGroupOutcome(outcome.GetError());
     }
 }
 
-void MdlClient::DescribeMediaLiveChannelAsync(const DescribeMediaLiveChannelRequest& request, const DescribeMediaLiveChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdlClient::DeleteStreamLiveInputSecurityGroupAsync(const DeleteStreamLiveInputSecurityGroupRequest& request, const DeleteStreamLiveInputSecurityGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->DescribeMediaLiveChannel(request), context);
+        handler(this, request, this->DeleteStreamLiveInputSecurityGroup(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdlClient::DescribeMediaLiveChannelOutcomeCallable MdlClient::DescribeMediaLiveChannelCallable(const DescribeMediaLiveChannelRequest &request)
+MdlClient::DeleteStreamLiveInputSecurityGroupOutcomeCallable MdlClient::DeleteStreamLiveInputSecurityGroupCallable(const DeleteStreamLiveInputSecurityGroupRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMediaLiveChannelOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<DeleteStreamLiveInputSecurityGroupOutcome()>>(
         [this, request]()
         {
-            return this->DescribeMediaLiveChannel(request);
+            return this->DeleteStreamLiveInputSecurityGroup(request);
         }
     );
 
@@ -341,42 +341,42 @@ MdlClient::DescribeMediaLiveChannelOutcomeCallable MdlClient::DescribeMediaLiveC
     return task->get_future();
 }
 
-MdlClient::DescribeMediaLiveChannelAlertsOutcome MdlClient::DescribeMediaLiveChannelAlerts(const DescribeMediaLiveChannelAlertsRequest &request)
+MdlClient::DeleteStreamLivePlanOutcome MdlClient::DeleteStreamLivePlan(const DeleteStreamLivePlanRequest &request)
 {
-    auto outcome = MakeRequest(request, "DescribeMediaLiveChannelAlerts");
+    auto outcome = MakeRequest(request, "DeleteStreamLivePlan");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        DescribeMediaLiveChannelAlertsResponse rsp = DescribeMediaLiveChannelAlertsResponse();
+        DeleteStreamLivePlanResponse rsp = DeleteStreamLivePlanResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return DescribeMediaLiveChannelAlertsOutcome(rsp);
+            return DeleteStreamLivePlanOutcome(rsp);
         else
-            return DescribeMediaLiveChannelAlertsOutcome(o.GetError());
+            return DeleteStreamLivePlanOutcome(o.GetError());
     }
     else
     {
-        return DescribeMediaLiveChannelAlertsOutcome(outcome.GetError());
+        return DeleteStreamLivePlanOutcome(outcome.GetError());
     }
 }
 
-void MdlClient::DescribeMediaLiveChannelAlertsAsync(const DescribeMediaLiveChannelAlertsRequest& request, const DescribeMediaLiveChannelAlertsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdlClient::DeleteStreamLivePlanAsync(const DeleteStreamLivePlanRequest& request, const DeleteStreamLivePlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->DescribeMediaLiveChannelAlerts(request), context);
+        handler(this, request, this->DeleteStreamLivePlan(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdlClient::DescribeMediaLiveChannelAlertsOutcomeCallable MdlClient::DescribeMediaLiveChannelAlertsCallable(const DescribeMediaLiveChannelAlertsRequest &request)
+MdlClient::DeleteStreamLivePlanOutcomeCallable MdlClient::DeleteStreamLivePlanCallable(const DeleteStreamLivePlanRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMediaLiveChannelAlertsOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<DeleteStreamLivePlanOutcome()>>(
         [this, request]()
         {
-            return this->DescribeMediaLiveChannelAlerts(request);
+            return this->DeleteStreamLivePlan(request);
         }
     );
 
@@ -384,42 +384,42 @@ MdlClient::DescribeMediaLiveChannelAlertsOutcomeCallable MdlClient::DescribeMedi
     return task->get_future();
 }
 
-MdlClient::DescribeMediaLiveChannelInputStatisticsOutcome MdlClient::DescribeMediaLiveChannelInputStatistics(const DescribeMediaLiveChannelInputStatisticsRequest &request)
+MdlClient::DescribeStreamLiveChannelOutcome MdlClient::DescribeStreamLiveChannel(const DescribeStreamLiveChannelRequest &request)
 {
-    auto outcome = MakeRequest(request, "DescribeMediaLiveChannelInputStatistics");
+    auto outcome = MakeRequest(request, "DescribeStreamLiveChannel");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        DescribeMediaLiveChannelInputStatisticsResponse rsp = DescribeMediaLiveChannelInputStatisticsResponse();
+        DescribeStreamLiveChannelResponse rsp = DescribeStreamLiveChannelResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return DescribeMediaLiveChannelInputStatisticsOutcome(rsp);
+            return DescribeStreamLiveChannelOutcome(rsp);
         else
-            return DescribeMediaLiveChannelInputStatisticsOutcome(o.GetError());
+            return DescribeStreamLiveChannelOutcome(o.GetError());
     }
     else
     {
-        return DescribeMediaLiveChannelInputStatisticsOutcome(outcome.GetError());
+        return DescribeStreamLiveChannelOutcome(outcome.GetError());
     }
 }
 
-void MdlClient::DescribeMediaLiveChannelInputStatisticsAsync(const DescribeMediaLiveChannelInputStatisticsRequest& request, const DescribeMediaLiveChannelInputStatisticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdlClient::DescribeStreamLiveChannelAsync(const DescribeStreamLiveChannelRequest& request, const DescribeStreamLiveChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->DescribeMediaLiveChannelInputStatistics(request), context);
+        handler(this, request, this->DescribeStreamLiveChannel(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdlClient::DescribeMediaLiveChannelInputStatisticsOutcomeCallable MdlClient::DescribeMediaLiveChannelInputStatisticsCallable(const DescribeMediaLiveChannelInputStatisticsRequest &request)
+MdlClient::DescribeStreamLiveChannelOutcomeCallable MdlClient::DescribeStreamLiveChannelCallable(const DescribeStreamLiveChannelRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMediaLiveChannelInputStatisticsOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveChannelOutcome()>>(
         [this, request]()
         {
-            return this->DescribeMediaLiveChannelInputStatistics(request);
+            return this->DescribeStreamLiveChannel(request);
         }
     );
 
@@ -427,42 +427,42 @@ MdlClient::DescribeMediaLiveChannelInputStatisticsOutcomeCallable MdlClient::Des
     return task->get_future();
 }
 
-MdlClient::DescribeMediaLiveChannelOutputStatisticsOutcome MdlClient::DescribeMediaLiveChannelOutputStatistics(const DescribeMediaLiveChannelOutputStatisticsRequest &request)
+MdlClient::DescribeStreamLiveChannelAlertsOutcome MdlClient::DescribeStreamLiveChannelAlerts(const DescribeStreamLiveChannelAlertsRequest &request)
 {
-    auto outcome = MakeRequest(request, "DescribeMediaLiveChannelOutputStatistics");
+    auto outcome = MakeRequest(request, "DescribeStreamLiveChannelAlerts");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        DescribeMediaLiveChannelOutputStatisticsResponse rsp = DescribeMediaLiveChannelOutputStatisticsResponse();
+        DescribeStreamLiveChannelAlertsResponse rsp = DescribeStreamLiveChannelAlertsResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return DescribeMediaLiveChannelOutputStatisticsOutcome(rsp);
+            return DescribeStreamLiveChannelAlertsOutcome(rsp);
         else
-            return DescribeMediaLiveChannelOutputStatisticsOutcome(o.GetError());
+            return DescribeStreamLiveChannelAlertsOutcome(o.GetError());
     }
     else
     {
-        return DescribeMediaLiveChannelOutputStatisticsOutcome(outcome.GetError());
+        return DescribeStreamLiveChannelAlertsOutcome(outcome.GetError());
     }
 }
 
-void MdlClient::DescribeMediaLiveChannelOutputStatisticsAsync(const DescribeMediaLiveChannelOutputStatisticsRequest& request, const DescribeMediaLiveChannelOutputStatisticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdlClient::DescribeStreamLiveChannelAlertsAsync(const DescribeStreamLiveChannelAlertsRequest& request, const DescribeStreamLiveChannelAlertsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->DescribeMediaLiveChannelOutputStatistics(request), context);
+        handler(this, request, this->DescribeStreamLiveChannelAlerts(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdlClient::DescribeMediaLiveChannelOutputStatisticsOutcomeCallable MdlClient::DescribeMediaLiveChannelOutputStatisticsCallable(const DescribeMediaLiveChannelOutputStatisticsRequest &request)
+MdlClient::DescribeStreamLiveChannelAlertsOutcomeCallable MdlClient::DescribeStreamLiveChannelAlertsCallable(const DescribeStreamLiveChannelAlertsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMediaLiveChannelOutputStatisticsOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveChannelAlertsOutcome()>>(
         [this, request]()
         {
-            return this->DescribeMediaLiveChannelOutputStatistics(request);
+            return this->DescribeStreamLiveChannelAlerts(request);
         }
     );
 
@@ -470,42 +470,42 @@ MdlClient::DescribeMediaLiveChannelOutputStatisticsOutcomeCallable MdlClient::De
     return task->get_future();
 }
 
-MdlClient::DescribeMediaLiveChannelsOutcome MdlClient::DescribeMediaLiveChannels(const DescribeMediaLiveChannelsRequest &request)
+MdlClient::DescribeStreamLiveChannelInputStatisticsOutcome MdlClient::DescribeStreamLiveChannelInputStatistics(const DescribeStreamLiveChannelInputStatisticsRequest &request)
 {
-    auto outcome = MakeRequest(request, "DescribeMediaLiveChannels");
+    auto outcome = MakeRequest(request, "DescribeStreamLiveChannelInputStatistics");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        DescribeMediaLiveChannelsResponse rsp = DescribeMediaLiveChannelsResponse();
+        DescribeStreamLiveChannelInputStatisticsResponse rsp = DescribeStreamLiveChannelInputStatisticsResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return DescribeMediaLiveChannelsOutcome(rsp);
+            return DescribeStreamLiveChannelInputStatisticsOutcome(rsp);
         else
-            return DescribeMediaLiveChannelsOutcome(o.GetError());
+            return DescribeStreamLiveChannelInputStatisticsOutcome(o.GetError());
     }
     else
     {
-        return DescribeMediaLiveChannelsOutcome(outcome.GetError());
+        return DescribeStreamLiveChannelInputStatisticsOutcome(outcome.GetError());
     }
 }
 
-void MdlClient::DescribeMediaLiveChannelsAsync(const DescribeMediaLiveChannelsRequest& request, const DescribeMediaLiveChannelsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdlClient::DescribeStreamLiveChannelInputStatisticsAsync(const DescribeStreamLiveChannelInputStatisticsRequest& request, const DescribeStreamLiveChannelInputStatisticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->DescribeMediaLiveChannels(request), context);
+        handler(this, request, this->DescribeStreamLiveChannelInputStatistics(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdlClient::DescribeMediaLiveChannelsOutcomeCallable MdlClient::DescribeMediaLiveChannelsCallable(const DescribeMediaLiveChannelsRequest &request)
+MdlClient::DescribeStreamLiveChannelInputStatisticsOutcomeCallable MdlClient::DescribeStreamLiveChannelInputStatisticsCallable(const DescribeStreamLiveChannelInputStatisticsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMediaLiveChannelsOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveChannelInputStatisticsOutcome()>>(
         [this, request]()
         {
-            return this->DescribeMediaLiveChannels(request);
+            return this->DescribeStreamLiveChannelInputStatistics(request);
         }
     );
 
@@ -513,42 +513,42 @@ MdlClient::DescribeMediaLiveChannelsOutcomeCallable MdlClient::DescribeMediaLive
     return task->get_future();
 }
 
-MdlClient::DescribeMediaLiveInputOutcome MdlClient::DescribeMediaLiveInput(const DescribeMediaLiveInputRequest &request)
+MdlClient::DescribeStreamLiveChannelLogsOutcome MdlClient::DescribeStreamLiveChannelLogs(const DescribeStreamLiveChannelLogsRequest &request)
 {
-    auto outcome = MakeRequest(request, "DescribeMediaLiveInput");
+    auto outcome = MakeRequest(request, "DescribeStreamLiveChannelLogs");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        DescribeMediaLiveInputResponse rsp = DescribeMediaLiveInputResponse();
+        DescribeStreamLiveChannelLogsResponse rsp = DescribeStreamLiveChannelLogsResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return DescribeMediaLiveInputOutcome(rsp);
+            return DescribeStreamLiveChannelLogsOutcome(rsp);
         else
-            return DescribeMediaLiveInputOutcome(o.GetError());
+            return DescribeStreamLiveChannelLogsOutcome(o.GetError());
     }
     else
     {
-        return DescribeMediaLiveInputOutcome(outcome.GetError());
+        return DescribeStreamLiveChannelLogsOutcome(outcome.GetError());
     }
 }
 
-void MdlClient::DescribeMediaLiveInputAsync(const DescribeMediaLiveInputRequest& request, const DescribeMediaLiveInputAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdlClient::DescribeStreamLiveChannelLogsAsync(const DescribeStreamLiveChannelLogsRequest& request, const DescribeStreamLiveChannelLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->DescribeMediaLiveInput(request), context);
+        handler(this, request, this->DescribeStreamLiveChannelLogs(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdlClient::DescribeMediaLiveInputOutcomeCallable MdlClient::DescribeMediaLiveInputCallable(const DescribeMediaLiveInputRequest &request)
+MdlClient::DescribeStreamLiveChannelLogsOutcomeCallable MdlClient::DescribeStreamLiveChannelLogsCallable(const DescribeStreamLiveChannelLogsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMediaLiveInputOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveChannelLogsOutcome()>>(
         [this, request]()
         {
-            return this->DescribeMediaLiveInput(request);
+            return this->DescribeStreamLiveChannelLogs(request);
         }
     );
 
@@ -556,42 +556,42 @@ MdlClient::DescribeMediaLiveInputOutcomeCallable MdlClient::DescribeMediaLiveInp
     return task->get_future();
 }
 
-MdlClient::DescribeMediaLiveInputSecurityGroupOutcome MdlClient::DescribeMediaLiveInputSecurityGroup(const DescribeMediaLiveInputSecurityGroupRequest &request)
+MdlClient::DescribeStreamLiveChannelOutputStatisticsOutcome MdlClient::DescribeStreamLiveChannelOutputStatistics(const DescribeStreamLiveChannelOutputStatisticsRequest &request)
 {
-    auto outcome = MakeRequest(request, "DescribeMediaLiveInputSecurityGroup");
+    auto outcome = MakeRequest(request, "DescribeStreamLiveChannelOutputStatistics");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        DescribeMediaLiveInputSecurityGroupResponse rsp = DescribeMediaLiveInputSecurityGroupResponse();
+        DescribeStreamLiveChannelOutputStatisticsResponse rsp = DescribeStreamLiveChannelOutputStatisticsResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return DescribeMediaLiveInputSecurityGroupOutcome(rsp);
+            return DescribeStreamLiveChannelOutputStatisticsOutcome(rsp);
         else
-            return DescribeMediaLiveInputSecurityGroupOutcome(o.GetError());
+            return DescribeStreamLiveChannelOutputStatisticsOutcome(o.GetError());
     }
     else
     {
-        return DescribeMediaLiveInputSecurityGroupOutcome(outcome.GetError());
+        return DescribeStreamLiveChannelOutputStatisticsOutcome(outcome.GetError());
     }
 }
 
-void MdlClient::DescribeMediaLiveInputSecurityGroupAsync(const DescribeMediaLiveInputSecurityGroupRequest& request, const DescribeMediaLiveInputSecurityGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdlClient::DescribeStreamLiveChannelOutputStatisticsAsync(const DescribeStreamLiveChannelOutputStatisticsRequest& request, const DescribeStreamLiveChannelOutputStatisticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->DescribeMediaLiveInputSecurityGroup(request), context);
+        handler(this, request, this->DescribeStreamLiveChannelOutputStatistics(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdlClient::DescribeMediaLiveInputSecurityGroupOutcomeCallable MdlClient::DescribeMediaLiveInputSecurityGroupCallable(const DescribeMediaLiveInputSecurityGroupRequest &request)
+MdlClient::DescribeStreamLiveChannelOutputStatisticsOutcomeCallable MdlClient::DescribeStreamLiveChannelOutputStatisticsCallable(const DescribeStreamLiveChannelOutputStatisticsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMediaLiveInputSecurityGroupOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveChannelOutputStatisticsOutcome()>>(
         [this, request]()
         {
-            return this->DescribeMediaLiveInputSecurityGroup(request);
+            return this->DescribeStreamLiveChannelOutputStatistics(request);
         }
     );
 
@@ -599,42 +599,42 @@ MdlClient::DescribeMediaLiveInputSecurityGroupOutcomeCallable MdlClient::Describ
     return task->get_future();
 }
 
-MdlClient::DescribeMediaLiveInputSecurityGroupsOutcome MdlClient::DescribeMediaLiveInputSecurityGroups(const DescribeMediaLiveInputSecurityGroupsRequest &request)
+MdlClient::DescribeStreamLiveChannelsOutcome MdlClient::DescribeStreamLiveChannels(const DescribeStreamLiveChannelsRequest &request)
 {
-    auto outcome = MakeRequest(request, "DescribeMediaLiveInputSecurityGroups");
+    auto outcome = MakeRequest(request, "DescribeStreamLiveChannels");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        DescribeMediaLiveInputSecurityGroupsResponse rsp = DescribeMediaLiveInputSecurityGroupsResponse();
+        DescribeStreamLiveChannelsResponse rsp = DescribeStreamLiveChannelsResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return DescribeMediaLiveInputSecurityGroupsOutcome(rsp);
+            return DescribeStreamLiveChannelsOutcome(rsp);
         else
-            return DescribeMediaLiveInputSecurityGroupsOutcome(o.GetError());
+            return DescribeStreamLiveChannelsOutcome(o.GetError());
     }
     else
     {
-        return DescribeMediaLiveInputSecurityGroupsOutcome(outcome.GetError());
+        return DescribeStreamLiveChannelsOutcome(outcome.GetError());
     }
 }
 
-void MdlClient::DescribeMediaLiveInputSecurityGroupsAsync(const DescribeMediaLiveInputSecurityGroupsRequest& request, const DescribeMediaLiveInputSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdlClient::DescribeStreamLiveChannelsAsync(const DescribeStreamLiveChannelsRequest& request, const DescribeStreamLiveChannelsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->DescribeMediaLiveInputSecurityGroups(request), context);
+        handler(this, request, this->DescribeStreamLiveChannels(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdlClient::DescribeMediaLiveInputSecurityGroupsOutcomeCallable MdlClient::DescribeMediaLiveInputSecurityGroupsCallable(const DescribeMediaLiveInputSecurityGroupsRequest &request)
+MdlClient::DescribeStreamLiveChannelsOutcomeCallable MdlClient::DescribeStreamLiveChannelsCallable(const DescribeStreamLiveChannelsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMediaLiveInputSecurityGroupsOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveChannelsOutcome()>>(
         [this, request]()
         {
-            return this->DescribeMediaLiveInputSecurityGroups(request);
+            return this->DescribeStreamLiveChannels(request);
         }
     );
 
@@ -642,42 +642,42 @@ MdlClient::DescribeMediaLiveInputSecurityGroupsOutcomeCallable MdlClient::Descri
     return task->get_future();
 }
 
-MdlClient::DescribeMediaLiveInputsOutcome MdlClient::DescribeMediaLiveInputs(const DescribeMediaLiveInputsRequest &request)
+MdlClient::DescribeStreamLiveInputOutcome MdlClient::DescribeStreamLiveInput(const DescribeStreamLiveInputRequest &request)
 {
-    auto outcome = MakeRequest(request, "DescribeMediaLiveInputs");
+    auto outcome = MakeRequest(request, "DescribeStreamLiveInput");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        DescribeMediaLiveInputsResponse rsp = DescribeMediaLiveInputsResponse();
+        DescribeStreamLiveInputResponse rsp = DescribeStreamLiveInputResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return DescribeMediaLiveInputsOutcome(rsp);
+            return DescribeStreamLiveInputOutcome(rsp);
         else
-            return DescribeMediaLiveInputsOutcome(o.GetError());
+            return DescribeStreamLiveInputOutcome(o.GetError());
     }
     else
     {
-        return DescribeMediaLiveInputsOutcome(outcome.GetError());
+        return DescribeStreamLiveInputOutcome(outcome.GetError());
     }
 }
 
-void MdlClient::DescribeMediaLiveInputsAsync(const DescribeMediaLiveInputsRequest& request, const DescribeMediaLiveInputsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdlClient::DescribeStreamLiveInputAsync(const DescribeStreamLiveInputRequest& request, const DescribeStreamLiveInputAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->DescribeMediaLiveInputs(request), context);
+        handler(this, request, this->DescribeStreamLiveInput(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdlClient::DescribeMediaLiveInputsOutcomeCallable MdlClient::DescribeMediaLiveInputsCallable(const DescribeMediaLiveInputsRequest &request)
+MdlClient::DescribeStreamLiveInputOutcomeCallable MdlClient::DescribeStreamLiveInputCallable(const DescribeStreamLiveInputRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeMediaLiveInputsOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveInputOutcome()>>(
         [this, request]()
         {
-            return this->DescribeMediaLiveInputs(request);
+            return this->DescribeStreamLiveInput(request);
         }
     );
 
@@ -685,42 +685,42 @@ MdlClient::DescribeMediaLiveInputsOutcomeCallable MdlClient::DescribeMediaLiveIn
     return task->get_future();
 }
 
-MdlClient::ModifyMediaLiveChannelOutcome MdlClient::ModifyMediaLiveChannel(const ModifyMediaLiveChannelRequest &request)
+MdlClient::DescribeStreamLiveInputSecurityGroupOutcome MdlClient::DescribeStreamLiveInputSecurityGroup(const DescribeStreamLiveInputSecurityGroupRequest &request)
 {
-    auto outcome = MakeRequest(request, "ModifyMediaLiveChannel");
+    auto outcome = MakeRequest(request, "DescribeStreamLiveInputSecurityGroup");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        ModifyMediaLiveChannelResponse rsp = ModifyMediaLiveChannelResponse();
+        DescribeStreamLiveInputSecurityGroupResponse rsp = DescribeStreamLiveInputSecurityGroupResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return ModifyMediaLiveChannelOutcome(rsp);
+            return DescribeStreamLiveInputSecurityGroupOutcome(rsp);
         else
-            return ModifyMediaLiveChannelOutcome(o.GetError());
+            return DescribeStreamLiveInputSecurityGroupOutcome(o.GetError());
     }
     else
     {
-        return ModifyMediaLiveChannelOutcome(outcome.GetError());
+        return DescribeStreamLiveInputSecurityGroupOutcome(outcome.GetError());
     }
 }
 
-void MdlClient::ModifyMediaLiveChannelAsync(const ModifyMediaLiveChannelRequest& request, const ModifyMediaLiveChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdlClient::DescribeStreamLiveInputSecurityGroupAsync(const DescribeStreamLiveInputSecurityGroupRequest& request, const DescribeStreamLiveInputSecurityGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->ModifyMediaLiveChannel(request), context);
+        handler(this, request, this->DescribeStreamLiveInputSecurityGroup(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdlClient::ModifyMediaLiveChannelOutcomeCallable MdlClient::ModifyMediaLiveChannelCallable(const ModifyMediaLiveChannelRequest &request)
+MdlClient::DescribeStreamLiveInputSecurityGroupOutcomeCallable MdlClient::DescribeStreamLiveInputSecurityGroupCallable(const DescribeStreamLiveInputSecurityGroupRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyMediaLiveChannelOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveInputSecurityGroupOutcome()>>(
         [this, request]()
         {
-            return this->ModifyMediaLiveChannel(request);
+            return this->DescribeStreamLiveInputSecurityGroup(request);
         }
     );
 
@@ -728,42 +728,42 @@ MdlClient::ModifyMediaLiveChannelOutcomeCallable MdlClient::ModifyMediaLiveChann
     return task->get_future();
 }
 
-MdlClient::ModifyMediaLiveInputOutcome MdlClient::ModifyMediaLiveInput(const ModifyMediaLiveInputRequest &request)
+MdlClient::DescribeStreamLiveInputSecurityGroupsOutcome MdlClient::DescribeStreamLiveInputSecurityGroups(const DescribeStreamLiveInputSecurityGroupsRequest &request)
 {
-    auto outcome = MakeRequest(request, "ModifyMediaLiveInput");
+    auto outcome = MakeRequest(request, "DescribeStreamLiveInputSecurityGroups");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        ModifyMediaLiveInputResponse rsp = ModifyMediaLiveInputResponse();
+        DescribeStreamLiveInputSecurityGroupsResponse rsp = DescribeStreamLiveInputSecurityGroupsResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return ModifyMediaLiveInputOutcome(rsp);
+            return DescribeStreamLiveInputSecurityGroupsOutcome(rsp);
         else
-            return ModifyMediaLiveInputOutcome(o.GetError());
+            return DescribeStreamLiveInputSecurityGroupsOutcome(o.GetError());
     }
     else
     {
-        return ModifyMediaLiveInputOutcome(outcome.GetError());
+        return DescribeStreamLiveInputSecurityGroupsOutcome(outcome.GetError());
     }
 }
 
-void MdlClient::ModifyMediaLiveInputAsync(const ModifyMediaLiveInputRequest& request, const ModifyMediaLiveInputAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdlClient::DescribeStreamLiveInputSecurityGroupsAsync(const DescribeStreamLiveInputSecurityGroupsRequest& request, const DescribeStreamLiveInputSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->ModifyMediaLiveInput(request), context);
+        handler(this, request, this->DescribeStreamLiveInputSecurityGroups(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdlClient::ModifyMediaLiveInputOutcomeCallable MdlClient::ModifyMediaLiveInputCallable(const ModifyMediaLiveInputRequest &request)
+MdlClient::DescribeStreamLiveInputSecurityGroupsOutcomeCallable MdlClient::DescribeStreamLiveInputSecurityGroupsCallable(const DescribeStreamLiveInputSecurityGroupsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyMediaLiveInputOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveInputSecurityGroupsOutcome()>>(
         [this, request]()
         {
-            return this->ModifyMediaLiveInput(request);
+            return this->DescribeStreamLiveInputSecurityGroups(request);
         }
     );
 
@@ -771,42 +771,42 @@ MdlClient::ModifyMediaLiveInputOutcomeCallable MdlClient::ModifyMediaLiveInputCa
     return task->get_future();
 }
 
-MdlClient::ModifyMediaLiveInputSecurityGroupOutcome MdlClient::ModifyMediaLiveInputSecurityGroup(const ModifyMediaLiveInputSecurityGroupRequest &request)
+MdlClient::DescribeStreamLiveInputsOutcome MdlClient::DescribeStreamLiveInputs(const DescribeStreamLiveInputsRequest &request)
 {
-    auto outcome = MakeRequest(request, "ModifyMediaLiveInputSecurityGroup");
+    auto outcome = MakeRequest(request, "DescribeStreamLiveInputs");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        ModifyMediaLiveInputSecurityGroupResponse rsp = ModifyMediaLiveInputSecurityGroupResponse();
+        DescribeStreamLiveInputsResponse rsp = DescribeStreamLiveInputsResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return ModifyMediaLiveInputSecurityGroupOutcome(rsp);
+            return DescribeStreamLiveInputsOutcome(rsp);
         else
-            return ModifyMediaLiveInputSecurityGroupOutcome(o.GetError());
+            return DescribeStreamLiveInputsOutcome(o.GetError());
     }
     else
     {
-        return ModifyMediaLiveInputSecurityGroupOutcome(outcome.GetError());
+        return DescribeStreamLiveInputsOutcome(outcome.GetError());
     }
 }
 
-void MdlClient::ModifyMediaLiveInputSecurityGroupAsync(const ModifyMediaLiveInputSecurityGroupRequest& request, const ModifyMediaLiveInputSecurityGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdlClient::DescribeStreamLiveInputsAsync(const DescribeStreamLiveInputsRequest& request, const DescribeStreamLiveInputsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->ModifyMediaLiveInputSecurityGroup(request), context);
+        handler(this, request, this->DescribeStreamLiveInputs(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdlClient::ModifyMediaLiveInputSecurityGroupOutcomeCallable MdlClient::ModifyMediaLiveInputSecurityGroupCallable(const ModifyMediaLiveInputSecurityGroupRequest &request)
+MdlClient::DescribeStreamLiveInputsOutcomeCallable MdlClient::DescribeStreamLiveInputsCallable(const DescribeStreamLiveInputsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ModifyMediaLiveInputSecurityGroupOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveInputsOutcome()>>(
         [this, request]()
         {
-            return this->ModifyMediaLiveInputSecurityGroup(request);
+            return this->DescribeStreamLiveInputs(request);
         }
     );
 
@@ -814,42 +814,42 @@ MdlClient::ModifyMediaLiveInputSecurityGroupOutcomeCallable MdlClient::ModifyMed
     return task->get_future();
 }
 
-MdlClient::StartMediaLiveChannelOutcome MdlClient::StartMediaLiveChannel(const StartMediaLiveChannelRequest &request)
+MdlClient::DescribeStreamLivePlansOutcome MdlClient::DescribeStreamLivePlans(const DescribeStreamLivePlansRequest &request)
 {
-    auto outcome = MakeRequest(request, "StartMediaLiveChannel");
+    auto outcome = MakeRequest(request, "DescribeStreamLivePlans");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        StartMediaLiveChannelResponse rsp = StartMediaLiveChannelResponse();
+        DescribeStreamLivePlansResponse rsp = DescribeStreamLivePlansResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return StartMediaLiveChannelOutcome(rsp);
+            return DescribeStreamLivePlansOutcome(rsp);
         else
-            return StartMediaLiveChannelOutcome(o.GetError());
+            return DescribeStreamLivePlansOutcome(o.GetError());
     }
     else
     {
-        return StartMediaLiveChannelOutcome(outcome.GetError());
+        return DescribeStreamLivePlansOutcome(outcome.GetError());
     }
 }
 
-void MdlClient::StartMediaLiveChannelAsync(const StartMediaLiveChannelRequest& request, const StartMediaLiveChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdlClient::DescribeStreamLivePlansAsync(const DescribeStreamLivePlansRequest& request, const DescribeStreamLivePlansAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->StartMediaLiveChannel(request), context);
+        handler(this, request, this->DescribeStreamLivePlans(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdlClient::StartMediaLiveChannelOutcomeCallable MdlClient::StartMediaLiveChannelCallable(const StartMediaLiveChannelRequest &request)
+MdlClient::DescribeStreamLivePlansOutcomeCallable MdlClient::DescribeStreamLivePlansCallable(const DescribeStreamLivePlansRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<StartMediaLiveChannelOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<DescribeStreamLivePlansOutcome()>>(
         [this, request]()
         {
-            return this->StartMediaLiveChannel(request);
+            return this->DescribeStreamLivePlans(request);
         }
     );
 
@@ -857,42 +857,257 @@ MdlClient::StartMediaLiveChannelOutcomeCallable MdlClient::StartMediaLiveChannel
     return task->get_future();
 }
 
-MdlClient::StopMediaLiveChannelOutcome MdlClient::StopMediaLiveChannel(const StopMediaLiveChannelRequest &request)
+MdlClient::DescribeStreamLiveRegionsOutcome MdlClient::DescribeStreamLiveRegions(const DescribeStreamLiveRegionsRequest &request)
 {
-    auto outcome = MakeRequest(request, "StopMediaLiveChannel");
+    auto outcome = MakeRequest(request, "DescribeStreamLiveRegions");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        StopMediaLiveChannelResponse rsp = StopMediaLiveChannelResponse();
+        DescribeStreamLiveRegionsResponse rsp = DescribeStreamLiveRegionsResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return StopMediaLiveChannelOutcome(rsp);
+            return DescribeStreamLiveRegionsOutcome(rsp);
         else
-            return StopMediaLiveChannelOutcome(o.GetError());
+            return DescribeStreamLiveRegionsOutcome(o.GetError());
     }
     else
     {
-        return StopMediaLiveChannelOutcome(outcome.GetError());
+        return DescribeStreamLiveRegionsOutcome(outcome.GetError());
     }
 }
 
-void MdlClient::StopMediaLiveChannelAsync(const StopMediaLiveChannelRequest& request, const StopMediaLiveChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void MdlClient::DescribeStreamLiveRegionsAsync(const DescribeStreamLiveRegionsRequest& request, const DescribeStreamLiveRegionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->StopMediaLiveChannel(request), context);
+        handler(this, request, this->DescribeStreamLiveRegions(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-MdlClient::StopMediaLiveChannelOutcomeCallable MdlClient::StopMediaLiveChannelCallable(const StopMediaLiveChannelRequest &request)
+MdlClient::DescribeStreamLiveRegionsOutcomeCallable MdlClient::DescribeStreamLiveRegionsCallable(const DescribeStreamLiveRegionsRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<StopMediaLiveChannelOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveRegionsOutcome()>>(
         [this, request]()
         {
-            return this->StopMediaLiveChannel(request);
+            return this->DescribeStreamLiveRegions(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdlClient::ModifyStreamLiveChannelOutcome MdlClient::ModifyStreamLiveChannel(const ModifyStreamLiveChannelRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyStreamLiveChannel");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyStreamLiveChannelResponse rsp = ModifyStreamLiveChannelResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyStreamLiveChannelOutcome(rsp);
+        else
+            return ModifyStreamLiveChannelOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyStreamLiveChannelOutcome(outcome.GetError());
+    }
+}
+
+void MdlClient::ModifyStreamLiveChannelAsync(const ModifyStreamLiveChannelRequest& request, const ModifyStreamLiveChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyStreamLiveChannel(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdlClient::ModifyStreamLiveChannelOutcomeCallable MdlClient::ModifyStreamLiveChannelCallable(const ModifyStreamLiveChannelRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyStreamLiveChannelOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyStreamLiveChannel(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdlClient::ModifyStreamLiveInputOutcome MdlClient::ModifyStreamLiveInput(const ModifyStreamLiveInputRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyStreamLiveInput");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyStreamLiveInputResponse rsp = ModifyStreamLiveInputResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyStreamLiveInputOutcome(rsp);
+        else
+            return ModifyStreamLiveInputOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyStreamLiveInputOutcome(outcome.GetError());
+    }
+}
+
+void MdlClient::ModifyStreamLiveInputAsync(const ModifyStreamLiveInputRequest& request, const ModifyStreamLiveInputAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyStreamLiveInput(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdlClient::ModifyStreamLiveInputOutcomeCallable MdlClient::ModifyStreamLiveInputCallable(const ModifyStreamLiveInputRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyStreamLiveInputOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyStreamLiveInput(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdlClient::ModifyStreamLiveInputSecurityGroupOutcome MdlClient::ModifyStreamLiveInputSecurityGroup(const ModifyStreamLiveInputSecurityGroupRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyStreamLiveInputSecurityGroup");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyStreamLiveInputSecurityGroupResponse rsp = ModifyStreamLiveInputSecurityGroupResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyStreamLiveInputSecurityGroupOutcome(rsp);
+        else
+            return ModifyStreamLiveInputSecurityGroupOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyStreamLiveInputSecurityGroupOutcome(outcome.GetError());
+    }
+}
+
+void MdlClient::ModifyStreamLiveInputSecurityGroupAsync(const ModifyStreamLiveInputSecurityGroupRequest& request, const ModifyStreamLiveInputSecurityGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyStreamLiveInputSecurityGroup(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdlClient::ModifyStreamLiveInputSecurityGroupOutcomeCallable MdlClient::ModifyStreamLiveInputSecurityGroupCallable(const ModifyStreamLiveInputSecurityGroupRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyStreamLiveInputSecurityGroupOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyStreamLiveInputSecurityGroup(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdlClient::StartStreamLiveChannelOutcome MdlClient::StartStreamLiveChannel(const StartStreamLiveChannelRequest &request)
+{
+    auto outcome = MakeRequest(request, "StartStreamLiveChannel");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        StartStreamLiveChannelResponse rsp = StartStreamLiveChannelResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return StartStreamLiveChannelOutcome(rsp);
+        else
+            return StartStreamLiveChannelOutcome(o.GetError());
+    }
+    else
+    {
+        return StartStreamLiveChannelOutcome(outcome.GetError());
+    }
+}
+
+void MdlClient::StartStreamLiveChannelAsync(const StartStreamLiveChannelRequest& request, const StartStreamLiveChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->StartStreamLiveChannel(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdlClient::StartStreamLiveChannelOutcomeCallable MdlClient::StartStreamLiveChannelCallable(const StartStreamLiveChannelRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<StartStreamLiveChannelOutcome()>>(
+        [this, request]()
+        {
+            return this->StartStreamLiveChannel(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdlClient::StopStreamLiveChannelOutcome MdlClient::StopStreamLiveChannel(const StopStreamLiveChannelRequest &request)
+{
+    auto outcome = MakeRequest(request, "StopStreamLiveChannel");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        StopStreamLiveChannelResponse rsp = StopStreamLiveChannelResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return StopStreamLiveChannelOutcome(rsp);
+        else
+            return StopStreamLiveChannelOutcome(o.GetError());
+    }
+    else
+    {
+        return StopStreamLiveChannelOutcome(outcome.GetError());
+    }
+}
+
+void MdlClient::StopStreamLiveChannelAsync(const StopStreamLiveChannelRequest& request, const StopStreamLiveChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->StopStreamLiveChannel(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdlClient::StopStreamLiveChannelOutcomeCallable MdlClient::StopStreamLiveChannelCallable(const StopStreamLiveChannelRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<StopStreamLiveChannelOutcome()>>(
+        [this, request]()
+        {
+            return this->StopStreamLiveChannel(request);
         }
     );
 

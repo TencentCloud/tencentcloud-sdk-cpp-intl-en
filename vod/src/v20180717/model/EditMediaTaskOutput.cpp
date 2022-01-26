@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 EditMediaTaskOutput::EditMediaTaskOutput() :
@@ -31,7 +30,7 @@ EditMediaTaskOutput::EditMediaTaskOutput() :
 {
 }
 
-CoreInternalOutcome EditMediaTaskOutput::Deserialize(const Value &value)
+CoreInternalOutcome EditMediaTaskOutput::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome EditMediaTaskOutput::Deserialize(const Value &value)
     {
         if (!value["FileType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `EditMediaTaskOutput.FileType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EditMediaTaskOutput.FileType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fileType = string(value["FileType"].GetString());
         m_fileTypeHasBeenSet = true;
@@ -50,7 +49,7 @@ CoreInternalOutcome EditMediaTaskOutput::Deserialize(const Value &value)
     {
         if (!value["FileUrl"].IsString())
         {
-            return CoreInternalOutcome(Error("response `EditMediaTaskOutput.FileUrl` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EditMediaTaskOutput.FileUrl` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fileUrl = string(value["FileUrl"].GetString());
         m_fileUrlHasBeenSet = true;
@@ -60,7 +59,7 @@ CoreInternalOutcome EditMediaTaskOutput::Deserialize(const Value &value)
     {
         if (!value["FileId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `EditMediaTaskOutput.FileId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EditMediaTaskOutput.FileId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fileId = string(value["FileId"].GetString());
         m_fileIdHasBeenSet = true;
@@ -70,7 +69,7 @@ CoreInternalOutcome EditMediaTaskOutput::Deserialize(const Value &value)
     {
         if (!value["MediaName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `EditMediaTaskOutput.MediaName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EditMediaTaskOutput.MediaName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_mediaName = string(value["MediaName"].GetString());
         m_mediaNameHasBeenSet = true;
@@ -80,7 +79,7 @@ CoreInternalOutcome EditMediaTaskOutput::Deserialize(const Value &value)
     {
         if (!value["ClassId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `EditMediaTaskOutput.ClassId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EditMediaTaskOutput.ClassId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_classId = value["ClassId"].GetInt64();
         m_classIdHasBeenSet = true;
@@ -90,7 +89,7 @@ CoreInternalOutcome EditMediaTaskOutput::Deserialize(const Value &value)
     {
         if (!value["ExpireTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `EditMediaTaskOutput.ExpireTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EditMediaTaskOutput.ExpireTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_expireTime = string(value["ExpireTime"].GetString());
         m_expireTimeHasBeenSet = true;
@@ -100,44 +99,44 @@ CoreInternalOutcome EditMediaTaskOutput::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void EditMediaTaskOutput::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void EditMediaTaskOutput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_fileTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fileType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fileType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fileUrlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileUrl";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fileUrl.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fileUrl.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fileIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fileId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fileId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_mediaNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MediaName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_mediaName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_mediaName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_classIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClassId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_classId, allocator);
@@ -145,10 +144,10 @@ void EditMediaTaskOutput::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_expireTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ExpireTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_expireTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_expireTime.c_str(), allocator).Move(), allocator);
     }
 
 }

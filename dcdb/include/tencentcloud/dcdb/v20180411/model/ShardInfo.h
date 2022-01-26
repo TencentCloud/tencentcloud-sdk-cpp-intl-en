@@ -173,14 +173,14 @@ namespace TencentCloud
                     bool ShardIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of nodes. 2: one master and one slave; 3: one master and two slaves
-                     * @return NodeCount Number of nodes. 2: one master and one slave; 3: one master and two slaves
+                     * 获取Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
+                     * @return NodeCount Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
                      */
                     int64_t GetNodeCount() const;
 
                     /**
-                     * 设置Number of nodes. 2: one master and one slave; 3: one master and two slaves
-                     * @param NodeCount Number of nodes. 2: one master and one slave; 3: one master and two slaves
+                     * 设置Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
+                     * @param NodeCount Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
                      */
                     void SetNodeCount(const int64_t& _nodeCount);
 
@@ -271,7 +271,7 @@ namespace TencentCloud
                     bool m_shardIdHasBeenSet;
 
                     /**
-                     * Number of nodes. 2: one master and one slave; 3: one master and two slaves
+                     * Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
                      */
                     int64_t m_nodeCount;
                     bool m_nodeCountHasBeenSet;

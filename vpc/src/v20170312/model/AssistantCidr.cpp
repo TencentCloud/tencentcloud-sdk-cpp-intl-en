@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 AssistantCidr::AssistantCidr() :
@@ -29,7 +28,7 @@ AssistantCidr::AssistantCidr() :
 {
 }
 
-CoreInternalOutcome AssistantCidr::Deserialize(const Value &value)
+CoreInternalOutcome AssistantCidr::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome AssistantCidr::Deserialize(const Value &value)
     {
         if (!value["VpcId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AssistantCidr.VpcId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AssistantCidr.VpcId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpcId = string(value["VpcId"].GetString());
         m_vpcIdHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome AssistantCidr::Deserialize(const Value &value)
     {
         if (!value["CidrBlock"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AssistantCidr.CidrBlock` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AssistantCidr.CidrBlock` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cidrBlock = string(value["CidrBlock"].GetString());
         m_cidrBlockHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome AssistantCidr::Deserialize(const Value &value)
     {
         if (!value["AssistantType"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `AssistantCidr.AssistantType` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AssistantCidr.AssistantType` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_assistantType = value["AssistantType"].GetInt64();
         m_assistantTypeHasBeenSet = true;
@@ -67,10 +66,10 @@ CoreInternalOutcome AssistantCidr::Deserialize(const Value &value)
     if (value.HasMember("SubnetSet") && !value["SubnetSet"].IsNull())
     {
         if (!value["SubnetSet"].IsArray())
-            return CoreInternalOutcome(Error("response `AssistantCidr.SubnetSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `AssistantCidr.SubnetSet` is not array type"));
 
-        const Value &tmpValue = value["SubnetSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["SubnetSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             Subnet item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -88,28 +87,28 @@ CoreInternalOutcome AssistantCidr::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void AssistantCidr::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AssistantCidr::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_vpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vpcId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpcId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cidrBlockHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CidrBlock";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cidrBlock.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cidrBlock.c_str(), allocator).Move(), allocator);
     }
 
     if (m_assistantTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AssistantType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_assistantType, allocator);
@@ -117,15 +116,15 @@ void AssistantCidr::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_subnetSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubnetSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_subnetSet.begin(); itr != m_subnetSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }

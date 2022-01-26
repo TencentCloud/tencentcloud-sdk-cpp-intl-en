@@ -1,0 +1,273 @@
+/*
+ * Copyright (c) 2017-2019 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_TDMQ_V20200217_MODEL_ROCKETMQCLUSTERCONFIG_H_
+#define TENCENTCLOUD_TDMQ_V20200217_MODEL_ROCKETMQCLUSTERCONFIG_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/utils/rapidjson/document.h>
+#include <tencentcloud/core/utils/rapidjson/writer.h>
+#include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
+#include <tencentcloud/core/AbstractModel.h>
+
+
+namespace TencentCloud
+{
+    namespace Tdmq
+    {
+        namespace V20200217
+        {
+            namespace Model
+            {
+                /**
+                * RocketMQ cluster configuration
+                */
+                class RocketMQClusterConfig : public AbstractModel
+                {
+                public:
+                    RocketMQClusterConfig();
+                    ~RocketMQClusterConfig() = default;
+                    void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
+                    CoreInternalOutcome Deserialize(const rapidjson::Value &value);
+
+
+                    /**
+                     * 获取Maximum TPS per namespace
+                     * @return MaxTpsPerNamespace Maximum TPS per namespace
+                     */
+                    uint64_t GetMaxTpsPerNamespace() const;
+
+                    /**
+                     * 设置Maximum TPS per namespace
+                     * @param MaxTpsPerNamespace Maximum TPS per namespace
+                     */
+                    void SetMaxTpsPerNamespace(const uint64_t& _maxTpsPerNamespace);
+
+                    /**
+                     * 判断参数 MaxTpsPerNamespace 是否已赋值
+                     * @return MaxTpsPerNamespace 是否已赋值
+                     */
+                    bool MaxTpsPerNamespaceHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum number of namespaces
+                     * @return MaxNamespaceNum Maximum number of namespaces
+                     */
+                    uint64_t GetMaxNamespaceNum() const;
+
+                    /**
+                     * 设置Maximum number of namespaces
+                     * @param MaxNamespaceNum Maximum number of namespaces
+                     */
+                    void SetMaxNamespaceNum(const uint64_t& _maxNamespaceNum);
+
+                    /**
+                     * 判断参数 MaxNamespaceNum 是否已赋值
+                     * @return MaxNamespaceNum 是否已赋值
+                     */
+                    bool MaxNamespaceNumHasBeenSet() const;
+
+                    /**
+                     * 获取Number of used namespaces
+                     * @return UsedNamespaceNum Number of used namespaces
+                     */
+                    uint64_t GetUsedNamespaceNum() const;
+
+                    /**
+                     * 设置Number of used namespaces
+                     * @param UsedNamespaceNum Number of used namespaces
+                     */
+                    void SetUsedNamespaceNum(const uint64_t& _usedNamespaceNum);
+
+                    /**
+                     * 判断参数 UsedNamespaceNum 是否已赋值
+                     * @return UsedNamespaceNum 是否已赋值
+                     */
+                    bool UsedNamespaceNumHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum number of topics
+                     * @return MaxTopicNum Maximum number of topics
+                     */
+                    uint64_t GetMaxTopicNum() const;
+
+                    /**
+                     * 设置Maximum number of topics
+                     * @param MaxTopicNum Maximum number of topics
+                     */
+                    void SetMaxTopicNum(const uint64_t& _maxTopicNum);
+
+                    /**
+                     * 判断参数 MaxTopicNum 是否已赋值
+                     * @return MaxTopicNum 是否已赋值
+                     */
+                    bool MaxTopicNumHasBeenSet() const;
+
+                    /**
+                     * 获取Number of used topics
+                     * @return UsedTopicNum Number of used topics
+                     */
+                    uint64_t GetUsedTopicNum() const;
+
+                    /**
+                     * 设置Number of used topics
+                     * @param UsedTopicNum Number of used topics
+                     */
+                    void SetUsedTopicNum(const uint64_t& _usedTopicNum);
+
+                    /**
+                     * 判断参数 UsedTopicNum 是否已赋值
+                     * @return UsedTopicNum 是否已赋值
+                     */
+                    bool UsedTopicNumHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum number of groups
+                     * @return MaxGroupNum Maximum number of groups
+                     */
+                    uint64_t GetMaxGroupNum() const;
+
+                    /**
+                     * 设置Maximum number of groups
+                     * @param MaxGroupNum Maximum number of groups
+                     */
+                    void SetMaxGroupNum(const uint64_t& _maxGroupNum);
+
+                    /**
+                     * 判断参数 MaxGroupNum 是否已赋值
+                     * @return MaxGroupNum 是否已赋值
+                     */
+                    bool MaxGroupNumHasBeenSet() const;
+
+                    /**
+                     * 获取Number of used groups
+                     * @return UsedGroupNum Number of used groups
+                     */
+                    uint64_t GetUsedGroupNum() const;
+
+                    /**
+                     * 设置Number of used groups
+                     * @param UsedGroupNum Number of used groups
+                     */
+                    void SetUsedGroupNum(const uint64_t& _usedGroupNum);
+
+                    /**
+                     * 判断参数 UsedGroupNum 是否已赋值
+                     * @return UsedGroupNum 是否已赋值
+                     */
+                    bool UsedGroupNumHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum message retention period in milliseconds
+                     * @return MaxRetentionTime Maximum message retention period in milliseconds
+                     */
+                    uint64_t GetMaxRetentionTime() const;
+
+                    /**
+                     * 设置Maximum message retention period in milliseconds
+                     * @param MaxRetentionTime Maximum message retention period in milliseconds
+                     */
+                    void SetMaxRetentionTime(const uint64_t& _maxRetentionTime);
+
+                    /**
+                     * 判断参数 MaxRetentionTime 是否已赋值
+                     * @return MaxRetentionTime 是否已赋值
+                     */
+                    bool MaxRetentionTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum message delay in milliseconds
+                     * @return MaxLatencyTime Maximum message delay in milliseconds
+                     */
+                    uint64_t GetMaxLatencyTime() const;
+
+                    /**
+                     * 设置Maximum message delay in milliseconds
+                     * @param MaxLatencyTime Maximum message delay in milliseconds
+                     */
+                    void SetMaxLatencyTime(const uint64_t& _maxLatencyTime);
+
+                    /**
+                     * 判断参数 MaxLatencyTime 是否已赋值
+                     * @return MaxLatencyTime 是否已赋值
+                     */
+                    bool MaxLatencyTimeHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * Maximum TPS per namespace
+                     */
+                    uint64_t m_maxTpsPerNamespace;
+                    bool m_maxTpsPerNamespaceHasBeenSet;
+
+                    /**
+                     * Maximum number of namespaces
+                     */
+                    uint64_t m_maxNamespaceNum;
+                    bool m_maxNamespaceNumHasBeenSet;
+
+                    /**
+                     * Number of used namespaces
+                     */
+                    uint64_t m_usedNamespaceNum;
+                    bool m_usedNamespaceNumHasBeenSet;
+
+                    /**
+                     * Maximum number of topics
+                     */
+                    uint64_t m_maxTopicNum;
+                    bool m_maxTopicNumHasBeenSet;
+
+                    /**
+                     * Number of used topics
+                     */
+                    uint64_t m_usedTopicNum;
+                    bool m_usedTopicNumHasBeenSet;
+
+                    /**
+                     * Maximum number of groups
+                     */
+                    uint64_t m_maxGroupNum;
+                    bool m_maxGroupNumHasBeenSet;
+
+                    /**
+                     * Number of used groups
+                     */
+                    uint64_t m_usedGroupNum;
+                    bool m_usedGroupNumHasBeenSet;
+
+                    /**
+                     * Maximum message retention period in milliseconds
+                     */
+                    uint64_t m_maxRetentionTime;
+                    bool m_maxRetentionTimeHasBeenSet;
+
+                    /**
+                     * Maximum message delay in milliseconds
+                     */
+                    uint64_t m_maxLatencyTime;
+                    bool m_maxLatencyTimeHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_TDMQ_V20200217_MODEL_ROCKETMQCLUSTERCONFIG_H_

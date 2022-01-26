@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cam::V20190116::Model;
-using namespace rapidjson;
 using namespace std;
 
 AttachedPolicyOfRole::AttachedPolicyOfRole() :
@@ -33,7 +32,7 @@ AttachedPolicyOfRole::AttachedPolicyOfRole() :
 {
 }
 
-CoreInternalOutcome AttachedPolicyOfRole::Deserialize(const Value &value)
+CoreInternalOutcome AttachedPolicyOfRole::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +41,7 @@ CoreInternalOutcome AttachedPolicyOfRole::Deserialize(const Value &value)
     {
         if (!value["PolicyId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AttachedPolicyOfRole.PolicyId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AttachedPolicyOfRole.PolicyId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_policyId = value["PolicyId"].GetUint64();
         m_policyIdHasBeenSet = true;
@@ -52,7 +51,7 @@ CoreInternalOutcome AttachedPolicyOfRole::Deserialize(const Value &value)
     {
         if (!value["PolicyName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AttachedPolicyOfRole.PolicyName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AttachedPolicyOfRole.PolicyName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_policyName = string(value["PolicyName"].GetString());
         m_policyNameHasBeenSet = true;
@@ -62,7 +61,7 @@ CoreInternalOutcome AttachedPolicyOfRole::Deserialize(const Value &value)
     {
         if (!value["AddTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AttachedPolicyOfRole.AddTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AttachedPolicyOfRole.AddTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_addTime = string(value["AddTime"].GetString());
         m_addTimeHasBeenSet = true;
@@ -72,7 +71,7 @@ CoreInternalOutcome AttachedPolicyOfRole::Deserialize(const Value &value)
     {
         if (!value["PolicyType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AttachedPolicyOfRole.PolicyType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AttachedPolicyOfRole.PolicyType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_policyType = string(value["PolicyType"].GetString());
         m_policyTypeHasBeenSet = true;
@@ -82,7 +81,7 @@ CoreInternalOutcome AttachedPolicyOfRole::Deserialize(const Value &value)
     {
         if (!value["CreateMode"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AttachedPolicyOfRole.CreateMode` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AttachedPolicyOfRole.CreateMode` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_createMode = value["CreateMode"].GetUint64();
         m_createModeHasBeenSet = true;
@@ -92,7 +91,7 @@ CoreInternalOutcome AttachedPolicyOfRole::Deserialize(const Value &value)
     {
         if (!value["Deactived"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AttachedPolicyOfRole.Deactived` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AttachedPolicyOfRole.Deactived` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_deactived = value["Deactived"].GetUint64();
         m_deactivedHasBeenSet = true;
@@ -101,10 +100,10 @@ CoreInternalOutcome AttachedPolicyOfRole::Deserialize(const Value &value)
     if (value.HasMember("DeactivedDetail") && !value["DeactivedDetail"].IsNull())
     {
         if (!value["DeactivedDetail"].IsArray())
-            return CoreInternalOutcome(Error("response `AttachedPolicyOfRole.DeactivedDetail` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `AttachedPolicyOfRole.DeactivedDetail` is not array type"));
 
-        const Value &tmpValue = value["DeactivedDetail"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["DeactivedDetail"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_deactivedDetail.push_back((*itr).GetString());
         }
@@ -115,7 +114,7 @@ CoreInternalOutcome AttachedPolicyOfRole::Deserialize(const Value &value)
     {
         if (!value["Description"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AttachedPolicyOfRole.Description` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AttachedPolicyOfRole.Description` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_description = string(value["Description"].GetString());
         m_descriptionHasBeenSet = true;
@@ -125,12 +124,12 @@ CoreInternalOutcome AttachedPolicyOfRole::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void AttachedPolicyOfRole::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AttachedPolicyOfRole::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_policyIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PolicyId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_policyId, allocator);
@@ -138,31 +137,31 @@ void AttachedPolicyOfRole::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_policyNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PolicyName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_policyName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_policyName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_addTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AddTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_addTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_addTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_policyTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PolicyType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_policyType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_policyType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createModeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateMode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_createMode, allocator);
@@ -170,7 +169,7 @@ void AttachedPolicyOfRole::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_deactivedHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Deactived";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_deactived, allocator);
@@ -178,23 +177,23 @@ void AttachedPolicyOfRole::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_deactivedDetailHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DeactivedDetail";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_deactivedDetail.begin(); itr != m_deactivedDetail.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_descriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Description";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_description.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
     }
 
 }

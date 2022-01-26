@@ -41,6 +41,7 @@ namespace TencentCloud
                     InquiryPriceCreateProxyResponse();
                     ~InquiryPriceCreateProxyResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -121,6 +122,34 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool DiscountFlowUnitPriceHasBeenSet() const;
 
+                    /**
+                     * 获取Dedicated BGP bandwidth price. Unit: USD/Mbps/day
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @return Cn2BandwidthPrice Dedicated BGP bandwidth price. Unit: USD/Mbps/day
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    double GetCn2BandwidthPrice() const;
+
+                    /**
+                     * 判断参数 Cn2BandwidthPrice 是否已赋值
+                     * @return Cn2BandwidthPrice 是否已赋值
+                     */
+                    bool Cn2BandwidthPriceHasBeenSet() const;
+
+                    /**
+                     * 获取Dedicated BGP bandwidth discount price. Unit: USD/Mbps/day
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @return Cn2BandwidthPriceWithDiscount Dedicated BGP bandwidth discount price. Unit: USD/Mbps/day
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    double GetCn2BandwidthPriceWithDiscount() const;
+
+                    /**
+                     * 判断参数 Cn2BandwidthPriceWithDiscount 是否已赋值
+                     * @return Cn2BandwidthPriceWithDiscount 是否已赋值
+                     */
+                    bool Cn2BandwidthPriceWithDiscountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -161,6 +190,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     double m_discountFlowUnitPrice;
                     bool m_discountFlowUnitPriceHasBeenSet;
+
+                    /**
+                     * Dedicated BGP bandwidth price. Unit: USD/Mbps/day
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    double m_cn2BandwidthPrice;
+                    bool m_cn2BandwidthPriceHasBeenSet;
+
+                    /**
+                     * Dedicated BGP bandwidth discount price. Unit: USD/Mbps/day
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    double m_cn2BandwidthPriceWithDiscount;
+                    bool m_cn2BandwidthPriceWithDiscountHasBeenSet;
 
                 };
             }

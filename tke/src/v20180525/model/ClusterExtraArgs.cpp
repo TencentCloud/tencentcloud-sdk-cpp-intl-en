@@ -18,17 +18,17 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Tke::V20180525::Model;
-using namespace rapidjson;
 using namespace std;
 
 ClusterExtraArgs::ClusterExtraArgs() :
     m_kubeAPIServerHasBeenSet(false),
     m_kubeControllerManagerHasBeenSet(false),
-    m_kubeSchedulerHasBeenSet(false)
+    m_kubeSchedulerHasBeenSet(false),
+    m_etcdHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ClusterExtraArgs::Deserialize(const Value &value)
+CoreInternalOutcome ClusterExtraArgs::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,10 +36,10 @@ CoreInternalOutcome ClusterExtraArgs::Deserialize(const Value &value)
     if (value.HasMember("KubeAPIServer") && !value["KubeAPIServer"].IsNull())
     {
         if (!value["KubeAPIServer"].IsArray())
-            return CoreInternalOutcome(Error("response `ClusterExtraArgs.KubeAPIServer` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ClusterExtraArgs.KubeAPIServer` is not array type"));
 
-        const Value &tmpValue = value["KubeAPIServer"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["KubeAPIServer"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_kubeAPIServer.push_back((*itr).GetString());
         }
@@ -49,10 +49,10 @@ CoreInternalOutcome ClusterExtraArgs::Deserialize(const Value &value)
     if (value.HasMember("KubeControllerManager") && !value["KubeControllerManager"].IsNull())
     {
         if (!value["KubeControllerManager"].IsArray())
-            return CoreInternalOutcome(Error("response `ClusterExtraArgs.KubeControllerManager` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ClusterExtraArgs.KubeControllerManager` is not array type"));
 
-        const Value &tmpValue = value["KubeControllerManager"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["KubeControllerManager"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_kubeControllerManager.push_back((*itr).GetString());
         }
@@ -62,59 +62,85 @@ CoreInternalOutcome ClusterExtraArgs::Deserialize(const Value &value)
     if (value.HasMember("KubeScheduler") && !value["KubeScheduler"].IsNull())
     {
         if (!value["KubeScheduler"].IsArray())
-            return CoreInternalOutcome(Error("response `ClusterExtraArgs.KubeScheduler` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ClusterExtraArgs.KubeScheduler` is not array type"));
 
-        const Value &tmpValue = value["KubeScheduler"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["KubeScheduler"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_kubeScheduler.push_back((*itr).GetString());
         }
         m_kubeSchedulerHasBeenSet = true;
     }
 
+    if (value.HasMember("Etcd") && !value["Etcd"].IsNull())
+    {
+        if (!value["Etcd"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `ClusterExtraArgs.Etcd` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["Etcd"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_etcd.push_back((*itr).GetString());
+        }
+        m_etcdHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void ClusterExtraArgs::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ClusterExtraArgs::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_kubeAPIServerHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "KubeAPIServer";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_kubeAPIServer.begin(); itr != m_kubeAPIServer.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_kubeControllerManagerHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "KubeControllerManager";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_kubeControllerManager.begin(); itr != m_kubeControllerManager.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_kubeSchedulerHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "KubeScheduler";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_kubeScheduler.begin(); itr != m_kubeScheduler.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_etcdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Etcd";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_etcd.begin(); itr != m_etcd.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
@@ -167,5 +193,21 @@ void ClusterExtraArgs::SetKubeScheduler(const vector<string>& _kubeScheduler)
 bool ClusterExtraArgs::KubeSchedulerHasBeenSet() const
 {
     return m_kubeSchedulerHasBeenSet;
+}
+
+vector<string> ClusterExtraArgs::GetEtcd() const
+{
+    return m_etcd;
+}
+
+void ClusterExtraArgs::SetEtcd(const vector<string>& _etcd)
+{
+    m_etcd = _etcd;
+    m_etcdHasBeenSet = true;
+}
+
+bool ClusterExtraArgs::EtcdHasBeenSet() const
+{
+    return m_etcdHasBeenSet;
 }
 

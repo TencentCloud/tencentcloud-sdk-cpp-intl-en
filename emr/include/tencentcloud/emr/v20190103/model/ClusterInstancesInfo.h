@@ -794,6 +794,160 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool ProductIdHasBeenSet() const;
 
+                    /**
+                     * 获取Availability zone
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @return Zone Availability zone
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetZone() const;
+
+                    /**
+                     * 设置Availability zone
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @param Zone Availability zone
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetZone(const std::string& _zone);
+
+                    /**
+                     * 判断参数 Zone 是否已赋值
+                     * @return Zone 是否已赋值
+                     */
+                    bool ZoneHasBeenSet() const;
+
+                    /**
+                     * 获取Scenario name
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return SceneName Scenario name
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetSceneName() const;
+
+                    /**
+                     * 设置Scenario name
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param SceneName Scenario name
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetSceneName(const std::string& _sceneName);
+
+                    /**
+                     * 判断参数 SceneName 是否已赋值
+                     * @return SceneName 是否已赋值
+                     */
+                    bool SceneNameHasBeenSet() const;
+
+                    /**
+                     * 获取Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return SceneServiceClass Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetSceneServiceClass() const;
+
+                    /**
+                     * 设置Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param SceneServiceClass Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetSceneServiceClass(const std::string& _sceneServiceClass);
+
+                    /**
+                     * 判断参数 SceneServiceClass 是否已赋值
+                     * @return SceneServiceClass 是否已赋值
+                     */
+                    bool SceneServiceClassHasBeenSet() const;
+
+                    /**
+                     * 获取Scenario-based EMR version
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return SceneEmrVersion Scenario-based EMR version
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetSceneEmrVersion() const;
+
+                    /**
+                     * 设置Scenario-based EMR version
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param SceneEmrVersion Scenario-based EMR version
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetSceneEmrVersion(const std::string& _sceneEmrVersion);
+
+                    /**
+                     * 判断参数 SceneEmrVersion 是否已赋值
+                     * @return SceneEmrVersion 是否已赋值
+                     */
+                    bool SceneEmrVersionHasBeenSet() const;
+
+                    /**
+                     * 获取Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return DisplayName Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetDisplayName() const;
+
+                    /**
+                     * 设置Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param DisplayName Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetDisplayName(const std::string& _displayName);
+
+                    /**
+                     * 判断参数 DisplayName 是否已赋值
+                     * @return DisplayName 是否已赋值
+                     */
+                    bool DisplayNameHasBeenSet() const;
+
+                    /**
+                     * 获取VPC name
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return VpcName VPC name
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetVpcName() const;
+
+                    /**
+                     * 设置VPC name
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param VpcName VPC name
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetVpcName(const std::string& _vpcName);
+
+                    /**
+                     * 判断参数 VpcName 是否已赋值
+                     * @return VpcName 是否已赋值
+                     */
+                    bool VpcNameHasBeenSet() const;
+
+                    /**
+                     * 获取Subnet name
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return SubnetName Subnet name
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetSubnetName() const;
+
+                    /**
+                     * 设置Subnet name
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param SubnetName Subnet name
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetSubnetName(const std::string& _subnetName);
+
+                    /**
+                     * 判断参数 SubnetName 是否已赋值
+                     * @return SubnetName 是否已赋值
+                     */
+                    bool SubnetNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1025,6 +1179,55 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_productId;
                     bool m_productIdHasBeenSet;
+
+                    /**
+                     * Availability zone
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_zone;
+                    bool m_zoneHasBeenSet;
+
+                    /**
+                     * Scenario name
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_sceneName;
+                    bool m_sceneNameHasBeenSet;
+
+                    /**
+                     * Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_sceneServiceClass;
+                    bool m_sceneServiceClassHasBeenSet;
+
+                    /**
+                     * Scenario-based EMR version
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_sceneEmrVersion;
+                    bool m_sceneEmrVersionHasBeenSet;
+
+                    /**
+                     * Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_displayName;
+                    bool m_displayNameHasBeenSet;
+
+                    /**
+                     * VPC name
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_vpcName;
+                    bool m_vpcNameHasBeenSet;
+
+                    /**
+                     * Subnet name
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_subnetName;
+                    bool m_subnetNameHasBeenSet;
 
                 };
             }

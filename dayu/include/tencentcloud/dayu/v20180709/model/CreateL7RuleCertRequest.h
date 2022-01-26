@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool BusinessHasBeenSet() const;
 
                     /**
-                     * 获取Anti-DDoS instance ID
-                     * @return Id Anti-DDoS instance ID
+                     * 获取The resource instance ID, such as the ID of an Anti-DDoS Advanced instance or the ID of an Anti-DDoS Ultimate instance.
+                     * @return Id The resource instance ID, such as the ID of an Anti-DDoS Advanced instance or the ID of an Anti-DDoS Ultimate instance.
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Anti-DDoS instance ID
-                     * @param Id Anti-DDoS instance ID
+                     * 设置The resource instance ID, such as the ID of an Anti-DDoS Advanced instance or the ID of an Anti-DDoS Ultimate instance.
+                     * @param Id The resource instance ID, such as the ID of an Anti-DDoS Advanced instance or the ID of an Anti-DDoS Ultimate instance.
                      */
                     void SetId(const std::string& _id);
 
@@ -177,7 +177,7 @@ namespace TencentCloud
                     bool m_businessHasBeenSet;
 
                     /**
-                     * Anti-DDoS instance ID
+                     * The resource instance ID, such as the ID of an Anti-DDoS Advanced instance or the ID of an Anti-DDoS Ultimate instance.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;

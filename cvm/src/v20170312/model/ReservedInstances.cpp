@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cvm::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 ReservedInstances::ReservedInstances() :
@@ -32,11 +31,12 @@ ReservedInstances::ReservedInstances() :
     m_productDescriptionHasBeenSet(false),
     m_stateHasBeenSet(false),
     m_currencyCodeHasBeenSet(false),
-    m_offeringTypeHasBeenSet(false)
+    m_offeringTypeHasBeenSet(false),
+    m_instanceFamilyHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ReservedInstances::Deserialize(const Value &value)
+CoreInternalOutcome ReservedInstances::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -45,7 +45,7 @@ CoreInternalOutcome ReservedInstances::Deserialize(const Value &value)
     {
         if (!value["ReservedInstancesId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ReservedInstances.ReservedInstancesId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ReservedInstances.ReservedInstancesId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_reservedInstancesId = string(value["ReservedInstancesId"].GetString());
         m_reservedInstancesIdHasBeenSet = true;
@@ -55,7 +55,7 @@ CoreInternalOutcome ReservedInstances::Deserialize(const Value &value)
     {
         if (!value["InstanceType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ReservedInstances.InstanceType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ReservedInstances.InstanceType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceType = string(value["InstanceType"].GetString());
         m_instanceTypeHasBeenSet = true;
@@ -65,7 +65,7 @@ CoreInternalOutcome ReservedInstances::Deserialize(const Value &value)
     {
         if (!value["Zone"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ReservedInstances.Zone` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ReservedInstances.Zone` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_zone = string(value["Zone"].GetString());
         m_zoneHasBeenSet = true;
@@ -75,7 +75,7 @@ CoreInternalOutcome ReservedInstances::Deserialize(const Value &value)
     {
         if (!value["StartTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ReservedInstances.StartTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ReservedInstances.StartTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_startTime = string(value["StartTime"].GetString());
         m_startTimeHasBeenSet = true;
@@ -85,7 +85,7 @@ CoreInternalOutcome ReservedInstances::Deserialize(const Value &value)
     {
         if (!value["EndTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ReservedInstances.EndTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ReservedInstances.EndTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_endTime = string(value["EndTime"].GetString());
         m_endTimeHasBeenSet = true;
@@ -95,7 +95,7 @@ CoreInternalOutcome ReservedInstances::Deserialize(const Value &value)
     {
         if (!value["Duration"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ReservedInstances.Duration` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ReservedInstances.Duration` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_duration = value["Duration"].GetInt64();
         m_durationHasBeenSet = true;
@@ -105,7 +105,7 @@ CoreInternalOutcome ReservedInstances::Deserialize(const Value &value)
     {
         if (!value["InstanceCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ReservedInstances.InstanceCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ReservedInstances.InstanceCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_instanceCount = value["InstanceCount"].GetInt64();
         m_instanceCountHasBeenSet = true;
@@ -115,7 +115,7 @@ CoreInternalOutcome ReservedInstances::Deserialize(const Value &value)
     {
         if (!value["ProductDescription"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ReservedInstances.ProductDescription` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ReservedInstances.ProductDescription` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_productDescription = string(value["ProductDescription"].GetString());
         m_productDescriptionHasBeenSet = true;
@@ -125,7 +125,7 @@ CoreInternalOutcome ReservedInstances::Deserialize(const Value &value)
     {
         if (!value["State"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ReservedInstances.State` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ReservedInstances.State` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_state = string(value["State"].GetString());
         m_stateHasBeenSet = true;
@@ -135,7 +135,7 @@ CoreInternalOutcome ReservedInstances::Deserialize(const Value &value)
     {
         if (!value["CurrencyCode"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ReservedInstances.CurrencyCode` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ReservedInstances.CurrencyCode` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_currencyCode = string(value["CurrencyCode"].GetString());
         m_currencyCodeHasBeenSet = true;
@@ -145,62 +145,72 @@ CoreInternalOutcome ReservedInstances::Deserialize(const Value &value)
     {
         if (!value["OfferingType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ReservedInstances.OfferingType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ReservedInstances.OfferingType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_offeringType = string(value["OfferingType"].GetString());
         m_offeringTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("InstanceFamily") && !value["InstanceFamily"].IsNull())
+    {
+        if (!value["InstanceFamily"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ReservedInstances.InstanceFamily` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_instanceFamily = string(value["InstanceFamily"].GetString());
+        m_instanceFamilyHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void ReservedInstances::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ReservedInstances::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_reservedInstancesIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReservedInstancesId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_reservedInstancesId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_reservedInstancesId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_zoneHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Zone";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_zone.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_zone.c_str(), allocator).Move(), allocator);
     }
 
     if (m_startTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_startTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_startTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_endTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_endTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_endTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_durationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Duration";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_duration, allocator);
@@ -208,7 +218,7 @@ void ReservedInstances::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_instanceCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_instanceCount, allocator);
@@ -216,34 +226,42 @@ void ReservedInstances::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_productDescriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProductDescription";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_productDescription.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_productDescription.c_str(), allocator).Move(), allocator);
     }
 
     if (m_stateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "State";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_state.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_state.c_str(), allocator).Move(), allocator);
     }
 
     if (m_currencyCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CurrencyCode";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_currencyCode.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_currencyCode.c_str(), allocator).Move(), allocator);
     }
 
     if (m_offeringTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OfferingType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_offeringType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_offeringType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_instanceFamilyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceFamily";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceFamily.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -423,5 +441,21 @@ void ReservedInstances::SetOfferingType(const string& _offeringType)
 bool ReservedInstances::OfferingTypeHasBeenSet() const
 {
     return m_offeringTypeHasBeenSet;
+}
+
+string ReservedInstances::GetInstanceFamily() const
+{
+    return m_instanceFamily;
+}
+
+void ReservedInstances::SetInstanceFamily(const string& _instanceFamily)
+{
+    m_instanceFamily = _instanceFamily;
+    m_instanceFamilyHasBeenSet = true;
+}
+
+bool ReservedInstances::InstanceFamilyHasBeenSet() const
+{
+    return m_instanceFamilyHasBeenSet;
 }
 

@@ -79,6 +79,24 @@ namespace TencentCloud
                      */
                     bool PrivateIpAddressesHasBeenSet() const;
 
+                    /**
+                     * 获取Instance ID of the server bound with this IP. This parameter is only applicable when you need to return an IP and unbind the related servers.
+                     * @return InstanceId Instance ID of the server bound with this IP. This parameter is only applicable when you need to return an IP and unbind the related servers.
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置Instance ID of the server bound with this IP. This parameter is only applicable when you need to return an IP and unbind the related servers.
+                     * @param InstanceId Instance ID of the server bound with this IP. This parameter is only applicable when you need to return an IP and unbind the related servers.
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -92,6 +110,12 @@ namespace TencentCloud
                      */
                     std::vector<PrivateIpAddressSpecification> m_privateIpAddresses;
                     bool m_privateIpAddressesHasBeenSet;
+
+                    /**
+                     * Instance ID of the server bound with this IP. This parameter is only applicable when you need to return an IP and unbind the related servers.
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
 
                 };
             }

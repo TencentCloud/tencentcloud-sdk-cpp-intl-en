@@ -18,15 +18,15 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 RangeOriginPull::RangeOriginPull() :
-    m_switchHasBeenSet(false)
+    m_switchHasBeenSet(false),
+    m_rangeRulesHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome RangeOriginPull::Deserialize(const Value &value)
+CoreInternalOutcome RangeOriginPull::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -35,25 +35,60 @@ CoreInternalOutcome RangeOriginPull::Deserialize(const Value &value)
     {
         if (!value["Switch"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RangeOriginPull.Switch` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RangeOriginPull.Switch` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_switch = string(value["Switch"].GetString());
         m_switchHasBeenSet = true;
+    }
+
+    if (value.HasMember("RangeRules") && !value["RangeRules"].IsNull())
+    {
+        if (!value["RangeRules"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `RangeOriginPull.RangeRules` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["RangeRules"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            RangeOriginPullRule item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_rangeRules.push_back(item);
+        }
+        m_rangeRulesHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void RangeOriginPull::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void RangeOriginPull::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_switchHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Switch";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_switch.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_switch.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_rangeRulesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RangeRules";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_rangeRules.begin(); itr != m_rangeRules.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
 }
@@ -73,5 +108,21 @@ void RangeOriginPull::SetSwitch(const string& _switch)
 bool RangeOriginPull::SwitchHasBeenSet() const
 {
     return m_switchHasBeenSet;
+}
+
+vector<RangeOriginPullRule> RangeOriginPull::GetRangeRules() const
+{
+    return m_rangeRules;
+}
+
+void RangeOriginPull::SetRangeRules(const vector<RangeOriginPullRule>& _rangeRules)
+{
+    m_rangeRules = _rangeRules;
+    m_rangeRulesHasBeenSet = true;
+}
+
+bool RangeOriginPull::RangeRulesHasBeenSet() const
+{
+    return m_rangeRulesHasBeenSet;
 }
 

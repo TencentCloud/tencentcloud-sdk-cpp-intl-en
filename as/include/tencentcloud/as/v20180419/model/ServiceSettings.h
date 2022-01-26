@@ -65,14 +65,26 @@ namespace TencentCloud
                     bool ReplaceMonitorUnhealthyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ScalingMode 
+                     * 获取Valid values: 
+CLASSIC_SCALING: this is the typical scaling method, which creates and terminates instances to perform scaling operations. 
+WAKE_UP_STOPPED_SCALING: this scaling method first tries to start stopped instances. If the number of instances woken up is insufficient, the system creates new instances for scale-out. For scale-in, instances are terminated as in the typical method. You can use the StopAutoScalingInstances API to stop instances in the scaling group. Scale-out operations triggered by alarms will still create new instances.
+Default value: CLASSIC_SCALING
+                     * @return ScalingMode Valid values: 
+CLASSIC_SCALING: this is the typical scaling method, which creates and terminates instances to perform scaling operations. 
+WAKE_UP_STOPPED_SCALING: this scaling method first tries to start stopped instances. If the number of instances woken up is insufficient, the system creates new instances for scale-out. For scale-in, instances are terminated as in the typical method. You can use the StopAutoScalingInstances API to stop instances in the scaling group. Scale-out operations triggered by alarms will still create new instances.
+Default value: CLASSIC_SCALING
                      */
                     std::string GetScalingMode() const;
 
                     /**
-                     * 设置
-                     * @param ScalingMode 
+                     * 设置Valid values: 
+CLASSIC_SCALING: this is the typical scaling method, which creates and terminates instances to perform scaling operations. 
+WAKE_UP_STOPPED_SCALING: this scaling method first tries to start stopped instances. If the number of instances woken up is insufficient, the system creates new instances for scale-out. For scale-in, instances are terminated as in the typical method. You can use the StopAutoScalingInstances API to stop instances in the scaling group. Scale-out operations triggered by alarms will still create new instances.
+Default value: CLASSIC_SCALING
+                     * @param ScalingMode Valid values: 
+CLASSIC_SCALING: this is the typical scaling method, which creates and terminates instances to perform scaling operations. 
+WAKE_UP_STOPPED_SCALING: this scaling method first tries to start stopped instances. If the number of instances woken up is insufficient, the system creates new instances for scale-out. For scale-in, instances are terminated as in the typical method. You can use the StopAutoScalingInstances API to stop instances in the scaling group. Scale-out operations triggered by alarms will still create new instances.
+Default value: CLASSIC_SCALING
                      */
                     void SetScalingMode(const std::string& _scalingMode);
 
@@ -81,6 +93,24 @@ namespace TencentCloud
                      * @return ScalingMode 是否已赋值
                      */
                     bool ScalingModeHasBeenSet() const;
+
+                    /**
+                     * 获取Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used.
+                     * @return ReplaceLoadBalancerUnhealthy Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used.
+                     */
+                    bool GetReplaceLoadBalancerUnhealthy() const;
+
+                    /**
+                     * 设置Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used.
+                     * @param ReplaceLoadBalancerUnhealthy Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used.
+                     */
+                    void SetReplaceLoadBalancerUnhealthy(const bool& _replaceLoadBalancerUnhealthy);
+
+                    /**
+                     * 判断参数 ReplaceLoadBalancerUnhealthy 是否已赋值
+                     * @return ReplaceLoadBalancerUnhealthy 是否已赋值
+                     */
+                    bool ReplaceLoadBalancerUnhealthyHasBeenSet() const;
 
                 private:
 
@@ -91,10 +121,19 @@ namespace TencentCloud
                     bool m_replaceMonitorUnhealthyHasBeenSet;
 
                     /**
-                     * 
+                     * Valid values: 
+CLASSIC_SCALING: this is the typical scaling method, which creates and terminates instances to perform scaling operations. 
+WAKE_UP_STOPPED_SCALING: this scaling method first tries to start stopped instances. If the number of instances woken up is insufficient, the system creates new instances for scale-out. For scale-in, instances are terminated as in the typical method. You can use the StopAutoScalingInstances API to stop instances in the scaling group. Scale-out operations triggered by alarms will still create new instances.
+Default value: CLASSIC_SCALING
                      */
                     std::string m_scalingMode;
                     bool m_scalingModeHasBeenSet;
+
+                    /**
+                     * Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used.
+                     */
+                    bool m_replaceLoadBalancerUnhealthy;
+                    bool m_replaceLoadBalancerUnhealthyHasBeenSet;
 
                 };
             }

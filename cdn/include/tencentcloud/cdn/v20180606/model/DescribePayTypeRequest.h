@@ -72,6 +72,24 @@ Default value: `mainland`.
                      */
                     bool AreaHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     * @return Product Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     */
+                    std::string GetProduct() const;
+
+                    /**
+                     * 设置Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     * @param Product Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     */
+                    void SetProduct(const std::string& _product);
+
+                    /**
+                     * 判断参数 Product 是否已赋值
+                     * @return Product 是否已赋值
+                     */
+                    bool ProductHasBeenSet() const;
+
                 private:
 
                     /**
@@ -82,6 +100,12 @@ Default value: `mainland`.
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
+
+                    /**
+                     * Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     */
+                    std::string m_product;
+                    bool m_productHasBeenSet;
 
                 };
             }

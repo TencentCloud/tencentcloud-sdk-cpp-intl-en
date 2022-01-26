@@ -18,17 +18,18 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 DirectConnectGatewayCcnRoute::DirectConnectGatewayCcnRoute() :
     m_routeIdHasBeenSet(false),
     m_destinationCidrBlockHasBeenSet(false),
-    m_aSPathHasBeenSet(false)
+    m_aSPathHasBeenSet(false),
+    m_descriptionHasBeenSet(false),
+    m_updateTimeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DirectConnectGatewayCcnRoute::Deserialize(const Value &value)
+CoreInternalOutcome DirectConnectGatewayCcnRoute::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +38,7 @@ CoreInternalOutcome DirectConnectGatewayCcnRoute::Deserialize(const Value &value
     {
         if (!value["RouteId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DirectConnectGatewayCcnRoute.RouteId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DirectConnectGatewayCcnRoute.RouteId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_routeId = string(value["RouteId"].GetString());
         m_routeIdHasBeenSet = true;
@@ -47,7 +48,7 @@ CoreInternalOutcome DirectConnectGatewayCcnRoute::Deserialize(const Value &value
     {
         if (!value["DestinationCidrBlock"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DirectConnectGatewayCcnRoute.DestinationCidrBlock` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DirectConnectGatewayCcnRoute.DestinationCidrBlock` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_destinationCidrBlock = string(value["DestinationCidrBlock"].GetString());
         m_destinationCidrBlockHasBeenSet = true;
@@ -56,50 +57,86 @@ CoreInternalOutcome DirectConnectGatewayCcnRoute::Deserialize(const Value &value
     if (value.HasMember("ASPath") && !value["ASPath"].IsNull())
     {
         if (!value["ASPath"].IsArray())
-            return CoreInternalOutcome(Error("response `DirectConnectGatewayCcnRoute.ASPath` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DirectConnectGatewayCcnRoute.ASPath` is not array type"));
 
-        const Value &tmpValue = value["ASPath"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["ASPath"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_aSPath.push_back((*itr).GetString());
         }
         m_aSPathHasBeenSet = true;
     }
 
+    if (value.HasMember("Description") && !value["Description"].IsNull())
+    {
+        if (!value["Description"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DirectConnectGatewayCcnRoute.Description` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_description = string(value["Description"].GetString());
+        m_descriptionHasBeenSet = true;
+    }
+
+    if (value.HasMember("UpdateTime") && !value["UpdateTime"].IsNull())
+    {
+        if (!value["UpdateTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DirectConnectGatewayCcnRoute.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_updateTime = string(value["UpdateTime"].GetString());
+        m_updateTimeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void DirectConnectGatewayCcnRoute::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DirectConnectGatewayCcnRoute::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_routeIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RouteId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_routeId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_routeId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_destinationCidrBlockHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DestinationCidrBlock";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_destinationCidrBlock.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_destinationCidrBlock.c_str(), allocator).Move(), allocator);
     }
 
     if (m_aSPathHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ASPath";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_aSPath.begin(); itr != m_aSPath.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
+    }
+
+    if (m_descriptionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Description";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_updateTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UpdateTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_updateTime.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -151,5 +188,37 @@ void DirectConnectGatewayCcnRoute::SetASPath(const vector<string>& _aSPath)
 bool DirectConnectGatewayCcnRoute::ASPathHasBeenSet() const
 {
     return m_aSPathHasBeenSet;
+}
+
+string DirectConnectGatewayCcnRoute::GetDescription() const
+{
+    return m_description;
+}
+
+void DirectConnectGatewayCcnRoute::SetDescription(const string& _description)
+{
+    m_description = _description;
+    m_descriptionHasBeenSet = true;
+}
+
+bool DirectConnectGatewayCcnRoute::DescriptionHasBeenSet() const
+{
+    return m_descriptionHasBeenSet;
+}
+
+string DirectConnectGatewayCcnRoute::GetUpdateTime() const
+{
+    return m_updateTime;
+}
+
+void DirectConnectGatewayCcnRoute::SetUpdateTime(const string& _updateTime)
+{
+    m_updateTime = _updateTime;
+    m_updateTimeHasBeenSet = true;
+}
+
+bool DirectConnectGatewayCcnRoute::UpdateTimeHasBeenSet() const
+{
+    return m_updateTimeHasBeenSet;
 }
 

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Scf::V20180416::Model;
-using namespace rapidjson;
 using namespace std;
 
 Trigger::Trigger() :
@@ -29,11 +28,15 @@ Trigger::Trigger() :
     m_addTimeHasBeenSet(false),
     m_enableHasBeenSet(false),
     m_customArgumentHasBeenSet(false),
-    m_availableStatusHasBeenSet(false)
+    m_availableStatusHasBeenSet(false),
+    m_resourceIdHasBeenSet(false),
+    m_bindStatusHasBeenSet(false),
+    m_triggerAttributeHasBeenSet(false),
+    m_qualifierHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome Trigger::Deserialize(const Value &value)
+CoreInternalOutcome Trigger::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +45,7 @@ CoreInternalOutcome Trigger::Deserialize(const Value &value)
     {
         if (!value["ModTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Trigger.ModTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Trigger.ModTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_modTime = string(value["ModTime"].GetString());
         m_modTimeHasBeenSet = true;
@@ -52,7 +55,7 @@ CoreInternalOutcome Trigger::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Trigger.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Trigger.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -62,7 +65,7 @@ CoreInternalOutcome Trigger::Deserialize(const Value &value)
     {
         if (!value["TriggerDesc"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Trigger.TriggerDesc` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Trigger.TriggerDesc` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_triggerDesc = string(value["TriggerDesc"].GetString());
         m_triggerDescHasBeenSet = true;
@@ -72,7 +75,7 @@ CoreInternalOutcome Trigger::Deserialize(const Value &value)
     {
         if (!value["TriggerName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Trigger.TriggerName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Trigger.TriggerName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_triggerName = string(value["TriggerName"].GetString());
         m_triggerNameHasBeenSet = true;
@@ -82,7 +85,7 @@ CoreInternalOutcome Trigger::Deserialize(const Value &value)
     {
         if (!value["AddTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Trigger.AddTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Trigger.AddTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_addTime = string(value["AddTime"].GetString());
         m_addTimeHasBeenSet = true;
@@ -92,7 +95,7 @@ CoreInternalOutcome Trigger::Deserialize(const Value &value)
     {
         if (!value["Enable"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Trigger.Enable` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Trigger.Enable` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_enable = value["Enable"].GetInt64();
         m_enableHasBeenSet = true;
@@ -102,7 +105,7 @@ CoreInternalOutcome Trigger::Deserialize(const Value &value)
     {
         if (!value["CustomArgument"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Trigger.CustomArgument` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Trigger.CustomArgument` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_customArgument = string(value["CustomArgument"].GetString());
         m_customArgumentHasBeenSet = true;
@@ -112,62 +115,102 @@ CoreInternalOutcome Trigger::Deserialize(const Value &value)
     {
         if (!value["AvailableStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Trigger.AvailableStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Trigger.AvailableStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_availableStatus = string(value["AvailableStatus"].GetString());
         m_availableStatusHasBeenSet = true;
+    }
+
+    if (value.HasMember("ResourceId") && !value["ResourceId"].IsNull())
+    {
+        if (!value["ResourceId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Trigger.ResourceId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_resourceId = string(value["ResourceId"].GetString());
+        m_resourceIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("BindStatus") && !value["BindStatus"].IsNull())
+    {
+        if (!value["BindStatus"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Trigger.BindStatus` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_bindStatus = string(value["BindStatus"].GetString());
+        m_bindStatusHasBeenSet = true;
+    }
+
+    if (value.HasMember("TriggerAttribute") && !value["TriggerAttribute"].IsNull())
+    {
+        if (!value["TriggerAttribute"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Trigger.TriggerAttribute` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_triggerAttribute = string(value["TriggerAttribute"].GetString());
+        m_triggerAttributeHasBeenSet = true;
+    }
+
+    if (value.HasMember("Qualifier") && !value["Qualifier"].IsNull())
+    {
+        if (!value["Qualifier"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Trigger.Qualifier` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_qualifier = string(value["Qualifier"].GetString());
+        m_qualifierHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void Trigger::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Trigger::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_modTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ModTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_modTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_modTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_triggerDescHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TriggerDesc";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_triggerDesc.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_triggerDesc.c_str(), allocator).Move(), allocator);
     }
 
     if (m_triggerNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TriggerName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_triggerName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_triggerName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_addTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AddTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_addTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_addTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_enableHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Enable";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_enable, allocator);
@@ -175,18 +218,50 @@ void Trigger::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_customArgumentHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CustomArgument";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_customArgument.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_customArgument.c_str(), allocator).Move(), allocator);
     }
 
     if (m_availableStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AvailableStatus";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_availableStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_availableStatus.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_resourceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ResourceId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resourceId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_bindStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BindStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_bindStatus.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_triggerAttributeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TriggerAttribute";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_triggerAttribute.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_qualifierHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Qualifier";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_qualifier.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -318,5 +393,69 @@ void Trigger::SetAvailableStatus(const string& _availableStatus)
 bool Trigger::AvailableStatusHasBeenSet() const
 {
     return m_availableStatusHasBeenSet;
+}
+
+string Trigger::GetResourceId() const
+{
+    return m_resourceId;
+}
+
+void Trigger::SetResourceId(const string& _resourceId)
+{
+    m_resourceId = _resourceId;
+    m_resourceIdHasBeenSet = true;
+}
+
+bool Trigger::ResourceIdHasBeenSet() const
+{
+    return m_resourceIdHasBeenSet;
+}
+
+string Trigger::GetBindStatus() const
+{
+    return m_bindStatus;
+}
+
+void Trigger::SetBindStatus(const string& _bindStatus)
+{
+    m_bindStatus = _bindStatus;
+    m_bindStatusHasBeenSet = true;
+}
+
+bool Trigger::BindStatusHasBeenSet() const
+{
+    return m_bindStatusHasBeenSet;
+}
+
+string Trigger::GetTriggerAttribute() const
+{
+    return m_triggerAttribute;
+}
+
+void Trigger::SetTriggerAttribute(const string& _triggerAttribute)
+{
+    m_triggerAttribute = _triggerAttribute;
+    m_triggerAttributeHasBeenSet = true;
+}
+
+bool Trigger::TriggerAttributeHasBeenSet() const
+{
+    return m_triggerAttributeHasBeenSet;
+}
+
+string Trigger::GetQualifier() const
+{
+    return m_qualifier;
+}
+
+void Trigger::SetQualifier(const string& _qualifier)
+{
+    m_qualifier = _qualifier;
+    m_qualifierHasBeenSet = true;
+}
+
+bool Trigger::QualifierHasBeenSet() const
+{
+    return m_qualifierHasBeenSet;
 }
 

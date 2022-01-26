@@ -21,31 +21,31 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Live::V20180801::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeLiveDomainsResponse::DescribeLiveDomainsResponse() :
     m_allCountHasBeenSet(false),
-    m_domainListHasBeenSet(false)
+    m_domainListHasBeenSet(false),
+    m_createLimitCountHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome DescribeLiveDomainsResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -56,11 +56,11 @@ CoreInternalOutcome DescribeLiveDomainsResponse::Deserialize(const string &paylo
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -68,7 +68,7 @@ CoreInternalOutcome DescribeLiveDomainsResponse::Deserialize(const string &paylo
     {
         if (!rsp["AllCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AllCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AllCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_allCount = rsp["AllCount"].GetUint64();
         m_allCountHasBeenSet = true;
@@ -77,10 +77,10 @@ CoreInternalOutcome DescribeLiveDomainsResponse::Deserialize(const string &paylo
     if (rsp.HasMember("DomainList") && !rsp["DomainList"].IsNull())
     {
         if (!rsp["DomainList"].IsArray())
-            return CoreInternalOutcome(Error("response `DomainList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DomainList` is not array type"));
 
-        const Value &tmpValue = rsp["DomainList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["DomainList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             DomainInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -94,8 +94,66 @@ CoreInternalOutcome DescribeLiveDomainsResponse::Deserialize(const string &paylo
         m_domainListHasBeenSet = true;
     }
 
+    if (rsp.HasMember("CreateLimitCount") && !rsp["CreateLimitCount"].IsNull())
+    {
+        if (!rsp["CreateLimitCount"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `CreateLimitCount` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_createLimitCount = rsp["CreateLimitCount"].GetInt64();
+        m_createLimitCountHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeLiveDomainsResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_allCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AllCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_allCount, allocator);
+    }
+
+    if (m_domainListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DomainList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_domainList.begin(); itr != m_domainList.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_createLimitCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CreateLimitCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_createLimitCount, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 
@@ -117,6 +175,16 @@ vector<DomainInfo> DescribeLiveDomainsResponse::GetDomainList() const
 bool DescribeLiveDomainsResponse::DomainListHasBeenSet() const
 {
     return m_domainListHasBeenSet;
+}
+
+int64_t DescribeLiveDomainsResponse::GetCreateLimitCount() const
+{
+    return m_createLimitCount;
+}
+
+bool DescribeLiveDomainsResponse::CreateLimitCountHasBeenSet() const
+{
+    return m_createLimitCountHasBeenSet;
 }
 
 

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ckafka::V20190819::Model;
-using namespace rapidjson;
 using namespace std;
 
 TopicPartitionDO::TopicPartitionDO() :
@@ -29,7 +28,7 @@ TopicPartitionDO::TopicPartitionDO() :
 {
 }
 
-CoreInternalOutcome TopicPartitionDO::Deserialize(const Value &value)
+CoreInternalOutcome TopicPartitionDO::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome TopicPartitionDO::Deserialize(const Value &value)
     {
         if (!value["Partition"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TopicPartitionDO.Partition` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicPartitionDO.Partition` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_partition = value["Partition"].GetInt64();
         m_partitionHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome TopicPartitionDO::Deserialize(const Value &value)
     {
         if (!value["LeaderStatus"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TopicPartitionDO.LeaderStatus` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicPartitionDO.LeaderStatus` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_leaderStatus = value["LeaderStatus"].GetInt64();
         m_leaderStatusHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome TopicPartitionDO::Deserialize(const Value &value)
     {
         if (!value["IsrNum"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TopicPartitionDO.IsrNum` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicPartitionDO.IsrNum` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_isrNum = value["IsrNum"].GetInt64();
         m_isrNumHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome TopicPartitionDO::Deserialize(const Value &value)
     {
         if (!value["ReplicaNum"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TopicPartitionDO.ReplicaNum` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TopicPartitionDO.ReplicaNum` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_replicaNum = value["ReplicaNum"].GetInt64();
         m_replicaNumHasBeenSet = true;
@@ -78,12 +77,12 @@ CoreInternalOutcome TopicPartitionDO::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void TopicPartitionDO::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TopicPartitionDO::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_partitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Partition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_partition, allocator);
@@ -91,7 +90,7 @@ void TopicPartitionDO::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_leaderStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LeaderStatus";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_leaderStatus, allocator);
@@ -99,7 +98,7 @@ void TopicPartitionDO::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_isrNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsrNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isrNum, allocator);
@@ -107,7 +106,7 @@ void TopicPartitionDO::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_replicaNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReplicaNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_replicaNum, allocator);

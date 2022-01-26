@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dcdb::V20180411::Model;
-using namespace rapidjson;
 using namespace std;
 
 ShardInfo::ShardInfo() :
@@ -35,7 +34,7 @@ ShardInfo::ShardInfo() :
 {
 }
 
-CoreInternalOutcome ShardInfo::Deserialize(const Value &value)
+CoreInternalOutcome ShardInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -44,7 +43,7 @@ CoreInternalOutcome ShardInfo::Deserialize(const Value &value)
     {
         if (!value["ShardInstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ShardInfo.ShardInstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ShardInfo.ShardInstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_shardInstanceId = string(value["ShardInstanceId"].GetString());
         m_shardInstanceIdHasBeenSet = true;
@@ -54,7 +53,7 @@ CoreInternalOutcome ShardInfo::Deserialize(const Value &value)
     {
         if (!value["ShardSerialId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ShardInfo.ShardSerialId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ShardInfo.ShardSerialId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_shardSerialId = string(value["ShardSerialId"].GetString());
         m_shardSerialIdHasBeenSet = true;
@@ -64,7 +63,7 @@ CoreInternalOutcome ShardInfo::Deserialize(const Value &value)
     {
         if (!value["Status"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ShardInfo.Status` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ShardInfo.Status` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_status = value["Status"].GetInt64();
         m_statusHasBeenSet = true;
@@ -74,7 +73,7 @@ CoreInternalOutcome ShardInfo::Deserialize(const Value &value)
     {
         if (!value["Createtime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ShardInfo.Createtime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ShardInfo.Createtime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createtime = string(value["Createtime"].GetString());
         m_createtimeHasBeenSet = true;
@@ -84,7 +83,7 @@ CoreInternalOutcome ShardInfo::Deserialize(const Value &value)
     {
         if (!value["Memory"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ShardInfo.Memory` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ShardInfo.Memory` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_memory = value["Memory"].GetInt64();
         m_memoryHasBeenSet = true;
@@ -94,7 +93,7 @@ CoreInternalOutcome ShardInfo::Deserialize(const Value &value)
     {
         if (!value["Storage"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ShardInfo.Storage` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ShardInfo.Storage` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_storage = value["Storage"].GetInt64();
         m_storageHasBeenSet = true;
@@ -104,7 +103,7 @@ CoreInternalOutcome ShardInfo::Deserialize(const Value &value)
     {
         if (!value["ShardId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ShardInfo.ShardId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ShardInfo.ShardId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_shardId = value["ShardId"].GetInt64();
         m_shardIdHasBeenSet = true;
@@ -114,7 +113,7 @@ CoreInternalOutcome ShardInfo::Deserialize(const Value &value)
     {
         if (!value["NodeCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ShardInfo.NodeCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ShardInfo.NodeCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_nodeCount = value["NodeCount"].GetInt64();
         m_nodeCountHasBeenSet = true;
@@ -124,7 +123,7 @@ CoreInternalOutcome ShardInfo::Deserialize(const Value &value)
     {
         if (!value["Pid"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ShardInfo.Pid` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ShardInfo.Pid` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_pid = value["Pid"].GetInt64();
         m_pidHasBeenSet = true;
@@ -134,7 +133,7 @@ CoreInternalOutcome ShardInfo::Deserialize(const Value &value)
     {
         if (!value["Cpu"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ShardInfo.Cpu` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ShardInfo.Cpu` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_cpu = value["Cpu"].GetUint64();
         m_cpuHasBeenSet = true;
@@ -144,28 +143,28 @@ CoreInternalOutcome ShardInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ShardInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ShardInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_shardInstanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ShardInstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_shardInstanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_shardInstanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_shardSerialIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ShardSerialId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_shardSerialId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_shardSerialId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);
@@ -173,15 +172,15 @@ void ShardInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_createtimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Createtime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createtime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createtime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_memoryHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Memory";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_memory, allocator);
@@ -189,7 +188,7 @@ void ShardInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_storageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Storage";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_storage, allocator);
@@ -197,7 +196,7 @@ void ShardInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_shardIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ShardId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_shardId, allocator);
@@ -205,7 +204,7 @@ void ShardInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_nodeCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NodeCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_nodeCount, allocator);
@@ -213,7 +212,7 @@ void ShardInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_pidHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Pid";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_pid, allocator);
@@ -221,7 +220,7 @@ void ShardInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_cpuHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Cpu";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cpu, allocator);

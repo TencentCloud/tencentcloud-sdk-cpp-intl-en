@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ckafka::V20190819::Model;
-using namespace rapidjson;
 using namespace std;
 
 InstanceDetailResponse::InstanceDetailResponse() :
@@ -27,7 +26,7 @@ InstanceDetailResponse::InstanceDetailResponse() :
 {
 }
 
-CoreInternalOutcome InstanceDetailResponse::Deserialize(const Value &value)
+CoreInternalOutcome InstanceDetailResponse::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome InstanceDetailResponse::Deserialize(const Value &value)
     {
         if (!value["TotalCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `InstanceDetailResponse.TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetailResponse.TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_totalCount = value["TotalCount"].GetInt64();
         m_totalCountHasBeenSet = true;
@@ -45,10 +44,10 @@ CoreInternalOutcome InstanceDetailResponse::Deserialize(const Value &value)
     if (value.HasMember("InstanceList") && !value["InstanceList"].IsNull())
     {
         if (!value["InstanceList"].IsArray())
-            return CoreInternalOutcome(Error("response `InstanceDetailResponse.InstanceList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `InstanceDetailResponse.InstanceList` is not array type"));
 
-        const Value &tmpValue = value["InstanceList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["InstanceList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             InstanceDetail item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -66,12 +65,12 @@ CoreInternalOutcome InstanceDetailResponse::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void InstanceDetailResponse::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void InstanceDetailResponse::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_totalCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TotalCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_totalCount, allocator);
@@ -79,15 +78,15 @@ void InstanceDetailResponse::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_instanceListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceList";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_instanceList.begin(); itr != m_instanceList.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }

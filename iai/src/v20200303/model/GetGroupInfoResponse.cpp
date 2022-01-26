@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Iai::V20200303::Model;
-using namespace rapidjson;
 using namespace std;
 
 GetGroupInfoResponse::GetGroupInfoResponse() :
@@ -36,20 +35,20 @@ GetGroupInfoResponse::GetGroupInfoResponse() :
 
 CoreInternalOutcome GetGroupInfoResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -60,11 +59,11 @@ CoreInternalOutcome GetGroupInfoResponse::Deserialize(const string &payload)
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -72,7 +71,7 @@ CoreInternalOutcome GetGroupInfoResponse::Deserialize(const string &payload)
     {
         if (!rsp["GroupName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GroupName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_groupName = string(rsp["GroupName"].GetString());
         m_groupNameHasBeenSet = true;
@@ -82,7 +81,7 @@ CoreInternalOutcome GetGroupInfoResponse::Deserialize(const string &payload)
     {
         if (!rsp["GroupId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GroupId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_groupId = string(rsp["GroupId"].GetString());
         m_groupIdHasBeenSet = true;
@@ -91,10 +90,10 @@ CoreInternalOutcome GetGroupInfoResponse::Deserialize(const string &payload)
     if (rsp.HasMember("GroupExDescriptions") && !rsp["GroupExDescriptions"].IsNull())
     {
         if (!rsp["GroupExDescriptions"].IsArray())
-            return CoreInternalOutcome(Error("response `GroupExDescriptions` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `GroupExDescriptions` is not array type"));
 
-        const Value &tmpValue = rsp["GroupExDescriptions"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["GroupExDescriptions"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_groupExDescriptions.push_back((*itr).GetString());
         }
@@ -105,7 +104,7 @@ CoreInternalOutcome GetGroupInfoResponse::Deserialize(const string &payload)
     {
         if (!rsp["Tag"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Tag` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Tag` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tag = string(rsp["Tag"].GetString());
         m_tagHasBeenSet = true;
@@ -115,7 +114,7 @@ CoreInternalOutcome GetGroupInfoResponse::Deserialize(const string &payload)
     {
         if (!rsp["FaceModelVersion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FaceModelVersion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FaceModelVersion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_faceModelVersion = string(rsp["FaceModelVersion"].GetString());
         m_faceModelVersionHasBeenSet = true;
@@ -125,7 +124,7 @@ CoreInternalOutcome GetGroupInfoResponse::Deserialize(const string &payload)
     {
         if (!rsp["CreationTimestamp"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CreationTimestamp` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CreationTimestamp` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_creationTimestamp = rsp["CreationTimestamp"].GetUint64();
         m_creationTimestampHasBeenSet = true;
@@ -133,6 +132,76 @@ CoreInternalOutcome GetGroupInfoResponse::Deserialize(const string &payload)
 
 
     return CoreInternalOutcome(true);
+}
+
+string GetGroupInfoResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_groupNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GroupName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_groupName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_groupIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GroupId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_groupId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_groupExDescriptionsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GroupExDescriptions";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_groupExDescriptions.begin(); itr != m_groupExDescriptions.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_tagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tag";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tag.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_faceModelVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FaceModelVersion";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_faceModelVersion.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_creationTimestampHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CreationTimestamp";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_creationTimestamp, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

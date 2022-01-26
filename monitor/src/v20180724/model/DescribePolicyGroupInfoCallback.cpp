@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Monitor::V20180724::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribePolicyGroupInfoCallback::DescribePolicyGroupInfoCallback() :
@@ -28,7 +27,7 @@ DescribePolicyGroupInfoCallback::DescribePolicyGroupInfoCallback() :
 {
 }
 
-CoreInternalOutcome DescribePolicyGroupInfoCallback::Deserialize(const Value &value)
+CoreInternalOutcome DescribePolicyGroupInfoCallback::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome DescribePolicyGroupInfoCallback::Deserialize(const Value &va
     {
         if (!value["CallbackUrl"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoCallback.CallbackUrl` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoCallback.CallbackUrl` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_callbackUrl = string(value["CallbackUrl"].GetString());
         m_callbackUrlHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome DescribePolicyGroupInfoCallback::Deserialize(const Value &va
     {
         if (!value["ValidFlag"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoCallback.ValidFlag` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoCallback.ValidFlag` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_validFlag = value["ValidFlag"].GetInt64();
         m_validFlagHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome DescribePolicyGroupInfoCallback::Deserialize(const Value &va
     {
         if (!value["VerifyCode"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyGroupInfoCallback.VerifyCode` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyGroupInfoCallback.VerifyCode` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_verifyCode = string(value["VerifyCode"].GetString());
         m_verifyCodeHasBeenSet = true;
@@ -67,20 +66,20 @@ CoreInternalOutcome DescribePolicyGroupInfoCallback::Deserialize(const Value &va
     return CoreInternalOutcome(true);
 }
 
-void DescribePolicyGroupInfoCallback::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DescribePolicyGroupInfoCallback::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_callbackUrlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CallbackUrl";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_callbackUrl.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_callbackUrl.c_str(), allocator).Move(), allocator);
     }
 
     if (m_validFlagHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ValidFlag";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_validFlag, allocator);
@@ -88,10 +87,10 @@ void DescribePolicyGroupInfoCallback::ToJsonObject(Value &value, Document::Alloc
 
     if (m_verifyCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VerifyCode";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_verifyCode.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_verifyCode.c_str(), allocator).Move(), allocator);
     }
 
 }

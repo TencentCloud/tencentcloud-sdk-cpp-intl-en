@@ -41,6 +41,7 @@ namespace TencentCloud
                     DescribeSecurityTrendsResponse();
                     ~DescribeSecurityTrendsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -103,6 +104,66 @@ namespace TencentCloud
                      */
                     bool BaseLinesHasBeenSet() const;
 
+                    /**
+                     * 获取Statistics array of malicious requests.
+                     * @return MaliciousRequests Statistics array of malicious requests.
+                     */
+                    std::vector<SecurityTrend> GetMaliciousRequests() const;
+
+                    /**
+                     * 判断参数 MaliciousRequests 是否已赋值
+                     * @return MaliciousRequests 是否已赋值
+                     */
+                    bool MaliciousRequestsHasBeenSet() const;
+
+                    /**
+                     * 获取Statistics array of high-risk commands.
+                     * @return HighRiskBashs Statistics array of high-risk commands.
+                     */
+                    std::vector<SecurityTrend> GetHighRiskBashs() const;
+
+                    /**
+                     * 判断参数 HighRiskBashs 是否已赋值
+                     * @return HighRiskBashs 是否已赋值
+                     */
+                    bool HighRiskBashsHasBeenSet() const;
+
+                    /**
+                     * 获取Statistics array of reverse shells.
+                     * @return ReverseShells Statistics array of reverse shells.
+                     */
+                    std::vector<SecurityTrend> GetReverseShells() const;
+
+                    /**
+                     * 判断参数 ReverseShells 是否已赋值
+                     * @return ReverseShells 是否已赋值
+                     */
+                    bool ReverseShellsHasBeenSet() const;
+
+                    /**
+                     * 获取Statistics array of local privilege escalations.
+                     * @return PrivilegeEscalations Statistics array of local privilege escalations.
+                     */
+                    std::vector<SecurityTrend> GetPrivilegeEscalations() const;
+
+                    /**
+                     * 判断参数 PrivilegeEscalations 是否已赋值
+                     * @return PrivilegeEscalations 是否已赋值
+                     */
+                    bool PrivilegeEscalationsHasBeenSet() const;
+
+                    /**
+                     * 获取Statistics array of network attacks.
+                     * @return CyberAttacks Statistics array of network attacks.
+                     */
+                    std::vector<SecurityTrend> GetCyberAttacks() const;
+
+                    /**
+                     * 判断参数 CyberAttacks 是否已赋值
+                     * @return CyberAttacks 是否已赋值
+                     */
+                    bool CyberAttacksHasBeenSet() const;
+
                 private:
 
                     /**
@@ -134,6 +195,36 @@ namespace TencentCloud
                      */
                     std::vector<SecurityTrend> m_baseLines;
                     bool m_baseLinesHasBeenSet;
+
+                    /**
+                     * Statistics array of malicious requests.
+                     */
+                    std::vector<SecurityTrend> m_maliciousRequests;
+                    bool m_maliciousRequestsHasBeenSet;
+
+                    /**
+                     * Statistics array of high-risk commands.
+                     */
+                    std::vector<SecurityTrend> m_highRiskBashs;
+                    bool m_highRiskBashsHasBeenSet;
+
+                    /**
+                     * Statistics array of reverse shells.
+                     */
+                    std::vector<SecurityTrend> m_reverseShells;
+                    bool m_reverseShellsHasBeenSet;
+
+                    /**
+                     * Statistics array of local privilege escalations.
+                     */
+                    std::vector<SecurityTrend> m_privilegeEscalations;
+                    bool m_privilegeEscalationsHasBeenSet;
+
+                    /**
+                     * Statistics array of network attacks.
+                     */
+                    std::vector<SecurityTrend> m_cyberAttacks;
+                    bool m_cyberAttacksHasBeenSet;
 
                 };
             }

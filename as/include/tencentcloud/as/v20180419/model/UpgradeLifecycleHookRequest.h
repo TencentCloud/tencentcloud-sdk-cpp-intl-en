@@ -116,14 +116,14 @@ namespace TencentCloud
                     bool DefaultResultHasBeenSet() const;
 
                     /**
-                     * 获取The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-3,600. Default value: 300
-                     * @return HeartbeatTimeout The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-3,600. Default value: 300
+                     * 获取The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300
+                     * @return HeartbeatTimeout The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300
                      */
                     int64_t GetHeartbeatTimeout() const;
 
                     /**
-                     * 设置The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-3,600. Default value: 300
-                     * @param HeartbeatTimeout The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-3,600. Default value: 300
+                     * 设置The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300
+                     * @param HeartbeatTimeout The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300
                      */
                     void SetHeartbeatTimeout(const int64_t& _heartbeatTimeout);
 
@@ -134,14 +134,14 @@ namespace TencentCloud
                     bool HeartbeatTimeoutHasBeenSet() const;
 
                     /**
-                     * 获取Additional information sent by AS to the notification target. The default value is ''
-                     * @return NotificationMetadata Additional information sent by AS to the notification target. The default value is ''
+                     * 获取Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default.
+                     * @return NotificationMetadata Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default.
                      */
                     std::string GetNotificationMetadata() const;
 
                     /**
-                     * 设置Additional information sent by AS to the notification target. The default value is ''
-                     * @param NotificationMetadata Additional information sent by AS to the notification target. The default value is ''
+                     * 设置Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default.
+                     * @param NotificationMetadata Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default.
                      */
                     void SetNotificationMetadata(const std::string& _notificationMetadata);
 
@@ -214,13 +214,13 @@ namespace TencentCloud
                     bool m_defaultResultHasBeenSet;
 
                     /**
-                     * The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-3,600. Default value: 300
+                     * The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300
                      */
                     int64_t m_heartbeatTimeout;
                     bool m_heartbeatTimeoutHasBeenSet;
 
                     /**
-                     * Additional information sent by AS to the notification target. The default value is ''
+                     * Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default.
                      */
                     std::string m_notificationMetadata;
                     bool m_notificationMetadataHasBeenSet;

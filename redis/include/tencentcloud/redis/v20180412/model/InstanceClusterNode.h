@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool RunIdHasBeenSet() const;
 
                     /**
-                     * 获取Cluster role. 0: master; 1: slave
-                     * @return Role Cluster role. 0: master; 1: slave
+                     * 获取Cluster role. 0: primary; 1: secondary
+                     * @return Role Cluster role. 0: primary; 1: secondary
                      */
                     int64_t GetRole() const;
 
                     /**
-                     * 设置Cluster role. 0: master; 1: slave
-                     * @param Role Cluster role. 0: master; 1: slave
+                     * 设置Cluster role. 0: primary; 1: secondary
+                     * @param Role Cluster role. 0: primary; 1: secondary
                      */
                     void SetRole(const int64_t& _role);
 
@@ -295,7 +295,7 @@ namespace TencentCloud
                     bool m_runIdHasBeenSet;
 
                     /**
-                     * Cluster role. 0: master; 1: slave
+                     * Cluster role. 0: primary; 1: secondary
                      */
                     int64_t m_role;
                     bool m_roleHasBeenSet;

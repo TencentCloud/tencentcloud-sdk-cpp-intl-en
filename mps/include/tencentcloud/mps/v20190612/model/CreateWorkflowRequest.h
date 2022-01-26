@@ -158,14 +158,14 @@ namespace TencentCloud
                     bool AiContentReviewTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AiAnalysisTask 
+                     * 获取Video content analysis task parameter.
+                     * @return AiAnalysisTask Video content analysis task parameter.
                      */
                     AiAnalysisTaskInput GetAiAnalysisTask() const;
 
                     /**
-                     * 设置
-                     * @param AiAnalysisTask 
+                     * 设置Video content analysis task parameter.
+                     * @param AiAnalysisTask Video content analysis task parameter.
                      */
                     void SetAiAnalysisTask(const AiAnalysisTaskInput& _aiAnalysisTask);
 
@@ -268,7 +268,7 @@ namespace TencentCloud
                     bool m_aiContentReviewTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Video content analysis task parameter.
                      */
                     AiAnalysisTaskInput m_aiAnalysisTask;
                     bool m_aiAnalysisTaskHasBeenSet;

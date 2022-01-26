@@ -132,6 +132,24 @@ namespace TencentCloud
                      */
                     bool BasicSecurityTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Upgrade mode. <li>scale: blue/green deployment</li><li>restart: rolling restart</li>Default value: scale
+                     * @return UpgradeMode Upgrade mode. <li>scale: blue/green deployment</li><li>restart: rolling restart</li>Default value: scale
+                     */
+                    std::string GetUpgradeMode() const;
+
+                    /**
+                     * 设置Upgrade mode. <li>scale: blue/green deployment</li><li>restart: rolling restart</li>Default value: scale
+                     * @param UpgradeMode Upgrade mode. <li>scale: blue/green deployment</li><li>restart: rolling restart</li>Default value: scale
+                     */
+                    void SetUpgradeMode(const std::string& _upgradeMode);
+
+                    /**
+                     * 判断参数 UpgradeMode 是否已赋值
+                     * @return UpgradeMode 是否已赋值
+                     */
+                    bool UpgradeModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -163,6 +181,12 @@ namespace TencentCloud
                      */
                     uint64_t m_basicSecurityType;
                     bool m_basicSecurityTypeHasBeenSet;
+
+                    /**
+                     * Upgrade mode. <li>scale: blue/green deployment</li><li>restart: rolling restart</li>Default value: scale
+                     */
+                    std::string m_upgradeMode;
+                    bool m_upgradeModeHasBeenSet;
 
                 };
             }

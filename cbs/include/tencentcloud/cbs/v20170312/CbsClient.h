@@ -61,6 +61,8 @@
 #include <tencentcloud/cbs/v20170312/model/DetachDisksResponse.h>
 #include <tencentcloud/cbs/v20170312/model/GetSnapOverviewRequest.h>
 #include <tencentcloud/cbs/v20170312/model/GetSnapOverviewResponse.h>
+#include <tencentcloud/cbs/v20170312/model/InquirePriceModifyDiskExtraPerformanceRequest.h>
+#include <tencentcloud/cbs/v20170312/model/InquirePriceModifyDiskExtraPerformanceResponse.h>
 #include <tencentcloud/cbs/v20170312/model/InquiryPriceCreateDisksRequest.h>
 #include <tencentcloud/cbs/v20170312/model/InquiryPriceCreateDisksResponse.h>
 #include <tencentcloud/cbs/v20170312/model/InquiryPriceResizeDiskRequest.h>
@@ -69,6 +71,8 @@
 #include <tencentcloud/cbs/v20170312/model/ModifyAutoSnapshotPolicyAttributeResponse.h>
 #include <tencentcloud/cbs/v20170312/model/ModifyDiskAttributesRequest.h>
 #include <tencentcloud/cbs/v20170312/model/ModifyDiskAttributesResponse.h>
+#include <tencentcloud/cbs/v20170312/model/ModifyDiskExtraPerformanceRequest.h>
+#include <tencentcloud/cbs/v20170312/model/ModifyDiskExtraPerformanceResponse.h>
 #include <tencentcloud/cbs/v20170312/model/ModifySnapshotAttributeRequest.h>
 #include <tencentcloud/cbs/v20170312/model/ModifySnapshotAttributeResponse.h>
 #include <tencentcloud/cbs/v20170312/model/ModifySnapshotsSharePermissionRequest.h>
@@ -93,88 +97,94 @@ namespace TencentCloud
                 CbsClient(const Credential &credential, const std::string &region);
                 CbsClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::ApplySnapshotResponse> ApplySnapshotOutcome;
+                typedef Outcome<Core::Error, Model::ApplySnapshotResponse> ApplySnapshotOutcome;
                 typedef std::future<ApplySnapshotOutcome> ApplySnapshotOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::ApplySnapshotRequest&, ApplySnapshotOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApplySnapshotAsyncHandler;
-                typedef Outcome<Error, Model::AttachDisksResponse> AttachDisksOutcome;
+                typedef Outcome<Core::Error, Model::AttachDisksResponse> AttachDisksOutcome;
                 typedef std::future<AttachDisksOutcome> AttachDisksOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::AttachDisksRequest&, AttachDisksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AttachDisksAsyncHandler;
-                typedef Outcome<Error, Model::BindAutoSnapshotPolicyResponse> BindAutoSnapshotPolicyOutcome;
+                typedef Outcome<Core::Error, Model::BindAutoSnapshotPolicyResponse> BindAutoSnapshotPolicyOutcome;
                 typedef std::future<BindAutoSnapshotPolicyOutcome> BindAutoSnapshotPolicyOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::BindAutoSnapshotPolicyRequest&, BindAutoSnapshotPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BindAutoSnapshotPolicyAsyncHandler;
-                typedef Outcome<Error, Model::CreateAutoSnapshotPolicyResponse> CreateAutoSnapshotPolicyOutcome;
+                typedef Outcome<Core::Error, Model::CreateAutoSnapshotPolicyResponse> CreateAutoSnapshotPolicyOutcome;
                 typedef std::future<CreateAutoSnapshotPolicyOutcome> CreateAutoSnapshotPolicyOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::CreateAutoSnapshotPolicyRequest&, CreateAutoSnapshotPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAutoSnapshotPolicyAsyncHandler;
-                typedef Outcome<Error, Model::CreateDisksResponse> CreateDisksOutcome;
+                typedef Outcome<Core::Error, Model::CreateDisksResponse> CreateDisksOutcome;
                 typedef std::future<CreateDisksOutcome> CreateDisksOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::CreateDisksRequest&, CreateDisksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDisksAsyncHandler;
-                typedef Outcome<Error, Model::CreateSnapshotResponse> CreateSnapshotOutcome;
+                typedef Outcome<Core::Error, Model::CreateSnapshotResponse> CreateSnapshotOutcome;
                 typedef std::future<CreateSnapshotOutcome> CreateSnapshotOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::CreateSnapshotRequest&, CreateSnapshotOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSnapshotAsyncHandler;
-                typedef Outcome<Error, Model::DeleteAutoSnapshotPoliciesResponse> DeleteAutoSnapshotPoliciesOutcome;
+                typedef Outcome<Core::Error, Model::DeleteAutoSnapshotPoliciesResponse> DeleteAutoSnapshotPoliciesOutcome;
                 typedef std::future<DeleteAutoSnapshotPoliciesOutcome> DeleteAutoSnapshotPoliciesOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::DeleteAutoSnapshotPoliciesRequest&, DeleteAutoSnapshotPoliciesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAutoSnapshotPoliciesAsyncHandler;
-                typedef Outcome<Error, Model::DeleteSnapshotsResponse> DeleteSnapshotsOutcome;
+                typedef Outcome<Core::Error, Model::DeleteSnapshotsResponse> DeleteSnapshotsOutcome;
                 typedef std::future<DeleteSnapshotsOutcome> DeleteSnapshotsOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::DeleteSnapshotsRequest&, DeleteSnapshotsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteSnapshotsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeAutoSnapshotPoliciesResponse> DescribeAutoSnapshotPoliciesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAutoSnapshotPoliciesResponse> DescribeAutoSnapshotPoliciesOutcome;
                 typedef std::future<DescribeAutoSnapshotPoliciesOutcome> DescribeAutoSnapshotPoliciesOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::DescribeAutoSnapshotPoliciesRequest&, DescribeAutoSnapshotPoliciesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAutoSnapshotPoliciesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDiskAssociatedAutoSnapshotPolicyResponse> DescribeDiskAssociatedAutoSnapshotPolicyOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDiskAssociatedAutoSnapshotPolicyResponse> DescribeDiskAssociatedAutoSnapshotPolicyOutcome;
                 typedef std::future<DescribeDiskAssociatedAutoSnapshotPolicyOutcome> DescribeDiskAssociatedAutoSnapshotPolicyOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::DescribeDiskAssociatedAutoSnapshotPolicyRequest&, DescribeDiskAssociatedAutoSnapshotPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDiskAssociatedAutoSnapshotPolicyAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDiskConfigQuotaResponse> DescribeDiskConfigQuotaOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDiskConfigQuotaResponse> DescribeDiskConfigQuotaOutcome;
                 typedef std::future<DescribeDiskConfigQuotaOutcome> DescribeDiskConfigQuotaOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::DescribeDiskConfigQuotaRequest&, DescribeDiskConfigQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDiskConfigQuotaAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDiskOperationLogsResponse> DescribeDiskOperationLogsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDiskOperationLogsResponse> DescribeDiskOperationLogsOutcome;
                 typedef std::future<DescribeDiskOperationLogsOutcome> DescribeDiskOperationLogsOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::DescribeDiskOperationLogsRequest&, DescribeDiskOperationLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDiskOperationLogsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDisksResponse> DescribeDisksOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDisksResponse> DescribeDisksOutcome;
                 typedef std::future<DescribeDisksOutcome> DescribeDisksOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::DescribeDisksRequest&, DescribeDisksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDisksAsyncHandler;
-                typedef Outcome<Error, Model::DescribeInstancesDiskNumResponse> DescribeInstancesDiskNumOutcome;
+                typedef Outcome<Core::Error, Model::DescribeInstancesDiskNumResponse> DescribeInstancesDiskNumOutcome;
                 typedef std::future<DescribeInstancesDiskNumOutcome> DescribeInstancesDiskNumOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::DescribeInstancesDiskNumRequest&, DescribeInstancesDiskNumOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstancesDiskNumAsyncHandler;
-                typedef Outcome<Error, Model::DescribeSnapshotOperationLogsResponse> DescribeSnapshotOperationLogsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeSnapshotOperationLogsResponse> DescribeSnapshotOperationLogsOutcome;
                 typedef std::future<DescribeSnapshotOperationLogsOutcome> DescribeSnapshotOperationLogsOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::DescribeSnapshotOperationLogsRequest&, DescribeSnapshotOperationLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSnapshotOperationLogsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeSnapshotSharePermissionResponse> DescribeSnapshotSharePermissionOutcome;
+                typedef Outcome<Core::Error, Model::DescribeSnapshotSharePermissionResponse> DescribeSnapshotSharePermissionOutcome;
                 typedef std::future<DescribeSnapshotSharePermissionOutcome> DescribeSnapshotSharePermissionOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::DescribeSnapshotSharePermissionRequest&, DescribeSnapshotSharePermissionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSnapshotSharePermissionAsyncHandler;
-                typedef Outcome<Error, Model::DescribeSnapshotsResponse> DescribeSnapshotsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeSnapshotsResponse> DescribeSnapshotsOutcome;
                 typedef std::future<DescribeSnapshotsOutcome> DescribeSnapshotsOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::DescribeSnapshotsRequest&, DescribeSnapshotsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSnapshotsAsyncHandler;
-                typedef Outcome<Error, Model::DetachDisksResponse> DetachDisksOutcome;
+                typedef Outcome<Core::Error, Model::DetachDisksResponse> DetachDisksOutcome;
                 typedef std::future<DetachDisksOutcome> DetachDisksOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::DetachDisksRequest&, DetachDisksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DetachDisksAsyncHandler;
-                typedef Outcome<Error, Model::GetSnapOverviewResponse> GetSnapOverviewOutcome;
+                typedef Outcome<Core::Error, Model::GetSnapOverviewResponse> GetSnapOverviewOutcome;
                 typedef std::future<GetSnapOverviewOutcome> GetSnapOverviewOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::GetSnapOverviewRequest&, GetSnapOverviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetSnapOverviewAsyncHandler;
-                typedef Outcome<Error, Model::InquiryPriceCreateDisksResponse> InquiryPriceCreateDisksOutcome;
+                typedef Outcome<Core::Error, Model::InquirePriceModifyDiskExtraPerformanceResponse> InquirePriceModifyDiskExtraPerformanceOutcome;
+                typedef std::future<InquirePriceModifyDiskExtraPerformanceOutcome> InquirePriceModifyDiskExtraPerformanceOutcomeCallable;
+                typedef std::function<void(const CbsClient*, const Model::InquirePriceModifyDiskExtraPerformanceRequest&, InquirePriceModifyDiskExtraPerformanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquirePriceModifyDiskExtraPerformanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::InquiryPriceCreateDisksResponse> InquiryPriceCreateDisksOutcome;
                 typedef std::future<InquiryPriceCreateDisksOutcome> InquiryPriceCreateDisksOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::InquiryPriceCreateDisksRequest&, InquiryPriceCreateDisksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceCreateDisksAsyncHandler;
-                typedef Outcome<Error, Model::InquiryPriceResizeDiskResponse> InquiryPriceResizeDiskOutcome;
+                typedef Outcome<Core::Error, Model::InquiryPriceResizeDiskResponse> InquiryPriceResizeDiskOutcome;
                 typedef std::future<InquiryPriceResizeDiskOutcome> InquiryPriceResizeDiskOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::InquiryPriceResizeDiskRequest&, InquiryPriceResizeDiskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceResizeDiskAsyncHandler;
-                typedef Outcome<Error, Model::ModifyAutoSnapshotPolicyAttributeResponse> ModifyAutoSnapshotPolicyAttributeOutcome;
+                typedef Outcome<Core::Error, Model::ModifyAutoSnapshotPolicyAttributeResponse> ModifyAutoSnapshotPolicyAttributeOutcome;
                 typedef std::future<ModifyAutoSnapshotPolicyAttributeOutcome> ModifyAutoSnapshotPolicyAttributeOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::ModifyAutoSnapshotPolicyAttributeRequest&, ModifyAutoSnapshotPolicyAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAutoSnapshotPolicyAttributeAsyncHandler;
-                typedef Outcome<Error, Model::ModifyDiskAttributesResponse> ModifyDiskAttributesOutcome;
+                typedef Outcome<Core::Error, Model::ModifyDiskAttributesResponse> ModifyDiskAttributesOutcome;
                 typedef std::future<ModifyDiskAttributesOutcome> ModifyDiskAttributesOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::ModifyDiskAttributesRequest&, ModifyDiskAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDiskAttributesAsyncHandler;
-                typedef Outcome<Error, Model::ModifySnapshotAttributeResponse> ModifySnapshotAttributeOutcome;
+                typedef Outcome<Core::Error, Model::ModifyDiskExtraPerformanceResponse> ModifyDiskExtraPerformanceOutcome;
+                typedef std::future<ModifyDiskExtraPerformanceOutcome> ModifyDiskExtraPerformanceOutcomeCallable;
+                typedef std::function<void(const CbsClient*, const Model::ModifyDiskExtraPerformanceRequest&, ModifyDiskExtraPerformanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDiskExtraPerformanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifySnapshotAttributeResponse> ModifySnapshotAttributeOutcome;
                 typedef std::future<ModifySnapshotAttributeOutcome> ModifySnapshotAttributeOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::ModifySnapshotAttributeRequest&, ModifySnapshotAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySnapshotAttributeAsyncHandler;
-                typedef Outcome<Error, Model::ModifySnapshotsSharePermissionResponse> ModifySnapshotsSharePermissionOutcome;
+                typedef Outcome<Core::Error, Model::ModifySnapshotsSharePermissionResponse> ModifySnapshotsSharePermissionOutcome;
                 typedef std::future<ModifySnapshotsSharePermissionOutcome> ModifySnapshotsSharePermissionOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::ModifySnapshotsSharePermissionRequest&, ModifySnapshotsSharePermissionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySnapshotsSharePermissionAsyncHandler;
-                typedef Outcome<Error, Model::ResizeDiskResponse> ResizeDiskOutcome;
+                typedef Outcome<Core::Error, Model::ResizeDiskResponse> ResizeDiskOutcome;
                 typedef std::future<ResizeDiskOutcome> ResizeDiskOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::ResizeDiskRequest&, ResizeDiskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResizeDiskAsyncHandler;
-                typedef Outcome<Error, Model::TerminateDisksResponse> TerminateDisksOutcome;
+                typedef Outcome<Core::Error, Model::TerminateDisksResponse> TerminateDisksOutcome;
                 typedef std::future<TerminateDisksOutcome> TerminateDisksOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::TerminateDisksRequest&, TerminateDisksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminateDisksAsyncHandler;
-                typedef Outcome<Error, Model::UnbindAutoSnapshotPolicyResponse> UnbindAutoSnapshotPolicyOutcome;
+                typedef Outcome<Core::Error, Model::UnbindAutoSnapshotPolicyResponse> UnbindAutoSnapshotPolicyOutcome;
                 typedef std::future<UnbindAutoSnapshotPolicyOutcome> UnbindAutoSnapshotPolicyOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::UnbindAutoSnapshotPolicyRequest&, UnbindAutoSnapshotPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnbindAutoSnapshotPolicyAsyncHandler;
 
@@ -183,9 +193,9 @@ namespace TencentCloud
                 /**
                  *This API (ApplySnapshot) is used to roll back a snapshot to the original cloud disk.
 
-* The snapshot can only be rolled back to the original cloud disk. For data disk snapshots, if you need to copy the snapshot data to other cloud disks, use the API [CreateDisks](/document/product/362/16312) to create an elastic cloud disk and then copy the snapshot data to the created cloud disk. 
-* The snapshot for rollback must be in NORMAL status. The snapshot status can be queried in the SnapshotState field in the output parameters through the API [DescribeSnapshots](/document/product/362/15647).
-* For elastic cloud disks, the cloud disk must be in UNMOUNTED status. The cloud disk status can be queried in the Attached field returned by the API [DescribeDisks](/document/product/362/16315). For non-elastic cloud disks purchased together with instances, the instance must be in SHUTDOWN status. The instance status can be queried through the API [DescribeInstancesStatus](/document/product/213/15738).
+* The snapshot can only be rolled back to the original cloud disk. For data disk snapshots, if you need to copy the snapshot data to other cloud disks, use the API [CreateDisks](https://intl.cloud.tencent.com/document/product/362/16312?from_cn_redirect=1) to create an elastic cloud disk and then copy the snapshot data to the created cloud disk. 
+* The snapshot for rollback must be in NORMAL status. The snapshot status can be queried in the SnapshotState field in the output parameters through the API [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+* For elastic cloud disks, the cloud disk must be in UNMOUNTED status. The cloud disk status can be queried in the Attached field returned by the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1). For non-elastic cloud disks purchased together with instances, the instance must be in SHUTDOWN status. The instance status can be queried through the API [DescribeInstancesStatus](https://intl.cloud.tencent.com/document/product/213/15738?from_cn_redirect=1).
                  * @param req ApplySnapshotRequest
                  * @return ApplySnapshotOutcome
                  */
@@ -194,10 +204,10 @@ namespace TencentCloud
                 ApplySnapshotOutcomeCallable ApplySnapshotCallable(const Model::ApplySnapshotRequest& request);
 
                 /**
-                 *This API (AttachDisks) is used to mount cloud disks.
+                 *This API is used to mount one or more cloud disks.
  
-* Batch operations are supported. Multiple cloud disks can be mounted to a CVM. If there is a cloud disk that does not allow this operation, the operation is not performed and a specific error code is returned.
-* This API is an asynchronous API. If the request for mounting the cloud disk successfully returns results, the operation of mounting cloud disk has been initiated at the background. You can use the API [DescribeDisks](/document/product/362/16315) to query the cloud disk status. If the status changes from "ATTACHING" to "ATTACHED", the cloud disk is mounted.
+* Batch operation is supported. You can mount multiple cloud disks to one CVM in a single request. If any of these cloud disks cannot be mounted, the operation fails and a specific error code returns.
+* This is an async API. A successful request indicates that the mounting is initiated. You can call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API to query the status of cloud disks. If the status changes from `ATTACHING` to `ATTACHED`, the mounting is successful.
                  * @param req AttachDisksRequest
                  * @return AttachDisksOutcome
                  */
@@ -208,7 +218,7 @@ namespace TencentCloud
                 /**
                  *This API (BindAutoSnapshotPolicy) is used to bind the cloud disk to the specified scheduled snapshot policy.
 
-* For the scheduled snapshot policy limit of each region, see [Scheduled Snapshots](/document/product/362/8191).
+* For the scheduled snapshot policy limit of each region, see [Scheduled Snapshots](https://intl.cloud.tencent.com/document/product/362/8191?from_cn_redirect=1).
 * When a cloud disk that is bound to a scheduled snapshot policy is in the unused state (that is, an elastic cloud disk has not been mounted or the server of an inelastic disk is powered off) scheduled snapshots are not created.
                  * @param req BindAutoSnapshotPolicyRequest
                  * @return BindAutoSnapshotPolicyOutcome
@@ -220,7 +230,7 @@ namespace TencentCloud
                 /**
                  *This API (CreateAutoSnapshotPolicy) is used to create a scheduled snapshot policy.
 
-* For the limits on the number of scheduled snapshot policies that can be created in each region, see [Scheduled Snapshots](/document/product/362/8191).
+* For the limits on the number of scheduled snapshot policies that can be created in each region, see [Scheduled Snapshots](https://intl.cloud.tencent.com/document/product/362/8191?from_cn_redirect=1).
 * The quantity and capacity of the snapshots that can be created in each region are limited. For more information, see the **Snapshots** page on the Tencent Cloud Console. If the number of snapshots exceeds the quota, the creation of the scheduled snapshots will fail.
                  * @param req CreateAutoSnapshotPolicyRequest
                  * @return CreateAutoSnapshotPolicyOutcome
@@ -233,7 +243,7 @@ namespace TencentCloud
                  *This API is used to create one or more cloud disks.
 
 * This API supports creating a cloud disk with a data disk snapshot so that the snapshot data can be copied to the purchased cloud disk.
-* This API is an async API. A cloud disk ID list will be returned when a request is made successfully, but it does not mean that the creation has been completed. You can call the [DescribeDisks](/document/product/362/16315) API to query cloud disks by `DiskId`. If a new cloud disk can be found and its state is 'UNATTACHED' or 'ATTACHED', it means that the cloud disk has been created successfully.
+* This API is an async API. A cloud disk ID list will be returned when a request is made successfully, but it does not mean that the creation has been completed. You can call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API to query cloud disks by `DiskId`. If a new cloud disk can be found and its state is 'UNATTACHED' or 'ATTACHED', it means that the cloud disk has been created successfully.
                  * @param req CreateDisksRequest
                  * @return CreateDisksOutcome
                  */
@@ -244,8 +254,8 @@ namespace TencentCloud
                 /**
                  *This API (CreateSnapshot) is used to create a snapshot of a specified cloud disk.
 
-* Snapshots can only be created for cloud disks with the snapshot capability. To check whether a cloud disk has the snapshot capability, see the SnapshotAbility field returned by the API [DescribeDisks](/document/product/362/16315).
-* For the number of snapshots that can be created, please see [Product Usage Restriction](https://cloud.tencent.com/doc/product/362/5145).
+* Snapshots can only be created for cloud disks with the snapshot capability. To check whether a cloud disk has the snapshot capability, see the SnapshotAbility field returned by the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
+* For the number of snapshots that can be created, please see [Product Usage Restriction](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1).
                  * @param req CreateSnapshotRequest
                  * @return CreateSnapshotOutcome
                  */
@@ -265,10 +275,10 @@ namespace TencentCloud
                 DeleteAutoSnapshotPoliciesOutcomeCallable DeleteAutoSnapshotPoliciesCallable(const Model::DeleteAutoSnapshotPoliciesRequest& request);
 
                 /**
-                 *This API (DeleteSnapshots) is used to delete snapshots.
+                 *This API is used to delete snapshots.
 
-* The snapshot must be in NORMAL status. The snapshot status can be queried in the SnapshotState field in the output parameters through the API [DescribeSnapshots](/document/product/362/15647).
-* Batch operations are supported. If one of the snapshots in a batch cannot be deleted, the operation is not performed and a specific error code is returned.
+* Only snapshots in the `NORMAL` state can be deleted. To query the state of a snapshot, you can call the [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1) API and check the `SnapshotState` field in the response.
+* Batch operations are supported. If there is any snapshot that cannot be deleted, the operation will not be performed and a specific error code will be returned.
                  * @param req DeleteSnapshotsRequest
                  * @return DeleteSnapshotsOutcome
                  */
@@ -376,10 +386,10 @@ You can filter according to the snapshot ID. The snapshot ID format is as follow
                 DescribeSnapshotsOutcomeCallable DescribeSnapshotsCallable(const Model::DescribeSnapshotsRequest& request);
 
                 /**
-                 *This API (DetachDisks) is used to unmount cloud disks.
+                 *This API is used to unmount one or more cloud disks.
 
-* Batch operations are supported. Multiple cloud disks mounted to the same CVM can be unmounted in batch. If there is a cloud disk that does not allow this operation, the operation is not performed and a specific error code is returned.
-* This API is an asynchronous API. When the request successfully returns results, the cloud disk is not unmounted from the CVM immediately. You can use the API [DescribeDisks](/document/product/362/16315) to query the cloud disk status. If the status changes from "ATTACHED" to "UNATTACHED", the cloud disk is unmounted.
+* Batch operation is supported. You can unmount multiple cloud disks from the same CVM in a single request. If any of these cloud disks cannot be unmounted, the operation fails and a specific error code returns.
+* This is an async API. A successful request does not mean that the cloud disks have been unmounted successfully. You can call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API to query the status of cloud disks. When the status changes from `ATTACHED` to `UNATTACHED`, the unmounting is successful.
                  * @param req DetachDisksRequest
                  * @return DetachDisksOutcome
                  */
@@ -395,6 +405,15 @@ You can filter according to the snapshot ID. The snapshot ID format is as follow
                 GetSnapOverviewOutcome GetSnapOverview(const Model::GetSnapOverviewRequest &request);
                 void GetSnapOverviewAsync(const Model::GetSnapOverviewRequest& request, const GetSnapOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 GetSnapOverviewOutcomeCallable GetSnapOverviewCallable(const Model::GetSnapOverviewRequest& request);
+
+                /**
+                 *This API is used to query the price for adjusting the cloud disk’s extra performance.
+                 * @param req InquirePriceModifyDiskExtraPerformanceRequest
+                 * @return InquirePriceModifyDiskExtraPerformanceOutcome
+                 */
+                InquirePriceModifyDiskExtraPerformanceOutcome InquirePriceModifyDiskExtraPerformance(const Model::InquirePriceModifyDiskExtraPerformanceRequest &request);
+                void InquirePriceModifyDiskExtraPerformanceAsync(const Model::InquirePriceModifyDiskExtraPerformanceRequest& request, const InquirePriceModifyDiskExtraPerformanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                InquirePriceModifyDiskExtraPerformanceOutcomeCallable InquirePriceModifyDiskExtraPerformanceCallable(const Model::InquirePriceModifyDiskExtraPerformanceRequest& request);
 
                 /**
                  *This API (InquiryPriceCreateDisks) is used to inquire the price for cloud disk creation.
@@ -429,7 +448,7 @@ You can filter according to the snapshot ID. The snapshot ID format is as follow
                 ModifyAutoSnapshotPolicyAttributeOutcomeCallable ModifyAutoSnapshotPolicyAttributeCallable(const Model::ModifyAutoSnapshotPolicyAttributeRequest& request);
 
                 /**
-                 ** Only the project ID of elastic cloud disk can be modified. The project ID of the cloud disk created with the CVM is linked with the CVM. The project ID can be can be queried in the Portable field in the output parameters through the API [DescribeDisks](/document/product/362/16315).
+                 ** Only the project ID of elastic cloud disk can be modified. The project ID of the cloud disk created with the CVM is linked with the CVM. The project ID can be can be queried in the Portable field in the output parameters through the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
 * "Cloud disk name" is only used by users for their management. Tencent Cloud does not use the name as the basis for ticket submission or cloud disk management.
 * Batch operations are supported. If multiple cloud disk IDs are specified, all the specified cloud disks must have the same attribute. If there is a cloud disk that does not allow this operation, the operation is not performed and a specific error code is returned.
                  * @param req ModifyDiskAttributesRequest
@@ -438,6 +457,17 @@ You can filter according to the snapshot ID. The snapshot ID format is as follow
                 ModifyDiskAttributesOutcome ModifyDiskAttributes(const Model::ModifyDiskAttributesRequest &request);
                 void ModifyDiskAttributesAsync(const Model::ModifyDiskAttributesRequest& request, const ModifyDiskAttributesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyDiskAttributesOutcomeCallable ModifyDiskAttributesCallable(const Model::ModifyDiskAttributesRequest& request);
+
+                /**
+                 *This API is used to adjust the cloud disk’s extra performance.
+
+* Currently, only Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD) support extra performance adjustment.
+                 * @param req ModifyDiskExtraPerformanceRequest
+                 * @return ModifyDiskExtraPerformanceOutcome
+                 */
+                ModifyDiskExtraPerformanceOutcome ModifyDiskExtraPerformance(const Model::ModifyDiskExtraPerformanceRequest &request);
+                void ModifyDiskExtraPerformanceAsync(const Model::ModifyDiskExtraPerformanceRequest& request, const ModifyDiskExtraPerformanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDiskExtraPerformanceOutcomeCallable ModifyDiskExtraPerformanceCallable(const Model::ModifyDiskExtraPerformanceRequest& request);
 
                 /**
                  *This API (ModifySnapshotAttribute) is used to modify the attributes of a specified snapshot.
@@ -467,10 +497,10 @@ After snapshots are shared, the accounts they are shared to can use the snapshot
                 ModifySnapshotsSharePermissionOutcomeCallable ModifySnapshotsSharePermissionCallable(const Model::ModifySnapshotsSharePermissionRequest& request);
 
                 /**
-                 *This API (ResizeDisk) is used to expand the capacity of the cloud disk.
+                 *This API is used to expand the capacity of a cloud disk.
 
-* Only elastic cloud disks can be expanded. The cloud disk type can be queried in the Portable field in the output parameters through the API [DescribeDisks](/document/product/362/16315). For the cloud disk created along with the CVM, the capacity can only be expanded via the API [ResizeInstanceDisks](/document/product/213/15731).
-* This API is an asynchronous API. The cloud disk is not immediately expanded to the specified size as the API successfully returns results. You can use the API [DescribeDisks](/document/product/362/16315) to query the cloud disk status. The cloud disk in the status of "EXPANDING" is in the process of capacity expansion. When the status changes to "UNATTACHED", the capacity expansion is completed. 
+* This API supports only the expansion of elastic cloud disks. To query the type of a cloud disk, you can call the [DescribeDisks](https://intl.cloud.tencent.comhttps://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1?from_cn_redirect=1) API and check the `Portable` field in the response. To expand non-elastic cloud disks, you can call the [ResizeInstanceDisks](https://intl.cloud.tencent.com/document/product/213/15731?from_cn_redirect=1) API.
+* This is an async API. A successful return of this API does not mean that the cloud disk has been expanded successfully. You can call the [DescribeDisks](https://intl.cloud.tencent.comhttps://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1?from_cn_redirect=1) API to query the status of a cloud disk. `EXPANDING` indicates that the expansion is in process. 
                  * @param req ResizeDiskRequest
                  * @return ResizeDiskOutcome
                  */

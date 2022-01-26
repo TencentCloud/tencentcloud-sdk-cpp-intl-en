@@ -110,18 +110,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Health check status of the real server bound to this rule
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Targets Health check status of the real server bound to this rule
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Health status of the real server bound to this rule
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Targets Health status of the real server bound to this rule
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<TargetHealth> GetTargets() const;
 
                     /**
-                     * 设置Health check status of the real server bound to this rule
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Targets Health check status of the real server bound to this rule
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Health status of the real server bound to this rule
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param Targets Health status of the real server bound to this rule
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetTargets(const std::vector<TargetHealth>& _targets);
 
@@ -154,8 +154,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Health check status of the real server bound to this rule
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Health status of the real server bound to this rule
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<TargetHealth> m_targets;
                     bool m_targetsHasBeenSet;

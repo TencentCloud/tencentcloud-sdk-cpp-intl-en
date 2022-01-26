@@ -86,6 +86,24 @@ Default value: 10.
                      */
                     bool PageSizeHasBeenSet() const;
 
+                    /**
+                     * 获取Stream name for query
+                     * @return StreamName Stream name for query
+                     */
+                    std::string GetStreamName() const;
+
+                    /**
+                     * 设置Stream name for query
+                     * @param StreamName Stream name for query
+                     */
+                    void SetStreamName(const std::string& _streamName);
+
+                    /**
+                     * 判断参数 StreamName 是否已赋值
+                     * @return StreamName 是否已赋值
+                     */
+                    bool StreamNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -101,6 +119,12 @@ Default value: 10.
                      */
                     int64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;
+
+                    /**
+                     * Stream name for query
+                     */
+                    std::string m_streamName;
+                    bool m_streamNameHasBeenSet;
 
                 };
             }

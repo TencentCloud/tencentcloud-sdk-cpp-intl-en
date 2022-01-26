@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 PlayerConfig::PlayerConfig() :
@@ -37,7 +36,7 @@ PlayerConfig::PlayerConfig() :
 {
 }
 
-CoreInternalOutcome PlayerConfig::Deserialize(const Value &value)
+CoreInternalOutcome PlayerConfig::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -46,7 +45,7 @@ CoreInternalOutcome PlayerConfig::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PlayerConfig.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PlayerConfig.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -56,7 +55,7 @@ CoreInternalOutcome PlayerConfig::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PlayerConfig.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PlayerConfig.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -66,7 +65,7 @@ CoreInternalOutcome PlayerConfig::Deserialize(const Value &value)
     {
         if (!value["DrmSwitch"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PlayerConfig.DrmSwitch` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PlayerConfig.DrmSwitch` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_drmSwitch = string(value["DrmSwitch"].GetString());
         m_drmSwitchHasBeenSet = true;
@@ -76,7 +75,7 @@ CoreInternalOutcome PlayerConfig::Deserialize(const Value &value)
     {
         if (!value["AdaptiveDynamicStreamingDefinition"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `PlayerConfig.AdaptiveDynamicStreamingDefinition` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PlayerConfig.AdaptiveDynamicStreamingDefinition` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_adaptiveDynamicStreamingDefinition = value["AdaptiveDynamicStreamingDefinition"].GetUint64();
         m_adaptiveDynamicStreamingDefinitionHasBeenSet = true;
@@ -86,7 +85,7 @@ CoreInternalOutcome PlayerConfig::Deserialize(const Value &value)
     {
         if (!value["DrmStreamingsInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `PlayerConfig.DrmStreamingsInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PlayerConfig.DrmStreamingsInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_drmStreamingsInfo.Deserialize(value["DrmStreamingsInfo"]);
@@ -103,7 +102,7 @@ CoreInternalOutcome PlayerConfig::Deserialize(const Value &value)
     {
         if (!value["ImageSpriteDefinition"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `PlayerConfig.ImageSpriteDefinition` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PlayerConfig.ImageSpriteDefinition` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_imageSpriteDefinition = value["ImageSpriteDefinition"].GetUint64();
         m_imageSpriteDefinitionHasBeenSet = true;
@@ -112,10 +111,10 @@ CoreInternalOutcome PlayerConfig::Deserialize(const Value &value)
     if (value.HasMember("ResolutionNameSet") && !value["ResolutionNameSet"].IsNull())
     {
         if (!value["ResolutionNameSet"].IsArray())
-            return CoreInternalOutcome(Error("response `PlayerConfig.ResolutionNameSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `PlayerConfig.ResolutionNameSet` is not array type"));
 
-        const Value &tmpValue = value["ResolutionNameSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["ResolutionNameSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             ResolutionNameInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -133,7 +132,7 @@ CoreInternalOutcome PlayerConfig::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PlayerConfig.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PlayerConfig.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -143,7 +142,7 @@ CoreInternalOutcome PlayerConfig::Deserialize(const Value &value)
     {
         if (!value["UpdateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PlayerConfig.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PlayerConfig.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_updateTime = string(value["UpdateTime"].GetString());
         m_updateTimeHasBeenSet = true;
@@ -153,7 +152,7 @@ CoreInternalOutcome PlayerConfig::Deserialize(const Value &value)
     {
         if (!value["Domain"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PlayerConfig.Domain` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PlayerConfig.Domain` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_domain = string(value["Domain"].GetString());
         m_domainHasBeenSet = true;
@@ -163,7 +162,7 @@ CoreInternalOutcome PlayerConfig::Deserialize(const Value &value)
     {
         if (!value["Scheme"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PlayerConfig.Scheme` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PlayerConfig.Scheme` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_scheme = string(value["Scheme"].GetString());
         m_schemeHasBeenSet = true;
@@ -173,7 +172,7 @@ CoreInternalOutcome PlayerConfig::Deserialize(const Value &value)
     {
         if (!value["Comment"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PlayerConfig.Comment` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PlayerConfig.Comment` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_comment = string(value["Comment"].GetString());
         m_commentHasBeenSet = true;
@@ -183,36 +182,36 @@ CoreInternalOutcome PlayerConfig::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void PlayerConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void PlayerConfig::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_drmSwitchHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DrmSwitch";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_drmSwitch.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_drmSwitch.c_str(), allocator).Move(), allocator);
     }
 
     if (m_adaptiveDynamicStreamingDefinitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AdaptiveDynamicStreamingDefinition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_adaptiveDynamicStreamingDefinition, allocator);
@@ -220,16 +219,16 @@ void PlayerConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_drmStreamingsInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DrmStreamingsInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_drmStreamingsInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_imageSpriteDefinitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ImageSpriteDefinition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_imageSpriteDefinition, allocator);
@@ -237,57 +236,57 @@ void PlayerConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_resolutionNameSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResolutionNameSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_resolutionNameSet.begin(); itr != m_resolutionNameSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_updateTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UpdateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_updateTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_updateTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_domainHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Domain";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_domain.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_domain.c_str(), allocator).Move(), allocator);
     }
 
     if (m_schemeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Scheme";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_scheme.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_scheme.c_str(), allocator).Move(), allocator);
     }
 
     if (m_commentHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Comment";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_comment.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_comment.c_str(), allocator).Move(), allocator);
     }
 
 }

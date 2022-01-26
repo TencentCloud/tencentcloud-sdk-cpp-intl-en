@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateServiceRequest::CreateServiceRequest() :
@@ -31,89 +30,114 @@ CreateServiceRequest::CreateServiceRequest() :
     m_netTypesHasBeenSet(false),
     m_ipVersionHasBeenSet(false),
     m_setServerNameHasBeenSet(false),
-    m_appIdTypeHasBeenSet(false)
+    m_appIdTypeHasBeenSet(false),
+    m_tagsHasBeenSet(false),
+    m_instanceIdHasBeenSet(false)
 {
 }
 
 string CreateServiceRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_serviceNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_serviceName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_serviceName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_protocolHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Protocol";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_protocol.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
     }
 
     if (m_serviceDescHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceDesc";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_serviceDesc.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_serviceDesc.c_str(), allocator).Move(), allocator);
     }
 
     if (m_exclusiveSetNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ExclusiveSetName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_exclusiveSetName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_exclusiveSetName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_netTypesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetTypes";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_netTypes.begin(); itr != m_netTypes.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_ipVersionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IpVersion";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_ipVersion.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_ipVersion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_setServerNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SetServerName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_setServerName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_setServerName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_appIdTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AppIdType";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_appIdType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_appIdType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_instanceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -245,6 +269,38 @@ void CreateServiceRequest::SetAppIdType(const string& _appIdType)
 bool CreateServiceRequest::AppIdTypeHasBeenSet() const
 {
     return m_appIdTypeHasBeenSet;
+}
+
+vector<Tag> CreateServiceRequest::GetTags() const
+{
+    return m_tags;
+}
+
+void CreateServiceRequest::SetTags(const vector<Tag>& _tags)
+{
+    m_tags = _tags;
+    m_tagsHasBeenSet = true;
+}
+
+bool CreateServiceRequest::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
+}
+
+string CreateServiceRequest::GetInstanceId() const
+{
+    return m_instanceId;
+}
+
+void CreateServiceRequest::SetInstanceId(const string& _instanceId)
+{
+    m_instanceId = _instanceId;
+    m_instanceIdHasBeenSet = true;
+}
+
+bool CreateServiceRequest::InstanceIdHasBeenSet() const
+{
+    return m_instanceIdHasBeenSet;
 }
 
 

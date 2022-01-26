@@ -488,6 +488,28 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     bool GroupInfoHasBeenSet() const;
 
+                    /**
+                     * 获取Display name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ViewName Display name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetViewName() const;
+
+                    /**
+                     * 设置Display name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param ViewName Display name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetViewName(const std::string& _viewName);
+
+                    /**
+                     * 判断参数 ViewName 是否已赋值
+                     * @return ViewName 是否已赋值
+                     */
+                    bool ViewNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -629,6 +651,13 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     std::vector<DescribeProductEventListEventsGroupInfo> m_groupInfo;
                     bool m_groupInfoHasBeenSet;
+
+                    /**
+                     * Display name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_viewName;
+                    bool m_viewNameHasBeenSet;
 
                 };
             }

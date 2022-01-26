@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Kms::V20190118::Model;
-using namespace rapidjson;
 using namespace std;
 
 DeviceFingerprint::DeviceFingerprint() :
@@ -27,7 +26,7 @@ DeviceFingerprint::DeviceFingerprint() :
 {
 }
 
-CoreInternalOutcome DeviceFingerprint::Deserialize(const Value &value)
+CoreInternalOutcome DeviceFingerprint::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome DeviceFingerprint::Deserialize(const Value &value)
     {
         if (!value["Identity"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DeviceFingerprint.Identity` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DeviceFingerprint.Identity` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_identity = string(value["Identity"].GetString());
         m_identityHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome DeviceFingerprint::Deserialize(const Value &value)
     {
         if (!value["Description"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DeviceFingerprint.Description` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DeviceFingerprint.Description` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_description = string(value["Description"].GetString());
         m_descriptionHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome DeviceFingerprint::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void DeviceFingerprint::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DeviceFingerprint::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_identityHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Identity";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_identity.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_identity.c_str(), allocator).Move(), allocator);
     }
 
     if (m_descriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Description";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_description.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
     }
 
 }

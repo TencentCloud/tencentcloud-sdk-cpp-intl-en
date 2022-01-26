@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 LiveStreamFaceRecognitionResult::LiveStreamFaceRecognitionResult() :
@@ -32,7 +31,7 @@ LiveStreamFaceRecognitionResult::LiveStreamFaceRecognitionResult() :
 {
 }
 
-CoreInternalOutcome LiveStreamFaceRecognitionResult::Deserialize(const Value &value)
+CoreInternalOutcome LiveStreamFaceRecognitionResult::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +40,7 @@ CoreInternalOutcome LiveStreamFaceRecognitionResult::Deserialize(const Value &va
     {
         if (!value["Id"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamFaceRecognitionResult.Id` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamFaceRecognitionResult.Id` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_id = string(value["Id"].GetString());
         m_idHasBeenSet = true;
@@ -51,7 +50,7 @@ CoreInternalOutcome LiveStreamFaceRecognitionResult::Deserialize(const Value &va
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamFaceRecognitionResult.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamFaceRecognitionResult.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -61,7 +60,7 @@ CoreInternalOutcome LiveStreamFaceRecognitionResult::Deserialize(const Value &va
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamFaceRecognitionResult.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamFaceRecognitionResult.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -69,9 +68,9 @@ CoreInternalOutcome LiveStreamFaceRecognitionResult::Deserialize(const Value &va
 
     if (value.HasMember("StartPtsTime") && !value["StartPtsTime"].IsNull())
     {
-        if (!value["StartPtsTime"].IsDouble())
+        if (!value["StartPtsTime"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamFaceRecognitionResult.StartPtsTime` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamFaceRecognitionResult.StartPtsTime` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_startPtsTime = value["StartPtsTime"].GetDouble();
         m_startPtsTimeHasBeenSet = true;
@@ -79,9 +78,9 @@ CoreInternalOutcome LiveStreamFaceRecognitionResult::Deserialize(const Value &va
 
     if (value.HasMember("EndPtsTime") && !value["EndPtsTime"].IsNull())
     {
-        if (!value["EndPtsTime"].IsDouble())
+        if (!value["EndPtsTime"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamFaceRecognitionResult.EndPtsTime` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamFaceRecognitionResult.EndPtsTime` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_endPtsTime = value["EndPtsTime"].GetDouble();
         m_endPtsTimeHasBeenSet = true;
@@ -89,9 +88,9 @@ CoreInternalOutcome LiveStreamFaceRecognitionResult::Deserialize(const Value &va
 
     if (value.HasMember("Confidence") && !value["Confidence"].IsNull())
     {
-        if (!value["Confidence"].IsDouble())
+        if (!value["Confidence"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamFaceRecognitionResult.Confidence` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamFaceRecognitionResult.Confidence` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_confidence = value["Confidence"].GetDouble();
         m_confidenceHasBeenSet = true;
@@ -100,10 +99,10 @@ CoreInternalOutcome LiveStreamFaceRecognitionResult::Deserialize(const Value &va
     if (value.HasMember("AreaCoordSet") && !value["AreaCoordSet"].IsNull())
     {
         if (!value["AreaCoordSet"].IsArray())
-            return CoreInternalOutcome(Error("response `LiveStreamFaceRecognitionResult.AreaCoordSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamFaceRecognitionResult.AreaCoordSet` is not array type"));
 
-        const Value &tmpValue = value["AreaCoordSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["AreaCoordSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_areaCoordSet.push_back((*itr).GetInt64());
         }
@@ -114,36 +113,36 @@ CoreInternalOutcome LiveStreamFaceRecognitionResult::Deserialize(const Value &va
     return CoreInternalOutcome(true);
 }
 
-void LiveStreamFaceRecognitionResult::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void LiveStreamFaceRecognitionResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_idHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Id";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_id.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_id.c_str(), allocator).Move(), allocator);
     }
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_startPtsTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartPtsTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_startPtsTime, allocator);
@@ -151,7 +150,7 @@ void LiveStreamFaceRecognitionResult::ToJsonObject(Value &value, Document::Alloc
 
     if (m_endPtsTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndPtsTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_endPtsTime, allocator);
@@ -159,7 +158,7 @@ void LiveStreamFaceRecognitionResult::ToJsonObject(Value &value, Document::Alloc
 
     if (m_confidenceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Confidence";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_confidence, allocator);
@@ -167,14 +166,14 @@ void LiveStreamFaceRecognitionResult::ToJsonObject(Value &value, Document::Alloc
 
     if (m_areaCoordSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AreaCoordSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_areaCoordSet.begin(); itr != m_areaCoordSet.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 

@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', and 'DES-CBC'. Default is 3DES-CBC.
-                     * @return PropoEncryAlgorithm Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', and 'DES-CBC'. Default is 3DES-CBC.
+                     * 获取Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBS-192`, `AES-CBC-256`, `DES-CBC`, and `SM4`; default value: `3DES-CBC`.
+                     * @return PropoEncryAlgorithm Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBS-192`, `AES-CBC-256`, `DES-CBC`, and `SM4`; default value: `3DES-CBC`.
                      */
                     std::string GetPropoEncryAlgorithm() const;
 
                     /**
-                     * 设置Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', and 'DES-CBC'. Default is 3DES-CBC.
-                     * @param PropoEncryAlgorithm Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', and 'DES-CBC'. Default is 3DES-CBC.
+                     * 设置Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBS-192`, `AES-CBC-256`, `DES-CBC`, and `SM4`; default value: `3DES-CBC`.
+                     * @param PropoEncryAlgorithm Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBS-192`, `AES-CBC-256`, `DES-CBC`, and `SM4`; default value: `3DES-CBC`.
                      */
                     void SetPropoEncryAlgorithm(const std::string& _propoEncryAlgorithm);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool PropoEncryAlgorithmHasBeenSet() const;
 
                     /**
-                     * 获取Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is MD5.
-                     * @return PropoAuthenAlgorithm Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is MD5.
+                     * 获取Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `MD5`.
+                     * @return PropoAuthenAlgorithm Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `MD5`.
                      */
                     std::string GetPropoAuthenAlgorithm() const;
 
                     /**
-                     * 设置Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is MD5.
-                     * @param PropoAuthenAlgorithm Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is MD5.
+                     * 设置Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `MD5`.
+                     * @param PropoAuthenAlgorithm Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `MD5`.
                      */
                     void SetPropoAuthenAlgorithm(const std::string& _propoAuthenAlgorithm);
 
@@ -265,13 +265,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', and 'DES-CBC'. Default is 3DES-CBC.
+                     * Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBS-192`, `AES-CBC-256`, `DES-CBC`, and `SM4`; default value: `3DES-CBC`.
                      */
                     std::string m_propoEncryAlgorithm;
                     bool m_propoEncryAlgorithmHasBeenSet;
 
                     /**
-                     * Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is MD5.
+                     * Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `MD5`.
                      */
                     std::string m_propoAuthenAlgorithm;
                     bool m_propoAuthenAlgorithmHasBeenSet;

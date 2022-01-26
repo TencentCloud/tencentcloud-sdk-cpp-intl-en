@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 AIAnalysisTemplateItem::AIAnalysisTemplateItem() :
@@ -35,7 +34,7 @@ AIAnalysisTemplateItem::AIAnalysisTemplateItem() :
 {
 }
 
-CoreInternalOutcome AIAnalysisTemplateItem::Deserialize(const Value &value)
+CoreInternalOutcome AIAnalysisTemplateItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -44,7 +43,7 @@ CoreInternalOutcome AIAnalysisTemplateItem::Deserialize(const Value &value)
     {
         if (!value["Definition"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `AIAnalysisTemplateItem.Definition` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AIAnalysisTemplateItem.Definition` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_definition = value["Definition"].GetInt64();
         m_definitionHasBeenSet = true;
@@ -54,7 +53,7 @@ CoreInternalOutcome AIAnalysisTemplateItem::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AIAnalysisTemplateItem.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AIAnalysisTemplateItem.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -64,7 +63,7 @@ CoreInternalOutcome AIAnalysisTemplateItem::Deserialize(const Value &value)
     {
         if (!value["Comment"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AIAnalysisTemplateItem.Comment` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AIAnalysisTemplateItem.Comment` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_comment = string(value["Comment"].GetString());
         m_commentHasBeenSet = true;
@@ -74,7 +73,7 @@ CoreInternalOutcome AIAnalysisTemplateItem::Deserialize(const Value &value)
     {
         if (!value["ClassificationConfigure"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AIAnalysisTemplateItem.ClassificationConfigure` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AIAnalysisTemplateItem.ClassificationConfigure` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_classificationConfigure.Deserialize(value["ClassificationConfigure"]);
@@ -91,7 +90,7 @@ CoreInternalOutcome AIAnalysisTemplateItem::Deserialize(const Value &value)
     {
         if (!value["TagConfigure"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AIAnalysisTemplateItem.TagConfigure` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AIAnalysisTemplateItem.TagConfigure` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_tagConfigure.Deserialize(value["TagConfigure"]);
@@ -108,7 +107,7 @@ CoreInternalOutcome AIAnalysisTemplateItem::Deserialize(const Value &value)
     {
         if (!value["CoverConfigure"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AIAnalysisTemplateItem.CoverConfigure` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AIAnalysisTemplateItem.CoverConfigure` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_coverConfigure.Deserialize(value["CoverConfigure"]);
@@ -125,7 +124,7 @@ CoreInternalOutcome AIAnalysisTemplateItem::Deserialize(const Value &value)
     {
         if (!value["FrameTagConfigure"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AIAnalysisTemplateItem.FrameTagConfigure` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AIAnalysisTemplateItem.FrameTagConfigure` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_frameTagConfigure.Deserialize(value["FrameTagConfigure"]);
@@ -142,7 +141,7 @@ CoreInternalOutcome AIAnalysisTemplateItem::Deserialize(const Value &value)
     {
         if (!value["HighlightConfigure"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AIAnalysisTemplateItem.HighlightConfigure` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AIAnalysisTemplateItem.HighlightConfigure` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_highlightConfigure.Deserialize(value["HighlightConfigure"]);
@@ -159,7 +158,7 @@ CoreInternalOutcome AIAnalysisTemplateItem::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AIAnalysisTemplateItem.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AIAnalysisTemplateItem.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -169,7 +168,7 @@ CoreInternalOutcome AIAnalysisTemplateItem::Deserialize(const Value &value)
     {
         if (!value["UpdateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AIAnalysisTemplateItem.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AIAnalysisTemplateItem.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_updateTime = string(value["UpdateTime"].GetString());
         m_updateTimeHasBeenSet = true;
@@ -179,12 +178,12 @@ CoreInternalOutcome AIAnalysisTemplateItem::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void AIAnalysisTemplateItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AIAnalysisTemplateItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_definitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Definition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_definition, allocator);
@@ -192,79 +191,79 @@ void AIAnalysisTemplateItem::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_commentHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Comment";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_comment.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_comment.c_str(), allocator).Move(), allocator);
     }
 
     if (m_classificationConfigureHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClassificationConfigure";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_classificationConfigure.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_tagConfigureHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TagConfigure";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_tagConfigure.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_coverConfigureHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CoverConfigure";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_coverConfigure.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_frameTagConfigureHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FrameTagConfigure";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_frameTagConfigure.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_highlightConfigureHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HighlightConfigure";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_highlightConfigure.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_updateTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UpdateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_updateTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_updateTime.c_str(), allocator).Move(), allocator);
     }
 
 }

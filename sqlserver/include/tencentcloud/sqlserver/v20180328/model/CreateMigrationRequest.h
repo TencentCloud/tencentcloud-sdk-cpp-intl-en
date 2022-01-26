@@ -24,6 +24,7 @@
 #include <tencentcloud/sqlserver/v20180328/model/MigrateSource.h>
 #include <tencentcloud/sqlserver/v20180328/model/MigrateTarget.h>
 #include <tencentcloud/sqlserver/v20180328/model/MigrateDB.h>
+#include <tencentcloud/sqlserver/v20180328/model/RenameRestoreDatabase.h>
 
 
 namespace TencentCloud
@@ -153,6 +154,24 @@ namespace TencentCloud
                      */
                     bool MigrateDBSetHasBeenSet() const;
 
+                    /**
+                     * 获取Restore and rename the databases listed in `ReNameRestoreDatabase`. If this parameter is left empty, all restored databases will be renamed in the default format. This parameter takes effect only when `SourceType=5`.
+                     * @return RenameRestore Restore and rename the databases listed in `ReNameRestoreDatabase`. If this parameter is left empty, all restored databases will be renamed in the default format. This parameter takes effect only when `SourceType=5`.
+                     */
+                    std::vector<RenameRestoreDatabase> GetRenameRestore() const;
+
+                    /**
+                     * 设置Restore and rename the databases listed in `ReNameRestoreDatabase`. If this parameter is left empty, all restored databases will be renamed in the default format. This parameter takes effect only when `SourceType=5`.
+                     * @param RenameRestore Restore and rename the databases listed in `ReNameRestoreDatabase`. If this parameter is left empty, all restored databases will be renamed in the default format. This parameter takes effect only when `SourceType=5`.
+                     */
+                    void SetRenameRestore(const std::vector<RenameRestoreDatabase>& _renameRestore);
+
+                    /**
+                     * 判断参数 RenameRestore 是否已赋值
+                     * @return RenameRestore 是否已赋值
+                     */
+                    bool RenameRestoreHasBeenSet() const;
+
                 private:
 
                     /**
@@ -190,6 +209,12 @@ namespace TencentCloud
                      */
                     std::vector<MigrateDB> m_migrateDBSet;
                     bool m_migrateDBSetHasBeenSet;
+
+                    /**
+                     * Restore and rename the databases listed in `ReNameRestoreDatabase`. If this parameter is left empty, all restored databases will be renamed in the default format. This parameter takes effect only when `SourceType=5`.
+                     */
+                    std::vector<RenameRestoreDatabase> m_renameRestore;
+                    bool m_renameRestoreHasBeenSet;
 
                 };
             }

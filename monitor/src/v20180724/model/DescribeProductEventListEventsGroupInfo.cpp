@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Monitor::V20180724::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeProductEventListEventsGroupInfo::DescribeProductEventListEventsGroupInfo() :
@@ -27,7 +26,7 @@ DescribeProductEventListEventsGroupInfo::DescribeProductEventListEventsGroupInfo
 {
 }
 
-CoreInternalOutcome DescribeProductEventListEventsGroupInfo::Deserialize(const Value &value)
+CoreInternalOutcome DescribeProductEventListEventsGroupInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome DescribeProductEventListEventsGroupInfo::Deserialize(const V
     {
         if (!value["GroupId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribeProductEventListEventsGroupInfo.GroupId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeProductEventListEventsGroupInfo.GroupId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_groupId = value["GroupId"].GetInt64();
         m_groupIdHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome DescribeProductEventListEventsGroupInfo::Deserialize(const V
     {
         if (!value["GroupName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeProductEventListEventsGroupInfo.GroupName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeProductEventListEventsGroupInfo.GroupName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_groupName = string(value["GroupName"].GetString());
         m_groupNameHasBeenSet = true;
@@ -56,12 +55,12 @@ CoreInternalOutcome DescribeProductEventListEventsGroupInfo::Deserialize(const V
     return CoreInternalOutcome(true);
 }
 
-void DescribeProductEventListEventsGroupInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DescribeProductEventListEventsGroupInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_groupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "GroupId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_groupId, allocator);
@@ -69,10 +68,10 @@ void DescribeProductEventListEventsGroupInfo::ToJsonObject(Value &value, Documen
 
     if (m_groupNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "GroupName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_groupName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_groupName.c_str(), allocator).Move(), allocator);
     }
 
 }

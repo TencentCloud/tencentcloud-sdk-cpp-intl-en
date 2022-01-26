@@ -40,13 +40,14 @@ namespace TencentCloud
                     GetGameServerSessionLogUrlResponse();
                     ~GetGameServerSessionLogUrlResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Log download URL
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PreSignedUrl Log download URL
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Log download URL. It should contain 1 to 1024 ASCII characters.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return PreSignedUrl Log download URL. It should contain 1 to 1024 ASCII characters.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string GetPreSignedUrl() const;
 
@@ -59,8 +60,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Log download URL
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Log download URL. It should contain 1 to 1024 ASCII characters.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string m_preSignedUrl;
                     bool m_preSignedUrlHasBeenSet;

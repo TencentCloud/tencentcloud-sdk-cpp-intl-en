@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dayu::V20180709::Model;
-using namespace rapidjson;
 using namespace std;
 
 DDoSPolicyDropOption::DDoSPolicyDropOption() :
@@ -44,7 +43,7 @@ DDoSPolicyDropOption::DDoSPolicyDropOption() :
 {
 }
 
-CoreInternalOutcome DDoSPolicyDropOption::Deserialize(const Value &value)
+CoreInternalOutcome DDoSPolicyDropOption::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -53,7 +52,7 @@ CoreInternalOutcome DDoSPolicyDropOption::Deserialize(const Value &value)
     {
         if (!value["DropTcp"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyDropOption.DropTcp` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyDropOption.DropTcp` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_dropTcp = value["DropTcp"].GetUint64();
         m_dropTcpHasBeenSet = true;
@@ -63,7 +62,7 @@ CoreInternalOutcome DDoSPolicyDropOption::Deserialize(const Value &value)
     {
         if (!value["DropUdp"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyDropOption.DropUdp` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyDropOption.DropUdp` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_dropUdp = value["DropUdp"].GetUint64();
         m_dropUdpHasBeenSet = true;
@@ -73,7 +72,7 @@ CoreInternalOutcome DDoSPolicyDropOption::Deserialize(const Value &value)
     {
         if (!value["DropIcmp"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyDropOption.DropIcmp` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyDropOption.DropIcmp` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_dropIcmp = value["DropIcmp"].GetUint64();
         m_dropIcmpHasBeenSet = true;
@@ -83,7 +82,7 @@ CoreInternalOutcome DDoSPolicyDropOption::Deserialize(const Value &value)
     {
         if (!value["DropOther"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyDropOption.DropOther` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyDropOption.DropOther` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_dropOther = value["DropOther"].GetUint64();
         m_dropOtherHasBeenSet = true;
@@ -93,7 +92,7 @@ CoreInternalOutcome DDoSPolicyDropOption::Deserialize(const Value &value)
     {
         if (!value["DropAbroad"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyDropOption.DropAbroad` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyDropOption.DropAbroad` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_dropAbroad = value["DropAbroad"].GetUint64();
         m_dropAbroadHasBeenSet = true;
@@ -103,7 +102,7 @@ CoreInternalOutcome DDoSPolicyDropOption::Deserialize(const Value &value)
     {
         if (!value["CheckSyncConn"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyDropOption.CheckSyncConn` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyDropOption.CheckSyncConn` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_checkSyncConn = value["CheckSyncConn"].GetUint64();
         m_checkSyncConnHasBeenSet = true;
@@ -113,7 +112,7 @@ CoreInternalOutcome DDoSPolicyDropOption::Deserialize(const Value &value)
     {
         if (!value["SdNewLimit"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyDropOption.SdNewLimit` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyDropOption.SdNewLimit` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_sdNewLimit = value["SdNewLimit"].GetUint64();
         m_sdNewLimitHasBeenSet = true;
@@ -123,7 +122,7 @@ CoreInternalOutcome DDoSPolicyDropOption::Deserialize(const Value &value)
     {
         if (!value["DstNewLimit"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyDropOption.DstNewLimit` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyDropOption.DstNewLimit` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_dstNewLimit = value["DstNewLimit"].GetUint64();
         m_dstNewLimitHasBeenSet = true;
@@ -133,7 +132,7 @@ CoreInternalOutcome DDoSPolicyDropOption::Deserialize(const Value &value)
     {
         if (!value["SdConnLimit"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyDropOption.SdConnLimit` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyDropOption.SdConnLimit` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_sdConnLimit = value["SdConnLimit"].GetUint64();
         m_sdConnLimitHasBeenSet = true;
@@ -143,7 +142,7 @@ CoreInternalOutcome DDoSPolicyDropOption::Deserialize(const Value &value)
     {
         if (!value["DstConnLimit"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyDropOption.DstConnLimit` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyDropOption.DstConnLimit` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_dstConnLimit = value["DstConnLimit"].GetUint64();
         m_dstConnLimitHasBeenSet = true;
@@ -153,7 +152,7 @@ CoreInternalOutcome DDoSPolicyDropOption::Deserialize(const Value &value)
     {
         if (!value["BadConnThreshold"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyDropOption.BadConnThreshold` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyDropOption.BadConnThreshold` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_badConnThreshold = value["BadConnThreshold"].GetUint64();
         m_badConnThresholdHasBeenSet = true;
@@ -163,7 +162,7 @@ CoreInternalOutcome DDoSPolicyDropOption::Deserialize(const Value &value)
     {
         if (!value["NullConnEnable"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyDropOption.NullConnEnable` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyDropOption.NullConnEnable` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_nullConnEnable = value["NullConnEnable"].GetUint64();
         m_nullConnEnableHasBeenSet = true;
@@ -173,7 +172,7 @@ CoreInternalOutcome DDoSPolicyDropOption::Deserialize(const Value &value)
     {
         if (!value["ConnTimeout"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyDropOption.ConnTimeout` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyDropOption.ConnTimeout` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_connTimeout = value["ConnTimeout"].GetUint64();
         m_connTimeoutHasBeenSet = true;
@@ -183,7 +182,7 @@ CoreInternalOutcome DDoSPolicyDropOption::Deserialize(const Value &value)
     {
         if (!value["SynRate"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyDropOption.SynRate` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyDropOption.SynRate` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_synRate = value["SynRate"].GetUint64();
         m_synRateHasBeenSet = true;
@@ -193,7 +192,7 @@ CoreInternalOutcome DDoSPolicyDropOption::Deserialize(const Value &value)
     {
         if (!value["SynLimit"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyDropOption.SynLimit` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyDropOption.SynLimit` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_synLimit = value["SynLimit"].GetUint64();
         m_synLimitHasBeenSet = true;
@@ -203,7 +202,7 @@ CoreInternalOutcome DDoSPolicyDropOption::Deserialize(const Value &value)
     {
         if (!value["DTcpMbpsLimit"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyDropOption.DTcpMbpsLimit` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyDropOption.DTcpMbpsLimit` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_dTcpMbpsLimit = value["DTcpMbpsLimit"].GetUint64();
         m_dTcpMbpsLimitHasBeenSet = true;
@@ -213,7 +212,7 @@ CoreInternalOutcome DDoSPolicyDropOption::Deserialize(const Value &value)
     {
         if (!value["DUdpMbpsLimit"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyDropOption.DUdpMbpsLimit` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyDropOption.DUdpMbpsLimit` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_dUdpMbpsLimit = value["DUdpMbpsLimit"].GetUint64();
         m_dUdpMbpsLimitHasBeenSet = true;
@@ -223,7 +222,7 @@ CoreInternalOutcome DDoSPolicyDropOption::Deserialize(const Value &value)
     {
         if (!value["DIcmpMbpsLimit"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyDropOption.DIcmpMbpsLimit` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyDropOption.DIcmpMbpsLimit` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_dIcmpMbpsLimit = value["DIcmpMbpsLimit"].GetUint64();
         m_dIcmpMbpsLimitHasBeenSet = true;
@@ -233,7 +232,7 @@ CoreInternalOutcome DDoSPolicyDropOption::Deserialize(const Value &value)
     {
         if (!value["DOtherMbpsLimit"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSPolicyDropOption.DOtherMbpsLimit` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSPolicyDropOption.DOtherMbpsLimit` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_dOtherMbpsLimit = value["DOtherMbpsLimit"].GetUint64();
         m_dOtherMbpsLimitHasBeenSet = true;
@@ -243,12 +242,12 @@ CoreInternalOutcome DDoSPolicyDropOption::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void DDoSPolicyDropOption::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DDoSPolicyDropOption::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_dropTcpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DropTcp";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_dropTcp, allocator);
@@ -256,7 +255,7 @@ void DDoSPolicyDropOption::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_dropUdpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DropUdp";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_dropUdp, allocator);
@@ -264,7 +263,7 @@ void DDoSPolicyDropOption::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_dropIcmpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DropIcmp";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_dropIcmp, allocator);
@@ -272,7 +271,7 @@ void DDoSPolicyDropOption::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_dropOtherHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DropOther";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_dropOther, allocator);
@@ -280,7 +279,7 @@ void DDoSPolicyDropOption::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_dropAbroadHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DropAbroad";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_dropAbroad, allocator);
@@ -288,7 +287,7 @@ void DDoSPolicyDropOption::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_checkSyncConnHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CheckSyncConn";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_checkSyncConn, allocator);
@@ -296,7 +295,7 @@ void DDoSPolicyDropOption::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_sdNewLimitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SdNewLimit";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_sdNewLimit, allocator);
@@ -304,7 +303,7 @@ void DDoSPolicyDropOption::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_dstNewLimitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DstNewLimit";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_dstNewLimit, allocator);
@@ -312,7 +311,7 @@ void DDoSPolicyDropOption::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_sdConnLimitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SdConnLimit";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_sdConnLimit, allocator);
@@ -320,7 +319,7 @@ void DDoSPolicyDropOption::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_dstConnLimitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DstConnLimit";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_dstConnLimit, allocator);
@@ -328,7 +327,7 @@ void DDoSPolicyDropOption::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_badConnThresholdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BadConnThreshold";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_badConnThreshold, allocator);
@@ -336,7 +335,7 @@ void DDoSPolicyDropOption::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_nullConnEnableHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NullConnEnable";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_nullConnEnable, allocator);
@@ -344,7 +343,7 @@ void DDoSPolicyDropOption::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_connTimeoutHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ConnTimeout";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_connTimeout, allocator);
@@ -352,7 +351,7 @@ void DDoSPolicyDropOption::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_synRateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SynRate";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_synRate, allocator);
@@ -360,7 +359,7 @@ void DDoSPolicyDropOption::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_synLimitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SynLimit";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_synLimit, allocator);
@@ -368,7 +367,7 @@ void DDoSPolicyDropOption::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_dTcpMbpsLimitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DTcpMbpsLimit";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_dTcpMbpsLimit, allocator);
@@ -376,7 +375,7 @@ void DDoSPolicyDropOption::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_dUdpMbpsLimitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DUdpMbpsLimit";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_dUdpMbpsLimit, allocator);
@@ -384,7 +383,7 @@ void DDoSPolicyDropOption::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_dIcmpMbpsLimitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DIcmpMbpsLimit";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_dIcmpMbpsLimit, allocator);
@@ -392,7 +391,7 @@ void DDoSPolicyDropOption::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_dOtherMbpsLimitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DOtherMbpsLimit";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_dOtherMbpsLimit, allocator);

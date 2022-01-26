@@ -205,14 +205,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of results to be returned at a time. Maximum value: 400.
-                     * @return Limit Number of results to be returned at a time. Maximum value: 400.
+                     * 获取The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
+                     * @return Limit The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results to be returned at a time. Maximum value: 400.
-                     * @param Limit Number of results to be returned at a time. Maximum value: 400.
+                     * 设置The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
+                     * @param Limit The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -221,6 +221,24 @@ namespace TencentCloud
                      * @return Limit 是否已赋值
                      */
                     bool LimitHasBeenSet() const;
+
+                    /**
+                     * 获取This parameter is valid only for source or disaster recovery instances. Valid value: `slave`, which indicates pulling logs from the replica.
+                     * @return InstType This parameter is valid only for source or disaster recovery instances. Valid value: `slave`, which indicates pulling logs from the replica.
+                     */
+                    std::string GetInstType() const;
+
+                    /**
+                     * 设置This parameter is valid only for source or disaster recovery instances. Valid value: `slave`, which indicates pulling logs from the replica.
+                     * @param InstType This parameter is valid only for source or disaster recovery instances. Valid value: `slave`, which indicates pulling logs from the replica.
+                     */
+                    void SetInstType(const std::string& _instType);
+
+                    /**
+                     * 判断参数 InstType 是否已赋值
+                     * @return InstType 是否已赋值
+                     */
+                    bool InstTypeHasBeenSet() const;
 
                 private:
 
@@ -279,10 +297,16 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of results to be returned at a time. Maximum value: 400.
+                     * The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
+
+                    /**
+                     * This parameter is valid only for source or disaster recovery instances. Valid value: `slave`, which indicates pulling logs from the replica.
+                     */
+                    std::string m_instType;
+                    bool m_instTypeHasBeenSet;
 
                 };
             }

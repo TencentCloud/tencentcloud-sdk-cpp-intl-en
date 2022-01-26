@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Yunjing::V20180228::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeProVersionInfoResponse::DescribeProVersionInfoResponse() :
@@ -33,20 +32,20 @@ DescribeProVersionInfoResponse::DescribeProVersionInfoResponse() :
 
 CoreInternalOutcome DescribeProVersionInfoResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -57,11 +56,11 @@ CoreInternalOutcome DescribeProVersionInfoResponse::Deserialize(const string &pa
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -69,7 +68,7 @@ CoreInternalOutcome DescribeProVersionInfoResponse::Deserialize(const string &pa
     {
         if (!rsp["PostPayCost"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `PostPayCost` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PostPayCost` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_postPayCost = rsp["PostPayCost"].GetUint64();
         m_postPayCostHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome DescribeProVersionInfoResponse::Deserialize(const string &pa
     {
         if (!rsp["IsAutoOpenProVersion"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `IsAutoOpenProVersion` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IsAutoOpenProVersion` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_isAutoOpenProVersion = rsp["IsAutoOpenProVersion"].GetBool();
         m_isAutoOpenProVersionHasBeenSet = true;
@@ -89,7 +88,7 @@ CoreInternalOutcome DescribeProVersionInfoResponse::Deserialize(const string &pa
     {
         if (!rsp["ProVersionNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ProVersionNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProVersionNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_proVersionNum = rsp["ProVersionNum"].GetUint64();
         m_proVersionNumHasBeenSet = true;
@@ -97,6 +96,47 @@ CoreInternalOutcome DescribeProVersionInfoResponse::Deserialize(const string &pa
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeProVersionInfoResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_postPayCostHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PostPayCost";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_postPayCost, allocator);
+    }
+
+    if (m_isAutoOpenProVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsAutoOpenProVersion";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isAutoOpenProVersion, allocator);
+    }
+
+    if (m_proVersionNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProVersionNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_proVersionNum, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

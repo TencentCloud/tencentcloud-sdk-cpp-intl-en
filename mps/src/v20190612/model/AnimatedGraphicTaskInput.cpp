@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 AnimatedGraphicTaskInput::AnimatedGraphicTaskInput() :
@@ -30,7 +29,7 @@ AnimatedGraphicTaskInput::AnimatedGraphicTaskInput() :
 {
 }
 
-CoreInternalOutcome AnimatedGraphicTaskInput::Deserialize(const Value &value)
+CoreInternalOutcome AnimatedGraphicTaskInput::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome AnimatedGraphicTaskInput::Deserialize(const Value &value)
     {
         if (!value["Definition"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `AnimatedGraphicTaskInput.Definition` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AnimatedGraphicTaskInput.Definition` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_definition = value["Definition"].GetUint64();
         m_definitionHasBeenSet = true;
@@ -47,9 +46,9 @@ CoreInternalOutcome AnimatedGraphicTaskInput::Deserialize(const Value &value)
 
     if (value.HasMember("StartTimeOffset") && !value["StartTimeOffset"].IsNull())
     {
-        if (!value["StartTimeOffset"].IsDouble())
+        if (!value["StartTimeOffset"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `AnimatedGraphicTaskInput.StartTimeOffset` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AnimatedGraphicTaskInput.StartTimeOffset` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_startTimeOffset = value["StartTimeOffset"].GetDouble();
         m_startTimeOffsetHasBeenSet = true;
@@ -57,9 +56,9 @@ CoreInternalOutcome AnimatedGraphicTaskInput::Deserialize(const Value &value)
 
     if (value.HasMember("EndTimeOffset") && !value["EndTimeOffset"].IsNull())
     {
-        if (!value["EndTimeOffset"].IsDouble())
+        if (!value["EndTimeOffset"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `AnimatedGraphicTaskInput.EndTimeOffset` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AnimatedGraphicTaskInput.EndTimeOffset` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_endTimeOffset = value["EndTimeOffset"].GetDouble();
         m_endTimeOffsetHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome AnimatedGraphicTaskInput::Deserialize(const Value &value)
     {
         if (!value["OutputStorage"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AnimatedGraphicTaskInput.OutputStorage` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AnimatedGraphicTaskInput.OutputStorage` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_outputStorage.Deserialize(value["OutputStorage"]);
@@ -86,7 +85,7 @@ CoreInternalOutcome AnimatedGraphicTaskInput::Deserialize(const Value &value)
     {
         if (!value["OutputObjectPath"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AnimatedGraphicTaskInput.OutputObjectPath` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AnimatedGraphicTaskInput.OutputObjectPath` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_outputObjectPath = string(value["OutputObjectPath"].GetString());
         m_outputObjectPathHasBeenSet = true;
@@ -96,12 +95,12 @@ CoreInternalOutcome AnimatedGraphicTaskInput::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void AnimatedGraphicTaskInput::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AnimatedGraphicTaskInput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_definitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Definition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_definition, allocator);
@@ -109,7 +108,7 @@ void AnimatedGraphicTaskInput::ToJsonObject(Value &value, Document::AllocatorTyp
 
     if (m_startTimeOffsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTimeOffset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_startTimeOffset, allocator);
@@ -117,7 +116,7 @@ void AnimatedGraphicTaskInput::ToJsonObject(Value &value, Document::AllocatorTyp
 
     if (m_endTimeOffsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndTimeOffset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_endTimeOffset, allocator);
@@ -125,19 +124,19 @@ void AnimatedGraphicTaskInput::ToJsonObject(Value &value, Document::AllocatorTyp
 
     if (m_outputStorageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OutputStorage";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_outputStorage.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_outputObjectPathHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OutputObjectPath";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_outputObjectPath.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_outputObjectPath.c_str(), allocator).Move(), allocator);
     }
 
 }

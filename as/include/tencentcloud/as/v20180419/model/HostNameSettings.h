@@ -47,30 +47,30 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Host name of a CVM.
-<br><li> A period (.) and hyphen (-) cannot be used as the first and the last characters of HostName, and multiple consecutive hyphens (-) or periods (.) are not allowed.
-<br><li> No support for Windows instances.
-<br><li> Other types of instances (such as Linux): the name should be a combination of 2 to 40 characters, supports multiple periods (.). The string between two periods can be composed of letters (case insensitive), numbers, and hyphens (-).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostName Host name of a CVM.
-<br><li> A period (.) and hyphen (-) cannot be used as the first and the last characters of HostName, and multiple consecutive hyphens (-) or periods (.) are not allowed.
-<br><li> No support for Windows instances.
-<br><li> Other types of instances (such as Linux): the name should be a combination of 2 to 40 characters, supports multiple periods (.). The string between two periods can be composed of letters (case insensitive), numbers, and hyphens (-).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Hostname of a CVM
+<br><li>The `HostName` cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods and hyphens.
+<br><li>This field is unavailable to CVM instances.
+<br><li>Other types of instances (such as Linux): the name contains 2 to 40 characters, and supports multiple periods (.). The string between two periods can consist of letters (case insensitive), numbers, and hyphens (-), and cannot be all numbers.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return HostName Hostname of a CVM
+<br><li>The `HostName` cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods and hyphens.
+<br><li>This field is unavailable to CVM instances.
+<br><li>Other types of instances (such as Linux): the name contains 2 to 40 characters, and supports multiple periods (.). The string between two periods can consist of letters (case insensitive), numbers, and hyphens (-), and cannot be all numbers.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string GetHostName() const;
 
                     /**
-                     * 设置Host name of a CVM.
-<br><li> A period (.) and hyphen (-) cannot be used as the first and the last characters of HostName, and multiple consecutive hyphens (-) or periods (.) are not allowed.
-<br><li> No support for Windows instances.
-<br><li> Other types of instances (such as Linux): the name should be a combination of 2 to 40 characters, supports multiple periods (.). The string between two periods can be composed of letters (case insensitive), numbers, and hyphens (-).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param HostName Host name of a CVM.
-<br><li> A period (.) and hyphen (-) cannot be used as the first and the last characters of HostName, and multiple consecutive hyphens (-) or periods (.) are not allowed.
-<br><li> No support for Windows instances.
-<br><li> Other types of instances (such as Linux): the name should be a combination of 2 to 40 characters, supports multiple periods (.). The string between two periods can be composed of letters (case insensitive), numbers, and hyphens (-).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Hostname of a CVM
+<br><li>The `HostName` cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods and hyphens.
+<br><li>This field is unavailable to CVM instances.
+<br><li>Other types of instances (such as Linux): the name contains 2 to 40 characters, and supports multiple periods (.). The string between two periods can consist of letters (case insensitive), numbers, and hyphens (-), and cannot be all numbers.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param HostName Hostname of a CVM
+<br><li>The `HostName` cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods and hyphens.
+<br><li>This field is unavailable to CVM instances.
+<br><li>Other types of instances (such as Linux): the name contains 2 to 40 characters, and supports multiple periods (.). The string between two periods can consist of letters (case insensitive), numbers, and hyphens (-), and cannot be all numbers.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     void SetHostName(const std::string& _hostName);
 
@@ -113,11 +113,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Host name of a CVM.
-<br><li> A period (.) and hyphen (-) cannot be used as the first and the last characters of HostName, and multiple consecutive hyphens (-) or periods (.) are not allowed.
-<br><li> No support for Windows instances.
-<br><li> Other types of instances (such as Linux): the name should be a combination of 2 to 40 characters, supports multiple periods (.). The string between two periods can be composed of letters (case insensitive), numbers, and hyphens (-).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Hostname of a CVM
+<br><li>The `HostName` cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods and hyphens.
+<br><li>This field is unavailable to CVM instances.
+<br><li>Other types of instances (such as Linux): the name contains 2 to 40 characters, and supports multiple periods (.). The string between two periods can consist of letters (case insensitive), numbers, and hyphens (-), and cannot be all numbers.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string m_hostName;
                     bool m_hostNameHasBeenSet;

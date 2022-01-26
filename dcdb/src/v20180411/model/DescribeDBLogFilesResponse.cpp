@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dcdb::V20180411::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeDBLogFilesResponse::DescribeDBLogFilesResponse() :
@@ -37,20 +36,20 @@ DescribeDBLogFilesResponse::DescribeDBLogFilesResponse() :
 
 CoreInternalOutcome DescribeDBLogFilesResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -61,11 +60,11 @@ CoreInternalOutcome DescribeDBLogFilesResponse::Deserialize(const string &payloa
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -73,7 +72,7 @@ CoreInternalOutcome DescribeDBLogFilesResponse::Deserialize(const string &payloa
     {
         if (!rsp["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(rsp["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -83,7 +82,7 @@ CoreInternalOutcome DescribeDBLogFilesResponse::Deserialize(const string &payloa
     {
         if (!rsp["Type"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Type` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Type` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_type = rsp["Type"].GetUint64();
         m_typeHasBeenSet = true;
@@ -93,7 +92,7 @@ CoreInternalOutcome DescribeDBLogFilesResponse::Deserialize(const string &payloa
     {
         if (!rsp["Total"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Total` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Total` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_total = rsp["Total"].GetUint64();
         m_totalHasBeenSet = true;
@@ -102,10 +101,10 @@ CoreInternalOutcome DescribeDBLogFilesResponse::Deserialize(const string &payloa
     if (rsp.HasMember("Files") && !rsp["Files"].IsNull())
     {
         if (!rsp["Files"].IsArray())
-            return CoreInternalOutcome(Error("response `Files` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Files` is not array type"));
 
-        const Value &tmpValue = rsp["Files"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["Files"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             LogFileInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -123,7 +122,7 @@ CoreInternalOutcome DescribeDBLogFilesResponse::Deserialize(const string &payloa
     {
         if (!rsp["VpcPrefix"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpcPrefix` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpcPrefix` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpcPrefix = string(rsp["VpcPrefix"].GetString());
         m_vpcPrefixHasBeenSet = true;
@@ -133,7 +132,7 @@ CoreInternalOutcome DescribeDBLogFilesResponse::Deserialize(const string &payloa
     {
         if (!rsp["NormalPrefix"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NormalPrefix` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NormalPrefix` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_normalPrefix = string(rsp["NormalPrefix"].GetString());
         m_normalPrefixHasBeenSet = true;
@@ -143,7 +142,7 @@ CoreInternalOutcome DescribeDBLogFilesResponse::Deserialize(const string &payloa
     {
         if (!rsp["ShardId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ShardId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ShardId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_shardId = string(rsp["ShardId"].GetString());
         m_shardIdHasBeenSet = true;
@@ -151,6 +150,86 @@ CoreInternalOutcome DescribeDBLogFilesResponse::Deserialize(const string &payloa
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeDBLogFilesResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_instanceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_typeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Type";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_type, allocator);
+    }
+
+    if (m_totalHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Total";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_total, allocator);
+    }
+
+    if (m_filesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Files";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_files.begin(); itr != m_files.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_vpcPrefixHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VpcPrefix";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpcPrefix.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_normalPrefixHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NormalPrefix";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_normalPrefix.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_shardIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ShardId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_shardId.c_str(), allocator).Move(), allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

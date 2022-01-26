@@ -40,6 +40,7 @@ namespace TencentCloud
                     DescribeDBInstanceInfoResponse();
                     ~DescribeDBInstanceInfoResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -106,6 +107,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool KeyRegionHasBeenSet() const;
 
+                    /**
+                     * 获取The default region of the KMS service currently used by the TencentDB backend service.
+Note: this field may return `null`, indicating that no valid value can be found.
+                     * @return DefaultKmsRegion The default region of the KMS service currently used by the TencentDB backend service.
+Note: this field may return `null`, indicating that no valid value can be found.
+                     */
+                    std::string GetDefaultKmsRegion() const;
+
+                    /**
+                     * 判断参数 DefaultKmsRegion 是否已赋值
+                     * @return DefaultKmsRegion 是否已赋值
+                     */
+                    bool DefaultKmsRegionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -139,6 +154,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_keyRegion;
                     bool m_keyRegionHasBeenSet;
+
+                    /**
+                     * The default region of the KMS service currently used by the TencentDB backend service.
+Note: this field may return `null`, indicating that no valid value can be found.
+                     */
+                    std::string m_defaultKmsRegion;
+                    bool m_defaultKmsRegionHasBeenSet;
 
                 };
             }

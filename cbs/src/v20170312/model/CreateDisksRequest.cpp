@@ -20,159 +20,186 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Cbs::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateDisksRequest::CreateDisksRequest() :
-    m_diskTypeHasBeenSet(false),
-    m_diskChargeTypeHasBeenSet(false),
     m_placementHasBeenSet(false),
+    m_diskChargeTypeHasBeenSet(false),
+    m_diskTypeHasBeenSet(false),
     m_diskNameHasBeenSet(false),
-    m_diskCountHasBeenSet(false),
-    m_diskChargePrepaidHasBeenSet(false),
-    m_diskSizeHasBeenSet(false),
+    m_tagsHasBeenSet(false),
     m_snapshotIdHasBeenSet(false),
+    m_diskCountHasBeenSet(false),
+    m_throughputPerformanceHasBeenSet(false),
+    m_diskSizeHasBeenSet(false),
+    m_shareableHasBeenSet(false),
     m_clientTokenHasBeenSet(false),
     m_encryptHasBeenSet(false),
-    m_tagsHasBeenSet(false),
-    m_shareableHasBeenSet(false)
+    m_diskChargePrepaidHasBeenSet(false),
+    m_deleteSnapshotHasBeenSet(false),
+    m_autoMountConfigurationHasBeenSet(false)
 {
 }
 
 string CreateDisksRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
-    if (m_diskTypeHasBeenSet)
+    if (m_placementHasBeenSet)
     {
-        Value iKey(kStringType);
-        string key = "DiskType";
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Placement";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_diskType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_placement.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_diskChargeTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskChargeType";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_diskChargeType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_diskChargeType.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_placementHasBeenSet)
+    if (m_diskTypeHasBeenSet)
     {
-        Value iKey(kStringType);
-        string key = "Placement";
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DiskType";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
-        m_placement.ToJsonObject(d[key.c_str()], allocator);
+        d.AddMember(iKey, rapidjson::Value(m_diskType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_diskNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_diskName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_diskName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_snapshotIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SnapshotId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_snapshotId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_diskCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskCount";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_diskCount, allocator);
     }
 
-    if (m_diskChargePrepaidHasBeenSet)
+    if (m_throughputPerformanceHasBeenSet)
     {
-        Value iKey(kStringType);
-        string key = "DiskChargePrepaid";
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ThroughputPerformance";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
-        m_diskChargePrepaid.ToJsonObject(d[key.c_str()], allocator);
+        d.AddMember(iKey, m_throughputPerformance, allocator);
     }
 
     if (m_diskSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskSize";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_diskSize, allocator);
     }
 
-    if (m_snapshotIdHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "SnapshotId";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_snapshotId.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_clientTokenHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "ClientToken";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_clientToken.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_encryptHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "Encrypt";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_encrypt.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_tagsHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "Tags";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
-
-        int i=0;
-        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
-        {
-            d[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
-            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
-        }
-    }
-
     if (m_shareableHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Shareable";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_shareable, allocator);
     }
 
+    if (m_clientTokenHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClientToken";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_clientToken.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    if (m_encryptHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Encrypt";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_encrypt.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_diskChargePrepaidHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DiskChargePrepaid";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_diskChargePrepaid.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_deleteSnapshotHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DeleteSnapshot";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_deleteSnapshot, allocator);
+    }
+
+    if (m_autoMountConfigurationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutoMountConfiguration";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_autoMountConfiguration.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
 
 
-string CreateDisksRequest::GetDiskType() const
+Placement CreateDisksRequest::GetPlacement() const
 {
-    return m_diskType;
+    return m_placement;
 }
 
-void CreateDisksRequest::SetDiskType(const string& _diskType)
+void CreateDisksRequest::SetPlacement(const Placement& _placement)
 {
-    m_diskType = _diskType;
-    m_diskTypeHasBeenSet = true;
+    m_placement = _placement;
+    m_placementHasBeenSet = true;
 }
 
-bool CreateDisksRequest::DiskTypeHasBeenSet() const
+bool CreateDisksRequest::PlacementHasBeenSet() const
 {
-    return m_diskTypeHasBeenSet;
+    return m_placementHasBeenSet;
 }
 
 string CreateDisksRequest::GetDiskChargeType() const
@@ -191,20 +218,20 @@ bool CreateDisksRequest::DiskChargeTypeHasBeenSet() const
     return m_diskChargeTypeHasBeenSet;
 }
 
-Placement CreateDisksRequest::GetPlacement() const
+string CreateDisksRequest::GetDiskType() const
 {
-    return m_placement;
+    return m_diskType;
 }
 
-void CreateDisksRequest::SetPlacement(const Placement& _placement)
+void CreateDisksRequest::SetDiskType(const string& _diskType)
 {
-    m_placement = _placement;
-    m_placementHasBeenSet = true;
+    m_diskType = _diskType;
+    m_diskTypeHasBeenSet = true;
 }
 
-bool CreateDisksRequest::PlacementHasBeenSet() const
+bool CreateDisksRequest::DiskTypeHasBeenSet() const
 {
-    return m_placementHasBeenSet;
+    return m_diskTypeHasBeenSet;
 }
 
 string CreateDisksRequest::GetDiskName() const
@@ -223,6 +250,38 @@ bool CreateDisksRequest::DiskNameHasBeenSet() const
     return m_diskNameHasBeenSet;
 }
 
+vector<Tag> CreateDisksRequest::GetTags() const
+{
+    return m_tags;
+}
+
+void CreateDisksRequest::SetTags(const vector<Tag>& _tags)
+{
+    m_tags = _tags;
+    m_tagsHasBeenSet = true;
+}
+
+bool CreateDisksRequest::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
+}
+
+string CreateDisksRequest::GetSnapshotId() const
+{
+    return m_snapshotId;
+}
+
+void CreateDisksRequest::SetSnapshotId(const string& _snapshotId)
+{
+    m_snapshotId = _snapshotId;
+    m_snapshotIdHasBeenSet = true;
+}
+
+bool CreateDisksRequest::SnapshotIdHasBeenSet() const
+{
+    return m_snapshotIdHasBeenSet;
+}
+
 uint64_t CreateDisksRequest::GetDiskCount() const
 {
     return m_diskCount;
@@ -239,20 +298,20 @@ bool CreateDisksRequest::DiskCountHasBeenSet() const
     return m_diskCountHasBeenSet;
 }
 
-DiskChargePrepaid CreateDisksRequest::GetDiskChargePrepaid() const
+uint64_t CreateDisksRequest::GetThroughputPerformance() const
 {
-    return m_diskChargePrepaid;
+    return m_throughputPerformance;
 }
 
-void CreateDisksRequest::SetDiskChargePrepaid(const DiskChargePrepaid& _diskChargePrepaid)
+void CreateDisksRequest::SetThroughputPerformance(const uint64_t& _throughputPerformance)
 {
-    m_diskChargePrepaid = _diskChargePrepaid;
-    m_diskChargePrepaidHasBeenSet = true;
+    m_throughputPerformance = _throughputPerformance;
+    m_throughputPerformanceHasBeenSet = true;
 }
 
-bool CreateDisksRequest::DiskChargePrepaidHasBeenSet() const
+bool CreateDisksRequest::ThroughputPerformanceHasBeenSet() const
 {
-    return m_diskChargePrepaidHasBeenSet;
+    return m_throughputPerformanceHasBeenSet;
 }
 
 uint64_t CreateDisksRequest::GetDiskSize() const
@@ -271,20 +330,20 @@ bool CreateDisksRequest::DiskSizeHasBeenSet() const
     return m_diskSizeHasBeenSet;
 }
 
-string CreateDisksRequest::GetSnapshotId() const
+bool CreateDisksRequest::GetShareable() const
 {
-    return m_snapshotId;
+    return m_shareable;
 }
 
-void CreateDisksRequest::SetSnapshotId(const string& _snapshotId)
+void CreateDisksRequest::SetShareable(const bool& _shareable)
 {
-    m_snapshotId = _snapshotId;
-    m_snapshotIdHasBeenSet = true;
+    m_shareable = _shareable;
+    m_shareableHasBeenSet = true;
 }
 
-bool CreateDisksRequest::SnapshotIdHasBeenSet() const
+bool CreateDisksRequest::ShareableHasBeenSet() const
 {
-    return m_snapshotIdHasBeenSet;
+    return m_shareableHasBeenSet;
 }
 
 string CreateDisksRequest::GetClientToken() const
@@ -319,36 +378,52 @@ bool CreateDisksRequest::EncryptHasBeenSet() const
     return m_encryptHasBeenSet;
 }
 
-vector<Tag> CreateDisksRequest::GetTags() const
+DiskChargePrepaid CreateDisksRequest::GetDiskChargePrepaid() const
 {
-    return m_tags;
+    return m_diskChargePrepaid;
 }
 
-void CreateDisksRequest::SetTags(const vector<Tag>& _tags)
+void CreateDisksRequest::SetDiskChargePrepaid(const DiskChargePrepaid& _diskChargePrepaid)
 {
-    m_tags = _tags;
-    m_tagsHasBeenSet = true;
+    m_diskChargePrepaid = _diskChargePrepaid;
+    m_diskChargePrepaidHasBeenSet = true;
 }
 
-bool CreateDisksRequest::TagsHasBeenSet() const
+bool CreateDisksRequest::DiskChargePrepaidHasBeenSet() const
 {
-    return m_tagsHasBeenSet;
+    return m_diskChargePrepaidHasBeenSet;
 }
 
-bool CreateDisksRequest::GetShareable() const
+int64_t CreateDisksRequest::GetDeleteSnapshot() const
 {
-    return m_shareable;
+    return m_deleteSnapshot;
 }
 
-void CreateDisksRequest::SetShareable(const bool& _shareable)
+void CreateDisksRequest::SetDeleteSnapshot(const int64_t& _deleteSnapshot)
 {
-    m_shareable = _shareable;
-    m_shareableHasBeenSet = true;
+    m_deleteSnapshot = _deleteSnapshot;
+    m_deleteSnapshotHasBeenSet = true;
 }
 
-bool CreateDisksRequest::ShareableHasBeenSet() const
+bool CreateDisksRequest::DeleteSnapshotHasBeenSet() const
 {
-    return m_shareableHasBeenSet;
+    return m_deleteSnapshotHasBeenSet;
+}
+
+AutoMountConfiguration CreateDisksRequest::GetAutoMountConfiguration() const
+{
+    return m_autoMountConfiguration;
+}
+
+void CreateDisksRequest::SetAutoMountConfiguration(const AutoMountConfiguration& _autoMountConfiguration)
+{
+    m_autoMountConfiguration = _autoMountConfiguration;
+    m_autoMountConfigurationHasBeenSet = true;
+}
+
+bool CreateDisksRequest::AutoMountConfigurationHasBeenSet() const
+{
+    return m_autoMountConfigurationHasBeenSet;
 }
 
 

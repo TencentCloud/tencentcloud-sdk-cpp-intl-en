@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 MediaAnimatedGraphicsItem::MediaAnimatedGraphicsItem() :
@@ -36,7 +35,7 @@ MediaAnimatedGraphicsItem::MediaAnimatedGraphicsItem() :
 {
 }
 
-CoreInternalOutcome MediaAnimatedGraphicsItem::Deserialize(const Value &value)
+CoreInternalOutcome MediaAnimatedGraphicsItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -45,7 +44,7 @@ CoreInternalOutcome MediaAnimatedGraphicsItem::Deserialize(const Value &value)
     {
         if (!value["Storage"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaAnimatedGraphicsItem.Storage` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaAnimatedGraphicsItem.Storage` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_storage.Deserialize(value["Storage"]);
@@ -62,7 +61,7 @@ CoreInternalOutcome MediaAnimatedGraphicsItem::Deserialize(const Value &value)
     {
         if (!value["Path"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaAnimatedGraphicsItem.Path` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaAnimatedGraphicsItem.Path` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_path = string(value["Path"].GetString());
         m_pathHasBeenSet = true;
@@ -72,7 +71,7 @@ CoreInternalOutcome MediaAnimatedGraphicsItem::Deserialize(const Value &value)
     {
         if (!value["Definition"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaAnimatedGraphicsItem.Definition` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaAnimatedGraphicsItem.Definition` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_definition = value["Definition"].GetInt64();
         m_definitionHasBeenSet = true;
@@ -82,7 +81,7 @@ CoreInternalOutcome MediaAnimatedGraphicsItem::Deserialize(const Value &value)
     {
         if (!value["Container"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaAnimatedGraphicsItem.Container` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaAnimatedGraphicsItem.Container` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_container = string(value["Container"].GetString());
         m_containerHasBeenSet = true;
@@ -92,7 +91,7 @@ CoreInternalOutcome MediaAnimatedGraphicsItem::Deserialize(const Value &value)
     {
         if (!value["Height"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaAnimatedGraphicsItem.Height` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaAnimatedGraphicsItem.Height` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_height = value["Height"].GetInt64();
         m_heightHasBeenSet = true;
@@ -102,7 +101,7 @@ CoreInternalOutcome MediaAnimatedGraphicsItem::Deserialize(const Value &value)
     {
         if (!value["Width"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaAnimatedGraphicsItem.Width` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaAnimatedGraphicsItem.Width` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_width = value["Width"].GetInt64();
         m_widthHasBeenSet = true;
@@ -112,7 +111,7 @@ CoreInternalOutcome MediaAnimatedGraphicsItem::Deserialize(const Value &value)
     {
         if (!value["Bitrate"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaAnimatedGraphicsItem.Bitrate` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaAnimatedGraphicsItem.Bitrate` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_bitrate = value["Bitrate"].GetInt64();
         m_bitrateHasBeenSet = true;
@@ -122,7 +121,7 @@ CoreInternalOutcome MediaAnimatedGraphicsItem::Deserialize(const Value &value)
     {
         if (!value["Size"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaAnimatedGraphicsItem.Size` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaAnimatedGraphicsItem.Size` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_size = value["Size"].GetInt64();
         m_sizeHasBeenSet = true;
@@ -132,7 +131,7 @@ CoreInternalOutcome MediaAnimatedGraphicsItem::Deserialize(const Value &value)
     {
         if (!value["Md5"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaAnimatedGraphicsItem.Md5` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaAnimatedGraphicsItem.Md5` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_md5 = string(value["Md5"].GetString());
         m_md5HasBeenSet = true;
@@ -140,9 +139,9 @@ CoreInternalOutcome MediaAnimatedGraphicsItem::Deserialize(const Value &value)
 
     if (value.HasMember("StartTimeOffset") && !value["StartTimeOffset"].IsNull())
     {
-        if (!value["StartTimeOffset"].IsDouble())
+        if (!value["StartTimeOffset"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `MediaAnimatedGraphicsItem.StartTimeOffset` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaAnimatedGraphicsItem.StartTimeOffset` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_startTimeOffset = value["StartTimeOffset"].GetDouble();
         m_startTimeOffsetHasBeenSet = true;
@@ -150,9 +149,9 @@ CoreInternalOutcome MediaAnimatedGraphicsItem::Deserialize(const Value &value)
 
     if (value.HasMember("EndTimeOffset") && !value["EndTimeOffset"].IsNull())
     {
-        if (!value["EndTimeOffset"].IsDouble())
+        if (!value["EndTimeOffset"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `MediaAnimatedGraphicsItem.EndTimeOffset` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaAnimatedGraphicsItem.EndTimeOffset` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_endTimeOffset = value["EndTimeOffset"].GetDouble();
         m_endTimeOffsetHasBeenSet = true;
@@ -162,29 +161,29 @@ CoreInternalOutcome MediaAnimatedGraphicsItem::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void MediaAnimatedGraphicsItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MediaAnimatedGraphicsItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_storageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Storage";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_storage.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_pathHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Path";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_path.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_path.c_str(), allocator).Move(), allocator);
     }
 
     if (m_definitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Definition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_definition, allocator);
@@ -192,15 +191,15 @@ void MediaAnimatedGraphicsItem::ToJsonObject(Value &value, Document::AllocatorTy
 
     if (m_containerHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Container";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_container.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_container.c_str(), allocator).Move(), allocator);
     }
 
     if (m_heightHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Height";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_height, allocator);
@@ -208,7 +207,7 @@ void MediaAnimatedGraphicsItem::ToJsonObject(Value &value, Document::AllocatorTy
 
     if (m_widthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Width";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_width, allocator);
@@ -216,7 +215,7 @@ void MediaAnimatedGraphicsItem::ToJsonObject(Value &value, Document::AllocatorTy
 
     if (m_bitrateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Bitrate";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_bitrate, allocator);
@@ -224,7 +223,7 @@ void MediaAnimatedGraphicsItem::ToJsonObject(Value &value, Document::AllocatorTy
 
     if (m_sizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Size";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_size, allocator);
@@ -232,15 +231,15 @@ void MediaAnimatedGraphicsItem::ToJsonObject(Value &value, Document::AllocatorTy
 
     if (m_md5HasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Md5";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_md5.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_md5.c_str(), allocator).Move(), allocator);
     }
 
     if (m_startTimeOffsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTimeOffset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_startTimeOffset, allocator);
@@ -248,7 +247,7 @@ void MediaAnimatedGraphicsItem::ToJsonObject(Value &value, Document::AllocatorTy
 
     if (m_endTimeOffsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndTimeOffset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_endTimeOffset, allocator);

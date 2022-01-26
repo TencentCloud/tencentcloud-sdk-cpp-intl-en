@@ -18,18 +18,21 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 AccessRegionDetial::AccessRegionDetial() :
     m_regionIdHasBeenSet(false),
     m_regionNameHasBeenSet(false),
     m_concurrentListHasBeenSet(false),
-    m_bandwidthListHasBeenSet(false)
+    m_bandwidthListHasBeenSet(false),
+    m_regionAreaHasBeenSet(false),
+    m_regionAreaNameHasBeenSet(false),
+    m_iDCTypeHasBeenSet(false),
+    m_featureBitmapHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome AccessRegionDetial::Deserialize(const Value &value)
+CoreInternalOutcome AccessRegionDetial::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +41,7 @@ CoreInternalOutcome AccessRegionDetial::Deserialize(const Value &value)
     {
         if (!value["RegionId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccessRegionDetial.RegionId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccessRegionDetial.RegionId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_regionId = string(value["RegionId"].GetString());
         m_regionIdHasBeenSet = true;
@@ -48,7 +51,7 @@ CoreInternalOutcome AccessRegionDetial::Deserialize(const Value &value)
     {
         if (!value["RegionName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccessRegionDetial.RegionName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccessRegionDetial.RegionName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_regionName = string(value["RegionName"].GetString());
         m_regionNameHasBeenSet = true;
@@ -57,10 +60,10 @@ CoreInternalOutcome AccessRegionDetial::Deserialize(const Value &value)
     if (value.HasMember("ConcurrentList") && !value["ConcurrentList"].IsNull())
     {
         if (!value["ConcurrentList"].IsArray())
-            return CoreInternalOutcome(Error("response `AccessRegionDetial.ConcurrentList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `AccessRegionDetial.ConcurrentList` is not array type"));
 
-        const Value &tmpValue = value["ConcurrentList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["ConcurrentList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_concurrentList.push_back((*itr).GetInt64());
         }
@@ -70,63 +73,135 @@ CoreInternalOutcome AccessRegionDetial::Deserialize(const Value &value)
     if (value.HasMember("BandwidthList") && !value["BandwidthList"].IsNull())
     {
         if (!value["BandwidthList"].IsArray())
-            return CoreInternalOutcome(Error("response `AccessRegionDetial.BandwidthList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `AccessRegionDetial.BandwidthList` is not array type"));
 
-        const Value &tmpValue = value["BandwidthList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["BandwidthList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_bandwidthList.push_back((*itr).GetInt64());
         }
         m_bandwidthListHasBeenSet = true;
     }
 
+    if (value.HasMember("RegionArea") && !value["RegionArea"].IsNull())
+    {
+        if (!value["RegionArea"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AccessRegionDetial.RegionArea` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_regionArea = string(value["RegionArea"].GetString());
+        m_regionAreaHasBeenSet = true;
+    }
+
+    if (value.HasMember("RegionAreaName") && !value["RegionAreaName"].IsNull())
+    {
+        if (!value["RegionAreaName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AccessRegionDetial.RegionAreaName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_regionAreaName = string(value["RegionAreaName"].GetString());
+        m_regionAreaNameHasBeenSet = true;
+    }
+
+    if (value.HasMember("IDCType") && !value["IDCType"].IsNull())
+    {
+        if (!value["IDCType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AccessRegionDetial.IDCType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_iDCType = string(value["IDCType"].GetString());
+        m_iDCTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("FeatureBitmap") && !value["FeatureBitmap"].IsNull())
+    {
+        if (!value["FeatureBitmap"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AccessRegionDetial.FeatureBitmap` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_featureBitmap = value["FeatureBitmap"].GetInt64();
+        m_featureBitmapHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void AccessRegionDetial::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AccessRegionDetial::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_regionIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RegionId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_regionId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_regionId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_regionNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RegionName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_regionName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_regionName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_concurrentListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ConcurrentList";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_concurrentList.begin(); itr != m_concurrentList.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 
     if (m_bandwidthListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BandwidthList";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_bandwidthList.begin(); itr != m_bandwidthList.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
+    }
+
+    if (m_regionAreaHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RegionArea";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_regionArea.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_regionAreaNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RegionAreaName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_regionAreaName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_iDCTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IDCType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_iDCType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_featureBitmapHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FeatureBitmap";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_featureBitmap, allocator);
     }
 
 }
@@ -194,5 +269,69 @@ void AccessRegionDetial::SetBandwidthList(const vector<int64_t>& _bandwidthList)
 bool AccessRegionDetial::BandwidthListHasBeenSet() const
 {
     return m_bandwidthListHasBeenSet;
+}
+
+string AccessRegionDetial::GetRegionArea() const
+{
+    return m_regionArea;
+}
+
+void AccessRegionDetial::SetRegionArea(const string& _regionArea)
+{
+    m_regionArea = _regionArea;
+    m_regionAreaHasBeenSet = true;
+}
+
+bool AccessRegionDetial::RegionAreaHasBeenSet() const
+{
+    return m_regionAreaHasBeenSet;
+}
+
+string AccessRegionDetial::GetRegionAreaName() const
+{
+    return m_regionAreaName;
+}
+
+void AccessRegionDetial::SetRegionAreaName(const string& _regionAreaName)
+{
+    m_regionAreaName = _regionAreaName;
+    m_regionAreaNameHasBeenSet = true;
+}
+
+bool AccessRegionDetial::RegionAreaNameHasBeenSet() const
+{
+    return m_regionAreaNameHasBeenSet;
+}
+
+string AccessRegionDetial::GetIDCType() const
+{
+    return m_iDCType;
+}
+
+void AccessRegionDetial::SetIDCType(const string& _iDCType)
+{
+    m_iDCType = _iDCType;
+    m_iDCTypeHasBeenSet = true;
+}
+
+bool AccessRegionDetial::IDCTypeHasBeenSet() const
+{
+    return m_iDCTypeHasBeenSet;
+}
+
+int64_t AccessRegionDetial::GetFeatureBitmap() const
+{
+    return m_featureBitmap;
+}
+
+void AccessRegionDetial::SetFeatureBitmap(const int64_t& _featureBitmap)
+{
+    m_featureBitmap = _featureBitmap;
+    m_featureBitmapHasBeenSet = true;
+}
+
+bool AccessRegionDetial::FeatureBitmapHasBeenSet() const
+{
+    return m_featureBitmapHasBeenSet;
 }
 

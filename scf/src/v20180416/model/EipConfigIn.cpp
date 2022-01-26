@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Scf::V20180416::Model;
-using namespace rapidjson;
 using namespace std;
 
 EipConfigIn::EipConfigIn() :
@@ -26,7 +25,7 @@ EipConfigIn::EipConfigIn() :
 {
 }
 
-CoreInternalOutcome EipConfigIn::Deserialize(const Value &value)
+CoreInternalOutcome EipConfigIn::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -35,7 +34,7 @@ CoreInternalOutcome EipConfigIn::Deserialize(const Value &value)
     {
         if (!value["EipStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `EipConfigIn.EipStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EipConfigIn.EipStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_eipStatus = string(value["EipStatus"].GetString());
         m_eipStatusHasBeenSet = true;
@@ -45,15 +44,15 @@ CoreInternalOutcome EipConfigIn::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void EipConfigIn::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void EipConfigIn::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_eipStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EipStatus";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_eipStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_eipStatus.c_str(), allocator).Move(), allocator);
     }
 
 }

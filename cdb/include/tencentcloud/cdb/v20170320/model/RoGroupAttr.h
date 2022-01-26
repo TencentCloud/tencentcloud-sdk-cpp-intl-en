@@ -136,6 +136,24 @@ namespace TencentCloud
                      */
                     bool WeightModeHasBeenSet() const;
 
+                    /**
+                     * 获取Replication delay.
+                     * @return ReplicationDelayTime Replication delay.
+                     */
+                    int64_t GetReplicationDelayTime() const;
+
+                    /**
+                     * 设置Replication delay.
+                     * @param ReplicationDelayTime Replication delay.
+                     */
+                    void SetReplicationDelayTime(const int64_t& _replicationDelayTime);
+
+                    /**
+                     * 判断参数 ReplicationDelayTime 是否已赋值
+                     * @return ReplicationDelayTime 是否已赋值
+                     */
+                    bool ReplicationDelayTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -167,6 +185,12 @@ namespace TencentCloud
                      */
                     std::string m_weightMode;
                     bool m_weightModeHasBeenSet;
+
+                    /**
+                     * Replication delay.
+                     */
+                    int64_t m_replicationDelayTime;
+                    bool m_replicationDelayTimeHasBeenSet;
 
                 };
             }

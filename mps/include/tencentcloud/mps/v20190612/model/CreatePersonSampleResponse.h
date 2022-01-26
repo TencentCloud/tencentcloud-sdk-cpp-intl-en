@@ -42,11 +42,12 @@ namespace TencentCloud
                     CreatePersonSampleResponse();
                     ~CreatePersonSampleResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Figure information.
-                     * @return Person Figure information.
+                     * 获取Image information
+                     * @return Person Image information
                      */
                     AiSamplePerson GetPerson() const;
 
@@ -57,8 +58,8 @@ namespace TencentCloud
                     bool PersonHasBeenSet() const;
 
                     /**
-                     * 获取Face information failing to be processed.
-                     * @return FailFaceInfoSet Face information failing to be processed.
+                     * 获取Information of images that failed the verification by facial feature positioning
+                     * @return FailFaceInfoSet Information of images that failed the verification by facial feature positioning
                      */
                     std::vector<AiSampleFailFaceInfo> GetFailFaceInfoSet() const;
 
@@ -71,13 +72,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Figure information.
+                     * Image information
                      */
                     AiSamplePerson m_person;
                     bool m_personHasBeenSet;
 
                     /**
-                     * Face information failing to be processed.
+                     * Information of images that failed the verification by facial feature positioning
                      */
                     std::vector<AiSampleFailFaceInfo> m_failFaceInfoSet;
                     bool m_failFaceInfoSetHasBeenSet;

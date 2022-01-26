@@ -40,11 +40,14 @@ namespace TencentCloud
                     EnableReplicaReadonlyResponse();
                     ~EnableReplicaReadonlyResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取ERROR: erroneous; OK: correct.
-                     * @return Status ERROR: erroneous; OK: correct.
+                     * 获取Valid values: `ERROR`, `OK`. This field has been deprecated.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Status Valid values: `ERROR`, `OK`. This field has been deprecated.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetStatus() const;
 
@@ -54,13 +57,35 @@ namespace TencentCloud
                      */
                     bool StatusHasBeenSet() const;
 
+                    /**
+                     * 获取Task ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return TaskId Task ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetTaskId() const;
+
+                    /**
+                     * 判断参数 TaskId 是否已赋值
+                     * @return TaskId 是否已赋值
+                     */
+                    bool TaskIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * ERROR: erroneous; OK: correct.
+                     * Valid values: `ERROR`, `OK`. This field has been deprecated.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
+
+                    /**
+                     * Task ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_taskId;
+                    bool m_taskIdHasBeenSet;
 
                 };
             }

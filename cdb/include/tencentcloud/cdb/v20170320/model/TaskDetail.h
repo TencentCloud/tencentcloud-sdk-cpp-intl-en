@@ -128,6 +128,7 @@ namespace TencentCloud
 "KILLED" - terminated;
 "REMOVED" - deleted;
 "PAUSED" - paused.
+"WAITING" - waiting (which can be canceled)
                      * @return TaskStatus Instance task status. Valid values:
 "UNDEFINED" - undefined;
 "INITIAL" - initializing;
@@ -137,6 +138,7 @@ namespace TencentCloud
 "KILLED" - terminated;
 "REMOVED" - deleted;
 "PAUSED" - paused.
+"WAITING" - waiting (which can be canceled)
                      */
                     std::string GetTaskStatus() const;
 
@@ -150,6 +152,7 @@ namespace TencentCloud
 "KILLED" - terminated;
 "REMOVED" - deleted;
 "PAUSED" - paused.
+"WAITING" - waiting (which can be canceled)
                      * @param TaskStatus Instance task status. Valid values:
 "UNDEFINED" - undefined;
 "INITIAL" - initializing;
@@ -159,6 +162,7 @@ namespace TencentCloud
 "KILLED" - terminated;
 "REMOVED" - deleted;
 "PAUSED" - paused.
+"WAITING" - waiting (which can be canceled)
                      */
                     void SetTaskStatus(const std::string& _taskStatus);
 
@@ -179,7 +183,7 @@ namespace TencentCloud
 "OPEN GTID" - enabling GTID of a TencentDB instance;
 "UPGRADE RO" - upgrading a read-only instance;
 "BATCH ROLLBACK" - rolling back databases in batches;
-"UPGRADE MASTER" - upgrading a master instance;
+"UPGRADE MASTER" - upgrading a primary instance;
 "DROP TABLES" - dropping a TencentDB table;
 "SWITCH DR TO MASTER" - promoting a disaster recovery instance.
                      * @return TaskType Instance task type. Valid values:
@@ -192,7 +196,7 @@ namespace TencentCloud
 "OPEN GTID" - enabling GTID of a TencentDB instance;
 "UPGRADE RO" - upgrading a read-only instance;
 "BATCH ROLLBACK" - rolling back databases in batches;
-"UPGRADE MASTER" - upgrading a master instance;
+"UPGRADE MASTER" - upgrading a primary instance;
 "DROP TABLES" - dropping a TencentDB table;
 "SWITCH DR TO MASTER" - promoting a disaster recovery instance.
                      */
@@ -209,7 +213,7 @@ namespace TencentCloud
 "OPEN GTID" - enabling GTID of a TencentDB instance;
 "UPGRADE RO" - upgrading a read-only instance;
 "BATCH ROLLBACK" - rolling back databases in batches;
-"UPGRADE MASTER" - upgrading a master instance;
+"UPGRADE MASTER" - upgrading a primary instance;
 "DROP TABLES" - dropping a TencentDB table;
 "SWITCH DR TO MASTER" - promoting a disaster recovery instance.
                      * @param TaskType Instance task type. Valid values:
@@ -222,7 +226,7 @@ namespace TencentCloud
 "OPEN GTID" - enabling GTID of a TencentDB instance;
 "UPGRADE RO" - upgrading a read-only instance;
 "BATCH ROLLBACK" - rolling back databases in batches;
-"UPGRADE MASTER" - upgrading a master instance;
+"UPGRADE MASTER" - upgrading a primary instance;
 "DROP TABLES" - dropping a TencentDB table;
 "SWITCH DR TO MASTER" - promoting a disaster recovery instance.
                      */
@@ -346,6 +350,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 "KILLED" - terminated;
 "REMOVED" - deleted;
 "PAUSED" - paused.
+"WAITING" - waiting (which can be canceled)
                      */
                     std::string m_taskStatus;
                     bool m_taskStatusHasBeenSet;
@@ -361,7 +366,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 "OPEN GTID" - enabling GTID of a TencentDB instance;
 "UPGRADE RO" - upgrading a read-only instance;
 "BATCH ROLLBACK" - rolling back databases in batches;
-"UPGRADE MASTER" - upgrading a master instance;
+"UPGRADE MASTER" - upgrading a primary instance;
 "DROP TABLES" - dropping a TencentDB table;
 "SWITCH DR TO MASTER" - promoting a disaster recovery instance.
                      */

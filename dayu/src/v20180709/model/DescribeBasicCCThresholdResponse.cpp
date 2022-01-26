@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dayu::V20180709::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeBasicCCThresholdResponse::DescribeBasicCCThresholdResponse() :
@@ -32,20 +31,20 @@ DescribeBasicCCThresholdResponse::DescribeBasicCCThresholdResponse() :
 
 CoreInternalOutcome DescribeBasicCCThresholdResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -56,11 +55,11 @@ CoreInternalOutcome DescribeBasicCCThresholdResponse::Deserialize(const string &
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -68,7 +67,7 @@ CoreInternalOutcome DescribeBasicCCThresholdResponse::Deserialize(const string &
     {
         if (!rsp["CCEnable"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CCEnable` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CCEnable` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_cCEnable = rsp["CCEnable"].GetUint64();
         m_cCEnableHasBeenSet = true;
@@ -78,7 +77,7 @@ CoreInternalOutcome DescribeBasicCCThresholdResponse::Deserialize(const string &
     {
         if (!rsp["CCThreshold"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `CCThreshold` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CCThreshold` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_cCThreshold = rsp["CCThreshold"].GetUint64();
         m_cCThresholdHasBeenSet = true;
@@ -86,6 +85,39 @@ CoreInternalOutcome DescribeBasicCCThresholdResponse::Deserialize(const string &
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeBasicCCThresholdResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_cCEnableHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CCEnable";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_cCEnable, allocator);
+    }
+
+    if (m_cCThresholdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CCThreshold";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_cCThreshold, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

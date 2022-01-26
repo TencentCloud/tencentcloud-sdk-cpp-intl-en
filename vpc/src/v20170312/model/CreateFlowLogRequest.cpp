@@ -20,106 +20,105 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateFlowLogRequest::CreateFlowLogRequest() :
-    m_vpcIdHasBeenSet(false),
     m_flowLogNameHasBeenSet(false),
     m_resourceTypeHasBeenSet(false),
     m_resourceIdHasBeenSet(false),
     m_trafficTypeHasBeenSet(false),
     m_cloudLogIdHasBeenSet(false),
-    m_flowLogDescriptionHasBeenSet(false)
+    m_vpcIdHasBeenSet(false),
+    m_flowLogDescriptionHasBeenSet(false),
+    m_tagsHasBeenSet(false)
 {
 }
 
 string CreateFlowLogRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
-
-    if (m_vpcIdHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "VpcId";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_vpcId.c_str(), allocator).Move(), allocator);
-    }
 
     if (m_flowLogNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FlowLogName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_flowLogName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_flowLogName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_resourceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResourceType";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_resourceType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_resourceType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_resourceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResourceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_resourceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_resourceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_trafficTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TrafficType";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_trafficType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_trafficType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cloudLogIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CloudLogId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_cloudLogId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_cloudLogId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_vpcIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VpcId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_vpcId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_flowLogDescriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FlowLogDescription";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_flowLogDescription.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_flowLogDescription.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
 
-
-string CreateFlowLogRequest::GetVpcId() const
-{
-    return m_vpcId;
-}
-
-void CreateFlowLogRequest::SetVpcId(const string& _vpcId)
-{
-    m_vpcId = _vpcId;
-    m_vpcIdHasBeenSet = true;
-}
-
-bool CreateFlowLogRequest::VpcIdHasBeenSet() const
-{
-    return m_vpcIdHasBeenSet;
-}
 
 string CreateFlowLogRequest::GetFlowLogName() const
 {
@@ -201,6 +200,22 @@ bool CreateFlowLogRequest::CloudLogIdHasBeenSet() const
     return m_cloudLogIdHasBeenSet;
 }
 
+string CreateFlowLogRequest::GetVpcId() const
+{
+    return m_vpcId;
+}
+
+void CreateFlowLogRequest::SetVpcId(const string& _vpcId)
+{
+    m_vpcId = _vpcId;
+    m_vpcIdHasBeenSet = true;
+}
+
+bool CreateFlowLogRequest::VpcIdHasBeenSet() const
+{
+    return m_vpcIdHasBeenSet;
+}
+
 string CreateFlowLogRequest::GetFlowLogDescription() const
 {
     return m_flowLogDescription;
@@ -215,6 +230,22 @@ void CreateFlowLogRequest::SetFlowLogDescription(const string& _flowLogDescripti
 bool CreateFlowLogRequest::FlowLogDescriptionHasBeenSet() const
 {
     return m_flowLogDescriptionHasBeenSet;
+}
+
+vector<Tag> CreateFlowLogRequest::GetTags() const
+{
+    return m_tags;
+}
+
+void CreateFlowLogRequest::SetTags(const vector<Tag>& _tags)
+{
+    m_tags = _tags;
+    m_tagsHasBeenSet = true;
+}
+
+bool CreateFlowLogRequest::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
 }
 
 

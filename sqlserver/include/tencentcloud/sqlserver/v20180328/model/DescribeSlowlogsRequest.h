@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Number of results per page. Value range: 1–100. Default value: 20
-                     * @return Limit Number of results per page. Value range: 1–100. Default value: 20
+                     * 获取Number of results per page. Value range: 1-100. Default value: 20
+                     * @return Limit Number of results per page. Value range: 1-100. Default value: 20
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results per page. Value range: 1–100. Default value: 20
-                     * @param Limit Number of results per page. Value range: 1–100. Default value: 20
+                     * 设置Number of results per page. Value range: 1-100. Default value: 20
+                     * @param Limit Number of results per page. Value range: 1-100. Default value: 20
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -153,7 +153,7 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Number of results per page. Value range: 1–100. Default value: 20
+                     * Number of results per page. Value range: 1-100. Default value: 20
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

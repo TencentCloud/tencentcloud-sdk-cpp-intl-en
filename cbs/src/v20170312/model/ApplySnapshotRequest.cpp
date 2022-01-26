@@ -20,41 +20,58 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Cbs::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 ApplySnapshotRequest::ApplySnapshotRequest() :
     m_snapshotIdHasBeenSet(false),
-    m_diskIdHasBeenSet(false)
+    m_diskIdHasBeenSet(false),
+    m_autoStopInstanceHasBeenSet(false),
+    m_autoStartInstanceHasBeenSet(false)
 {
 }
 
 string ApplySnapshotRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_snapshotIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SnapshotId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_snapshotId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_snapshotId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_diskIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_diskId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_diskId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_autoStopInstanceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutoStopInstance";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_autoStopInstance, allocator);
+    }
+
+    if (m_autoStartInstanceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutoStartInstance";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_autoStartInstance, allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -90,6 +107,38 @@ void ApplySnapshotRequest::SetDiskId(const string& _diskId)
 bool ApplySnapshotRequest::DiskIdHasBeenSet() const
 {
     return m_diskIdHasBeenSet;
+}
+
+bool ApplySnapshotRequest::GetAutoStopInstance() const
+{
+    return m_autoStopInstance;
+}
+
+void ApplySnapshotRequest::SetAutoStopInstance(const bool& _autoStopInstance)
+{
+    m_autoStopInstance = _autoStopInstance;
+    m_autoStopInstanceHasBeenSet = true;
+}
+
+bool ApplySnapshotRequest::AutoStopInstanceHasBeenSet() const
+{
+    return m_autoStopInstanceHasBeenSet;
+}
+
+bool ApplySnapshotRequest::GetAutoStartInstance() const
+{
+    return m_autoStartInstance;
+}
+
+void ApplySnapshotRequest::SetAutoStartInstance(const bool& _autoStartInstance)
+{
+    m_autoStartInstance = _autoStartInstance;
+    m_autoStartInstanceHasBeenSet = true;
+}
+
+bool ApplySnapshotRequest::AutoStartInstanceHasBeenSet() const
+{
+    return m_autoStartInstanceHasBeenSet;
 }
 
 

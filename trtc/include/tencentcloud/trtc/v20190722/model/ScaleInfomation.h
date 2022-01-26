@@ -65,14 +65,18 @@ namespace TencentCloud
                     bool TimeHasBeenSet() const;
 
                     /**
-                     * 获取Number of users in room
-                     * @return UserNumber Number of users in room
+                     * 获取Number of users in room. If a user enters the room for multiple times, the user will be counted as one user.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return UserNumber Number of users in room. If a user enters the room for multiple times, the user will be counted as one user.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetUserNumber() const;
 
                     /**
-                     * 设置Number of users in room
-                     * @param UserNumber Number of users in room
+                     * 设置Number of users in room. If a user enters the room for multiple times, the user will be counted as one user.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param UserNumber Number of users in room. If a user enters the room for multiple times, the user will be counted as one user.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetUserNumber(const uint64_t& _userNumber);
 
@@ -83,14 +87,18 @@ namespace TencentCloud
                     bool UserNumberHasBeenSet() const;
 
                     /**
-                     * 获取Number of times a room has been entered
-                     * @return UserCount Number of times a room has been entered
+                     * 获取Number of room entries. Every time when a user enters the room, it will be counted as one room entry.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return UserCount Number of room entries. Every time when a user enters the room, it will be counted as one room entry.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetUserCount() const;
 
                     /**
-                     * 设置Number of times a room has been entered
-                     * @param UserCount Number of times a room has been entered
+                     * 设置Number of room entries. Every time when a user enters the room, it will be counted as one room entry.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param UserCount Number of room entries. Every time when a user enters the room, it will be counted as one room entry.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetUserCount(const uint64_t& _userCount);
 
@@ -101,14 +109,18 @@ namespace TencentCloud
                     bool UserCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of rooms.
-                     * @return RoomNumbers Number of rooms.
+                     * 获取Number of rooms under `sdkappid` on a day
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return RoomNumbers Number of rooms under `sdkappid` on a day
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetRoomNumbers() const;
 
                     /**
-                     * 设置Number of rooms.
-                     * @param RoomNumbers Number of rooms.
+                     * 设置Number of rooms under `sdkappid` on a day
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param RoomNumbers Number of rooms under `sdkappid` on a day
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetRoomNumbers(const uint64_t& _roomNumbers);
 
@@ -127,19 +139,22 @@ namespace TencentCloud
                     bool m_timeHasBeenSet;
 
                     /**
-                     * Number of users in room
+                     * Number of users in room. If a user enters the room for multiple times, the user will be counted as one user.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_userNumber;
                     bool m_userNumberHasBeenSet;
 
                     /**
-                     * Number of times a room has been entered
+                     * Number of room entries. Every time when a user enters the room, it will be counted as one room entry.
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_userCount;
                     bool m_userCountHasBeenSet;
 
                     /**
-                     * Number of rooms.
+                     * Number of rooms under `sdkappid` on a day
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_roomNumbers;
                     bool m_roomNumbersHasBeenSet;

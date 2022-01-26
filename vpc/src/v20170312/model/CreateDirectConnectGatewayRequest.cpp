@@ -20,59 +20,85 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateDirectConnectGatewayRequest::CreateDirectConnectGatewayRequest() :
     m_directConnectGatewayNameHasBeenSet(false),
     m_networkTypeHasBeenSet(false),
     m_networkInstanceIdHasBeenSet(false),
-    m_gatewayTypeHasBeenSet(false)
+    m_gatewayTypeHasBeenSet(false),
+    m_modeTypeHasBeenSet(false),
+    m_zoneHasBeenSet(false),
+    m_haZoneGroupIdHasBeenSet(false)
 {
 }
 
 string CreateDirectConnectGatewayRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_directConnectGatewayNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DirectConnectGatewayName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_directConnectGatewayName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_directConnectGatewayName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_networkTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetworkType";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_networkType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_networkType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_networkInstanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetworkInstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_networkInstanceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_networkInstanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_gatewayTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "GatewayType";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_gatewayType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_gatewayType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_modeTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ModeType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_modeType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_zoneHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Zone";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_zone.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_haZoneGroupIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HaZoneGroupId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_haZoneGroupId.c_str(), allocator).Move(), allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -140,6 +166,54 @@ void CreateDirectConnectGatewayRequest::SetGatewayType(const string& _gatewayTyp
 bool CreateDirectConnectGatewayRequest::GatewayTypeHasBeenSet() const
 {
     return m_gatewayTypeHasBeenSet;
+}
+
+string CreateDirectConnectGatewayRequest::GetModeType() const
+{
+    return m_modeType;
+}
+
+void CreateDirectConnectGatewayRequest::SetModeType(const string& _modeType)
+{
+    m_modeType = _modeType;
+    m_modeTypeHasBeenSet = true;
+}
+
+bool CreateDirectConnectGatewayRequest::ModeTypeHasBeenSet() const
+{
+    return m_modeTypeHasBeenSet;
+}
+
+string CreateDirectConnectGatewayRequest::GetZone() const
+{
+    return m_zone;
+}
+
+void CreateDirectConnectGatewayRequest::SetZone(const string& _zone)
+{
+    m_zone = _zone;
+    m_zoneHasBeenSet = true;
+}
+
+bool CreateDirectConnectGatewayRequest::ZoneHasBeenSet() const
+{
+    return m_zoneHasBeenSet;
+}
+
+string CreateDirectConnectGatewayRequest::GetHaZoneGroupId() const
+{
+    return m_haZoneGroupId;
+}
+
+void CreateDirectConnectGatewayRequest::SetHaZoneGroupId(const string& _haZoneGroupId)
+{
+    m_haZoneGroupId = _haZoneGroupId;
+    m_haZoneGroupIdHasBeenSet = true;
+}
+
+bool CreateDirectConnectGatewayRequest::HaZoneGroupIdHasBeenSet() const
+{
+    return m_haZoneGroupIdHasBeenSet;
 }
 
 

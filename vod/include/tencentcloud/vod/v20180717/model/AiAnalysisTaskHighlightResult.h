@@ -67,14 +67,32 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code. 0: success; other values: failure.
-                     * @return ErrCode Error code. 0: success; other values: failure.
+                     * 获取Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+                     * @return ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+                     */
+                    std::string GetErrCodeExt() const;
+
+                    /**
+                     * 设置Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+                     * @param ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+                     */
+                    void SetErrCodeExt(const std::string& _errCodeExt);
+
+                    /**
+                     * 判断参数 ErrCodeExt 是否已赋值
+                     * @return ErrCodeExt 是否已赋值
+                     */
+                    bool ErrCodeExtHasBeenSet() const;
+
+                    /**
+                     * 获取Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+                     * @return ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置Error code. 0: success; other values: failure.
-                     * @param ErrCode Error code. 0: success; other values: failure.
+                     * 设置Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+                     * @param ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
                      */
                     void SetErrCode(const int64_t& _errCode);
 
@@ -151,7 +169,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code. 0: success; other values: failure.
+                     * Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+                     */
+                    std::string m_errCodeExt;
+                    bool m_errCodeExtHasBeenSet;
+
+                    /**
+                     * Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;

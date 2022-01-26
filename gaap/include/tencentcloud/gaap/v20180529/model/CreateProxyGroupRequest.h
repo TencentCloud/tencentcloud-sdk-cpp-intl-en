@@ -134,6 +134,42 @@ namespace TencentCloud
                      */
                     bool AccessRegionSetHasBeenSet() const;
 
+                    /**
+                     * 获取IP version. Valid values: `IPv4` (default), `IPv6`.
+                     * @return IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+                     */
+                    std::string GetIPAddressVersion() const;
+
+                    /**
+                     * 设置IP version. Valid values: `IPv4` (default), `IPv6`.
+                     * @param IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+                     */
+                    void SetIPAddressVersion(const std::string& _iPAddressVersion);
+
+                    /**
+                     * 判断参数 IPAddressVersion 是否已赋值
+                     * @return IPAddressVersion 是否已赋值
+                     */
+                    bool IPAddressVersionHasBeenSet() const;
+
+                    /**
+                     * 获取Package type of connection group. Valid values: `Thunder` (default) and `Accelerator`.
+                     * @return PackageType Package type of connection group. Valid values: `Thunder` (default) and `Accelerator`.
+                     */
+                    std::string GetPackageType() const;
+
+                    /**
+                     * 设置Package type of connection group. Valid values: `Thunder` (default) and `Accelerator`.
+                     * @param PackageType Package type of connection group. Valid values: `Thunder` (default) and `Accelerator`.
+                     */
+                    void SetPackageType(const std::string& _packageType);
+
+                    /**
+                     * 判断参数 PackageType 是否已赋值
+                     * @return PackageType 是否已赋值
+                     */
+                    bool PackageTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -165,6 +201,18 @@ namespace TencentCloud
                      */
                     std::vector<AccessConfiguration> m_accessRegionSet;
                     bool m_accessRegionSetHasBeenSet;
+
+                    /**
+                     * IP version. Valid values: `IPv4` (default), `IPv6`.
+                     */
+                    std::string m_iPAddressVersion;
+                    bool m_iPAddressVersionHasBeenSet;
+
+                    /**
+                     * Package type of connection group. Valid values: `Thunder` (default) and `Accelerator`.
+                     */
+                    std::string m_packageType;
+                    bool m_packageTypeHasBeenSet;
 
                 };
             }

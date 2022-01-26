@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Sts::V20180813::Model;
-using namespace rapidjson;
 using namespace std;
 
 Credentials::Credentials() :
@@ -28,7 +27,7 @@ Credentials::Credentials() :
 {
 }
 
-CoreInternalOutcome Credentials::Deserialize(const Value &value)
+CoreInternalOutcome Credentials::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome Credentials::Deserialize(const Value &value)
     {
         if (!value["Token"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Credentials.Token` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Credentials.Token` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_token = string(value["Token"].GetString());
         m_tokenHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome Credentials::Deserialize(const Value &value)
     {
         if (!value["TmpSecretId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Credentials.TmpSecretId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Credentials.TmpSecretId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tmpSecretId = string(value["TmpSecretId"].GetString());
         m_tmpSecretIdHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome Credentials::Deserialize(const Value &value)
     {
         if (!value["TmpSecretKey"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Credentials.TmpSecretKey` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Credentials.TmpSecretKey` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tmpSecretKey = string(value["TmpSecretKey"].GetString());
         m_tmpSecretKeyHasBeenSet = true;
@@ -67,31 +66,31 @@ CoreInternalOutcome Credentials::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Credentials::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Credentials::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_tokenHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Token";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_token.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_token.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tmpSecretIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TmpSecretId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_tmpSecretId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tmpSecretId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tmpSecretKeyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TmpSecretKey";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_tmpSecretKey.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tmpSecretKey.c_str(), allocator).Move(), allocator);
     }
 
 }

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mongodb::V20190725::Model;
-using namespace rapidjson;
 using namespace std;
 
 BackupInfo::BackupInfo() :
@@ -34,7 +33,7 @@ BackupInfo::BackupInfo() :
 {
 }
 
-CoreInternalOutcome BackupInfo::Deserialize(const Value &value)
+CoreInternalOutcome BackupInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -43,7 +42,7 @@ CoreInternalOutcome BackupInfo::Deserialize(const Value &value)
     {
         if (!value["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BackupInfo.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(value["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -53,7 +52,7 @@ CoreInternalOutcome BackupInfo::Deserialize(const Value &value)
     {
         if (!value["BackupType"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `BackupInfo.BackupType` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.BackupType` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_backupType = value["BackupType"].GetUint64();
         m_backupTypeHasBeenSet = true;
@@ -63,7 +62,7 @@ CoreInternalOutcome BackupInfo::Deserialize(const Value &value)
     {
         if (!value["BackupName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BackupInfo.BackupName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.BackupName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_backupName = string(value["BackupName"].GetString());
         m_backupNameHasBeenSet = true;
@@ -73,7 +72,7 @@ CoreInternalOutcome BackupInfo::Deserialize(const Value &value)
     {
         if (!value["BackupDesc"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BackupInfo.BackupDesc` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.BackupDesc` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_backupDesc = string(value["BackupDesc"].GetString());
         m_backupDescHasBeenSet = true;
@@ -83,7 +82,7 @@ CoreInternalOutcome BackupInfo::Deserialize(const Value &value)
     {
         if (!value["BackupSize"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `BackupInfo.BackupSize` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.BackupSize` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_backupSize = value["BackupSize"].GetUint64();
         m_backupSizeHasBeenSet = true;
@@ -93,7 +92,7 @@ CoreInternalOutcome BackupInfo::Deserialize(const Value &value)
     {
         if (!value["StartTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BackupInfo.StartTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.StartTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_startTime = string(value["StartTime"].GetString());
         m_startTimeHasBeenSet = true;
@@ -103,7 +102,7 @@ CoreInternalOutcome BackupInfo::Deserialize(const Value &value)
     {
         if (!value["EndTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BackupInfo.EndTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.EndTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_endTime = string(value["EndTime"].GetString());
         m_endTimeHasBeenSet = true;
@@ -113,7 +112,7 @@ CoreInternalOutcome BackupInfo::Deserialize(const Value &value)
     {
         if (!value["Status"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `BackupInfo.Status` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.Status` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_status = value["Status"].GetUint64();
         m_statusHasBeenSet = true;
@@ -123,7 +122,7 @@ CoreInternalOutcome BackupInfo::Deserialize(const Value &value)
     {
         if (!value["BackupMethod"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `BackupInfo.BackupMethod` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.BackupMethod` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_backupMethod = value["BackupMethod"].GetUint64();
         m_backupMethodHasBeenSet = true;
@@ -133,20 +132,20 @@ CoreInternalOutcome BackupInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void BackupInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void BackupInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_backupTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BackupType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_backupType, allocator);
@@ -154,23 +153,23 @@ void BackupInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_backupNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BackupName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_backupName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_backupName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_backupDescHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BackupDesc";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_backupDesc.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_backupDesc.c_str(), allocator).Move(), allocator);
     }
 
     if (m_backupSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BackupSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_backupSize, allocator);
@@ -178,23 +177,23 @@ void BackupInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_startTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_startTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_startTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_endTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_endTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_endTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);
@@ -202,7 +201,7 @@ void BackupInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_backupMethodHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BackupMethod";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_backupMethod, allocator);

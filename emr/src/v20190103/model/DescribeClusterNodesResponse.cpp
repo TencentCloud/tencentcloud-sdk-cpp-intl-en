@@ -21,32 +21,32 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Emr::V20190103::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeClusterNodesResponse::DescribeClusterNodesResponse() :
     m_totalCntHasBeenSet(false),
     m_nodeListHasBeenSet(false),
-    m_tagKeysHasBeenSet(false)
+    m_tagKeysHasBeenSet(false),
+    m_hardwareResourceTypeListHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome DescribeClusterNodesResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -57,11 +57,11 @@ CoreInternalOutcome DescribeClusterNodesResponse::Deserialize(const string &payl
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -69,7 +69,7 @@ CoreInternalOutcome DescribeClusterNodesResponse::Deserialize(const string &payl
     {
         if (!rsp["TotalCnt"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TotalCnt` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TotalCnt` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_totalCnt = rsp["TotalCnt"].GetInt64();
         m_totalCntHasBeenSet = true;
@@ -78,10 +78,10 @@ CoreInternalOutcome DescribeClusterNodesResponse::Deserialize(const string &payl
     if (rsp.HasMember("NodeList") && !rsp["NodeList"].IsNull())
     {
         if (!rsp["NodeList"].IsArray())
-            return CoreInternalOutcome(Error("response `NodeList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `NodeList` is not array type"));
 
-        const Value &tmpValue = rsp["NodeList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["NodeList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             NodeHardwareInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -98,18 +98,97 @@ CoreInternalOutcome DescribeClusterNodesResponse::Deserialize(const string &payl
     if (rsp.HasMember("TagKeys") && !rsp["TagKeys"].IsNull())
     {
         if (!rsp["TagKeys"].IsArray())
-            return CoreInternalOutcome(Error("response `TagKeys` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `TagKeys` is not array type"));
 
-        const Value &tmpValue = rsp["TagKeys"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["TagKeys"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_tagKeys.push_back((*itr).GetString());
         }
         m_tagKeysHasBeenSet = true;
     }
 
+    if (rsp.HasMember("HardwareResourceTypeList") && !rsp["HardwareResourceTypeList"].IsNull())
+    {
+        if (!rsp["HardwareResourceTypeList"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `HardwareResourceTypeList` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["HardwareResourceTypeList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_hardwareResourceTypeList.push_back((*itr).GetString());
+        }
+        m_hardwareResourceTypeListHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeClusterNodesResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_totalCntHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalCnt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalCnt, allocator);
+    }
+
+    if (m_nodeListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NodeList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_nodeList.begin(); itr != m_nodeList.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_tagKeysHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TagKeys";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_tagKeys.begin(); itr != m_tagKeys.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_hardwareResourceTypeListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HardwareResourceTypeList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_hardwareResourceTypeList.begin(); itr != m_hardwareResourceTypeList.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 
@@ -141,6 +220,16 @@ vector<string> DescribeClusterNodesResponse::GetTagKeys() const
 bool DescribeClusterNodesResponse::TagKeysHasBeenSet() const
 {
     return m_tagKeysHasBeenSet;
+}
+
+vector<string> DescribeClusterNodesResponse::GetHardwareResourceTypeList() const
+{
+    return m_hardwareResourceTypeList;
+}
+
+bool DescribeClusterNodesResponse::HardwareResourceTypeListHasBeenSet() const
+{
+    return m_hardwareResourceTypeListHasBeenSet;
 }
 
 

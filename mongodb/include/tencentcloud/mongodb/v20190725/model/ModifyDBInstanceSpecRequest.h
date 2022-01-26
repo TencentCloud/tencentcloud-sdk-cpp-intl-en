@@ -114,6 +114,60 @@ namespace TencentCloud
                      */
                     bool OplogSizeHasBeenSet() const;
 
+                    /**
+                     * 获取Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+                     * @return NodeNum Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+                     */
+                    uint64_t GetNodeNum() const;
+
+                    /**
+                     * 设置Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+                     * @param NodeNum Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+                     */
+                    void SetNodeNum(const uint64_t& _nodeNum);
+
+                    /**
+                     * 判断参数 NodeNum 是否已赋值
+                     * @return NodeNum 是否已赋值
+                     */
+                    bool NodeNumHasBeenSet() const;
+
+                    /**
+                     * 获取Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+                     * @return ReplicateSetNum Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+                     */
+                    uint64_t GetReplicateSetNum() const;
+
+                    /**
+                     * 设置Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+                     * @param ReplicateSetNum Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+                     */
+                    void SetReplicateSetNum(const uint64_t& _replicateSetNum);
+
+                    /**
+                     * 判断参数 ReplicateSetNum 是否已赋值
+                     * @return ReplicateSetNum 是否已赋值
+                     */
+                    bool ReplicateSetNumHasBeenSet() const;
+
+                    /**
+                     * 获取Switch time. Valid values: `0` (upon modification completion), `1` (during maintenance time). Default value: `0`. If the quantity of nodes or shards is modified, the value will be `0`.
+                     * @return InMaintenance Switch time. Valid values: `0` (upon modification completion), `1` (during maintenance time). Default value: `0`. If the quantity of nodes or shards is modified, the value will be `0`.
+                     */
+                    uint64_t GetInMaintenance() const;
+
+                    /**
+                     * 设置Switch time. Valid values: `0` (upon modification completion), `1` (during maintenance time). Default value: `0`. If the quantity of nodes or shards is modified, the value will be `0`.
+                     * @param InMaintenance Switch time. Valid values: `0` (upon modification completion), `1` (during maintenance time). Default value: `0`. If the quantity of nodes or shards is modified, the value will be `0`.
+                     */
+                    void SetInMaintenance(const uint64_t& _inMaintenance);
+
+                    /**
+                     * 判断参数 InMaintenance 是否已赋值
+                     * @return InMaintenance 是否已赋值
+                     */
+                    bool InMaintenanceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -139,6 +193,24 @@ namespace TencentCloud
                      */
                     uint64_t m_oplogSize;
                     bool m_oplogSizeHasBeenSet;
+
+                    /**
+                     * Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+                     */
+                    uint64_t m_nodeNum;
+                    bool m_nodeNumHasBeenSet;
+
+                    /**
+                     * Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+                     */
+                    uint64_t m_replicateSetNum;
+                    bool m_replicateSetNumHasBeenSet;
+
+                    /**
+                     * Switch time. Valid values: `0` (upon modification completion), `1` (during maintenance time). Default value: `0`. If the quantity of nodes or shards is modified, the value will be `0`.
+                     */
+                    uint64_t m_inMaintenance;
+                    bool m_inMaintenanceHasBeenSet;
 
                 };
             }

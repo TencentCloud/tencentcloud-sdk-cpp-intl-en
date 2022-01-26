@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](/document/product/362/16315).
-                     * @return DiskId ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](/document/product/362/16315).
+                     * 获取ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
+                     * @return DiskId ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
                      */
                     std::string GetDiskId() const;
 
                     /**
-                     * 设置ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](/document/product/362/16315).
-                     * @param DiskId ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](/document/product/362/16315).
+                     * 设置ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
+                     * @param DiskId ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
                      */
                     void SetDiskId(const std::string& _diskId);
 
@@ -78,10 +78,28 @@ namespace TencentCloud
                      */
                     bool SnapshotNameHasBeenSet() const;
 
+                    /**
+                     * 获取Expiration time of the snapshot. It must be in UTC ISO-8601 format, eg. 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires
+                     * @return Deadline Expiration time of the snapshot. It must be in UTC ISO-8601 format, eg. 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires
+                     */
+                    std::string GetDeadline() const;
+
+                    /**
+                     * 设置Expiration time of the snapshot. It must be in UTC ISO-8601 format, eg. 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires
+                     * @param Deadline Expiration time of the snapshot. It must be in UTC ISO-8601 format, eg. 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires
+                     */
+                    void SetDeadline(const std::string& _deadline);
+
+                    /**
+                     * 判断参数 Deadline 是否已赋值
+                     * @return Deadline 是否已赋值
+                     */
+                    bool DeadlineHasBeenSet() const;
+
                 private:
 
                     /**
-                     * ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](/document/product/362/16315).
+                     * ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
                      */
                     std::string m_diskId;
                     bool m_diskIdHasBeenSet;
@@ -91,6 +109,12 @@ namespace TencentCloud
                      */
                     std::string m_snapshotName;
                     bool m_snapshotNameHasBeenSet;
+
+                    /**
+                     * Expiration time of the snapshot. It must be in UTC ISO-8601 format, eg. 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires
+                     */
+                    std::string m_deadline;
+                    bool m_deadlineHasBeenSet;
 
                 };
             }

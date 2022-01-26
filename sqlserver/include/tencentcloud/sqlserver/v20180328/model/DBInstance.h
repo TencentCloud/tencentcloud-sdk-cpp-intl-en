@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/sqlserver/v20180328/model/ResourceTag.h>
 
 
 namespace TencentCloud
@@ -173,14 +174,14 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (master/slave switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
-                     * @return Status Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (master/slave switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
+                     * 获取Instance status. Valid values: <li>1: creating</li> <li>2: running</li> <li>3: instance operations restricted (due to the ongoing primary-replica switch)</li> <li>4: isolated</li> <li>5: repossessing</li> <li>6: repossessed</li> <li>7: running tasks (such as backup and rollback tasks)</li> <li>8: eliminated</li> <li>9: expanding capacity</li> <li>10: migrating</li> <li>11: read-only</li> <li>12: restarting</li>  <li>13: modifying configuration and waiting for switch</li> <li>14: implementing pub/sub</li> <li>15: modifying pub/sub configuration</li> <li>16: modifying configuration and switching</li> <li>17: creating read-only instances</li>
+                     * @return Status Instance status. Valid values: <li>1: creating</li> <li>2: running</li> <li>3: instance operations restricted (due to the ongoing primary-replica switch)</li> <li>4: isolated</li> <li>5: repossessing</li> <li>6: repossessed</li> <li>7: running tasks (such as backup and rollback tasks)</li> <li>8: eliminated</li> <li>9: expanding capacity</li> <li>10: migrating</li> <li>11: read-only</li> <li>12: restarting</li>  <li>13: modifying configuration and waiting for switch</li> <li>14: implementing pub/sub</li> <li>15: modifying pub/sub configuration</li> <li>16: modifying configuration and switching</li> <li>17: creating read-only instances</li>
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (master/slave switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
-                     * @param Status Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (master/slave switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
+                     * 设置Instance status. Valid values: <li>1: creating</li> <li>2: running</li> <li>3: instance operations restricted (due to the ongoing primary-replica switch)</li> <li>4: isolated</li> <li>5: repossessing</li> <li>6: repossessed</li> <li>7: running tasks (such as backup and rollback tasks)</li> <li>8: eliminated</li> <li>9: expanding capacity</li> <li>10: migrating</li> <li>11: read-only</li> <li>12: restarting</li>  <li>13: modifying configuration and waiting for switch</li> <li>14: implementing pub/sub</li> <li>15: modifying pub/sub configuration</li> <li>16: modifying configuration and switching</li> <li>17: creating read-only instances</li>
+                     * @param Status Instance status. Valid values: <li>1: creating</li> <li>2: running</li> <li>3: instance operations restricted (due to the ongoing primary-replica switch)</li> <li>4: isolated</li> <li>5: repossessing</li> <li>6: repossessed</li> <li>7: running tasks (such as backup and rollback tasks)</li> <li>8: eliminated</li> <li>9: expanding capacity</li> <li>10: migrating</li> <li>11: read-only</li> <li>12: restarting</li>  <li>13: modifying configuration and waiting for switch</li> <li>14: implementing pub/sub</li> <li>15: modifying pub/sub configuration</li> <li>16: modifying configuration and switching</li> <li>17: creating read-only instances</li>
                      */
                     void SetStatus(const int64_t& _status);
 
@@ -407,14 +408,14 @@ namespace TencentCloud
                     bool RenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Instance high availability status. 1: dual-server high-availability, 2: single-server
-                     * @return Model Instance high availability status. 1: dual-server high-availability, 2: single-server
+                     * 获取High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (private consumption)
+                     * @return Model High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (private consumption)
                      */
                     int64_t GetModel() const;
 
                     /**
-                     * 设置Instance high availability status. 1: dual-server high-availability, 2: single-server
-                     * @param Model Instance high availability status. 1: dual-server high-availability, 2: single-server
+                     * 设置High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (private consumption)
+                     * @param Model High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (private consumption)
                      */
                     void SetModel(const int64_t& _model);
 
@@ -622,6 +623,138 @@ namespace TencentCloud
                      */
                     bool UniqSubnetIdHasBeenSet() const;
 
+                    /**
+                     * 获取Instance isolation.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return IsolateOperator Instance isolation.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetIsolateOperator() const;
+
+                    /**
+                     * 设置Instance isolation.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param IsolateOperator Instance isolation.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetIsolateOperator(const std::string& _isolateOperator);
+
+                    /**
+                     * 判断参数 IsolateOperator 是否已赋值
+                     * @return IsolateOperator 是否已赋值
+                     */
+                    bool IsolateOperatorHasBeenSet() const;
+
+                    /**
+                     * 获取Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return SubFlag Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetSubFlag() const;
+
+                    /**
+                     * 设置Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param SubFlag Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetSubFlag(const std::string& _subFlag);
+
+                    /**
+                     * 判断参数 SubFlag 是否已赋值
+                     * @return SubFlag 是否已赋值
+                     */
+                    bool SubFlagHasBeenSet() const;
+
+                    /**
+                     * 获取Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return ROFlag Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetROFlag() const;
+
+                    /**
+                     * 设置Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param ROFlag Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetROFlag(const std::string& _rOFlag);
+
+                    /**
+                     * 判断参数 ROFlag 是否已赋值
+                     * @return ROFlag 是否已赋值
+                     */
+                    bool ROFlagHasBeenSet() const;
+
+                    /**
+                     * 获取Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return HAFlag Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetHAFlag() const;
+
+                    /**
+                     * 设置Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param HAFlag Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetHAFlag(const std::string& _hAFlag);
+
+                    /**
+                     * 判断参数 HAFlag 是否已赋值
+                     * @return HAFlag 是否已赋值
+                     */
+                    bool HAFlagHasBeenSet() const;
+
+                    /**
+                     * 获取The list of tags associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return ResourceTags The list of tags associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ResourceTag> GetResourceTags() const;
+
+                    /**
+                     * 设置The list of tags associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param ResourceTags The list of tags associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetResourceTags(const std::vector<ResourceTag>& _resourceTags);
+
+                    /**
+                     * 判断参数 ResourceTags 是否已赋值
+                     * @return ResourceTags 是否已赋值
+                     */
+                    bool ResourceTagsHasBeenSet() const;
+
+                    /**
+                     * 获取Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return BackupModel Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetBackupModel() const;
+
+                    /**
+                     * 设置Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param BackupModel Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetBackupModel(const std::string& _backupModel);
+
+                    /**
+                     * 判断参数 BackupModel 是否已赋值
+                     * @return BackupModel 是否已赋值
+                     */
+                    bool BackupModelHasBeenSet() const;
+
                 private:
 
                     /**
@@ -667,7 +800,7 @@ namespace TencentCloud
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (master/slave switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
+                     * Instance status. Valid values: <li>1: creating</li> <li>2: running</li> <li>3: instance operations restricted (due to the ongoing primary-replica switch)</li> <li>4: isolated</li> <li>5: repossessing</li> <li>6: repossessed</li> <li>7: running tasks (such as backup and rollback tasks)</li> <li>8: eliminated</li> <li>9: expanding capacity</li> <li>10: migrating</li> <li>11: read-only</li> <li>12: restarting</li>  <li>13: modifying configuration and waiting for switch</li> <li>14: implementing pub/sub</li> <li>15: modifying pub/sub configuration</li> <li>16: modifying configuration and switching</li> <li>17: creating read-only instances</li>
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
@@ -745,7 +878,7 @@ namespace TencentCloud
                     bool m_renewFlagHasBeenSet;
 
                     /**
-                     * Instance high availability status. 1: dual-server high-availability, 2: single-server
+                     * High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (private consumption)
                      */
                     int64_t m_model;
                     bool m_modelHasBeenSet;
@@ -815,6 +948,48 @@ namespace TencentCloud
                      */
                     std::string m_uniqSubnetId;
                     bool m_uniqSubnetIdHasBeenSet;
+
+                    /**
+                     * Instance isolation.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_isolateOperator;
+                    bool m_isolateOperatorHasBeenSet;
+
+                    /**
+                     * Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_subFlag;
+                    bool m_subFlagHasBeenSet;
+
+                    /**
+                     * Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_rOFlag;
+                    bool m_rOFlagHasBeenSet;
+
+                    /**
+                     * Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_hAFlag;
+                    bool m_hAFlagHasBeenSet;
+
+                    /**
+                     * The list of tags associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ResourceTag> m_resourceTags;
+                    bool m_resourceTagsHasBeenSet;
+
+                    /**
+                     * Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_backupModel;
+                    bool m_backupModelHasBeenSet;
 
                 };
             }

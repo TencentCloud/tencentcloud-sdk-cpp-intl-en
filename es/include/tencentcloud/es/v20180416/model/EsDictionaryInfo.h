@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * ES IK dictionary information
+                * ES dictionary information
                 */
                 class EsDictionaryInfo : public AbstractModel
                 {
@@ -83,6 +83,60 @@ namespace TencentCloud
                      */
                     bool StopwordsHasBeenSet() const;
 
+                    /**
+                     * 获取QQ dictionary list
+                     * @return QQDict QQ dictionary list
+                     */
+                    std::vector<DictInfo> GetQQDict() const;
+
+                    /**
+                     * 设置QQ dictionary list
+                     * @param QQDict QQ dictionary list
+                     */
+                    void SetQQDict(const std::vector<DictInfo>& _qQDict);
+
+                    /**
+                     * 判断参数 QQDict 是否已赋值
+                     * @return QQDict 是否已赋值
+                     */
+                    bool QQDictHasBeenSet() const;
+
+                    /**
+                     * 获取Synonym dictionary list
+                     * @return Synonym Synonym dictionary list
+                     */
+                    std::vector<DictInfo> GetSynonym() const;
+
+                    /**
+                     * 设置Synonym dictionary list
+                     * @param Synonym Synonym dictionary list
+                     */
+                    void SetSynonym(const std::vector<DictInfo>& _synonym);
+
+                    /**
+                     * 判断参数 Synonym 是否已赋值
+                     * @return Synonym 是否已赋值
+                     */
+                    bool SynonymHasBeenSet() const;
+
+                    /**
+                     * 获取Update dictionary type
+                     * @return UpdateType Update dictionary type
+                     */
+                    std::string GetUpdateType() const;
+
+                    /**
+                     * 设置Update dictionary type
+                     * @param UpdateType Update dictionary type
+                     */
+                    void SetUpdateType(const std::string& _updateType);
+
+                    /**
+                     * 判断参数 UpdateType 是否已赋值
+                     * @return UpdateType 是否已赋值
+                     */
+                    bool UpdateTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -96,6 +150,24 @@ namespace TencentCloud
                      */
                     std::vector<DictInfo> m_stopwords;
                     bool m_stopwordsHasBeenSet;
+
+                    /**
+                     * QQ dictionary list
+                     */
+                    std::vector<DictInfo> m_qQDict;
+                    bool m_qQDictHasBeenSet;
+
+                    /**
+                     * Synonym dictionary list
+                     */
+                    std::vector<DictInfo> m_synonym;
+                    bool m_synonymHasBeenSet;
+
+                    /**
+                     * Update dictionary type
+                     */
+                    std::string m_updateType;
+                    bool m_updateTypeHasBeenSet;
 
                 };
             }

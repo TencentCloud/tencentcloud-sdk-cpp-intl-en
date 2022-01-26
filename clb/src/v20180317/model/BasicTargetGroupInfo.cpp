@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Clb::V20180317::Model;
-using namespace rapidjson;
 using namespace std;
 
 BasicTargetGroupInfo::BasicTargetGroupInfo() :
@@ -27,7 +26,7 @@ BasicTargetGroupInfo::BasicTargetGroupInfo() :
 {
 }
 
-CoreInternalOutcome BasicTargetGroupInfo::Deserialize(const Value &value)
+CoreInternalOutcome BasicTargetGroupInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome BasicTargetGroupInfo::Deserialize(const Value &value)
     {
         if (!value["TargetGroupId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BasicTargetGroupInfo.TargetGroupId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BasicTargetGroupInfo.TargetGroupId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_targetGroupId = string(value["TargetGroupId"].GetString());
         m_targetGroupIdHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome BasicTargetGroupInfo::Deserialize(const Value &value)
     {
         if (!value["TargetGroupName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BasicTargetGroupInfo.TargetGroupName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BasicTargetGroupInfo.TargetGroupName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_targetGroupName = string(value["TargetGroupName"].GetString());
         m_targetGroupNameHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome BasicTargetGroupInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void BasicTargetGroupInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void BasicTargetGroupInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_targetGroupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TargetGroupId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_targetGroupId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_targetGroupId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_targetGroupNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TargetGroupName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_targetGroupName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_targetGroupName.c_str(), allocator).Move(), allocator);
     }
 
 }

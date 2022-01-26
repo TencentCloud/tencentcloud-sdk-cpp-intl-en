@@ -236,14 +236,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool GamePropertiesHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of players
-                     * @return MaximumPlayerSessionCount Maximum number of players
+                     * 获取The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
+                     * @return MaximumPlayerSessionCount The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
                      */
                     uint64_t GetMaximumPlayerSessionCount() const;
 
                     /**
-                     * 设置Maximum number of players
-                     * @param MaximumPlayerSessionCount Maximum number of players
+                     * 设置The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
+                     * @param MaximumPlayerSessionCount The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
                      */
                     void SetMaximumPlayerSessionCount(const uint64_t& _maximumPlayerSessionCount);
 
@@ -466,7 +466,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_gamePropertiesHasBeenSet;
 
                     /**
-                     * Maximum number of players
+                     * The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
                      */
                     uint64_t m_maximumPlayerSessionCount;
                     bool m_maximumPlayerSessionCountHasBeenSet;

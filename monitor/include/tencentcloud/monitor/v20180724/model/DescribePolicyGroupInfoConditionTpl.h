@@ -181,17 +181,17 @@ Note: This field may return null, indicating that no valid value was found.
                     bool InsertTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether the “AND” rule is used.
+                     * 获取Whether the 'AND' rule is used.
 Note: This field may return null, indicating that no valid value was found.
-                     * @return IsUnionRule Whether the “AND” rule is used.
+                     * @return IsUnionRule Whether the 'AND' rule is used.
 Note: This field may return null, indicating that no valid value was found.
                      */
                     int64_t GetIsUnionRule() const;
 
                     /**
-                     * 设置Whether the “AND” rule is used.
+                     * 设置Whether the 'AND' rule is used.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param IsUnionRule Whether the “AND” rule is used.
+                     * @param IsUnionRule Whether the 'AND' rule is used.
 Note: This field may return null, indicating that no valid value was found.
                      */
                     void SetIsUnionRule(const int64_t& _isUnionRule);
@@ -249,7 +249,7 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_insertTimeHasBeenSet;
 
                     /**
-                     * Whether the “AND” rule is used.
+                     * Whether the 'AND' rule is used.
 Note: This field may return null, indicating that no valid value was found.
                      */
                     int64_t m_isUnionRule;

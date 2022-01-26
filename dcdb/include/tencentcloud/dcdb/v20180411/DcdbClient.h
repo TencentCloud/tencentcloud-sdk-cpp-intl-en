@@ -23,6 +23,10 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/dcdb/v20180411/model/AssociateSecurityGroupsRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/AssociateSecurityGroupsResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/CancelDcnJobRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/CancelDcnJobResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/CloneAccountRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/CloneAccountResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/CloseDBExtranetAccessRequest.h>
@@ -41,8 +45,12 @@
 #include <tencentcloud/dcdb/v20180411/model/DescribeDBLogFilesResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDBParametersRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDBParametersResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeDBSecurityGroupsRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeDBSecurityGroupsResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDBSyncModeRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDBSyncModeResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeDCDBInstanceNodeInfoRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeDCDBInstanceNodeInfoResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDCDBInstancesRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDCDBInstancesResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDCDBShardsRequest.h>
@@ -53,14 +61,30 @@
 #include <tencentcloud/dcdb/v20180411/model/DescribeDatabaseTableResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDatabasesRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDatabasesResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeDcnDetailRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeDcnDetailResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeFileDownloadUrlRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeFileDownloadUrlResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeFlowRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeFlowResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeProjectSecurityGroupsRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeProjectSecurityGroupsResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeProjectsRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeProjectsResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/DestroyDCDBInstanceRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/DestroyDCDBInstanceResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/DestroyHourDCDBInstanceRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/DestroyHourDCDBInstanceResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/DisassociateSecurityGroupsRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/DisassociateSecurityGroupsResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/GrantAccountPrivilegesRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/GrantAccountPrivilegesResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/InitDCDBInstancesRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/InitDCDBInstancesResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/ModifyAccountDescriptionRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/ModifyAccountDescriptionResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/ModifyDBInstanceSecurityGroupsRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/ModifyDBInstanceSecurityGroupsResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/ModifyDBInstancesProjectRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/ModifyDBInstancesProjectResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/ModifyDBParametersRequest.h>
@@ -85,80 +109,134 @@ namespace TencentCloud
                 DcdbClient(const Credential &credential, const std::string &region);
                 DcdbClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::CloneAccountResponse> CloneAccountOutcome;
+                typedef Outcome<Core::Error, Model::AssociateSecurityGroupsResponse> AssociateSecurityGroupsOutcome;
+                typedef std::future<AssociateSecurityGroupsOutcome> AssociateSecurityGroupsOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::AssociateSecurityGroupsRequest&, AssociateSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssociateSecurityGroupsAsyncHandler;
+                typedef Outcome<Core::Error, Model::CancelDcnJobResponse> CancelDcnJobOutcome;
+                typedef std::future<CancelDcnJobOutcome> CancelDcnJobOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::CancelDcnJobRequest&, CancelDcnJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CancelDcnJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::CloneAccountResponse> CloneAccountOutcome;
                 typedef std::future<CloneAccountOutcome> CloneAccountOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::CloneAccountRequest&, CloneAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloneAccountAsyncHandler;
-                typedef Outcome<Error, Model::CloseDBExtranetAccessResponse> CloseDBExtranetAccessOutcome;
+                typedef Outcome<Core::Error, Model::CloseDBExtranetAccessResponse> CloseDBExtranetAccessOutcome;
                 typedef std::future<CloseDBExtranetAccessOutcome> CloseDBExtranetAccessOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::CloseDBExtranetAccessRequest&, CloseDBExtranetAccessOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloseDBExtranetAccessAsyncHandler;
-                typedef Outcome<Error, Model::CopyAccountPrivilegesResponse> CopyAccountPrivilegesOutcome;
+                typedef Outcome<Core::Error, Model::CopyAccountPrivilegesResponse> CopyAccountPrivilegesOutcome;
                 typedef std::future<CopyAccountPrivilegesOutcome> CopyAccountPrivilegesOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::CopyAccountPrivilegesRequest&, CopyAccountPrivilegesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CopyAccountPrivilegesAsyncHandler;
-                typedef Outcome<Error, Model::CreateAccountResponse> CreateAccountOutcome;
+                typedef Outcome<Core::Error, Model::CreateAccountResponse> CreateAccountOutcome;
                 typedef std::future<CreateAccountOutcome> CreateAccountOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::CreateAccountRequest&, CreateAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAccountAsyncHandler;
-                typedef Outcome<Error, Model::DeleteAccountResponse> DeleteAccountOutcome;
+                typedef Outcome<Core::Error, Model::DeleteAccountResponse> DeleteAccountOutcome;
                 typedef std::future<DeleteAccountOutcome> DeleteAccountOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DeleteAccountRequest&, DeleteAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAccountAsyncHandler;
-                typedef Outcome<Error, Model::DescribeAccountPrivilegesResponse> DescribeAccountPrivilegesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAccountPrivilegesResponse> DescribeAccountPrivilegesOutcome;
                 typedef std::future<DescribeAccountPrivilegesOutcome> DescribeAccountPrivilegesOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeAccountPrivilegesRequest&, DescribeAccountPrivilegesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccountPrivilegesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeAccountsResponse> DescribeAccountsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeAccountsResponse> DescribeAccountsOutcome;
                 typedef std::future<DescribeAccountsOutcome> DescribeAccountsOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeAccountsRequest&, DescribeAccountsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccountsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDBLogFilesResponse> DescribeDBLogFilesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDBLogFilesResponse> DescribeDBLogFilesOutcome;
                 typedef std::future<DescribeDBLogFilesOutcome> DescribeDBLogFilesOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeDBLogFilesRequest&, DescribeDBLogFilesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBLogFilesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDBParametersResponse> DescribeDBParametersOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDBParametersResponse> DescribeDBParametersOutcome;
                 typedef std::future<DescribeDBParametersOutcome> DescribeDBParametersOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeDBParametersRequest&, DescribeDBParametersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBParametersAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDBSyncModeResponse> DescribeDBSyncModeOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDBSecurityGroupsResponse> DescribeDBSecurityGroupsOutcome;
+                typedef std::future<DescribeDBSecurityGroupsOutcome> DescribeDBSecurityGroupsOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::DescribeDBSecurityGroupsRequest&, DescribeDBSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBSecurityGroupsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDBSyncModeResponse> DescribeDBSyncModeOutcome;
                 typedef std::future<DescribeDBSyncModeOutcome> DescribeDBSyncModeOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeDBSyncModeRequest&, DescribeDBSyncModeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBSyncModeAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDCDBInstancesResponse> DescribeDCDBInstancesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDCDBInstanceNodeInfoResponse> DescribeDCDBInstanceNodeInfoOutcome;
+                typedef std::future<DescribeDCDBInstanceNodeInfoOutcome> DescribeDCDBInstanceNodeInfoOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::DescribeDCDBInstanceNodeInfoRequest&, DescribeDCDBInstanceNodeInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDCDBInstanceNodeInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDCDBInstancesResponse> DescribeDCDBInstancesOutcome;
                 typedef std::future<DescribeDCDBInstancesOutcome> DescribeDCDBInstancesOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeDCDBInstancesRequest&, DescribeDCDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDCDBInstancesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDCDBShardsResponse> DescribeDCDBShardsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDCDBShardsResponse> DescribeDCDBShardsOutcome;
                 typedef std::future<DescribeDCDBShardsOutcome> DescribeDCDBShardsOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeDCDBShardsRequest&, DescribeDCDBShardsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDCDBShardsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDatabaseObjectsResponse> DescribeDatabaseObjectsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDatabaseObjectsResponse> DescribeDatabaseObjectsOutcome;
                 typedef std::future<DescribeDatabaseObjectsOutcome> DescribeDatabaseObjectsOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeDatabaseObjectsRequest&, DescribeDatabaseObjectsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDatabaseObjectsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDatabaseTableResponse> DescribeDatabaseTableOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDatabaseTableResponse> DescribeDatabaseTableOutcome;
                 typedef std::future<DescribeDatabaseTableOutcome> DescribeDatabaseTableOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeDatabaseTableRequest&, DescribeDatabaseTableOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDatabaseTableAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDatabasesResponse> DescribeDatabasesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDatabasesResponse> DescribeDatabasesOutcome;
                 typedef std::future<DescribeDatabasesOutcome> DescribeDatabasesOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeDatabasesRequest&, DescribeDatabasesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDatabasesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeProjectsResponse> DescribeProjectsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDcnDetailResponse> DescribeDcnDetailOutcome;
+                typedef std::future<DescribeDcnDetailOutcome> DescribeDcnDetailOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::DescribeDcnDetailRequest&, DescribeDcnDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDcnDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeFileDownloadUrlResponse> DescribeFileDownloadUrlOutcome;
+                typedef std::future<DescribeFileDownloadUrlOutcome> DescribeFileDownloadUrlOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::DescribeFileDownloadUrlRequest&, DescribeFileDownloadUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeFileDownloadUrlAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeFlowResponse> DescribeFlowOutcome;
+                typedef std::future<DescribeFlowOutcome> DescribeFlowOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::DescribeFlowRequest&, DescribeFlowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeFlowAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeProjectSecurityGroupsResponse> DescribeProjectSecurityGroupsOutcome;
+                typedef std::future<DescribeProjectSecurityGroupsOutcome> DescribeProjectSecurityGroupsOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::DescribeProjectSecurityGroupsRequest&, DescribeProjectSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProjectSecurityGroupsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeProjectsResponse> DescribeProjectsOutcome;
                 typedef std::future<DescribeProjectsOutcome> DescribeProjectsOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeProjectsRequest&, DescribeProjectsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProjectsAsyncHandler;
-                typedef Outcome<Error, Model::GrantAccountPrivilegesResponse> GrantAccountPrivilegesOutcome;
+                typedef Outcome<Core::Error, Model::DestroyDCDBInstanceResponse> DestroyDCDBInstanceOutcome;
+                typedef std::future<DestroyDCDBInstanceOutcome> DestroyDCDBInstanceOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::DestroyDCDBInstanceRequest&, DestroyDCDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DestroyDCDBInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::DestroyHourDCDBInstanceResponse> DestroyHourDCDBInstanceOutcome;
+                typedef std::future<DestroyHourDCDBInstanceOutcome> DestroyHourDCDBInstanceOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::DestroyHourDCDBInstanceRequest&, DestroyHourDCDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DestroyHourDCDBInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::DisassociateSecurityGroupsResponse> DisassociateSecurityGroupsOutcome;
+                typedef std::future<DisassociateSecurityGroupsOutcome> DisassociateSecurityGroupsOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::DisassociateSecurityGroupsRequest&, DisassociateSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisassociateSecurityGroupsAsyncHandler;
+                typedef Outcome<Core::Error, Model::GrantAccountPrivilegesResponse> GrantAccountPrivilegesOutcome;
                 typedef std::future<GrantAccountPrivilegesOutcome> GrantAccountPrivilegesOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::GrantAccountPrivilegesRequest&, GrantAccountPrivilegesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GrantAccountPrivilegesAsyncHandler;
-                typedef Outcome<Error, Model::InitDCDBInstancesResponse> InitDCDBInstancesOutcome;
+                typedef Outcome<Core::Error, Model::InitDCDBInstancesResponse> InitDCDBInstancesOutcome;
                 typedef std::future<InitDCDBInstancesOutcome> InitDCDBInstancesOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::InitDCDBInstancesRequest&, InitDCDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InitDCDBInstancesAsyncHandler;
-                typedef Outcome<Error, Model::ModifyAccountDescriptionResponse> ModifyAccountDescriptionOutcome;
+                typedef Outcome<Core::Error, Model::ModifyAccountDescriptionResponse> ModifyAccountDescriptionOutcome;
                 typedef std::future<ModifyAccountDescriptionOutcome> ModifyAccountDescriptionOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::ModifyAccountDescriptionRequest&, ModifyAccountDescriptionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAccountDescriptionAsyncHandler;
-                typedef Outcome<Error, Model::ModifyDBInstancesProjectResponse> ModifyDBInstancesProjectOutcome;
+                typedef Outcome<Core::Error, Model::ModifyDBInstanceSecurityGroupsResponse> ModifyDBInstanceSecurityGroupsOutcome;
+                typedef std::future<ModifyDBInstanceSecurityGroupsOutcome> ModifyDBInstanceSecurityGroupsOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::ModifyDBInstanceSecurityGroupsRequest&, ModifyDBInstanceSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceSecurityGroupsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDBInstancesProjectResponse> ModifyDBInstancesProjectOutcome;
                 typedef std::future<ModifyDBInstancesProjectOutcome> ModifyDBInstancesProjectOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::ModifyDBInstancesProjectRequest&, ModifyDBInstancesProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstancesProjectAsyncHandler;
-                typedef Outcome<Error, Model::ModifyDBParametersResponse> ModifyDBParametersOutcome;
+                typedef Outcome<Core::Error, Model::ModifyDBParametersResponse> ModifyDBParametersOutcome;
                 typedef std::future<ModifyDBParametersOutcome> ModifyDBParametersOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::ModifyDBParametersRequest&, ModifyDBParametersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBParametersAsyncHandler;
-                typedef Outcome<Error, Model::ModifyDBSyncModeResponse> ModifyDBSyncModeOutcome;
+                typedef Outcome<Core::Error, Model::ModifyDBSyncModeResponse> ModifyDBSyncModeOutcome;
                 typedef std::future<ModifyDBSyncModeOutcome> ModifyDBSyncModeOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::ModifyDBSyncModeRequest&, ModifyDBSyncModeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBSyncModeAsyncHandler;
-                typedef Outcome<Error, Model::OpenDBExtranetAccessResponse> OpenDBExtranetAccessOutcome;
+                typedef Outcome<Core::Error, Model::OpenDBExtranetAccessResponse> OpenDBExtranetAccessOutcome;
                 typedef std::future<OpenDBExtranetAccessOutcome> OpenDBExtranetAccessOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::OpenDBExtranetAccessRequest&, OpenDBExtranetAccessOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenDBExtranetAccessAsyncHandler;
-                typedef Outcome<Error, Model::ResetAccountPasswordResponse> ResetAccountPasswordOutcome;
+                typedef Outcome<Core::Error, Model::ResetAccountPasswordResponse> ResetAccountPasswordOutcome;
                 typedef std::future<ResetAccountPasswordOutcome> ResetAccountPasswordOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::ResetAccountPasswordRequest&, ResetAccountPasswordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetAccountPasswordAsyncHandler;
 
 
+
+                /**
+                 *This API is used to associate security groups with Tencent Cloud resources in batches.
+                 * @param req AssociateSecurityGroupsRequest
+                 * @return AssociateSecurityGroupsOutcome
+                 */
+                AssociateSecurityGroupsOutcome AssociateSecurityGroups(const Model::AssociateSecurityGroupsRequest &request);
+                void AssociateSecurityGroupsAsync(const Model::AssociateSecurityGroupsRequest& request, const AssociateSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AssociateSecurityGroupsOutcomeCallable AssociateSecurityGroupsCallable(const Model::AssociateSecurityGroupsRequest& request);
+
+                /**
+                 *This API is used to cancel DCN synchronization.
+                 * @param req CancelDcnJobRequest
+                 * @return CancelDcnJobOutcome
+                 */
+                CancelDcnJobOutcome CancelDcnJob(const Model::CancelDcnJobRequest &request);
+                void CancelDcnJobAsync(const Model::CancelDcnJobRequest& request, const CancelDcnJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CancelDcnJobOutcomeCallable CancelDcnJobCallable(const Model::CancelDcnJobRequest& request);
 
                 /**
                  *This API is used to clone an instance account.
@@ -244,6 +322,15 @@ Note: accounts with the same username but different hosts are different accounts
                 DescribeDBParametersOutcomeCallable DescribeDBParametersCallable(const Model::DescribeDBParametersRequest& request);
 
                 /**
+                 *This API is used to query the security group details of an instance.
+                 * @param req DescribeDBSecurityGroupsRequest
+                 * @return DescribeDBSecurityGroupsOutcome
+                 */
+                DescribeDBSecurityGroupsOutcome DescribeDBSecurityGroups(const Model::DescribeDBSecurityGroupsRequest &request);
+                void DescribeDBSecurityGroupsAsync(const Model::DescribeDBSecurityGroupsRequest& request, const DescribeDBSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDBSecurityGroupsOutcomeCallable DescribeDBSecurityGroupsCallable(const Model::DescribeDBSecurityGroupsRequest& request);
+
+                /**
                  *This API is used to query the sync mode of a TencentDB instance.
                  * @param req DescribeDBSyncModeRequest
                  * @return DescribeDBSyncModeOutcome
@@ -251,6 +338,15 @@ Note: accounts with the same username but different hosts are different accounts
                 DescribeDBSyncModeOutcome DescribeDBSyncMode(const Model::DescribeDBSyncModeRequest &request);
                 void DescribeDBSyncModeAsync(const Model::DescribeDBSyncModeRequest& request, const DescribeDBSyncModeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeDBSyncModeOutcomeCallable DescribeDBSyncModeCallable(const Model::DescribeDBSyncModeRequest& request);
+
+                /**
+                 *This API is used to query the information of instance nodes.
+                 * @param req DescribeDCDBInstanceNodeInfoRequest
+                 * @return DescribeDCDBInstanceNodeInfoOutcome
+                 */
+                DescribeDCDBInstanceNodeInfoOutcome DescribeDCDBInstanceNodeInfo(const Model::DescribeDCDBInstanceNodeInfoRequest &request);
+                void DescribeDCDBInstanceNodeInfoAsync(const Model::DescribeDCDBInstanceNodeInfoRequest& request, const DescribeDCDBInstanceNodeInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDCDBInstanceNodeInfoOutcomeCallable DescribeDCDBInstanceNodeInfoCallable(const Model::DescribeDCDBInstanceNodeInfoRequest& request);
 
                 /**
                  *This API is used to query the list of TencentDB instances. It supports filtering instances by project ID, instance ID, private network address, and instance name.
@@ -299,6 +395,42 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
                 DescribeDatabasesOutcomeCallable DescribeDatabasesCallable(const Model::DescribeDatabasesRequest& request);
 
                 /**
+                 *This API is used to query the disaster recovery details of an instance.
+                 * @param req DescribeDcnDetailRequest
+                 * @return DescribeDcnDetailOutcome
+                 */
+                DescribeDcnDetailOutcome DescribeDcnDetail(const Model::DescribeDcnDetailRequest &request);
+                void DescribeDcnDetailAsync(const Model::DescribeDcnDetailRequest& request, const DescribeDcnDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDcnDetailOutcomeCallable DescribeDcnDetailCallable(const Model::DescribeDcnDetailRequest& request);
+
+                /**
+                 *This API is used to get the download URL of a specific backup or log file of a database.
+                 * @param req DescribeFileDownloadUrlRequest
+                 * @return DescribeFileDownloadUrlOutcome
+                 */
+                DescribeFileDownloadUrlOutcome DescribeFileDownloadUrl(const Model::DescribeFileDownloadUrlRequest &request);
+                void DescribeFileDownloadUrlAsync(const Model::DescribeFileDownloadUrlRequest& request, const DescribeFileDownloadUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeFileDownloadUrlOutcomeCallable DescribeFileDownloadUrlCallable(const Model::DescribeFileDownloadUrlRequest& request);
+
+                /**
+                 *This API is used to query task status.
+                 * @param req DescribeFlowRequest
+                 * @return DescribeFlowOutcome
+                 */
+                DescribeFlowOutcome DescribeFlow(const Model::DescribeFlowRequest &request);
+                void DescribeFlowAsync(const Model::DescribeFlowRequest& request, const DescribeFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeFlowOutcomeCallable DescribeFlowCallable(const Model::DescribeFlowRequest& request);
+
+                /**
+                 *This API is used to query the security group details of a project.
+                 * @param req DescribeProjectSecurityGroupsRequest
+                 * @return DescribeProjectSecurityGroupsOutcome
+                 */
+                DescribeProjectSecurityGroupsOutcome DescribeProjectSecurityGroups(const Model::DescribeProjectSecurityGroupsRequest &request);
+                void DescribeProjectSecurityGroupsAsync(const Model::DescribeProjectSecurityGroupsRequest& request, const DescribeProjectSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeProjectSecurityGroupsOutcomeCallable DescribeProjectSecurityGroupsCallable(const Model::DescribeProjectSecurityGroupsRequest& request);
+
+                /**
                  *This API is used to query the project list.
                  * @param req DescribeProjectsRequest
                  * @return DescribeProjectsOutcome
@@ -306,6 +438,33 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
                 DescribeProjectsOutcome DescribeProjects(const Model::DescribeProjectsRequest &request);
                 void DescribeProjectsAsync(const Model::DescribeProjectsRequest& request, const DescribeProjectsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeProjectsOutcomeCallable DescribeProjectsCallable(const Model::DescribeProjectsRequest& request);
+
+                /**
+                 *This API is used to terminate an isolated monthly-subscribed instance.
+                 * @param req DestroyDCDBInstanceRequest
+                 * @return DestroyDCDBInstanceOutcome
+                 */
+                DestroyDCDBInstanceOutcome DestroyDCDBInstance(const Model::DestroyDCDBInstanceRequest &request);
+                void DestroyDCDBInstanceAsync(const Model::DestroyDCDBInstanceRequest& request, const DestroyDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DestroyDCDBInstanceOutcomeCallable DestroyDCDBInstanceCallable(const Model::DestroyDCDBInstanceRequest& request);
+
+                /**
+                 *This API is used to terminate a pay-as-you-go instance.
+                 * @param req DestroyHourDCDBInstanceRequest
+                 * @return DestroyHourDCDBInstanceOutcome
+                 */
+                DestroyHourDCDBInstanceOutcome DestroyHourDCDBInstance(const Model::DestroyHourDCDBInstanceRequest &request);
+                void DestroyHourDCDBInstanceAsync(const Model::DestroyHourDCDBInstanceRequest& request, const DestroyHourDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DestroyHourDCDBInstanceOutcomeCallable DestroyHourDCDBInstanceCallable(const Model::DestroyHourDCDBInstanceRequest& request);
+
+                /**
+                 *This API is used to unassociate security groups from instances in batches.
+                 * @param req DisassociateSecurityGroupsRequest
+                 * @return DisassociateSecurityGroupsOutcome
+                 */
+                DisassociateSecurityGroupsOutcome DisassociateSecurityGroups(const Model::DisassociateSecurityGroupsRequest &request);
+                void DisassociateSecurityGroupsAsync(const Model::DisassociateSecurityGroupsRequest& request, const DisassociateSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DisassociateSecurityGroupsOutcomeCallable DisassociateSecurityGroupsCallable(const Model::DisassociateSecurityGroupsRequest& request);
 
                 /**
                  *This API is used to grant permissions to a TencentDB account.
@@ -335,6 +494,15 @@ Note: accounts with the same username but different hosts are different accounts
                 ModifyAccountDescriptionOutcome ModifyAccountDescription(const Model::ModifyAccountDescriptionRequest &request);
                 void ModifyAccountDescriptionAsync(const Model::ModifyAccountDescriptionRequest& request, const ModifyAccountDescriptionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyAccountDescriptionOutcomeCallable ModifyAccountDescriptionCallable(const Model::ModifyAccountDescriptionRequest& request);
+
+                /**
+                 *This API is used to modify the security groups associated with TencentDB.
+                 * @param req ModifyDBInstanceSecurityGroupsRequest
+                 * @return ModifyDBInstanceSecurityGroupsOutcome
+                 */
+                ModifyDBInstanceSecurityGroupsOutcome ModifyDBInstanceSecurityGroups(const Model::ModifyDBInstanceSecurityGroupsRequest &request);
+                void ModifyDBInstanceSecurityGroupsAsync(const Model::ModifyDBInstanceSecurityGroupsRequest& request, const ModifyDBInstanceSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDBInstanceSecurityGroupsOutcomeCallable ModifyDBInstanceSecurityGroupsCallable(const Model::ModifyDBInstanceSecurityGroupsRequest& request);
 
                 /**
                  *This API is used to modify the project to which TencentDB instances belong.

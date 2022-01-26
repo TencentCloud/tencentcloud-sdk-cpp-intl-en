@@ -212,6 +212,49 @@ TcaplusdbClient::CreateClusterOutcomeCallable TcaplusdbClient::CreateClusterCall
     return task->get_future();
 }
 
+TcaplusdbClient::CreateSnapshotsOutcome TcaplusdbClient::CreateSnapshots(const CreateSnapshotsRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateSnapshots");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateSnapshotsResponse rsp = CreateSnapshotsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateSnapshotsOutcome(rsp);
+        else
+            return CreateSnapshotsOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateSnapshotsOutcome(outcome.GetError());
+    }
+}
+
+void TcaplusdbClient::CreateSnapshotsAsync(const CreateSnapshotsRequest& request, const CreateSnapshotsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateSnapshots(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcaplusdbClient::CreateSnapshotsOutcomeCallable TcaplusdbClient::CreateSnapshotsCallable(const CreateSnapshotsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateSnapshotsOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateSnapshots(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TcaplusdbClient::CreateTableGroupOutcome TcaplusdbClient::CreateTableGroup(const CreateTableGroupRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateTableGroup");
@@ -384,6 +427,92 @@ TcaplusdbClient::DeleteIdlFilesOutcomeCallable TcaplusdbClient::DeleteIdlFilesCa
     return task->get_future();
 }
 
+TcaplusdbClient::DeleteSnapshotsOutcome TcaplusdbClient::DeleteSnapshots(const DeleteSnapshotsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteSnapshots");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteSnapshotsResponse rsp = DeleteSnapshotsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteSnapshotsOutcome(rsp);
+        else
+            return DeleteSnapshotsOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteSnapshotsOutcome(outcome.GetError());
+    }
+}
+
+void TcaplusdbClient::DeleteSnapshotsAsync(const DeleteSnapshotsRequest& request, const DeleteSnapshotsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteSnapshots(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcaplusdbClient::DeleteSnapshotsOutcomeCallable TcaplusdbClient::DeleteSnapshotsCallable(const DeleteSnapshotsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteSnapshotsOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteSnapshots(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcaplusdbClient::DeleteTableDataFlowOutcome TcaplusdbClient::DeleteTableDataFlow(const DeleteTableDataFlowRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteTableDataFlow");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteTableDataFlowResponse rsp = DeleteTableDataFlowResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteTableDataFlowOutcome(rsp);
+        else
+            return DeleteTableDataFlowOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteTableDataFlowOutcome(outcome.GetError());
+    }
+}
+
+void TcaplusdbClient::DeleteTableDataFlowAsync(const DeleteTableDataFlowRequest& request, const DeleteTableDataFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteTableDataFlow(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcaplusdbClient::DeleteTableDataFlowOutcomeCallable TcaplusdbClient::DeleteTableDataFlowCallable(const DeleteTableDataFlowRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteTableDataFlowOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteTableDataFlow(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TcaplusdbClient::DeleteTableGroupOutcome TcaplusdbClient::DeleteTableGroup(const DeleteTableGroupRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteTableGroup");
@@ -427,6 +556,49 @@ TcaplusdbClient::DeleteTableGroupOutcomeCallable TcaplusdbClient::DeleteTableGro
     return task->get_future();
 }
 
+TcaplusdbClient::DeleteTableIndexOutcome TcaplusdbClient::DeleteTableIndex(const DeleteTableIndexRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteTableIndex");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteTableIndexResponse rsp = DeleteTableIndexResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteTableIndexOutcome(rsp);
+        else
+            return DeleteTableIndexOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteTableIndexOutcome(outcome.GetError());
+    }
+}
+
+void TcaplusdbClient::DeleteTableIndexAsync(const DeleteTableIndexRequest& request, const DeleteTableIndexAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteTableIndex(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcaplusdbClient::DeleteTableIndexOutcomeCallable TcaplusdbClient::DeleteTableIndexCallable(const DeleteTableIndexRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteTableIndexOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteTableIndex(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TcaplusdbClient::DeleteTablesOutcome TcaplusdbClient::DeleteTables(const DeleteTablesRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteTables");
@@ -463,6 +635,49 @@ TcaplusdbClient::DeleteTablesOutcomeCallable TcaplusdbClient::DeleteTablesCallab
         [this, request]()
         {
             return this->DeleteTables(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcaplusdbClient::DescribeApplicationsOutcome TcaplusdbClient::DescribeApplications(const DescribeApplicationsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeApplications");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeApplicationsResponse rsp = DescribeApplicationsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeApplicationsOutcome(rsp);
+        else
+            return DescribeApplicationsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeApplicationsOutcome(outcome.GetError());
+    }
+}
+
+void TcaplusdbClient::DescribeApplicationsAsync(const DescribeApplicationsRequest& request, const DescribeApplicationsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeApplications(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcaplusdbClient::DescribeApplicationsOutcomeCallable TcaplusdbClient::DescribeApplicationsCallable(const DescribeApplicationsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeApplicationsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeApplications(request);
         }
     );
 
@@ -599,6 +814,49 @@ TcaplusdbClient::DescribeIdlFileInfosOutcomeCallable TcaplusdbClient::DescribeId
     return task->get_future();
 }
 
+TcaplusdbClient::DescribeMachineOutcome TcaplusdbClient::DescribeMachine(const DescribeMachineRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMachine");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMachineResponse rsp = DescribeMachineResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMachineOutcome(rsp);
+        else
+            return DescribeMachineOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMachineOutcome(outcome.GetError());
+    }
+}
+
+void TcaplusdbClient::DescribeMachineAsync(const DescribeMachineRequest& request, const DescribeMachineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeMachine(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcaplusdbClient::DescribeMachineOutcomeCallable TcaplusdbClient::DescribeMachineCallable(const DescribeMachineRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeMachineOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeMachine(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TcaplusdbClient::DescribeRegionsOutcome TcaplusdbClient::DescribeRegions(const DescribeRegionsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeRegions");
@@ -635,6 +893,49 @@ TcaplusdbClient::DescribeRegionsOutcomeCallable TcaplusdbClient::DescribeRegions
         [this, request]()
         {
             return this->DescribeRegions(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcaplusdbClient::DescribeSnapshotsOutcome TcaplusdbClient::DescribeSnapshots(const DescribeSnapshotsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSnapshots");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSnapshotsResponse rsp = DescribeSnapshotsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSnapshotsOutcome(rsp);
+        else
+            return DescribeSnapshotsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSnapshotsOutcome(outcome.GetError());
+    }
+}
+
+void TcaplusdbClient::DescribeSnapshotsAsync(const DescribeSnapshotsRequest& request, const DescribeSnapshotsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeSnapshots(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcaplusdbClient::DescribeSnapshotsOutcomeCallable TcaplusdbClient::DescribeSnapshotsCallable(const DescribeSnapshotsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeSnapshotsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeSnapshots(request);
         }
     );
 
@@ -943,6 +1244,264 @@ TcaplusdbClient::DescribeUinInWhitelistOutcomeCallable TcaplusdbClient::Describe
     return task->get_future();
 }
 
+TcaplusdbClient::DisableRestProxyOutcome TcaplusdbClient::DisableRestProxy(const DisableRestProxyRequest &request)
+{
+    auto outcome = MakeRequest(request, "DisableRestProxy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DisableRestProxyResponse rsp = DisableRestProxyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DisableRestProxyOutcome(rsp);
+        else
+            return DisableRestProxyOutcome(o.GetError());
+    }
+    else
+    {
+        return DisableRestProxyOutcome(outcome.GetError());
+    }
+}
+
+void TcaplusdbClient::DisableRestProxyAsync(const DisableRestProxyRequest& request, const DisableRestProxyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DisableRestProxy(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcaplusdbClient::DisableRestProxyOutcomeCallable TcaplusdbClient::DisableRestProxyCallable(const DisableRestProxyRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DisableRestProxyOutcome()>>(
+        [this, request]()
+        {
+            return this->DisableRestProxy(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcaplusdbClient::EnableRestProxyOutcome TcaplusdbClient::EnableRestProxy(const EnableRestProxyRequest &request)
+{
+    auto outcome = MakeRequest(request, "EnableRestProxy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        EnableRestProxyResponse rsp = EnableRestProxyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return EnableRestProxyOutcome(rsp);
+        else
+            return EnableRestProxyOutcome(o.GetError());
+    }
+    else
+    {
+        return EnableRestProxyOutcome(outcome.GetError());
+    }
+}
+
+void TcaplusdbClient::EnableRestProxyAsync(const EnableRestProxyRequest& request, const EnableRestProxyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->EnableRestProxy(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcaplusdbClient::EnableRestProxyOutcomeCallable TcaplusdbClient::EnableRestProxyCallable(const EnableRestProxyRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<EnableRestProxyOutcome()>>(
+        [this, request]()
+        {
+            return this->EnableRestProxy(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcaplusdbClient::ImportSnapshotsOutcome TcaplusdbClient::ImportSnapshots(const ImportSnapshotsRequest &request)
+{
+    auto outcome = MakeRequest(request, "ImportSnapshots");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ImportSnapshotsResponse rsp = ImportSnapshotsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ImportSnapshotsOutcome(rsp);
+        else
+            return ImportSnapshotsOutcome(o.GetError());
+    }
+    else
+    {
+        return ImportSnapshotsOutcome(outcome.GetError());
+    }
+}
+
+void TcaplusdbClient::ImportSnapshotsAsync(const ImportSnapshotsRequest& request, const ImportSnapshotsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ImportSnapshots(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcaplusdbClient::ImportSnapshotsOutcomeCallable TcaplusdbClient::ImportSnapshotsCallable(const ImportSnapshotsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ImportSnapshotsOutcome()>>(
+        [this, request]()
+        {
+            return this->ImportSnapshots(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcaplusdbClient::MergeTablesDataOutcome TcaplusdbClient::MergeTablesData(const MergeTablesDataRequest &request)
+{
+    auto outcome = MakeRequest(request, "MergeTablesData");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        MergeTablesDataResponse rsp = MergeTablesDataResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return MergeTablesDataOutcome(rsp);
+        else
+            return MergeTablesDataOutcome(o.GetError());
+    }
+    else
+    {
+        return MergeTablesDataOutcome(outcome.GetError());
+    }
+}
+
+void TcaplusdbClient::MergeTablesDataAsync(const MergeTablesDataRequest& request, const MergeTablesDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->MergeTablesData(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcaplusdbClient::MergeTablesDataOutcomeCallable TcaplusdbClient::MergeTablesDataCallable(const MergeTablesDataRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<MergeTablesDataOutcome()>>(
+        [this, request]()
+        {
+            return this->MergeTablesData(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcaplusdbClient::ModifyCensorshipOutcome TcaplusdbClient::ModifyCensorship(const ModifyCensorshipRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyCensorship");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyCensorshipResponse rsp = ModifyCensorshipResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyCensorshipOutcome(rsp);
+        else
+            return ModifyCensorshipOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyCensorshipOutcome(outcome.GetError());
+    }
+}
+
+void TcaplusdbClient::ModifyCensorshipAsync(const ModifyCensorshipRequest& request, const ModifyCensorshipAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyCensorship(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcaplusdbClient::ModifyCensorshipOutcomeCallable TcaplusdbClient::ModifyCensorshipCallable(const ModifyCensorshipRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyCensorshipOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyCensorship(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcaplusdbClient::ModifyClusterMachineOutcome TcaplusdbClient::ModifyClusterMachine(const ModifyClusterMachineRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyClusterMachine");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyClusterMachineResponse rsp = ModifyClusterMachineResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyClusterMachineOutcome(rsp);
+        else
+            return ModifyClusterMachineOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyClusterMachineOutcome(outcome.GetError());
+    }
+}
+
+void TcaplusdbClient::ModifyClusterMachineAsync(const ModifyClusterMachineRequest& request, const ModifyClusterMachineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyClusterMachine(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcaplusdbClient::ModifyClusterMachineOutcomeCallable TcaplusdbClient::ModifyClusterMachineCallable(const ModifyClusterMachineRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyClusterMachineOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyClusterMachine(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TcaplusdbClient::ModifyClusterNameOutcome TcaplusdbClient::ModifyClusterName(const ModifyClusterNameRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyClusterName");
@@ -1065,6 +1624,49 @@ TcaplusdbClient::ModifyClusterTagsOutcomeCallable TcaplusdbClient::ModifyCluster
         [this, request]()
         {
             return this->ModifyClusterTags(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcaplusdbClient::ModifySnapshotsOutcome TcaplusdbClient::ModifySnapshots(const ModifySnapshotsRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifySnapshots");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifySnapshotsResponse rsp = ModifySnapshotsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifySnapshotsOutcome(rsp);
+        else
+            return ModifySnapshotsOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifySnapshotsOutcome(outcome.GetError());
+    }
+}
+
+void TcaplusdbClient::ModifySnapshotsAsync(const ModifySnapshotsRequest& request, const ModifySnapshotsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifySnapshots(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcaplusdbClient::ModifySnapshotsOutcomeCallable TcaplusdbClient::ModifySnapshotsCallable(const ModifySnapshotsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifySnapshotsOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifySnapshots(request);
         }
     );
 
@@ -1409,6 +2011,135 @@ TcaplusdbClient::RollbackTablesOutcomeCallable TcaplusdbClient::RollbackTablesCa
         [this, request]()
         {
             return this->RollbackTables(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcaplusdbClient::SetTableDataFlowOutcome TcaplusdbClient::SetTableDataFlow(const SetTableDataFlowRequest &request)
+{
+    auto outcome = MakeRequest(request, "SetTableDataFlow");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SetTableDataFlowResponse rsp = SetTableDataFlowResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SetTableDataFlowOutcome(rsp);
+        else
+            return SetTableDataFlowOutcome(o.GetError());
+    }
+    else
+    {
+        return SetTableDataFlowOutcome(outcome.GetError());
+    }
+}
+
+void TcaplusdbClient::SetTableDataFlowAsync(const SetTableDataFlowRequest& request, const SetTableDataFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->SetTableDataFlow(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcaplusdbClient::SetTableDataFlowOutcomeCallable TcaplusdbClient::SetTableDataFlowCallable(const SetTableDataFlowRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<SetTableDataFlowOutcome()>>(
+        [this, request]()
+        {
+            return this->SetTableDataFlow(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcaplusdbClient::SetTableIndexOutcome TcaplusdbClient::SetTableIndex(const SetTableIndexRequest &request)
+{
+    auto outcome = MakeRequest(request, "SetTableIndex");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SetTableIndexResponse rsp = SetTableIndexResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SetTableIndexOutcome(rsp);
+        else
+            return SetTableIndexOutcome(o.GetError());
+    }
+    else
+    {
+        return SetTableIndexOutcome(outcome.GetError());
+    }
+}
+
+void TcaplusdbClient::SetTableIndexAsync(const SetTableIndexRequest& request, const SetTableIndexAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->SetTableIndex(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcaplusdbClient::SetTableIndexOutcomeCallable TcaplusdbClient::SetTableIndexCallable(const SetTableIndexRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<SetTableIndexOutcome()>>(
+        [this, request]()
+        {
+            return this->SetTableIndex(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TcaplusdbClient::UpdateApplyOutcome TcaplusdbClient::UpdateApply(const UpdateApplyRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateApply");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateApplyResponse rsp = UpdateApplyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateApplyOutcome(rsp);
+        else
+            return UpdateApplyOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateApplyOutcome(outcome.GetError());
+    }
+}
+
+void TcaplusdbClient::UpdateApplyAsync(const UpdateApplyRequest& request, const UpdateApplyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpdateApply(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcaplusdbClient::UpdateApplyOutcomeCallable TcaplusdbClient::UpdateApplyCallable(const UpdateApplyRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpdateApplyOutcome()>>(
+        [this, request]()
+        {
+            return this->UpdateApply(request);
         }
     );
 

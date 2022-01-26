@@ -20,61 +20,61 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 GetDisableRecordsRequest::GetDisableRecordsRequest() :
+    m_urlHasBeenSet(false),
     m_startTimeHasBeenSet(false),
     m_endTimeHasBeenSet(false),
-    m_urlHasBeenSet(false),
     m_statusHasBeenSet(false),
     m_offsetHasBeenSet(false),
-    m_limitHasBeenSet(false)
+    m_limitHasBeenSet(false),
+    m_taskIdHasBeenSet(false)
 {
 }
 
 string GetDisableRecordsRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
+
+    if (m_urlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Url";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_url.c_str(), allocator).Move(), allocator);
+    }
 
     if (m_startTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTime";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_startTime.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_startTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_endTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndTime";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_endTime.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_urlHasBeenSet)
-    {
-        Value iKey(kStringType);
-        string key = "Url";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_url.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_endTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_status.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
     }
 
     if (m_offsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Offset";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_offset, allocator);
@@ -82,19 +82,43 @@ string GetDisableRecordsRequest::ToJsonString() const
 
     if (m_limitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Limit";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_limit, allocator);
     }
 
+    if (m_taskIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TaskId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_taskId.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
 
+
+string GetDisableRecordsRequest::GetUrl() const
+{
+    return m_url;
+}
+
+void GetDisableRecordsRequest::SetUrl(const string& _url)
+{
+    m_url = _url;
+    m_urlHasBeenSet = true;
+}
+
+bool GetDisableRecordsRequest::UrlHasBeenSet() const
+{
+    return m_urlHasBeenSet;
+}
 
 string GetDisableRecordsRequest::GetStartTime() const
 {
@@ -126,22 +150,6 @@ void GetDisableRecordsRequest::SetEndTime(const string& _endTime)
 bool GetDisableRecordsRequest::EndTimeHasBeenSet() const
 {
     return m_endTimeHasBeenSet;
-}
-
-string GetDisableRecordsRequest::GetUrl() const
-{
-    return m_url;
-}
-
-void GetDisableRecordsRequest::SetUrl(const string& _url)
-{
-    m_url = _url;
-    m_urlHasBeenSet = true;
-}
-
-bool GetDisableRecordsRequest::UrlHasBeenSet() const
-{
-    return m_urlHasBeenSet;
 }
 
 string GetDisableRecordsRequest::GetStatus() const
@@ -190,6 +198,22 @@ void GetDisableRecordsRequest::SetLimit(const int64_t& _limit)
 bool GetDisableRecordsRequest::LimitHasBeenSet() const
 {
     return m_limitHasBeenSet;
+}
+
+string GetDisableRecordsRequest::GetTaskId() const
+{
+    return m_taskId;
+}
+
+void GetDisableRecordsRequest::SetTaskId(const string& _taskId)
+{
+    m_taskId = _taskId;
+    m_taskIdHasBeenSet = true;
+}
+
+bool GetDisableRecordsRequest::TaskIdHasBeenSet() const
+{
+    return m_taskIdHasBeenSet;
 }
 
 

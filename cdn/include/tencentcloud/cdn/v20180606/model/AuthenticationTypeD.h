@@ -77,17 +77,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Signature expiration time
-Unit: second. The maximum value is 31536000.
+Unit: second. The maximum value is 630720000.
                      * @return ExpireTime Signature expiration time
-Unit: second. The maximum value is 31536000.
+Unit: second. The maximum value is 630720000.
                      */
                     int64_t GetExpireTime() const;
 
                     /**
                      * 设置Signature expiration time
-Unit: second. The maximum value is 31536000.
+Unit: second. The maximum value is 630720000.
                      * @param ExpireTime Signature expiration time
-Unit: second. The maximum value is 31536000.
+Unit: second. The maximum value is 630720000.
                      */
                     void SetExpireTime(const int64_t& _expireTime);
 
@@ -120,17 +120,17 @@ If it contains an asterisk (*), this indicates all files.
                     bool FileExtensionsHasBeenSet() const;
 
                     /**
-                     * 获取whitelist: indicates that all file types apart from the FileExtensions list are authenticated
+                     * 获取allowlist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
-                     * @return FilterType whitelist: indicates that all file types apart from the FileExtensions list are authenticated
+                     * @return FilterType allowlist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
                      */
                     std::string GetFilterType() const;
 
                     /**
-                     * 设置whitelist: indicates that all file types apart from the FileExtensions list are authenticated
+                     * 设置allowlist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
-                     * @param FilterType whitelist: indicates that all file types apart from the FileExtensions list are authenticated
+                     * @param FilterType allowlist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
                      */
                     void SetFilterType(const std::string& _filterType);
@@ -211,6 +211,32 @@ hex: hexadecimal
                      */
                     bool TimeFormatHasBeenSet() const;
 
+                    /**
+                     * 获取Backup key, which is used to calculate a signature.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return BackupSecretKey Backup key, which is used to calculate a signature.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetBackupSecretKey() const;
+
+                    /**
+                     * 设置Backup key, which is used to calculate a signature.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param BackupSecretKey Backup key, which is used to calculate a signature.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetBackupSecretKey(const std::string& _backupSecretKey);
+
+                    /**
+                     * 判断参数 BackupSecretKey 是否已赋值
+                     * @return BackupSecretKey 是否已赋值
+                     */
+                    bool BackupSecretKeyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -223,7 +249,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Signature expiration time
-Unit: second. The maximum value is 31536000.
+Unit: second. The maximum value is 630720000.
                      */
                     int64_t m_expireTime;
                     bool m_expireTimeHasBeenSet;
@@ -236,7 +262,7 @@ If it contains an asterisk (*), this indicates all files.
                     bool m_fileExtensionsHasBeenSet;
 
                     /**
-                     * whitelist: indicates that all file types apart from the FileExtensions list are authenticated
+                     * allowlist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
                      */
                     std::string m_filterType;
@@ -263,6 +289,14 @@ hex: hexadecimal
                      */
                     std::string m_timeFormat;
                     bool m_timeFormatHasBeenSet;
+
+                    /**
+                     * Backup key, which is used to calculate a signature.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_backupSecretKey;
+                    bool m_backupSecretKeyHasBeenSet;
 
                 };
             }

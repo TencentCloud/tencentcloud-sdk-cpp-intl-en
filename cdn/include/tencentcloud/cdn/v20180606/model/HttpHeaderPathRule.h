@@ -47,30 +47,30 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取HTTP header setting method
-add: add header. If a header exists, then there will be a duplicated header.
-set: only supports origin-pull header configuration. If a header exists, it will be overwritten. If one does not exist, then the header will be added.
-del: delete header
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return HeaderMode HTTP header setting method
-add: add header. If a header exists, then there will be a duplicated header.
-set: only supports origin-pull header configuration. If a header exists, it will be overwritten. If one does not exist, then the header will be added.
-del: delete header
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取HTTP header setting methods
+`set`: sets a value for an existing header parameter, a new header parameter, or multiple header parameters. Multiple header parameters will be merged into one.
+`del`: deletes a header parameter.
+`add`: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return HeaderMode HTTP header setting methods
+`set`: sets a value for an existing header parameter, a new header parameter, or multiple header parameters. Multiple header parameters will be merged into one.
+`del`: deletes a header parameter.
+`add`: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetHeaderMode() const;
 
                     /**
-                     * 设置HTTP header setting method
-add: add header. If a header exists, then there will be a duplicated header.
-set: only supports origin-pull header configuration. If a header exists, it will be overwritten. If one does not exist, then the header will be added.
-del: delete header
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param HeaderMode HTTP header setting method
-add: add header. If a header exists, then there will be a duplicated header.
-set: only supports origin-pull header configuration. If a header exists, it will be overwritten. If one does not exist, then the header will be added.
-del: delete header
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置HTTP header setting methods
+`set`: sets a value for an existing header parameter, a new header parameter, or multiple header parameters. Multiple header parameters will be merged into one.
+`del`: deletes a header parameter.
+`add`: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param HeaderMode HTTP header setting methods
+`set`: sets a value for an existing header parameter, a new header parameter, or multiple header parameters. Multiple header parameters will be merged into one.
+`del`: deletes a header parameter.
+`add`: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetHeaderMode(const std::string& _headerMode);
 
@@ -211,11 +211,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * HTTP header setting method
-add: add header. If a header exists, then there will be a duplicated header.
-set: only supports origin-pull header configuration. If a header exists, it will be overwritten. If one does not exist, then the header will be added.
-del: delete header
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * HTTP header setting methods
+`set`: sets a value for an existing header parameter, a new header parameter, or multiple header parameters. Multiple header parameters will be merged into one.
+`del`: deletes a header parameter.
+`add`: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_headerMode;
                     bool m_headerModeHasBeenSet;

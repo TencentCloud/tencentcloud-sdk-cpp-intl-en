@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 Service::Service() :
@@ -36,11 +35,15 @@ Service::Service() :
     m_createdTimeHasBeenSet(false),
     m_innerHttpPortHasBeenSet(false),
     m_innerSubDomainHasBeenSet(false),
-    m_tradeIsolateStatusHasBeenSet(false)
+    m_tradeIsolateStatusHasBeenSet(false),
+    m_tagsHasBeenSet(false),
+    m_instanceIdHasBeenSet(false),
+    m_setTypeHasBeenSet(false),
+    m_deploymentTypeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome Service::Deserialize(const Value &value)
+CoreInternalOutcome Service::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -49,7 +52,7 @@ CoreInternalOutcome Service::Deserialize(const Value &value)
     {
         if (!value["InnerHttpsPort"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Service.InnerHttpsPort` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Service.InnerHttpsPort` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_innerHttpsPort = value["InnerHttpsPort"].GetInt64();
         m_innerHttpsPortHasBeenSet = true;
@@ -59,7 +62,7 @@ CoreInternalOutcome Service::Deserialize(const Value &value)
     {
         if (!value["ServiceDesc"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Service.ServiceDesc` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Service.ServiceDesc` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_serviceDesc = string(value["ServiceDesc"].GetString());
         m_serviceDescHasBeenSet = true;
@@ -69,7 +72,7 @@ CoreInternalOutcome Service::Deserialize(const Value &value)
     {
         if (!value["Protocol"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Service.Protocol` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Service.Protocol` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_protocol = string(value["Protocol"].GetString());
         m_protocolHasBeenSet = true;
@@ -79,7 +82,7 @@ CoreInternalOutcome Service::Deserialize(const Value &value)
     {
         if (!value["ModifiedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Service.ModifiedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Service.ModifiedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_modifiedTime = string(value["ModifiedTime"].GetString());
         m_modifiedTimeHasBeenSet = true;
@@ -88,10 +91,10 @@ CoreInternalOutcome Service::Deserialize(const Value &value)
     if (value.HasMember("NetTypes") && !value["NetTypes"].IsNull())
     {
         if (!value["NetTypes"].IsArray())
-            return CoreInternalOutcome(Error("response `Service.NetTypes` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Service.NetTypes` is not array type"));
 
-        const Value &tmpValue = value["NetTypes"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["NetTypes"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_netTypes.push_back((*itr).GetString());
         }
@@ -102,7 +105,7 @@ CoreInternalOutcome Service::Deserialize(const Value &value)
     {
         if (!value["ExclusiveSetName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Service.ExclusiveSetName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Service.ExclusiveSetName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_exclusiveSetName = string(value["ExclusiveSetName"].GetString());
         m_exclusiveSetNameHasBeenSet = true;
@@ -112,7 +115,7 @@ CoreInternalOutcome Service::Deserialize(const Value &value)
     {
         if (!value["ServiceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Service.ServiceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Service.ServiceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_serviceId = string(value["ServiceId"].GetString());
         m_serviceIdHasBeenSet = true;
@@ -122,7 +125,7 @@ CoreInternalOutcome Service::Deserialize(const Value &value)
     {
         if (!value["IpVersion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Service.IpVersion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Service.IpVersion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ipVersion = string(value["IpVersion"].GetString());
         m_ipVersionHasBeenSet = true;
@@ -131,10 +134,10 @@ CoreInternalOutcome Service::Deserialize(const Value &value)
     if (value.HasMember("AvailableEnvironments") && !value["AvailableEnvironments"].IsNull())
     {
         if (!value["AvailableEnvironments"].IsArray())
-            return CoreInternalOutcome(Error("response `Service.AvailableEnvironments` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Service.AvailableEnvironments` is not array type"));
 
-        const Value &tmpValue = value["AvailableEnvironments"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["AvailableEnvironments"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_availableEnvironments.push_back((*itr).GetString());
         }
@@ -145,7 +148,7 @@ CoreInternalOutcome Service::Deserialize(const Value &value)
     {
         if (!value["ServiceName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Service.ServiceName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Service.ServiceName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_serviceName = string(value["ServiceName"].GetString());
         m_serviceNameHasBeenSet = true;
@@ -155,7 +158,7 @@ CoreInternalOutcome Service::Deserialize(const Value &value)
     {
         if (!value["OuterSubDomain"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Service.OuterSubDomain` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Service.OuterSubDomain` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_outerSubDomain = string(value["OuterSubDomain"].GetString());
         m_outerSubDomainHasBeenSet = true;
@@ -165,7 +168,7 @@ CoreInternalOutcome Service::Deserialize(const Value &value)
     {
         if (!value["CreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Service.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Service.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createdTime = string(value["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
@@ -175,7 +178,7 @@ CoreInternalOutcome Service::Deserialize(const Value &value)
     {
         if (!value["InnerHttpPort"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Service.InnerHttpPort` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Service.InnerHttpPort` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_innerHttpPort = value["InnerHttpPort"].GetUint64();
         m_innerHttpPortHasBeenSet = true;
@@ -185,7 +188,7 @@ CoreInternalOutcome Service::Deserialize(const Value &value)
     {
         if (!value["InnerSubDomain"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Service.InnerSubDomain` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Service.InnerSubDomain` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_innerSubDomain = string(value["InnerSubDomain"].GetString());
         m_innerSubDomainHasBeenSet = true;
@@ -195,22 +198,72 @@ CoreInternalOutcome Service::Deserialize(const Value &value)
     {
         if (!value["TradeIsolateStatus"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Service.TradeIsolateStatus` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Service.TradeIsolateStatus` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_tradeIsolateStatus = value["TradeIsolateStatus"].GetInt64();
         m_tradeIsolateStatusHasBeenSet = true;
+    }
+
+    if (value.HasMember("Tags") && !value["Tags"].IsNull())
+    {
+        if (!value["Tags"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Service.Tags` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["Tags"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            Tag item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_tags.push_back(item);
+        }
+        m_tagsHasBeenSet = true;
+    }
+
+    if (value.HasMember("InstanceId") && !value["InstanceId"].IsNull())
+    {
+        if (!value["InstanceId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Service.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_instanceId = string(value["InstanceId"].GetString());
+        m_instanceIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("SetType") && !value["SetType"].IsNull())
+    {
+        if (!value["SetType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Service.SetType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_setType = string(value["SetType"].GetString());
+        m_setTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("DeploymentType") && !value["DeploymentType"].IsNull())
+    {
+        if (!value["DeploymentType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Service.DeploymentType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_deploymentType = string(value["DeploymentType"].GetString());
+        m_deploymentTypeHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void Service::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Service::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_innerHttpsPortHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InnerHttpsPort";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_innerHttpsPort, allocator);
@@ -218,105 +271,105 @@ void Service::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_serviceDescHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceDesc";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_serviceDesc.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_serviceDesc.c_str(), allocator).Move(), allocator);
     }
 
     if (m_protocolHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Protocol";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_protocol.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
     }
 
     if (m_modifiedTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ModifiedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_modifiedTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_modifiedTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_netTypesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetTypes";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_netTypes.begin(); itr != m_netTypes.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_exclusiveSetNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ExclusiveSetName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_exclusiveSetName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_exclusiveSetName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_serviceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_serviceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_serviceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ipVersionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IpVersion";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ipVersion.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ipVersion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_availableEnvironmentsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AvailableEnvironments";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_availableEnvironments.begin(); itr != m_availableEnvironments.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_serviceNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_serviceName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_serviceName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_outerSubDomainHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OuterSubDomain";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_outerSubDomain.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_outerSubDomain.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createdTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createdTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_innerHttpPortHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InnerHttpPort";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_innerHttpPort, allocator);
@@ -324,18 +377,57 @@ void Service::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_innerSubDomainHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InnerSubDomain";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_innerSubDomain.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_innerSubDomain.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tradeIsolateStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TradeIsolateStatus";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_tradeIsolateStatus, allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_instanceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_setTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SetType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_setType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_deploymentTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DeploymentType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_deploymentType.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -579,5 +671,69 @@ void Service::SetTradeIsolateStatus(const int64_t& _tradeIsolateStatus)
 bool Service::TradeIsolateStatusHasBeenSet() const
 {
     return m_tradeIsolateStatusHasBeenSet;
+}
+
+vector<Tag> Service::GetTags() const
+{
+    return m_tags;
+}
+
+void Service::SetTags(const vector<Tag>& _tags)
+{
+    m_tags = _tags;
+    m_tagsHasBeenSet = true;
+}
+
+bool Service::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
+}
+
+string Service::GetInstanceId() const
+{
+    return m_instanceId;
+}
+
+void Service::SetInstanceId(const string& _instanceId)
+{
+    m_instanceId = _instanceId;
+    m_instanceIdHasBeenSet = true;
+}
+
+bool Service::InstanceIdHasBeenSet() const
+{
+    return m_instanceIdHasBeenSet;
+}
+
+string Service::GetSetType() const
+{
+    return m_setType;
+}
+
+void Service::SetSetType(const string& _setType)
+{
+    m_setType = _setType;
+    m_setTypeHasBeenSet = true;
+}
+
+bool Service::SetTypeHasBeenSet() const
+{
+    return m_setTypeHasBeenSet;
+}
+
+string Service::GetDeploymentType() const
+{
+    return m_deploymentType;
+}
+
+void Service::SetDeploymentType(const string& _deploymentType)
+{
+    m_deploymentType = _deploymentType;
+    m_deploymentTypeHasBeenSet = true;
+}
+
+bool Service::DeploymentTypeHasBeenSet() const
+{
+    return m_deploymentTypeHasBeenSet;
 }
 

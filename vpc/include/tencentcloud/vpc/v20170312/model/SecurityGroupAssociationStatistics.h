@@ -84,14 +84,14 @@ namespace TencentCloud
                     bool CVMHasBeenSet() const;
 
                     /**
-                     * 获取Number of database instances.
-                     * @return CDB Number of database instances.
+                     * 获取Number of TencentDB for MySQL instances
+                     * @return CDB Number of TencentDB for MySQL instances
                      */
                     uint64_t GetCDB() const;
 
                     /**
-                     * 设置Number of database instances.
-                     * @param CDB Number of database instances.
+                     * 设置Number of TencentDB for MySQL instances
+                     * @param CDB Number of TencentDB for MySQL instances
                      */
                     void SetCDB(const uint64_t& _cDB);
 
@@ -206,7 +206,7 @@ namespace TencentCloud
                     bool m_cVMHasBeenSet;
 
                     /**
-                     * Number of database instances.
+                     * Number of TencentDB for MySQL instances
                      */
                     uint64_t m_cDB;
                     bool m_cDBHasBeenSet;

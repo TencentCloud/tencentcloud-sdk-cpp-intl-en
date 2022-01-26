@@ -42,6 +42,7 @@ set(batch_public_header_model
   include/tencentcloud/batch/v20170312/model/TaskInstanceLog.h
   include/tencentcloud/batch/v20170312/model/MountDataDisk.h
   include/tencentcloud/batch/v20170312/model/TaskView.h
+  include/tencentcloud/batch/v20170312/model/Tag.h
   include/tencentcloud/batch/v20170312/model/DescribeComputeEnvResponse.h
   include/tencentcloud/batch/v20170312/model/TerminateJobRequest.h
   include/tencentcloud/batch/v20170312/model/DetachInstancesResponse.h
@@ -80,6 +81,7 @@ set(batch_public_header_model
   include/tencentcloud/batch/v20170312/model/Instance.h
   include/tencentcloud/batch/v20170312/model/OutputMapping.h
   include/tencentcloud/batch/v20170312/model/EnhancedService.h
+  include/tencentcloud/batch/v20170312/model/RunAutomationServiceEnabled.h
   include/tencentcloud/batch/v20170312/model/DescribeJobSubmitInfoResponse.h
   include/tencentcloud/batch/v20170312/model/DescribeComputeEnvCreateInfosResponse.h
   include/tencentcloud/batch/v20170312/model/RunSecurityServiceEnabled.h
@@ -158,6 +160,7 @@ set(batch_src
   src/v20170312/model/TaskInstanceLog.cpp
   src/v20170312/model/MountDataDisk.cpp
   src/v20170312/model/TaskView.cpp
+  src/v20170312/model/Tag.cpp
   src/v20170312/model/DescribeComputeEnvResponse.cpp
   src/v20170312/model/TerminateJobRequest.cpp
   src/v20170312/model/DetachInstancesResponse.cpp
@@ -196,6 +199,7 @@ set(batch_src
   src/v20170312/model/Instance.cpp
   src/v20170312/model/OutputMapping.cpp
   src/v20170312/model/EnhancedService.cpp
+  src/v20170312/model/RunAutomationServiceEnabled.cpp
   src/v20170312/model/DescribeJobSubmitInfoResponse.cpp
   src/v20170312/model/DescribeComputeEnvCreateInfosResponse.cpp
   src/v20170312/model/RunSecurityServiceEnabled.cpp

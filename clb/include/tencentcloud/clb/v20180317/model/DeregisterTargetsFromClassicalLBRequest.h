@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取List of real server instance IDs
-                     * @return InstanceIds List of real server instance IDs
+                     * 获取List of real server IDs
+                     * @return InstanceIds List of real server IDs
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置List of real server instance IDs
-                     * @param InstanceIds List of real server instance IDs
+                     * 设置List of real server IDs
+                     * @param InstanceIds List of real server IDs
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
@@ -87,7 +87,7 @@ namespace TencentCloud
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * List of real server instance IDs
+                     * List of real server IDs
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;

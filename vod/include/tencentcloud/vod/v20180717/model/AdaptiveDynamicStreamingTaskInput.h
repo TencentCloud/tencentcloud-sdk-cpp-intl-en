@@ -87,6 +87,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool WatermarkSetHasBeenSet() const;
 
+                    /**
+                     * 获取List of subtitle IDs (maximum: 16)
+                     * @return SubtitleSet List of subtitle IDs (maximum: 16)
+                     */
+                    std::vector<std::string> GetSubtitleSet() const;
+
+                    /**
+                     * 设置List of subtitle IDs (maximum: 16)
+                     * @param SubtitleSet List of subtitle IDs (maximum: 16)
+                     */
+                    void SetSubtitleSet(const std::vector<std::string>& _subtitleSet);
+
+                    /**
+                     * 判断参数 SubtitleSet 是否已赋值
+                     * @return SubtitleSet 是否已赋值
+                     */
+                    bool SubtitleSetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -101,6 +119,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<WatermarkInput> m_watermarkSet;
                     bool m_watermarkSetHasBeenSet;
+
+                    /**
+                     * List of subtitle IDs (maximum: 16)
+                     */
+                    std::vector<std::string> m_subtitleSet;
+                    bool m_subtitleSetHasBeenSet;
 
                 };
             }

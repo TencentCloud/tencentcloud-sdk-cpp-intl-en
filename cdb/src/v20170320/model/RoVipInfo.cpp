@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 RoVipInfo::RoVipInfo() :
@@ -30,7 +29,7 @@ RoVipInfo::RoVipInfo() :
 {
 }
 
-CoreInternalOutcome RoVipInfo::Deserialize(const Value &value)
+CoreInternalOutcome RoVipInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome RoVipInfo::Deserialize(const Value &value)
     {
         if (!value["RoVipStatus"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `RoVipInfo.RoVipStatus` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RoVipInfo.RoVipStatus` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_roVipStatus = value["RoVipStatus"].GetInt64();
         m_roVipStatusHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome RoVipInfo::Deserialize(const Value &value)
     {
         if (!value["RoSubnetId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `RoVipInfo.RoSubnetId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RoVipInfo.RoSubnetId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_roSubnetId = value["RoSubnetId"].GetInt64();
         m_roSubnetIdHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome RoVipInfo::Deserialize(const Value &value)
     {
         if (!value["RoVpcId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `RoVipInfo.RoVpcId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RoVipInfo.RoVpcId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_roVpcId = value["RoVpcId"].GetInt64();
         m_roVpcIdHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome RoVipInfo::Deserialize(const Value &value)
     {
         if (!value["RoVport"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `RoVipInfo.RoVport` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RoVipInfo.RoVport` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_roVport = value["RoVport"].GetInt64();
         m_roVportHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome RoVipInfo::Deserialize(const Value &value)
     {
         if (!value["RoVip"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RoVipInfo.RoVip` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RoVipInfo.RoVip` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_roVip = string(value["RoVip"].GetString());
         m_roVipHasBeenSet = true;
@@ -89,12 +88,12 @@ CoreInternalOutcome RoVipInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void RoVipInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void RoVipInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_roVipStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RoVipStatus";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_roVipStatus, allocator);
@@ -102,7 +101,7 @@ void RoVipInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_roSubnetIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RoSubnetId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_roSubnetId, allocator);
@@ -110,7 +109,7 @@ void RoVipInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_roVpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RoVpcId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_roVpcId, allocator);
@@ -118,7 +117,7 @@ void RoVipInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_roVportHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RoVport";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_roVport, allocator);
@@ -126,10 +125,10 @@ void RoVipInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) c
 
     if (m_roVipHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RoVip";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_roVip.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_roVip.c_str(), allocator).Move(), allocator);
     }
 
 }

@@ -75,6 +75,8 @@
 #include <tencentcloud/cvm/v20170312/model/DescribeRegionsResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeReservedInstancesRequest.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeReservedInstancesResponse.h>
+#include <tencentcloud/cvm/v20170312/model/DescribeReservedInstancesConfigInfosRequest.h>
+#include <tencentcloud/cvm/v20170312/model/DescribeReservedInstancesConfigInfosResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeReservedInstancesOfferingsRequest.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeReservedInstancesOfferingsResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeZoneInstanceConfigInfosRequest.h>
@@ -89,6 +91,8 @@
 #include <tencentcloud/cvm/v20170312/model/ImportImageResponse.h>
 #include <tencentcloud/cvm/v20170312/model/ImportKeyPairRequest.h>
 #include <tencentcloud/cvm/v20170312/model/ImportKeyPairResponse.h>
+#include <tencentcloud/cvm/v20170312/model/InquirePricePurchaseReservedInstancesOfferingRequest.h>
+#include <tencentcloud/cvm/v20170312/model/InquirePricePurchaseReservedInstancesOfferingResponse.h>
 #include <tencentcloud/cvm/v20170312/model/InquiryPriceResetInstanceRequest.h>
 #include <tencentcloud/cvm/v20170312/model/InquiryPriceResetInstanceResponse.h>
 #include <tencentcloud/cvm/v20170312/model/InquiryPriceResetInstancesInternetMaxBandwidthRequest.h>
@@ -153,178 +157,184 @@ namespace TencentCloud
                 CvmClient(const Credential &credential, const std::string &region);
                 CvmClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::AllocateHostsResponse> AllocateHostsOutcome;
+                typedef Outcome<Core::Error, Model::AllocateHostsResponse> AllocateHostsOutcome;
                 typedef std::future<AllocateHostsOutcome> AllocateHostsOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::AllocateHostsRequest&, AllocateHostsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AllocateHostsAsyncHandler;
-                typedef Outcome<Error, Model::AssociateInstancesKeyPairsResponse> AssociateInstancesKeyPairsOutcome;
+                typedef Outcome<Core::Error, Model::AssociateInstancesKeyPairsResponse> AssociateInstancesKeyPairsOutcome;
                 typedef std::future<AssociateInstancesKeyPairsOutcome> AssociateInstancesKeyPairsOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::AssociateInstancesKeyPairsRequest&, AssociateInstancesKeyPairsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssociateInstancesKeyPairsAsyncHandler;
-                typedef Outcome<Error, Model::AssociateSecurityGroupsResponse> AssociateSecurityGroupsOutcome;
+                typedef Outcome<Core::Error, Model::AssociateSecurityGroupsResponse> AssociateSecurityGroupsOutcome;
                 typedef std::future<AssociateSecurityGroupsOutcome> AssociateSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::AssociateSecurityGroupsRequest&, AssociateSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssociateSecurityGroupsAsyncHandler;
-                typedef Outcome<Error, Model::CreateDisasterRecoverGroupResponse> CreateDisasterRecoverGroupOutcome;
+                typedef Outcome<Core::Error, Model::CreateDisasterRecoverGroupResponse> CreateDisasterRecoverGroupOutcome;
                 typedef std::future<CreateDisasterRecoverGroupOutcome> CreateDisasterRecoverGroupOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::CreateDisasterRecoverGroupRequest&, CreateDisasterRecoverGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDisasterRecoverGroupAsyncHandler;
-                typedef Outcome<Error, Model::CreateImageResponse> CreateImageOutcome;
+                typedef Outcome<Core::Error, Model::CreateImageResponse> CreateImageOutcome;
                 typedef std::future<CreateImageOutcome> CreateImageOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::CreateImageRequest&, CreateImageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateImageAsyncHandler;
-                typedef Outcome<Error, Model::CreateKeyPairResponse> CreateKeyPairOutcome;
+                typedef Outcome<Core::Error, Model::CreateKeyPairResponse> CreateKeyPairOutcome;
                 typedef std::future<CreateKeyPairOutcome> CreateKeyPairOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::CreateKeyPairRequest&, CreateKeyPairOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateKeyPairAsyncHandler;
-                typedef Outcome<Error, Model::DeleteDisasterRecoverGroupsResponse> DeleteDisasterRecoverGroupsOutcome;
+                typedef Outcome<Core::Error, Model::DeleteDisasterRecoverGroupsResponse> DeleteDisasterRecoverGroupsOutcome;
                 typedef std::future<DeleteDisasterRecoverGroupsOutcome> DeleteDisasterRecoverGroupsOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DeleteDisasterRecoverGroupsRequest&, DeleteDisasterRecoverGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteDisasterRecoverGroupsAsyncHandler;
-                typedef Outcome<Error, Model::DeleteImagesResponse> DeleteImagesOutcome;
+                typedef Outcome<Core::Error, Model::DeleteImagesResponse> DeleteImagesOutcome;
                 typedef std::future<DeleteImagesOutcome> DeleteImagesOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DeleteImagesRequest&, DeleteImagesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteImagesAsyncHandler;
-                typedef Outcome<Error, Model::DeleteKeyPairsResponse> DeleteKeyPairsOutcome;
+                typedef Outcome<Core::Error, Model::DeleteKeyPairsResponse> DeleteKeyPairsOutcome;
                 typedef std::future<DeleteKeyPairsOutcome> DeleteKeyPairsOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DeleteKeyPairsRequest&, DeleteKeyPairsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteKeyPairsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDisasterRecoverGroupQuotaResponse> DescribeDisasterRecoverGroupQuotaOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDisasterRecoverGroupQuotaResponse> DescribeDisasterRecoverGroupQuotaOutcome;
                 typedef std::future<DescribeDisasterRecoverGroupQuotaOutcome> DescribeDisasterRecoverGroupQuotaOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeDisasterRecoverGroupQuotaRequest&, DescribeDisasterRecoverGroupQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDisasterRecoverGroupQuotaAsyncHandler;
-                typedef Outcome<Error, Model::DescribeDisasterRecoverGroupsResponse> DescribeDisasterRecoverGroupsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeDisasterRecoverGroupsResponse> DescribeDisasterRecoverGroupsOutcome;
                 typedef std::future<DescribeDisasterRecoverGroupsOutcome> DescribeDisasterRecoverGroupsOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeDisasterRecoverGroupsRequest&, DescribeDisasterRecoverGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDisasterRecoverGroupsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeHostsResponse> DescribeHostsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeHostsResponse> DescribeHostsOutcome;
                 typedef std::future<DescribeHostsOutcome> DescribeHostsOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeHostsRequest&, DescribeHostsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHostsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeImageQuotaResponse> DescribeImageQuotaOutcome;
+                typedef Outcome<Core::Error, Model::DescribeImageQuotaResponse> DescribeImageQuotaOutcome;
                 typedef std::future<DescribeImageQuotaOutcome> DescribeImageQuotaOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeImageQuotaRequest&, DescribeImageQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeImageQuotaAsyncHandler;
-                typedef Outcome<Error, Model::DescribeImageSharePermissionResponse> DescribeImageSharePermissionOutcome;
+                typedef Outcome<Core::Error, Model::DescribeImageSharePermissionResponse> DescribeImageSharePermissionOutcome;
                 typedef std::future<DescribeImageSharePermissionOutcome> DescribeImageSharePermissionOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeImageSharePermissionRequest&, DescribeImageSharePermissionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeImageSharePermissionAsyncHandler;
-                typedef Outcome<Error, Model::DescribeImagesResponse> DescribeImagesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeImagesResponse> DescribeImagesOutcome;
                 typedef std::future<DescribeImagesOutcome> DescribeImagesOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeImagesRequest&, DescribeImagesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeImagesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeImportImageOsResponse> DescribeImportImageOsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeImportImageOsResponse> DescribeImportImageOsOutcome;
                 typedef std::future<DescribeImportImageOsOutcome> DescribeImportImageOsOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeImportImageOsRequest&, DescribeImportImageOsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeImportImageOsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeInstanceFamilyConfigsResponse> DescribeInstanceFamilyConfigsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeInstanceFamilyConfigsResponse> DescribeInstanceFamilyConfigsOutcome;
                 typedef std::future<DescribeInstanceFamilyConfigsOutcome> DescribeInstanceFamilyConfigsOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeInstanceFamilyConfigsRequest&, DescribeInstanceFamilyConfigsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceFamilyConfigsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeInstanceTypeConfigsResponse> DescribeInstanceTypeConfigsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeInstanceTypeConfigsResponse> DescribeInstanceTypeConfigsOutcome;
                 typedef std::future<DescribeInstanceTypeConfigsOutcome> DescribeInstanceTypeConfigsOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeInstanceTypeConfigsRequest&, DescribeInstanceTypeConfigsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceTypeConfigsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeInstanceVncUrlResponse> DescribeInstanceVncUrlOutcome;
+                typedef Outcome<Core::Error, Model::DescribeInstanceVncUrlResponse> DescribeInstanceVncUrlOutcome;
                 typedef std::future<DescribeInstanceVncUrlOutcome> DescribeInstanceVncUrlOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeInstanceVncUrlRequest&, DescribeInstanceVncUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceVncUrlAsyncHandler;
-                typedef Outcome<Error, Model::DescribeInstancesResponse> DescribeInstancesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeInstancesResponse> DescribeInstancesOutcome;
                 typedef std::future<DescribeInstancesOutcome> DescribeInstancesOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeInstancesRequest&, DescribeInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstancesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeInstancesOperationLimitResponse> DescribeInstancesOperationLimitOutcome;
+                typedef Outcome<Core::Error, Model::DescribeInstancesOperationLimitResponse> DescribeInstancesOperationLimitOutcome;
                 typedef std::future<DescribeInstancesOperationLimitOutcome> DescribeInstancesOperationLimitOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeInstancesOperationLimitRequest&, DescribeInstancesOperationLimitOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstancesOperationLimitAsyncHandler;
-                typedef Outcome<Error, Model::DescribeInstancesStatusResponse> DescribeInstancesStatusOutcome;
+                typedef Outcome<Core::Error, Model::DescribeInstancesStatusResponse> DescribeInstancesStatusOutcome;
                 typedef std::future<DescribeInstancesStatusOutcome> DescribeInstancesStatusOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeInstancesStatusRequest&, DescribeInstancesStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstancesStatusAsyncHandler;
-                typedef Outcome<Error, Model::DescribeInternetChargeTypeConfigsResponse> DescribeInternetChargeTypeConfigsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeInternetChargeTypeConfigsResponse> DescribeInternetChargeTypeConfigsOutcome;
                 typedef std::future<DescribeInternetChargeTypeConfigsOutcome> DescribeInternetChargeTypeConfigsOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeInternetChargeTypeConfigsRequest&, DescribeInternetChargeTypeConfigsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInternetChargeTypeConfigsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeKeyPairsResponse> DescribeKeyPairsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeKeyPairsResponse> DescribeKeyPairsOutcome;
                 typedef std::future<DescribeKeyPairsOutcome> DescribeKeyPairsOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeKeyPairsRequest&, DescribeKeyPairsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeKeyPairsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeRegionsResponse> DescribeRegionsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeRegionsResponse> DescribeRegionsOutcome;
                 typedef std::future<DescribeRegionsOutcome> DescribeRegionsOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeRegionsRequest&, DescribeRegionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRegionsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeReservedInstancesResponse> DescribeReservedInstancesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeReservedInstancesResponse> DescribeReservedInstancesOutcome;
                 typedef std::future<DescribeReservedInstancesOutcome> DescribeReservedInstancesOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeReservedInstancesRequest&, DescribeReservedInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeReservedInstancesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeReservedInstancesOfferingsResponse> DescribeReservedInstancesOfferingsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeReservedInstancesConfigInfosResponse> DescribeReservedInstancesConfigInfosOutcome;
+                typedef std::future<DescribeReservedInstancesConfigInfosOutcome> DescribeReservedInstancesConfigInfosOutcomeCallable;
+                typedef std::function<void(const CvmClient*, const Model::DescribeReservedInstancesConfigInfosRequest&, DescribeReservedInstancesConfigInfosOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeReservedInstancesConfigInfosAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeReservedInstancesOfferingsResponse> DescribeReservedInstancesOfferingsOutcome;
                 typedef std::future<DescribeReservedInstancesOfferingsOutcome> DescribeReservedInstancesOfferingsOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeReservedInstancesOfferingsRequest&, DescribeReservedInstancesOfferingsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeReservedInstancesOfferingsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeZoneInstanceConfigInfosResponse> DescribeZoneInstanceConfigInfosOutcome;
+                typedef Outcome<Core::Error, Model::DescribeZoneInstanceConfigInfosResponse> DescribeZoneInstanceConfigInfosOutcome;
                 typedef std::future<DescribeZoneInstanceConfigInfosOutcome> DescribeZoneInstanceConfigInfosOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeZoneInstanceConfigInfosRequest&, DescribeZoneInstanceConfigInfosOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeZoneInstanceConfigInfosAsyncHandler;
-                typedef Outcome<Error, Model::DescribeZonesResponse> DescribeZonesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeZonesResponse> DescribeZonesOutcome;
                 typedef std::future<DescribeZonesOutcome> DescribeZonesOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeZonesRequest&, DescribeZonesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeZonesAsyncHandler;
-                typedef Outcome<Error, Model::DisassociateInstancesKeyPairsResponse> DisassociateInstancesKeyPairsOutcome;
+                typedef Outcome<Core::Error, Model::DisassociateInstancesKeyPairsResponse> DisassociateInstancesKeyPairsOutcome;
                 typedef std::future<DisassociateInstancesKeyPairsOutcome> DisassociateInstancesKeyPairsOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DisassociateInstancesKeyPairsRequest&, DisassociateInstancesKeyPairsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisassociateInstancesKeyPairsAsyncHandler;
-                typedef Outcome<Error, Model::DisassociateSecurityGroupsResponse> DisassociateSecurityGroupsOutcome;
+                typedef Outcome<Core::Error, Model::DisassociateSecurityGroupsResponse> DisassociateSecurityGroupsOutcome;
                 typedef std::future<DisassociateSecurityGroupsOutcome> DisassociateSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DisassociateSecurityGroupsRequest&, DisassociateSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisassociateSecurityGroupsAsyncHandler;
-                typedef Outcome<Error, Model::ImportImageResponse> ImportImageOutcome;
+                typedef Outcome<Core::Error, Model::ImportImageResponse> ImportImageOutcome;
                 typedef std::future<ImportImageOutcome> ImportImageOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ImportImageRequest&, ImportImageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ImportImageAsyncHandler;
-                typedef Outcome<Error, Model::ImportKeyPairResponse> ImportKeyPairOutcome;
+                typedef Outcome<Core::Error, Model::ImportKeyPairResponse> ImportKeyPairOutcome;
                 typedef std::future<ImportKeyPairOutcome> ImportKeyPairOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ImportKeyPairRequest&, ImportKeyPairOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ImportKeyPairAsyncHandler;
-                typedef Outcome<Error, Model::InquiryPriceResetInstanceResponse> InquiryPriceResetInstanceOutcome;
+                typedef Outcome<Core::Error, Model::InquirePricePurchaseReservedInstancesOfferingResponse> InquirePricePurchaseReservedInstancesOfferingOutcome;
+                typedef std::future<InquirePricePurchaseReservedInstancesOfferingOutcome> InquirePricePurchaseReservedInstancesOfferingOutcomeCallable;
+                typedef std::function<void(const CvmClient*, const Model::InquirePricePurchaseReservedInstancesOfferingRequest&, InquirePricePurchaseReservedInstancesOfferingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquirePricePurchaseReservedInstancesOfferingAsyncHandler;
+                typedef Outcome<Core::Error, Model::InquiryPriceResetInstanceResponse> InquiryPriceResetInstanceOutcome;
                 typedef std::future<InquiryPriceResetInstanceOutcome> InquiryPriceResetInstanceOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::InquiryPriceResetInstanceRequest&, InquiryPriceResetInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceResetInstanceAsyncHandler;
-                typedef Outcome<Error, Model::InquiryPriceResetInstancesInternetMaxBandwidthResponse> InquiryPriceResetInstancesInternetMaxBandwidthOutcome;
+                typedef Outcome<Core::Error, Model::InquiryPriceResetInstancesInternetMaxBandwidthResponse> InquiryPriceResetInstancesInternetMaxBandwidthOutcome;
                 typedef std::future<InquiryPriceResetInstancesInternetMaxBandwidthOutcome> InquiryPriceResetInstancesInternetMaxBandwidthOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::InquiryPriceResetInstancesInternetMaxBandwidthRequest&, InquiryPriceResetInstancesInternetMaxBandwidthOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceResetInstancesInternetMaxBandwidthAsyncHandler;
-                typedef Outcome<Error, Model::InquiryPriceResetInstancesTypeResponse> InquiryPriceResetInstancesTypeOutcome;
+                typedef Outcome<Core::Error, Model::InquiryPriceResetInstancesTypeResponse> InquiryPriceResetInstancesTypeOutcome;
                 typedef std::future<InquiryPriceResetInstancesTypeOutcome> InquiryPriceResetInstancesTypeOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::InquiryPriceResetInstancesTypeRequest&, InquiryPriceResetInstancesTypeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceResetInstancesTypeAsyncHandler;
-                typedef Outcome<Error, Model::InquiryPriceResizeInstanceDisksResponse> InquiryPriceResizeInstanceDisksOutcome;
+                typedef Outcome<Core::Error, Model::InquiryPriceResizeInstanceDisksResponse> InquiryPriceResizeInstanceDisksOutcome;
                 typedef std::future<InquiryPriceResizeInstanceDisksOutcome> InquiryPriceResizeInstanceDisksOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::InquiryPriceResizeInstanceDisksRequest&, InquiryPriceResizeInstanceDisksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceResizeInstanceDisksAsyncHandler;
-                typedef Outcome<Error, Model::InquiryPriceRunInstancesResponse> InquiryPriceRunInstancesOutcome;
+                typedef Outcome<Core::Error, Model::InquiryPriceRunInstancesResponse> InquiryPriceRunInstancesOutcome;
                 typedef std::future<InquiryPriceRunInstancesOutcome> InquiryPriceRunInstancesOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::InquiryPriceRunInstancesRequest&, InquiryPriceRunInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceRunInstancesAsyncHandler;
-                typedef Outcome<Error, Model::ModifyDisasterRecoverGroupAttributeResponse> ModifyDisasterRecoverGroupAttributeOutcome;
+                typedef Outcome<Core::Error, Model::ModifyDisasterRecoverGroupAttributeResponse> ModifyDisasterRecoverGroupAttributeOutcome;
                 typedef std::future<ModifyDisasterRecoverGroupAttributeOutcome> ModifyDisasterRecoverGroupAttributeOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ModifyDisasterRecoverGroupAttributeRequest&, ModifyDisasterRecoverGroupAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDisasterRecoverGroupAttributeAsyncHandler;
-                typedef Outcome<Error, Model::ModifyHostsAttributeResponse> ModifyHostsAttributeOutcome;
+                typedef Outcome<Core::Error, Model::ModifyHostsAttributeResponse> ModifyHostsAttributeOutcome;
                 typedef std::future<ModifyHostsAttributeOutcome> ModifyHostsAttributeOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ModifyHostsAttributeRequest&, ModifyHostsAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyHostsAttributeAsyncHandler;
-                typedef Outcome<Error, Model::ModifyImageAttributeResponse> ModifyImageAttributeOutcome;
+                typedef Outcome<Core::Error, Model::ModifyImageAttributeResponse> ModifyImageAttributeOutcome;
                 typedef std::future<ModifyImageAttributeOutcome> ModifyImageAttributeOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ModifyImageAttributeRequest&, ModifyImageAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyImageAttributeAsyncHandler;
-                typedef Outcome<Error, Model::ModifyImageSharePermissionResponse> ModifyImageSharePermissionOutcome;
+                typedef Outcome<Core::Error, Model::ModifyImageSharePermissionResponse> ModifyImageSharePermissionOutcome;
                 typedef std::future<ModifyImageSharePermissionOutcome> ModifyImageSharePermissionOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ModifyImageSharePermissionRequest&, ModifyImageSharePermissionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyImageSharePermissionAsyncHandler;
-                typedef Outcome<Error, Model::ModifyInstancesAttributeResponse> ModifyInstancesAttributeOutcome;
+                typedef Outcome<Core::Error, Model::ModifyInstancesAttributeResponse> ModifyInstancesAttributeOutcome;
                 typedef std::future<ModifyInstancesAttributeOutcome> ModifyInstancesAttributeOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ModifyInstancesAttributeRequest&, ModifyInstancesAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstancesAttributeAsyncHandler;
-                typedef Outcome<Error, Model::ModifyInstancesProjectResponse> ModifyInstancesProjectOutcome;
+                typedef Outcome<Core::Error, Model::ModifyInstancesProjectResponse> ModifyInstancesProjectOutcome;
                 typedef std::future<ModifyInstancesProjectOutcome> ModifyInstancesProjectOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ModifyInstancesProjectRequest&, ModifyInstancesProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstancesProjectAsyncHandler;
-                typedef Outcome<Error, Model::ModifyInstancesVpcAttributeResponse> ModifyInstancesVpcAttributeOutcome;
+                typedef Outcome<Core::Error, Model::ModifyInstancesVpcAttributeResponse> ModifyInstancesVpcAttributeOutcome;
                 typedef std::future<ModifyInstancesVpcAttributeOutcome> ModifyInstancesVpcAttributeOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ModifyInstancesVpcAttributeRequest&, ModifyInstancesVpcAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstancesVpcAttributeAsyncHandler;
-                typedef Outcome<Error, Model::ModifyKeyPairAttributeResponse> ModifyKeyPairAttributeOutcome;
+                typedef Outcome<Core::Error, Model::ModifyKeyPairAttributeResponse> ModifyKeyPairAttributeOutcome;
                 typedef std::future<ModifyKeyPairAttributeOutcome> ModifyKeyPairAttributeOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ModifyKeyPairAttributeRequest&, ModifyKeyPairAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyKeyPairAttributeAsyncHandler;
-                typedef Outcome<Error, Model::PurchaseReservedInstancesOfferingResponse> PurchaseReservedInstancesOfferingOutcome;
+                typedef Outcome<Core::Error, Model::PurchaseReservedInstancesOfferingResponse> PurchaseReservedInstancesOfferingOutcome;
                 typedef std::future<PurchaseReservedInstancesOfferingOutcome> PurchaseReservedInstancesOfferingOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::PurchaseReservedInstancesOfferingRequest&, PurchaseReservedInstancesOfferingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PurchaseReservedInstancesOfferingAsyncHandler;
-                typedef Outcome<Error, Model::RebootInstancesResponse> RebootInstancesOutcome;
+                typedef Outcome<Core::Error, Model::RebootInstancesResponse> RebootInstancesOutcome;
                 typedef std::future<RebootInstancesOutcome> RebootInstancesOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::RebootInstancesRequest&, RebootInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RebootInstancesAsyncHandler;
-                typedef Outcome<Error, Model::ResetInstanceResponse> ResetInstanceOutcome;
+                typedef Outcome<Core::Error, Model::ResetInstanceResponse> ResetInstanceOutcome;
                 typedef std::future<ResetInstanceOutcome> ResetInstanceOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ResetInstanceRequest&, ResetInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetInstanceAsyncHandler;
-                typedef Outcome<Error, Model::ResetInstancesInternetMaxBandwidthResponse> ResetInstancesInternetMaxBandwidthOutcome;
+                typedef Outcome<Core::Error, Model::ResetInstancesInternetMaxBandwidthResponse> ResetInstancesInternetMaxBandwidthOutcome;
                 typedef std::future<ResetInstancesInternetMaxBandwidthOutcome> ResetInstancesInternetMaxBandwidthOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ResetInstancesInternetMaxBandwidthRequest&, ResetInstancesInternetMaxBandwidthOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetInstancesInternetMaxBandwidthAsyncHandler;
-                typedef Outcome<Error, Model::ResetInstancesPasswordResponse> ResetInstancesPasswordOutcome;
+                typedef Outcome<Core::Error, Model::ResetInstancesPasswordResponse> ResetInstancesPasswordOutcome;
                 typedef std::future<ResetInstancesPasswordOutcome> ResetInstancesPasswordOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ResetInstancesPasswordRequest&, ResetInstancesPasswordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetInstancesPasswordAsyncHandler;
-                typedef Outcome<Error, Model::ResetInstancesTypeResponse> ResetInstancesTypeOutcome;
+                typedef Outcome<Core::Error, Model::ResetInstancesTypeResponse> ResetInstancesTypeOutcome;
                 typedef std::future<ResetInstancesTypeOutcome> ResetInstancesTypeOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ResetInstancesTypeRequest&, ResetInstancesTypeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetInstancesTypeAsyncHandler;
-                typedef Outcome<Error, Model::ResizeInstanceDisksResponse> ResizeInstanceDisksOutcome;
+                typedef Outcome<Core::Error, Model::ResizeInstanceDisksResponse> ResizeInstanceDisksOutcome;
                 typedef std::future<ResizeInstanceDisksOutcome> ResizeInstanceDisksOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ResizeInstanceDisksRequest&, ResizeInstanceDisksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResizeInstanceDisksAsyncHandler;
-                typedef Outcome<Error, Model::RunInstancesResponse> RunInstancesOutcome;
+                typedef Outcome<Core::Error, Model::RunInstancesResponse> RunInstancesOutcome;
                 typedef std::future<RunInstancesOutcome> RunInstancesOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::RunInstancesRequest&, RunInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RunInstancesAsyncHandler;
-                typedef Outcome<Error, Model::StartInstancesResponse> StartInstancesOutcome;
+                typedef Outcome<Core::Error, Model::StartInstancesResponse> StartInstancesOutcome;
                 typedef std::future<StartInstancesOutcome> StartInstancesOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::StartInstancesRequest&, StartInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartInstancesAsyncHandler;
-                typedef Outcome<Error, Model::StopInstancesResponse> StopInstancesOutcome;
+                typedef Outcome<Core::Error, Model::StopInstancesResponse> StopInstancesOutcome;
                 typedef std::future<StopInstancesOutcome> StopInstancesOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::StopInstancesRequest&, StopInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopInstancesAsyncHandler;
-                typedef Outcome<Error, Model::SyncImagesResponse> SyncImagesOutcome;
+                typedef Outcome<Core::Error, Model::SyncImagesResponse> SyncImagesOutcome;
                 typedef std::future<SyncImagesOutcome> SyncImagesOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::SyncImagesRequest&, SyncImagesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SyncImagesAsyncHandler;
-                typedef Outcome<Error, Model::TerminateInstancesResponse> TerminateInstancesOutcome;
+                typedef Outcome<Core::Error, Model::TerminateInstancesResponse> TerminateInstancesOutcome;
                 typedef std::future<TerminateInstancesOutcome> TerminateInstancesOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::TerminateInstancesRequest&, TerminateInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminateInstancesAsyncHandler;
 
@@ -364,7 +374,7 @@ If you currently use a password to log in, you will no longer be able to do so a
                 AssociateSecurityGroupsOutcomeCallable AssociateSecurityGroupsCallable(const Model::AssociateSecurityGroupsRequest& request);
 
                 /**
-                 *This API is used to create a [spread placement group](https://cloud.tencent.com/document/product/213/15486). After you create one, you can specify it for an instance when you [create the instance](https://cloud.tencent.com/document/api/213/15730), 
+                 *This API is used to create a [spread placement group](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1). After you create one, you can specify it for an instance when you [create the instance](https://intl.cloud.tencent.com/document/api/213/15730?from_cn_redirect=1), 
                  * @param req CreateDisasterRecoverGroupRequest
                  * @return CreateDisasterRecoverGroupOutcome
                  */
@@ -396,7 +406,7 @@ If you currently use a password to log in, you will no longer be able to do so a
                 CreateKeyPairOutcomeCallable CreateKeyPairCallable(const Model::CreateKeyPairRequest& request);
 
                 /**
-                 *This API is used to delete a [spread placement group](https://cloud.tencent.com/document/product/213/15486). Only empty placement groups can be deleted. To delete a non-empty group, you need to terminate all the CVM instances in it first. Otherwise, the deletion will fail.
+                 *This API is used to delete a [spread placement group](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1). Only empty placement groups can be deleted. To delete a non-empty group, you need to terminate all the CVM instances in it first. Otherwise, the deletion will fail.
                  * @param req DeleteDisasterRecoverGroupsRequest
                  * @return DeleteDisasterRecoverGroupsOutcome
                  */
@@ -407,7 +417,7 @@ If you currently use a password to log in, you will no longer be able to do so a
                 /**
                  *This API is used to delete images.
 
-* If the [ImageState](https://cloud.tencent.com/document/api/213/9452#image_state) of an image is `Creating` or `In Use`, it cannot be deleted. Use [DescribeImages](https://cloud.tencent.com/document/api/213/9418) to query the image state.
+* If the [ImageState](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#image_state) of an image is `Creating` or `In Use`, it cannot be deleted. Use [DescribeImages](https://intl.cloud.tencent.com/document/api/213/9418?from_cn_redirect=1) to query the image state.
 * You can only create up to 10 custom images in each region. If you have used up the quota, you can delete images to create new ones.
 * A shared image cannot be deleted.
                  * @param req DeleteImagesRequest
@@ -430,7 +440,7 @@ If you currently use a password to log in, you will no longer be able to do so a
                 DeleteKeyPairsOutcomeCallable DeleteKeyPairsCallable(const Model::DeleteKeyPairsRequest& request);
 
                 /**
-                 *This API is used to query the quota of [spread placement groups](https://cloud.tencent.com/document/product/213/15486).
+                 *This API is used to query the quota of [spread placement groups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1).
                  * @param req DescribeDisasterRecoverGroupQuotaRequest
                  * @return DescribeDisasterRecoverGroupQuotaOutcome
                  */
@@ -439,7 +449,7 @@ If you currently use a password to log in, you will no longer be able to do so a
                 DescribeDisasterRecoverGroupQuotaOutcomeCallable DescribeDisasterRecoverGroupQuotaCallable(const Model::DescribeDisasterRecoverGroupQuotaRequest& request);
 
                 /**
-                 *This API is used to query the information on [spread placement groups](https://cloud.tencent.com/document/product/213/15486).
+                 *This API is used to query the information on [spread placement groups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1).
                  * @param req DescribeDisasterRecoverGroupsRequest
                  * @return DescribeDisasterRecoverGroupsOutcome
                  */
@@ -507,7 +517,7 @@ If you currently use a password to log in, you will no longer be able to do so a
                 /**
                  *This API is used to query the model configuration of an instance.
 
-* You can filter the query results with `zone` or `instance-family`. For more information on filtering conditions, see [`Filter`](https://cloud.tencent.com/document/api/213/15753#Filter).
+* You can filter the query results with `zone` or `instance-family`. For more information on filtering conditions, see [`Filter`](https://intl.cloud.tencent.com/document/api/213/15753?from_cn_redirect=1#Filter).
 * If no parameter is defined, the model configuration of all the instances in the specified region will be returned.
                  * @param req DescribeInstanceTypeConfigsRequest
                  * @return DescribeInstanceTypeConfigsOutcome
@@ -596,7 +606,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 DescribeKeyPairsOutcomeCallable DescribeKeyPairsCallable(const Model::DescribeKeyPairsRequest& request);
 
                 /**
-                 *This API is used to query regions.
+                 *(Suspended) This API is used to query the information of regions. Due to platform policy, the update of this API has been temporarily stopped. Please try the new one as described in https://intl.cloud.tencent.com/document/product/1278/55255?from_cn_redirect=1
                  * @param req DescribeRegionsRequest
                  * @return DescribeRegionsOutcome
                  */
@@ -612,6 +622,15 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 DescribeReservedInstancesOutcome DescribeReservedInstances(const Model::DescribeReservedInstancesRequest &request);
                 void DescribeReservedInstancesAsync(const Model::DescribeReservedInstancesRequest& request, const DescribeReservedInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeReservedInstancesOutcomeCallable DescribeReservedInstancesCallable(const Model::DescribeReservedInstancesRequest& request);
+
+                /**
+                 *This API is used to describe reserved instance (RI) offerings. Currently, RIs are only offered to beta users.
+                 * @param req DescribeReservedInstancesConfigInfosRequest
+                 * @return DescribeReservedInstancesConfigInfosOutcome
+                 */
+                DescribeReservedInstancesConfigInfosOutcome DescribeReservedInstancesConfigInfos(const Model::DescribeReservedInstancesConfigInfosRequest &request);
+                void DescribeReservedInstancesConfigInfosAsync(const Model::DescribeReservedInstancesConfigInfosRequest& request, const DescribeReservedInstancesConfigInfosAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeReservedInstancesConfigInfosOutcomeCallable DescribeReservedInstancesConfigInfosCallable(const Model::DescribeReservedInstancesConfigInfosRequest& request);
 
                 /**
                  *This API is used to describe Reserved Instance offerings that are available for purchase.
@@ -643,9 +662,9 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 /**
                  *This API is used to unbind one or more key pairs from one or more instances.
 
-* It only supports [`STOPPED`](https://cloud.tencent.com/document/product/213/15753#InstanceStatus) Linux instances.
+* It only supports [`STOPPED`](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#InstanceStatus) Linux instances.
 * After a key pair is disassociated from an instance, you can log in to the instance with password.
-* If you did not set a password for the instance, you will not be able to log in via SSH after the unbinding. In this case, you can call [ResetInstancesPassword](https://cloud.tencent.com/document/api/213/15736) to set a login password.
+* If you did not set a password for the instance, you will not be able to log in via SSH after the unbinding. In this case, you can call [ResetInstancesPassword](https://intl.cloud.tencent.com/document/api/213/15736?from_cn_redirect=1) to set a login password.
 * Batch operations are supported. The maximum number of instances in each request is 100. If instances not available for the operation are selected, you will get an error code.
                  * @param req DisassociateInstancesKeyPairsRequest
                  * @return DisassociateInstancesKeyPairsOutcome
@@ -664,7 +683,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 DisassociateSecurityGroupsOutcomeCallable DisassociateSecurityGroupsCallable(const Model::DisassociateSecurityGroupsRequest& request);
 
                 /**
-                 *This API is used to import images. Imported images can be used to create instances. 
+                 *The API is used to import an image. The image imported can be used to create instances. Currently, this API can import images in formats like RAW, VHD, QCOW2, and VMDK.
                  * @param req ImportImageRequest
                  * @return ImportImageOutcome
                  */
@@ -675,7 +694,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 /**
                  *This API is used to import key pairs.
 
-* You can use this API to import key pairs to a user account, but the key pairs will not be automatically associated with any instance. You may use [AssociasteInstancesKeyPair](https://cloud.tencent.com/document/api/213/9404) to associate key pairs with instances.
+* You can use this API to import key pairs to a user account, but the key pairs will not be automatically associated with any instance. You may use [AssociasteInstancesKeyPair](https://intl.cloud.tencent.com/document/api/213/9404?from_cn_redirect=1) to associate key pairs with instances.
 * You need to specify the names of the key pairs and the content of the public keys.
 * If you only have private keys, you can convert them to public keys with the `SSL` tool before importing them.
                  * @param req ImportKeyPairRequest
@@ -686,10 +705,19 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 ImportKeyPairOutcomeCallable ImportKeyPairCallable(const Model::ImportKeyPairRequest& request);
 
                 /**
+                 *This API is used to query the price of reserved instances. It only supports querying purchasable reserved instance offerings. Currently, RIs are only offered to beta users.
+                 * @param req InquirePricePurchaseReservedInstancesOfferingRequest
+                 * @return InquirePricePurchaseReservedInstancesOfferingOutcome
+                 */
+                InquirePricePurchaseReservedInstancesOfferingOutcome InquirePricePurchaseReservedInstancesOffering(const Model::InquirePricePurchaseReservedInstancesOfferingRequest &request);
+                void InquirePricePurchaseReservedInstancesOfferingAsync(const Model::InquirePricePurchaseReservedInstancesOfferingRequest& request, const InquirePricePurchaseReservedInstancesOfferingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                InquirePricePurchaseReservedInstancesOfferingOutcomeCallable InquirePricePurchaseReservedInstancesOfferingCallable(const Model::InquirePricePurchaseReservedInstancesOfferingRequest& request);
+
+                /**
                  *This API is used to query the price for reinstalling an instance.
 
 * If you have specified the `ImageId` parameter, the price query is performed with the specified image. Otherwise, the image used by the current instance is used.
-* You can only query the price for reinstallation caused by switching between Linux and Windows OS. And the [system disk type](https://cloud.tencent.com/document/api/213/15753#SystemDisk) of the instance must be `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`.
+* You can only query the price for reinstallation caused by switching between Linux and Windows OS. And the [system disk type](https://intl.cloud.tencent.com/document/api/213/15753?from_cn_redirect=1#SystemDisk) of the instance must be `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`.
 * Currently, this API only supports instances in Mainland China regions.
                  * @param req InquiryPriceResetInstanceRequest
                  * @return InquiryPriceResetInstanceOutcome
@@ -701,7 +729,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 /**
                  *This API is used to query the price for upgrading the public bandwidth cap of an instance.
 
-* The allowed bandwidth cap varies for different models. For details, see [Purchasing Network Bandwidth](https://cloud.tencent.com/document/product/213/509).
+* The allowed bandwidth cap varies for different models. For details, see [Purchasing Network Bandwidth](https://intl.cloud.tencent.com/document/product/213/509?from_cn_redirect=1).
 * For bandwidth billed by the `TRAFFIC_POSTPAID_BY_HOUR` method, changing the bandwidth cap through this API takes effect in real time. You can increase or reduce bandwidth within applicable limits.
                  * @param req InquiryPriceResetInstancesInternetMaxBandwidthRequest
                  * @return InquiryPriceResetInstancesInternetMaxBandwidthOutcome
@@ -713,8 +741,8 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 /**
                  *This API is used to query the price for adjusting the instance model.
 
-* Currently, you can only use this API to query the prices of instances whose [system disk type](https://cloud.tencent.com/document/api/213/9452#block_device) is `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`.
-* Currently, you cannot use this API to query the prices of [CDH](https://cloud.tencent.com/document/product/416) instances.
+* Currently, you can only use this API to query the prices of instances whose [system disk type](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#block_device) is `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`.
+* Currently, you cannot use this API to query the prices of [CDH](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) instances.
                  * @param req InquiryPriceResetInstancesTypeRequest
                  * @return InquiryPriceResetInstancesTypeOutcome
                  */
@@ -725,8 +753,8 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 /**
                  *This API is used to query the price for expanding data disks of an instance.
 
-* Currently, you can only use this API to query the price of non-elastic data disks whose [disk type](/document/api/213/9452#block_device) is `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`. You can use [`DescribeDisks`](https://cloud.tencent.com/document/api/362/16315) to check whether a disk is elastic. If the `Portable` field in the response is `false`, it means that the disk is non-elastic.
-* Currently, you cannot use this API to query the price for [CDH](https://cloud.tencent.com/document/product/416) instances. *Also, you can only query the price of expanding one data disk at a time.
+* Currently, you can only use this API to query the price of non-elastic data disks whose [disk type](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#block_device) is `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`. You can use [`DescribeDisks`](https://intl.cloud.tencent.com/document/api/362/16315?from_cn_redirect=1) to check whether a disk is elastic. If the `Portable` field in the response is `false`, it means that the disk is non-elastic.
+* Currently, you cannot use this API to query the price for [CDH](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) instances. *Also, you can only query the price of expanding one data disk at a time.
                  * @param req InquiryPriceResizeInstanceDisksRequest
                  * @return InquiryPriceResizeInstanceDisksOutcome
                  */
@@ -735,7 +763,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 InquiryPriceResizeInstanceDisksOutcomeCallable InquiryPriceResizeInstanceDisksCallable(const Model::InquiryPriceResizeInstanceDisksRequest& request);
 
                 /**
-                 *This API is used to query the price of creating instances. You can only use this API for instances whose configuration is within the purchase limit. For more information, see [RunInstances](https://cloud.tencent.com/document/api/213/15730).
+                 *This API is used to query the price of creating instances. You can only use this API for instances whose configuration is within the purchase limit. For more information, see [RunInstances](https://intl.cloud.tencent.com/document/api/213/15730?from_cn_redirect=1).
                  * @param req InquiryPriceRunInstancesRequest
                  * @return InquiryPriceRunInstancesOutcome
                  */
@@ -744,7 +772,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 InquiryPriceRunInstancesOutcomeCallable InquiryPriceRunInstancesCallable(const Model::InquiryPriceRunInstancesRequest& request);
 
                 /**
-                 *This API is used to modify the attributes of [spread placement groups](https://cloud.tencent.com/document/product/213/15486).
+                 *This API is used to modify the attributes of [spread placement groups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1).
                  * @param req ModifyDisasterRecoverGroupAttributeRequest
                  * @return ModifyDisasterRecoverGroupAttributeOutcome
                  */
@@ -788,11 +816,12 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 ModifyImageSharePermissionOutcomeCallable ModifyImageSharePermissionCallable(const Model::ModifyImageSharePermissionRequest& request);
 
                 /**
-                 *This API is used to modify the attributes of an instance. Currently you can only use the API to modify the name and the associated security groups of the instance.
+                 *The API is used to modify the attributes of an instance. Currently, you can only use the API to modify the name and the associated security groups of the instance.
 
-* Instance names are used only for users' convenience. Tencent Cloud does not use the name for ticket submission or instance management.
-* Batch operations are supported. The maximum number of instances in each request is 100.
-* When you change the security groups associated with an instance, the original security groups will be disassociated.
+* **Instance names** are used only for users' convenience. Tencent Cloud does not use these names for online support or instance management.
+* Batch operations are supported. The maximum number of Batch instances in each request is 100.
+* When you modify the security groups associated with an instance, the original security groups will be disassociated.
+* You can use the [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) API to query the instance operation result. If the 'LatestOperationState' in the response is **SUCCESS**, the operation is successful.
                  * @param req ModifyInstancesAttributeRequest
                  * @return ModifyInstancesAttributeOutcome
                  */
@@ -803,11 +832,11 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 /**
                  *This API is used to change the project to which an instance belongs.
 
-* Project is a virtual concept. You can create multiple projects under one account, manage different resources in each project, and assign different instances to different projects. You may use the [`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API to query instances and use the project ID to filter results.
-* You cannot modify the project of an instance that is bound to a load balancer. You need to firstly unbind the load balancer from the instance by using the [`DeregisterInstancesFromLoadBalancer`](https://cloud.tencent.com/document/api/214/1258) API.
-[^_^]: # (If you modify the project of an instance, security groups associated with the instance will be automatically disassociated. You can use the [`ModifyInstancesAttribute`](https://cloud.tencent.com/document/api/213/15739) API to associate the instance with the security groups again.
+* Project is a virtual concept. You can create multiple projects under one account, manage different resources in each project, and assign different instances to different projects. You may use the [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) API to query instances and use the project ID to filter results.
+* You cannot modify the project of an instance that is bound to a load balancer. You need to firstly unbind the load balancer from the instance by using the [`DeregisterInstancesFromLoadBalancer`](https://intl.cloud.tencent.com/document/api/214/1258?from_cn_redirect=1) API.
+[^_^]: # (If you modify the project of an instance, security groups associated with the instance will be automatically disassociated. You can use the [`ModifyInstancesAttribute`](https://intl.cloud.tencent.com/document/api/213/15739?from_cn_redirect=1) API to associate the instance with the security groups again.
 * Batch operations are supported. You can operate up to 100 instances in each request.
-* You can call the [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) API and find the result of the operation in the response parameter `LatestOperationState`. If the value is `SUCCESS`, the operation is successful.
+* You can call the [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) API and find the result of the operation in the response parameter `LatestOperationState`. If the value is `SUCCESS`, the operation is successful.
                  * @param req ModifyInstancesProjectRequest
                  * @return ModifyInstancesProjectOutcome
                  */
@@ -818,7 +847,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 /**
                  *This API is used to modify the VPC attributes of an instance, such as the VPC IP address.
 * By default, the instances will shut down when you perform this operation and restart upon completion.
-* If the specified VPC ID and subnet ID (the subnet must be in the same availability zone as the instance) are different from the VPC where the specified instance resides, the instance will be migrated to a subnet of the specified VPC. Before performing this operation, make sure that the specified instance is not bound with an [ENI](https://cloud.tencent.com/document/product/576) or [CLB](https://cloud.tencent.com/document/product/214).
+* If the specified VPC ID and subnet ID (the subnet must be in the same availability zone as the instance) are different from the VPC where the specified instance resides, the instance will be migrated to a subnet of the specified VPC. Before performing this operation, make sure that the specified instance is not bound with an [ENI](https://intl.cloud.tencent.com/document/product/576?from_cn_redirect=1) or [CLB](https://intl.cloud.tencent.com/document/product/214?from_cn_redirect=1).
                  * @param req ModifyInstancesVpcAttributeRequest
                  * @return ModifyInstancesVpcAttributeOutcome
                  */
@@ -869,7 +898,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * The system disk will be formatted and reset. Therefore, make sure that no important files are stored on the system disk.
 * If the operating system switches between `Linux` and `Windows`, the system disk `ID` of the instance will change, and the snapshots that are associated with the system disk can no longer be used to roll back and restore data.
 * If no password is specified, you will get a random password via internal message.
-* You can only use this API to switch the operating system between `Linux` and `Windows` for instances whose [system disk type](https://cloud.tencent.com/document/api/213/9452#SystemDisk) is `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`.
+* You can only use this API to switch the operating system between `Linux` and `Windows` for instances whose [system disk type](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#SystemDisk) is `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`.
 * Currently, this API only supports instances in Mainland China regions.
                  * @param req ResetInstanceRequest
                  * @return ResetInstanceOutcome
@@ -881,7 +910,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 /**
                  *This API is used to change the public bandwidth cap of an instance.
 
-* The allowed bandwidth cap varies for different models. For details, see [Purchasing Network Bandwidth](https://cloud.tencent.com/document/product/213/509).
+* The allowed bandwidth cap varies for different models. For details, see [Purchasing Network Bandwidth](https://intl.cloud.tencent.com/document/product/213/509?from_cn_redirect=1).
 * For bandwidth billed by the `TRAFFIC_POSTPAID_BY_HOUR` method, changing the bandwidth cap through this API takes effect in real time. Users can increase or reduce bandwidth within applicable limits.
                  * @param req ResetInstancesInternetMaxBandwidthRequest
                  * @return ResetInstancesInternetMaxBandwidthOutcome
@@ -896,7 +925,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * To modify the password of the administrator account: the name of the administrator account varies with the operating system. In Windows, it is `Administrator`; in Ubuntu, it is `ubuntu`; in Linux, it is `root`.
 * To reset the password of a running instance, you need to set the parameter `ForceStop` to `True` for a forced shutdown. If not, only passwords of stopped instances can be reset.
 * Batch operations are supported. You can reset the passwords of up to 100 instances to the same value once.
-* You can call the [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) API and find the result of the operation in the response parameter `LatestOperationState`. If the value is `SUCCESS`, the operation is successful.
+* You can call the [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) API and find the result of the operation in the response parameter `LatestOperationState`. If the value is `SUCCESS`, the operation is successful.
                  * @param req ResetInstancesPasswordRequest
                  * @return ResetInstancesPasswordOutcome
                  */
@@ -906,8 +935,8 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 
                 /**
                  *This API is used to change the model of an instance.
-* You can only use this API to change the models of instances whose [system disk type](/document/api/213/9452#block_device) is `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`.
-* Currently, you cannot use this API to change the models of [CDH](https://cloud.tencent.com/document/product/416) instances.
+* You can only use this API to change the models of instances whose [system disk type](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#block_device) is `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`.
+* Currently, you cannot use this API to change the models of [CDH](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) instances.
                  * @param req ResetInstancesTypeRequest
                  * @return ResetInstancesTypeOutcome
                  */
@@ -918,8 +947,8 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 /**
                  *This API (ResizeInstanceDisks) is used to expand the data disks of an instance.
 
-* Currently, you can only use the API to expand non-elastic data disks whose [disk type](/document/api/213/9452#block_device) is `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`. You can use [`DescribeDisks`](https://cloud.tencent.com/document/api/362/16315) to check whether a disk is elastic. If the `Portable` field in the response is `false`, it means that the disk is non-elastic.
-* Currently, this API does not support [CDH](https://cloud.tencent.com/document/product/416) instances.
+* Currently, you can only use the API to expand non-elastic data disks whose [disk type](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#block_device) is `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`. You can use [`DescribeDisks`](https://intl.cloud.tencent.com/document/api/362/16315?from_cn_redirect=1) to check whether a disk is elastic. If the `Portable` field in the response is `false`, it means that the disk is non-elastic.
+* Currently, this API does not support [CDH](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) instances.
 * Currently, only one data disk can be expanded at a time.
                  * @param req ResizeInstanceDisksRequest
                  * @return ResizeInstanceDisksOutcome
@@ -931,10 +960,10 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 /**
                  *This API is used to create one or more instances with a specified configuration.
 
-* After an instance is created successfully, it will start up automatically, and the [instance state](/document/api/213/9452#instance_state) will become "Running".
+* After an instance is created successfully, it will start up automatically, and the [instance state](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#instance_state) will become "Running".
 * If you create a pay-as-you-go instance billed on an hourly basis, an amount equivalent to the hourly rate will be frozen before the creation. Make sure your account balance is sufficient before calling this API.
-* The number of instances you can purchase through this API is subject to the [CVM instance purchase limit](https://cloud.tencent.com/document/product/213/2664). Both the instances created through this API and the console will be counted toward the quota.
-* This API is an async API. An instance `ID` list will be returned after you successfully make a creation request. However, it does not mean the creation has been completed. The state of the instance will be `Creating` during the creation. You can use [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) to query the status of the instance. If the status changes from `Creating` to `Running`, it means that the instance has been created successfully.
+* The number of instances you can purchase through this API is subject to the [CVM instance purchase limit](https://intl.cloud.tencent.com/document/product/213/2664?from_cn_redirect=1). Both the instances created through this API and the console will be counted toward the quota.
+* This API is an async API. An instance `ID` list will be returned after you successfully make a creation request. However, it does not mean the creation has been completed. The state of the instance will be `Creating` during the creation. You can use [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) to query the status of the instance. If the status changes from `Creating` to `Running`, it means that the instance has been created successfully.
                  * @param req RunInstancesRequest
                  * @return RunInstancesOutcome
                  */

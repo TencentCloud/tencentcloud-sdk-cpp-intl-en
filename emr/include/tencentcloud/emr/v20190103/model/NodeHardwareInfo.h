@@ -138,17 +138,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool WanIpHasBeenSet() const;
 
                     /**
-                     * 获取Node type
+                     * 获取Node type. 0: common node; 1: master node;
+2: core node; 3: task node
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Flag Node type
+                     * @return Flag Node type. 0: common node; 1: master node;
+2: core node; 3: task node
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetFlag() const;
 
                     /**
-                     * 设置Node type
+                     * 设置Node type. 0: common node; 1: master node;
+2: core node; 3: task node
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Flag Node type
+                     * @param Flag Node type. 0: common node; 1: master node;
+2: core node; 3: task node
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetFlag(const int64_t& _flag);
@@ -820,18 +824,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is an automatically scalable node. 0: general node, 1: automatically scalable node.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AutoFlag Whether it is an automatically scalable node. 0: general node, 1: automatically scalable node.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node.
+                     * @return AutoFlag Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node.
                      */
                     int64_t GetAutoFlag() const;
 
                     /**
-                     * 设置Whether it is an automatically scalable node. 0: general node, 1: automatically scalable node.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AutoFlag Whether it is an automatically scalable node. 0: general node, 1: automatically scalable node.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node.
+                     * @param AutoFlag Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node.
                      */
                     void SetAutoFlag(const int64_t& _autoFlag);
 
@@ -840,6 +840,94 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return AutoFlag 是否已赋值
                      */
                     bool AutoFlagHasBeenSet() const;
+
+                    /**
+                     * 获取Resource type. Valid values: host, pod
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return HardwareResourceType Resource type. Valid values: host, pod
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetHardwareResourceType() const;
+
+                    /**
+                     * 设置Resource type. Valid values: host, pod
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param HardwareResourceType Resource type. Valid values: host, pod
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetHardwareResourceType(const std::string& _hardwareResourceType);
+
+                    /**
+                     * 判断参数 HardwareResourceType 是否已赋值
+                     * @return HardwareResourceType 是否已赋值
+                     */
+                    bool HardwareResourceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether floating specification is used. `1`: yes; `0`: no
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return IsDynamicSpec Whether floating specification is used. `1`: yes; `0`: no
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetIsDynamicSpec() const;
+
+                    /**
+                     * 设置Whether floating specification is used. `1`: yes; `0`: no
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param IsDynamicSpec Whether floating specification is used. `1`: yes; `0`: no
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetIsDynamicSpec(const int64_t& _isDynamicSpec);
+
+                    /**
+                     * 判断参数 IsDynamicSpec 是否已赋值
+                     * @return IsDynamicSpec 是否已赋值
+                     */
+                    bool IsDynamicSpecHasBeenSet() const;
+
+                    /**
+                     * 获取Floating specification in JSON string
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return DynamicPodSpec Floating specification in JSON string
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDynamicPodSpec() const;
+
+                    /**
+                     * 设置Floating specification in JSON string
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param DynamicPodSpec Floating specification in JSON string
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetDynamicPodSpec(const std::string& _dynamicPodSpec);
+
+                    /**
+                     * 判断参数 DynamicPodSpec 是否已赋值
+                     * @return DynamicPodSpec 是否已赋值
+                     */
+                    bool DynamicPodSpecHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to support billing mode change. `0`: no; `1`: yes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return SupportModifyPayMode Whether to support billing mode change. `0`: no; `1`: yes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetSupportModifyPayMode() const;
+
+                    /**
+                     * 设置Whether to support billing mode change. `0`: no; `1`: yes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param SupportModifyPayMode Whether to support billing mode change. `0`: no; `1`: yes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetSupportModifyPayMode(const int64_t& _supportModifyPayMode);
+
+                    /**
+                     * 判断参数 SupportModifyPayMode 是否已赋值
+                     * @return SupportModifyPayMode 是否已赋值
+                     */
+                    bool SupportModifyPayModeHasBeenSet() const;
 
                 private:
 
@@ -872,7 +960,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_wanIpHasBeenSet;
 
                     /**
-                     * Node type
+                     * Node type. 0: common node; 1: master node;
+2: core node; 3: task node
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_flag;
@@ -1089,11 +1178,38 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Whether it is an automatically scalable node. 0: general node, 1: automatically scalable node.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node.
                      */
                     int64_t m_autoFlag;
                     bool m_autoFlagHasBeenSet;
+
+                    /**
+                     * Resource type. Valid values: host, pod
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_hardwareResourceType;
+                    bool m_hardwareResourceTypeHasBeenSet;
+
+                    /**
+                     * Whether floating specification is used. `1`: yes; `0`: no
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_isDynamicSpec;
+                    bool m_isDynamicSpecHasBeenSet;
+
+                    /**
+                     * Floating specification in JSON string
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_dynamicPodSpec;
+                    bool m_dynamicPodSpecHasBeenSet;
+
+                    /**
+                     * Whether to support billing mode change. `0`: no; `1`: yes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_supportModifyPayMode;
+                    bool m_supportModifyPayModeHasBeenSet;
 
                 };
             }

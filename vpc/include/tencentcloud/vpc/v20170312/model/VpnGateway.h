@@ -371,6 +371,42 @@ namespace TencentCloud
                      */
                     bool NetworkInstanceIdHasBeenSet() const;
 
+                    /**
+                     * 获取CDC instance ID
+                     * @return CdcId CDC instance ID
+                     */
+                    std::string GetCdcId() const;
+
+                    /**
+                     * 设置CDC instance ID
+                     * @param CdcId CDC instance ID
+                     */
+                    void SetCdcId(const std::string& _cdcId);
+
+                    /**
+                     * 判断参数 CdcId 是否已赋值
+                     * @return CdcId 是否已赋值
+                     */
+                    bool CdcIdHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum number of connected clients allowed for the SSL VPN gateway.
+                     * @return MaxConnection Maximum number of connected clients allowed for the SSL VPN gateway.
+                     */
+                    uint64_t GetMaxConnection() const;
+
+                    /**
+                     * 设置Maximum number of connected clients allowed for the SSL VPN gateway.
+                     * @param MaxConnection Maximum number of connected clients allowed for the SSL VPN gateway.
+                     */
+                    void SetMaxConnection(const uint64_t& _maxConnection);
+
+                    /**
+                     * 判断参数 MaxConnection 是否已赋值
+                     * @return MaxConnection 是否已赋值
+                     */
+                    bool MaxConnectionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -480,6 +516,18 @@ namespace TencentCloud
                      */
                     std::string m_networkInstanceId;
                     bool m_networkInstanceIdHasBeenSet;
+
+                    /**
+                     * CDC instance ID
+                     */
+                    std::string m_cdcId;
+                    bool m_cdcIdHasBeenSet;
+
+                    /**
+                     * Maximum number of connected clients allowed for the SSL VPN gateway.
+                     */
+                    uint64_t m_maxConnection;
+                    bool m_maxConnectionHasBeenSet;
 
                 };
             }

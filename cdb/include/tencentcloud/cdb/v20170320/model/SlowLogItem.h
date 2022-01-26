@@ -69,18 +69,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TimestampHasBeenSet() const;
 
                     /**
-                     * 获取SQL execution duration.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return QueryTime SQL execution duration.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取SQL execution duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return QueryTime SQL execution duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     double GetQueryTime() const;
 
                     /**
-                     * 设置SQL execution duration.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param QueryTime SQL execution duration.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置SQL execution duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param QueryTime SQL execution duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetQueryTime(const double& _queryTime);
 
@@ -179,18 +179,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DatabaseHasBeenSet() const;
 
                     /**
-                     * 获取Lock duration.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return LockTime Lock duration.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Lock duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return LockTime Lock duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     double GetLockTime() const;
 
                     /**
-                     * 设置Lock duration.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param LockTime Lock duration.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Lock duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param LockTime Lock duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetLockTime(const double& _lockTime);
 
@@ -298,8 +298,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_timestampHasBeenSet;
 
                     /**
-                     * SQL execution duration.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * SQL execution duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     double m_queryTime;
                     bool m_queryTimeHasBeenSet;
@@ -333,8 +333,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_databaseHasBeenSet;
 
                     /**
-                     * Lock duration.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Lock duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     double m_lockTime;
                     bool m_lockTimeHasBeenSet;

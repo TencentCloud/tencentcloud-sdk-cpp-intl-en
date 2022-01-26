@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Batch::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 RedirectInfo::RedirectInfo() :
@@ -29,7 +28,7 @@ RedirectInfo::RedirectInfo() :
 {
 }
 
-CoreInternalOutcome RedirectInfo::Deserialize(const Value &value)
+CoreInternalOutcome RedirectInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome RedirectInfo::Deserialize(const Value &value)
     {
         if (!value["StdoutRedirectPath"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RedirectInfo.StdoutRedirectPath` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RedirectInfo.StdoutRedirectPath` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_stdoutRedirectPath = string(value["StdoutRedirectPath"].GetString());
         m_stdoutRedirectPathHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome RedirectInfo::Deserialize(const Value &value)
     {
         if (!value["StderrRedirectPath"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RedirectInfo.StderrRedirectPath` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RedirectInfo.StderrRedirectPath` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_stderrRedirectPath = string(value["StderrRedirectPath"].GetString());
         m_stderrRedirectPathHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome RedirectInfo::Deserialize(const Value &value)
     {
         if (!value["StdoutRedirectFileName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RedirectInfo.StdoutRedirectFileName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RedirectInfo.StdoutRedirectFileName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_stdoutRedirectFileName = string(value["StdoutRedirectFileName"].GetString());
         m_stdoutRedirectFileNameHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome RedirectInfo::Deserialize(const Value &value)
     {
         if (!value["StderrRedirectFileName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RedirectInfo.StderrRedirectFileName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RedirectInfo.StderrRedirectFileName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_stderrRedirectFileName = string(value["StderrRedirectFileName"].GetString());
         m_stderrRedirectFileNameHasBeenSet = true;
@@ -78,39 +77,39 @@ CoreInternalOutcome RedirectInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void RedirectInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void RedirectInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_stdoutRedirectPathHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StdoutRedirectPath";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_stdoutRedirectPath.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_stdoutRedirectPath.c_str(), allocator).Move(), allocator);
     }
 
     if (m_stderrRedirectPathHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StderrRedirectPath";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_stderrRedirectPath.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_stderrRedirectPath.c_str(), allocator).Move(), allocator);
     }
 
     if (m_stdoutRedirectFileNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StdoutRedirectFileName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_stdoutRedirectFileName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_stdoutRedirectFileName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_stderrRedirectFileNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StderrRedirectFileName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_stderrRedirectFileName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_stderrRedirectFileName.c_str(), allocator).Move(), allocator);
     }
 
 }

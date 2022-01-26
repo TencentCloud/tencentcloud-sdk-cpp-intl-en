@@ -27,6 +27,8 @@
 #include <tencentcloud/ckafka/v20190819/model/VipEntity.h>
 #include <tencentcloud/ckafka/v20190819/model/InstanceConfigDO.h>
 #include <tencentcloud/ckafka/v20190819/model/Tag.h>
+#include <tencentcloud/ckafka/v20190819/model/DynamicRetentionTime.h>
+#include <tencentcloud/ckafka/v20190819/model/DynamicDiskConfig.h>
 
 
 namespace TencentCloud
@@ -520,18 +522,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MaxGroupNumHasBeenSet() const;
 
                     /**
-                     * 获取Sale type
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Cvm Sale type
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Offering type. `0`: Standard Edition; `1`: Professional Edition
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @return Cvm Offering type. `0`: Standard Edition; `1`: Professional Edition
+Note: this field may return `null`, indicating that no valid value was found.
                      */
                     int64_t GetCvm() const;
 
                     /**
-                     * 设置Sale type
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Cvm Sale type
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Offering type. `0`: Standard Edition; `1`: Professional Edition
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @param Cvm Offering type. `0`: Standard Edition; `1`: Professional Edition
+Note: this field may return `null`, indicating that no valid value was found.
                      */
                     void SetCvm(const int64_t& _cvm);
 
@@ -540,6 +542,204 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return Cvm 是否已赋值
                      */
                     bool CvmHasBeenSet() const;
+
+                    /**
+                     * 获取Type.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @return InstanceType Type.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetInstanceType() const;
+
+                    /**
+                     * 设置Type.
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @param InstanceType Type.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetInstanceType(const std::string& _instanceType);
+
+                    /**
+                     * 判断参数 InstanceType 是否已赋值
+                     * @return InstanceType 是否已赋值
+                     */
+                    bool InstanceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return Features Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetFeatures() const;
+
+                    /**
+                     * 设置Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param Features Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetFeatures(const std::vector<std::string>& _features);
+
+                    /**
+                     * 判断参数 Features 是否已赋值
+                     * @return Features 是否已赋值
+                     */
+                    bool FeaturesHasBeenSet() const;
+
+                    /**
+                     * 获取Dynamic message retention policy
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @return RetentionTimeConfig Dynamic message retention policy
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    DynamicRetentionTime GetRetentionTimeConfig() const;
+
+                    /**
+                     * 设置Dynamic message retention policy
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @param RetentionTimeConfig Dynamic message retention policy
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    void SetRetentionTimeConfig(const DynamicRetentionTime& _retentionTimeConfig);
+
+                    /**
+                     * 判断参数 RetentionTimeConfig 是否已赋值
+                     * @return RetentionTimeConfig 是否已赋值
+                     */
+                    bool RetentionTimeConfigHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum number of connections
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return MaxConnection Maximum number of connections
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetMaxConnection() const;
+
+                    /**
+                     * 设置Maximum number of connections
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param MaxConnection Maximum number of connections
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetMaxConnection(const uint64_t& _maxConnection);
+
+                    /**
+                     * 判断参数 MaxConnection 是否已赋值
+                     * @return MaxConnection 是否已赋值
+                     */
+                    bool MaxConnectionHasBeenSet() const;
+
+                    /**
+                     * 获取Public network bandwidth
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return PublicNetwork Public network bandwidth
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetPublicNetwork() const;
+
+                    /**
+                     * 设置Public network bandwidth
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param PublicNetwork Public network bandwidth
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetPublicNetwork(const int64_t& _publicNetwork);
+
+                    /**
+                     * 判断参数 PublicNetwork 是否已赋值
+                     * @return PublicNetwork 是否已赋值
+                     */
+                    bool PublicNetworkHasBeenSet() const;
+
+                    /**
+                     * 获取Time
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return DeleteRouteTimestamp Time
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDeleteRouteTimestamp() const;
+
+                    /**
+                     * 设置Time
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param DeleteRouteTimestamp Time
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDeleteRouteTimestamp(const std::string& _deleteRouteTimestamp);
+
+                    /**
+                     * 判断参数 DeleteRouteTimestamp 是否已赋值
+                     * @return DeleteRouteTimestamp 是否已赋值
+                     */
+                    bool DeleteRouteTimestampHasBeenSet() const;
+
+                    /**
+                     * 获取Number of remaining creatable partitions
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return RemainingPartitions Number of remaining creatable partitions
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetRemainingPartitions() const;
+
+                    /**
+                     * 设置Number of remaining creatable partitions
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param RemainingPartitions Number of remaining creatable partitions
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetRemainingPartitions(const int64_t& _remainingPartitions);
+
+                    /**
+                     * 判断参数 RemainingPartitions 是否已赋值
+                     * @return RemainingPartitions 是否已赋值
+                     */
+                    bool RemainingPartitionsHasBeenSet() const;
+
+                    /**
+                     * 获取Number of remaining creatable topics
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return RemainingTopics Number of remaining creatable topics
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetRemainingTopics() const;
+
+                    /**
+                     * 设置Number of remaining creatable topics
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param RemainingTopics Number of remaining creatable topics
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetRemainingTopics(const int64_t& _remainingTopics);
+
+                    /**
+                     * 判断参数 RemainingTopics 是否已赋值
+                     * @return RemainingTopics 是否已赋值
+                     */
+                    bool RemainingTopicsHasBeenSet() const;
+
+                    /**
+                     * 获取Dynamic disk expansion policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return DynamicDiskConfig Dynamic disk expansion policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    DynamicDiskConfig GetDynamicDiskConfig() const;
+
+                    /**
+                     * 设置Dynamic disk expansion policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param DynamicDiskConfig Dynamic disk expansion policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetDynamicDiskConfig(const DynamicDiskConfig& _dynamicDiskConfig);
+
+                    /**
+                     * 判断参数 DynamicDiskConfig 是否已赋值
+                     * @return DynamicDiskConfig 是否已赋值
+                     */
+                    bool DynamicDiskConfigHasBeenSet() const;
 
                 private:
 
@@ -699,11 +899,74 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_maxGroupNumHasBeenSet;
 
                     /**
-                     * Sale type
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Offering type. `0`: Standard Edition; `1`: Professional Edition
+Note: this field may return `null`, indicating that no valid value was found.
                      */
                     int64_t m_cvm;
                     bool m_cvmHasBeenSet;
+
+                    /**
+                     * Type.
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_instanceType;
+                    bool m_instanceTypeHasBeenSet;
+
+                    /**
+                     * Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_features;
+                    bool m_featuresHasBeenSet;
+
+                    /**
+                     * Dynamic message retention policy
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    DynamicRetentionTime m_retentionTimeConfig;
+                    bool m_retentionTimeConfigHasBeenSet;
+
+                    /**
+                     * Maximum number of connections
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_maxConnection;
+                    bool m_maxConnectionHasBeenSet;
+
+                    /**
+                     * Public network bandwidth
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_publicNetwork;
+                    bool m_publicNetworkHasBeenSet;
+
+                    /**
+                     * Time
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_deleteRouteTimestamp;
+                    bool m_deleteRouteTimestampHasBeenSet;
+
+                    /**
+                     * Number of remaining creatable partitions
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_remainingPartitions;
+                    bool m_remainingPartitionsHasBeenSet;
+
+                    /**
+                     * Number of remaining creatable topics
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_remainingTopics;
+                    bool m_remainingTopicsHasBeenSet;
+
+                    /**
+                     * Dynamic disk expansion policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    DynamicDiskConfig m_dynamicDiskConfig;
+                    bool m_dynamicDiskConfigHasBeenSet;
 
                 };
             }

@@ -19,26 +19,38 @@ set(dc_public_header
   )
 
 set(dc_public_header_model
+  include/tencentcloud/dc/v20180410/model/DescribeInternetAddressQuotaRequest.h
   include/tencentcloud/dc/v20180410/model/BgpPeer.h
   include/tencentcloud/dc/v20180410/model/RejectDirectConnectTunnelRequest.h
-  include/tencentcloud/dc/v20180410/model/ModifyDirectConnectAttributeRequest.h
+  include/tencentcloud/dc/v20180410/model/Coordinate.h
   include/tencentcloud/dc/v20180410/model/DeleteDirectConnectTunnelRequest.h
   include/tencentcloud/dc/v20180410/model/CreateDirectConnectResponse.h
   include/tencentcloud/dc/v20180410/model/DirectConnect.h
+  include/tencentcloud/dc/v20180410/model/InternetAddressDetail.h
   include/tencentcloud/dc/v20180410/model/DescribeAccessPointsResponse.h
   include/tencentcloud/dc/v20180410/model/AcceptDirectConnectTunnelResponse.h
   include/tencentcloud/dc/v20180410/model/DescribeDirectConnectTunnelsRequest.h
+  include/tencentcloud/dc/v20180410/model/ReleaseInternetAddressRequest.h
   include/tencentcloud/dc/v20180410/model/ModifyDirectConnectTunnelAttributeResponse.h
   include/tencentcloud/dc/v20180410/model/RouteFilterPrefix.h
+  include/tencentcloud/dc/v20180410/model/ApplyInternetAddressResponse.h
   include/tencentcloud/dc/v20180410/model/AcceptDirectConnectTunnelRequest.h
   include/tencentcloud/dc/v20180410/model/CreateDirectConnectTunnelRequest.h
   include/tencentcloud/dc/v20180410/model/DeleteDirectConnectResponse.h
+  include/tencentcloud/dc/v20180410/model/EnableInternetAddressResponse.h
+  include/tencentcloud/dc/v20180410/model/ApplyInternetAddressRequest.h
   include/tencentcloud/dc/v20180410/model/DescribeDirectConnectsResponse.h
   include/tencentcloud/dc/v20180410/model/DescribeAccessPointsRequest.h
   include/tencentcloud/dc/v20180410/model/DescribeDirectConnectsRequest.h
   include/tencentcloud/dc/v20180410/model/ModifyDirectConnectTunnelAttributeRequest.h
+  include/tencentcloud/dc/v20180410/model/ModifyDirectConnectAttributeRequest.h
+  include/tencentcloud/dc/v20180410/model/DescribeInternetAddressResponse.h
   include/tencentcloud/dc/v20180410/model/Filter.h
+  include/tencentcloud/dc/v20180410/model/DisableInternetAddressResponse.h
+  include/tencentcloud/dc/v20180410/model/DescribeInternetAddressStatisticsRequest.h
+  include/tencentcloud/dc/v20180410/model/InternetAddressStatistics.h
   include/tencentcloud/dc/v20180410/model/CreateDirectConnectRequest.h
+  include/tencentcloud/dc/v20180410/model/EnableInternetAddressRequest.h
   include/tencentcloud/dc/v20180410/model/ModifyDirectConnectAttributeResponse.h
   include/tencentcloud/dc/v20180410/model/RejectDirectConnectTunnelResponse.h
   include/tencentcloud/dc/v20180410/model/CreateDirectConnectTunnelResponse.h
@@ -46,32 +58,49 @@ set(dc_public_header_model
   include/tencentcloud/dc/v20180410/model/AccessPoint.h
   include/tencentcloud/dc/v20180410/model/DeleteDirectConnectRequest.h
   include/tencentcloud/dc/v20180410/model/DescribeDirectConnectTunnelsResponse.h
+  include/tencentcloud/dc/v20180410/model/DescribeInternetAddressStatisticsResponse.h
   include/tencentcloud/dc/v20180410/model/Tag.h
+  include/tencentcloud/dc/v20180410/model/DescribeInternetAddressRequest.h
+  include/tencentcloud/dc/v20180410/model/DescribeInternetAddressQuotaResponse.h
+  include/tencentcloud/dc/v20180410/model/ReleaseInternetAddressResponse.h
   include/tencentcloud/dc/v20180410/model/DirectConnectTunnel.h
+  include/tencentcloud/dc/v20180410/model/DisableInternetAddressRequest.h
   )
 
 set(dc_src
   src/v20180410/DcClient.cpp
+  src/v20180410/model/DescribeInternetAddressQuotaRequest.cpp
   src/v20180410/model/BgpPeer.cpp
   src/v20180410/model/RejectDirectConnectTunnelRequest.cpp
-  src/v20180410/model/ModifyDirectConnectAttributeRequest.cpp
+  src/v20180410/model/Coordinate.cpp
   src/v20180410/model/DeleteDirectConnectTunnelRequest.cpp
   src/v20180410/model/CreateDirectConnectResponse.cpp
   src/v20180410/model/DirectConnect.cpp
+  src/v20180410/model/InternetAddressDetail.cpp
   src/v20180410/model/DescribeAccessPointsResponse.cpp
   src/v20180410/model/AcceptDirectConnectTunnelResponse.cpp
   src/v20180410/model/DescribeDirectConnectTunnelsRequest.cpp
+  src/v20180410/model/ReleaseInternetAddressRequest.cpp
   src/v20180410/model/ModifyDirectConnectTunnelAttributeResponse.cpp
   src/v20180410/model/RouteFilterPrefix.cpp
+  src/v20180410/model/ApplyInternetAddressResponse.cpp
   src/v20180410/model/AcceptDirectConnectTunnelRequest.cpp
   src/v20180410/model/CreateDirectConnectTunnelRequest.cpp
   src/v20180410/model/DeleteDirectConnectResponse.cpp
+  src/v20180410/model/EnableInternetAddressResponse.cpp
+  src/v20180410/model/ApplyInternetAddressRequest.cpp
   src/v20180410/model/DescribeDirectConnectsResponse.cpp
   src/v20180410/model/DescribeAccessPointsRequest.cpp
   src/v20180410/model/DescribeDirectConnectsRequest.cpp
   src/v20180410/model/ModifyDirectConnectTunnelAttributeRequest.cpp
+  src/v20180410/model/ModifyDirectConnectAttributeRequest.cpp
+  src/v20180410/model/DescribeInternetAddressResponse.cpp
   src/v20180410/model/Filter.cpp
+  src/v20180410/model/DisableInternetAddressResponse.cpp
+  src/v20180410/model/DescribeInternetAddressStatisticsRequest.cpp
+  src/v20180410/model/InternetAddressStatistics.cpp
   src/v20180410/model/CreateDirectConnectRequest.cpp
+  src/v20180410/model/EnableInternetAddressRequest.cpp
   src/v20180410/model/ModifyDirectConnectAttributeResponse.cpp
   src/v20180410/model/RejectDirectConnectTunnelResponse.cpp
   src/v20180410/model/CreateDirectConnectTunnelResponse.cpp
@@ -79,8 +108,13 @@ set(dc_src
   src/v20180410/model/AccessPoint.cpp
   src/v20180410/model/DeleteDirectConnectRequest.cpp
   src/v20180410/model/DescribeDirectConnectTunnelsResponse.cpp
+  src/v20180410/model/DescribeInternetAddressStatisticsResponse.cpp
   src/v20180410/model/Tag.cpp
+  src/v20180410/model/DescribeInternetAddressRequest.cpp
+  src/v20180410/model/DescribeInternetAddressQuotaResponse.cpp
+  src/v20180410/model/ReleaseInternetAddressResponse.cpp
   src/v20180410/model/DirectConnectTunnel.cpp
+  src/v20180410/model/DisableInternetAddressRequest.cpp
   )
 
 set(dc_include

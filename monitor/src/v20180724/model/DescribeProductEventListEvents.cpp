@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Monitor::V20180724::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeProductEventListEvents::DescribeProductEventListEvents() :
@@ -41,11 +40,12 @@ DescribeProductEventListEvents::DescribeProductEventListEvents() :
     m_dimensionsHasBeenSet(false),
     m_additionMsgHasBeenSet(false),
     m_isAlarmConfigHasBeenSet(false),
-    m_groupInfoHasBeenSet(false)
+    m_groupInfoHasBeenSet(false),
+    m_viewNameHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DescribeProductEventListEvents::Deserialize(const Value &value)
+CoreInternalOutcome DescribeProductEventListEvents::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -54,7 +54,7 @@ CoreInternalOutcome DescribeProductEventListEvents::Deserialize(const Value &val
     {
         if (!value["EventId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribeProductEventListEvents.EventId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeProductEventListEvents.EventId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_eventId = value["EventId"].GetInt64();
         m_eventIdHasBeenSet = true;
@@ -64,7 +64,7 @@ CoreInternalOutcome DescribeProductEventListEvents::Deserialize(const Value &val
     {
         if (!value["EventCName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeProductEventListEvents.EventCName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeProductEventListEvents.EventCName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_eventCName = string(value["EventCName"].GetString());
         m_eventCNameHasBeenSet = true;
@@ -74,7 +74,7 @@ CoreInternalOutcome DescribeProductEventListEvents::Deserialize(const Value &val
     {
         if (!value["EventEName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeProductEventListEvents.EventEName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeProductEventListEvents.EventEName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_eventEName = string(value["EventEName"].GetString());
         m_eventENameHasBeenSet = true;
@@ -84,7 +84,7 @@ CoreInternalOutcome DescribeProductEventListEvents::Deserialize(const Value &val
     {
         if (!value["EventName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeProductEventListEvents.EventName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeProductEventListEvents.EventName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_eventName = string(value["EventName"].GetString());
         m_eventNameHasBeenSet = true;
@@ -94,7 +94,7 @@ CoreInternalOutcome DescribeProductEventListEvents::Deserialize(const Value &val
     {
         if (!value["ProductCName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeProductEventListEvents.ProductCName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeProductEventListEvents.ProductCName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_productCName = string(value["ProductCName"].GetString());
         m_productCNameHasBeenSet = true;
@@ -104,7 +104,7 @@ CoreInternalOutcome DescribeProductEventListEvents::Deserialize(const Value &val
     {
         if (!value["ProductEName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeProductEventListEvents.ProductEName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeProductEventListEvents.ProductEName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_productEName = string(value["ProductEName"].GetString());
         m_productENameHasBeenSet = true;
@@ -114,7 +114,7 @@ CoreInternalOutcome DescribeProductEventListEvents::Deserialize(const Value &val
     {
         if (!value["ProductName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeProductEventListEvents.ProductName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeProductEventListEvents.ProductName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_productName = string(value["ProductName"].GetString());
         m_productNameHasBeenSet = true;
@@ -124,7 +124,7 @@ CoreInternalOutcome DescribeProductEventListEvents::Deserialize(const Value &val
     {
         if (!value["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeProductEventListEvents.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeProductEventListEvents.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(value["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -134,7 +134,7 @@ CoreInternalOutcome DescribeProductEventListEvents::Deserialize(const Value &val
     {
         if (!value["InstanceName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeProductEventListEvents.InstanceName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeProductEventListEvents.InstanceName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceName = string(value["InstanceName"].GetString());
         m_instanceNameHasBeenSet = true;
@@ -144,7 +144,7 @@ CoreInternalOutcome DescribeProductEventListEvents::Deserialize(const Value &val
     {
         if (!value["ProjectId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeProductEventListEvents.ProjectId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeProductEventListEvents.ProjectId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_projectId = string(value["ProjectId"].GetString());
         m_projectIdHasBeenSet = true;
@@ -154,7 +154,7 @@ CoreInternalOutcome DescribeProductEventListEvents::Deserialize(const Value &val
     {
         if (!value["Region"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeProductEventListEvents.Region` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeProductEventListEvents.Region` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_region = string(value["Region"].GetString());
         m_regionHasBeenSet = true;
@@ -164,7 +164,7 @@ CoreInternalOutcome DescribeProductEventListEvents::Deserialize(const Value &val
     {
         if (!value["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeProductEventListEvents.Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeProductEventListEvents.Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(value["Status"].GetString());
         m_statusHasBeenSet = true;
@@ -174,7 +174,7 @@ CoreInternalOutcome DescribeProductEventListEvents::Deserialize(const Value &val
     {
         if (!value["SupportAlarm"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribeProductEventListEvents.SupportAlarm` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeProductEventListEvents.SupportAlarm` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_supportAlarm = value["SupportAlarm"].GetInt64();
         m_supportAlarmHasBeenSet = true;
@@ -184,7 +184,7 @@ CoreInternalOutcome DescribeProductEventListEvents::Deserialize(const Value &val
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeProductEventListEvents.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeProductEventListEvents.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -194,7 +194,7 @@ CoreInternalOutcome DescribeProductEventListEvents::Deserialize(const Value &val
     {
         if (!value["StartTime"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribeProductEventListEvents.StartTime` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeProductEventListEvents.StartTime` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_startTime = value["StartTime"].GetInt64();
         m_startTimeHasBeenSet = true;
@@ -204,7 +204,7 @@ CoreInternalOutcome DescribeProductEventListEvents::Deserialize(const Value &val
     {
         if (!value["UpdateTime"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribeProductEventListEvents.UpdateTime` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeProductEventListEvents.UpdateTime` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_updateTime = value["UpdateTime"].GetInt64();
         m_updateTimeHasBeenSet = true;
@@ -213,10 +213,10 @@ CoreInternalOutcome DescribeProductEventListEvents::Deserialize(const Value &val
     if (value.HasMember("Dimensions") && !value["Dimensions"].IsNull())
     {
         if (!value["Dimensions"].IsArray())
-            return CoreInternalOutcome(Error("response `DescribeProductEventListEvents.Dimensions` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DescribeProductEventListEvents.Dimensions` is not array type"));
 
-        const Value &tmpValue = value["Dimensions"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Dimensions"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             DescribeProductEventListEventsDimensions item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -233,10 +233,10 @@ CoreInternalOutcome DescribeProductEventListEvents::Deserialize(const Value &val
     if (value.HasMember("AdditionMsg") && !value["AdditionMsg"].IsNull())
     {
         if (!value["AdditionMsg"].IsArray())
-            return CoreInternalOutcome(Error("response `DescribeProductEventListEvents.AdditionMsg` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DescribeProductEventListEvents.AdditionMsg` is not array type"));
 
-        const Value &tmpValue = value["AdditionMsg"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["AdditionMsg"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             DescribeProductEventListEventsDimensions item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -254,7 +254,7 @@ CoreInternalOutcome DescribeProductEventListEvents::Deserialize(const Value &val
     {
         if (!value["IsAlarmConfig"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DescribeProductEventListEvents.IsAlarmConfig` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeProductEventListEvents.IsAlarmConfig` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_isAlarmConfig = value["IsAlarmConfig"].GetInt64();
         m_isAlarmConfigHasBeenSet = true;
@@ -263,10 +263,10 @@ CoreInternalOutcome DescribeProductEventListEvents::Deserialize(const Value &val
     if (value.HasMember("GroupInfo") && !value["GroupInfo"].IsNull())
     {
         if (!value["GroupInfo"].IsArray())
-            return CoreInternalOutcome(Error("response `DescribeProductEventListEvents.GroupInfo` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DescribeProductEventListEvents.GroupInfo` is not array type"));
 
-        const Value &tmpValue = value["GroupInfo"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["GroupInfo"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             DescribeProductEventListEventsGroupInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -280,16 +280,26 @@ CoreInternalOutcome DescribeProductEventListEvents::Deserialize(const Value &val
         m_groupInfoHasBeenSet = true;
     }
 
+    if (value.HasMember("ViewName") && !value["ViewName"].IsNull())
+    {
+        if (!value["ViewName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeProductEventListEvents.ViewName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_viewName = string(value["ViewName"].GetString());
+        m_viewNameHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void DescribeProductEventListEvents::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DescribeProductEventListEvents::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_eventIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EventId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_eventId, allocator);
@@ -297,95 +307,95 @@ void DescribeProductEventListEvents::ToJsonObject(Value &value, Document::Alloca
 
     if (m_eventCNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EventCName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_eventCName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_eventCName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_eventENameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EventEName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_eventEName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_eventEName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_eventNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EventName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_eventName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_eventName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_productCNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProductCName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_productCName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_productCName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_productENameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProductEName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_productEName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_productEName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_productNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProductName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_productName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_productName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_projectIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProjectId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_projectId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_projectId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_regionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Region";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_region.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_region.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_status.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
     }
 
     if (m_supportAlarmHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SupportAlarm";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_supportAlarm, allocator);
@@ -393,15 +403,15 @@ void DescribeProductEventListEvents::ToJsonObject(Value &value, Document::Alloca
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_startTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_startTime, allocator);
@@ -409,7 +419,7 @@ void DescribeProductEventListEvents::ToJsonObject(Value &value, Document::Alloca
 
     if (m_updateTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UpdateTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_updateTime, allocator);
@@ -417,37 +427,37 @@ void DescribeProductEventListEvents::ToJsonObject(Value &value, Document::Alloca
 
     if (m_dimensionsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Dimensions";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_dimensions.begin(); itr != m_dimensions.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_additionMsgHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AdditionMsg";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_additionMsg.begin(); itr != m_additionMsg.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_isAlarmConfigHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsAlarmConfig";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isAlarmConfig, allocator);
@@ -455,17 +465,25 @@ void DescribeProductEventListEvents::ToJsonObject(Value &value, Document::Alloca
 
     if (m_groupInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "GroupInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_groupInfo.begin(); itr != m_groupInfo.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_viewNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ViewName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_viewName.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -789,5 +807,21 @@ void DescribeProductEventListEvents::SetGroupInfo(const vector<DescribeProductEv
 bool DescribeProductEventListEvents::GroupInfoHasBeenSet() const
 {
     return m_groupInfoHasBeenSet;
+}
+
+string DescribeProductEventListEvents::GetViewName() const
+{
+    return m_viewName;
+}
+
+void DescribeProductEventListEvents::SetViewName(const string& _viewName)
+{
+    m_viewName = _viewName;
+    m_viewNameHasBeenSet = true;
+}
+
+bool DescribeProductEventListEvents::ViewNameHasBeenSet() const
+{
+    return m_viewNameHasBeenSet;
 }
 

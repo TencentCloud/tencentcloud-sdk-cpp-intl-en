@@ -83,6 +83,92 @@ AsClient::AttachInstancesOutcomeCallable AsClient::AttachInstancesCallable(const
     return task->get_future();
 }
 
+AsClient::AttachLoadBalancersOutcome AsClient::AttachLoadBalancers(const AttachLoadBalancersRequest &request)
+{
+    auto outcome = MakeRequest(request, "AttachLoadBalancers");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AttachLoadBalancersResponse rsp = AttachLoadBalancersResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AttachLoadBalancersOutcome(rsp);
+        else
+            return AttachLoadBalancersOutcome(o.GetError());
+    }
+    else
+    {
+        return AttachLoadBalancersOutcome(outcome.GetError());
+    }
+}
+
+void AsClient::AttachLoadBalancersAsync(const AttachLoadBalancersRequest& request, const AttachLoadBalancersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->AttachLoadBalancers(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+AsClient::AttachLoadBalancersOutcomeCallable AsClient::AttachLoadBalancersCallable(const AttachLoadBalancersRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<AttachLoadBalancersOutcome()>>(
+        [this, request]()
+        {
+            return this->AttachLoadBalancers(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+AsClient::ClearLaunchConfigurationAttributesOutcome AsClient::ClearLaunchConfigurationAttributes(const ClearLaunchConfigurationAttributesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ClearLaunchConfigurationAttributes");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ClearLaunchConfigurationAttributesResponse rsp = ClearLaunchConfigurationAttributesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ClearLaunchConfigurationAttributesOutcome(rsp);
+        else
+            return ClearLaunchConfigurationAttributesOutcome(o.GetError());
+    }
+    else
+    {
+        return ClearLaunchConfigurationAttributesOutcome(outcome.GetError());
+    }
+}
+
+void AsClient::ClearLaunchConfigurationAttributesAsync(const ClearLaunchConfigurationAttributesRequest& request, const ClearLaunchConfigurationAttributesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ClearLaunchConfigurationAttributes(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+AsClient::ClearLaunchConfigurationAttributesOutcomeCallable AsClient::ClearLaunchConfigurationAttributesCallable(const ClearLaunchConfigurationAttributesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ClearLaunchConfigurationAttributesOutcome()>>(
+        [this, request]()
+        {
+            return this->ClearLaunchConfigurationAttributes(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 AsClient::CompleteLifecycleActionOutcome AsClient::CompleteLifecycleAction(const CompleteLifecycleActionRequest &request)
 {
     auto outcome = MakeRequest(request, "CompleteLifecycleAction");
@@ -334,49 +420,6 @@ AsClient::CreateNotificationConfigurationOutcomeCallable AsClient::CreateNotific
         [this, request]()
         {
             return this->CreateNotificationConfiguration(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-AsClient::CreatePaiInstanceOutcome AsClient::CreatePaiInstance(const CreatePaiInstanceRequest &request)
-{
-    auto outcome = MakeRequest(request, "CreatePaiInstance");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        CreatePaiInstanceResponse rsp = CreatePaiInstanceResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return CreatePaiInstanceOutcome(rsp);
-        else
-            return CreatePaiInstanceOutcome(o.GetError());
-    }
-    else
-    {
-        return CreatePaiInstanceOutcome(outcome.GetError());
-    }
-}
-
-void AsClient::CreatePaiInstanceAsync(const CreatePaiInstanceRequest& request, const CreatePaiInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreatePaiInstance(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-AsClient::CreatePaiInstanceOutcomeCallable AsClient::CreatePaiInstanceCallable(const CreatePaiInstanceRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<CreatePaiInstanceOutcome()>>(
-        [this, request]()
-        {
-            return this->CreatePaiInstance(request);
         }
     );
 
@@ -814,6 +857,49 @@ AsClient::DescribeAutoScalingActivitiesOutcomeCallable AsClient::DescribeAutoSca
     return task->get_future();
 }
 
+AsClient::DescribeAutoScalingAdvicesOutcome AsClient::DescribeAutoScalingAdvices(const DescribeAutoScalingAdvicesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAutoScalingAdvices");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAutoScalingAdvicesResponse rsp = DescribeAutoScalingAdvicesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAutoScalingAdvicesOutcome(rsp);
+        else
+            return DescribeAutoScalingAdvicesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAutoScalingAdvicesOutcome(outcome.GetError());
+    }
+}
+
+void AsClient::DescribeAutoScalingAdvicesAsync(const DescribeAutoScalingAdvicesRequest& request, const DescribeAutoScalingAdvicesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeAutoScalingAdvices(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+AsClient::DescribeAutoScalingAdvicesOutcomeCallable AsClient::DescribeAutoScalingAdvicesCallable(const DescribeAutoScalingAdvicesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeAutoScalingAdvicesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeAutoScalingAdvices(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 AsClient::DescribeAutoScalingGroupLastActivitiesOutcome AsClient::DescribeAutoScalingGroupLastActivities(const DescribeAutoScalingGroupLastActivitiesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeAutoScalingGroupLastActivities");
@@ -1072,49 +1158,6 @@ AsClient::DescribeNotificationConfigurationsOutcomeCallable AsClient::DescribeNo
     return task->get_future();
 }
 
-AsClient::DescribePaiInstancesOutcome AsClient::DescribePaiInstances(const DescribePaiInstancesRequest &request)
-{
-    auto outcome = MakeRequest(request, "DescribePaiInstances");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DescribePaiInstancesResponse rsp = DescribePaiInstancesResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DescribePaiInstancesOutcome(rsp);
-        else
-            return DescribePaiInstancesOutcome(o.GetError());
-    }
-    else
-    {
-        return DescribePaiInstancesOutcome(outcome.GetError());
-    }
-}
-
-void AsClient::DescribePaiInstancesAsync(const DescribePaiInstancesRequest& request, const DescribePaiInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribePaiInstances(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-AsClient::DescribePaiInstancesOutcomeCallable AsClient::DescribePaiInstancesCallable(const DescribePaiInstancesRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<DescribePaiInstancesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribePaiInstances(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 AsClient::DescribeScalingPoliciesOutcome AsClient::DescribeScalingPolicies(const DescribeScalingPoliciesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeScalingPolicies");
@@ -1237,6 +1280,49 @@ AsClient::DetachInstancesOutcomeCallable AsClient::DetachInstancesCallable(const
         [this, request]()
         {
             return this->DetachInstances(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+AsClient::DetachLoadBalancersOutcome AsClient::DetachLoadBalancers(const DetachLoadBalancersRequest &request)
+{
+    auto outcome = MakeRequest(request, "DetachLoadBalancers");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DetachLoadBalancersResponse rsp = DetachLoadBalancersResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DetachLoadBalancersOutcome(rsp);
+        else
+            return DetachLoadBalancersOutcome(o.GetError());
+    }
+    else
+    {
+        return DetachLoadBalancersOutcome(outcome.GetError());
+    }
+}
+
+void AsClient::DetachLoadBalancersAsync(const DetachLoadBalancersRequest& request, const DetachLoadBalancersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DetachLoadBalancers(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+AsClient::DetachLoadBalancersOutcomeCallable AsClient::DetachLoadBalancersCallable(const DetachLoadBalancersRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DetachLoadBalancersOutcome()>>(
+        [this, request]()
+        {
+            return this->DetachLoadBalancers(request);
         }
     );
 
@@ -1502,6 +1588,49 @@ AsClient::ModifyLaunchConfigurationAttributesOutcomeCallable AsClient::ModifyLau
     return task->get_future();
 }
 
+AsClient::ModifyLoadBalancerTargetAttributesOutcome AsClient::ModifyLoadBalancerTargetAttributes(const ModifyLoadBalancerTargetAttributesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyLoadBalancerTargetAttributes");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyLoadBalancerTargetAttributesResponse rsp = ModifyLoadBalancerTargetAttributesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyLoadBalancerTargetAttributesOutcome(rsp);
+        else
+            return ModifyLoadBalancerTargetAttributesOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyLoadBalancerTargetAttributesOutcome(outcome.GetError());
+    }
+}
+
+void AsClient::ModifyLoadBalancerTargetAttributesAsync(const ModifyLoadBalancerTargetAttributesRequest& request, const ModifyLoadBalancerTargetAttributesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyLoadBalancerTargetAttributes(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+AsClient::ModifyLoadBalancerTargetAttributesOutcomeCallable AsClient::ModifyLoadBalancerTargetAttributesCallable(const ModifyLoadBalancerTargetAttributesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyLoadBalancerTargetAttributesOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyLoadBalancerTargetAttributes(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 AsClient::ModifyLoadBalancersOutcome AsClient::ModifyLoadBalancers(const ModifyLoadBalancersRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyLoadBalancers");
@@ -1674,49 +1803,6 @@ AsClient::ModifyScheduledActionOutcomeCallable AsClient::ModifyScheduledActionCa
     return task->get_future();
 }
 
-AsClient::PreviewPaiDomainNameOutcome AsClient::PreviewPaiDomainName(const PreviewPaiDomainNameRequest &request)
-{
-    auto outcome = MakeRequest(request, "PreviewPaiDomainName");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        PreviewPaiDomainNameResponse rsp = PreviewPaiDomainNameResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return PreviewPaiDomainNameOutcome(rsp);
-        else
-            return PreviewPaiDomainNameOutcome(o.GetError());
-    }
-    else
-    {
-        return PreviewPaiDomainNameOutcome(outcome.GetError());
-    }
-}
-
-void AsClient::PreviewPaiDomainNameAsync(const PreviewPaiDomainNameRequest& request, const PreviewPaiDomainNameAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->PreviewPaiDomainName(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-AsClient::PreviewPaiDomainNameOutcomeCallable AsClient::PreviewPaiDomainNameCallable(const PreviewPaiDomainNameRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<PreviewPaiDomainNameOutcome()>>(
-        [this, request]()
-        {
-            return this->PreviewPaiDomainName(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 AsClient::RemoveInstancesOutcome AsClient::RemoveInstances(const RemoveInstancesRequest &request)
 {
     auto outcome = MakeRequest(request, "RemoveInstances");
@@ -1753,6 +1839,92 @@ AsClient::RemoveInstancesOutcomeCallable AsClient::RemoveInstancesCallable(const
         [this, request]()
         {
             return this->RemoveInstances(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+AsClient::ScaleInInstancesOutcome AsClient::ScaleInInstances(const ScaleInInstancesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ScaleInInstances");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ScaleInInstancesResponse rsp = ScaleInInstancesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ScaleInInstancesOutcome(rsp);
+        else
+            return ScaleInInstancesOutcome(o.GetError());
+    }
+    else
+    {
+        return ScaleInInstancesOutcome(outcome.GetError());
+    }
+}
+
+void AsClient::ScaleInInstancesAsync(const ScaleInInstancesRequest& request, const ScaleInInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ScaleInInstances(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+AsClient::ScaleInInstancesOutcomeCallable AsClient::ScaleInInstancesCallable(const ScaleInInstancesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ScaleInInstancesOutcome()>>(
+        [this, request]()
+        {
+            return this->ScaleInInstances(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+AsClient::ScaleOutInstancesOutcome AsClient::ScaleOutInstances(const ScaleOutInstancesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ScaleOutInstances");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ScaleOutInstancesResponse rsp = ScaleOutInstancesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ScaleOutInstancesOutcome(rsp);
+        else
+            return ScaleOutInstancesOutcome(o.GetError());
+    }
+    else
+    {
+        return ScaleOutInstancesOutcome(outcome.GetError());
+    }
+}
+
+void AsClient::ScaleOutInstancesAsync(const ScaleOutInstancesRequest& request, const ScaleOutInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ScaleOutInstances(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+AsClient::ScaleOutInstancesOutcomeCallable AsClient::ScaleOutInstancesCallable(const ScaleOutInstancesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ScaleOutInstancesOutcome()>>(
+        [this, request]()
+        {
+            return this->ScaleOutInstances(request);
         }
     );
 

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 WorkflowTask::WorkflowTask() :
@@ -35,7 +34,7 @@ WorkflowTask::WorkflowTask() :
 {
 }
 
-CoreInternalOutcome WorkflowTask::Deserialize(const Value &value)
+CoreInternalOutcome WorkflowTask::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -44,7 +43,7 @@ CoreInternalOutcome WorkflowTask::Deserialize(const Value &value)
     {
         if (!value["TaskId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WorkflowTask.TaskId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WorkflowTask.TaskId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_taskId = string(value["TaskId"].GetString());
         m_taskIdHasBeenSet = true;
@@ -54,7 +53,7 @@ CoreInternalOutcome WorkflowTask::Deserialize(const Value &value)
     {
         if (!value["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WorkflowTask.Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WorkflowTask.Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(value["Status"].GetString());
         m_statusHasBeenSet = true;
@@ -64,7 +63,7 @@ CoreInternalOutcome WorkflowTask::Deserialize(const Value &value)
     {
         if (!value["ErrCode"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `WorkflowTask.ErrCode` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WorkflowTask.ErrCode` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_errCode = value["ErrCode"].GetInt64();
         m_errCodeHasBeenSet = true;
@@ -74,7 +73,7 @@ CoreInternalOutcome WorkflowTask::Deserialize(const Value &value)
     {
         if (!value["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WorkflowTask.Message` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WorkflowTask.Message` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_message = string(value["Message"].GetString());
         m_messageHasBeenSet = true;
@@ -84,7 +83,7 @@ CoreInternalOutcome WorkflowTask::Deserialize(const Value &value)
     {
         if (!value["InputInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `WorkflowTask.InputInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WorkflowTask.InputInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_inputInfo.Deserialize(value["InputInfo"]);
@@ -101,7 +100,7 @@ CoreInternalOutcome WorkflowTask::Deserialize(const Value &value)
     {
         if (!value["MetaData"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `WorkflowTask.MetaData` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WorkflowTask.MetaData` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_metaData.Deserialize(value["MetaData"]);
@@ -117,10 +116,10 @@ CoreInternalOutcome WorkflowTask::Deserialize(const Value &value)
     if (value.HasMember("MediaProcessResultSet") && !value["MediaProcessResultSet"].IsNull())
     {
         if (!value["MediaProcessResultSet"].IsArray())
-            return CoreInternalOutcome(Error("response `WorkflowTask.MediaProcessResultSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `WorkflowTask.MediaProcessResultSet` is not array type"));
 
-        const Value &tmpValue = value["MediaProcessResultSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["MediaProcessResultSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             MediaProcessTaskResult item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -137,10 +136,10 @@ CoreInternalOutcome WorkflowTask::Deserialize(const Value &value)
     if (value.HasMember("AiContentReviewResultSet") && !value["AiContentReviewResultSet"].IsNull())
     {
         if (!value["AiContentReviewResultSet"].IsArray())
-            return CoreInternalOutcome(Error("response `WorkflowTask.AiContentReviewResultSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `WorkflowTask.AiContentReviewResultSet` is not array type"));
 
-        const Value &tmpValue = value["AiContentReviewResultSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["AiContentReviewResultSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             AiContentReviewResult item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -157,10 +156,10 @@ CoreInternalOutcome WorkflowTask::Deserialize(const Value &value)
     if (value.HasMember("AiAnalysisResultSet") && !value["AiAnalysisResultSet"].IsNull())
     {
         if (!value["AiAnalysisResultSet"].IsArray())
-            return CoreInternalOutcome(Error("response `WorkflowTask.AiAnalysisResultSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `WorkflowTask.AiAnalysisResultSet` is not array type"));
 
-        const Value &tmpValue = value["AiAnalysisResultSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["AiAnalysisResultSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             AiAnalysisResult item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -177,10 +176,10 @@ CoreInternalOutcome WorkflowTask::Deserialize(const Value &value)
     if (value.HasMember("AiRecognitionResultSet") && !value["AiRecognitionResultSet"].IsNull())
     {
         if (!value["AiRecognitionResultSet"].IsArray())
-            return CoreInternalOutcome(Error("response `WorkflowTask.AiRecognitionResultSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `WorkflowTask.AiRecognitionResultSet` is not array type"));
 
-        const Value &tmpValue = value["AiRecognitionResultSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["AiRecognitionResultSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             AiRecognitionResult item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -198,28 +197,28 @@ CoreInternalOutcome WorkflowTask::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void WorkflowTask::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void WorkflowTask::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_taskIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TaskId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_taskId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_taskId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_status.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
     }
 
     if (m_errCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ErrCode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_errCode, allocator);
@@ -227,86 +226,86 @@ void WorkflowTask::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_messageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Message";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_message.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_message.c_str(), allocator).Move(), allocator);
     }
 
     if (m_inputInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InputInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_inputInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_metaDataHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MetaData";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_metaData.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_mediaProcessResultSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MediaProcessResultSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_mediaProcessResultSet.begin(); itr != m_mediaProcessResultSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_aiContentReviewResultSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AiContentReviewResultSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_aiContentReviewResultSet.begin(); itr != m_aiContentReviewResultSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_aiAnalysisResultSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AiAnalysisResultSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_aiAnalysisResultSet.begin(); itr != m_aiAnalysisResultSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_aiRecognitionResultSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AiRecognitionResultSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_aiRecognitionResultSet.begin(); itr != m_aiRecognitionResultSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }

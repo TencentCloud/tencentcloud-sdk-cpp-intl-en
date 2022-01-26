@@ -126,14 +126,14 @@ namespace TencentCloud
                     bool PacketFiltersHasBeenSet() const;
 
                     /**
-                     * 获取IP blacklist/whitelist
-                     * @return IpBlackWhiteLists IP blacklist/whitelist
+                     * 获取IP blocklist/allowlist
+                     * @return IpBlackWhiteLists IP blocklist/allowlist
                      */
                     std::vector<IpBlackWhite> GetIpBlackWhiteLists() const;
 
                     /**
-                     * 设置IP blacklist/whitelist
-                     * @param IpBlackWhiteLists IP blacklist/whitelist
+                     * 设置IP blocklist/allowlist
+                     * @param IpBlackWhiteLists IP blocklist/allowlist
                      */
                     void SetIpBlackWhiteLists(const std::vector<IpBlackWhite>& _ipBlackWhiteLists);
 
@@ -304,7 +304,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_packetFiltersHasBeenSet;
 
                     /**
-                     * IP blacklist/whitelist
+                     * IP blocklist/allowlist
                      */
                     std::vector<IpBlackWhite> m_ipBlackWhiteLists;
                     bool m_ipBlackWhiteListsHasBeenSet;

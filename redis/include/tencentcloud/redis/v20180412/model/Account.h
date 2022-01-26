@@ -135,17 +135,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PrivilegeHasBeenSet() const;
 
                     /**
-                     * 获取Routing policy. master: master node; replication: slave node
+                     * 获取Routing policy. master: master node; replication: secondary node
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ReadonlyPolicy Routing policy. master: master node; replication: slave node
+                     * @return ReadonlyPolicy Routing policy. master: master node; replication: secondary node
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetReadonlyPolicy() const;
 
                     /**
-                     * 设置Routing policy. master: master node; replication: slave node
+                     * 设置Routing policy. master: master node; replication: secondary node
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ReadonlyPolicy Routing policy. master: master node; replication: slave node
+                     * @param ReadonlyPolicy Routing policy. master: master node; replication: secondary node
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetReadonlyPolicy(const std::vector<std::string>& _readonlyPolicy);
@@ -209,7 +209,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_privilegeHasBeenSet;
 
                     /**
-                     * Routing policy. master: master node; replication: slave node
+                     * Routing policy. master: master node; replication: secondary node
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_readonlyPolicy;

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Batch::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 Task::Task() :
@@ -43,7 +42,7 @@ Task::Task() :
 {
 }
 
-CoreInternalOutcome Task::Deserialize(const Value &value)
+CoreInternalOutcome Task::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -52,7 +51,7 @@ CoreInternalOutcome Task::Deserialize(const Value &value)
     {
         if (!value["Application"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `Task.Application` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Task.Application` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_application.Deserialize(value["Application"]);
@@ -69,7 +68,7 @@ CoreInternalOutcome Task::Deserialize(const Value &value)
     {
         if (!value["TaskName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Task.TaskName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Task.TaskName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_taskName = string(value["TaskName"].GetString());
         m_taskNameHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome Task::Deserialize(const Value &value)
     {
         if (!value["TaskInstanceNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Task.TaskInstanceNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Task.TaskInstanceNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_taskInstanceNum = value["TaskInstanceNum"].GetUint64();
         m_taskInstanceNumHasBeenSet = true;
@@ -89,7 +88,7 @@ CoreInternalOutcome Task::Deserialize(const Value &value)
     {
         if (!value["ComputeEnv"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `Task.ComputeEnv` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Task.ComputeEnv` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_computeEnv.Deserialize(value["ComputeEnv"]);
@@ -106,7 +105,7 @@ CoreInternalOutcome Task::Deserialize(const Value &value)
     {
         if (!value["EnvId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Task.EnvId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Task.EnvId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_envId = string(value["EnvId"].GetString());
         m_envIdHasBeenSet = true;
@@ -116,7 +115,7 @@ CoreInternalOutcome Task::Deserialize(const Value &value)
     {
         if (!value["RedirectInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `Task.RedirectInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Task.RedirectInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_redirectInfo.Deserialize(value["RedirectInfo"]);
@@ -133,7 +132,7 @@ CoreInternalOutcome Task::Deserialize(const Value &value)
     {
         if (!value["RedirectLocalInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `Task.RedirectLocalInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Task.RedirectLocalInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_redirectLocalInfo.Deserialize(value["RedirectLocalInfo"]);
@@ -149,10 +148,10 @@ CoreInternalOutcome Task::Deserialize(const Value &value)
     if (value.HasMember("InputMappings") && !value["InputMappings"].IsNull())
     {
         if (!value["InputMappings"].IsArray())
-            return CoreInternalOutcome(Error("response `Task.InputMappings` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Task.InputMappings` is not array type"));
 
-        const Value &tmpValue = value["InputMappings"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["InputMappings"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             InputMapping item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -169,10 +168,10 @@ CoreInternalOutcome Task::Deserialize(const Value &value)
     if (value.HasMember("OutputMappings") && !value["OutputMappings"].IsNull())
     {
         if (!value["OutputMappings"].IsArray())
-            return CoreInternalOutcome(Error("response `Task.OutputMappings` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Task.OutputMappings` is not array type"));
 
-        const Value &tmpValue = value["OutputMappings"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["OutputMappings"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             OutputMapping item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -189,10 +188,10 @@ CoreInternalOutcome Task::Deserialize(const Value &value)
     if (value.HasMember("OutputMappingConfigs") && !value["OutputMappingConfigs"].IsNull())
     {
         if (!value["OutputMappingConfigs"].IsArray())
-            return CoreInternalOutcome(Error("response `Task.OutputMappingConfigs` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Task.OutputMappingConfigs` is not array type"));
 
-        const Value &tmpValue = value["OutputMappingConfigs"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["OutputMappingConfigs"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             OutputMappingConfig item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -209,10 +208,10 @@ CoreInternalOutcome Task::Deserialize(const Value &value)
     if (value.HasMember("EnvVars") && !value["EnvVars"].IsNull())
     {
         if (!value["EnvVars"].IsArray())
-            return CoreInternalOutcome(Error("response `Task.EnvVars` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Task.EnvVars` is not array type"));
 
-        const Value &tmpValue = value["EnvVars"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["EnvVars"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             EnvVar item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -229,10 +228,10 @@ CoreInternalOutcome Task::Deserialize(const Value &value)
     if (value.HasMember("Authentications") && !value["Authentications"].IsNull())
     {
         if (!value["Authentications"].IsArray())
-            return CoreInternalOutcome(Error("response `Task.Authentications` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Task.Authentications` is not array type"));
 
-        const Value &tmpValue = value["Authentications"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Authentications"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             Authentication item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -250,7 +249,7 @@ CoreInternalOutcome Task::Deserialize(const Value &value)
     {
         if (!value["FailedAction"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Task.FailedAction` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Task.FailedAction` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_failedAction = string(value["FailedAction"].GetString());
         m_failedActionHasBeenSet = true;
@@ -260,7 +259,7 @@ CoreInternalOutcome Task::Deserialize(const Value &value)
     {
         if (!value["MaxRetryCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Task.MaxRetryCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Task.MaxRetryCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_maxRetryCount = value["MaxRetryCount"].GetUint64();
         m_maxRetryCountHasBeenSet = true;
@@ -270,7 +269,7 @@ CoreInternalOutcome Task::Deserialize(const Value &value)
     {
         if (!value["Timeout"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Task.Timeout` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Task.Timeout` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_timeout = value["Timeout"].GetUint64();
         m_timeoutHasBeenSet = true;
@@ -280,7 +279,7 @@ CoreInternalOutcome Task::Deserialize(const Value &value)
     {
         if (!value["MaxConcurrentNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Task.MaxConcurrentNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Task.MaxConcurrentNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_maxConcurrentNum = value["MaxConcurrentNum"].GetUint64();
         m_maxConcurrentNumHasBeenSet = true;
@@ -290,7 +289,7 @@ CoreInternalOutcome Task::Deserialize(const Value &value)
     {
         if (!value["RestartComputeNode"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `Task.RestartComputeNode` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Task.RestartComputeNode` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_restartComputeNode = value["RestartComputeNode"].GetBool();
         m_restartComputeNodeHasBeenSet = true;
@@ -300,7 +299,7 @@ CoreInternalOutcome Task::Deserialize(const Value &value)
     {
         if (!value["ResourceMaxRetryCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Task.ResourceMaxRetryCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Task.ResourceMaxRetryCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_resourceMaxRetryCount = value["ResourceMaxRetryCount"].GetUint64();
         m_resourceMaxRetryCountHasBeenSet = true;
@@ -310,29 +309,29 @@ CoreInternalOutcome Task::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Task::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Task::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_applicationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Application";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_application.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_taskNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TaskName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_taskName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_taskName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_taskInstanceNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TaskInstanceNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_taskInstanceNum, allocator);
@@ -340,125 +339,125 @@ void Task::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
 
     if (m_computeEnvHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ComputeEnv";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_computeEnv.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_envIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EnvId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_envId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_envId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_redirectInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RedirectInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_redirectInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_redirectLocalInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RedirectLocalInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_redirectLocalInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_inputMappingsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InputMappings";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_inputMappings.begin(); itr != m_inputMappings.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_outputMappingsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OutputMappings";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_outputMappings.begin(); itr != m_outputMappings.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_outputMappingConfigsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OutputMappingConfigs";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_outputMappingConfigs.begin(); itr != m_outputMappingConfigs.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_envVarsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EnvVars";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_envVars.begin(); itr != m_envVars.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_authenticationsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Authentications";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_authentications.begin(); itr != m_authentications.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_failedActionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FailedAction";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_failedAction.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_failedAction.c_str(), allocator).Move(), allocator);
     }
 
     if (m_maxRetryCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaxRetryCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_maxRetryCount, allocator);
@@ -466,7 +465,7 @@ void Task::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
 
     if (m_timeoutHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Timeout";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_timeout, allocator);
@@ -474,7 +473,7 @@ void Task::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
 
     if (m_maxConcurrentNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaxConcurrentNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_maxConcurrentNum, allocator);
@@ -482,7 +481,7 @@ void Task::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
 
     if (m_restartComputeNodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RestartComputeNode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_restartComputeNode, allocator);
@@ -490,7 +489,7 @@ void Task::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
 
     if (m_resourceMaxRetryCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResourceMaxRetryCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_resourceMaxRetryCount, allocator);

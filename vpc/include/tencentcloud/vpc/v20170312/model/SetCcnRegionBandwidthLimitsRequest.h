@@ -79,6 +79,24 @@ namespace TencentCloud
                      */
                     bool CcnRegionBandwidthLimitsHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to restore the region outbound bandwidth limit or inter-region bandwidth limit to default 1 Gbps. Valid values: `false` (no); `true` (yes). Default value: `false`. When the parameter is set to `true`, the CCN instance created will not be displayed in the console.
+                     * @return SetDefaultLimitFlag Whether to restore the region outbound bandwidth limit or inter-region bandwidth limit to default 1 Gbps. Valid values: `false` (no); `true` (yes). Default value: `false`. When the parameter is set to `true`, the CCN instance created will not be displayed in the console.
+                     */
+                    bool GetSetDefaultLimitFlag() const;
+
+                    /**
+                     * 设置Whether to restore the region outbound bandwidth limit or inter-region bandwidth limit to default 1 Gbps. Valid values: `false` (no); `true` (yes). Default value: `false`. When the parameter is set to `true`, the CCN instance created will not be displayed in the console.
+                     * @param SetDefaultLimitFlag Whether to restore the region outbound bandwidth limit or inter-region bandwidth limit to default 1 Gbps. Valid values: `false` (no); `true` (yes). Default value: `false`. When the parameter is set to `true`, the CCN instance created will not be displayed in the console.
+                     */
+                    void SetSetDefaultLimitFlag(const bool& _setDefaultLimitFlag);
+
+                    /**
+                     * 判断参数 SetDefaultLimitFlag 是否已赋值
+                     * @return SetDefaultLimitFlag 是否已赋值
+                     */
+                    bool SetDefaultLimitFlagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -92,6 +110,12 @@ namespace TencentCloud
                      */
                     std::vector<CcnRegionBandwidthLimit> m_ccnRegionBandwidthLimits;
                     bool m_ccnRegionBandwidthLimitsHasBeenSet;
+
+                    /**
+                     * Whether to restore the region outbound bandwidth limit or inter-region bandwidth limit to default 1 Gbps. Valid values: `false` (no); `true` (yes). Default value: `false`. When the parameter is set to `true`, the CCN instance created will not be displayed in the console.
+                     */
+                    bool m_setDefaultLimitFlag;
+                    bool m_setDefaultLimitFlagHasBeenSet;
 
                 };
             }

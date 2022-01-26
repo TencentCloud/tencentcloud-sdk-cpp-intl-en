@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 MainlandConfig::MainlandConfig() :
@@ -45,11 +44,13 @@ MainlandConfig::MainlandConfig() :
     m_seoHasBeenSet(false),
     m_serviceTypeHasBeenSet(false),
     m_statusCodeCacheHasBeenSet(false),
-    m_videoSeekHasBeenSet(false)
+    m_videoSeekHasBeenSet(false),
+    m_awsPrivateAccessHasBeenSet(false),
+    m_ossPrivateAccessHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
+CoreInternalOutcome MainlandConfig::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -58,7 +59,7 @@ CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
     {
         if (!value["Authentication"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MainlandConfig.Authentication` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.Authentication` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_authentication.Deserialize(value["Authentication"]);
@@ -75,7 +76,7 @@ CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
     {
         if (!value["BandwidthAlert"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MainlandConfig.BandwidthAlert` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.BandwidthAlert` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_bandwidthAlert.Deserialize(value["BandwidthAlert"]);
@@ -92,7 +93,7 @@ CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
     {
         if (!value["Cache"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MainlandConfig.Cache` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.Cache` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_cache.Deserialize(value["Cache"]);
@@ -109,7 +110,7 @@ CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
     {
         if (!value["CacheKey"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MainlandConfig.CacheKey` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.CacheKey` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_cacheKey.Deserialize(value["CacheKey"]);
@@ -126,7 +127,7 @@ CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
     {
         if (!value["Compression"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MainlandConfig.Compression` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.Compression` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_compression.Deserialize(value["Compression"]);
@@ -143,7 +144,7 @@ CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
     {
         if (!value["DownstreamCapping"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MainlandConfig.DownstreamCapping` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.DownstreamCapping` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_downstreamCapping.Deserialize(value["DownstreamCapping"]);
@@ -160,7 +161,7 @@ CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
     {
         if (!value["ErrorPage"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MainlandConfig.ErrorPage` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.ErrorPage` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_errorPage.Deserialize(value["ErrorPage"]);
@@ -177,7 +178,7 @@ CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
     {
         if (!value["FollowRedirect"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MainlandConfig.FollowRedirect` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.FollowRedirect` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_followRedirect.Deserialize(value["FollowRedirect"]);
@@ -194,7 +195,7 @@ CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
     {
         if (!value["ForceRedirect"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MainlandConfig.ForceRedirect` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.ForceRedirect` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_forceRedirect.Deserialize(value["ForceRedirect"]);
@@ -211,7 +212,7 @@ CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
     {
         if (!value["Https"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MainlandConfig.Https` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.Https` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_https.Deserialize(value["Https"]);
@@ -228,7 +229,7 @@ CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
     {
         if (!value["IpFilter"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MainlandConfig.IpFilter` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.IpFilter` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_ipFilter.Deserialize(value["IpFilter"]);
@@ -245,7 +246,7 @@ CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
     {
         if (!value["IpFreqLimit"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MainlandConfig.IpFreqLimit` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.IpFreqLimit` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_ipFreqLimit.Deserialize(value["IpFreqLimit"]);
@@ -262,7 +263,7 @@ CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
     {
         if (!value["MaxAge"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MainlandConfig.MaxAge` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.MaxAge` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_maxAge.Deserialize(value["MaxAge"]);
@@ -279,7 +280,7 @@ CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
     {
         if (!value["Origin"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MainlandConfig.Origin` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.Origin` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_origin.Deserialize(value["Origin"]);
@@ -296,7 +297,7 @@ CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
     {
         if (!value["OriginPullOptimization"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MainlandConfig.OriginPullOptimization` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.OriginPullOptimization` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_originPullOptimization.Deserialize(value["OriginPullOptimization"]);
@@ -313,7 +314,7 @@ CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
     {
         if (!value["RangeOriginPull"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MainlandConfig.RangeOriginPull` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.RangeOriginPull` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_rangeOriginPull.Deserialize(value["RangeOriginPull"]);
@@ -330,7 +331,7 @@ CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
     {
         if (!value["Referer"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MainlandConfig.Referer` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.Referer` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_referer.Deserialize(value["Referer"]);
@@ -347,7 +348,7 @@ CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
     {
         if (!value["RequestHeader"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MainlandConfig.RequestHeader` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.RequestHeader` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_requestHeader.Deserialize(value["RequestHeader"]);
@@ -364,7 +365,7 @@ CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
     {
         if (!value["ResponseHeader"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MainlandConfig.ResponseHeader` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.ResponseHeader` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_responseHeader.Deserialize(value["ResponseHeader"]);
@@ -381,7 +382,7 @@ CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
     {
         if (!value["ResponseHeaderCache"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MainlandConfig.ResponseHeaderCache` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.ResponseHeaderCache` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_responseHeaderCache.Deserialize(value["ResponseHeaderCache"]);
@@ -398,7 +399,7 @@ CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
     {
         if (!value["Seo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MainlandConfig.Seo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.Seo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_seo.Deserialize(value["Seo"]);
@@ -415,7 +416,7 @@ CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
     {
         if (!value["ServiceType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MainlandConfig.ServiceType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.ServiceType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_serviceType = string(value["ServiceType"].GetString());
         m_serviceTypeHasBeenSet = true;
@@ -425,7 +426,7 @@ CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
     {
         if (!value["StatusCodeCache"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MainlandConfig.StatusCodeCache` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.StatusCodeCache` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_statusCodeCache.Deserialize(value["StatusCodeCache"]);
@@ -442,7 +443,7 @@ CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
     {
         if (!value["VideoSeek"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MainlandConfig.VideoSeek` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.VideoSeek` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_videoSeek.Deserialize(value["VideoSeek"]);
@@ -455,226 +456,278 @@ CoreInternalOutcome MainlandConfig::Deserialize(const Value &value)
         m_videoSeekHasBeenSet = true;
     }
 
+    if (value.HasMember("AwsPrivateAccess") && !value["AwsPrivateAccess"].IsNull())
+    {
+        if (!value["AwsPrivateAccess"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.AwsPrivateAccess` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_awsPrivateAccess.Deserialize(value["AwsPrivateAccess"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_awsPrivateAccessHasBeenSet = true;
+    }
+
+    if (value.HasMember("OssPrivateAccess") && !value["OssPrivateAccess"].IsNull())
+    {
+        if (!value["OssPrivateAccess"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `MainlandConfig.OssPrivateAccess` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_ossPrivateAccess.Deserialize(value["OssPrivateAccess"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_ossPrivateAccessHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void MainlandConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MainlandConfig::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_authenticationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Authentication";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_authentication.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_bandwidthAlertHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BandwidthAlert";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_bandwidthAlert.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_cacheHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Cache";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_cache.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_cacheKeyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CacheKey";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_cacheKey.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_compressionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Compression";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_compression.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_downstreamCappingHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DownstreamCapping";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_downstreamCapping.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_errorPageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ErrorPage";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_errorPage.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_followRedirectHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FollowRedirect";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_followRedirect.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_forceRedirectHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ForceRedirect";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_forceRedirect.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_httpsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Https";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_https.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_ipFilterHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IpFilter";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_ipFilter.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_ipFreqLimitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IpFreqLimit";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_ipFreqLimit.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_maxAgeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaxAge";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_maxAge.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_originHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Origin";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_origin.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_originPullOptimizationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OriginPullOptimization";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_originPullOptimization.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_rangeOriginPullHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RangeOriginPull";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_rangeOriginPull.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_refererHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Referer";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_referer.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_requestHeaderHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RequestHeader";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_requestHeader.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_responseHeaderHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResponseHeader";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_responseHeader.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_responseHeaderCacheHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResponseHeaderCache";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_responseHeaderCache.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_seoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Seo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_seo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_serviceTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_serviceType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_serviceType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusCodeCacheHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StatusCodeCache";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_statusCodeCache.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_videoSeekHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VideoSeek";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_videoSeek.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_awsPrivateAccessHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AwsPrivateAccess";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_awsPrivateAccess.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_ossPrivateAccessHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OssPrivateAccess";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_ossPrivateAccess.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -1062,5 +1115,37 @@ void MainlandConfig::SetVideoSeek(const VideoSeek& _videoSeek)
 bool MainlandConfig::VideoSeekHasBeenSet() const
 {
     return m_videoSeekHasBeenSet;
+}
+
+AwsPrivateAccess MainlandConfig::GetAwsPrivateAccess() const
+{
+    return m_awsPrivateAccess;
+}
+
+void MainlandConfig::SetAwsPrivateAccess(const AwsPrivateAccess& _awsPrivateAccess)
+{
+    m_awsPrivateAccess = _awsPrivateAccess;
+    m_awsPrivateAccessHasBeenSet = true;
+}
+
+bool MainlandConfig::AwsPrivateAccessHasBeenSet() const
+{
+    return m_awsPrivateAccessHasBeenSet;
+}
+
+OssPrivateAccess MainlandConfig::GetOssPrivateAccess() const
+{
+    return m_ossPrivateAccess;
+}
+
+void MainlandConfig::SetOssPrivateAccess(const OssPrivateAccess& _ossPrivateAccess)
+{
+    m_ossPrivateAccess = _ossPrivateAccess;
+    m_ossPrivateAccessHasBeenSet = true;
+}
+
+bool MainlandConfig::OssPrivateAccessHasBeenSet() const
+{
+    return m_ossPrivateAccessHasBeenSet;
 }
 

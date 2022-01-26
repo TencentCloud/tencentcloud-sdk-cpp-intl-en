@@ -20,12 +20,12 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Monitor::V20180724::Model;
-using namespace rapidjson;
 using namespace std;
 
 BindingPolicyObjectRequest::BindingPolicyObjectRequest() :
-    m_groupIdHasBeenSet(false),
     m_moduleHasBeenSet(false),
+    m_groupIdHasBeenSet(false),
+    m_policyIdHasBeenSet(false),
     m_instanceGroupIdHasBeenSet(false),
     m_dimensionsHasBeenSet(false)
 {
@@ -33,30 +33,38 @@ BindingPolicyObjectRequest::BindingPolicyObjectRequest() :
 
 string BindingPolicyObjectRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
+
+    if (m_moduleHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Module";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_module.c_str(), allocator).Move(), allocator);
+    }
 
     if (m_groupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "GroupId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_groupId, allocator);
     }
 
-    if (m_moduleHasBeenSet)
+    if (m_policyIdHasBeenSet)
     {
-        Value iKey(kStringType);
-        string key = "Module";
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PolicyId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_module.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_policyId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceGroupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceGroupId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_instanceGroupId, allocator);
@@ -64,26 +72,42 @@ string BindingPolicyObjectRequest::ToJsonString() const
 
     if (m_dimensionsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Dimensions";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_dimensions.begin(); itr != m_dimensions.end(); ++itr, ++i)
         {
-            d[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
 
+
+string BindingPolicyObjectRequest::GetModule() const
+{
+    return m_module;
+}
+
+void BindingPolicyObjectRequest::SetModule(const string& _module)
+{
+    m_module = _module;
+    m_moduleHasBeenSet = true;
+}
+
+bool BindingPolicyObjectRequest::ModuleHasBeenSet() const
+{
+    return m_moduleHasBeenSet;
+}
 
 int64_t BindingPolicyObjectRequest::GetGroupId() const
 {
@@ -101,20 +125,20 @@ bool BindingPolicyObjectRequest::GroupIdHasBeenSet() const
     return m_groupIdHasBeenSet;
 }
 
-string BindingPolicyObjectRequest::GetModule() const
+string BindingPolicyObjectRequest::GetPolicyId() const
 {
-    return m_module;
+    return m_policyId;
 }
 
-void BindingPolicyObjectRequest::SetModule(const string& _module)
+void BindingPolicyObjectRequest::SetPolicyId(const string& _policyId)
 {
-    m_module = _module;
-    m_moduleHasBeenSet = true;
+    m_policyId = _policyId;
+    m_policyIdHasBeenSet = true;
 }
 
-bool BindingPolicyObjectRequest::ModuleHasBeenSet() const
+bool BindingPolicyObjectRequest::PolicyIdHasBeenSet() const
 {
-    return m_moduleHasBeenSet;
+    return m_policyIdHasBeenSet;
 }
 
 int64_t BindingPolicyObjectRequest::GetInstanceGroupId() const

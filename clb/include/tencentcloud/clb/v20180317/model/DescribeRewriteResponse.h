@@ -41,11 +41,12 @@ namespace TencentCloud
                     DescribeRewriteResponse();
                     ~DescribeRewriteResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned
-                     * @return RewriteSet Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned
+                     * 获取Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned.
+                     * @return RewriteSet Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned.
                      */
                     std::vector<RuleOutput> GetRewriteSet() const;
 
@@ -58,7 +59,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned
+                     * Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned.
                      */
                     std::vector<RuleOutput> m_rewriteSet;
                     bool m_rewriteSetHasBeenSet;

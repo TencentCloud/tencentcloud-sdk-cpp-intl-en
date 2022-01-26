@@ -23,10 +23,16 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/kms/v20190118/model/ArchiveKeyRequest.h>
+#include <tencentcloud/kms/v20190118/model/ArchiveKeyResponse.h>
 #include <tencentcloud/kms/v20190118/model/AsymmetricRsaDecryptRequest.h>
 #include <tencentcloud/kms/v20190118/model/AsymmetricRsaDecryptResponse.h>
 #include <tencentcloud/kms/v20190118/model/AsymmetricSm2DecryptRequest.h>
 #include <tencentcloud/kms/v20190118/model/AsymmetricSm2DecryptResponse.h>
+#include <tencentcloud/kms/v20190118/model/BindCloudResourceRequest.h>
+#include <tencentcloud/kms/v20190118/model/BindCloudResourceResponse.h>
+#include <tencentcloud/kms/v20190118/model/CancelKeyArchiveRequest.h>
+#include <tencentcloud/kms/v20190118/model/CancelKeyArchiveResponse.h>
 #include <tencentcloud/kms/v20190118/model/CancelKeyDeletionRequest.h>
 #include <tencentcloud/kms/v20190118/model/CancelKeyDeletionResponse.h>
 #include <tencentcloud/kms/v20190118/model/CreateKeyRequest.h>
@@ -87,6 +93,8 @@
 #include <tencentcloud/kms/v20190118/model/GetParametersForImportResponse.h>
 #include <tencentcloud/kms/v20190118/model/GetPublicKeyRequest.h>
 #include <tencentcloud/kms/v20190118/model/GetPublicKeyResponse.h>
+#include <tencentcloud/kms/v20190118/model/GetRegionsRequest.h>
+#include <tencentcloud/kms/v20190118/model/GetRegionsResponse.h>
 #include <tencentcloud/kms/v20190118/model/GetServiceStatusRequest.h>
 #include <tencentcloud/kms/v20190118/model/GetServiceStatusResponse.h>
 #include <tencentcloud/kms/v20190118/model/ImportKeyMaterialRequest.h>
@@ -103,10 +111,16 @@
 #include <tencentcloud/kms/v20190118/model/ReEncryptResponse.h>
 #include <tencentcloud/kms/v20190118/model/ScheduleKeyDeletionRequest.h>
 #include <tencentcloud/kms/v20190118/model/ScheduleKeyDeletionResponse.h>
+#include <tencentcloud/kms/v20190118/model/SignByAsymmetricKeyRequest.h>
+#include <tencentcloud/kms/v20190118/model/SignByAsymmetricKeyResponse.h>
+#include <tencentcloud/kms/v20190118/model/UnbindCloudResourceRequest.h>
+#include <tencentcloud/kms/v20190118/model/UnbindCloudResourceResponse.h>
 #include <tencentcloud/kms/v20190118/model/UpdateAliasRequest.h>
 #include <tencentcloud/kms/v20190118/model/UpdateAliasResponse.h>
 #include <tencentcloud/kms/v20190118/model/UpdateKeyDescriptionRequest.h>
 #include <tencentcloud/kms/v20190118/model/UpdateKeyDescriptionResponse.h>
+#include <tencentcloud/kms/v20190118/model/VerifyByAsymmetricKeyRequest.h>
+#include <tencentcloud/kms/v20190118/model/VerifyByAsymmetricKeyResponse.h>
 
 
 namespace TencentCloud
@@ -121,134 +135,164 @@ namespace TencentCloud
                 KmsClient(const Credential &credential, const std::string &region);
                 KmsClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::AsymmetricRsaDecryptResponse> AsymmetricRsaDecryptOutcome;
+                typedef Outcome<Core::Error, Model::ArchiveKeyResponse> ArchiveKeyOutcome;
+                typedef std::future<ArchiveKeyOutcome> ArchiveKeyOutcomeCallable;
+                typedef std::function<void(const KmsClient*, const Model::ArchiveKeyRequest&, ArchiveKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ArchiveKeyAsyncHandler;
+                typedef Outcome<Core::Error, Model::AsymmetricRsaDecryptResponse> AsymmetricRsaDecryptOutcome;
                 typedef std::future<AsymmetricRsaDecryptOutcome> AsymmetricRsaDecryptOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::AsymmetricRsaDecryptRequest&, AsymmetricRsaDecryptOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AsymmetricRsaDecryptAsyncHandler;
-                typedef Outcome<Error, Model::AsymmetricSm2DecryptResponse> AsymmetricSm2DecryptOutcome;
+                typedef Outcome<Core::Error, Model::AsymmetricSm2DecryptResponse> AsymmetricSm2DecryptOutcome;
                 typedef std::future<AsymmetricSm2DecryptOutcome> AsymmetricSm2DecryptOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::AsymmetricSm2DecryptRequest&, AsymmetricSm2DecryptOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AsymmetricSm2DecryptAsyncHandler;
-                typedef Outcome<Error, Model::CancelKeyDeletionResponse> CancelKeyDeletionOutcome;
+                typedef Outcome<Core::Error, Model::BindCloudResourceResponse> BindCloudResourceOutcome;
+                typedef std::future<BindCloudResourceOutcome> BindCloudResourceOutcomeCallable;
+                typedef std::function<void(const KmsClient*, const Model::BindCloudResourceRequest&, BindCloudResourceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BindCloudResourceAsyncHandler;
+                typedef Outcome<Core::Error, Model::CancelKeyArchiveResponse> CancelKeyArchiveOutcome;
+                typedef std::future<CancelKeyArchiveOutcome> CancelKeyArchiveOutcomeCallable;
+                typedef std::function<void(const KmsClient*, const Model::CancelKeyArchiveRequest&, CancelKeyArchiveOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CancelKeyArchiveAsyncHandler;
+                typedef Outcome<Core::Error, Model::CancelKeyDeletionResponse> CancelKeyDeletionOutcome;
                 typedef std::future<CancelKeyDeletionOutcome> CancelKeyDeletionOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::CancelKeyDeletionRequest&, CancelKeyDeletionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CancelKeyDeletionAsyncHandler;
-                typedef Outcome<Error, Model::CreateKeyResponse> CreateKeyOutcome;
+                typedef Outcome<Core::Error, Model::CreateKeyResponse> CreateKeyOutcome;
                 typedef std::future<CreateKeyOutcome> CreateKeyOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::CreateKeyRequest&, CreateKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateKeyAsyncHandler;
-                typedef Outcome<Error, Model::CreateWhiteBoxKeyResponse> CreateWhiteBoxKeyOutcome;
+                typedef Outcome<Core::Error, Model::CreateWhiteBoxKeyResponse> CreateWhiteBoxKeyOutcome;
                 typedef std::future<CreateWhiteBoxKeyOutcome> CreateWhiteBoxKeyOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::CreateWhiteBoxKeyRequest&, CreateWhiteBoxKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateWhiteBoxKeyAsyncHandler;
-                typedef Outcome<Error, Model::DecryptResponse> DecryptOutcome;
+                typedef Outcome<Core::Error, Model::DecryptResponse> DecryptOutcome;
                 typedef std::future<DecryptOutcome> DecryptOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::DecryptRequest&, DecryptOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DecryptAsyncHandler;
-                typedef Outcome<Error, Model::DeleteImportedKeyMaterialResponse> DeleteImportedKeyMaterialOutcome;
+                typedef Outcome<Core::Error, Model::DeleteImportedKeyMaterialResponse> DeleteImportedKeyMaterialOutcome;
                 typedef std::future<DeleteImportedKeyMaterialOutcome> DeleteImportedKeyMaterialOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::DeleteImportedKeyMaterialRequest&, DeleteImportedKeyMaterialOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteImportedKeyMaterialAsyncHandler;
-                typedef Outcome<Error, Model::DeleteWhiteBoxKeyResponse> DeleteWhiteBoxKeyOutcome;
+                typedef Outcome<Core::Error, Model::DeleteWhiteBoxKeyResponse> DeleteWhiteBoxKeyOutcome;
                 typedef std::future<DeleteWhiteBoxKeyOutcome> DeleteWhiteBoxKeyOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::DeleteWhiteBoxKeyRequest&, DeleteWhiteBoxKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteWhiteBoxKeyAsyncHandler;
-                typedef Outcome<Error, Model::DescribeKeyResponse> DescribeKeyOutcome;
+                typedef Outcome<Core::Error, Model::DescribeKeyResponse> DescribeKeyOutcome;
                 typedef std::future<DescribeKeyOutcome> DescribeKeyOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::DescribeKeyRequest&, DescribeKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeKeyAsyncHandler;
-                typedef Outcome<Error, Model::DescribeKeysResponse> DescribeKeysOutcome;
+                typedef Outcome<Core::Error, Model::DescribeKeysResponse> DescribeKeysOutcome;
                 typedef std::future<DescribeKeysOutcome> DescribeKeysOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::DescribeKeysRequest&, DescribeKeysOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeKeysAsyncHandler;
-                typedef Outcome<Error, Model::DescribeWhiteBoxDecryptKeyResponse> DescribeWhiteBoxDecryptKeyOutcome;
+                typedef Outcome<Core::Error, Model::DescribeWhiteBoxDecryptKeyResponse> DescribeWhiteBoxDecryptKeyOutcome;
                 typedef std::future<DescribeWhiteBoxDecryptKeyOutcome> DescribeWhiteBoxDecryptKeyOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::DescribeWhiteBoxDecryptKeyRequest&, DescribeWhiteBoxDecryptKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWhiteBoxDecryptKeyAsyncHandler;
-                typedef Outcome<Error, Model::DescribeWhiteBoxDeviceFingerprintsResponse> DescribeWhiteBoxDeviceFingerprintsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeWhiteBoxDeviceFingerprintsResponse> DescribeWhiteBoxDeviceFingerprintsOutcome;
                 typedef std::future<DescribeWhiteBoxDeviceFingerprintsOutcome> DescribeWhiteBoxDeviceFingerprintsOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::DescribeWhiteBoxDeviceFingerprintsRequest&, DescribeWhiteBoxDeviceFingerprintsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWhiteBoxDeviceFingerprintsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeWhiteBoxKeyResponse> DescribeWhiteBoxKeyOutcome;
+                typedef Outcome<Core::Error, Model::DescribeWhiteBoxKeyResponse> DescribeWhiteBoxKeyOutcome;
                 typedef std::future<DescribeWhiteBoxKeyOutcome> DescribeWhiteBoxKeyOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::DescribeWhiteBoxKeyRequest&, DescribeWhiteBoxKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWhiteBoxKeyAsyncHandler;
-                typedef Outcome<Error, Model::DescribeWhiteBoxKeyDetailsResponse> DescribeWhiteBoxKeyDetailsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeWhiteBoxKeyDetailsResponse> DescribeWhiteBoxKeyDetailsOutcome;
                 typedef std::future<DescribeWhiteBoxKeyDetailsOutcome> DescribeWhiteBoxKeyDetailsOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::DescribeWhiteBoxKeyDetailsRequest&, DescribeWhiteBoxKeyDetailsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWhiteBoxKeyDetailsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeWhiteBoxServiceStatusResponse> DescribeWhiteBoxServiceStatusOutcome;
+                typedef Outcome<Core::Error, Model::DescribeWhiteBoxServiceStatusResponse> DescribeWhiteBoxServiceStatusOutcome;
                 typedef std::future<DescribeWhiteBoxServiceStatusOutcome> DescribeWhiteBoxServiceStatusOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::DescribeWhiteBoxServiceStatusRequest&, DescribeWhiteBoxServiceStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWhiteBoxServiceStatusAsyncHandler;
-                typedef Outcome<Error, Model::DisableKeyResponse> DisableKeyOutcome;
+                typedef Outcome<Core::Error, Model::DisableKeyResponse> DisableKeyOutcome;
                 typedef std::future<DisableKeyOutcome> DisableKeyOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::DisableKeyRequest&, DisableKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableKeyAsyncHandler;
-                typedef Outcome<Error, Model::DisableKeyRotationResponse> DisableKeyRotationOutcome;
+                typedef Outcome<Core::Error, Model::DisableKeyRotationResponse> DisableKeyRotationOutcome;
                 typedef std::future<DisableKeyRotationOutcome> DisableKeyRotationOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::DisableKeyRotationRequest&, DisableKeyRotationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableKeyRotationAsyncHandler;
-                typedef Outcome<Error, Model::DisableKeysResponse> DisableKeysOutcome;
+                typedef Outcome<Core::Error, Model::DisableKeysResponse> DisableKeysOutcome;
                 typedef std::future<DisableKeysOutcome> DisableKeysOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::DisableKeysRequest&, DisableKeysOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableKeysAsyncHandler;
-                typedef Outcome<Error, Model::DisableWhiteBoxKeyResponse> DisableWhiteBoxKeyOutcome;
+                typedef Outcome<Core::Error, Model::DisableWhiteBoxKeyResponse> DisableWhiteBoxKeyOutcome;
                 typedef std::future<DisableWhiteBoxKeyOutcome> DisableWhiteBoxKeyOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::DisableWhiteBoxKeyRequest&, DisableWhiteBoxKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableWhiteBoxKeyAsyncHandler;
-                typedef Outcome<Error, Model::DisableWhiteBoxKeysResponse> DisableWhiteBoxKeysOutcome;
+                typedef Outcome<Core::Error, Model::DisableWhiteBoxKeysResponse> DisableWhiteBoxKeysOutcome;
                 typedef std::future<DisableWhiteBoxKeysOutcome> DisableWhiteBoxKeysOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::DisableWhiteBoxKeysRequest&, DisableWhiteBoxKeysOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableWhiteBoxKeysAsyncHandler;
-                typedef Outcome<Error, Model::EnableKeyResponse> EnableKeyOutcome;
+                typedef Outcome<Core::Error, Model::EnableKeyResponse> EnableKeyOutcome;
                 typedef std::future<EnableKeyOutcome> EnableKeyOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::EnableKeyRequest&, EnableKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableKeyAsyncHandler;
-                typedef Outcome<Error, Model::EnableKeyRotationResponse> EnableKeyRotationOutcome;
+                typedef Outcome<Core::Error, Model::EnableKeyRotationResponse> EnableKeyRotationOutcome;
                 typedef std::future<EnableKeyRotationOutcome> EnableKeyRotationOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::EnableKeyRotationRequest&, EnableKeyRotationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableKeyRotationAsyncHandler;
-                typedef Outcome<Error, Model::EnableKeysResponse> EnableKeysOutcome;
+                typedef Outcome<Core::Error, Model::EnableKeysResponse> EnableKeysOutcome;
                 typedef std::future<EnableKeysOutcome> EnableKeysOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::EnableKeysRequest&, EnableKeysOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableKeysAsyncHandler;
-                typedef Outcome<Error, Model::EnableWhiteBoxKeyResponse> EnableWhiteBoxKeyOutcome;
+                typedef Outcome<Core::Error, Model::EnableWhiteBoxKeyResponse> EnableWhiteBoxKeyOutcome;
                 typedef std::future<EnableWhiteBoxKeyOutcome> EnableWhiteBoxKeyOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::EnableWhiteBoxKeyRequest&, EnableWhiteBoxKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableWhiteBoxKeyAsyncHandler;
-                typedef Outcome<Error, Model::EnableWhiteBoxKeysResponse> EnableWhiteBoxKeysOutcome;
+                typedef Outcome<Core::Error, Model::EnableWhiteBoxKeysResponse> EnableWhiteBoxKeysOutcome;
                 typedef std::future<EnableWhiteBoxKeysOutcome> EnableWhiteBoxKeysOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::EnableWhiteBoxKeysRequest&, EnableWhiteBoxKeysOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableWhiteBoxKeysAsyncHandler;
-                typedef Outcome<Error, Model::EncryptResponse> EncryptOutcome;
+                typedef Outcome<Core::Error, Model::EncryptResponse> EncryptOutcome;
                 typedef std::future<EncryptOutcome> EncryptOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::EncryptRequest&, EncryptOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EncryptAsyncHandler;
-                typedef Outcome<Error, Model::EncryptByWhiteBoxResponse> EncryptByWhiteBoxOutcome;
+                typedef Outcome<Core::Error, Model::EncryptByWhiteBoxResponse> EncryptByWhiteBoxOutcome;
                 typedef std::future<EncryptByWhiteBoxOutcome> EncryptByWhiteBoxOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::EncryptByWhiteBoxRequest&, EncryptByWhiteBoxOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EncryptByWhiteBoxAsyncHandler;
-                typedef Outcome<Error, Model::GenerateDataKeyResponse> GenerateDataKeyOutcome;
+                typedef Outcome<Core::Error, Model::GenerateDataKeyResponse> GenerateDataKeyOutcome;
                 typedef std::future<GenerateDataKeyOutcome> GenerateDataKeyOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::GenerateDataKeyRequest&, GenerateDataKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GenerateDataKeyAsyncHandler;
-                typedef Outcome<Error, Model::GenerateRandomResponse> GenerateRandomOutcome;
+                typedef Outcome<Core::Error, Model::GenerateRandomResponse> GenerateRandomOutcome;
                 typedef std::future<GenerateRandomOutcome> GenerateRandomOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::GenerateRandomRequest&, GenerateRandomOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GenerateRandomAsyncHandler;
-                typedef Outcome<Error, Model::GetKeyRotationStatusResponse> GetKeyRotationStatusOutcome;
+                typedef Outcome<Core::Error, Model::GetKeyRotationStatusResponse> GetKeyRotationStatusOutcome;
                 typedef std::future<GetKeyRotationStatusOutcome> GetKeyRotationStatusOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::GetKeyRotationStatusRequest&, GetKeyRotationStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetKeyRotationStatusAsyncHandler;
-                typedef Outcome<Error, Model::GetParametersForImportResponse> GetParametersForImportOutcome;
+                typedef Outcome<Core::Error, Model::GetParametersForImportResponse> GetParametersForImportOutcome;
                 typedef std::future<GetParametersForImportOutcome> GetParametersForImportOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::GetParametersForImportRequest&, GetParametersForImportOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetParametersForImportAsyncHandler;
-                typedef Outcome<Error, Model::GetPublicKeyResponse> GetPublicKeyOutcome;
+                typedef Outcome<Core::Error, Model::GetPublicKeyResponse> GetPublicKeyOutcome;
                 typedef std::future<GetPublicKeyOutcome> GetPublicKeyOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::GetPublicKeyRequest&, GetPublicKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetPublicKeyAsyncHandler;
-                typedef Outcome<Error, Model::GetServiceStatusResponse> GetServiceStatusOutcome;
+                typedef Outcome<Core::Error, Model::GetRegionsResponse> GetRegionsOutcome;
+                typedef std::future<GetRegionsOutcome> GetRegionsOutcomeCallable;
+                typedef std::function<void(const KmsClient*, const Model::GetRegionsRequest&, GetRegionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetRegionsAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetServiceStatusResponse> GetServiceStatusOutcome;
                 typedef std::future<GetServiceStatusOutcome> GetServiceStatusOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::GetServiceStatusRequest&, GetServiceStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetServiceStatusAsyncHandler;
-                typedef Outcome<Error, Model::ImportKeyMaterialResponse> ImportKeyMaterialOutcome;
+                typedef Outcome<Core::Error, Model::ImportKeyMaterialResponse> ImportKeyMaterialOutcome;
                 typedef std::future<ImportKeyMaterialOutcome> ImportKeyMaterialOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::ImportKeyMaterialRequest&, ImportKeyMaterialOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ImportKeyMaterialAsyncHandler;
-                typedef Outcome<Error, Model::ListAlgorithmsResponse> ListAlgorithmsOutcome;
+                typedef Outcome<Core::Error, Model::ListAlgorithmsResponse> ListAlgorithmsOutcome;
                 typedef std::future<ListAlgorithmsOutcome> ListAlgorithmsOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::ListAlgorithmsRequest&, ListAlgorithmsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListAlgorithmsAsyncHandler;
-                typedef Outcome<Error, Model::ListKeyDetailResponse> ListKeyDetailOutcome;
+                typedef Outcome<Core::Error, Model::ListKeyDetailResponse> ListKeyDetailOutcome;
                 typedef std::future<ListKeyDetailOutcome> ListKeyDetailOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::ListKeyDetailRequest&, ListKeyDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListKeyDetailAsyncHandler;
-                typedef Outcome<Error, Model::ListKeysResponse> ListKeysOutcome;
+                typedef Outcome<Core::Error, Model::ListKeysResponse> ListKeysOutcome;
                 typedef std::future<ListKeysOutcome> ListKeysOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::ListKeysRequest&, ListKeysOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListKeysAsyncHandler;
-                typedef Outcome<Error, Model::OverwriteWhiteBoxDeviceFingerprintsResponse> OverwriteWhiteBoxDeviceFingerprintsOutcome;
+                typedef Outcome<Core::Error, Model::OverwriteWhiteBoxDeviceFingerprintsResponse> OverwriteWhiteBoxDeviceFingerprintsOutcome;
                 typedef std::future<OverwriteWhiteBoxDeviceFingerprintsOutcome> OverwriteWhiteBoxDeviceFingerprintsOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::OverwriteWhiteBoxDeviceFingerprintsRequest&, OverwriteWhiteBoxDeviceFingerprintsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OverwriteWhiteBoxDeviceFingerprintsAsyncHandler;
-                typedef Outcome<Error, Model::ReEncryptResponse> ReEncryptOutcome;
+                typedef Outcome<Core::Error, Model::ReEncryptResponse> ReEncryptOutcome;
                 typedef std::future<ReEncryptOutcome> ReEncryptOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::ReEncryptRequest&, ReEncryptOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReEncryptAsyncHandler;
-                typedef Outcome<Error, Model::ScheduleKeyDeletionResponse> ScheduleKeyDeletionOutcome;
+                typedef Outcome<Core::Error, Model::ScheduleKeyDeletionResponse> ScheduleKeyDeletionOutcome;
                 typedef std::future<ScheduleKeyDeletionOutcome> ScheduleKeyDeletionOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::ScheduleKeyDeletionRequest&, ScheduleKeyDeletionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ScheduleKeyDeletionAsyncHandler;
-                typedef Outcome<Error, Model::UpdateAliasResponse> UpdateAliasOutcome;
+                typedef Outcome<Core::Error, Model::SignByAsymmetricKeyResponse> SignByAsymmetricKeyOutcome;
+                typedef std::future<SignByAsymmetricKeyOutcome> SignByAsymmetricKeyOutcomeCallable;
+                typedef std::function<void(const KmsClient*, const Model::SignByAsymmetricKeyRequest&, SignByAsymmetricKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SignByAsymmetricKeyAsyncHandler;
+                typedef Outcome<Core::Error, Model::UnbindCloudResourceResponse> UnbindCloudResourceOutcome;
+                typedef std::future<UnbindCloudResourceOutcome> UnbindCloudResourceOutcomeCallable;
+                typedef std::function<void(const KmsClient*, const Model::UnbindCloudResourceRequest&, UnbindCloudResourceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnbindCloudResourceAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateAliasResponse> UpdateAliasOutcome;
                 typedef std::future<UpdateAliasOutcome> UpdateAliasOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::UpdateAliasRequest&, UpdateAliasOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateAliasAsyncHandler;
-                typedef Outcome<Error, Model::UpdateKeyDescriptionResponse> UpdateKeyDescriptionOutcome;
+                typedef Outcome<Core::Error, Model::UpdateKeyDescriptionResponse> UpdateKeyDescriptionOutcome;
                 typedef std::future<UpdateKeyDescriptionOutcome> UpdateKeyDescriptionOutcomeCallable;
                 typedef std::function<void(const KmsClient*, const Model::UpdateKeyDescriptionRequest&, UpdateKeyDescriptionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateKeyDescriptionAsyncHandler;
+                typedef Outcome<Core::Error, Model::VerifyByAsymmetricKeyResponse> VerifyByAsymmetricKeyOutcome;
+                typedef std::future<VerifyByAsymmetricKeyOutcome> VerifyByAsymmetricKeyOutcomeCallable;
+                typedef std::function<void(const KmsClient*, const Model::VerifyByAsymmetricKeyRequest&, VerifyByAsymmetricKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> VerifyByAsymmetricKeyAsyncHandler;
 
 
+
+                /**
+                 *This API is used to archive keys. The archived keys can only be used for decryption but not encryption.
+                 * @param req ArchiveKeyRequest
+                 * @return ArchiveKeyOutcome
+                 */
+                ArchiveKeyOutcome ArchiveKey(const Model::ArchiveKeyRequest &request);
+                void ArchiveKeyAsync(const Model::ArchiveKeyRequest& request, const ArchiveKeyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ArchiveKeyOutcomeCallable ArchiveKeyCallable(const Model::ArchiveKeyRequest& request);
 
                 /**
                  *This API is used to decrypt data with the specified private key that is encrypted with RSA asymmetric cryptographic algorithm. The ciphertext must be encrypted with the corresponding public key. The asymmetric key must be in `Enabled` state for decryption.
@@ -267,6 +311,24 @@ namespace TencentCloud
                 AsymmetricSm2DecryptOutcome AsymmetricSm2Decrypt(const Model::AsymmetricSm2DecryptRequest &request);
                 void AsymmetricSm2DecryptAsync(const Model::AsymmetricSm2DecryptRequest& request, const AsymmetricSm2DecryptAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AsymmetricSm2DecryptOutcomeCallable AsymmetricSm2DecryptCallable(const Model::AsymmetricSm2DecryptRequest& request);
+
+                /**
+                 *This API is used to bind a key with a Tencent Cloud resource. If the key has been set to be expired automatically, the setting will be canceled to ensure that the key will not be invalid automatically. If the key and the resource has already been bound, the call will still be successful.
+                 * @param req BindCloudResourceRequest
+                 * @return BindCloudResourceOutcome
+                 */
+                BindCloudResourceOutcome BindCloudResource(const Model::BindCloudResourceRequest &request);
+                void BindCloudResourceAsync(const Model::BindCloudResourceRequest& request, const BindCloudResourceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                BindCloudResourceOutcomeCallable BindCloudResourceCallable(const Model::BindCloudResourceRequest& request);
+
+                /**
+                 *This API is used to unarchive keys. If a key is unarchived, its status will be `Enabled`.
+                 * @param req CancelKeyArchiveRequest
+                 * @return CancelKeyArchiveOutcome
+                 */
+                CancelKeyArchiveOutcome CancelKeyArchive(const Model::CancelKeyArchiveRequest &request);
+                void CancelKeyArchiveAsync(const Model::CancelKeyArchiveRequest& request, const CancelKeyArchiveAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CancelKeyArchiveOutcomeCallable CancelKeyArchiveCallable(const Model::CancelKeyArchiveRequest& request);
 
                 /**
                  *Cancel the scheduled deletion of CMK
@@ -530,13 +592,22 @@ namespace TencentCloud
                 GetParametersForImportOutcomeCallable GetParametersForImportCallable(const Model::GetParametersForImportRequest& request);
 
                 /**
-                 *This API is used to get the information of the public key that is encrypted with the asymmetric cryptographic algorithm and of which the `KeyUsage` is `ASYMMETRIC_DECRYPT_RSA_2048` or `ASYMMETRIC_DECRYPT_SM2`. This public key can be used to encrypt data locally, and the data encrypted with it can only be decrypted with the corresponding private key through KMS. The public key can only be obtained from the asymmetric key in `Enabled` state.
+                 *This API is used to get the public key of an asymmetric KMS key (which must be enabled). With the public key, you can encrypt messages and verify signatures.
                  * @param req GetPublicKeyRequest
                  * @return GetPublicKeyOutcome
                  */
                 GetPublicKeyOutcome GetPublicKey(const Model::GetPublicKeyRequest &request);
                 void GetPublicKeyAsync(const Model::GetPublicKeyRequest& request, const GetPublicKeyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 GetPublicKeyOutcomeCallable GetPublicKeyCallable(const Model::GetPublicKeyRequest& request);
+
+                /**
+                 *This API is used to return all regions support KMS service.
+                 * @param req GetRegionsRequest
+                 * @return GetRegionsOutcome
+                 */
+                GetRegionsOutcome GetRegions(const Model::GetRegionsRequest &request);
+                void GetRegionsAsync(const Model::GetRegionsRequest& request, const GetRegionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetRegionsOutcomeCallable GetRegionsCallable(const Model::GetRegionsRequest& request);
 
                 /**
                  *Used to query whether the user has activated the KMS service.
@@ -612,6 +683,25 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
                 ScheduleKeyDeletionOutcomeCallable ScheduleKeyDeletionCallable(const Model::ScheduleKeyDeletionRequest& request);
 
                 /**
+                 *This API is used to generate a signature with an asymmetric key.
+Note that only when KeyUsage is `ASYMMETRIC_SIGN_VERIFY_${ALGORITHM}` (e.g., `ASYMMETRIC_SIGN_VERIFY_SM2` and `ASYMMETRIC_SIGN_VERIFY_ECC`), the key can be used for signing.
+                 * @param req SignByAsymmetricKeyRequest
+                 * @return SignByAsymmetricKeyOutcome
+                 */
+                SignByAsymmetricKeyOutcome SignByAsymmetricKey(const Model::SignByAsymmetricKeyRequest &request);
+                void SignByAsymmetricKeyAsync(const Model::SignByAsymmetricKeyRequest& request, const SignByAsymmetricKeyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SignByAsymmetricKeyOutcomeCallable SignByAsymmetricKeyCallable(const Model::SignByAsymmetricKeyRequest& request);
+
+                /**
+                 *This API is used to unbind a key with a Tencent Cloud resource, indicating that the Tencent Cloud resource will not use the key any longer.
+                 * @param req UnbindCloudResourceRequest
+                 * @return UnbindCloudResourceOutcome
+                 */
+                UnbindCloudResourceOutcome UnbindCloudResource(const Model::UnbindCloudResourceRequest &request);
+                void UnbindCloudResourceAsync(const Model::UnbindCloudResourceRequest& request, const UnbindCloudResourceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UnbindCloudResourceOutcomeCallable UnbindCloudResourceCallable(const Model::UnbindCloudResourceRequest& request);
+
+                /**
                  *This API is used to modify the alias of a CMK. CMKs in `PendingDelete` status cannot be modified.
                  * @param req UpdateAliasRequest
                  * @return UpdateAliasOutcome
@@ -628,6 +718,15 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
                 UpdateKeyDescriptionOutcome UpdateKeyDescription(const Model::UpdateKeyDescriptionRequest &request);
                 void UpdateKeyDescriptionAsync(const Model::UpdateKeyDescriptionRequest& request, const UpdateKeyDescriptionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UpdateKeyDescriptionOutcomeCallable UpdateKeyDescriptionCallable(const Model::UpdateKeyDescriptionRequest& request);
+
+                /**
+                 *This API is used to verify a signature with an asymmetric key.
+                 * @param req VerifyByAsymmetricKeyRequest
+                 * @return VerifyByAsymmetricKeyOutcome
+                 */
+                VerifyByAsymmetricKeyOutcome VerifyByAsymmetricKey(const Model::VerifyByAsymmetricKeyRequest &request);
+                void VerifyByAsymmetricKeyAsync(const Model::VerifyByAsymmetricKeyRequest& request, const VerifyByAsymmetricKeyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                VerifyByAsymmetricKeyOutcomeCallable VerifyByAsymmetricKeyCallable(const Model::VerifyByAsymmetricKeyRequest& request);
 
             };
         }

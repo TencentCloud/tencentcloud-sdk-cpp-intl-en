@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Status code redirect configuration. This is disabled by default. (This feature is in beta and not generally available yet.)
+                * Status code redirect configuration, which is disabled by default.
                 */
                 class ErrorPage : public AbstractModel
                 {

@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user’s tags will be queried.
-                     * @return TagKey Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user’s tags will be queried.
+                     * 获取Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user's tags will be queried.
+                     * @return TagKey Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user's tags will be queried.
                      */
                     std::string GetTagKey() const;
 
                     /**
-                     * 设置Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user’s tags will be queried.
-                     * @param TagKey Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user’s tags will be queried.
+                     * 设置Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user's tags will be queried.
+                     * @param TagKey Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user's tags will be queried.
                      */
                     void SetTagKey(const std::string& _tagKey);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool TagKeyHasBeenSet() const;
 
                     /**
-                     * 获取Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user’s tags will be queried.
-                     * @return TagValue Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user’s tags will be queried.
+                     * 获取Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user's tags will be queried.
+                     * @return TagValue Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user's tags will be queried.
                      */
                     std::string GetTagValue() const;
 
                     /**
-                     * 设置Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user’s tags will be queried.
-                     * @param TagValue Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user’s tags will be queried.
+                     * 设置Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user's tags will be queried.
+                     * @param TagValue Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user's tags will be queried.
                      */
                     void SetTagValue(const std::string& _tagValue);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool CreateUinHasBeenSet() const;
 
                     /**
-                     * 获取Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored
-                     * @return TagKeys Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored
+                     * 获取Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored.
+                     * @return TagKeys Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored.
                      */
                     std::vector<std::string> GetTagKeys() const;
 
                     /**
-                     * 设置Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored
-                     * @param TagKeys Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored
+                     * 设置Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored.
+                     * @param TagKeys Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored.
                      */
                     void SetTagKeys(const std::vector<std::string>& _tagKeys);
 
@@ -171,13 +171,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user’s tags will be queried.
+                     * Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user's tags will be queried.
                      */
                     std::string m_tagKey;
                     bool m_tagKeyHasBeenSet;
 
                     /**
-                     * Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user’s tags will be queried.
+                     * Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user's tags will be queried.
                      */
                     std::string m_tagValue;
                     bool m_tagValueHasBeenSet;
@@ -201,7 +201,7 @@ namespace TencentCloud
                     bool m_createUinHasBeenSet;
 
                     /**
-                     * Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored
+                     * Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored.
                      */
                     std::vector<std::string> m_tagKeys;
                     bool m_tagKeysHasBeenSet;

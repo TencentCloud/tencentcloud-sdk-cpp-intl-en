@@ -45,14 +45,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Offset for paginated queries. Default value: 0 (the first page).
-                     * @return Offset Offset for paginated queries. Default value: 0 (the first page).
+                     * 获取Offset for paginated queries. Default value: 0
+                     * @return Offset Offset for paginated queries. Default value: 0
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset for paginated queries. Default value: 0 (the first page).
-                     * @param Offset Offset for paginated queries. Default value: 0 (the first page).
+                     * 设置Offset for paginated queries. Default value: 0
+                     * @param Offset Offset for paginated queries. Default value: 0
                      */
                     void SetOffset(const int64_t& _offset);
 
@@ -119,7 +119,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Offset for paginated queries. Default value: 0 (the first page).
+                     * Offset for paginated queries. Default value: 0
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

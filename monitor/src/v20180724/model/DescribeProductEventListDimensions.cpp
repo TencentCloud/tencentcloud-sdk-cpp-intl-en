@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Monitor::V20180724::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeProductEventListDimensions::DescribeProductEventListDimensions() :
@@ -27,7 +26,7 @@ DescribeProductEventListDimensions::DescribeProductEventListDimensions() :
 {
 }
 
-CoreInternalOutcome DescribeProductEventListDimensions::Deserialize(const Value &value)
+CoreInternalOutcome DescribeProductEventListDimensions::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome DescribeProductEventListDimensions::Deserialize(const Value 
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeProductEventListDimensions.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeProductEventListDimensions.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome DescribeProductEventListDimensions::Deserialize(const Value 
     {
         if (!value["Value"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DescribeProductEventListDimensions.Value` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribeProductEventListDimensions.Value` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_value = string(value["Value"].GetString());
         m_valueHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome DescribeProductEventListDimensions::Deserialize(const Value 
     return CoreInternalOutcome(true);
 }
 
-void DescribeProductEventListDimensions::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DescribeProductEventListDimensions::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_valueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Value";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_value.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_value.c_str(), allocator).Move(), allocator);
     }
 
 }

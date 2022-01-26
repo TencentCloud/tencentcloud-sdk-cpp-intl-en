@@ -41,6 +41,7 @@ namespace TencentCloud
                     DescribeVisitTopSumInfoListResponse();
                     ~DescribeVisitTopSumInfoListResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -86,8 +87,8 @@ Default value: 20.
                     bool TopIndexHasBeenSet() const;
 
                     /**
-                     * 获取Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
-                     * @return OrderParam Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+                     * 获取Sorting metric. Valid values: AvgFluxPerSecond (sort by average traffic per second), TotalRequest (sort by total requests), TotalFlux (sort by total traffic). Default value: TotalRequest.
+                     * @return OrderParam Sorting metric. Valid values: AvgFluxPerSecond (sort by average traffic per second), TotalRequest (sort by total requests), TotalFlux (sort by total traffic). Default value: TotalRequest.
                      */
                     std::string GetOrderParam() const;
 
@@ -157,7 +158,7 @@ Default value: 20.
                     bool m_topIndexHasBeenSet;
 
                     /**
-                     * Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+                     * Sorting metric. Valid values: AvgFluxPerSecond (sort by average traffic per second), TotalRequest (sort by total requests), TotalFlux (sort by total traffic). Default value: TotalRequest.
                      */
                     std::string m_orderParam;
                     bool m_orderParamHasBeenSet;

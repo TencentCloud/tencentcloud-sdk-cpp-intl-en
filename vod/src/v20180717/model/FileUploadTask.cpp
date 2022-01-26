@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 FileUploadTask::FileUploadTask() :
@@ -29,7 +28,7 @@ FileUploadTask::FileUploadTask() :
 {
 }
 
-CoreInternalOutcome FileUploadTask::Deserialize(const Value &value)
+CoreInternalOutcome FileUploadTask::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome FileUploadTask::Deserialize(const Value &value)
     {
         if (!value["FileId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FileUploadTask.FileId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FileUploadTask.FileId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fileId = string(value["FileId"].GetString());
         m_fileIdHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome FileUploadTask::Deserialize(const Value &value)
     {
         if (!value["MediaBasicInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `FileUploadTask.MediaBasicInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FileUploadTask.MediaBasicInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_mediaBasicInfo.Deserialize(value["MediaBasicInfo"]);
@@ -65,7 +64,7 @@ CoreInternalOutcome FileUploadTask::Deserialize(const Value &value)
     {
         if (!value["ProcedureTaskId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FileUploadTask.ProcedureTaskId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FileUploadTask.ProcedureTaskId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_procedureTaskId = string(value["ProcedureTaskId"].GetString());
         m_procedureTaskIdHasBeenSet = true;
@@ -75,7 +74,7 @@ CoreInternalOutcome FileUploadTask::Deserialize(const Value &value)
     {
         if (!value["MetaData"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `FileUploadTask.MetaData` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FileUploadTask.MetaData` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_metaData.Deserialize(value["MetaData"]);
@@ -92,40 +91,40 @@ CoreInternalOutcome FileUploadTask::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void FileUploadTask::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void FileUploadTask::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_fileIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fileId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fileId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_mediaBasicInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MediaBasicInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_mediaBasicInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_procedureTaskIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProcedureTaskId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_procedureTaskId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_procedureTaskId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_metaDataHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MetaData";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_metaData.ToJsonObject(value[key.c_str()], allocator);
     }
 

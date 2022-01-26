@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Pagination offset, which is used for querying the next page
-                     * @return NextToken Pagination offset, which is used for querying the next page
+                     * 获取Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+                     * @return NextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
                      */
                     std::string GetNextToken() const;
 
                     /**
-                     * 设置Pagination offset, which is used for querying the next page
-                     * @param NextToken Pagination offset, which is used for querying the next page
+                     * 设置Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+                     * @param NextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
                      */
                     void SetNextToken(const std::string& _nextToken);
 
@@ -126,6 +126,32 @@ gameServerSessionProperties: game session attributes in `String` type
 
 Expressions in `String` type support = and <> for judgment
 Expressions in `Number` type support =, <>, >, >=, <, and <= for judgment
+
+Example:
+If FilterExpression takes the value:
+playerSessionCount>=2 AND hasAvailablePlayerSessions=true"
+It means searching for game sessions that have at least two players and have player sessions available.
+If FilterExpression takes the value:
+gameServerSessionProperties.K1 = 'V1' AND gameServerSessionProperties.K2 = 'V2' OR gameServerSessionProperties.K3 = 'V3'
+
+it means
+searching for game sessions that meets the following game server session attributes
+{
+    "GameProperties":[
+        {
+            "Key":"K1",
+            "Value":"V1"
+        },
+        {
+            "Key":"K2",
+            "Value":"V2"
+        },
+        {
+            "Key":"K3",
+            "Value":"V3"
+        }
+    ]
+}
                      * @return FilterExpression Search filter expression. Valid values:
 gameServerSessionName: game session name in `String` type
 gameServerSessionId: game session ID in `String` type
@@ -137,6 +163,32 @@ gameServerSessionProperties: game session attributes in `String` type
 
 Expressions in `String` type support = and <> for judgment
 Expressions in `Number` type support =, <>, >, >=, <, and <= for judgment
+
+Example:
+If FilterExpression takes the value:
+playerSessionCount>=2 AND hasAvailablePlayerSessions=true"
+It means searching for game sessions that have at least two players and have player sessions available.
+If FilterExpression takes the value:
+gameServerSessionProperties.K1 = 'V1' AND gameServerSessionProperties.K2 = 'V2' OR gameServerSessionProperties.K3 = 'V3'
+
+it means
+searching for game sessions that meets the following game server session attributes
+{
+    "GameProperties":[
+        {
+            "Key":"K1",
+            "Value":"V1"
+        },
+        {
+            "Key":"K2",
+            "Value":"V2"
+        },
+        {
+            "Key":"K3",
+            "Value":"V3"
+        }
+    ]
+}
                      */
                     std::string GetFilterExpression() const;
 
@@ -152,6 +204,32 @@ gameServerSessionProperties: game session attributes in `String` type
 
 Expressions in `String` type support = and <> for judgment
 Expressions in `Number` type support =, <>, >, >=, <, and <= for judgment
+
+Example:
+If FilterExpression takes the value:
+playerSessionCount>=2 AND hasAvailablePlayerSessions=true"
+It means searching for game sessions that have at least two players and have player sessions available.
+If FilterExpression takes the value:
+gameServerSessionProperties.K1 = 'V1' AND gameServerSessionProperties.K2 = 'V2' OR gameServerSessionProperties.K3 = 'V3'
+
+it means
+searching for game sessions that meets the following game server session attributes
+{
+    "GameProperties":[
+        {
+            "Key":"K1",
+            "Value":"V1"
+        },
+        {
+            "Key":"K2",
+            "Value":"V2"
+        },
+        {
+            "Key":"K3",
+            "Value":"V3"
+        }
+    ]
+}
                      * @param FilterExpression Search filter expression. Valid values:
 gameServerSessionName: game session name in `String` type
 gameServerSessionId: game session ID in `String` type
@@ -163,6 +241,32 @@ gameServerSessionProperties: game session attributes in `String` type
 
 Expressions in `String` type support = and <> for judgment
 Expressions in `Number` type support =, <>, >, >=, <, and <= for judgment
+
+Example:
+If FilterExpression takes the value:
+playerSessionCount>=2 AND hasAvailablePlayerSessions=true"
+It means searching for game sessions that have at least two players and have player sessions available.
+If FilterExpression takes the value:
+gameServerSessionProperties.K1 = 'V1' AND gameServerSessionProperties.K2 = 'V2' OR gameServerSessionProperties.K3 = 'V3'
+
+it means
+searching for game sessions that meets the following game server session attributes
+{
+    "GameProperties":[
+        {
+            "Key":"K1",
+            "Value":"V1"
+        },
+        {
+            "Key":"K2",
+            "Value":"V2"
+        },
+        {
+            "Key":"K3",
+            "Value":"V3"
+        }
+    ]
+}
                      */
                     void SetFilterExpression(const std::string& _filterExpression);
 
@@ -235,7 +339,7 @@ playerSessionCount: current number of player sessions in `Number` type
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Pagination offset, which is used for querying the next page
+                     * Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
                      */
                     std::string m_nextToken;
                     bool m_nextTokenHasBeenSet;
@@ -252,6 +356,32 @@ gameServerSessionProperties: game session attributes in `String` type
 
 Expressions in `String` type support = and <> for judgment
 Expressions in `Number` type support =, <>, >, >=, <, and <= for judgment
+
+Example:
+If FilterExpression takes the value:
+playerSessionCount>=2 AND hasAvailablePlayerSessions=true"
+It means searching for game sessions that have at least two players and have player sessions available.
+If FilterExpression takes the value:
+gameServerSessionProperties.K1 = 'V1' AND gameServerSessionProperties.K2 = 'V2' OR gameServerSessionProperties.K3 = 'V3'
+
+it means
+searching for game sessions that meets the following game server session attributes
+{
+    "GameProperties":[
+        {
+            "Key":"K1",
+            "Value":"V1"
+        },
+        {
+            "Key":"K2",
+            "Value":"V2"
+        },
+        {
+            "Key":"K3",
+            "Value":"V3"
+        }
+    ]
+}
                      */
                     std::string m_filterExpression;
                     bool m_filterExpressionHasBeenSet;

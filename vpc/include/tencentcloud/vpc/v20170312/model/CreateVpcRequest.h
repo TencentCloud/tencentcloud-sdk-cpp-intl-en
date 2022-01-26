@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool VpcNameHasBeenSet() const;
 
                     /**
-                     * 获取VPC CIDR, which must fall within the following private network IP ranges: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.
-                     * @return CidrBlock VPC CIDR, which must fall within the following private network IP ranges: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.
+                     * 获取VPC CIDR blocks, which must fall within the following three private network IP ranges: 10.0.0.0/16, 172.16.0.0/16 and 192.168.0.0/16.
+                     * @return CidrBlock VPC CIDR blocks, which must fall within the following three private network IP ranges: 10.0.0.0/16, 172.16.0.0/16 and 192.168.0.0/16.
                      */
                     std::string GetCidrBlock() const;
 
                     /**
-                     * 设置VPC CIDR, which must fall within the following private network IP ranges: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.
-                     * @param CidrBlock VPC CIDR, which must fall within the following private network IP ranges: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.
+                     * 设置VPC CIDR blocks, which must fall within the following three private network IP ranges: 10.0.0.0/16, 172.16.0.0/16 and 192.168.0.0/16.
+                     * @param CidrBlock VPC CIDR blocks, which must fall within the following three private network IP ranges: 10.0.0.0/16, 172.16.0.0/16 and 192.168.0.0/16.
                      */
                     void SetCidrBlock(const std::string& _cidrBlock);
 
@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool EnableMulticastHasBeenSet() const;
 
                     /**
-                     * 获取The DNS address. A maximum of 4 addresses is supported.
-                     * @return DnsServers The DNS address. A maximum of 4 addresses is supported.
+                     * 获取DNS address. A maximum of 4 addresses is supported.
+                     * @return DnsServers DNS address. A maximum of 4 addresses is supported.
                      */
                     std::vector<std::string> GetDnsServers() const;
 
                     /**
-                     * 设置The DNS address. A maximum of 4 addresses is supported.
-                     * @param DnsServers The DNS address. A maximum of 4 addresses is supported.
+                     * 设置DNS address. A maximum of 4 addresses is supported.
+                     * @param DnsServers DNS address. A maximum of 4 addresses is supported.
                      */
                     void SetDnsServers(const std::vector<std::string>& _dnsServers);
 
@@ -116,14 +116,14 @@ namespace TencentCloud
                     bool DnsServersHasBeenSet() const;
 
                     /**
-                     * 获取Domain name
-                     * @return DomainName Domain name
+                     * 获取Domain name of DHCP
+                     * @return DomainName Domain name of DHCP
                      */
                     std::string GetDomainName() const;
 
                     /**
-                     * 设置Domain name
-                     * @param DomainName Domain name
+                     * 设置Domain name of DHCP
+                     * @param DomainName Domain name of DHCP
                      */
                     void SetDomainName(const std::string& _domainName);
 
@@ -134,14 +134,14 @@ namespace TencentCloud
                     bool DomainNameHasBeenSet() const;
 
                     /**
-                     * 获取Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
-                     * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * 获取Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+                     * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
-                     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * 设置Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+                     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
@@ -160,7 +160,7 @@ namespace TencentCloud
                     bool m_vpcNameHasBeenSet;
 
                     /**
-                     * VPC CIDR, which must fall within the following private network IP ranges: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.
+                     * VPC CIDR blocks, which must fall within the following three private network IP ranges: 10.0.0.0/16, 172.16.0.0/16 and 192.168.0.0/16.
                      */
                     std::string m_cidrBlock;
                     bool m_cidrBlockHasBeenSet;
@@ -172,19 +172,19 @@ namespace TencentCloud
                     bool m_enableMulticastHasBeenSet;
 
                     /**
-                     * The DNS address. A maximum of 4 addresses is supported.
+                     * DNS address. A maximum of 4 addresses is supported.
                      */
                     std::vector<std::string> m_dnsServers;
                     bool m_dnsServersHasBeenSet;
 
                     /**
-                     * Domain name
+                     * Domain name of DHCP
                      */
                     std::string m_domainName;
                     bool m_domainNameHasBeenSet;
 
                     /**
-                     * Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;

@@ -47,6 +47,24 @@ namespace TencentCloud
 
 
                     /**
+                     * 获取User Group ID
+                     * @return GroupId User Group ID
+                     */
+                    uint64_t GetGroupId() const;
+
+                    /**
+                     * 设置User Group ID
+                     * @param GroupId User Group ID
+                     */
+                    void SetGroupId(const uint64_t& _groupId);
+
+                    /**
+                     * 判断参数 GroupId 是否已赋值
+                     * @return GroupId 是否已赋值
+                     */
+                    bool GroupIdHasBeenSet() const;
+
+                    /**
                      * 获取Sub-user UID
                      * @return Uid Sub-user UID
                      */
@@ -65,24 +83,30 @@ namespace TencentCloud
                     bool UidHasBeenSet() const;
 
                     /**
-                     * 获取User Group ID
-                     * @return GroupId User Group ID
+                     * 获取Sub-user UIN. For UIN and UID, at least one of them is required.
+                     * @return Uin Sub-user UIN. For UIN and UID, at least one of them is required.
                      */
-                    uint64_t GetGroupId() const;
+                    uint64_t GetUin() const;
 
                     /**
-                     * 设置User Group ID
-                     * @param GroupId User Group ID
+                     * 设置Sub-user UIN. For UIN and UID, at least one of them is required.
+                     * @param Uin Sub-user UIN. For UIN and UID, at least one of them is required.
                      */
-                    void SetGroupId(const uint64_t& _groupId);
+                    void SetUin(const uint64_t& _uin);
 
                     /**
-                     * 判断参数 GroupId 是否已赋值
-                     * @return GroupId 是否已赋值
+                     * 判断参数 Uin 是否已赋值
+                     * @return Uin 是否已赋值
                      */
-                    bool GroupIdHasBeenSet() const;
+                    bool UinHasBeenSet() const;
 
                 private:
+
+                    /**
+                     * User Group ID
+                     */
+                    uint64_t m_groupId;
+                    bool m_groupIdHasBeenSet;
 
                     /**
                      * Sub-user UID
@@ -91,10 +115,10 @@ namespace TencentCloud
                     bool m_uidHasBeenSet;
 
                     /**
-                     * User Group ID
+                     * Sub-user UIN. For UIN and UID, at least one of them is required.
                      */
-                    uint64_t m_groupId;
-                    bool m_groupIdHasBeenSet;
+                    uint64_t m_uin;
+                    bool m_uinHasBeenSet;
 
                 };
             }

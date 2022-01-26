@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Filter. Valid values: ServiceId, ServiceName, NotUsagePlanId, Environment, IpVersion.
-                     * @return Filters Filter. Valid values: ServiceId, ServiceName, NotUsagePlanId, Environment, IpVersion.
+                     * 获取Filter. Valid values: `ServiceId`, `ServiceName`, `NotUsagePlanId`, `Environment`, `IpVersion`, `InstanceId`, `NetType`, `EIAMAppId`.
+                     * @return Filters Filter. Valid values: `ServiceId`, `ServiceName`, `NotUsagePlanId`, `Environment`, `IpVersion`, `InstanceId`, `NetType`, `EIAMAppId`.
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter. Valid values: ServiceId, ServiceName, NotUsagePlanId, Environment, IpVersion.
-                     * @param Filters Filter. Valid values: ServiceId, ServiceName, NotUsagePlanId, Environment, IpVersion.
+                     * 设置Filter. Valid values: `ServiceId`, `ServiceName`, `NotUsagePlanId`, `Environment`, `IpVersion`, `InstanceId`, `NetType`, `EIAMAppId`.
+                     * @param Filters Filter. Valid values: `ServiceId`, `ServiceName`, `NotUsagePlanId`, `Environment`, `IpVersion`, `InstanceId`, `NetType`, `EIAMAppId`.
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -112,7 +112,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Filter. Valid values: ServiceId, ServiceName, NotUsagePlanId, Environment, IpVersion.
+                     * Filter. Valid values: `ServiceId`, `ServiceName`, `NotUsagePlanId`, `Environment`, `IpVersion`, `InstanceId`, `NetType`, `EIAMAppId`.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

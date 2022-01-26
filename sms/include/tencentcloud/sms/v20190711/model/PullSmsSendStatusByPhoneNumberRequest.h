@@ -136,6 +136,24 @@ Note: this parameter is currently fixed at 0.
                      */
                     bool SmsSdkAppidHasBeenSet() const;
 
+                    /**
+                     * 获取Pull end time in UNIX timestamp accurate to seconds.
+                     * @return EndDateTime Pull end time in UNIX timestamp accurate to seconds.
+                     */
+                    uint64_t GetEndDateTime() const;
+
+                    /**
+                     * 设置Pull end time in UNIX timestamp accurate to seconds.
+                     * @param EndDateTime Pull end time in UNIX timestamp accurate to seconds.
+                     */
+                    void SetEndDateTime(const uint64_t& _endDateTime);
+
+                    /**
+                     * 判断参数 EndDateTime 是否已赋值
+                     * @return EndDateTime 是否已赋值
+                     */
+                    bool EndDateTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -168,6 +186,12 @@ Note: this parameter is currently fixed at 0.
                      */
                     std::string m_smsSdkAppid;
                     bool m_smsSdkAppidHasBeenSet;
+
+                    /**
+                     * Pull end time in UNIX timestamp accurate to seconds.
+                     */
+                    uint64_t m_endDateTime;
+                    bool m_endDateTimeHasBeenSet;
 
                 };
             }

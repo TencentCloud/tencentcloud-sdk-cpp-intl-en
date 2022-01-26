@@ -40,6 +40,7 @@ namespace TencentCloud
                     AllocateAddressesResponse();
                     ~AllocateAddressesResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -55,8 +56,8 @@ namespace TencentCloud
                     bool AddressSetHasBeenSet() const;
 
                     /**
-                     * 获取The Async task ID. You can use the [DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271) API to query the task status.
-                     * @return TaskId The Async task ID. You can use the [DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271) API to query the task status.
+                     * 获取The Async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
+                     * @return TaskId The Async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
                      */
                     std::string GetTaskId() const;
 
@@ -75,7 +76,7 @@ namespace TencentCloud
                     bool m_addressSetHasBeenSet;
 
                     /**
-                     * The Async task ID. You can use the [DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271) API to query the task status.
+                     * The Async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

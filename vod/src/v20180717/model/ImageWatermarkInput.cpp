@@ -18,17 +18,17 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 ImageWatermarkInput::ImageWatermarkInput() :
     m_imageContentHasBeenSet(false),
     m_widthHasBeenSet(false),
-    m_heightHasBeenSet(false)
+    m_heightHasBeenSet(false),
+    m_repeatTypeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ImageWatermarkInput::Deserialize(const Value &value)
+CoreInternalOutcome ImageWatermarkInput::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +37,7 @@ CoreInternalOutcome ImageWatermarkInput::Deserialize(const Value &value)
     {
         if (!value["ImageContent"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ImageWatermarkInput.ImageContent` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImageWatermarkInput.ImageContent` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_imageContent = string(value["ImageContent"].GetString());
         m_imageContentHasBeenSet = true;
@@ -47,7 +47,7 @@ CoreInternalOutcome ImageWatermarkInput::Deserialize(const Value &value)
     {
         if (!value["Width"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ImageWatermarkInput.Width` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImageWatermarkInput.Width` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_width = string(value["Width"].GetString());
         m_widthHasBeenSet = true;
@@ -57,41 +57,59 @@ CoreInternalOutcome ImageWatermarkInput::Deserialize(const Value &value)
     {
         if (!value["Height"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ImageWatermarkInput.Height` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImageWatermarkInput.Height` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_height = string(value["Height"].GetString());
         m_heightHasBeenSet = true;
+    }
+
+    if (value.HasMember("RepeatType") && !value["RepeatType"].IsNull())
+    {
+        if (!value["RepeatType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ImageWatermarkInput.RepeatType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_repeatType = string(value["RepeatType"].GetString());
+        m_repeatTypeHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void ImageWatermarkInput::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ImageWatermarkInput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_imageContentHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ImageContent";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_imageContent.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_imageContent.c_str(), allocator).Move(), allocator);
     }
 
     if (m_widthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Width";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_width.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_width.c_str(), allocator).Move(), allocator);
     }
 
     if (m_heightHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Height";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_height.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_height.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_repeatTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RepeatType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_repeatType.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -143,5 +161,21 @@ void ImageWatermarkInput::SetHeight(const string& _height)
 bool ImageWatermarkInput::HeightHasBeenSet() const
 {
     return m_heightHasBeenSet;
+}
+
+string ImageWatermarkInput::GetRepeatType() const
+{
+    return m_repeatType;
+}
+
+void ImageWatermarkInput::SetRepeatType(const string& _repeatType)
+{
+    m_repeatType = _repeatType;
+    m_repeatTypeHasBeenSet = true;
+}
+
+bool ImageWatermarkInput::RepeatTypeHasBeenSet() const
+{
+    return m_repeatTypeHasBeenSet;
 }
 

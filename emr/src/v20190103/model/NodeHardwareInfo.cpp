@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Emr::V20190103::Model;
-using namespace rapidjson;
 using namespace std;
 
 NodeHardwareInfo::NodeHardwareInfo() :
@@ -57,11 +56,15 @@ NodeHardwareInfo::NodeHardwareInfo() :
     m_ipHasBeenSet(false),
     m_destroyableHasBeenSet(false),
     m_tagsHasBeenSet(false),
-    m_autoFlagHasBeenSet(false)
+    m_autoFlagHasBeenSet(false),
+    m_hardwareResourceTypeHasBeenSet(false),
+    m_isDynamicSpecHasBeenSet(false),
+    m_dynamicPodSpecHasBeenSet(false),
+    m_supportModifyPayModeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
+CoreInternalOutcome NodeHardwareInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -70,7 +73,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["AppId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.AppId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.AppId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_appId = value["AppId"].GetInt64();
         m_appIdHasBeenSet = true;
@@ -80,7 +83,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["SerialNo"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.SerialNo` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.SerialNo` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_serialNo = string(value["SerialNo"].GetString());
         m_serialNoHasBeenSet = true;
@@ -90,7 +93,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["OrderNo"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.OrderNo` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.OrderNo` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_orderNo = string(value["OrderNo"].GetString());
         m_orderNoHasBeenSet = true;
@@ -100,7 +103,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["WanIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.WanIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.WanIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_wanIp = string(value["WanIp"].GetString());
         m_wanIpHasBeenSet = true;
@@ -110,7 +113,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["Flag"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.Flag` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.Flag` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_flag = value["Flag"].GetInt64();
         m_flagHasBeenSet = true;
@@ -120,7 +123,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["Spec"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.Spec` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.Spec` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_spec = string(value["Spec"].GetString());
         m_specHasBeenSet = true;
@@ -130,7 +133,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["CpuNum"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.CpuNum` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.CpuNum` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_cpuNum = value["CpuNum"].GetInt64();
         m_cpuNumHasBeenSet = true;
@@ -140,7 +143,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["MemSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.MemSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.MemSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_memSize = value["MemSize"].GetInt64();
         m_memSizeHasBeenSet = true;
@@ -150,7 +153,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["MemDesc"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.MemDesc` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.MemDesc` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_memDesc = string(value["MemDesc"].GetString());
         m_memDescHasBeenSet = true;
@@ -160,7 +163,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["RegionId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.RegionId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.RegionId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_regionId = value["RegionId"].GetInt64();
         m_regionIdHasBeenSet = true;
@@ -170,7 +173,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["ZoneId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.ZoneId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.ZoneId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_zoneId = value["ZoneId"].GetInt64();
         m_zoneIdHasBeenSet = true;
@@ -180,7 +183,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["ApplyTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.ApplyTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.ApplyTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_applyTime = string(value["ApplyTime"].GetString());
         m_applyTimeHasBeenSet = true;
@@ -190,7 +193,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["FreeTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.FreeTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.FreeTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_freeTime = string(value["FreeTime"].GetString());
         m_freeTimeHasBeenSet = true;
@@ -200,7 +203,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["DiskSize"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.DiskSize` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.DiskSize` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_diskSize = string(value["DiskSize"].GetString());
         m_diskSizeHasBeenSet = true;
@@ -210,7 +213,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["NameTag"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.NameTag` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.NameTag` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_nameTag = string(value["NameTag"].GetString());
         m_nameTagHasBeenSet = true;
@@ -220,7 +223,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["Services"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.Services` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.Services` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_services = string(value["Services"].GetString());
         m_servicesHasBeenSet = true;
@@ -230,7 +233,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["StorageType"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.StorageType` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.StorageType` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_storageType = value["StorageType"].GetInt64();
         m_storageTypeHasBeenSet = true;
@@ -240,7 +243,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["RootSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.RootSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.RootSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_rootSize = value["RootSize"].GetInt64();
         m_rootSizeHasBeenSet = true;
@@ -250,7 +253,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["ChargeType"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.ChargeType` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.ChargeType` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_chargeType = value["ChargeType"].GetInt64();
         m_chargeTypeHasBeenSet = true;
@@ -260,7 +263,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["CdbIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.CdbIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.CdbIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cdbIp = string(value["CdbIp"].GetString());
         m_cdbIpHasBeenSet = true;
@@ -270,7 +273,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["CdbPort"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.CdbPort` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.CdbPort` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_cdbPort = value["CdbPort"].GetInt64();
         m_cdbPortHasBeenSet = true;
@@ -280,7 +283,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["HwDiskSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.HwDiskSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.HwDiskSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_hwDiskSize = value["HwDiskSize"].GetInt64();
         m_hwDiskSizeHasBeenSet = true;
@@ -290,7 +293,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["HwDiskSizeDesc"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.HwDiskSizeDesc` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.HwDiskSizeDesc` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_hwDiskSizeDesc = string(value["HwDiskSizeDesc"].GetString());
         m_hwDiskSizeDescHasBeenSet = true;
@@ -300,7 +303,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["HwMemSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.HwMemSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.HwMemSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_hwMemSize = value["HwMemSize"].GetInt64();
         m_hwMemSizeHasBeenSet = true;
@@ -310,7 +313,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["HwMemSizeDesc"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.HwMemSizeDesc` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.HwMemSizeDesc` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_hwMemSizeDesc = string(value["HwMemSizeDesc"].GetString());
         m_hwMemSizeDescHasBeenSet = true;
@@ -320,7 +323,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["ExpireTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.ExpireTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.ExpireTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_expireTime = string(value["ExpireTime"].GetString());
         m_expireTimeHasBeenSet = true;
@@ -330,7 +333,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["EmrResourceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.EmrResourceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.EmrResourceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_emrResourceId = string(value["EmrResourceId"].GetString());
         m_emrResourceIdHasBeenSet = true;
@@ -340,7 +343,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["IsAutoRenew"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.IsAutoRenew` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.IsAutoRenew` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_isAutoRenew = value["IsAutoRenew"].GetInt64();
         m_isAutoRenewHasBeenSet = true;
@@ -350,7 +353,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["DeviceClass"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.DeviceClass` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.DeviceClass` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_deviceClass = string(value["DeviceClass"].GetString());
         m_deviceClassHasBeenSet = true;
@@ -360,7 +363,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["Mutable"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.Mutable` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.Mutable` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_mutable = value["Mutable"].GetInt64();
         m_mutableHasBeenSet = true;
@@ -369,10 +372,10 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     if (value.HasMember("MCMultiDisk") && !value["MCMultiDisk"].IsNull())
     {
         if (!value["MCMultiDisk"].IsArray())
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.MCMultiDisk` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.MCMultiDisk` is not array type"));
 
-        const Value &tmpValue = value["MCMultiDisk"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["MCMultiDisk"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             MultiDiskMC item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -390,7 +393,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["CdbNodeInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.CdbNodeInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.CdbNodeInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_cdbNodeInfo.Deserialize(value["CdbNodeInfo"]);
@@ -407,7 +410,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["Ip"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.Ip` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.Ip` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ip = string(value["Ip"].GetString());
         m_ipHasBeenSet = true;
@@ -417,7 +420,7 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["Destroyable"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.Destroyable` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.Destroyable` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_destroyable = value["Destroyable"].GetInt64();
         m_destroyableHasBeenSet = true;
@@ -426,10 +429,10 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     if (value.HasMember("Tags") && !value["Tags"].IsNull())
     {
         if (!value["Tags"].IsArray())
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.Tags` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.Tags` is not array type"));
 
-        const Value &tmpValue = value["Tags"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Tags"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             Tag item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -447,22 +450,62 @@ CoreInternalOutcome NodeHardwareInfo::Deserialize(const Value &value)
     {
         if (!value["AutoFlag"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `NodeHardwareInfo.AutoFlag` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.AutoFlag` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_autoFlag = value["AutoFlag"].GetInt64();
         m_autoFlagHasBeenSet = true;
+    }
+
+    if (value.HasMember("HardwareResourceType") && !value["HardwareResourceType"].IsNull())
+    {
+        if (!value["HardwareResourceType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.HardwareResourceType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_hardwareResourceType = string(value["HardwareResourceType"].GetString());
+        m_hardwareResourceTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("IsDynamicSpec") && !value["IsDynamicSpec"].IsNull())
+    {
+        if (!value["IsDynamicSpec"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.IsDynamicSpec` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_isDynamicSpec = value["IsDynamicSpec"].GetInt64();
+        m_isDynamicSpecHasBeenSet = true;
+    }
+
+    if (value.HasMember("DynamicPodSpec") && !value["DynamicPodSpec"].IsNull())
+    {
+        if (!value["DynamicPodSpec"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.DynamicPodSpec` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_dynamicPodSpec = string(value["DynamicPodSpec"].GetString());
+        m_dynamicPodSpecHasBeenSet = true;
+    }
+
+    if (value.HasMember("SupportModifyPayMode") && !value["SupportModifyPayMode"].IsNull())
+    {
+        if (!value["SupportModifyPayMode"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `NodeHardwareInfo.SupportModifyPayMode` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_supportModifyPayMode = value["SupportModifyPayMode"].GetInt64();
+        m_supportModifyPayModeHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void NodeHardwareInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void NodeHardwareInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_appIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AppId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_appId, allocator);
@@ -470,31 +513,31 @@ void NodeHardwareInfo::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_serialNoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SerialNo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_serialNo.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_serialNo.c_str(), allocator).Move(), allocator);
     }
 
     if (m_orderNoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OrderNo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_orderNo.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_orderNo.c_str(), allocator).Move(), allocator);
     }
 
     if (m_wanIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "WanIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_wanIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_wanIp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_flagHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Flag";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_flag, allocator);
@@ -502,15 +545,15 @@ void NodeHardwareInfo::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_specHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Spec";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_spec.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_spec.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cpuNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CpuNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cpuNum, allocator);
@@ -518,7 +561,7 @@ void NodeHardwareInfo::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_memSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MemSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_memSize, allocator);
@@ -526,15 +569,15 @@ void NodeHardwareInfo::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_memDescHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MemDesc";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_memDesc.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_memDesc.c_str(), allocator).Move(), allocator);
     }
 
     if (m_regionIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RegionId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_regionId, allocator);
@@ -542,7 +585,7 @@ void NodeHardwareInfo::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_zoneIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ZoneId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_zoneId, allocator);
@@ -550,47 +593,47 @@ void NodeHardwareInfo::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_applyTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ApplyTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_applyTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_applyTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_freeTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FreeTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_freeTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_freeTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_diskSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskSize";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_diskSize.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_diskSize.c_str(), allocator).Move(), allocator);
     }
 
     if (m_nameTagHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NameTag";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_nameTag.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_nameTag.c_str(), allocator).Move(), allocator);
     }
 
     if (m_servicesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Services";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_services.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_services.c_str(), allocator).Move(), allocator);
     }
 
     if (m_storageTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StorageType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_storageType, allocator);
@@ -598,7 +641,7 @@ void NodeHardwareInfo::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_rootSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RootSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_rootSize, allocator);
@@ -606,7 +649,7 @@ void NodeHardwareInfo::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_chargeTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ChargeType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_chargeType, allocator);
@@ -614,15 +657,15 @@ void NodeHardwareInfo::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_cdbIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CdbIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cdbIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cdbIp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cdbPortHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CdbPort";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cdbPort, allocator);
@@ -630,7 +673,7 @@ void NodeHardwareInfo::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_hwDiskSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HwDiskSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_hwDiskSize, allocator);
@@ -638,15 +681,15 @@ void NodeHardwareInfo::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_hwDiskSizeDescHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HwDiskSizeDesc";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_hwDiskSizeDesc.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_hwDiskSizeDesc.c_str(), allocator).Move(), allocator);
     }
 
     if (m_hwMemSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HwMemSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_hwMemSize, allocator);
@@ -654,31 +697,31 @@ void NodeHardwareInfo::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_hwMemSizeDescHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HwMemSizeDesc";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_hwMemSizeDesc.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_hwMemSizeDesc.c_str(), allocator).Move(), allocator);
     }
 
     if (m_expireTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ExpireTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_expireTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_expireTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_emrResourceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EmrResourceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_emrResourceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_emrResourceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_isAutoRenewHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsAutoRenew";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isAutoRenew, allocator);
@@ -686,15 +729,15 @@ void NodeHardwareInfo::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_deviceClassHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DeviceClass";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_deviceClass.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_deviceClass.c_str(), allocator).Move(), allocator);
     }
 
     if (m_mutableHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Mutable";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_mutable, allocator);
@@ -702,39 +745,39 @@ void NodeHardwareInfo::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_mCMultiDiskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MCMultiDisk";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_mCMultiDisk.begin(); itr != m_mCMultiDisk.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_cdbNodeInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CdbNodeInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_cdbNodeInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_ipHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Ip";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ip.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ip.c_str(), allocator).Move(), allocator);
     }
 
     if (m_destroyableHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Destroyable";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_destroyable, allocator);
@@ -742,25 +785,57 @@ void NodeHardwareInfo::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_tagsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Tags";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_autoFlagHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AutoFlag";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_autoFlag, allocator);
+    }
+
+    if (m_hardwareResourceTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HardwareResourceType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_hardwareResourceType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_isDynamicSpecHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsDynamicSpec";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isDynamicSpec, allocator);
+    }
+
+    if (m_dynamicPodSpecHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DynamicPodSpec";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_dynamicPodSpec.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_supportModifyPayModeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SupportModifyPayMode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_supportModifyPayMode, allocator);
     }
 
 }
@@ -1340,5 +1415,69 @@ void NodeHardwareInfo::SetAutoFlag(const int64_t& _autoFlag)
 bool NodeHardwareInfo::AutoFlagHasBeenSet() const
 {
     return m_autoFlagHasBeenSet;
+}
+
+string NodeHardwareInfo::GetHardwareResourceType() const
+{
+    return m_hardwareResourceType;
+}
+
+void NodeHardwareInfo::SetHardwareResourceType(const string& _hardwareResourceType)
+{
+    m_hardwareResourceType = _hardwareResourceType;
+    m_hardwareResourceTypeHasBeenSet = true;
+}
+
+bool NodeHardwareInfo::HardwareResourceTypeHasBeenSet() const
+{
+    return m_hardwareResourceTypeHasBeenSet;
+}
+
+int64_t NodeHardwareInfo::GetIsDynamicSpec() const
+{
+    return m_isDynamicSpec;
+}
+
+void NodeHardwareInfo::SetIsDynamicSpec(const int64_t& _isDynamicSpec)
+{
+    m_isDynamicSpec = _isDynamicSpec;
+    m_isDynamicSpecHasBeenSet = true;
+}
+
+bool NodeHardwareInfo::IsDynamicSpecHasBeenSet() const
+{
+    return m_isDynamicSpecHasBeenSet;
+}
+
+string NodeHardwareInfo::GetDynamicPodSpec() const
+{
+    return m_dynamicPodSpec;
+}
+
+void NodeHardwareInfo::SetDynamicPodSpec(const string& _dynamicPodSpec)
+{
+    m_dynamicPodSpec = _dynamicPodSpec;
+    m_dynamicPodSpecHasBeenSet = true;
+}
+
+bool NodeHardwareInfo::DynamicPodSpecHasBeenSet() const
+{
+    return m_dynamicPodSpecHasBeenSet;
+}
+
+int64_t NodeHardwareInfo::GetSupportModifyPayMode() const
+{
+    return m_supportModifyPayMode;
+}
+
+void NodeHardwareInfo::SetSupportModifyPayMode(const int64_t& _supportModifyPayMode)
+{
+    m_supportModifyPayMode = _supportModifyPayMode;
+    m_supportModifyPayModeHasBeenSet = true;
+}
+
+bool NodeHardwareInfo::SupportModifyPayModeHasBeenSet() const
+{
+    return m_supportModifyPayModeHasBeenSet;
 }
 

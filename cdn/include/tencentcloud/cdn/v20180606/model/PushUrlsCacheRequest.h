@@ -116,6 +116,62 @@ Default value: `mainland`. You can prefetch a URL to nodes in a region provided 
                      */
                     bool AreaHasBeenSet() const;
 
+                    /**
+                     * 获取If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
+Note: resources prefetched outside the Chinese mainland will be cached to CDN nodes outside the Chinese mainland and the traffic generated will incur costs.
+                     * @return Layer If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
+Note: resources prefetched outside the Chinese mainland will be cached to CDN nodes outside the Chinese mainland and the traffic generated will incur costs.
+                     */
+                    std::string GetLayer() const;
+
+                    /**
+                     * 设置If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
+Note: resources prefetched outside the Chinese mainland will be cached to CDN nodes outside the Chinese mainland and the traffic generated will incur costs.
+                     * @param Layer If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
+Note: resources prefetched outside the Chinese mainland will be cached to CDN nodes outside the Chinese mainland and the traffic generated will incur costs.
+                     */
+                    void SetLayer(const std::string& _layer);
+
+                    /**
+                     * 判断参数 Layer 是否已赋值
+                     * @return Layer 是否已赋值
+                     */
+                    bool LayerHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to recursively resolve the M3U8 index file and prefetch the TS shards in it.
+Notes:
+1. This feature requires that the M3U8 index file can be directly requested and obtained.
+2. In the M3U8 index file, currently only the TS shards at the first to the third level can be recursively resolved.
+3. Prefetching the TS shards obtained through recursive resolution consumes the daily prefetch quota. If the usage exceeds the quota, the feature will be disabled and TS shards will not be prefetched.
+                     * @return ParseM3U8 Whether to recursively resolve the M3U8 index file and prefetch the TS shards in it.
+Notes:
+1. This feature requires that the M3U8 index file can be directly requested and obtained.
+2. In the M3U8 index file, currently only the TS shards at the first to the third level can be recursively resolved.
+3. Prefetching the TS shards obtained through recursive resolution consumes the daily prefetch quota. If the usage exceeds the quota, the feature will be disabled and TS shards will not be prefetched.
+                     */
+                    bool GetParseM3U8() const;
+
+                    /**
+                     * 设置Whether to recursively resolve the M3U8 index file and prefetch the TS shards in it.
+Notes:
+1. This feature requires that the M3U8 index file can be directly requested and obtained.
+2. In the M3U8 index file, currently only the TS shards at the first to the third level can be recursively resolved.
+3. Prefetching the TS shards obtained through recursive resolution consumes the daily prefetch quota. If the usage exceeds the quota, the feature will be disabled and TS shards will not be prefetched.
+                     * @param ParseM3U8 Whether to recursively resolve the M3U8 index file and prefetch the TS shards in it.
+Notes:
+1. This feature requires that the M3U8 index file can be directly requested and obtained.
+2. In the M3U8 index file, currently only the TS shards at the first to the third level can be recursively resolved.
+3. Prefetching the TS shards obtained through recursive resolution consumes the daily prefetch quota. If the usage exceeds the quota, the feature will be disabled and TS shards will not be prefetched.
+                     */
+                    void SetParseM3U8(const bool& _parseM3U8);
+
+                    /**
+                     * 判断参数 ParseM3U8 是否已赋值
+                     * @return ParseM3U8 是否已赋值
+                     */
+                    bool ParseM3U8HasBeenSet() const;
+
                 private:
 
                     /**
@@ -140,6 +196,23 @@ Default value: `mainland`. You can prefetch a URL to nodes in a region provided 
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
+
+                    /**
+                     * If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
+Note: resources prefetched outside the Chinese mainland will be cached to CDN nodes outside the Chinese mainland and the traffic generated will incur costs.
+                     */
+                    std::string m_layer;
+                    bool m_layerHasBeenSet;
+
+                    /**
+                     * Whether to recursively resolve the M3U8 index file and prefetch the TS shards in it.
+Notes:
+1. This feature requires that the M3U8 index file can be directly requested and obtained.
+2. In the M3U8 index file, currently only the TS shards at the first to the third level can be recursively resolved.
+3. Prefetching the TS shards obtained through recursive resolution consumes the daily prefetch quota. If the usage exceeds the quota, the feature will be disabled and TS shards will not be prefetched.
+                     */
+                    bool m_parseM3U8;
+                    bool m_parseM3U8HasBeenSet;
 
                 };
             }

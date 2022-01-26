@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 SqlFileInfo::SqlFileInfo() :
@@ -31,7 +30,7 @@ SqlFileInfo::SqlFileInfo() :
 {
 }
 
-CoreInternalOutcome SqlFileInfo::Deserialize(const Value &value)
+CoreInternalOutcome SqlFileInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome SqlFileInfo::Deserialize(const Value &value)
     {
         if (!value["UploadTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SqlFileInfo.UploadTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SqlFileInfo.UploadTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_uploadTime = string(value["UploadTime"].GetString());
         m_uploadTimeHasBeenSet = true;
@@ -50,7 +49,7 @@ CoreInternalOutcome SqlFileInfo::Deserialize(const Value &value)
     {
         if (!value["UploadInfo"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `SqlFileInfo.UploadInfo` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SqlFileInfo.UploadInfo` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_uploadInfo.Deserialize(value["UploadInfo"]);
@@ -67,7 +66,7 @@ CoreInternalOutcome SqlFileInfo::Deserialize(const Value &value)
     {
         if (!value["FileName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SqlFileInfo.FileName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SqlFileInfo.FileName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fileName = string(value["FileName"].GetString());
         m_fileNameHasBeenSet = true;
@@ -77,7 +76,7 @@ CoreInternalOutcome SqlFileInfo::Deserialize(const Value &value)
     {
         if (!value["FileSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SqlFileInfo.FileSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SqlFileInfo.FileSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_fileSize = value["FileSize"].GetInt64();
         m_fileSizeHasBeenSet = true;
@@ -87,7 +86,7 @@ CoreInternalOutcome SqlFileInfo::Deserialize(const Value &value)
     {
         if (!value["IsUploadFinished"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SqlFileInfo.IsUploadFinished` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SqlFileInfo.IsUploadFinished` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_isUploadFinished = value["IsUploadFinished"].GetInt64();
         m_isUploadFinishedHasBeenSet = true;
@@ -97,7 +96,7 @@ CoreInternalOutcome SqlFileInfo::Deserialize(const Value &value)
     {
         if (!value["FileId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SqlFileInfo.FileId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SqlFileInfo.FileId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fileId = string(value["FileId"].GetString());
         m_fileIdHasBeenSet = true;
@@ -107,37 +106,37 @@ CoreInternalOutcome SqlFileInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void SqlFileInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SqlFileInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_uploadTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UploadTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_uploadTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_uploadTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_uploadInfoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UploadInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_uploadInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_fileNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fileName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fileName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fileSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_fileSize, allocator);
@@ -145,7 +144,7 @@ void SqlFileInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_isUploadFinishedHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsUploadFinished";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isUploadFinished, allocator);
@@ -153,10 +152,10 @@ void SqlFileInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_fileIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fileId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fileId.c_str(), allocator).Move(), allocator);
     }
 
 }

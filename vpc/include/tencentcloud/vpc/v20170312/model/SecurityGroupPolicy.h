@@ -49,14 +49,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Security group policy index number.
-                     * @return PolicyIndex Security group policy index number.
+                     * 获取The index number of security group rules, which dynamically changes with the rules. This parameter can be obtained via the `DescribeSecurityGroupPolicies` API and used with the `Version` field in the returned value of the API.
+                     * @return PolicyIndex The index number of security group rules, which dynamically changes with the rules. This parameter can be obtained via the `DescribeSecurityGroupPolicies` API and used with the `Version` field in the returned value of the API.
                      */
                     int64_t GetPolicyIndex() const;
 
                     /**
-                     * 设置Security group policy index number.
-                     * @param PolicyIndex Security group policy index number.
+                     * 设置The index number of security group rules, which dynamically changes with the rules. This parameter can be obtained via the `DescribeSecurityGroupPolicies` API and used with the `Version` field in the returned value of the API.
+                     * @param PolicyIndex The index number of security group rules, which dynamically changes with the rules. This parameter can be obtained via the `DescribeSecurityGroupPolicies` API and used with the `Version` field in the returned value of the API.
                      */
                     void SetPolicyIndex(const int64_t& _policyIndex);
 
@@ -67,14 +67,14 @@ namespace TencentCloud
                     bool PolicyIndexHasBeenSet() const;
 
                     /**
-                     * 获取Protocol. Values: TCP, UDP, ICMP
-                     * @return Protocol Protocol. Values: TCP, UDP, ICMP
+                     * 获取Protocol. Valid values: TCP, UDP, ICMP, ICMPv6, ALL.
+                     * @return Protocol Protocol. Valid values: TCP, UDP, ICMP, ICMPv6, ALL.
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置Protocol. Values: TCP, UDP, ICMP
-                     * @param Protocol Protocol. Values: TCP, UDP, ICMP
+                     * 设置Protocol. Valid values: TCP, UDP, ICMP, ICMPv6, ALL.
+                     * @param Protocol Protocol. Valid values: TCP, UDP, ICMP, ICMPv6, ALL.
                      */
                     void SetProtocol(const std::string& _protocol);
 
@@ -249,13 +249,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Security group policy index number.
+                     * The index number of security group rules, which dynamically changes with the rules. This parameter can be obtained via the `DescribeSecurityGroupPolicies` API and used with the `Version` field in the returned value of the API.
                      */
                     int64_t m_policyIndex;
                     bool m_policyIndexHasBeenSet;
 
                     /**
-                     * Protocol. Values: TCP, UDP, ICMP
+                     * Protocol. Valid values: TCP, UDP, ICMP, ICMPv6, ALL.
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;

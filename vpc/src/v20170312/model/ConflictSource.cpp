@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 ConflictSource::ConflictSource() :
@@ -28,7 +27,7 @@ ConflictSource::ConflictSource() :
 {
 }
 
-CoreInternalOutcome ConflictSource::Deserialize(const Value &value)
+CoreInternalOutcome ConflictSource::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome ConflictSource::Deserialize(const Value &value)
     {
         if (!value["ConflictSourceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ConflictSource.ConflictSourceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ConflictSource.ConflictSourceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_conflictSourceId = string(value["ConflictSourceId"].GetString());
         m_conflictSourceIdHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome ConflictSource::Deserialize(const Value &value)
     {
         if (!value["SourceItem"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ConflictSource.SourceItem` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ConflictSource.SourceItem` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_sourceItem = string(value["SourceItem"].GetString());
         m_sourceItemHasBeenSet = true;
@@ -56,10 +55,10 @@ CoreInternalOutcome ConflictSource::Deserialize(const Value &value)
     if (value.HasMember("ConflictItemSet") && !value["ConflictItemSet"].IsNull())
     {
         if (!value["ConflictItemSet"].IsArray())
-            return CoreInternalOutcome(Error("response `ConflictSource.ConflictItemSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ConflictSource.ConflictItemSet` is not array type"));
 
-        const Value &tmpValue = value["ConflictItemSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["ConflictItemSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             ConflictItem item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -77,36 +76,36 @@ CoreInternalOutcome ConflictSource::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ConflictSource::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ConflictSource::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_conflictSourceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ConflictSourceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_conflictSourceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_conflictSourceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sourceItemHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SourceItem";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_sourceItem.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sourceItem.c_str(), allocator).Move(), allocator);
     }
 
     if (m_conflictItemSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ConflictItemSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_conflictItemSet.begin(); itr != m_conflictItemSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }

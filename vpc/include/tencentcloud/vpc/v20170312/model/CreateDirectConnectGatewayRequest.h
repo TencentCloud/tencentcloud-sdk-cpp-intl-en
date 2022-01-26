@@ -134,6 +134,60 @@ namespace TencentCloud
                      */
                     bool GatewayTypeHasBeenSet() const;
 
+                    /**
+                     * 获取CCN route publishing method. Valid values: `standard` and `exquisite`. This parameter is only valid for the CCN direct connect gateway.
+                     * @return ModeType CCN route publishing method. Valid values: `standard` and `exquisite`. This parameter is only valid for the CCN direct connect gateway.
+                     */
+                    std::string GetModeType() const;
+
+                    /**
+                     * 设置CCN route publishing method. Valid values: `standard` and `exquisite`. This parameter is only valid for the CCN direct connect gateway.
+                     * @param ModeType CCN route publishing method. Valid values: `standard` and `exquisite`. This parameter is only valid for the CCN direct connect gateway.
+                     */
+                    void SetModeType(const std::string& _modeType);
+
+                    /**
+                     * 判断参数 ModeType 是否已赋值
+                     * @return ModeType 是否已赋值
+                     */
+                    bool ModeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Availability zone where the direct connect gateway resides.
+                     * @return Zone Availability zone where the direct connect gateway resides.
+                     */
+                    std::string GetZone() const;
+
+                    /**
+                     * 设置Availability zone where the direct connect gateway resides.
+                     * @param Zone Availability zone where the direct connect gateway resides.
+                     */
+                    void SetZone(const std::string& _zone);
+
+                    /**
+                     * 判断参数 Zone 是否已赋值
+                     * @return Zone 是否已赋值
+                     */
+                    bool ZoneHasBeenSet() const;
+
+                    /**
+                     * 获取ID of DC highly available placement group
+                     * @return HaZoneGroupId ID of DC highly available placement group
+                     */
+                    std::string GetHaZoneGroupId() const;
+
+                    /**
+                     * 设置ID of DC highly available placement group
+                     * @param HaZoneGroupId ID of DC highly available placement group
+                     */
+                    void SetHaZoneGroupId(const std::string& _haZoneGroupId);
+
+                    /**
+                     * 判断参数 HaZoneGroupId 是否已赋值
+                     * @return HaZoneGroupId 是否已赋值
+                     */
+                    bool HaZoneGroupIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -164,6 +218,24 @@ namespace TencentCloud
                      */
                     std::string m_gatewayType;
                     bool m_gatewayTypeHasBeenSet;
+
+                    /**
+                     * CCN route publishing method. Valid values: `standard` and `exquisite`. This parameter is only valid for the CCN direct connect gateway.
+                     */
+                    std::string m_modeType;
+                    bool m_modeTypeHasBeenSet;
+
+                    /**
+                     * Availability zone where the direct connect gateway resides.
+                     */
+                    std::string m_zone;
+                    bool m_zoneHasBeenSet;
+
+                    /**
+                     * ID of DC highly available placement group
+                     */
+                    std::string m_haZoneGroupId;
+                    bool m_haZoneGroupIdHasBeenSet;
 
                 };
             }

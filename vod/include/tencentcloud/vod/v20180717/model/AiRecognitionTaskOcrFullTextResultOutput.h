@@ -48,14 +48,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Full text recognition result set.
-                     * @return SegmentSet Full text recognition result set.
+                     * 获取Full-text recognition result set
+<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
+                     * @return SegmentSet Full-text recognition result set
+<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
                      */
                     std::vector<AiRecognitionTaskOcrFullTextSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置Full text recognition result set.
-                     * @param SegmentSet Full text recognition result set.
+                     * 设置Full-text recognition result set
+<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
+                     * @param SegmentSet Full-text recognition result set
+<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
                      */
                     void SetSegmentSet(const std::vector<AiRecognitionTaskOcrFullTextSegmentItem>& _segmentSet);
 
@@ -65,13 +69,62 @@ namespace TencentCloud
                      */
                     bool SegmentSetHasBeenSet() const;
 
+                    /**
+                     * 获取URL to the file of the full-text recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+                     * @return SegmentSetFileUrl URL to the file of the full-text recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+                     */
+                    std::string GetSegmentSetFileUrl() const;
+
+                    /**
+                     * 设置URL to the file of the full-text recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+                     * @param SegmentSetFileUrl URL to the file of the full-text recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+                     */
+                    void SetSegmentSetFileUrl(const std::string& _segmentSetFileUrl);
+
+                    /**
+                     * 判断参数 SegmentSetFileUrl 是否已赋值
+                     * @return SegmentSetFileUrl 是否已赋值
+                     */
+                    bool SegmentSetFileUrlHasBeenSet() const;
+
+                    /**
+                     * 获取Expiration time of the URL to the file of the full-text recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+                     * @return SegmentSetFileUrlExpireTime Expiration time of the URL to the file of the full-text recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+                     */
+                    std::string GetSegmentSetFileUrlExpireTime() const;
+
+                    /**
+                     * 设置Expiration time of the URL to the file of the full-text recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+                     * @param SegmentSetFileUrlExpireTime Expiration time of the URL to the file of the full-text recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+                     */
+                    void SetSegmentSetFileUrlExpireTime(const std::string& _segmentSetFileUrlExpireTime);
+
+                    /**
+                     * 判断参数 SegmentSetFileUrlExpireTime 是否已赋值
+                     * @return SegmentSetFileUrlExpireTime 是否已赋值
+                     */
+                    bool SegmentSetFileUrlExpireTimeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Full text recognition result set.
+                     * Full-text recognition result set
+<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
                      */
                     std::vector<AiRecognitionTaskOcrFullTextSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;
+
+                    /**
+                     * URL to the file of the full-text recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+                     */
+                    std::string m_segmentSetFileUrl;
+                    bool m_segmentSetFileUrlHasBeenSet;
+
+                    /**
+                     * Expiration time of the URL to the file of the full-text recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+                     */
+                    std::string m_segmentSetFileUrlExpireTime;
+                    bool m_segmentSetFileUrlExpireTimeHasBeenSet;
 
                 };
             }

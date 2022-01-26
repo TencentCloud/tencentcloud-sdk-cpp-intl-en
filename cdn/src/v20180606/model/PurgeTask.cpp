@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 PurgeTask::PurgeTask() :
@@ -31,7 +30,7 @@ PurgeTask::PurgeTask() :
 {
 }
 
-CoreInternalOutcome PurgeTask::Deserialize(const Value &value)
+CoreInternalOutcome PurgeTask::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome PurgeTask::Deserialize(const Value &value)
     {
         if (!value["TaskId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PurgeTask.TaskId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PurgeTask.TaskId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_taskId = string(value["TaskId"].GetString());
         m_taskIdHasBeenSet = true;
@@ -50,7 +49,7 @@ CoreInternalOutcome PurgeTask::Deserialize(const Value &value)
     {
         if (!value["Url"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PurgeTask.Url` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PurgeTask.Url` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_url = string(value["Url"].GetString());
         m_urlHasBeenSet = true;
@@ -60,7 +59,7 @@ CoreInternalOutcome PurgeTask::Deserialize(const Value &value)
     {
         if (!value["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PurgeTask.Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PurgeTask.Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(value["Status"].GetString());
         m_statusHasBeenSet = true;
@@ -70,7 +69,7 @@ CoreInternalOutcome PurgeTask::Deserialize(const Value &value)
     {
         if (!value["PurgeType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PurgeTask.PurgeType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PurgeTask.PurgeType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_purgeType = string(value["PurgeType"].GetString());
         m_purgeTypeHasBeenSet = true;
@@ -80,7 +79,7 @@ CoreInternalOutcome PurgeTask::Deserialize(const Value &value)
     {
         if (!value["FlushType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PurgeTask.FlushType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PurgeTask.FlushType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_flushType = string(value["FlushType"].GetString());
         m_flushTypeHasBeenSet = true;
@@ -90,7 +89,7 @@ CoreInternalOutcome PurgeTask::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PurgeTask.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PurgeTask.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -100,55 +99,55 @@ CoreInternalOutcome PurgeTask::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void PurgeTask::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void PurgeTask::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_taskIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TaskId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_taskId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_taskId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_urlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Url";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_url.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_url.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_status.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
     }
 
     if (m_purgeTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PurgeType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_purgeType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_purgeType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_flushTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FlushType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_flushType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_flushType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
 }

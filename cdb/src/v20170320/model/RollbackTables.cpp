@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 RollbackTables::RollbackTables() :
@@ -27,7 +26,7 @@ RollbackTables::RollbackTables() :
 {
 }
 
-CoreInternalOutcome RollbackTables::Deserialize(const Value &value)
+CoreInternalOutcome RollbackTables::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome RollbackTables::Deserialize(const Value &value)
     {
         if (!value["Database"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RollbackTables.Database` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RollbackTables.Database` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_database = string(value["Database"].GetString());
         m_databaseHasBeenSet = true;
@@ -45,10 +44,10 @@ CoreInternalOutcome RollbackTables::Deserialize(const Value &value)
     if (value.HasMember("Table") && !value["Table"].IsNull())
     {
         if (!value["Table"].IsArray())
-            return CoreInternalOutcome(Error("response `RollbackTables.Table` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `RollbackTables.Table` is not array type"));
 
-        const Value &tmpValue = value["Table"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Table"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             RollbackTableName item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -66,28 +65,28 @@ CoreInternalOutcome RollbackTables::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void RollbackTables::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void RollbackTables::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_databaseHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Database";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_database.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_database.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tableHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Table";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_table.begin(); itr != m_table.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }

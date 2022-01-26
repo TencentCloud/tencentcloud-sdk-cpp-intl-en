@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Person ID
-                     * @return PersonId Person ID
+                     * 获取Person ID, which is the `PersonId` in the `CreatePerson` API.
+                     * @return PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
                      */
                     std::string GetPersonId() const;
 
                     /**
-                     * 设置Person ID
-                     * @param PersonId Person ID
+                     * 设置Person ID, which is the `PersonId` in the `CreatePerson` API.
+                     * @param PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
                      */
                     void SetPersonId(const std::string& _personId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool PersonIdHasBeenSet() const;
 
                     /**
-                     * 获取List of the groups to add to.
-                     * @return GroupIds List of the groups to add to.
+                     * 获取List of groups to join. The array element value is the `GroupId` in the `CreateGroup` API.
+                     * @return GroupIds List of groups to join. The array element value is the `GroupId` in the `CreateGroup` API.
                      */
                     std::vector<std::string> GetGroupIds() const;
 
                     /**
-                     * 设置List of the groups to add to.
-                     * @param GroupIds List of the groups to add to.
+                     * 设置List of groups to join. The array element value is the `GroupId` in the `CreateGroup` API.
+                     * @param GroupIds List of groups to join. The array element value is the `GroupId` in the `CreateGroup` API.
                      */
                     void SetGroupIds(const std::vector<std::string>& _groupIds);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Person ID
+                     * Person ID, which is the `PersonId` in the `CreatePerson` API.
                      */
                     std::string m_personId;
                     bool m_personIdHasBeenSet;
 
                     /**
-                     * List of the groups to add to.
+                     * List of groups to join. The array element value is the `GroupId` in the `CreateGroup` API.
                      */
                     std::vector<std::string> m_groupIds;
                     bool m_groupIdsHasBeenSet;

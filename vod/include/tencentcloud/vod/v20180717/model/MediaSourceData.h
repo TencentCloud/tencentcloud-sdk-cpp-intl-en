@@ -47,34 +47,34 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Source category of media file:
-<li>Record: recording, such as LVB recording and LVB time shifting recording.</li>
-<li>Upload: upload, such as pull for upload, upload from server, and UCG upload from client.</li>
-<li>VideoProcessing: video processing, such as video splicing and video clipping.</li>
-<li>Unknown: unknown source.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SourceType Source category of media file:
-<li>Record: recording, such as LVB recording and LVB time shifting recording.</li>
-<li>Upload: upload, such as pull for upload, upload from server, and UCG upload from client.</li>
-<li>VideoProcessing: video processing, such as video splicing and video clipping.</li>
-<li>Unknown: unknown source.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Source of a media file:
+<li>`Record`: recording, such as live or time-shift recording</li>
+<li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
+<li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
+<li>`WebPageRecord`: panoramic recording </li>
+<li>`Unknown`: unknown source</li>
+                     * @return SourceType Source of a media file:
+<li>`Record`: recording, such as live or time-shift recording</li>
+<li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
+<li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
+<li>`WebPageRecord`: panoramic recording </li>
+<li>`Unknown`: unknown source</li>
                      */
                     std::string GetSourceType() const;
 
                     /**
-                     * 设置Source category of media file:
-<li>Record: recording, such as LVB recording and LVB time shifting recording.</li>
-<li>Upload: upload, such as pull for upload, upload from server, and UCG upload from client.</li>
-<li>VideoProcessing: video processing, such as video splicing and video clipping.</li>
-<li>Unknown: unknown source.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SourceType Source category of media file:
-<li>Record: recording, such as LVB recording and LVB time shifting recording.</li>
-<li>Upload: upload, such as pull for upload, upload from server, and UCG upload from client.</li>
-<li>VideoProcessing: video processing, such as video splicing and video clipping.</li>
-<li>Unknown: unknown source.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Source of a media file:
+<li>`Record`: recording, such as live or time-shift recording</li>
+<li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
+<li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
+<li>`WebPageRecord`: panoramic recording </li>
+<li>`Unknown`: unknown source</li>
+                     * @param SourceType Source of a media file:
+<li>`Record`: recording, such as live or time-shift recording</li>
+<li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
+<li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
+<li>`WebPageRecord`: panoramic recording </li>
+<li>`Unknown`: unknown source</li>
                      */
                     void SetSourceType(const std::string& _sourceType);
 
@@ -109,12 +109,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Source category of media file:
-<li>Record: recording, such as LVB recording and LVB time shifting recording.</li>
-<li>Upload: upload, such as pull for upload, upload from server, and UCG upload from client.</li>
-<li>VideoProcessing: video processing, such as video splicing and video clipping.</li>
-<li>Unknown: unknown source.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Source of a media file:
+<li>`Record`: recording, such as live or time-shift recording</li>
+<li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
+<li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
+<li>`WebPageRecord`: panoramic recording </li>
+<li>`Unknown`: unknown source</li>
                      */
                     std::string m_sourceType;
                     bool m_sourceTypeHasBeenSet;

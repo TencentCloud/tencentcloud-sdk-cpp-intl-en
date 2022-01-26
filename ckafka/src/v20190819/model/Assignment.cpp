@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ckafka::V20190819::Model;
-using namespace rapidjson;
 using namespace std;
 
 Assignment::Assignment() :
@@ -27,7 +26,7 @@ Assignment::Assignment() :
 {
 }
 
-CoreInternalOutcome Assignment::Deserialize(const Value &value)
+CoreInternalOutcome Assignment::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome Assignment::Deserialize(const Value &value)
     {
         if (!value["Version"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Assignment.Version` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Assignment.Version` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_version = value["Version"].GetInt64();
         m_versionHasBeenSet = true;
@@ -45,10 +44,10 @@ CoreInternalOutcome Assignment::Deserialize(const Value &value)
     if (value.HasMember("Topics") && !value["Topics"].IsNull())
     {
         if (!value["Topics"].IsArray())
-            return CoreInternalOutcome(Error("response `Assignment.Topics` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Assignment.Topics` is not array type"));
 
-        const Value &tmpValue = value["Topics"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Topics"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             GroupInfoTopics item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -66,12 +65,12 @@ CoreInternalOutcome Assignment::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Assignment::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Assignment::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_versionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Version";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_version, allocator);
@@ -79,15 +78,15 @@ void Assignment::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_topicsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Topics";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_topics.begin(); itr != m_topics.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ckafka::V20190819::Model;
-using namespace rapidjson;
 using namespace std;
 
 Topic::Topic() :
@@ -28,7 +27,7 @@ Topic::Topic() :
 {
 }
 
-CoreInternalOutcome Topic::Deserialize(const Value &value)
+CoreInternalOutcome Topic::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome Topic::Deserialize(const Value &value)
     {
         if (!value["TopicId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Topic.TopicId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Topic.TopicId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_topicId = string(value["TopicId"].GetString());
         m_topicIdHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome Topic::Deserialize(const Value &value)
     {
         if (!value["TopicName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Topic.TopicName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Topic.TopicName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_topicName = string(value["TopicName"].GetString());
         m_topicNameHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome Topic::Deserialize(const Value &value)
     {
         if (!value["Note"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Topic.Note` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Topic.Note` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_note = string(value["Note"].GetString());
         m_noteHasBeenSet = true;
@@ -67,31 +66,31 @@ CoreInternalOutcome Topic::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Topic::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Topic::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_topicIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TopicId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_topicId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_topicId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_topicNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TopicName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_topicName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_topicName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_noteHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Note";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_note.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_note.c_str(), allocator).Move(), allocator);
     }
 
 }

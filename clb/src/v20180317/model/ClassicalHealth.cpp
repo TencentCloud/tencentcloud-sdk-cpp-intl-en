@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Clb::V20180317::Model;
-using namespace rapidjson;
 using namespace std;
 
 ClassicalHealth::ClassicalHealth() :
@@ -30,7 +29,7 @@ ClassicalHealth::ClassicalHealth() :
 {
 }
 
-CoreInternalOutcome ClassicalHealth::Deserialize(const Value &value)
+CoreInternalOutcome ClassicalHealth::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome ClassicalHealth::Deserialize(const Value &value)
     {
         if (!value["IP"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClassicalHealth.IP` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalHealth.IP` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_iP = string(value["IP"].GetString());
         m_iPHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome ClassicalHealth::Deserialize(const Value &value)
     {
         if (!value["Port"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ClassicalHealth.Port` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalHealth.Port` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_port = value["Port"].GetInt64();
         m_portHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome ClassicalHealth::Deserialize(const Value &value)
     {
         if (!value["ListenerPort"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ClassicalHealth.ListenerPort` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalHealth.ListenerPort` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_listenerPort = value["ListenerPort"].GetInt64();
         m_listenerPortHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome ClassicalHealth::Deserialize(const Value &value)
     {
         if (!value["Protocol"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClassicalHealth.Protocol` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalHealth.Protocol` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_protocol = string(value["Protocol"].GetString());
         m_protocolHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome ClassicalHealth::Deserialize(const Value &value)
     {
         if (!value["HealthStatus"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ClassicalHealth.HealthStatus` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClassicalHealth.HealthStatus` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_healthStatus = value["HealthStatus"].GetInt64();
         m_healthStatusHasBeenSet = true;
@@ -89,20 +88,20 @@ CoreInternalOutcome ClassicalHealth::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ClassicalHealth::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ClassicalHealth::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_iPHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IP";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_iP.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_iP.c_str(), allocator).Move(), allocator);
     }
 
     if (m_portHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Port";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_port, allocator);
@@ -110,7 +109,7 @@ void ClassicalHealth::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_listenerPortHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ListenerPort";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_listenerPort, allocator);
@@ -118,15 +117,15 @@ void ClassicalHealth::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_protocolHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Protocol";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_protocol.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
     }
 
     if (m_healthStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "HealthStatus";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_healthStatus, allocator);

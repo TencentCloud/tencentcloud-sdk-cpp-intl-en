@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 ErrorCodes::ErrorCodes() :
@@ -30,7 +29,7 @@ ErrorCodes::ErrorCodes() :
 {
 }
 
-CoreInternalOutcome ErrorCodes::Deserialize(const Value &value)
+CoreInternalOutcome ErrorCodes::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome ErrorCodes::Deserialize(const Value &value)
     {
         if (!value["Code"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ErrorCodes.Code` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ErrorCodes.Code` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_code = value["Code"].GetInt64();
         m_codeHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome ErrorCodes::Deserialize(const Value &value)
     {
         if (!value["Msg"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ErrorCodes.Msg` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ErrorCodes.Msg` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_msg = string(value["Msg"].GetString());
         m_msgHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome ErrorCodes::Deserialize(const Value &value)
     {
         if (!value["Desc"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ErrorCodes.Desc` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ErrorCodes.Desc` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_desc = string(value["Desc"].GetString());
         m_descHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome ErrorCodes::Deserialize(const Value &value)
     {
         if (!value["ConvertedCode"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ErrorCodes.ConvertedCode` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ErrorCodes.ConvertedCode` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_convertedCode = value["ConvertedCode"].GetInt64();
         m_convertedCodeHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome ErrorCodes::Deserialize(const Value &value)
     {
         if (!value["NeedConvert"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `ErrorCodes.NeedConvert` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ErrorCodes.NeedConvert` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_needConvert = value["NeedConvert"].GetBool();
         m_needConvertHasBeenSet = true;
@@ -89,12 +88,12 @@ CoreInternalOutcome ErrorCodes::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ErrorCodes::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ErrorCodes::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_codeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Code";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_code, allocator);
@@ -102,23 +101,23 @@ void ErrorCodes::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_msgHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Msg";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_msg.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_msg.c_str(), allocator).Move(), allocator);
     }
 
     if (m_descHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Desc";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_desc.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_desc.c_str(), allocator).Move(), allocator);
     }
 
     if (m_convertedCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ConvertedCode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_convertedCode, allocator);
@@ -126,7 +125,7 @@ void ErrorCodes::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_needConvertHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NeedConvert";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_needConvert, allocator);

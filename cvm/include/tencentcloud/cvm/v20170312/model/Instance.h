@@ -216,14 +216,14 @@ namespace TencentCloud
                     bool SystemDiskHasBeenSet() const;
 
                     /**
-                     * 获取Information on the data disks of the instance, which only covers the data disks purchased together with the instance. 
-                     * @return DataDisks Information on the data disks of the instance, which only covers the data disks purchased together with the instance. 
+                     * 获取Information of the instance data disks.
+                     * @return DataDisks Information of the instance data disks.
                      */
                     std::vector<DataDisk> GetDataDisks() const;
 
                     /**
-                     * 设置Information on the data disks of the instance, which only covers the data disks purchased together with the instance. 
-                     * @param DataDisks Information on the data disks of the instance, which only covers the data disks purchased together with the instance. 
+                     * 设置Information of the instance data disks.
+                     * @param DataDisks Information of the instance data disks.
                      */
                     void SetDataDisks(const std::vector<DataDisk>& _dataDisks);
 
@@ -498,14 +498,14 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
                     bool StopChargingModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Uuid 
+                     * 获取Globally unique ID of the instance.
+                     * @return Uuid Globally unique ID of the instance.
                      */
                     std::string GetUuid() const;
 
                     /**
-                     * 设置
-                     * @param Uuid 
+                     * 设置Globally unique ID of the instance.
+                     * @param Uuid Globally unique ID of the instance.
                      */
                     void SetUuid(const std::string& _uuid);
 
@@ -516,14 +516,14 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
                     bool UuidHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LatestOperation 
+                     * 获取Last operation of the instance, such as StopInstances or ResetInstance.
+                     * @return LatestOperation Last operation of the instance, such as StopInstances or ResetInstance.
                      */
                     std::string GetLatestOperation() const;
 
                     /**
-                     * 设置
-                     * @param LatestOperation 
+                     * 设置Last operation of the instance, such as StopInstances or ResetInstance.
+                     * @param LatestOperation Last operation of the instance, such as StopInstances or ResetInstance.
                      */
                     void SetLatestOperation(const std::string& _latestOperation);
 
@@ -534,14 +534,14 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
                     bool LatestOperationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LatestOperationState 
+                     * 获取The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
+                     * @return LatestOperationState The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
                      */
                     std::string GetLatestOperationState() const;
 
                     /**
-                     * 设置
-                     * @param LatestOperationState 
+                     * 设置The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
+                     * @param LatestOperationState The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
                      */
                     void SetLatestOperationState(const std::string& _latestOperationState);
 
@@ -552,14 +552,14 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
                     bool LatestOperationStateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LatestOperationRequestId 
+                     * 获取Unique request ID for the last operation of the instance.
+                     * @return LatestOperationRequestId Unique request ID for the last operation of the instance.
                      */
                     std::string GetLatestOperationRequestId() const;
 
                     /**
-                     * 设置
-                     * @param LatestOperationRequestId 
+                     * 设置Unique request ID for the last operation of the instance.
+                     * @param LatestOperationRequestId Unique request ID for the last operation of the instance.
                      */
                     void SetLatestOperationRequestId(const std::string& _latestOperationRequestId);
 
@@ -635,6 +635,72 @@ Note: this field may return null, indicating that no valid value is obtained.
                      */
                     bool CamRoleNameHasBeenSet() const;
 
+                    /**
+                     * 获取HPC cluster ID.
+Note: this field may return null, indicating that no valid value was found.
+                     * @return HpcClusterId HPC cluster ID.
+Note: this field may return null, indicating that no valid value was found.
+                     */
+                    std::string GetHpcClusterId() const;
+
+                    /**
+                     * 设置HPC cluster ID.
+Note: this field may return null, indicating that no valid value was found.
+                     * @param HpcClusterId HPC cluster ID.
+Note: this field may return null, indicating that no valid value was found.
+                     */
+                    void SetHpcClusterId(const std::string& _hpcClusterId);
+
+                    /**
+                     * 判断参数 HpcClusterId 是否已赋值
+                     * @return HpcClusterId 是否已赋值
+                     */
+                    bool HpcClusterIdHasBeenSet() const;
+
+                    /**
+                     * 获取IP list of HPC cluster.
+Note: this field may return null, indicating that no valid value was found.
+                     * @return RdmaIpAddresses IP list of HPC cluster.
+Note: this field may return null, indicating that no valid value was found.
+                     */
+                    std::vector<std::string> GetRdmaIpAddresses() const;
+
+                    /**
+                     * 设置IP list of HPC cluster.
+Note: this field may return null, indicating that no valid value was found.
+                     * @param RdmaIpAddresses IP list of HPC cluster.
+Note: this field may return null, indicating that no valid value was found.
+                     */
+                    void SetRdmaIpAddresses(const std::vector<std::string>& _rdmaIpAddresses);
+
+                    /**
+                     * 判断参数 RdmaIpAddresses 是否已赋值
+                     * @return RdmaIpAddresses 是否已赋值
+                     */
+                    bool RdmaIpAddressesHasBeenSet() const;
+
+                    /**
+                     * 获取The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
+Note: this field may return null, indicating that no valid value was found.
+                     * @return IsolatedSource The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
+Note: this field may return null, indicating that no valid value was found.
+                     */
+                    std::string GetIsolatedSource() const;
+
+                    /**
+                     * 设置The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
+Note: this field may return null, indicating that no valid value was found.
+                     * @param IsolatedSource The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
+Note: this field may return null, indicating that no valid value was found.
+                     */
+                    void SetIsolatedSource(const std::string& _isolatedSource);
+
+                    /**
+                     * 判断参数 IsolatedSource 是否已赋值
+                     * @return IsolatedSource 是否已赋值
+                     */
+                    bool IsolatedSourceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -692,7 +758,7 @@ Note: this field may return null, indicating that no valid value is obtained.
                     bool m_systemDiskHasBeenSet;
 
                     /**
-                     * Information on the data disks of the instance, which only covers the data disks purchased together with the instance. 
+                     * Information of the instance data disks.
                      */
                     std::vector<DataDisk> m_dataDisks;
                     bool m_dataDisksHasBeenSet;
@@ -785,25 +851,25 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
                     bool m_stopChargingModeHasBeenSet;
 
                     /**
-                     * 
+                     * Globally unique ID of the instance.
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;
 
                     /**
-                     * 
+                     * Last operation of the instance, such as StopInstances or ResetInstance.
                      */
                     std::string m_latestOperation;
                     bool m_latestOperationHasBeenSet;
 
                     /**
-                     * 
+                     * The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
                      */
                     std::string m_latestOperationState;
                     bool m_latestOperationStateHasBeenSet;
 
                     /**
-                     * 
+                     * Unique request ID for the last operation of the instance.
                      */
                     std::string m_latestOperationRequestId;
                     bool m_latestOperationRequestIdHasBeenSet;
@@ -828,6 +894,27 @@ Note: this field may return null, indicating that no valid value is obtained.
                      */
                     std::string m_camRoleName;
                     bool m_camRoleNameHasBeenSet;
+
+                    /**
+                     * HPC cluster ID.
+Note: this field may return null, indicating that no valid value was found.
+                     */
+                    std::string m_hpcClusterId;
+                    bool m_hpcClusterIdHasBeenSet;
+
+                    /**
+                     * IP list of HPC cluster.
+Note: this field may return null, indicating that no valid value was found.
+                     */
+                    std::vector<std::string> m_rdmaIpAddresses;
+                    bool m_rdmaIpAddressesHasBeenSet;
+
+                    /**
+                     * The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
+Note: this field may return null, indicating that no valid value was found.
+                     */
+                    std::string m_isolatedSource;
+                    bool m_isolatedSourceHasBeenSet;
 
                 };
             }

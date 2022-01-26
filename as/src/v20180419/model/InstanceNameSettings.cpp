@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::As::V20180419::Model;
-using namespace rapidjson;
 using namespace std;
 
 InstanceNameSettings::InstanceNameSettings() :
@@ -27,7 +26,7 @@ InstanceNameSettings::InstanceNameSettings() :
 {
 }
 
-CoreInternalOutcome InstanceNameSettings::Deserialize(const Value &value)
+CoreInternalOutcome InstanceNameSettings::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome InstanceNameSettings::Deserialize(const Value &value)
     {
         if (!value["InstanceName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceNameSettings.InstanceName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceNameSettings.InstanceName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceName = string(value["InstanceName"].GetString());
         m_instanceNameHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome InstanceNameSettings::Deserialize(const Value &value)
     {
         if (!value["InstanceNameStyle"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceNameSettings.InstanceNameStyle` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceNameSettings.InstanceNameStyle` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceNameStyle = string(value["InstanceNameStyle"].GetString());
         m_instanceNameStyleHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome InstanceNameSettings::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void InstanceNameSettings::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void InstanceNameSettings::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_instanceNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceNameStyleHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceNameStyle";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceNameStyle.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceNameStyle.c_str(), allocator).Move(), allocator);
     }
 
 }

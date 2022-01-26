@@ -40,6 +40,7 @@ namespace TencentCloud
                     DescribeDBSyncModeResponse();
                     ~DescribeDBSyncModeResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -66,6 +67,18 @@ namespace TencentCloud
                      */
                     bool IsModifyingHasBeenSet() const;
 
+                    /**
+                     * 获取Current sync mode. Valid values: `0` (async), `1` (sync).
+                     * @return CurrentSyncMode Current sync mode. Valid values: `0` (async), `1` (sync).
+                     */
+                    int64_t GetCurrentSyncMode() const;
+
+                    /**
+                     * 判断参数 CurrentSyncMode 是否已赋值
+                     * @return CurrentSyncMode 是否已赋值
+                     */
+                    bool CurrentSyncModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -79,6 +92,12 @@ namespace TencentCloud
                      */
                     int64_t m_isModifying;
                     bool m_isModifyingHasBeenSet;
+
+                    /**
+                     * Current sync mode. Valid values: `0` (async), `1` (sync).
+                     */
+                    int64_t m_currentSyncMode;
+                    bool m_currentSyncModeHasBeenSet;
 
                 };
             }

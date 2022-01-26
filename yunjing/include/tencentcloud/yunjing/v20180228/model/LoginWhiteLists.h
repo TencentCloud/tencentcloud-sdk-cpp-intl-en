@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Login whitelist
+                * Login allowlist
                 */
                 class LoginWhiteLists : public AbstractModel
                 {
@@ -227,6 +227,42 @@ namespace TencentCloud
                      */
                     bool HostIpHasBeenSet() const;
 
+                    /**
+                     * 获取Start time
+                     * @return StartTime Start time
+                     */
+                    std::string GetStartTime() const;
+
+                    /**
+                     * 设置Start time
+                     * @param StartTime Start time
+                     */
+                    void SetStartTime(const std::string& _startTime);
+
+                    /**
+                     * 判断参数 StartTime 是否已赋值
+                     * @return StartTime 是否已赋值
+                     */
+                    bool StartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取End time
+                     * @return EndTime End time
+                     */
+                    std::string GetEndTime() const;
+
+                    /**
+                     * 设置End time
+                     * @param EndTime End time
+                     */
+                    void SetEndTime(const std::string& _endTime);
+
+                    /**
+                     * 判断参数 EndTime 是否已赋值
+                     * @return EndTime 是否已赋值
+                     */
+                    bool EndTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -288,6 +324,18 @@ namespace TencentCloud
                      */
                     std::string m_hostIp;
                     bool m_hostIpHasBeenSet;
+
+                    /**
+                     * Start time
+                     */
+                    std::string m_startTime;
+                    bool m_startTimeHasBeenSet;
+
+                    /**
+                     * End time
+                     */
+                    std::string m_endTime;
+                    bool m_endTimeHasBeenSet;
 
                 };
             }

@@ -50,14 +50,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Position of detected face frame.
-                     * @return FaceRect Position of detected face frame.
+                     * 获取Position of detected face frame
+                     * @return FaceRect Position of detected face frame
                      */
                     FaceRect GetFaceRect() const;
 
                     /**
-                     * 设置Position of detected face frame.
-                     * @param FaceRect Position of detected face frame.
+                     * 设置Position of detected face frame
+                     * @param FaceRect Position of detected face frame
                      */
                     void SetFaceRect(const FaceRect& _faceRect);
 
@@ -110,7 +110,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Position of detected face frame.
+                     * Position of detected face frame
                      */
                     FaceRect m_faceRect;
                     bool m_faceRectHasBeenSet;

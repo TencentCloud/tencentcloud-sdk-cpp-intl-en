@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool MethodHasBeenSet() const;
 
                     /**
-                     * 获取Blacklist/whitelist type. Valid value: [white (whitelist)]
-                     * @return Type Blacklist/whitelist type. Valid value: [white (whitelist)]
+                     * 获取Blocklist/allowlist type. Valid value: [white (allowlist)]
+                     * @return Type Blocklist/allowlist type. Valid value: [white (allowlist)]
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Blacklist/whitelist type. Valid value: [white (whitelist)]
-                     * @param Type Blacklist/whitelist type. Valid value: [white (whitelist)]
+                     * 设置Blocklist/allowlist type. Valid value: [white (allowlist)]
+                     * @param Type Blocklist/allowlist type. Valid value: [white (allowlist)]
                      */
                     void SetType(const std::string& _type);
 
@@ -219,7 +219,7 @@ If `Method` is `delete`, this field can be left empty;
                     bool m_methodHasBeenSet;
 
                     /**
-                     * Blacklist/whitelist type. Valid value: [white (whitelist)]
+                     * Blocklist/allowlist type. Valid value: [white (allowlist)]
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

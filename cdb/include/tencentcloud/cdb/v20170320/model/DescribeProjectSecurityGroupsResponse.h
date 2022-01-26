@@ -41,6 +41,7 @@ namespace TencentCloud
                     DescribeProjectSecurityGroupsResponse();
                     ~DescribeProjectSecurityGroupsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -55,6 +56,18 @@ namespace TencentCloud
                      */
                     bool GroupsHasBeenSet() const;
 
+                    /**
+                     * 获取Number of security group rules
+                     * @return TotalCount Number of security group rules
+                     */
+                    int64_t GetTotalCount() const;
+
+                    /**
+                     * 判断参数 TotalCount 是否已赋值
+                     * @return TotalCount 是否已赋值
+                     */
+                    bool TotalCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -62,6 +75,12 @@ namespace TencentCloud
                      */
                     std::vector<SecurityGroup> m_groups;
                     bool m_groupsHasBeenSet;
+
+                    /**
+                     * Number of security group rules
+                     */
+                    int64_t m_totalCount;
+                    bool m_totalCountHasBeenSet;
 
                 };
             }

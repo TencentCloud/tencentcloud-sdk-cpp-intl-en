@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Master version of alias
-                     * @return FunctionVersion Master version of alias
+                     * 获取Master version pointed to by the alias
+                     * @return FunctionVersion Master version pointed to by the alias
                      */
                     std::string GetFunctionVersion() const;
 
                     /**
-                     * 设置Master version of alias
-                     * @param FunctionVersion Master version of alias
+                     * 设置Master version pointed to by the alias
+                     * @param FunctionVersion Master version pointed to by the alias
                      */
                     void SetFunctionVersion(const std::string& _functionVersion);
 
@@ -166,7 +166,7 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Master version of alias
+                     * Master version pointed to by the alias
                      */
                     std::string m_functionVersion;
                     bool m_functionVersionHasBeenSet;

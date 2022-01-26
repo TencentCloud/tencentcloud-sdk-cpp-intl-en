@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 ProxySimpleInfo::ProxySimpleInfo() :
@@ -28,7 +27,7 @@ ProxySimpleInfo::ProxySimpleInfo() :
 {
 }
 
-CoreInternalOutcome ProxySimpleInfo::Deserialize(const Value &value)
+CoreInternalOutcome ProxySimpleInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome ProxySimpleInfo::Deserialize(const Value &value)
     {
         if (!value["ProxyId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ProxySimpleInfo.ProxyId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProxySimpleInfo.ProxyId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_proxyId = string(value["ProxyId"].GetString());
         m_proxyIdHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome ProxySimpleInfo::Deserialize(const Value &value)
     {
         if (!value["ProxyName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ProxySimpleInfo.ProxyName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProxySimpleInfo.ProxyName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_proxyName = string(value["ProxyName"].GetString());
         m_proxyNameHasBeenSet = true;
@@ -56,10 +55,10 @@ CoreInternalOutcome ProxySimpleInfo::Deserialize(const Value &value)
     if (value.HasMember("ListenerList") && !value["ListenerList"].IsNull())
     {
         if (!value["ListenerList"].IsArray())
-            return CoreInternalOutcome(Error("response `ProxySimpleInfo.ListenerList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ProxySimpleInfo.ListenerList` is not array type"));
 
-        const Value &tmpValue = value["ListenerList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["ListenerList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             ListenerInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -77,36 +76,36 @@ CoreInternalOutcome ProxySimpleInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ProxySimpleInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ProxySimpleInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_proxyIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProxyId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_proxyId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_proxyId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_proxyNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProxyName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_proxyName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_proxyName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_listenerListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ListenerList";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_listenerList.begin(); itr != m_listenerList.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }

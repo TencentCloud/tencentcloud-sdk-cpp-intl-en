@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gse::V20191112::Model;
-using namespace rapidjson;
 using namespace std;
 
 InstanceAccess::InstanceAccess() :
@@ -30,7 +29,7 @@ InstanceAccess::InstanceAccess() :
 {
 }
 
-CoreInternalOutcome InstanceAccess::Deserialize(const Value &value)
+CoreInternalOutcome InstanceAccess::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome InstanceAccess::Deserialize(const Value &value)
     {
         if (!value["Credentials"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `InstanceAccess.Credentials` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceAccess.Credentials` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_credentials.Deserialize(value["Credentials"]);
@@ -56,7 +55,7 @@ CoreInternalOutcome InstanceAccess::Deserialize(const Value &value)
     {
         if (!value["FleetId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceAccess.FleetId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceAccess.FleetId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fleetId = string(value["FleetId"].GetString());
         m_fleetIdHasBeenSet = true;
@@ -66,7 +65,7 @@ CoreInternalOutcome InstanceAccess::Deserialize(const Value &value)
     {
         if (!value["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceAccess.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceAccess.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(value["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -76,7 +75,7 @@ CoreInternalOutcome InstanceAccess::Deserialize(const Value &value)
     {
         if (!value["IpAddress"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceAccess.IpAddress` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceAccess.IpAddress` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ipAddress = string(value["IpAddress"].GetString());
         m_ipAddressHasBeenSet = true;
@@ -86,7 +85,7 @@ CoreInternalOutcome InstanceAccess::Deserialize(const Value &value)
     {
         if (!value["OperatingSystem"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceAccess.OperatingSystem` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceAccess.OperatingSystem` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_operatingSystem = string(value["OperatingSystem"].GetString());
         m_operatingSystemHasBeenSet = true;
@@ -96,48 +95,48 @@ CoreInternalOutcome InstanceAccess::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void InstanceAccess::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void InstanceAccess::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_credentialsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Credentials";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_credentials.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_fleetIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FleetId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fleetId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fleetId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ipAddressHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IpAddress";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ipAddress.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ipAddress.c_str(), allocator).Move(), allocator);
     }
 
     if (m_operatingSystemHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OperatingSystem";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_operatingSystem.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_operatingSystem.c_str(), allocator).Move(), allocator);
     }
 
 }

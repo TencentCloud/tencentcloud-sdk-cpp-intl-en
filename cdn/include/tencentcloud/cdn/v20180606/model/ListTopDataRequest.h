@@ -104,37 +104,33 @@ Data generated before or at 23:59:59 on the end date will be returned
 
                     /**
                      * 获取Object representing the sort criteria. The following objects are supported:
-url: sorts by access URL (including the query string). Supported filters are `flux` and `request`
-path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (whitelist-based feature)
-district: sorts by district. Supported filters are `flux` and `request`
-isp: sorts by ISP. Supported filters are `flux` and `request`
-host: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, 2XX, 3XX, 4XX, 5XX, and `statusCode`
-originHost: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, `origin_2XX`, `origin_3XX`, `origin_4XX`, `origin_5XX`, and `OriginStatusCode`
+`url`: sorts by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
+`district`: sorts by province, country, or region. Supported filters are `flux` and `request`.
+`isp`: sorts by ISP. Supported filters are `flux` and `request`.
+`host`: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
+`originHost`: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX).
                      * @return Metric Object representing the sort criteria. The following objects are supported:
-url: sorts by access URL (including the query string). Supported filters are `flux` and `request`
-path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (whitelist-based feature)
-district: sorts by district. Supported filters are `flux` and `request`
-isp: sorts by ISP. Supported filters are `flux` and `request`
-host: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, 2XX, 3XX, 4XX, 5XX, and `statusCode`
-originHost: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, `origin_2XX`, `origin_3XX`, `origin_4XX`, `origin_5XX`, and `OriginStatusCode`
+`url`: sorts by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
+`district`: sorts by province, country, or region. Supported filters are `flux` and `request`.
+`isp`: sorts by ISP. Supported filters are `flux` and `request`.
+`host`: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
+`originHost`: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX).
                      */
                     std::string GetMetric() const;
 
                     /**
                      * 设置Object representing the sort criteria. The following objects are supported:
-url: sorts by access URL (including the query string). Supported filters are `flux` and `request`
-path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (whitelist-based feature)
-district: sorts by district. Supported filters are `flux` and `request`
-isp: sorts by ISP. Supported filters are `flux` and `request`
-host: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, 2XX, 3XX, 4XX, 5XX, and `statusCode`
-originHost: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, `origin_2XX`, `origin_3XX`, `origin_4XX`, `origin_5XX`, and `OriginStatusCode`
+`url`: sorts by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
+`district`: sorts by province, country, or region. Supported filters are `flux` and `request`.
+`isp`: sorts by ISP. Supported filters are `flux` and `request`.
+`host`: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
+`originHost`: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX).
                      * @param Metric Object representing the sort criteria. The following objects are supported:
-url: sorts by access URL (including the query string). Supported filters are `flux` and `request`
-path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (whitelist-based feature)
-district: sorts by district. Supported filters are `flux` and `request`
-isp: sorts by ISP. Supported filters are `flux` and `request`
-host: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, 2XX, 3XX, 4XX, 5XX, and `statusCode`
-originHost: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, `origin_2XX`, `origin_3XX`, `origin_4XX`, `origin_5XX`, and `OriginStatusCode`
+`url`: sorts by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
+`district`: sorts by province, country, or region. Supported filters are `flux` and `request`.
+`isp`: sorts by ISP. Supported filters are `flux` and `request`.
+`host`: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
+`originHost`: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX).
                      */
                     void SetMetric(const std::string& _metric);
 
@@ -259,17 +255,17 @@ Please note that if domain names are specified, this parameter will be ignored.
                     bool ProjectHasBeenSet() const;
 
                     /**
-                     * 获取Default is `false` for multi–domain name queries, which returns sorted results of all domain names. 
+                     * 获取Default is `false` for multi-domain name queries, which returns sorted results of all domain names. 
 If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `request`, it can be set to `true` to return the sorted results of each domain.
-                     * @return Detail Default is `false` for multi–domain name queries, which returns sorted results of all domain names. 
+                     * @return Detail Default is `false` for multi-domain name queries, which returns sorted results of all domain names. 
 If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `request`, it can be set to `true` to return the sorted results of each domain.
                      */
                     bool GetDetail() const;
 
                     /**
-                     * 设置Default is `false` for multi–domain name queries, which returns sorted results of all domain names. 
+                     * 设置Default is `false` for multi-domain name queries, which returns sorted results of all domain names. 
 If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `request`, it can be set to `true` to return the sorted results of each domain.
-                     * @param Detail Default is `false` for multi–domain name queries, which returns sorted results of all domain names. 
+                     * @param Detail Default is `false` for multi-domain name queries, which returns sorted results of all domain names. 
 If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `request`, it can be set to `true` to return the sorted results of each domain.
                      */
                     void SetDetail(const bool& _detail);
@@ -350,6 +346,42 @@ client: specifies to query data of the client region (where a user request devic
                      */
                     bool AreaTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     * @return Product Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     */
+                    std::string GetProduct() const;
+
+                    /**
+                     * 设置Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     * @param Product Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     */
+                    void SetProduct(const std::string& _product);
+
+                    /**
+                     * 判断参数 Product 是否已赋值
+                     * @return Product 是否已赋值
+                     */
+                    bool ProductHasBeenSet() const;
+
+                    /**
+                     * 获取Returns the first N data entries. The default value is 100 if this parameter is not specified, whereas 1000 if `Metric` is `url`.
+                     * @return Limit Returns the first N data entries. The default value is 100 if this parameter is not specified, whereas 1000 if `Metric` is `url`.
+                     */
+                    int64_t GetLimit() const;
+
+                    /**
+                     * 设置Returns the first N data entries. The default value is 100 if this parameter is not specified, whereas 1000 if `Metric` is `url`.
+                     * @param Limit Returns the first N data entries. The default value is 100 if this parameter is not specified, whereas 1000 if `Metric` is `url`.
+                     */
+                    void SetLimit(const int64_t& _limit);
+
+                    /**
+                     * 判断参数 Limit 是否已赋值
+                     * @return Limit 是否已赋值
+                     */
+                    bool LimitHasBeenSet() const;
+
                 private:
 
                     /**
@@ -372,12 +404,11 @@ Data generated before or at 23:59:59 on the end date will be returned
 
                     /**
                      * Object representing the sort criteria. The following objects are supported:
-url: sorts by access URL (including the query string). Supported filters are `flux` and `request`
-path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (whitelist-based feature)
-district: sorts by district. Supported filters are `flux` and `request`
-isp: sorts by ISP. Supported filters are `flux` and `request`
-host: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, 2XX, 3XX, 4XX, 5XX, and `statusCode`
-originHost: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, `origin_2XX`, `origin_3XX`, `origin_4XX`, `origin_5XX`, and `OriginStatusCode`
+`url`: sorts by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
+`district`: sorts by province, country, or region. Supported filters are `flux` and `request`.
+`isp`: sorts by ISP. Supported filters are `flux` and `request`.
+`host`: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
+`originHost`: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX).
                      */
                     std::string m_metric;
                     bool m_metricHasBeenSet;
@@ -416,7 +447,7 @@ Please note that if domain names are specified, this parameter will be ignored.
                     bool m_projectHasBeenSet;
 
                     /**
-                     * Default is `false` for multi–domain name queries, which returns sorted results of all domain names. 
+                     * Default is `false` for multi-domain name queries, which returns sorted results of all domain names. 
 If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `request`, it can be set to `true` to return the sorted results of each domain.
                      */
                     bool m_detail;
@@ -443,6 +474,18 @@ client: specifies to query data of the client region (where a user request devic
                      */
                     std::string m_areaType;
                     bool m_areaTypeHasBeenSet;
+
+                    /**
+                     * Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     */
+                    std::string m_product;
+                    bool m_productHasBeenSet;
+
+                    /**
+                     * Returns the first N data entries. The default value is 100 if this parameter is not specified, whereas 1000 if `Metric` is `url`.
+                     */
+                    int64_t m_limit;
+                    bool m_limitHasBeenSet;
 
                 };
             }

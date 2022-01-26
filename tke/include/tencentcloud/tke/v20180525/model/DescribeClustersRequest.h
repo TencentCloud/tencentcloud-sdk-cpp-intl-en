@@ -102,14 +102,126 @@ all clusters under the account will be obtained)
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filter condition. Currently, only filtering by a single ClusterName is supported
-                     * @return Filters Filter condition. Currently, only filtering by a single ClusterName is supported
+                     * 获取·  ClusterName
+    Filters by the cluster name
+    Type: String
+    Required: no
+
+·  Tags
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
+
+·  vpc-id
+    Filters by the VPC ID
+    Type: String
+    Required: no
+
+·  tag-key
+    Filters by the tag key
+    Type: String
+    Required: no
+
+·  tag-value
+    Filters by the tag value
+    Type: String
+    Required: no
+
+·  tag:tag-key
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
+                     * @return Filters ·  ClusterName
+    Filters by the cluster name
+    Type: String
+    Required: no
+
+·  Tags
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
+
+·  vpc-id
+    Filters by the VPC ID
+    Type: String
+    Required: no
+
+·  tag-key
+    Filters by the tag key
+    Type: String
+    Required: no
+
+·  tag-value
+    Filters by the tag value
+    Type: String
+    Required: no
+
+·  tag:tag-key
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter condition. Currently, only filtering by a single ClusterName is supported
-                     * @param Filters Filter condition. Currently, only filtering by a single ClusterName is supported
+                     * 设置·  ClusterName
+    Filters by the cluster name
+    Type: String
+    Required: no
+
+·  Tags
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
+
+·  vpc-id
+    Filters by the VPC ID
+    Type: String
+    Required: no
+
+·  tag-key
+    Filters by the tag key
+    Type: String
+    Required: no
+
+·  tag-value
+    Filters by the tag value
+    Type: String
+    Required: no
+
+·  tag:tag-key
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
+                     * @param Filters ·  ClusterName
+    Filters by the cluster name
+    Type: String
+    Required: no
+
+·  Tags
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
+
+·  vpc-id
+    Filters by the VPC ID
+    Type: String
+    Required: no
+
+·  tag-key
+    Filters by the tag key
+    Type: String
+    Required: no
+
+·  tag-value
+    Filters by the tag value
+    Type: String
+    Required: no
+
+·  tag:tag-key
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -118,6 +230,24 @@ all clusters under the account will be obtained)
                      * @return Filters 是否已赋值
                      */
                     bool FiltersHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster type, such as `MANAGED_CLUSTER`
+                     * @return ClusterType Cluster type, such as `MANAGED_CLUSTER`
+                     */
+                    std::string GetClusterType() const;
+
+                    /**
+                     * 设置Cluster type, such as `MANAGED_CLUSTER`
+                     * @param ClusterType Cluster type, such as `MANAGED_CLUSTER`
+                     */
+                    void SetClusterType(const std::string& _clusterType);
+
+                    /**
+                     * 判断参数 ClusterType 是否已赋值
+                     * @return ClusterType 是否已赋值
+                     */
+                    bool ClusterTypeHasBeenSet() const;
 
                 private:
 
@@ -141,10 +271,44 @@ all clusters under the account will be obtained)
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filter condition. Currently, only filtering by a single ClusterName is supported
+                     * ·  ClusterName
+    Filters by the cluster name
+    Type: String
+    Required: no
+
+·  Tags
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
+
+·  vpc-id
+    Filters by the VPC ID
+    Type: String
+    Required: no
+
+·  tag-key
+    Filters by the tag key
+    Type: String
+    Required: no
+
+·  tag-value
+    Filters by the tag value
+    Type: String
+    Required: no
+
+·  tag:tag-key
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
+
+                    /**
+                     * Cluster type, such as `MANAGED_CLUSTER`
+                     */
+                    std::string m_clusterType;
+                    bool m_clusterTypeHasBeenSet;
 
                 };
             }

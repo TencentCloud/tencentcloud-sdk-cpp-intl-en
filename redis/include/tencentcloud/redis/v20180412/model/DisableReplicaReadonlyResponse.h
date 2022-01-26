@@ -40,27 +40,31 @@ namespace TencentCloud
                     DisableReplicaReadonlyResponse();
                     ~DisableReplicaReadonlyResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取ERROR: failure; OK: success
-                     * @return Status ERROR: failure; OK: success
+                     * 获取Task ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return TaskId Task ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
-                    std::string GetStatus() const;
+                    int64_t GetTaskId() const;
 
                     /**
-                     * 判断参数 Status 是否已赋值
-                     * @return Status 是否已赋值
+                     * 判断参数 TaskId 是否已赋值
+                     * @return TaskId 是否已赋值
                      */
-                    bool StatusHasBeenSet() const;
+                    bool TaskIdHasBeenSet() const;
 
                 private:
 
                     /**
-                     * ERROR: failure; OK: success
+                     * Task ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
-                    std::string m_status;
-                    bool m_statusHasBeenSet;
+                    int64_t m_taskId;
+                    bool m_taskIdHasBeenSet;
 
                 };
             }

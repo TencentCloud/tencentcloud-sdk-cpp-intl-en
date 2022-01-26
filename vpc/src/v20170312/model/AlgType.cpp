@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 AlgType::AlgType() :
@@ -27,7 +26,7 @@ AlgType::AlgType() :
 {
 }
 
-CoreInternalOutcome AlgType::Deserialize(const Value &value)
+CoreInternalOutcome AlgType::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome AlgType::Deserialize(const Value &value)
     {
         if (!value["Ftp"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `AlgType.Ftp` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AlgType.Ftp` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_ftp = value["Ftp"].GetBool();
         m_ftpHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome AlgType::Deserialize(const Value &value)
     {
         if (!value["Sip"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `AlgType.Sip` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AlgType.Sip` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_sip = value["Sip"].GetBool();
         m_sipHasBeenSet = true;
@@ -56,12 +55,12 @@ CoreInternalOutcome AlgType::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void AlgType::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AlgType::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_ftpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Ftp";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_ftp, allocator);
@@ -69,7 +68,7 @@ void AlgType::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_sipHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Sip";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_sip, allocator);

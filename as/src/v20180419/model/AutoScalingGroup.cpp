@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::As::V20180419::Model;
-using namespace rapidjson;
 using namespace std;
 
 AutoScalingGroup::AutoScalingGroup() :
@@ -47,11 +46,16 @@ AutoScalingGroup::AutoScalingGroup() :
     m_tagsHasBeenSet(false),
     m_serviceSettingsHasBeenSet(false),
     m_ipv6AddressCountHasBeenSet(false),
-    m_multiZoneSubnetPolicyHasBeenSet(false)
+    m_multiZoneSubnetPolicyHasBeenSet(false),
+    m_healthCheckTypeHasBeenSet(false),
+    m_loadBalancerHealthCheckGracePeriodHasBeenSet(false),
+    m_instanceAllocationPolicyHasBeenSet(false),
+    m_spotMixedAllocationPolicyHasBeenSet(false),
+    m_capacityRebalanceHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
+CoreInternalOutcome AutoScalingGroup::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -60,7 +64,7 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     {
         if (!value["AutoScalingGroupId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.AutoScalingGroupId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.AutoScalingGroupId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_autoScalingGroupId = string(value["AutoScalingGroupId"].GetString());
         m_autoScalingGroupIdHasBeenSet = true;
@@ -70,7 +74,7 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     {
         if (!value["AutoScalingGroupName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.AutoScalingGroupName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.AutoScalingGroupName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_autoScalingGroupName = string(value["AutoScalingGroupName"].GetString());
         m_autoScalingGroupNameHasBeenSet = true;
@@ -80,7 +84,7 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     {
         if (!value["AutoScalingGroupStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.AutoScalingGroupStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.AutoScalingGroupStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_autoScalingGroupStatus = string(value["AutoScalingGroupStatus"].GetString());
         m_autoScalingGroupStatusHasBeenSet = true;
@@ -90,7 +94,7 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     {
         if (!value["CreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createdTime = string(value["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
@@ -100,7 +104,7 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     {
         if (!value["DefaultCooldown"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.DefaultCooldown` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.DefaultCooldown` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_defaultCooldown = value["DefaultCooldown"].GetInt64();
         m_defaultCooldownHasBeenSet = true;
@@ -110,7 +114,7 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     {
         if (!value["DesiredCapacity"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.DesiredCapacity` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.DesiredCapacity` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_desiredCapacity = value["DesiredCapacity"].GetInt64();
         m_desiredCapacityHasBeenSet = true;
@@ -120,7 +124,7 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     {
         if (!value["EnabledStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.EnabledStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.EnabledStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_enabledStatus = string(value["EnabledStatus"].GetString());
         m_enabledStatusHasBeenSet = true;
@@ -129,10 +133,10 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     if (value.HasMember("ForwardLoadBalancerSet") && !value["ForwardLoadBalancerSet"].IsNull())
     {
         if (!value["ForwardLoadBalancerSet"].IsArray())
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.ForwardLoadBalancerSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.ForwardLoadBalancerSet` is not array type"));
 
-        const Value &tmpValue = value["ForwardLoadBalancerSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["ForwardLoadBalancerSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             ForwardLoadBalancer item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -150,7 +154,7 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     {
         if (!value["InstanceCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.InstanceCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.InstanceCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_instanceCount = value["InstanceCount"].GetInt64();
         m_instanceCountHasBeenSet = true;
@@ -160,7 +164,7 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     {
         if (!value["InServiceInstanceCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.InServiceInstanceCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.InServiceInstanceCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_inServiceInstanceCount = value["InServiceInstanceCount"].GetInt64();
         m_inServiceInstanceCountHasBeenSet = true;
@@ -170,7 +174,7 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     {
         if (!value["LaunchConfigurationId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.LaunchConfigurationId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.LaunchConfigurationId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_launchConfigurationId = string(value["LaunchConfigurationId"].GetString());
         m_launchConfigurationIdHasBeenSet = true;
@@ -180,7 +184,7 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     {
         if (!value["LaunchConfigurationName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.LaunchConfigurationName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.LaunchConfigurationName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_launchConfigurationName = string(value["LaunchConfigurationName"].GetString());
         m_launchConfigurationNameHasBeenSet = true;
@@ -189,10 +193,10 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     if (value.HasMember("LoadBalancerIdSet") && !value["LoadBalancerIdSet"].IsNull())
     {
         if (!value["LoadBalancerIdSet"].IsArray())
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.LoadBalancerIdSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.LoadBalancerIdSet` is not array type"));
 
-        const Value &tmpValue = value["LoadBalancerIdSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["LoadBalancerIdSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_loadBalancerIdSet.push_back((*itr).GetString());
         }
@@ -203,7 +207,7 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     {
         if (!value["MaxSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.MaxSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.MaxSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_maxSize = value["MaxSize"].GetInt64();
         m_maxSizeHasBeenSet = true;
@@ -213,7 +217,7 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     {
         if (!value["MinSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.MinSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.MinSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_minSize = value["MinSize"].GetInt64();
         m_minSizeHasBeenSet = true;
@@ -223,7 +227,7 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     {
         if (!value["ProjectId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.ProjectId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.ProjectId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_projectId = value["ProjectId"].GetInt64();
         m_projectIdHasBeenSet = true;
@@ -232,10 +236,10 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     if (value.HasMember("SubnetIdSet") && !value["SubnetIdSet"].IsNull())
     {
         if (!value["SubnetIdSet"].IsArray())
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.SubnetIdSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.SubnetIdSet` is not array type"));
 
-        const Value &tmpValue = value["SubnetIdSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["SubnetIdSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_subnetIdSet.push_back((*itr).GetString());
         }
@@ -245,10 +249,10 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     if (value.HasMember("TerminationPolicySet") && !value["TerminationPolicySet"].IsNull())
     {
         if (!value["TerminationPolicySet"].IsArray())
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.TerminationPolicySet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.TerminationPolicySet` is not array type"));
 
-        const Value &tmpValue = value["TerminationPolicySet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["TerminationPolicySet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_terminationPolicySet.push_back((*itr).GetString());
         }
@@ -259,7 +263,7 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     {
         if (!value["VpcId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.VpcId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.VpcId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpcId = string(value["VpcId"].GetString());
         m_vpcIdHasBeenSet = true;
@@ -268,10 +272,10 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     if (value.HasMember("ZoneSet") && !value["ZoneSet"].IsNull())
     {
         if (!value["ZoneSet"].IsArray())
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.ZoneSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.ZoneSet` is not array type"));
 
-        const Value &tmpValue = value["ZoneSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["ZoneSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_zoneSet.push_back((*itr).GetString());
         }
@@ -282,7 +286,7 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     {
         if (!value["RetryPolicy"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.RetryPolicy` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.RetryPolicy` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_retryPolicy = string(value["RetryPolicy"].GetString());
         m_retryPolicyHasBeenSet = true;
@@ -292,7 +296,7 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     {
         if (!value["InActivityStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.InActivityStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.InActivityStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_inActivityStatus = string(value["InActivityStatus"].GetString());
         m_inActivityStatusHasBeenSet = true;
@@ -301,10 +305,10 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     if (value.HasMember("Tags") && !value["Tags"].IsNull())
     {
         if (!value["Tags"].IsArray())
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.Tags` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.Tags` is not array type"));
 
-        const Value &tmpValue = value["Tags"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Tags"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             Tag item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -322,7 +326,7 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     {
         if (!value["ServiceSettings"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.ServiceSettings` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.ServiceSettings` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_serviceSettings.Deserialize(value["ServiceSettings"]);
@@ -339,7 +343,7 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     {
         if (!value["Ipv6AddressCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.Ipv6AddressCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.Ipv6AddressCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_ipv6AddressCount = value["Ipv6AddressCount"].GetInt64();
         m_ipv6AddressCountHasBeenSet = true;
@@ -349,54 +353,111 @@ CoreInternalOutcome AutoScalingGroup::Deserialize(const Value &value)
     {
         if (!value["MultiZoneSubnetPolicy"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AutoScalingGroup.MultiZoneSubnetPolicy` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.MultiZoneSubnetPolicy` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_multiZoneSubnetPolicy = string(value["MultiZoneSubnetPolicy"].GetString());
         m_multiZoneSubnetPolicyHasBeenSet = true;
+    }
+
+    if (value.HasMember("HealthCheckType") && !value["HealthCheckType"].IsNull())
+    {
+        if (!value["HealthCheckType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.HealthCheckType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_healthCheckType = string(value["HealthCheckType"].GetString());
+        m_healthCheckTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("LoadBalancerHealthCheckGracePeriod") && !value["LoadBalancerHealthCheckGracePeriod"].IsNull())
+    {
+        if (!value["LoadBalancerHealthCheckGracePeriod"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.LoadBalancerHealthCheckGracePeriod` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_loadBalancerHealthCheckGracePeriod = value["LoadBalancerHealthCheckGracePeriod"].GetUint64();
+        m_loadBalancerHealthCheckGracePeriodHasBeenSet = true;
+    }
+
+    if (value.HasMember("InstanceAllocationPolicy") && !value["InstanceAllocationPolicy"].IsNull())
+    {
+        if (!value["InstanceAllocationPolicy"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.InstanceAllocationPolicy` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_instanceAllocationPolicy = string(value["InstanceAllocationPolicy"].GetString());
+        m_instanceAllocationPolicyHasBeenSet = true;
+    }
+
+    if (value.HasMember("SpotMixedAllocationPolicy") && !value["SpotMixedAllocationPolicy"].IsNull())
+    {
+        if (!value["SpotMixedAllocationPolicy"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.SpotMixedAllocationPolicy` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_spotMixedAllocationPolicy.Deserialize(value["SpotMixedAllocationPolicy"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_spotMixedAllocationPolicyHasBeenSet = true;
+    }
+
+    if (value.HasMember("CapacityRebalance") && !value["CapacityRebalance"].IsNull())
+    {
+        if (!value["CapacityRebalance"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `AutoScalingGroup.CapacityRebalance` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_capacityRebalance = value["CapacityRebalance"].GetBool();
+        m_capacityRebalanceHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void AutoScalingGroup::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AutoScalingGroup::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_autoScalingGroupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AutoScalingGroupId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_autoScalingGroupId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_autoScalingGroupId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_autoScalingGroupNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AutoScalingGroupName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_autoScalingGroupName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_autoScalingGroupName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_autoScalingGroupStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AutoScalingGroupStatus";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_autoScalingGroupStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_autoScalingGroupStatus.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createdTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createdTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_defaultCooldownHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DefaultCooldown";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_defaultCooldown, allocator);
@@ -404,7 +465,7 @@ void AutoScalingGroup::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_desiredCapacityHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DesiredCapacity";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_desiredCapacity, allocator);
@@ -412,30 +473,30 @@ void AutoScalingGroup::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_enabledStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EnabledStatus";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_enabledStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_enabledStatus.c_str(), allocator).Move(), allocator);
     }
 
     if (m_forwardLoadBalancerSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ForwardLoadBalancerSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_forwardLoadBalancerSet.begin(); itr != m_forwardLoadBalancerSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_instanceCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_instanceCount, allocator);
@@ -443,7 +504,7 @@ void AutoScalingGroup::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_inServiceInstanceCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InServiceInstanceCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_inServiceInstanceCount, allocator);
@@ -451,36 +512,36 @@ void AutoScalingGroup::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_launchConfigurationIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LaunchConfigurationId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_launchConfigurationId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_launchConfigurationId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_launchConfigurationNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LaunchConfigurationName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_launchConfigurationName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_launchConfigurationName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_loadBalancerIdSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LoadBalancerIdSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_loadBalancerIdSet.begin(); itr != m_loadBalancerIdSet.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_maxSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaxSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_maxSize, allocator);
@@ -488,7 +549,7 @@ void AutoScalingGroup::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_minSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MinSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_minSize, allocator);
@@ -496,7 +557,7 @@ void AutoScalingGroup::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_projectIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProjectId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_projectId, allocator);
@@ -504,94 +565,94 @@ void AutoScalingGroup::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_subnetIdSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubnetIdSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_subnetIdSet.begin(); itr != m_subnetIdSet.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_terminationPolicySetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TerminationPolicySet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_terminationPolicySet.begin(); itr != m_terminationPolicySet.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_vpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vpcId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpcId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_zoneSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ZoneSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_zoneSet.begin(); itr != m_zoneSet.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_retryPolicyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RetryPolicy";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_retryPolicy.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_retryPolicy.c_str(), allocator).Move(), allocator);
     }
 
     if (m_inActivityStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InActivityStatus";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_inActivityStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_inActivityStatus.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tagsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Tags";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_serviceSettingsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceSettings";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_serviceSettings.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_ipv6AddressCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Ipv6AddressCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_ipv6AddressCount, allocator);
@@ -599,10 +660,51 @@ void AutoScalingGroup::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_multiZoneSubnetPolicyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MultiZoneSubnetPolicy";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_multiZoneSubnetPolicy.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_multiZoneSubnetPolicy.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_healthCheckTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HealthCheckType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_healthCheckType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_loadBalancerHealthCheckGracePeriodHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LoadBalancerHealthCheckGracePeriod";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_loadBalancerHealthCheckGracePeriod, allocator);
+    }
+
+    if (m_instanceAllocationPolicyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceAllocationPolicy";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceAllocationPolicy.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_spotMixedAllocationPolicyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SpotMixedAllocationPolicy";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_spotMixedAllocationPolicy.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_capacityRebalanceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CapacityRebalance";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_capacityRebalance, allocator);
     }
 
 }
@@ -1022,5 +1124,85 @@ void AutoScalingGroup::SetMultiZoneSubnetPolicy(const string& _multiZoneSubnetPo
 bool AutoScalingGroup::MultiZoneSubnetPolicyHasBeenSet() const
 {
     return m_multiZoneSubnetPolicyHasBeenSet;
+}
+
+string AutoScalingGroup::GetHealthCheckType() const
+{
+    return m_healthCheckType;
+}
+
+void AutoScalingGroup::SetHealthCheckType(const string& _healthCheckType)
+{
+    m_healthCheckType = _healthCheckType;
+    m_healthCheckTypeHasBeenSet = true;
+}
+
+bool AutoScalingGroup::HealthCheckTypeHasBeenSet() const
+{
+    return m_healthCheckTypeHasBeenSet;
+}
+
+uint64_t AutoScalingGroup::GetLoadBalancerHealthCheckGracePeriod() const
+{
+    return m_loadBalancerHealthCheckGracePeriod;
+}
+
+void AutoScalingGroup::SetLoadBalancerHealthCheckGracePeriod(const uint64_t& _loadBalancerHealthCheckGracePeriod)
+{
+    m_loadBalancerHealthCheckGracePeriod = _loadBalancerHealthCheckGracePeriod;
+    m_loadBalancerHealthCheckGracePeriodHasBeenSet = true;
+}
+
+bool AutoScalingGroup::LoadBalancerHealthCheckGracePeriodHasBeenSet() const
+{
+    return m_loadBalancerHealthCheckGracePeriodHasBeenSet;
+}
+
+string AutoScalingGroup::GetInstanceAllocationPolicy() const
+{
+    return m_instanceAllocationPolicy;
+}
+
+void AutoScalingGroup::SetInstanceAllocationPolicy(const string& _instanceAllocationPolicy)
+{
+    m_instanceAllocationPolicy = _instanceAllocationPolicy;
+    m_instanceAllocationPolicyHasBeenSet = true;
+}
+
+bool AutoScalingGroup::InstanceAllocationPolicyHasBeenSet() const
+{
+    return m_instanceAllocationPolicyHasBeenSet;
+}
+
+SpotMixedAllocationPolicy AutoScalingGroup::GetSpotMixedAllocationPolicy() const
+{
+    return m_spotMixedAllocationPolicy;
+}
+
+void AutoScalingGroup::SetSpotMixedAllocationPolicy(const SpotMixedAllocationPolicy& _spotMixedAllocationPolicy)
+{
+    m_spotMixedAllocationPolicy = _spotMixedAllocationPolicy;
+    m_spotMixedAllocationPolicyHasBeenSet = true;
+}
+
+bool AutoScalingGroup::SpotMixedAllocationPolicyHasBeenSet() const
+{
+    return m_spotMixedAllocationPolicyHasBeenSet;
+}
+
+bool AutoScalingGroup::GetCapacityRebalance() const
+{
+    return m_capacityRebalance;
+}
+
+void AutoScalingGroup::SetCapacityRebalance(const bool& _capacityRebalance)
+{
+    m_capacityRebalance = _capacityRebalance;
+    m_capacityRebalanceHasBeenSet = true;
+}
+
+bool AutoScalingGroup::CapacityRebalanceHasBeenSet() const
+{
+    return m_capacityRebalanceHasBeenSet;
 }
 

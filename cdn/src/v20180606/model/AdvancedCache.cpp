@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 AdvancedCache::AdvancedCache() :
@@ -28,7 +27,7 @@ AdvancedCache::AdvancedCache() :
 {
 }
 
-CoreInternalOutcome AdvancedCache::Deserialize(const Value &value)
+CoreInternalOutcome AdvancedCache::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,10 +35,10 @@ CoreInternalOutcome AdvancedCache::Deserialize(const Value &value)
     if (value.HasMember("CacheRules") && !value["CacheRules"].IsNull())
     {
         if (!value["CacheRules"].IsArray())
-            return CoreInternalOutcome(Error("response `AdvancedCache.CacheRules` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `AdvancedCache.CacheRules` is not array type"));
 
-        const Value &tmpValue = value["CacheRules"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["CacheRules"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             AdvanceCacheRule item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -57,7 +56,7 @@ CoreInternalOutcome AdvancedCache::Deserialize(const Value &value)
     {
         if (!value["IgnoreCacheControl"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AdvancedCache.IgnoreCacheControl` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AdvancedCache.IgnoreCacheControl` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ignoreCacheControl = string(value["IgnoreCacheControl"].GetString());
         m_ignoreCacheControlHasBeenSet = true;
@@ -67,7 +66,7 @@ CoreInternalOutcome AdvancedCache::Deserialize(const Value &value)
     {
         if (!value["IgnoreSetCookie"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AdvancedCache.IgnoreSetCookie` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AdvancedCache.IgnoreSetCookie` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ignoreSetCookie = string(value["IgnoreSetCookie"].GetString());
         m_ignoreSetCookieHasBeenSet = true;
@@ -77,38 +76,38 @@ CoreInternalOutcome AdvancedCache::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void AdvancedCache::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AdvancedCache::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_cacheRulesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CacheRules";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_cacheRules.begin(); itr != m_cacheRules.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_ignoreCacheControlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IgnoreCacheControl";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ignoreCacheControl.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ignoreCacheControl.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ignoreSetCookieHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IgnoreSetCookie";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ignoreSetCookie.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ignoreSetCookie.c_str(), allocator).Move(), allocator);
     }
 
 }

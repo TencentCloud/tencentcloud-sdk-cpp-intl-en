@@ -158,25 +158,25 @@ Default value: 1.
 
                     /**
                      * 获取Number of entries per page.
-Maximum value: 100.
-Value range: any integer between 1 and 100.
-Default value: 10.
+Maximum value: 100
+Valid values: integers between 10 and 100
+Default value: 10
                      * @return PageSize Number of entries per page.
-Maximum value: 100.
-Value range: any integer between 1 and 100.
-Default value: 10.
+Maximum value: 100
+Valid values: integers between 10 and 100
+Default value: 10
                      */
                     uint64_t GetPageSize() const;
 
                     /**
                      * 设置Number of entries per page.
-Maximum value: 100.
-Value range: any integer between 1 and 100.
-Default value: 10.
+Maximum value: 100
+Valid values: integers between 10 and 100
+Default value: 10
                      * @param PageSize Number of entries per page.
-Maximum value: 100.
-Value range: any integer between 1 and 100.
-Default value: 10.
+Maximum value: 100
+Valid values: integers between 10 and 100
+Default value: 10
                      */
                     void SetPageSize(const uint64_t& _pageSize);
 
@@ -244,9 +244,9 @@ Default value: 1.
 
                     /**
                      * Number of entries per page.
-Maximum value: 100.
-Value range: any integer between 1 and 100.
-Default value: 10.
+Maximum value: 100
+Valid values: integers between 10 and 100
+Default value: 10
                      */
                     uint64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;

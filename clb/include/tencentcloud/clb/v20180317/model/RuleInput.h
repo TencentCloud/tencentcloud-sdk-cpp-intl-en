@@ -103,14 +103,14 @@ namespace TencentCloud
                     bool SessionExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Health check information
-                     * @return HealthCheck Health check information
+                     * 获取Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
+                     * @return HealthCheck Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
                      */
                     HealthCheck GetHealthCheck() const;
 
                     /**
-                     * 设置Health check information
-                     * @param HealthCheck Health check information
+                     * 设置Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
+                     * @param HealthCheck Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
                      */
                     void SetHealthCheck(const HealthCheck& _healthCheck);
 
@@ -307,7 +307,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                     bool m_sessionExpireTimeHasBeenSet;
 
                     /**
-                     * Health check information
+                     * Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
                      */
                     HealthCheck m_healthCheck;
                     bool m_healthCheckHasBeenSet;

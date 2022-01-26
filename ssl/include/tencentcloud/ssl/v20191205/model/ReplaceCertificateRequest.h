@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Certificate ID.
-                     * @return CertificateId Certificate ID.
+                     * 获取Certificate ID
+                     * @return CertificateId Certificate ID
                      */
                     std::string GetCertificateId() const;
 
                     /**
-                     * 设置Certificate ID.
-                     * @param CertificateId Certificate ID.
+                     * 设置Certificate ID
+                     * @param CertificateId Certificate ID
                      */
                     void SetCertificateId(const std::string& _certificateId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool CertificateIdHasBeenSet() const;
 
                     /**
-                     * 获取Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
-                     * @return ValidType Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
+                     * 获取Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
+                     * @return ValidType Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
                      */
                     std::string GetValidType() const;
 
                     /**
-                     * 设置Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
-                     * @param ValidType Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
+                     * 设置Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
+                     * @param ValidType Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
                      */
                     void SetValidType(const std::string& _validType);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool ValidTypeHasBeenSet() const;
 
                     /**
-                     * 获取Type. Original: original certificate CSR; upload: uploaded manually; online: generated online. The default value is original.
-                     * @return CsrType Type. Original: original certificate CSR; upload: uploaded manually; online: generated online. The default value is original.
+                     * 获取Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
+                     * @return CsrType Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
                      */
                     std::string GetCsrType() const;
 
                     /**
-                     * 设置Type. Original: original certificate CSR; upload: uploaded manually; online: generated online. The default value is original.
-                     * @param CsrType Type. Original: original certificate CSR; upload: uploaded manually; online: generated online. The default value is original.
+                     * 设置Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
+                     * @param CsrType Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
                      */
                     void SetCsrType(const std::string& _csrType);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool CsrTypeHasBeenSet() const;
 
                     /**
-                     * 获取CSR content.
-                     * @return CsrContent CSR content.
+                     * 获取CSR content
+                     * @return CsrContent CSR content
                      */
                     std::string GetCsrContent() const;
 
                     /**
-                     * 设置CSR content.
-                     * @param CsrContent CSR content.
+                     * 设置CSR content
+                     * @param CsrContent CSR content
                      */
                     void SetCsrContent(const std::string& _csrContent);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool CsrContentHasBeenSet() const;
 
                     /**
-                     * 获取Password of the key.
-                     * @return CsrkeyPassword Password of the key.
+                     * 获取Password of the key
+                     * @return CsrkeyPassword Password of the key
                      */
                     std::string GetCsrkeyPassword() const;
 
                     /**
-                     * 设置Password of the key.
-                     * @param CsrkeyPassword Password of the key.
+                     * 设置Password of the key
+                     * @param CsrkeyPassword Password of the key
                      */
                     void SetCsrkeyPassword(const std::string& _csrkeyPassword);
 
@@ -132,37 +132,61 @@ namespace TencentCloud
                      */
                     bool CsrkeyPasswordHasBeenSet() const;
 
+                    /**
+                     * 获取Reissue reason
+                     * @return Reason Reissue reason
+                     */
+                    std::string GetReason() const;
+
+                    /**
+                     * 设置Reissue reason
+                     * @param Reason Reissue reason
+                     */
+                    void SetReason(const std::string& _reason);
+
+                    /**
+                     * 判断参数 Reason 是否已赋值
+                     * @return Reason 是否已赋值
+                     */
+                    bool ReasonHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Certificate ID.
+                     * Certificate ID
                      */
                     std::string m_certificateId;
                     bool m_certificateIdHasBeenSet;
 
                     /**
-                     * Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
+                     * Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
                      */
                     std::string m_validType;
                     bool m_validTypeHasBeenSet;
 
                     /**
-                     * Type. Original: original certificate CSR; upload: uploaded manually; online: generated online. The default value is original.
+                     * Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
                      */
                     std::string m_csrType;
                     bool m_csrTypeHasBeenSet;
 
                     /**
-                     * CSR content.
+                     * CSR content
                      */
                     std::string m_csrContent;
                     bool m_csrContentHasBeenSet;
 
                     /**
-                     * Password of the key.
+                     * Password of the key
                      */
                     std::string m_csrkeyPassword;
                     bool m_csrkeyPasswordHasBeenSet;
+
+                    /**
+                     * Reissue reason
+                     */
+                    std::string m_reason;
+                    bool m_reasonHasBeenSet;
 
                 };
             }

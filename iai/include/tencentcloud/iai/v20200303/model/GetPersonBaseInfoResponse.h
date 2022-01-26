@@ -40,6 +40,7 @@ namespace TencentCloud
                     GetPersonBaseInfoResponse();
                     ~GetPersonBaseInfoResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -55,8 +56,8 @@ namespace TencentCloud
                     bool PersonNameHasBeenSet() const;
 
                     /**
-                     * 获取Person gender
-                     * @return Gender Person gender
+                     * 获取Person gender. 0: empty; 1: male; 2: female.
+                     * @return Gender Person gender. 0: empty; 1: male; 2: female.
                      */
                     int64_t GetGender() const;
 
@@ -87,7 +88,7 @@ namespace TencentCloud
                     bool m_personNameHasBeenSet;
 
                     /**
-                     * Person gender
+                     * Person gender. 0: empty; 1: male; 2: female.
                      */
                     int64_t m_gender;
                     bool m_genderHasBeenSet;

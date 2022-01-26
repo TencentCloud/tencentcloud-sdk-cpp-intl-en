@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cvm::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 InternetChargeTypeConfig::InternetChargeTypeConfig() :
@@ -27,7 +26,7 @@ InternetChargeTypeConfig::InternetChargeTypeConfig() :
 {
 }
 
-CoreInternalOutcome InternetChargeTypeConfig::Deserialize(const Value &value)
+CoreInternalOutcome InternetChargeTypeConfig::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome InternetChargeTypeConfig::Deserialize(const Value &value)
     {
         if (!value["InternetChargeType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InternetChargeTypeConfig.InternetChargeType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InternetChargeTypeConfig.InternetChargeType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_internetChargeType = string(value["InternetChargeType"].GetString());
         m_internetChargeTypeHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome InternetChargeTypeConfig::Deserialize(const Value &value)
     {
         if (!value["Description"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InternetChargeTypeConfig.Description` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InternetChargeTypeConfig.Description` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_description = string(value["Description"].GetString());
         m_descriptionHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome InternetChargeTypeConfig::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void InternetChargeTypeConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void InternetChargeTypeConfig::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_internetChargeTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InternetChargeType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_internetChargeType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_internetChargeType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_descriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Description";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_description.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
     }
 
 }

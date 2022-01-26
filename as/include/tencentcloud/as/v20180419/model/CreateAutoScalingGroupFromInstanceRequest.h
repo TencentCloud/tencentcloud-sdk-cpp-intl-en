@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取The minimum number of instances. Value range: 0 - 2000.
-                     * @return MinSize The minimum number of instances. Value range: 0 - 2000.
+                     * 获取The minimum number of instances. Value range: 0-2000.
+                     * @return MinSize The minimum number of instances. Value range: 0-2000.
                      */
                     int64_t GetMinSize() const;
 
                     /**
-                     * 设置The minimum number of instances. Value range: 0 - 2000.
-                     * @param MinSize The minimum number of instances. Value range: 0 - 2000.
+                     * 设置The minimum number of instances. Value range: 0-2000.
+                     * @param MinSize The minimum number of instances. Value range: 0-2000.
                      */
                     void SetMinSize(const int64_t& _minSize);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool MinSizeHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of instances. Value range: 0 - 2000.
-                     * @return MaxSize The maximum number of instances. Value range: 0 - 2000.
+                     * 获取The maximum number of instances. Value range: 0-2000.
+                     * @return MaxSize The maximum number of instances. Value range: 0-2000.
                      */
                     int64_t GetMaxSize() const;
 
                     /**
-                     * 设置The maximum number of instances. Value range: 0 - 2000.
-                     * @param MaxSize The maximum number of instances. Value range: 0 - 2000.
+                     * 设置The maximum number of instances. Value range: 0-2000.
+                     * @param MaxSize The maximum number of instances. Value range: 0-2000.
                      */
                     void SetMaxSize(const int64_t& _maxSize);
 
@@ -165,13 +165,13 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * The minimum number of instances. Value range: 0 - 2000.
+                     * The minimum number of instances. Value range: 0-2000.
                      */
                     int64_t m_minSize;
                     bool m_minSizeHasBeenSet;
 
                     /**
-                     * The maximum number of instances. Value range: 0 - 2000.
+                     * The maximum number of instances. Value range: 0-2000.
                      */
                     int64_t m_maxSize;
                     bool m_maxSizeHasBeenSet;

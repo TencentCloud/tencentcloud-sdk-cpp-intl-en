@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribePayTypeResponse::DescribePayTypeResponse() :
@@ -35,20 +34,20 @@ DescribePayTypeResponse::DescribePayTypeResponse() :
 
 CoreInternalOutcome DescribePayTypeResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -59,11 +58,11 @@ CoreInternalOutcome DescribePayTypeResponse::Deserialize(const string &payload)
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -71,7 +70,7 @@ CoreInternalOutcome DescribePayTypeResponse::Deserialize(const string &payload)
     {
         if (!rsp["PayType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PayType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PayType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_payType = string(rsp["PayType"].GetString());
         m_payTypeHasBeenSet = true;
@@ -81,7 +80,7 @@ CoreInternalOutcome DescribePayTypeResponse::Deserialize(const string &payload)
     {
         if (!rsp["BillingCycle"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BillingCycle` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BillingCycle` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_billingCycle = string(rsp["BillingCycle"].GetString());
         m_billingCycleHasBeenSet = true;
@@ -91,7 +90,7 @@ CoreInternalOutcome DescribePayTypeResponse::Deserialize(const string &payload)
     {
         if (!rsp["StatType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `StatType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `StatType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_statType = string(rsp["StatType"].GetString());
         m_statTypeHasBeenSet = true;
@@ -101,7 +100,7 @@ CoreInternalOutcome DescribePayTypeResponse::Deserialize(const string &payload)
     {
         if (!rsp["RegionType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RegionType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RegionType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_regionType = string(rsp["RegionType"].GetString());
         m_regionTypeHasBeenSet = true;
@@ -111,7 +110,7 @@ CoreInternalOutcome DescribePayTypeResponse::Deserialize(const string &payload)
     {
         if (!rsp["CurrentPayType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CurrentPayType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CurrentPayType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_currentPayType = string(rsp["CurrentPayType"].GetString());
         m_currentPayTypeHasBeenSet = true;
@@ -119,6 +118,63 @@ CoreInternalOutcome DescribePayTypeResponse::Deserialize(const string &payload)
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribePayTypeResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_payTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PayType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_payType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_billingCycleHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BillingCycle";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_billingCycle.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_statTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StatType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_statType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_regionTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RegionType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_regionType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_currentPayTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CurrentPayType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_currentPayType.c_str(), allocator).Move(), allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

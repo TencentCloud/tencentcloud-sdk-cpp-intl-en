@@ -25,6 +25,7 @@
 #include <tencentcloud/emr/v20190103/model/Placement.h>
 #include <tencentcloud/emr/v20190103/model/VPCSettings.h>
 #include <tencentcloud/emr/v20190103/model/CustomMetaInfo.h>
+#include <tencentcloud/emr/v20190103/model/ExternalService.h>
 
 
 namespace TencentCloud
@@ -348,6 +349,58 @@ namespace TencentCloud
                      */
                     bool ProductIdHasBeenSet() const;
 
+                    /**
+                     * 获取Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+                     * @return SceneName Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+                     */
+                    std::string GetSceneName() const;
+
+                    /**
+                     * 设置Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+                     * @param SceneName Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+                     */
+                    void SetSceneName(const std::string& _sceneName);
+
+                    /**
+                     * 判断参数 SceneName 是否已赋值
+                     * @return SceneName 是否已赋值
+                     */
+                    bool SceneNameHasBeenSet() const;
+
+                    /**
+                     * 获取Shared component information
+                     * @return ExternalService Shared component information
+                     */
+                    std::vector<ExternalService> GetExternalService() const;
+
+                    /**
+                     * 设置Shared component information
+                     * @param ExternalService Shared component information
+                     */
+                    void SetExternalService(const std::vector<ExternalService>& _externalService);
+
+                    /**
+                     * 判断参数 ExternalService 是否已赋值
+                     * @return ExternalService 是否已赋值
+                     */
+                    bool ExternalServiceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -444,6 +497,22 @@ namespace TencentCloud
                      */
                     uint64_t m_productId;
                     bool m_productIdHasBeenSet;
+
+                    /**
+                     * Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+                     */
+                    std::string m_sceneName;
+                    bool m_sceneNameHasBeenSet;
+
+                    /**
+                     * Shared component information
+                     */
+                    std::vector<ExternalService> m_externalService;
+                    bool m_externalServiceHasBeenSet;
 
                 };
             }

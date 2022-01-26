@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Input parameter type of OCR-based prohibited information detection in text task in content audit
                 */
                 class AiReviewProhibitedOcrTaskInput : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Prohibited information detection template ID.
+                     * @return Definition Prohibited information detection template ID.
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param Definition 
+                     * 设置Prohibited information detection template ID.
+                     * @param Definition Prohibited information detection template ID.
                      */
                     void SetDefinition(const uint64_t& _definition);
 
@@ -67,7 +67,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Prohibited information detection template ID.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

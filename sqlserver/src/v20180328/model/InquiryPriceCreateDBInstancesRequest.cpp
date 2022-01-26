@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Sqlserver::V20180328::Model;
-using namespace rapidjson;
 using namespace std;
 
 InquiryPriceCreateDBInstancesRequest::InquiryPriceCreateDBInstancesRequest() :
@@ -30,28 +29,31 @@ InquiryPriceCreateDBInstancesRequest::InquiryPriceCreateDBInstancesRequest() :
     m_instanceChargeTypeHasBeenSet(false),
     m_periodHasBeenSet(false),
     m_goodsNumHasBeenSet(false),
-    m_dBVersionHasBeenSet(false)
+    m_dBVersionHasBeenSet(false),
+    m_cpuHasBeenSet(false),
+    m_instanceTypeHasBeenSet(false),
+    m_machineTypeHasBeenSet(false)
 {
 }
 
 string InquiryPriceCreateDBInstancesRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_zoneHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Zone";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_zone.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_zone.c_str(), allocator).Move(), allocator);
     }
 
     if (m_memoryHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Memory";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_memory, allocator);
@@ -59,7 +61,7 @@ string InquiryPriceCreateDBInstancesRequest::ToJsonString() const
 
     if (m_storageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Storage";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_storage, allocator);
@@ -67,15 +69,15 @@ string InquiryPriceCreateDBInstancesRequest::ToJsonString() const
 
     if (m_instanceChargeTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceChargeType";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceChargeType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceChargeType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_periodHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Period";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_period, allocator);
@@ -83,7 +85,7 @@ string InquiryPriceCreateDBInstancesRequest::ToJsonString() const
 
     if (m_goodsNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "GoodsNum";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_goodsNum, allocator);
@@ -91,15 +93,39 @@ string InquiryPriceCreateDBInstancesRequest::ToJsonString() const
 
     if (m_dBVersionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DBVersion";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_dBVersion.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_dBVersion.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_cpuHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Cpu";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_cpu, allocator);
+    }
+
+    if (m_instanceTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_machineTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MachineType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_machineType.c_str(), allocator).Move(), allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -215,6 +241,54 @@ void InquiryPriceCreateDBInstancesRequest::SetDBVersion(const string& _dBVersion
 bool InquiryPriceCreateDBInstancesRequest::DBVersionHasBeenSet() const
 {
     return m_dBVersionHasBeenSet;
+}
+
+int64_t InquiryPriceCreateDBInstancesRequest::GetCpu() const
+{
+    return m_cpu;
+}
+
+void InquiryPriceCreateDBInstancesRequest::SetCpu(const int64_t& _cpu)
+{
+    m_cpu = _cpu;
+    m_cpuHasBeenSet = true;
+}
+
+bool InquiryPriceCreateDBInstancesRequest::CpuHasBeenSet() const
+{
+    return m_cpuHasBeenSet;
+}
+
+string InquiryPriceCreateDBInstancesRequest::GetInstanceType() const
+{
+    return m_instanceType;
+}
+
+void InquiryPriceCreateDBInstancesRequest::SetInstanceType(const string& _instanceType)
+{
+    m_instanceType = _instanceType;
+    m_instanceTypeHasBeenSet = true;
+}
+
+bool InquiryPriceCreateDBInstancesRequest::InstanceTypeHasBeenSet() const
+{
+    return m_instanceTypeHasBeenSet;
+}
+
+string InquiryPriceCreateDBInstancesRequest::GetMachineType() const
+{
+    return m_machineType;
+}
+
+void InquiryPriceCreateDBInstancesRequest::SetMachineType(const string& _machineType)
+{
+    m_machineType = _machineType;
+    m_machineTypeHasBeenSet = true;
+}
+
+bool InquiryPriceCreateDBInstancesRequest::MachineTypeHasBeenSet() const
+{
+    return m_machineTypeHasBeenSet;
 }
 
 

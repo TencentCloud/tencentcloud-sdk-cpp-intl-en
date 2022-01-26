@@ -158,6 +158,72 @@ You cannot modify this parameter when calling ModifyRuleAttribute API.
                      */
                     bool DomainHasBeenSet() const;
 
+                    /**
+                     * 获取Origin server failure check frequency
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return FailedCountInter Origin server failure check frequency
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetFailedCountInter() const;
+
+                    /**
+                     * 设置Origin server failure check frequency
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param FailedCountInter Origin server failure check frequency
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetFailedCountInter(const uint64_t& _failedCountInter);
+
+                    /**
+                     * 判断参数 FailedCountInter 是否已赋值
+                     * @return FailedCountInter 是否已赋值
+                     */
+                    bool FailedCountInterHasBeenSet() const;
+
+                    /**
+                     * 获取Origin server health check threshold. All requests to the origin server will be blocked once the threshold is exceeded.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return FailedThreshold Origin server health check threshold. All requests to the origin server will be blocked once the threshold is exceeded.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetFailedThreshold() const;
+
+                    /**
+                     * 设置Origin server health check threshold. All requests to the origin server will be blocked once the threshold is exceeded.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param FailedThreshold Origin server health check threshold. All requests to the origin server will be blocked once the threshold is exceeded.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetFailedThreshold(const uint64_t& _failedThreshold);
+
+                    /**
+                     * 判断参数 FailedThreshold 是否已赋值
+                     * @return FailedThreshold 是否已赋值
+                     */
+                    bool FailedThresholdHasBeenSet() const;
+
+                    /**
+                     * 获取Duration to block requests targeting the origin server after a failed health check
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return BlockInter Duration to block requests targeting the origin server after a failed health check
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetBlockInter() const;
+
+                    /**
+                     * 设置Duration to block requests targeting the origin server after a failed health check
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param BlockInter Duration to block requests targeting the origin server after a failed health check
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetBlockInter(const uint64_t& _blockInter);
+
+                    /**
+                     * 判断参数 BlockInter 是否已赋值
+                     * @return BlockInter 是否已赋值
+                     */
+                    bool BlockInterHasBeenSet() const;
+
                 private:
 
                     /**
@@ -196,6 +262,27 @@ You cannot modify this parameter when calling ModifyRuleAttribute API.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
+
+                    /**
+                     * Origin server failure check frequency
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_failedCountInter;
+                    bool m_failedCountInterHasBeenSet;
+
+                    /**
+                     * Origin server health check threshold. All requests to the origin server will be blocked once the threshold is exceeded.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_failedThreshold;
+                    bool m_failedThresholdHasBeenSet;
+
+                    /**
+                     * Duration to block requests targeting the origin server after a failed health check
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_blockInter;
+                    bool m_blockInterHasBeenSet;
 
                 };
             }

@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 ModifyVpnConnectionAttributeRequest::ModifyVpnConnectionAttributeRequest() :
@@ -29,77 +28,140 @@ ModifyVpnConnectionAttributeRequest::ModifyVpnConnectionAttributeRequest() :
     m_preShareKeyHasBeenSet(false),
     m_securityPolicyDatabasesHasBeenSet(false),
     m_iKEOptionsSpecificationHasBeenSet(false),
-    m_iPSECOptionsSpecificationHasBeenSet(false)
+    m_iPSECOptionsSpecificationHasBeenSet(false),
+    m_enableHealthCheckHasBeenSet(false),
+    m_healthCheckLocalIpHasBeenSet(false),
+    m_healthCheckRemoteIpHasBeenSet(false),
+    m_negotiationTypeHasBeenSet(false),
+    m_dpdEnableHasBeenSet(false),
+    m_dpdTimeoutHasBeenSet(false),
+    m_dpdActionHasBeenSet(false)
 {
 }
 
 string ModifyVpnConnectionAttributeRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_vpnConnectionIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpnConnectionId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_vpnConnectionId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_vpnConnectionId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vpnConnectionNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpnConnectionName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_vpnConnectionName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_vpnConnectionName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_preShareKeyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PreShareKey";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_preShareKey.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_preShareKey.c_str(), allocator).Move(), allocator);
     }
 
     if (m_securityPolicyDatabasesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SecurityPolicyDatabases";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_securityPolicyDatabases.begin(); itr != m_securityPolicyDatabases.end(); ++itr, ++i)
         {
-            d[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
     }
 
     if (m_iKEOptionsSpecificationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IKEOptionsSpecification";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_iKEOptionsSpecification.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_iPSECOptionsSpecificationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IPSECOptionsSpecification";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_iPSECOptionsSpecification.ToJsonObject(d[key.c_str()], allocator);
     }
 
+    if (m_enableHealthCheckHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableHealthCheck";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_enableHealthCheck, allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    if (m_healthCheckLocalIpHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HealthCheckLocalIp";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_healthCheckLocalIp.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_healthCheckRemoteIpHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HealthCheckRemoteIp";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_healthCheckRemoteIp.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_negotiationTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NegotiationType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_negotiationType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_dpdEnableHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DpdEnable";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_dpdEnable, allocator);
+    }
+
+    if (m_dpdTimeoutHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DpdTimeout";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_dpdTimeout.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_dpdActionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DpdAction";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_dpdAction.c_str(), allocator).Move(), allocator);
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -199,6 +261,118 @@ void ModifyVpnConnectionAttributeRequest::SetIPSECOptionsSpecification(const IPS
 bool ModifyVpnConnectionAttributeRequest::IPSECOptionsSpecificationHasBeenSet() const
 {
     return m_iPSECOptionsSpecificationHasBeenSet;
+}
+
+bool ModifyVpnConnectionAttributeRequest::GetEnableHealthCheck() const
+{
+    return m_enableHealthCheck;
+}
+
+void ModifyVpnConnectionAttributeRequest::SetEnableHealthCheck(const bool& _enableHealthCheck)
+{
+    m_enableHealthCheck = _enableHealthCheck;
+    m_enableHealthCheckHasBeenSet = true;
+}
+
+bool ModifyVpnConnectionAttributeRequest::EnableHealthCheckHasBeenSet() const
+{
+    return m_enableHealthCheckHasBeenSet;
+}
+
+string ModifyVpnConnectionAttributeRequest::GetHealthCheckLocalIp() const
+{
+    return m_healthCheckLocalIp;
+}
+
+void ModifyVpnConnectionAttributeRequest::SetHealthCheckLocalIp(const string& _healthCheckLocalIp)
+{
+    m_healthCheckLocalIp = _healthCheckLocalIp;
+    m_healthCheckLocalIpHasBeenSet = true;
+}
+
+bool ModifyVpnConnectionAttributeRequest::HealthCheckLocalIpHasBeenSet() const
+{
+    return m_healthCheckLocalIpHasBeenSet;
+}
+
+string ModifyVpnConnectionAttributeRequest::GetHealthCheckRemoteIp() const
+{
+    return m_healthCheckRemoteIp;
+}
+
+void ModifyVpnConnectionAttributeRequest::SetHealthCheckRemoteIp(const string& _healthCheckRemoteIp)
+{
+    m_healthCheckRemoteIp = _healthCheckRemoteIp;
+    m_healthCheckRemoteIpHasBeenSet = true;
+}
+
+bool ModifyVpnConnectionAttributeRequest::HealthCheckRemoteIpHasBeenSet() const
+{
+    return m_healthCheckRemoteIpHasBeenSet;
+}
+
+string ModifyVpnConnectionAttributeRequest::GetNegotiationType() const
+{
+    return m_negotiationType;
+}
+
+void ModifyVpnConnectionAttributeRequest::SetNegotiationType(const string& _negotiationType)
+{
+    m_negotiationType = _negotiationType;
+    m_negotiationTypeHasBeenSet = true;
+}
+
+bool ModifyVpnConnectionAttributeRequest::NegotiationTypeHasBeenSet() const
+{
+    return m_negotiationTypeHasBeenSet;
+}
+
+int64_t ModifyVpnConnectionAttributeRequest::GetDpdEnable() const
+{
+    return m_dpdEnable;
+}
+
+void ModifyVpnConnectionAttributeRequest::SetDpdEnable(const int64_t& _dpdEnable)
+{
+    m_dpdEnable = _dpdEnable;
+    m_dpdEnableHasBeenSet = true;
+}
+
+bool ModifyVpnConnectionAttributeRequest::DpdEnableHasBeenSet() const
+{
+    return m_dpdEnableHasBeenSet;
+}
+
+string ModifyVpnConnectionAttributeRequest::GetDpdTimeout() const
+{
+    return m_dpdTimeout;
+}
+
+void ModifyVpnConnectionAttributeRequest::SetDpdTimeout(const string& _dpdTimeout)
+{
+    m_dpdTimeout = _dpdTimeout;
+    m_dpdTimeoutHasBeenSet = true;
+}
+
+bool ModifyVpnConnectionAttributeRequest::DpdTimeoutHasBeenSet() const
+{
+    return m_dpdTimeoutHasBeenSet;
+}
+
+string ModifyVpnConnectionAttributeRequest::GetDpdAction() const
+{
+    return m_dpdAction;
+}
+
+void ModifyVpnConnectionAttributeRequest::SetDpdAction(const string& _dpdAction)
+{
+    m_dpdAction = _dpdAction;
+    m_dpdActionHasBeenSet = true;
+}
+
+bool ModifyVpnConnectionAttributeRequest::DpdActionHasBeenSet() const
+{
+    return m_dpdActionHasBeenSet;
 }
 
 

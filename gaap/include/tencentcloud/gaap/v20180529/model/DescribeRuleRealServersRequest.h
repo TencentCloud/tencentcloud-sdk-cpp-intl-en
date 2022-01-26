@@ -60,6 +60,42 @@ namespace TencentCloud
                      */
                     bool RuleIdHasBeenSet() const;
 
+                    /**
+                     * 获取Offset. Default value: 0.
+                     * @return Offset Offset. Default value: 0.
+                     */
+                    uint64_t GetOffset() const;
+
+                    /**
+                     * 设置Offset. Default value: 0.
+                     * @param Offset Offset. Default value: 0.
+                     */
+                    void SetOffset(const uint64_t& _offset);
+
+                    /**
+                     * 判断参数 Offset 是否已赋值
+                     * @return Offset 是否已赋值
+                     */
+                    bool OffsetHasBeenSet() const;
+
+                    /**
+                     * 获取Number of values to be returned. The default value is 20. Maximum is 1000.
+                     * @return Limit Number of values to be returned. The default value is 20. Maximum is 1000.
+                     */
+                    uint64_t GetLimit() const;
+
+                    /**
+                     * 设置Number of values to be returned. The default value is 20. Maximum is 1000.
+                     * @param Limit Number of values to be returned. The default value is 20. Maximum is 1000.
+                     */
+                    void SetLimit(const uint64_t& _limit);
+
+                    /**
+                     * 判断参数 Limit 是否已赋值
+                     * @return Limit 是否已赋值
+                     */
+                    bool LimitHasBeenSet() const;
+
                 private:
 
                     /**
@@ -67,6 +103,18 @@ namespace TencentCloud
                      */
                     std::string m_ruleId;
                     bool m_ruleIdHasBeenSet;
+
+                    /**
+                     * Offset. Default value: 0.
+                     */
+                    uint64_t m_offset;
+                    bool m_offsetHasBeenSet;
+
+                    /**
+                     * Number of values to be returned. The default value is 20. Maximum is 1000.
+                     */
+                    uint64_t m_limit;
+                    bool m_limitHasBeenSet;
 
                 };
             }

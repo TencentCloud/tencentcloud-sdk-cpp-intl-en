@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool AppNameHasBeenSet() const;
 
                     /**
-                     * 获取Recording task end time in UNIX timestamp, which must be after `StartTime` and within 24 hours from the current time.
-                     * @return EndTime Recording task end time in UNIX timestamp, which must be after `StartTime` and within 24 hours from the current time.
+                     * 获取Recording end time in UNIX timestamp format. `EndTime` should be later than `StartTime` and the current time, and the duration between `EndTime` and `StartTime` is up to 24 hours.
+                     * @return EndTime Recording end time in UNIX timestamp format. `EndTime` should be later than `StartTime` and the current time, and the duration between `EndTime` and `StartTime` is up to 24 hours.
                      */
                     uint64_t GetEndTime() const;
 
                     /**
-                     * 设置Recording task end time in UNIX timestamp, which must be after `StartTime` and within 24 hours from the current time.
-                     * @param EndTime Recording task end time in UNIX timestamp, which must be after `StartTime` and within 24 hours from the current time.
+                     * 设置Recording end time in UNIX timestamp format. `EndTime` should be later than `StartTime` and the current time, and the duration between `EndTime` and `StartTime` is up to 24 hours.
+                     * @param EndTime Recording end time in UNIX timestamp format. `EndTime` should be later than `StartTime` and the current time, and the duration between `EndTime` and `StartTime` is up to 24 hours.
                      */
                     void SetEndTime(const uint64_t& _endTime);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Recording task start time in UNIX timestamp. If this parameter is left empty, it indicates to start recording immediately. It must be within 24 hours from the current time.
-                     * @return StartTime Recording task start time in UNIX timestamp. If this parameter is left empty, it indicates to start recording immediately. It must be within 24 hours from the current time.
+                     * 获取Recording start time in UNIX timestamp format. Leaving this parameter empty means starting recording now. `StartTime` cannot be later than the current time plus 6 days.
+                     * @return StartTime Recording start time in UNIX timestamp format. Leaving this parameter empty means starting recording now. `StartTime` cannot be later than the current time plus 6 days.
                      */
                     uint64_t GetStartTime() const;
 
                     /**
-                     * 设置Recording task start time in UNIX timestamp. If this parameter is left empty, it indicates to start recording immediately. It must be within 24 hours from the current time.
-                     * @param StartTime Recording task start time in UNIX timestamp. If this parameter is left empty, it indicates to start recording immediately. It must be within 24 hours from the current time.
+                     * 设置Recording start time in UNIX timestamp format. Leaving this parameter empty means starting recording now. `StartTime` cannot be later than the current time plus 6 days.
+                     * @param StartTime Recording start time in UNIX timestamp format. Leaving this parameter empty means starting recording now. `StartTime` cannot be later than the current time plus 6 days.
                      */
                     void SetStartTime(const uint64_t& _startTime);
 
@@ -177,14 +177,14 @@ namespace TencentCloud
                     bool TemplateIdHasBeenSet() const;
 
                     /**
-                     * 获取Extended field, which is empty by default.
-                     * @return Extension Extended field, which is empty by default.
+                     * 获取Extension field which is not defined now. It is empty by default.
+                     * @return Extension Extension field which is not defined now. It is empty by default.
                      */
                     std::string GetExtension() const;
 
                     /**
-                     * 设置Extended field, which is empty by default.
-                     * @param Extension Extended field, which is empty by default.
+                     * 设置Extension field which is not defined now. It is empty by default.
+                     * @param Extension Extension field which is not defined now. It is empty by default.
                      */
                     void SetExtension(const std::string& _extension);
 
@@ -215,13 +215,13 @@ namespace TencentCloud
                     bool m_appNameHasBeenSet;
 
                     /**
-                     * Recording task end time in UNIX timestamp, which must be after `StartTime` and within 24 hours from the current time.
+                     * Recording end time in UNIX timestamp format. `EndTime` should be later than `StartTime` and the current time, and the duration between `EndTime` and `StartTime` is up to 24 hours.
                      */
                     uint64_t m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Recording task start time in UNIX timestamp. If this parameter is left empty, it indicates to start recording immediately. It must be within 24 hours from the current time.
+                     * Recording start time in UNIX timestamp format. Leaving this parameter empty means starting recording now. `StartTime` cannot be later than the current time plus 6 days.
                      */
                     uint64_t m_startTime;
                     bool m_startTimeHasBeenSet;
@@ -241,7 +241,7 @@ namespace TencentCloud
                     bool m_templateIdHasBeenSet;
 
                     /**
-                     * Extended field, which is empty by default.
+                     * Extension field which is not defined now. It is empty by default.
                      */
                     std::string m_extension;
                     bool m_extensionHasBeenSet;

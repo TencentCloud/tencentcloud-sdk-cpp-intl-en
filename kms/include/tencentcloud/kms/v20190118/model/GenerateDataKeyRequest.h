@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return KeyId 
+                     * 获取Globally unique CMK ID
+                     * @return KeyId Globally unique CMK ID
                      */
                     std::string GetKeyId() const;
 
                     /**
-                     * 设置
-                     * @param KeyId 
+                     * 设置Globally unique CMK ID
+                     * @param KeyId Globally unique CMK ID
                      */
                     void SetKeyId(const std::string& _keyId);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool NumberOfBytesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EncryptionContext 
+                     * 获取JSON string of key-value pair. If this field is used, the same string should be entered when the returned `DataKey` is decrypted.
+                     * @return EncryptionContext JSON string of key-value pair. If this field is used, the same string should be entered when the returned `DataKey` is decrypted.
                      */
                     std::string GetEncryptionContext() const;
 
                     /**
-                     * 设置
-                     * @param EncryptionContext 
+                     * 设置JSON string of key-value pair. If this field is used, the same string should be entered when the returned `DataKey` is decrypted.
+                     * @param EncryptionContext JSON string of key-value pair. If this field is used, the same string should be entered when the returned `DataKey` is decrypted.
                      */
                     void SetEncryptionContext(const std::string& _encryptionContext);
 
@@ -114,10 +114,46 @@ namespace TencentCloud
                      */
                     bool EncryptionContextHasBeenSet() const;
 
+                    /**
+                     * 获取PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+                     * @return EncryptionPublicKey PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+                     */
+                    std::string GetEncryptionPublicKey() const;
+
+                    /**
+                     * 设置PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+                     * @param EncryptionPublicKey PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+                     */
+                    void SetEncryptionPublicKey(const std::string& _encryptionPublicKey);
+
+                    /**
+                     * 判断参数 EncryptionPublicKey 是否已赋值
+                     * @return EncryptionPublicKey 是否已赋值
+                     */
+                    bool EncryptionPublicKeyHasBeenSet() const;
+
+                    /**
+                     * 获取Asymmetric encryption algorithm. Valid values: `SM2(C1C3C2)`, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used with `EncryptionPublicKey` for encryption. If it is left empty, a SM2 public key will be used by default.
+                     * @return EncryptionAlgorithm Asymmetric encryption algorithm. Valid values: `SM2(C1C3C2)`, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used with `EncryptionPublicKey` for encryption. If it is left empty, a SM2 public key will be used by default.
+                     */
+                    std::string GetEncryptionAlgorithm() const;
+
+                    /**
+                     * 设置Asymmetric encryption algorithm. Valid values: `SM2(C1C3C2)`, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used with `EncryptionPublicKey` for encryption. If it is left empty, a SM2 public key will be used by default.
+                     * @param EncryptionAlgorithm Asymmetric encryption algorithm. Valid values: `SM2(C1C3C2)`, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used with `EncryptionPublicKey` for encryption. If it is left empty, a SM2 public key will be used by default.
+                     */
+                    void SetEncryptionAlgorithm(const std::string& _encryptionAlgorithm);
+
+                    /**
+                     * 判断参数 EncryptionAlgorithm 是否已赋值
+                     * @return EncryptionAlgorithm 是否已赋值
+                     */
+                    bool EncryptionAlgorithmHasBeenSet() const;
+
                 private:
 
                     /**
-                     * 
+                     * Globally unique CMK ID
                      */
                     std::string m_keyId;
                     bool m_keyIdHasBeenSet;
@@ -135,10 +171,22 @@ namespace TencentCloud
                     bool m_numberOfBytesHasBeenSet;
 
                     /**
-                     * 
+                     * JSON string of key-value pair. If this field is used, the same string should be entered when the returned `DataKey` is decrypted.
                      */
                     std::string m_encryptionContext;
                     bool m_encryptionContextHasBeenSet;
+
+                    /**
+                     * PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+                     */
+                    std::string m_encryptionPublicKey;
+                    bool m_encryptionPublicKeyHasBeenSet;
+
+                    /**
+                     * Asymmetric encryption algorithm. Valid values: `SM2(C1C3C2)`, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used with `EncryptionPublicKey` for encryption. If it is left empty, a SM2 public key will be used by default.
+                     */
+                    std::string m_encryptionAlgorithm;
+                    bool m_encryptionAlgorithmHasBeenSet;
 
                 };
             }

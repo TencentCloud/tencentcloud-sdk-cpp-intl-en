@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Redis::V20180412::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeInstanceParamsResponse::DescribeInstanceParamsResponse() :
@@ -35,20 +34,20 @@ DescribeInstanceParamsResponse::DescribeInstanceParamsResponse() :
 
 CoreInternalOutcome DescribeInstanceParamsResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -59,11 +58,11 @@ CoreInternalOutcome DescribeInstanceParamsResponse::Deserialize(const string &pa
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -71,7 +70,7 @@ CoreInternalOutcome DescribeInstanceParamsResponse::Deserialize(const string &pa
     {
         if (!rsp["TotalCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_totalCount = rsp["TotalCount"].GetInt64();
         m_totalCountHasBeenSet = true;
@@ -80,10 +79,10 @@ CoreInternalOutcome DescribeInstanceParamsResponse::Deserialize(const string &pa
     if (rsp.HasMember("InstanceEnumParam") && !rsp["InstanceEnumParam"].IsNull())
     {
         if (!rsp["InstanceEnumParam"].IsArray())
-            return CoreInternalOutcome(Error("response `InstanceEnumParam` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `InstanceEnumParam` is not array type"));
 
-        const Value &tmpValue = rsp["InstanceEnumParam"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["InstanceEnumParam"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             InstanceEnumParam item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -100,10 +99,10 @@ CoreInternalOutcome DescribeInstanceParamsResponse::Deserialize(const string &pa
     if (rsp.HasMember("InstanceIntegerParam") && !rsp["InstanceIntegerParam"].IsNull())
     {
         if (!rsp["InstanceIntegerParam"].IsArray())
-            return CoreInternalOutcome(Error("response `InstanceIntegerParam` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `InstanceIntegerParam` is not array type"));
 
-        const Value &tmpValue = rsp["InstanceIntegerParam"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["InstanceIntegerParam"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             InstanceIntegerParam item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -120,10 +119,10 @@ CoreInternalOutcome DescribeInstanceParamsResponse::Deserialize(const string &pa
     if (rsp.HasMember("InstanceTextParam") && !rsp["InstanceTextParam"].IsNull())
     {
         if (!rsp["InstanceTextParam"].IsArray())
-            return CoreInternalOutcome(Error("response `InstanceTextParam` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `InstanceTextParam` is not array type"));
 
-        const Value &tmpValue = rsp["InstanceTextParam"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["InstanceTextParam"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             InstanceTextParam item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -140,10 +139,10 @@ CoreInternalOutcome DescribeInstanceParamsResponse::Deserialize(const string &pa
     if (rsp.HasMember("InstanceMultiParam") && !rsp["InstanceMultiParam"].IsNull())
     {
         if (!rsp["InstanceMultiParam"].IsArray())
-            return CoreInternalOutcome(Error("response `InstanceMultiParam` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `InstanceMultiParam` is not array type"));
 
-        const Value &tmpValue = rsp["InstanceMultiParam"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["InstanceMultiParam"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             InstanceMultiParam item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -159,6 +158,91 @@ CoreInternalOutcome DescribeInstanceParamsResponse::Deserialize(const string &pa
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeInstanceParamsResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_totalCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalCount, allocator);
+    }
+
+    if (m_instanceEnumParamHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceEnumParam";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_instanceEnumParam.begin(); itr != m_instanceEnumParam.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_instanceIntegerParamHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceIntegerParam";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_instanceIntegerParam.begin(); itr != m_instanceIntegerParam.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_instanceTextParamHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceTextParam";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_instanceTextParam.begin(); itr != m_instanceTextParam.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_instanceMultiParamHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceMultiParam";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_instanceMultiParam.begin(); itr != m_instanceMultiParam.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

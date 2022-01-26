@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dts::V20180330::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeMigrateCheckJobResponse::DescribeMigrateCheckJobResponse() :
@@ -35,20 +34,20 @@ DescribeMigrateCheckJobResponse::DescribeMigrateCheckJobResponse() :
 
 CoreInternalOutcome DescribeMigrateCheckJobResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -59,11 +58,11 @@ CoreInternalOutcome DescribeMigrateCheckJobResponse::Deserialize(const string &p
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -71,7 +70,7 @@ CoreInternalOutcome DescribeMigrateCheckJobResponse::Deserialize(const string &p
     {
         if (!rsp["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(rsp["Status"].GetString());
         m_statusHasBeenSet = true;
@@ -81,7 +80,7 @@ CoreInternalOutcome DescribeMigrateCheckJobResponse::Deserialize(const string &p
     {
         if (!rsp["ErrorCode"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ErrorCode` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ErrorCode` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_errorCode = rsp["ErrorCode"].GetInt64();
         m_errorCodeHasBeenSet = true;
@@ -91,7 +90,7 @@ CoreInternalOutcome DescribeMigrateCheckJobResponse::Deserialize(const string &p
     {
         if (!rsp["ErrorMessage"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ErrorMessage` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ErrorMessage` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_errorMessage = string(rsp["ErrorMessage"].GetString());
         m_errorMessageHasBeenSet = true;
@@ -101,7 +100,7 @@ CoreInternalOutcome DescribeMigrateCheckJobResponse::Deserialize(const string &p
     {
         if (!rsp["Progress"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Progress` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Progress` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_progress = string(rsp["Progress"].GetString());
         m_progressHasBeenSet = true;
@@ -111,7 +110,7 @@ CoreInternalOutcome DescribeMigrateCheckJobResponse::Deserialize(const string &p
     {
         if (!rsp["CheckFlag"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `CheckFlag` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CheckFlag` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_checkFlag = rsp["CheckFlag"].GetInt64();
         m_checkFlagHasBeenSet = true;
@@ -119,6 +118,63 @@ CoreInternalOutcome DescribeMigrateCheckJobResponse::Deserialize(const string &p
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeMigrateCheckJobResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_statusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Status";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_errorCodeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ErrorCode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_errorCode, allocator);
+    }
+
+    if (m_errorMessageHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ErrorMessage";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_errorMessage.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_progressHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Progress";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_progress.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_checkFlagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CheckFlag";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_checkFlag, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

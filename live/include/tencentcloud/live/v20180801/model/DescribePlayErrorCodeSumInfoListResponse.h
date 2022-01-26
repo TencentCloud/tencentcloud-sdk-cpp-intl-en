@@ -42,11 +42,12 @@ namespace TencentCloud
                     DescribePlayErrorCodeSumInfoListResponse();
                     ~DescribePlayErrorCodeSumInfoListResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Information of 4xx or 5xx error codes by district and ISP.
-                     * @return ProIspInfoList Information of 4xx or 5xx error codes by district and ISP.
+                     * 获取Information of error codes starting with 2, 3, 4, or 5 by district and ISP.
+                     * @return ProIspInfoList Information of error codes starting with 2, 3, 4, or 5 by district and ISP.
                      */
                     std::vector<ProIspPlayCodeDataInfo> GetProIspInfoList() const;
 
@@ -179,7 +180,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Information of 4xx or 5xx error codes by district and ISP.
+                     * Information of error codes starting with 2, 3, 4, or 5 by district and ISP.
                      */
                     std::vector<ProIspPlayCodeDataInfo> m_proIspInfoList;
                     bool m_proIspInfoListHasBeenSet;

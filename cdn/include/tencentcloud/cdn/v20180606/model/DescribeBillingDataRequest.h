@@ -96,37 +96,37 @@ The range between the start time and end time should be less than or equal to 90
 
                     /**
                      * 获取Time granularity, which can be:
-min: 1-minute. The query range should be less than or equal to 24 hours
-5min: 5-minute. The query range should be less than or equal to 31 days
-hour: 1-hour. The query range should be less than or equal to 31 days
-day: 1-day. The query period should be greater than 31 days
+`min`: 1-minute granularity. The query period cannot exceed 24 hours.
+`5min`: 5-minute granularity. The query range cannot exceed 31 days.
+`hour`: 1-hour granularity. The query period cannot exceed 31 days.
+`day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Currently, data query at 1-minute granularity is not supported if the `Area` field is `overseas`
+Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
                      * @return Interval Time granularity, which can be:
-min: 1-minute. The query range should be less than or equal to 24 hours
-5min: 5-minute. The query range should be less than or equal to 31 days
-hour: 1-hour. The query range should be less than or equal to 31 days
-day: 1-day. The query period should be greater than 31 days
+`min`: 1-minute granularity. The query period cannot exceed 24 hours.
+`5min`: 5-minute granularity. The query range cannot exceed 31 days.
+`hour`: 1-hour granularity. The query period cannot exceed 31 days.
+`day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Currently, data query at 1-minute granularity is not supported if the `Area` field is `overseas`
+Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
                      */
                     std::string GetInterval() const;
 
                     /**
                      * 设置Time granularity, which can be:
-min: 1-minute. The query range should be less than or equal to 24 hours
-5min: 5-minute. The query range should be less than or equal to 31 days
-hour: 1-hour. The query range should be less than or equal to 31 days
-day: 1-day. The query period should be greater than 31 days
+`min`: 1-minute granularity. The query period cannot exceed 24 hours.
+`5min`: 5-minute granularity. The query range cannot exceed 31 days.
+`hour`: 1-hour granularity. The query period cannot exceed 31 days.
+`day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Currently, data query at 1-minute granularity is not supported if the `Area` field is `overseas`
+Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
                      * @param Interval Time granularity, which can be:
-min: 1-minute. The query range should be less than or equal to 24 hours
-5min: 5-minute. The query range should be less than or equal to 31 days
-hour: 1-hour. The query range should be less than or equal to 31 days
-day: 1-day. The query period should be greater than 31 days
+`min`: 1-minute granularity. The query period cannot exceed 24 hours.
+`5min`: 5-minute granularity. The query range cannot exceed 31 days.
+`hour`: 1-hour granularity. The query period cannot exceed 31 days.
+`day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Currently, data query at 1-minute granularity is not supported if the `Area` field is `overseas`
+Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
                      */
                     void SetInterval(const std::string& _interval);
 
@@ -208,20 +208,20 @@ If this parameter is left empty, `mainland` will be used by default
 
                     /**
                      * 获取Country/region to be queried if `Area` is `overseas`
-For district or country/region codes, please see [District Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+For district or country/region codes, please see [District Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
 If this parameter is left empty, all countries/regions will be queried
                      * @return District Country/region to be queried if `Area` is `overseas`
-For district or country/region codes, please see [District Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+For district or country/region codes, please see [District Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
 If this parameter is left empty, all countries/regions will be queried
                      */
                     int64_t GetDistrict() const;
 
                     /**
                      * 设置Country/region to be queried if `Area` is `overseas`
-For district or country/region codes, please see [District Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+For district or country/region codes, please see [District Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
 If this parameter is left empty, all countries/regions will be queried
                      * @param District Country/region to be queried if `Area` is `overseas`
-For district or country/region codes, please see [District Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+For district or country/region codes, please see [District Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
 If this parameter is left empty, all countries/regions will be queried
                      */
                     void SetDistrict(const int64_t& _district);
@@ -262,6 +262,24 @@ Default value: `bandwidth`
                      */
                     bool MetricHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     * @return Product Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     */
+                    std::string GetProduct() const;
+
+                    /**
+                     * 设置Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     * @param Product Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     */
+                    void SetProduct(const std::string& _product);
+
+                    /**
+                     * 判断参数 Product 是否已赋值
+                     * @return Product 是否已赋值
+                     */
+                    bool ProductHasBeenSet() const;
+
                 private:
 
                     /**
@@ -282,12 +300,12 @@ The range between the start time and end time should be less than or equal to 90
 
                     /**
                      * Time granularity, which can be:
-min: 1-minute. The query range should be less than or equal to 24 hours
-5min: 5-minute. The query range should be less than or equal to 31 days
-hour: 1-hour. The query range should be less than or equal to 31 days
-day: 1-day. The query period should be greater than 31 days
+`min`: 1-minute granularity. The query period cannot exceed 24 hours.
+`5min`: 5-minute granularity. The query range cannot exceed 31 days.
+`hour`: 1-hour granularity. The query period cannot exceed 31 days.
+`day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Currently, data query at 1-minute granularity is not supported if the `Area` field is `overseas`
+Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
                      */
                     std::string m_interval;
                     bool m_intervalHasBeenSet;
@@ -316,7 +334,7 @@ If this parameter is left empty, `mainland` will be used by default
 
                     /**
                      * Country/region to be queried if `Area` is `overseas`
-For district or country/region codes, please see [District Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+For district or country/region codes, please see [District Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
 If this parameter is left empty, all countries/regions will be queried
                      */
                     int64_t m_district;
@@ -330,6 +348,12 @@ Default value: `bandwidth`
                      */
                     std::string m_metric;
                     bool m_metricHasBeenSet;
+
+                    /**
+                     * Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     */
+                    std::string m_product;
+                    bool m_productHasBeenSet;
 
                 };
             }

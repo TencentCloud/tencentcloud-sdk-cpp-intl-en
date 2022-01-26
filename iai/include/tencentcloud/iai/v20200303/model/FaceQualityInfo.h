@@ -51,12 +51,12 @@ namespace TencentCloud
                      * 获取Quality score. Value range: [0,100]. It comprehensively evaluates whether the image quality is suitable for face recognition; the higher the score, the higher the quality. 
 In normal cases, you only need to use `Score` as the overall quality standard score. Specific item scores such as `Sharpness`, `Brightness`, `Completeness` are for reference only.
 Reference range: [0,40]: poor; [40,60]: fine; [60,80]: good; [80,100]: excellent. 
-You are recommended to select images with a score above 70 for adding faces.
+We recommend selecting images with a score above 70 for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Score Quality score. Value range: [0,100]. It comprehensively evaluates whether the image quality is suitable for face recognition; the higher the score, the higher the quality. 
 In normal cases, you only need to use `Score` as the overall quality standard score. Specific item scores such as `Sharpness`, `Brightness`, `Completeness` are for reference only.
 Reference range: [0,40]: poor; [40,60]: fine; [60,80]: good; [80,100]: excellent. 
-You are recommended to select images with a score above 70 for adding faces.
+We recommend selecting images with a score above 70 for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetScore() const;
@@ -65,12 +65,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Quality score. Value range: [0,100]. It comprehensively evaluates whether the image quality is suitable for face recognition; the higher the score, the higher the quality. 
 In normal cases, you only need to use `Score` as the overall quality standard score. Specific item scores such as `Sharpness`, `Brightness`, `Completeness` are for reference only.
 Reference range: [0,40]: poor; [40,60]: fine; [60,80]: good; [80,100]: excellent. 
-You are recommended to select images with a score above 70 for adding faces.
+We recommend selecting images with a score above 70 for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @param Score Quality score. Value range: [0,100]. It comprehensively evaluates whether the image quality is suitable for face recognition; the higher the score, the higher the quality. 
 In normal cases, you only need to use `Score` as the overall quality standard score. Specific item scores such as `Sharpness`, `Brightness`, `Completeness` are for reference only.
 Reference range: [0,40]: poor; [40,60]: fine; [60,80]: good; [80,100]: excellent. 
-You are recommended to select images with a score above 70 for adding faces.
+We recommend selecting images with a score above 70 for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetScore(const int64_t& _score);
@@ -84,11 +84,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取Sharpness. Value range: [0,100]. It evaluates the sharpness of the image. The higher the score, the sharper the image. 
 Reference range: [0,40]: very blurry; [40,60]: blurry; [60,80]: fine; [80,100]: sharp. 
-You are recommended to select images with a score above 80 for adding faces.
+We recommend selecting images with a score above 80 for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Sharpness Sharpness. Value range: [0,100]. It evaluates the sharpness of the image. The higher the score, the sharper the image. 
 Reference range: [0,40]: very blurry; [40,60]: blurry; [60,80]: fine; [80,100]: sharp. 
-You are recommended to select images with a score above 80 for adding faces.
+We recommend selecting images with a score above 80 for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetSharpness() const;
@@ -96,11 +96,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     /**
                      * 设置Sharpness. Value range: [0,100]. It evaluates the sharpness of the image. The higher the score, the sharper the image. 
 Reference range: [0,40]: very blurry; [40,60]: blurry; [60,80]: fine; [80,100]: sharp. 
-You are recommended to select images with a score above 80 for adding faces.
+We recommend selecting images with a score above 80 for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @param Sharpness Sharpness. Value range: [0,100]. It evaluates the sharpness of the image. The higher the score, the sharper the image. 
 Reference range: [0,40]: very blurry; [40,60]: blurry; [60,80]: fine; [80,100]: sharp. 
-You are recommended to select images with a score above 80 for adding faces.
+We recommend selecting images with a score above 80 for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetSharpness(const int64_t& _sharpness);
@@ -114,11 +114,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取Brightness. Value range: [0,100]. The brighter the image, the higher the score. 
 Reference range: [0,30]: dark; [30,70]: normal; [70,100]: bright. 
-You are recommended to select images in the [30,70] range for adding faces.
+We recommend selecting images in the [30,70] range for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Brightness Brightness. Value range: [0,100]. The brighter the image, the higher the score. 
 Reference range: [0,30]: dark; [30,70]: normal; [70,100]: bright. 
-You are recommended to select images in the [30,70] range for adding faces.
+We recommend selecting images in the [30,70] range for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetBrightness() const;
@@ -126,11 +126,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     /**
                      * 设置Brightness. Value range: [0,100]. The brighter the image, the higher the score. 
 Reference range: [0,30]: dark; [30,70]: normal; [70,100]: bright. 
-You are recommended to select images in the [30,70] range for adding faces.
+We recommend selecting images in the [30,70] range for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @param Brightness Brightness. Value range: [0,100]. The brighter the image, the higher the score. 
 Reference range: [0,30]: dark; [30,70]: normal; [70,100]: bright. 
-You are recommended to select images in the [30,70] range for adding faces.
+We recommend selecting images in the [30,70] range for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetBrightness(const int64_t& _brightness);
@@ -169,7 +169,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * Quality score. Value range: [0,100]. It comprehensively evaluates whether the image quality is suitable for face recognition; the higher the score, the higher the quality. 
 In normal cases, you only need to use `Score` as the overall quality standard score. Specific item scores such as `Sharpness`, `Brightness`, `Completeness` are for reference only.
 Reference range: [0,40]: poor; [40,60]: fine; [60,80]: good; [80,100]: excellent. 
-You are recommended to select images with a score above 70 for adding faces.
+We recommend selecting images with a score above 70 for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_score;
@@ -178,7 +178,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     /**
                      * Sharpness. Value range: [0,100]. It evaluates the sharpness of the image. The higher the score, the sharper the image. 
 Reference range: [0,40]: very blurry; [40,60]: blurry; [60,80]: fine; [80,100]: sharp. 
-You are recommended to select images with a score above 80 for adding faces.
+We recommend selecting images with a score above 80 for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_sharpness;
@@ -187,7 +187,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     /**
                      * Brightness. Value range: [0,100]. The brighter the image, the higher the score. 
 Reference range: [0,30]: dark; [30,70]: normal; [70,100]: bright. 
-You are recommended to select images in the [30,70] range for adding faces.
+We recommend selecting images in the [30,70] range for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_brightness;

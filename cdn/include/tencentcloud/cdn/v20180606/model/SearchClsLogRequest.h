@@ -151,14 +151,14 @@ namespace TencentCloud
                     bool ChannelHasBeenSet() const;
 
                     /**
-                     * 获取Content to be queried. For more information, please visit https://cloud.tencent.com/document/product/614/16982
-                     * @return Query Content to be queried. For more information, please visit https://cloud.tencent.com/document/product/614/16982
+                     * 获取Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1
+                     * @return Query Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1
                      */
                     std::string GetQuery() const;
 
                     /**
-                     * 设置Content to be queried. For more information, please visit https://cloud.tencent.com/document/product/614/16982
-                     * @param Query Content to be queried. For more information, please visit https://cloud.tencent.com/document/product/614/16982
+                     * 设置Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1
+                     * @param Query Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1
                      */
                     void SetQuery(const std::string& _query);
 
@@ -243,7 +243,7 @@ namespace TencentCloud
                     bool m_channelHasBeenSet;
 
                     /**
-                     * Content to be queried. For more information, please visit https://cloud.tencent.com/document/product/614/16982
+                     * Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1
                      */
                     std::string m_query;
                     bool m_queryHasBeenSet;

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Live::V20180801::Model;
-using namespace rapidjson;
 using namespace std;
 
 CommonMixCropParams::CommonMixCropParams() :
@@ -29,16 +28,16 @@ CommonMixCropParams::CommonMixCropParams() :
 {
 }
 
-CoreInternalOutcome CommonMixCropParams::Deserialize(const Value &value)
+CoreInternalOutcome CommonMixCropParams::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
 
     if (value.HasMember("CropWidth") && !value["CropWidth"].IsNull())
     {
-        if (!value["CropWidth"].IsDouble())
+        if (!value["CropWidth"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `CommonMixCropParams.CropWidth` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CommonMixCropParams.CropWidth` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_cropWidth = value["CropWidth"].GetDouble();
         m_cropWidthHasBeenSet = true;
@@ -46,9 +45,9 @@ CoreInternalOutcome CommonMixCropParams::Deserialize(const Value &value)
 
     if (value.HasMember("CropHeight") && !value["CropHeight"].IsNull())
     {
-        if (!value["CropHeight"].IsDouble())
+        if (!value["CropHeight"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `CommonMixCropParams.CropHeight` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CommonMixCropParams.CropHeight` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_cropHeight = value["CropHeight"].GetDouble();
         m_cropHeightHasBeenSet = true;
@@ -56,9 +55,9 @@ CoreInternalOutcome CommonMixCropParams::Deserialize(const Value &value)
 
     if (value.HasMember("CropStartLocationX") && !value["CropStartLocationX"].IsNull())
     {
-        if (!value["CropStartLocationX"].IsDouble())
+        if (!value["CropStartLocationX"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `CommonMixCropParams.CropStartLocationX` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CommonMixCropParams.CropStartLocationX` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_cropStartLocationX = value["CropStartLocationX"].GetDouble();
         m_cropStartLocationXHasBeenSet = true;
@@ -66,9 +65,9 @@ CoreInternalOutcome CommonMixCropParams::Deserialize(const Value &value)
 
     if (value.HasMember("CropStartLocationY") && !value["CropStartLocationY"].IsNull())
     {
-        if (!value["CropStartLocationY"].IsDouble())
+        if (!value["CropStartLocationY"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `CommonMixCropParams.CropStartLocationY` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CommonMixCropParams.CropStartLocationY` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_cropStartLocationY = value["CropStartLocationY"].GetDouble();
         m_cropStartLocationYHasBeenSet = true;
@@ -78,12 +77,12 @@ CoreInternalOutcome CommonMixCropParams::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void CommonMixCropParams::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void CommonMixCropParams::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_cropWidthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CropWidth";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cropWidth, allocator);
@@ -91,7 +90,7 @@ void CommonMixCropParams::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_cropHeightHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CropHeight";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cropHeight, allocator);
@@ -99,7 +98,7 @@ void CommonMixCropParams::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_cropStartLocationXHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CropStartLocationX";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cropStartLocationX, allocator);
@@ -107,7 +106,7 @@ void CommonMixCropParams::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_cropStartLocationYHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CropStartLocationY";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cropStartLocationY, allocator);

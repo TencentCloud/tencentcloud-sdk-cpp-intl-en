@@ -182,29 +182,33 @@ In Hz.
 
                     /**
                      * 获取Audio channel system. Valid values:
-<li>1: mono</li>
-<li>2: dual</li>
+<li>1: mono-channel</li>
+<li>2: dual-channel</li>
 <li>6: stereo</li>
-Default value: 2.
+You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
+Default value: 2
                      * @return AudioChannel Audio channel system. Valid values:
-<li>1: mono</li>
-<li>2: dual</li>
+<li>1: mono-channel</li>
+<li>2: dual-channel</li>
 <li>6: stereo</li>
-Default value: 2.
+You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
+Default value: 2
                      */
                     int64_t GetAudioChannel() const;
 
                     /**
                      * 设置Audio channel system. Valid values:
-<li>1: mono</li>
-<li>2: dual</li>
+<li>1: mono-channel</li>
+<li>2: dual-channel</li>
 <li>6: stereo</li>
-Default value: 2.
+You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
+Default value: 2
                      * @param AudioChannel Audio channel system. Valid values:
-<li>1: mono</li>
-<li>2: dual</li>
+<li>1: mono-channel</li>
+<li>2: dual-channel</li>
 <li>6: stereo</li>
-Default value: 2.
+You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
+Default value: 2
                      */
                     void SetAudioChannel(const int64_t& _audioChannel);
 
@@ -256,10 +260,11 @@ In Hz.
 
                     /**
                      * Audio channel system. Valid values:
-<li>1: mono</li>
-<li>2: dual</li>
+<li>1: mono-channel</li>
+<li>2: dual-channel</li>
 <li>6: stereo</li>
-Default value: 2.
+You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
+Default value: 2
                      */
                     int64_t m_audioChannel;
                     bool m_audioChannelHasBeenSet;

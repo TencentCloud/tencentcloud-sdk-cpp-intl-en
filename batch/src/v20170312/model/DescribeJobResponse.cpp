@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Batch::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeJobResponse::DescribeJobResponse() :
@@ -36,26 +35,28 @@ DescribeJobResponse::DescribeJobResponse() :
     m_dependenceSetHasBeenSet(false),
     m_taskMetricsHasBeenSet(false),
     m_taskInstanceMetricsHasBeenSet(false),
-    m_stateReasonHasBeenSet(false)
+    m_stateReasonHasBeenSet(false),
+    m_tagsHasBeenSet(false),
+    m_nextActionHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome DescribeJobResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -66,11 +67,11 @@ CoreInternalOutcome DescribeJobResponse::Deserialize(const string &payload)
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -78,7 +79,7 @@ CoreInternalOutcome DescribeJobResponse::Deserialize(const string &payload)
     {
         if (!rsp["JobId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `JobId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `JobId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_jobId = string(rsp["JobId"].GetString());
         m_jobIdHasBeenSet = true;
@@ -88,7 +89,7 @@ CoreInternalOutcome DescribeJobResponse::Deserialize(const string &payload)
     {
         if (!rsp["JobName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `JobName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `JobName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_jobName = string(rsp["JobName"].GetString());
         m_jobNameHasBeenSet = true;
@@ -98,7 +99,7 @@ CoreInternalOutcome DescribeJobResponse::Deserialize(const string &payload)
     {
         if (!rsp["Zone"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Zone` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Zone` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_zone = string(rsp["Zone"].GetString());
         m_zoneHasBeenSet = true;
@@ -108,7 +109,7 @@ CoreInternalOutcome DescribeJobResponse::Deserialize(const string &payload)
     {
         if (!rsp["Priority"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Priority` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Priority` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_priority = rsp["Priority"].GetInt64();
         m_priorityHasBeenSet = true;
@@ -118,7 +119,7 @@ CoreInternalOutcome DescribeJobResponse::Deserialize(const string &payload)
     {
         if (!rsp["JobState"].IsString())
         {
-            return CoreInternalOutcome(Error("response `JobState` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `JobState` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_jobState = string(rsp["JobState"].GetString());
         m_jobStateHasBeenSet = true;
@@ -128,7 +129,7 @@ CoreInternalOutcome DescribeJobResponse::Deserialize(const string &payload)
     {
         if (!rsp["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(rsp["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -138,7 +139,7 @@ CoreInternalOutcome DescribeJobResponse::Deserialize(const string &payload)
     {
         if (!rsp["EndTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `EndTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EndTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_endTime = string(rsp["EndTime"].GetString());
         m_endTimeHasBeenSet = true;
@@ -147,10 +148,10 @@ CoreInternalOutcome DescribeJobResponse::Deserialize(const string &payload)
     if (rsp.HasMember("TaskSet") && !rsp["TaskSet"].IsNull())
     {
         if (!rsp["TaskSet"].IsArray())
-            return CoreInternalOutcome(Error("response `TaskSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `TaskSet` is not array type"));
 
-        const Value &tmpValue = rsp["TaskSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["TaskSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             TaskView item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -167,10 +168,10 @@ CoreInternalOutcome DescribeJobResponse::Deserialize(const string &payload)
     if (rsp.HasMember("DependenceSet") && !rsp["DependenceSet"].IsNull())
     {
         if (!rsp["DependenceSet"].IsArray())
-            return CoreInternalOutcome(Error("response `DependenceSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DependenceSet` is not array type"));
 
-        const Value &tmpValue = rsp["DependenceSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["DependenceSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             Dependence item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -188,7 +189,7 @@ CoreInternalOutcome DescribeJobResponse::Deserialize(const string &payload)
     {
         if (!rsp["TaskMetrics"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `TaskMetrics` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskMetrics` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_taskMetrics.Deserialize(rsp["TaskMetrics"]);
@@ -205,7 +206,7 @@ CoreInternalOutcome DescribeJobResponse::Deserialize(const string &payload)
     {
         if (!rsp["TaskInstanceMetrics"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `TaskInstanceMetrics` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskInstanceMetrics` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_taskInstanceMetrics.Deserialize(rsp["TaskInstanceMetrics"]);
@@ -222,14 +223,196 @@ CoreInternalOutcome DescribeJobResponse::Deserialize(const string &payload)
     {
         if (!rsp["StateReason"].IsString())
         {
-            return CoreInternalOutcome(Error("response `StateReason` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `StateReason` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_stateReason = string(rsp["StateReason"].GetString());
         m_stateReasonHasBeenSet = true;
     }
 
+    if (rsp.HasMember("Tags") && !rsp["Tags"].IsNull())
+    {
+        if (!rsp["Tags"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Tags` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["Tags"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            Tag item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_tags.push_back(item);
+        }
+        m_tagsHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("NextAction") && !rsp["NextAction"].IsNull())
+    {
+        if (!rsp["NextAction"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `NextAction` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_nextAction = string(rsp["NextAction"].GetString());
+        m_nextActionHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeJobResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_jobIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "JobId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_jobId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_jobNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "JobName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_jobName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_zoneHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Zone";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_zone.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_priorityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Priority";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_priority, allocator);
+    }
+
+    if (m_jobStateHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "JobState";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_jobState.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_createTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CreateTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_endTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EndTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_endTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_taskSetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TaskSet";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_taskSet.begin(); itr != m_taskSet.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_dependenceSetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DependenceSet";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_dependenceSet.begin(); itr != m_dependenceSet.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_taskMetricsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TaskMetrics";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_taskMetrics.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_taskInstanceMetricsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TaskInstanceMetrics";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_taskInstanceMetrics.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_stateReasonHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StateReason";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_stateReason.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_nextActionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NextAction";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_nextAction.c_str(), allocator).Move(), allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 
@@ -333,7 +516,7 @@ bool DescribeJobResponse::TaskMetricsHasBeenSet() const
     return m_taskMetricsHasBeenSet;
 }
 
-TaskInstanceView DescribeJobResponse::GetTaskInstanceMetrics() const
+TaskInstanceMetrics DescribeJobResponse::GetTaskInstanceMetrics() const
 {
     return m_taskInstanceMetrics;
 }
@@ -351,6 +534,26 @@ string DescribeJobResponse::GetStateReason() const
 bool DescribeJobResponse::StateReasonHasBeenSet() const
 {
     return m_stateReasonHasBeenSet;
+}
+
+vector<Tag> DescribeJobResponse::GetTags() const
+{
+    return m_tags;
+}
+
+bool DescribeJobResponse::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
+}
+
+string DescribeJobResponse::GetNextAction() const
+{
+    return m_nextAction;
+}
+
+bool DescribeJobResponse::NextActionHasBeenSet() const
+{
+    return m_nextActionHasBeenSet;
 }
 
 

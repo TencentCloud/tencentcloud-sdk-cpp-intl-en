@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 NetworkAcl::NetworkAcl() :
@@ -32,7 +31,7 @@ NetworkAcl::NetworkAcl() :
 {
 }
 
-CoreInternalOutcome NetworkAcl::Deserialize(const Value &value)
+CoreInternalOutcome NetworkAcl::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +40,7 @@ CoreInternalOutcome NetworkAcl::Deserialize(const Value &value)
     {
         if (!value["VpcId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NetworkAcl.VpcId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NetworkAcl.VpcId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpcId = string(value["VpcId"].GetString());
         m_vpcIdHasBeenSet = true;
@@ -51,7 +50,7 @@ CoreInternalOutcome NetworkAcl::Deserialize(const Value &value)
     {
         if (!value["NetworkAclId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NetworkAcl.NetworkAclId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NetworkAcl.NetworkAclId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_networkAclId = string(value["NetworkAclId"].GetString());
         m_networkAclIdHasBeenSet = true;
@@ -61,7 +60,7 @@ CoreInternalOutcome NetworkAcl::Deserialize(const Value &value)
     {
         if (!value["NetworkAclName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NetworkAcl.NetworkAclName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NetworkAcl.NetworkAclName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_networkAclName = string(value["NetworkAclName"].GetString());
         m_networkAclNameHasBeenSet = true;
@@ -71,7 +70,7 @@ CoreInternalOutcome NetworkAcl::Deserialize(const Value &value)
     {
         if (!value["CreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NetworkAcl.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NetworkAcl.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createdTime = string(value["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
@@ -80,10 +79,10 @@ CoreInternalOutcome NetworkAcl::Deserialize(const Value &value)
     if (value.HasMember("SubnetSet") && !value["SubnetSet"].IsNull())
     {
         if (!value["SubnetSet"].IsArray())
-            return CoreInternalOutcome(Error("response `NetworkAcl.SubnetSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `NetworkAcl.SubnetSet` is not array type"));
 
-        const Value &tmpValue = value["SubnetSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["SubnetSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             Subnet item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -100,10 +99,10 @@ CoreInternalOutcome NetworkAcl::Deserialize(const Value &value)
     if (value.HasMember("IngressEntries") && !value["IngressEntries"].IsNull())
     {
         if (!value["IngressEntries"].IsArray())
-            return CoreInternalOutcome(Error("response `NetworkAcl.IngressEntries` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `NetworkAcl.IngressEntries` is not array type"));
 
-        const Value &tmpValue = value["IngressEntries"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["IngressEntries"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             NetworkAclEntry item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -120,10 +119,10 @@ CoreInternalOutcome NetworkAcl::Deserialize(const Value &value)
     if (value.HasMember("EgressEntries") && !value["EgressEntries"].IsNull())
     {
         if (!value["EgressEntries"].IsArray())
-            return CoreInternalOutcome(Error("response `NetworkAcl.EgressEntries` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `NetworkAcl.EgressEntries` is not array type"));
 
-        const Value &tmpValue = value["EgressEntries"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["EgressEntries"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             NetworkAclEntry item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -141,82 +140,82 @@ CoreInternalOutcome NetworkAcl::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void NetworkAcl::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void NetworkAcl::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_vpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vpcId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpcId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_networkAclIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetworkAclId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_networkAclId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_networkAclId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_networkAclNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetworkAclName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_networkAclName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_networkAclName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createdTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createdTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_subnetSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubnetSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_subnetSet.begin(); itr != m_subnetSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_ingressEntriesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IngressEntries";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_ingressEntries.begin(); itr != m_ingressEntries.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_egressEntriesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EgressEntries";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_egressEntries.begin(); itr != m_egressEntries.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }

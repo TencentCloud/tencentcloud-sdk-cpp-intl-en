@@ -132,6 +132,78 @@ namespace TencentCloud
                      */
                     bool GroupIdHasBeenSet() const;
 
+                    /**
+                     * 获取IP version. Valid values: `IPv4` (default), `IPv6`.
+                     * @return IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+                     */
+                    std::string GetIPAddressVersion() const;
+
+                    /**
+                     * 设置IP version. Valid values: `IPv4` (default), `IPv6`.
+                     * @param IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+                     */
+                    void SetIPAddressVersion(const std::string& _iPAddressVersion);
+
+                    /**
+                     * 判断参数 IPAddressVersion 是否已赋值
+                     * @return IPAddressVersion 是否已赋值
+                     */
+                    bool IPAddressVersionHasBeenSet() const;
+
+                    /**
+                     * 获取Network type. Valid values: `normal` (default), `cn2`
+                     * @return NetworkType Network type. Valid values: `normal` (default), `cn2`
+                     */
+                    std::string GetNetworkType() const;
+
+                    /**
+                     * 设置Network type. Valid values: `normal` (default), `cn2`
+                     * @param NetworkType Network type. Valid values: `normal` (default), `cn2`
+                     */
+                    void SetNetworkType(const std::string& _networkType);
+
+                    /**
+                     * 判断参数 NetworkType 是否已赋值
+                     * @return NetworkType 是否已赋值
+                     */
+                    bool NetworkTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-border connection group).
+                     * @return PackageType Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-border connection group).
+                     */
+                    std::string GetPackageType() const;
+
+                    /**
+                     * 设置Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-border connection group).
+                     * @param PackageType Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-border connection group).
+                     */
+                    void SetPackageType(const std::string& _packageType);
+
+                    /**
+                     * 判断参数 PackageType 是否已赋值
+                     * @return PackageType 是否已赋值
+                     */
+                    bool PackageTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Http3Supported 
+                     */
+                    int64_t GetHttp3Supported() const;
+
+                    /**
+                     * 设置
+                     * @param Http3Supported 
+                     */
+                    void SetHttp3Supported(const int64_t& _http3Supported);
+
+                    /**
+                     * 判断参数 Http3Supported 是否已赋值
+                     * @return Http3Supported 是否已赋值
+                     */
+                    bool Http3SupportedHasBeenSet() const;
+
                 private:
 
                     /**
@@ -163,6 +235,30 @@ namespace TencentCloud
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
+
+                    /**
+                     * IP version. Valid values: `IPv4` (default), `IPv6`.
+                     */
+                    std::string m_iPAddressVersion;
+                    bool m_iPAddressVersionHasBeenSet;
+
+                    /**
+                     * Network type. Valid values: `normal` (default), `cn2`
+                     */
+                    std::string m_networkType;
+                    bool m_networkTypeHasBeenSet;
+
+                    /**
+                     * Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-border connection group).
+                     */
+                    std::string m_packageType;
+                    bool m_packageTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_http3Supported;
+                    bool m_http3SupportedHasBeenSet;
 
                 };
             }

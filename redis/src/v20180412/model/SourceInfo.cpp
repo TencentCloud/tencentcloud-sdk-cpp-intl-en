@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Redis::V20180412::Model;
-using namespace rapidjson;
 using namespace std;
 
 SourceInfo::SourceInfo() :
@@ -28,7 +27,7 @@ SourceInfo::SourceInfo() :
 {
 }
 
-CoreInternalOutcome SourceInfo::Deserialize(const Value &value)
+CoreInternalOutcome SourceInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome SourceInfo::Deserialize(const Value &value)
     {
         if (!value["Ip"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SourceInfo.Ip` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SourceInfo.Ip` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ip = string(value["Ip"].GetString());
         m_ipHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome SourceInfo::Deserialize(const Value &value)
     {
         if (!value["Conn"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SourceInfo.Conn` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SourceInfo.Conn` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_conn = value["Conn"].GetInt64();
         m_connHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome SourceInfo::Deserialize(const Value &value)
     {
         if (!value["Cmd"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SourceInfo.Cmd` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SourceInfo.Cmd` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_cmd = value["Cmd"].GetInt64();
         m_cmdHasBeenSet = true;
@@ -67,20 +66,20 @@ CoreInternalOutcome SourceInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void SourceInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SourceInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_ipHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Ip";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ip.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ip.c_str(), allocator).Move(), allocator);
     }
 
     if (m_connHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Conn";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_conn, allocator);
@@ -88,7 +87,7 @@ void SourceInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_cmdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Cmd";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cmd, allocator);

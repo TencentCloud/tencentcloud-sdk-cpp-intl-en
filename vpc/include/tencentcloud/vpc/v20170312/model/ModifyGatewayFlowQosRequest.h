@@ -73,14 +73,14 @@ ID of VPN gateway instance, e.g. `vpn-ltjahce6`.
                     bool GatewayIdHasBeenSet() const;
 
                     /**
-                     * 获取Bandwidth limit value in Mbps. Valid values: >0: set the limit to the specified value. 0: block all traffic. -1: no bandwidth limit.
-                     * @return Bandwidth Bandwidth limit value in Mbps. Valid values: >0: set the limit to the specified value. 0: block all traffic. -1: no bandwidth limit.
+                     * 获取Bandwidth limit value.
+                     * @return Bandwidth Bandwidth limit value.
                      */
                     int64_t GetBandwidth() const;
 
                     /**
-                     * 设置Bandwidth limit value in Mbps. Valid values: >0: set the limit to the specified value. 0: block all traffic. -1: no bandwidth limit.
-                     * @param Bandwidth Bandwidth limit value in Mbps. Valid values: >0: set the limit to the specified value. 0: block all traffic. -1: no bandwidth limit.
+                     * 设置Bandwidth limit value.
+                     * @param Bandwidth Bandwidth limit value.
                      */
                     void SetBandwidth(const int64_t& _bandwidth);
 
@@ -120,7 +120,7 @@ ID of VPN gateway instance, e.g. `vpn-ltjahce6`.
                     bool m_gatewayIdHasBeenSet;
 
                     /**
-                     * Bandwidth limit value in Mbps. Valid values: >0: set the limit to the specified value. 0: block all traffic. -1: no bandwidth limit.
+                     * Bandwidth limit value.
                      */
                     int64_t m_bandwidth;
                     bool m_bandwidthHasBeenSet;

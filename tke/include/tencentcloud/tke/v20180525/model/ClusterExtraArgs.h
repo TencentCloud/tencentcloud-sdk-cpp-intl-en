@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取kube-apiserver custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @return KubeAPIServer kube-apiserver custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 获取kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return KubeAPIServer kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::vector<std::string> GetKubeAPIServer() const;
 
                     /**
-                     * 设置kube-apiserver custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @param KubeAPIServer kube-apiserver custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 设置kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param KubeAPIServer kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     void SetKubeAPIServer(const std::vector<std::string>& _kubeAPIServer);
 
@@ -112,11 +112,33 @@ Note: this field may return null, indicating that no valid value is obtained.
                      */
                     bool KubeSchedulerHasBeenSet() const;
 
+                    /**
+                     * 获取etcd custom parameter, which is only effective for self-deployed cluster.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return Etcd etcd custom parameter, which is only effective for self-deployed cluster.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    std::vector<std::string> GetEtcd() const;
+
+                    /**
+                     * 设置etcd custom parameter, which is only effective for self-deployed cluster.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param Etcd etcd custom parameter, which is only effective for self-deployed cluster.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    void SetEtcd(const std::vector<std::string>& _etcd);
+
+                    /**
+                     * 判断参数 Etcd 是否已赋值
+                     * @return Etcd 是否已赋值
+                     */
+                    bool EtcdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * kube-apiserver custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
+                     * kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::vector<std::string> m_kubeAPIServer;
                     bool m_kubeAPIServerHasBeenSet;
@@ -134,6 +156,13 @@ Note: this field may return null, indicating that no valid value is obtained.
                      */
                     std::vector<std::string> m_kubeScheduler;
                     bool m_kubeSchedulerHasBeenSet;
+
+                    /**
+                     * etcd custom parameter, which is only effective for self-deployed cluster.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    std::vector<std::string> m_etcd;
+                    bool m_etcdHasBeenSet;
 
                 };
             }

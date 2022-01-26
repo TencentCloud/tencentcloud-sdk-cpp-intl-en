@@ -20,37 +20,54 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 PurgeUrlsCacheRequest::PurgeUrlsCacheRequest() :
-    m_urlsHasBeenSet(false)
+    m_urlsHasBeenSet(false),
+    m_areaHasBeenSet(false),
+    m_urlEncodeHasBeenSet(false)
 {
 }
 
 string PurgeUrlsCacheRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_urlsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Urls";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_urls.begin(); itr != m_urls.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
+    if (m_areaHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Area";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_area.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    if (m_urlEncodeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UrlEncode";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_urlEncode, allocator);
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -70,6 +87,38 @@ void PurgeUrlsCacheRequest::SetUrls(const vector<string>& _urls)
 bool PurgeUrlsCacheRequest::UrlsHasBeenSet() const
 {
     return m_urlsHasBeenSet;
+}
+
+string PurgeUrlsCacheRequest::GetArea() const
+{
+    return m_area;
+}
+
+void PurgeUrlsCacheRequest::SetArea(const string& _area)
+{
+    m_area = _area;
+    m_areaHasBeenSet = true;
+}
+
+bool PurgeUrlsCacheRequest::AreaHasBeenSet() const
+{
+    return m_areaHasBeenSet;
+}
+
+bool PurgeUrlsCacheRequest::GetUrlEncode() const
+{
+    return m_urlEncode;
+}
+
+void PurgeUrlsCacheRequest::SetUrlEncode(const bool& _urlEncode)
+{
+    m_urlEncode = _urlEncode;
+    m_urlEncodeHasBeenSet = true;
+}
+
+bool PurgeUrlsCacheRequest::UrlEncodeHasBeenSet() const
+{
+    return m_urlEncodeHasBeenSet;
 }
 
 

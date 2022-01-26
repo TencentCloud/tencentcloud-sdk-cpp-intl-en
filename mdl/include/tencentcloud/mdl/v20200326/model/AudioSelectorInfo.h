@@ -48,14 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Audio name, which can contain 1–32 letters, digits, and underscores.
-                     * @return Name Audio name, which can contain 1–32 letters, digits, and underscores.
+                     * 获取Audio name, which can contain 1-32 letters, digits, and underscores.
+                     * @return Name Audio name, which can contain 1-32 letters, digits, and underscores.
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Audio name, which can contain 1–32 letters, digits, and underscores.
-                     * @param Name Audio name, which can contain 1–32 letters, digits, and underscores.
+                     * 设置Audio name, which can contain 1-32 letters, digits, and underscores.
+                     * @param Name Audio name, which can contain 1-32 letters, digits, and underscores.
                      */
                     void SetName(const std::string& _name);
 
@@ -86,7 +86,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Audio name, which can contain 1–32 letters, digits, and underscores.
+                     * Audio name, which can contain 1-32 letters, digits, and underscores.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

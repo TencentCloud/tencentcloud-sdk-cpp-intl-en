@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cam::V20190116::Model;
-using namespace rapidjson;
 using namespace std;
 
 GroupMemberInfo::GroupMemberInfo() :
@@ -36,7 +35,7 @@ GroupMemberInfo::GroupMemberInfo() :
 {
 }
 
-CoreInternalOutcome GroupMemberInfo::Deserialize(const Value &value)
+CoreInternalOutcome GroupMemberInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -45,7 +44,7 @@ CoreInternalOutcome GroupMemberInfo::Deserialize(const Value &value)
     {
         if (!value["Uid"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `GroupMemberInfo.Uid` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupMemberInfo.Uid` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_uid = value["Uid"].GetUint64();
         m_uidHasBeenSet = true;
@@ -55,7 +54,7 @@ CoreInternalOutcome GroupMemberInfo::Deserialize(const Value &value)
     {
         if (!value["Uin"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `GroupMemberInfo.Uin` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupMemberInfo.Uin` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_uin = value["Uin"].GetUint64();
         m_uinHasBeenSet = true;
@@ -65,7 +64,7 @@ CoreInternalOutcome GroupMemberInfo::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GroupMemberInfo.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupMemberInfo.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -75,7 +74,7 @@ CoreInternalOutcome GroupMemberInfo::Deserialize(const Value &value)
     {
         if (!value["PhoneNum"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GroupMemberInfo.PhoneNum` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupMemberInfo.PhoneNum` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_phoneNum = string(value["PhoneNum"].GetString());
         m_phoneNumHasBeenSet = true;
@@ -85,7 +84,7 @@ CoreInternalOutcome GroupMemberInfo::Deserialize(const Value &value)
     {
         if (!value["CountryCode"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GroupMemberInfo.CountryCode` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupMemberInfo.CountryCode` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_countryCode = string(value["CountryCode"].GetString());
         m_countryCodeHasBeenSet = true;
@@ -95,7 +94,7 @@ CoreInternalOutcome GroupMemberInfo::Deserialize(const Value &value)
     {
         if (!value["PhoneFlag"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `GroupMemberInfo.PhoneFlag` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupMemberInfo.PhoneFlag` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_phoneFlag = value["PhoneFlag"].GetUint64();
         m_phoneFlagHasBeenSet = true;
@@ -105,7 +104,7 @@ CoreInternalOutcome GroupMemberInfo::Deserialize(const Value &value)
     {
         if (!value["Email"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GroupMemberInfo.Email` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupMemberInfo.Email` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_email = string(value["Email"].GetString());
         m_emailHasBeenSet = true;
@@ -115,7 +114,7 @@ CoreInternalOutcome GroupMemberInfo::Deserialize(const Value &value)
     {
         if (!value["EmailFlag"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `GroupMemberInfo.EmailFlag` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupMemberInfo.EmailFlag` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_emailFlag = value["EmailFlag"].GetUint64();
         m_emailFlagHasBeenSet = true;
@@ -125,7 +124,7 @@ CoreInternalOutcome GroupMemberInfo::Deserialize(const Value &value)
     {
         if (!value["UserType"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `GroupMemberInfo.UserType` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupMemberInfo.UserType` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_userType = value["UserType"].GetUint64();
         m_userTypeHasBeenSet = true;
@@ -135,7 +134,7 @@ CoreInternalOutcome GroupMemberInfo::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GroupMemberInfo.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupMemberInfo.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -145,7 +144,7 @@ CoreInternalOutcome GroupMemberInfo::Deserialize(const Value &value)
     {
         if (!value["IsReceiverOwner"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `GroupMemberInfo.IsReceiverOwner` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupMemberInfo.IsReceiverOwner` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_isReceiverOwner = value["IsReceiverOwner"].GetUint64();
         m_isReceiverOwnerHasBeenSet = true;
@@ -155,12 +154,12 @@ CoreInternalOutcome GroupMemberInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void GroupMemberInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void GroupMemberInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_uidHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Uid";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_uid, allocator);
@@ -168,7 +167,7 @@ void GroupMemberInfo::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_uinHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Uin";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_uin, allocator);
@@ -176,31 +175,31 @@ void GroupMemberInfo::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_phoneNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PhoneNum";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_phoneNum.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_phoneNum.c_str(), allocator).Move(), allocator);
     }
 
     if (m_countryCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CountryCode";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_countryCode.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_countryCode.c_str(), allocator).Move(), allocator);
     }
 
     if (m_phoneFlagHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PhoneFlag";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_phoneFlag, allocator);
@@ -208,15 +207,15 @@ void GroupMemberInfo::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_emailHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Email";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_email.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_email.c_str(), allocator).Move(), allocator);
     }
 
     if (m_emailFlagHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EmailFlag";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_emailFlag, allocator);
@@ -224,7 +223,7 @@ void GroupMemberInfo::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_userTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UserType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_userType, allocator);
@@ -232,15 +231,15 @@ void GroupMemberInfo::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_isReceiverOwnerHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsReceiverOwner";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isReceiverOwner, allocator);

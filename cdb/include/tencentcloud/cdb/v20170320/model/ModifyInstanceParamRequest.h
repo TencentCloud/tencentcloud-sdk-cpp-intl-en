@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool ParamListHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TemplateId 
+                     * 获取Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
+                     * @return TemplateId Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
                      */
                     int64_t GetTemplateId() const;
 
                     /**
-                     * 设置
-                     * @param TemplateId 
+                     * 设置Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
+                     * @param TemplateId Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
                      */
                     void SetTemplateId(const int64_t& _templateId);
 
@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool TemplateIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WaitSwitch 
+                     * 获取When to perform the parameter adjustment task. Default value: 0. Valid values: 0 - execute immediately, 1 - execute during window. When its value is 1, only one instance ID can be passed in (i.e., only one `InstanceIds` can be passed in).
+                     * @return WaitSwitch When to perform the parameter adjustment task. Default value: 0. Valid values: 0 - execute immediately, 1 - execute during window. When its value is 1, only one instance ID can be passed in (i.e., only one `InstanceIds` can be passed in).
                      */
                     int64_t GetWaitSwitch() const;
 
                     /**
-                     * 设置
-                     * @param WaitSwitch 
+                     * 设置When to perform the parameter adjustment task. Default value: 0. Valid values: 0 - execute immediately, 1 - execute during window. When its value is 1, only one instance ID can be passed in (i.e., only one `InstanceIds` can be passed in).
+                     * @param WaitSwitch When to perform the parameter adjustment task. Default value: 0. Valid values: 0 - execute immediately, 1 - execute during window. When its value is 1, only one instance ID can be passed in (i.e., only one `InstanceIds` can be passed in).
                      */
                     void SetWaitSwitch(const int64_t& _waitSwitch);
 
@@ -130,13 +130,13 @@ namespace TencentCloud
                     bool m_paramListHasBeenSet;
 
                     /**
-                     * 
+                     * Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
                      */
                     int64_t m_templateId;
                     bool m_templateIdHasBeenSet;
 
                     /**
-                     * 
+                     * When to perform the parameter adjustment task. Default value: 0. Valid values: 0 - execute immediately, 1 - execute during window. When its value is 1, only one instance ID can be passed in (i.e., only one `InstanceIds` can be passed in).
                      */
                     int64_t m_waitSwitch;
                     bool m_waitSwitchHasBeenSet;

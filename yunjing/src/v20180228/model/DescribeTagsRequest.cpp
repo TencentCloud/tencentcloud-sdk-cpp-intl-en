@@ -20,26 +20,75 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Yunjing::V20180228::Model;
-using namespace rapidjson;
 using namespace std;
 
-DescribeTagsRequest::DescribeTagsRequest()
+DescribeTagsRequest::DescribeTagsRequest() :
+    m_machineTypeHasBeenSet(false),
+    m_machineRegionHasBeenSet(false)
 {
 }
 
 string DescribeTagsRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
+    if (m_machineTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MachineType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_machineType.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    if (m_machineRegionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MachineRegion";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_machineRegion.c_str(), allocator).Move(), allocator);
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
 
+
+string DescribeTagsRequest::GetMachineType() const
+{
+    return m_machineType;
+}
+
+void DescribeTagsRequest::SetMachineType(const string& _machineType)
+{
+    m_machineType = _machineType;
+    m_machineTypeHasBeenSet = true;
+}
+
+bool DescribeTagsRequest::MachineTypeHasBeenSet() const
+{
+    return m_machineTypeHasBeenSet;
+}
+
+string DescribeTagsRequest::GetMachineRegion() const
+{
+    return m_machineRegion;
+}
+
+void DescribeTagsRequest::SetMachineRegion(const string& _machineRegion)
+{
+    m_machineRegion = _machineRegion;
+    m_machineRegionHasBeenSet = true;
+}
+
+bool DescribeTagsRequest::MachineRegionHasBeenSet() const
+{
+    return m_machineRegionHasBeenSet;
+}
 
 

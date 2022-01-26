@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 VideoTemplateInfoForUpdate::VideoTemplateInfoForUpdate() :
@@ -29,11 +28,12 @@ VideoTemplateInfoForUpdate::VideoTemplateInfoForUpdate() :
     m_widthHasBeenSet(false),
     m_heightHasBeenSet(false),
     m_gopHasBeenSet(false),
-    m_fillTypeHasBeenSet(false)
+    m_fillTypeHasBeenSet(false),
+    m_vcrfHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome VideoTemplateInfoForUpdate::Deserialize(const Value &value)
+CoreInternalOutcome VideoTemplateInfoForUpdate::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +42,7 @@ CoreInternalOutcome VideoTemplateInfoForUpdate::Deserialize(const Value &value)
     {
         if (!value["Codec"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VideoTemplateInfoForUpdate.Codec` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfoForUpdate.Codec` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_codec = string(value["Codec"].GetString());
         m_codecHasBeenSet = true;
@@ -52,7 +52,7 @@ CoreInternalOutcome VideoTemplateInfoForUpdate::Deserialize(const Value &value)
     {
         if (!value["Fps"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `VideoTemplateInfoForUpdate.Fps` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfoForUpdate.Fps` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_fps = value["Fps"].GetUint64();
         m_fpsHasBeenSet = true;
@@ -62,7 +62,7 @@ CoreInternalOutcome VideoTemplateInfoForUpdate::Deserialize(const Value &value)
     {
         if (!value["Bitrate"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `VideoTemplateInfoForUpdate.Bitrate` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfoForUpdate.Bitrate` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_bitrate = value["Bitrate"].GetUint64();
         m_bitrateHasBeenSet = true;
@@ -72,7 +72,7 @@ CoreInternalOutcome VideoTemplateInfoForUpdate::Deserialize(const Value &value)
     {
         if (!value["ResolutionAdaptive"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VideoTemplateInfoForUpdate.ResolutionAdaptive` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfoForUpdate.ResolutionAdaptive` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_resolutionAdaptive = string(value["ResolutionAdaptive"].GetString());
         m_resolutionAdaptiveHasBeenSet = true;
@@ -82,7 +82,7 @@ CoreInternalOutcome VideoTemplateInfoForUpdate::Deserialize(const Value &value)
     {
         if (!value["Width"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `VideoTemplateInfoForUpdate.Width` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfoForUpdate.Width` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_width = value["Width"].GetUint64();
         m_widthHasBeenSet = true;
@@ -92,7 +92,7 @@ CoreInternalOutcome VideoTemplateInfoForUpdate::Deserialize(const Value &value)
     {
         if (!value["Height"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `VideoTemplateInfoForUpdate.Height` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfoForUpdate.Height` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_height = value["Height"].GetUint64();
         m_heightHasBeenSet = true;
@@ -102,7 +102,7 @@ CoreInternalOutcome VideoTemplateInfoForUpdate::Deserialize(const Value &value)
     {
         if (!value["Gop"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `VideoTemplateInfoForUpdate.Gop` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfoForUpdate.Gop` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_gop = value["Gop"].GetUint64();
         m_gopHasBeenSet = true;
@@ -112,30 +112,40 @@ CoreInternalOutcome VideoTemplateInfoForUpdate::Deserialize(const Value &value)
     {
         if (!value["FillType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VideoTemplateInfoForUpdate.FillType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfoForUpdate.FillType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fillType = string(value["FillType"].GetString());
         m_fillTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("Vcrf") && !value["Vcrf"].IsNull())
+    {
+        if (!value["Vcrf"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfoForUpdate.Vcrf` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_vcrf = value["Vcrf"].GetUint64();
+        m_vcrfHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void VideoTemplateInfoForUpdate::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void VideoTemplateInfoForUpdate::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_codecHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Codec";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_codec.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_codec.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fpsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Fps";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_fps, allocator);
@@ -143,7 +153,7 @@ void VideoTemplateInfoForUpdate::ToJsonObject(Value &value, Document::AllocatorT
 
     if (m_bitrateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Bitrate";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_bitrate, allocator);
@@ -151,15 +161,15 @@ void VideoTemplateInfoForUpdate::ToJsonObject(Value &value, Document::AllocatorT
 
     if (m_resolutionAdaptiveHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResolutionAdaptive";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_resolutionAdaptive.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resolutionAdaptive.c_str(), allocator).Move(), allocator);
     }
 
     if (m_widthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Width";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_width, allocator);
@@ -167,7 +177,7 @@ void VideoTemplateInfoForUpdate::ToJsonObject(Value &value, Document::AllocatorT
 
     if (m_heightHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Height";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_height, allocator);
@@ -175,7 +185,7 @@ void VideoTemplateInfoForUpdate::ToJsonObject(Value &value, Document::AllocatorT
 
     if (m_gopHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Gop";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_gop, allocator);
@@ -183,10 +193,18 @@ void VideoTemplateInfoForUpdate::ToJsonObject(Value &value, Document::AllocatorT
 
     if (m_fillTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FillType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fillType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fillType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_vcrfHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Vcrf";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_vcrf, allocator);
     }
 
 }
@@ -318,5 +336,21 @@ void VideoTemplateInfoForUpdate::SetFillType(const string& _fillType)
 bool VideoTemplateInfoForUpdate::FillTypeHasBeenSet() const
 {
     return m_fillTypeHasBeenSet;
+}
+
+uint64_t VideoTemplateInfoForUpdate::GetVcrf() const
+{
+    return m_vcrf;
+}
+
+void VideoTemplateInfoForUpdate::SetVcrf(const uint64_t& _vcrf)
+{
+    m_vcrf = _vcrf;
+    m_vcrfHasBeenSet = true;
+}
+
+bool VideoTemplateInfoForUpdate::VcrfHasBeenSet() const
+{
+    return m_vcrfHasBeenSet;
 }
 

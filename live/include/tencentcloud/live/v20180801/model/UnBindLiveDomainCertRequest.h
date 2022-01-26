@@ -60,6 +60,40 @@ namespace TencentCloud
                      */
                     bool DomainNameHasBeenSet() const;
 
+                    /**
+                     * 获取Valid values:
+`gray`: unbind the canary certificate
+`formal` (default): unbind the formal certificate
+
+`formal` will be used if no value is passed in
+                     * @return Type Valid values:
+`gray`: unbind the canary certificate
+`formal` (default): unbind the formal certificate
+
+`formal` will be used if no value is passed in
+                     */
+                    std::string GetType() const;
+
+                    /**
+                     * 设置Valid values:
+`gray`: unbind the canary certificate
+`formal` (default): unbind the formal certificate
+
+`formal` will be used if no value is passed in
+                     * @param Type Valid values:
+`gray`: unbind the canary certificate
+`formal` (default): unbind the formal certificate
+
+`formal` will be used if no value is passed in
+                     */
+                    void SetType(const std::string& _type);
+
+                    /**
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
+                     */
+                    bool TypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -67,6 +101,16 @@ namespace TencentCloud
                      */
                     std::string m_domainName;
                     bool m_domainNameHasBeenSet;
+
+                    /**
+                     * Valid values:
+`gray`: unbind the canary certificate
+`formal` (default): unbind the formal certificate
+
+`formal` will be used if no value is passed in
+                     */
+                    std::string m_type;
+                    bool m_typeHasBeenSet;
 
                 };
             }

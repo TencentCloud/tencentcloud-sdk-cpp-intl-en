@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Specification information
+                * Specification description
                 */
                 class SpecItemInfo : public AbstractModel
                 {
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool SpecCodeHasBeenSet() const;
 
                     /**
-                     * 获取PostgreSQL kernel version number
-                     * @return Version PostgreSQL kernel version number
+                     * 获取PostgerSQL version number
+                     * @return Version PostgerSQL version number
                      */
                     std::string GetVersion() const;
 
                     /**
-                     * 设置PostgreSQL kernel version number
-                     * @param Version PostgreSQL kernel version number
+                     * 设置PostgerSQL version number
+                     * @param Version PostgerSQL version number
                      */
                     void SetVersion(const std::string& _version);
 
@@ -226,6 +226,50 @@ namespace TencentCloud
                      */
                     bool TypeHasBeenSet() const;
 
+                    /**
+                     * 获取PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return MajorVersion PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetMajorVersion() const;
+
+                    /**
+                     * 设置PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param MajorVersion PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetMajorVersion(const std::string& _majorVersion);
+
+                    /**
+                     * 判断参数 MajorVersion 是否已赋值
+                     * @return MajorVersion 是否已赋值
+                     */
+                    bool MajorVersionHasBeenSet() const;
+
+                    /**
+                     * 获取PostgreSQL kernel version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return KernelVersion PostgreSQL kernel version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetKernelVersion() const;
+
+                    /**
+                     * 设置PostgreSQL kernel version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param KernelVersion PostgreSQL kernel version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetKernelVersion(const std::string& _kernelVersion);
+
+                    /**
+                     * 判断参数 KernelVersion 是否已赋值
+                     * @return KernelVersion 是否已赋值
+                     */
+                    bool KernelVersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -235,7 +279,7 @@ namespace TencentCloud
                     bool m_specCodeHasBeenSet;
 
                     /**
-                     * PostgreSQL kernel version number
+                     * PostgerSQL version number
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;
@@ -287,6 +331,20 @@ namespace TencentCloud
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
+
+                    /**
+                     * PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_majorVersion;
+                    bool m_majorVersionHasBeenSet;
+
+                    /**
+                     * PostgreSQL kernel version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_kernelVersion;
+                    bool m_kernelVersionHasBeenSet;
 
                 };
             }

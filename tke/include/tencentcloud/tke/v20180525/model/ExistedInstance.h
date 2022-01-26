@@ -153,17 +153,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取List of private IPs of the instance’s primary ENI.
+                     * 获取List of private IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PrivateIpAddresses List of private IPs of the instance’s primary ENI.
+                     * @return PrivateIpAddresses List of private IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetPrivateIpAddresses() const;
 
                     /**
-                     * 设置List of private IPs of the instance’s primary ENI.
+                     * 设置List of private IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PrivateIpAddresses List of private IPs of the instance’s primary ENI.
+                     * @param PrivateIpAddresses List of private IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetPrivateIpAddresses(const std::vector<std::string>& _privateIpAddresses);
@@ -175,17 +175,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PrivateIpAddressesHasBeenSet() const;
 
                     /**
-                     * 获取List of public IPs of the instance’s primary ENI.
+                     * 获取List of public IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PublicIpAddresses List of public IPs of the instance’s primary ENI.
+                     * @return PublicIpAddresses List of public IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetPublicIpAddresses() const;
 
                     /**
-                     * 设置List of public IPs of the instance’s primary ENI.
+                     * 设置List of public IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PublicIpAddresses List of public IPs of the instance’s primary ENI.
+                     * @param PublicIpAddresses List of public IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetPublicIpAddresses(const std::vector<std::string>& _publicIpAddresses);
@@ -219,17 +219,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Instance’s number of CPU cores. Unit: cores.
+                     * 获取Instance's number of CPU cores. Unit: cores.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CPU Instance’s number of CPU cores. Unit: cores.
+                     * @return CPU Instance's number of CPU cores. Unit: cores.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetCPU() const;
 
                     /**
-                     * 设置Instance’s number of CPU cores. Unit: cores.
+                     * 设置Instance's number of CPU cores. Unit: cores.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CPU Instance’s number of CPU cores. Unit: cores.
+                     * @param CPU Instance's number of CPU cores. Unit: cores.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetCPU(const uint64_t& _cPU);
@@ -241,17 +241,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CPUHasBeenSet() const;
 
                     /**
-                     * 获取Instance’s memory capacity. Unit: GB.
+                     * 获取Instance's memory capacity. Unit: GB.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Memory Instance’s memory capacity. Unit: GB.
+                     * @return Memory Instance's memory capacity. Unit: GB.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetMemory() const;
 
                     /**
-                     * 设置Instance’s memory capacity. Unit: GB.
+                     * 设置Instance's memory capacity. Unit: GB.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Memory Instance’s memory capacity. Unit: GB.
+                     * @param Memory Instance's memory capacity. Unit: GB.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetMemory(const uint64_t& _memory);
@@ -387,14 +387,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * List of private IPs of the instance’s primary ENI.
+                     * List of private IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_privateIpAddresses;
                     bool m_privateIpAddressesHasBeenSet;
 
                     /**
-                     * List of public IPs of the instance’s primary ENI.
+                     * List of public IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_publicIpAddresses;
@@ -408,14 +408,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_createdTimeHasBeenSet;
 
                     /**
-                     * Instance’s number of CPU cores. Unit: cores.
+                     * Instance's number of CPU cores. Unit: cores.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_cPU;
                     bool m_cPUHasBeenSet;
 
                     /**
-                     * Instance’s memory capacity. Unit: GB.
+                     * Instance's memory capacity. Unit: GB.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_memory;

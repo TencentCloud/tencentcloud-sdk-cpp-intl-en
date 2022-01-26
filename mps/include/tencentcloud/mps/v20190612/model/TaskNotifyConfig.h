@@ -136,6 +136,42 @@ namespace TencentCloud
                      */
                     bool NotifyModeHasBeenSet() const;
 
+                    /**
+                     * 获取Notification type, `CMQ` by default. If `URL` is passed in, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+                     * @return NotifyType Notification type, `CMQ` by default. If `URL` is passed in, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+                     */
+                    std::string GetNotifyType() const;
+
+                    /**
+                     * 设置Notification type, `CMQ` by default. If `URL` is passed in, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+                     * @param NotifyType Notification type, `CMQ` by default. If `URL` is passed in, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+                     */
+                    void SetNotifyType(const std::string& _notifyType);
+
+                    /**
+                     * 判断参数 NotifyType 是否已赋值
+                     * @return NotifyType 是否已赋值
+                     */
+                    bool NotifyTypeHasBeenSet() const;
+
+                    /**
+                     * 获取HTTP callback URL, required if `NotifyType` is set to `URL`
+                     * @return NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
+                     */
+                    std::string GetNotifyUrl() const;
+
+                    /**
+                     * 设置HTTP callback URL, required if `NotifyType` is set to `URL`
+                     * @param NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
+                     */
+                    void SetNotifyUrl(const std::string& _notifyUrl);
+
+                    /**
+                     * 判断参数 NotifyUrl 是否已赋值
+                     * @return NotifyUrl 是否已赋值
+                     */
+                    bool NotifyUrlHasBeenSet() const;
+
                 private:
 
                     /**
@@ -167,6 +203,18 @@ namespace TencentCloud
                      */
                     std::string m_notifyMode;
                     bool m_notifyModeHasBeenSet;
+
+                    /**
+                     * Notification type, `CMQ` by default. If `URL` is passed in, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+                     */
+                    std::string m_notifyType;
+                    bool m_notifyTypeHasBeenSet;
+
+                    /**
+                     * HTTP callback URL, required if `NotifyType` is set to `URL`
+                     */
+                    std::string m_notifyUrl;
+                    bool m_notifyUrlHasBeenSet;
 
                 };
             }

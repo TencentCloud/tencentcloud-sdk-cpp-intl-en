@@ -137,14 +137,14 @@ namespace TencentCloud
                     bool ExternalAddrHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Size 
+                     * 获取Backup file size
+                     * @return Size Backup file size
                      */
                     int64_t GetSize() const;
 
                     /**
-                     * 设置
-                     * @param Size 
+                     * 设置Backup file size
+                     * @param Size Backup file size
                      */
                     void SetSize(const int64_t& _size);
 
@@ -187,7 +187,7 @@ namespace TencentCloud
                     bool m_externalAddrHasBeenSet;
 
                     /**
-                     * 
+                     * Backup file size
                      */
                     int64_t m_size;
                     bool m_sizeHasBeenSet;

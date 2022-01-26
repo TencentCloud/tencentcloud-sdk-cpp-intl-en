@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/postgres/v20170312/model/Tag.h>
 
 
 namespace TencentCloud
@@ -59,24 +60,6 @@ namespace TencentCloud
                      * @return SpecCode 是否已赋值
                      */
                     bool SpecCodeHasBeenSet() const;
-
-                    /**
-                     * 获取PostgreSQL kernel version. Currently, only two versions are supported: 9.3.5 and 9.5.4.
-                     * @return DBVersion PostgreSQL kernel version. Currently, only two versions are supported: 9.3.5 and 9.5.4.
-                     */
-                    std::string GetDBVersion() const;
-
-                    /**
-                     * 设置PostgreSQL kernel version. Currently, only two versions are supported: 9.3.5 and 9.5.4.
-                     * @param DBVersion PostgreSQL kernel version. Currently, only two versions are supported: 9.3.5 and 9.5.4.
-                     */
-                    void SetDBVersion(const std::string& _dBVersion);
-
-                    /**
-                     * 判断参数 DBVersion 是否已赋值
-                     * @return DBVersion 是否已赋值
-                     */
-                    bool DBVersionHasBeenSet() const;
 
                     /**
                      * 获取Instance capacity size in GB.
@@ -167,6 +150,24 @@ namespace TencentCloud
                      * @return ProjectId 是否已赋值
                      */
                     bool ProjectIdHasBeenSet() const;
+
+                    /**
+                     * 获取PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
+                     * @return DBVersion PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
+                     */
+                    std::string GetDBVersion() const;
+
+                    /**
+                     * 设置PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
+                     * @param DBVersion PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
+                     */
+                    void SetDBVersion(const std::string& _dBVersion);
+
+                    /**
+                     * 判断参数 DBVersion 是否已赋值
+                     * @return DBVersion 是否已赋值
+                     */
+                    bool DBVersionHasBeenSet() const;
 
                     /**
                      * 获取Instance billing type.
@@ -277,14 +278,14 @@ namespace TencentCloud
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ActivityId 
+                     * 获取Activity ID
+                     * @return ActivityId Activity ID
                      */
                     int64_t GetActivityId() const;
 
                     /**
-                     * 设置
-                     * @param ActivityId 
+                     * 设置Activity ID
+                     * @param ActivityId Activity ID
                      */
                     void SetActivityId(const int64_t& _activityId);
 
@@ -330,6 +331,78 @@ namespace TencentCloud
                      */
                     bool NeedSupportIpv6HasBeenSet() const;
 
+                    /**
+                     * 获取The information of tags to be associated with instances. This parameter is left empty by default.
+                     * @return TagList The information of tags to be associated with instances. This parameter is left empty by default.
+                     */
+                    std::vector<Tag> GetTagList() const;
+
+                    /**
+                     * 设置The information of tags to be associated with instances. This parameter is left empty by default.
+                     * @param TagList The information of tags to be associated with instances. This parameter is left empty by default.
+                     */
+                    void SetTagList(const std::vector<Tag>& _tagList);
+
+                    /**
+                     * 判断参数 TagList 是否已赋值
+                     * @return TagList 是否已赋值
+                     */
+                    bool TagListHasBeenSet() const;
+
+                    /**
+                     * 获取Security group ID
+                     * @return SecurityGroupIds Security group ID
+                     */
+                    std::vector<std::string> GetSecurityGroupIds() const;
+
+                    /**
+                     * 设置Security group ID
+                     * @param SecurityGroupIds Security group ID
+                     */
+                    void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
+
+                    /**
+                     * 判断参数 SecurityGroupIds 是否已赋值
+                     * @return SecurityGroupIds 是否已赋值
+                     */
+                    bool SecurityGroupIdsHasBeenSet() const;
+
+                    /**
+                     * 获取PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
+                     * @return DBMajorVersion PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
+                     */
+                    std::string GetDBMajorVersion() const;
+
+                    /**
+                     * 设置PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
+                     * @param DBMajorVersion PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
+                     */
+                    void SetDBMajorVersion(const std::string& _dBMajorVersion);
+
+                    /**
+                     * 判断参数 DBMajorVersion 是否已赋值
+                     * @return DBMajorVersion 是否已赋值
+                     */
+                    bool DBMajorVersionHasBeenSet() const;
+
+                    /**
+                     * 获取PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+                     * @return DBKernelVersion PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+                     */
+                    std::string GetDBKernelVersion() const;
+
+                    /**
+                     * 设置PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+                     * @param DBKernelVersion PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+                     */
+                    void SetDBKernelVersion(const std::string& _dBKernelVersion);
+
+                    /**
+                     * 判断参数 DBKernelVersion 是否已赋值
+                     * @return DBKernelVersion 是否已赋值
+                     */
+                    bool DBKernelVersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -337,12 +410,6 @@ namespace TencentCloud
                      */
                     std::string m_specCode;
                     bool m_specCodeHasBeenSet;
-
-                    /**
-                     * PostgreSQL kernel version. Currently, only two versions are supported: 9.3.5 and 9.5.4.
-                     */
-                    std::string m_dBVersion;
-                    bool m_dBVersionHasBeenSet;
 
                     /**
                      * Instance capacity size in GB.
@@ -373,6 +440,12 @@ namespace TencentCloud
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
+
+                    /**
+                     * PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
+                     */
+                    std::string m_dBVersion;
+                    bool m_dBVersionHasBeenSet;
 
                     /**
                      * Instance billing type.
@@ -411,7 +484,7 @@ namespace TencentCloud
                     bool m_autoRenewFlagHasBeenSet;
 
                     /**
-                     * 
+                     * Activity ID
                      */
                     int64_t m_activityId;
                     bool m_activityIdHasBeenSet;
@@ -427,6 +500,30 @@ namespace TencentCloud
                      */
                     uint64_t m_needSupportIpv6;
                     bool m_needSupportIpv6HasBeenSet;
+
+                    /**
+                     * The information of tags to be associated with instances. This parameter is left empty by default.
+                     */
+                    std::vector<Tag> m_tagList;
+                    bool m_tagListHasBeenSet;
+
+                    /**
+                     * Security group ID
+                     */
+                    std::vector<std::string> m_securityGroupIds;
+                    bool m_securityGroupIdsHasBeenSet;
+
+                    /**
+                     * PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
+                     */
+                    std::string m_dBMajorVersion;
+                    bool m_dBMajorVersionHasBeenSet;
+
+                    /**
+                     * PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+                     */
+                    std::string m_dBKernelVersion;
+                    bool m_dBKernelVersionHasBeenSet;
 
                 };
             }

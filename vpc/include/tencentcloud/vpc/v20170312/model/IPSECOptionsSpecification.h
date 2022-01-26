@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', and 'NULL'. Default is AES-CBC-128.
-                     * @return EncryptAlgorithm Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', and 'NULL'. Default is AES-CBC-128.
+                     * 获取Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBC-192`, `AES-CBC-256`, `DES-CBC`, `SM4`, and `NULL`; default value: `AES-CBC-128`.
+                     * @return EncryptAlgorithm Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBC-192`, `AES-CBC-256`, `DES-CBC`, `SM4`, and `NULL`; default value: `AES-CBC-128`.
                      */
                     std::string GetEncryptAlgorithm() const;
 
                     /**
-                     * 设置Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', and 'NULL'. Default is AES-CBC-128.
-                     * @param EncryptAlgorithm Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', and 'NULL'. Default is AES-CBC-128.
+                     * 设置Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBC-192`, `AES-CBC-256`, `DES-CBC`, `SM4`, and `NULL`; default value: `AES-CBC-128`.
+                     * @param EncryptAlgorithm Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBC-192`, `AES-CBC-256`, `DES-CBC`, `SM4`, and `NULL`; default value: `AES-CBC-128`.
                      */
                     void SetEncryptAlgorithm(const std::string& _encryptAlgorithm);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool EncryptAlgorithmHasBeenSet() const;
 
                     /**
-                     * 获取Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is:
-                     * @return IntegrityAlgorith Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is:
+                     * 获取Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
+                     * @return IntegrityAlgorith Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
                      */
                     std::string GetIntegrityAlgorith() const;
 
                     /**
-                     * 设置Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is:
-                     * @param IntegrityAlgorith Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is:
+                     * 设置Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
+                     * @param IntegrityAlgorith Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
                      */
                     void SetIntegrityAlgorith(const std::string& _integrityAlgorith);
 
@@ -139,13 +139,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', and 'NULL'. Default is AES-CBC-128.
+                     * Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBC-192`, `AES-CBC-256`, `DES-CBC`, `SM4`, and `NULL`; default value: `AES-CBC-128`.
                      */
                     std::string m_encryptAlgorithm;
                     bool m_encryptAlgorithmHasBeenSet;
 
                     /**
-                     * Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is:
+                     * Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
                      */
                     std::string m_integrityAlgorith;
                     bool m_integrityAlgorithHasBeenSet;

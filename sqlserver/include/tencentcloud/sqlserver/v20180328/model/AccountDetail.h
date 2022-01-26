@@ -191,6 +191,24 @@ namespace TencentCloud
                      */
                     bool DbsHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it is an admin account
+                     * @return IsAdmin Whether it is an admin account
+                     */
+                    bool GetIsAdmin() const;
+
+                    /**
+                     * 设置Whether it is an admin account
+                     * @param IsAdmin Whether it is an admin account
+                     */
+                    void SetIsAdmin(const bool& _isAdmin);
+
+                    /**
+                     * 判断参数 IsAdmin 是否已赋值
+                     * @return IsAdmin 是否已赋值
+                     */
+                    bool IsAdminHasBeenSet() const;
+
                 private:
 
                     /**
@@ -240,6 +258,12 @@ namespace TencentCloud
                      */
                     std::vector<DBPrivilege> m_dbs;
                     bool m_dbsHasBeenSet;
+
+                    /**
+                     * Whether it is an admin account
+                     */
+                    bool m_isAdmin;
+                    bool m_isAdminHasBeenSet;
 
                 };
             }

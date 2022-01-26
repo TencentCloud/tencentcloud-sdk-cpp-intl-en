@@ -25,6 +25,8 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/tag/v20180813/model/AddResourceTagRequest.h>
 #include <tencentcloud/tag/v20180813/model/AddResourceTagResponse.h>
+#include <tencentcloud/tag/v20180813/model/AttachResourcesTagRequest.h>
+#include <tencentcloud/tag/v20180813/model/AttachResourcesTagResponse.h>
 #include <tencentcloud/tag/v20180813/model/CreateTagRequest.h>
 #include <tencentcloud/tag/v20180813/model/CreateTagResponse.h>
 #include <tencentcloud/tag/v20180813/model/DeleteResourceTagRequest.h>
@@ -35,18 +37,30 @@
 #include <tencentcloud/tag/v20180813/model/DescribeResourceTagsResponse.h>
 #include <tencentcloud/tag/v20180813/model/DescribeResourceTagsByResourceIdsRequest.h>
 #include <tencentcloud/tag/v20180813/model/DescribeResourceTagsByResourceIdsResponse.h>
+#include <tencentcloud/tag/v20180813/model/DescribeResourceTagsByResourceIdsSeqRequest.h>
+#include <tencentcloud/tag/v20180813/model/DescribeResourceTagsByResourceIdsSeqResponse.h>
 #include <tencentcloud/tag/v20180813/model/DescribeResourceTagsByTagKeysRequest.h>
 #include <tencentcloud/tag/v20180813/model/DescribeResourceTagsByTagKeysResponse.h>
 #include <tencentcloud/tag/v20180813/model/DescribeResourcesByTagsRequest.h>
 #include <tencentcloud/tag/v20180813/model/DescribeResourcesByTagsResponse.h>
+#include <tencentcloud/tag/v20180813/model/DescribeResourcesByTagsUnionRequest.h>
+#include <tencentcloud/tag/v20180813/model/DescribeResourcesByTagsUnionResponse.h>
 #include <tencentcloud/tag/v20180813/model/DescribeTagKeysRequest.h>
 #include <tencentcloud/tag/v20180813/model/DescribeTagKeysResponse.h>
 #include <tencentcloud/tag/v20180813/model/DescribeTagValuesRequest.h>
 #include <tencentcloud/tag/v20180813/model/DescribeTagValuesResponse.h>
+#include <tencentcloud/tag/v20180813/model/DescribeTagValuesSeqRequest.h>
+#include <tencentcloud/tag/v20180813/model/DescribeTagValuesSeqResponse.h>
 #include <tencentcloud/tag/v20180813/model/DescribeTagsRequest.h>
 #include <tencentcloud/tag/v20180813/model/DescribeTagsResponse.h>
+#include <tencentcloud/tag/v20180813/model/DescribeTagsSeqRequest.h>
+#include <tencentcloud/tag/v20180813/model/DescribeTagsSeqResponse.h>
+#include <tencentcloud/tag/v20180813/model/DetachResourcesTagRequest.h>
+#include <tencentcloud/tag/v20180813/model/DetachResourcesTagResponse.h>
 #include <tencentcloud/tag/v20180813/model/ModifyResourceTagsRequest.h>
 #include <tencentcloud/tag/v20180813/model/ModifyResourceTagsResponse.h>
+#include <tencentcloud/tag/v20180813/model/ModifyResourcesTagValueRequest.h>
+#include <tencentcloud/tag/v20180813/model/ModifyResourcesTagValueResponse.h>
 #include <tencentcloud/tag/v20180813/model/UpdateResourceTagValueRequest.h>
 #include <tencentcloud/tag/v20180813/model/UpdateResourceTagValueResponse.h>
 
@@ -63,43 +77,64 @@ namespace TencentCloud
                 TagClient(const Credential &credential, const std::string &region);
                 TagClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::AddResourceTagResponse> AddResourceTagOutcome;
+                typedef Outcome<Core::Error, Model::AddResourceTagResponse> AddResourceTagOutcome;
                 typedef std::future<AddResourceTagOutcome> AddResourceTagOutcomeCallable;
                 typedef std::function<void(const TagClient*, const Model::AddResourceTagRequest&, AddResourceTagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddResourceTagAsyncHandler;
-                typedef Outcome<Error, Model::CreateTagResponse> CreateTagOutcome;
+                typedef Outcome<Core::Error, Model::AttachResourcesTagResponse> AttachResourcesTagOutcome;
+                typedef std::future<AttachResourcesTagOutcome> AttachResourcesTagOutcomeCallable;
+                typedef std::function<void(const TagClient*, const Model::AttachResourcesTagRequest&, AttachResourcesTagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AttachResourcesTagAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateTagResponse> CreateTagOutcome;
                 typedef std::future<CreateTagOutcome> CreateTagOutcomeCallable;
                 typedef std::function<void(const TagClient*, const Model::CreateTagRequest&, CreateTagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateTagAsyncHandler;
-                typedef Outcome<Error, Model::DeleteResourceTagResponse> DeleteResourceTagOutcome;
+                typedef Outcome<Core::Error, Model::DeleteResourceTagResponse> DeleteResourceTagOutcome;
                 typedef std::future<DeleteResourceTagOutcome> DeleteResourceTagOutcomeCallable;
                 typedef std::function<void(const TagClient*, const Model::DeleteResourceTagRequest&, DeleteResourceTagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteResourceTagAsyncHandler;
-                typedef Outcome<Error, Model::DeleteTagResponse> DeleteTagOutcome;
+                typedef Outcome<Core::Error, Model::DeleteTagResponse> DeleteTagOutcome;
                 typedef std::future<DeleteTagOutcome> DeleteTagOutcomeCallable;
                 typedef std::function<void(const TagClient*, const Model::DeleteTagRequest&, DeleteTagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTagAsyncHandler;
-                typedef Outcome<Error, Model::DescribeResourceTagsResponse> DescribeResourceTagsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeResourceTagsResponse> DescribeResourceTagsOutcome;
                 typedef std::future<DescribeResourceTagsOutcome> DescribeResourceTagsOutcomeCallable;
                 typedef std::function<void(const TagClient*, const Model::DescribeResourceTagsRequest&, DescribeResourceTagsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeResourceTagsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeResourceTagsByResourceIdsResponse> DescribeResourceTagsByResourceIdsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeResourceTagsByResourceIdsResponse> DescribeResourceTagsByResourceIdsOutcome;
                 typedef std::future<DescribeResourceTagsByResourceIdsOutcome> DescribeResourceTagsByResourceIdsOutcomeCallable;
                 typedef std::function<void(const TagClient*, const Model::DescribeResourceTagsByResourceIdsRequest&, DescribeResourceTagsByResourceIdsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeResourceTagsByResourceIdsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeResourceTagsByTagKeysResponse> DescribeResourceTagsByTagKeysOutcome;
+                typedef Outcome<Core::Error, Model::DescribeResourceTagsByResourceIdsSeqResponse> DescribeResourceTagsByResourceIdsSeqOutcome;
+                typedef std::future<DescribeResourceTagsByResourceIdsSeqOutcome> DescribeResourceTagsByResourceIdsSeqOutcomeCallable;
+                typedef std::function<void(const TagClient*, const Model::DescribeResourceTagsByResourceIdsSeqRequest&, DescribeResourceTagsByResourceIdsSeqOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeResourceTagsByResourceIdsSeqAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeResourceTagsByTagKeysResponse> DescribeResourceTagsByTagKeysOutcome;
                 typedef std::future<DescribeResourceTagsByTagKeysOutcome> DescribeResourceTagsByTagKeysOutcomeCallable;
                 typedef std::function<void(const TagClient*, const Model::DescribeResourceTagsByTagKeysRequest&, DescribeResourceTagsByTagKeysOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeResourceTagsByTagKeysAsyncHandler;
-                typedef Outcome<Error, Model::DescribeResourcesByTagsResponse> DescribeResourcesByTagsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeResourcesByTagsResponse> DescribeResourcesByTagsOutcome;
                 typedef std::future<DescribeResourcesByTagsOutcome> DescribeResourcesByTagsOutcomeCallable;
                 typedef std::function<void(const TagClient*, const Model::DescribeResourcesByTagsRequest&, DescribeResourcesByTagsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeResourcesByTagsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTagKeysResponse> DescribeTagKeysOutcome;
+                typedef Outcome<Core::Error, Model::DescribeResourcesByTagsUnionResponse> DescribeResourcesByTagsUnionOutcome;
+                typedef std::future<DescribeResourcesByTagsUnionOutcome> DescribeResourcesByTagsUnionOutcomeCallable;
+                typedef std::function<void(const TagClient*, const Model::DescribeResourcesByTagsUnionRequest&, DescribeResourcesByTagsUnionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeResourcesByTagsUnionAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTagKeysResponse> DescribeTagKeysOutcome;
                 typedef std::future<DescribeTagKeysOutcome> DescribeTagKeysOutcomeCallable;
                 typedef std::function<void(const TagClient*, const Model::DescribeTagKeysRequest&, DescribeTagKeysOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTagKeysAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTagValuesResponse> DescribeTagValuesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTagValuesResponse> DescribeTagValuesOutcome;
                 typedef std::future<DescribeTagValuesOutcome> DescribeTagValuesOutcomeCallable;
                 typedef std::function<void(const TagClient*, const Model::DescribeTagValuesRequest&, DescribeTagValuesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTagValuesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTagsResponse> DescribeTagsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTagValuesSeqResponse> DescribeTagValuesSeqOutcome;
+                typedef std::future<DescribeTagValuesSeqOutcome> DescribeTagValuesSeqOutcomeCallable;
+                typedef std::function<void(const TagClient*, const Model::DescribeTagValuesSeqRequest&, DescribeTagValuesSeqOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTagValuesSeqAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTagsResponse> DescribeTagsOutcome;
                 typedef std::future<DescribeTagsOutcome> DescribeTagsOutcomeCallable;
                 typedef std::function<void(const TagClient*, const Model::DescribeTagsRequest&, DescribeTagsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTagsAsyncHandler;
-                typedef Outcome<Error, Model::ModifyResourceTagsResponse> ModifyResourceTagsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTagsSeqResponse> DescribeTagsSeqOutcome;
+                typedef std::future<DescribeTagsSeqOutcome> DescribeTagsSeqOutcomeCallable;
+                typedef std::function<void(const TagClient*, const Model::DescribeTagsSeqRequest&, DescribeTagsSeqOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTagsSeqAsyncHandler;
+                typedef Outcome<Core::Error, Model::DetachResourcesTagResponse> DetachResourcesTagOutcome;
+                typedef std::future<DetachResourcesTagOutcome> DetachResourcesTagOutcomeCallable;
+                typedef std::function<void(const TagClient*, const Model::DetachResourcesTagRequest&, DetachResourcesTagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DetachResourcesTagAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyResourceTagsResponse> ModifyResourceTagsOutcome;
                 typedef std::future<ModifyResourceTagsOutcome> ModifyResourceTagsOutcomeCallable;
                 typedef std::function<void(const TagClient*, const Model::ModifyResourceTagsRequest&, ModifyResourceTagsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyResourceTagsAsyncHandler;
-                typedef Outcome<Error, Model::UpdateResourceTagValueResponse> UpdateResourceTagValueOutcome;
+                typedef Outcome<Core::Error, Model::ModifyResourcesTagValueResponse> ModifyResourcesTagValueOutcome;
+                typedef std::future<ModifyResourcesTagValueOutcome> ModifyResourcesTagValueOutcomeCallable;
+                typedef std::function<void(const TagClient*, const Model::ModifyResourcesTagValueRequest&, ModifyResourcesTagValueOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyResourcesTagValueAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateResourceTagValueResponse> UpdateResourceTagValueOutcome;
                 typedef std::future<UpdateResourceTagValueOutcome> UpdateResourceTagValueOutcomeCallable;
                 typedef std::function<void(const TagClient*, const Model::UpdateResourceTagValueRequest&, UpdateResourceTagValueOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateResourceTagValueAsyncHandler;
 
@@ -113,6 +148,15 @@ namespace TencentCloud
                 AddResourceTagOutcome AddResourceTag(const Model::AddResourceTagRequest &request);
                 void AddResourceTagAsync(const Model::AddResourceTagRequest& request, const AddResourceTagAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AddResourceTagOutcomeCallable AddResourceTagCallable(const Model::AddResourceTagRequest& request);
+
+                /**
+                 *This API is used to associate a tag with multiple resources.
+                 * @param req AttachResourcesTagRequest
+                 * @return AttachResourcesTagOutcome
+                 */
+                AttachResourcesTagOutcome AttachResourcesTag(const Model::AttachResourcesTagRequest &request);
+                void AttachResourcesTagAsync(const Model::AttachResourcesTagRequest& request, const AttachResourcesTagAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AttachResourcesTagOutcomeCallable AttachResourcesTagCallable(const Model::AttachResourcesTagRequest& request);
 
                 /**
                  *This API is used to create a tag key and tag value pair.
@@ -160,6 +204,15 @@ namespace TencentCloud
                 DescribeResourceTagsByResourceIdsOutcomeCallable DescribeResourceTagsByResourceIdsCallable(const Model::DescribeResourceTagsByResourceIdsRequest& request);
 
                 /**
+                 *This API is used to view the tags associated with a resource in sequence.
+                 * @param req DescribeResourceTagsByResourceIdsSeqRequest
+                 * @return DescribeResourceTagsByResourceIdsSeqOutcome
+                 */
+                DescribeResourceTagsByResourceIdsSeqOutcome DescribeResourceTagsByResourceIdsSeq(const Model::DescribeResourceTagsByResourceIdsSeqRequest &request);
+                void DescribeResourceTagsByResourceIdsSeqAsync(const Model::DescribeResourceTagsByResourceIdsSeqRequest& request, const DescribeResourceTagsByResourceIdsSeqAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeResourceTagsByResourceIdsSeqOutcomeCallable DescribeResourceTagsByResourceIdsSeqCallable(const Model::DescribeResourceTagsByResourceIdsSeqRequest& request);
+
+                /**
                  *This API is used to get resource tags based on tag keys.
                  * @param req DescribeResourceTagsByTagKeysRequest
                  * @return DescribeResourceTagsByTagKeysOutcome
@@ -176,6 +229,15 @@ namespace TencentCloud
                 DescribeResourcesByTagsOutcome DescribeResourcesByTags(const Model::DescribeResourcesByTagsRequest &request);
                 void DescribeResourcesByTagsAsync(const Model::DescribeResourcesByTagsRequest& request, const DescribeResourcesByTagsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeResourcesByTagsOutcomeCallable DescribeResourcesByTagsCallable(const Model::DescribeResourcesByTagsRequest& request);
+
+                /**
+                 *This API is used to query resource list by tags.
+                 * @param req DescribeResourcesByTagsUnionRequest
+                 * @return DescribeResourcesByTagsUnionOutcome
+                 */
+                DescribeResourcesByTagsUnionOutcome DescribeResourcesByTagsUnion(const Model::DescribeResourcesByTagsUnionRequest &request);
+                void DescribeResourcesByTagsUnionAsync(const Model::DescribeResourcesByTagsUnionRequest& request, const DescribeResourcesByTagsUnionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeResourcesByTagsUnionOutcomeCallable DescribeResourcesByTagsUnionCallable(const Model::DescribeResourcesByTagsUnionRequest& request);
 
                 /**
                  *This API is used to query tag keys in an existing tag list.
@@ -197,6 +259,15 @@ namespace TencentCloud
                 DescribeTagValuesOutcomeCallable DescribeTagValuesCallable(const Model::DescribeTagValuesRequest& request);
 
                 /**
+                 *This API is used to query tag values in a created tag list.
+                 * @param req DescribeTagValuesSeqRequest
+                 * @return DescribeTagValuesSeqOutcome
+                 */
+                DescribeTagValuesSeqOutcome DescribeTagValuesSeq(const Model::DescribeTagValuesSeqRequest &request);
+                void DescribeTagValuesSeqAsync(const Model::DescribeTagValuesSeqRequest& request, const DescribeTagValuesSeqAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTagValuesSeqOutcomeCallable DescribeTagValuesSeqCallable(const Model::DescribeTagValuesSeqRequest& request);
+
+                /**
                  *This API is used to query existing tag lists.
 
                  * @param req DescribeTagsRequest
@@ -207,6 +278,25 @@ namespace TencentCloud
                 DescribeTagsOutcomeCallable DescribeTagsCallable(const Model::DescribeTagsRequest& request);
 
                 /**
+                 *This API is used to query the created tag lists.
+
+                 * @param req DescribeTagsSeqRequest
+                 * @return DescribeTagsSeqOutcome
+                 */
+                DescribeTagsSeqOutcome DescribeTagsSeq(const Model::DescribeTagsSeqRequest &request);
+                void DescribeTagsSeqAsync(const Model::DescribeTagsSeqRequest& request, const DescribeTagsSeqAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTagsSeqOutcomeCallable DescribeTagsSeqCallable(const Model::DescribeTagsSeqRequest& request);
+
+                /**
+                 *This API is used to unbind a tag from multiple resources.
+                 * @param req DetachResourcesTagRequest
+                 * @return DetachResourcesTagOutcome
+                 */
+                DetachResourcesTagOutcome DetachResourcesTag(const Model::DetachResourcesTagRequest &request);
+                void DetachResourcesTagAsync(const Model::DetachResourcesTagRequest& request, const DetachResourcesTagAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DetachResourcesTagOutcomeCallable DetachResourcesTagCallable(const Model::DetachResourcesTagRequest& request);
+
+                /**
                  *This API is used to modify all tags associated with a resource.
                  * @param req ModifyResourceTagsRequest
                  * @return ModifyResourceTagsOutcome
@@ -214,6 +304,15 @@ namespace TencentCloud
                 ModifyResourceTagsOutcome ModifyResourceTags(const Model::ModifyResourceTagsRequest &request);
                 void ModifyResourceTagsAsync(const Model::ModifyResourceTagsRequest& request, const ModifyResourceTagsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyResourceTagsOutcomeCallable ModifyResourceTagsCallable(const Model::ModifyResourceTagsRequest& request);
+
+                /**
+                 *This API is used to modify the tag value corresponding to a tag key associated with multiple resources.
+                 * @param req ModifyResourcesTagValueRequest
+                 * @return ModifyResourcesTagValueOutcome
+                 */
+                ModifyResourcesTagValueOutcome ModifyResourcesTagValue(const Model::ModifyResourcesTagValueRequest &request);
+                void ModifyResourcesTagValueAsync(const Model::ModifyResourcesTagValueRequest& request, const ModifyResourcesTagValueAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyResourcesTagValueOutcomeCallable ModifyResourcesTagValueCallable(const Model::ModifyResourcesTagValueRequest& request);
 
                 /**
                  *This API is used to modify the values of tags associated with a resource (the tag key does not change).

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dcdb::V20180411::Model;
-using namespace rapidjson;
 using namespace std;
 
 Project::Project() :
@@ -36,7 +35,7 @@ Project::Project() :
 {
 }
 
-CoreInternalOutcome Project::Deserialize(const Value &value)
+CoreInternalOutcome Project::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -45,7 +44,7 @@ CoreInternalOutcome Project::Deserialize(const Value &value)
     {
         if (!value["ProjectId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Project.ProjectId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Project.ProjectId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_projectId = value["ProjectId"].GetInt64();
         m_projectIdHasBeenSet = true;
@@ -55,7 +54,7 @@ CoreInternalOutcome Project::Deserialize(const Value &value)
     {
         if (!value["OwnerUin"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Project.OwnerUin` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Project.OwnerUin` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_ownerUin = value["OwnerUin"].GetInt64();
         m_ownerUinHasBeenSet = true;
@@ -65,7 +64,7 @@ CoreInternalOutcome Project::Deserialize(const Value &value)
     {
         if (!value["AppId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Project.AppId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Project.AppId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_appId = value["AppId"].GetInt64();
         m_appIdHasBeenSet = true;
@@ -75,7 +74,7 @@ CoreInternalOutcome Project::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Project.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Project.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -85,7 +84,7 @@ CoreInternalOutcome Project::Deserialize(const Value &value)
     {
         if (!value["CreatorUin"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Project.CreatorUin` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Project.CreatorUin` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_creatorUin = value["CreatorUin"].GetInt64();
         m_creatorUinHasBeenSet = true;
@@ -95,7 +94,7 @@ CoreInternalOutcome Project::Deserialize(const Value &value)
     {
         if (!value["SrcPlat"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Project.SrcPlat` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Project.SrcPlat` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_srcPlat = string(value["SrcPlat"].GetString());
         m_srcPlatHasBeenSet = true;
@@ -105,7 +104,7 @@ CoreInternalOutcome Project::Deserialize(const Value &value)
     {
         if (!value["SrcAppId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Project.SrcAppId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Project.SrcAppId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_srcAppId = value["SrcAppId"].GetInt64();
         m_srcAppIdHasBeenSet = true;
@@ -115,7 +114,7 @@ CoreInternalOutcome Project::Deserialize(const Value &value)
     {
         if (!value["Status"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Project.Status` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Project.Status` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_status = value["Status"].GetInt64();
         m_statusHasBeenSet = true;
@@ -125,7 +124,7 @@ CoreInternalOutcome Project::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Project.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Project.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -135,7 +134,7 @@ CoreInternalOutcome Project::Deserialize(const Value &value)
     {
         if (!value["IsDefault"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Project.IsDefault` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Project.IsDefault` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_isDefault = value["IsDefault"].GetInt64();
         m_isDefaultHasBeenSet = true;
@@ -145,7 +144,7 @@ CoreInternalOutcome Project::Deserialize(const Value &value)
     {
         if (!value["Info"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Project.Info` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Project.Info` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_info = string(value["Info"].GetString());
         m_infoHasBeenSet = true;
@@ -155,12 +154,12 @@ CoreInternalOutcome Project::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void Project::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Project::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_projectIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProjectId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_projectId, allocator);
@@ -168,7 +167,7 @@ void Project::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_ownerUinHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OwnerUin";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_ownerUin, allocator);
@@ -176,7 +175,7 @@ void Project::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_appIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AppId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_appId, allocator);
@@ -184,15 +183,15 @@ void Project::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_creatorUinHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatorUin";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_creatorUin, allocator);
@@ -200,15 +199,15 @@ void Project::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_srcPlatHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SrcPlat";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_srcPlat.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_srcPlat.c_str(), allocator).Move(), allocator);
     }
 
     if (m_srcAppIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SrcAppId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_srcAppId, allocator);
@@ -216,7 +215,7 @@ void Project::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);
@@ -224,15 +223,15 @@ void Project::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_isDefaultHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsDefault";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isDefault, allocator);
@@ -240,10 +239,10 @@ void Project::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_infoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Info";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_info.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_info.c_str(), allocator).Move(), allocator);
     }
 
 }

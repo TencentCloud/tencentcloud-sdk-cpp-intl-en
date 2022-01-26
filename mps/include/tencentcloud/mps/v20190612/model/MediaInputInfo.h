@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/CosInputInfo.h>
+#include <tencentcloud/mps/v20190612/model/UrlInputInfo.h>
 
 
 namespace TencentCloud
@@ -48,14 +49,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video processing object type. Only COS is supported currently.
-                     * @return Type Video processing object type. Only COS is supported currently.
+                     * 获取The type of video processing input object, which supports COS and URL.
+                     * @return Type The type of video processing input object, which supports COS and URL.
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Video processing object type. Only COS is supported currently.
-                     * @param Type Video processing object type. Only COS is supported currently.
+                     * 设置The type of video processing input object, which supports COS and URL.
+                     * @param Type The type of video processing input object, which supports COS and URL.
                      */
                     void SetType(const std::string& _type);
 
@@ -83,10 +84,32 @@ namespace TencentCloud
                      */
                     bool CosInputInfoHasBeenSet() const;
 
+                    /**
+                     * 获取This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return UrlInputInfo This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    UrlInputInfo GetUrlInputInfo() const;
+
+                    /**
+                     * 设置This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param UrlInputInfo This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    void SetUrlInputInfo(const UrlInputInfo& _urlInputInfo);
+
+                    /**
+                     * 判断参数 UrlInputInfo 是否已赋值
+                     * @return UrlInputInfo 是否已赋值
+                     */
+                    bool UrlInputInfoHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Video processing object type. Only COS is supported currently.
+                     * The type of video processing input object, which supports COS and URL.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -96,6 +119,13 @@ namespace TencentCloud
                      */
                     CosInputInfo m_cosInputInfo;
                     bool m_cosInputInfoHasBeenSet;
+
+                    /**
+                     * This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    UrlInputInfo m_urlInputInfo;
+                    bool m_urlInputInfoHasBeenSet;
 
                 };
             }

@@ -24,6 +24,9 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/ServerDetailInfo.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/ProxyDetailInfo.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/KafkaInfo.h>
 
 
 namespace TencentCloud
@@ -324,6 +327,244 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool ApiAccessIpv6HasBeenSet() const;
 
+                    /**
+                     * 获取Cluster type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return ClusterType Cluster type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetClusterType() const;
+
+                    /**
+                     * 设置Cluster type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param ClusterType Cluster type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetClusterType(const int64_t& _clusterType);
+
+                    /**
+                     * 判断参数 ClusterType 是否已赋值
+                     * @return ClusterType 是否已赋值
+                     */
+                    bool ClusterTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return ClusterStatus Cluster status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetClusterStatus() const;
+
+                    /**
+                     * 设置Cluster status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param ClusterStatus Cluster status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetClusterStatus(const int64_t& _clusterStatus);
+
+                    /**
+                     * 判断参数 ClusterStatus 是否已赋值
+                     * @return ClusterStatus 是否已赋值
+                     */
+                    bool ClusterStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Read CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return ReadCapacityUnit Read CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetReadCapacityUnit() const;
+
+                    /**
+                     * 设置Read CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param ReadCapacityUnit Read CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetReadCapacityUnit(const int64_t& _readCapacityUnit);
+
+                    /**
+                     * 判断参数 ReadCapacityUnit 是否已赋值
+                     * @return ReadCapacityUnit 是否已赋值
+                     */
+                    bool ReadCapacityUnitHasBeenSet() const;
+
+                    /**
+                     * 获取Write CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return WriteCapacityUnit Write CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetWriteCapacityUnit() const;
+
+                    /**
+                     * 设置Write CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param WriteCapacityUnit Write CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetWriteCapacityUnit(const int64_t& _writeCapacityUnit);
+
+                    /**
+                     * 判断参数 WriteCapacityUnit 是否已赋值
+                     * @return WriteCapacityUnit 是否已赋值
+                     */
+                    bool WriteCapacityUnitHasBeenSet() const;
+
+                    /**
+                     * 获取Disk capacity
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return DiskVolume Disk capacity
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetDiskVolume() const;
+
+                    /**
+                     * 设置Disk capacity
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param DiskVolume Disk capacity
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetDiskVolume(const int64_t& _diskVolume);
+
+                    /**
+                     * 判断参数 DiskVolume 是否已赋值
+                     * @return DiskVolume 是否已赋值
+                     */
+                    bool DiskVolumeHasBeenSet() const;
+
+                    /**
+                     * 获取Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return ServerList Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ServerDetailInfo> GetServerList() const;
+
+                    /**
+                     * 设置Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param ServerList Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetServerList(const std::vector<ServerDetailInfo>& _serverList);
+
+                    /**
+                     * 判断参数 ServerList 是否已赋值
+                     * @return ServerList 是否已赋值
+                     */
+                    bool ServerListHasBeenSet() const;
+
+                    /**
+                     * 获取Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return ProxyList Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ProxyDetailInfo> GetProxyList() const;
+
+                    /**
+                     * 设置Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param ProxyList Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetProxyList(const std::vector<ProxyDetailInfo>& _proxyList);
+
+                    /**
+                     * 判断参数 ProxyList 是否已赋值
+                     * @return ProxyList 是否已赋值
+                     */
+                    bool ProxyListHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the cluster operation approval feature is enabled. Valid values: `0` (disabled), `1` (enabled)
+                     * @return Censorship Whether the cluster operation approval feature is enabled. Valid values: `0` (disabled), `1` (enabled)
+                     */
+                    int64_t GetCensorship() const;
+
+                    /**
+                     * 设置Whether the cluster operation approval feature is enabled. Valid values: `0` (disabled), `1` (enabled)
+                     * @param Censorship Whether the cluster operation approval feature is enabled. Valid values: `0` (disabled), `1` (enabled)
+                     */
+                    void SetCensorship(const int64_t& _censorship);
+
+                    /**
+                     * 判断参数 Censorship 是否已赋值
+                     * @return Censorship 是否已赋值
+                     */
+                    bool CensorshipHasBeenSet() const;
+
+                    /**
+                     * 获取Approver UIN list
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @return DbaUins Approver UIN list
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetDbaUins() const;
+
+                    /**
+                     * 设置Approver UIN list
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @param DbaUins Approver UIN list
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    void SetDbaUins(const std::vector<std::string>& _dbaUins);
+
+                    /**
+                     * 判断参数 DbaUins 是否已赋值
+                     * @return DbaUins 是否已赋值
+                     */
+                    bool DbaUinsHasBeenSet() const;
+
+                    /**
+                     * 获取Whether data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return DataFlowStatus Whether data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetDataFlowStatus() const;
+
+                    /**
+                     * 设置Whether data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param DataFlowStatus Whether data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetDataFlowStatus(const int64_t& _dataFlowStatus);
+
+                    /**
+                     * 判断参数 DataFlowStatus 是否已赋值
+                     * @return DataFlowStatus 是否已赋值
+                     */
+                    bool DataFlowStatusHasBeenSet() const;
+
+                    /**
+                     * 获取CKafka information when data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return KafkaInfo CKafka information when data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    KafkaInfo GetKafkaInfo() const;
+
+                    /**
+                     * 设置CKafka information when data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param KafkaInfo CKafka information when data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetKafkaInfo(const KafkaInfo& _kafkaInfo);
+
+                    /**
+                     * 判断参数 KafkaInfo 是否已赋值
+                     * @return KafkaInfo 是否已赋值
+                     */
+                    bool KafkaInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -417,6 +658,82 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_apiAccessIpv6;
                     bool m_apiAccessIpv6HasBeenSet;
+
+                    /**
+                     * Cluster type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_clusterType;
+                    bool m_clusterTypeHasBeenSet;
+
+                    /**
+                     * Cluster status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_clusterStatus;
+                    bool m_clusterStatusHasBeenSet;
+
+                    /**
+                     * Read CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_readCapacityUnit;
+                    bool m_readCapacityUnitHasBeenSet;
+
+                    /**
+                     * Write CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_writeCapacityUnit;
+                    bool m_writeCapacityUnitHasBeenSet;
+
+                    /**
+                     * Disk capacity
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_diskVolume;
+                    bool m_diskVolumeHasBeenSet;
+
+                    /**
+                     * Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ServerDetailInfo> m_serverList;
+                    bool m_serverListHasBeenSet;
+
+                    /**
+                     * Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ProxyDetailInfo> m_proxyList;
+                    bool m_proxyListHasBeenSet;
+
+                    /**
+                     * Whether the cluster operation approval feature is enabled. Valid values: `0` (disabled), `1` (enabled)
+                     */
+                    int64_t m_censorship;
+                    bool m_censorshipHasBeenSet;
+
+                    /**
+                     * Approver UIN list
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_dbaUins;
+                    bool m_dbaUinsHasBeenSet;
+
+                    /**
+                     * Whether data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_dataFlowStatus;
+                    bool m_dataFlowStatusHasBeenSet;
+
+                    /**
+                     * CKafka information when data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    KafkaInfo m_kafkaInfo;
+                    bool m_kafkaInfoHasBeenSet;
 
                 };
             }

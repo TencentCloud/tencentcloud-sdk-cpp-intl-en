@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Batch::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeJobSubmitInfoResponse::DescribeJobSubmitInfoResponse() :
@@ -30,26 +29,27 @@ DescribeJobSubmitInfoResponse::DescribeJobSubmitInfoResponse() :
     m_jobDescriptionHasBeenSet(false),
     m_priorityHasBeenSet(false),
     m_tasksHasBeenSet(false),
-    m_dependencesHasBeenSet(false)
+    m_dependencesHasBeenSet(false),
+    m_tagsHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome DescribeJobSubmitInfoResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -60,11 +60,11 @@ CoreInternalOutcome DescribeJobSubmitInfoResponse::Deserialize(const string &pay
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -72,7 +72,7 @@ CoreInternalOutcome DescribeJobSubmitInfoResponse::Deserialize(const string &pay
     {
         if (!rsp["JobId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `JobId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `JobId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_jobId = string(rsp["JobId"].GetString());
         m_jobIdHasBeenSet = true;
@@ -82,7 +82,7 @@ CoreInternalOutcome DescribeJobSubmitInfoResponse::Deserialize(const string &pay
     {
         if (!rsp["JobName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `JobName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `JobName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_jobName = string(rsp["JobName"].GetString());
         m_jobNameHasBeenSet = true;
@@ -92,7 +92,7 @@ CoreInternalOutcome DescribeJobSubmitInfoResponse::Deserialize(const string &pay
     {
         if (!rsp["JobDescription"].IsString())
         {
-            return CoreInternalOutcome(Error("response `JobDescription` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `JobDescription` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_jobDescription = string(rsp["JobDescription"].GetString());
         m_jobDescriptionHasBeenSet = true;
@@ -102,7 +102,7 @@ CoreInternalOutcome DescribeJobSubmitInfoResponse::Deserialize(const string &pay
     {
         if (!rsp["Priority"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Priority` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Priority` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_priority = rsp["Priority"].GetInt64();
         m_priorityHasBeenSet = true;
@@ -111,10 +111,10 @@ CoreInternalOutcome DescribeJobSubmitInfoResponse::Deserialize(const string &pay
     if (rsp.HasMember("Tasks") && !rsp["Tasks"].IsNull())
     {
         if (!rsp["Tasks"].IsArray())
-            return CoreInternalOutcome(Error("response `Tasks` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Tasks` is not array type"));
 
-        const Value &tmpValue = rsp["Tasks"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["Tasks"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             Task item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -131,10 +131,10 @@ CoreInternalOutcome DescribeJobSubmitInfoResponse::Deserialize(const string &pay
     if (rsp.HasMember("Dependences") && !rsp["Dependences"].IsNull())
     {
         if (!rsp["Dependences"].IsArray())
-            return CoreInternalOutcome(Error("response `Dependences` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Dependences` is not array type"));
 
-        const Value &tmpValue = rsp["Dependences"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["Dependences"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             Dependence item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -148,8 +148,122 @@ CoreInternalOutcome DescribeJobSubmitInfoResponse::Deserialize(const string &pay
         m_dependencesHasBeenSet = true;
     }
 
+    if (rsp.HasMember("Tags") && !rsp["Tags"].IsNull())
+    {
+        if (!rsp["Tags"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Tags` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["Tags"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            Tag item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_tags.push_back(item);
+        }
+        m_tagsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeJobSubmitInfoResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_jobIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "JobId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_jobId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_jobNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "JobName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_jobName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_jobDescriptionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "JobDescription";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_jobDescription.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_priorityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Priority";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_priority, allocator);
+    }
+
+    if (m_tasksHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tasks";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tasks.begin(); itr != m_tasks.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_dependencesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Dependences";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_dependences.begin(); itr != m_dependences.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 
@@ -211,6 +325,16 @@ vector<Dependence> DescribeJobSubmitInfoResponse::GetDependences() const
 bool DescribeJobSubmitInfoResponse::DependencesHasBeenSet() const
 {
     return m_dependencesHasBeenSet;
+}
+
+vector<Tag> DescribeJobSubmitInfoResponse::GetTags() const
+{
+    return m_tags;
+}
+
+bool DescribeJobSubmitInfoResponse::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
 }
 
 

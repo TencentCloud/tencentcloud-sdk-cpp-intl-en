@@ -20,59 +20,85 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeRealServerStatisticsRequest::DescribeRealServerStatisticsRequest() :
     m_realServerIdHasBeenSet(false),
     m_listenerIdHasBeenSet(false),
+    m_ruleIdHasBeenSet(false),
     m_withinTimeHasBeenSet(false),
-    m_ruleIdHasBeenSet(false)
+    m_startTimeHasBeenSet(false),
+    m_endTimeHasBeenSet(false),
+    m_granularityHasBeenSet(false)
 {
 }
 
 string DescribeRealServerStatisticsRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_realServerIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RealServerId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_realServerId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_realServerId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_listenerIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ListenerId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_listenerId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_listenerId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_ruleIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RuleId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_ruleId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_withinTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "WithinTime";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_withinTime, allocator);
     }
 
-    if (m_ruleIdHasBeenSet)
+    if (m_startTimeHasBeenSet)
     {
-        Value iKey(kStringType);
-        string key = "RuleId";
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StartTime";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_ruleId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_startTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_endTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EndTime";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_endTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_granularityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Granularity";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_granularity, allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -110,6 +136,22 @@ bool DescribeRealServerStatisticsRequest::ListenerIdHasBeenSet() const
     return m_listenerIdHasBeenSet;
 }
 
+string DescribeRealServerStatisticsRequest::GetRuleId() const
+{
+    return m_ruleId;
+}
+
+void DescribeRealServerStatisticsRequest::SetRuleId(const string& _ruleId)
+{
+    m_ruleId = _ruleId;
+    m_ruleIdHasBeenSet = true;
+}
+
+bool DescribeRealServerStatisticsRequest::RuleIdHasBeenSet() const
+{
+    return m_ruleIdHasBeenSet;
+}
+
 uint64_t DescribeRealServerStatisticsRequest::GetWithinTime() const
 {
     return m_withinTime;
@@ -126,20 +168,52 @@ bool DescribeRealServerStatisticsRequest::WithinTimeHasBeenSet() const
     return m_withinTimeHasBeenSet;
 }
 
-string DescribeRealServerStatisticsRequest::GetRuleId() const
+string DescribeRealServerStatisticsRequest::GetStartTime() const
 {
-    return m_ruleId;
+    return m_startTime;
 }
 
-void DescribeRealServerStatisticsRequest::SetRuleId(const string& _ruleId)
+void DescribeRealServerStatisticsRequest::SetStartTime(const string& _startTime)
 {
-    m_ruleId = _ruleId;
-    m_ruleIdHasBeenSet = true;
+    m_startTime = _startTime;
+    m_startTimeHasBeenSet = true;
 }
 
-bool DescribeRealServerStatisticsRequest::RuleIdHasBeenSet() const
+bool DescribeRealServerStatisticsRequest::StartTimeHasBeenSet() const
 {
-    return m_ruleIdHasBeenSet;
+    return m_startTimeHasBeenSet;
+}
+
+string DescribeRealServerStatisticsRequest::GetEndTime() const
+{
+    return m_endTime;
+}
+
+void DescribeRealServerStatisticsRequest::SetEndTime(const string& _endTime)
+{
+    m_endTime = _endTime;
+    m_endTimeHasBeenSet = true;
+}
+
+bool DescribeRealServerStatisticsRequest::EndTimeHasBeenSet() const
+{
+    return m_endTimeHasBeenSet;
+}
+
+uint64_t DescribeRealServerStatisticsRequest::GetGranularity() const
+{
+    return m_granularity;
+}
+
+void DescribeRealServerStatisticsRequest::SetGranularity(const uint64_t& _granularity)
+{
+    m_granularity = _granularity;
+    m_granularityHasBeenSet = true;
+}
+
+bool DescribeRealServerStatisticsRequest::GranularityHasBeenSet() const
+{
+    return m_granularityHasBeenSet;
 }
 
 

@@ -191,14 +191,14 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
-                     * @return InstanceType Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
+                     * 获取Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
+                     * @return InstanceType Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
                      */
                     int64_t GetInstanceType() const;
 
                     /**
-                     * 设置Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
-                     * @param InstanceType Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
+                     * 设置Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
+                     * @param InstanceType Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
                      */
                     void SetInstanceType(const int64_t& _instanceType);
 
@@ -245,14 +245,14 @@ namespace TencentCloud
                     bool HourFeeStatusHasBeenSet() const;
 
                     /**
-                     * 获取RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating slave <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
-                     * @return TaskStatus RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating slave <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
+                     * 获取RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating secondary <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
+                     * @return TaskStatus RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating secondary <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
                      */
                     int64_t GetTaskStatus() const;
 
                     /**
-                     * 设置RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating slave <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
-                     * @param TaskStatus RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating slave <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
+                     * 设置RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating secondary <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
+                     * @param TaskStatus RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating secondary <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
                      */
                     void SetTaskStatus(const int64_t& _taskStatus);
 
@@ -407,14 +407,14 @@ namespace TencentCloud
                     bool DeviceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Database engine version of the RO instance. Value range: 5.1, 5.5, 5.6, 5.7
-                     * @return EngineVersion Database engine version of the RO instance. Value range: 5.1, 5.5, 5.6, 5.7
+                     * 获取Database engine version of the read-only replica. Valid values: `5.1`, `5.5`, `5.6`, `5.7`, `8.0`
+                     * @return EngineVersion Database engine version of the read-only replica. Valid values: `5.1`, `5.5`, `5.6`, `5.7`, `8.0`
                      */
                     std::string GetEngineVersion() const;
 
                     /**
-                     * 设置Database engine version of the RO instance. Value range: 5.1, 5.5, 5.6, 5.7
-                     * @param EngineVersion Database engine version of the RO instance. Value range: 5.1, 5.5, 5.6, 5.7
+                     * 设置Database engine version of the read-only replica. Valid values: `5.1`, `5.5`, `5.6`, `5.7`, `8.0`
+                     * @param EngineVersion Database engine version of the read-only replica. Valid values: `5.1`, `5.5`, `5.6`, `5.7`, `8.0`
                      */
                     void SetEngineVersion(const std::string& _engineVersion);
 
@@ -511,7 +511,7 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
+                     * Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
                      */
                     int64_t m_instanceType;
                     bool m_instanceTypeHasBeenSet;
@@ -529,7 +529,7 @@ namespace TencentCloud
                     bool m_hourFeeStatusHasBeenSet;
 
                     /**
-                     * RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating slave <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
+                     * RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating secondary <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
                      */
                     int64_t m_taskStatus;
                     bool m_taskStatusHasBeenSet;
@@ -583,7 +583,7 @@ namespace TencentCloud
                     bool m_deviceTypeHasBeenSet;
 
                     /**
-                     * Database engine version of the RO instance. Value range: 5.1, 5.5, 5.6, 5.7
+                     * Database engine version of the read-only replica. Valid values: `5.1`, `5.5`, `5.6`, `5.7`, `8.0`
                      */
                     std::string m_engineVersion;
                     bool m_engineVersionHasBeenSet;

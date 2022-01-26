@@ -41,6 +41,7 @@ namespace TencentCloud
                     DescribeDBPerformanceDetailsResponse();
                     ~DescribeDBPerformanceDetailsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -70,9 +71,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool Slave1HasBeenSet() const;
 
                     /**
-                     * 获取Slave 2 performance monitoring data. If the instance is one-master-one-slave, it does not have this field
+                     * 获取Slave 2 performance monitoring data. If the instance is one-primary-one-secondary, it does not have this field
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Slave2 Slave 2 performance monitoring data. If the instance is one-master-one-slave, it does not have this field
+                     * @return Slave2 Slave 2 performance monitoring data. If the instance is one-primary-one-secondary, it does not have this field
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     PerformanceMonitorSet GetSlave2() const;
@@ -99,7 +100,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_slave1HasBeenSet;
 
                     /**
-                     * Slave 2 performance monitoring data. If the instance is one-master-one-slave, it does not have this field
+                     * Slave 2 performance monitoring data. If the instance is one-primary-one-secondary, it does not have this field
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     PerformanceMonitorSet m_slave2;

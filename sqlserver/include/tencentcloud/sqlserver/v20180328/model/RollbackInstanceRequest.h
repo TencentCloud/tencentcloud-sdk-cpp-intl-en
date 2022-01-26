@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/sqlserver/v20180328/model/RenameRestoreDatabase.h>
 
 
 namespace TencentCloud
@@ -114,6 +115,42 @@ namespace TencentCloud
                      */
                     bool TimeHasBeenSet() const;
 
+                    /**
+                     * 获取ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+                     * @return TargetInstanceId ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+                     */
+                    std::string GetTargetInstanceId() const;
+
+                    /**
+                     * 设置ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+                     * @param TargetInstanceId ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+                     */
+                    void SetTargetInstanceId(const std::string& _targetInstanceId);
+
+                    /**
+                     * 判断参数 TargetInstanceId 是否已赋值
+                     * @return TargetInstanceId 是否已赋值
+                     */
+                    bool TargetInstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Rename the databases listed in `ReNameRestoreDatabase`. This parameter takes effect only when `Type = 1` which indicates that backup rollback supports renaming databases. If it is left empty, databases will be renamed in the default format and the `DBs` parameter specifies the databases to be restored.
+                     * @return RenameRestore Rename the databases listed in `ReNameRestoreDatabase`. This parameter takes effect only when `Type = 1` which indicates that backup rollback supports renaming databases. If it is left empty, databases will be renamed in the default format and the `DBs` parameter specifies the databases to be restored.
+                     */
+                    std::vector<RenameRestoreDatabase> GetRenameRestore() const;
+
+                    /**
+                     * 设置Rename the databases listed in `ReNameRestoreDatabase`. This parameter takes effect only when `Type = 1` which indicates that backup rollback supports renaming databases. If it is left empty, databases will be renamed in the default format and the `DBs` parameter specifies the databases to be restored.
+                     * @param RenameRestore Rename the databases listed in `ReNameRestoreDatabase`. This parameter takes effect only when `Type = 1` which indicates that backup rollback supports renaming databases. If it is left empty, databases will be renamed in the default format and the `DBs` parameter specifies the databases to be restored.
+                     */
+                    void SetRenameRestore(const std::vector<RenameRestoreDatabase>& _renameRestore);
+
+                    /**
+                     * 判断参数 RenameRestore 是否已赋值
+                     * @return RenameRestore 是否已赋值
+                     */
+                    bool RenameRestoreHasBeenSet() const;
+
                 private:
 
                     /**
@@ -139,6 +176,18 @@ namespace TencentCloud
                      */
                     std::string m_time;
                     bool m_timeHasBeenSet;
+
+                    /**
+                     * ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+                     */
+                    std::string m_targetInstanceId;
+                    bool m_targetInstanceIdHasBeenSet;
+
+                    /**
+                     * Rename the databases listed in `ReNameRestoreDatabase`. This parameter takes effect only when `Type = 1` which indicates that backup rollback supports renaming databases. If it is left empty, databases will be renamed in the default format and the `DBs` parameter specifies the databases to be restored.
+                     */
+                    std::vector<RenameRestoreDatabase> m_renameRestore;
+                    bool m_renameRestoreHasBeenSet;
 
                 };
             }

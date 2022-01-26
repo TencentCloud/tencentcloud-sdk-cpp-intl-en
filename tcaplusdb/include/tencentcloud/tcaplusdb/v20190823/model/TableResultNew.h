@@ -223,6 +223,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool TaskIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Cluster operation application ID
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @return ApplicationId Cluster operation application ID
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    std::string GetApplicationId() const;
+
+                    /**
+                     * 设置Cluster operation application ID
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @param ApplicationId Cluster operation application ID
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    void SetApplicationId(const std::string& _applicationId);
+
+                    /**
+                     * 判断参数 ApplicationId 是否已赋值
+                     * @return ApplicationId 是否已赋值
+                     */
+                    bool ApplicationIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -280,6 +302,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<std::string> m_taskIds;
                     bool m_taskIdsHasBeenSet;
+
+                    /**
+                     * Cluster operation application ID
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    std::string m_applicationId;
+                    bool m_applicationIdHasBeenSet;
 
                 };
             }

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ckafka::V20190819::Model;
-using namespace rapidjson;
 using namespace std;
 
 GroupOffsetPartition::GroupOffsetPartition() :
@@ -31,7 +30,7 @@ GroupOffsetPartition::GroupOffsetPartition() :
 {
 }
 
-CoreInternalOutcome GroupOffsetPartition::Deserialize(const Value &value)
+CoreInternalOutcome GroupOffsetPartition::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome GroupOffsetPartition::Deserialize(const Value &value)
     {
         if (!value["Partition"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `GroupOffsetPartition.Partition` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupOffsetPartition.Partition` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_partition = value["Partition"].GetInt64();
         m_partitionHasBeenSet = true;
@@ -50,7 +49,7 @@ CoreInternalOutcome GroupOffsetPartition::Deserialize(const Value &value)
     {
         if (!value["Offset"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `GroupOffsetPartition.Offset` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupOffsetPartition.Offset` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_offset = value["Offset"].GetInt64();
         m_offsetHasBeenSet = true;
@@ -60,7 +59,7 @@ CoreInternalOutcome GroupOffsetPartition::Deserialize(const Value &value)
     {
         if (!value["Metadata"].IsString())
         {
-            return CoreInternalOutcome(Error("response `GroupOffsetPartition.Metadata` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupOffsetPartition.Metadata` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_metadata = string(value["Metadata"].GetString());
         m_metadataHasBeenSet = true;
@@ -70,7 +69,7 @@ CoreInternalOutcome GroupOffsetPartition::Deserialize(const Value &value)
     {
         if (!value["ErrorCode"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `GroupOffsetPartition.ErrorCode` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupOffsetPartition.ErrorCode` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_errorCode = value["ErrorCode"].GetInt64();
         m_errorCodeHasBeenSet = true;
@@ -80,7 +79,7 @@ CoreInternalOutcome GroupOffsetPartition::Deserialize(const Value &value)
     {
         if (!value["LogEndOffset"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `GroupOffsetPartition.LogEndOffset` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupOffsetPartition.LogEndOffset` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_logEndOffset = value["LogEndOffset"].GetInt64();
         m_logEndOffsetHasBeenSet = true;
@@ -90,7 +89,7 @@ CoreInternalOutcome GroupOffsetPartition::Deserialize(const Value &value)
     {
         if (!value["Lag"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `GroupOffsetPartition.Lag` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupOffsetPartition.Lag` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_lag = value["Lag"].GetInt64();
         m_lagHasBeenSet = true;
@@ -100,12 +99,12 @@ CoreInternalOutcome GroupOffsetPartition::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void GroupOffsetPartition::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void GroupOffsetPartition::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_partitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Partition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_partition, allocator);
@@ -113,7 +112,7 @@ void GroupOffsetPartition::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_offsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Offset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_offset, allocator);
@@ -121,15 +120,15 @@ void GroupOffsetPartition::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_metadataHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Metadata";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_metadata.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_metadata.c_str(), allocator).Move(), allocator);
     }
 
     if (m_errorCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ErrorCode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_errorCode, allocator);
@@ -137,7 +136,7 @@ void GroupOffsetPartition::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_logEndOffsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LogEndOffset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_logEndOffset, allocator);
@@ -145,7 +144,7 @@ void GroupOffsetPartition::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_lagHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Lag";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_lag, allocator);

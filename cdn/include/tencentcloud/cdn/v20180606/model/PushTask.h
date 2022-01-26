@@ -87,10 +87,12 @@ namespace TencentCloud
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
                      * @return Status Prefetch task status
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
                      */
                     std::string GetStatus() const;
 
@@ -99,10 +101,12 @@ namespace TencentCloud
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
                      * @param Status Prefetch task status
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
                      */
                     void SetStatus(const std::string& _status);
 
@@ -219,6 +223,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

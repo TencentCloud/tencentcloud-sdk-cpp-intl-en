@@ -41,6 +41,7 @@ namespace TencentCloud
                     DescribeSubAppIdsResponse();
                     ~DescribeSubAppIdsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -55,6 +56,18 @@ namespace TencentCloud
                      */
                     bool SubAppIdInfoSetHasBeenSet() const;
 
+                    /**
+                     * 获取Total number of subapplications.
+                     * @return TotalCount Total number of subapplications.
+                     */
+                    uint64_t GetTotalCount() const;
+
+                    /**
+                     * 判断参数 TotalCount 是否已赋值
+                     * @return TotalCount 是否已赋值
+                     */
+                    bool TotalCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -62,6 +75,12 @@ namespace TencentCloud
                      */
                     std::vector<SubAppIdInfo> m_subAppIdInfoSet;
                     bool m_subAppIdInfoSetHasBeenSet;
+
+                    /**
+                     * Total number of subapplications.
+                     */
+                    uint64_t m_totalCount;
+                    bool m_totalCountHasBeenSet;
 
                 };
             }

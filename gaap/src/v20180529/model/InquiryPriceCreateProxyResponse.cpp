@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Gaap::V20180529::Model;
-using namespace rapidjson;
 using namespace std;
 
 InquiryPriceCreateProxyResponse::InquiryPriceCreateProxyResponse() :
@@ -30,26 +29,28 @@ InquiryPriceCreateProxyResponse::InquiryPriceCreateProxyResponse() :
     m_discountProxyDailyPriceHasBeenSet(false),
     m_currencyHasBeenSet(false),
     m_flowUnitPriceHasBeenSet(false),
-    m_discountFlowUnitPriceHasBeenSet(false)
+    m_discountFlowUnitPriceHasBeenSet(false),
+    m_cn2BandwidthPriceHasBeenSet(false),
+    m_cn2BandwidthPriceWithDiscountHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome InquiryPriceCreateProxyResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -60,19 +61,19 @@ CoreInternalOutcome InquiryPriceCreateProxyResponse::Deserialize(const string &p
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
     if (rsp.HasMember("ProxyDailyPrice") && !rsp["ProxyDailyPrice"].IsNull())
     {
-        if (!rsp["ProxyDailyPrice"].IsDouble())
+        if (!rsp["ProxyDailyPrice"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `ProxyDailyPrice` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProxyDailyPrice` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_proxyDailyPrice = rsp["ProxyDailyPrice"].GetDouble();
         m_proxyDailyPriceHasBeenSet = true;
@@ -81,10 +82,10 @@ CoreInternalOutcome InquiryPriceCreateProxyResponse::Deserialize(const string &p
     if (rsp.HasMember("BandwidthUnitPrice") && !rsp["BandwidthUnitPrice"].IsNull())
     {
         if (!rsp["BandwidthUnitPrice"].IsArray())
-            return CoreInternalOutcome(Error("response `BandwidthUnitPrice` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `BandwidthUnitPrice` is not array type"));
 
-        const Value &tmpValue = rsp["BandwidthUnitPrice"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["BandwidthUnitPrice"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             BandwidthPriceGradient item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -100,9 +101,9 @@ CoreInternalOutcome InquiryPriceCreateProxyResponse::Deserialize(const string &p
 
     if (rsp.HasMember("DiscountProxyDailyPrice") && !rsp["DiscountProxyDailyPrice"].IsNull())
     {
-        if (!rsp["DiscountProxyDailyPrice"].IsDouble())
+        if (!rsp["DiscountProxyDailyPrice"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `DiscountProxyDailyPrice` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DiscountProxyDailyPrice` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_discountProxyDailyPrice = rsp["DiscountProxyDailyPrice"].GetDouble();
         m_discountProxyDailyPriceHasBeenSet = true;
@@ -112,7 +113,7 @@ CoreInternalOutcome InquiryPriceCreateProxyResponse::Deserialize(const string &p
     {
         if (!rsp["Currency"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Currency` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Currency` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_currency = string(rsp["Currency"].GetString());
         m_currencyHasBeenSet = true;
@@ -120,9 +121,9 @@ CoreInternalOutcome InquiryPriceCreateProxyResponse::Deserialize(const string &p
 
     if (rsp.HasMember("FlowUnitPrice") && !rsp["FlowUnitPrice"].IsNull())
     {
-        if (!rsp["FlowUnitPrice"].IsDouble())
+        if (!rsp["FlowUnitPrice"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `FlowUnitPrice` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FlowUnitPrice` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_flowUnitPrice = rsp["FlowUnitPrice"].GetDouble();
         m_flowUnitPriceHasBeenSet = true;
@@ -130,16 +131,124 @@ CoreInternalOutcome InquiryPriceCreateProxyResponse::Deserialize(const string &p
 
     if (rsp.HasMember("DiscountFlowUnitPrice") && !rsp["DiscountFlowUnitPrice"].IsNull())
     {
-        if (!rsp["DiscountFlowUnitPrice"].IsDouble())
+        if (!rsp["DiscountFlowUnitPrice"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `DiscountFlowUnitPrice` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DiscountFlowUnitPrice` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_discountFlowUnitPrice = rsp["DiscountFlowUnitPrice"].GetDouble();
         m_discountFlowUnitPriceHasBeenSet = true;
     }
 
+    if (rsp.HasMember("Cn2BandwidthPrice") && !rsp["Cn2BandwidthPrice"].IsNull())
+    {
+        if (!rsp["Cn2BandwidthPrice"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `Cn2BandwidthPrice` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_cn2BandwidthPrice = rsp["Cn2BandwidthPrice"].GetDouble();
+        m_cn2BandwidthPriceHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("Cn2BandwidthPriceWithDiscount") && !rsp["Cn2BandwidthPriceWithDiscount"].IsNull())
+    {
+        if (!rsp["Cn2BandwidthPriceWithDiscount"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `Cn2BandwidthPriceWithDiscount` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_cn2BandwidthPriceWithDiscount = rsp["Cn2BandwidthPriceWithDiscount"].GetDouble();
+        m_cn2BandwidthPriceWithDiscountHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
+}
+
+string InquiryPriceCreateProxyResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_proxyDailyPriceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProxyDailyPrice";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_proxyDailyPrice, allocator);
+    }
+
+    if (m_bandwidthUnitPriceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BandwidthUnitPrice";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_bandwidthUnitPrice.begin(); itr != m_bandwidthUnitPrice.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_discountProxyDailyPriceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DiscountProxyDailyPrice";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_discountProxyDailyPrice, allocator);
+    }
+
+    if (m_currencyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Currency";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_currency.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_flowUnitPriceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FlowUnitPrice";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_flowUnitPrice, allocator);
+    }
+
+    if (m_discountFlowUnitPriceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DiscountFlowUnitPrice";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_discountFlowUnitPrice, allocator);
+    }
+
+    if (m_cn2BandwidthPriceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Cn2BandwidthPrice";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_cn2BandwidthPrice, allocator);
+    }
+
+    if (m_cn2BandwidthPriceWithDiscountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Cn2BandwidthPriceWithDiscount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_cn2BandwidthPriceWithDiscount, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 
@@ -201,6 +310,26 @@ double InquiryPriceCreateProxyResponse::GetDiscountFlowUnitPrice() const
 bool InquiryPriceCreateProxyResponse::DiscountFlowUnitPriceHasBeenSet() const
 {
     return m_discountFlowUnitPriceHasBeenSet;
+}
+
+double InquiryPriceCreateProxyResponse::GetCn2BandwidthPrice() const
+{
+    return m_cn2BandwidthPrice;
+}
+
+bool InquiryPriceCreateProxyResponse::Cn2BandwidthPriceHasBeenSet() const
+{
+    return m_cn2BandwidthPriceHasBeenSet;
+}
+
+double InquiryPriceCreateProxyResponse::GetCn2BandwidthPriceWithDiscount() const
+{
+    return m_cn2BandwidthPriceWithDiscount;
+}
+
+bool InquiryPriceCreateProxyResponse::Cn2BandwidthPriceWithDiscountHasBeenSet() const
+{
+    return m_cn2BandwidthPriceWithDiscountHasBeenSet;
 }
 
 

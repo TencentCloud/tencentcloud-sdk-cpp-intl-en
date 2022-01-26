@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Iai::V20200303::Model;
-using namespace rapidjson;
 using namespace std;
 
 FaceAttributesInfo::FaceAttributesInfo() :
@@ -37,7 +36,7 @@ FaceAttributesInfo::FaceAttributesInfo() :
 {
 }
 
-CoreInternalOutcome FaceAttributesInfo::Deserialize(const Value &value)
+CoreInternalOutcome FaceAttributesInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -46,7 +45,7 @@ CoreInternalOutcome FaceAttributesInfo::Deserialize(const Value &value)
     {
         if (!value["Gender"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `FaceAttributesInfo.Gender` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FaceAttributesInfo.Gender` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_gender = value["Gender"].GetInt64();
         m_genderHasBeenSet = true;
@@ -56,7 +55,7 @@ CoreInternalOutcome FaceAttributesInfo::Deserialize(const Value &value)
     {
         if (!value["Age"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `FaceAttributesInfo.Age` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FaceAttributesInfo.Age` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_age = value["Age"].GetInt64();
         m_ageHasBeenSet = true;
@@ -66,7 +65,7 @@ CoreInternalOutcome FaceAttributesInfo::Deserialize(const Value &value)
     {
         if (!value["Expression"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `FaceAttributesInfo.Expression` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FaceAttributesInfo.Expression` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_expression = value["Expression"].GetInt64();
         m_expressionHasBeenSet = true;
@@ -76,7 +75,7 @@ CoreInternalOutcome FaceAttributesInfo::Deserialize(const Value &value)
     {
         if (!value["Glass"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `FaceAttributesInfo.Glass` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FaceAttributesInfo.Glass` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_glass = value["Glass"].GetBool();
         m_glassHasBeenSet = true;
@@ -86,7 +85,7 @@ CoreInternalOutcome FaceAttributesInfo::Deserialize(const Value &value)
     {
         if (!value["Pitch"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `FaceAttributesInfo.Pitch` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FaceAttributesInfo.Pitch` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_pitch = value["Pitch"].GetInt64();
         m_pitchHasBeenSet = true;
@@ -96,7 +95,7 @@ CoreInternalOutcome FaceAttributesInfo::Deserialize(const Value &value)
     {
         if (!value["Yaw"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `FaceAttributesInfo.Yaw` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FaceAttributesInfo.Yaw` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_yaw = value["Yaw"].GetInt64();
         m_yawHasBeenSet = true;
@@ -106,7 +105,7 @@ CoreInternalOutcome FaceAttributesInfo::Deserialize(const Value &value)
     {
         if (!value["Roll"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `FaceAttributesInfo.Roll` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FaceAttributesInfo.Roll` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_roll = value["Roll"].GetInt64();
         m_rollHasBeenSet = true;
@@ -116,7 +115,7 @@ CoreInternalOutcome FaceAttributesInfo::Deserialize(const Value &value)
     {
         if (!value["Beauty"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `FaceAttributesInfo.Beauty` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FaceAttributesInfo.Beauty` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_beauty = value["Beauty"].GetInt64();
         m_beautyHasBeenSet = true;
@@ -126,7 +125,7 @@ CoreInternalOutcome FaceAttributesInfo::Deserialize(const Value &value)
     {
         if (!value["Hat"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `FaceAttributesInfo.Hat` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FaceAttributesInfo.Hat` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_hat = value["Hat"].GetBool();
         m_hatHasBeenSet = true;
@@ -136,7 +135,7 @@ CoreInternalOutcome FaceAttributesInfo::Deserialize(const Value &value)
     {
         if (!value["Mask"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `FaceAttributesInfo.Mask` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FaceAttributesInfo.Mask` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_mask = value["Mask"].GetBool();
         m_maskHasBeenSet = true;
@@ -146,7 +145,7 @@ CoreInternalOutcome FaceAttributesInfo::Deserialize(const Value &value)
     {
         if (!value["Hair"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `FaceAttributesInfo.Hair` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FaceAttributesInfo.Hair` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_hair.Deserialize(value["Hair"]);
@@ -163,7 +162,7 @@ CoreInternalOutcome FaceAttributesInfo::Deserialize(const Value &value)
     {
         if (!value["EyeOpen"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `FaceAttributesInfo.EyeOpen` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FaceAttributesInfo.EyeOpen` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_eyeOpen = value["EyeOpen"].GetBool();
         m_eyeOpenHasBeenSet = true;
@@ -173,12 +172,12 @@ CoreInternalOutcome FaceAttributesInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void FaceAttributesInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void FaceAttributesInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_genderHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Gender";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_gender, allocator);
@@ -186,7 +185,7 @@ void FaceAttributesInfo::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_ageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Age";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_age, allocator);
@@ -194,7 +193,7 @@ void FaceAttributesInfo::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_expressionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Expression";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_expression, allocator);
@@ -202,7 +201,7 @@ void FaceAttributesInfo::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_glassHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Glass";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_glass, allocator);
@@ -210,7 +209,7 @@ void FaceAttributesInfo::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_pitchHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Pitch";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_pitch, allocator);
@@ -218,7 +217,7 @@ void FaceAttributesInfo::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_yawHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Yaw";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_yaw, allocator);
@@ -226,7 +225,7 @@ void FaceAttributesInfo::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_rollHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Roll";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_roll, allocator);
@@ -234,7 +233,7 @@ void FaceAttributesInfo::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_beautyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Beauty";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_beauty, allocator);
@@ -242,7 +241,7 @@ void FaceAttributesInfo::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_hatHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Hat";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_hat, allocator);
@@ -250,7 +249,7 @@ void FaceAttributesInfo::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_maskHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Mask";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_mask, allocator);
@@ -258,16 +257,16 @@ void FaceAttributesInfo::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_hairHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Hair";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_hair.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_eyeOpenHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EyeOpen";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_eyeOpen, allocator);

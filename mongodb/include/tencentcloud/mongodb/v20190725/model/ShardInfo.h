@@ -155,14 +155,14 @@ namespace TencentCloud
                     bool OplogSizeHasBeenSet() const;
 
                     /**
-                     * 获取Number of slave nodes of a shard
-                     * @return SecondaryNum Number of slave nodes of a shard
+                     * 获取Number of secondary nodes of a shard
+                     * @return SecondaryNum Number of secondary nodes of a shard
                      */
                     uint64_t GetSecondaryNum() const;
 
                     /**
-                     * 设置Number of slave nodes of a shard
-                     * @param SecondaryNum Number of slave nodes of a shard
+                     * 设置Number of secondary nodes of a shard
+                     * @param SecondaryNum Number of secondary nodes of a shard
                      */
                     void SetSecondaryNum(const uint64_t& _secondaryNum);
 
@@ -229,7 +229,7 @@ namespace TencentCloud
                     bool m_oplogSizeHasBeenSet;
 
                     /**
-                     * Number of slave nodes of a shard
+                     * Number of secondary nodes of a shard
                      */
                     uint64_t m_secondaryNum;
                     bool m_secondaryNumHasBeenSet;

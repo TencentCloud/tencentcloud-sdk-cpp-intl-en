@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Instance network connection information.
+                * Instance network connection information
                 */
                 class DBInstanceNetInfo : public AbstractModel
                 {
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool AddressHasBeenSet() const;
 
                     /**
-                     * 获取IP address
-                     * @return Ip IP address
+                     * 获取Ip
+                     * @return Ip Ip
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置IP address
-                     * @param Ip IP address
+                     * 设置Ip
+                     * @param Ip Ip
                      */
                     void SetIp(const std::string& _ip);
 
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Network type. Valid values: inner (private address of classic network), private (private address of VPC), public (public address of classic network/VPC)
-                     * @return NetType Network type. Valid values: inner (private address of classic network), private (private address of VPC), public (public address of classic network/VPC)
+                     * 获取Network type. 1: inner (private network address), 2: public (public network address)
+                     * @return NetType Network type. 1: inner (private network address), 2: public (public network address)
                      */
                     std::string GetNetType() const;
 
                     /**
-                     * 设置Network type. Valid values: inner (private address of classic network), private (private address of VPC), public (public address of classic network/VPC)
-                     * @param NetType Network type. Valid values: inner (private address of classic network), private (private address of VPC), public (public address of classic network/VPC)
+                     * 设置Network type. 1: inner (private network address), 2: public (public network address)
+                     * @param NetType Network type. 1: inner (private network address), 2: public (public network address)
                      */
                     void SetNetType(const std::string& _netType);
 
@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool NetTypeHasBeenSet() const;
 
                     /**
-                     * 获取Network connection status
-                     * @return Status Network connection status
+                     * 获取Network connection status. Valid values: `initing` (never enabled before), `opened` (enabled), `closed` (disabled), `opening` (enabling), `closing` (disabling)
+                     * @return Status Network connection status. Valid values: `initing` (never enabled before), `opened` (enabled), `closed` (disabled), `opening` (enabling), `closing` (disabling)
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Network connection status
-                     * @param Status Network connection status
+                     * 设置Network connection status. Valid values: `initing` (never enabled before), `opened` (enabled), `closed` (disabled), `opening` (enabling), `closing` (disabling)
+                     * @param Status Network connection status. Valid values: `initing` (never enabled before), `opened` (enabled), `closed` (disabled), `opening` (enabling), `closing` (disabling)
                      */
                     void SetStatus(const std::string& _status);
 
@@ -135,6 +135,50 @@ namespace TencentCloud
                      * @return Status 是否已赋值
                      */
                     bool StatusHasBeenSet() const;
+
+                    /**
+                     * 获取VPC ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return VpcId VPC ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetVpcId() const;
+
+                    /**
+                     * 设置VPC ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param VpcId VPC ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetVpcId(const std::string& _vpcId);
+
+                    /**
+                     * 判断参数 VpcId 是否已赋值
+                     * @return VpcId 是否已赋值
+                     */
+                    bool VpcIdHasBeenSet() const;
+
+                    /**
+                     * 获取Subnet ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return SubnetId Subnet ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetSubnetId() const;
+
+                    /**
+                     * 设置Subnet ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param SubnetId Subnet ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetSubnetId(const std::string& _subnetId);
+
+                    /**
+                     * 判断参数 SubnetId 是否已赋值
+                     * @return SubnetId 是否已赋值
+                     */
+                    bool SubnetIdHasBeenSet() const;
 
                 private:
 
@@ -145,7 +189,7 @@ namespace TencentCloud
                     bool m_addressHasBeenSet;
 
                     /**
-                     * IP address
+                     * Ip
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;
@@ -157,16 +201,30 @@ namespace TencentCloud
                     bool m_portHasBeenSet;
 
                     /**
-                     * Network type. Valid values: inner (private address of classic network), private (private address of VPC), public (public address of classic network/VPC)
+                     * Network type. 1: inner (private network address), 2: public (public network address)
                      */
                     std::string m_netType;
                     bool m_netTypeHasBeenSet;
 
                     /**
-                     * Network connection status
+                     * Network connection status. Valid values: `initing` (never enabled before), `opened` (enabled), `closed` (disabled), `opening` (enabling), `closing` (disabling)
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
+
+                    /**
+                     * VPC ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_vpcId;
+                    bool m_vpcIdHasBeenSet;
+
+                    /**
+                     * Subnet ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_subnetId;
+                    bool m_subnetIdHasBeenSet;
 
                 };
             }

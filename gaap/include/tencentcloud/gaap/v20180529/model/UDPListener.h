@@ -269,6 +269,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool CreateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return SessionPersist Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetSessionPersist() const;
+
+                    /**
+                     * 设置Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param SessionPersist Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetSessionPersist(const uint64_t& _sessionPersist);
+
+                    /**
+                     * 判断参数 SessionPersist 是否已赋值
+                     * @return SessionPersist 是否已赋值
+                     */
+                    bool SessionPersistHasBeenSet() const;
+
                 private:
 
                     /**
@@ -342,6 +364,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_createTime;
                     bool m_createTimeHasBeenSet;
+
+                    /**
+                     * Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_sessionPersist;
+                    bool m_sessionPersistHasBeenSet;
 
                 };
             }

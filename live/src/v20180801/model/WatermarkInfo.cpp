@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Live::V20180801::Model;
-using namespace rapidjson;
 using namespace std;
 
 WatermarkInfo::WatermarkInfo() :
@@ -34,7 +33,7 @@ WatermarkInfo::WatermarkInfo() :
 {
 }
 
-CoreInternalOutcome WatermarkInfo::Deserialize(const Value &value)
+CoreInternalOutcome WatermarkInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -43,7 +42,7 @@ CoreInternalOutcome WatermarkInfo::Deserialize(const Value &value)
     {
         if (!value["WatermarkId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `WatermarkInfo.WatermarkId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WatermarkInfo.WatermarkId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_watermarkId = value["WatermarkId"].GetInt64();
         m_watermarkIdHasBeenSet = true;
@@ -53,7 +52,7 @@ CoreInternalOutcome WatermarkInfo::Deserialize(const Value &value)
     {
         if (!value["PictureUrl"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WatermarkInfo.PictureUrl` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WatermarkInfo.PictureUrl` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_pictureUrl = string(value["PictureUrl"].GetString());
         m_pictureUrlHasBeenSet = true;
@@ -63,7 +62,7 @@ CoreInternalOutcome WatermarkInfo::Deserialize(const Value &value)
     {
         if (!value["XPosition"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `WatermarkInfo.XPosition` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WatermarkInfo.XPosition` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_xPosition = value["XPosition"].GetInt64();
         m_xPositionHasBeenSet = true;
@@ -73,7 +72,7 @@ CoreInternalOutcome WatermarkInfo::Deserialize(const Value &value)
     {
         if (!value["YPosition"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `WatermarkInfo.YPosition` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WatermarkInfo.YPosition` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_yPosition = value["YPosition"].GetInt64();
         m_yPositionHasBeenSet = true;
@@ -83,7 +82,7 @@ CoreInternalOutcome WatermarkInfo::Deserialize(const Value &value)
     {
         if (!value["WatermarkName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WatermarkInfo.WatermarkName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WatermarkInfo.WatermarkName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_watermarkName = string(value["WatermarkName"].GetString());
         m_watermarkNameHasBeenSet = true;
@@ -93,7 +92,7 @@ CoreInternalOutcome WatermarkInfo::Deserialize(const Value &value)
     {
         if (!value["Status"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `WatermarkInfo.Status` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WatermarkInfo.Status` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_status = value["Status"].GetInt64();
         m_statusHasBeenSet = true;
@@ -103,7 +102,7 @@ CoreInternalOutcome WatermarkInfo::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WatermarkInfo.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WatermarkInfo.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -113,7 +112,7 @@ CoreInternalOutcome WatermarkInfo::Deserialize(const Value &value)
     {
         if (!value["Width"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `WatermarkInfo.Width` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WatermarkInfo.Width` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_width = value["Width"].GetInt64();
         m_widthHasBeenSet = true;
@@ -123,7 +122,7 @@ CoreInternalOutcome WatermarkInfo::Deserialize(const Value &value)
     {
         if (!value["Height"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `WatermarkInfo.Height` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WatermarkInfo.Height` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_height = value["Height"].GetInt64();
         m_heightHasBeenSet = true;
@@ -133,12 +132,12 @@ CoreInternalOutcome WatermarkInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void WatermarkInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void WatermarkInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_watermarkIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "WatermarkId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_watermarkId, allocator);
@@ -146,15 +145,15 @@ void WatermarkInfo::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_pictureUrlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PictureUrl";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_pictureUrl.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_pictureUrl.c_str(), allocator).Move(), allocator);
     }
 
     if (m_xPositionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "XPosition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_xPosition, allocator);
@@ -162,7 +161,7 @@ void WatermarkInfo::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_yPositionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "YPosition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_yPosition, allocator);
@@ -170,15 +169,15 @@ void WatermarkInfo::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_watermarkNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "WatermarkName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_watermarkName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_watermarkName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);
@@ -186,15 +185,15 @@ void WatermarkInfo::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_widthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Width";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_width, allocator);
@@ -202,7 +201,7 @@ void WatermarkInfo::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_heightHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Height";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_height, allocator);

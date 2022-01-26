@@ -29,6 +29,8 @@
 #include <tencentcloud/ecdn/v20191012/model/Cache.h>
 #include <tencentcloud/ecdn/v20191012/model/Https.h>
 #include <tencentcloud/ecdn/v20191012/model/ForceRedirect.h>
+#include <tencentcloud/ecdn/v20191012/model/Tag.h>
+#include <tencentcloud/ecdn/v20191012/model/WebSocket.h>
 
 
 namespace TencentCloud
@@ -123,14 +125,14 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取IP blacklist/whitelist configuration.
-                     * @return IpFilter IP blacklist/whitelist configuration.
+                     * 获取IP block/allowlist configuration.
+                     * @return IpFilter IP block/allowlist configuration.
                      */
                     IpFilter GetIpFilter() const;
 
                     /**
-                     * 设置IP blacklist/whitelist configuration.
-                     * @param IpFilter IP blacklist/whitelist configuration.
+                     * 设置IP block/allowlist configuration.
+                     * @param IpFilter IP block/allowlist configuration.
                      */
                     void SetIpFilter(const IpFilter& _ipFilter);
 
@@ -248,6 +250,42 @@ namespace TencentCloud
                      */
                     bool ForceRedirectHasBeenSet() const;
 
+                    /**
+                     * 获取Tag bound to a domain name.
+                     * @return Tag Tag bound to a domain name.
+                     */
+                    std::vector<Tag> GetTag() const;
+
+                    /**
+                     * 设置Tag bound to a domain name.
+                     * @param Tag Tag bound to a domain name.
+                     */
+                    void SetTag(const std::vector<Tag>& _tag);
+
+                    /**
+                     * 判断参数 Tag 是否已赋值
+                     * @return Tag 是否已赋值
+                     */
+                    bool TagHasBeenSet() const;
+
+                    /**
+                     * 获取WebSocket configuration.
+                     * @return WebSocket WebSocket configuration.
+                     */
+                    WebSocket GetWebSocket() const;
+
+                    /**
+                     * 设置WebSocket configuration.
+                     * @param WebSocket WebSocket configuration.
+                     */
+                    void SetWebSocket(const WebSocket& _webSocket);
+
+                    /**
+                     * 判断参数 WebSocket 是否已赋值
+                     * @return WebSocket 是否已赋值
+                     */
+                    bool WebSocketHasBeenSet() const;
+
                 private:
 
                     /**
@@ -275,7 +313,7 @@ namespace TencentCloud
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * IP blacklist/whitelist configuration.
+                     * IP block/allowlist configuration.
                      */
                     IpFilter m_ipFilter;
                     bool m_ipFilterHasBeenSet;
@@ -315,6 +353,18 @@ namespace TencentCloud
                      */
                     ForceRedirect m_forceRedirect;
                     bool m_forceRedirectHasBeenSet;
+
+                    /**
+                     * Tag bound to a domain name.
+                     */
+                    std::vector<Tag> m_tag;
+                    bool m_tagHasBeenSet;
+
+                    /**
+                     * WebSocket configuration.
+                     */
+                    WebSocket m_webSocket;
+                    bool m_webSocketHasBeenSet;
 
                 };
             }

@@ -20,25 +20,25 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Live::V20180801::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeLiveForbidStreamListRequest::DescribeLiveForbidStreamListRequest() :
     m_pageNumHasBeenSet(false),
-    m_pageSizeHasBeenSet(false)
+    m_pageSizeHasBeenSet(false),
+    m_streamNameHasBeenSet(false)
 {
 }
 
 string DescribeLiveForbidStreamListRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_pageNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PageNum";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_pageNum, allocator);
@@ -46,15 +46,23 @@ string DescribeLiveForbidStreamListRequest::ToJsonString() const
 
     if (m_pageSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PageSize";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_pageSize, allocator);
     }
 
+    if (m_streamNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StreamName";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_streamName.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -90,6 +98,22 @@ void DescribeLiveForbidStreamListRequest::SetPageSize(const int64_t& _pageSize)
 bool DescribeLiveForbidStreamListRequest::PageSizeHasBeenSet() const
 {
     return m_pageSizeHasBeenSet;
+}
+
+string DescribeLiveForbidStreamListRequest::GetStreamName() const
+{
+    return m_streamName;
+}
+
+void DescribeLiveForbidStreamListRequest::SetStreamName(const string& _streamName)
+{
+    m_streamName = _streamName;
+    m_streamNameHasBeenSet = true;
+}
+
+bool DescribeLiveForbidStreamListRequest::StreamNameHasBeenSet() const
+{
+    return m_streamNameHasBeenSet;
 }
 
 

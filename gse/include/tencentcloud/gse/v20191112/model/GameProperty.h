@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Attribute name
-                     * @return Key Attribute name
+                     * 获取Attribute name. Up to 32 ASCII characters are allowed.
+                     * @return Key Attribute name. Up to 32 ASCII characters are allowed.
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Attribute name
-                     * @param Key Attribute name
+                     * 设置Attribute name. Up to 32 ASCII characters are allowed.
+                     * @param Key Attribute name. Up to 32 ASCII characters are allowed.
                      */
                     void SetKey(const std::string& _key);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Attribute value
-                     * @return Value Attribute value
+                     * 获取Attribute value. Up to 96 ASCII characters are allowed.
+                     * @return Value Attribute value. Up to 96 ASCII characters are allowed.
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Attribute value
-                     * @param Value Attribute value
+                     * 设置Attribute value. Up to 96 ASCII characters are allowed.
+                     * @param Value Attribute value. Up to 96 ASCII characters are allowed.
                      */
                     void SetValue(const std::string& _value);
 
@@ -85,13 +85,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Attribute name
+                     * Attribute name. Up to 32 ASCII characters are allowed.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Attribute value
+                     * Attribute value. Up to 96 ASCII characters are allowed.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

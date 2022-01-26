@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/batch/v20170312/model/Placement.h>
 #include <tencentcloud/batch/v20170312/model/TaskMetrics.h>
+#include <tencentcloud/batch/v20170312/model/Tag.h>
 
 
 namespace TencentCloud
@@ -200,6 +201,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TaskMetricsHasBeenSet() const;
 
+                    /**
+                     * 获取Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return Tags Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param Tags Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -251,6 +274,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     TaskMetrics m_taskMetrics;
                     bool m_taskMetricsHasBeenSet;
+
+                    /**
+                     * Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

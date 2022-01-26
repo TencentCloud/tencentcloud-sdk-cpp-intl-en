@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Tcaplusdb::V20190823::Model;
-using namespace rapidjson;
 using namespace std;
 
 ClusterInfo::ClusterInfo() :
@@ -36,11 +35,22 @@ ClusterInfo::ClusterInfo() :
     m_apiAccessIpHasBeenSet(false),
     m_apiAccessPortHasBeenSet(false),
     m_oldPasswordExpireTimeHasBeenSet(false),
-    m_apiAccessIpv6HasBeenSet(false)
+    m_apiAccessIpv6HasBeenSet(false),
+    m_clusterTypeHasBeenSet(false),
+    m_clusterStatusHasBeenSet(false),
+    m_readCapacityUnitHasBeenSet(false),
+    m_writeCapacityUnitHasBeenSet(false),
+    m_diskVolumeHasBeenSet(false),
+    m_serverListHasBeenSet(false),
+    m_proxyListHasBeenSet(false),
+    m_censorshipHasBeenSet(false),
+    m_dbaUinsHasBeenSet(false),
+    m_dataFlowStatusHasBeenSet(false),
+    m_kafkaInfoHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ClusterInfo::Deserialize(const Value &value)
+CoreInternalOutcome ClusterInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -49,7 +59,7 @@ CoreInternalOutcome ClusterInfo::Deserialize(const Value &value)
     {
         if (!value["ClusterName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClusterInfo.ClusterName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.ClusterName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_clusterName = string(value["ClusterName"].GetString());
         m_clusterNameHasBeenSet = true;
@@ -59,7 +69,7 @@ CoreInternalOutcome ClusterInfo::Deserialize(const Value &value)
     {
         if (!value["ClusterId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClusterInfo.ClusterId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.ClusterId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_clusterId = string(value["ClusterId"].GetString());
         m_clusterIdHasBeenSet = true;
@@ -69,7 +79,7 @@ CoreInternalOutcome ClusterInfo::Deserialize(const Value &value)
     {
         if (!value["Region"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClusterInfo.Region` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.Region` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_region = string(value["Region"].GetString());
         m_regionHasBeenSet = true;
@@ -79,7 +89,7 @@ CoreInternalOutcome ClusterInfo::Deserialize(const Value &value)
     {
         if (!value["IdlType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClusterInfo.IdlType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.IdlType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_idlType = string(value["IdlType"].GetString());
         m_idlTypeHasBeenSet = true;
@@ -89,7 +99,7 @@ CoreInternalOutcome ClusterInfo::Deserialize(const Value &value)
     {
         if (!value["NetworkType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClusterInfo.NetworkType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.NetworkType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_networkType = string(value["NetworkType"].GetString());
         m_networkTypeHasBeenSet = true;
@@ -99,7 +109,7 @@ CoreInternalOutcome ClusterInfo::Deserialize(const Value &value)
     {
         if (!value["VpcId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClusterInfo.VpcId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.VpcId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpcId = string(value["VpcId"].GetString());
         m_vpcIdHasBeenSet = true;
@@ -109,7 +119,7 @@ CoreInternalOutcome ClusterInfo::Deserialize(const Value &value)
     {
         if (!value["SubnetId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClusterInfo.SubnetId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.SubnetId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_subnetId = string(value["SubnetId"].GetString());
         m_subnetIdHasBeenSet = true;
@@ -119,7 +129,7 @@ CoreInternalOutcome ClusterInfo::Deserialize(const Value &value)
     {
         if (!value["CreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClusterInfo.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createdTime = string(value["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
@@ -129,7 +139,7 @@ CoreInternalOutcome ClusterInfo::Deserialize(const Value &value)
     {
         if (!value["Password"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClusterInfo.Password` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.Password` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_password = string(value["Password"].GetString());
         m_passwordHasBeenSet = true;
@@ -139,7 +149,7 @@ CoreInternalOutcome ClusterInfo::Deserialize(const Value &value)
     {
         if (!value["PasswordStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClusterInfo.PasswordStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.PasswordStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_passwordStatus = string(value["PasswordStatus"].GetString());
         m_passwordStatusHasBeenSet = true;
@@ -149,7 +159,7 @@ CoreInternalOutcome ClusterInfo::Deserialize(const Value &value)
     {
         if (!value["ApiAccessId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClusterInfo.ApiAccessId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.ApiAccessId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_apiAccessId = string(value["ApiAccessId"].GetString());
         m_apiAccessIdHasBeenSet = true;
@@ -159,7 +169,7 @@ CoreInternalOutcome ClusterInfo::Deserialize(const Value &value)
     {
         if (!value["ApiAccessIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClusterInfo.ApiAccessIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.ApiAccessIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_apiAccessIp = string(value["ApiAccessIp"].GetString());
         m_apiAccessIpHasBeenSet = true;
@@ -169,7 +179,7 @@ CoreInternalOutcome ClusterInfo::Deserialize(const Value &value)
     {
         if (!value["ApiAccessPort"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ClusterInfo.ApiAccessPort` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.ApiAccessPort` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_apiAccessPort = value["ApiAccessPort"].GetInt64();
         m_apiAccessPortHasBeenSet = true;
@@ -179,7 +189,7 @@ CoreInternalOutcome ClusterInfo::Deserialize(const Value &value)
     {
         if (!value["OldPasswordExpireTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClusterInfo.OldPasswordExpireTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.OldPasswordExpireTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_oldPasswordExpireTime = string(value["OldPasswordExpireTime"].GetString());
         m_oldPasswordExpireTimeHasBeenSet = true;
@@ -189,118 +199,258 @@ CoreInternalOutcome ClusterInfo::Deserialize(const Value &value)
     {
         if (!value["ApiAccessIpv6"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ClusterInfo.ApiAccessIpv6` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.ApiAccessIpv6` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_apiAccessIpv6 = string(value["ApiAccessIpv6"].GetString());
         m_apiAccessIpv6HasBeenSet = true;
+    }
+
+    if (value.HasMember("ClusterType") && !value["ClusterType"].IsNull())
+    {
+        if (!value["ClusterType"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.ClusterType` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_clusterType = value["ClusterType"].GetInt64();
+        m_clusterTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("ClusterStatus") && !value["ClusterStatus"].IsNull())
+    {
+        if (!value["ClusterStatus"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.ClusterStatus` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_clusterStatus = value["ClusterStatus"].GetInt64();
+        m_clusterStatusHasBeenSet = true;
+    }
+
+    if (value.HasMember("ReadCapacityUnit") && !value["ReadCapacityUnit"].IsNull())
+    {
+        if (!value["ReadCapacityUnit"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.ReadCapacityUnit` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_readCapacityUnit = value["ReadCapacityUnit"].GetInt64();
+        m_readCapacityUnitHasBeenSet = true;
+    }
+
+    if (value.HasMember("WriteCapacityUnit") && !value["WriteCapacityUnit"].IsNull())
+    {
+        if (!value["WriteCapacityUnit"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.WriteCapacityUnit` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_writeCapacityUnit = value["WriteCapacityUnit"].GetInt64();
+        m_writeCapacityUnitHasBeenSet = true;
+    }
+
+    if (value.HasMember("DiskVolume") && !value["DiskVolume"].IsNull())
+    {
+        if (!value["DiskVolume"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.DiskVolume` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_diskVolume = value["DiskVolume"].GetInt64();
+        m_diskVolumeHasBeenSet = true;
+    }
+
+    if (value.HasMember("ServerList") && !value["ServerList"].IsNull())
+    {
+        if (!value["ServerList"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.ServerList` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["ServerList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            ServerDetailInfo item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_serverList.push_back(item);
+        }
+        m_serverListHasBeenSet = true;
+    }
+
+    if (value.HasMember("ProxyList") && !value["ProxyList"].IsNull())
+    {
+        if (!value["ProxyList"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.ProxyList` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["ProxyList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            ProxyDetailInfo item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_proxyList.push_back(item);
+        }
+        m_proxyListHasBeenSet = true;
+    }
+
+    if (value.HasMember("Censorship") && !value["Censorship"].IsNull())
+    {
+        if (!value["Censorship"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.Censorship` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_censorship = value["Censorship"].GetInt64();
+        m_censorshipHasBeenSet = true;
+    }
+
+    if (value.HasMember("DbaUins") && !value["DbaUins"].IsNull())
+    {
+        if (!value["DbaUins"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.DbaUins` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["DbaUins"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_dbaUins.push_back((*itr).GetString());
+        }
+        m_dbaUinsHasBeenSet = true;
+    }
+
+    if (value.HasMember("DataFlowStatus") && !value["DataFlowStatus"].IsNull())
+    {
+        if (!value["DataFlowStatus"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.DataFlowStatus` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_dataFlowStatus = value["DataFlowStatus"].GetInt64();
+        m_dataFlowStatusHasBeenSet = true;
+    }
+
+    if (value.HasMember("KafkaInfo") && !value["KafkaInfo"].IsNull())
+    {
+        if (!value["KafkaInfo"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterInfo.KafkaInfo` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_kafkaInfo.Deserialize(value["KafkaInfo"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_kafkaInfoHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void ClusterInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ClusterInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_clusterNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClusterName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_clusterName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clusterName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_clusterIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClusterId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_clusterId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clusterId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_regionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Region";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_region.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_region.c_str(), allocator).Move(), allocator);
     }
 
     if (m_idlTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IdlType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_idlType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_idlType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_networkTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetworkType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_networkType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_networkType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vpcId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpcId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_subnetIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubnetId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_subnetId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_subnetId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createdTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createdTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_passwordHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Password";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_password.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_password.c_str(), allocator).Move(), allocator);
     }
 
     if (m_passwordStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PasswordStatus";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_passwordStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_passwordStatus.c_str(), allocator).Move(), allocator);
     }
 
     if (m_apiAccessIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ApiAccessId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_apiAccessId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_apiAccessId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_apiAccessIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ApiAccessIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_apiAccessIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_apiAccessIp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_apiAccessPortHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ApiAccessPort";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_apiAccessPort, allocator);
@@ -308,18 +458,126 @@ void ClusterInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_oldPasswordExpireTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OldPasswordExpireTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_oldPasswordExpireTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_oldPasswordExpireTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_apiAccessIpv6HasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ApiAccessIpv6";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_apiAccessIpv6.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_apiAccessIpv6.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_clusterTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClusterType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_clusterType, allocator);
+    }
+
+    if (m_clusterStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClusterStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_clusterStatus, allocator);
+    }
+
+    if (m_readCapacityUnitHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ReadCapacityUnit";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_readCapacityUnit, allocator);
+    }
+
+    if (m_writeCapacityUnitHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WriteCapacityUnit";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_writeCapacityUnit, allocator);
+    }
+
+    if (m_diskVolumeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DiskVolume";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_diskVolume, allocator);
+    }
+
+    if (m_serverListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ServerList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_serverList.begin(); itr != m_serverList.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_proxyListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProxyList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_proxyList.begin(); itr != m_proxyList.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_censorshipHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Censorship";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_censorship, allocator);
+    }
+
+    if (m_dbaUinsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DbaUins";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_dbaUins.begin(); itr != m_dbaUins.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_dataFlowStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DataFlowStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_dataFlowStatus, allocator);
+    }
+
+    if (m_kafkaInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "KafkaInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_kafkaInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -563,5 +821,181 @@ void ClusterInfo::SetApiAccessIpv6(const string& _apiAccessIpv6)
 bool ClusterInfo::ApiAccessIpv6HasBeenSet() const
 {
     return m_apiAccessIpv6HasBeenSet;
+}
+
+int64_t ClusterInfo::GetClusterType() const
+{
+    return m_clusterType;
+}
+
+void ClusterInfo::SetClusterType(const int64_t& _clusterType)
+{
+    m_clusterType = _clusterType;
+    m_clusterTypeHasBeenSet = true;
+}
+
+bool ClusterInfo::ClusterTypeHasBeenSet() const
+{
+    return m_clusterTypeHasBeenSet;
+}
+
+int64_t ClusterInfo::GetClusterStatus() const
+{
+    return m_clusterStatus;
+}
+
+void ClusterInfo::SetClusterStatus(const int64_t& _clusterStatus)
+{
+    m_clusterStatus = _clusterStatus;
+    m_clusterStatusHasBeenSet = true;
+}
+
+bool ClusterInfo::ClusterStatusHasBeenSet() const
+{
+    return m_clusterStatusHasBeenSet;
+}
+
+int64_t ClusterInfo::GetReadCapacityUnit() const
+{
+    return m_readCapacityUnit;
+}
+
+void ClusterInfo::SetReadCapacityUnit(const int64_t& _readCapacityUnit)
+{
+    m_readCapacityUnit = _readCapacityUnit;
+    m_readCapacityUnitHasBeenSet = true;
+}
+
+bool ClusterInfo::ReadCapacityUnitHasBeenSet() const
+{
+    return m_readCapacityUnitHasBeenSet;
+}
+
+int64_t ClusterInfo::GetWriteCapacityUnit() const
+{
+    return m_writeCapacityUnit;
+}
+
+void ClusterInfo::SetWriteCapacityUnit(const int64_t& _writeCapacityUnit)
+{
+    m_writeCapacityUnit = _writeCapacityUnit;
+    m_writeCapacityUnitHasBeenSet = true;
+}
+
+bool ClusterInfo::WriteCapacityUnitHasBeenSet() const
+{
+    return m_writeCapacityUnitHasBeenSet;
+}
+
+int64_t ClusterInfo::GetDiskVolume() const
+{
+    return m_diskVolume;
+}
+
+void ClusterInfo::SetDiskVolume(const int64_t& _diskVolume)
+{
+    m_diskVolume = _diskVolume;
+    m_diskVolumeHasBeenSet = true;
+}
+
+bool ClusterInfo::DiskVolumeHasBeenSet() const
+{
+    return m_diskVolumeHasBeenSet;
+}
+
+vector<ServerDetailInfo> ClusterInfo::GetServerList() const
+{
+    return m_serverList;
+}
+
+void ClusterInfo::SetServerList(const vector<ServerDetailInfo>& _serverList)
+{
+    m_serverList = _serverList;
+    m_serverListHasBeenSet = true;
+}
+
+bool ClusterInfo::ServerListHasBeenSet() const
+{
+    return m_serverListHasBeenSet;
+}
+
+vector<ProxyDetailInfo> ClusterInfo::GetProxyList() const
+{
+    return m_proxyList;
+}
+
+void ClusterInfo::SetProxyList(const vector<ProxyDetailInfo>& _proxyList)
+{
+    m_proxyList = _proxyList;
+    m_proxyListHasBeenSet = true;
+}
+
+bool ClusterInfo::ProxyListHasBeenSet() const
+{
+    return m_proxyListHasBeenSet;
+}
+
+int64_t ClusterInfo::GetCensorship() const
+{
+    return m_censorship;
+}
+
+void ClusterInfo::SetCensorship(const int64_t& _censorship)
+{
+    m_censorship = _censorship;
+    m_censorshipHasBeenSet = true;
+}
+
+bool ClusterInfo::CensorshipHasBeenSet() const
+{
+    return m_censorshipHasBeenSet;
+}
+
+vector<string> ClusterInfo::GetDbaUins() const
+{
+    return m_dbaUins;
+}
+
+void ClusterInfo::SetDbaUins(const vector<string>& _dbaUins)
+{
+    m_dbaUins = _dbaUins;
+    m_dbaUinsHasBeenSet = true;
+}
+
+bool ClusterInfo::DbaUinsHasBeenSet() const
+{
+    return m_dbaUinsHasBeenSet;
+}
+
+int64_t ClusterInfo::GetDataFlowStatus() const
+{
+    return m_dataFlowStatus;
+}
+
+void ClusterInfo::SetDataFlowStatus(const int64_t& _dataFlowStatus)
+{
+    m_dataFlowStatus = _dataFlowStatus;
+    m_dataFlowStatusHasBeenSet = true;
+}
+
+bool ClusterInfo::DataFlowStatusHasBeenSet() const
+{
+    return m_dataFlowStatusHasBeenSet;
+}
+
+KafkaInfo ClusterInfo::GetKafkaInfo() const
+{
+    return m_kafkaInfo;
+}
+
+void ClusterInfo::SetKafkaInfo(const KafkaInfo& _kafkaInfo)
+{
+    m_kafkaInfo = _kafkaInfo;
+    m_kafkaInfoHasBeenSet = true;
+}
+
+bool ClusterInfo::KafkaInfoHasBeenSet() const
+{
+    return m_kafkaInfoHasBeenSet;
 }
 

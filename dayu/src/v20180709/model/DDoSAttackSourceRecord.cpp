@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dayu::V20180709::Model;
-using namespace rapidjson;
 using namespace std;
 
 DDoSAttackSourceRecord::DDoSAttackSourceRecord() :
@@ -30,7 +29,7 @@ DDoSAttackSourceRecord::DDoSAttackSourceRecord() :
 {
 }
 
-CoreInternalOutcome DDoSAttackSourceRecord::Deserialize(const Value &value)
+CoreInternalOutcome DDoSAttackSourceRecord::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome DDoSAttackSourceRecord::Deserialize(const Value &value)
     {
         if (!value["SrcIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DDoSAttackSourceRecord.SrcIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSAttackSourceRecord.SrcIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_srcIp = string(value["SrcIp"].GetString());
         m_srcIpHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome DDoSAttackSourceRecord::Deserialize(const Value &value)
     {
         if (!value["Province"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DDoSAttackSourceRecord.Province` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSAttackSourceRecord.Province` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_province = string(value["Province"].GetString());
         m_provinceHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome DDoSAttackSourceRecord::Deserialize(const Value &value)
     {
         if (!value["Nation"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DDoSAttackSourceRecord.Nation` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSAttackSourceRecord.Nation` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_nation = string(value["Nation"].GetString());
         m_nationHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome DDoSAttackSourceRecord::Deserialize(const Value &value)
     {
         if (!value["PacketSum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSAttackSourceRecord.PacketSum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSAttackSourceRecord.PacketSum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_packetSum = value["PacketSum"].GetUint64();
         m_packetSumHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome DDoSAttackSourceRecord::Deserialize(const Value &value)
     {
         if (!value["PacketLen"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DDoSAttackSourceRecord.PacketLen` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DDoSAttackSourceRecord.PacketLen` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_packetLen = value["PacketLen"].GetUint64();
         m_packetLenHasBeenSet = true;
@@ -89,36 +88,36 @@ CoreInternalOutcome DDoSAttackSourceRecord::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void DDoSAttackSourceRecord::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DDoSAttackSourceRecord::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_srcIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SrcIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_srcIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_srcIp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_provinceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Province";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_province.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_province.c_str(), allocator).Move(), allocator);
     }
 
     if (m_nationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Nation";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_nation.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_nation.c_str(), allocator).Move(), allocator);
     }
 
     if (m_packetSumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PacketSum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_packetSum, allocator);
@@ -126,7 +125,7 @@ void DDoSAttackSourceRecord::ToJsonObject(Value &value, Document::AllocatorType&
 
     if (m_packetLenHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PacketLen";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_packetLen, allocator);

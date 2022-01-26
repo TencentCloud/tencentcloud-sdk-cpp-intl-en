@@ -40,6 +40,7 @@ namespace TencentCloud
                     AddUserResponse();
                     ~AddUserResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -79,8 +80,8 @@ namespace TencentCloud
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取Sub-user’s key ID
-                     * @return SecretId Sub-user’s key ID
+                     * 获取Sub-user's key ID
+                     * @return SecretId Sub-user's key ID
                      */
                     std::string GetSecretId() const;
 
@@ -91,8 +92,8 @@ namespace TencentCloud
                     bool SecretIdHasBeenSet() const;
 
                     /**
-                     * 获取Sub-user’s secret key
-                     * @return SecretKey Sub-user’s secret key
+                     * 获取Sub-user's secret key
+                     * @return SecretKey Sub-user's secret key
                      */
                     std::string GetSecretKey() const;
 
@@ -135,13 +136,13 @@ namespace TencentCloud
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * Sub-user’s key ID
+                     * Sub-user's key ID
                      */
                     std::string m_secretId;
                     bool m_secretIdHasBeenSet;
 
                     /**
-                     * Sub-user’s secret key
+                     * Sub-user's secret key
                      */
                     std::string m_secretKey;
                     bool m_secretKeyHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Describes instance states. For state types, see [here](/document/api/213/15753#InstanceStatus).
+                * Describes instance states. For state types, see [here](https://intl.cloud.tencent.com/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
                 */
                 class InstanceStatus : public AbstractModel
                 {

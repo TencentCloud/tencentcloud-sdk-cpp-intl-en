@@ -120,14 +120,14 @@ namespace TencentCloud
                     bool PortLimitsHasBeenSet() const;
 
                     /**
-                     * 获取IP blacklist/whitelist. Enter an empty array if there is no IP blacklist/whitelist
-                     * @return IpAllowDenys IP blacklist/whitelist. Enter an empty array if there is no IP blacklist/whitelist
+                     * 获取IP blocklist/allowlist. Enter an empty array if there is no IP blocklist/allowlist
+                     * @return IpAllowDenys IP blocklist/allowlist. Enter an empty array if there is no IP blocklist/allowlist
                      */
                     std::vector<IpBlackWhite> GetIpAllowDenys() const;
 
                     /**
-                     * 设置IP blacklist/whitelist. Enter an empty array if there is no IP blacklist/whitelist
-                     * @param IpAllowDenys IP blacklist/whitelist. Enter an empty array if there is no IP blacklist/whitelist
+                     * 设置IP blocklist/allowlist. Enter an empty array if there is no IP blocklist/allowlist
+                     * @param IpAllowDenys IP blocklist/allowlist. Enter an empty array if there is no IP blocklist/allowlist
                      */
                     void SetIpAllowDenys(const std::vector<IpBlackWhite>& _ipAllowDenys);
 
@@ -200,7 +200,7 @@ namespace TencentCloud
                     bool m_portLimitsHasBeenSet;
 
                     /**
-                     * IP blacklist/whitelist. Enter an empty array if there is no IP blacklist/whitelist
+                     * IP blocklist/allowlist. Enter an empty array if there is no IP blocklist/allowlist
                      */
                     std::vector<IpBlackWhite> m_ipAllowDenys;
                     bool m_ipAllowDenysHasBeenSet;

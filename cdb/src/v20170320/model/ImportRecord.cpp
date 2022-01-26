@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 ImportRecord::ImportRecord() :
@@ -38,7 +37,7 @@ ImportRecord::ImportRecord() :
 {
 }
 
-CoreInternalOutcome ImportRecord::Deserialize(const Value &value)
+CoreInternalOutcome ImportRecord::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -47,7 +46,7 @@ CoreInternalOutcome ImportRecord::Deserialize(const Value &value)
     {
         if (!value["Status"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ImportRecord.Status` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImportRecord.Status` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_status = value["Status"].GetInt64();
         m_statusHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome ImportRecord::Deserialize(const Value &value)
     {
         if (!value["Code"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ImportRecord.Code` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImportRecord.Code` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_code = value["Code"].GetInt64();
         m_codeHasBeenSet = true;
@@ -67,7 +66,7 @@ CoreInternalOutcome ImportRecord::Deserialize(const Value &value)
     {
         if (!value["CostTime"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ImportRecord.CostTime` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImportRecord.CostTime` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_costTime = value["CostTime"].GetInt64();
         m_costTimeHasBeenSet = true;
@@ -77,7 +76,7 @@ CoreInternalOutcome ImportRecord::Deserialize(const Value &value)
     {
         if (!value["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ImportRecord.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImportRecord.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(value["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -87,7 +86,7 @@ CoreInternalOutcome ImportRecord::Deserialize(const Value &value)
     {
         if (!value["WorkId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ImportRecord.WorkId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImportRecord.WorkId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_workId = string(value["WorkId"].GetString());
         m_workIdHasBeenSet = true;
@@ -97,7 +96,7 @@ CoreInternalOutcome ImportRecord::Deserialize(const Value &value)
     {
         if (!value["FileName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ImportRecord.FileName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImportRecord.FileName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fileName = string(value["FileName"].GetString());
         m_fileNameHasBeenSet = true;
@@ -107,7 +106,7 @@ CoreInternalOutcome ImportRecord::Deserialize(const Value &value)
     {
         if (!value["Process"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ImportRecord.Process` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImportRecord.Process` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_process = value["Process"].GetInt64();
         m_processHasBeenSet = true;
@@ -117,7 +116,7 @@ CoreInternalOutcome ImportRecord::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ImportRecord.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImportRecord.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -127,7 +126,7 @@ CoreInternalOutcome ImportRecord::Deserialize(const Value &value)
     {
         if (!value["FileSize"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ImportRecord.FileSize` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImportRecord.FileSize` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fileSize = string(value["FileSize"].GetString());
         m_fileSizeHasBeenSet = true;
@@ -137,7 +136,7 @@ CoreInternalOutcome ImportRecord::Deserialize(const Value &value)
     {
         if (!value["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ImportRecord.Message` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImportRecord.Message` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_message = string(value["Message"].GetString());
         m_messageHasBeenSet = true;
@@ -147,7 +146,7 @@ CoreInternalOutcome ImportRecord::Deserialize(const Value &value)
     {
         if (!value["JobId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ImportRecord.JobId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImportRecord.JobId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_jobId = value["JobId"].GetInt64();
         m_jobIdHasBeenSet = true;
@@ -157,7 +156,7 @@ CoreInternalOutcome ImportRecord::Deserialize(const Value &value)
     {
         if (!value["DbName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ImportRecord.DbName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImportRecord.DbName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_dbName = string(value["DbName"].GetString());
         m_dbNameHasBeenSet = true;
@@ -167,7 +166,7 @@ CoreInternalOutcome ImportRecord::Deserialize(const Value &value)
     {
         if (!value["AsyncRequestId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ImportRecord.AsyncRequestId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ImportRecord.AsyncRequestId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_asyncRequestId = string(value["AsyncRequestId"].GetString());
         m_asyncRequestIdHasBeenSet = true;
@@ -177,12 +176,12 @@ CoreInternalOutcome ImportRecord::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ImportRecord::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ImportRecord::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);
@@ -190,7 +189,7 @@ void ImportRecord::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_codeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Code";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_code, allocator);
@@ -198,7 +197,7 @@ void ImportRecord::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_costTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CostTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_costTime, allocator);
@@ -206,31 +205,31 @@ void ImportRecord::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_workIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "WorkId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_workId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_workId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fileNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fileName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fileName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_processHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Process";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_process, allocator);
@@ -238,31 +237,31 @@ void ImportRecord::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fileSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileSize";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fileSize.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fileSize.c_str(), allocator).Move(), allocator);
     }
 
     if (m_messageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Message";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_message.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_message.c_str(), allocator).Move(), allocator);
     }
 
     if (m_jobIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "JobId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_jobId, allocator);
@@ -270,18 +269,18 @@ void ImportRecord::ToJsonObject(Value &value, Document::AllocatorType& allocator
 
     if (m_dbNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DbName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_dbName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_dbName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_asyncRequestIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AsyncRequestId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_asyncRequestId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_asyncRequestId.c_str(), allocator).Move(), allocator);
     }
 
 }

@@ -19,13 +19,17 @@ set(faceid_public_header
   )
 
 set(faceid_public_header_model
+  include/tencentcloud/faceid/v20180301/model/DetectReflectLivenessAndCompareRequest.h
   include/tencentcloud/faceid/v20180301/model/LivenessCompareResponse.h
+  include/tencentcloud/faceid/v20180301/model/DetectReflectLivenessAndCompareResponse.h
   include/tencentcloud/faceid/v20180301/model/LivenessCompareRequest.h
   )
 
 set(faceid_src
   src/v20180301/FaceidClient.cpp
+  src/v20180301/model/DetectReflectLivenessAndCompareRequest.cpp
   src/v20180301/model/LivenessCompareResponse.cpp
+  src/v20180301/model/DetectReflectLivenessAndCompareResponse.cpp
   src/v20180301/model/LivenessCompareRequest.cpp
   )
 

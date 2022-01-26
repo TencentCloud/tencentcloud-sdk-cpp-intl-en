@@ -18,16 +18,16 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 MediaAiAnalysisFrameTagItem::MediaAiAnalysisFrameTagItem() :
     m_tagHasBeenSet(false),
+    m_categorySetHasBeenSet(false),
     m_confidenceHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome MediaAiAnalysisFrameTagItem::Deserialize(const Value &value)
+CoreInternalOutcome MediaAiAnalysisFrameTagItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,17 +36,30 @@ CoreInternalOutcome MediaAiAnalysisFrameTagItem::Deserialize(const Value &value)
     {
         if (!value["Tag"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaAiAnalysisFrameTagItem.Tag` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaAiAnalysisFrameTagItem.Tag` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tag = string(value["Tag"].GetString());
         m_tagHasBeenSet = true;
     }
 
+    if (value.HasMember("CategorySet") && !value["CategorySet"].IsNull())
+    {
+        if (!value["CategorySet"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `MediaAiAnalysisFrameTagItem.CategorySet` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["CategorySet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_categorySet.push_back((*itr).GetString());
+        }
+        m_categorySetHasBeenSet = true;
+    }
+
     if (value.HasMember("Confidence") && !value["Confidence"].IsNull())
     {
-        if (!value["Confidence"].IsDouble())
+        if (!value["Confidence"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `MediaAiAnalysisFrameTagItem.Confidence` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaAiAnalysisFrameTagItem.Confidence` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_confidence = value["Confidence"].GetDouble();
         m_confidenceHasBeenSet = true;
@@ -56,20 +69,33 @@ CoreInternalOutcome MediaAiAnalysisFrameTagItem::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void MediaAiAnalysisFrameTagItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MediaAiAnalysisFrameTagItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_tagHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Tag";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_tag.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tag.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_categorySetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CategorySet";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_categorySet.begin(); itr != m_categorySet.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
     if (m_confidenceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Confidence";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_confidence, allocator);
@@ -92,6 +118,22 @@ void MediaAiAnalysisFrameTagItem::SetTag(const string& _tag)
 bool MediaAiAnalysisFrameTagItem::TagHasBeenSet() const
 {
     return m_tagHasBeenSet;
+}
+
+vector<string> MediaAiAnalysisFrameTagItem::GetCategorySet() const
+{
+    return m_categorySet;
+}
+
+void MediaAiAnalysisFrameTagItem::SetCategorySet(const vector<string>& _categorySet)
+{
+    m_categorySet = _categorySet;
+    m_categorySetHasBeenSet = true;
+}
+
+bool MediaAiAnalysisFrameTagItem::CategorySetHasBeenSet() const
+{
+    return m_categorySetHasBeenSet;
 }
 
 double MediaAiAnalysisFrameTagItem::GetConfidence() const

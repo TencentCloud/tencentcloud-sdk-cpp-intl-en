@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Voice chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: high. SD sound quality is only available to whitelisted users. To try it out, please contact your Tencent Cloud rep.
-                     * @return Quality Voice chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: high. SD sound quality is only available to whitelisted users. To try it out, please contact your Tencent Cloud rep.
+                     * 获取Voice chat sound quality. Valid value: `high`
+                     * @return Quality Voice chat sound quality. Valid value: `high`
                      */
                     std::string GetQuality() const;
 
                     /**
-                     * 设置Voice chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: high. SD sound quality is only available to whitelisted users. To try it out, please contact your Tencent Cloud rep.
-                     * @param Quality Voice chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: high. SD sound quality is only available to whitelisted users. To try it out, please contact your Tencent Cloud rep.
+                     * 设置Voice chat sound quality. Valid value: `high`
+                     * @param Quality Voice chat sound quality. Valid value: `high`
                      */
                     void SetQuality(const std::string& _quality);
 
@@ -91,7 +91,7 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Voice chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: high. SD sound quality is only available to whitelisted users. To try it out, please contact your Tencent Cloud rep.
+                     * Voice chat sound quality. Valid value: `high`
                      */
                     std::string m_quality;
                     bool m_qualityHasBeenSet;

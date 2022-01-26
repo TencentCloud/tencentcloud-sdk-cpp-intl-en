@@ -20,43 +20,44 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Emr::V20190103::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeClusterNodesRequest::DescribeClusterNodesRequest() :
     m_instanceIdHasBeenSet(false),
     m_nodeFlagHasBeenSet(false),
     m_offsetHasBeenSet(false),
-    m_limitHasBeenSet(false)
+    m_limitHasBeenSet(false),
+    m_hardwareResourceTypeHasBeenSet(false),
+    m_searchFieldsHasBeenSet(false)
 {
 }
 
 string DescribeClusterNodesRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_nodeFlagHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NodeFlag";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_nodeFlag.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_nodeFlag.c_str(), allocator).Move(), allocator);
     }
 
     if (m_offsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Offset";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_offset, allocator);
@@ -64,15 +65,38 @@ string DescribeClusterNodesRequest::ToJsonString() const
 
     if (m_limitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Limit";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_limit, allocator);
     }
 
+    if (m_hardwareResourceTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HardwareResourceType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_hardwareResourceType.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    if (m_searchFieldsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SearchFields";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_searchFields.begin(); itr != m_searchFields.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -140,6 +164,38 @@ void DescribeClusterNodesRequest::SetLimit(const int64_t& _limit)
 bool DescribeClusterNodesRequest::LimitHasBeenSet() const
 {
     return m_limitHasBeenSet;
+}
+
+string DescribeClusterNodesRequest::GetHardwareResourceType() const
+{
+    return m_hardwareResourceType;
+}
+
+void DescribeClusterNodesRequest::SetHardwareResourceType(const string& _hardwareResourceType)
+{
+    m_hardwareResourceType = _hardwareResourceType;
+    m_hardwareResourceTypeHasBeenSet = true;
+}
+
+bool DescribeClusterNodesRequest::HardwareResourceTypeHasBeenSet() const
+{
+    return m_hardwareResourceTypeHasBeenSet;
+}
+
+vector<SearchItem> DescribeClusterNodesRequest::GetSearchFields() const
+{
+    return m_searchFields;
+}
+
+void DescribeClusterNodesRequest::SetSearchFields(const vector<SearchItem>& _searchFields)
+{
+    m_searchFields = _searchFields;
+    m_searchFieldsHasBeenSet = true;
+}
+
+bool DescribeClusterNodesRequest::SearchFieldsHasBeenSet() const
+{
+    return m_searchFieldsHasBeenSet;
 }
 
 

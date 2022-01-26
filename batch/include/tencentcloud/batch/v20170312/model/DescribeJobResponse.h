@@ -24,7 +24,8 @@
 #include <tencentcloud/batch/v20170312/model/TaskView.h>
 #include <tencentcloud/batch/v20170312/model/Dependence.h>
 #include <tencentcloud/batch/v20170312/model/TaskMetrics.h>
-#include <tencentcloud/batch/v20170312/model/TaskInstanceView.h>
+#include <tencentcloud/batch/v20170312/model/TaskInstanceMetrics.h>
+#include <tencentcloud/batch/v20170312/model/Tag.h>
 
 
 namespace TencentCloud
@@ -44,6 +45,7 @@ namespace TencentCloud
                     DescribeJobResponse();
                     ~DescribeJobResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -170,7 +172,7 @@ namespace TencentCloud
                      * 获取Task instance statistical metrics
                      * @return TaskInstanceMetrics Task instance statistical metrics
                      */
-                    TaskInstanceView GetTaskInstanceMetrics() const;
+                    TaskInstanceMetrics GetTaskInstanceMetrics() const;
 
                     /**
                      * 判断参数 TaskInstanceMetrics 是否已赋值
@@ -189,6 +191,34 @@ namespace TencentCloud
                      * @return StateReason 是否已赋值
                      */
                     bool StateReasonHasBeenSet() const;
+
+                    /**
+                     * 获取Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return Tags Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取Next action
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return NextAction Next action
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetNextAction() const;
+
+                    /**
+                     * 判断参数 NextAction 是否已赋值
+                     * @return NextAction 是否已赋值
+                     */
+                    bool NextActionHasBeenSet() const;
 
                 private:
 
@@ -255,7 +285,7 @@ namespace TencentCloud
                     /**
                      * Task instance statistical metrics
                      */
-                    TaskInstanceView m_taskInstanceMetrics;
+                    TaskInstanceMetrics m_taskInstanceMetrics;
                     bool m_taskInstanceMetricsHasBeenSet;
 
                     /**
@@ -263,6 +293,20 @@ namespace TencentCloud
                      */
                     std::string m_stateReason;
                     bool m_stateReasonHasBeenSet;
+
+                    /**
+                     * Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * Next action
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_nextAction;
+                    bool m_nextActionHasBeenSet;
 
                 };
             }

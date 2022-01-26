@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool UserPermissionHasBeenSet() const;
 
                     /**
-                     * 获取Rule priority. Value range: 1–100. 1 represents the highest priority, while 100 the lowest
-                     * @return Priority Rule priority. Value range: 1–100. 1 represents the highest priority, while 100 the lowest
+                     * 获取Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
+                     * @return Priority Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
                      */
                     int64_t GetPriority() const;
 
                     /**
-                     * 设置Rule priority. Value range: 1–100. 1 represents the highest priority, while 100 the lowest
-                     * @param Priority Rule priority. Value range: 1–100. 1 represents the highest priority, while 100 the lowest
+                     * 设置Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
+                     * @param Priority Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
                      */
                     void SetPriority(const int64_t& _priority);
 
@@ -163,7 +163,7 @@ namespace TencentCloud
                     bool m_userPermissionHasBeenSet;
 
                     /**
-                     * Rule priority. Value range: 1–100. 1 represents the highest priority, while 100 the lowest
+                     * Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
                      */
                     int64_t m_priority;
                     bool m_priorityHasBeenSet;

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dcdb::V20180411::Model;
-using namespace rapidjson;
 using namespace std;
 
 LogFileInfo::LogFileInfo() :
@@ -29,7 +28,7 @@ LogFileInfo::LogFileInfo() :
 {
 }
 
-CoreInternalOutcome LogFileInfo::Deserialize(const Value &value)
+CoreInternalOutcome LogFileInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome LogFileInfo::Deserialize(const Value &value)
     {
         if (!value["Mtime"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `LogFileInfo.Mtime` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LogFileInfo.Mtime` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_mtime = value["Mtime"].GetUint64();
         m_mtimeHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome LogFileInfo::Deserialize(const Value &value)
     {
         if (!value["Length"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `LogFileInfo.Length` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LogFileInfo.Length` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_length = value["Length"].GetUint64();
         m_lengthHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome LogFileInfo::Deserialize(const Value &value)
     {
         if (!value["Uri"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LogFileInfo.Uri` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LogFileInfo.Uri` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_uri = string(value["Uri"].GetString());
         m_uriHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome LogFileInfo::Deserialize(const Value &value)
     {
         if (!value["FileName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LogFileInfo.FileName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LogFileInfo.FileName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_fileName = string(value["FileName"].GetString());
         m_fileNameHasBeenSet = true;
@@ -78,12 +77,12 @@ CoreInternalOutcome LogFileInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void LogFileInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void LogFileInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_mtimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Mtime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_mtime, allocator);
@@ -91,7 +90,7 @@ void LogFileInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_lengthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Length";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_length, allocator);
@@ -99,18 +98,18 @@ void LogFileInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator)
 
     if (m_uriHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Uri";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_uri.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_uri.c_str(), allocator).Move(), allocator);
     }
 
     if (m_fileNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_fileName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fileName.c_str(), allocator).Move(), allocator);
     }
 
 }

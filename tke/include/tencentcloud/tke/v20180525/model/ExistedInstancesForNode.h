@@ -102,6 +102,24 @@ namespace TencentCloud
                      */
                     bool InstanceAdvancedSettingsOverrideHasBeenSet() const;
 
+                    /**
+                     * 获取When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+                     * @return DesiredPodNumbers When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+                     */
+                    std::vector<int64_t> GetDesiredPodNumbers() const;
+
+                    /**
+                     * 设置When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+                     * @param DesiredPodNumbers When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+                     */
+                    void SetDesiredPodNumbers(const std::vector<int64_t>& _desiredPodNumbers);
+
+                    /**
+                     * 判断参数 DesiredPodNumbers 是否已赋值
+                     * @return DesiredPodNumbers 是否已赋值
+                     */
+                    bool DesiredPodNumbersHasBeenSet() const;
+
                 private:
 
                     /**
@@ -121,6 +139,12 @@ namespace TencentCloud
                      */
                     InstanceAdvancedSettings m_instanceAdvancedSettingsOverride;
                     bool m_instanceAdvancedSettingsOverrideHasBeenSet;
+
+                    /**
+                     * When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+                     */
+                    std::vector<int64_t> m_desiredPodNumbers;
+                    bool m_desiredPodNumbersHasBeenSet;
 
                 };
             }

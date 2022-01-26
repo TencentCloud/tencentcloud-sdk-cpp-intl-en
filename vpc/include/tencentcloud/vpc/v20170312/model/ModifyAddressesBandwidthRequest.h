@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The unique ID of the EIP, such as 'eip-xxxx'.
-                     * @return AddressIds The unique ID of the EIP, such as 'eip-xxxx'.
+                     * 获取List of EIP IDs, such as “eip-xxxx”.
+                     * @return AddressIds List of EIP IDs, such as “eip-xxxx”.
                      */
                     std::vector<std::string> GetAddressIds() const;
 
                     /**
-                     * 设置The unique ID of the EIP, such as 'eip-xxxx'.
-                     * @param AddressIds The unique ID of the EIP, such as 'eip-xxxx'.
+                     * 设置List of EIP IDs, such as “eip-xxxx”.
+                     * @param AddressIds List of EIP IDs, such as “eip-xxxx”.
                      */
                     void SetAddressIds(const std::vector<std::string>& _addressIds);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool InternetMaxBandwidthOutHasBeenSet() const;
 
                     /**
-                     * 获取The monthly bandwidth start time
-                     * @return StartTime The monthly bandwidth start time
+                     * 获取(Disused) The start time of the monthly bandwidth subscription
+                     * @return StartTime (Disused) The start time of the monthly bandwidth subscription
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置The monthly bandwidth start time
-                     * @param StartTime The monthly bandwidth start time
+                     * 设置(Disused) The start time of the monthly bandwidth subscription
+                     * @param StartTime (Disused) The start time of the monthly bandwidth subscription
                      */
                     void SetStartTime(const std::string& _startTime);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取The monthly bandwidth end time
-                     * @return EndTime The monthly bandwidth end time
+                     * 获取(Disused) The end time of the monthly bandwidth subscription
+                     * @return EndTime (Disused) The end time of the monthly bandwidth subscription
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置The monthly bandwidth end time
-                     * @param EndTime The monthly bandwidth end time
+                     * 设置(Disused) The end time of the monthly bandwidth subscription
+                     * @param EndTime (Disused) The end time of the monthly bandwidth subscription
                      */
                     void SetEndTime(const std::string& _endTime);
 
@@ -117,7 +117,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The unique ID of the EIP, such as 'eip-xxxx'.
+                     * List of EIP IDs, such as “eip-xxxx”.
                      */
                     std::vector<std::string> m_addressIds;
                     bool m_addressIdsHasBeenSet;
@@ -129,13 +129,13 @@ namespace TencentCloud
                     bool m_internetMaxBandwidthOutHasBeenSet;
 
                     /**
-                     * The monthly bandwidth start time
+                     * (Disused) The start time of the monthly bandwidth subscription
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * The monthly bandwidth end time
+                     * (Disused) The end time of the monthly bandwidth subscription
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

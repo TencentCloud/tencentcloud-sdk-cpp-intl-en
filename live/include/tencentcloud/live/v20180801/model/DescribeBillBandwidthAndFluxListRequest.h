@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time point in the format of `yyyy-mm-dd HH:MM:SS`. The difference between the start time and end time cannot be greater than 31 days.
-                     * @return EndTime End time point in the format of `yyyy-mm-dd HH:MM:SS`. The difference between the start time and end time cannot be greater than 31 days.
+                     * 获取End time point in the format of yyyy-mm-dd HH:MM:SS. The difference between the start time and end time cannot be greater than 31 days. Data in the last 3 years can be queried.
+                     * @return EndTime End time point in the format of yyyy-mm-dd HH:MM:SS. The difference between the start time and end time cannot be greater than 31 days. Data in the last 3 years can be queried.
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time point in the format of `yyyy-mm-dd HH:MM:SS`. The difference between the start time and end time cannot be greater than 31 days.
-                     * @param EndTime End time point in the format of `yyyy-mm-dd HH:MM:SS`. The difference between the start time and end time cannot be greater than 31 days.
+                     * 设置End time point in the format of yyyy-mm-dd HH:MM:SS. The difference between the start time and end time cannot be greater than 31 days. Data in the last 3 years can be queried.
+                     * @param EndTime End time point in the format of yyyy-mm-dd HH:MM:SS. The difference between the start time and end time cannot be greater than 31 days. Data in the last 3 years can be queried.
                      */
                     void SetEndTime(const std::string& _endTime);
 
@@ -165,14 +165,14 @@ Default value: 5.
                     bool GranularityHasBeenSet() const;
 
                     /**
-                     * 获取Service name. Valid values: LVB, LEB. Default value: LVB.
-                     * @return ServiceName Service name. Valid values: LVB, LEB. Default value: LVB.
+                     * 获取Service name. Valid values: LVB, LEB. The sum of LVB and LEB usage will be returned if this parameter is left empty.
+                     * @return ServiceName Service name. Valid values: LVB, LEB. The sum of LVB and LEB usage will be returned if this parameter is left empty.
                      */
                     std::string GetServiceName() const;
 
                     /**
-                     * 设置Service name. Valid values: LVB, LEB. Default value: LVB.
-                     * @param ServiceName Service name. Valid values: LVB, LEB. Default value: LVB.
+                     * 设置Service name. Valid values: LVB, LEB. The sum of LVB and LEB usage will be returned if this parameter is left empty.
+                     * @param ServiceName Service name. Valid values: LVB, LEB. The sum of LVB and LEB usage will be returned if this parameter is left empty.
                      */
                     void SetServiceName(const std::string& _serviceName);
 
@@ -181,6 +181,60 @@ Default value: 5.
                      * @return ServiceName 是否已赋值
                      */
                     bool ServiceNameHasBeenSet() const;
+
+                    /**
+                     * 获取Region. Valid values:
+China Mainland
+Asia Pacific I
+Asia Pacific II
+Asia Pacific III
+Europe
+North America
+South America
+Middle East
+Africa
+                     * @return RegionNames Region. Valid values:
+China Mainland
+Asia Pacific I
+Asia Pacific II
+Asia Pacific III
+Europe
+North America
+South America
+Middle East
+Africa
+                     */
+                    std::vector<std::string> GetRegionNames() const;
+
+                    /**
+                     * 设置Region. Valid values:
+China Mainland
+Asia Pacific I
+Asia Pacific II
+Asia Pacific III
+Europe
+North America
+South America
+Middle East
+Africa
+                     * @param RegionNames Region. Valid values:
+China Mainland
+Asia Pacific I
+Asia Pacific II
+Asia Pacific III
+Europe
+North America
+South America
+Middle East
+Africa
+                     */
+                    void SetRegionNames(const std::vector<std::string>& _regionNames);
+
+                    /**
+                     * 判断参数 RegionNames 是否已赋值
+                     * @return RegionNames 是否已赋值
+                     */
+                    bool RegionNamesHasBeenSet() const;
 
                 private:
 
@@ -191,7 +245,7 @@ Default value: 5.
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time point in the format of `yyyy-mm-dd HH:MM:SS`. The difference between the start time and end time cannot be greater than 31 days.
+                     * End time point in the format of yyyy-mm-dd HH:MM:SS. The difference between the start time and end time cannot be greater than 31 days. Data in the last 3 years can be queried.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
@@ -223,10 +277,25 @@ Default value: 5.
                     bool m_granularityHasBeenSet;
 
                     /**
-                     * Service name. Valid values: LVB, LEB. Default value: LVB.
+                     * Service name. Valid values: LVB, LEB. The sum of LVB and LEB usage will be returned if this parameter is left empty.
                      */
                     std::string m_serviceName;
                     bool m_serviceNameHasBeenSet;
+
+                    /**
+                     * Region. Valid values:
+China Mainland
+Asia Pacific I
+Asia Pacific II
+Asia Pacific III
+Europe
+North America
+South America
+Middle East
+Africa
+                     */
+                    std::vector<std::string> m_regionNames;
+                    bool m_regionNamesHasBeenSet;
 
                 };
             }

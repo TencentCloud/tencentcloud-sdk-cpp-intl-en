@@ -18,16 +18,16 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 EnvironmentStrategy::EnvironmentStrategy() :
     m_environmentNameHasBeenSet(false),
-    m_quotaHasBeenSet(false)
+    m_quotaHasBeenSet(false),
+    m_maxQuotaHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome EnvironmentStrategy::Deserialize(const Value &value)
+CoreInternalOutcome EnvironmentStrategy::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +36,7 @@ CoreInternalOutcome EnvironmentStrategy::Deserialize(const Value &value)
     {
         if (!value["EnvironmentName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `EnvironmentStrategy.EnvironmentName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EnvironmentStrategy.EnvironmentName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_environmentName = string(value["EnvironmentName"].GetString());
         m_environmentNameHasBeenSet = true;
@@ -46,33 +46,51 @@ CoreInternalOutcome EnvironmentStrategy::Deserialize(const Value &value)
     {
         if (!value["Quota"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `EnvironmentStrategy.Quota` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EnvironmentStrategy.Quota` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_quota = value["Quota"].GetInt64();
         m_quotaHasBeenSet = true;
+    }
+
+    if (value.HasMember("MaxQuota") && !value["MaxQuota"].IsNull())
+    {
+        if (!value["MaxQuota"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `EnvironmentStrategy.MaxQuota` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_maxQuota = value["MaxQuota"].GetInt64();
+        m_maxQuotaHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void EnvironmentStrategy::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void EnvironmentStrategy::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_environmentNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EnvironmentName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_environmentName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_environmentName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_quotaHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Quota";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_quota, allocator);
+    }
+
+    if (m_maxQuotaHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MaxQuota";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_maxQuota, allocator);
     }
 
 }
@@ -108,5 +126,21 @@ void EnvironmentStrategy::SetQuota(const int64_t& _quota)
 bool EnvironmentStrategy::QuotaHasBeenSet() const
 {
     return m_quotaHasBeenSet;
+}
+
+int64_t EnvironmentStrategy::GetMaxQuota() const
+{
+    return m_maxQuota;
+}
+
+void EnvironmentStrategy::SetMaxQuota(const int64_t& _maxQuota)
+{
+    m_maxQuota = _maxQuota;
+    m_maxQuotaHasBeenSet = true;
+}
+
+bool EnvironmentStrategy::MaxQuotaHasBeenSet() const
+{
+    return m_maxQuotaHasBeenSet;
 }
 

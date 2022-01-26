@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vod/v20180717/model/MediaSubtitleItem.h>
 
 
 namespace TencentCloud
@@ -40,6 +41,7 @@ namespace TencentCloud
                     ModifyMediaInfoResponse();
                     ~ModifyMediaInfoResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -56,6 +58,18 @@ namespace TencentCloud
                      */
                     bool CoverUrlHasBeenSet() const;
 
+                    /**
+                     * 获取Added subtitle information
+                     * @return AddedSubtitleSet Added subtitle information
+                     */
+                    std::vector<MediaSubtitleItem> GetAddedSubtitleSet() const;
+
+                    /**
+                     * 判断参数 AddedSubtitleSet 是否已赋值
+                     * @return AddedSubtitleSet 是否已赋值
+                     */
+                    bool AddedSubtitleSetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -64,6 +78,12 @@ namespace TencentCloud
                      */
                     std::string m_coverUrl;
                     bool m_coverUrlHasBeenSet;
+
+                    /**
+                     * Added subtitle information
+                     */
+                    std::vector<MediaSubtitleItem> m_addedSubtitleSet;
+                    bool m_addedSubtitleSetHasBeenSet;
 
                 };
             }

@@ -40,6 +40,7 @@ namespace TencentCloud
                     CreateWhiteBoxKeyResponse();
                     ~CreateWhiteBoxKeyResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -78,6 +79,30 @@ namespace TencentCloud
                      */
                     bool KeyIdHasBeenSet() const;
 
+                    /**
+                     * 获取Tag operation return code. 0: success; 1: internal error; 2: business processing error
+                     * @return TagCode Tag operation return code. 0: success; 1: internal error; 2: business processing error
+                     */
+                    uint64_t GetTagCode() const;
+
+                    /**
+                     * 判断参数 TagCode 是否已赋值
+                     * @return TagCode 是否已赋值
+                     */
+                    bool TagCodeHasBeenSet() const;
+
+                    /**
+                     * 获取Tag operation return message
+                     * @return TagMsg Tag operation return message
+                     */
+                    std::string GetTagMsg() const;
+
+                    /**
+                     * 判断参数 TagMsg 是否已赋值
+                     * @return TagMsg 是否已赋值
+                     */
+                    bool TagMsgHasBeenSet() const;
+
                 private:
 
                     /**
@@ -97,6 +122,18 @@ namespace TencentCloud
                      */
                     std::string m_keyId;
                     bool m_keyIdHasBeenSet;
+
+                    /**
+                     * Tag operation return code. 0: success; 1: internal error; 2: business processing error
+                     */
+                    uint64_t m_tagCode;
+                    bool m_tagCodeHasBeenSet;
+
+                    /**
+                     * Tag operation return message
+                     */
+                    std::string m_tagMsg;
+                    bool m_tagMsgHasBeenSet;
 
                 };
             }

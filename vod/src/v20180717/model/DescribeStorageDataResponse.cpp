@@ -21,33 +21,33 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeStorageDataResponse::DescribeStorageDataResponse() :
     m_mediaCountHasBeenSet(false),
     m_totalStorageHasBeenSet(false),
     m_infrequentStorageHasBeenSet(false),
-    m_standardStorageHasBeenSet(false)
+    m_standardStorageHasBeenSet(false),
+    m_storageStatHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome DescribeStorageDataResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -58,11 +58,11 @@ CoreInternalOutcome DescribeStorageDataResponse::Deserialize(const string &paylo
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -70,7 +70,7 @@ CoreInternalOutcome DescribeStorageDataResponse::Deserialize(const string &paylo
     {
         if (!rsp["MediaCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `MediaCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_mediaCount = rsp["MediaCount"].GetUint64();
         m_mediaCountHasBeenSet = true;
@@ -80,7 +80,7 @@ CoreInternalOutcome DescribeStorageDataResponse::Deserialize(const string &paylo
     {
         if (!rsp["TotalStorage"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TotalStorage` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TotalStorage` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_totalStorage = rsp["TotalStorage"].GetUint64();
         m_totalStorageHasBeenSet = true;
@@ -90,7 +90,7 @@ CoreInternalOutcome DescribeStorageDataResponse::Deserialize(const string &paylo
     {
         if (!rsp["InfrequentStorage"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `InfrequentStorage` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InfrequentStorage` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_infrequentStorage = rsp["InfrequentStorage"].GetUint64();
         m_infrequentStorageHasBeenSet = true;
@@ -100,14 +100,98 @@ CoreInternalOutcome DescribeStorageDataResponse::Deserialize(const string &paylo
     {
         if (!rsp["StandardStorage"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `StandardStorage` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `StandardStorage` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_standardStorage = rsp["StandardStorage"].GetUint64();
         m_standardStorageHasBeenSet = true;
     }
 
+    if (rsp.HasMember("StorageStat") && !rsp["StorageStat"].IsNull())
+    {
+        if (!rsp["StorageStat"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `StorageStat` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["StorageStat"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            StorageStatData item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_storageStat.push_back(item);
+        }
+        m_storageStatHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeStorageDataResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_mediaCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MediaCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_mediaCount, allocator);
+    }
+
+    if (m_totalStorageHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalStorage";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalStorage, allocator);
+    }
+
+    if (m_infrequentStorageHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InfrequentStorage";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_infrequentStorage, allocator);
+    }
+
+    if (m_standardStorageHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StandardStorage";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_standardStorage, allocator);
+    }
+
+    if (m_storageStatHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StorageStat";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_storageStat.begin(); itr != m_storageStat.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 
@@ -149,6 +233,16 @@ uint64_t DescribeStorageDataResponse::GetStandardStorage() const
 bool DescribeStorageDataResponse::StandardStorageHasBeenSet() const
 {
     return m_standardStorageHasBeenSet;
+}
+
+vector<StorageStatData> DescribeStorageDataResponse::GetStorageStat() const
+{
+    return m_storageStat;
+}
+
+bool DescribeStorageDataResponse::StorageStatHasBeenSet() const
+{
+    return m_storageStatHasBeenSet;
 }
 
 

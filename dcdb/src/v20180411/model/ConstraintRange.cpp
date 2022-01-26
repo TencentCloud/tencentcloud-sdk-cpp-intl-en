@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dcdb::V20180411::Model;
-using namespace rapidjson;
 using namespace std;
 
 ConstraintRange::ConstraintRange() :
@@ -27,7 +26,7 @@ ConstraintRange::ConstraintRange() :
 {
 }
 
-CoreInternalOutcome ConstraintRange::Deserialize(const Value &value)
+CoreInternalOutcome ConstraintRange::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome ConstraintRange::Deserialize(const Value &value)
     {
         if (!value["Min"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ConstraintRange.Min` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ConstraintRange.Min` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_min = string(value["Min"].GetString());
         m_minHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome ConstraintRange::Deserialize(const Value &value)
     {
         if (!value["Max"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ConstraintRange.Max` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ConstraintRange.Max` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_max = string(value["Max"].GetString());
         m_maxHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome ConstraintRange::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ConstraintRange::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ConstraintRange::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_minHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Min";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_min.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_min.c_str(), allocator).Move(), allocator);
     }
 
     if (m_maxHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Max";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_max.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_max.c_str(), allocator).Move(), allocator);
     }
 
 }

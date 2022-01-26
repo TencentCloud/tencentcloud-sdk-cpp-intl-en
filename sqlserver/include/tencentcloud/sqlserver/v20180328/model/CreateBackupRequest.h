@@ -96,6 +96,24 @@ namespace TencentCloud
                      */
                     bool InstanceIdHasBeenSet() const;
 
+                    /**
+                     * 获取Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated.
+                     * @return BackupName Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated.
+                     */
+                    std::string GetBackupName() const;
+
+                    /**
+                     * 设置Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated.
+                     * @param BackupName Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated.
+                     */
+                    void SetBackupName(const std::string& _backupName);
+
+                    /**
+                     * 判断参数 BackupName 是否已赋值
+                     * @return BackupName 是否已赋值
+                     */
+                    bool BackupNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +133,12 @@ namespace TencentCloud
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated.
+                     */
+                    std::string m_backupName;
+                    bool m_backupNameHasBeenSet;
 
                 };
             }

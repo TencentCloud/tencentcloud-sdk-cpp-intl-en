@@ -312,6 +312,78 @@ namespace TencentCloud
                      */
                     bool ExclusterIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Tag key used in queries
+                     * @return TagKeys Tag key used in queries
+                     */
+                    std::vector<std::string> GetTagKeys() const;
+
+                    /**
+                     * 设置Tag key used in queries
+                     * @param TagKeys Tag key used in queries
+                     */
+                    void SetTagKeys(const std::vector<std::string>& _tagKeys);
+
+                    /**
+                     * 判断参数 TagKeys 是否已赋值
+                     * @return TagKeys 是否已赋值
+                     */
+                    bool TagKeysHasBeenSet() const;
+
+                    /**
+                     * 获取Instance types used in filtering. Valid values: 1 (dedicated instance), 2 (primary instance), 3 (disaster recovery instance). Multiple values should be separated by commas.
+                     * @return FilterInstanceType Instance types used in filtering. Valid values: 1 (dedicated instance), 2 (primary instance), 3 (disaster recovery instance). Multiple values should be separated by commas.
+                     */
+                    std::string GetFilterInstanceType() const;
+
+                    /**
+                     * 设置Instance types used in filtering. Valid values: 1 (dedicated instance), 2 (primary instance), 3 (disaster recovery instance). Multiple values should be separated by commas.
+                     * @param FilterInstanceType Instance types used in filtering. Valid values: 1 (dedicated instance), 2 (primary instance), 3 (disaster recovery instance). Multiple values should be separated by commas.
+                     */
+                    void SetFilterInstanceType(const std::string& _filterInstanceType);
+
+                    /**
+                     * 判断参数 FilterInstanceType 是否已赋值
+                     * @return FilterInstanceType 是否已赋值
+                     */
+                    bool FilterInstanceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Use this filter to include instances in specific statuses
+                     * @return Status Use this filter to include instances in specific statuses
+                     */
+                    std::vector<int64_t> GetStatus() const;
+
+                    /**
+                     * 设置Use this filter to include instances in specific statuses
+                     * @param Status Use this filter to include instances in specific statuses
+                     */
+                    void SetStatus(const std::vector<int64_t>& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     */
+                    bool StatusHasBeenSet() const;
+
+                    /**
+                     * 获取Use this filter to exclude instances in specific statuses
+                     * @return ExcludeStatus Use this filter to exclude instances in specific statuses
+                     */
+                    std::vector<int64_t> GetExcludeStatus() const;
+
+                    /**
+                     * 设置Use this filter to exclude instances in specific statuses
+                     * @param ExcludeStatus Use this filter to exclude instances in specific statuses
+                     */
+                    void SetExcludeStatus(const std::vector<int64_t>& _excludeStatus);
+
+                    /**
+                     * 判断参数 ExcludeStatus 是否已赋值
+                     * @return ExcludeStatus 是否已赋值
+                     */
+                    bool ExcludeStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -403,6 +475,30 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_exclusterIds;
                     bool m_exclusterIdsHasBeenSet;
+
+                    /**
+                     * Tag key used in queries
+                     */
+                    std::vector<std::string> m_tagKeys;
+                    bool m_tagKeysHasBeenSet;
+
+                    /**
+                     * Instance types used in filtering. Valid values: 1 (dedicated instance), 2 (primary instance), 3 (disaster recovery instance). Multiple values should be separated by commas.
+                     */
+                    std::string m_filterInstanceType;
+                    bool m_filterInstanceTypeHasBeenSet;
+
+                    /**
+                     * Use this filter to include instances in specific statuses
+                     */
+                    std::vector<int64_t> m_status;
+                    bool m_statusHasBeenSet;
+
+                    /**
+                     * Use this filter to exclude instances in specific statuses
+                     */
+                    std::vector<int64_t> m_excludeStatus;
+                    bool m_excludeStatusHasBeenSet;
 
                 };
             }

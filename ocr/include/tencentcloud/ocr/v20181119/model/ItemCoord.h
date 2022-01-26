@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`
+                * Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`.
                 */
                 class ItemCoord : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取X-coordinate of top-left point
-                     * @return X X-coordinate of top-left point
+                     * 获取X-coordinate of top-left point.
+                     * @return X X-coordinate of top-left point.
                      */
                     int64_t GetX() const;
 
                     /**
-                     * 设置X-coordinate of top-left point
-                     * @param X X-coordinate of top-left point
+                     * 设置X-coordinate of top-left point.
+                     * @param X X-coordinate of top-left point.
                      */
                     void SetX(const int64_t& _x);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool XHasBeenSet() const;
 
                     /**
-                     * 获取Y-coordinate of top-left point
-                     * @return Y Y-coordinate of top-left point
+                     * 获取Y-coordinate of top-left point.
+                     * @return Y Y-coordinate of top-left point.
                      */
                     int64_t GetY() const;
 
                     /**
-                     * 设置Y-coordinate of top-left point
-                     * @param Y Y-coordinate of top-left point
+                     * 设置Y-coordinate of top-left point.
+                     * @param Y Y-coordinate of top-left point.
                      */
                     void SetY(const int64_t& _y);
 
@@ -121,13 +121,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * X-coordinate of top-left point
+                     * X-coordinate of top-left point.
                      */
                     int64_t m_x;
                     bool m_xHasBeenSet;
 
                     /**
-                     * Y-coordinate of top-left point
+                     * Y-coordinate of top-left point.
                      */
                     int64_t m_y;
                     bool m_yHasBeenSet;

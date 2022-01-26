@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool ListenerIdsHasBeenSet() const;
 
                     /**
-                     * 获取CLB listening protocol. Value range: TCP, UDP, HTTP, HTTPS
-                     * @return Protocol CLB listening protocol. Value range: TCP, UDP, HTTP, HTTPS
+                     * 获取CLB listening protocol. Valid values: TCP, UDP, HTTP, and HTTPS.
+                     * @return Protocol CLB listening protocol. Valid values: TCP, UDP, HTTP, and HTTPS.
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置CLB listening protocol. Value range: TCP, UDP, HTTP, HTTPS
-                     * @param Protocol CLB listening protocol. Value range: TCP, UDP, HTTP, HTTPS
+                     * 设置CLB listening protocol. Valid values: TCP, UDP, HTTP, and HTTPS.
+                     * @param Protocol CLB listening protocol. Valid values: TCP, UDP, HTTP, and HTTPS.
                      */
                     void SetProtocol(const std::string& _protocol);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取CLB listening port. Value range: [1-65535]
-                     * @return ListenerPort CLB listening port. Value range: [1-65535]
+                     * 获取CLB listening port. Value range: 1 - 65535.
+                     * @return ListenerPort CLB listening port. Value range: 1 - 65535.
                      */
                     int64_t GetListenerPort() const;
 
                     /**
-                     * 设置CLB listening port. Value range: [1-65535]
-                     * @param ListenerPort CLB listening port. Value range: [1-65535]
+                     * 设置CLB listening port. Value range: 1 - 65535.
+                     * @param ListenerPort CLB listening port. Value range: 1 - 65535.
                      */
                     void SetListenerPort(const int64_t& _listenerPort);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool ListenerPortHasBeenSet() const;
 
                     /**
-                     * 获取Listener status. Value range: 0 (creating), 1 (running)
-                     * @return Status Listener status. Value range: 0 (creating), 1 (running)
+                     * 获取Listener status. Valid values: 0 (creating) and 1 (running).
+                     * @return Status Listener status. Valid values: 0 (creating) and 1 (running).
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Listener status. Value range: 0 (creating), 1 (running)
-                     * @param Status Listener status. Value range: 0 (creating), 1 (running)
+                     * 设置Listener status. Valid values: 0 (creating) and 1 (running).
+                     * @param Status Listener status. Valid values: 0 (creating) and 1 (running).
                      */
                     void SetStatus(const int64_t& _status);
 
@@ -147,19 +147,19 @@ namespace TencentCloud
                     bool m_listenerIdsHasBeenSet;
 
                     /**
-                     * CLB listening protocol. Value range: TCP, UDP, HTTP, HTTPS
+                     * CLB listening protocol. Valid values: TCP, UDP, HTTP, and HTTPS.
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * CLB listening port. Value range: [1-65535]
+                     * CLB listening port. Value range: 1 - 65535.
                      */
                     int64_t m_listenerPort;
                     bool m_listenerPortHasBeenSet;
 
                     /**
-                     * Listener status. Value range: 0 (creating), 1 (running)
+                     * Listener status. Valid values: 0 (creating) and 1 (running).
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

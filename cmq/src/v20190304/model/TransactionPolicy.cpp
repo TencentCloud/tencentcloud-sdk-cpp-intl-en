@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cmq::V20190304::Model;
-using namespace rapidjson;
 using namespace std;
 
 TransactionPolicy::TransactionPolicy() :
@@ -27,7 +26,7 @@ TransactionPolicy::TransactionPolicy() :
 {
 }
 
-CoreInternalOutcome TransactionPolicy::Deserialize(const Value &value)
+CoreInternalOutcome TransactionPolicy::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome TransactionPolicy::Deserialize(const Value &value)
     {
         if (!value["FirstQueryInterval"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TransactionPolicy.FirstQueryInterval` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TransactionPolicy.FirstQueryInterval` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_firstQueryInterval = value["FirstQueryInterval"].GetUint64();
         m_firstQueryIntervalHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome TransactionPolicy::Deserialize(const Value &value)
     {
         if (!value["MaxQueryCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TransactionPolicy.MaxQueryCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TransactionPolicy.MaxQueryCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_maxQueryCount = value["MaxQueryCount"].GetUint64();
         m_maxQueryCountHasBeenSet = true;
@@ -56,12 +55,12 @@ CoreInternalOutcome TransactionPolicy::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void TransactionPolicy::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TransactionPolicy::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_firstQueryIntervalHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FirstQueryInterval";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_firstQueryInterval, allocator);
@@ -69,7 +68,7 @@ void TransactionPolicy::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_maxQueryCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaxQueryCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_maxQueryCount, allocator);

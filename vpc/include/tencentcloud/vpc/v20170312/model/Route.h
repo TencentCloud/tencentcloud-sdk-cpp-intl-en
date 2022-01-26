@@ -65,50 +65,50 @@ namespace TencentCloud
                     bool DestinationCidrBlockHasBeenSet() const;
 
                     /**
-                     * 获取Type of the next hop. Currently supported types are:
-CVM: CVM of the public gateway type;
-VPN: VPN gateway;
-DIRECTCONNECT: direct connect gateway;
-PEERCONNECTION: peering connection;
-SSLVPN: sslvpn gateway;
-NAT: NAT gateway; 
-NORMAL_CVM: normal CVM;
-EIP: public IP address of the CVM;
-CCN: Cloud Connect Network.
-                     * @return GatewayType Type of the next hop. Currently supported types are:
-CVM: CVM of the public gateway type;
-VPN: VPN gateway;
-DIRECTCONNECT: direct connect gateway;
-PEERCONNECTION: peering connection;
-SSLVPN: sslvpn gateway;
-NAT: NAT gateway; 
-NORMAL_CVM: normal CVM;
-EIP: public IP address of the CVM;
-CCN: Cloud Connect Network.
+                     * 获取Type of the next hop. Valid values:
+`CVM`: public gateway CVM;
+`VPN`: VPN gateway;
+`DIRECTCONNECT`: direct connect gateway;
+`PEERCONNECTION`: peering connection;
+`HAVIP`: HAVIP;
+`NAT`: NAT Gateway; 
+`NORMAL_CVM`: normal CVM;
+`EIP`: public IP address of the CVM;
+`LOCAL_GATEWAY`: local gateway.
+                     * @return GatewayType Type of the next hop. Valid values:
+`CVM`: public gateway CVM;
+`VPN`: VPN gateway;
+`DIRECTCONNECT`: direct connect gateway;
+`PEERCONNECTION`: peering connection;
+`HAVIP`: HAVIP;
+`NAT`: NAT Gateway; 
+`NORMAL_CVM`: normal CVM;
+`EIP`: public IP address of the CVM;
+`LOCAL_GATEWAY`: local gateway.
                      */
                     std::string GetGatewayType() const;
 
                     /**
-                     * 设置Type of the next hop. Currently supported types are:
-CVM: CVM of the public gateway type;
-VPN: VPN gateway;
-DIRECTCONNECT: direct connect gateway;
-PEERCONNECTION: peering connection;
-SSLVPN: sslvpn gateway;
-NAT: NAT gateway; 
-NORMAL_CVM: normal CVM;
-EIP: public IP address of the CVM;
-CCN: Cloud Connect Network.
-                     * @param GatewayType Type of the next hop. Currently supported types are:
-CVM: CVM of the public gateway type;
-VPN: VPN gateway;
-DIRECTCONNECT: direct connect gateway;
-PEERCONNECTION: peering connection;
-SSLVPN: sslvpn gateway;
-NAT: NAT gateway; 
-NORMAL_CVM: normal CVM;
-EIP: public IP address of the CVM;
-CCN: Cloud Connect Network.
+                     * 设置Type of the next hop. Valid values:
+`CVM`: public gateway CVM;
+`VPN`: VPN gateway;
+`DIRECTCONNECT`: direct connect gateway;
+`PEERCONNECTION`: peering connection;
+`HAVIP`: HAVIP;
+`NAT`: NAT Gateway; 
+`NORMAL_CVM`: normal CVM;
+`EIP`: public IP address of the CVM;
+`LOCAL_GATEWAY`: local gateway.
+                     * @param GatewayType Type of the next hop. Valid values:
+`CVM`: public gateway CVM;
+`VPN`: VPN gateway;
+`DIRECTCONNECT`: direct connect gateway;
+`PEERCONNECTION`: peering connection;
+`HAVIP`: HAVIP;
+`NAT`: NAT Gateway; 
+`NORMAL_CVM`: normal CVM;
+`EIP`: public IP address of the CVM;
+`LOCAL_GATEWAY`: local gateway.
                      */
                     void SetGatewayType(const std::string& _gatewayType);
 
@@ -141,14 +141,18 @@ Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
                     bool GatewayIdHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the routing policy.
-                     * @return RouteId The ID of the routing policy.
+                     * 获取Routing policy ID. The IPv4 routing policy will have a meaningful value, while the IPv6 routing policy is always 0. We recommend using the unique ID `RouteItemId` for the routing policy.
+This field is required when you want to delete a routing policy.
+                     * @return RouteId Routing policy ID. The IPv4 routing policy will have a meaningful value, while the IPv6 routing policy is always 0. We recommend using the unique ID `RouteItemId` for the routing policy.
+This field is required when you want to delete a routing policy.
                      */
                     uint64_t GetRouteId() const;
 
                     /**
-                     * 设置The ID of the routing policy.
-                     * @param RouteId The ID of the routing policy.
+                     * 设置Routing policy ID. The IPv4 routing policy will have a meaningful value, while the IPv6 routing policy is always 0. We recommend using the unique ID `RouteItemId` for the routing policy.
+This field is required when you want to delete a routing policy.
+                     * @param RouteId Routing policy ID. The IPv4 routing policy will have a meaningful value, while the IPv6 routing policy is always 0. We recommend using the unique ID `RouteItemId` for the routing policy.
+This field is required when you want to delete a routing policy.
                      */
                     void SetRouteId(const uint64_t& _routeId);
 
@@ -282,6 +286,46 @@ Users can only add and operate USER-type routes.
                      */
                     bool RouteItemIdHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the routing policy is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return PublishedToVbc Whether the routing policy is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool GetPublishedToVbc() const;
+
+                    /**
+                     * 设置Whether the routing policy is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param PublishedToVbc Whether the routing policy is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetPublishedToVbc(const bool& _publishedToVbc);
+
+                    /**
+                     * 判断参数 PublishedToVbc 是否已赋值
+                     * @return PublishedToVbc 是否已赋值
+                     */
+                    bool PublishedToVbcHasBeenSet() const;
+
+                    /**
+                     * 获取Creation time of the routing policy
+                     * @return CreatedTime Creation time of the routing policy
+                     */
+                    std::string GetCreatedTime() const;
+
+                    /**
+                     * 设置Creation time of the routing policy
+                     * @param CreatedTime Creation time of the routing policy
+                     */
+                    void SetCreatedTime(const std::string& _createdTime);
+
+                    /**
+                     * 判断参数 CreatedTime 是否已赋值
+                     * @return CreatedTime 是否已赋值
+                     */
+                    bool CreatedTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -291,16 +335,16 @@ Users can only add and operate USER-type routes.
                     bool m_destinationCidrBlockHasBeenSet;
 
                     /**
-                     * Type of the next hop. Currently supported types are:
-CVM: CVM of the public gateway type;
-VPN: VPN gateway;
-DIRECTCONNECT: direct connect gateway;
-PEERCONNECTION: peering connection;
-SSLVPN: sslvpn gateway;
-NAT: NAT gateway; 
-NORMAL_CVM: normal CVM;
-EIP: public IP address of the CVM;
-CCN: Cloud Connect Network.
+                     * Type of the next hop. Valid values:
+`CVM`: public gateway CVM;
+`VPN`: VPN gateway;
+`DIRECTCONNECT`: direct connect gateway;
+`PEERCONNECTION`: peering connection;
+`HAVIP`: HAVIP;
+`NAT`: NAT Gateway; 
+`NORMAL_CVM`: normal CVM;
+`EIP`: public IP address of the CVM;
+`LOCAL_GATEWAY`: local gateway.
                      */
                     std::string m_gatewayType;
                     bool m_gatewayTypeHasBeenSet;
@@ -313,7 +357,8 @@ Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
                     bool m_gatewayIdHasBeenSet;
 
                     /**
-                     * The ID of the routing policy.
+                     * Routing policy ID. The IPv4 routing policy will have a meaningful value, while the IPv6 routing policy is always 0. We recommend using the unique ID `RouteItemId` for the routing policy.
+This field is required when you want to delete a routing policy.
                      */
                     uint64_t m_routeId;
                     bool m_routeIdHasBeenSet;
@@ -357,6 +402,19 @@ Users can only add and operate USER-type routes.
                      */
                     std::string m_routeItemId;
                     bool m_routeItemIdHasBeenSet;
+
+                    /**
+                     * Whether the routing policy is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool m_publishedToVbc;
+                    bool m_publishedToVbcHasBeenSet;
+
+                    /**
+                     * Creation time of the routing policy
+                     */
+                    std::string m_createdTime;
+                    bool m_createdTimeHasBeenSet;
 
                 };
             }

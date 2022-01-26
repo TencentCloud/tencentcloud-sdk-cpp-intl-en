@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 BandwidthPackage::BandwidthPackage() :
@@ -33,7 +32,7 @@ BandwidthPackage::BandwidthPackage() :
 {
 }
 
-CoreInternalOutcome BandwidthPackage::Deserialize(const Value &value)
+CoreInternalOutcome BandwidthPackage::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +41,7 @@ CoreInternalOutcome BandwidthPackage::Deserialize(const Value &value)
     {
         if (!value["BandwidthPackageId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BandwidthPackage.BandwidthPackageId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BandwidthPackage.BandwidthPackageId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_bandwidthPackageId = string(value["BandwidthPackageId"].GetString());
         m_bandwidthPackageIdHasBeenSet = true;
@@ -52,7 +51,7 @@ CoreInternalOutcome BandwidthPackage::Deserialize(const Value &value)
     {
         if (!value["NetworkType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BandwidthPackage.NetworkType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BandwidthPackage.NetworkType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_networkType = string(value["NetworkType"].GetString());
         m_networkTypeHasBeenSet = true;
@@ -62,7 +61,7 @@ CoreInternalOutcome BandwidthPackage::Deserialize(const Value &value)
     {
         if (!value["ChargeType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BandwidthPackage.ChargeType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BandwidthPackage.ChargeType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_chargeType = string(value["ChargeType"].GetString());
         m_chargeTypeHasBeenSet = true;
@@ -72,7 +71,7 @@ CoreInternalOutcome BandwidthPackage::Deserialize(const Value &value)
     {
         if (!value["BandwidthPackageName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BandwidthPackage.BandwidthPackageName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BandwidthPackage.BandwidthPackageName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_bandwidthPackageName = string(value["BandwidthPackageName"].GetString());
         m_bandwidthPackageNameHasBeenSet = true;
@@ -82,7 +81,7 @@ CoreInternalOutcome BandwidthPackage::Deserialize(const Value &value)
     {
         if (!value["CreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BandwidthPackage.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BandwidthPackage.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createdTime = string(value["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
@@ -92,7 +91,7 @@ CoreInternalOutcome BandwidthPackage::Deserialize(const Value &value)
     {
         if (!value["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BandwidthPackage.Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BandwidthPackage.Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(value["Status"].GetString());
         m_statusHasBeenSet = true;
@@ -101,10 +100,10 @@ CoreInternalOutcome BandwidthPackage::Deserialize(const Value &value)
     if (value.HasMember("ResourceSet") && !value["ResourceSet"].IsNull())
     {
         if (!value["ResourceSet"].IsArray())
-            return CoreInternalOutcome(Error("response `BandwidthPackage.ResourceSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `BandwidthPackage.ResourceSet` is not array type"));
 
-        const Value &tmpValue = value["ResourceSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["ResourceSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             Resource item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -122,7 +121,7 @@ CoreInternalOutcome BandwidthPackage::Deserialize(const Value &value)
     {
         if (!value["Bandwidth"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `BandwidthPackage.Bandwidth` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BandwidthPackage.Bandwidth` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_bandwidth = value["Bandwidth"].GetInt64();
         m_bandwidthHasBeenSet = true;
@@ -132,75 +131,75 @@ CoreInternalOutcome BandwidthPackage::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void BandwidthPackage::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void BandwidthPackage::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_bandwidthPackageIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BandwidthPackageId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_bandwidthPackageId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_bandwidthPackageId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_networkTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetworkType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_networkType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_networkType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_chargeTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ChargeType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_chargeType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_chargeType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_bandwidthPackageNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BandwidthPackageName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_bandwidthPackageName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_bandwidthPackageName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createdTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createdTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_status.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
     }
 
     if (m_resourceSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResourceSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_resourceSet.begin(); itr != m_resourceSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_bandwidthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Bandwidth";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_bandwidth, allocator);

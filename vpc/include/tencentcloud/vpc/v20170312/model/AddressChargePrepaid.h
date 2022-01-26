@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Purchase duration of instance
-                     * @return Period Purchase duration of instance
+                     * 获取Purchased usage period, in month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
+                     * @return Period Purchased usage period, in month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
                      */
                     int64_t GetPeriod() const;
 
                     /**
-                     * 设置Purchase duration of instance
-                     * @param Period Purchase duration of instance
+                     * 设置Purchased usage period, in month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
+                     * @param Period Purchased usage period, in month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
                      */
                     void SetPeriod(const int64_t& _period);
 
@@ -65,36 +65,36 @@ namespace TencentCloud
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取Whether auto-renewal is enabled
-                     * @return RenewFlag Whether auto-renewal is enabled
+                     * 获取Setting of renewal. Valid values: 0: manual renewal; 1: auto-renewal; 2: no renewal after expiration. Default value: 0
+                     * @return AutoRenewFlag Setting of renewal. Valid values: 0: manual renewal; 1: auto-renewal; 2: no renewal after expiration. Default value: 0
                      */
-                    std::string GetRenewFlag() const;
+                    int64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置Whether auto-renewal is enabled
-                     * @param RenewFlag Whether auto-renewal is enabled
+                     * 设置Setting of renewal. Valid values: 0: manual renewal; 1: auto-renewal; 2: no renewal after expiration. Default value: 0
+                     * @param AutoRenewFlag Setting of renewal. Valid values: 0: manual renewal; 1: auto-renewal; 2: no renewal after expiration. Default value: 0
                      */
-                    void SetRenewFlag(const std::string& _renewFlag);
+                    void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
 
                     /**
-                     * 判断参数 RenewFlag 是否已赋值
-                     * @return RenewFlag 是否已赋值
+                     * 判断参数 AutoRenewFlag 是否已赋值
+                     * @return AutoRenewFlag 是否已赋值
                      */
-                    bool RenewFlagHasBeenSet() const;
+                    bool AutoRenewFlagHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Purchase duration of instance
+                     * Purchased usage period, in month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * Whether auto-renewal is enabled
+                     * Setting of renewal. Valid values: 0: manual renewal; 1: auto-renewal; 2: no renewal after expiration. Default value: 0
                      */
-                    std::string m_renewFlag;
-                    bool m_renewFlagHasBeenSet;
+                    int64_t m_autoRenewFlag;
+                    bool m_autoRenewFlagHasBeenSet;
 
                 };
             }

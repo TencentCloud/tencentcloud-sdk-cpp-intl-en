@@ -44,21 +44,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Base64-encoded value of an image.
-Supported image formats: PNG, JPG, JPEG. GIF is not supported at present.
-Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
                      * @return ImageBase64 Base64-encoded value of an image.
-Supported image formats: PNG, JPG, JPEG. GIF is not supported at present.
-Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
                      */
                     std::string GetImageBase64() const;
 
                     /**
                      * 设置Base64-encoded value of an image.
-Supported image formats: PNG, JPG, JPEG. GIF is not supported at present.
-Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
                      * @param ImageBase64 Base64-encoded value of an image.
-Supported image formats: PNG, JPG, JPEG. GIF is not supported at present.
-Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
                      */
                     void SetImageBase64(const std::string& _imageBase64);
 
@@ -69,29 +69,29 @@ Supported image size: the downloaded image cannot exceed 3 MB in size after bein
                     bool ImageBase64HasBeenSet() const;
 
                     /**
-                     * 获取URL address of an image. (This field is not supported outside Mainland China)
-Supported image formats: PNG, JPG, JPEG. GIF is not supported at present.
-Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-It is recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+                     * 获取URL of an image. (This field is not supported outside the Chinese mainland)
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
-                     * @return ImageUrl URL address of an image. (This field is not supported outside Mainland China)
-Supported image formats: PNG, JPG, JPEG. GIF is not supported at present.
-Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-It is recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+                     * @return ImageUrl URL of an image. (This field is not supported outside the Chinese mainland)
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
                      */
                     std::string GetImageUrl() const;
 
                     /**
-                     * 设置URL address of an image. (This field is not supported outside Mainland China)
-Supported image formats: PNG, JPG, JPEG. GIF is not supported at present.
-Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-It is recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+                     * 设置URL of an image. (This field is not supported outside the Chinese mainland)
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
-                     * @param ImageUrl URL address of an image. (This field is not supported outside Mainland China)
-Supported image formats: PNG, JPG, JPEG. GIF is not supported at present.
-Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-It is recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+                     * @param ImageUrl URL of an image. (This field is not supported outside the Chinese mainland)
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
                      */
                     void SetImageUrl(const std::string& _imageUrl);
@@ -124,17 +124,17 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
 
                     /**
                      * Base64-encoded value of an image.
-Supported image formats: PNG, JPG, JPEG. GIF is not supported at present.
-Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
                      */
                     std::string m_imageBase64;
                     bool m_imageBase64HasBeenSet;
 
                     /**
-                     * URL address of an image. (This field is not supported outside Mainland China)
-Supported image formats: PNG, JPG, JPEG. GIF is not supported at present.
-Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-It is recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+                     * URL of an image. (This field is not supported outside the Chinese mainland)
+Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
                      */
                     std::string m_imageUrl;

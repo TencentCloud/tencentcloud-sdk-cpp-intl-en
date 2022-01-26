@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Monitor::V20180724::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeBindingPolicyObjectListResponse::DescribeBindingPolicyObjectListResponse() :
@@ -34,20 +33,20 @@ DescribeBindingPolicyObjectListResponse::DescribeBindingPolicyObjectListResponse
 
 CoreInternalOutcome DescribeBindingPolicyObjectListResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -58,21 +57,21 @@ CoreInternalOutcome DescribeBindingPolicyObjectListResponse::Deserialize(const s
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
     if (rsp.HasMember("List") && !rsp["List"].IsNull())
     {
         if (!rsp["List"].IsArray())
-            return CoreInternalOutcome(Error("response `List` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `List` is not array type"));
 
-        const Value &tmpValue = rsp["List"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["List"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             DescribeBindingPolicyObjectListInstance item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -90,7 +89,7 @@ CoreInternalOutcome DescribeBindingPolicyObjectListResponse::Deserialize(const s
     {
         if (!rsp["Total"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Total` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Total` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_total = rsp["Total"].GetInt64();
         m_totalHasBeenSet = true;
@@ -100,7 +99,7 @@ CoreInternalOutcome DescribeBindingPolicyObjectListResponse::Deserialize(const s
     {
         if (!rsp["NoShieldedSum"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `NoShieldedSum` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NoShieldedSum` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_noShieldedSum = rsp["NoShieldedSum"].GetInt64();
         m_noShieldedSumHasBeenSet = true;
@@ -110,7 +109,7 @@ CoreInternalOutcome DescribeBindingPolicyObjectListResponse::Deserialize(const s
     {
         if (!rsp["InstanceGroup"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `InstanceGroup` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceGroup` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_instanceGroup.Deserialize(rsp["InstanceGroup"]);
@@ -125,6 +124,63 @@ CoreInternalOutcome DescribeBindingPolicyObjectListResponse::Deserialize(const s
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeBindingPolicyObjectListResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_listHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "List";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_list.begin(); itr != m_list.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_totalHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Total";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_total, allocator);
+    }
+
+    if (m_noShieldedSumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NoShieldedSum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_noShieldedSum, allocator);
+    }
+
+    if (m_instanceGroupHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceGroup";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_instanceGroup.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

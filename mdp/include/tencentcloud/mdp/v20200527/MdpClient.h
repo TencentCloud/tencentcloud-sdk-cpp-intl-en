@@ -23,24 +23,28 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
-#include <tencentcloud/mdp/v20200527/model/CreateMediaPackageChannelRequest.h>
-#include <tencentcloud/mdp/v20200527/model/CreateMediaPackageChannelResponse.h>
-#include <tencentcloud/mdp/v20200527/model/CreateMediaPackageChannelEndpointRequest.h>
-#include <tencentcloud/mdp/v20200527/model/CreateMediaPackageChannelEndpointResponse.h>
-#include <tencentcloud/mdp/v20200527/model/DeleteMediaPackageChannelEndpointsRequest.h>
-#include <tencentcloud/mdp/v20200527/model/DeleteMediaPackageChannelEndpointsResponse.h>
-#include <tencentcloud/mdp/v20200527/model/DeleteMediaPackageChannelsRequest.h>
-#include <tencentcloud/mdp/v20200527/model/DeleteMediaPackageChannelsResponse.h>
-#include <tencentcloud/mdp/v20200527/model/DescribeMediaPackageChannelRequest.h>
-#include <tencentcloud/mdp/v20200527/model/DescribeMediaPackageChannelResponse.h>
-#include <tencentcloud/mdp/v20200527/model/DescribeMediaPackageChannelsRequest.h>
-#include <tencentcloud/mdp/v20200527/model/DescribeMediaPackageChannelsResponse.h>
-#include <tencentcloud/mdp/v20200527/model/ModifyMediaPackageChannelRequest.h>
-#include <tencentcloud/mdp/v20200527/model/ModifyMediaPackageChannelResponse.h>
-#include <tencentcloud/mdp/v20200527/model/ModifyMediaPackageChannelEndpointRequest.h>
-#include <tencentcloud/mdp/v20200527/model/ModifyMediaPackageChannelEndpointResponse.h>
-#include <tencentcloud/mdp/v20200527/model/ModifyMediaPackageChannelInputAuthInfoRequest.h>
-#include <tencentcloud/mdp/v20200527/model/ModifyMediaPackageChannelInputAuthInfoResponse.h>
+#include <tencentcloud/mdp/v20200527/model/BindNewLVBDomainWithChannelRequest.h>
+#include <tencentcloud/mdp/v20200527/model/BindNewLVBDomainWithChannelResponse.h>
+#include <tencentcloud/mdp/v20200527/model/CreateStreamPackageChannelRequest.h>
+#include <tencentcloud/mdp/v20200527/model/CreateStreamPackageChannelResponse.h>
+#include <tencentcloud/mdp/v20200527/model/CreateStreamPackageChannelEndpointRequest.h>
+#include <tencentcloud/mdp/v20200527/model/CreateStreamPackageChannelEndpointResponse.h>
+#include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelEndpointsRequest.h>
+#include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelEndpointsResponse.h>
+#include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelsRequest.h>
+#include <tencentcloud/mdp/v20200527/model/DeleteStreamPackageChannelsResponse.h>
+#include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageChannelRequest.h>
+#include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageChannelResponse.h>
+#include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageChannelsRequest.h>
+#include <tencentcloud/mdp/v20200527/model/DescribeStreamPackageChannelsResponse.h>
+#include <tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelRequest.h>
+#include <tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelResponse.h>
+#include <tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelEndpointRequest.h>
+#include <tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelEndpointResponse.h>
+#include <tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelInputAuthInfoRequest.h>
+#include <tencentcloud/mdp/v20200527/model/ModifyStreamPackageChannelInputAuthInfoResponse.h>
+#include <tencentcloud/mdp/v20200527/model/UnbindCdnDomainWithChannelRequest.h>
+#include <tencentcloud/mdp/v20200527/model/UnbindCdnDomainWithChannelResponse.h>
 
 
 namespace TencentCloud
@@ -55,116 +59,140 @@ namespace TencentCloud
                 MdpClient(const Credential &credential, const std::string &region);
                 MdpClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::CreateMediaPackageChannelResponse> CreateMediaPackageChannelOutcome;
-                typedef std::future<CreateMediaPackageChannelOutcome> CreateMediaPackageChannelOutcomeCallable;
-                typedef std::function<void(const MdpClient*, const Model::CreateMediaPackageChannelRequest&, CreateMediaPackageChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMediaPackageChannelAsyncHandler;
-                typedef Outcome<Error, Model::CreateMediaPackageChannelEndpointResponse> CreateMediaPackageChannelEndpointOutcome;
-                typedef std::future<CreateMediaPackageChannelEndpointOutcome> CreateMediaPackageChannelEndpointOutcomeCallable;
-                typedef std::function<void(const MdpClient*, const Model::CreateMediaPackageChannelEndpointRequest&, CreateMediaPackageChannelEndpointOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMediaPackageChannelEndpointAsyncHandler;
-                typedef Outcome<Error, Model::DeleteMediaPackageChannelEndpointsResponse> DeleteMediaPackageChannelEndpointsOutcome;
-                typedef std::future<DeleteMediaPackageChannelEndpointsOutcome> DeleteMediaPackageChannelEndpointsOutcomeCallable;
-                typedef std::function<void(const MdpClient*, const Model::DeleteMediaPackageChannelEndpointsRequest&, DeleteMediaPackageChannelEndpointsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteMediaPackageChannelEndpointsAsyncHandler;
-                typedef Outcome<Error, Model::DeleteMediaPackageChannelsResponse> DeleteMediaPackageChannelsOutcome;
-                typedef std::future<DeleteMediaPackageChannelsOutcome> DeleteMediaPackageChannelsOutcomeCallable;
-                typedef std::function<void(const MdpClient*, const Model::DeleteMediaPackageChannelsRequest&, DeleteMediaPackageChannelsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteMediaPackageChannelsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeMediaPackageChannelResponse> DescribeMediaPackageChannelOutcome;
-                typedef std::future<DescribeMediaPackageChannelOutcome> DescribeMediaPackageChannelOutcomeCallable;
-                typedef std::function<void(const MdpClient*, const Model::DescribeMediaPackageChannelRequest&, DescribeMediaPackageChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMediaPackageChannelAsyncHandler;
-                typedef Outcome<Error, Model::DescribeMediaPackageChannelsResponse> DescribeMediaPackageChannelsOutcome;
-                typedef std::future<DescribeMediaPackageChannelsOutcome> DescribeMediaPackageChannelsOutcomeCallable;
-                typedef std::function<void(const MdpClient*, const Model::DescribeMediaPackageChannelsRequest&, DescribeMediaPackageChannelsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMediaPackageChannelsAsyncHandler;
-                typedef Outcome<Error, Model::ModifyMediaPackageChannelResponse> ModifyMediaPackageChannelOutcome;
-                typedef std::future<ModifyMediaPackageChannelOutcome> ModifyMediaPackageChannelOutcomeCallable;
-                typedef std::function<void(const MdpClient*, const Model::ModifyMediaPackageChannelRequest&, ModifyMediaPackageChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyMediaPackageChannelAsyncHandler;
-                typedef Outcome<Error, Model::ModifyMediaPackageChannelEndpointResponse> ModifyMediaPackageChannelEndpointOutcome;
-                typedef std::future<ModifyMediaPackageChannelEndpointOutcome> ModifyMediaPackageChannelEndpointOutcomeCallable;
-                typedef std::function<void(const MdpClient*, const Model::ModifyMediaPackageChannelEndpointRequest&, ModifyMediaPackageChannelEndpointOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyMediaPackageChannelEndpointAsyncHandler;
-                typedef Outcome<Error, Model::ModifyMediaPackageChannelInputAuthInfoResponse> ModifyMediaPackageChannelInputAuthInfoOutcome;
-                typedef std::future<ModifyMediaPackageChannelInputAuthInfoOutcome> ModifyMediaPackageChannelInputAuthInfoOutcomeCallable;
-                typedef std::function<void(const MdpClient*, const Model::ModifyMediaPackageChannelInputAuthInfoRequest&, ModifyMediaPackageChannelInputAuthInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyMediaPackageChannelInputAuthInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::BindNewLVBDomainWithChannelResponse> BindNewLVBDomainWithChannelOutcome;
+                typedef std::future<BindNewLVBDomainWithChannelOutcome> BindNewLVBDomainWithChannelOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::BindNewLVBDomainWithChannelRequest&, BindNewLVBDomainWithChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BindNewLVBDomainWithChannelAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateStreamPackageChannelResponse> CreateStreamPackageChannelOutcome;
+                typedef std::future<CreateStreamPackageChannelOutcome> CreateStreamPackageChannelOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::CreateStreamPackageChannelRequest&, CreateStreamPackageChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateStreamPackageChannelAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateStreamPackageChannelEndpointResponse> CreateStreamPackageChannelEndpointOutcome;
+                typedef std::future<CreateStreamPackageChannelEndpointOutcome> CreateStreamPackageChannelEndpointOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::CreateStreamPackageChannelEndpointRequest&, CreateStreamPackageChannelEndpointOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateStreamPackageChannelEndpointAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteStreamPackageChannelEndpointsResponse> DeleteStreamPackageChannelEndpointsOutcome;
+                typedef std::future<DeleteStreamPackageChannelEndpointsOutcome> DeleteStreamPackageChannelEndpointsOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::DeleteStreamPackageChannelEndpointsRequest&, DeleteStreamPackageChannelEndpointsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteStreamPackageChannelEndpointsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteStreamPackageChannelsResponse> DeleteStreamPackageChannelsOutcome;
+                typedef std::future<DeleteStreamPackageChannelsOutcome> DeleteStreamPackageChannelsOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::DeleteStreamPackageChannelsRequest&, DeleteStreamPackageChannelsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteStreamPackageChannelsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeStreamPackageChannelResponse> DescribeStreamPackageChannelOutcome;
+                typedef std::future<DescribeStreamPackageChannelOutcome> DescribeStreamPackageChannelOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::DescribeStreamPackageChannelRequest&, DescribeStreamPackageChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamPackageChannelAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeStreamPackageChannelsResponse> DescribeStreamPackageChannelsOutcome;
+                typedef std::future<DescribeStreamPackageChannelsOutcome> DescribeStreamPackageChannelsOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::DescribeStreamPackageChannelsRequest&, DescribeStreamPackageChannelsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamPackageChannelsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyStreamPackageChannelResponse> ModifyStreamPackageChannelOutcome;
+                typedef std::future<ModifyStreamPackageChannelOutcome> ModifyStreamPackageChannelOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::ModifyStreamPackageChannelRequest&, ModifyStreamPackageChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyStreamPackageChannelAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyStreamPackageChannelEndpointResponse> ModifyStreamPackageChannelEndpointOutcome;
+                typedef std::future<ModifyStreamPackageChannelEndpointOutcome> ModifyStreamPackageChannelEndpointOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::ModifyStreamPackageChannelEndpointRequest&, ModifyStreamPackageChannelEndpointOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyStreamPackageChannelEndpointAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyStreamPackageChannelInputAuthInfoResponse> ModifyStreamPackageChannelInputAuthInfoOutcome;
+                typedef std::future<ModifyStreamPackageChannelInputAuthInfoOutcome> ModifyStreamPackageChannelInputAuthInfoOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::ModifyStreamPackageChannelInputAuthInfoRequest&, ModifyStreamPackageChannelInputAuthInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyStreamPackageChannelInputAuthInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::UnbindCdnDomainWithChannelResponse> UnbindCdnDomainWithChannelOutcome;
+                typedef std::future<UnbindCdnDomainWithChannelOutcome> UnbindCdnDomainWithChannelOutcomeCallable;
+                typedef std::function<void(const MdpClient*, const Model::UnbindCdnDomainWithChannelRequest&, UnbindCdnDomainWithChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnbindCdnDomainWithChannelAsyncHandler;
 
 
 
                 /**
-                 *This API is used to create a media package channel.
-                 * @param req CreateMediaPackageChannelRequest
-                 * @return CreateMediaPackageChannelOutcome
+                 *This API is used to bind an LVB domain name to a channel.
+                 * @param req BindNewLVBDomainWithChannelRequest
+                 * @return BindNewLVBDomainWithChannelOutcome
                  */
-                CreateMediaPackageChannelOutcome CreateMediaPackageChannel(const Model::CreateMediaPackageChannelRequest &request);
-                void CreateMediaPackageChannelAsync(const Model::CreateMediaPackageChannelRequest& request, const CreateMediaPackageChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateMediaPackageChannelOutcomeCallable CreateMediaPackageChannelCallable(const Model::CreateMediaPackageChannelRequest& request);
+                BindNewLVBDomainWithChannelOutcome BindNewLVBDomainWithChannel(const Model::BindNewLVBDomainWithChannelRequest &request);
+                void BindNewLVBDomainWithChannelAsync(const Model::BindNewLVBDomainWithChannelRequest& request, const BindNewLVBDomainWithChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                BindNewLVBDomainWithChannelOutcomeCallable BindNewLVBDomainWithChannelCallable(const Model::BindNewLVBDomainWithChannelRequest& request);
 
                 /**
-                 *This API is used to create an endpoint of a media package channel.
-                 * @param req CreateMediaPackageChannelEndpointRequest
-                 * @return CreateMediaPackageChannelEndpointOutcome
+                 *This API is used to create a StreamPackage channel.
+                 * @param req CreateStreamPackageChannelRequest
+                 * @return CreateStreamPackageChannelOutcome
                  */
-                CreateMediaPackageChannelEndpointOutcome CreateMediaPackageChannelEndpoint(const Model::CreateMediaPackageChannelEndpointRequest &request);
-                void CreateMediaPackageChannelEndpointAsync(const Model::CreateMediaPackageChannelEndpointRequest& request, const CreateMediaPackageChannelEndpointAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateMediaPackageChannelEndpointOutcomeCallable CreateMediaPackageChannelEndpointCallable(const Model::CreateMediaPackageChannelEndpointRequest& request);
+                CreateStreamPackageChannelOutcome CreateStreamPackageChannel(const Model::CreateStreamPackageChannelRequest &request);
+                void CreateStreamPackageChannelAsync(const Model::CreateStreamPackageChannelRequest& request, const CreateStreamPackageChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateStreamPackageChannelOutcomeCallable CreateStreamPackageChannelCallable(const Model::CreateStreamPackageChannelRequest& request);
 
                 /**
-                 *This API is used to delete endpoints from a media package channel in batches.
-                 * @param req DeleteMediaPackageChannelEndpointsRequest
-                 * @return DeleteMediaPackageChannelEndpointsOutcome
+                 *This API is used to create an endpoint on a StreamPackage channel.
+                 * @param req CreateStreamPackageChannelEndpointRequest
+                 * @return CreateStreamPackageChannelEndpointOutcome
                  */
-                DeleteMediaPackageChannelEndpointsOutcome DeleteMediaPackageChannelEndpoints(const Model::DeleteMediaPackageChannelEndpointsRequest &request);
-                void DeleteMediaPackageChannelEndpointsAsync(const Model::DeleteMediaPackageChannelEndpointsRequest& request, const DeleteMediaPackageChannelEndpointsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DeleteMediaPackageChannelEndpointsOutcomeCallable DeleteMediaPackageChannelEndpointsCallable(const Model::DeleteMediaPackageChannelEndpointsRequest& request);
+                CreateStreamPackageChannelEndpointOutcome CreateStreamPackageChannelEndpoint(const Model::CreateStreamPackageChannelEndpointRequest &request);
+                void CreateStreamPackageChannelEndpointAsync(const Model::CreateStreamPackageChannelEndpointRequest& request, const CreateStreamPackageChannelEndpointAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateStreamPackageChannelEndpointOutcomeCallable CreateStreamPackageChannelEndpointCallable(const Model::CreateStreamPackageChannelEndpointRequest& request);
 
                 /**
-                 *This API is used to delete media package channels in batches.
-                 * @param req DeleteMediaPackageChannelsRequest
-                 * @return DeleteMediaPackageChannelsOutcome
+                 *This API is used to delete endpoints from a StreamPackage channel in batches.
+                 * @param req DeleteStreamPackageChannelEndpointsRequest
+                 * @return DeleteStreamPackageChannelEndpointsOutcome
                  */
-                DeleteMediaPackageChannelsOutcome DeleteMediaPackageChannels(const Model::DeleteMediaPackageChannelsRequest &request);
-                void DeleteMediaPackageChannelsAsync(const Model::DeleteMediaPackageChannelsRequest& request, const DeleteMediaPackageChannelsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DeleteMediaPackageChannelsOutcomeCallable DeleteMediaPackageChannelsCallable(const Model::DeleteMediaPackageChannelsRequest& request);
+                DeleteStreamPackageChannelEndpointsOutcome DeleteStreamPackageChannelEndpoints(const Model::DeleteStreamPackageChannelEndpointsRequest &request);
+                void DeleteStreamPackageChannelEndpointsAsync(const Model::DeleteStreamPackageChannelEndpointsRequest& request, const DeleteStreamPackageChannelEndpointsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteStreamPackageChannelEndpointsOutcomeCallable DeleteStreamPackageChannelEndpointsCallable(const Model::DeleteStreamPackageChannelEndpointsRequest& request);
 
                 /**
-                 *This API is used to query the information of a media package channel.
-                 * @param req DescribeMediaPackageChannelRequest
-                 * @return DescribeMediaPackageChannelOutcome
+                 *This API is used to delete StreamPackage channels in batches.
+                 * @param req DeleteStreamPackageChannelsRequest
+                 * @return DeleteStreamPackageChannelsOutcome
                  */
-                DescribeMediaPackageChannelOutcome DescribeMediaPackageChannel(const Model::DescribeMediaPackageChannelRequest &request);
-                void DescribeMediaPackageChannelAsync(const Model::DescribeMediaPackageChannelRequest& request, const DescribeMediaPackageChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeMediaPackageChannelOutcomeCallable DescribeMediaPackageChannelCallable(const Model::DescribeMediaPackageChannelRequest& request);
+                DeleteStreamPackageChannelsOutcome DeleteStreamPackageChannels(const Model::DeleteStreamPackageChannelsRequest &request);
+                void DeleteStreamPackageChannelsAsync(const Model::DeleteStreamPackageChannelsRequest& request, const DeleteStreamPackageChannelsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteStreamPackageChannelsOutcomeCallable DeleteStreamPackageChannelsCallable(const Model::DeleteStreamPackageChannelsRequest& request);
 
                 /**
-                 *This API is used to query the information list of media package channels.
-                 * @param req DescribeMediaPackageChannelsRequest
-                 * @return DescribeMediaPackageChannelsOutcome
+                 *This API is used to query the information of a StreamPackage channel.
+                 * @param req DescribeStreamPackageChannelRequest
+                 * @return DescribeStreamPackageChannelOutcome
                  */
-                DescribeMediaPackageChannelsOutcome DescribeMediaPackageChannels(const Model::DescribeMediaPackageChannelsRequest &request);
-                void DescribeMediaPackageChannelsAsync(const Model::DescribeMediaPackageChannelsRequest& request, const DescribeMediaPackageChannelsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeMediaPackageChannelsOutcomeCallable DescribeMediaPackageChannelsCallable(const Model::DescribeMediaPackageChannelsRequest& request);
+                DescribeStreamPackageChannelOutcome DescribeStreamPackageChannel(const Model::DescribeStreamPackageChannelRequest &request);
+                void DescribeStreamPackageChannelAsync(const Model::DescribeStreamPackageChannelRequest& request, const DescribeStreamPackageChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeStreamPackageChannelOutcomeCallable DescribeStreamPackageChannelCallable(const Model::DescribeStreamPackageChannelRequest& request);
 
                 /**
-                 *This API is used to modify the information of a media package channel.
-                 * @param req ModifyMediaPackageChannelRequest
-                 * @return ModifyMediaPackageChannelOutcome
+                 *This API is used to query the information of multiple StreamPackage channels.
+                 * @param req DescribeStreamPackageChannelsRequest
+                 * @return DescribeStreamPackageChannelsOutcome
                  */
-                ModifyMediaPackageChannelOutcome ModifyMediaPackageChannel(const Model::ModifyMediaPackageChannelRequest &request);
-                void ModifyMediaPackageChannelAsync(const Model::ModifyMediaPackageChannelRequest& request, const ModifyMediaPackageChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ModifyMediaPackageChannelOutcomeCallable ModifyMediaPackageChannelCallable(const Model::ModifyMediaPackageChannelRequest& request);
+                DescribeStreamPackageChannelsOutcome DescribeStreamPackageChannels(const Model::DescribeStreamPackageChannelsRequest &request);
+                void DescribeStreamPackageChannelsAsync(const Model::DescribeStreamPackageChannelsRequest& request, const DescribeStreamPackageChannelsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeStreamPackageChannelsOutcomeCallable DescribeStreamPackageChannelsCallable(const Model::DescribeStreamPackageChannelsRequest& request);
 
                 /**
-                 *This API is used to modify an endpoint of a media package channel.
-                 * @param req ModifyMediaPackageChannelEndpointRequest
-                 * @return ModifyMediaPackageChannelEndpointOutcome
+                 *This API is used to modify a StreamPackage channel.
+                 * @param req ModifyStreamPackageChannelRequest
+                 * @return ModifyStreamPackageChannelOutcome
                  */
-                ModifyMediaPackageChannelEndpointOutcome ModifyMediaPackageChannelEndpoint(const Model::ModifyMediaPackageChannelEndpointRequest &request);
-                void ModifyMediaPackageChannelEndpointAsync(const Model::ModifyMediaPackageChannelEndpointRequest& request, const ModifyMediaPackageChannelEndpointAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ModifyMediaPackageChannelEndpointOutcomeCallable ModifyMediaPackageChannelEndpointCallable(const Model::ModifyMediaPackageChannelEndpointRequest& request);
+                ModifyStreamPackageChannelOutcome ModifyStreamPackageChannel(const Model::ModifyStreamPackageChannelRequest &request);
+                void ModifyStreamPackageChannelAsync(const Model::ModifyStreamPackageChannelRequest& request, const ModifyStreamPackageChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyStreamPackageChannelOutcomeCallable ModifyStreamPackageChannelCallable(const Model::ModifyStreamPackageChannelRequest& request);
 
                 /**
-                 *This API is used to modify the input authentication information of a media package channel.
-                 * @param req ModifyMediaPackageChannelInputAuthInfoRequest
-                 * @return ModifyMediaPackageChannelInputAuthInfoOutcome
+                 *This API is used to modify an endpoint of a StreamPackage channel.
+                 * @param req ModifyStreamPackageChannelEndpointRequest
+                 * @return ModifyStreamPackageChannelEndpointOutcome
                  */
-                ModifyMediaPackageChannelInputAuthInfoOutcome ModifyMediaPackageChannelInputAuthInfo(const Model::ModifyMediaPackageChannelInputAuthInfoRequest &request);
-                void ModifyMediaPackageChannelInputAuthInfoAsync(const Model::ModifyMediaPackageChannelInputAuthInfoRequest& request, const ModifyMediaPackageChannelInputAuthInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ModifyMediaPackageChannelInputAuthInfoOutcomeCallable ModifyMediaPackageChannelInputAuthInfoCallable(const Model::ModifyMediaPackageChannelInputAuthInfoRequest& request);
+                ModifyStreamPackageChannelEndpointOutcome ModifyStreamPackageChannelEndpoint(const Model::ModifyStreamPackageChannelEndpointRequest &request);
+                void ModifyStreamPackageChannelEndpointAsync(const Model::ModifyStreamPackageChannelEndpointRequest& request, const ModifyStreamPackageChannelEndpointAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyStreamPackageChannelEndpointOutcomeCallable ModifyStreamPackageChannelEndpointCallable(const Model::ModifyStreamPackageChannelEndpointRequest& request);
+
+                /**
+                 *This API is used to modify the input authentication information of a StreamPackage channel.
+                 * @param req ModifyStreamPackageChannelInputAuthInfoRequest
+                 * @return ModifyStreamPackageChannelInputAuthInfoOutcome
+                 */
+                ModifyStreamPackageChannelInputAuthInfoOutcome ModifyStreamPackageChannelInputAuthInfo(const Model::ModifyStreamPackageChannelInputAuthInfoRequest &request);
+                void ModifyStreamPackageChannelInputAuthInfoAsync(const Model::ModifyStreamPackageChannelInputAuthInfoRequest& request, const ModifyStreamPackageChannelInputAuthInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyStreamPackageChannelInputAuthInfoOutcomeCallable ModifyStreamPackageChannelInputAuthInfoCallable(const Model::ModifyStreamPackageChannelInputAuthInfoRequest& request);
+
+                /**
+                 *This API is used to unbind a CDN playback domain name from a channel.
+                 * @param req UnbindCdnDomainWithChannelRequest
+                 * @return UnbindCdnDomainWithChannelOutcome
+                 */
+                UnbindCdnDomainWithChannelOutcome UnbindCdnDomainWithChannel(const Model::UnbindCdnDomainWithChannelRequest &request);
+                void UnbindCdnDomainWithChannelAsync(const Model::UnbindCdnDomainWithChannelRequest& request, const UnbindCdnDomainWithChannelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UnbindCdnDomainWithChannelOutcomeCallable UnbindCdnDomainWithChannelCallable(const Model::UnbindCdnDomainWithChannelRequest& request);
 
             };
         }

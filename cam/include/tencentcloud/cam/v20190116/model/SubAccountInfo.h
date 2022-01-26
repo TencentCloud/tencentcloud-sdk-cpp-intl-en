@@ -190,6 +190,28 @@ namespace TencentCloud
                      */
                     bool EmailHasBeenSet() const;
 
+                    /**
+                     * 获取Creation time
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return CreateTime Creation time
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetCreateTime() const;
+
+                    /**
+                     * 设置Creation time
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param CreateTime Creation time
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetCreateTime(const std::string& _createTime);
+
+                    /**
+                     * 判断参数 CreateTime 是否已赋值
+                     * @return CreateTime 是否已赋值
+                     */
+                    bool CreateTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -239,6 +261,13 @@ namespace TencentCloud
                      */
                     std::string m_email;
                     bool m_emailHasBeenSet;
+
+                    /**
+                     * Creation time
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_createTime;
+                    bool m_createTimeHasBeenSet;
 
                 };
             }

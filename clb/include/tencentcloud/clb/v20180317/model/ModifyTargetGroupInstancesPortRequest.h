@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool TargetGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Array of servers for which to modify port
-                     * @return TargetGroupInstances Array of servers for which to modify port
+                     * 获取Array of servers for which to modify ports
+                     * @return TargetGroupInstances Array of servers for which to modify ports
                      */
                     std::vector<TargetGroupInstance> GetTargetGroupInstances() const;
 
                     /**
-                     * 设置Array of servers for which to modify port
-                     * @param TargetGroupInstances Array of servers for which to modify port
+                     * 设置Array of servers for which to modify ports
+                     * @param TargetGroupInstances Array of servers for which to modify ports
                      */
                     void SetTargetGroupInstances(const std::vector<TargetGroupInstance>& _targetGroupInstances);
 
@@ -88,7 +88,7 @@ namespace TencentCloud
                     bool m_targetGroupIdHasBeenSet;
 
                     /**
-                     * Array of servers for which to modify port
+                     * Array of servers for which to modify ports
                      */
                     std::vector<TargetGroupInstance> m_targetGroupInstances;
                     bool m_targetGroupInstancesHasBeenSet;

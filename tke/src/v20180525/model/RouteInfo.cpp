@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Tke::V20180525::Model;
-using namespace rapidjson;
 using namespace std;
 
 RouteInfo::RouteInfo() :
@@ -28,7 +27,7 @@ RouteInfo::RouteInfo() :
 {
 }
 
-CoreInternalOutcome RouteInfo::Deserialize(const Value &value)
+CoreInternalOutcome RouteInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome RouteInfo::Deserialize(const Value &value)
     {
         if (!value["RouteTableName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RouteInfo.RouteTableName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RouteInfo.RouteTableName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_routeTableName = string(value["RouteTableName"].GetString());
         m_routeTableNameHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome RouteInfo::Deserialize(const Value &value)
     {
         if (!value["DestinationCidrBlock"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RouteInfo.DestinationCidrBlock` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RouteInfo.DestinationCidrBlock` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_destinationCidrBlock = string(value["DestinationCidrBlock"].GetString());
         m_destinationCidrBlockHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome RouteInfo::Deserialize(const Value &value)
     {
         if (!value["GatewayIp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RouteInfo.GatewayIp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RouteInfo.GatewayIp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_gatewayIp = string(value["GatewayIp"].GetString());
         m_gatewayIpHasBeenSet = true;
@@ -67,31 +66,31 @@ CoreInternalOutcome RouteInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void RouteInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void RouteInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_routeTableNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RouteTableName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_routeTableName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_routeTableName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_destinationCidrBlockHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DestinationCidrBlock";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_destinationCidrBlock.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_destinationCidrBlock.c_str(), allocator).Move(), allocator);
     }
 
     if (m_gatewayIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "GatewayIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_gatewayIp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_gatewayIp.c_str(), allocator).Move(), allocator);
     }
 
 }

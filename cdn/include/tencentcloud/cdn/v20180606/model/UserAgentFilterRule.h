@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * `UserAgent` blacklist/whitelist rule configuration
+                * `UserAgent` blocklist/allowlist rule configuration
                 */
                 class UserAgentFilterRule : public AbstractModel
                 {
@@ -129,17 +129,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool UserAgentsHasBeenSet() const;
 
                     /**
-                     * 获取Blacklist or whitelist. Valid values: blacklist, whitelist
+                     * 获取blocklist or allowlist. Valid values: blacklist, whitelist
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return FilterType Blacklist or whitelist. Valid values: blacklist, whitelist
+                     * @return FilterType blocklist or allowlist. Valid values: blacklist, whitelist
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetFilterType() const;
 
                     /**
-                     * 设置Blacklist or whitelist. Valid values: blacklist, whitelist
+                     * 设置blocklist or allowlist. Valid values: blacklist, whitelist
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FilterType Blacklist or whitelist. Valid values: blacklist, whitelist
+                     * @param FilterType blocklist or allowlist. Valid values: blacklist, whitelist
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetFilterType(const std::string& _filterType);
@@ -178,7 +178,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_userAgentsHasBeenSet;
 
                     /**
-                     * Blacklist or whitelist. Valid values: blacklist, whitelist
+                     * blocklist or allowlist. Valid values: blacklist, whitelist
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_filterType;

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Batch::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 ComputeEnvCreateInfo::ComputeEnvCreateInfo() :
@@ -31,11 +30,12 @@ ComputeEnvCreateInfo::ComputeEnvCreateInfo() :
     m_inputMappingsHasBeenSet(false),
     m_authenticationsHasBeenSet(false),
     m_notificationsHasBeenSet(false),
-    m_desiredComputeNodeCountHasBeenSet(false)
+    m_desiredComputeNodeCountHasBeenSet(false),
+    m_tagsHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ComputeEnvCreateInfo::Deserialize(const Value &value)
+CoreInternalOutcome ComputeEnvCreateInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -44,7 +44,7 @@ CoreInternalOutcome ComputeEnvCreateInfo::Deserialize(const Value &value)
     {
         if (!value["EnvId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ComputeEnvCreateInfo.EnvId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComputeEnvCreateInfo.EnvId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_envId = string(value["EnvId"].GetString());
         m_envIdHasBeenSet = true;
@@ -54,7 +54,7 @@ CoreInternalOutcome ComputeEnvCreateInfo::Deserialize(const Value &value)
     {
         if (!value["EnvName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ComputeEnvCreateInfo.EnvName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComputeEnvCreateInfo.EnvName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_envName = string(value["EnvName"].GetString());
         m_envNameHasBeenSet = true;
@@ -64,7 +64,7 @@ CoreInternalOutcome ComputeEnvCreateInfo::Deserialize(const Value &value)
     {
         if (!value["EnvDescription"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ComputeEnvCreateInfo.EnvDescription` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComputeEnvCreateInfo.EnvDescription` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_envDescription = string(value["EnvDescription"].GetString());
         m_envDescriptionHasBeenSet = true;
@@ -74,7 +74,7 @@ CoreInternalOutcome ComputeEnvCreateInfo::Deserialize(const Value &value)
     {
         if (!value["EnvType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ComputeEnvCreateInfo.EnvType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComputeEnvCreateInfo.EnvType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_envType = string(value["EnvType"].GetString());
         m_envTypeHasBeenSet = true;
@@ -84,7 +84,7 @@ CoreInternalOutcome ComputeEnvCreateInfo::Deserialize(const Value &value)
     {
         if (!value["EnvData"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `ComputeEnvCreateInfo.EnvData` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComputeEnvCreateInfo.EnvData` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_envData.Deserialize(value["EnvData"]);
@@ -100,10 +100,10 @@ CoreInternalOutcome ComputeEnvCreateInfo::Deserialize(const Value &value)
     if (value.HasMember("MountDataDisks") && !value["MountDataDisks"].IsNull())
     {
         if (!value["MountDataDisks"].IsArray())
-            return CoreInternalOutcome(Error("response `ComputeEnvCreateInfo.MountDataDisks` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ComputeEnvCreateInfo.MountDataDisks` is not array type"));
 
-        const Value &tmpValue = value["MountDataDisks"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["MountDataDisks"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             MountDataDisk item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -120,10 +120,10 @@ CoreInternalOutcome ComputeEnvCreateInfo::Deserialize(const Value &value)
     if (value.HasMember("InputMappings") && !value["InputMappings"].IsNull())
     {
         if (!value["InputMappings"].IsArray())
-            return CoreInternalOutcome(Error("response `ComputeEnvCreateInfo.InputMappings` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ComputeEnvCreateInfo.InputMappings` is not array type"));
 
-        const Value &tmpValue = value["InputMappings"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["InputMappings"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             InputMapping item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -140,10 +140,10 @@ CoreInternalOutcome ComputeEnvCreateInfo::Deserialize(const Value &value)
     if (value.HasMember("Authentications") && !value["Authentications"].IsNull())
     {
         if (!value["Authentications"].IsArray())
-            return CoreInternalOutcome(Error("response `ComputeEnvCreateInfo.Authentications` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ComputeEnvCreateInfo.Authentications` is not array type"));
 
-        const Value &tmpValue = value["Authentications"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Authentications"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             Authentication item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -160,10 +160,10 @@ CoreInternalOutcome ComputeEnvCreateInfo::Deserialize(const Value &value)
     if (value.HasMember("Notifications") && !value["Notifications"].IsNull())
     {
         if (!value["Notifications"].IsArray())
-            return CoreInternalOutcome(Error("response `ComputeEnvCreateInfo.Notifications` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ComputeEnvCreateInfo.Notifications` is not array type"));
 
-        const Value &tmpValue = value["Notifications"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Notifications"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             Notification item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -181,126 +181,161 @@ CoreInternalOutcome ComputeEnvCreateInfo::Deserialize(const Value &value)
     {
         if (!value["DesiredComputeNodeCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ComputeEnvCreateInfo.DesiredComputeNodeCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComputeEnvCreateInfo.DesiredComputeNodeCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_desiredComputeNodeCount = value["DesiredComputeNodeCount"].GetUint64();
         m_desiredComputeNodeCountHasBeenSet = true;
+    }
+
+    if (value.HasMember("Tags") && !value["Tags"].IsNull())
+    {
+        if (!value["Tags"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `ComputeEnvCreateInfo.Tags` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["Tags"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            Tag item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_tags.push_back(item);
+        }
+        m_tagsHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void ComputeEnvCreateInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ComputeEnvCreateInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_envIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EnvId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_envId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_envId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_envNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EnvName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_envName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_envName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_envDescriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EnvDescription";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_envDescription.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_envDescription.c_str(), allocator).Move(), allocator);
     }
 
     if (m_envTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EnvType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_envType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_envType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_envDataHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EnvData";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_envData.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_mountDataDisksHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MountDataDisks";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_mountDataDisks.begin(); itr != m_mountDataDisks.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_inputMappingsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InputMappings";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_inputMappings.begin(); itr != m_inputMappings.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_authenticationsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Authentications";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_authentications.begin(); itr != m_authentications.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_notificationsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Notifications";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_notifications.begin(); itr != m_notifications.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_desiredComputeNodeCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DesiredComputeNodeCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_desiredComputeNodeCount, allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
 }
@@ -464,5 +499,21 @@ void ComputeEnvCreateInfo::SetDesiredComputeNodeCount(const uint64_t& _desiredCo
 bool ComputeEnvCreateInfo::DesiredComputeNodeCountHasBeenSet() const
 {
     return m_desiredComputeNodeCountHasBeenSet;
+}
+
+vector<Tag> ComputeEnvCreateInfo::GetTags() const
+{
+    return m_tags;
+}
+
+void ComputeEnvCreateInfo::SetTags(const vector<Tag>& _tags)
+{
+    m_tags = _tags;
+    m_tagsHasBeenSet = true;
+}
+
+bool ComputeEnvCreateInfo::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
 }
 

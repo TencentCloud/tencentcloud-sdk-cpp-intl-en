@@ -410,14 +410,14 @@ namespace TencentCloud
                     bool MachineTypeHasBeenSet() const;
 
                     /**
-                     * 获取Number of slave nodes of an instance
-                     * @return SecondaryNum Number of slave nodes of an instance
+                     * 获取Number of secondary nodes of an instance
+                     * @return SecondaryNum Number of secondary nodes of an instance
                      */
                     uint64_t GetSecondaryNum() const;
 
                     /**
-                     * 设置Number of slave nodes of an instance
-                     * @param SecondaryNum Number of slave nodes of an instance
+                     * 设置Number of secondary nodes of an instance
+                     * @param SecondaryNum Number of secondary nodes of an instance
                      */
                     void SetSecondaryNum(const uint64_t& _secondaryNum);
 
@@ -590,14 +590,14 @@ namespace TencentCloud
                     bool CloneInstancesHasBeenSet() const;
 
                     /**
-                     * 获取Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its master instance
-                     * @return RelatedInstance Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its master instance
+                     * 获取Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
+                     * @return RelatedInstance Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
                      */
                     DBInstanceInfo GetRelatedInstance() const;
 
                     /**
-                     * 设置Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its master instance
-                     * @param RelatedInstance Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its master instance
+                     * 设置Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
+                     * @param RelatedInstance Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
                      */
                     void SetRelatedInstance(const DBInstanceInfo& _relatedInstance);
 
@@ -856,7 +856,7 @@ namespace TencentCloud
                     bool m_machineTypeHasBeenSet;
 
                     /**
-                     * Number of slave nodes of an instance
+                     * Number of secondary nodes of an instance
                      */
                     uint64_t m_secondaryNum;
                     bool m_secondaryNumHasBeenSet;
@@ -916,7 +916,7 @@ namespace TencentCloud
                     bool m_cloneInstancesHasBeenSet;
 
                     /**
-                     * Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its master instance
+                     * Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
                      */
                     DBInstanceInfo m_relatedInstance;
                     bool m_relatedInstanceHasBeenSet;

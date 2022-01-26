@@ -67,26 +67,32 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code. 0: success; other values: failure.
-<li>40000: Invalid input parameter. Please check it;</li>
-<li>60000: Invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: Internal service error. Please try again.</li>
-                     * @return ErrCode Error code. 0: success; other values: failure.
-<li>40000: Invalid input parameter. Please check it;</li>
-<li>60000: Invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: Internal service error. Please try again.</li>
+                     * 获取Error code. An empty string indicates the task is successful; otherwise it is failed. For details about the values, see [Error Code List](https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * @return ErrCodeExt Error code. An empty string indicates the task is successful; otherwise it is failed. For details about the values, see [Error Code List](https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     */
+                    std::string GetErrCodeExt() const;
+
+                    /**
+                     * 设置Error code. An empty string indicates the task is successful; otherwise it is failed. For details about the values, see [Error Code List](https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * @param ErrCodeExt Error code. An empty string indicates the task is successful; otherwise it is failed. For details about the values, see [Error Code List](https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     */
+                    void SetErrCodeExt(const std::string& _errCodeExt);
+
+                    /**
+                     * 判断参数 ErrCodeExt 是否已赋值
+                     * @return ErrCodeExt 是否已赋值
+                     */
+                    bool ErrCodeExtHasBeenSet() const;
+
+                    /**
+                     * 获取Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
+                     * @return ErrCode Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置Error code. 0: success; other values: failure.
-<li>40000: Invalid input parameter. Please check it;</li>
-<li>60000: Invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: Internal service error. Please try again.</li>
-                     * @param ErrCode Error code. 0: success; other values: failure.
-<li>40000: Invalid input parameter. Please check it;</li>
-<li>60000: Invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: Internal service error. Please try again.</li>
+                     * 设置Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
+                     * @param ErrCode Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
                      */
                     void SetErrCode(const int64_t& _errCode);
 
@@ -154,6 +160,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool OutputHasBeenSet() const;
 
+                    /**
+                     * 获取Transcoding progress. Value range: 0-100
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return Progress Transcoding progress. Value range: 0-100
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    int64_t GetProgress() const;
+
+                    /**
+                     * 设置Transcoding progress. Value range: 0-100
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param Progress Transcoding progress. Value range: 0-100
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetProgress(const int64_t& _progress);
+
+                    /**
+                     * 判断参数 Progress 是否已赋值
+                     * @return Progress 是否已赋值
+                     */
+                    bool ProgressHasBeenSet() const;
+
                 private:
 
                     /**
@@ -163,10 +191,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code. 0: success; other values: failure.
-<li>40000: Invalid input parameter. Please check it;</li>
-<li>60000: Invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: Internal service error. Please try again.</li>
+                     * Error code. An empty string indicates the task is successful; otherwise it is failed. For details about the values, see [Error Code List](https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     */
+                    std::string m_errCodeExt;
+                    bool m_errCodeExtHasBeenSet;
+
+                    /**
+                     * Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
@@ -189,6 +220,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     MediaTranscodeItem m_output;
                     bool m_outputHasBeenSet;
+
+                    /**
+                     * Transcoding progress. Value range: 0-100
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    int64_t m_progress;
+                    bool m_progressHasBeenSet;
 
                 };
             }

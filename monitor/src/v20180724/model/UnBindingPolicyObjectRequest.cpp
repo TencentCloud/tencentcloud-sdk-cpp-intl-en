@@ -20,35 +20,35 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Monitor::V20180724::Model;
-using namespace rapidjson;
 using namespace std;
 
 UnBindingPolicyObjectRequest::UnBindingPolicyObjectRequest() :
     m_moduleHasBeenSet(false),
     m_groupIdHasBeenSet(false),
     m_uniqueIdHasBeenSet(false),
-    m_instanceGroupIdHasBeenSet(false)
+    m_instanceGroupIdHasBeenSet(false),
+    m_policyIdHasBeenSet(false)
 {
 }
 
 string UnBindingPolicyObjectRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_moduleHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Module";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_module.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_module.c_str(), allocator).Move(), allocator);
     }
 
     if (m_groupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "GroupId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_groupId, allocator);
@@ -56,28 +56,36 @@ string UnBindingPolicyObjectRequest::ToJsonString() const
 
     if (m_uniqueIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UniqueId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_uniqueId.begin(); itr != m_uniqueId.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_instanceGroupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceGroupId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_instanceGroupId, allocator);
     }
 
+    if (m_policyIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PolicyId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_policyId.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -145,6 +153,22 @@ void UnBindingPolicyObjectRequest::SetInstanceGroupId(const int64_t& _instanceGr
 bool UnBindingPolicyObjectRequest::InstanceGroupIdHasBeenSet() const
 {
     return m_instanceGroupIdHasBeenSet;
+}
+
+string UnBindingPolicyObjectRequest::GetPolicyId() const
+{
+    return m_policyId;
+}
+
+void UnBindingPolicyObjectRequest::SetPolicyId(const string& _policyId)
+{
+    m_policyId = _policyId;
+    m_policyIdHasBeenSet = true;
+}
+
+bool UnBindingPolicyObjectRequest::PolicyIdHasBeenSet() const
+{
+    return m_policyIdHasBeenSet;
 }
 
 

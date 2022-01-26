@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool SourceListenerIdsHasBeenSet() const;
 
                     /**
-                     * 获取Array of CLB forwarding rules
-                     * @return SourceLocationIds Array of CLB forwarding rules
+                     * 获取Array of CLB forwarding rule IDs
+                     * @return SourceLocationIds Array of CLB forwarding rule IDs
                      */
                     std::vector<std::string> GetSourceLocationIds() const;
 
                     /**
-                     * 设置Array of CLB forwarding rules
-                     * @param SourceLocationIds Array of CLB forwarding rules
+                     * 设置Array of CLB forwarding rule IDs
+                     * @param SourceLocationIds Array of CLB forwarding rule IDs
                      */
                     void SetSourceLocationIds(const std::vector<std::string>& _sourceLocationIds);
 
@@ -111,7 +111,7 @@ namespace TencentCloud
                     bool m_sourceListenerIdsHasBeenSet;
 
                     /**
-                     * Array of CLB forwarding rules
+                     * Array of CLB forwarding rule IDs
                      */
                     std::vector<std::string> m_sourceLocationIds;
                     bool m_sourceLocationIdsHasBeenSet;

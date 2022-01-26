@@ -47,6 +47,12 @@
 #include <tencentcloud/cdn/v20180606/model/Ipv6.h>
 #include <tencentcloud/cdn/v20180606/model/SpecificConfig.h>
 #include <tencentcloud/cdn/v20180606/model/OriginPullTimeout.h>
+#include <tencentcloud/cdn/v20180606/model/Tag.h>
+#include <tencentcloud/cdn/v20180606/model/Ipv6Access.h>
+#include <tencentcloud/cdn/v20180606/model/OfflineCache.h>
+#include <tencentcloud/cdn/v20180606/model/Quic.h>
+#include <tencentcloud/cdn/v20180606/model/AwsPrivateAccess.h>
+#include <tencentcloud/cdn/v20180606/model/OssPrivateAccess.h>
 
 
 namespace TencentCloud
@@ -153,14 +159,14 @@ media: streaming media VOD acceleration
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取IP blacklist/whitelist configuration
-                     * @return IpFilter IP blacklist/whitelist configuration
+                     * 获取IP blocklist/allowlist configuration
+                     * @return IpFilter IP blocklist/allowlist configuration
                      */
                     IpFilter GetIpFilter() const;
 
                     /**
-                     * 设置IP blacklist/whitelist configuration
-                     * @param IpFilter IP blacklist/whitelist configuration
+                     * 设置IP blocklist/allowlist configuration
+                     * @param IpFilter IP blocklist/allowlist configuration
                      */
                     void SetIpFilter(const IpFilter& _ipFilter);
 
@@ -640,6 +646,114 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
                      */
                     bool OriginPullTimeoutHasBeenSet() const;
 
+                    /**
+                     * 获取Tag configuration
+                     * @return Tag Tag configuration
+                     */
+                    std::vector<Tag> GetTag() const;
+
+                    /**
+                     * 设置Tag configuration
+                     * @param Tag Tag configuration
+                     */
+                    void SetTag(const std::vector<Tag>& _tag);
+
+                    /**
+                     * 判断参数 Tag 是否已赋值
+                     * @return Tag 是否已赋值
+                     */
+                    bool TagHasBeenSet() const;
+
+                    /**
+                     * 获取IPv6 access configuration
+                     * @return Ipv6Access IPv6 access configuration
+                     */
+                    Ipv6Access GetIpv6Access() const;
+
+                    /**
+                     * 设置IPv6 access configuration
+                     * @param Ipv6Access IPv6 access configuration
+                     */
+                    void SetIpv6Access(const Ipv6Access& _ipv6Access);
+
+                    /**
+                     * 判断参数 Ipv6Access 是否已赋值
+                     * @return Ipv6Access 是否已赋值
+                     */
+                    bool Ipv6AccessHasBeenSet() const;
+
+                    /**
+                     * 获取Offline cache
+                     * @return OfflineCache Offline cache
+                     */
+                    OfflineCache GetOfflineCache() const;
+
+                    /**
+                     * 设置Offline cache
+                     * @param OfflineCache Offline cache
+                     */
+                    void SetOfflineCache(const OfflineCache& _offlineCache);
+
+                    /**
+                     * 判断参数 OfflineCache 是否已赋值
+                     * @return OfflineCache 是否已赋值
+                     */
+                    bool OfflineCacheHasBeenSet() const;
+
+                    /**
+                     * 获取QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+                     * @return Quic QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+                     */
+                    Quic GetQuic() const;
+
+                    /**
+                     * 设置QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+                     * @param Quic QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+                     */
+                    void SetQuic(const Quic& _quic);
+
+                    /**
+                     * 判断参数 Quic 是否已赋值
+                     * @return Quic 是否已赋值
+                     */
+                    bool QuicHasBeenSet() const;
+
+                    /**
+                     * 获取Access authentication for S3 origin
+                     * @return AwsPrivateAccess Access authentication for S3 origin
+                     */
+                    AwsPrivateAccess GetAwsPrivateAccess() const;
+
+                    /**
+                     * 设置Access authentication for S3 origin
+                     * @param AwsPrivateAccess Access authentication for S3 origin
+                     */
+                    void SetAwsPrivateAccess(const AwsPrivateAccess& _awsPrivateAccess);
+
+                    /**
+                     * 判断参数 AwsPrivateAccess 是否已赋值
+                     * @return AwsPrivateAccess 是否已赋值
+                     */
+                    bool AwsPrivateAccessHasBeenSet() const;
+
+                    /**
+                     * 获取Access authentication for OSS origin
+                     * @return OssPrivateAccess Access authentication for OSS origin
+                     */
+                    OssPrivateAccess GetOssPrivateAccess() const;
+
+                    /**
+                     * 设置Access authentication for OSS origin
+                     * @param OssPrivateAccess Access authentication for OSS origin
+                     */
+                    void SetOssPrivateAccess(const OssPrivateAccess& _ossPrivateAccess);
+
+                    /**
+                     * 判断参数 OssPrivateAccess 是否已赋值
+                     * @return OssPrivateAccess 是否已赋值
+                     */
+                    bool OssPrivateAccessHasBeenSet() const;
+
                 private:
 
                     /**
@@ -670,7 +784,7 @@ media: streaming media VOD acceleration
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * IP blacklist/whitelist configuration
+                     * IP blocklist/allowlist configuration
                      */
                     IpFilter m_ipFilter;
                     bool m_ipFilterHasBeenSet;
@@ -829,6 +943,42 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
                      */
                     OriginPullTimeout m_originPullTimeout;
                     bool m_originPullTimeoutHasBeenSet;
+
+                    /**
+                     * Tag configuration
+                     */
+                    std::vector<Tag> m_tag;
+                    bool m_tagHasBeenSet;
+
+                    /**
+                     * IPv6 access configuration
+                     */
+                    Ipv6Access m_ipv6Access;
+                    bool m_ipv6AccessHasBeenSet;
+
+                    /**
+                     * Offline cache
+                     */
+                    OfflineCache m_offlineCache;
+                    bool m_offlineCacheHasBeenSet;
+
+                    /**
+                     * QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+                     */
+                    Quic m_quic;
+                    bool m_quicHasBeenSet;
+
+                    /**
+                     * Access authentication for S3 origin
+                     */
+                    AwsPrivateAccess m_awsPrivateAccess;
+                    bool m_awsPrivateAccessHasBeenSet;
+
+                    /**
+                     * Access authentication for OSS origin
+                     */
+                    OssPrivateAccess m_ossPrivateAccess;
+                    bool m_ossPrivateAccessHasBeenSet;
 
                 };
             }

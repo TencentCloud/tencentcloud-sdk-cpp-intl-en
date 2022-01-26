@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 VpcPrivateIpAddress::VpcPrivateIpAddress() :
@@ -29,7 +28,7 @@ VpcPrivateIpAddress::VpcPrivateIpAddress() :
 {
 }
 
-CoreInternalOutcome VpcPrivateIpAddress::Deserialize(const Value &value)
+CoreInternalOutcome VpcPrivateIpAddress::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome VpcPrivateIpAddress::Deserialize(const Value &value)
     {
         if (!value["PrivateIpAddress"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpcPrivateIpAddress.PrivateIpAddress` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpcPrivateIpAddress.PrivateIpAddress` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_privateIpAddress = string(value["PrivateIpAddress"].GetString());
         m_privateIpAddressHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome VpcPrivateIpAddress::Deserialize(const Value &value)
     {
         if (!value["CidrBlock"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpcPrivateIpAddress.CidrBlock` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpcPrivateIpAddress.CidrBlock` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cidrBlock = string(value["CidrBlock"].GetString());
         m_cidrBlockHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome VpcPrivateIpAddress::Deserialize(const Value &value)
     {
         if (!value["PrivateIpAddressType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpcPrivateIpAddress.PrivateIpAddressType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpcPrivateIpAddress.PrivateIpAddressType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_privateIpAddressType = string(value["PrivateIpAddressType"].GetString());
         m_privateIpAddressTypeHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome VpcPrivateIpAddress::Deserialize(const Value &value)
     {
         if (!value["CreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VpcPrivateIpAddress.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VpcPrivateIpAddress.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createdTime = string(value["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
@@ -78,39 +77,39 @@ CoreInternalOutcome VpcPrivateIpAddress::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void VpcPrivateIpAddress::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void VpcPrivateIpAddress::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_privateIpAddressHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PrivateIpAddress";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_privateIpAddress.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_privateIpAddress.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cidrBlockHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CidrBlock";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_cidrBlock.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cidrBlock.c_str(), allocator).Move(), allocator);
     }
 
     if (m_privateIpAddressTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PrivateIpAddressType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_privateIpAddressType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_privateIpAddressType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createdTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createdTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
     }
 
 }

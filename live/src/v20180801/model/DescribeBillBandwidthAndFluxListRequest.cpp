@@ -20,7 +20,6 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Live::V20180801::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeBillBandwidthAndFluxListRequest::DescribeBillBandwidthAndFluxListRequest() :
@@ -29,57 +28,58 @@ DescribeBillBandwidthAndFluxListRequest::DescribeBillBandwidthAndFluxListRequest
     m_playDomainsHasBeenSet(false),
     m_mainlandOrOverseaHasBeenSet(false),
     m_granularityHasBeenSet(false),
-    m_serviceNameHasBeenSet(false)
+    m_serviceNameHasBeenSet(false),
+    m_regionNamesHasBeenSet(false)
 {
 }
 
 string DescribeBillBandwidthAndFluxListRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_startTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTime";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_startTime.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_startTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_endTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndTime";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_endTime.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_endTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_playDomainsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PlayDomains";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_playDomains.begin(); itr != m_playDomains.end(); ++itr)
         {
-            d[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_mainlandOrOverseaHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MainlandOrOversea";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_mainlandOrOversea.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_mainlandOrOversea.c_str(), allocator).Move(), allocator);
     }
 
     if (m_granularityHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Granularity";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_granularity, allocator);
@@ -87,15 +87,28 @@ string DescribeBillBandwidthAndFluxListRequest::ToJsonString() const
 
     if (m_serviceNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ServiceName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_serviceName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_serviceName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_regionNamesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RegionNames";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_regionNames.begin(); itr != m_regionNames.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -195,6 +208,22 @@ void DescribeBillBandwidthAndFluxListRequest::SetServiceName(const string& _serv
 bool DescribeBillBandwidthAndFluxListRequest::ServiceNameHasBeenSet() const
 {
     return m_serviceNameHasBeenSet;
+}
+
+vector<string> DescribeBillBandwidthAndFluxListRequest::GetRegionNames() const
+{
+    return m_regionNames;
+}
+
+void DescribeBillBandwidthAndFluxListRequest::SetRegionNames(const vector<string>& _regionNames)
+{
+    m_regionNames = _regionNames;
+    m_regionNamesHasBeenSet = true;
+}
+
+bool DescribeBillBandwidthAndFluxListRequest::RegionNamesHasBeenSet() const
+{
+    return m_regionNamesHasBeenSet;
 }
 
 

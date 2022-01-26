@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Kibana access blacklist
-                     * @return BlackIpList Kibana access blacklist
+                     * 获取Kibana access blocklist
+                     * @return BlackIpList Kibana access blocklist
                      */
                     std::vector<std::string> GetBlackIpList() const;
 
                     /**
-                     * 设置Kibana access blacklist
-                     * @param BlackIpList Kibana access blacklist
+                     * 设置Kibana access blocklist
+                     * @param BlackIpList Kibana access blocklist
                      */
                     void SetBlackIpList(const std::vector<std::string>& _blackIpList);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool BlackIpListHasBeenSet() const;
 
                     /**
-                     * 获取Kibana access whitelist
-                     * @return WhiteIpList Kibana access whitelist
+                     * 获取Kibana access allowlist
+                     * @return WhiteIpList Kibana access allowlist
                      */
                     std::vector<std::string> GetWhiteIpList() const;
 
                     /**
-                     * 设置Kibana access whitelist
-                     * @param WhiteIpList Kibana access whitelist
+                     * 设置Kibana access allowlist
+                     * @param WhiteIpList Kibana access allowlist
                      */
                     void SetWhiteIpList(const std::vector<std::string>& _whiteIpList);
 
@@ -85,13 +85,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Kibana access blacklist
+                     * Kibana access blocklist
                      */
                     std::vector<std::string> m_blackIpList;
                     bool m_blackIpListHasBeenSet;
 
                     /**
-                     * Kibana access whitelist
+                     * Kibana access allowlist
                      */
                     std::vector<std::string> m_whiteIpList;
                     bool m_whiteIpListHasBeenSet;

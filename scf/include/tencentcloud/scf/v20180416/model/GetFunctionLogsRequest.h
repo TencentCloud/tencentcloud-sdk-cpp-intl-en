@@ -45,14 +45,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Function name
-                     * @return FunctionName Function name
+                     * 获取Function name.
+- To ensure the compatibility of the [`GetFunctionLogs`](https://intl.cloud.tencent.com/document/product/583/18583?from_cn_redirect=1) API, the input parameter `FunctionName` is optional, but we recommend you enter it; otherwise, log acquisition may fail.
+- After the function is connected to CLS, we recommend you use the [related CLS API](https://intl.cloud.tencent.com/document/product/614/16875?from_cn_redirect=1) to get the best log retrieval experience.
+                     * @return FunctionName Function name.
+- To ensure the compatibility of the [`GetFunctionLogs`](https://intl.cloud.tencent.com/document/product/583/18583?from_cn_redirect=1) API, the input parameter `FunctionName` is optional, but we recommend you enter it; otherwise, log acquisition may fail.
+- After the function is connected to CLS, we recommend you use the [related CLS API](https://intl.cloud.tencent.com/document/product/614/16875?from_cn_redirect=1) to get the best log retrieval experience.
                      */
                     std::string GetFunctionName() const;
 
                     /**
-                     * 设置Function name
-                     * @param FunctionName Function name
+                     * 设置Function name.
+- To ensure the compatibility of the [`GetFunctionLogs`](https://intl.cloud.tencent.com/document/product/583/18583?from_cn_redirect=1) API, the input parameter `FunctionName` is optional, but we recommend you enter it; otherwise, log acquisition may fail.
+- After the function is connected to CLS, we recommend you use the [related CLS API](https://intl.cloud.tencent.com/document/product/614/16875?from_cn_redirect=1) to get the best log retrieval experience.
+                     * @param FunctionName Function name.
+- To ensure the compatibility of the [`GetFunctionLogs`](https://intl.cloud.tencent.com/document/product/583/18583?from_cn_redirect=1) API, the input parameter `FunctionName` is optional, but we recommend you enter it; otherwise, log acquisition may fail.
+- After the function is connected to CLS, we recommend you use the [related CLS API](https://intl.cloud.tencent.com/document/product/614/16875?from_cn_redirect=1) to get the best log retrieval experience.
                      */
                     void SetFunctionName(const std::string& _functionName);
 
@@ -243,14 +251,14 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Service log related parameter. `Offset` on the first page is a null string. Enter other pages based on SearchContext in the response field.
-                     * @return SearchContext Service log related parameter. `Offset` on the first page is a null string. Enter other pages based on SearchContext in the response field.
+                     * 获取This field is disused.
+                     * @return SearchContext This field is disused.
                      */
                     LogSearchContext GetSearchContext() const;
 
                     /**
-                     * 设置Service log related parameter. `Offset` on the first page is a null string. Enter other pages based on SearchContext in the response field.
-                     * @param SearchContext Service log related parameter. `Offset` on the first page is a null string. Enter other pages based on SearchContext in the response field.
+                     * 设置This field is disused.
+                     * @param SearchContext This field is disused.
                      */
                     void SetSearchContext(const LogSearchContext& _searchContext);
 
@@ -263,7 +271,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Function name
+                     * Function name.
+- To ensure the compatibility of the [`GetFunctionLogs`](https://intl.cloud.tencent.com/document/product/583/18583?from_cn_redirect=1) API, the input parameter `FunctionName` is optional, but we recommend you enter it; otherwise, log acquisition may fail.
+- After the function is connected to CLS, we recommend you use the [related CLS API](https://intl.cloud.tencent.com/document/product/614/16875?from_cn_redirect=1) to get the best log retrieval experience.
                      */
                     std::string m_functionName;
                     bool m_functionNameHasBeenSet;
@@ -329,7 +339,7 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Service log related parameter. `Offset` on the first page is a null string. Enter other pages based on SearchContext in the response field.
+                     * This field is disused.
                      */
                     LogSearchContext m_searchContext;
                     bool m_searchContextHasBeenSet;

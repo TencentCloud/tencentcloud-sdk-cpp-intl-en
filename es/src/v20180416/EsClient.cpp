@@ -255,6 +255,92 @@ EsClient::DescribeInstancesOutcomeCallable EsClient::DescribeInstancesCallable(c
     return task->get_future();
 }
 
+EsClient::DescribeViewsOutcome EsClient::DescribeViews(const DescribeViewsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeViews");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeViewsResponse rsp = DescribeViewsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeViewsOutcome(rsp);
+        else
+            return DescribeViewsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeViewsOutcome(outcome.GetError());
+    }
+}
+
+void EsClient::DescribeViewsAsync(const DescribeViewsRequest& request, const DescribeViewsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeViews(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+EsClient::DescribeViewsOutcomeCallable EsClient::DescribeViewsCallable(const DescribeViewsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeViewsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeViews(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+EsClient::GetRequestTargetNodeTypesOutcome EsClient::GetRequestTargetNodeTypes(const GetRequestTargetNodeTypesRequest &request)
+{
+    auto outcome = MakeRequest(request, "GetRequestTargetNodeTypes");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GetRequestTargetNodeTypesResponse rsp = GetRequestTargetNodeTypesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GetRequestTargetNodeTypesOutcome(rsp);
+        else
+            return GetRequestTargetNodeTypesOutcome(o.GetError());
+    }
+    else
+    {
+        return GetRequestTargetNodeTypesOutcome(outcome.GetError());
+    }
+}
+
+void EsClient::GetRequestTargetNodeTypesAsync(const GetRequestTargetNodeTypesRequest& request, const GetRequestTargetNodeTypesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->GetRequestTargetNodeTypes(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+EsClient::GetRequestTargetNodeTypesOutcomeCallable EsClient::GetRequestTargetNodeTypesCallable(const GetRequestTargetNodeTypesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<GetRequestTargetNodeTypesOutcome()>>(
+        [this, request]()
+        {
+            return this->GetRequestTargetNodeTypes(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 EsClient::RestartInstanceOutcome EsClient::RestartInstance(const RestartInstanceRequest &request)
 {
     auto outcome = MakeRequest(request, "RestartInstance");
@@ -298,6 +384,92 @@ EsClient::RestartInstanceOutcomeCallable EsClient::RestartInstanceCallable(const
     return task->get_future();
 }
 
+EsClient::RestartKibanaOutcome EsClient::RestartKibana(const RestartKibanaRequest &request)
+{
+    auto outcome = MakeRequest(request, "RestartKibana");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RestartKibanaResponse rsp = RestartKibanaResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RestartKibanaOutcome(rsp);
+        else
+            return RestartKibanaOutcome(o.GetError());
+    }
+    else
+    {
+        return RestartKibanaOutcome(outcome.GetError());
+    }
+}
+
+void EsClient::RestartKibanaAsync(const RestartKibanaRequest& request, const RestartKibanaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RestartKibana(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+EsClient::RestartKibanaOutcomeCallable EsClient::RestartKibanaCallable(const RestartKibanaRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RestartKibanaOutcome()>>(
+        [this, request]()
+        {
+            return this->RestartKibana(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+EsClient::RestartNodesOutcome EsClient::RestartNodes(const RestartNodesRequest &request)
+{
+    auto outcome = MakeRequest(request, "RestartNodes");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RestartNodesResponse rsp = RestartNodesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RestartNodesOutcome(rsp);
+        else
+            return RestartNodesOutcome(o.GetError());
+    }
+    else
+    {
+        return RestartNodesOutcome(outcome.GetError());
+    }
+}
+
+void EsClient::RestartNodesAsync(const RestartNodesRequest& request, const RestartNodesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RestartNodes(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+EsClient::RestartNodesOutcomeCallable EsClient::RestartNodesCallable(const RestartNodesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RestartNodesOutcome()>>(
+        [this, request]()
+        {
+            return this->RestartNodes(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 EsClient::UpdateInstanceOutcome EsClient::UpdateInstance(const UpdateInstanceRequest &request)
 {
     auto outcome = MakeRequest(request, "UpdateInstance");
@@ -334,6 +506,92 @@ EsClient::UpdateInstanceOutcomeCallable EsClient::UpdateInstanceCallable(const U
         [this, request]()
         {
             return this->UpdateInstance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+EsClient::UpdatePluginsOutcome EsClient::UpdatePlugins(const UpdatePluginsRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdatePlugins");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdatePluginsResponse rsp = UpdatePluginsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdatePluginsOutcome(rsp);
+        else
+            return UpdatePluginsOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdatePluginsOutcome(outcome.GetError());
+    }
+}
+
+void EsClient::UpdatePluginsAsync(const UpdatePluginsRequest& request, const UpdatePluginsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpdatePlugins(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+EsClient::UpdatePluginsOutcomeCallable EsClient::UpdatePluginsCallable(const UpdatePluginsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpdatePluginsOutcome()>>(
+        [this, request]()
+        {
+            return this->UpdatePlugins(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+EsClient::UpdateRequestTargetNodeTypesOutcome EsClient::UpdateRequestTargetNodeTypes(const UpdateRequestTargetNodeTypesRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateRequestTargetNodeTypes");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateRequestTargetNodeTypesResponse rsp = UpdateRequestTargetNodeTypesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateRequestTargetNodeTypesOutcome(rsp);
+        else
+            return UpdateRequestTargetNodeTypesOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateRequestTargetNodeTypesOutcome(outcome.GetError());
+    }
+}
+
+void EsClient::UpdateRequestTargetNodeTypesAsync(const UpdateRequestTargetNodeTypesRequest& request, const UpdateRequestTargetNodeTypesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpdateRequestTargetNodeTypes(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+EsClient::UpdateRequestTargetNodeTypesOutcomeCallable EsClient::UpdateRequestTargetNodeTypesCallable(const UpdateRequestTargetNodeTypesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpdateRequestTargetNodeTypesOutcome()>>(
+        [this, request]()
+        {
+            return this->UpdateRequestTargetNodeTypes(request);
         }
     );
 

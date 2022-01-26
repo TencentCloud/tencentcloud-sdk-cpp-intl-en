@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::As::V20180419::Model;
-using namespace rapidjson;
 using namespace std;
 
 ScalingPolicy::ScalingPolicy() :
@@ -33,7 +32,7 @@ ScalingPolicy::ScalingPolicy() :
 {
 }
 
-CoreInternalOutcome ScalingPolicy::Deserialize(const Value &value)
+CoreInternalOutcome ScalingPolicy::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +41,7 @@ CoreInternalOutcome ScalingPolicy::Deserialize(const Value &value)
     {
         if (!value["AutoScalingGroupId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ScalingPolicy.AutoScalingGroupId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScalingPolicy.AutoScalingGroupId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_autoScalingGroupId = string(value["AutoScalingGroupId"].GetString());
         m_autoScalingGroupIdHasBeenSet = true;
@@ -52,7 +51,7 @@ CoreInternalOutcome ScalingPolicy::Deserialize(const Value &value)
     {
         if (!value["AutoScalingPolicyId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ScalingPolicy.AutoScalingPolicyId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScalingPolicy.AutoScalingPolicyId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_autoScalingPolicyId = string(value["AutoScalingPolicyId"].GetString());
         m_autoScalingPolicyIdHasBeenSet = true;
@@ -62,7 +61,7 @@ CoreInternalOutcome ScalingPolicy::Deserialize(const Value &value)
     {
         if (!value["ScalingPolicyName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ScalingPolicy.ScalingPolicyName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScalingPolicy.ScalingPolicyName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_scalingPolicyName = string(value["ScalingPolicyName"].GetString());
         m_scalingPolicyNameHasBeenSet = true;
@@ -72,7 +71,7 @@ CoreInternalOutcome ScalingPolicy::Deserialize(const Value &value)
     {
         if (!value["AdjustmentType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ScalingPolicy.AdjustmentType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScalingPolicy.AdjustmentType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_adjustmentType = string(value["AdjustmentType"].GetString());
         m_adjustmentTypeHasBeenSet = true;
@@ -82,7 +81,7 @@ CoreInternalOutcome ScalingPolicy::Deserialize(const Value &value)
     {
         if (!value["AdjustmentValue"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ScalingPolicy.AdjustmentValue` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScalingPolicy.AdjustmentValue` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_adjustmentValue = value["AdjustmentValue"].GetInt64();
         m_adjustmentValueHasBeenSet = true;
@@ -92,7 +91,7 @@ CoreInternalOutcome ScalingPolicy::Deserialize(const Value &value)
     {
         if (!value["Cooldown"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ScalingPolicy.Cooldown` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScalingPolicy.Cooldown` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_cooldown = value["Cooldown"].GetUint64();
         m_cooldownHasBeenSet = true;
@@ -102,7 +101,7 @@ CoreInternalOutcome ScalingPolicy::Deserialize(const Value &value)
     {
         if (!value["MetricAlarm"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `ScalingPolicy.MetricAlarm` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScalingPolicy.MetricAlarm` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_metricAlarm.Deserialize(value["MetricAlarm"]);
@@ -118,10 +117,10 @@ CoreInternalOutcome ScalingPolicy::Deserialize(const Value &value)
     if (value.HasMember("NotificationUserGroupIds") && !value["NotificationUserGroupIds"].IsNull())
     {
         if (!value["NotificationUserGroupIds"].IsArray())
-            return CoreInternalOutcome(Error("response `ScalingPolicy.NotificationUserGroupIds` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ScalingPolicy.NotificationUserGroupIds` is not array type"));
 
-        const Value &tmpValue = value["NotificationUserGroupIds"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["NotificationUserGroupIds"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_notificationUserGroupIds.push_back((*itr).GetString());
         }
@@ -132,44 +131,44 @@ CoreInternalOutcome ScalingPolicy::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ScalingPolicy::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ScalingPolicy::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_autoScalingGroupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AutoScalingGroupId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_autoScalingGroupId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_autoScalingGroupId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_autoScalingPolicyIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AutoScalingPolicyId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_autoScalingPolicyId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_autoScalingPolicyId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_scalingPolicyNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ScalingPolicyName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_scalingPolicyName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_scalingPolicyName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_adjustmentTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AdjustmentType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_adjustmentType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_adjustmentType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_adjustmentValueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AdjustmentValue";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_adjustmentValue, allocator);
@@ -177,7 +176,7 @@ void ScalingPolicy::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_cooldownHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Cooldown";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cooldown, allocator);
@@ -185,23 +184,23 @@ void ScalingPolicy::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_metricAlarmHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MetricAlarm";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_metricAlarm.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_notificationUserGroupIdsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NotificationUserGroupIds";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_notificationUserGroupIds.begin(); itr != m_notificationUserGroupIds.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 

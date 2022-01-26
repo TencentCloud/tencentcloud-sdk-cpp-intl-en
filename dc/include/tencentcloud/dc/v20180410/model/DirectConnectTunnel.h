@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Dedicated tunnel information list
+                * Dedicated tunnel information list.
                 */
                 class DirectConnectTunnel : public AbstractModel
                 {
@@ -50,14 +50,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Dedicated tunnel ID
-                     * @return DirectConnectTunnelId Dedicated tunnel ID
+                     * 获取Dedicated tunnel ID.
+                     * @return DirectConnectTunnelId Dedicated tunnel ID.
                      */
                     std::string GetDirectConnectTunnelId() const;
 
                     /**
-                     * 设置Dedicated tunnel ID
-                     * @param DirectConnectTunnelId Dedicated tunnel ID
+                     * 设置Dedicated tunnel ID.
+                     * @param DirectConnectTunnelId Dedicated tunnel ID.
                      */
                     void SetDirectConnectTunnelId(const std::string& _directConnectTunnelId);
 
@@ -86,50 +86,50 @@ namespace TencentCloud
                     bool DirectConnectIdHasBeenSet() const;
 
                     /**
-                     * 获取Dedicated tunnel status
-AVAILABLE: ready or connected
-PENDING: applying
-ALLOCATING: configuring
-ALLOCATED: configured
-ALTERING: modifying
-DELETING: deleting
-DELETED: deleted
-CONFIRMING: to be accepted
-REJECTED: rejected
-                     * @return State Dedicated tunnel status
-AVAILABLE: ready or connected
-PENDING: applying
-ALLOCATING: configuring
-ALLOCATED: configured
-ALTERING: modifying
-DELETING: deleting
-DELETED: deleted
-CONFIRMING: to be accepted
-REJECTED: rejected
+                     * 获取Dedicated tunnel status.
+AVAILABLE: Ready or connected.
+PENDING: Applying.
+ALLOCATING: Configuring.
+ALLOCATED: Configured.
+ALTERING: Modifying.
+DELETING: Deleting.
+DELETED: Deleted.
+COMFIRMING: To be accepted.
+REJECTED: Rejected.
+                     * @return State Dedicated tunnel status.
+AVAILABLE: Ready or connected.
+PENDING: Applying.
+ALLOCATING: Configuring.
+ALLOCATED: Configured.
+ALTERING: Modifying.
+DELETING: Deleting.
+DELETED: Deleted.
+COMFIRMING: To be accepted.
+REJECTED: Rejected.
                      */
                     std::string GetState() const;
 
                     /**
-                     * 设置Dedicated tunnel status
-AVAILABLE: ready or connected
-PENDING: applying
-ALLOCATING: configuring
-ALLOCATED: configured
-ALTERING: modifying
-DELETING: deleting
-DELETED: deleted
-CONFIRMING: to be accepted
-REJECTED: rejected
-                     * @param State Dedicated tunnel status
-AVAILABLE: ready or connected
-PENDING: applying
-ALLOCATING: configuring
-ALLOCATED: configured
-ALTERING: modifying
-DELETING: deleting
-DELETED: deleted
-CONFIRMING: to be accepted
-REJECTED: rejected
+                     * 设置Dedicated tunnel status.
+AVAILABLE: Ready or connected.
+PENDING: Applying.
+ALLOCATING: Configuring.
+ALLOCATED: Configured.
+ALTERING: Modifying.
+DELETING: Deleting.
+DELETED: Deleted.
+COMFIRMING: To be accepted.
+REJECTED: Rejected.
+                     * @param State Dedicated tunnel status.
+AVAILABLE: Ready or connected.
+PENDING: Applying.
+ALLOCATING: Configuring.
+ALLOCATED: Configured.
+ALTERING: Modifying.
+DELETING: Deleting.
+DELETED: Deleted.
+COMFIRMING: To be accepted.
+REJECTED: Rejected.
                      */
                     void SetState(const std::string& _state);
 
@@ -158,14 +158,14 @@ REJECTED: rejected
                     bool DirectConnectOwnerAccountHasBeenSet() const;
 
                     /**
-                     * 获取Dedicated tunnel owner, i.e., developer account ID
-                     * @return OwnerAccount Dedicated tunnel owner, i.e., developer account ID
+                     * 获取Dedicated tunnel owner, i.e., developer account ID.
+                     * @return OwnerAccount Dedicated tunnel owner, i.e., developer account ID.
                      */
                     std::string GetOwnerAccount() const;
 
                     /**
-                     * 设置Dedicated tunnel owner, i.e., developer account ID
-                     * @param OwnerAccount Dedicated tunnel owner, i.e., developer account ID
+                     * 设置Dedicated tunnel owner, i.e., developer account ID.
+                     * @param OwnerAccount Dedicated tunnel owner, i.e., developer account ID.
                      */
                     void SetOwnerAccount(const std::string& _ownerAccount);
 
@@ -306,14 +306,14 @@ REJECTED: rejected
                     bool RouteFilterPrefixesHasBeenSet() const;
 
                     /**
-                     * 获取Dedicated tunnel `Vlan`
-                     * @return Vlan Dedicated tunnel `Vlan`
+                     * 获取VLAN of a dedicated tunnel.
+                     * @return Vlan VLAN of a dedicated tunnel.
                      */
                     int64_t GetVlan() const;
 
                     /**
-                     * 设置Dedicated tunnel `Vlan`
-                     * @param Vlan Dedicated tunnel `Vlan`
+                     * 设置VLAN of a dedicated tunnel.
+                     * @param Vlan VLAN of a dedicated tunnel.
                      */
                     void SetVlan(const int64_t& _vlan);
 
@@ -360,14 +360,14 @@ REJECTED: rejected
                     bool CustomerAddressHasBeenSet() const;
 
                     /**
-                     * 获取Dedicated tunnel name
-                     * @return DirectConnectTunnelName Dedicated tunnel name
+                     * 获取Dedicated tunnel name.
+                     * @return DirectConnectTunnelName Dedicated tunnel name.
                      */
                     std::string GetDirectConnectTunnelName() const;
 
                     /**
-                     * 设置Dedicated tunnel name
-                     * @param DirectConnectTunnelName Dedicated tunnel name
+                     * 设置Dedicated tunnel name.
+                     * @param DirectConnectTunnelName Dedicated tunnel name.
                      */
                     void SetDirectConnectTunnelName(const std::string& _directConnectTunnelName);
 
@@ -378,14 +378,14 @@ REJECTED: rejected
                     bool DirectConnectTunnelNameHasBeenSet() const;
 
                     /**
-                     * 获取Dedicated tunnel creation time
-                     * @return CreatedTime Dedicated tunnel creation time
+                     * 获取Creation time of a dedicated tunnel.
+                     * @return CreatedTime Creation time of a dedicated tunnel.
                      */
                     std::string GetCreatedTime() const;
 
                     /**
-                     * 设置Dedicated tunnel creation time
-                     * @param CreatedTime Dedicated tunnel creation time
+                     * 设置Creation time of a dedicated tunnel.
+                     * @param CreatedTime Creation time of a dedicated tunnel.
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
@@ -396,14 +396,14 @@ REJECTED: rejected
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Dedicated tunnel bandwidth value
-                     * @return Bandwidth Dedicated tunnel bandwidth value
+                     * 获取Bandwidth value of a dedicated tunnel.
+                     * @return Bandwidth Bandwidth value of a dedicated tunnel.
                      */
                     int64_t GetBandwidth() const;
 
                     /**
-                     * 设置Dedicated tunnel bandwidth value
-                     * @param Bandwidth Dedicated tunnel bandwidth value
+                     * 设置Bandwidth value of a dedicated tunnel.
+                     * @param Bandwidth Bandwidth value of a dedicated tunnel.
                      */
                     void SetBandwidth(const int64_t& _bandwidth);
 
@@ -414,14 +414,14 @@ REJECTED: rejected
                     bool BandwidthHasBeenSet() const;
 
                     /**
-                     * 获取Dedicated tunnel tag value
-                     * @return TagSet Dedicated tunnel tag value
+                     * 获取Tag value of a dedicated tunnel.
+                     * @return TagSet Tag value of a dedicated tunnel.
                      */
                     std::vector<Tag> GetTagSet() const;
 
                     /**
-                     * 设置Dedicated tunnel tag value
-                     * @param TagSet Dedicated tunnel tag value
+                     * 设置Tag value of a dedicated tunnel.
+                     * @param TagSet Tag value of a dedicated tunnel.
                      */
                     void SetTagSet(const std::vector<Tag>& _tagSet);
 
@@ -542,17 +542,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool BfdEnableHasBeenSet() const;
 
                     /**
-                     * 获取Dedicated tunnel access point type
+                     * 获取Access point type of a dedicated tunnel.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AccessPointType Dedicated tunnel access point type
+                     * @return AccessPointType Access point type of a dedicated tunnel.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetAccessPointType() const;
 
                     /**
-                     * 设置Dedicated tunnel access point type
+                     * 设置Access point type of a dedicated tunnel.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AccessPointType Dedicated tunnel access point type
+                     * @param AccessPointType Access point type of a dedicated tunnel.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetAccessPointType(const std::string& _accessPointType);
@@ -608,18 +608,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool VpcNameHasBeenSet() const;
 
                     /**
-                     * 获取TencentBackupAddress, i.e., Tencent-side standby IP address
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TencentBackupAddress TencentBackupAddress, i.e., Tencent-side standby IP address
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Backup IP address on the Tencent side.
+                     * @return TencentBackupAddress Backup IP address on the Tencent side.
                      */
                     std::string GetTencentBackupAddress() const;
 
                     /**
-                     * 设置TencentBackupAddress, i.e., Tencent-side standby IP address
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TencentBackupAddress TencentBackupAddress, i.e., Tencent-side standby IP address
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Backup IP address on the Tencent side.
+                     * @param TencentBackupAddress Backup IP address on the Tencent side.
                      */
                     void SetTencentBackupAddress(const std::string& _tencentBackupAddress);
 
@@ -629,10 +625,54 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool TencentBackupAddressHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the connection associated with the dedicated tunnel has the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return SignLaw Whether the connection associated with the dedicated tunnel has the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    bool GetSignLaw() const;
+
+                    /**
+                     * 设置Whether the connection associated with the dedicated tunnel has the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param SignLaw Whether the connection associated with the dedicated tunnel has the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    void SetSignLaw(const bool& _signLaw);
+
+                    /**
+                     * 判断参数 SignLaw 是否已赋值
+                     * @return SignLaw 是否已赋值
+                     */
+                    bool SignLawHasBeenSet() const;
+
+                    /**
+                     * 获取Cloud Attached Connection Service ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return CloudAttachId Cloud Attached Connection Service ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetCloudAttachId() const;
+
+                    /**
+                     * 设置Cloud Attached Connection Service ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param CloudAttachId Cloud Attached Connection Service ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetCloudAttachId(const std::string& _cloudAttachId);
+
+                    /**
+                     * 判断参数 CloudAttachId 是否已赋值
+                     * @return CloudAttachId 是否已赋值
+                     */
+                    bool CloudAttachIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Dedicated tunnel ID
+                     * Dedicated tunnel ID.
                      */
                     std::string m_directConnectTunnelId;
                     bool m_directConnectTunnelIdHasBeenSet;
@@ -644,16 +684,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_directConnectIdHasBeenSet;
 
                     /**
-                     * Dedicated tunnel status
-AVAILABLE: ready or connected
-PENDING: applying
-ALLOCATING: configuring
-ALLOCATED: configured
-ALTERING: modifying
-DELETING: deleting
-DELETED: deleted
-CONFIRMING: to be accepted
-REJECTED: rejected
+                     * Dedicated tunnel status.
+AVAILABLE: Ready or connected.
+PENDING: Applying.
+ALLOCATING: Configuring.
+ALLOCATED: Configured.
+ALTERING: Modifying.
+DELETING: Deleting.
+DELETED: Deleted.
+COMFIRMING: To be accepted.
+REJECTED: Rejected.
                      */
                     std::string m_state;
                     bool m_stateHasBeenSet;
@@ -665,7 +705,7 @@ REJECTED: rejected
                     bool m_directConnectOwnerAccountHasBeenSet;
 
                     /**
-                     * Dedicated tunnel owner, i.e., developer account ID
+                     * Dedicated tunnel owner, i.e., developer account ID.
                      */
                     std::string m_ownerAccount;
                     bool m_ownerAccountHasBeenSet;
@@ -714,7 +754,7 @@ REJECTED: rejected
                     bool m_routeFilterPrefixesHasBeenSet;
 
                     /**
-                     * Dedicated tunnel `Vlan`
+                     * VLAN of a dedicated tunnel.
                      */
                     int64_t m_vlan;
                     bool m_vlanHasBeenSet;
@@ -732,25 +772,25 @@ REJECTED: rejected
                     bool m_customerAddressHasBeenSet;
 
                     /**
-                     * Dedicated tunnel name
+                     * Dedicated tunnel name.
                      */
                     std::string m_directConnectTunnelName;
                     bool m_directConnectTunnelNameHasBeenSet;
 
                     /**
-                     * Dedicated tunnel creation time
+                     * Creation time of a dedicated tunnel.
                      */
                     std::string m_createdTime;
                     bool m_createdTimeHasBeenSet;
 
                     /**
-                     * Dedicated tunnel bandwidth value
+                     * Bandwidth value of a dedicated tunnel.
                      */
                     int64_t m_bandwidth;
                     bool m_bandwidthHasBeenSet;
 
                     /**
-                     * Dedicated tunnel tag value
+                     * Tag value of a dedicated tunnel.
                      */
                     std::vector<Tag> m_tagSet;
                     bool m_tagSetHasBeenSet;
@@ -791,7 +831,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_bfdEnableHasBeenSet;
 
                     /**
-                     * Dedicated tunnel access point type
+                     * Access point type of a dedicated tunnel.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_accessPointType;
@@ -812,11 +852,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_vpcNameHasBeenSet;
 
                     /**
-                     * TencentBackupAddress, i.e., Tencent-side standby IP address
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Backup IP address on the Tencent side.
                      */
                     std::string m_tencentBackupAddress;
                     bool m_tencentBackupAddressHasBeenSet;
+
+                    /**
+                     * Whether the connection associated with the dedicated tunnel has the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    bool m_signLaw;
+                    bool m_signLawHasBeenSet;
+
+                    /**
+                     * Cloud Attached Connection Service ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_cloudAttachId;
+                    bool m_cloudAttachIdHasBeenSet;
 
                 };
             }

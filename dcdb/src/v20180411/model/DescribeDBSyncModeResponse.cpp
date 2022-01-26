@@ -21,31 +21,31 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dcdb::V20180411::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeDBSyncModeResponse::DescribeDBSyncModeResponse() :
     m_syncModeHasBeenSet(false),
-    m_isModifyingHasBeenSet(false)
+    m_isModifyingHasBeenSet(false),
+    m_currentSyncModeHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome DescribeDBSyncModeResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -56,11 +56,11 @@ CoreInternalOutcome DescribeDBSyncModeResponse::Deserialize(const string &payloa
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -68,7 +68,7 @@ CoreInternalOutcome DescribeDBSyncModeResponse::Deserialize(const string &payloa
     {
         if (!rsp["SyncMode"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SyncMode` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SyncMode` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_syncMode = rsp["SyncMode"].GetInt64();
         m_syncModeHasBeenSet = true;
@@ -78,14 +78,65 @@ CoreInternalOutcome DescribeDBSyncModeResponse::Deserialize(const string &payloa
     {
         if (!rsp["IsModifying"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `IsModifying` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IsModifying` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_isModifying = rsp["IsModifying"].GetInt64();
         m_isModifyingHasBeenSet = true;
     }
 
+    if (rsp.HasMember("CurrentSyncMode") && !rsp["CurrentSyncMode"].IsNull())
+    {
+        if (!rsp["CurrentSyncMode"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `CurrentSyncMode` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_currentSyncMode = rsp["CurrentSyncMode"].GetInt64();
+        m_currentSyncModeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeDBSyncModeResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_syncModeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SyncMode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_syncMode, allocator);
+    }
+
+    if (m_isModifyingHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsModifying";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isModifying, allocator);
+    }
+
+    if (m_currentSyncModeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CurrentSyncMode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_currentSyncMode, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 
@@ -107,6 +158,16 @@ int64_t DescribeDBSyncModeResponse::GetIsModifying() const
 bool DescribeDBSyncModeResponse::IsModifyingHasBeenSet() const
 {
     return m_isModifyingHasBeenSet;
+}
+
+int64_t DescribeDBSyncModeResponse::GetCurrentSyncMode() const
+{
+    return m_currentSyncMode;
+}
+
+bool DescribeDBSyncModeResponse::CurrentSyncModeHasBeenSet() const
+{
+    return m_currentSyncModeHasBeenSet;
 }
 
 

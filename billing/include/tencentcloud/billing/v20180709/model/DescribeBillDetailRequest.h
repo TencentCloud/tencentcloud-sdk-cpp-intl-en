@@ -226,6 +226,144 @@ namespace TencentCloud
                      */
                     bool ResourceIdHasBeenSet() const;
 
+                    /**
+                     * 获取Action type to query. Valid values:
+Purchase
+Renewal
+Modify
+Refund
+Deduction
+Hourly settlement
+Daily settlement
+Monthly settlement
+Offline project deduction
+Offline deduction
+adjust-CR
+adjust-DR
+One-off RI Fee
+Spot
+Hourly RI fee
+New monthly subscription
+Monthly subscription renewal
+Monthly subscription specification adjustment
+Monthly subscription specification adjustment
+Monthly subscription refund
+                     * @return ActionType Action type to query. Valid values:
+Purchase
+Renewal
+Modify
+Refund
+Deduction
+Hourly settlement
+Daily settlement
+Monthly settlement
+Offline project deduction
+Offline deduction
+adjust-CR
+adjust-DR
+One-off RI Fee
+Spot
+Hourly RI fee
+New monthly subscription
+Monthly subscription renewal
+Monthly subscription specification adjustment
+Monthly subscription specification adjustment
+Monthly subscription refund
+                     */
+                    std::string GetActionType() const;
+
+                    /**
+                     * 设置Action type to query. Valid values:
+Purchase
+Renewal
+Modify
+Refund
+Deduction
+Hourly settlement
+Daily settlement
+Monthly settlement
+Offline project deduction
+Offline deduction
+adjust-CR
+adjust-DR
+One-off RI Fee
+Spot
+Hourly RI fee
+New monthly subscription
+Monthly subscription renewal
+Monthly subscription specification adjustment
+Monthly subscription specification adjustment
+Monthly subscription refund
+                     * @param ActionType Action type to query. Valid values:
+Purchase
+Renewal
+Modify
+Refund
+Deduction
+Hourly settlement
+Daily settlement
+Monthly settlement
+Offline project deduction
+Offline deduction
+adjust-CR
+adjust-DR
+One-off RI Fee
+Spot
+Hourly RI fee
+New monthly subscription
+Monthly subscription renewal
+Monthly subscription specification adjustment
+Monthly subscription specification adjustment
+Monthly subscription refund
+                     */
+                    void SetActionType(const std::string& _actionType);
+
+                    /**
+                     * 判断参数 ActionType 是否已赋值
+                     * @return ActionType 是否已赋值
+                     */
+                    bool ActionTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Project ID: ID of the project to which the resource belongs
+                     * @return ProjectId Project ID: ID of the project to which the resource belongs
+                     */
+                    int64_t GetProjectId() const;
+
+                    /**
+                     * 设置Project ID: ID of the project to which the resource belongs
+                     * @param ProjectId Project ID: ID of the project to which the resource belongs
+                     */
+                    void SetProjectId(const int64_t& _projectId);
+
+                    /**
+                     * 判断参数 ProjectId 是否已赋值
+                     * @return ProjectId 是否已赋值
+                     */
+                    bool ProjectIdHasBeenSet() const;
+
+                    /**
+                     * 获取Product code
+Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+                     * @return BusinessCode Product code
+Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+                     */
+                    std::string GetBusinessCode() const;
+
+                    /**
+                     * 设置Product code
+Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+                     * @param BusinessCode Product code
+Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+                     */
+                    void SetBusinessCode(const std::string& _businessCode);
+
+                    /**
+                     * 判断参数 BusinessCode 是否已赋值
+                     * @return BusinessCode 是否已赋值
+                     */
+                    bool BusinessCodeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -288,6 +426,45 @@ namespace TencentCloud
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;
+
+                    /**
+                     * Action type to query. Valid values:
+Purchase
+Renewal
+Modify
+Refund
+Deduction
+Hourly settlement
+Daily settlement
+Monthly settlement
+Offline project deduction
+Offline deduction
+adjust-CR
+adjust-DR
+One-off RI Fee
+Spot
+Hourly RI fee
+New monthly subscription
+Monthly subscription renewal
+Monthly subscription specification adjustment
+Monthly subscription specification adjustment
+Monthly subscription refund
+                     */
+                    std::string m_actionType;
+                    bool m_actionTypeHasBeenSet;
+
+                    /**
+                     * Project ID: ID of the project to which the resource belongs
+                     */
+                    int64_t m_projectId;
+                    bool m_projectIdHasBeenSet;
+
+                    /**
+                     * Product code
+Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+                     */
+                    std::string m_businessCode;
+                    bool m_businessCodeHasBeenSet;
 
                 };
             }

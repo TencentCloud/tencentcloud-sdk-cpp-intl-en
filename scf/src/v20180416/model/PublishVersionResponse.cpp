@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Scf::V20180416::Model;
-using namespace rapidjson;
 using namespace std;
 
 PublishVersionResponse::PublishVersionResponse() :
@@ -38,20 +37,20 @@ PublishVersionResponse::PublishVersionResponse() :
 
 CoreInternalOutcome PublishVersionResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -62,11 +61,11 @@ CoreInternalOutcome PublishVersionResponse::Deserialize(const string &payload)
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -74,7 +73,7 @@ CoreInternalOutcome PublishVersionResponse::Deserialize(const string &payload)
     {
         if (!rsp["FunctionVersion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FunctionVersion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FunctionVersion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_functionVersion = string(rsp["FunctionVersion"].GetString());
         m_functionVersionHasBeenSet = true;
@@ -84,7 +83,7 @@ CoreInternalOutcome PublishVersionResponse::Deserialize(const string &payload)
     {
         if (!rsp["CodeSize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `CodeSize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CodeSize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_codeSize = rsp["CodeSize"].GetInt64();
         m_codeSizeHasBeenSet = true;
@@ -94,7 +93,7 @@ CoreInternalOutcome PublishVersionResponse::Deserialize(const string &payload)
     {
         if (!rsp["MemorySize"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MemorySize` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MemorySize` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_memorySize = rsp["MemorySize"].GetInt64();
         m_memorySizeHasBeenSet = true;
@@ -104,7 +103,7 @@ CoreInternalOutcome PublishVersionResponse::Deserialize(const string &payload)
     {
         if (!rsp["Description"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Description` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Description` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_description = string(rsp["Description"].GetString());
         m_descriptionHasBeenSet = true;
@@ -114,7 +113,7 @@ CoreInternalOutcome PublishVersionResponse::Deserialize(const string &payload)
     {
         if (!rsp["Handler"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Handler` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Handler` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_handler = string(rsp["Handler"].GetString());
         m_handlerHasBeenSet = true;
@@ -124,7 +123,7 @@ CoreInternalOutcome PublishVersionResponse::Deserialize(const string &payload)
     {
         if (!rsp["Timeout"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `Timeout` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Timeout` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_timeout = rsp["Timeout"].GetInt64();
         m_timeoutHasBeenSet = true;
@@ -134,7 +133,7 @@ CoreInternalOutcome PublishVersionResponse::Deserialize(const string &payload)
     {
         if (!rsp["Runtime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Runtime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Runtime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_runtime = string(rsp["Runtime"].GetString());
         m_runtimeHasBeenSet = true;
@@ -144,7 +143,7 @@ CoreInternalOutcome PublishVersionResponse::Deserialize(const string &payload)
     {
         if (!rsp["Namespace"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Namespace` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Namespace` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_namespace = string(rsp["Namespace"].GetString());
         m_namespaceHasBeenSet = true;
@@ -152,6 +151,87 @@ CoreInternalOutcome PublishVersionResponse::Deserialize(const string &payload)
 
 
     return CoreInternalOutcome(true);
+}
+
+string PublishVersionResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_functionVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FunctionVersion";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_functionVersion.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_codeSizeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CodeSize";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_codeSize, allocator);
+    }
+
+    if (m_memorySizeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MemorySize";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_memorySize, allocator);
+    }
+
+    if (m_descriptionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Description";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_handlerHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Handler";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_handler.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_timeoutHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Timeout";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_timeout, allocator);
+    }
+
+    if (m_runtimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Runtime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_runtime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_namespaceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Namespace";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_namespace.c_str(), allocator).Move(), allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

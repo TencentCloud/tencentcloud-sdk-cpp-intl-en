@@ -20,35 +20,35 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 SimpleHlsClipRequest::SimpleHlsClipRequest() :
     m_urlHasBeenSet(false),
     m_startTimeOffsetHasBeenSet(false),
     m_endTimeOffsetHasBeenSet(false),
+    m_isPersistenceHasBeenSet(false),
     m_subAppIdHasBeenSet(false)
 {
 }
 
 string SimpleHlsClipRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_urlHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Url";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_url.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_url.c_str(), allocator).Move(), allocator);
     }
 
     if (m_startTimeOffsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTimeOffset";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_startTimeOffset, allocator);
@@ -56,23 +56,31 @@ string SimpleHlsClipRequest::ToJsonString() const
 
     if (m_endTimeOffsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndTimeOffset";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_endTimeOffset, allocator);
     }
 
+    if (m_isPersistenceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsPersistence";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_isPersistence, allocator);
+    }
+
     if (m_subAppIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubAppId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_subAppId, allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -124,6 +132,22 @@ void SimpleHlsClipRequest::SetEndTimeOffset(const double& _endTimeOffset)
 bool SimpleHlsClipRequest::EndTimeOffsetHasBeenSet() const
 {
     return m_endTimeOffsetHasBeenSet;
+}
+
+int64_t SimpleHlsClipRequest::GetIsPersistence() const
+{
+    return m_isPersistence;
+}
+
+void SimpleHlsClipRequest::SetIsPersistence(const int64_t& _isPersistence)
+{
+    m_isPersistence = _isPersistence;
+    m_isPersistenceHasBeenSet = true;
+}
+
+bool SimpleHlsClipRequest::IsPersistenceHasBeenSet() const
+{
+    return m_isPersistenceHasBeenSet;
 }
 
 uint64_t SimpleHlsClipRequest::GetSubAppId() const

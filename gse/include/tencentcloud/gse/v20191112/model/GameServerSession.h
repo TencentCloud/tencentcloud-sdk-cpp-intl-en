@@ -66,18 +66,18 @@ namespace TencentCloud
                     bool CreationTimeHasBeenSet() const;
 
                     /**
-                     * 获取Creator ID
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CreatorId Creator ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Creator ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return CreatorId Creator ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string GetCreatorId() const;
 
                     /**
-                     * 设置Creator ID
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreatorId Creator ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Creator ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param CreatorId Creator ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     void SetCreatorId(const std::string& _creatorId);
 
@@ -88,14 +88,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CreatorIdHasBeenSet() const;
 
                     /**
-                     * 获取Current number of players
-                     * @return CurrentPlayerSessionCount Current number of players
+                     * 获取The current number of players, which cannot be less than 0.
+                     * @return CurrentPlayerSessionCount The current number of players, which cannot be less than 0.
                      */
                     uint64_t GetCurrentPlayerSessionCount() const;
 
                     /**
-                     * 设置Current number of players
-                     * @param CurrentPlayerSessionCount Current number of players
+                     * 设置The current number of players, which cannot be less than 0.
+                     * @param CurrentPlayerSessionCount The current number of players, which cannot be less than 0.
                      */
                     void SetCurrentPlayerSessionCount(const uint64_t& _currentPlayerSessionCount);
 
@@ -146,18 +146,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool FleetIdHasBeenSet() const;
 
                     /**
-                     * 获取Game attributes
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return GameProperties Game attributes
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Game attributes. Up to 16 groups of attributes are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return GameProperties Game attributes. Up to 16 groups of attributes are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::vector<GameProperty> GetGameProperties() const;
 
                     /**
-                     * 设置Game attributes
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param GameProperties Game attributes
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Game attributes. Up to 16 groups of attributes are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param GameProperties Game attributes. Up to 16 groups of attributes are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     void SetGameProperties(const std::vector<GameProperty>& _gameProperties);
 
@@ -168,18 +168,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool GamePropertiesHasBeenSet() const;
 
                     /**
-                     * 获取Game server session attribute details
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return GameServerSessionData Game server session attribute details
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取The attribute details of game server session. Up to 4096 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return GameServerSessionData The attribute details of game server session. Up to 4096 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string GetGameServerSessionData() const;
 
                     /**
-                     * 设置Game server session attribute details
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param GameServerSessionData Game server session attribute details
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置The attribute details of game server session. Up to 4096 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param GameServerSessionData The attribute details of game server session. Up to 4096 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     void SetGameServerSessionData(const std::string& _gameServerSessionData);
 
@@ -190,14 +190,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool GameServerSessionDataHasBeenSet() const;
 
                     /**
-                     * 获取Game server session ID
-                     * @return GameServerSessionId Game server session ID
+                     * 获取Game server session ID. It should contain 1 to 48 ASCII characters.
+                     * @return GameServerSessionId Game server session ID. It should contain 1 to 48 ASCII characters.
                      */
                     std::string GetGameServerSessionId() const;
 
                     /**
-                     * 设置Game server session ID
-                     * @param GameServerSessionId Game server session ID
+                     * 设置Game server session ID. It should contain 1 to 48 ASCII characters.
+                     * @param GameServerSessionId Game server session ID. It should contain 1 to 48 ASCII characters.
                      */
                     void SetGameServerSessionId(const std::string& _gameServerSessionId);
 
@@ -226,18 +226,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IpAddressHasBeenSet() const;
 
                     /**
-                     * 获取Battle progress details
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MatchmakerData Battle progress details
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Battle progress details. Up to 400,000 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return MatchmakerData Battle progress details. Up to 400,000 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string GetMatchmakerData() const;
 
                     /**
-                     * 设置Battle progress details
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MatchmakerData Battle progress details
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Battle progress details. Up to 400,000 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param MatchmakerData Battle progress details. Up to 400,000 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     void SetMatchmakerData(const std::string& _matchmakerData);
 
@@ -248,14 +248,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MatchmakerDataHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of players
-                     * @return MaximumPlayerSessionCount Maximum number of players
+                     * 获取The maximum number of players, which cannot be less than 0.
+                     * @return MaximumPlayerSessionCount The maximum number of players, which cannot be less than 0.
                      */
                     uint64_t GetMaximumPlayerSessionCount() const;
 
                     /**
-                     * 设置Maximum number of players
-                     * @param MaximumPlayerSessionCount Maximum number of players
+                     * 设置The maximum number of players, which cannot be less than 0.
+                     * @param MaximumPlayerSessionCount The maximum number of players, which cannot be less than 0.
                      */
                     void SetMaximumPlayerSessionCount(const uint64_t& _maximumPlayerSessionCount);
 
@@ -266,18 +266,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MaximumPlayerSessionCountHasBeenSet() const;
 
                     /**
-                     * 获取Game server session name
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Name Game server session name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取The name of game server session. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return Name The name of game server session. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Game server session name
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Name Game server session name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置The name of game server session. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param Name The name of game server session. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     void SetName(const std::string& _name);
 
@@ -288,18 +288,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Player session creation policy
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PlayerSessionCreationPolicy Player session creation policy
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return PlayerSessionCreationPolicy Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string GetPlayerSessionCreationPolicy() const;
 
                     /**
-                     * 设置Player session creation policy
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PlayerSessionCreationPolicy Player session creation policy
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param PlayerSessionCreationPolicy Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     void SetPlayerSessionCreationPolicy(const std::string& _playerSessionCreationPolicy);
 
@@ -310,14 +310,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PlayerSessionCreationPolicyHasBeenSet() const;
 
                     /**
-                     * 获取Port number
-                     * @return Port Port number
+                     * 获取Port number. It should be a value between 1 to 60000.
+                     * @return Port Port number. It should be a value between 1 to 60000.
                      */
                     uint64_t GetPort() const;
 
                     /**
-                     * 设置Port number
-                     * @param Port Port number
+                     * 设置Port number. It should be a value between 1 to 60000.
+                     * @param Port Port number. It should be a value between 1 to 60000.
                      */
                     void SetPort(const uint64_t& _port);
 
@@ -328,14 +328,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Game server session status
-                     * @return Status Game server session status
+                     * 获取Game server session status. Valid values: ACTIVE, ACTIVATING, TERMINATED, TERMINATING, ERROR
+                     * @return Status Game server session status. Valid values: ACTIVE, ACTIVATING, TERMINATED, TERMINATING, ERROR
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Game server session status
-                     * @param Status Game server session status
+                     * 设置Game server session status. Valid values: ACTIVE, ACTIVATING, TERMINATED, TERMINATING, ERROR
+                     * @param Status Game server session status. Valid values: ACTIVE, ACTIVATING, TERMINATED, TERMINATING, ERROR
                      */
                     void SetStatus(const std::string& _status);
 
@@ -390,18 +390,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TerminationTimeHasBeenSet() const;
 
                     /**
-                     * 获取Instance type
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceType Instance type
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance type. Up to 128 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return InstanceType Instance type. Up to 128 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Instance type
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceType Instance type
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance type. Up to 128 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param InstanceType Instance type. Up to 128 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
@@ -478,18 +478,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool WeightHasBeenSet() const;
 
                     /**
-                     * 获取Session availability status, i.e., whether it is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AvailabilityStatus Session availability status, i.e., whether it is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Session availability status, i.e., whether it is blocked. Valid value: Enable, Disable
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return AvailabilityStatus Session availability status, i.e., whether it is blocked. Valid value: Enable, Disable
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string GetAvailabilityStatus() const;
 
                     /**
-                     * 设置Session availability status, i.e., whether it is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AvailabilityStatus Session availability status, i.e., whether it is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Session availability status, i.e., whether it is blocked. Valid value: Enable, Disable
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param AvailabilityStatus Session availability status, i.e., whether it is blocked. Valid value: Enable, Disable
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     void SetAvailabilityStatus(const std::string& _availabilityStatus);
 
@@ -508,14 +508,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_creationTimeHasBeenSet;
 
                     /**
-                     * Creator ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Creator ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string m_creatorId;
                     bool m_creatorIdHasBeenSet;
 
                     /**
-                     * Current number of players
+                     * The current number of players, which cannot be less than 0.
                      */
                     uint64_t m_currentPlayerSessionCount;
                     bool m_currentPlayerSessionCountHasBeenSet;
@@ -534,21 +534,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_fleetIdHasBeenSet;
 
                     /**
-                     * Game attributes
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Game attributes. Up to 16 groups of attributes are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::vector<GameProperty> m_gameProperties;
                     bool m_gamePropertiesHasBeenSet;
 
                     /**
-                     * Game server session attribute details
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * The attribute details of game server session. Up to 4096 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string m_gameServerSessionData;
                     bool m_gameServerSessionDataHasBeenSet;
 
                     /**
-                     * Game server session ID
+                     * Game server session ID. It should contain 1 to 48 ASCII characters.
                      */
                     std::string m_gameServerSessionId;
                     bool m_gameServerSessionIdHasBeenSet;
@@ -560,40 +560,40 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_ipAddressHasBeenSet;
 
                     /**
-                     * Battle progress details
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Battle progress details. Up to 400,000 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string m_matchmakerData;
                     bool m_matchmakerDataHasBeenSet;
 
                     /**
-                     * Maximum number of players
+                     * The maximum number of players, which cannot be less than 0.
                      */
                     uint64_t m_maximumPlayerSessionCount;
                     bool m_maximumPlayerSessionCountHasBeenSet;
 
                     /**
-                     * Game server session name
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * The name of game server session. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Player session creation policy
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string m_playerSessionCreationPolicy;
                     bool m_playerSessionCreationPolicyHasBeenSet;
 
                     /**
-                     * Port number
+                     * Port number. It should be a value between 1 to 60000.
                      */
                     uint64_t m_port;
                     bool m_portHasBeenSet;
 
                     /**
-                     * Game server session status
+                     * Game server session status. Valid values: ACTIVE, ACTIVATING, TERMINATED, TERMINATING, ERROR
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -613,8 +613,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_terminationTimeHasBeenSet;
 
                     /**
-                     * Instance type
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Instance type. Up to 128 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
@@ -641,8 +641,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_weightHasBeenSet;
 
                     /**
-                     * Session availability status, i.e., whether it is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Session availability status, i.e., whether it is blocked. Valid value: Enable, Disable
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string m_availabilityStatus;
                     bool m_availabilityStatusHasBeenSet;

@@ -96,6 +96,24 @@ namespace TencentCloud
                      */
                     bool DestinationInstanceIdHasBeenSet() const;
 
+                    /**
+                     * 获取ENI mount method. Valid values: 0: standard; 1: extension; default value: 0
+                     * @return AttachType ENI mount method. Valid values: 0: standard; 1: extension; default value: 0
+                     */
+                    uint64_t GetAttachType() const;
+
+                    /**
+                     * 设置ENI mount method. Valid values: 0: standard; 1: extension; default value: 0
+                     * @param AttachType ENI mount method. Valid values: 0: standard; 1: extension; default value: 0
+                     */
+                    void SetAttachType(const uint64_t& _attachType);
+
+                    /**
+                     * 判断参数 AttachType 是否已赋值
+                     * @return AttachType 是否已赋值
+                     */
+                    bool AttachTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +133,12 @@ namespace TencentCloud
                      */
                     std::string m_destinationInstanceId;
                     bool m_destinationInstanceIdHasBeenSet;
+
+                    /**
+                     * ENI mount method. Valid values: 0: standard; 1: extension; default value: 0
+                     */
+                    uint64_t m_attachType;
+                    bool m_attachTypeHasBeenSet;
 
                 };
             }

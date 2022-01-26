@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 AiRecognitionTaskFaceSegmentItem::AiRecognitionTaskFaceSegmentItem() :
@@ -29,16 +28,16 @@ AiRecognitionTaskFaceSegmentItem::AiRecognitionTaskFaceSegmentItem() :
 {
 }
 
-CoreInternalOutcome AiRecognitionTaskFaceSegmentItem::Deserialize(const Value &value)
+CoreInternalOutcome AiRecognitionTaskFaceSegmentItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
 
     if (value.HasMember("StartTimeOffset") && !value["StartTimeOffset"].IsNull())
     {
-        if (!value["StartTimeOffset"].IsDouble())
+        if (!value["StartTimeOffset"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `AiRecognitionTaskFaceSegmentItem.StartTimeOffset` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionTaskFaceSegmentItem.StartTimeOffset` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_startTimeOffset = value["StartTimeOffset"].GetDouble();
         m_startTimeOffsetHasBeenSet = true;
@@ -46,9 +45,9 @@ CoreInternalOutcome AiRecognitionTaskFaceSegmentItem::Deserialize(const Value &v
 
     if (value.HasMember("EndTimeOffset") && !value["EndTimeOffset"].IsNull())
     {
-        if (!value["EndTimeOffset"].IsDouble())
+        if (!value["EndTimeOffset"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `AiRecognitionTaskFaceSegmentItem.EndTimeOffset` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionTaskFaceSegmentItem.EndTimeOffset` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_endTimeOffset = value["EndTimeOffset"].GetDouble();
         m_endTimeOffsetHasBeenSet = true;
@@ -56,9 +55,9 @@ CoreInternalOutcome AiRecognitionTaskFaceSegmentItem::Deserialize(const Value &v
 
     if (value.HasMember("Confidence") && !value["Confidence"].IsNull())
     {
-        if (!value["Confidence"].IsDouble())
+        if (!value["Confidence"].IsLosslessDouble())
         {
-            return CoreInternalOutcome(Error("response `AiRecognitionTaskFaceSegmentItem.Confidence` IsDouble=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionTaskFaceSegmentItem.Confidence` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
         }
         m_confidence = value["Confidence"].GetDouble();
         m_confidenceHasBeenSet = true;
@@ -67,10 +66,10 @@ CoreInternalOutcome AiRecognitionTaskFaceSegmentItem::Deserialize(const Value &v
     if (value.HasMember("AreaCoordSet") && !value["AreaCoordSet"].IsNull())
     {
         if (!value["AreaCoordSet"].IsArray())
-            return CoreInternalOutcome(Error("response `AiRecognitionTaskFaceSegmentItem.AreaCoordSet` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `AiRecognitionTaskFaceSegmentItem.AreaCoordSet` is not array type"));
 
-        const Value &tmpValue = value["AreaCoordSet"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["AreaCoordSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_areaCoordSet.push_back((*itr).GetInt64());
         }
@@ -81,12 +80,12 @@ CoreInternalOutcome AiRecognitionTaskFaceSegmentItem::Deserialize(const Value &v
     return CoreInternalOutcome(true);
 }
 
-void AiRecognitionTaskFaceSegmentItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AiRecognitionTaskFaceSegmentItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_startTimeOffsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTimeOffset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_startTimeOffset, allocator);
@@ -94,7 +93,7 @@ void AiRecognitionTaskFaceSegmentItem::ToJsonObject(Value &value, Document::Allo
 
     if (m_endTimeOffsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndTimeOffset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_endTimeOffset, allocator);
@@ -102,7 +101,7 @@ void AiRecognitionTaskFaceSegmentItem::ToJsonObject(Value &value, Document::Allo
 
     if (m_confidenceHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Confidence";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_confidence, allocator);
@@ -110,14 +109,14 @@ void AiRecognitionTaskFaceSegmentItem::ToJsonObject(Value &value, Document::Allo
 
     if (m_areaCoordSetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AreaCoordSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_areaCoordSet.begin(); itr != m_areaCoordSet.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 

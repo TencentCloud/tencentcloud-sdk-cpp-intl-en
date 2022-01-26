@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cvm::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 DisasterRecoverGroup::DisasterRecoverGroup() :
@@ -32,7 +31,7 @@ DisasterRecoverGroup::DisasterRecoverGroup() :
 {
 }
 
-CoreInternalOutcome DisasterRecoverGroup::Deserialize(const Value &value)
+CoreInternalOutcome DisasterRecoverGroup::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +40,7 @@ CoreInternalOutcome DisasterRecoverGroup::Deserialize(const Value &value)
     {
         if (!value["DisasterRecoverGroupId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DisasterRecoverGroup.DisasterRecoverGroupId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DisasterRecoverGroup.DisasterRecoverGroupId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_disasterRecoverGroupId = string(value["DisasterRecoverGroupId"].GetString());
         m_disasterRecoverGroupIdHasBeenSet = true;
@@ -51,7 +50,7 @@ CoreInternalOutcome DisasterRecoverGroup::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DisasterRecoverGroup.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DisasterRecoverGroup.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -61,7 +60,7 @@ CoreInternalOutcome DisasterRecoverGroup::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DisasterRecoverGroup.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DisasterRecoverGroup.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -71,7 +70,7 @@ CoreInternalOutcome DisasterRecoverGroup::Deserialize(const Value &value)
     {
         if (!value["CvmQuotaTotal"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DisasterRecoverGroup.CvmQuotaTotal` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DisasterRecoverGroup.CvmQuotaTotal` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_cvmQuotaTotal = value["CvmQuotaTotal"].GetInt64();
         m_cvmQuotaTotalHasBeenSet = true;
@@ -81,7 +80,7 @@ CoreInternalOutcome DisasterRecoverGroup::Deserialize(const Value &value)
     {
         if (!value["CurrentNum"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DisasterRecoverGroup.CurrentNum` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DisasterRecoverGroup.CurrentNum` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_currentNum = value["CurrentNum"].GetInt64();
         m_currentNumHasBeenSet = true;
@@ -90,10 +89,10 @@ CoreInternalOutcome DisasterRecoverGroup::Deserialize(const Value &value)
     if (value.HasMember("InstanceIds") && !value["InstanceIds"].IsNull())
     {
         if (!value["InstanceIds"].IsArray())
-            return CoreInternalOutcome(Error("response `DisasterRecoverGroup.InstanceIds` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DisasterRecoverGroup.InstanceIds` is not array type"));
 
-        const Value &tmpValue = value["InstanceIds"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["InstanceIds"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_instanceIds.push_back((*itr).GetString());
         }
@@ -104,7 +103,7 @@ CoreInternalOutcome DisasterRecoverGroup::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DisasterRecoverGroup.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DisasterRecoverGroup.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -114,36 +113,36 @@ CoreInternalOutcome DisasterRecoverGroup::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void DisasterRecoverGroup::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DisasterRecoverGroup::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_disasterRecoverGroupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DisasterRecoverGroupId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_disasterRecoverGroupId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_disasterRecoverGroupId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cvmQuotaTotalHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CvmQuotaTotal";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cvmQuotaTotal, allocator);
@@ -151,7 +150,7 @@ void DisasterRecoverGroup::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_currentNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CurrentNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_currentNum, allocator);
@@ -159,23 +158,23 @@ void DisasterRecoverGroup::ToJsonObject(Value &value, Document::AllocatorType& a
 
     if (m_instanceIdsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceIds";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_instanceIds.begin(); itr != m_instanceIds.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
 }

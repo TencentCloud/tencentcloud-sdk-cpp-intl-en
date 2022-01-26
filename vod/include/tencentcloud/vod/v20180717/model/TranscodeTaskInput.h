@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vod/v20180717/model/WatermarkInput.h>
 #include <tencentcloud/vod/v20180717/model/MosaicInput.h>
+#include <tencentcloud/vod/v20180717/model/HeadTailTaskInput.h>
 
 
 namespace TencentCloud
@@ -106,6 +107,84 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool MosaicSetHasBeenSet() const;
 
+                    /**
+                     * 获取List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
+                     * @return HeadTailSet List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
+                     */
+                    std::vector<HeadTailTaskInput> GetHeadTailSet() const;
+
+                    /**
+                     * 设置List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
+                     * @param HeadTailSet List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
+                     */
+                    void SetHeadTailSet(const std::vector<HeadTailTaskInput>& _headTailSet);
+
+                    /**
+                     * 判断参数 HeadTailSet 是否已赋值
+                     * @return HeadTailSet 是否已赋值
+                     */
+                    bool HeadTailSetHasBeenSet() const;
+
+                    /**
+                     * 获取Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+                     * @return StartTimeOffset Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+                     */
+                    double GetStartTimeOffset() const;
+
+                    /**
+                     * 设置Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+                     * @param StartTimeOffset Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+                     */
+                    void SetStartTimeOffset(const double& _startTimeOffset);
+
+                    /**
+                     * 判断参数 StartTimeOffset 是否已赋值
+                     * @return StartTimeOffset 是否已赋值
+                     */
+                    bool StartTimeOffsetHasBeenSet() const;
+
+                    /**
+                     * 获取End time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+                     * @return EndTimeOffset End time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+                     */
+                    double GetEndTimeOffset() const;
+
+                    /**
+                     * 设置End time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+                     * @param EndTimeOffset End time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+                     */
+                    void SetEndTimeOffset(const double& _endTimeOffset);
+
+                    /**
+                     * 判断参数 EndTimeOffset 是否已赋值
+                     * @return EndTimeOffset 是否已赋值
+                     */
+                    bool EndTimeOffsetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -126,6 +205,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<MosaicInput> m_mosaicSet;
                     bool m_mosaicSetHasBeenSet;
+
+                    /**
+                     * List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
+                     */
+                    std::vector<HeadTailTaskInput> m_headTailSet;
+                    bool m_headTailSetHasBeenSet;
+
+                    /**
+                     * Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+                     */
+                    double m_startTimeOffset;
+                    bool m_startTimeOffsetHasBeenSet;
+
+                    /**
+                     * End time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+                     */
+                    double m_endTimeOffset;
+                    bool m_endTimeOffsetHasBeenSet;
 
                 };
             }

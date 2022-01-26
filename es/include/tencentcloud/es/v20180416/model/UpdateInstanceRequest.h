@@ -25,6 +25,8 @@
 #include <tencentcloud/es/v20180416/model/CosBackup.h>
 #include <tencentcloud/es/v20180416/model/NodeInfo.h>
 #include <tencentcloud/es/v20180416/model/EsPublicAcl.h>
+#include <tencentcloud/es/v20180416/model/ZoneDetail.h>
+#include <tencentcloud/es/v20180416/model/WebNodeTypeInfo.h>
 
 
 namespace TencentCloud
@@ -84,17 +86,17 @@ namespace TencentCloud
 
                     /**
                      * 获取This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2–50)
+Number of nodes (2-50)
                      * @return NodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2–50)
+Number of nodes (2-50)
                      */
                     uint64_t GetNodeNum() const;
 
                     /**
                      * 设置This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2–50)
+Number of nodes (2-50)
                      * @param NodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2–50)
+Number of nodes (2-50)
                      */
                     void SetNodeNum(const uint64_t& _nodeNum);
 
@@ -105,14 +107,14 @@ Number of nodes (2–50)
                     bool NodeNumHasBeenSet() const;
 
                     /**
-                     * 获取Configuration item (JSON string). Only the following items are supported currently: <li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
-                     * @return EsConfig Configuration item (JSON string). Only the following items are supported currently: <li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+                     * 获取ES configuration item (JSON string)
+                     * @return EsConfig ES configuration item (JSON string)
                      */
                     std::string GetEsConfig() const;
 
                     /**
-                     * 设置Configuration item (JSON string). Only the following items are supported currently: <li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
-                     * @param EsConfig Configuration item (JSON string). Only the following items are supported currently: <li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+                     * 设置ES configuration item (JSON string)
+                     * @param EsConfig ES configuration item (JSON string)
                      */
                     void SetEsConfig(const std::string& _esConfig);
 
@@ -123,14 +125,14 @@ Number of nodes (2–50)
                     bool EsConfigHasBeenSet() const;
 
                     /**
-                     * 获取Password of the default user “elastic“, which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
-                     * @return Password Password of the default user “elastic“, which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
+                     * 获取Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
+                     * @return Password Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置Password of the default user “elastic“, which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
-                     * @param Password Password of the default user “elastic“, which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
+                     * 设置Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
+                     * @param Password Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
                      */
                     void SetPassword(const std::string& _password);
 
@@ -204,17 +206,17 @@ Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 
 
                     /**
                      * 获取This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated master nodes (only 3 and 5 are supported)
+Number of dedicated primary nodes (only 3 and 5 are supported)
                      * @return MasterNodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated master nodes (only 3 and 5 are supported)
+Number of dedicated primary nodes (only 3 and 5 are supported)
                      */
                     uint64_t GetMasterNodeNum() const;
 
                     /**
                      * 设置This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated master nodes (only 3 and 5 are supported)
+Number of dedicated primary nodes (only 3 and 5 are supported)
                      * @param MasterNodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated master nodes (only 3 and 5 are supported)
+Number of dedicated primary nodes (only 3 and 5 are supported)
                      */
                     void SetMasterNodeNum(const uint64_t& _masterNodeNum);
 
@@ -226,17 +228,17 @@ Number of dedicated master nodes (only 3 and 5 are supported)
 
                     /**
                      * 获取This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
                      * @return MasterNodeType This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
                      */
                     std::string GetMasterNodeType() const;
 
                     /**
                      * 设置This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
                      * @param MasterNodeType This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
                      */
                     void SetMasterNodeType(const std::string& _masterNodeType);
 
@@ -248,17 +250,17 @@ Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.
 
                     /**
                      * 获取This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
+Dedicated primary node disk size in GB. This is 50 GB by default and currently cannot be customized
                      * @return MasterNodeDiskSize This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
+Dedicated primary node disk size in GB. This is 50 GB by default and currently cannot be customized
                      */
                     uint64_t GetMasterNodeDiskSize() const;
 
                     /**
                      * 设置This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
+Dedicated primary node disk size in GB. This is 50 GB by default and currently cannot be customized
                      * @param MasterNodeDiskSize This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
+Dedicated primary node disk size in GB. This is 50 GB by default and currently cannot be customized
                      */
                     void SetMasterNodeDiskSize(const uint64_t& _masterNodeDiskSize);
 
@@ -430,6 +432,168 @@ Dedicated master node disk size in GB. This is 50 GB by default and currently ca
                      */
                     bool KibanaPrivatePortHasBeenSet() const;
 
+                    /**
+                     * 获取0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
+                     * @return ScaleType 0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
+                     */
+                    int64_t GetScaleType() const;
+
+                    /**
+                     * 设置0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
+                     * @param ScaleType 0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
+                     */
+                    void SetScaleType(const int64_t& _scaleType);
+
+                    /**
+                     * 判断参数 ScaleType 是否已赋值
+                     * @return ScaleType 是否已赋值
+                     */
+                    bool ScaleTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Multi-AZ deployment
+                     * @return MultiZoneInfo Multi-AZ deployment
+                     */
+                    std::vector<ZoneDetail> GetMultiZoneInfo() const;
+
+                    /**
+                     * 设置Multi-AZ deployment
+                     * @param MultiZoneInfo Multi-AZ deployment
+                     */
+                    void SetMultiZoneInfo(const std::vector<ZoneDetail>& _multiZoneInfo);
+
+                    /**
+                     * 判断参数 MultiZoneInfo 是否已赋值
+                     * @return MultiZoneInfo 是否已赋值
+                     */
+                    bool MultiZoneInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
+                     * @return SceneType Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
+                     */
+                    int64_t GetSceneType() const;
+
+                    /**
+                     * 设置Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
+                     * @param SceneType Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
+                     */
+                    void SetSceneType(const int64_t& _sceneType);
+
+                    /**
+                     * 判断参数 SceneType 是否已赋值
+                     * @return SceneType 是否已赋值
+                     */
+                    bool SceneTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Kibana configuration item (JSON string)
+                     * @return KibanaConfig Kibana configuration item (JSON string)
+                     */
+                    std::string GetKibanaConfig() const;
+
+                    /**
+                     * 设置Kibana configuration item (JSON string)
+                     * @param KibanaConfig Kibana configuration item (JSON string)
+                     */
+                    void SetKibanaConfig(const std::string& _kibanaConfig);
+
+                    /**
+                     * 判断参数 KibanaConfig 是否已赋值
+                     * @return KibanaConfig 是否已赋值
+                     */
+                    bool KibanaConfigHasBeenSet() const;
+
+                    /**
+                     * 获取Visual node configuration
+                     * @return WebNodeTypeInfo Visual node configuration
+                     */
+                    WebNodeTypeInfo GetWebNodeTypeInfo() const;
+
+                    /**
+                     * 设置Visual node configuration
+                     * @param WebNodeTypeInfo Visual node configuration
+                     */
+                    void SetWebNodeTypeInfo(const WebNodeTypeInfo& _webNodeTypeInfo);
+
+                    /**
+                     * 判断参数 WebNodeTypeInfo 是否已赋值
+                     * @return WebNodeTypeInfo 是否已赋值
+                     */
+                    bool WebNodeTypeInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to switch to the new network architecture
+                     * @return SwitchPrivateLink Whether to switch to the new network architecture
+                     */
+                    std::string GetSwitchPrivateLink() const;
+
+                    /**
+                     * 设置Whether to switch to the new network architecture
+                     * @param SwitchPrivateLink Whether to switch to the new network architecture
+                     */
+                    void SetSwitchPrivateLink(const std::string& _switchPrivateLink);
+
+                    /**
+                     * 判断参数 SwitchPrivateLink 是否已赋值
+                     * @return SwitchPrivateLink 是否已赋值
+                     */
+                    bool SwitchPrivateLinkHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable Cerebro
+                     * @return EnableCerebro Whether to enable Cerebro
+                     */
+                    bool GetEnableCerebro() const;
+
+                    /**
+                     * 设置Whether to enable Cerebro
+                     * @param EnableCerebro Whether to enable Cerebro
+                     */
+                    void SetEnableCerebro(const bool& _enableCerebro);
+
+                    /**
+                     * 判断参数 EnableCerebro 是否已赋值
+                     * @return EnableCerebro 是否已赋值
+                     */
+                    bool EnableCerebroHasBeenSet() const;
+
+                    /**
+                     * 获取Cerebro public network access status
+                     * @return CerebroPublicAccess Cerebro public network access status
+                     */
+                    std::string GetCerebroPublicAccess() const;
+
+                    /**
+                     * 设置Cerebro public network access status
+                     * @param CerebroPublicAccess Cerebro public network access status
+                     */
+                    void SetCerebroPublicAccess(const std::string& _cerebroPublicAccess);
+
+                    /**
+                     * 判断参数 CerebroPublicAccess 是否已赋值
+                     * @return CerebroPublicAccess 是否已赋值
+                     */
+                    bool CerebroPublicAccessHasBeenSet() const;
+
+                    /**
+                     * 获取Cerebro private network access status
+                     * @return CerebroPrivateAccess Cerebro private network access status
+                     */
+                    std::string GetCerebroPrivateAccess() const;
+
+                    /**
+                     * 设置Cerebro private network access status
+                     * @param CerebroPrivateAccess Cerebro private network access status
+                     */
+                    void SetCerebroPrivateAccess(const std::string& _cerebroPrivateAccess);
+
+                    /**
+                     * 判断参数 CerebroPrivateAccess 是否已赋值
+                     * @return CerebroPrivateAccess 是否已赋值
+                     */
+                    bool CerebroPrivateAccessHasBeenSet() const;
+
                 private:
 
                     /**
@@ -446,19 +610,19 @@ Dedicated master node disk size in GB. This is 50 GB by default and currently ca
 
                     /**
                      * This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2–50)
+Number of nodes (2-50)
                      */
                     uint64_t m_nodeNum;
                     bool m_nodeNumHasBeenSet;
 
                     /**
-                     * Configuration item (JSON string). Only the following items are supported currently: <li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+                     * ES configuration item (JSON string)
                      */
                     std::string m_esConfig;
                     bool m_esConfigHasBeenSet;
 
                     /**
-                     * Password of the default user “elastic“, which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
+                     * Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
@@ -485,21 +649,21 @@ Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 
 
                     /**
                      * This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated master nodes (only 3 and 5 are supported)
+Number of dedicated primary nodes (only 3 and 5 are supported)
                      */
                     uint64_t m_masterNodeNum;
                     bool m_masterNodeNumHasBeenSet;
 
                     /**
                      * This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
                      */
                     std::string m_masterNodeType;
                     bool m_masterNodeTypeHasBeenSet;
 
                     /**
                      * This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
+Dedicated primary node disk size in GB. This is 50 GB by default and currently cannot be customized
                      */
                     uint64_t m_masterNodeDiskSize;
                     bool m_masterNodeDiskSizeHasBeenSet;
@@ -557,6 +721,60 @@ Dedicated master node disk size in GB. This is 50 GB by default and currently ca
                      */
                     uint64_t m_kibanaPrivatePort;
                     bool m_kibanaPrivatePortHasBeenSet;
+
+                    /**
+                     * 0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
+                     */
+                    int64_t m_scaleType;
+                    bool m_scaleTypeHasBeenSet;
+
+                    /**
+                     * Multi-AZ deployment
+                     */
+                    std::vector<ZoneDetail> m_multiZoneInfo;
+                    bool m_multiZoneInfoHasBeenSet;
+
+                    /**
+                     * Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
+                     */
+                    int64_t m_sceneType;
+                    bool m_sceneTypeHasBeenSet;
+
+                    /**
+                     * Kibana configuration item (JSON string)
+                     */
+                    std::string m_kibanaConfig;
+                    bool m_kibanaConfigHasBeenSet;
+
+                    /**
+                     * Visual node configuration
+                     */
+                    WebNodeTypeInfo m_webNodeTypeInfo;
+                    bool m_webNodeTypeInfoHasBeenSet;
+
+                    /**
+                     * Whether to switch to the new network architecture
+                     */
+                    std::string m_switchPrivateLink;
+                    bool m_switchPrivateLinkHasBeenSet;
+
+                    /**
+                     * Whether to enable Cerebro
+                     */
+                    bool m_enableCerebro;
+                    bool m_enableCerebroHasBeenSet;
+
+                    /**
+                     * Cerebro public network access status
+                     */
+                    std::string m_cerebroPublicAccess;
+                    bool m_cerebroPublicAccessHasBeenSet;
+
+                    /**
+                     * Cerebro private network access status
+                     */
+                    std::string m_cerebroPrivateAccess;
+                    bool m_cerebroPrivateAccessHasBeenSet;
 
                 };
             }

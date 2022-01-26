@@ -18,18 +18,18 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Yunjing::V20180228::Model;
-using namespace rapidjson;
 using namespace std;
 
 SecurityDynamic::SecurityDynamic() :
     m_uuidHasBeenSet(false),
     m_eventTimeHasBeenSet(false),
     m_eventTypeHasBeenSet(false),
-    m_messageHasBeenSet(false)
+    m_messageHasBeenSet(false),
+    m_securityLevelHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome SecurityDynamic::Deserialize(const Value &value)
+CoreInternalOutcome SecurityDynamic::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +38,7 @@ CoreInternalOutcome SecurityDynamic::Deserialize(const Value &value)
     {
         if (!value["Uuid"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityDynamic.Uuid` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityDynamic.Uuid` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_uuid = string(value["Uuid"].GetString());
         m_uuidHasBeenSet = true;
@@ -48,7 +48,7 @@ CoreInternalOutcome SecurityDynamic::Deserialize(const Value &value)
     {
         if (!value["EventTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityDynamic.EventTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityDynamic.EventTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_eventTime = string(value["EventTime"].GetString());
         m_eventTimeHasBeenSet = true;
@@ -58,7 +58,7 @@ CoreInternalOutcome SecurityDynamic::Deserialize(const Value &value)
     {
         if (!value["EventType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityDynamic.EventType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityDynamic.EventType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_eventType = string(value["EventType"].GetString());
         m_eventTypeHasBeenSet = true;
@@ -68,49 +68,67 @@ CoreInternalOutcome SecurityDynamic::Deserialize(const Value &value)
     {
         if (!value["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityDynamic.Message` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityDynamic.Message` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_message = string(value["Message"].GetString());
         m_messageHasBeenSet = true;
+    }
+
+    if (value.HasMember("SecurityLevel") && !value["SecurityLevel"].IsNull())
+    {
+        if (!value["SecurityLevel"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SecurityDynamic.SecurityLevel` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_securityLevel = string(value["SecurityLevel"].GetString());
+        m_securityLevelHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void SecurityDynamic::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SecurityDynamic::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_uuidHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Uuid";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_uuid.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_uuid.c_str(), allocator).Move(), allocator);
     }
 
     if (m_eventTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EventTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_eventTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_eventTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_eventTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EventType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_eventType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_eventType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_messageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Message";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_message.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_message.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_securityLevelHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SecurityLevel";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_securityLevel.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -178,5 +196,21 @@ void SecurityDynamic::SetMessage(const string& _message)
 bool SecurityDynamic::MessageHasBeenSet() const
 {
     return m_messageHasBeenSet;
+}
+
+string SecurityDynamic::GetSecurityLevel() const
+{
+    return m_securityLevel;
+}
+
+void SecurityDynamic::SetSecurityLevel(const string& _securityLevel)
+{
+    m_securityLevel = _securityLevel;
+    m_securityLevelHasBeenSet = true;
+}
+
+bool SecurityDynamic::SecurityLevelHasBeenSet() const
+{
+    return m_securityLevelHasBeenSet;
 }
 

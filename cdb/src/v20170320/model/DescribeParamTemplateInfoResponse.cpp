@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeParamTemplateInfoResponse::DescribeParamTemplateInfoResponse() :
@@ -29,26 +28,27 @@ DescribeParamTemplateInfoResponse::DescribeParamTemplateInfoResponse() :
     m_nameHasBeenSet(false),
     m_engineVersionHasBeenSet(false),
     m_totalCountHasBeenSet(false),
-    m_itemsHasBeenSet(false)
+    m_itemsHasBeenSet(false),
+    m_descriptionHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome DescribeParamTemplateInfoResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -59,11 +59,11 @@ CoreInternalOutcome DescribeParamTemplateInfoResponse::Deserialize(const string 
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -71,7 +71,7 @@ CoreInternalOutcome DescribeParamTemplateInfoResponse::Deserialize(const string 
     {
         if (!rsp["TemplateId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TemplateId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TemplateId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_templateId = rsp["TemplateId"].GetInt64();
         m_templateIdHasBeenSet = true;
@@ -81,7 +81,7 @@ CoreInternalOutcome DescribeParamTemplateInfoResponse::Deserialize(const string 
     {
         if (!rsp["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(rsp["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -91,7 +91,7 @@ CoreInternalOutcome DescribeParamTemplateInfoResponse::Deserialize(const string 
     {
         if (!rsp["EngineVersion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `EngineVersion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EngineVersion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_engineVersion = string(rsp["EngineVersion"].GetString());
         m_engineVersionHasBeenSet = true;
@@ -101,7 +101,7 @@ CoreInternalOutcome DescribeParamTemplateInfoResponse::Deserialize(const string 
     {
         if (!rsp["TotalCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_totalCount = rsp["TotalCount"].GetInt64();
         m_totalCountHasBeenSet = true;
@@ -110,10 +110,10 @@ CoreInternalOutcome DescribeParamTemplateInfoResponse::Deserialize(const string 
     if (rsp.HasMember("Items") && !rsp["Items"].IsNull())
     {
         if (!rsp["Items"].IsArray())
-            return CoreInternalOutcome(Error("response `Items` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Items` is not array type"));
 
-        const Value &tmpValue = rsp["Items"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["Items"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             ParameterDetail item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -127,8 +127,90 @@ CoreInternalOutcome DescribeParamTemplateInfoResponse::Deserialize(const string 
         m_itemsHasBeenSet = true;
     }
 
+    if (rsp.HasMember("Description") && !rsp["Description"].IsNull())
+    {
+        if (!rsp["Description"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Description` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_description = string(rsp["Description"].GetString());
+        m_descriptionHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeParamTemplateInfoResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_templateIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TemplateId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_templateId, allocator);
+    }
+
+    if (m_nameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Name";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_engineVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EngineVersion";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_engineVersion.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_totalCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalCount, allocator);
+    }
+
+    if (m_itemsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Items";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_items.begin(); itr != m_items.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_descriptionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Description";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 
@@ -180,6 +262,16 @@ vector<ParameterDetail> DescribeParamTemplateInfoResponse::GetItems() const
 bool DescribeParamTemplateInfoResponse::ItemsHasBeenSet() const
 {
     return m_itemsHasBeenSet;
+}
+
+string DescribeParamTemplateInfoResponse::GetDescription() const
+{
+    return m_description;
+}
+
+bool DescribeParamTemplateInfoResponse::DescriptionHasBeenSet() const
+{
+    return m_descriptionHasBeenSet;
 }
 
 

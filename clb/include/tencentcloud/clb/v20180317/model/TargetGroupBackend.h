@@ -246,6 +246,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool EniIdHasBeenSet() const;
 
+                    /**
+                     * 获取AZ ID of the real server
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ZoneId AZ ID of the real server
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetZoneId() const;
+
+                    /**
+                     * 设置AZ ID of the real server
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param ZoneId AZ ID of the real server
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetZoneId(const uint64_t& _zoneId);
+
+                    /**
+                     * 判断参数 ZoneId 是否已赋值
+                     * @return ZoneId 是否已赋值
+                     */
+                    bool ZoneIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -312,6 +334,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_eniId;
                     bool m_eniIdHasBeenSet;
+
+                    /**
+                     * AZ ID of the real server
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_zoneId;
+                    bool m_zoneIdHasBeenSet;
 
                 };
             }

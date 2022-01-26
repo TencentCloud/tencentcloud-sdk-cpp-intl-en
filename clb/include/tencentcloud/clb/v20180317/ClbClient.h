@@ -33,6 +33,10 @@
 #include <tencentcloud/clb/v20180317/model/BatchModifyTargetWeightResponse.h>
 #include <tencentcloud/clb/v20180317/model/BatchRegisterTargetsRequest.h>
 #include <tencentcloud/clb/v20180317/model/BatchRegisterTargetsResponse.h>
+#include <tencentcloud/clb/v20180317/model/CloneLoadBalancerRequest.h>
+#include <tencentcloud/clb/v20180317/model/CloneLoadBalancerResponse.h>
+#include <tencentcloud/clb/v20180317/model/CreateClsLogSetRequest.h>
+#include <tencentcloud/clb/v20180317/model/CreateClsLogSetResponse.h>
 #include <tencentcloud/clb/v20180317/model/CreateListenerRequest.h>
 #include <tencentcloud/clb/v20180317/model/CreateListenerResponse.h>
 #include <tencentcloud/clb/v20180317/model/CreateLoadBalancerRequest.h>
@@ -43,6 +47,8 @@
 #include <tencentcloud/clb/v20180317/model/CreateRuleResponse.h>
 #include <tencentcloud/clb/v20180317/model/CreateTargetGroupRequest.h>
 #include <tencentcloud/clb/v20180317/model/CreateTargetGroupResponse.h>
+#include <tencentcloud/clb/v20180317/model/CreateTopicRequest.h>
+#include <tencentcloud/clb/v20180317/model/CreateTopicResponse.h>
 #include <tencentcloud/clb/v20180317/model/DeleteListenerRequest.h>
 #include <tencentcloud/clb/v20180317/model/DeleteListenerResponse.h>
 #include <tencentcloud/clb/v20180317/model/DeleteLoadBalancerRequest.h>
@@ -75,12 +81,28 @@
 #include <tencentcloud/clb/v20180317/model/DescribeClassicalLBListenersResponse.h>
 #include <tencentcloud/clb/v20180317/model/DescribeClassicalLBTargetsRequest.h>
 #include <tencentcloud/clb/v20180317/model/DescribeClassicalLBTargetsResponse.h>
+#include <tencentcloud/clb/v20180317/model/DescribeClsLogSetRequest.h>
+#include <tencentcloud/clb/v20180317/model/DescribeClsLogSetResponse.h>
+#include <tencentcloud/clb/v20180317/model/DescribeCustomizedConfigAssociateListRequest.h>
+#include <tencentcloud/clb/v20180317/model/DescribeCustomizedConfigAssociateListResponse.h>
+#include <tencentcloud/clb/v20180317/model/DescribeCustomizedConfigListRequest.h>
+#include <tencentcloud/clb/v20180317/model/DescribeCustomizedConfigListResponse.h>
+#include <tencentcloud/clb/v20180317/model/DescribeLBListenersRequest.h>
+#include <tencentcloud/clb/v20180317/model/DescribeLBListenersResponse.h>
 #include <tencentcloud/clb/v20180317/model/DescribeListenersRequest.h>
 #include <tencentcloud/clb/v20180317/model/DescribeListenersResponse.h>
 #include <tencentcloud/clb/v20180317/model/DescribeLoadBalancerListByCertIdRequest.h>
 #include <tencentcloud/clb/v20180317/model/DescribeLoadBalancerListByCertIdResponse.h>
+#include <tencentcloud/clb/v20180317/model/DescribeLoadBalancerOverviewRequest.h>
+#include <tencentcloud/clb/v20180317/model/DescribeLoadBalancerOverviewResponse.h>
+#include <tencentcloud/clb/v20180317/model/DescribeLoadBalancerTrafficRequest.h>
+#include <tencentcloud/clb/v20180317/model/DescribeLoadBalancerTrafficResponse.h>
 #include <tencentcloud/clb/v20180317/model/DescribeLoadBalancersRequest.h>
 #include <tencentcloud/clb/v20180317/model/DescribeLoadBalancersResponse.h>
+#include <tencentcloud/clb/v20180317/model/DescribeLoadBalancersDetailRequest.h>
+#include <tencentcloud/clb/v20180317/model/DescribeLoadBalancersDetailResponse.h>
+#include <tencentcloud/clb/v20180317/model/DescribeQuotaRequest.h>
+#include <tencentcloud/clb/v20180317/model/DescribeQuotaResponse.h>
 #include <tencentcloud/clb/v20180317/model/DescribeRewriteRequest.h>
 #include <tencentcloud/clb/v20180317/model/DescribeRewriteResponse.h>
 #include <tencentcloud/clb/v20180317/model/DescribeTargetGroupInstancesRequest.h>
@@ -109,6 +131,8 @@
 #include <tencentcloud/clb/v20180317/model/ModifyListenerResponse.h>
 #include <tencentcloud/clb/v20180317/model/ModifyLoadBalancerAttributesRequest.h>
 #include <tencentcloud/clb/v20180317/model/ModifyLoadBalancerAttributesResponse.h>
+#include <tencentcloud/clb/v20180317/model/ModifyLoadBalancerSlaRequest.h>
+#include <tencentcloud/clb/v20180317/model/ModifyLoadBalancerSlaResponse.h>
 #include <tencentcloud/clb/v20180317/model/ModifyRuleRequest.h>
 #include <tencentcloud/clb/v20180317/model/ModifyRuleResponse.h>
 #include <tencentcloud/clb/v20180317/model/ModifyTargetGroupAttributeRequest.h>
@@ -149,172 +173,208 @@ namespace TencentCloud
                 ClbClient(const Credential &credential, const std::string &region);
                 ClbClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Error, Model::AssociateTargetGroupsResponse> AssociateTargetGroupsOutcome;
+                typedef Outcome<Core::Error, Model::AssociateTargetGroupsResponse> AssociateTargetGroupsOutcome;
                 typedef std::future<AssociateTargetGroupsOutcome> AssociateTargetGroupsOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::AssociateTargetGroupsRequest&, AssociateTargetGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssociateTargetGroupsAsyncHandler;
-                typedef Outcome<Error, Model::AutoRewriteResponse> AutoRewriteOutcome;
+                typedef Outcome<Core::Error, Model::AutoRewriteResponse> AutoRewriteOutcome;
                 typedef std::future<AutoRewriteOutcome> AutoRewriteOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::AutoRewriteRequest&, AutoRewriteOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AutoRewriteAsyncHandler;
-                typedef Outcome<Error, Model::BatchDeregisterTargetsResponse> BatchDeregisterTargetsOutcome;
+                typedef Outcome<Core::Error, Model::BatchDeregisterTargetsResponse> BatchDeregisterTargetsOutcome;
                 typedef std::future<BatchDeregisterTargetsOutcome> BatchDeregisterTargetsOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::BatchDeregisterTargetsRequest&, BatchDeregisterTargetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BatchDeregisterTargetsAsyncHandler;
-                typedef Outcome<Error, Model::BatchModifyTargetWeightResponse> BatchModifyTargetWeightOutcome;
+                typedef Outcome<Core::Error, Model::BatchModifyTargetWeightResponse> BatchModifyTargetWeightOutcome;
                 typedef std::future<BatchModifyTargetWeightOutcome> BatchModifyTargetWeightOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::BatchModifyTargetWeightRequest&, BatchModifyTargetWeightOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BatchModifyTargetWeightAsyncHandler;
-                typedef Outcome<Error, Model::BatchRegisterTargetsResponse> BatchRegisterTargetsOutcome;
+                typedef Outcome<Core::Error, Model::BatchRegisterTargetsResponse> BatchRegisterTargetsOutcome;
                 typedef std::future<BatchRegisterTargetsOutcome> BatchRegisterTargetsOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::BatchRegisterTargetsRequest&, BatchRegisterTargetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BatchRegisterTargetsAsyncHandler;
-                typedef Outcome<Error, Model::CreateListenerResponse> CreateListenerOutcome;
+                typedef Outcome<Core::Error, Model::CloneLoadBalancerResponse> CloneLoadBalancerOutcome;
+                typedef std::future<CloneLoadBalancerOutcome> CloneLoadBalancerOutcomeCallable;
+                typedef std::function<void(const ClbClient*, const Model::CloneLoadBalancerRequest&, CloneLoadBalancerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloneLoadBalancerAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateClsLogSetResponse> CreateClsLogSetOutcome;
+                typedef std::future<CreateClsLogSetOutcome> CreateClsLogSetOutcomeCallable;
+                typedef std::function<void(const ClbClient*, const Model::CreateClsLogSetRequest&, CreateClsLogSetOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateClsLogSetAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateListenerResponse> CreateListenerOutcome;
                 typedef std::future<CreateListenerOutcome> CreateListenerOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::CreateListenerRequest&, CreateListenerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateListenerAsyncHandler;
-                typedef Outcome<Error, Model::CreateLoadBalancerResponse> CreateLoadBalancerOutcome;
+                typedef Outcome<Core::Error, Model::CreateLoadBalancerResponse> CreateLoadBalancerOutcome;
                 typedef std::future<CreateLoadBalancerOutcome> CreateLoadBalancerOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::CreateLoadBalancerRequest&, CreateLoadBalancerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLoadBalancerAsyncHandler;
-                typedef Outcome<Error, Model::CreateLoadBalancerSnatIpsResponse> CreateLoadBalancerSnatIpsOutcome;
+                typedef Outcome<Core::Error, Model::CreateLoadBalancerSnatIpsResponse> CreateLoadBalancerSnatIpsOutcome;
                 typedef std::future<CreateLoadBalancerSnatIpsOutcome> CreateLoadBalancerSnatIpsOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::CreateLoadBalancerSnatIpsRequest&, CreateLoadBalancerSnatIpsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLoadBalancerSnatIpsAsyncHandler;
-                typedef Outcome<Error, Model::CreateRuleResponse> CreateRuleOutcome;
+                typedef Outcome<Core::Error, Model::CreateRuleResponse> CreateRuleOutcome;
                 typedef std::future<CreateRuleOutcome> CreateRuleOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::CreateRuleRequest&, CreateRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRuleAsyncHandler;
-                typedef Outcome<Error, Model::CreateTargetGroupResponse> CreateTargetGroupOutcome;
+                typedef Outcome<Core::Error, Model::CreateTargetGroupResponse> CreateTargetGroupOutcome;
                 typedef std::future<CreateTargetGroupOutcome> CreateTargetGroupOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::CreateTargetGroupRequest&, CreateTargetGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateTargetGroupAsyncHandler;
-                typedef Outcome<Error, Model::DeleteListenerResponse> DeleteListenerOutcome;
+                typedef Outcome<Core::Error, Model::CreateTopicResponse> CreateTopicOutcome;
+                typedef std::future<CreateTopicOutcome> CreateTopicOutcomeCallable;
+                typedef std::function<void(const ClbClient*, const Model::CreateTopicRequest&, CreateTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateTopicAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteListenerResponse> DeleteListenerOutcome;
                 typedef std::future<DeleteListenerOutcome> DeleteListenerOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DeleteListenerRequest&, DeleteListenerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteListenerAsyncHandler;
-                typedef Outcome<Error, Model::DeleteLoadBalancerResponse> DeleteLoadBalancerOutcome;
+                typedef Outcome<Core::Error, Model::DeleteLoadBalancerResponse> DeleteLoadBalancerOutcome;
                 typedef std::future<DeleteLoadBalancerOutcome> DeleteLoadBalancerOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DeleteLoadBalancerRequest&, DeleteLoadBalancerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLoadBalancerAsyncHandler;
-                typedef Outcome<Error, Model::DeleteLoadBalancerListenersResponse> DeleteLoadBalancerListenersOutcome;
+                typedef Outcome<Core::Error, Model::DeleteLoadBalancerListenersResponse> DeleteLoadBalancerListenersOutcome;
                 typedef std::future<DeleteLoadBalancerListenersOutcome> DeleteLoadBalancerListenersOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DeleteLoadBalancerListenersRequest&, DeleteLoadBalancerListenersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLoadBalancerListenersAsyncHandler;
-                typedef Outcome<Error, Model::DeleteLoadBalancerSnatIpsResponse> DeleteLoadBalancerSnatIpsOutcome;
+                typedef Outcome<Core::Error, Model::DeleteLoadBalancerSnatIpsResponse> DeleteLoadBalancerSnatIpsOutcome;
                 typedef std::future<DeleteLoadBalancerSnatIpsOutcome> DeleteLoadBalancerSnatIpsOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DeleteLoadBalancerSnatIpsRequest&, DeleteLoadBalancerSnatIpsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLoadBalancerSnatIpsAsyncHandler;
-                typedef Outcome<Error, Model::DeleteRewriteResponse> DeleteRewriteOutcome;
+                typedef Outcome<Core::Error, Model::DeleteRewriteResponse> DeleteRewriteOutcome;
                 typedef std::future<DeleteRewriteOutcome> DeleteRewriteOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DeleteRewriteRequest&, DeleteRewriteOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRewriteAsyncHandler;
-                typedef Outcome<Error, Model::DeleteRuleResponse> DeleteRuleOutcome;
+                typedef Outcome<Core::Error, Model::DeleteRuleResponse> DeleteRuleOutcome;
                 typedef std::future<DeleteRuleOutcome> DeleteRuleOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DeleteRuleRequest&, DeleteRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRuleAsyncHandler;
-                typedef Outcome<Error, Model::DeleteTargetGroupsResponse> DeleteTargetGroupsOutcome;
+                typedef Outcome<Core::Error, Model::DeleteTargetGroupsResponse> DeleteTargetGroupsOutcome;
                 typedef std::future<DeleteTargetGroupsOutcome> DeleteTargetGroupsOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DeleteTargetGroupsRequest&, DeleteTargetGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTargetGroupsAsyncHandler;
-                typedef Outcome<Error, Model::DeregisterTargetGroupInstancesResponse> DeregisterTargetGroupInstancesOutcome;
+                typedef Outcome<Core::Error, Model::DeregisterTargetGroupInstancesResponse> DeregisterTargetGroupInstancesOutcome;
                 typedef std::future<DeregisterTargetGroupInstancesOutcome> DeregisterTargetGroupInstancesOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DeregisterTargetGroupInstancesRequest&, DeregisterTargetGroupInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeregisterTargetGroupInstancesAsyncHandler;
-                typedef Outcome<Error, Model::DeregisterTargetsResponse> DeregisterTargetsOutcome;
+                typedef Outcome<Core::Error, Model::DeregisterTargetsResponse> DeregisterTargetsOutcome;
                 typedef std::future<DeregisterTargetsOutcome> DeregisterTargetsOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DeregisterTargetsRequest&, DeregisterTargetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeregisterTargetsAsyncHandler;
-                typedef Outcome<Error, Model::DeregisterTargetsFromClassicalLBResponse> DeregisterTargetsFromClassicalLBOutcome;
+                typedef Outcome<Core::Error, Model::DeregisterTargetsFromClassicalLBResponse> DeregisterTargetsFromClassicalLBOutcome;
                 typedef std::future<DeregisterTargetsFromClassicalLBOutcome> DeregisterTargetsFromClassicalLBOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DeregisterTargetsFromClassicalLBRequest&, DeregisterTargetsFromClassicalLBOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeregisterTargetsFromClassicalLBAsyncHandler;
-                typedef Outcome<Error, Model::DescribeBlockIPListResponse> DescribeBlockIPListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeBlockIPListResponse> DescribeBlockIPListOutcome;
                 typedef std::future<DescribeBlockIPListOutcome> DescribeBlockIPListOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DescribeBlockIPListRequest&, DescribeBlockIPListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBlockIPListAsyncHandler;
-                typedef Outcome<Error, Model::DescribeBlockIPTaskResponse> DescribeBlockIPTaskOutcome;
+                typedef Outcome<Core::Error, Model::DescribeBlockIPTaskResponse> DescribeBlockIPTaskOutcome;
                 typedef std::future<DescribeBlockIPTaskOutcome> DescribeBlockIPTaskOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DescribeBlockIPTaskRequest&, DescribeBlockIPTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBlockIPTaskAsyncHandler;
-                typedef Outcome<Error, Model::DescribeClassicalLBByInstanceIdResponse> DescribeClassicalLBByInstanceIdOutcome;
+                typedef Outcome<Core::Error, Model::DescribeClassicalLBByInstanceIdResponse> DescribeClassicalLBByInstanceIdOutcome;
                 typedef std::future<DescribeClassicalLBByInstanceIdOutcome> DescribeClassicalLBByInstanceIdOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DescribeClassicalLBByInstanceIdRequest&, DescribeClassicalLBByInstanceIdOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClassicalLBByInstanceIdAsyncHandler;
-                typedef Outcome<Error, Model::DescribeClassicalLBHealthStatusResponse> DescribeClassicalLBHealthStatusOutcome;
+                typedef Outcome<Core::Error, Model::DescribeClassicalLBHealthStatusResponse> DescribeClassicalLBHealthStatusOutcome;
                 typedef std::future<DescribeClassicalLBHealthStatusOutcome> DescribeClassicalLBHealthStatusOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DescribeClassicalLBHealthStatusRequest&, DescribeClassicalLBHealthStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClassicalLBHealthStatusAsyncHandler;
-                typedef Outcome<Error, Model::DescribeClassicalLBListenersResponse> DescribeClassicalLBListenersOutcome;
+                typedef Outcome<Core::Error, Model::DescribeClassicalLBListenersResponse> DescribeClassicalLBListenersOutcome;
                 typedef std::future<DescribeClassicalLBListenersOutcome> DescribeClassicalLBListenersOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DescribeClassicalLBListenersRequest&, DescribeClassicalLBListenersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClassicalLBListenersAsyncHandler;
-                typedef Outcome<Error, Model::DescribeClassicalLBTargetsResponse> DescribeClassicalLBTargetsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeClassicalLBTargetsResponse> DescribeClassicalLBTargetsOutcome;
                 typedef std::future<DescribeClassicalLBTargetsOutcome> DescribeClassicalLBTargetsOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DescribeClassicalLBTargetsRequest&, DescribeClassicalLBTargetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClassicalLBTargetsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeListenersResponse> DescribeListenersOutcome;
+                typedef Outcome<Core::Error, Model::DescribeClsLogSetResponse> DescribeClsLogSetOutcome;
+                typedef std::future<DescribeClsLogSetOutcome> DescribeClsLogSetOutcomeCallable;
+                typedef std::function<void(const ClbClient*, const Model::DescribeClsLogSetRequest&, DescribeClsLogSetOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClsLogSetAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCustomizedConfigAssociateListResponse> DescribeCustomizedConfigAssociateListOutcome;
+                typedef std::future<DescribeCustomizedConfigAssociateListOutcome> DescribeCustomizedConfigAssociateListOutcomeCallable;
+                typedef std::function<void(const ClbClient*, const Model::DescribeCustomizedConfigAssociateListRequest&, DescribeCustomizedConfigAssociateListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomizedConfigAssociateListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCustomizedConfigListResponse> DescribeCustomizedConfigListOutcome;
+                typedef std::future<DescribeCustomizedConfigListOutcome> DescribeCustomizedConfigListOutcomeCallable;
+                typedef std::function<void(const ClbClient*, const Model::DescribeCustomizedConfigListRequest&, DescribeCustomizedConfigListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomizedConfigListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLBListenersResponse> DescribeLBListenersOutcome;
+                typedef std::future<DescribeLBListenersOutcome> DescribeLBListenersOutcomeCallable;
+                typedef std::function<void(const ClbClient*, const Model::DescribeLBListenersRequest&, DescribeLBListenersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLBListenersAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeListenersResponse> DescribeListenersOutcome;
                 typedef std::future<DescribeListenersOutcome> DescribeListenersOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DescribeListenersRequest&, DescribeListenersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeListenersAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLoadBalancerListByCertIdResponse> DescribeLoadBalancerListByCertIdOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLoadBalancerListByCertIdResponse> DescribeLoadBalancerListByCertIdOutcome;
                 typedef std::future<DescribeLoadBalancerListByCertIdOutcome> DescribeLoadBalancerListByCertIdOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DescribeLoadBalancerListByCertIdRequest&, DescribeLoadBalancerListByCertIdOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLoadBalancerListByCertIdAsyncHandler;
-                typedef Outcome<Error, Model::DescribeLoadBalancersResponse> DescribeLoadBalancersOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLoadBalancerOverviewResponse> DescribeLoadBalancerOverviewOutcome;
+                typedef std::future<DescribeLoadBalancerOverviewOutcome> DescribeLoadBalancerOverviewOutcomeCallable;
+                typedef std::function<void(const ClbClient*, const Model::DescribeLoadBalancerOverviewRequest&, DescribeLoadBalancerOverviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLoadBalancerOverviewAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLoadBalancerTrafficResponse> DescribeLoadBalancerTrafficOutcome;
+                typedef std::future<DescribeLoadBalancerTrafficOutcome> DescribeLoadBalancerTrafficOutcomeCallable;
+                typedef std::function<void(const ClbClient*, const Model::DescribeLoadBalancerTrafficRequest&, DescribeLoadBalancerTrafficOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLoadBalancerTrafficAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLoadBalancersResponse> DescribeLoadBalancersOutcome;
                 typedef std::future<DescribeLoadBalancersOutcome> DescribeLoadBalancersOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DescribeLoadBalancersRequest&, DescribeLoadBalancersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLoadBalancersAsyncHandler;
-                typedef Outcome<Error, Model::DescribeRewriteResponse> DescribeRewriteOutcome;
+                typedef Outcome<Core::Error, Model::DescribeLoadBalancersDetailResponse> DescribeLoadBalancersDetailOutcome;
+                typedef std::future<DescribeLoadBalancersDetailOutcome> DescribeLoadBalancersDetailOutcomeCallable;
+                typedef std::function<void(const ClbClient*, const Model::DescribeLoadBalancersDetailRequest&, DescribeLoadBalancersDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLoadBalancersDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeQuotaResponse> DescribeQuotaOutcome;
+                typedef std::future<DescribeQuotaOutcome> DescribeQuotaOutcomeCallable;
+                typedef std::function<void(const ClbClient*, const Model::DescribeQuotaRequest&, DescribeQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeQuotaAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRewriteResponse> DescribeRewriteOutcome;
                 typedef std::future<DescribeRewriteOutcome> DescribeRewriteOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DescribeRewriteRequest&, DescribeRewriteOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRewriteAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTargetGroupInstancesResponse> DescribeTargetGroupInstancesOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTargetGroupInstancesResponse> DescribeTargetGroupInstancesOutcome;
                 typedef std::future<DescribeTargetGroupInstancesOutcome> DescribeTargetGroupInstancesOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DescribeTargetGroupInstancesRequest&, DescribeTargetGroupInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTargetGroupInstancesAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTargetGroupListResponse> DescribeTargetGroupListOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTargetGroupListResponse> DescribeTargetGroupListOutcome;
                 typedef std::future<DescribeTargetGroupListOutcome> DescribeTargetGroupListOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DescribeTargetGroupListRequest&, DescribeTargetGroupListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTargetGroupListAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTargetGroupsResponse> DescribeTargetGroupsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTargetGroupsResponse> DescribeTargetGroupsOutcome;
                 typedef std::future<DescribeTargetGroupsOutcome> DescribeTargetGroupsOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DescribeTargetGroupsRequest&, DescribeTargetGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTargetGroupsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTargetHealthResponse> DescribeTargetHealthOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTargetHealthResponse> DescribeTargetHealthOutcome;
                 typedef std::future<DescribeTargetHealthOutcome> DescribeTargetHealthOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DescribeTargetHealthRequest&, DescribeTargetHealthOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTargetHealthAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTargetsResponse> DescribeTargetsOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTargetsResponse> DescribeTargetsOutcome;
                 typedef std::future<DescribeTargetsOutcome> DescribeTargetsOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DescribeTargetsRequest&, DescribeTargetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTargetsAsyncHandler;
-                typedef Outcome<Error, Model::DescribeTaskStatusResponse> DescribeTaskStatusOutcome;
+                typedef Outcome<Core::Error, Model::DescribeTaskStatusResponse> DescribeTaskStatusOutcome;
                 typedef std::future<DescribeTaskStatusOutcome> DescribeTaskStatusOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DescribeTaskStatusRequest&, DescribeTaskStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTaskStatusAsyncHandler;
-                typedef Outcome<Error, Model::DisassociateTargetGroupsResponse> DisassociateTargetGroupsOutcome;
+                typedef Outcome<Core::Error, Model::DisassociateTargetGroupsResponse> DisassociateTargetGroupsOutcome;
                 typedef std::future<DisassociateTargetGroupsOutcome> DisassociateTargetGroupsOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DisassociateTargetGroupsRequest&, DisassociateTargetGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisassociateTargetGroupsAsyncHandler;
-                typedef Outcome<Error, Model::ManualRewriteResponse> ManualRewriteOutcome;
+                typedef Outcome<Core::Error, Model::ManualRewriteResponse> ManualRewriteOutcome;
                 typedef std::future<ManualRewriteOutcome> ManualRewriteOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::ManualRewriteRequest&, ManualRewriteOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ManualRewriteAsyncHandler;
-                typedef Outcome<Error, Model::ModifyBlockIPListResponse> ModifyBlockIPListOutcome;
+                typedef Outcome<Core::Error, Model::ModifyBlockIPListResponse> ModifyBlockIPListOutcome;
                 typedef std::future<ModifyBlockIPListOutcome> ModifyBlockIPListOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::ModifyBlockIPListRequest&, ModifyBlockIPListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBlockIPListAsyncHandler;
-                typedef Outcome<Error, Model::ModifyDomainResponse> ModifyDomainOutcome;
+                typedef Outcome<Core::Error, Model::ModifyDomainResponse> ModifyDomainOutcome;
                 typedef std::future<ModifyDomainOutcome> ModifyDomainOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::ModifyDomainRequest&, ModifyDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDomainAsyncHandler;
-                typedef Outcome<Error, Model::ModifyDomainAttributesResponse> ModifyDomainAttributesOutcome;
+                typedef Outcome<Core::Error, Model::ModifyDomainAttributesResponse> ModifyDomainAttributesOutcome;
                 typedef std::future<ModifyDomainAttributesOutcome> ModifyDomainAttributesOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::ModifyDomainAttributesRequest&, ModifyDomainAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDomainAttributesAsyncHandler;
-                typedef Outcome<Error, Model::ModifyListenerResponse> ModifyListenerOutcome;
+                typedef Outcome<Core::Error, Model::ModifyListenerResponse> ModifyListenerOutcome;
                 typedef std::future<ModifyListenerOutcome> ModifyListenerOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::ModifyListenerRequest&, ModifyListenerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyListenerAsyncHandler;
-                typedef Outcome<Error, Model::ModifyLoadBalancerAttributesResponse> ModifyLoadBalancerAttributesOutcome;
+                typedef Outcome<Core::Error, Model::ModifyLoadBalancerAttributesResponse> ModifyLoadBalancerAttributesOutcome;
                 typedef std::future<ModifyLoadBalancerAttributesOutcome> ModifyLoadBalancerAttributesOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::ModifyLoadBalancerAttributesRequest&, ModifyLoadBalancerAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLoadBalancerAttributesAsyncHandler;
-                typedef Outcome<Error, Model::ModifyRuleResponse> ModifyRuleOutcome;
+                typedef Outcome<Core::Error, Model::ModifyLoadBalancerSlaResponse> ModifyLoadBalancerSlaOutcome;
+                typedef std::future<ModifyLoadBalancerSlaOutcome> ModifyLoadBalancerSlaOutcomeCallable;
+                typedef std::function<void(const ClbClient*, const Model::ModifyLoadBalancerSlaRequest&, ModifyLoadBalancerSlaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLoadBalancerSlaAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyRuleResponse> ModifyRuleOutcome;
                 typedef std::future<ModifyRuleOutcome> ModifyRuleOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::ModifyRuleRequest&, ModifyRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRuleAsyncHandler;
-                typedef Outcome<Error, Model::ModifyTargetGroupAttributeResponse> ModifyTargetGroupAttributeOutcome;
+                typedef Outcome<Core::Error, Model::ModifyTargetGroupAttributeResponse> ModifyTargetGroupAttributeOutcome;
                 typedef std::future<ModifyTargetGroupAttributeOutcome> ModifyTargetGroupAttributeOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::ModifyTargetGroupAttributeRequest&, ModifyTargetGroupAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyTargetGroupAttributeAsyncHandler;
-                typedef Outcome<Error, Model::ModifyTargetGroupInstancesPortResponse> ModifyTargetGroupInstancesPortOutcome;
+                typedef Outcome<Core::Error, Model::ModifyTargetGroupInstancesPortResponse> ModifyTargetGroupInstancesPortOutcome;
                 typedef std::future<ModifyTargetGroupInstancesPortOutcome> ModifyTargetGroupInstancesPortOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::ModifyTargetGroupInstancesPortRequest&, ModifyTargetGroupInstancesPortOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyTargetGroupInstancesPortAsyncHandler;
-                typedef Outcome<Error, Model::ModifyTargetGroupInstancesWeightResponse> ModifyTargetGroupInstancesWeightOutcome;
+                typedef Outcome<Core::Error, Model::ModifyTargetGroupInstancesWeightResponse> ModifyTargetGroupInstancesWeightOutcome;
                 typedef std::future<ModifyTargetGroupInstancesWeightOutcome> ModifyTargetGroupInstancesWeightOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::ModifyTargetGroupInstancesWeightRequest&, ModifyTargetGroupInstancesWeightOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyTargetGroupInstancesWeightAsyncHandler;
-                typedef Outcome<Error, Model::ModifyTargetPortResponse> ModifyTargetPortOutcome;
+                typedef Outcome<Core::Error, Model::ModifyTargetPortResponse> ModifyTargetPortOutcome;
                 typedef std::future<ModifyTargetPortOutcome> ModifyTargetPortOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::ModifyTargetPortRequest&, ModifyTargetPortOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyTargetPortAsyncHandler;
-                typedef Outcome<Error, Model::ModifyTargetWeightResponse> ModifyTargetWeightOutcome;
+                typedef Outcome<Core::Error, Model::ModifyTargetWeightResponse> ModifyTargetWeightOutcome;
                 typedef std::future<ModifyTargetWeightOutcome> ModifyTargetWeightOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::ModifyTargetWeightRequest&, ModifyTargetWeightOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyTargetWeightAsyncHandler;
-                typedef Outcome<Error, Model::RegisterTargetGroupInstancesResponse> RegisterTargetGroupInstancesOutcome;
+                typedef Outcome<Core::Error, Model::RegisterTargetGroupInstancesResponse> RegisterTargetGroupInstancesOutcome;
                 typedef std::future<RegisterTargetGroupInstancesOutcome> RegisterTargetGroupInstancesOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::RegisterTargetGroupInstancesRequest&, RegisterTargetGroupInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RegisterTargetGroupInstancesAsyncHandler;
-                typedef Outcome<Error, Model::RegisterTargetsResponse> RegisterTargetsOutcome;
+                typedef Outcome<Core::Error, Model::RegisterTargetsResponse> RegisterTargetsOutcome;
                 typedef std::future<RegisterTargetsOutcome> RegisterTargetsOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::RegisterTargetsRequest&, RegisterTargetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RegisterTargetsAsyncHandler;
-                typedef Outcome<Error, Model::RegisterTargetsWithClassicalLBResponse> RegisterTargetsWithClassicalLBOutcome;
+                typedef Outcome<Core::Error, Model::RegisterTargetsWithClassicalLBResponse> RegisterTargetsWithClassicalLBOutcome;
                 typedef std::future<RegisterTargetsWithClassicalLBOutcome> RegisterTargetsWithClassicalLBOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::RegisterTargetsWithClassicalLBRequest&, RegisterTargetsWithClassicalLBOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RegisterTargetsWithClassicalLBAsyncHandler;
-                typedef Outcome<Error, Model::ReplaceCertForLoadBalancersResponse> ReplaceCertForLoadBalancersOutcome;
+                typedef Outcome<Core::Error, Model::ReplaceCertForLoadBalancersResponse> ReplaceCertForLoadBalancersOutcome;
                 typedef std::future<ReplaceCertForLoadBalancersOutcome> ReplaceCertForLoadBalancersOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::ReplaceCertForLoadBalancersRequest&, ReplaceCertForLoadBalancersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReplaceCertForLoadBalancersAsyncHandler;
-                typedef Outcome<Error, Model::SetLoadBalancerClsLogResponse> SetLoadBalancerClsLogOutcome;
+                typedef Outcome<Core::Error, Model::SetLoadBalancerClsLogResponse> SetLoadBalancerClsLogOutcome;
                 typedef std::future<SetLoadBalancerClsLogOutcome> SetLoadBalancerClsLogOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::SetLoadBalancerClsLogRequest&, SetLoadBalancerClsLogOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetLoadBalancerClsLogAsyncHandler;
-                typedef Outcome<Error, Model::SetLoadBalancerSecurityGroupsResponse> SetLoadBalancerSecurityGroupsOutcome;
+                typedef Outcome<Core::Error, Model::SetLoadBalancerSecurityGroupsResponse> SetLoadBalancerSecurityGroupsOutcome;
                 typedef std::future<SetLoadBalancerSecurityGroupsOutcome> SetLoadBalancerSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::SetLoadBalancerSecurityGroupsRequest&, SetLoadBalancerSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetLoadBalancerSecurityGroupsAsyncHandler;
-                typedef Outcome<Error, Model::SetSecurityGroupForLoadbalancersResponse> SetSecurityGroupForLoadbalancersOutcome;
+                typedef Outcome<Core::Error, Model::SetSecurityGroupForLoadbalancersResponse> SetSecurityGroupForLoadbalancersOutcome;
                 typedef std::future<SetSecurityGroupForLoadbalancersOutcome> SetSecurityGroupForLoadbalancersOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::SetSecurityGroupForLoadbalancersRequest&, SetSecurityGroupForLoadbalancersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetSecurityGroupForLoadbalancersAsyncHandler;
 
@@ -340,7 +400,7 @@ This is an async API. After it is returned successfully, you can call the `Descr
                 AutoRewriteOutcomeCallable AutoRewriteCallable(const Model::AutoRewriteRequest& request);
 
                 /**
-                 *This API is used to unbind layer-4/layer-7 real servers in batches.
+                 *This API is used to unbind layer-4 and layer-7 real servers in batches. Up to 500 servers can be unbound in a batch.
                  * @param req BatchDeregisterTargetsRequest
                  * @return BatchDeregisterTargetsOutcome
                  */
@@ -349,8 +409,8 @@ This is an async API. After it is returned successfully, you can call the `Descr
                 BatchDeregisterTargetsOutcomeCallable BatchDeregisterTargetsCallable(const Model::BatchDeregisterTargetsRequest& request);
 
                 /**
-                 *This API is used to modify the forwarding weights of real servers bound to a CLB listener in batches. It supports layer-4 and layer-7 CLB listeners but not Classic CLB.
-This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
+                 *This API is used to modify forwarding weights of real servers bound to CLB listeners in batches. Up to 500 servers can be unbound in a batch. As this API is async, you should check whether the task is successful by passing the RequestId returned to the API call `DescribeTaskStatus`.<br/> This API is supported by CLB layer-4 and layer-7 listeners, but not Classis CLB counterparts.
+
                  * @param req BatchModifyTargetWeightRequest
                  * @return BatchModifyTargetWeightOutcome
                  */
@@ -359,13 +419,31 @@ This is an async API. After it is returned successfully, you can call the `Descr
                 BatchModifyTargetWeightOutcomeCallable BatchModifyTargetWeightCallable(const Model::BatchModifyTargetWeightRequest& request);
 
                 /**
-                 *This API is used to bind CVM instances or ENIs in batches. It supports cross-region binding and layer-4 and layer-7 (TCP, UDP, HTTP, HTTPS) protocols.
+                 *This API is used to bind CVM instances or ENIs in batches. Up to 500 servers can be bound in a batch. It supports cross-region binding, and layer-4 and layer-7 (TCP/UDP/HTTP/HTTPS) protocols.
                  * @param req BatchRegisterTargetsRequest
                  * @return BatchRegisterTargetsOutcome
                  */
                 BatchRegisterTargetsOutcome BatchRegisterTargets(const Model::BatchRegisterTargetsRequest &request);
                 void BatchRegisterTargetsAsync(const Model::BatchRegisterTargetsRequest& request, const BatchRegisterTargetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 BatchRegisterTargetsOutcomeCallable BatchRegisterTargetsCallable(const Model::BatchRegisterTargetsRequest& request);
+
+                /**
+                 *This API is used to generate a CLB instance that has the same rules and binding relations as the specified CLB instance.
+                 * @param req CloneLoadBalancerRequest
+                 * @return CloneLoadBalancerOutcome
+                 */
+                CloneLoadBalancerOutcome CloneLoadBalancer(const Model::CloneLoadBalancerRequest &request);
+                void CloneLoadBalancerAsync(const Model::CloneLoadBalancerRequest& request, const CloneLoadBalancerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CloneLoadBalancerOutcomeCallable CloneLoadBalancerCallable(const Model::CloneLoadBalancerRequest& request);
+
+                /**
+                 *This API is used to create a CLB exclusive logset for storing CLB logs.
+                 * @param req CreateClsLogSetRequest
+                 * @return CreateClsLogSetOutcome
+                 */
+                CreateClsLogSetOutcome CreateClsLogSet(const Model::CreateClsLogSetRequest &request);
+                void CreateClsLogSetAsync(const Model::CreateClsLogSetRequest& request, const CreateClsLogSetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateClsLogSetOutcomeCallable CreateClsLogSetCallable(const Model::CreateClsLogSetRequest& request);
 
                 /**
                  *This API is used to create a listener for a CLB instance.
@@ -389,7 +467,7 @@ This is an async API. After it is returned successfully, you can call the Descri
                 CreateLoadBalancerOutcomeCallable CreateLoadBalancerCallable(const Model::CreateLoadBalancerRequest& request);
 
                 /**
-                 *This API is used to add a SNAT IP for a SnatPro CLB instance. If SnatPro is not enabled for CLB, it will be automatically enabled after the SNAT IP is added.
+                 *This API is used to add an SNAT IP for an SnatPro CLB instance. If SnatPro is not enabled for CLB, it will be automatically enabled after the SNAT IP is added.
                  * @param req CreateLoadBalancerSnatIpsRequest
                  * @return CreateLoadBalancerSnatIpsOutcome
                  */
@@ -415,6 +493,15 @@ This is an async API. After it is returned successfully, you can call the Descri
                 CreateTargetGroupOutcome CreateTargetGroup(const Model::CreateTargetGroupRequest &request);
                 void CreateTargetGroupAsync(const Model::CreateTargetGroupRequest& request, const CreateTargetGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateTargetGroupOutcomeCallable CreateTargetGroupCallable(const Model::CreateTargetGroupRequest& request);
+
+                /**
+                 *This API is used to create a topic with the full-text index and key-value index enabled by default. The creation will fail if there is no CLB exclusive logset.
+                 * @param req CreateTopicRequest
+                 * @return CreateTopicOutcome
+                 */
+                CreateTopicOutcome CreateTopic(const Model::CreateTopicRequest &request);
+                void CreateTopicAsync(const Model::CreateTopicRequest& request, const CreateTopicAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateTopicOutcomeCallable CreateTopicCallable(const Model::CreateTopicRequest& request);
 
                 /**
                  *This API is used to delete a listener from a CLB instance (layer-4 or layer-7).
@@ -447,7 +534,7 @@ This is an async API. After it is returned successfully, you can call the `Descr
                 DeleteLoadBalancerListenersOutcomeCallable DeleteLoadBalancerListenersCallable(const Model::DeleteLoadBalancerListenersRequest& request);
 
                 /**
-                 *This API is used to delete a SNAT IP for a SnatPro CLB instance.
+                 *This API is used to delete the SNAT IP for an SnatPro CLB instance.
                  * @param req DeleteLoadBalancerSnatIpsRequest
                  * @return DeleteLoadBalancerSnatIpsOutcome
                  */
@@ -485,7 +572,7 @@ This is an async API. After it is returned successfully, you can call the Descri
 
                 /**
                  *This API is used to unbind a server from a target group.
-This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
+This is an async API. After it is returned successfully, you can call the API `DescribeTaskStatus` with the returned RequestId as an input parameter to check whether this task is successful.
                  * @param req DeregisterTargetGroupInstancesRequest
                  * @return DeregisterTargetGroupInstancesOutcome
                  */
@@ -504,8 +591,7 @@ This is an async API. After it is returned successfully, you can call the Descri
                 DeregisterTargetsOutcomeCallable DeregisterTargetsCallable(const Model::DeregisterTargetsRequest& request);
 
                 /**
-                 *This API (DeregisterTargetsFromClassicalLB) is used to unbind real servers from a classic load balancer.
-This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestId as an input parameter to check whether this task is successful.
+                 *This API is used to unbind a CLB real server. This is an async API. After it is returned successfully, you can call the API `DescribeTaskStatus` with the returned RequestId as an input parameter to check whether this task is successful.
                  * @param req DeregisterTargetsFromClassicalLBRequest
                  * @return DeregisterTargetsFromClassicalLBOutcome
                  */
@@ -514,7 +600,7 @@ This is an async API. After it is returned successfully, you can call the Descri
                 DeregisterTargetsFromClassicalLBOutcomeCallable DeregisterTargetsFromClassicalLBCallable(const Model::DeregisterTargetsFromClassicalLBRequest& request);
 
                 /**
-                 *This API is used to query the list of blocked IPs (blacklist) of a CLB instance. (This API is in beta test. To use it, please submit a ticket.)
+                 *This API is used to query the list of blocked IPs (blocklist) of a CLB instance. (This API is in beta test. To use it, please submit a ticket.)
                  * @param req DescribeBlockIPListRequest
                  * @return DescribeBlockIPListOutcome
                  */
@@ -523,7 +609,7 @@ This is an async API. After it is returned successfully, you can call the Descri
                 DescribeBlockIPListOutcomeCallable DescribeBlockIPListCallable(const Model::DescribeBlockIPListRequest& request);
 
                 /**
-                 *This API is used to query the execution status of an async IP blocking (blacklisting) task by the async task ID returned by the `ModifyBlockIPList` API. (This API is in beta test. To use it, please submit a ticket.)
+                 *This API is used to query the execution status of an async IP blocking (blocklisting) task by the async task ID returned by the `ModifyBlockIPList` API. (This API is in beta test. To use it, please submit a ticket.)
                  * @param req DescribeBlockIPTaskRequest
                  * @return DescribeBlockIPTaskOutcome
                  */
@@ -532,7 +618,7 @@ This is an async API. After it is returned successfully, you can call the Descri
                 DescribeBlockIPTaskOutcomeCallable DescribeBlockIPTaskCallable(const Model::DescribeBlockIPTaskRequest& request);
 
                 /**
-                 *This API (DescribeClassicalLBByInstanceId) is used to get the list of classic CLB IDs through the real server instance ID.
+                 *This API is used to get the list of classic CLB instance IDs through a real server ID.
                  * @param req DescribeClassicalLBByInstanceIdRequest
                  * @return DescribeClassicalLBByInstanceIdOutcome
                  */
@@ -559,7 +645,7 @@ This is an async API. After it is returned successfully, you can call the Descri
                 DescribeClassicalLBListenersOutcomeCallable DescribeClassicalLBListenersCallable(const Model::DescribeClassicalLBListenersRequest& request);
 
                 /**
-                 *This API (DescribeClassicalLBTargets) is used to get the real servers bound to a classic CLB.
+                 *This API is used to get the real servers bound to a classic CLB instance.
                  * @param req DescribeClassicalLBTargetsRequest
                  * @return DescribeClassicalLBTargetsOutcome
                  */
@@ -568,7 +654,43 @@ This is an async API. After it is returned successfully, you can call the Descri
                 DescribeClassicalLBTargetsOutcomeCallable DescribeClassicalLBTargetsCallable(const Model::DescribeClassicalLBTargetsRequest& request);
 
                 /**
-                 *This API is used to get the list of listeners by CLB instance ID, listener protocol, or port. If no filter is specified, all listeners under the CLB instance will be returned.
+                 *This API is used to get the CLB exclusive logset.
+                 * @param req DescribeClsLogSetRequest
+                 * @return DescribeClsLogSetOutcome
+                 */
+                DescribeClsLogSetOutcome DescribeClsLogSet(const Model::DescribeClsLogSetRequest &request);
+                void DescribeClsLogSetAsync(const Model::DescribeClsLogSetRequest& request, const DescribeClsLogSetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeClsLogSetOutcomeCallable DescribeClsLogSetCallable(const Model::DescribeClsLogSetRequest& request);
+
+                /**
+                 *This API is used to query the configured location, bound server or bound CLB instance. If there are domain names, the result will be filtered by domain name.
+                 * @param req DescribeCustomizedConfigAssociateListRequest
+                 * @return DescribeCustomizedConfigAssociateListOutcome
+                 */
+                DescribeCustomizedConfigAssociateListOutcome DescribeCustomizedConfigAssociateList(const Model::DescribeCustomizedConfigAssociateListRequest &request);
+                void DescribeCustomizedConfigAssociateListAsync(const Model::DescribeCustomizedConfigAssociateListRequest& request, const DescribeCustomizedConfigAssociateListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCustomizedConfigAssociateListOutcomeCallable DescribeCustomizedConfigAssociateListCallable(const Model::DescribeCustomizedConfigAssociateListRequest& request);
+
+                /**
+                 *This API is used to pull custom configuration lists to return the user configuration of `AppId`.
+                 * @param req DescribeCustomizedConfigListRequest
+                 * @return DescribeCustomizedConfigListOutcome
+                 */
+                DescribeCustomizedConfigListOutcome DescribeCustomizedConfigList(const Model::DescribeCustomizedConfigListRequest &request);
+                void DescribeCustomizedConfigListAsync(const Model::DescribeCustomizedConfigListRequest& request, const DescribeCustomizedConfigListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCustomizedConfigListOutcomeCallable DescribeCustomizedConfigListCallable(const Model::DescribeCustomizedConfigListRequest& request);
+
+                /**
+                 *This API is used to query CLB instances bound to the CVM or ENI.
+                 * @param req DescribeLBListenersRequest
+                 * @return DescribeLBListenersOutcome
+                 */
+                DescribeLBListenersOutcome DescribeLBListeners(const Model::DescribeLBListenersRequest &request);
+                void DescribeLBListenersAsync(const Model::DescribeLBListenersRequest& request, const DescribeLBListenersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLBListenersOutcomeCallable DescribeLBListenersCallable(const Model::DescribeLBListenersRequest& request);
+
+                /**
+                 *This API is used to get the list of listeners by CLB ID, listener protocol, or listener port. If no filter is specified, all listeners for the CLB instance will be returned.
                  * @param req DescribeListenersRequest
                  * @return DescribeListenersOutcome
                  */
@@ -586,6 +708,24 @@ This is an async API. After it is returned successfully, you can call the Descri
                 DescribeLoadBalancerListByCertIdOutcomeCallable DescribeLoadBalancerListByCertIdCallable(const Model::DescribeLoadBalancerListByCertIdRequest& request);
 
                 /**
+                 *Queries the total number of CLB instances and the number of CLB instances in different status (running, isolated and about to expire).
+                 * @param req DescribeLoadBalancerOverviewRequest
+                 * @return DescribeLoadBalancerOverviewOutcome
+                 */
+                DescribeLoadBalancerOverviewOutcome DescribeLoadBalancerOverview(const Model::DescribeLoadBalancerOverviewRequest &request);
+                void DescribeLoadBalancerOverviewAsync(const Model::DescribeLoadBalancerOverviewRequest& request, const DescribeLoadBalancerOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLoadBalancerOverviewOutcomeCallable DescribeLoadBalancerOverviewCallable(const Model::DescribeLoadBalancerOverviewRequest& request);
+
+                /**
+                 *This API is used to query CLB instances with high traffic under the current account, and return the top 10 results. For queries using a sub-account, only the CLB instances authorized to the sub-account will be returned.
+                 * @param req DescribeLoadBalancerTrafficRequest
+                 * @return DescribeLoadBalancerTrafficOutcome
+                 */
+                DescribeLoadBalancerTrafficOutcome DescribeLoadBalancerTraffic(const Model::DescribeLoadBalancerTrafficRequest &request);
+                void DescribeLoadBalancerTrafficAsync(const Model::DescribeLoadBalancerTrafficRequest& request, const DescribeLoadBalancerTrafficAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLoadBalancerTrafficOutcomeCallable DescribeLoadBalancerTrafficCallable(const Model::DescribeLoadBalancerTrafficRequest& request);
+
+                /**
                  *This API is used to query the list of CLB instances in a region.
 
                  * @param req DescribeLoadBalancersRequest
@@ -594,6 +734,24 @@ This is an async API. After it is returned successfully, you can call the Descri
                 DescribeLoadBalancersOutcome DescribeLoadBalancers(const Model::DescribeLoadBalancersRequest &request);
                 void DescribeLoadBalancersAsync(const Model::DescribeLoadBalancersRequest& request, const DescribeLoadBalancersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeLoadBalancersOutcomeCallable DescribeLoadBalancersCallable(const Model::DescribeLoadBalancersRequest& request);
+
+                /**
+                 *This API is used to query CLB instance details, including listener, rules, and target real servers.
+                 * @param req DescribeLoadBalancersDetailRequest
+                 * @return DescribeLoadBalancersDetailOutcome
+                 */
+                DescribeLoadBalancersDetailOutcome DescribeLoadBalancersDetail(const Model::DescribeLoadBalancersDetailRequest &request);
+                void DescribeLoadBalancersDetailAsync(const Model::DescribeLoadBalancersDetailRequest& request, const DescribeLoadBalancersDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLoadBalancersDetailOutcomeCallable DescribeLoadBalancersDetailCallable(const Model::DescribeLoadBalancersDetailRequest& request);
+
+                /**
+                 *This API is used to query various quotas in the current region.
+                 * @param req DescribeQuotaRequest
+                 * @return DescribeQuotaOutcome
+                 */
+                DescribeQuotaOutcome DescribeQuota(const Model::DescribeQuotaRequest &request);
+                void DescribeQuotaAsync(const Model::DescribeQuotaRequest& request, const DescribeQuotaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeQuotaOutcomeCallable DescribeQuotaCallable(const Model::DescribeQuotaRequest& request);
 
                 /**
                  *This API (DescribeRewrite) is used to query the redirection relationship between the forwarding rules of a CLB instance by instance ID. If no listener ID or forwarding rule ID is specified, all redirection relationships in the instance will be returned.
@@ -678,7 +836,7 @@ This is an async API. After it is returned successfully, you can call the `Descr
                 ManualRewriteOutcomeCallable ManualRewriteCallable(const Model::ManualRewriteRequest& request);
 
                 /**
-                 *This API is used to modify the client IP blacklist of a CLB instance. One forwarding rule supports blocking up to 2,000,000 IPs. One blacklist can contain up to 2,000,000 entries.
+                 *This API is used to modify the client IP blocklist of a CLB instance. One forwarding rule supports blocking up to 2,000,000 IPs. One blocklist can contain up to 2,000,000 entries.
 (This API is in beta test. To use it, please submit a ticket.)
                  * @param req ModifyBlockIPListRequest
                  * @return ModifyBlockIPListOutcome
@@ -725,6 +883,15 @@ This is an async API. After it is returned successfully, you can call the Descri
                 ModifyLoadBalancerAttributesOutcome ModifyLoadBalancerAttributes(const Model::ModifyLoadBalancerAttributesRequest &request);
                 void ModifyLoadBalancerAttributesAsync(const Model::ModifyLoadBalancerAttributesRequest& request, const ModifyLoadBalancerAttributesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyLoadBalancerAttributesOutcomeCallable ModifyLoadBalancerAttributesCallable(const Model::ModifyLoadBalancerAttributesRequest& request);
+
+                /**
+                 *This API is used to upgrade shared CLB instances to LCU-supported CLB instances (downgrade is not allowed) and upgrade/downgrade the specification of LCU-supported instances.
+                 * @param req ModifyLoadBalancerSlaRequest
+                 * @return ModifyLoadBalancerSlaOutcome
+                 */
+                ModifyLoadBalancerSlaOutcome ModifyLoadBalancerSla(const Model::ModifyLoadBalancerSlaRequest &request);
+                void ModifyLoadBalancerSlaAsync(const Model::ModifyLoadBalancerSlaRequest& request, const ModifyLoadBalancerSlaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyLoadBalancerSlaOutcomeCallable ModifyLoadBalancerSlaCallable(const Model::ModifyLoadBalancerSlaRequest& request);
 
                 /**
                  *This API (ModifyRule) is used to modify the attributes of a forwarding rule under a layer-7 CLB listener, such as forwarding path, health check attribute, and forwarding policy.
@@ -806,8 +973,7 @@ This is an async API. After it is returned successfully, you can call the Descri
                 RegisterTargetsOutcomeCallable RegisterTargetsCallable(const Model::RegisterTargetsRequest& request);
 
                 /**
-                 *This API (RegisterTargetsWithClassicalLB) is used to bind real servers to a classic CLB.
-This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestId as an input parameter to check whether this task is successful.
+                 *This API is used to bind a real server with a classic CLB instance. This is an async API. After it is returned successfully, you can call the API `DescribeTaskStatus` with the returned RequestId as an input parameter to check whether this task is successful.
                  * @param req RegisterTargetsWithClassicalLBRequest
                  * @return RegisterTargetsWithClassicalLBOutcome
                  */

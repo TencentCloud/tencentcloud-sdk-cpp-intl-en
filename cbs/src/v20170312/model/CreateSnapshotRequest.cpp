@@ -20,41 +20,49 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Cbs::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateSnapshotRequest::CreateSnapshotRequest() :
     m_diskIdHasBeenSet(false),
-    m_snapshotNameHasBeenSet(false)
+    m_snapshotNameHasBeenSet(false),
+    m_deadlineHasBeenSet(false)
 {
 }
 
 string CreateSnapshotRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_diskIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_diskId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_diskId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_snapshotNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SnapshotName";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_snapshotName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_snapshotName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_deadlineHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Deadline";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_deadline.c_str(), allocator).Move(), allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -90,6 +98,22 @@ void CreateSnapshotRequest::SetSnapshotName(const string& _snapshotName)
 bool CreateSnapshotRequest::SnapshotNameHasBeenSet() const
 {
     return m_snapshotNameHasBeenSet;
+}
+
+string CreateSnapshotRequest::GetDeadline() const
+{
+    return m_deadline;
+}
+
+void CreateSnapshotRequest::SetDeadline(const string& _deadline)
+{
+    m_deadline = _deadline;
+    m_deadlineHasBeenSet = true;
+}
+
+bool CreateSnapshotRequest::DeadlineHasBeenSet() const
+{
+    return m_deadlineHasBeenSet;
 }
 
 

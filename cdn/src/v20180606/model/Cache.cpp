@@ -18,16 +18,16 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 Cache::Cache() :
     m_simpleCacheHasBeenSet(false),
-    m_advancedCacheHasBeenSet(false)
+    m_advancedCacheHasBeenSet(false),
+    m_ruleCacheHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome Cache::Deserialize(const Value &value)
+CoreInternalOutcome Cache::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +36,7 @@ CoreInternalOutcome Cache::Deserialize(const Value &value)
     {
         if (!value["SimpleCache"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `Cache.SimpleCache` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Cache.SimpleCache` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_simpleCache.Deserialize(value["SimpleCache"]);
@@ -53,7 +53,7 @@ CoreInternalOutcome Cache::Deserialize(const Value &value)
     {
         if (!value["AdvancedCache"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `Cache.AdvancedCache` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Cache.AdvancedCache` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_advancedCache.Deserialize(value["AdvancedCache"]);
@@ -66,29 +66,64 @@ CoreInternalOutcome Cache::Deserialize(const Value &value)
         m_advancedCacheHasBeenSet = true;
     }
 
+    if (value.HasMember("RuleCache") && !value["RuleCache"].IsNull())
+    {
+        if (!value["RuleCache"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Cache.RuleCache` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["RuleCache"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            RuleCache item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_ruleCache.push_back(item);
+        }
+        m_ruleCacheHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void Cache::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Cache::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_simpleCacheHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SimpleCache";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_simpleCache.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_advancedCacheHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AdvancedCache";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_advancedCache.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_ruleCacheHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RuleCache";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_ruleCache.begin(); itr != m_ruleCache.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
 }
@@ -124,5 +159,21 @@ void Cache::SetAdvancedCache(const AdvancedCache& _advancedCache)
 bool Cache::AdvancedCacheHasBeenSet() const
 {
     return m_advancedCacheHasBeenSet;
+}
+
+vector<RuleCache> Cache::GetRuleCache() const
+{
+    return m_ruleCache;
+}
+
+void Cache::SetRuleCache(const vector<RuleCache>& _ruleCache)
+{
+    m_ruleCache = _ruleCache;
+    m_ruleCacheHasBeenSet = true;
+}
+
+bool Cache::RuleCacheHasBeenSet() const
+{
+    return m_ruleCacheHasBeenSet;
 }
 

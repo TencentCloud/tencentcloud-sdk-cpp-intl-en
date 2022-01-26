@@ -155,14 +155,14 @@ namespace TencentCloud
                     bool CPUHasBeenSet() const;
 
                     /**
-                     * 获取Instance's memory capacity. Unit: GB.
-                     * @return Memory Instance's memory capacity. Unit: GB.
+                     * 获取Instance’s memory capacity. Unit: GB.
+                     * @return Memory Instance’s memory capacity. Unit: GB.
                      */
                     uint64_t GetMemory() const;
 
                     /**
-                     * 设置Instance's memory capacity. Unit: GB.
-                     * @param Memory Instance's memory capacity. Unit: GB.
+                     * 设置Instance’s memory capacity. Unit: GB.
+                     * @param Memory Instance’s memory capacity. Unit: GB.
                      */
                     void SetMemory(const uint64_t& _memory);
 
@@ -191,14 +191,14 @@ namespace TencentCloud
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceType 
+                     * 获取Instance type.
+                     * @return InstanceType Instance type.
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置
-                     * @param InstanceType 
+                     * 设置Instance type.
+                     * @param InstanceType Instance type.
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
@@ -301,7 +301,7 @@ namespace TencentCloud
                     bool m_cPUHasBeenSet;
 
                     /**
-                     * Instance's memory capacity. Unit: GB.
+                     * Instance’s memory capacity. Unit: GB.
                      */
                     uint64_t m_memory;
                     bool m_memoryHasBeenSet;
@@ -313,7 +313,7 @@ namespace TencentCloud
                     bool m_createdTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Instance type.
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;

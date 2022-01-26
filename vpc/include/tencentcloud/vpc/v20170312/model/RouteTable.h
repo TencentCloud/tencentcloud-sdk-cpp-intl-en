@@ -27,6 +27,7 @@
 #include <tencentcloud/vpc/v20170312/model/RouteTableAssociation.h>
 #include <tencentcloud/vpc/v20170312/model/Route.h>
 #include <tencentcloud/vpc/v20170312/model/Tag.h>
+#include <tencentcloud/vpc/v20170312/model/CidrForCcn.h>
 
 
 namespace TencentCloud
@@ -122,14 +123,14 @@ namespace TencentCloud
                     bool AssociationSetHasBeenSet() const;
 
                     /**
-                     * 获取Route table policy set.
-                     * @return RouteSet Route table policy set.
+                     * 获取IPv4 routing policy set.
+                     * @return RouteSet IPv4 routing policy set.
                      */
                     std::vector<Route> GetRouteSet() const;
 
                     /**
-                     * 设置Route table policy set.
-                     * @param RouteSet Route table policy set.
+                     * 设置IPv4 routing policy set.
+                     * @param RouteSet IPv4 routing policy set.
                      */
                     void SetRouteSet(const std::vector<Route>& _routeSet);
 
@@ -193,6 +194,28 @@ namespace TencentCloud
                      */
                     bool TagSetHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the local route is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return LocalCidrForCcn Whether the local route is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<CidrForCcn> GetLocalCidrForCcn() const;
+
+                    /**
+                     * 设置Whether the local route is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param LocalCidrForCcn Whether the local route is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetLocalCidrForCcn(const std::vector<CidrForCcn>& _localCidrForCcn);
+
+                    /**
+                     * 判断参数 LocalCidrForCcn 是否已赋值
+                     * @return LocalCidrForCcn 是否已赋值
+                     */
+                    bool LocalCidrForCcnHasBeenSet() const;
+
                 private:
 
                     /**
@@ -220,7 +243,7 @@ namespace TencentCloud
                     bool m_associationSetHasBeenSet;
 
                     /**
-                     * Route table policy set.
+                     * IPv4 routing policy set.
                      */
                     std::vector<Route> m_routeSet;
                     bool m_routeSetHasBeenSet;
@@ -242,6 +265,13 @@ namespace TencentCloud
                      */
                     std::vector<Tag> m_tagSet;
                     bool m_tagSetHasBeenSet;
+
+                    /**
+                     * Whether the local route is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<CidrForCcn> m_localCidrForCcn;
+                    bool m_localCidrForCcnHasBeenSet;
 
                 };
             }

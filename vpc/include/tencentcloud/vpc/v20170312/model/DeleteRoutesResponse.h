@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vpc/v20170312/model/Route.h>
 
 
 namespace TencentCloud
@@ -40,9 +41,28 @@ namespace TencentCloud
                     DeleteRoutesResponse();
                     ~DeleteRoutesResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
+
+                    /**
+                     * 获取Details of the routing policy that has been deleted.
+                     * @return RouteSet Details of the routing policy that has been deleted.
+                     */
+                    std::vector<Route> GetRouteSet() const;
+
+                    /**
+                     * 判断参数 RouteSet 是否已赋值
+                     * @return RouteSet 是否已赋值
+                     */
+                    bool RouteSetHasBeenSet() const;
 
                 private:
+
+                    /**
+                     * Details of the routing policy that has been deleted.
+                     */
+                    std::vector<Route> m_routeSet;
+                    bool m_routeSetHasBeenSet;
 
                 };
             }

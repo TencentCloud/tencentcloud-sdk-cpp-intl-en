@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Game server session ID
-                     * @return GameServerSessionId Game server session ID
+                     * 获取Game server session ID. It should contain 1 to 48 ASCII characters.
+                     * @return GameServerSessionId Game server session ID. It should contain 1 to 48 ASCII characters.
                      */
                     std::string GetGameServerSessionId() const;
 
                     /**
-                     * 设置Game server session ID
-                     * @param GameServerSessionId Game server session ID
+                     * 设置Game server session ID. It should contain 1 to 48 ASCII characters.
+                     * @param GameServerSessionId Game server session ID. It should contain 1 to 48 ASCII characters.
                      */
                     void SetGameServerSessionId(const std::string& _gameServerSessionId);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Pagination offset, which is used for querying the next page
-                     * @return NextToken Pagination offset, which is used for querying the next page
+                     * 获取Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+                     * @return NextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
                      */
                     std::string GetNextToken() const;
 
                     /**
-                     * 设置Pagination offset, which is used for querying the next page
-                     * @param NextToken Pagination offset, which is used for querying the next page
+                     * 设置Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+                     * @param NextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
                      */
                     void SetNextToken(const std::string& _nextToken);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool NextTokenHasBeenSet() const;
 
                     /**
-                     * 获取Player ID
-                     * @return PlayerId Player ID
+                     * 获取Player ID. It should contain 1 to 1024 ASCII characters.
+                     * @return PlayerId Player ID. It should contain 1 to 1024 ASCII characters.
                      */
                     std::string GetPlayerId() const;
 
                     /**
-                     * 设置Player ID
-                     * @param PlayerId Player ID
+                     * 设置Player ID. It should contain 1 to 1024 ASCII characters.
+                     * @param PlayerId Player ID. It should contain 1 to 1024 ASCII characters.
                      */
                     void SetPlayerId(const std::string& _playerId);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool PlayerIdHasBeenSet() const;
 
                     /**
-                     * 获取Player session ID
-                     * @return PlayerSessionId Player session ID
+                     * 获取Player session ID. It should contain 1 to 1024 ASCII characters.
+                     * @return PlayerSessionId Player session ID. It should contain 1 to 1024 ASCII characters.
                      */
                     std::string GetPlayerSessionId() const;
 
                     /**
-                     * 设置Player session ID
-                     * @param PlayerSessionId Player session ID
+                     * 设置Player session ID. It should contain 1 to 1024 ASCII characters.
+                     * @param PlayerSessionId Player session ID. It should contain 1 to 1024 ASCII characters.
                      */
                     void SetPlayerSessionId(const std::string& _playerSessionId);
 
@@ -153,7 +153,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Game server session ID
+                     * Game server session ID. It should contain 1 to 48 ASCII characters.
                      */
                     std::string m_gameServerSessionId;
                     bool m_gameServerSessionIdHasBeenSet;
@@ -165,19 +165,19 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Pagination offset, which is used for querying the next page
+                     * Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
                      */
                     std::string m_nextToken;
                     bool m_nextTokenHasBeenSet;
 
                     /**
-                     * Player ID
+                     * Player ID. It should contain 1 to 1024 ASCII characters.
                      */
                     std::string m_playerId;
                     bool m_playerIdHasBeenSet;
 
                     /**
-                     * Player session ID
+                     * Player session ID. It should contain 1 to 1024 ASCII characters.
                      */
                     std::string m_playerSessionId;
                     bool m_playerSessionIdHasBeenSet;

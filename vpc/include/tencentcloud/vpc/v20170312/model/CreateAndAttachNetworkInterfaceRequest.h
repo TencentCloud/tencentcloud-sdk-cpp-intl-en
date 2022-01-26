@@ -99,14 +99,14 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取The CVM instance ID.
-                     * @return InstanceId The CVM instance ID.
+                     * 获取CVM instance ID.
+                     * @return InstanceId CVM instance ID.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置The CVM instance ID.
-                     * @param InstanceId The CVM instance ID.
+                     * 设置CVM instance ID.
+                     * @param InstanceId CVM instance ID.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -206,6 +206,24 @@ namespace TencentCloud
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
+                     * @return AttachType ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
+                     */
+                    uint64_t GetAttachType() const;
+
+                    /**
+                     * 设置ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
+                     * @param AttachType ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
+                     */
+                    void SetAttachType(const uint64_t& _attachType);
+
+                    /**
+                     * 判断参数 AttachType 是否已赋值
+                     * @return AttachType 是否已赋值
+                     */
+                    bool AttachTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -227,7 +245,7 @@ namespace TencentCloud
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * The CVM instance ID.
+                     * CVM instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -261,6 +279,12 @@ namespace TencentCloud
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
+                     */
+                    uint64_t m_attachType;
+                    bool m_attachTypeHasBeenSet;
 
                 };
             }

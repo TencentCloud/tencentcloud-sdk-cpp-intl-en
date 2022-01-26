@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Sms::V20190711::Model;
-using namespace rapidjson;
 using namespace std;
 
 PullSmsSendStatus::PullSmsSendStatus() :
@@ -33,7 +32,7 @@ PullSmsSendStatus::PullSmsSendStatus() :
 {
 }
 
-CoreInternalOutcome PullSmsSendStatus::Deserialize(const Value &value)
+CoreInternalOutcome PullSmsSendStatus::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +41,7 @@ CoreInternalOutcome PullSmsSendStatus::Deserialize(const Value &value)
     {
         if (!value["UserReceiveTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PullSmsSendStatus.UserReceiveTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PullSmsSendStatus.UserReceiveTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_userReceiveTime = string(value["UserReceiveTime"].GetString());
         m_userReceiveTimeHasBeenSet = true;
@@ -52,7 +51,7 @@ CoreInternalOutcome PullSmsSendStatus::Deserialize(const Value &value)
     {
         if (!value["UserReceiveUnixTime"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `PullSmsSendStatus.UserReceiveUnixTime` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PullSmsSendStatus.UserReceiveUnixTime` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_userReceiveUnixTime = value["UserReceiveUnixTime"].GetUint64();
         m_userReceiveUnixTimeHasBeenSet = true;
@@ -62,7 +61,7 @@ CoreInternalOutcome PullSmsSendStatus::Deserialize(const Value &value)
     {
         if (!value["NationCode"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PullSmsSendStatus.NationCode` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PullSmsSendStatus.NationCode` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_nationCode = string(value["NationCode"].GetString());
         m_nationCodeHasBeenSet = true;
@@ -72,7 +71,7 @@ CoreInternalOutcome PullSmsSendStatus::Deserialize(const Value &value)
     {
         if (!value["PurePhoneNumber"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PullSmsSendStatus.PurePhoneNumber` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PullSmsSendStatus.PurePhoneNumber` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_purePhoneNumber = string(value["PurePhoneNumber"].GetString());
         m_purePhoneNumberHasBeenSet = true;
@@ -82,7 +81,7 @@ CoreInternalOutcome PullSmsSendStatus::Deserialize(const Value &value)
     {
         if (!value["PhoneNumber"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PullSmsSendStatus.PhoneNumber` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PullSmsSendStatus.PhoneNumber` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_phoneNumber = string(value["PhoneNumber"].GetString());
         m_phoneNumberHasBeenSet = true;
@@ -92,7 +91,7 @@ CoreInternalOutcome PullSmsSendStatus::Deserialize(const Value &value)
     {
         if (!value["SerialNo"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PullSmsSendStatus.SerialNo` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PullSmsSendStatus.SerialNo` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_serialNo = string(value["SerialNo"].GetString());
         m_serialNoHasBeenSet = true;
@@ -102,7 +101,7 @@ CoreInternalOutcome PullSmsSendStatus::Deserialize(const Value &value)
     {
         if (!value["ReportStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PullSmsSendStatus.ReportStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PullSmsSendStatus.ReportStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_reportStatus = string(value["ReportStatus"].GetString());
         m_reportStatusHasBeenSet = true;
@@ -112,7 +111,7 @@ CoreInternalOutcome PullSmsSendStatus::Deserialize(const Value &value)
     {
         if (!value["Description"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PullSmsSendStatus.Description` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PullSmsSendStatus.Description` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_description = string(value["Description"].GetString());
         m_descriptionHasBeenSet = true;
@@ -122,20 +121,20 @@ CoreInternalOutcome PullSmsSendStatus::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void PullSmsSendStatus::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void PullSmsSendStatus::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_userReceiveTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UserReceiveTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_userReceiveTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_userReceiveTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_userReceiveUnixTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UserReceiveUnixTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_userReceiveUnixTime, allocator);
@@ -143,50 +142,50 @@ void PullSmsSendStatus::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_nationCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NationCode";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_nationCode.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_nationCode.c_str(), allocator).Move(), allocator);
     }
 
     if (m_purePhoneNumberHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PurePhoneNumber";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_purePhoneNumber.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_purePhoneNumber.c_str(), allocator).Move(), allocator);
     }
 
     if (m_phoneNumberHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PhoneNumber";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_phoneNumber.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_phoneNumber.c_str(), allocator).Move(), allocator);
     }
 
     if (m_serialNoHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SerialNo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_serialNo.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_serialNo.c_str(), allocator).Move(), allocator);
     }
 
     if (m_reportStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReportStatus";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_reportStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_reportStatus.c_str(), allocator).Move(), allocator);
     }
 
     if (m_descriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Description";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_description.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
     }
 
 }

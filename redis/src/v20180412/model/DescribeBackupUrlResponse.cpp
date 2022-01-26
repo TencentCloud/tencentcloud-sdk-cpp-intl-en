@@ -21,31 +21,32 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Redis::V20180412::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeBackupUrlResponse::DescribeBackupUrlResponse() :
     m_downloadUrlHasBeenSet(false),
-    m_innerDownloadUrlHasBeenSet(false)
+    m_innerDownloadUrlHasBeenSet(false),
+    m_filenamesHasBeenSet(false),
+    m_backupInfosHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome DescribeBackupUrlResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -56,21 +57,21 @@ CoreInternalOutcome DescribeBackupUrlResponse::Deserialize(const string &payload
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
     if (rsp.HasMember("DownloadUrl") && !rsp["DownloadUrl"].IsNull())
     {
         if (!rsp["DownloadUrl"].IsArray())
-            return CoreInternalOutcome(Error("response `DownloadUrl` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DownloadUrl` is not array type"));
 
-        const Value &tmpValue = rsp["DownloadUrl"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["DownloadUrl"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_downloadUrl.push_back((*itr).GetString());
         }
@@ -80,18 +81,122 @@ CoreInternalOutcome DescribeBackupUrlResponse::Deserialize(const string &payload
     if (rsp.HasMember("InnerDownloadUrl") && !rsp["InnerDownloadUrl"].IsNull())
     {
         if (!rsp["InnerDownloadUrl"].IsArray())
-            return CoreInternalOutcome(Error("response `InnerDownloadUrl` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `InnerDownloadUrl` is not array type"));
 
-        const Value &tmpValue = rsp["InnerDownloadUrl"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["InnerDownloadUrl"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_innerDownloadUrl.push_back((*itr).GetString());
         }
         m_innerDownloadUrlHasBeenSet = true;
     }
 
+    if (rsp.HasMember("Filenames") && !rsp["Filenames"].IsNull())
+    {
+        if (!rsp["Filenames"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Filenames` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["Filenames"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_filenames.push_back((*itr).GetString());
+        }
+        m_filenamesHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("BackupInfos") && !rsp["BackupInfos"].IsNull())
+    {
+        if (!rsp["BackupInfos"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `BackupInfos` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["BackupInfos"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            BackupDownloadInfo item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_backupInfos.push_back(item);
+        }
+        m_backupInfosHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeBackupUrlResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_downloadUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DownloadUrl";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_downloadUrl.begin(); itr != m_downloadUrl.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_innerDownloadUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InnerDownloadUrl";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_innerDownloadUrl.begin(); itr != m_innerDownloadUrl.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_filenamesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Filenames";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_filenames.begin(); itr != m_filenames.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_backupInfosHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BackupInfos";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_backupInfos.begin(); itr != m_backupInfos.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 
@@ -113,6 +218,26 @@ vector<string> DescribeBackupUrlResponse::GetInnerDownloadUrl() const
 bool DescribeBackupUrlResponse::InnerDownloadUrlHasBeenSet() const
 {
     return m_innerDownloadUrlHasBeenSet;
+}
+
+vector<string> DescribeBackupUrlResponse::GetFilenames() const
+{
+    return m_filenames;
+}
+
+bool DescribeBackupUrlResponse::FilenamesHasBeenSet() const
+{
+    return m_filenamesHasBeenSet;
+}
+
+vector<BackupDownloadInfo> DescribeBackupUrlResponse::GetBackupInfos() const
+{
+    return m_backupInfos;
+}
+
+bool DescribeBackupUrlResponse::BackupInfosHasBeenSet() const
+{
+    return m_backupInfosHasBeenSet;
 }
 
 

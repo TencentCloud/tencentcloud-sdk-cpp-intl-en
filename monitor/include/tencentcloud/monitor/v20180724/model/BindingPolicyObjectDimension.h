@@ -83,14 +83,22 @@ namespace TencentCloud
                     bool RegionIdHasBeenSet() const;
 
                     /**
-                     * 获取Dimensions.
-                     * @return Dimensions Dimensions.
+                     * 获取Instance dimension information in the following format:
+{"unInstanceId":"ins-00jvv9mo"}. The dimension information varies by Tencent Cloud services. For more information, please see:
+[Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
+                     * @return Dimensions Instance dimension information in the following format:
+{"unInstanceId":"ins-00jvv9mo"}. The dimension information varies by Tencent Cloud services. For more information, please see:
+[Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
                      */
                     std::string GetDimensions() const;
 
                     /**
-                     * 设置Dimensions.
-                     * @param Dimensions Dimensions.
+                     * 设置Instance dimension information in the following format:
+{"unInstanceId":"ins-00jvv9mo"}. The dimension information varies by Tencent Cloud services. For more information, please see:
+[Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
+                     * @param Dimensions Instance dimension information in the following format:
+{"unInstanceId":"ins-00jvv9mo"}. The dimension information varies by Tencent Cloud services. For more information, please see:
+[Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
                      */
                     void SetDimensions(const std::string& _dimensions);
 
@@ -133,7 +141,9 @@ namespace TencentCloud
                     bool m_regionIdHasBeenSet;
 
                     /**
-                     * Dimensions.
+                     * Instance dimension information in the following format:
+{"unInstanceId":"ins-00jvv9mo"}. The dimension information varies by Tencent Cloud services. For more information, please see:
+[Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
                      */
                     std::string m_dimensions;
                     bool m_dimensionsHasBeenSet;

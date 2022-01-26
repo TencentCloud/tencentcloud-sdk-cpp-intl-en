@@ -41,6 +41,7 @@ namespace TencentCloud
                     GeneralBasicOCRResponse();
                     ~GeneralBasicOCRResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -68,8 +69,8 @@ namespace TencentCloud
                     bool LanguageHasBeenSet() const;
 
                     /**
-                     * 获取Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://cloud.tencent.com/document/product/866/45139">How to Correct Tilted Text</a>
-                     * @return Angel Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://cloud.tencent.com/document/product/866/45139">How to Correct Tilted Text</a>
+                     * 获取Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://intl.cloud.tencent.com/document/product/866/45139?from_cn_redirect=1">How to Correct Tilted Text</a>.
+                     * @return Angel Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://intl.cloud.tencent.com/document/product/866/45139?from_cn_redirect=1">How to Correct Tilted Text</a>.
                      */
                     double GetAngel() const;
 
@@ -78,6 +79,18 @@ namespace TencentCloud
                      * @return Angel 是否已赋值
                      */
                     bool AngelHasBeenSet() const;
+
+                    /**
+                     * 获取Total number of PDF pages to be returned if the image is a PDF. Default value: 0.
+                     * @return PdfPageSize Total number of PDF pages to be returned if the image is a PDF. Default value: 0.
+                     */
+                    int64_t GetPdfPageSize() const;
+
+                    /**
+                     * 判断参数 PdfPageSize 是否已赋值
+                     * @return PdfPageSize 是否已赋值
+                     */
+                    bool PdfPageSizeHasBeenSet() const;
 
                 private:
 
@@ -94,10 +107,16 @@ namespace TencentCloud
                     bool m_languageHasBeenSet;
 
                     /**
-                     * Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://cloud.tencent.com/document/product/866/45139">How to Correct Tilted Text</a>
+                     * Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://intl.cloud.tencent.com/document/product/866/45139?from_cn_redirect=1">How to Correct Tilted Text</a>.
                      */
                     double m_angel;
                     bool m_angelHasBeenSet;
+
+                    /**
+                     * Total number of PDF pages to be returned if the image is a PDF. Default value: 0.
+                     */
+                    int64_t m_pdfPageSize;
+                    bool m_pdfPageSizeHasBeenSet;
 
                 };
             }

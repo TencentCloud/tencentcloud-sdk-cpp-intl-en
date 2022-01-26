@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Live::V20180801::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribePlayErrorCodeSumInfoListResponse::DescribePlayErrorCodeSumInfoListResponse() :
@@ -41,20 +40,20 @@ DescribePlayErrorCodeSumInfoListResponse::DescribePlayErrorCodeSumInfoListRespon
 
 CoreInternalOutcome DescribePlayErrorCodeSumInfoListResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -65,21 +64,21 @@ CoreInternalOutcome DescribePlayErrorCodeSumInfoListResponse::Deserialize(const 
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
     if (rsp.HasMember("ProIspInfoList") && !rsp["ProIspInfoList"].IsNull())
     {
         if (!rsp["ProIspInfoList"].IsArray())
-            return CoreInternalOutcome(Error("response `ProIspInfoList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ProIspInfoList` is not array type"));
 
-        const Value &tmpValue = rsp["ProIspInfoList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["ProIspInfoList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             ProIspPlayCodeDataInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -97,7 +96,7 @@ CoreInternalOutcome DescribePlayErrorCodeSumInfoListResponse::Deserialize(const 
     {
         if (!rsp["TotalCodeAll"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TotalCodeAll` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TotalCodeAll` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_totalCodeAll = rsp["TotalCodeAll"].GetUint64();
         m_totalCodeAllHasBeenSet = true;
@@ -107,7 +106,7 @@ CoreInternalOutcome DescribePlayErrorCodeSumInfoListResponse::Deserialize(const 
     {
         if (!rsp["TotalCode4xx"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TotalCode4xx` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TotalCode4xx` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_totalCode4xx = rsp["TotalCode4xx"].GetUint64();
         m_totalCode4xxHasBeenSet = true;
@@ -117,7 +116,7 @@ CoreInternalOutcome DescribePlayErrorCodeSumInfoListResponse::Deserialize(const 
     {
         if (!rsp["TotalCode5xx"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TotalCode5xx` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TotalCode5xx` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_totalCode5xx = rsp["TotalCode5xx"].GetUint64();
         m_totalCode5xxHasBeenSet = true;
@@ -126,10 +125,10 @@ CoreInternalOutcome DescribePlayErrorCodeSumInfoListResponse::Deserialize(const 
     if (rsp.HasMember("TotalCodeList") && !rsp["TotalCodeList"].IsNull())
     {
         if (!rsp["TotalCodeList"].IsArray())
-            return CoreInternalOutcome(Error("response `TotalCodeList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `TotalCodeList` is not array type"));
 
-        const Value &tmpValue = rsp["TotalCodeList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["TotalCodeList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             PlayCodeTotalInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -147,7 +146,7 @@ CoreInternalOutcome DescribePlayErrorCodeSumInfoListResponse::Deserialize(const 
     {
         if (!rsp["PageNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `PageNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PageNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_pageNum = rsp["PageNum"].GetUint64();
         m_pageNumHasBeenSet = true;
@@ -157,7 +156,7 @@ CoreInternalOutcome DescribePlayErrorCodeSumInfoListResponse::Deserialize(const 
     {
         if (!rsp["PageSize"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `PageSize` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PageSize` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_pageSize = rsp["PageSize"].GetUint64();
         m_pageSizeHasBeenSet = true;
@@ -167,7 +166,7 @@ CoreInternalOutcome DescribePlayErrorCodeSumInfoListResponse::Deserialize(const 
     {
         if (!rsp["TotalPage"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TotalPage` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TotalPage` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_totalPage = rsp["TotalPage"].GetUint64();
         m_totalPageHasBeenSet = true;
@@ -177,7 +176,7 @@ CoreInternalOutcome DescribePlayErrorCodeSumInfoListResponse::Deserialize(const 
     {
         if (!rsp["TotalNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TotalNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TotalNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_totalNum = rsp["TotalNum"].GetUint64();
         m_totalNumHasBeenSet = true;
@@ -187,7 +186,7 @@ CoreInternalOutcome DescribePlayErrorCodeSumInfoListResponse::Deserialize(const 
     {
         if (!rsp["TotalCode2xx"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TotalCode2xx` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TotalCode2xx` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_totalCode2xx = rsp["TotalCode2xx"].GetUint64();
         m_totalCode2xxHasBeenSet = true;
@@ -197,7 +196,7 @@ CoreInternalOutcome DescribePlayErrorCodeSumInfoListResponse::Deserialize(const 
     {
         if (!rsp["TotalCode3xx"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TotalCode3xx` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TotalCode3xx` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_totalCode3xx = rsp["TotalCode3xx"].GetUint64();
         m_totalCode3xxHasBeenSet = true;
@@ -205,6 +204,125 @@ CoreInternalOutcome DescribePlayErrorCodeSumInfoListResponse::Deserialize(const 
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribePlayErrorCodeSumInfoListResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_proIspInfoListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProIspInfoList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_proIspInfoList.begin(); itr != m_proIspInfoList.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_totalCodeAllHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalCodeAll";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalCodeAll, allocator);
+    }
+
+    if (m_totalCode4xxHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalCode4xx";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalCode4xx, allocator);
+    }
+
+    if (m_totalCode5xxHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalCode5xx";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalCode5xx, allocator);
+    }
+
+    if (m_totalCodeListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalCodeList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_totalCodeList.begin(); itr != m_totalCodeList.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_pageNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PageNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_pageNum, allocator);
+    }
+
+    if (m_pageSizeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PageSize";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_pageSize, allocator);
+    }
+
+    if (m_totalPageHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalPage";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalPage, allocator);
+    }
+
+    if (m_totalNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalNum, allocator);
+    }
+
+    if (m_totalCode2xxHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalCode2xx";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalCode2xx, allocator);
+    }
+
+    if (m_totalCode3xxHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalCode3xx";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalCode3xx, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

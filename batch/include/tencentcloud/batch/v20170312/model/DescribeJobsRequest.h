@@ -62,30 +62,46 @@ namespace TencentCloud
                     bool JobIdsHasBeenSet() const;
 
                     /**
-                     * 获取Filter
-<li> job-id - String - Required: No - (Filter) Filter by job ID.</li>
-<li> job-name - String - Required: No - (Filter) Filter by job name.</li>
-<li> job-state - String - Required: No - (Filter) Filter by job state.</li>
-<li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
-                     * @return Filters Filter
-<li> job-id - String - Required: No - (Filter) Filter by job ID.</li>
-<li> job-name - String - Required: No - (Filter) Filter by job name.</li>
-<li> job-state - String - Required: No - (Filter) Filter by job state.</li>
-<li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
+                     * 获取Filter.
+<li> `job-id` - String - Optional - Filter by job ID.</li>
+<li> `job-name` - String - Optional - Filter by job name.</li>
+<li> `job-state` - String - Optional - Filter by job state.</li>
+<li> `zone` - String - Optional - Filter by availability zone.</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+<li> `tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `JobIds` parameter.
+                     * @return Filters Filter.
+<li> `job-id` - String - Optional - Filter by job ID.</li>
+<li> `job-name` - String - Optional - Filter by job name.</li>
+<li> `job-state` - String - Optional - Filter by job state.</li>
+<li> `zone` - String - Optional - Filter by availability zone.</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+<li> `tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `JobIds` parameter.
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter
-<li> job-id - String - Required: No - (Filter) Filter by job ID.</li>
-<li> job-name - String - Required: No - (Filter) Filter by job name.</li>
-<li> job-state - String - Required: No - (Filter) Filter by job state.</li>
-<li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
-                     * @param Filters Filter
-<li> job-id - String - Required: No - (Filter) Filter by job ID.</li>
-<li> job-name - String - Required: No - (Filter) Filter by job name.</li>
-<li> job-state - String - Required: No - (Filter) Filter by job state.</li>
-<li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
+                     * 设置Filter.
+<li> `job-id` - String - Optional - Filter by job ID.</li>
+<li> `job-name` - String - Optional - Filter by job name.</li>
+<li> `job-state` - String - Optional - Filter by job state.</li>
+<li> `zone` - String - Optional - Filter by availability zone.</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+<li> `tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `JobIds` parameter.
+                     * @param Filters Filter.
+<li> `job-id` - String - Optional - Filter by job ID.</li>
+<li> `job-name` - String - Optional - Filter by job name.</li>
+<li> `job-state` - String - Optional - Filter by job state.</li>
+<li> `zone` - String - Optional - Filter by availability zone.</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+<li> `tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `JobIds` parameter.
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -140,11 +156,15 @@ namespace TencentCloud
                     bool m_jobIdsHasBeenSet;
 
                     /**
-                     * Filter
-<li> job-id - String - Required: No - (Filter) Filter by job ID.</li>
-<li> job-name - String - Required: No - (Filter) Filter by job name.</li>
-<li> job-state - String - Required: No - (Filter) Filter by job state.</li>
-<li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
+                     * Filter.
+<li> `job-id` - String - Optional - Filter by job ID.</li>
+<li> `job-name` - String - Optional - Filter by job name.</li>
+<li> `job-state` - String - Optional - Filter by job state.</li>
+<li> `zone` - String - Optional - Filter by availability zone.</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+<li> `tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `JobIds` parameter.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

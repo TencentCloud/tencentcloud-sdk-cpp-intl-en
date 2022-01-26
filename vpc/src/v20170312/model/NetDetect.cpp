@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 NetDetect::NetDetect() :
@@ -38,7 +37,7 @@ NetDetect::NetDetect() :
 {
 }
 
-CoreInternalOutcome NetDetect::Deserialize(const Value &value)
+CoreInternalOutcome NetDetect::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -47,7 +46,7 @@ CoreInternalOutcome NetDetect::Deserialize(const Value &value)
     {
         if (!value["VpcId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NetDetect.VpcId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NetDetect.VpcId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpcId = string(value["VpcId"].GetString());
         m_vpcIdHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome NetDetect::Deserialize(const Value &value)
     {
         if (!value["VpcName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NetDetect.VpcName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NetDetect.VpcName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpcName = string(value["VpcName"].GetString());
         m_vpcNameHasBeenSet = true;
@@ -67,7 +66,7 @@ CoreInternalOutcome NetDetect::Deserialize(const Value &value)
     {
         if (!value["SubnetId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NetDetect.SubnetId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NetDetect.SubnetId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_subnetId = string(value["SubnetId"].GetString());
         m_subnetIdHasBeenSet = true;
@@ -77,7 +76,7 @@ CoreInternalOutcome NetDetect::Deserialize(const Value &value)
     {
         if (!value["SubnetName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NetDetect.SubnetName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NetDetect.SubnetName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_subnetName = string(value["SubnetName"].GetString());
         m_subnetNameHasBeenSet = true;
@@ -87,7 +86,7 @@ CoreInternalOutcome NetDetect::Deserialize(const Value &value)
     {
         if (!value["NetDetectId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NetDetect.NetDetectId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NetDetect.NetDetectId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_netDetectId = string(value["NetDetectId"].GetString());
         m_netDetectIdHasBeenSet = true;
@@ -97,7 +96,7 @@ CoreInternalOutcome NetDetect::Deserialize(const Value &value)
     {
         if (!value["NetDetectName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NetDetect.NetDetectName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NetDetect.NetDetectName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_netDetectName = string(value["NetDetectName"].GetString());
         m_netDetectNameHasBeenSet = true;
@@ -106,10 +105,10 @@ CoreInternalOutcome NetDetect::Deserialize(const Value &value)
     if (value.HasMember("DetectDestinationIp") && !value["DetectDestinationIp"].IsNull())
     {
         if (!value["DetectDestinationIp"].IsArray())
-            return CoreInternalOutcome(Error("response `NetDetect.DetectDestinationIp` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `NetDetect.DetectDestinationIp` is not array type"));
 
-        const Value &tmpValue = value["DetectDestinationIp"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["DetectDestinationIp"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_detectDestinationIp.push_back((*itr).GetString());
         }
@@ -119,10 +118,10 @@ CoreInternalOutcome NetDetect::Deserialize(const Value &value)
     if (value.HasMember("DetectSourceIp") && !value["DetectSourceIp"].IsNull())
     {
         if (!value["DetectSourceIp"].IsArray())
-            return CoreInternalOutcome(Error("response `NetDetect.DetectSourceIp` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `NetDetect.DetectSourceIp` is not array type"));
 
-        const Value &tmpValue = value["DetectSourceIp"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["DetectSourceIp"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_detectSourceIp.push_back((*itr).GetString());
         }
@@ -133,7 +132,7 @@ CoreInternalOutcome NetDetect::Deserialize(const Value &value)
     {
         if (!value["NextHopType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NetDetect.NextHopType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NetDetect.NextHopType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_nextHopType = string(value["NextHopType"].GetString());
         m_nextHopTypeHasBeenSet = true;
@@ -143,7 +142,7 @@ CoreInternalOutcome NetDetect::Deserialize(const Value &value)
     {
         if (!value["NextHopDestination"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NetDetect.NextHopDestination` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NetDetect.NextHopDestination` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_nextHopDestination = string(value["NextHopDestination"].GetString());
         m_nextHopDestinationHasBeenSet = true;
@@ -153,7 +152,7 @@ CoreInternalOutcome NetDetect::Deserialize(const Value &value)
     {
         if (!value["NextHopName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NetDetect.NextHopName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NetDetect.NextHopName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_nextHopName = string(value["NextHopName"].GetString());
         m_nextHopNameHasBeenSet = true;
@@ -163,7 +162,7 @@ CoreInternalOutcome NetDetect::Deserialize(const Value &value)
     {
         if (!value["NetDetectDescription"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NetDetect.NetDetectDescription` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NetDetect.NetDetectDescription` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_netDetectDescription = string(value["NetDetectDescription"].GetString());
         m_netDetectDescriptionHasBeenSet = true;
@@ -173,7 +172,7 @@ CoreInternalOutcome NetDetect::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `NetDetect.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NetDetect.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -183,121 +182,121 @@ CoreInternalOutcome NetDetect::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void NetDetect::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void NetDetect::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_vpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vpcId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpcId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vpcNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vpcName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpcName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_subnetIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubnetId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_subnetId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_subnetId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_subnetNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubnetName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_subnetName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_subnetName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_netDetectIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetDetectId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_netDetectId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_netDetectId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_netDetectNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetDetectName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_netDetectName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_netDetectName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_detectDestinationIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DetectDestinationIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_detectDestinationIp.begin(); itr != m_detectDestinationIp.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_detectSourceIpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DetectSourceIp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_detectSourceIp.begin(); itr != m_detectSourceIp.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_nextHopTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NextHopType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_nextHopType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_nextHopType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_nextHopDestinationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NextHopDestination";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_nextHopDestination.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_nextHopDestination.c_str(), allocator).Move(), allocator);
     }
 
     if (m_nextHopNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NextHopName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_nextHopName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_nextHopName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_netDetectDescriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NetDetectDescription";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_netDetectDescription.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_netDetectDescription.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
 }

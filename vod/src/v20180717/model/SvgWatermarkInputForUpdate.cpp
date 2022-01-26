@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 SvgWatermarkInputForUpdate::SvgWatermarkInputForUpdate() :
@@ -28,7 +27,7 @@ SvgWatermarkInputForUpdate::SvgWatermarkInputForUpdate() :
 {
 }
 
-CoreInternalOutcome SvgWatermarkInputForUpdate::Deserialize(const Value &value)
+CoreInternalOutcome SvgWatermarkInputForUpdate::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome SvgWatermarkInputForUpdate::Deserialize(const Value &value)
     {
         if (!value["Width"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SvgWatermarkInputForUpdate.Width` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SvgWatermarkInputForUpdate.Width` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_width = string(value["Width"].GetString());
         m_widthHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome SvgWatermarkInputForUpdate::Deserialize(const Value &value)
     {
         if (!value["Height"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SvgWatermarkInputForUpdate.Height` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SvgWatermarkInputForUpdate.Height` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_height = string(value["Height"].GetString());
         m_heightHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome SvgWatermarkInputForUpdate::Deserialize(const Value &value)
     {
         if (!value["CycleConfig"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `SvgWatermarkInputForUpdate.CycleConfig` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SvgWatermarkInputForUpdate.CycleConfig` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_cycleConfig.Deserialize(value["CycleConfig"]);
@@ -74,31 +73,31 @@ CoreInternalOutcome SvgWatermarkInputForUpdate::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void SvgWatermarkInputForUpdate::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SvgWatermarkInputForUpdate::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_widthHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Width";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_width.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_width.c_str(), allocator).Move(), allocator);
     }
 
     if (m_heightHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Height";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_height.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_height.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cycleConfigHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CycleConfig";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_cycleConfig.ToJsonObject(value[key.c_str()], allocator);
     }
 

@@ -20,26 +20,26 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Cam::V20190116::Model;
-using namespace rapidjson;
 using namespace std;
 
 ListAttachedGroupPoliciesRequest::ListAttachedGroupPoliciesRequest() :
     m_targetGroupIdHasBeenSet(false),
     m_pageHasBeenSet(false),
-    m_rpHasBeenSet(false)
+    m_rpHasBeenSet(false),
+    m_keywordHasBeenSet(false)
 {
 }
 
 string ListAttachedGroupPoliciesRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_targetGroupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TargetGroupId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_targetGroupId, allocator);
@@ -47,7 +47,7 @@ string ListAttachedGroupPoliciesRequest::ToJsonString() const
 
     if (m_pageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Page";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_page, allocator);
@@ -55,15 +55,23 @@ string ListAttachedGroupPoliciesRequest::ToJsonString() const
 
     if (m_rpHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Rp";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_rp, allocator);
     }
 
+    if (m_keywordHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Keyword";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_keyword.c_str(), allocator).Move(), allocator);
+    }
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -115,6 +123,22 @@ void ListAttachedGroupPoliciesRequest::SetRp(const uint64_t& _rp)
 bool ListAttachedGroupPoliciesRequest::RpHasBeenSet() const
 {
     return m_rpHasBeenSet;
+}
+
+string ListAttachedGroupPoliciesRequest::GetKeyword() const
+{
+    return m_keyword;
+}
+
+void ListAttachedGroupPoliciesRequest::SetKeyword(const string& _keyword)
+{
+    m_keyword = _keyword;
+    m_keywordHasBeenSet = true;
+}
+
+bool ListAttachedGroupPoliciesRequest::KeywordHasBeenSet() const
+{
+    return m_keywordHasBeenSet;
 }
 
 

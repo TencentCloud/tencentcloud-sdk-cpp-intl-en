@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 WatermarkTemplate::WatermarkTemplate() :
@@ -37,7 +36,7 @@ WatermarkTemplate::WatermarkTemplate() :
 {
 }
 
-CoreInternalOutcome WatermarkTemplate::Deserialize(const Value &value)
+CoreInternalOutcome WatermarkTemplate::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -46,7 +45,7 @@ CoreInternalOutcome WatermarkTemplate::Deserialize(const Value &value)
     {
         if (!value["Definition"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `WatermarkTemplate.Definition` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WatermarkTemplate.Definition` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_definition = value["Definition"].GetInt64();
         m_definitionHasBeenSet = true;
@@ -56,7 +55,7 @@ CoreInternalOutcome WatermarkTemplate::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WatermarkTemplate.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WatermarkTemplate.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -66,7 +65,7 @@ CoreInternalOutcome WatermarkTemplate::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WatermarkTemplate.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WatermarkTemplate.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -76,7 +75,7 @@ CoreInternalOutcome WatermarkTemplate::Deserialize(const Value &value)
     {
         if (!value["Comment"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WatermarkTemplate.Comment` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WatermarkTemplate.Comment` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_comment = string(value["Comment"].GetString());
         m_commentHasBeenSet = true;
@@ -86,7 +85,7 @@ CoreInternalOutcome WatermarkTemplate::Deserialize(const Value &value)
     {
         if (!value["XPos"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WatermarkTemplate.XPos` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WatermarkTemplate.XPos` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_xPos = string(value["XPos"].GetString());
         m_xPosHasBeenSet = true;
@@ -96,7 +95,7 @@ CoreInternalOutcome WatermarkTemplate::Deserialize(const Value &value)
     {
         if (!value["YPos"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WatermarkTemplate.YPos` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WatermarkTemplate.YPos` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_yPos = string(value["YPos"].GetString());
         m_yPosHasBeenSet = true;
@@ -106,7 +105,7 @@ CoreInternalOutcome WatermarkTemplate::Deserialize(const Value &value)
     {
         if (!value["ImageTemplate"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `WatermarkTemplate.ImageTemplate` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WatermarkTemplate.ImageTemplate` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_imageTemplate.Deserialize(value["ImageTemplate"]);
@@ -123,7 +122,7 @@ CoreInternalOutcome WatermarkTemplate::Deserialize(const Value &value)
     {
         if (!value["TextTemplate"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `WatermarkTemplate.TextTemplate` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WatermarkTemplate.TextTemplate` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_textTemplate.Deserialize(value["TextTemplate"]);
@@ -140,7 +139,7 @@ CoreInternalOutcome WatermarkTemplate::Deserialize(const Value &value)
     {
         if (!value["SvgTemplate"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `WatermarkTemplate.SvgTemplate` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WatermarkTemplate.SvgTemplate` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_svgTemplate.Deserialize(value["SvgTemplate"]);
@@ -157,7 +156,7 @@ CoreInternalOutcome WatermarkTemplate::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WatermarkTemplate.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WatermarkTemplate.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -167,7 +166,7 @@ CoreInternalOutcome WatermarkTemplate::Deserialize(const Value &value)
     {
         if (!value["UpdateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WatermarkTemplate.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WatermarkTemplate.UpdateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_updateTime = string(value["UpdateTime"].GetString());
         m_updateTimeHasBeenSet = true;
@@ -177,7 +176,7 @@ CoreInternalOutcome WatermarkTemplate::Deserialize(const Value &value)
     {
         if (!value["CoordinateOrigin"].IsString())
         {
-            return CoreInternalOutcome(Error("response `WatermarkTemplate.CoordinateOrigin` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WatermarkTemplate.CoordinateOrigin` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_coordinateOrigin = string(value["CoordinateOrigin"].GetString());
         m_coordinateOriginHasBeenSet = true;
@@ -187,12 +186,12 @@ CoreInternalOutcome WatermarkTemplate::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void WatermarkTemplate::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void WatermarkTemplate::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_definitionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Definition";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_definition, allocator);
@@ -200,93 +199,93 @@ void WatermarkTemplate::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_commentHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Comment";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_comment.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_comment.c_str(), allocator).Move(), allocator);
     }
 
     if (m_xPosHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "XPos";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_xPos.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_xPos.c_str(), allocator).Move(), allocator);
     }
 
     if (m_yPosHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "YPos";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_yPos.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_yPos.c_str(), allocator).Move(), allocator);
     }
 
     if (m_imageTemplateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ImageTemplate";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_imageTemplate.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_textTemplateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TextTemplate";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_textTemplate.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_svgTemplateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SvgTemplate";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_svgTemplate.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_updateTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UpdateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_updateTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_updateTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_coordinateOriginHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CoordinateOrigin";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_coordinateOrigin.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_coordinateOrigin.c_str(), allocator).Move(), allocator);
     }
 
 }

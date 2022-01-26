@@ -41,11 +41,12 @@ namespace TencentCloud
                     CheckAssistantCidrResponse();
                     ~CheckAssistantCidrResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取
-                     * @return ConflictSourceSet 
+                     * 获取Array of conflict resources.
+                     * @return ConflictSourceSet Array of conflict resources.
                      */
                     std::vector<ConflictSource> GetConflictSourceSet() const;
 
@@ -58,7 +59,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Array of conflict resources.
                      */
                     std::vector<ConflictSource> m_conflictSourceSet;
                     bool m_conflictSourceSetHasBeenSet;

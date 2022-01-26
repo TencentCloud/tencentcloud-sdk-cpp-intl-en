@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cvm::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeDisasterRecoverGroupQuotaResponse::DescribeDisasterRecoverGroupQuotaResponse() :
@@ -35,20 +34,20 @@ DescribeDisasterRecoverGroupQuotaResponse::DescribeDisasterRecoverGroupQuotaResp
 
 CoreInternalOutcome DescribeDisasterRecoverGroupQuotaResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -59,11 +58,11 @@ CoreInternalOutcome DescribeDisasterRecoverGroupQuotaResponse::Deserialize(const
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -71,7 +70,7 @@ CoreInternalOutcome DescribeDisasterRecoverGroupQuotaResponse::Deserialize(const
     {
         if (!rsp["GroupQuota"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `GroupQuota` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GroupQuota` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_groupQuota = rsp["GroupQuota"].GetInt64();
         m_groupQuotaHasBeenSet = true;
@@ -81,7 +80,7 @@ CoreInternalOutcome DescribeDisasterRecoverGroupQuotaResponse::Deserialize(const
     {
         if (!rsp["CurrentNum"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `CurrentNum` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CurrentNum` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_currentNum = rsp["CurrentNum"].GetInt64();
         m_currentNumHasBeenSet = true;
@@ -91,7 +90,7 @@ CoreInternalOutcome DescribeDisasterRecoverGroupQuotaResponse::Deserialize(const
     {
         if (!rsp["CvmInHostGroupQuota"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `CvmInHostGroupQuota` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CvmInHostGroupQuota` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_cvmInHostGroupQuota = rsp["CvmInHostGroupQuota"].GetInt64();
         m_cvmInHostGroupQuotaHasBeenSet = true;
@@ -101,7 +100,7 @@ CoreInternalOutcome DescribeDisasterRecoverGroupQuotaResponse::Deserialize(const
     {
         if (!rsp["CvmInSwGroupQuota"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `CvmInSwGroupQuota` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CvmInSwGroupQuota` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_cvmInSwGroupQuota = rsp["CvmInSwGroupQuota"].GetInt64();
         m_cvmInSwGroupQuotaHasBeenSet = true;
@@ -111,7 +110,7 @@ CoreInternalOutcome DescribeDisasterRecoverGroupQuotaResponse::Deserialize(const
     {
         if (!rsp["CvmInRackGroupQuota"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `CvmInRackGroupQuota` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CvmInRackGroupQuota` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_cvmInRackGroupQuota = rsp["CvmInRackGroupQuota"].GetInt64();
         m_cvmInRackGroupQuotaHasBeenSet = true;
@@ -119,6 +118,63 @@ CoreInternalOutcome DescribeDisasterRecoverGroupQuotaResponse::Deserialize(const
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeDisasterRecoverGroupQuotaResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_groupQuotaHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GroupQuota";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_groupQuota, allocator);
+    }
+
+    if (m_currentNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CurrentNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_currentNum, allocator);
+    }
+
+    if (m_cvmInHostGroupQuotaHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CvmInHostGroupQuota";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_cvmInHostGroupQuota, allocator);
+    }
+
+    if (m_cvmInSwGroupQuotaHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CvmInSwGroupQuota";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_cvmInSwGroupQuota, allocator);
+    }
+
+    if (m_cvmInRackGroupQuotaHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CvmInRackGroupQuota";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_cvmInRackGroupQuota, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

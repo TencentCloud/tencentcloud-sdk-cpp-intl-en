@@ -21,31 +21,32 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeNetworkInterfaceLimitResponse::DescribeNetworkInterfaceLimitResponse() :
     m_eniQuantityHasBeenSet(false),
-    m_eniPrivateIpAddressQuantityHasBeenSet(false)
+    m_eniPrivateIpAddressQuantityHasBeenSet(false),
+    m_extendEniQuantityHasBeenSet(false),
+    m_extendEniPrivateIpAddressQuantityHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome DescribeNetworkInterfaceLimitResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -56,11 +57,11 @@ CoreInternalOutcome DescribeNetworkInterfaceLimitResponse::Deserialize(const str
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -68,7 +69,7 @@ CoreInternalOutcome DescribeNetworkInterfaceLimitResponse::Deserialize(const str
     {
         if (!rsp["EniQuantity"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `EniQuantity` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EniQuantity` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_eniQuantity = rsp["EniQuantity"].GetInt64();
         m_eniQuantityHasBeenSet = true;
@@ -78,14 +79,83 @@ CoreInternalOutcome DescribeNetworkInterfaceLimitResponse::Deserialize(const str
     {
         if (!rsp["EniPrivateIpAddressQuantity"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `EniPrivateIpAddressQuantity` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EniPrivateIpAddressQuantity` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_eniPrivateIpAddressQuantity = rsp["EniPrivateIpAddressQuantity"].GetInt64();
         m_eniPrivateIpAddressQuantityHasBeenSet = true;
     }
 
+    if (rsp.HasMember("ExtendEniQuantity") && !rsp["ExtendEniQuantity"].IsNull())
+    {
+        if (!rsp["ExtendEniQuantity"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ExtendEniQuantity` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_extendEniQuantity = rsp["ExtendEniQuantity"].GetInt64();
+        m_extendEniQuantityHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("ExtendEniPrivateIpAddressQuantity") && !rsp["ExtendEniPrivateIpAddressQuantity"].IsNull())
+    {
+        if (!rsp["ExtendEniPrivateIpAddressQuantity"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ExtendEniPrivateIpAddressQuantity` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_extendEniPrivateIpAddressQuantity = rsp["ExtendEniPrivateIpAddressQuantity"].GetInt64();
+        m_extendEniPrivateIpAddressQuantityHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeNetworkInterfaceLimitResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_eniQuantityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EniQuantity";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_eniQuantity, allocator);
+    }
+
+    if (m_eniPrivateIpAddressQuantityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EniPrivateIpAddressQuantity";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_eniPrivateIpAddressQuantity, allocator);
+    }
+
+    if (m_extendEniQuantityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExtendEniQuantity";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_extendEniQuantity, allocator);
+    }
+
+    if (m_extendEniPrivateIpAddressQuantityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExtendEniPrivateIpAddressQuantity";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_extendEniPrivateIpAddressQuantity, allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 
@@ -107,6 +177,26 @@ int64_t DescribeNetworkInterfaceLimitResponse::GetEniPrivateIpAddressQuantity() 
 bool DescribeNetworkInterfaceLimitResponse::EniPrivateIpAddressQuantityHasBeenSet() const
 {
     return m_eniPrivateIpAddressQuantityHasBeenSet;
+}
+
+int64_t DescribeNetworkInterfaceLimitResponse::GetExtendEniQuantity() const
+{
+    return m_extendEniQuantity;
+}
+
+bool DescribeNetworkInterfaceLimitResponse::ExtendEniQuantityHasBeenSet() const
+{
+    return m_extendEniQuantityHasBeenSet;
+}
+
+int64_t DescribeNetworkInterfaceLimitResponse::GetExtendEniPrivateIpAddressQuantity() const
+{
+    return m_extendEniPrivateIpAddressQuantity;
+}
+
+bool DescribeNetworkInterfaceLimitResponse::ExtendEniPrivateIpAddressQuantityHasBeenSet() const
+{
+    return m_extendEniPrivateIpAddressQuantityHasBeenSet;
 }
 
 

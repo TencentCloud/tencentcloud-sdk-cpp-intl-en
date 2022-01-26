@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Tke::V20180525::Model;
-using namespace rapidjson;
 using namespace std;
 
 RunInstancesForNode::RunInstancesForNode() :
@@ -28,7 +27,7 @@ RunInstancesForNode::RunInstancesForNode() :
 {
 }
 
-CoreInternalOutcome RunInstancesForNode::Deserialize(const Value &value)
+CoreInternalOutcome RunInstancesForNode::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome RunInstancesForNode::Deserialize(const Value &value)
     {
         if (!value["NodeRole"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RunInstancesForNode.NodeRole` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RunInstancesForNode.NodeRole` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_nodeRole = string(value["NodeRole"].GetString());
         m_nodeRoleHasBeenSet = true;
@@ -46,10 +45,10 @@ CoreInternalOutcome RunInstancesForNode::Deserialize(const Value &value)
     if (value.HasMember("RunInstancesPara") && !value["RunInstancesPara"].IsNull())
     {
         if (!value["RunInstancesPara"].IsArray())
-            return CoreInternalOutcome(Error("response `RunInstancesForNode.RunInstancesPara` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `RunInstancesForNode.RunInstancesPara` is not array type"));
 
-        const Value &tmpValue = value["RunInstancesPara"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["RunInstancesPara"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_runInstancesPara.push_back((*itr).GetString());
         }
@@ -59,10 +58,10 @@ CoreInternalOutcome RunInstancesForNode::Deserialize(const Value &value)
     if (value.HasMember("InstanceAdvancedSettingsOverrides") && !value["InstanceAdvancedSettingsOverrides"].IsNull())
     {
         if (!value["InstanceAdvancedSettingsOverrides"].IsArray())
-            return CoreInternalOutcome(Error("response `RunInstancesForNode.InstanceAdvancedSettingsOverrides` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `RunInstancesForNode.InstanceAdvancedSettingsOverrides` is not array type"));
 
-        const Value &tmpValue = value["InstanceAdvancedSettingsOverrides"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["InstanceAdvancedSettingsOverrides"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             InstanceAdvancedSettings item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -80,41 +79,41 @@ CoreInternalOutcome RunInstancesForNode::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void RunInstancesForNode::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void RunInstancesForNode::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_nodeRoleHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NodeRole";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_nodeRole.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_nodeRole.c_str(), allocator).Move(), allocator);
     }
 
     if (m_runInstancesParaHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RunInstancesPara";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_runInstancesPara.begin(); itr != m_runInstancesPara.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_instanceAdvancedSettingsOverridesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceAdvancedSettingsOverrides";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_instanceAdvancedSettingsOverrides.begin(); itr != m_instanceAdvancedSettingsOverrides.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }

@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Yunjing::V20180228::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeVulInfoResponse::DescribeVulInfoResponse() :
@@ -38,20 +37,20 @@ DescribeVulInfoResponse::DescribeVulInfoResponse() :
 
 CoreInternalOutcome DescribeVulInfoResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -62,11 +61,11 @@ CoreInternalOutcome DescribeVulInfoResponse::Deserialize(const string &payload)
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -74,7 +73,7 @@ CoreInternalOutcome DescribeVulInfoResponse::Deserialize(const string &payload)
     {
         if (!rsp["VulId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `VulId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VulId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_vulId = rsp["VulId"].GetUint64();
         m_vulIdHasBeenSet = true;
@@ -84,7 +83,7 @@ CoreInternalOutcome DescribeVulInfoResponse::Deserialize(const string &payload)
     {
         if (!rsp["VulName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VulName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VulName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vulName = string(rsp["VulName"].GetString());
         m_vulNameHasBeenSet = true;
@@ -94,7 +93,7 @@ CoreInternalOutcome DescribeVulInfoResponse::Deserialize(const string &payload)
     {
         if (!rsp["VulLevel"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VulLevel` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VulLevel` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vulLevel = string(rsp["VulLevel"].GetString());
         m_vulLevelHasBeenSet = true;
@@ -104,7 +103,7 @@ CoreInternalOutcome DescribeVulInfoResponse::Deserialize(const string &payload)
     {
         if (!rsp["VulType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VulType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VulType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vulType = string(rsp["VulType"].GetString());
         m_vulTypeHasBeenSet = true;
@@ -114,7 +113,7 @@ CoreInternalOutcome DescribeVulInfoResponse::Deserialize(const string &payload)
     {
         if (!rsp["Description"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Description` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Description` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_description = string(rsp["Description"].GetString());
         m_descriptionHasBeenSet = true;
@@ -124,7 +123,7 @@ CoreInternalOutcome DescribeVulInfoResponse::Deserialize(const string &payload)
     {
         if (!rsp["RepairPlan"].IsString())
         {
-            return CoreInternalOutcome(Error("response `RepairPlan` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `RepairPlan` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_repairPlan = string(rsp["RepairPlan"].GetString());
         m_repairPlanHasBeenSet = true;
@@ -134,7 +133,7 @@ CoreInternalOutcome DescribeVulInfoResponse::Deserialize(const string &payload)
     {
         if (!rsp["CveId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CveId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CveId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_cveId = string(rsp["CveId"].GetString());
         m_cveIdHasBeenSet = true;
@@ -144,7 +143,7 @@ CoreInternalOutcome DescribeVulInfoResponse::Deserialize(const string &payload)
     {
         if (!rsp["Reference"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Reference` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Reference` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_reference = string(rsp["Reference"].GetString());
         m_referenceHasBeenSet = true;
@@ -152,6 +151,87 @@ CoreInternalOutcome DescribeVulInfoResponse::Deserialize(const string &payload)
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeVulInfoResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_vulIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VulId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_vulId, allocator);
+    }
+
+    if (m_vulNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VulName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vulName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_vulLevelHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VulLevel";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vulLevel.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_vulTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VulType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vulType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_descriptionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Description";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_repairPlanHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RepairPlan";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_repairPlan.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_cveIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CveId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cveId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_referenceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Reference";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_reference.c_str(), allocator).Move(), allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

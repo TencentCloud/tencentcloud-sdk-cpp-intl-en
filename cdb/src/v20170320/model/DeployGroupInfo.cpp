@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 DeployGroupInfo::DeployGroupInfo() :
@@ -33,7 +32,7 @@ DeployGroupInfo::DeployGroupInfo() :
 {
 }
 
-CoreInternalOutcome DeployGroupInfo::Deserialize(const Value &value)
+CoreInternalOutcome DeployGroupInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -42,7 +41,7 @@ CoreInternalOutcome DeployGroupInfo::Deserialize(const Value &value)
     {
         if (!value["DeployGroupId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DeployGroupInfo.DeployGroupId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DeployGroupInfo.DeployGroupId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_deployGroupId = string(value["DeployGroupId"].GetString());
         m_deployGroupIdHasBeenSet = true;
@@ -52,7 +51,7 @@ CoreInternalOutcome DeployGroupInfo::Deserialize(const Value &value)
     {
         if (!value["DeployGroupName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DeployGroupInfo.DeployGroupName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DeployGroupInfo.DeployGroupName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_deployGroupName = string(value["DeployGroupName"].GetString());
         m_deployGroupNameHasBeenSet = true;
@@ -62,7 +61,7 @@ CoreInternalOutcome DeployGroupInfo::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DeployGroupInfo.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DeployGroupInfo.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -72,7 +71,7 @@ CoreInternalOutcome DeployGroupInfo::Deserialize(const Value &value)
     {
         if (!value["Quota"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DeployGroupInfo.Quota` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DeployGroupInfo.Quota` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_quota = value["Quota"].GetInt64();
         m_quotaHasBeenSet = true;
@@ -82,7 +81,7 @@ CoreInternalOutcome DeployGroupInfo::Deserialize(const Value &value)
     {
         if (!value["Affinity"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DeployGroupInfo.Affinity` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DeployGroupInfo.Affinity` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_affinity = string(value["Affinity"].GetString());
         m_affinityHasBeenSet = true;
@@ -92,7 +91,7 @@ CoreInternalOutcome DeployGroupInfo::Deserialize(const Value &value)
     {
         if (!value["LimitNum"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `DeployGroupInfo.LimitNum` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DeployGroupInfo.LimitNum` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_limitNum = value["LimitNum"].GetInt64();
         m_limitNumHasBeenSet = true;
@@ -102,7 +101,7 @@ CoreInternalOutcome DeployGroupInfo::Deserialize(const Value &value)
     {
         if (!value["Description"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DeployGroupInfo.Description` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DeployGroupInfo.Description` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_description = string(value["Description"].GetString());
         m_descriptionHasBeenSet = true;
@@ -112,7 +111,7 @@ CoreInternalOutcome DeployGroupInfo::Deserialize(const Value &value)
     {
         if (!value["DevClass"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DeployGroupInfo.DevClass` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DeployGroupInfo.DevClass` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_devClass = string(value["DevClass"].GetString());
         m_devClassHasBeenSet = true;
@@ -122,36 +121,36 @@ CoreInternalOutcome DeployGroupInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void DeployGroupInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DeployGroupInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_deployGroupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DeployGroupId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_deployGroupId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_deployGroupId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_deployGroupNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DeployGroupName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_deployGroupName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_deployGroupName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_quotaHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Quota";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_quota, allocator);
@@ -159,15 +158,15 @@ void DeployGroupInfo::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_affinityHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Affinity";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_affinity.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_affinity.c_str(), allocator).Move(), allocator);
     }
 
     if (m_limitNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LimitNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_limitNum, allocator);
@@ -175,18 +174,18 @@ void DeployGroupInfo::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_descriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Description";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_description.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
     }
 
     if (m_devClassHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DevClass";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_devClass.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_devClass.c_str(), allocator).Move(), allocator);
     }
 
 }

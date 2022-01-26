@@ -25,13 +25,14 @@
 #include <tencentcloud/vod/v20180717/model/EditMediaTask.h>
 #include <tencentcloud/vod/v20180717/model/WechatPublishTask.h>
 #include <tencentcloud/vod/v20180717/model/ComposeMediaTask.h>
+#include <tencentcloud/vod/v20180717/model/SplitMediaTask.h>
+#include <tencentcloud/vod/v20180717/model/WechatMiniProgramPublishTask.h>
 #include <tencentcloud/vod/v20180717/model/PullUploadTask.h>
 #include <tencentcloud/vod/v20180717/model/TranscodeTask2017.h>
-#include <tencentcloud/vod/v20180717/model/SnapshotByTimeOffsetTask2017.h>
 #include <tencentcloud/vod/v20180717/model/ConcatTask2017.h>
 #include <tencentcloud/vod/v20180717/model/ClipTask2017.h>
 #include <tencentcloud/vod/v20180717/model/CreateImageSpriteTask2017.h>
-#include <tencentcloud/vod/v20180717/model/WechatMiniProgramPublishTask.h>
+#include <tencentcloud/vod/v20180717/model/SnapshotByTimeOffsetTask2017.h>
 
 
 namespace TencentCloud
@@ -51,37 +52,40 @@ namespace TencentCloud
                     DescribeTaskDetailResponse();
                     ~DescribeTaskDetailResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
                      * 获取Task type. Valid values:
-<li>Procedure: video processing task;</li>
-<li>EditMedia: video editing task;</li>
-<li>WechatPublish: release on WeChat task;</li>
-<li>WechatMiniProgramPublish: release on WeChat Mini Program task;</li>
-<li>ComposeMedia: media file composing task;</li>
-<li>PullUpload: media file pulling for upload task.</li>
+<li>Procedure: video processing task</li>
+<li>EditMedia: video editing task</li>
+<li>SplitMedia: video splitting task</li>
+<li>ComposeMedia: media file producing task</li>
+<li>WechatPublish: WeChat publishing task</li>
+<li>WechatMiniProgramPublish: video publishing on WeChat Mini Program</li>
+<li>PullUpload: pulling media files for upload</li>
 
-Task types compatible with v2017:
-<li>Transcode: transcoding task;</li>
+Support v2017 task types:
+<li>Transcode: transcoding task</li>
 <li>SnapshotByTimeOffset: screencapturing task</li>
-<li>Concat: video splicing task;</li>
-<li>Clip: video clipping task;</li>
-<li>ImageSprites: image sprite generating task.</li>
+<li>Concat: video splicing task</li>
+<li>Clip: video clipping task</li>
+<li>ImageSprites: image sprite generating task</li>
                      * @return TaskType Task type. Valid values:
-<li>Procedure: video processing task;</li>
-<li>EditMedia: video editing task;</li>
-<li>WechatPublish: release on WeChat task;</li>
-<li>WechatMiniProgramPublish: release on WeChat Mini Program task;</li>
-<li>ComposeMedia: media file composing task;</li>
-<li>PullUpload: media file pulling for upload task.</li>
+<li>Procedure: video processing task</li>
+<li>EditMedia: video editing task</li>
+<li>SplitMedia: video splitting task</li>
+<li>ComposeMedia: media file producing task</li>
+<li>WechatPublish: WeChat publishing task</li>
+<li>WechatMiniProgramPublish: video publishing on WeChat Mini Program</li>
+<li>PullUpload: pulling media files for upload</li>
 
-Task types compatible with v2017:
-<li>Transcode: transcoding task;</li>
+Support v2017 task types:
+<li>Transcode: transcoding task</li>
 <li>SnapshotByTimeOffset: screencapturing task</li>
-<li>Concat: video splicing task;</li>
-<li>Clip: video clipping task;</li>
-<li>ImageSprites: image sprite generating task.</li>
+<li>Concat: video splicing task</li>
+<li>Clip: video clipping task</li>
+<li>ImageSprites: image sprite generating task</li>
                      */
                     std::string GetTaskType() const;
 
@@ -110,8 +114,8 @@ Task types compatible with v2017:
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-                     * @return CreateTime Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * 获取Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return CreateTime Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string GetCreateTime() const;
 
@@ -122,8 +126,8 @@ Task types compatible with v2017:
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-                     * @return BeginProcessTime Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * 获取Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return BeginProcessTime Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string GetBeginProcessTime() const;
 
@@ -134,8 +138,8 @@ Task types compatible with v2017:
                     bool BeginProcessTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-                     * @return FinishTime End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * 获取End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return FinishTime End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string GetFinishTime() const;
 
@@ -202,6 +206,34 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ComposeMediaTaskHasBeenSet() const;
 
                     /**
+                     * 获取Video splitting task information. This field has a value only when `TaskType` is `EditMedia`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return SplitMediaTask Video splitting task information. This field has a value only when `TaskType` is `EditMedia`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    SplitMediaTask GetSplitMediaTask() const;
+
+                    /**
+                     * 判断参数 SplitMediaTask 是否已赋值
+                     * @return SplitMediaTask 是否已赋值
+                     */
+                    bool SplitMediaTaskHasBeenSet() const;
+
+                    /**
+                     * 获取Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return WechatMiniProgramPublishTask Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    WechatMiniProgramPublishTask GetWechatMiniProgramPublishTask() const;
+
+                    /**
+                     * 判断参数 WechatMiniProgramPublishTask 是否已赋值
+                     * @return WechatMiniProgramPublishTask 是否已赋值
+                     */
+                    bool WechatMiniProgramPublishTaskHasBeenSet() const;
+
+                    /**
                      * 获取Media file pulling for upload task information. This field has a value only when `TaskType` is `PullUpload`.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PullUploadTask Media file pulling for upload task information. This field has a value only when `TaskType` is `PullUpload`.
@@ -228,20 +260,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return TranscodeTask 是否已赋值
                      */
                     bool TranscodeTaskHasBeenSet() const;
-
-                    /**
-                     * 获取Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SnapshotByTimeOffsetTask Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    SnapshotByTimeOffsetTask2017 GetSnapshotByTimeOffsetTask() const;
-
-                    /**
-                     * 判断参数 SnapshotByTimeOffsetTask 是否已赋值
-                     * @return SnapshotByTimeOffsetTask 是否已赋值
-                     */
-                    bool SnapshotByTimeOffsetTaskHasBeenSet() const;
 
                     /**
                      * 获取Video splicing task information. This field has a value only when `TaskType` is `Concat`.
@@ -286,36 +304,37 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CreateImageSpriteTaskHasBeenSet() const;
 
                     /**
-                     * 获取Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+                     * 获取Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return WechatMiniProgramPublishTask Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+                     * @return SnapshotByTimeOffsetTask Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
-                    WechatMiniProgramPublishTask GetWechatMiniProgramPublishTask() const;
+                    SnapshotByTimeOffsetTask2017 GetSnapshotByTimeOffsetTask() const;
 
                     /**
-                     * 判断参数 WechatMiniProgramPublishTask 是否已赋值
-                     * @return WechatMiniProgramPublishTask 是否已赋值
+                     * 判断参数 SnapshotByTimeOffsetTask 是否已赋值
+                     * @return SnapshotByTimeOffsetTask 是否已赋值
                      */
-                    bool WechatMiniProgramPublishTaskHasBeenSet() const;
+                    bool SnapshotByTimeOffsetTaskHasBeenSet() const;
 
                 private:
 
                     /**
                      * Task type. Valid values:
-<li>Procedure: video processing task;</li>
-<li>EditMedia: video editing task;</li>
-<li>WechatPublish: release on WeChat task;</li>
-<li>WechatMiniProgramPublish: release on WeChat Mini Program task;</li>
-<li>ComposeMedia: media file composing task;</li>
-<li>PullUpload: media file pulling for upload task.</li>
+<li>Procedure: video processing task</li>
+<li>EditMedia: video editing task</li>
+<li>SplitMedia: video splitting task</li>
+<li>ComposeMedia: media file producing task</li>
+<li>WechatPublish: WeChat publishing task</li>
+<li>WechatMiniProgramPublish: video publishing on WeChat Mini Program</li>
+<li>PullUpload: pulling media files for upload</li>
 
-Task types compatible with v2017:
-<li>Transcode: transcoding task;</li>
+Support v2017 task types:
+<li>Transcode: transcoding task</li>
 <li>SnapshotByTimeOffset: screencapturing task</li>
-<li>Concat: video splicing task;</li>
-<li>Clip: video clipping task;</li>
-<li>ImageSprites: image sprite generating task.</li>
+<li>Concat: video splicing task</li>
+<li>Clip: video clipping task</li>
+<li>ImageSprites: image sprite generating task</li>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
@@ -330,19 +349,19 @@ Task types compatible with v2017:
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_beginProcessTime;
                     bool m_beginProcessTimeHasBeenSet;
 
                     /**
-                     * End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+                     * End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_finishTime;
                     bool m_finishTimeHasBeenSet;
@@ -376,6 +395,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_composeMediaTaskHasBeenSet;
 
                     /**
+                     * Video splitting task information. This field has a value only when `TaskType` is `EditMedia`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    SplitMediaTask m_splitMediaTask;
+                    bool m_splitMediaTaskHasBeenSet;
+
+                    /**
+                     * Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    WechatMiniProgramPublishTask m_wechatMiniProgramPublishTask;
+                    bool m_wechatMiniProgramPublishTaskHasBeenSet;
+
+                    /**
                      * Media file pulling for upload task information. This field has a value only when `TaskType` is `PullUpload`.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
@@ -388,13 +421,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     TranscodeTask2017 m_transcodeTask;
                     bool m_transcodeTaskHasBeenSet;
-
-                    /**
-                     * Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    SnapshotByTimeOffsetTask2017 m_snapshotByTimeOffsetTask;
-                    bool m_snapshotByTimeOffsetTaskHasBeenSet;
 
                     /**
                      * Video splicing task information. This field has a value only when `TaskType` is `Concat`.
@@ -418,11 +444,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_createImageSpriteTaskHasBeenSet;
 
                     /**
-                     * Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+                     * Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
-                    WechatMiniProgramPublishTask m_wechatMiniProgramPublishTask;
-                    bool m_wechatMiniProgramPublishTaskHasBeenSet;
+                    SnapshotByTimeOffsetTask2017 m_snapshotByTimeOffsetTask;
+                    bool m_snapshotByTimeOffsetTaskHasBeenSet;
 
                 };
             }

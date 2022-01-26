@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Batch::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 VirtualPrivateCloud::VirtualPrivateCloud() :
@@ -30,7 +29,7 @@ VirtualPrivateCloud::VirtualPrivateCloud() :
 {
 }
 
-CoreInternalOutcome VirtualPrivateCloud::Deserialize(const Value &value)
+CoreInternalOutcome VirtualPrivateCloud::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome VirtualPrivateCloud::Deserialize(const Value &value)
     {
         if (!value["VpcId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VirtualPrivateCloud.VpcId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VirtualPrivateCloud.VpcId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_vpcId = string(value["VpcId"].GetString());
         m_vpcIdHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome VirtualPrivateCloud::Deserialize(const Value &value)
     {
         if (!value["SubnetId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `VirtualPrivateCloud.SubnetId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VirtualPrivateCloud.SubnetId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_subnetId = string(value["SubnetId"].GetString());
         m_subnetIdHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome VirtualPrivateCloud::Deserialize(const Value &value)
     {
         if (!value["AsVpcGateway"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `VirtualPrivateCloud.AsVpcGateway` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VirtualPrivateCloud.AsVpcGateway` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_asVpcGateway = value["AsVpcGateway"].GetBool();
         m_asVpcGatewayHasBeenSet = true;
@@ -68,10 +67,10 @@ CoreInternalOutcome VirtualPrivateCloud::Deserialize(const Value &value)
     if (value.HasMember("PrivateIpAddresses") && !value["PrivateIpAddresses"].IsNull())
     {
         if (!value["PrivateIpAddresses"].IsArray())
-            return CoreInternalOutcome(Error("response `VirtualPrivateCloud.PrivateIpAddresses` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `VirtualPrivateCloud.PrivateIpAddresses` is not array type"));
 
-        const Value &tmpValue = value["PrivateIpAddresses"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["PrivateIpAddresses"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_privateIpAddresses.push_back((*itr).GetString());
         }
@@ -82,7 +81,7 @@ CoreInternalOutcome VirtualPrivateCloud::Deserialize(const Value &value)
     {
         if (!value["Ipv6AddressCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `VirtualPrivateCloud.Ipv6AddressCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VirtualPrivateCloud.Ipv6AddressCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_ipv6AddressCount = value["Ipv6AddressCount"].GetUint64();
         m_ipv6AddressCountHasBeenSet = true;
@@ -92,28 +91,28 @@ CoreInternalOutcome VirtualPrivateCloud::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void VirtualPrivateCloud::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void VirtualPrivateCloud::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_vpcIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "VpcId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_vpcId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vpcId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_subnetIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubnetId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_subnetId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_subnetId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_asVpcGatewayHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AsVpcGateway";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_asVpcGateway, allocator);
@@ -121,20 +120,20 @@ void VirtualPrivateCloud::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_privateIpAddressesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PrivateIpAddresses";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_privateIpAddresses.begin(); itr != m_privateIpAddresses.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_ipv6AddressCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Ipv6AddressCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_ipv6AddressCount, allocator);

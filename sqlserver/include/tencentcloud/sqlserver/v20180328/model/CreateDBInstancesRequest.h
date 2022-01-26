@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/sqlserver/v20180328/model/ResourceTag.h>
 
 
 namespace TencentCloud
@@ -276,6 +277,132 @@ namespace TencentCloud
                      */
                     bool AutoRenewFlagHasBeenSet() const;
 
+                    /**
+                     * 获取Security group list, which contains security group IDs in the format of sg-xxx.
+                     * @return SecurityGroupList Security group list, which contains security group IDs in the format of sg-xxx.
+                     */
+                    std::vector<std::string> GetSecurityGroupList() const;
+
+                    /**
+                     * 设置Security group list, which contains security group IDs in the format of sg-xxx.
+                     * @param SecurityGroupList Security group list, which contains security group IDs in the format of sg-xxx.
+                     */
+                    void SetSecurityGroupList(const std::vector<std::string>& _securityGroupList);
+
+                    /**
+                     * 判断参数 SecurityGroupList 是否已赋值
+                     * @return SecurityGroupList 是否已赋值
+                     */
+                    bool SecurityGroupListHasBeenSet() const;
+
+                    /**
+                     * 获取Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday).
+                     * @return Weekly Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday).
+                     */
+                    std::vector<int64_t> GetWeekly() const;
+
+                    /**
+                     * 设置Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday).
+                     * @param Weekly Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday).
+                     */
+                    void SetWeekly(const std::vector<int64_t>& _weekly);
+
+                    /**
+                     * 判断参数 Weekly 是否已赋值
+                     * @return Weekly 是否已赋值
+                     */
+                    bool WeeklyHasBeenSet() const;
+
+                    /**
+                     * 获取Configuration of the maintenance window, which specifies the start time of daily maintenance.
+                     * @return StartTime Configuration of the maintenance window, which specifies the start time of daily maintenance.
+                     */
+                    std::string GetStartTime() const;
+
+                    /**
+                     * 设置Configuration of the maintenance window, which specifies the start time of daily maintenance.
+                     * @param StartTime Configuration of the maintenance window, which specifies the start time of daily maintenance.
+                     */
+                    void SetStartTime(const std::string& _startTime);
+
+                    /**
+                     * 判断参数 StartTime 是否已赋值
+                     * @return StartTime 是否已赋值
+                     */
+                    bool StartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Configuration of the maintenance window, which specifies the maintenance duration in hours.
+                     * @return Span Configuration of the maintenance window, which specifies the maintenance duration in hours.
+                     */
+                    int64_t GetSpan() const;
+
+                    /**
+                     * 设置Configuration of the maintenance window, which specifies the maintenance duration in hours.
+                     * @param Span Configuration of the maintenance window, which specifies the maintenance duration in hours.
+                     */
+                    void SetSpan(const int64_t& _span);
+
+                    /**
+                     * 判断参数 Span 是否已赋值
+                     * @return Span 是否已赋值
+                     */
+                    bool SpanHasBeenSet() const;
+
+                    /**
+                     * 获取The type of purchased high-availability instance. Valid values: DUAL (dual-server high availability), CLUSTER (cluster). Default value: DUAL.
+                     * @return HAType The type of purchased high-availability instance. Valid values: DUAL (dual-server high availability), CLUSTER (cluster). Default value: DUAL.
+                     */
+                    std::string GetHAType() const;
+
+                    /**
+                     * 设置The type of purchased high-availability instance. Valid values: DUAL (dual-server high availability), CLUSTER (cluster). Default value: DUAL.
+                     * @param HAType The type of purchased high-availability instance. Valid values: DUAL (dual-server high availability), CLUSTER (cluster). Default value: DUAL.
+                     */
+                    void SetHAType(const std::string& _hAType);
+
+                    /**
+                     * 判断参数 HAType 是否已赋值
+                     * @return HAType 是否已赋值
+                     */
+                    bool HATypeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to deploy across availability zones. Default value: false.
+                     * @return MultiZones Whether to deploy across availability zones. Default value: false.
+                     */
+                    bool GetMultiZones() const;
+
+                    /**
+                     * 设置Whether to deploy across availability zones. Default value: false.
+                     * @param MultiZones Whether to deploy across availability zones. Default value: false.
+                     */
+                    void SetMultiZones(const bool& _multiZones);
+
+                    /**
+                     * 判断参数 MultiZones 是否已赋值
+                     * @return MultiZones 是否已赋值
+                     */
+                    bool MultiZonesHasBeenSet() const;
+
+                    /**
+                     * 获取Tags associated with the instances to be created
+                     * @return ResourceTags Tags associated with the instances to be created
+                     */
+                    std::vector<ResourceTag> GetResourceTags() const;
+
+                    /**
+                     * 设置Tags associated with the instances to be created
+                     * @param ResourceTags Tags associated with the instances to be created
+                     */
+                    void SetResourceTags(const std::vector<ResourceTag>& _resourceTags);
+
+                    /**
+                     * 判断参数 ResourceTags 是否已赋值
+                     * @return ResourceTags 是否已赋值
+                     */
+                    bool ResourceTagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -355,6 +482,48 @@ namespace TencentCloud
                      */
                     int64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;
+
+                    /**
+                     * Security group list, which contains security group IDs in the format of sg-xxx.
+                     */
+                    std::vector<std::string> m_securityGroupList;
+                    bool m_securityGroupListHasBeenSet;
+
+                    /**
+                     * Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday).
+                     */
+                    std::vector<int64_t> m_weekly;
+                    bool m_weeklyHasBeenSet;
+
+                    /**
+                     * Configuration of the maintenance window, which specifies the start time of daily maintenance.
+                     */
+                    std::string m_startTime;
+                    bool m_startTimeHasBeenSet;
+
+                    /**
+                     * Configuration of the maintenance window, which specifies the maintenance duration in hours.
+                     */
+                    int64_t m_span;
+                    bool m_spanHasBeenSet;
+
+                    /**
+                     * The type of purchased high-availability instance. Valid values: DUAL (dual-server high availability), CLUSTER (cluster). Default value: DUAL.
+                     */
+                    std::string m_hAType;
+                    bool m_hATypeHasBeenSet;
+
+                    /**
+                     * Whether to deploy across availability zones. Default value: false.
+                     */
+                    bool m_multiZones;
+                    bool m_multiZonesHasBeenSet;
+
+                    /**
+                     * Tags associated with the instances to be created
+                     */
+                    std::vector<ResourceTag> m_resourceTags;
+                    bool m_resourceTagsHasBeenSet;
 
                 };
             }

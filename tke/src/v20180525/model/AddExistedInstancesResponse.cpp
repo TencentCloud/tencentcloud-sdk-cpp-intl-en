@@ -21,32 +21,32 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Tke::V20180525::Model;
-using namespace rapidjson;
 using namespace std;
 
 AddExistedInstancesResponse::AddExistedInstancesResponse() :
     m_failedInstanceIdsHasBeenSet(false),
     m_succInstanceIdsHasBeenSet(false),
-    m_timeoutInstanceIdsHasBeenSet(false)
+    m_timeoutInstanceIdsHasBeenSet(false),
+    m_failedReasonsHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome AddExistedInstancesResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -57,21 +57,21 @@ CoreInternalOutcome AddExistedInstancesResponse::Deserialize(const string &paylo
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
     if (rsp.HasMember("FailedInstanceIds") && !rsp["FailedInstanceIds"].IsNull())
     {
         if (!rsp["FailedInstanceIds"].IsArray())
-            return CoreInternalOutcome(Error("response `FailedInstanceIds` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `FailedInstanceIds` is not array type"));
 
-        const Value &tmpValue = rsp["FailedInstanceIds"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["FailedInstanceIds"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_failedInstanceIds.push_back((*itr).GetString());
         }
@@ -81,10 +81,10 @@ CoreInternalOutcome AddExistedInstancesResponse::Deserialize(const string &paylo
     if (rsp.HasMember("SuccInstanceIds") && !rsp["SuccInstanceIds"].IsNull())
     {
         if (!rsp["SuccInstanceIds"].IsArray())
-            return CoreInternalOutcome(Error("response `SuccInstanceIds` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `SuccInstanceIds` is not array type"));
 
-        const Value &tmpValue = rsp["SuccInstanceIds"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["SuccInstanceIds"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_succInstanceIds.push_back((*itr).GetString());
         }
@@ -94,18 +94,100 @@ CoreInternalOutcome AddExistedInstancesResponse::Deserialize(const string &paylo
     if (rsp.HasMember("TimeoutInstanceIds") && !rsp["TimeoutInstanceIds"].IsNull())
     {
         if (!rsp["TimeoutInstanceIds"].IsArray())
-            return CoreInternalOutcome(Error("response `TimeoutInstanceIds` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `TimeoutInstanceIds` is not array type"));
 
-        const Value &tmpValue = rsp["TimeoutInstanceIds"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["TimeoutInstanceIds"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_timeoutInstanceIds.push_back((*itr).GetString());
         }
         m_timeoutInstanceIdsHasBeenSet = true;
     }
 
+    if (rsp.HasMember("FailedReasons") && !rsp["FailedReasons"].IsNull())
+    {
+        if (!rsp["FailedReasons"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `FailedReasons` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["FailedReasons"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_failedReasons.push_back((*itr).GetString());
+        }
+        m_failedReasonsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
+}
+
+string AddExistedInstancesResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_failedInstanceIdsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FailedInstanceIds";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_failedInstanceIds.begin(); itr != m_failedInstanceIds.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_succInstanceIdsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SuccInstanceIds";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_succInstanceIds.begin(); itr != m_succInstanceIds.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_timeoutInstanceIdsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TimeoutInstanceIds";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_timeoutInstanceIds.begin(); itr != m_timeoutInstanceIds.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_failedReasonsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FailedReasons";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_failedReasons.begin(); itr != m_failedReasons.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 
@@ -137,6 +219,16 @@ vector<string> AddExistedInstancesResponse::GetTimeoutInstanceIds() const
 bool AddExistedInstancesResponse::TimeoutInstanceIdsHasBeenSet() const
 {
     return m_timeoutInstanceIdsHasBeenSet;
+}
+
+vector<string> AddExistedInstancesResponse::GetFailedReasons() const
+{
+    return m_failedReasons;
+}
+
+bool AddExistedInstancesResponse::FailedReasonsHasBeenSet() const
+{
+    return m_failedReasonsHasBeenSet;
 }
 
 

@@ -67,14 +67,14 @@ namespace TencentCloud
                     bool ImgReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OcrReviewInfo 
+                     * 获取Control parameter of terrorism information detection in text task.
+                     * @return OcrReviewInfo Control parameter of terrorism information detection in text task.
                      */
                     TerrorismOcrReviewTemplateInfoForUpdate GetOcrReviewInfo() const;
 
                     /**
-                     * 设置
-                     * @param OcrReviewInfo 
+                     * 设置Control parameter of terrorism information detection in text task.
+                     * @param OcrReviewInfo Control parameter of terrorism information detection in text task.
                      */
                     void SetOcrReviewInfo(const TerrorismOcrReviewTemplateInfoForUpdate& _ocrReviewInfo);
 
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_imgReviewInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Control parameter of terrorism information detection in text task.
                      */
                     TerrorismOcrReviewTemplateInfoForUpdate m_ocrReviewInfo;
                     bool m_ocrReviewInfoHasBeenSet;

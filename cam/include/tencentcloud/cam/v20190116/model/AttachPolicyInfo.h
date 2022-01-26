@@ -153,14 +153,14 @@ Note: This field may return null, indicating that no valid value was found.
                     bool PolicyTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Remark 
+                     * 获取Policy remarks
+                     * @return Remark Policy remarks
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置
-                     * @param Remark 
+                     * 设置Policy remarks
+                     * @param Remark Policy remarks
                      */
                     void SetRemark(const std::string& _remark);
 
@@ -171,14 +171,18 @@ Note: This field may return null, indicating that no valid value was found.
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OperateOwnerUin 
+                     * 获取Root account of the operator associating the policy
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return OperateOwnerUin Root account of the operator associating the policy
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetOperateOwnerUin() const;
 
                     /**
-                     * 设置
-                     * @param OperateOwnerUin 
+                     * 设置Root account of the operator associating the policy
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param OperateOwnerUin Root account of the operator associating the policy
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetOperateOwnerUin(const std::string& _operateOwnerUin);
 
@@ -189,14 +193,14 @@ Note: This field may return null, indicating that no valid value was found.
                     bool OperateOwnerUinHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OperateUin 
+                     * 获取The ID of the account associating the policy. If `UinType` is 0, this indicates that this is a sub-account `UIN`. If `UinType` is 1, this indicates this is a role ID
+                     * @return OperateUin The ID of the account associating the policy. If `UinType` is 0, this indicates that this is a sub-account `UIN`. If `UinType` is 1, this indicates this is a role ID
                      */
                     std::string GetOperateUin() const;
 
                     /**
-                     * 设置
-                     * @param OperateUin 
+                     * 设置The ID of the account associating the policy. If `UinType` is 0, this indicates that this is a sub-account `UIN`. If `UinType` is 1, this indicates this is a role ID
+                     * @param OperateUin The ID of the account associating the policy. If `UinType` is 0, this indicates that this is a sub-account `UIN`. If `UinType` is 1, this indicates this is a role ID
                      */
                     void SetOperateUin(const std::string& _operateUin);
 
@@ -207,14 +211,14 @@ Note: This field may return null, indicating that no valid value was found.
                     bool OperateUinHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OperateUinType 
+                     * 获取If `UinType` is 0, `OperateUin` indicates that this is a sub-account `UIN`. If `UinType` is 1, `OperateUin` indicates that this is a role ID
+                     * @return OperateUinType If `UinType` is 0, `OperateUin` indicates that this is a sub-account `UIN`. If `UinType` is 1, `OperateUin` indicates that this is a role ID
                      */
                     uint64_t GetOperateUinType() const;
 
                     /**
-                     * 设置
-                     * @param OperateUinType 
+                     * 设置If `UinType` is 0, `OperateUin` indicates that this is a sub-account `UIN`. If `UinType` is 1, `OperateUin` indicates that this is a role ID
+                     * @param OperateUinType If `UinType` is 0, `OperateUin` indicates that this is a sub-account `UIN`. If `UinType` is 1, `OperateUin` indicates that this is a role ID
                      */
                     void SetOperateUinType(const uint64_t& _operateUinType);
 
@@ -305,25 +309,26 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_policyTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Policy remarks
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * 
+                     * Root account of the operator associating the policy
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_operateOwnerUin;
                     bool m_operateOwnerUinHasBeenSet;
 
                     /**
-                     * 
+                     * The ID of the account associating the policy. If `UinType` is 0, this indicates that this is a sub-account `UIN`. If `UinType` is 1, this indicates this is a role ID
                      */
                     std::string m_operateUin;
                     bool m_operateUinHasBeenSet;
 
                     /**
-                     * 
+                     * If `UinType` is 0, `OperateUin` indicates that this is a sub-account `UIN`. If `UinType` is 1, `OperateUin` indicates that this is a role ID
                      */
                     uint64_t m_operateUinType;
                     bool m_operateUinTypeHasBeenSet;

@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cdb/v20170320/model/DatabasesWithCharacterLists.h>
 
 
 namespace TencentCloud
@@ -40,6 +41,7 @@ namespace TencentCloud
                     DescribeDatabasesResponse();
                     ~DescribeDatabasesResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -66,6 +68,18 @@ namespace TencentCloud
                      */
                     bool ItemsHasBeenSet() const;
 
+                    /**
+                     * 获取Database name and character set
+                     * @return DatabaseList Database name and character set
+                     */
+                    std::vector<DatabasesWithCharacterLists> GetDatabaseList() const;
+
+                    /**
+                     * 判断参数 DatabaseList 是否已赋值
+                     * @return DatabaseList 是否已赋值
+                     */
+                    bool DatabaseListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -79,6 +93,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_items;
                     bool m_itemsHasBeenSet;
+
+                    /**
+                     * Database name and character set
+                     */
+                    std::vector<DatabasesWithCharacterLists> m_databaseList;
+                    bool m_databaseListHasBeenSet;
 
                 };
             }

@@ -178,25 +178,29 @@ In Hz.
 
                     /**
                      * 获取Audio channel system. Valid values:
-<li>1: mono</li>
-<li>2: dual</li>
+<li>1: mono-channel</li>
+<li>2: dual-channel</li>
 <li>6: stereo</li>
+You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
                      * @return AudioChannel Audio channel system. Valid values:
-<li>1: mono</li>
-<li>2: dual</li>
+<li>1: mono-channel</li>
+<li>2: dual-channel</li>
 <li>6: stereo</li>
+You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
                      */
                     int64_t GetAudioChannel() const;
 
                     /**
                      * 设置Audio channel system. Valid values:
-<li>1: mono</li>
-<li>2: dual</li>
+<li>1: mono-channel</li>
+<li>2: dual-channel</li>
 <li>6: stereo</li>
+You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
                      * @param AudioChannel Audio channel system. Valid values:
-<li>1: mono</li>
-<li>2: dual</li>
+<li>1: mono-channel</li>
+<li>2: dual-channel</li>
 <li>6: stereo</li>
+You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
                      */
                     void SetAudioChannel(const int64_t& _audioChannel);
 
@@ -247,9 +251,10 @@ In Hz.
 
                     /**
                      * Audio channel system. Valid values:
-<li>1: mono</li>
-<li>2: dual</li>
+<li>1: mono-channel</li>
+<li>2: dual-channel</li>
 <li>6: stereo</li>
+You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
                      */
                     int64_t m_audioChannel;
                     bool m_audioChannelHasBeenSet;

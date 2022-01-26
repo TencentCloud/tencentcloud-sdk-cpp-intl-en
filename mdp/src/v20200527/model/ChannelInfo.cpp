@@ -18,18 +18,18 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mdp::V20200527::Model;
-using namespace rapidjson;
 using namespace std;
 
 ChannelInfo::ChannelInfo() :
     m_idHasBeenSet(false),
     m_nameHasBeenSet(false),
     m_protocolHasBeenSet(false),
-    m_pointsHasBeenSet(false)
+    m_pointsHasBeenSet(false),
+    m_cacheInfoHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ChannelInfo::Deserialize(const Value &value)
+CoreInternalOutcome ChannelInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +38,7 @@ CoreInternalOutcome ChannelInfo::Deserialize(const Value &value)
     {
         if (!value["Id"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ChannelInfo.Id` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ChannelInfo.Id` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_id = string(value["Id"].GetString());
         m_idHasBeenSet = true;
@@ -48,7 +48,7 @@ CoreInternalOutcome ChannelInfo::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ChannelInfo.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ChannelInfo.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
@@ -58,7 +58,7 @@ CoreInternalOutcome ChannelInfo::Deserialize(const Value &value)
     {
         if (!value["Protocol"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ChannelInfo.Protocol` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ChannelInfo.Protocol` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_protocol = string(value["Protocol"].GetString());
         m_protocolHasBeenSet = true;
@@ -68,7 +68,7 @@ CoreInternalOutcome ChannelInfo::Deserialize(const Value &value)
     {
         if (!value["Points"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `ChannelInfo.Points` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ChannelInfo.Points` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_points.Deserialize(value["Points"]);
@@ -81,44 +81,70 @@ CoreInternalOutcome ChannelInfo::Deserialize(const Value &value)
         m_pointsHasBeenSet = true;
     }
 
+    if (value.HasMember("CacheInfo") && !value["CacheInfo"].IsNull())
+    {
+        if (!value["CacheInfo"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `ChannelInfo.CacheInfo` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_cacheInfo.Deserialize(value["CacheInfo"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_cacheInfoHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void ChannelInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ChannelInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_idHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Id";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_id.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_id.c_str(), allocator).Move(), allocator);
     }
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
     }
 
     if (m_protocolHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Protocol";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_protocol.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_protocol.c_str(), allocator).Move(), allocator);
     }
 
     if (m_pointsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Points";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_points.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_cacheInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CacheInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_cacheInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -186,5 +212,21 @@ void ChannelInfo::SetPoints(const PointInfo& _points)
 bool ChannelInfo::PointsHasBeenSet() const
 {
     return m_pointsHasBeenSet;
+}
+
+CacheInfo ChannelInfo::GetCacheInfo() const
+{
+    return m_cacheInfo;
+}
+
+void ChannelInfo::SetCacheInfo(const CacheInfo& _cacheInfo)
+{
+    m_cacheInfo = _cacheInfo;
+    m_cacheInfoHasBeenSet = true;
+}
+
+bool ChannelInfo::CacheInfoHasBeenSet() const
+{
+    return m_cacheInfoHasBeenSet;
 }
 

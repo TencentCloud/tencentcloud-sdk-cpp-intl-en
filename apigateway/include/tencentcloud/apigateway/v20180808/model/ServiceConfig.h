@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/apigateway/v20180808/model/CosConfig.h>
 
 
 namespace TencentCloud
@@ -35,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * ServiceConfig
+                * ServiceConfig information
                 */
                 class ServiceConfig : public AbstractModel
                 {
@@ -47,14 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Backend type, which takes effect when VPC is enabled. Currently, only `clb` is supported.
-                     * @return Product Backend type, which takes effect when VPC is enabled. Currently, only `clb` is supported.
+                     * 获取Backend type, which takes effect when VPC is enabled. Valid values: `clb` and `upstream` (VPC channel)
+                     * @return Product Backend type, which takes effect when VPC is enabled. Valid values: `clb` and `upstream` (VPC channel)
                      */
                     std::string GetProduct() const;
 
                     /**
-                     * 设置Backend type, which takes effect when VPC is enabled. Currently, only `clb` is supported.
-                     * @param Product Backend type, which takes effect when VPC is enabled. Currently, only `clb` is supported.
+                     * 设置Backend type, which takes effect when VPC is enabled. Valid values: `clb` and `upstream` (VPC channel)
+                     * @param Product Backend type, which takes effect when VPC is enabled. Valid values: `clb` and `upstream` (VPC channel)
                      */
                     void SetProduct(const std::string& _product);
 
@@ -136,10 +137,32 @@ namespace TencentCloud
                      */
                     bool MethodHasBeenSet() const;
 
+                    /**
+                     * 获取API backend COS configuration. It’s required if the `ServiceType` is ·`COS`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return CosConfig API backend COS configuration. It’s required if the `ServiceType` is ·`COS`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    CosConfig GetCosConfig() const;
+
+                    /**
+                     * 设置API backend COS configuration. It’s required if the `ServiceType` is ·`COS`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param CosConfig API backend COS configuration. It’s required if the `ServiceType` is ·`COS`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetCosConfig(const CosConfig& _cosConfig);
+
+                    /**
+                     * 判断参数 CosConfig 是否已赋值
+                     * @return CosConfig 是否已赋值
+                     */
+                    bool CosConfigHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Backend type, which takes effect when VPC is enabled. Currently, only `clb` is supported.
+                     * Backend type, which takes effect when VPC is enabled. Valid values: `clb` and `upstream` (VPC channel)
                      */
                     std::string m_product;
                     bool m_productHasBeenSet;
@@ -167,6 +190,13 @@ namespace TencentCloud
                      */
                     std::string m_method;
                     bool m_methodHasBeenSet;
+
+                    /**
+                     * API backend COS configuration. It’s required if the `ServiceType` is ·`COS`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    CosConfig m_cosConfig;
+                    bool m_cosConfigHasBeenSet;
 
                 };
             }

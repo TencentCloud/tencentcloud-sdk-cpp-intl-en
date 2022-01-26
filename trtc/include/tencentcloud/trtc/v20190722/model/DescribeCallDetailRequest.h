@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Call ID (unique call ID): sdkappid_roomgString (room ID)_createTime (room creation time in UNIX timestamp in seconds). You can get the parameter value through the `DescribeRoomInformation` API which is used to query the room list.
-                     * @return CommId Call ID (unique call ID): sdkappid_roomgString (room ID)_createTime (room creation time in UNIX timestamp in seconds). You can get the parameter value through the `DescribeRoomInformation` API which is used to query the room list.
+                     * 获取Unique ID of a call: sdkappid_roomgString_createTime. The `roomgString` refers to the room ID, and `createTime` refers to the creation time of a room in the format of UNIX timestamp in seconds, such as 1400353843_218695_1590065777. Its value can be obtained from the `DescribeRoomInformation` API (related document: https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1).
+                     * @return CommId Unique ID of a call: sdkappid_roomgString_createTime. The `roomgString` refers to the room ID, and `createTime` refers to the creation time of a room in the format of UNIX timestamp in seconds, such as 1400353843_218695_1590065777. Its value can be obtained from the `DescribeRoomInformation` API (related document: https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1).
                      */
                     std::string GetCommId() const;
 
                     /**
-                     * 设置Call ID (unique call ID): sdkappid_roomgString (room ID)_createTime (room creation time in UNIX timestamp in seconds). You can get the parameter value through the `DescribeRoomInformation` API which is used to query the room list.
-                     * @param CommId Call ID (unique call ID): sdkappid_roomgString (room ID)_createTime (room creation time in UNIX timestamp in seconds). You can get the parameter value through the `DescribeRoomInformation` API which is used to query the room list.
+                     * 设置Unique ID of a call: sdkappid_roomgString_createTime. The `roomgString` refers to the room ID, and `createTime` refers to the creation time of a room in the format of UNIX timestamp in seconds, such as 1400353843_218695_1590065777. Its value can be obtained from the `DescribeRoomInformation` API (related document: https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1).
+                     * @param CommId Unique ID of a call: sdkappid_roomgString_createTime. The `roomgString` refers to the room ID, and `createTime` refers to the creation time of a room in the format of UNIX timestamp in seconds, such as 1400353843_218695_1590065777. Its value can be obtained from the `DescribeRoomInformation` API (related document: https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1).
                      */
                     void SetCommId(const std::string& _commId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool CommIdHasBeenSet() const;
 
                     /**
-                     * 获取Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
-                     * @return StartTime Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
+                     * 获取Query start time (s) in the format of Unix timestamp (e.g., 1590065777), which must be a time point in the last 14 days. The start and end time for query must not be more than 1 hour apart.
+                     * @return StartTime Query start time (s) in the format of Unix timestamp (e.g., 1590065777), which must be a time point in the last 14 days. The start and end time for query must not be more than 1 hour apart.
                      */
                     uint64_t GetStartTime() const;
 
                     /**
-                     * 设置Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
-                     * @param StartTime Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
+                     * 设置Query start time (s) in the format of Unix timestamp (e.g., 1590065777), which must be a time point in the last 14 days. The start and end time for query must not be more than 1 hour apart.
+                     * @param StartTime Query start time (s) in the format of Unix timestamp (e.g., 1590065777), which must be a time point in the last 14 days. The start and end time for query must not be more than 1 hour apart.
                      */
                     void SetStartTime(const uint64_t& _startTime);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Query end time in the format of local UNIX timestamp, such as 1588031999s.
-                     * @return EndTime Query end time in the format of local UNIX timestamp, such as 1588031999s.
+                     * 获取Query end time (s) in the format of Unix timestamp, e.g., 1590065877
+                     * @return EndTime Query end time (s) in the format of Unix timestamp, e.g., 1590065877
                      */
                     uint64_t GetEndTime() const;
 
                     /**
-                     * 设置Query end time in the format of local UNIX timestamp, such as 1588031999s.
-                     * @param EndTime Query end time in the format of local UNIX timestamp, such as 1588031999s.
+                     * 设置Query end time (s) in the format of Unix timestamp, e.g., 1590065877
+                     * @param EndTime Query end time (s) in the format of Unix timestamp, e.g., 1590065877
                      */
                     void SetEndTime(const uint64_t& _endTime);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取User `sdkappid`
-                     * @return SdkAppId User `sdkappid`
+                     * 获取`SDKAppID` of the users to query, e.g., 1400353843
+                     * @return SdkAppId `SDKAppID` of the users to query, e.g., 1400353843
                      */
                     std::string GetSdkAppId() const;
 
                     /**
-                     * 设置User `sdkappid`
-                     * @param SdkAppId User `sdkappid`
+                     * 设置`SDKAppID` of the users to query, e.g., 1400353843
+                     * @param SdkAppId `SDKAppID` of the users to query, e.g., 1400353843
                      */
                     void SetSdkAppId(const std::string& _sdkAppId);
 
@@ -134,65 +134,65 @@ namespace TencentCloud
 
                     /**
                      * 获取Metric to query. The user list will be returned if it is left empty; all metrics will be returned if its value is `all`.
-appCpu: CPU utilization of application;
-sysCpu: CPU utilization of system;
+appCpu: CPU utilization of the application;
+sysCpu: CPU utilization of the system;
 aBit: upstream/downstream audio bitrate;
 aBlock: audio lag duration;
-vBit: upstream/downstream video bitrate;
-vCapFps: video capturing frame rate;
-vEncFps: video sending frame rate;
-vDecFps: rendering frame rate;
-vBlock: video lag duration;
+bigvBit: upstream/downstream video bitrate;
+bigvCapFps: frame rate for capturing videos;
+bigvEncFps: frame rate for sending videos;
+bigvDecFps: rendering frame rate;
+bigvBlock: video lag duration;
 aLoss: upstream/downstream audio packet loss;
-vLoss: upstream/downstream video packet loss;
-vWidth: upstream/downstream resolution in width;
-vHeight: upstream/downstream resolution in height.
+bigvLoss: upstream/downstream video packet loss;
+bigvWidth: upstream/downstream resolution in width;
+bigvHeight: upstream/downstream resolution in height.
                      * @return DataType Metric to query. The user list will be returned if it is left empty; all metrics will be returned if its value is `all`.
-appCpu: CPU utilization of application;
-sysCpu: CPU utilization of system;
+appCpu: CPU utilization of the application;
+sysCpu: CPU utilization of the system;
 aBit: upstream/downstream audio bitrate;
 aBlock: audio lag duration;
-vBit: upstream/downstream video bitrate;
-vCapFps: video capturing frame rate;
-vEncFps: video sending frame rate;
-vDecFps: rendering frame rate;
-vBlock: video lag duration;
+bigvBit: upstream/downstream video bitrate;
+bigvCapFps: frame rate for capturing videos;
+bigvEncFps: frame rate for sending videos;
+bigvDecFps: rendering frame rate;
+bigvBlock: video lag duration;
 aLoss: upstream/downstream audio packet loss;
-vLoss: upstream/downstream video packet loss;
-vWidth: upstream/downstream resolution in width;
-vHeight: upstream/downstream resolution in height.
+bigvLoss: upstream/downstream video packet loss;
+bigvWidth: upstream/downstream resolution in width;
+bigvHeight: upstream/downstream resolution in height.
                      */
                     std::vector<std::string> GetDataType() const;
 
                     /**
                      * 设置Metric to query. The user list will be returned if it is left empty; all metrics will be returned if its value is `all`.
-appCpu: CPU utilization of application;
-sysCpu: CPU utilization of system;
+appCpu: CPU utilization of the application;
+sysCpu: CPU utilization of the system;
 aBit: upstream/downstream audio bitrate;
 aBlock: audio lag duration;
-vBit: upstream/downstream video bitrate;
-vCapFps: video capturing frame rate;
-vEncFps: video sending frame rate;
-vDecFps: rendering frame rate;
-vBlock: video lag duration;
+bigvBit: upstream/downstream video bitrate;
+bigvCapFps: frame rate for capturing videos;
+bigvEncFps: frame rate for sending videos;
+bigvDecFps: rendering frame rate;
+bigvBlock: video lag duration;
 aLoss: upstream/downstream audio packet loss;
-vLoss: upstream/downstream video packet loss;
-vWidth: upstream/downstream resolution in width;
-vHeight: upstream/downstream resolution in height.
+bigvLoss: upstream/downstream video packet loss;
+bigvWidth: upstream/downstream resolution in width;
+bigvHeight: upstream/downstream resolution in height.
                      * @param DataType Metric to query. The user list will be returned if it is left empty; all metrics will be returned if its value is `all`.
-appCpu: CPU utilization of application;
-sysCpu: CPU utilization of system;
+appCpu: CPU utilization of the application;
+sysCpu: CPU utilization of the system;
 aBit: upstream/downstream audio bitrate;
 aBlock: audio lag duration;
-vBit: upstream/downstream video bitrate;
-vCapFps: video capturing frame rate;
-vEncFps: video sending frame rate;
-vDecFps: rendering frame rate;
-vBlock: video lag duration;
+bigvBit: upstream/downstream video bitrate;
+bigvCapFps: frame rate for capturing videos;
+bigvEncFps: frame rate for sending videos;
+bigvDecFps: rendering frame rate;
+bigvBlock: video lag duration;
 aLoss: upstream/downstream audio packet loss;
-vLoss: upstream/downstream video packet loss;
-vWidth: upstream/downstream resolution in width;
-vHeight: upstream/downstream resolution in height.
+bigvLoss: upstream/downstream video packet loss;
+bigvWidth: upstream/downstream resolution in width;
+bigvHeight: upstream/downstream resolution in height.
                      */
                     void SetDataType(const std::vector<std::string>& _dataType);
 
@@ -202,28 +202,64 @@ vHeight: upstream/downstream resolution in height.
                      */
                     bool DataTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Page index starting from 0. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default.
+                     * @return PageNumber Page index starting from 0. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default.
+                     */
+                    std::string GetPageNumber() const;
+
+                    /**
+                     * 设置Page index starting from 0. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default.
+                     * @param PageNumber Page index starting from 0. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default.
+                     */
+                    void SetPageNumber(const std::string& _pageNumber);
+
+                    /**
+                     * 判断参数 PageNumber 是否已赋值
+                     * @return PageNumber 是否已赋值
+                     */
+                    bool PageNumberHasBeenSet() const;
+
+                    /**
+                     * 获取Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When either `DataType` or `UserId` is not null, `PageSize` is up to 6. When `DataType` and `UserId` are null, `PageSize` is up to 100.
+                     * @return PageSize Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When either `DataType` or `UserId` is not null, `PageSize` is up to 6. When `DataType` and `UserId` are null, `PageSize` is up to 100.
+                     */
+                    std::string GetPageSize() const;
+
+                    /**
+                     * 设置Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When either `DataType` or `UserId` is not null, `PageSize` is up to 6. When `DataType` and `UserId` are null, `PageSize` is up to 100.
+                     * @param PageSize Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When either `DataType` or `UserId` is not null, `PageSize` is up to 6. When `DataType` and `UserId` are null, `PageSize` is up to 100.
+                     */
+                    void SetPageSize(const std::string& _pageSize);
+
+                    /**
+                     * 判断参数 PageSize 是否已赋值
+                     * @return PageSize 是否已赋值
+                     */
+                    bool PageSizeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Call ID (unique call ID): sdkappid_roomgString (room ID)_createTime (room creation time in UNIX timestamp in seconds). You can get the parameter value through the `DescribeRoomInformation` API which is used to query the room list.
+                     * Unique ID of a call: sdkappid_roomgString_createTime. The `roomgString` refers to the room ID, and `createTime` refers to the creation time of a room in the format of UNIX timestamp in seconds, such as 1400353843_218695_1590065777. Its value can be obtained from the `DescribeRoomInformation` API (related document: https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1).
                      */
                     std::string m_commId;
                     bool m_commIdHasBeenSet;
 
                     /**
-                     * Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
+                     * Query start time (s) in the format of Unix timestamp (e.g., 1590065777), which must be a time point in the last 14 days. The start and end time for query must not be more than 1 hour apart.
                      */
                     uint64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Query end time in the format of local UNIX timestamp, such as 1588031999s.
+                     * Query end time (s) in the format of Unix timestamp, e.g., 1590065877
                      */
                     uint64_t m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * User `sdkappid`
+                     * `SDKAppID` of the users to query, e.g., 1400353843
                      */
                     std::string m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
@@ -236,22 +272,34 @@ vHeight: upstream/downstream resolution in height.
 
                     /**
                      * Metric to query. The user list will be returned if it is left empty; all metrics will be returned if its value is `all`.
-appCpu: CPU utilization of application;
-sysCpu: CPU utilization of system;
+appCpu: CPU utilization of the application;
+sysCpu: CPU utilization of the system;
 aBit: upstream/downstream audio bitrate;
 aBlock: audio lag duration;
-vBit: upstream/downstream video bitrate;
-vCapFps: video capturing frame rate;
-vEncFps: video sending frame rate;
-vDecFps: rendering frame rate;
-vBlock: video lag duration;
+bigvBit: upstream/downstream video bitrate;
+bigvCapFps: frame rate for capturing videos;
+bigvEncFps: frame rate for sending videos;
+bigvDecFps: rendering frame rate;
+bigvBlock: video lag duration;
 aLoss: upstream/downstream audio packet loss;
-vLoss: upstream/downstream video packet loss;
-vWidth: upstream/downstream resolution in width;
-vHeight: upstream/downstream resolution in height.
+bigvLoss: upstream/downstream video packet loss;
+bigvWidth: upstream/downstream resolution in width;
+bigvHeight: upstream/downstream resolution in height.
                      */
                     std::vector<std::string> m_dataType;
                     bool m_dataTypeHasBeenSet;
+
+                    /**
+                     * Page index starting from 0. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default.
+                     */
+                    std::string m_pageNumber;
+                    bool m_pageNumberHasBeenSet;
+
+                    /**
+                     * Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When either `DataType` or `UserId` is not null, `PageSize` is up to 6. When `DataType` and `UserId` are null, `PageSize` is up to 100.
+                     */
+                    std::string m_pageSize;
+                    bool m_pageSizeHasBeenSet;
 
                 };
             }

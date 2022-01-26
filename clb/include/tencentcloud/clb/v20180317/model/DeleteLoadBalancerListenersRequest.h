@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取Array of IDs of the listeners to be deleted. If this parameter is left empty, all listeners of the CLB instance will be deleted.
-                     * @return ListenerIds Array of IDs of the listeners to be deleted. If this parameter is left empty, all listeners of the CLB instance will be deleted.
+                     * 获取Array of listener IDs to delete (20 IDs at most). If this parameter is left empty, all listeners of the CLB instance will be deleted.
+                     * @return ListenerIds Array of listener IDs to delete (20 IDs at most). If this parameter is left empty, all listeners of the CLB instance will be deleted.
                      */
                     std::vector<std::string> GetListenerIds() const;
 
                     /**
-                     * 设置Array of IDs of the listeners to be deleted. If this parameter is left empty, all listeners of the CLB instance will be deleted.
-                     * @param ListenerIds Array of IDs of the listeners to be deleted. If this parameter is left empty, all listeners of the CLB instance will be deleted.
+                     * 设置Array of listener IDs to delete (20 IDs at most). If this parameter is left empty, all listeners of the CLB instance will be deleted.
+                     * @param ListenerIds Array of listener IDs to delete (20 IDs at most). If this parameter is left empty, all listeners of the CLB instance will be deleted.
                      */
                     void SetListenerIds(const std::vector<std::string>& _listenerIds);
 
@@ -87,7 +87,7 @@ namespace TencentCloud
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * Array of IDs of the listeners to be deleted. If this parameter is left empty, all listeners of the CLB instance will be deleted.
+                     * Array of listener IDs to delete (20 IDs at most). If this parameter is left empty, all listeners of the CLB instance will be deleted.
                      */
                     std::vector<std::string> m_listenerIds;
                     bool m_listenerIdsHasBeenSet;

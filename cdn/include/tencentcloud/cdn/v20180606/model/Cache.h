@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cdn/v20180606/model/SimpleCache.h>
 #include <tencentcloud/cdn/v20180606/model/AdvancedCache.h>
+#include <tencentcloud/cdn/v20180606/model/RuleCache.h>
 
 
 namespace TencentCloud
@@ -73,18 +74,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SimpleCacheHasBeenSet() const;
 
                     /**
-                     * 获取Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AdvancedCache Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取(Disused) Advanced cache validity configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return AdvancedCache (Disused) Advanced cache validity configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     AdvancedCache GetAdvancedCache() const;
 
                     /**
-                     * 设置Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AdvancedCache Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置(Disused) Advanced cache validity configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param AdvancedCache (Disused) Advanced cache validity configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetAdvancedCache(const AdvancedCache& _advancedCache);
 
@@ -93,6 +94,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return AdvancedCache 是否已赋值
                      */
                     bool AdvancedCacheHasBeenSet() const;
+
+                    /**
+                     * 获取Advanced path cache configuration
+Note: this field may return null, indicating that no valid value is obtained.
+                     * @return RuleCache Advanced path cache configuration
+Note: this field may return null, indicating that no valid value is obtained.
+                     */
+                    std::vector<RuleCache> GetRuleCache() const;
+
+                    /**
+                     * 设置Advanced path cache configuration
+Note: this field may return null, indicating that no valid value is obtained.
+                     * @param RuleCache Advanced path cache configuration
+Note: this field may return null, indicating that no valid value is obtained.
+                     */
+                    void SetRuleCache(const std::vector<RuleCache>& _ruleCache);
+
+                    /**
+                     * 判断参数 RuleCache 是否已赋值
+                     * @return RuleCache 是否已赋值
+                     */
+                    bool RuleCacheHasBeenSet() const;
 
                 private:
 
@@ -104,11 +127,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_simpleCacheHasBeenSet;
 
                     /**
-                     * Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * (Disused) Advanced cache validity configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     AdvancedCache m_advancedCache;
                     bool m_advancedCacheHasBeenSet;
+
+                    /**
+                     * Advanced path cache configuration
+Note: this field may return null, indicating that no valid value is obtained.
+                     */
+                    std::vector<RuleCache> m_ruleCache;
+                    bool m_ruleCacheHasBeenSet;
 
                 };
             }

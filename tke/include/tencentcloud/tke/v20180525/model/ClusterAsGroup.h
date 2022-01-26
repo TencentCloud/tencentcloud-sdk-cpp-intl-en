@@ -66,14 +66,14 @@ namespace TencentCloud
                     bool AutoScalingGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Scaling group status (enabled, enabling, disabled, disabling, updating, deleting, scaleDownEnabling, scaleDownDisabling)
-                     * @return Status Scaling group status (enabled, enabling, disabled, disabling, updating, deleting, scaleDownEnabling, scaleDownDisabling)
+                     * 获取Scaling group status (`enabled`, `enabling`, `disabled`, `disabling`, `updating`, `deleting`, `scaleDownEnabling`, `scaleDownDisabling`)
+                     * @return Status Scaling group status (`enabled`, `enabling`, `disabled`, `disabling`, `updating`, `deleting`, `scaleDownEnabling`, `scaleDownDisabling`)
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Scaling group status (enabled, enabling, disabled, disabling, updating, deleting, scaleDownEnabling, scaleDownDisabling)
-                     * @param Status Scaling group status (enabled, enabling, disabled, disabling, updating, deleting, scaleDownEnabling, scaleDownDisabling)
+                     * 设置Scaling group status (`enabled`, `enabling`, `disabled`, `disabling`, `updating`, `deleting`, `scaleDownEnabling`, `scaleDownDisabling`)
+                     * @param Status Scaling group status (`enabled`, `enabling`, `disabled`, `disabling`, `updating`, `deleting`, `scaleDownEnabling`, `scaleDownDisabling`)
                      */
                     void SetStatus(const std::string& _status);
 
@@ -154,7 +154,7 @@ Note: this field may return null, indicating that no valid value was found.
                     bool m_autoScalingGroupIdHasBeenSet;
 
                     /**
-                     * Scaling group status (enabled, enabling, disabled, disabling, updating, deleting, scaleDownEnabling, scaleDownDisabling)
+                     * Scaling group status (`enabled`, `enabling`, `disabled`, `disabling`, `updating`, `deleting`, `scaleDownEnabling`, `scaleDownDisabling`)
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

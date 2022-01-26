@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dcdb::V20180411::Model;
-using namespace rapidjson;
 using namespace std;
 
 DBParamValue::DBParamValue() :
@@ -27,7 +26,7 @@ DBParamValue::DBParamValue() :
 {
 }
 
-CoreInternalOutcome DBParamValue::Deserialize(const Value &value)
+CoreInternalOutcome DBParamValue::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +35,7 @@ CoreInternalOutcome DBParamValue::Deserialize(const Value &value)
     {
         if (!value["Param"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBParamValue.Param` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBParamValue.Param` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_param = string(value["Param"].GetString());
         m_paramHasBeenSet = true;
@@ -46,7 +45,7 @@ CoreInternalOutcome DBParamValue::Deserialize(const Value &value)
     {
         if (!value["Value"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DBParamValue.Value` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DBParamValue.Value` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_value = string(value["Value"].GetString());
         m_valueHasBeenSet = true;
@@ -56,23 +55,23 @@ CoreInternalOutcome DBParamValue::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void DBParamValue::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DBParamValue::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_paramHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Param";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_param.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_param.c_str(), allocator).Move(), allocator);
     }
 
     if (m_valueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Value";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_value.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_value.c_str(), allocator).Move(), allocator);
     }
 
 }

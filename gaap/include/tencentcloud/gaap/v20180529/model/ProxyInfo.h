@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/gaap/v20180529/model/RegionDetail.h>
 #include <tencentcloud/gaap/v20180529/model/TagPair.h>
+#include <tencentcloud/gaap/v20180529/model/IPDetail.h>
 
 
 namespace TencentCloud
@@ -197,54 +198,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ConcurrentHasBeenSet() const;
 
                     /**
-                     * 获取Connection status:
-RUNNING: running;
-CREATING: creating;
-DESTROYING: terminating;
-OPENING: enabling;
-CLOSING: disabling;
-CLOSED: disabled;
-ADJUSTING: adjusting configuration
-ISOLATING: isolating (it's triggered when the account is in arrears);
-ISOLATED: isolated (it's triggered when the account is in arrears);
-UNKNOWN: unknown status.
-                     * @return Status Connection status:
-RUNNING: running;
-CREATING: creating;
-DESTROYING: terminating;
-OPENING: enabling;
-CLOSING: disabling;
-CLOSED: disabled;
-ADJUSTING: adjusting configuration
-ISOLATING: isolating (it's triggered when the account is in arrears);
-ISOLATED: isolated (it's triggered when the account is in arrears);
-UNKNOWN: unknown status.
+                     * 获取Connection status. Valid values:
+`RUNNING`: running
+`CREATING`: creating
+`DESTROYING`: terminating
+`OPENING`: enabling
+`CLOSING`: disabling
+`CLOSED`: disabled
+`ADJUSTING`: adjusting configuration
+`ISOLATING`: isolating
+`ISOLATED`: isolated
+`CLONING`: copying
+                     * @return Status Connection status. Valid values:
+`RUNNING`: running
+`CREATING`: creating
+`DESTROYING`: terminating
+`OPENING`: enabling
+`CLOSING`: disabling
+`CLOSED`: disabled
+`ADJUSTING`: adjusting configuration
+`ISOLATING`: isolating
+`ISOLATED`: isolated
+`CLONING`: copying
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Connection status:
-RUNNING: running;
-CREATING: creating;
-DESTROYING: terminating;
-OPENING: enabling;
-CLOSING: disabling;
-CLOSED: disabled;
-ADJUSTING: adjusting configuration
-ISOLATING: isolating (it's triggered when the account is in arrears);
-ISOLATED: isolated (it's triggered when the account is in arrears);
-UNKNOWN: unknown status.
-                     * @param Status Connection status:
-RUNNING: running;
-CREATING: creating;
-DESTROYING: terminating;
-OPENING: enabling;
-CLOSING: disabling;
-CLOSED: disabled;
-ADJUSTING: adjusting configuration
-ISOLATING: isolating (it's triggered when the account is in arrears);
-ISOLATED: isolated (it's triggered when the account is in arrears);
-UNKNOWN: unknown status.
+                     * 设置Connection status. Valid values:
+`RUNNING`: running
+`CREATING`: creating
+`DESTROYING`: terminating
+`OPENING`: enabling
+`CLOSING`: disabling
+`CLOSED`: disabled
+`ADJUSTING`: adjusting configuration
+`ISOLATING`: isolating
+`ISOLATED`: isolated
+`CLONING`: copying
+                     * @param Status Connection status. Valid values:
+`RUNNING`: running
+`CREATING`: creating
+`DESTROYING`: terminating
+`OPENING`: enabling
+`CLOSING`: disabling
+`CLOSED`: disabled
+`ADJUSTING`: adjusting configuration
+`ISOLATING`: isolating
+`ISOLATED`: isolated
+`CLONING`: copying
                      */
                     void SetStatus(const std::string& _status);
 
@@ -582,6 +583,178 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool ModifyConfigTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Connection type. `100`: THUNDER connection; `103`: Microsoft connection.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @return ProxyType Connection type. `100`: THUNDER connection; `103`: Microsoft connection.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    uint64_t GetProxyType() const;
+
+                    /**
+                     * 设置Connection type. `100`: THUNDER connection; `103`: Microsoft connection.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @param ProxyType Connection type. `100`: THUNDER connection; `103`: Microsoft connection.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetProxyType(const uint64_t& _proxyType);
+
+                    /**
+                     * 判断参数 ProxyType 是否已赋值
+                     * @return ProxyType 是否已赋值
+                     */
+                    bool ProxyTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return ClientIPMethod Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<int64_t> GetClientIPMethod() const;
+
+                    /**
+                     * 设置Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param ClientIPMethod Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetClientIPMethod(const std::vector<int64_t>& _clientIPMethod);
+
+                    /**
+                     * 判断参数 ClientIPMethod 是否已赋值
+                     * @return ClientIPMethod 是否已赋值
+                     */
+                    bool ClientIPMethodHasBeenSet() const;
+
+                    /**
+                     * 获取IP version. Valid values: `IPv4`, `IPv6`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return IPAddressVersion IP version. Valid values: `IPv4`, `IPv6`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetIPAddressVersion() const;
+
+                    /**
+                     * 设置IP version. Valid values: `IPv4`, `IPv6`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param IPAddressVersion IP version. Valid values: `IPv4`, `IPv6`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetIPAddressVersion(const std::string& _iPAddressVersion);
+
+                    /**
+                     * 判断参数 IPAddressVersion 是否已赋值
+                     * @return IPAddressVersion 是否已赋值
+                     */
+                    bool IPAddressVersionHasBeenSet() const;
+
+                    /**
+                     * 获取Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @return NetworkType Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetNetworkType() const;
+
+                    /**
+                     * 设置Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @param NetworkType Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetNetworkType(const std::string& _networkType);
+
+                    /**
+                     * 判断参数 NetworkType 是否已赋值
+                     * @return NetworkType 是否已赋值
+                     */
+                    bool NetworkTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), 
+and `CrossBorder` (cross-MLC-border connection).
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @return PackageType Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), 
+and `CrossBorder` (cross-MLC-border connection).
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetPackageType() const;
+
+                    /**
+                     * 设置Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), 
+and `CrossBorder` (cross-MLC-border connection).
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @param PackageType Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), 
+and `CrossBorder` (cross-MLC-border connection).
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetPackageType(const std::string& _packageType);
+
+                    /**
+                     * 判断参数 PackageType 是否已赋值
+                     * @return PackageType 是否已赋值
+                     */
+                    bool PackageTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @return BanStatus Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetBanStatus() const;
+
+                    /**
+                     * 设置Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @param BanStatus Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetBanStatus(const std::string& _banStatus);
+
+                    /**
+                     * 判断参数 BanStatus 是否已赋值
+                     * @return BanStatus 是否已赋值
+                     */
+                    bool BanStatusHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return IPList 
+                     */
+                    std::vector<IPDetail> GetIPList() const;
+
+                    /**
+                     * 设置
+                     * @param IPList 
+                     */
+                    void SetIPList(const std::vector<IPDetail>& _iPList);
+
+                    /**
+                     * 判断参数 IPList 是否已赋值
+                     * @return IPList 是否已赋值
+                     */
+                    bool IPListHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Http3Supported 
+                     */
+                    int64_t GetHttp3Supported() const;
+
+                    /**
+                     * 设置
+                     * @param Http3Supported 
+                     */
+                    void SetHttp3Supported(const int64_t& _http3Supported);
+
+                    /**
+                     * 判断参数 Http3Supported 是否已赋值
+                     * @return Http3Supported 是否已赋值
+                     */
+                    bool Http3SupportedHasBeenSet() const;
+
                 private:
 
                     /**
@@ -634,17 +807,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_concurrentHasBeenSet;
 
                     /**
-                     * Connection status:
-RUNNING: running;
-CREATING: creating;
-DESTROYING: terminating;
-OPENING: enabling;
-CLOSING: disabling;
-CLOSED: disabled;
-ADJUSTING: adjusting configuration
-ISOLATING: isolating (it's triggered when the account is in arrears);
-ISOLATED: isolated (it's triggered when the account is in arrears);
-UNKNOWN: unknown status.
+                     * Connection status. Valid values:
+`RUNNING`: running
+`CREATING`: creating
+`DESTROYING`: terminating
+`OPENING`: enabling
+`CLOSING`: disabling
+`CLOSED`: disabled
+`ADJUSTING`: adjusting configuration
+`ISOLATING`: isolating
+`ISOLATED`: isolated
+`CLONING`: copying
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -754,6 +927,61 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_modifyConfigTime;
                     bool m_modifyConfigTimeHasBeenSet;
+
+                    /**
+                     * Connection type. `100`: THUNDER connection; `103`: Microsoft connection.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    uint64_t m_proxyType;
+                    bool m_proxyTypeHasBeenSet;
+
+                    /**
+                     * Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<int64_t> m_clientIPMethod;
+                    bool m_clientIPMethodHasBeenSet;
+
+                    /**
+                     * IP version. Valid values: `IPv4`, `IPv6`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_iPAddressVersion;
+                    bool m_iPAddressVersionHasBeenSet;
+
+                    /**
+                     * Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_networkType;
+                    bool m_networkTypeHasBeenSet;
+
+                    /**
+                     * Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), 
+and `CrossBorder` (cross-MLC-border connection).
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_packageType;
+                    bool m_packageTypeHasBeenSet;
+
+                    /**
+                     * Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_banStatus;
+                    bool m_banStatusHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<IPDetail> m_iPList;
+                    bool m_iPListHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_http3Supported;
+                    bool m_http3SupportedHasBeenSet;
 
                 };
             }

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 AccessControl::AccessControl() :
@@ -28,7 +27,7 @@ AccessControl::AccessControl() :
 {
 }
 
-CoreInternalOutcome AccessControl::Deserialize(const Value &value)
+CoreInternalOutcome AccessControl::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome AccessControl::Deserialize(const Value &value)
     {
         if (!value["Switch"].IsString())
         {
-            return CoreInternalOutcome(Error("response `AccessControl.Switch` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccessControl.Switch` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_switch = string(value["Switch"].GetString());
         m_switchHasBeenSet = true;
@@ -46,10 +45,10 @@ CoreInternalOutcome AccessControl::Deserialize(const Value &value)
     if (value.HasMember("AccessControlRules") && !value["AccessControlRules"].IsNull())
     {
         if (!value["AccessControlRules"].IsArray())
-            return CoreInternalOutcome(Error("response `AccessControl.AccessControlRules` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `AccessControl.AccessControlRules` is not array type"));
 
-        const Value &tmpValue = value["AccessControlRules"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["AccessControlRules"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             AccessControlRule item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -67,7 +66,7 @@ CoreInternalOutcome AccessControl::Deserialize(const Value &value)
     {
         if (!value["ReturnCode"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `AccessControl.ReturnCode` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AccessControl.ReturnCode` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_returnCode = value["ReturnCode"].GetInt64();
         m_returnCodeHasBeenSet = true;
@@ -77,35 +76,35 @@ CoreInternalOutcome AccessControl::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void AccessControl::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void AccessControl::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_switchHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Switch";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_switch.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_switch.c_str(), allocator).Move(), allocator);
     }
 
     if (m_accessControlRulesHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AccessControlRules";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_accessControlRules.begin(); itr != m_accessControlRules.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_returnCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReturnCode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_returnCode, allocator);

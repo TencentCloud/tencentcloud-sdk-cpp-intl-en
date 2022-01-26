@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Trtc::V20190722::Model;
-using namespace rapidjson;
 using namespace std;
 
 ScaleInfomation::ScaleInfomation() :
@@ -29,7 +28,7 @@ ScaleInfomation::ScaleInfomation() :
 {
 }
 
-CoreInternalOutcome ScaleInfomation::Deserialize(const Value &value)
+CoreInternalOutcome ScaleInfomation::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,7 +37,7 @@ CoreInternalOutcome ScaleInfomation::Deserialize(const Value &value)
     {
         if (!value["Time"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ScaleInfomation.Time` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScaleInfomation.Time` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_time = value["Time"].GetUint64();
         m_timeHasBeenSet = true;
@@ -48,7 +47,7 @@ CoreInternalOutcome ScaleInfomation::Deserialize(const Value &value)
     {
         if (!value["UserNumber"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ScaleInfomation.UserNumber` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScaleInfomation.UserNumber` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_userNumber = value["UserNumber"].GetUint64();
         m_userNumberHasBeenSet = true;
@@ -58,7 +57,7 @@ CoreInternalOutcome ScaleInfomation::Deserialize(const Value &value)
     {
         if (!value["UserCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ScaleInfomation.UserCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScaleInfomation.UserCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_userCount = value["UserCount"].GetUint64();
         m_userCountHasBeenSet = true;
@@ -68,7 +67,7 @@ CoreInternalOutcome ScaleInfomation::Deserialize(const Value &value)
     {
         if (!value["RoomNumbers"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ScaleInfomation.RoomNumbers` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ScaleInfomation.RoomNumbers` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_roomNumbers = value["RoomNumbers"].GetUint64();
         m_roomNumbersHasBeenSet = true;
@@ -78,12 +77,12 @@ CoreInternalOutcome ScaleInfomation::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ScaleInfomation::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ScaleInfomation::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_timeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Time";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_time, allocator);
@@ -91,7 +90,7 @@ void ScaleInfomation::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_userNumberHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UserNumber";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_userNumber, allocator);
@@ -99,7 +98,7 @@ void ScaleInfomation::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_userCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UserCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_userCount, allocator);
@@ -107,7 +106,7 @@ void ScaleInfomation::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_roomNumbersHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RoomNumbers";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_roomNumbers, allocator);

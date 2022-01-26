@@ -40,11 +40,12 @@ namespace TencentCloud
                     CancelCertificateOrderResponse();
                     ~CancelCertificateOrderResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取ID of the certificate whose order has been successfully cancelled.
-                     * @return CertificateId ID of the certificate whose order has been successfully cancelled.
+                     * 获取ID of the certificate whose order has been successfully cancelled
+                     * @return CertificateId ID of the certificate whose order has been successfully cancelled
                      */
                     std::string GetCertificateId() const;
 
@@ -57,7 +58,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the certificate whose order has been successfully cancelled.
+                     * ID of the certificate whose order has been successfully cancelled
                      */
                     std::string m_certificateId;
                     bool m_certificateIdHasBeenSet;

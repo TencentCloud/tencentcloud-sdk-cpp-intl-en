@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Tke::V20180525::Model;
-using namespace rapidjson;
 using namespace std;
 
 Cluster::Cluster() :
@@ -39,11 +38,12 @@ Cluster::Cluster() :
     m_osCustomizeTypeHasBeenSet(false),
     m_containerRuntimeHasBeenSet(false),
     m_createdTimeHasBeenSet(false),
-    m_deletionProtectionHasBeenSet(false)
+    m_deletionProtectionHasBeenSet(false),
+    m_enableExternalNodeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome Cluster::Deserialize(const Value &value)
+CoreInternalOutcome Cluster::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -52,7 +52,7 @@ CoreInternalOutcome Cluster::Deserialize(const Value &value)
     {
         if (!value["ClusterId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Cluster.ClusterId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Cluster.ClusterId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_clusterId = string(value["ClusterId"].GetString());
         m_clusterIdHasBeenSet = true;
@@ -62,7 +62,7 @@ CoreInternalOutcome Cluster::Deserialize(const Value &value)
     {
         if (!value["ClusterName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Cluster.ClusterName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Cluster.ClusterName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_clusterName = string(value["ClusterName"].GetString());
         m_clusterNameHasBeenSet = true;
@@ -72,7 +72,7 @@ CoreInternalOutcome Cluster::Deserialize(const Value &value)
     {
         if (!value["ClusterDescription"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Cluster.ClusterDescription` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Cluster.ClusterDescription` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_clusterDescription = string(value["ClusterDescription"].GetString());
         m_clusterDescriptionHasBeenSet = true;
@@ -82,7 +82,7 @@ CoreInternalOutcome Cluster::Deserialize(const Value &value)
     {
         if (!value["ClusterVersion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Cluster.ClusterVersion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Cluster.ClusterVersion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_clusterVersion = string(value["ClusterVersion"].GetString());
         m_clusterVersionHasBeenSet = true;
@@ -92,7 +92,7 @@ CoreInternalOutcome Cluster::Deserialize(const Value &value)
     {
         if (!value["ClusterOs"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Cluster.ClusterOs` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Cluster.ClusterOs` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_clusterOs = string(value["ClusterOs"].GetString());
         m_clusterOsHasBeenSet = true;
@@ -102,7 +102,7 @@ CoreInternalOutcome Cluster::Deserialize(const Value &value)
     {
         if (!value["ClusterType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Cluster.ClusterType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Cluster.ClusterType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_clusterType = string(value["ClusterType"].GetString());
         m_clusterTypeHasBeenSet = true;
@@ -112,7 +112,7 @@ CoreInternalOutcome Cluster::Deserialize(const Value &value)
     {
         if (!value["ClusterNetworkSettings"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `Cluster.ClusterNetworkSettings` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Cluster.ClusterNetworkSettings` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_clusterNetworkSettings.Deserialize(value["ClusterNetworkSettings"]);
@@ -129,7 +129,7 @@ CoreInternalOutcome Cluster::Deserialize(const Value &value)
     {
         if (!value["ClusterNodeNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Cluster.ClusterNodeNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Cluster.ClusterNodeNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_clusterNodeNum = value["ClusterNodeNum"].GetUint64();
         m_clusterNodeNumHasBeenSet = true;
@@ -139,7 +139,7 @@ CoreInternalOutcome Cluster::Deserialize(const Value &value)
     {
         if (!value["ProjectId"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Cluster.ProjectId` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Cluster.ProjectId` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_projectId = value["ProjectId"].GetUint64();
         m_projectIdHasBeenSet = true;
@@ -148,10 +148,10 @@ CoreInternalOutcome Cluster::Deserialize(const Value &value)
     if (value.HasMember("TagSpecification") && !value["TagSpecification"].IsNull())
     {
         if (!value["TagSpecification"].IsArray())
-            return CoreInternalOutcome(Error("response `Cluster.TagSpecification` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `Cluster.TagSpecification` is not array type"));
 
-        const Value &tmpValue = value["TagSpecification"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["TagSpecification"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             TagSpecification item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -169,7 +169,7 @@ CoreInternalOutcome Cluster::Deserialize(const Value &value)
     {
         if (!value["ClusterStatus"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Cluster.ClusterStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Cluster.ClusterStatus` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_clusterStatus = string(value["ClusterStatus"].GetString());
         m_clusterStatusHasBeenSet = true;
@@ -179,7 +179,7 @@ CoreInternalOutcome Cluster::Deserialize(const Value &value)
     {
         if (!value["Property"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Cluster.Property` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Cluster.Property` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_property = string(value["Property"].GetString());
         m_propertyHasBeenSet = true;
@@ -189,7 +189,7 @@ CoreInternalOutcome Cluster::Deserialize(const Value &value)
     {
         if (!value["ClusterMaterNodeNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `Cluster.ClusterMaterNodeNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Cluster.ClusterMaterNodeNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_clusterMaterNodeNum = value["ClusterMaterNodeNum"].GetUint64();
         m_clusterMaterNodeNumHasBeenSet = true;
@@ -199,7 +199,7 @@ CoreInternalOutcome Cluster::Deserialize(const Value &value)
     {
         if (!value["ImageId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Cluster.ImageId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Cluster.ImageId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_imageId = string(value["ImageId"].GetString());
         m_imageIdHasBeenSet = true;
@@ -209,7 +209,7 @@ CoreInternalOutcome Cluster::Deserialize(const Value &value)
     {
         if (!value["OsCustomizeType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Cluster.OsCustomizeType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Cluster.OsCustomizeType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_osCustomizeType = string(value["OsCustomizeType"].GetString());
         m_osCustomizeTypeHasBeenSet = true;
@@ -219,7 +219,7 @@ CoreInternalOutcome Cluster::Deserialize(const Value &value)
     {
         if (!value["ContainerRuntime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Cluster.ContainerRuntime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Cluster.ContainerRuntime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_containerRuntime = string(value["ContainerRuntime"].GetString());
         m_containerRuntimeHasBeenSet = true;
@@ -229,7 +229,7 @@ CoreInternalOutcome Cluster::Deserialize(const Value &value)
     {
         if (!value["CreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Cluster.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Cluster.CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createdTime = string(value["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
@@ -239,79 +239,89 @@ CoreInternalOutcome Cluster::Deserialize(const Value &value)
     {
         if (!value["DeletionProtection"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `Cluster.DeletionProtection` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Cluster.DeletionProtection` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_deletionProtection = value["DeletionProtection"].GetBool();
         m_deletionProtectionHasBeenSet = true;
+    }
+
+    if (value.HasMember("EnableExternalNode") && !value["EnableExternalNode"].IsNull())
+    {
+        if (!value["EnableExternalNode"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `Cluster.EnableExternalNode` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_enableExternalNode = value["EnableExternalNode"].GetBool();
+        m_enableExternalNodeHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void Cluster::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void Cluster::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_clusterIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClusterId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_clusterId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clusterId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_clusterNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClusterName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_clusterName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clusterName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_clusterDescriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClusterDescription";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_clusterDescription.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clusterDescription.c_str(), allocator).Move(), allocator);
     }
 
     if (m_clusterVersionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClusterVersion";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_clusterVersion.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clusterVersion.c_str(), allocator).Move(), allocator);
     }
 
     if (m_clusterOsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClusterOs";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_clusterOs.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clusterOs.c_str(), allocator).Move(), allocator);
     }
 
     if (m_clusterTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClusterType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_clusterType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clusterType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_clusterNetworkSettingsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClusterNetworkSettings";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_clusterNetworkSettings.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_clusterNodeNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClusterNodeNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_clusterNodeNum, allocator);
@@ -319,7 +329,7 @@ void Cluster::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_projectIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProjectId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_projectId, allocator);
@@ -327,38 +337,38 @@ void Cluster::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_tagSpecificationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TagSpecification";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_tagSpecification.begin(); itr != m_tagSpecification.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_clusterStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClusterStatus";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_clusterStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clusterStatus.c_str(), allocator).Move(), allocator);
     }
 
     if (m_propertyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Property";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_property.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_property.c_str(), allocator).Move(), allocator);
     }
 
     if (m_clusterMaterNodeNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClusterMaterNodeNum";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_clusterMaterNodeNum, allocator);
@@ -366,42 +376,50 @@ void Cluster::ToJsonObject(Value &value, Document::AllocatorType& allocator) con
 
     if (m_imageIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ImageId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_imageId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_imageId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_osCustomizeTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OsCustomizeType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_osCustomizeType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_osCustomizeType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_containerRuntimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ContainerRuntime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_containerRuntime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_containerRuntime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_createdTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createdTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_deletionProtectionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DeletionProtection";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_deletionProtection, allocator);
+    }
+
+    if (m_enableExternalNodeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableExternalNode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_enableExternalNode, allocator);
     }
 
 }
@@ -693,5 +711,21 @@ void Cluster::SetDeletionProtection(const bool& _deletionProtection)
 bool Cluster::DeletionProtectionHasBeenSet() const
 {
     return m_deletionProtectionHasBeenSet;
+}
+
+bool Cluster::GetEnableExternalNode() const
+{
+    return m_enableExternalNode;
+}
+
+void Cluster::SetEnableExternalNode(const bool& _enableExternalNode)
+{
+    m_enableExternalNode = _enableExternalNode;
+    m_enableExternalNodeHasBeenSet = true;
+}
+
+bool Cluster::EnableExternalNodeHasBeenSet() const
+{
+    return m_enableExternalNodeHasBeenSet;
 }
 

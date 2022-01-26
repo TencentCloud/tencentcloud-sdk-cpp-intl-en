@@ -47,17 +47,17 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable scale-down
+                     * 获取Whether to enable scale-in
 Note: this field may return null, indicating that no valid value was found.
-                     * @return IsScaleDownEnabled Whether to enable scale-down
+                     * @return IsScaleDownEnabled Whether to enable scale-in
 Note: this field may return null, indicating that no valid value was found.
                      */
                     bool GetIsScaleDownEnabled() const;
 
                     /**
-                     * 设置Whether to enable scale-down
+                     * 设置Whether to enable scale-in
 Note: this field may return null, indicating that no valid value was found.
-                     * @param IsScaleDownEnabled Whether to enable scale-down
+                     * @param IsScaleDownEnabled Whether to enable scale-in
 Note: this field may return null, indicating that no valid value was found.
                      */
                     void SetIsScaleDownEnabled(const bool& _isScaleDownEnabled);
@@ -69,17 +69,17 @@ Note: this field may return null, indicating that no valid value was found.
                     bool IsScaleDownEnabledHasBeenSet() const;
 
                     /**
-                     * 获取Scale-up selection algorithm when there are multiple scaling groups (random: random selection. most-pods: pod with the most types. least-waste: least waste of resources. The default value is random.)
+                     * 获取The scale-out method when there are multiple scaling groups. `random`: select a random scaling group. `most-pods`: choose the scaling group that can schedule the most pods. `least-waste`: select the scaling group that can ensure the fewest remaining resources after Pod scheduling.. The default value is `random`.)
 Note: this field may return null, indicating that no valid value was found.
-                     * @return Expander Scale-up selection algorithm when there are multiple scaling groups (random: random selection. most-pods: pod with the most types. least-waste: least waste of resources. The default value is random.)
+                     * @return Expander The scale-out method when there are multiple scaling groups. `random`: select a random scaling group. `most-pods`: choose the scaling group that can schedule the most pods. `least-waste`: select the scaling group that can ensure the fewest remaining resources after Pod scheduling.. The default value is `random`.)
 Note: this field may return null, indicating that no valid value was found.
                      */
                     std::string GetExpander() const;
 
                     /**
-                     * 设置Scale-up selection algorithm when there are multiple scaling groups (random: random selection. most-pods: pod with the most types. least-waste: least waste of resources. The default value is random.)
+                     * 设置The scale-out method when there are multiple scaling groups. `random`: select a random scaling group. `most-pods`: choose the scaling group that can schedule the most pods. `least-waste`: select the scaling group that can ensure the fewest remaining resources after Pod scheduling.. The default value is `random`.)
 Note: this field may return null, indicating that no valid value was found.
-                     * @param Expander Scale-up selection algorithm when there are multiple scaling groups (random: random selection. most-pods: pod with the most types. least-waste: least waste of resources. The default value is random.)
+                     * @param Expander The scale-out method when there are multiple scaling groups. `random`: select a random scaling group. `most-pods`: choose the scaling group that can schedule the most pods. `least-waste`: select the scaling group that can ensure the fewest remaining resources after Pod scheduling.. The default value is `random`.)
 Note: this field may return null, indicating that no valid value was found.
                      */
                     void SetExpander(const std::string& _expander);
@@ -91,17 +91,17 @@ Note: this field may return null, indicating that no valid value was found.
                     bool ExpanderHasBeenSet() const;
 
                     /**
-                     * 获取Max concurrent scale-down volume
+                     * 获取Max concurrent scale-in volume
 Note: this field may return null, indicating that no valid value was found.
-                     * @return MaxEmptyBulkDelete Max concurrent scale-down volume
+                     * @return MaxEmptyBulkDelete Max concurrent scale-in volume
 Note: this field may return null, indicating that no valid value was found.
                      */
                     int64_t GetMaxEmptyBulkDelete() const;
 
                     /**
-                     * 设置Max concurrent scale-down volume
+                     * 设置Max concurrent scale-in volume
 Note: this field may return null, indicating that no valid value was found.
-                     * @param MaxEmptyBulkDelete Max concurrent scale-down volume
+                     * @param MaxEmptyBulkDelete Max concurrent scale-in volume
 Note: this field may return null, indicating that no valid value was found.
                      */
                     void SetMaxEmptyBulkDelete(const int64_t& _maxEmptyBulkDelete);
@@ -113,17 +113,17 @@ Note: this field may return null, indicating that no valid value was found.
                     bool MaxEmptyBulkDeleteHasBeenSet() const;
 
                     /**
-                     * 获取Number of minutes after cluster scale-up when the system starts judging whether to perform scale-down
+                     * 获取Number of minutes after cluster scale-out when the system starts judging whether to perform scale-in
 Note: this field may return null, indicating that no valid value was found.
-                     * @return ScaleDownDelay Number of minutes after cluster scale-up when the system starts judging whether to perform scale-down
+                     * @return ScaleDownDelay Number of minutes after cluster scale-out when the system starts judging whether to perform scale-in
 Note: this field may return null, indicating that no valid value was found.
                      */
                     int64_t GetScaleDownDelay() const;
 
                     /**
-                     * 设置Number of minutes after cluster scale-up when the system starts judging whether to perform scale-down
+                     * 设置Number of minutes after cluster scale-out when the system starts judging whether to perform scale-in
 Note: this field may return null, indicating that no valid value was found.
-                     * @param ScaleDownDelay Number of minutes after cluster scale-up when the system starts judging whether to perform scale-down
+                     * @param ScaleDownDelay Number of minutes after cluster scale-out when the system starts judging whether to perform scale-in
 Note: this field may return null, indicating that no valid value was found.
                      */
                     void SetScaleDownDelay(const int64_t& _scaleDownDelay);
@@ -135,17 +135,17 @@ Note: this field may return null, indicating that no valid value was found.
                     bool ScaleDownDelayHasBeenSet() const;
 
                     /**
-                     * 获取Number of consecutive minutes of idleness after which the node is subject to scale-down (default value: 10)
+                     * 获取Number of consecutive minutes of idleness after which the node is subject to scale-in (default value: 10)
 Note: this field may return null, indicating that no valid value was found.
-                     * @return ScaleDownUnneededTime Number of consecutive minutes of idleness after which the node is subject to scale-down (default value: 10)
+                     * @return ScaleDownUnneededTime Number of consecutive minutes of idleness after which the node is subject to scale-in (default value: 10)
 Note: this field may return null, indicating that no valid value was found.
                      */
                     int64_t GetScaleDownUnneededTime() const;
 
                     /**
-                     * 设置Number of consecutive minutes of idleness after which the node is subject to scale-down (default value: 10)
+                     * 设置Number of consecutive minutes of idleness after which the node is subject to scale-in (default value: 10)
 Note: this field may return null, indicating that no valid value was found.
-                     * @param ScaleDownUnneededTime Number of consecutive minutes of idleness after which the node is subject to scale-down (default value: 10)
+                     * @param ScaleDownUnneededTime Number of consecutive minutes of idleness after which the node is subject to scale-in (default value: 10)
 Note: this field may return null, indicating that no valid value was found.
                      */
                     void SetScaleDownUnneededTime(const int64_t& _scaleDownUnneededTime);
@@ -179,17 +179,17 @@ Note: this field may return null, indicating that no valid value was found.
                     bool ScaleDownUtilizationThresholdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to skip scale-down for nodes with local storage pods (default value: False)
+                     * 获取During scale-in, ignore nodes with local storage pods (default value: False)
 Note: this field may return null, indicating that no valid value was found.
-                     * @return SkipNodesWithLocalStorage Whether to skip scale-down for nodes with local storage pods (default value: False)
+                     * @return SkipNodesWithLocalStorage During scale-in, ignore nodes with local storage pods (default value: False)
 Note: this field may return null, indicating that no valid value was found.
                      */
                     bool GetSkipNodesWithLocalStorage() const;
 
                     /**
-                     * 设置Whether to skip scale-down for nodes with local storage pods (default value: False)
+                     * 设置During scale-in, ignore nodes with local storage pods (default value: False)
 Note: this field may return null, indicating that no valid value was found.
-                     * @param SkipNodesWithLocalStorage Whether to skip scale-down for nodes with local storage pods (default value: False)
+                     * @param SkipNodesWithLocalStorage During scale-in, ignore nodes with local storage pods (default value: False)
 Note: this field may return null, indicating that no valid value was found.
                      */
                     void SetSkipNodesWithLocalStorage(const bool& _skipNodesWithLocalStorage);
@@ -201,17 +201,17 @@ Note: this field may return null, indicating that no valid value was found.
                     bool SkipNodesWithLocalStorageHasBeenSet() const;
 
                     /**
-                     * 获取Whether to skip scale-down for nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
+                     * 获取During scale-in, ignore nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
 Note: this field may return null, indicating that no valid value was found.
-                     * @return SkipNodesWithSystemPods Whether to skip scale-down for nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
+                     * @return SkipNodesWithSystemPods During scale-in, ignore nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
 Note: this field may return null, indicating that no valid value was found.
                      */
                     bool GetSkipNodesWithSystemPods() const;
 
                     /**
-                     * 设置Whether to skip scale-down for nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
+                     * 设置During scale-in, ignore nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
 Note: this field may return null, indicating that no valid value was found.
-                     * @param SkipNodesWithSystemPods Whether to skip scale-down for nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
+                     * @param SkipNodesWithSystemPods During scale-in, ignore nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
 Note: this field may return null, indicating that no valid value was found.
                      */
                     void SetSkipNodesWithSystemPods(const bool& _skipNodesWithSystemPods);
@@ -289,17 +289,17 @@ Note: this field may return null, indicating that no valid value was found.
                     bool MaxTotalUnreadyPercentageHasBeenSet() const;
 
                     /**
-                     * 获取Amount of time before unready nodes become eligible for scale-down
+                     * 获取Amount of time before unready nodes become eligible for scale-in
 Note: this field may return null, indicating that no valid value was found.
-                     * @return ScaleDownUnreadyTime Amount of time before unready nodes become eligible for scale-down
+                     * @return ScaleDownUnreadyTime Amount of time before unready nodes become eligible for scale-in
 Note: this field may return null, indicating that no valid value was found.
                      */
                     int64_t GetScaleDownUnreadyTime() const;
 
                     /**
-                     * 设置Amount of time before unready nodes become eligible for scale-down
+                     * 设置Amount of time before unready nodes become eligible for scale-in
 Note: this field may return null, indicating that no valid value was found.
-                     * @param ScaleDownUnreadyTime Amount of time before unready nodes become eligible for scale-down
+                     * @param ScaleDownUnreadyTime Amount of time before unready nodes become eligible for scale-in
 Note: this field may return null, indicating that no valid value was found.
                      */
                     void SetScaleDownUnreadyTime(const int64_t& _scaleDownUnreadyTime);
@@ -335,35 +335,35 @@ Note: this field may return null, indicating that no valid value was found.
                 private:
 
                     /**
-                     * Whether to enable scale-down
+                     * Whether to enable scale-in
 Note: this field may return null, indicating that no valid value was found.
                      */
                     bool m_isScaleDownEnabled;
                     bool m_isScaleDownEnabledHasBeenSet;
 
                     /**
-                     * Scale-up selection algorithm when there are multiple scaling groups (random: random selection. most-pods: pod with the most types. least-waste: least waste of resources. The default value is random.)
+                     * The scale-out method when there are multiple scaling groups. `random`: select a random scaling group. `most-pods`: choose the scaling group that can schedule the most pods. `least-waste`: select the scaling group that can ensure the fewest remaining resources after Pod scheduling.. The default value is `random`.)
 Note: this field may return null, indicating that no valid value was found.
                      */
                     std::string m_expander;
                     bool m_expanderHasBeenSet;
 
                     /**
-                     * Max concurrent scale-down volume
+                     * Max concurrent scale-in volume
 Note: this field may return null, indicating that no valid value was found.
                      */
                     int64_t m_maxEmptyBulkDelete;
                     bool m_maxEmptyBulkDeleteHasBeenSet;
 
                     /**
-                     * Number of minutes after cluster scale-up when the system starts judging whether to perform scale-down
+                     * Number of minutes after cluster scale-out when the system starts judging whether to perform scale-in
 Note: this field may return null, indicating that no valid value was found.
                      */
                     int64_t m_scaleDownDelay;
                     bool m_scaleDownDelayHasBeenSet;
 
                     /**
-                     * Number of consecutive minutes of idleness after which the node is subject to scale-down (default value: 10)
+                     * Number of consecutive minutes of idleness after which the node is subject to scale-in (default value: 10)
 Note: this field may return null, indicating that no valid value was found.
                      */
                     int64_t m_scaleDownUnneededTime;
@@ -377,14 +377,14 @@ Note: this field may return null, indicating that no valid value was found.
                     bool m_scaleDownUtilizationThresholdHasBeenSet;
 
                     /**
-                     * Whether to skip scale-down for nodes with local storage pods (default value: False)
+                     * During scale-in, ignore nodes with local storage pods (default value: False)
 Note: this field may return null, indicating that no valid value was found.
                      */
                     bool m_skipNodesWithLocalStorage;
                     bool m_skipNodesWithLocalStorageHasBeenSet;
 
                     /**
-                     * Whether to skip scale-down for nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
+                     * During scale-in, ignore nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
 Note: this field may return null, indicating that no valid value was found.
                      */
                     bool m_skipNodesWithSystemPods;
@@ -412,7 +412,7 @@ Note: this field may return null, indicating that no valid value was found.
                     bool m_maxTotalUnreadyPercentageHasBeenSet;
 
                     /**
-                     * Amount of time before unready nodes become eligible for scale-down
+                     * Amount of time before unready nodes become eligible for scale-in
 Note: this field may return null, indicating that no valid value was found.
                      */
                     int64_t m_scaleDownUnreadyTime;

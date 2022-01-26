@@ -203,14 +203,14 @@ Note: This field may return null, indicating that no valid value was found.
                     bool ServiceTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IsAttached 
+                     * 获取This value should not be null when querying whether a marked entity has been associated with a policy. 0 indicates that no policy has been associated, while 1 indicates that a policy has been associated
+                     * @return IsAttached This value should not be null when querying whether a marked entity has been associated with a policy. 0 indicates that no policy has been associated, while 1 indicates that a policy has been associated
                      */
                     uint64_t GetIsAttached() const;
 
                     /**
-                     * 设置
-                     * @param IsAttached 
+                     * 设置This value should not be null when querying whether a marked entity has been associated with a policy. 0 indicates that no policy has been associated, while 1 indicates that a policy has been associated
+                     * @param IsAttached This value should not be null when querying whether a marked entity has been associated with a policy. 0 indicates that no policy has been associated, while 1 indicates that a policy has been associated
                      */
                     void SetIsAttached(const uint64_t& _isAttached);
 
@@ -286,6 +286,72 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool IsServiceLinkedPolicyHasBeenSet() const;
 
+                    /**
+                     * 获取The number of entities associated with the policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return AttachEntityCount The number of entities associated with the policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetAttachEntityCount() const;
+
+                    /**
+                     * 设置The number of entities associated with the policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param AttachEntityCount The number of entities associated with the policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetAttachEntityCount(const int64_t& _attachEntityCount);
+
+                    /**
+                     * 判断参数 AttachEntityCount 是否已赋值
+                     * @return AttachEntityCount 是否已赋值
+                     */
+                    bool AttachEntityCountHasBeenSet() const;
+
+                    /**
+                     * 获取The number of entities associated with the permission boundary.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return AttachEntityBoundaryCount The number of entities associated with the permission boundary.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetAttachEntityBoundaryCount() const;
+
+                    /**
+                     * 设置The number of entities associated with the permission boundary.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param AttachEntityBoundaryCount The number of entities associated with the permission boundary.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetAttachEntityBoundaryCount(const int64_t& _attachEntityBoundaryCount);
+
+                    /**
+                     * 判断参数 AttachEntityBoundaryCount 是否已赋值
+                     * @return AttachEntityBoundaryCount 是否已赋值
+                     */
+                    bool AttachEntityBoundaryCountHasBeenSet() const;
+
+                    /**
+                     * 获取The last edited time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return UpdateTime The last edited time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetUpdateTime() const;
+
+                    /**
+                     * 设置The last edited time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param UpdateTime The last edited time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetUpdateTime(const std::string& _updateTime);
+
+                    /**
+                     * 判断参数 UpdateTime 是否已赋值
+                     * @return UpdateTime 是否已赋值
+                     */
+                    bool UpdateTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -340,7 +406,7 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_serviceTypeHasBeenSet;
 
                     /**
-                     * 
+                     * This value should not be null when querying whether a marked entity has been associated with a policy. 0 indicates that no policy has been associated, while 1 indicates that a policy has been associated
                      */
                     uint64_t m_isAttached;
                     bool m_isAttachedHasBeenSet;
@@ -365,6 +431,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_isServiceLinkedPolicy;
                     bool m_isServiceLinkedPolicyHasBeenSet;
+
+                    /**
+                     * The number of entities associated with the policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_attachEntityCount;
+                    bool m_attachEntityCountHasBeenSet;
+
+                    /**
+                     * The number of entities associated with the permission boundary.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_attachEntityBoundaryCount;
+                    bool m_attachEntityBoundaryCountHasBeenSet;
+
+                    /**
+                     * The last edited time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_updateTime;
+                    bool m_updateTimeHasBeenSet;
 
                 };
             }

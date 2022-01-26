@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * IP added to blacklist 12306
+                * IP added to blocklist 12306
                 */
                 class BlockedIP : public AbstractModel
                 {

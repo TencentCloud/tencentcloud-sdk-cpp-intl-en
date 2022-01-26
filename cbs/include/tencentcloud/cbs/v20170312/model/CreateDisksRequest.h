@@ -22,8 +22,9 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cbs/v20170312/model/Placement.h>
-#include <tencentcloud/cbs/v20170312/model/DiskChargePrepaid.h>
 #include <tencentcloud/cbs/v20170312/model/Tag.h>
+#include <tencentcloud/cbs/v20170312/model/DiskChargePrepaid.h>
+#include <tencentcloud/cbs/v20170312/model/AutoMountConfiguration.h>
 
 
 namespace TencentCloud
@@ -46,42 +47,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Type of hard disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-                     * @return DiskType Type of hard disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-                     */
-                    std::string GetDiskType() const;
-
-                    /**
-                     * 设置Type of hard disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-                     * @param DiskType Type of hard disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-                     */
-                    void SetDiskType(const std::string& _diskType);
-
-                    /**
-                     * 判断参数 DiskType 是否已赋值
-                     * @return DiskType 是否已赋值
-                     */
-                    bool DiskTypeHasBeenSet() const;
-
-                    /**
-                     * 获取Cloud disk billing method. POSTPAID_BY_HOUR: pay as you go by hour<br><li>CDCPAID: Billed together with the bound dedicated cluster<br>For information about the pricing of each method, see the cloud disk [Pricing Overview](/document/product/362/2413).
-                     * @return DiskChargeType Cloud disk billing method. POSTPAID_BY_HOUR: pay as you go by hour<br><li>CDCPAID: Billed together with the bound dedicated cluster<br>For information about the pricing of each method, see the cloud disk [Pricing Overview](/document/product/362/2413).
-                     */
-                    std::string GetDiskChargeType() const;
-
-                    /**
-                     * 设置Cloud disk billing method. POSTPAID_BY_HOUR: pay as you go by hour<br><li>CDCPAID: Billed together with the bound dedicated cluster<br>For information about the pricing of each method, see the cloud disk [Pricing Overview](/document/product/362/2413).
-                     * @param DiskChargeType Cloud disk billing method. POSTPAID_BY_HOUR: pay as you go by hour<br><li>CDCPAID: Billed together with the bound dedicated cluster<br>For information about the pricing of each method, see the cloud disk [Pricing Overview](/document/product/362/2413).
-                     */
-                    void SetDiskChargeType(const std::string& _diskChargeType);
-
-                    /**
-                     * 判断参数 DiskChargeType 是否已赋值
-                     * @return DiskChargeType 是否已赋值
-                     */
-                    bool DiskChargeTypeHasBeenSet() const;
-
-                    /**
                      * 获取The location of the instance. The availability zone and the project that the instance belongs to can be specified using this parameter. If the project is not specified, it will be created under the default project.
                      * @return Placement The location of the instance. The availability zone and the project that the instance belongs to can be specified using this parameter. If the project is not specified, it will be created under the default project.
                      */
@@ -98,6 +63,42 @@ namespace TencentCloud
                      * @return Placement 是否已赋值
                      */
                     bool PlacementHasBeenSet() const;
+
+                    /**
+                     * 获取Cloud disk billing method. POSTPAID_BY_HOUR: pay as you go by hour<br><li>CDCPAID: Billed together with the bound dedicated cluster<br>For information about the pricing of each method, see the cloud disk [Pricing Overview](https://intl.cloud.tencent.com/document/product/362/2413?from_cn_redirect=1).
+                     * @return DiskChargeType Cloud disk billing method. POSTPAID_BY_HOUR: pay as you go by hour<br><li>CDCPAID: Billed together with the bound dedicated cluster<br>For information about the pricing of each method, see the cloud disk [Pricing Overview](https://intl.cloud.tencent.com/document/product/362/2413?from_cn_redirect=1).
+                     */
+                    std::string GetDiskChargeType() const;
+
+                    /**
+                     * 设置Cloud disk billing method. POSTPAID_BY_HOUR: pay as you go by hour<br><li>CDCPAID: Billed together with the bound dedicated cluster<br>For information about the pricing of each method, see the cloud disk [Pricing Overview](https://intl.cloud.tencent.com/document/product/362/2413?from_cn_redirect=1).
+                     * @param DiskChargeType Cloud disk billing method. POSTPAID_BY_HOUR: pay as you go by hour<br><li>CDCPAID: Billed together with the bound dedicated cluster<br>For information about the pricing of each method, see the cloud disk [Pricing Overview](https://intl.cloud.tencent.com/document/product/362/2413?from_cn_redirect=1).
+                     */
+                    void SetDiskChargeType(const std::string& _diskChargeType);
+
+                    /**
+                     * 判断参数 DiskChargeType 是否已赋值
+                     * @return DiskChargeType 是否已赋值
+                     */
+                    bool DiskChargeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
+                     * @return DiskType Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
+                     */
+                    std::string GetDiskType() const;
+
+                    /**
+                     * 设置Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
+                     * @param DiskType Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
+                     */
+                    void SetDiskType(const std::string& _diskType);
+
+                    /**
+                     * 判断参数 DiskType 是否已赋值
+                     * @return DiskType 是否已赋值
+                     */
+                    bool DiskTypeHasBeenSet() const;
 
                     /**
                      * 获取The displayed name of the cloud disk. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
@@ -118,14 +119,50 @@ namespace TencentCloud
                     bool DiskNameHasBeenSet() const;
 
                     /**
-                     * 获取If the number of cloud disks to be created is left empty, the default is 1. There is a limit to the maximum number of cloud disks that can be created for a single request. For more information, please see [CBS Use Limits](https://cloud.tencent.com/doc/product/362/5145).
-                     * @return DiskCount If the number of cloud disks to be created is left empty, the default is 1. There is a limit to the maximum number of cloud disks that can be created for a single request. For more information, please see [CBS Use Limits](https://cloud.tencent.com/doc/product/362/5145).
+                     * 获取Cloud disk binding tag.
+                     * @return Tags Cloud disk binding tag.
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Cloud disk binding tag.
+                     * @param Tags Cloud disk binding tag.
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取Snapshot ID. If this parameter is specified, the cloud disk is created based on the snapshot. The snapshot type must be a data disk snapshot. The snapshot can be queried in the DiskUsage field in the output parameter through the API [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+                     * @return SnapshotId Snapshot ID. If this parameter is specified, the cloud disk is created based on the snapshot. The snapshot type must be a data disk snapshot. The snapshot can be queried in the DiskUsage field in the output parameter through the API [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+                     */
+                    std::string GetSnapshotId() const;
+
+                    /**
+                     * 设置Snapshot ID. If this parameter is specified, the cloud disk is created based on the snapshot. The snapshot type must be a data disk snapshot. The snapshot can be queried in the DiskUsage field in the output parameter through the API [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+                     * @param SnapshotId Snapshot ID. If this parameter is specified, the cloud disk is created based on the snapshot. The snapshot type must be a data disk snapshot. The snapshot can be queried in the DiskUsage field in the output parameter through the API [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+                     */
+                    void SetSnapshotId(const std::string& _snapshotId);
+
+                    /**
+                     * 判断参数 SnapshotId 是否已赋值
+                     * @return SnapshotId 是否已赋值
+                     */
+                    bool SnapshotIdHasBeenSet() const;
+
+                    /**
+                     * 获取If the number of cloud disks to be created is left empty, the default is 1. There is a limit to the maximum number of cloud disks that can be created for a single request. For more information, please see [CBS Use Limits](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1).
+                     * @return DiskCount If the number of cloud disks to be created is left empty, the default is 1. There is a limit to the maximum number of cloud disks that can be created for a single request. For more information, please see [CBS Use Limits](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1).
                      */
                     uint64_t GetDiskCount() const;
 
                     /**
-                     * 设置If the number of cloud disks to be created is left empty, the default is 1. There is a limit to the maximum number of cloud disks that can be created for a single request. For more information, please see [CBS Use Limits](https://cloud.tencent.com/doc/product/362/5145).
-                     * @param DiskCount If the number of cloud disks to be created is left empty, the default is 1. There is a limit to the maximum number of cloud disks that can be created for a single request. For more information, please see [CBS Use Limits](https://cloud.tencent.com/doc/product/362/5145).
+                     * 设置If the number of cloud disks to be created is left empty, the default is 1. There is a limit to the maximum number of cloud disks that can be created for a single request. For more information, please see [CBS Use Limits](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1).
+                     * @param DiskCount If the number of cloud disks to be created is left empty, the default is 1. There is a limit to the maximum number of cloud disks that can be created for a single request. For more information, please see [CBS Use Limits](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1).
                      */
                     void SetDiskCount(const uint64_t& _diskCount);
 
@@ -136,32 +173,32 @@ namespace TencentCloud
                     bool DiskCountHasBeenSet() const;
 
                     /**
-                     * 获取Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk. 
-                     * @return DiskChargePrepaid Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk. 
+                     * 获取Extra performance purchased for a cloud disk.<br>This optional parameter is only valid for Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD).
+                     * @return ThroughputPerformance Extra performance purchased for a cloud disk.<br>This optional parameter is only valid for Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD).
                      */
-                    DiskChargePrepaid GetDiskChargePrepaid() const;
+                    uint64_t GetThroughputPerformance() const;
 
                     /**
-                     * 设置Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk. 
-                     * @param DiskChargePrepaid Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk. 
+                     * 设置Extra performance purchased for a cloud disk.<br>This optional parameter is only valid for Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD).
+                     * @param ThroughputPerformance Extra performance purchased for a cloud disk.<br>This optional parameter is only valid for Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD).
                      */
-                    void SetDiskChargePrepaid(const DiskChargePrepaid& _diskChargePrepaid);
+                    void SetThroughputPerformance(const uint64_t& _throughputPerformance);
 
                     /**
-                     * 判断参数 DiskChargePrepaid 是否已赋值
-                     * @return DiskChargePrepaid 是否已赋值
+                     * 判断参数 ThroughputPerformance 是否已赋值
+                     * @return ThroughputPerformance 是否已赋值
                      */
-                    bool DiskChargePrepaidHasBeenSet() const;
+                    bool ThroughputPerformanceHasBeenSet() const;
 
                     /**
-                     * 获取Cloud hard disk size (in GB). <br><li> If `SnapshotId` is passed, `DiskSize` cannot be passed. In this case, the size of the cloud disk is the size of the snapshot. <br><li>To pass `SnapshotId` and `DiskSize` at the same time, the size of the disk must be larger than or equal to the size of the snapshot. <br><li>For information about the size range of cloud disks, see cloud disk [Product Types](/document/product/362/2353).
-                     * @return DiskSize Cloud hard disk size (in GB). <br><li> If `SnapshotId` is passed, `DiskSize` cannot be passed. In this case, the size of the cloud disk is the size of the snapshot. <br><li>To pass `SnapshotId` and `DiskSize` at the same time, the size of the disk must be larger than or equal to the size of the snapshot. <br><li>For information about the size range of cloud disks, see cloud disk [Product Types](/document/product/362/2353).
+                     * 获取Cloud hard disk size (in GB). <br><li> If `SnapshotId` is passed, `DiskSize` cannot be passed. In this case, the size of the cloud disk is the size of the snapshot. <br><li>To pass `SnapshotId` and `DiskSize` at the same time, the size of the disk must be larger than or equal to the size of the snapshot. <br><li>For information about the size range of cloud disks, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+                     * @return DiskSize Cloud hard disk size (in GB). <br><li> If `SnapshotId` is passed, `DiskSize` cannot be passed. In this case, the size of the cloud disk is the size of the snapshot. <br><li>To pass `SnapshotId` and `DiskSize` at the same time, the size of the disk must be larger than or equal to the size of the snapshot. <br><li>For information about the size range of cloud disks, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
                      */
                     uint64_t GetDiskSize() const;
 
                     /**
-                     * 设置Cloud hard disk size (in GB). <br><li> If `SnapshotId` is passed, `DiskSize` cannot be passed. In this case, the size of the cloud disk is the size of the snapshot. <br><li>To pass `SnapshotId` and `DiskSize` at the same time, the size of the disk must be larger than or equal to the size of the snapshot. <br><li>For information about the size range of cloud disks, see cloud disk [Product Types](/document/product/362/2353).
-                     * @param DiskSize Cloud hard disk size (in GB). <br><li> If `SnapshotId` is passed, `DiskSize` cannot be passed. In this case, the size of the cloud disk is the size of the snapshot. <br><li>To pass `SnapshotId` and `DiskSize` at the same time, the size of the disk must be larger than or equal to the size of the snapshot. <br><li>For information about the size range of cloud disks, see cloud disk [Product Types](/document/product/362/2353).
+                     * 设置Cloud hard disk size (in GB). <br><li> If `SnapshotId` is passed, `DiskSize` cannot be passed. In this case, the size of the cloud disk is the size of the snapshot. <br><li>To pass `SnapshotId` and `DiskSize` at the same time, the size of the disk must be larger than or equal to the size of the snapshot. <br><li>For information about the size range of cloud disks, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+                     * @param DiskSize Cloud hard disk size (in GB). <br><li> If `SnapshotId` is passed, `DiskSize` cannot be passed. In this case, the size of the cloud disk is the size of the snapshot. <br><li>To pass `SnapshotId` and `DiskSize` at the same time, the size of the disk must be larger than or equal to the size of the snapshot. <br><li>For information about the size range of cloud disks, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
                      */
                     void SetDiskSize(const uint64_t& _diskSize);
 
@@ -172,22 +209,22 @@ namespace TencentCloud
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot ID. If this parameter is specified, the cloud disk is created based on the snapshot. The snapshot type must be a data disk snapshot. The snapshot can be queried in the DiskUsage field in the output parameter through the API [DescribeSnapshots](/document/product/362/15647).
-                     * @return SnapshotId Snapshot ID. If this parameter is specified, the cloud disk is created based on the snapshot. The snapshot type must be a data disk snapshot. The snapshot can be queried in the DiskUsage field in the output parameter through the API [DescribeSnapshots](/document/product/362/15647).
+                     * 获取The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk.
+                     * @return Shareable The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk.
                      */
-                    std::string GetSnapshotId() const;
+                    bool GetShareable() const;
 
                     /**
-                     * 设置Snapshot ID. If this parameter is specified, the cloud disk is created based on the snapshot. The snapshot type must be a data disk snapshot. The snapshot can be queried in the DiskUsage field in the output parameter through the API [DescribeSnapshots](/document/product/362/15647).
-                     * @param SnapshotId Snapshot ID. If this parameter is specified, the cloud disk is created based on the snapshot. The snapshot type must be a data disk snapshot. The snapshot can be queried in the DiskUsage field in the output parameter through the API [DescribeSnapshots](/document/product/362/15647).
+                     * 设置The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk.
+                     * @param Shareable The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk.
                      */
-                    void SetSnapshotId(const std::string& _snapshotId);
+                    void SetShareable(const bool& _shareable);
 
                     /**
-                     * 判断参数 SnapshotId 是否已赋值
-                     * @return SnapshotId 是否已赋值
+                     * 判断参数 Shareable 是否已赋值
+                     * @return Shareable 是否已赋值
                      */
-                    bool SnapshotIdHasBeenSet() const;
+                    bool ShareableHasBeenSet() const;
 
                     /**
                      * 获取A string to ensure the idempotency of the request, which is generated by the client. Each request shall have a unique string with a maximum of 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be ensured.
@@ -226,54 +263,60 @@ namespace TencentCloud
                     bool EncryptHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk binding tag.
-                     * @return Tags Cloud disk binding tag.
+                     * 获取Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk. 
+                     * @return DiskChargePrepaid Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk. 
                      */
-                    std::vector<Tag> GetTags() const;
+                    DiskChargePrepaid GetDiskChargePrepaid() const;
 
                     /**
-                     * 设置Cloud disk binding tag.
-                     * @param Tags Cloud disk binding tag.
+                     * 设置Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk. 
+                     * @param DiskChargePrepaid Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk. 
                      */
-                    void SetTags(const std::vector<Tag>& _tags);
+                    void SetDiskChargePrepaid(const DiskChargePrepaid& _diskChargePrepaid);
 
                     /**
-                     * 判断参数 Tags 是否已赋值
-                     * @return Tags 是否已赋值
+                     * 判断参数 DiskChargePrepaid 是否已赋值
+                     * @return DiskChargePrepaid 是否已赋值
                      */
-                    bool TagsHasBeenSet() const;
+                    bool DiskChargePrepaidHasBeenSet() const;
 
                     /**
-                     * 获取The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk.
-                     * @return Shareable The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk.
+                     * 获取Whether to delete the associated non-permanent snapshots when a cloud disk is terminated. Valid values: `0` (do not delete); `1` (delete). Default value: `0`. To find out whether a snapshot is permanent, you can call the `DescribeSnapshots` API and check the `IsPermanent` field (`true`: permanent; `false`: non-permanent) in its response.
+                     * @return DeleteSnapshot Whether to delete the associated non-permanent snapshots when a cloud disk is terminated. Valid values: `0` (do not delete); `1` (delete). Default value: `0`. To find out whether a snapshot is permanent, you can call the `DescribeSnapshots` API and check the `IsPermanent` field (`true`: permanent; `false`: non-permanent) in its response.
                      */
-                    bool GetShareable() const;
+                    int64_t GetDeleteSnapshot() const;
 
                     /**
-                     * 设置The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk.
-                     * @param Shareable The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk.
+                     * 设置Whether to delete the associated non-permanent snapshots when a cloud disk is terminated. Valid values: `0` (do not delete); `1` (delete). Default value: `0`. To find out whether a snapshot is permanent, you can call the `DescribeSnapshots` API and check the `IsPermanent` field (`true`: permanent; `false`: non-permanent) in its response.
+                     * @param DeleteSnapshot Whether to delete the associated non-permanent snapshots when a cloud disk is terminated. Valid values: `0` (do not delete); `1` (delete). Default value: `0`. To find out whether a snapshot is permanent, you can call the `DescribeSnapshots` API and check the `IsPermanent` field (`true`: permanent; `false`: non-permanent) in its response.
                      */
-                    void SetShareable(const bool& _shareable);
+                    void SetDeleteSnapshot(const int64_t& _deleteSnapshot);
 
                     /**
-                     * 判断参数 Shareable 是否已赋值
-                     * @return Shareable 是否已赋值
+                     * 判断参数 DeleteSnapshot 是否已赋值
+                     * @return DeleteSnapshot 是否已赋值
                      */
-                    bool ShareableHasBeenSet() const;
+                    bool DeleteSnapshotHasBeenSet() const;
+
+                    /**
+                     * 获取When a cloud disk is created, automatically initialize it and attach it to the specified mount point
+                     * @return AutoMountConfiguration When a cloud disk is created, automatically initialize it and attach it to the specified mount point
+                     */
+                    AutoMountConfiguration GetAutoMountConfiguration() const;
+
+                    /**
+                     * 设置When a cloud disk is created, automatically initialize it and attach it to the specified mount point
+                     * @param AutoMountConfiguration When a cloud disk is created, automatically initialize it and attach it to the specified mount point
+                     */
+                    void SetAutoMountConfiguration(const AutoMountConfiguration& _autoMountConfiguration);
+
+                    /**
+                     * 判断参数 AutoMountConfiguration 是否已赋值
+                     * @return AutoMountConfiguration 是否已赋值
+                     */
+                    bool AutoMountConfigurationHasBeenSet() const;
 
                 private:
-
-                    /**
-                     * Type of hard disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-                     */
-                    std::string m_diskType;
-                    bool m_diskTypeHasBeenSet;
-
-                    /**
-                     * Cloud disk billing method. POSTPAID_BY_HOUR: pay as you go by hour<br><li>CDCPAID: Billed together with the bound dedicated cluster<br>For information about the pricing of each method, see the cloud disk [Pricing Overview](/document/product/362/2413).
-                     */
-                    std::string m_diskChargeType;
-                    bool m_diskChargeTypeHasBeenSet;
 
                     /**
                      * The location of the instance. The availability zone and the project that the instance belongs to can be specified using this parameter. If the project is not specified, it will be created under the default project.
@@ -282,34 +325,58 @@ namespace TencentCloud
                     bool m_placementHasBeenSet;
 
                     /**
+                     * Cloud disk billing method. POSTPAID_BY_HOUR: pay as you go by hour<br><li>CDCPAID: Billed together with the bound dedicated cluster<br>For information about the pricing of each method, see the cloud disk [Pricing Overview](https://intl.cloud.tencent.com/document/product/362/2413?from_cn_redirect=1).
+                     */
+                    std::string m_diskChargeType;
+                    bool m_diskChargeTypeHasBeenSet;
+
+                    /**
+                     * Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
+                     */
+                    std::string m_diskType;
+                    bool m_diskTypeHasBeenSet;
+
+                    /**
                      * The displayed name of the cloud disk. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
                      */
                     std::string m_diskName;
                     bool m_diskNameHasBeenSet;
 
                     /**
-                     * If the number of cloud disks to be created is left empty, the default is 1. There is a limit to the maximum number of cloud disks that can be created for a single request. For more information, please see [CBS Use Limits](https://cloud.tencent.com/doc/product/362/5145).
+                     * Cloud disk binding tag.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * Snapshot ID. If this parameter is specified, the cloud disk is created based on the snapshot. The snapshot type must be a data disk snapshot. The snapshot can be queried in the DiskUsage field in the output parameter through the API [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+                     */
+                    std::string m_snapshotId;
+                    bool m_snapshotIdHasBeenSet;
+
+                    /**
+                     * If the number of cloud disks to be created is left empty, the default is 1. There is a limit to the maximum number of cloud disks that can be created for a single request. For more information, please see [CBS Use Limits](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1).
                      */
                     uint64_t m_diskCount;
                     bool m_diskCountHasBeenSet;
 
                     /**
-                     * Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk. 
+                     * Extra performance purchased for a cloud disk.<br>This optional parameter is only valid for Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD).
                      */
-                    DiskChargePrepaid m_diskChargePrepaid;
-                    bool m_diskChargePrepaidHasBeenSet;
+                    uint64_t m_throughputPerformance;
+                    bool m_throughputPerformanceHasBeenSet;
 
                     /**
-                     * Cloud hard disk size (in GB). <br><li> If `SnapshotId` is passed, `DiskSize` cannot be passed. In this case, the size of the cloud disk is the size of the snapshot. <br><li>To pass `SnapshotId` and `DiskSize` at the same time, the size of the disk must be larger than or equal to the size of the snapshot. <br><li>For information about the size range of cloud disks, see cloud disk [Product Types](/document/product/362/2353).
+                     * Cloud hard disk size (in GB). <br><li> If `SnapshotId` is passed, `DiskSize` cannot be passed. In this case, the size of the cloud disk is the size of the snapshot. <br><li>To pass `SnapshotId` and `DiskSize` at the same time, the size of the disk must be larger than or equal to the size of the snapshot. <br><li>For information about the size range of cloud disks, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
                      */
                     uint64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * Snapshot ID. If this parameter is specified, the cloud disk is created based on the snapshot. The snapshot type must be a data disk snapshot. The snapshot can be queried in the DiskUsage field in the output parameter through the API [DescribeSnapshots](/document/product/362/15647).
+                     * The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk.
                      */
-                    std::string m_snapshotId;
-                    bool m_snapshotIdHasBeenSet;
+                    bool m_shareable;
+                    bool m_shareableHasBeenSet;
 
                     /**
                      * A string to ensure the idempotency of the request, which is generated by the client. Each request shall have a unique string with a maximum of 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be ensured.
@@ -324,16 +391,22 @@ namespace TencentCloud
                     bool m_encryptHasBeenSet;
 
                     /**
-                     * Cloud disk binding tag.
+                     * Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk. 
                      */
-                    std::vector<Tag> m_tags;
-                    bool m_tagsHasBeenSet;
+                    DiskChargePrepaid m_diskChargePrepaid;
+                    bool m_diskChargePrepaidHasBeenSet;
 
                     /**
-                     * The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk.
+                     * Whether to delete the associated non-permanent snapshots when a cloud disk is terminated. Valid values: `0` (do not delete); `1` (delete). Default value: `0`. To find out whether a snapshot is permanent, you can call the `DescribeSnapshots` API and check the `IsPermanent` field (`true`: permanent; `false`: non-permanent) in its response.
                      */
-                    bool m_shareable;
-                    bool m_shareableHasBeenSet;
+                    int64_t m_deleteSnapshot;
+                    bool m_deleteSnapshotHasBeenSet;
+
+                    /**
+                     * When a cloud disk is created, automatically initialize it and attach it to the specified mount point
+                     */
+                    AutoMountConfiguration m_autoMountConfiguration;
+                    bool m_autoMountConfigurationHasBeenSet;
 
                 };
             }

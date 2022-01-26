@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 IPStrategyApi::IPStrategyApi() :
@@ -32,7 +31,7 @@ IPStrategyApi::IPStrategyApi() :
 {
 }
 
-CoreInternalOutcome IPStrategyApi::Deserialize(const Value &value)
+CoreInternalOutcome IPStrategyApi::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +40,7 @@ CoreInternalOutcome IPStrategyApi::Deserialize(const Value &value)
     {
         if (!value["ApiId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IPStrategyApi.ApiId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IPStrategyApi.ApiId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_apiId = string(value["ApiId"].GetString());
         m_apiIdHasBeenSet = true;
@@ -51,7 +50,7 @@ CoreInternalOutcome IPStrategyApi::Deserialize(const Value &value)
     {
         if (!value["ApiName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IPStrategyApi.ApiName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IPStrategyApi.ApiName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_apiName = string(value["ApiName"].GetString());
         m_apiNameHasBeenSet = true;
@@ -61,7 +60,7 @@ CoreInternalOutcome IPStrategyApi::Deserialize(const Value &value)
     {
         if (!value["ApiType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IPStrategyApi.ApiType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IPStrategyApi.ApiType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_apiType = string(value["ApiType"].GetString());
         m_apiTypeHasBeenSet = true;
@@ -71,7 +70,7 @@ CoreInternalOutcome IPStrategyApi::Deserialize(const Value &value)
     {
         if (!value["Path"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IPStrategyApi.Path` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IPStrategyApi.Path` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_path = string(value["Path"].GetString());
         m_pathHasBeenSet = true;
@@ -81,7 +80,7 @@ CoreInternalOutcome IPStrategyApi::Deserialize(const Value &value)
     {
         if (!value["Method"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IPStrategyApi.Method` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IPStrategyApi.Method` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_method = string(value["Method"].GetString());
         m_methodHasBeenSet = true;
@@ -91,7 +90,7 @@ CoreInternalOutcome IPStrategyApi::Deserialize(const Value &value)
     {
         if (!value["OtherIPStrategyId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IPStrategyApi.OtherIPStrategyId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IPStrategyApi.OtherIPStrategyId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_otherIPStrategyId = string(value["OtherIPStrategyId"].GetString());
         m_otherIPStrategyIdHasBeenSet = true;
@@ -101,7 +100,7 @@ CoreInternalOutcome IPStrategyApi::Deserialize(const Value &value)
     {
         if (!value["OtherEnvironmentName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IPStrategyApi.OtherEnvironmentName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IPStrategyApi.OtherEnvironmentName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_otherEnvironmentName = string(value["OtherEnvironmentName"].GetString());
         m_otherEnvironmentNameHasBeenSet = true;
@@ -111,63 +110,63 @@ CoreInternalOutcome IPStrategyApi::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void IPStrategyApi::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void IPStrategyApi::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_apiIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ApiId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_apiId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_apiId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_apiNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ApiName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_apiName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_apiName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_apiTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ApiType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_apiType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_apiType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_pathHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Path";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_path.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_path.c_str(), allocator).Move(), allocator);
     }
 
     if (m_methodHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Method";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_method.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_method.c_str(), allocator).Move(), allocator);
     }
 
     if (m_otherIPStrategyIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OtherIPStrategyId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_otherIPStrategyId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_otherIPStrategyId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_otherEnvironmentNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OtherEnvironmentName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_otherEnvironmentName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_otherEnvironmentName.c_str(), allocator).Move(), allocator);
     }
 
 }

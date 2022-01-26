@@ -350,6 +350,24 @@ Default value: Non-zero.
                      */
                     bool TencentBackupAddressHasBeenSet() const;
 
+                    /**
+                     * 获取Cloud Attached Connection Service ID
+                     * @return CloudAttachId Cloud Attached Connection Service ID
+                     */
+                    std::string GetCloudAttachId() const;
+
+                    /**
+                     * 设置Cloud Attached Connection Service ID
+                     * @param CloudAttachId Cloud Attached Connection Service ID
+                     */
+                    void SetCloudAttachId(const std::string& _cloudAttachId);
+
+                    /**
+                     * 判断参数 CloudAttachId 是否已赋值
+                     * @return CloudAttachId 是否已赋值
+                     */
+                    bool CloudAttachIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -450,6 +468,12 @@ Default value: Non-zero.
                      */
                     std::string m_tencentBackupAddress;
                     bool m_tencentBackupAddressHasBeenSet;
+
+                    /**
+                     * Cloud Attached Connection Service ID
+                     */
+                    std::string m_cloudAttachId;
+                    bool m_cloudAttachIdHasBeenSet;
 
                 };
             }

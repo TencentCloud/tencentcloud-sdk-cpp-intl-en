@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Listener ID
-                     * @return ListenerId Listener ID
+                     * 获取Listener ID.
+                     * @return ListenerId Listener ID.
                      */
                     std::string GetListenerId() const;
 
                     /**
-                     * 设置Listener ID
-                     * @param ListenerId Listener ID
+                     * 设置Listener ID.
+                     * @param ListenerId Listener ID.
                      */
                     void SetListenerId(const std::string& _listenerId);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool ListenerIdHasBeenSet() const;
 
                     /**
-                     * 获取Binding port
-                     * @return Port Binding port
+                     * 获取The port to Bind
+                     * @return Port The port to Bind
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置Binding port
-                     * @param Port Binding port
+                     * 设置The port to Bind
+                     * @param Port The port to Bind
                      */
                     void SetPort(const int64_t& _port);
 
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取CVM instance ID
-                     * @return InstanceId CVM instance ID
+                     * 获取CVM instance ID. The primary IP of the primary ENI will be bound.
+                     * @return InstanceId CVM instance ID. The primary IP of the primary ENI will be bound.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置CVM instance ID
-                     * @param InstanceId CVM instance ID
+                     * 设置CVM instance ID. The primary IP of the primary ENI will be bound.
+                     * @param InstanceId CVM instance ID. The primary IP of the primary ENI will be bound.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -101,14 +101,18 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取ENI IP
-                     * @return EniIp ENI IP
+                     * 获取It is required for binding an IP. It supports an ENI IP or any other private IP. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
+Note: either `InstanceId` or `EniIp` must be passed in, which is required for binding a dual-stack IPv6 CVM instance.
+                     * @return EniIp It is required for binding an IP. It supports an ENI IP or any other private IP. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
+Note: either `InstanceId` or `EniIp` must be passed in, which is required for binding a dual-stack IPv6 CVM instance.
                      */
                     std::string GetEniIp() const;
 
                     /**
-                     * 设置ENI IP
-                     * @param EniIp ENI IP
+                     * 设置It is required for binding an IP. It supports an ENI IP or any other private IP. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
+Note: either `InstanceId` or `EniIp` must be passed in, which is required for binding a dual-stack IPv6 CVM instance.
+                     * @param EniIp It is required for binding an IP. It supports an ENI IP or any other private IP. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
+Note: either `InstanceId` or `EniIp` must be passed in, which is required for binding a dual-stack IPv6 CVM instance.
                      */
                     void SetEniIp(const std::string& _eniIp);
 
@@ -119,14 +123,14 @@ namespace TencentCloud
                     bool EniIpHasBeenSet() const;
 
                     /**
-                     * 获取Weight of a CVM instance. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
-                     * @return Weight Weight of a CVM instance. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
+                     * 获取Weight of the CVM instance. Value range: [0, 100]. If it is not specified for binding the instance, 10 will be used by default.
+                     * @return Weight Weight of the CVM instance. Value range: [0, 100]. If it is not specified for binding the instance, 10 will be used by default.
                      */
                     int64_t GetWeight() const;
 
                     /**
-                     * 设置Weight of a CVM instance. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
-                     * @param Weight Weight of a CVM instance. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
+                     * 设置Weight of the CVM instance. Value range: [0, 100]. If it is not specified for binding the instance, 10 will be used by default.
+                     * @param Weight Weight of the CVM instance. Value range: [0, 100]. If it is not specified for binding the instance, 10 will be used by default.
                      */
                     void SetWeight(const int64_t& _weight);
 
@@ -137,14 +141,14 @@ namespace TencentCloud
                     bool WeightHasBeenSet() const;
 
                     /**
-                     * 获取Layer-7 rule ID
-                     * @return LocationId Layer-7 rule ID
+                     * 获取Layer-7 rule ID.
+                     * @return LocationId Layer-7 rule ID.
                      */
                     std::string GetLocationId() const;
 
                     /**
-                     * 设置Layer-7 rule ID
-                     * @param LocationId Layer-7 rule ID
+                     * 设置Layer-7 rule ID.
+                     * @param LocationId Layer-7 rule ID.
                      */
                     void SetLocationId(const std::string& _locationId);
 
@@ -157,37 +161,38 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Listener ID
+                     * Listener ID.
                      */
                     std::string m_listenerId;
                     bool m_listenerIdHasBeenSet;
 
                     /**
-                     * Binding port
+                     * The port to Bind
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;
 
                     /**
-                     * CVM instance ID
+                     * CVM instance ID. The primary IP of the primary ENI will be bound.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * ENI IP
+                     * It is required for binding an IP. It supports an ENI IP or any other private IP. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
+Note: either `InstanceId` or `EniIp` must be passed in, which is required for binding a dual-stack IPv6 CVM instance.
                      */
                     std::string m_eniIp;
                     bool m_eniIpHasBeenSet;
 
                     /**
-                     * Weight of a CVM instance. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
+                     * Weight of the CVM instance. Value range: [0, 100]. If it is not specified for binding the instance, 10 will be used by default.
                      */
                     int64_t m_weight;
                     bool m_weightHasBeenSet;
 
                     /**
-                     * Layer-7 rule ID
+                     * Layer-7 rule ID.
                      */
                     std::string m_locationId;
                     bool m_locationIdHasBeenSet;

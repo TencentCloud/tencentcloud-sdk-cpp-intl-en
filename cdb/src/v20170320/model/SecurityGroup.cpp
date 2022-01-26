@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 SecurityGroup::SecurityGroup() :
@@ -32,7 +31,7 @@ SecurityGroup::SecurityGroup() :
 {
 }
 
-CoreInternalOutcome SecurityGroup::Deserialize(const Value &value)
+CoreInternalOutcome SecurityGroup::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +40,7 @@ CoreInternalOutcome SecurityGroup::Deserialize(const Value &value)
     {
         if (!value["ProjectId"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `SecurityGroup.ProjectId` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityGroup.ProjectId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_projectId = value["ProjectId"].GetInt64();
         m_projectIdHasBeenSet = true;
@@ -51,7 +50,7 @@ CoreInternalOutcome SecurityGroup::Deserialize(const Value &value)
     {
         if (!value["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityGroup.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityGroup.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(value["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -60,10 +59,10 @@ CoreInternalOutcome SecurityGroup::Deserialize(const Value &value)
     if (value.HasMember("Inbound") && !value["Inbound"].IsNull())
     {
         if (!value["Inbound"].IsArray())
-            return CoreInternalOutcome(Error("response `SecurityGroup.Inbound` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `SecurityGroup.Inbound` is not array type"));
 
-        const Value &tmpValue = value["Inbound"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Inbound"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             Inbound item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -80,10 +79,10 @@ CoreInternalOutcome SecurityGroup::Deserialize(const Value &value)
     if (value.HasMember("Outbound") && !value["Outbound"].IsNull())
     {
         if (!value["Outbound"].IsArray())
-            return CoreInternalOutcome(Error("response `SecurityGroup.Outbound` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `SecurityGroup.Outbound` is not array type"));
 
-        const Value &tmpValue = value["Outbound"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Outbound"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             Outbound item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -101,7 +100,7 @@ CoreInternalOutcome SecurityGroup::Deserialize(const Value &value)
     {
         if (!value["SecurityGroupId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityGroup.SecurityGroupId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityGroup.SecurityGroupId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_securityGroupId = string(value["SecurityGroupId"].GetString());
         m_securityGroupIdHasBeenSet = true;
@@ -111,7 +110,7 @@ CoreInternalOutcome SecurityGroup::Deserialize(const Value &value)
     {
         if (!value["SecurityGroupName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityGroup.SecurityGroupName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityGroup.SecurityGroupName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_securityGroupName = string(value["SecurityGroupName"].GetString());
         m_securityGroupNameHasBeenSet = true;
@@ -121,7 +120,7 @@ CoreInternalOutcome SecurityGroup::Deserialize(const Value &value)
     {
         if (!value["SecurityGroupRemark"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SecurityGroup.SecurityGroupRemark` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SecurityGroup.SecurityGroupRemark` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_securityGroupRemark = string(value["SecurityGroupRemark"].GetString());
         m_securityGroupRemarkHasBeenSet = true;
@@ -131,12 +130,12 @@ CoreInternalOutcome SecurityGroup::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void SecurityGroup::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void SecurityGroup::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_projectIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ProjectId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_projectId, allocator);
@@ -144,64 +143,64 @@ void SecurityGroup::ToJsonObject(Value &value, Document::AllocatorType& allocato
 
     if (m_createTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreateTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_createTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_inboundHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Inbound";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_inbound.begin(); itr != m_inbound.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_outboundHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Outbound";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_outbound.begin(); itr != m_outbound.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
     if (m_securityGroupIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SecurityGroupId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_securityGroupId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_securityGroupId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_securityGroupNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SecurityGroupName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_securityGroupName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_securityGroupName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_securityGroupRemarkHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SecurityGroupRemark";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_securityGroupRemark.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_securityGroupRemark.c_str(), allocator).Move(), allocator);
     }
 
 }

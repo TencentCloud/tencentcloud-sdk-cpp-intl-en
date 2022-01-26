@@ -96,6 +96,24 @@ namespace TencentCloud
                      */
                     bool StorageHasBeenSet() const;
 
+                    /**
+                     * 获取The number of CUP cores after the instance is upgraded, which cannot be smaller than that of the current cores.
+                     * @return Cpu The number of CUP cores after the instance is upgraded, which cannot be smaller than that of the current cores.
+                     */
+                    int64_t GetCpu() const;
+
+                    /**
+                     * 设置The number of CUP cores after the instance is upgraded, which cannot be smaller than that of the current cores.
+                     * @param Cpu The number of CUP cores after the instance is upgraded, which cannot be smaller than that of the current cores.
+                     */
+                    void SetCpu(const int64_t& _cpu);
+
+                    /**
+                     * 判断参数 Cpu 是否已赋值
+                     * @return Cpu 是否已赋值
+                     */
+                    bool CpuHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +133,12 @@ namespace TencentCloud
                      */
                     int64_t m_storage;
                     bool m_storageHasBeenSet;
+
+                    /**
+                     * The number of CUP cores after the instance is upgraded, which cannot be smaller than that of the current cores.
+                     */
+                    int64_t m_cpu;
+                    bool m_cpuHasBeenSet;
 
                 };
             }

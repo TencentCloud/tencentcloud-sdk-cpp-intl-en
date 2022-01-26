@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 IpStatus::IpStatus() :
@@ -30,7 +29,7 @@ IpStatus::IpStatus() :
 {
 }
 
-CoreInternalOutcome IpStatus::Deserialize(const Value &value)
+CoreInternalOutcome IpStatus::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome IpStatus::Deserialize(const Value &value)
     {
         if (!value["Ip"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IpStatus.Ip` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IpStatus.Ip` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ip = string(value["Ip"].GetString());
         m_ipHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome IpStatus::Deserialize(const Value &value)
     {
         if (!value["District"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IpStatus.District` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IpStatus.District` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_district = string(value["District"].GetString());
         m_districtHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome IpStatus::Deserialize(const Value &value)
     {
         if (!value["Isp"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IpStatus.Isp` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IpStatus.Isp` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_isp = string(value["Isp"].GetString());
         m_ispHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome IpStatus::Deserialize(const Value &value)
     {
         if (!value["City"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IpStatus.City` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IpStatus.City` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_city = string(value["City"].GetString());
         m_cityHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome IpStatus::Deserialize(const Value &value)
     {
         if (!value["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IpStatus.Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IpStatus.Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(value["Status"].GetString());
         m_statusHasBeenSet = true;
@@ -89,47 +88,47 @@ CoreInternalOutcome IpStatus::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void IpStatus::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void IpStatus::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_ipHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Ip";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_ip.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ip.c_str(), allocator).Move(), allocator);
     }
 
     if (m_districtHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "District";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_district.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_district.c_str(), allocator).Move(), allocator);
     }
 
     if (m_ispHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Isp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_isp.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_isp.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cityHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "City";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_city.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_city.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_status.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
     }
 
 }

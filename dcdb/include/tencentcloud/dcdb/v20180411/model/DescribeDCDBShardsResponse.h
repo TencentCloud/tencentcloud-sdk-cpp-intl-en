@@ -41,6 +41,7 @@ namespace TencentCloud
                     DescribeDCDBShardsResponse();
                     ~DescribeDCDBShardsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -67,6 +68,20 @@ namespace TencentCloud
                      */
                     bool ShardsHasBeenSet() const;
 
+                    /**
+                     * 获取DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return DcnFlag DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetDcnFlag() const;
+
+                    /**
+                     * 判断参数 DcnFlag 是否已赋值
+                     * @return DcnFlag 是否已赋值
+                     */
+                    bool DcnFlagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -80,6 +95,13 @@ namespace TencentCloud
                      */
                     std::vector<DCDBShardInfo> m_shards;
                     bool m_shardsHasBeenSet;
+
+                    /**
+                     * DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_dcnFlag;
+                    bool m_dcnFlagHasBeenSet;
 
                 };
             }

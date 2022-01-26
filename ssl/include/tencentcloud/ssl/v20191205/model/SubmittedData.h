@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Content of the SubmittedData parameter returned by DescribeCertificates.
+                * Content of the `SubmittedData` parameter returned by `DescribeCertificates`
                 */
                 class SubmittedData : public AbstractModel
                 {
@@ -47,17 +47,17 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CSR type. Online: CSR generated online; parse: CSR pasted.
+                     * 获取CSR type. `online`: CSR generated online; `parse`: CSR pasted
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CsrType CSR type. Online: CSR generated online; parse: CSR pasted.
+                     * @return CsrType CSR type. `online`: CSR generated online; `parse`: CSR pasted
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetCsrType() const;
 
                     /**
-                     * 设置CSR type. Online: CSR generated online; parse: CSR pasted.
+                     * 设置CSR type. `online`: CSR generated online; `parse`: CSR pasted
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CsrType CSR type. Online: CSR generated online; parse: CSR pasted.
+                     * @param CsrType CSR type. `online`: CSR generated online; `parse`: CSR pasted
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetCsrType(const std::string& _csrType);
@@ -69,17 +69,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CsrTypeHasBeenSet() const;
 
                     /**
-                     * 获取CSR content.
+                     * 获取CSR content
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CsrContent CSR content.
+                     * @return CsrContent CSR content
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetCsrContent() const;
 
                     /**
-                     * 设置CSR content.
+                     * 设置CSR content
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CsrContent CSR content.
+                     * @param CsrContent CSR content
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetCsrContent(const std::string& _csrContent);
@@ -91,17 +91,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CsrContentHasBeenSet() const;
 
                     /**
-                     * 获取Domain name information.
+                     * 获取Domain name information
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CertificateDomain Domain name information.
+                     * @return CertificateDomain Domain name information
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetCertificateDomain() const;
 
                     /**
-                     * 设置Domain name information.
+                     * 设置Domain name information
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CertificateDomain Domain name information.
+                     * @param CertificateDomain Domain name information
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetCertificateDomain(const std::string& _certificateDomain);
@@ -113,17 +113,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CertificateDomainHasBeenSet() const;
 
                     /**
-                     * 获取DNS information.
+                     * 获取DNS information
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DomainList DNS information.
+                     * @return DomainList DNS information
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetDomainList() const;
 
                     /**
-                     * 设置DNS information.
+                     * 设置DNS information
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DomainList DNS information.
+                     * @param DomainList DNS information
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetDomainList(const std::vector<std::string>& _domainList);
@@ -135,17 +135,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DomainListHasBeenSet() const;
 
                     /**
-                     * 获取Password of the private key.
+                     * 获取Password of the private key
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return KeyPassword Password of the private key.
+                     * @return KeyPassword Password of the private key
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetKeyPassword() const;
 
                     /**
-                     * 设置Password of the private key.
+                     * 设置Password of the private key
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param KeyPassword Password of the private key.
+                     * @param KeyPassword Password of the private key
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetKeyPassword(const std::string& _keyPassword);
@@ -157,17 +157,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool KeyPasswordHasBeenSet() const;
 
                     /**
-                     * 获取Enterprise or unit name.
+                     * 获取Enterprise or unit name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return OrganizationName Enterprise or unit name.
+                     * @return OrganizationName Enterprise or unit name
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetOrganizationName() const;
 
                     /**
-                     * 设置Enterprise or unit name.
+                     * 设置Enterprise or unit name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OrganizationName Enterprise or unit name.
+                     * @param OrganizationName Enterprise or unit name
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetOrganizationName(const std::string& _organizationName);
@@ -179,17 +179,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool OrganizationNameHasBeenSet() const;
 
                     /**
-                     * 获取Division.
+                     * 获取Division
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return OrganizationDivision Division.
+                     * @return OrganizationDivision Division
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetOrganizationDivision() const;
 
                     /**
-                     * 设置Division.
+                     * 设置Division
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OrganizationDivision Division.
+                     * @param OrganizationDivision Division
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetOrganizationDivision(const std::string& _organizationDivision);
@@ -201,17 +201,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool OrganizationDivisionHasBeenSet() const;
 
                     /**
-                     * 获取Address.
+                     * 获取Address
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return OrganizationAddress Address.
+                     * @return OrganizationAddress Address
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetOrganizationAddress() const;
 
                     /**
-                     * 设置Address.
+                     * 设置Address
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OrganizationAddress Address.
+                     * @param OrganizationAddress Address
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetOrganizationAddress(const std::string& _organizationAddress);
@@ -223,17 +223,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool OrganizationAddressHasBeenSet() const;
 
                     /**
-                     * 获取Country.
+                     * 获取Country
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return OrganizationCountry Country.
+                     * @return OrganizationCountry Country
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetOrganizationCountry() const;
 
                     /**
-                     * 设置Country.
+                     * 设置Country
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OrganizationCountry Country.
+                     * @param OrganizationCountry Country
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetOrganizationCountry(const std::string& _organizationCountry);
@@ -245,17 +245,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool OrganizationCountryHasBeenSet() const;
 
                     /**
-                     * 获取City.
+                     * 获取City
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return OrganizationCity City.
+                     * @return OrganizationCity City
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetOrganizationCity() const;
 
                     /**
-                     * 设置City.
+                     * 设置City
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OrganizationCity City.
+                     * @param OrganizationCity City
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetOrganizationCity(const std::string& _organizationCity);
@@ -267,17 +267,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool OrganizationCityHasBeenSet() const;
 
                     /**
-                     * 获取Province.
+                     * 获取Province
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return OrganizationRegion Province.
+                     * @return OrganizationRegion Province
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetOrganizationRegion() const;
 
                     /**
-                     * 设置Province.
+                     * 设置Province
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OrganizationRegion Province.
+                     * @param OrganizationRegion Province
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetOrganizationRegion(const std::string& _organizationRegion);
@@ -289,17 +289,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool OrganizationRegionHasBeenSet() const;
 
                     /**
-                     * 获取Postal code.
+                     * 获取Postal code
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PostalCode Postal code.
+                     * @return PostalCode Postal code
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetPostalCode() const;
 
                     /**
-                     * 设置Postal code.
+                     * 设置Postal code
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PostalCode Postal code.
+                     * @param PostalCode Postal code
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetPostalCode(const std::string& _postalCode);
@@ -311,17 +311,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PostalCodeHasBeenSet() const;
 
                     /**
-                     * 获取Area code of the fixed-line phone number.
+                     * 获取Area code of the fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PhoneAreaCode Area code of the fixed-line phone number.
+                     * @return PhoneAreaCode Area code of the fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetPhoneAreaCode() const;
 
                     /**
-                     * 设置Area code of the fixed-line phone number.
+                     * 设置Area code of the fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PhoneAreaCode Area code of the fixed-line phone number.
+                     * @param PhoneAreaCode Area code of the fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetPhoneAreaCode(const std::string& _phoneAreaCode);
@@ -333,17 +333,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PhoneAreaCodeHasBeenSet() const;
 
                     /**
-                     * 获取Fixed-line phone number.
+                     * 获取Fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PhoneNumber Fixed-line phone number.
+                     * @return PhoneNumber Fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetPhoneNumber() const;
 
                     /**
-                     * 设置Fixed-line phone number.
+                     * 设置Fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PhoneNumber Fixed-line phone number.
+                     * @param PhoneNumber Fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetPhoneNumber(const std::string& _phoneNumber);
@@ -355,17 +355,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PhoneNumberHasBeenSet() const;
 
                     /**
-                     * 获取First name of the admin.
+                     * 获取First name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AdminFirstName First name of the admin.
+                     * @return AdminFirstName First name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetAdminFirstName() const;
 
                     /**
-                     * 设置First name of the admin.
+                     * 设置First name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AdminFirstName First name of the admin.
+                     * @param AdminFirstName First name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetAdminFirstName(const std::string& _adminFirstName);
@@ -377,17 +377,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AdminFirstNameHasBeenSet() const;
 
                     /**
-                     * 获取Last name of the admin.
+                     * 获取Last name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AdminLastName Last name of the admin.
+                     * @return AdminLastName Last name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetAdminLastName() const;
 
                     /**
-                     * 设置Last name of the admin.
+                     * 设置Last name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AdminLastName Last name of the admin.
+                     * @param AdminLastName Last name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetAdminLastName(const std::string& _adminLastName);
@@ -399,17 +399,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AdminLastNameHasBeenSet() const;
 
                     /**
-                     * 获取Phone number of the admin.
+                     * 获取Phone number of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AdminPhoneNum Phone number of the admin.
+                     * @return AdminPhoneNum Phone number of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetAdminPhoneNum() const;
 
                     /**
-                     * 设置Phone number of the admin.
+                     * 设置Phone number of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AdminPhoneNum Phone number of the admin.
+                     * @param AdminPhoneNum Phone number of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetAdminPhoneNum(const std::string& _adminPhoneNum);
@@ -421,17 +421,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AdminPhoneNumHasBeenSet() const;
 
                     /**
-                     * 获取Email of the admin.
+                     * 获取Email of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AdminEmail Email of the admin.
+                     * @return AdminEmail Email of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetAdminEmail() const;
 
                     /**
-                     * 设置Email of the admin.
+                     * 设置Email of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AdminEmail Email of the admin.
+                     * @param AdminEmail Email of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetAdminEmail(const std::string& _adminEmail);
@@ -443,17 +443,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AdminEmailHasBeenSet() const;
 
                     /**
-                     * 获取Position of the admin.
+                     * 获取Position of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AdminPosition Position of the admin.
+                     * @return AdminPosition Position of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetAdminPosition() const;
 
                     /**
-                     * 设置Position of the admin.
+                     * 设置Position of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AdminPosition Position of the admin.
+                     * @param AdminPosition Position of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetAdminPosition(const std::string& _adminPosition);
@@ -465,17 +465,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AdminPositionHasBeenSet() const;
 
                     /**
-                     * 获取First name of the contact.
+                     * 获取First name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ContactFirstName First name of the contact.
+                     * @return ContactFirstName First name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetContactFirstName() const;
 
                     /**
-                     * 设置First name of the contact.
+                     * 设置First name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ContactFirstName First name of the contact.
+                     * @param ContactFirstName First name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetContactFirstName(const std::string& _contactFirstName);
@@ -487,17 +487,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ContactFirstNameHasBeenSet() const;
 
                     /**
-                     * 获取Last name of the contact.
+                     * 获取Last name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ContactLastName Last name of the contact.
+                     * @return ContactLastName Last name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetContactLastName() const;
 
                     /**
-                     * 设置Last name of the contact.
+                     * 设置Last name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ContactLastName Last name of the contact.
+                     * @param ContactLastName Last name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetContactLastName(const std::string& _contactLastName);
@@ -509,17 +509,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ContactLastNameHasBeenSet() const;
 
                     /**
-                     * 获取Phone number of the contact.
+                     * 获取Phone number of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ContactNumber Phone number of the contact.
+                     * @return ContactNumber Phone number of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetContactNumber() const;
 
                     /**
-                     * 设置Phone number of the contact.
+                     * 设置Phone number of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ContactNumber Phone number of the contact.
+                     * @param ContactNumber Phone number of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetContactNumber(const std::string& _contactNumber);
@@ -531,17 +531,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ContactNumberHasBeenSet() const;
 
                     /**
-                     * 获取Email of the contact.
+                     * 获取Email of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ContactEmail Email of the contact.
+                     * @return ContactEmail Email of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetContactEmail() const;
 
                     /**
-                     * 设置Email of the contact.
+                     * 设置Email of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ContactEmail Email of the contact.
+                     * @param ContactEmail Email of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetContactEmail(const std::string& _contactEmail);
@@ -553,17 +553,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ContactEmailHasBeenSet() const;
 
                     /**
-                     * 获取Position of the contact.
+                     * 获取Position of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ContactPosition Position of the contact.
+                     * @return ContactPosition Position of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetContactPosition() const;
 
                     /**
-                     * 设置Position of the contact.
+                     * 设置Position of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ContactPosition Position of the contact.
+                     * @param ContactPosition Position of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetContactPosition(const std::string& _contactPosition);
@@ -575,17 +575,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ContactPositionHasBeenSet() const;
 
                     /**
-                     * 获取Verification type.
+                     * 获取Validation type
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return VerifyType Verification type.
+                     * @return VerifyType Validation type
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetVerifyType() const;
 
                     /**
-                     * 设置Verification type.
+                     * 设置Validation type
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param VerifyType Verification type.
+                     * @param VerifyType Validation type
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetVerifyType(const std::string& _verifyType);
@@ -599,175 +599,175 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * CSR type. Online: CSR generated online; parse: CSR pasted.
+                     * CSR type. `online`: CSR generated online; `parse`: CSR pasted
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_csrType;
                     bool m_csrTypeHasBeenSet;
 
                     /**
-                     * CSR content.
+                     * CSR content
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_csrContent;
                     bool m_csrContentHasBeenSet;
 
                     /**
-                     * Domain name information.
+                     * Domain name information
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_certificateDomain;
                     bool m_certificateDomainHasBeenSet;
 
                     /**
-                     * DNS information.
+                     * DNS information
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_domainList;
                     bool m_domainListHasBeenSet;
 
                     /**
-                     * Password of the private key.
+                     * Password of the private key
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_keyPassword;
                     bool m_keyPasswordHasBeenSet;
 
                     /**
-                     * Enterprise or unit name.
+                     * Enterprise or unit name
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_organizationName;
                     bool m_organizationNameHasBeenSet;
 
                     /**
-                     * Division.
+                     * Division
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_organizationDivision;
                     bool m_organizationDivisionHasBeenSet;
 
                     /**
-                     * Address.
+                     * Address
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_organizationAddress;
                     bool m_organizationAddressHasBeenSet;
 
                     /**
-                     * Country.
+                     * Country
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_organizationCountry;
                     bool m_organizationCountryHasBeenSet;
 
                     /**
-                     * City.
+                     * City
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_organizationCity;
                     bool m_organizationCityHasBeenSet;
 
                     /**
-                     * Province.
+                     * Province
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_organizationRegion;
                     bool m_organizationRegionHasBeenSet;
 
                     /**
-                     * Postal code.
+                     * Postal code
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_postalCode;
                     bool m_postalCodeHasBeenSet;
 
                     /**
-                     * Area code of the fixed-line phone number.
+                     * Area code of the fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_phoneAreaCode;
                     bool m_phoneAreaCodeHasBeenSet;
 
                     /**
-                     * Fixed-line phone number.
+                     * Fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_phoneNumber;
                     bool m_phoneNumberHasBeenSet;
 
                     /**
-                     * First name of the admin.
+                     * First name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_adminFirstName;
                     bool m_adminFirstNameHasBeenSet;
 
                     /**
-                     * Last name of the admin.
+                     * Last name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_adminLastName;
                     bool m_adminLastNameHasBeenSet;
 
                     /**
-                     * Phone number of the admin.
+                     * Phone number of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_adminPhoneNum;
                     bool m_adminPhoneNumHasBeenSet;
 
                     /**
-                     * Email of the admin.
+                     * Email of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_adminEmail;
                     bool m_adminEmailHasBeenSet;
 
                     /**
-                     * Position of the admin.
+                     * Position of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_adminPosition;
                     bool m_adminPositionHasBeenSet;
 
                     /**
-                     * First name of the contact.
+                     * First name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_contactFirstName;
                     bool m_contactFirstNameHasBeenSet;
 
                     /**
-                     * Last name of the contact.
+                     * Last name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_contactLastName;
                     bool m_contactLastNameHasBeenSet;
 
                     /**
-                     * Phone number of the contact.
+                     * Phone number of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_contactNumber;
                     bool m_contactNumberHasBeenSet;
 
                     /**
-                     * Email of the contact.
+                     * Email of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_contactEmail;
                     bool m_contactEmailHasBeenSet;
 
                     /**
-                     * Position of the contact.
+                     * Position of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_contactPosition;
                     bool m_contactPositionHasBeenSet;
 
                     /**
-                     * Verification type.
+                     * Validation type
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_verifyType;

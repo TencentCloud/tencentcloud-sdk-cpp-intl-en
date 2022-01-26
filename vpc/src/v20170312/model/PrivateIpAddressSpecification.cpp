@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 PrivateIpAddressSpecification::PrivateIpAddressSpecification() :
@@ -32,7 +31,7 @@ PrivateIpAddressSpecification::PrivateIpAddressSpecification() :
 {
 }
 
-CoreInternalOutcome PrivateIpAddressSpecification::Deserialize(const Value &value)
+CoreInternalOutcome PrivateIpAddressSpecification::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +40,7 @@ CoreInternalOutcome PrivateIpAddressSpecification::Deserialize(const Value &valu
     {
         if (!value["PrivateIpAddress"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PrivateIpAddressSpecification.PrivateIpAddress` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PrivateIpAddressSpecification.PrivateIpAddress` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_privateIpAddress = string(value["PrivateIpAddress"].GetString());
         m_privateIpAddressHasBeenSet = true;
@@ -51,7 +50,7 @@ CoreInternalOutcome PrivateIpAddressSpecification::Deserialize(const Value &valu
     {
         if (!value["Primary"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `PrivateIpAddressSpecification.Primary` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PrivateIpAddressSpecification.Primary` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_primary = value["Primary"].GetBool();
         m_primaryHasBeenSet = true;
@@ -61,7 +60,7 @@ CoreInternalOutcome PrivateIpAddressSpecification::Deserialize(const Value &valu
     {
         if (!value["PublicIpAddress"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PrivateIpAddressSpecification.PublicIpAddress` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PrivateIpAddressSpecification.PublicIpAddress` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_publicIpAddress = string(value["PublicIpAddress"].GetString());
         m_publicIpAddressHasBeenSet = true;
@@ -71,7 +70,7 @@ CoreInternalOutcome PrivateIpAddressSpecification::Deserialize(const Value &valu
     {
         if (!value["AddressId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PrivateIpAddressSpecification.AddressId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PrivateIpAddressSpecification.AddressId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_addressId = string(value["AddressId"].GetString());
         m_addressIdHasBeenSet = true;
@@ -81,7 +80,7 @@ CoreInternalOutcome PrivateIpAddressSpecification::Deserialize(const Value &valu
     {
         if (!value["Description"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PrivateIpAddressSpecification.Description` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PrivateIpAddressSpecification.Description` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_description = string(value["Description"].GetString());
         m_descriptionHasBeenSet = true;
@@ -91,7 +90,7 @@ CoreInternalOutcome PrivateIpAddressSpecification::Deserialize(const Value &valu
     {
         if (!value["IsWanIpBlocked"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `PrivateIpAddressSpecification.IsWanIpBlocked` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PrivateIpAddressSpecification.IsWanIpBlocked` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_isWanIpBlocked = value["IsWanIpBlocked"].GetBool();
         m_isWanIpBlockedHasBeenSet = true;
@@ -101,7 +100,7 @@ CoreInternalOutcome PrivateIpAddressSpecification::Deserialize(const Value &valu
     {
         if (!value["State"].IsString())
         {
-            return CoreInternalOutcome(Error("response `PrivateIpAddressSpecification.State` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PrivateIpAddressSpecification.State` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_state = string(value["State"].GetString());
         m_stateHasBeenSet = true;
@@ -111,20 +110,20 @@ CoreInternalOutcome PrivateIpAddressSpecification::Deserialize(const Value &valu
     return CoreInternalOutcome(true);
 }
 
-void PrivateIpAddressSpecification::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void PrivateIpAddressSpecification::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_privateIpAddressHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PrivateIpAddress";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_privateIpAddress.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_privateIpAddress.c_str(), allocator).Move(), allocator);
     }
 
     if (m_primaryHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Primary";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_primary, allocator);
@@ -132,31 +131,31 @@ void PrivateIpAddressSpecification::ToJsonObject(Value &value, Document::Allocat
 
     if (m_publicIpAddressHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PublicIpAddress";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_publicIpAddress.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_publicIpAddress.c_str(), allocator).Move(), allocator);
     }
 
     if (m_addressIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AddressId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_addressId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_addressId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_descriptionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Description";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_description.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
     }
 
     if (m_isWanIpBlockedHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "IsWanIpBlocked";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isWanIpBlocked, allocator);
@@ -164,10 +163,10 @@ void PrivateIpAddressSpecification::ToJsonObject(Value &value, Document::Allocat
 
     if (m_stateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "State";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_state.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_state.c_str(), allocator).Move(), allocator);
     }
 
 }

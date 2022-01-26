@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 DeviceNetInfo::DeviceNetInfo() :
@@ -30,7 +29,7 @@ DeviceNetInfo::DeviceNetInfo() :
 {
 }
 
-CoreInternalOutcome DeviceNetInfo::Deserialize(const Value &value)
+CoreInternalOutcome DeviceNetInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,10 +37,10 @@ CoreInternalOutcome DeviceNetInfo::Deserialize(const Value &value)
     if (value.HasMember("Conn") && !value["Conn"].IsNull())
     {
         if (!value["Conn"].IsArray())
-            return CoreInternalOutcome(Error("response `DeviceNetInfo.Conn` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DeviceNetInfo.Conn` is not array type"));
 
-        const Value &tmpValue = value["Conn"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["Conn"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_conn.push_back((*itr).GetInt64());
         }
@@ -51,10 +50,10 @@ CoreInternalOutcome DeviceNetInfo::Deserialize(const Value &value)
     if (value.HasMember("PackageIn") && !value["PackageIn"].IsNull())
     {
         if (!value["PackageIn"].IsArray())
-            return CoreInternalOutcome(Error("response `DeviceNetInfo.PackageIn` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DeviceNetInfo.PackageIn` is not array type"));
 
-        const Value &tmpValue = value["PackageIn"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["PackageIn"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_packageIn.push_back((*itr).GetInt64());
         }
@@ -64,10 +63,10 @@ CoreInternalOutcome DeviceNetInfo::Deserialize(const Value &value)
     if (value.HasMember("PackageOut") && !value["PackageOut"].IsNull())
     {
         if (!value["PackageOut"].IsArray())
-            return CoreInternalOutcome(Error("response `DeviceNetInfo.PackageOut` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DeviceNetInfo.PackageOut` is not array type"));
 
-        const Value &tmpValue = value["PackageOut"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["PackageOut"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_packageOut.push_back((*itr).GetInt64());
         }
@@ -77,10 +76,10 @@ CoreInternalOutcome DeviceNetInfo::Deserialize(const Value &value)
     if (value.HasMember("FlowIn") && !value["FlowIn"].IsNull())
     {
         if (!value["FlowIn"].IsArray())
-            return CoreInternalOutcome(Error("response `DeviceNetInfo.FlowIn` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DeviceNetInfo.FlowIn` is not array type"));
 
-        const Value &tmpValue = value["FlowIn"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["FlowIn"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_flowIn.push_back((*itr).GetInt64());
         }
@@ -90,10 +89,10 @@ CoreInternalOutcome DeviceNetInfo::Deserialize(const Value &value)
     if (value.HasMember("FlowOut") && !value["FlowOut"].IsNull())
     {
         if (!value["FlowOut"].IsArray())
-            return CoreInternalOutcome(Error("response `DeviceNetInfo.FlowOut` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DeviceNetInfo.FlowOut` is not array type"));
 
-        const Value &tmpValue = value["FlowOut"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["FlowOut"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_flowOut.push_back((*itr).GetInt64());
         }
@@ -104,71 +103,71 @@ CoreInternalOutcome DeviceNetInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void DeviceNetInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DeviceNetInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_connHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Conn";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_conn.begin(); itr != m_conn.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 
     if (m_packageInHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PackageIn";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_packageIn.begin(); itr != m_packageIn.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 
     if (m_packageOutHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PackageOut";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_packageOut.begin(); itr != m_packageOut.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 
     if (m_flowInHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FlowIn";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_flowIn.begin(); itr != m_flowIn.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 
     if (m_flowOutHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FlowOut";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_flowOut.begin(); itr != m_flowOut.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetInt64(*itr), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
     }
 

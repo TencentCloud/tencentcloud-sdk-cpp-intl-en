@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ckafka::V20190819::Model;
-using namespace rapidjson;
 using namespace std;
 
 ModifyInstanceAttributesConfig::ModifyInstanceAttributesConfig() :
@@ -28,7 +27,7 @@ ModifyInstanceAttributesConfig::ModifyInstanceAttributesConfig() :
 {
 }
 
-CoreInternalOutcome ModifyInstanceAttributesConfig::Deserialize(const Value &value)
+CoreInternalOutcome ModifyInstanceAttributesConfig::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +36,7 @@ CoreInternalOutcome ModifyInstanceAttributesConfig::Deserialize(const Value &val
     {
         if (!value["AutoCreateTopicEnable"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `ModifyInstanceAttributesConfig.AutoCreateTopicEnable` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ModifyInstanceAttributesConfig.AutoCreateTopicEnable` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_autoCreateTopicEnable = value["AutoCreateTopicEnable"].GetBool();
         m_autoCreateTopicEnableHasBeenSet = true;
@@ -47,7 +46,7 @@ CoreInternalOutcome ModifyInstanceAttributesConfig::Deserialize(const Value &val
     {
         if (!value["DefaultNumPartitions"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ModifyInstanceAttributesConfig.DefaultNumPartitions` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ModifyInstanceAttributesConfig.DefaultNumPartitions` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_defaultNumPartitions = value["DefaultNumPartitions"].GetInt64();
         m_defaultNumPartitionsHasBeenSet = true;
@@ -57,7 +56,7 @@ CoreInternalOutcome ModifyInstanceAttributesConfig::Deserialize(const Value &val
     {
         if (!value["DefaultReplicationFactor"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ModifyInstanceAttributesConfig.DefaultReplicationFactor` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ModifyInstanceAttributesConfig.DefaultReplicationFactor` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_defaultReplicationFactor = value["DefaultReplicationFactor"].GetInt64();
         m_defaultReplicationFactorHasBeenSet = true;
@@ -67,12 +66,12 @@ CoreInternalOutcome ModifyInstanceAttributesConfig::Deserialize(const Value &val
     return CoreInternalOutcome(true);
 }
 
-void ModifyInstanceAttributesConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ModifyInstanceAttributesConfig::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_autoCreateTopicEnableHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AutoCreateTopicEnable";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_autoCreateTopicEnable, allocator);
@@ -80,7 +79,7 @@ void ModifyInstanceAttributesConfig::ToJsonObject(Value &value, Document::Alloca
 
     if (m_defaultNumPartitionsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DefaultNumPartitions";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_defaultNumPartitions, allocator);
@@ -88,7 +87,7 @@ void ModifyInstanceAttributesConfig::ToJsonObject(Value &value, Document::Alloca
 
     if (m_defaultReplicationFactorHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DefaultReplicationFactor";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_defaultReplicationFactor, allocator);

@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 ComposeMediaTask::ComposeMediaTask() :
@@ -26,12 +25,16 @@ ComposeMediaTask::ComposeMediaTask() :
     m_statusHasBeenSet(false),
     m_errCodeHasBeenSet(false),
     m_messageHasBeenSet(false),
+    m_progressHasBeenSet(false),
     m_inputHasBeenSet(false),
-    m_outputHasBeenSet(false)
+    m_outputHasBeenSet(false),
+    m_metaDataHasBeenSet(false),
+    m_sessionIdHasBeenSet(false),
+    m_sessionContextHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ComposeMediaTask::Deserialize(const Value &value)
+CoreInternalOutcome ComposeMediaTask::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +43,7 @@ CoreInternalOutcome ComposeMediaTask::Deserialize(const Value &value)
     {
         if (!value["TaskId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ComposeMediaTask.TaskId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComposeMediaTask.TaskId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_taskId = string(value["TaskId"].GetString());
         m_taskIdHasBeenSet = true;
@@ -50,7 +53,7 @@ CoreInternalOutcome ComposeMediaTask::Deserialize(const Value &value)
     {
         if (!value["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ComposeMediaTask.Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComposeMediaTask.Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(value["Status"].GetString());
         m_statusHasBeenSet = true;
@@ -60,7 +63,7 @@ CoreInternalOutcome ComposeMediaTask::Deserialize(const Value &value)
     {
         if (!value["ErrCode"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `ComposeMediaTask.ErrCode` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComposeMediaTask.ErrCode` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_errCode = value["ErrCode"].GetInt64();
         m_errCodeHasBeenSet = true;
@@ -70,17 +73,27 @@ CoreInternalOutcome ComposeMediaTask::Deserialize(const Value &value)
     {
         if (!value["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ComposeMediaTask.Message` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComposeMediaTask.Message` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_message = string(value["Message"].GetString());
         m_messageHasBeenSet = true;
+    }
+
+    if (value.HasMember("Progress") && !value["Progress"].IsNull())
+    {
+        if (!value["Progress"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ComposeMediaTask.Progress` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_progress = value["Progress"].GetInt64();
+        m_progressHasBeenSet = true;
     }
 
     if (value.HasMember("Input") && !value["Input"].IsNull())
     {
         if (!value["Input"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `ComposeMediaTask.Input` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComposeMediaTask.Input` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_input.Deserialize(value["Input"]);
@@ -97,7 +110,7 @@ CoreInternalOutcome ComposeMediaTask::Deserialize(const Value &value)
     {
         if (!value["Output"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `ComposeMediaTask.Output` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComposeMediaTask.Output` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_output.Deserialize(value["Output"]);
@@ -110,32 +123,69 @@ CoreInternalOutcome ComposeMediaTask::Deserialize(const Value &value)
         m_outputHasBeenSet = true;
     }
 
+    if (value.HasMember("MetaData") && !value["MetaData"].IsNull())
+    {
+        if (!value["MetaData"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `ComposeMediaTask.MetaData` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_metaData.Deserialize(value["MetaData"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_metaDataHasBeenSet = true;
+    }
+
+    if (value.HasMember("SessionId") && !value["SessionId"].IsNull())
+    {
+        if (!value["SessionId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ComposeMediaTask.SessionId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_sessionId = string(value["SessionId"].GetString());
+        m_sessionIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("SessionContext") && !value["SessionContext"].IsNull())
+    {
+        if (!value["SessionContext"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ComposeMediaTask.SessionContext` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_sessionContext = string(value["SessionContext"].GetString());
+        m_sessionContextHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void ComposeMediaTask::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ComposeMediaTask::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_taskIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TaskId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_taskId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_taskId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_status.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
     }
 
     if (m_errCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ErrCode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_errCode, allocator);
@@ -143,28 +193,61 @@ void ComposeMediaTask::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_messageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Message";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_message.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_message.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_progressHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Progress";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_progress, allocator);
     }
 
     if (m_inputHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Input";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_input.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_outputHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Output";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_output.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_metaDataHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MetaData";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_metaData.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_sessionIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SessionId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sessionId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_sessionContextHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SessionContext";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sessionContext.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -234,6 +317,22 @@ bool ComposeMediaTask::MessageHasBeenSet() const
     return m_messageHasBeenSet;
 }
 
+int64_t ComposeMediaTask::GetProgress() const
+{
+    return m_progress;
+}
+
+void ComposeMediaTask::SetProgress(const int64_t& _progress)
+{
+    m_progress = _progress;
+    m_progressHasBeenSet = true;
+}
+
+bool ComposeMediaTask::ProgressHasBeenSet() const
+{
+    return m_progressHasBeenSet;
+}
+
 ComposeMediaTaskInput ComposeMediaTask::GetInput() const
 {
     return m_input;
@@ -264,5 +363,53 @@ void ComposeMediaTask::SetOutput(const ComposeMediaTaskOutput& _output)
 bool ComposeMediaTask::OutputHasBeenSet() const
 {
     return m_outputHasBeenSet;
+}
+
+MediaMetaData ComposeMediaTask::GetMetaData() const
+{
+    return m_metaData;
+}
+
+void ComposeMediaTask::SetMetaData(const MediaMetaData& _metaData)
+{
+    m_metaData = _metaData;
+    m_metaDataHasBeenSet = true;
+}
+
+bool ComposeMediaTask::MetaDataHasBeenSet() const
+{
+    return m_metaDataHasBeenSet;
+}
+
+string ComposeMediaTask::GetSessionId() const
+{
+    return m_sessionId;
+}
+
+void ComposeMediaTask::SetSessionId(const string& _sessionId)
+{
+    m_sessionId = _sessionId;
+    m_sessionIdHasBeenSet = true;
+}
+
+bool ComposeMediaTask::SessionIdHasBeenSet() const
+{
+    return m_sessionIdHasBeenSet;
+}
+
+string ComposeMediaTask::GetSessionContext() const
+{
+    return m_sessionContext;
+}
+
+void ComposeMediaTask::SetSessionContext(const string& _sessionContext)
+{
+    m_sessionContext = _sessionContext;
+    m_sessionContextHasBeenSet = true;
+}
+
+bool ComposeMediaTask::SessionContextHasBeenSet() const
+{
+    return m_sessionContextHasBeenSet;
 }
 

@@ -20,27 +20,27 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Scf::V20180416::Model;
-using namespace rapidjson;
 using namespace std;
 
 ListNamespacesRequest::ListNamespacesRequest() :
     m_limitHasBeenSet(false),
     m_offsetHasBeenSet(false),
     m_orderbyHasBeenSet(false),
-    m_orderHasBeenSet(false)
+    m_orderHasBeenSet(false),
+    m_searchKeyHasBeenSet(false)
 {
 }
 
 string ListNamespacesRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_limitHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Limit";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_limit, allocator);
@@ -48,7 +48,7 @@ string ListNamespacesRequest::ToJsonString() const
 
     if (m_offsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Offset";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_offset, allocator);
@@ -56,23 +56,38 @@ string ListNamespacesRequest::ToJsonString() const
 
     if (m_orderbyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Orderby";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_orderby.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_orderby.c_str(), allocator).Move(), allocator);
     }
 
     if (m_orderHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Order";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_order.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_order.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_searchKeyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SearchKey";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_searchKey.begin(); itr != m_searchKey.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -140,6 +155,22 @@ void ListNamespacesRequest::SetOrder(const string& _order)
 bool ListNamespacesRequest::OrderHasBeenSet() const
 {
     return m_orderHasBeenSet;
+}
+
+vector<SearchKey> ListNamespacesRequest::GetSearchKey() const
+{
+    return m_searchKey;
+}
+
+void ListNamespacesRequest::SetSearchKey(const vector<SearchKey>& _searchKey)
+{
+    m_searchKey = _searchKey;
+    m_searchKeyHasBeenSet = true;
+}
+
+bool ListNamespacesRequest::SearchKeyHasBeenSet() const
+{
+    return m_searchKeyHasBeenSet;
 }
 
 

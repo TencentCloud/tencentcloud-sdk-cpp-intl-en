@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dayu::V20180709::Model;
-using namespace rapidjson;
 using namespace std;
 
 WaterPrintPolicy::WaterPrintPolicy() :
@@ -30,7 +29,7 @@ WaterPrintPolicy::WaterPrintPolicy() :
 {
 }
 
-CoreInternalOutcome WaterPrintPolicy::Deserialize(const Value &value)
+CoreInternalOutcome WaterPrintPolicy::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -38,10 +37,10 @@ CoreInternalOutcome WaterPrintPolicy::Deserialize(const Value &value)
     if (value.HasMember("TcpPortList") && !value["TcpPortList"].IsNull())
     {
         if (!value["TcpPortList"].IsArray())
-            return CoreInternalOutcome(Error("response `WaterPrintPolicy.TcpPortList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `WaterPrintPolicy.TcpPortList` is not array type"));
 
-        const Value &tmpValue = value["TcpPortList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["TcpPortList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_tcpPortList.push_back((*itr).GetString());
         }
@@ -51,10 +50,10 @@ CoreInternalOutcome WaterPrintPolicy::Deserialize(const Value &value)
     if (value.HasMember("UdpPortList") && !value["UdpPortList"].IsNull())
     {
         if (!value["UdpPortList"].IsArray())
-            return CoreInternalOutcome(Error("response `WaterPrintPolicy.UdpPortList` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `WaterPrintPolicy.UdpPortList` is not array type"));
 
-        const Value &tmpValue = value["UdpPortList"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = value["UdpPortList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_udpPortList.push_back((*itr).GetString());
         }
@@ -65,7 +64,7 @@ CoreInternalOutcome WaterPrintPolicy::Deserialize(const Value &value)
     {
         if (!value["Offset"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `WaterPrintPolicy.Offset` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WaterPrintPolicy.Offset` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_offset = value["Offset"].GetUint64();
         m_offsetHasBeenSet = true;
@@ -75,7 +74,7 @@ CoreInternalOutcome WaterPrintPolicy::Deserialize(const Value &value)
     {
         if (!value["RemoveSwitch"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `WaterPrintPolicy.RemoveSwitch` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WaterPrintPolicy.RemoveSwitch` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_removeSwitch = value["RemoveSwitch"].GetUint64();
         m_removeSwitchHasBeenSet = true;
@@ -85,7 +84,7 @@ CoreInternalOutcome WaterPrintPolicy::Deserialize(const Value &value)
     {
         if (!value["OpenStatus"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `WaterPrintPolicy.OpenStatus` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WaterPrintPolicy.OpenStatus` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_openStatus = value["OpenStatus"].GetUint64();
         m_openStatusHasBeenSet = true;
@@ -95,38 +94,38 @@ CoreInternalOutcome WaterPrintPolicy::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void WaterPrintPolicy::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void WaterPrintPolicy::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_tcpPortListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TcpPortList";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_tcpPortList.begin(); itr != m_tcpPortList.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_udpPortListHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "UdpPortList";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_udpPortList.begin(); itr != m_udpPortList.end(); ++itr)
         {
-            value[key.c_str()].PushBack(Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
     if (m_offsetHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Offset";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_offset, allocator);
@@ -134,7 +133,7 @@ void WaterPrintPolicy::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_removeSwitchHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RemoveSwitch";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_removeSwitch, allocator);
@@ -142,7 +141,7 @@ void WaterPrintPolicy::ToJsonObject(Value &value, Document::AllocatorType& alloc
 
     if (m_openStatusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OpenStatus";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_openStatus, allocator);

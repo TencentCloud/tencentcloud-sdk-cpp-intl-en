@@ -79,14 +79,38 @@ namespace TencentCloud
                     bool AccountNameHasBeenSet() const;
 
                     /**
-                     * 获取Sub-account password
-                     * @return AccountPassword Sub-account password
+                     * 获取1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
+2. The password cannot start with a slash (/).
+3. The password must contain at least two of the following four types:
+    a. Lowercase letters (a-z)
+    b. Uppercase letters (A-Z)
+    c. Digits (0-9)
+    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+                     * @return AccountPassword 1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
+2. The password cannot start with a slash (/).
+3. The password must contain at least two of the following four types:
+    a. Lowercase letters (a-z)
+    b. Uppercase letters (A-Z)
+    c. Digits (0-9)
+    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
                      */
                     std::string GetAccountPassword() const;
 
                     /**
-                     * 设置Sub-account password
-                     * @param AccountPassword Sub-account password
+                     * 设置1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
+2. The password cannot start with a slash (/).
+3. The password must contain at least two of the following four types:
+    a. Lowercase letters (a-z)
+    b. Uppercase letters (A-Z)
+    c. Digits (0-9)
+    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+                     * @param AccountPassword 1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
+2. The password cannot start with a slash (/).
+3. The password must contain at least two of the following four types:
+    a. Lowercase letters (a-z)
+    b. Uppercase letters (A-Z)
+    c. Digits (0-9)
+    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
                      */
                     void SetAccountPassword(const std::string& _accountPassword);
 
@@ -97,14 +121,14 @@ namespace TencentCloud
                     bool AccountPasswordHasBeenSet() const;
 
                     /**
-                     * 获取Routing policy. Enter `master` for master node or `replication` for slave node
-                     * @return ReadonlyPolicy Routing policy. Enter `master` for master node or `replication` for slave node
+                     * 获取Routing policy. Enter `master` for primary node or `replication` for secondary node
+                     * @return ReadonlyPolicy Routing policy. Enter `master` for primary node or `replication` for secondary node
                      */
                     std::vector<std::string> GetReadonlyPolicy() const;
 
                     /**
-                     * 设置Routing policy. Enter `master` for master node or `replication` for slave node
-                     * @param ReadonlyPolicy Routing policy. Enter `master` for master node or `replication` for slave node
+                     * 设置Routing policy. Enter `master` for primary node or `replication` for secondary node
+                     * @param ReadonlyPolicy Routing policy. Enter `master` for primary node or `replication` for secondary node
                      */
                     void SetReadonlyPolicy(const std::vector<std::string>& _readonlyPolicy);
 
@@ -165,13 +189,19 @@ namespace TencentCloud
                     bool m_accountNameHasBeenSet;
 
                     /**
-                     * Sub-account password
+                     * 1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
+2. The password cannot start with a slash (/).
+3. The password must contain at least two of the following four types:
+    a. Lowercase letters (a-z)
+    b. Uppercase letters (A-Z)
+    c. Digits (0-9)
+    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
                      */
                     std::string m_accountPassword;
                     bool m_accountPasswordHasBeenSet;
 
                     /**
-                     * Routing policy. Enter `master` for master node or `replication` for slave node
+                     * Routing policy. Enter `master` for primary node or `replication` for secondary node
                      */
                     std::vector<std::string> m_readonlyPolicy;
                     bool m_readonlyPolicyHasBeenSet;

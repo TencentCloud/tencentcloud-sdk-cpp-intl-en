@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Batch::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 ComputeNodeMetrics::ComputeNodeMetrics() :
@@ -32,7 +31,7 @@ ComputeNodeMetrics::ComputeNodeMetrics() :
 {
 }
 
-CoreInternalOutcome ComputeNodeMetrics::Deserialize(const Value &value)
+CoreInternalOutcome ComputeNodeMetrics::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -41,7 +40,7 @@ CoreInternalOutcome ComputeNodeMetrics::Deserialize(const Value &value)
     {
         if (!value["SubmittedCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ComputeNodeMetrics.SubmittedCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComputeNodeMetrics.SubmittedCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_submittedCount = value["SubmittedCount"].GetUint64();
         m_submittedCountHasBeenSet = true;
@@ -51,7 +50,7 @@ CoreInternalOutcome ComputeNodeMetrics::Deserialize(const Value &value)
     {
         if (!value["CreatingCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ComputeNodeMetrics.CreatingCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComputeNodeMetrics.CreatingCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_creatingCount = value["CreatingCount"].GetUint64();
         m_creatingCountHasBeenSet = true;
@@ -61,7 +60,7 @@ CoreInternalOutcome ComputeNodeMetrics::Deserialize(const Value &value)
     {
         if (!value["CreationFailedCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ComputeNodeMetrics.CreationFailedCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComputeNodeMetrics.CreationFailedCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_creationFailedCount = value["CreationFailedCount"].GetUint64();
         m_creationFailedCountHasBeenSet = true;
@@ -71,7 +70,7 @@ CoreInternalOutcome ComputeNodeMetrics::Deserialize(const Value &value)
     {
         if (!value["CreatedCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ComputeNodeMetrics.CreatedCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComputeNodeMetrics.CreatedCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_createdCount = value["CreatedCount"].GetUint64();
         m_createdCountHasBeenSet = true;
@@ -81,7 +80,7 @@ CoreInternalOutcome ComputeNodeMetrics::Deserialize(const Value &value)
     {
         if (!value["RunningCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ComputeNodeMetrics.RunningCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComputeNodeMetrics.RunningCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_runningCount = value["RunningCount"].GetUint64();
         m_runningCountHasBeenSet = true;
@@ -91,7 +90,7 @@ CoreInternalOutcome ComputeNodeMetrics::Deserialize(const Value &value)
     {
         if (!value["DeletingCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ComputeNodeMetrics.DeletingCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComputeNodeMetrics.DeletingCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_deletingCount = value["DeletingCount"].GetUint64();
         m_deletingCountHasBeenSet = true;
@@ -101,7 +100,7 @@ CoreInternalOutcome ComputeNodeMetrics::Deserialize(const Value &value)
     {
         if (!value["AbnormalCount"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ComputeNodeMetrics.AbnormalCount` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComputeNodeMetrics.AbnormalCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_abnormalCount = value["AbnormalCount"].GetUint64();
         m_abnormalCountHasBeenSet = true;
@@ -111,12 +110,12 @@ CoreInternalOutcome ComputeNodeMetrics::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void ComputeNodeMetrics::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ComputeNodeMetrics::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_submittedCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SubmittedCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_submittedCount, allocator);
@@ -124,7 +123,7 @@ void ComputeNodeMetrics::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_creatingCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatingCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_creatingCount, allocator);
@@ -132,7 +131,7 @@ void ComputeNodeMetrics::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_creationFailedCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreationFailedCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_creationFailedCount, allocator);
@@ -140,7 +139,7 @@ void ComputeNodeMetrics::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_createdCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_createdCount, allocator);
@@ -148,7 +147,7 @@ void ComputeNodeMetrics::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_runningCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RunningCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_runningCount, allocator);
@@ -156,7 +155,7 @@ void ComputeNodeMetrics::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_deletingCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DeletingCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_deletingCount, allocator);
@@ -164,7 +163,7 @@ void ComputeNodeMetrics::ToJsonObject(Value &value, Document::AllocatorType& all
 
     if (m_abnormalCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AbnormalCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_abnormalCount, allocator);

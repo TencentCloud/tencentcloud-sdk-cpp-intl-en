@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Redis::V20180412::Model;
-using namespace rapidjson;
 using namespace std;
 
 InstanceIntegerParam::InstanceIntegerParam() :
@@ -30,11 +29,12 @@ InstanceIntegerParam::InstanceIntegerParam() :
     m_tipsHasBeenSet(false),
     m_minHasBeenSet(false),
     m_maxHasBeenSet(false),
-    m_statusHasBeenSet(false)
+    m_statusHasBeenSet(false),
+    m_unitHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome InstanceIntegerParam::Deserialize(const Value &value)
+CoreInternalOutcome InstanceIntegerParam::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -43,7 +43,7 @@ CoreInternalOutcome InstanceIntegerParam::Deserialize(const Value &value)
     {
         if (!value["ParamName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceIntegerParam.ParamName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceIntegerParam.ParamName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_paramName = string(value["ParamName"].GetString());
         m_paramNameHasBeenSet = true;
@@ -53,7 +53,7 @@ CoreInternalOutcome InstanceIntegerParam::Deserialize(const Value &value)
     {
         if (!value["ValueType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceIntegerParam.ValueType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceIntegerParam.ValueType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_valueType = string(value["ValueType"].GetString());
         m_valueTypeHasBeenSet = true;
@@ -63,7 +63,7 @@ CoreInternalOutcome InstanceIntegerParam::Deserialize(const Value &value)
     {
         if (!value["NeedRestart"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceIntegerParam.NeedRestart` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceIntegerParam.NeedRestart` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_needRestart = string(value["NeedRestart"].GetString());
         m_needRestartHasBeenSet = true;
@@ -73,7 +73,7 @@ CoreInternalOutcome InstanceIntegerParam::Deserialize(const Value &value)
     {
         if (!value["DefaultValue"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceIntegerParam.DefaultValue` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceIntegerParam.DefaultValue` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_defaultValue = string(value["DefaultValue"].GetString());
         m_defaultValueHasBeenSet = true;
@@ -83,7 +83,7 @@ CoreInternalOutcome InstanceIntegerParam::Deserialize(const Value &value)
     {
         if (!value["CurrentValue"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceIntegerParam.CurrentValue` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceIntegerParam.CurrentValue` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_currentValue = string(value["CurrentValue"].GetString());
         m_currentValueHasBeenSet = true;
@@ -93,7 +93,7 @@ CoreInternalOutcome InstanceIntegerParam::Deserialize(const Value &value)
     {
         if (!value["Tips"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceIntegerParam.Tips` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceIntegerParam.Tips` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tips = string(value["Tips"].GetString());
         m_tipsHasBeenSet = true;
@@ -103,7 +103,7 @@ CoreInternalOutcome InstanceIntegerParam::Deserialize(const Value &value)
     {
         if (!value["Min"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceIntegerParam.Min` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceIntegerParam.Min` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_min = string(value["Min"].GetString());
         m_minHasBeenSet = true;
@@ -113,7 +113,7 @@ CoreInternalOutcome InstanceIntegerParam::Deserialize(const Value &value)
     {
         if (!value["Max"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InstanceIntegerParam.Max` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceIntegerParam.Max` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_max = string(value["Max"].GetString());
         m_maxHasBeenSet = true;
@@ -123,89 +123,107 @@ CoreInternalOutcome InstanceIntegerParam::Deserialize(const Value &value)
     {
         if (!value["Status"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `InstanceIntegerParam.Status` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstanceIntegerParam.Status` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_status = value["Status"].GetInt64();
         m_statusHasBeenSet = true;
+    }
+
+    if (value.HasMember("Unit") && !value["Unit"].IsNull())
+    {
+        if (!value["Unit"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `InstanceIntegerParam.Unit` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_unit = string(value["Unit"].GetString());
+        m_unitHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void InstanceIntegerParam::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void InstanceIntegerParam::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_paramNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ParamName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_paramName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_paramName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_valueTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ValueType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_valueType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_valueType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_needRestartHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NeedRestart";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_needRestart.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_needRestart.c_str(), allocator).Move(), allocator);
     }
 
     if (m_defaultValueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DefaultValue";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_defaultValue.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_defaultValue.c_str(), allocator).Move(), allocator);
     }
 
     if (m_currentValueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CurrentValue";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_currentValue.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_currentValue.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tipsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Tips";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_tips.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tips.c_str(), allocator).Move(), allocator);
     }
 
     if (m_minHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Min";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_min.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_min.c_str(), allocator).Move(), allocator);
     }
 
     if (m_maxHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Max";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_max.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_max.c_str(), allocator).Move(), allocator);
     }
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);
+    }
+
+    if (m_unitHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Unit";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_unit.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -353,5 +371,21 @@ void InstanceIntegerParam::SetStatus(const int64_t& _status)
 bool InstanceIntegerParam::StatusHasBeenSet() const
 {
     return m_statusHasBeenSet;
+}
+
+string InstanceIntegerParam::GetUnit() const
+{
+    return m_unit;
+}
+
+void InstanceIntegerParam::SetUnit(const string& _unit)
+{
+    m_unit = _unit;
+    m_unitHasBeenSet = true;
+}
+
+bool InstanceIntegerParam::UnitHasBeenSet() const
+{
+    return m_unitHasBeenSet;
 }
 

@@ -48,14 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Information of slave server 1
-                     * @return First Information of slave server 1
+                     * 获取Information of secondary server 1
+                     * @return First Information of secondary server 1
                      */
                     SlaveInstanceInfo GetFirst() const;
 
                     /**
-                     * 设置Information of slave server 1
-                     * @param First Information of slave server 1
+                     * 设置Information of secondary server 1
+                     * @param First Information of secondary server 1
                      */
                     void SetFirst(const SlaveInstanceInfo& _first);
 
@@ -66,17 +66,17 @@ namespace TencentCloud
                     bool FirstHasBeenSet() const;
 
                     /**
-                     * 获取Information of slave server 2
+                     * 获取Information of secondary server 2
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Second Information of slave server 2
+                     * @return Second Information of secondary server 2
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     SlaveInstanceInfo GetSecond() const;
 
                     /**
-                     * 设置Information of slave server 2
+                     * 设置Information of secondary server 2
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Second Information of slave server 2
+                     * @param Second Information of secondary server 2
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetSecond(const SlaveInstanceInfo& _second);
@@ -90,13 +90,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Information of slave server 1
+                     * Information of secondary server 1
                      */
                     SlaveInstanceInfo m_first;
                     bool m_firstHasBeenSet;
 
                     /**
-                     * Information of slave server 2
+                     * Information of secondary server 2
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     SlaveInstanceInfo m_second;

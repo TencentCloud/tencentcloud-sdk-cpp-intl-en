@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 BackupSummaryItem::BackupSummaryItem() :
@@ -35,7 +34,7 @@ BackupSummaryItem::BackupSummaryItem() :
 {
 }
 
-CoreInternalOutcome BackupSummaryItem::Deserialize(const Value &value)
+CoreInternalOutcome BackupSummaryItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -44,7 +43,7 @@ CoreInternalOutcome BackupSummaryItem::Deserialize(const Value &value)
     {
         if (!value["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BackupSummaryItem.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupSummaryItem.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(value["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -54,7 +53,7 @@ CoreInternalOutcome BackupSummaryItem::Deserialize(const Value &value)
     {
         if (!value["AutoBackupCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `BackupSummaryItem.AutoBackupCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupSummaryItem.AutoBackupCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_autoBackupCount = value["AutoBackupCount"].GetInt64();
         m_autoBackupCountHasBeenSet = true;
@@ -64,7 +63,7 @@ CoreInternalOutcome BackupSummaryItem::Deserialize(const Value &value)
     {
         if (!value["AutoBackupVolume"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `BackupSummaryItem.AutoBackupVolume` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupSummaryItem.AutoBackupVolume` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_autoBackupVolume = value["AutoBackupVolume"].GetInt64();
         m_autoBackupVolumeHasBeenSet = true;
@@ -74,7 +73,7 @@ CoreInternalOutcome BackupSummaryItem::Deserialize(const Value &value)
     {
         if (!value["ManualBackupCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `BackupSummaryItem.ManualBackupCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupSummaryItem.ManualBackupCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_manualBackupCount = value["ManualBackupCount"].GetInt64();
         m_manualBackupCountHasBeenSet = true;
@@ -84,7 +83,7 @@ CoreInternalOutcome BackupSummaryItem::Deserialize(const Value &value)
     {
         if (!value["ManualBackupVolume"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `BackupSummaryItem.ManualBackupVolume` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupSummaryItem.ManualBackupVolume` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_manualBackupVolume = value["ManualBackupVolume"].GetInt64();
         m_manualBackupVolumeHasBeenSet = true;
@@ -94,7 +93,7 @@ CoreInternalOutcome BackupSummaryItem::Deserialize(const Value &value)
     {
         if (!value["DataBackupCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `BackupSummaryItem.DataBackupCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupSummaryItem.DataBackupCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_dataBackupCount = value["DataBackupCount"].GetInt64();
         m_dataBackupCountHasBeenSet = true;
@@ -104,7 +103,7 @@ CoreInternalOutcome BackupSummaryItem::Deserialize(const Value &value)
     {
         if (!value["DataBackupVolume"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `BackupSummaryItem.DataBackupVolume` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupSummaryItem.DataBackupVolume` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_dataBackupVolume = value["DataBackupVolume"].GetInt64();
         m_dataBackupVolumeHasBeenSet = true;
@@ -114,7 +113,7 @@ CoreInternalOutcome BackupSummaryItem::Deserialize(const Value &value)
     {
         if (!value["BinlogBackupCount"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `BackupSummaryItem.BinlogBackupCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupSummaryItem.BinlogBackupCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_binlogBackupCount = value["BinlogBackupCount"].GetInt64();
         m_binlogBackupCountHasBeenSet = true;
@@ -124,7 +123,7 @@ CoreInternalOutcome BackupSummaryItem::Deserialize(const Value &value)
     {
         if (!value["BinlogBackupVolume"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `BackupSummaryItem.BinlogBackupVolume` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupSummaryItem.BinlogBackupVolume` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_binlogBackupVolume = value["BinlogBackupVolume"].GetInt64();
         m_binlogBackupVolumeHasBeenSet = true;
@@ -134,7 +133,7 @@ CoreInternalOutcome BackupSummaryItem::Deserialize(const Value &value)
     {
         if (!value["BackupVolume"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `BackupSummaryItem.BackupVolume` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BackupSummaryItem.BackupVolume` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_backupVolume = value["BackupVolume"].GetInt64();
         m_backupVolumeHasBeenSet = true;
@@ -144,20 +143,20 @@ CoreInternalOutcome BackupSummaryItem::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void BackupSummaryItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void BackupSummaryItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_autoBackupCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AutoBackupCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_autoBackupCount, allocator);
@@ -165,7 +164,7 @@ void BackupSummaryItem::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_autoBackupVolumeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AutoBackupVolume";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_autoBackupVolume, allocator);
@@ -173,7 +172,7 @@ void BackupSummaryItem::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_manualBackupCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ManualBackupCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_manualBackupCount, allocator);
@@ -181,7 +180,7 @@ void BackupSummaryItem::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_manualBackupVolumeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ManualBackupVolume";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_manualBackupVolume, allocator);
@@ -189,7 +188,7 @@ void BackupSummaryItem::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_dataBackupCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DataBackupCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_dataBackupCount, allocator);
@@ -197,7 +196,7 @@ void BackupSummaryItem::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_dataBackupVolumeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DataBackupVolume";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_dataBackupVolume, allocator);
@@ -205,7 +204,7 @@ void BackupSummaryItem::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_binlogBackupCountHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BinlogBackupCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_binlogBackupCount, allocator);
@@ -213,7 +212,7 @@ void BackupSummaryItem::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_binlogBackupVolumeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BinlogBackupVolume";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_binlogBackupVolume, allocator);
@@ -221,7 +220,7 @@ void BackupSummaryItem::ToJsonObject(Value &value, Document::AllocatorType& allo
 
     if (m_backupVolumeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "BackupVolume";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_backupVolume, allocator);

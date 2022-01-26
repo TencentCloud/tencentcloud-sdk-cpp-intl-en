@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
-                     * @return DvAuthMethod Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
+                     * 获取Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
+                     * @return DvAuthMethod Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
                      */
                     std::string GetDvAuthMethod() const;
 
                     /**
-                     * 设置Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
-                     * @param DvAuthMethod Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
+                     * 设置Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
+                     * @param DvAuthMethod Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
                      */
                     void SetDvAuthMethod(const std::string& _dvAuthMethod);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool DvAuthMethodHasBeenSet() const;
 
                     /**
-                     * 获取Domain name.
-                     * @return DomainName Domain name.
+                     * 获取Domain name
+                     * @return DomainName Domain name
                      */
                     std::string GetDomainName() const;
 
                     /**
-                     * 设置Domain name.
-                     * @param DomainName Domain name.
+                     * 设置Domain name
+                     * @param DomainName Domain name
                      */
                     void SetDomainName(const std::string& _domainName);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool DomainNameHasBeenSet() const;
 
                     /**
-                     * 获取Project ID.
-                     * @return ProjectId Project ID.
+                     * 获取Project ID
+                     * @return ProjectId Project ID
                      */
                     uint64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID.
-                     * @param ProjectId Project ID.
+                     * 设置Project ID
+                     * @param ProjectId Project ID
                      */
                     void SetProjectId(const uint64_t& _projectId);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool PackageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Email address.
-                     * @return ContactEmail Email address.
+                     * 获取Email address
+                     * @return ContactEmail Email address
                      */
                     std::string GetContactEmail() const;
 
                     /**
-                     * 设置Email address.
-                     * @param ContactEmail Email address.
+                     * 设置Email address
+                     * @param ContactEmail Email address
                      */
                     void SetContactEmail(const std::string& _contactEmail);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool ContactEmailHasBeenSet() const;
 
                     /**
-                     * 获取Mobile number.
-                     * @return ContactPhone Mobile number.
+                     * 获取Mobile number
+                     * @return ContactPhone Mobile number
                      */
                     std::string GetContactPhone() const;
 
                     /**
-                     * 设置Mobile number.
-                     * @param ContactPhone Mobile number.
+                     * 设置Mobile number
+                     * @param ContactPhone Mobile number
                      */
                     void SetContactPhone(const std::string& _contactPhone);
 
@@ -205,14 +205,14 @@ namespace TencentCloud
                     bool CsrKeyParameterHasBeenSet() const;
 
                     /**
-                     * 获取CSR encryption password.
-                     * @return CsrKeyPassword CSR encryption password.
+                     * 获取CSR encryption password
+                     * @return CsrKeyPassword CSR encryption password
                      */
                     std::string GetCsrKeyPassword() const;
 
                     /**
-                     * 设置CSR encryption password.
-                     * @param CsrKeyPassword CSR encryption password.
+                     * 设置CSR encryption password
+                     * @param CsrKeyPassword CSR encryption password
                      */
                     void SetCsrKeyPassword(const std::string& _csrKeyPassword);
 
@@ -223,14 +223,14 @@ namespace TencentCloud
                     bool CsrKeyPasswordHasBeenSet() const;
 
                     /**
-                     * 获取Alias.
-                     * @return Alias Alias.
+                     * 获取Alias
+                     * @return Alias Alias
                      */
                     std::string GetAlias() const;
 
                     /**
-                     * 设置Alias.
-                     * @param Alias Alias.
+                     * 设置Alias
+                     * @param Alias Alias
                      */
                     void SetAlias(const std::string& _alias);
 
@@ -261,19 +261,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
+                     * Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
                      */
                     std::string m_dvAuthMethod;
                     bool m_dvAuthMethodHasBeenSet;
 
                     /**
-                     * Domain name.
+                     * Domain name
                      */
                     std::string m_domainName;
                     bool m_domainNameHasBeenSet;
 
                     /**
-                     * Project ID.
+                     * Project ID
                      */
                     uint64_t m_projectId;
                     bool m_projectIdHasBeenSet;
@@ -285,13 +285,13 @@ namespace TencentCloud
                     bool m_packageTypeHasBeenSet;
 
                     /**
-                     * Email address.
+                     * Email address
                      */
                     std::string m_contactEmail;
                     bool m_contactEmailHasBeenSet;
 
                     /**
-                     * Mobile number.
+                     * Mobile number
                      */
                     std::string m_contactPhone;
                     bool m_contactPhoneHasBeenSet;
@@ -315,13 +315,13 @@ namespace TencentCloud
                     bool m_csrKeyParameterHasBeenSet;
 
                     /**
-                     * CSR encryption password.
+                     * CSR encryption password
                      */
                     std::string m_csrKeyPassword;
                     bool m_csrKeyPasswordHasBeenSet;
 
                     /**
-                     * Alias.
+                     * Alias
                      */
                     std::string m_alias;
                     bool m_aliasHasBeenSet;

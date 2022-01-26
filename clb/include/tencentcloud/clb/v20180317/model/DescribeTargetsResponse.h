@@ -41,13 +41,14 @@ namespace TencentCloud
                     DescribeTargetsResponse();
                     ~DescribeTargetsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
                      * 获取Information of real servers bound to the listener
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Listeners Information of real servers bound to the listener
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<ListenerBackend> GetListeners() const;
 
@@ -61,7 +62,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Information of real servers bound to the listener
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<ListenerBackend> m_listeners;
                     bool m_listenersHasBeenSet;

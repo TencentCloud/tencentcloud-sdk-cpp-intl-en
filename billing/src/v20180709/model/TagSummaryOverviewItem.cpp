@@ -18,17 +18,17 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Billing::V20180709::Model;
-using namespace rapidjson;
 using namespace std;
 
 TagSummaryOverviewItem::TagSummaryOverviewItem() :
     m_tagValueHasBeenSet(false),
     m_realTotalCostHasBeenSet(false),
-    m_realTotalCostRatioHasBeenSet(false)
+    m_realTotalCostRatioHasBeenSet(false),
+    m_totalCostHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome TagSummaryOverviewItem::Deserialize(const Value &value)
+CoreInternalOutcome TagSummaryOverviewItem::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -37,7 +37,7 @@ CoreInternalOutcome TagSummaryOverviewItem::Deserialize(const Value &value)
     {
         if (!value["TagValue"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TagSummaryOverviewItem.TagValue` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TagSummaryOverviewItem.TagValue` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_tagValue = string(value["TagValue"].GetString());
         m_tagValueHasBeenSet = true;
@@ -47,7 +47,7 @@ CoreInternalOutcome TagSummaryOverviewItem::Deserialize(const Value &value)
     {
         if (!value["RealTotalCost"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TagSummaryOverviewItem.RealTotalCost` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TagSummaryOverviewItem.RealTotalCost` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_realTotalCost = string(value["RealTotalCost"].GetString());
         m_realTotalCostHasBeenSet = true;
@@ -57,41 +57,59 @@ CoreInternalOutcome TagSummaryOverviewItem::Deserialize(const Value &value)
     {
         if (!value["RealTotalCostRatio"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TagSummaryOverviewItem.RealTotalCostRatio` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TagSummaryOverviewItem.RealTotalCostRatio` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_realTotalCostRatio = string(value["RealTotalCostRatio"].GetString());
         m_realTotalCostRatioHasBeenSet = true;
+    }
+
+    if (value.HasMember("TotalCost") && !value["TotalCost"].IsNull())
+    {
+        if (!value["TotalCost"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `TagSummaryOverviewItem.TotalCost` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_totalCost = string(value["TotalCost"].GetString());
+        m_totalCostHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void TagSummaryOverviewItem::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TagSummaryOverviewItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_tagValueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TagValue";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_tagValue.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_tagValue.c_str(), allocator).Move(), allocator);
     }
 
     if (m_realTotalCostHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RealTotalCost";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_realTotalCost.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_realTotalCost.c_str(), allocator).Move(), allocator);
     }
 
     if (m_realTotalCostRatioHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RealTotalCostRatio";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_realTotalCostRatio.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_realTotalCostRatio.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_totalCostHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalCost";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_totalCost.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -143,5 +161,21 @@ void TagSummaryOverviewItem::SetRealTotalCostRatio(const string& _realTotalCostR
 bool TagSummaryOverviewItem::RealTotalCostRatioHasBeenSet() const
 {
     return m_realTotalCostRatioHasBeenSet;
+}
+
+string TagSummaryOverviewItem::GetTotalCost() const
+{
+    return m_totalCost;
+}
+
+void TagSummaryOverviewItem::SetTotalCost(const string& _totalCost)
+{
+    m_totalCost = _totalCost;
+    m_totalCostHasBeenSet = true;
+}
+
+bool TagSummaryOverviewItem::TotalCostHasBeenSet() const
+{
+    return m_totalCostHasBeenSet;
 }
 

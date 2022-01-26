@@ -79,6 +79,24 @@ namespace TencentCloud
                     bool ListenerIdHasBeenSet() const;
 
                     /**
+                     * 获取Layer-7 rule ID
+                     * @return RuleId Layer-7 rule ID
+                     */
+                    std::string GetRuleId() const;
+
+                    /**
+                     * 设置Layer-7 rule ID
+                     * @param RuleId Layer-7 rule ID
+                     */
+                    void SetRuleId(const std::string& _ruleId);
+
+                    /**
+                     * 判断参数 RuleId 是否已赋值
+                     * @return RuleId 是否已赋值
+                     */
+                    bool RuleIdHasBeenSet() const;
+
+                    /**
                      * 获取Statistics duration. Unit: hours. It only supports querying statistics for the past 1, 3, 6, 12, and 24 hours.
                      * @return WithinTime Statistics duration. Unit: hours. It only supports querying statistics for the past 1, 3, 6, 12, and 24 hours.
                      */
@@ -97,22 +115,58 @@ namespace TencentCloud
                     bool WithinTimeHasBeenSet() const;
 
                     /**
-                     * 获取Rule ID
-                     * @return RuleId Rule ID
+                     * 获取Statistics start time, such as `2020-08-19 00:00:00`
+                     * @return StartTime Statistics start time, such as `2020-08-19 00:00:00`
                      */
-                    std::string GetRuleId() const;
+                    std::string GetStartTime() const;
 
                     /**
-                     * 设置Rule ID
-                     * @param RuleId Rule ID
+                     * 设置Statistics start time, such as `2020-08-19 00:00:00`
+                     * @param StartTime Statistics start time, such as `2020-08-19 00:00:00`
                      */
-                    void SetRuleId(const std::string& _ruleId);
+                    void SetStartTime(const std::string& _startTime);
 
                     /**
-                     * 判断参数 RuleId 是否已赋值
-                     * @return RuleId 是否已赋值
+                     * 判断参数 StartTime 是否已赋值
+                     * @return StartTime 是否已赋值
                      */
-                    bool RuleIdHasBeenSet() const;
+                    bool StartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Statistics end time, such as `2020-08-19 23:59:59`
+                     * @return EndTime Statistics end time, such as `2020-08-19 23:59:59`
+                     */
+                    std::string GetEndTime() const;
+
+                    /**
+                     * 设置Statistics end time, such as `2020-08-19 23:59:59`
+                     * @param EndTime Statistics end time, such as `2020-08-19 23:59:59`
+                     */
+                    void SetEndTime(const std::string& _endTime);
+
+                    /**
+                     * 判断参数 EndTime 是否已赋值
+                     * @return EndTime 是否已赋值
+                     */
+                    bool EndTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported.
+                     * @return Granularity Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported.
+                     */
+                    uint64_t GetGranularity() const;
+
+                    /**
+                     * 设置Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported.
+                     * @param Granularity Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported.
+                     */
+                    void SetGranularity(const uint64_t& _granularity);
+
+                    /**
+                     * 判断参数 Granularity 是否已赋值
+                     * @return Granularity 是否已赋值
+                     */
+                    bool GranularityHasBeenSet() const;
 
                 private:
 
@@ -129,16 +183,34 @@ namespace TencentCloud
                     bool m_listenerIdHasBeenSet;
 
                     /**
+                     * Layer-7 rule ID
+                     */
+                    std::string m_ruleId;
+                    bool m_ruleIdHasBeenSet;
+
+                    /**
                      * Statistics duration. Unit: hours. It only supports querying statistics for the past 1, 3, 6, 12, and 24 hours.
                      */
                     uint64_t m_withinTime;
                     bool m_withinTimeHasBeenSet;
 
                     /**
-                     * Rule ID
+                     * Statistics start time, such as `2020-08-19 00:00:00`
                      */
-                    std::string m_ruleId;
-                    bool m_ruleIdHasBeenSet;
+                    std::string m_startTime;
+                    bool m_startTimeHasBeenSet;
+
+                    /**
+                     * Statistics end time, such as `2020-08-19 23:59:59`
+                     */
+                    std::string m_endTime;
+                    bool m_endTimeHasBeenSet;
+
+                    /**
+                     * Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported.
+                     */
+                    uint64_t m_granularity;
+                    bool m_granularityHasBeenSet;
 
                 };
             }

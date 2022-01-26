@@ -156,6 +156,28 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     bool MountTargetHasBeenSet() const;
 
+                    /**
+                     * 获取The name of the device or partition to mount
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return DiskPartition The name of the device or partition to mount
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    std::string GetDiskPartition() const;
+
+                    /**
+                     * 设置The name of the device or partition to mount
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param DiskPartition The name of the device or partition to mount
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    void SetDiskPartition(const std::string& _diskPartition);
+
+                    /**
+                     * 判断参数 DiskPartition 是否已赋值
+                     * @return DiskPartition 是否已赋值
+                     */
+                    bool DiskPartitionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -192,6 +214,13 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     std::string m_mountTarget;
                     bool m_mountTargetHasBeenSet;
+
+                    /**
+                     * The name of the device or partition to mount
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    std::string m_diskPartition;
+                    bool m_diskPartitionHasBeenSet;
 
                 };
             }

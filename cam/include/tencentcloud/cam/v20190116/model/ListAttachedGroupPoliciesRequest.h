@@ -96,6 +96,24 @@ namespace TencentCloud
                      */
                     bool RpHasBeenSet() const;
 
+                    /**
+                     * 获取Search by keyword
+                     * @return Keyword Search by keyword
+                     */
+                    std::string GetKeyword() const;
+
+                    /**
+                     * 设置Search by keyword
+                     * @param Keyword Search by keyword
+                     */
+                    void SetKeyword(const std::string& _keyword);
+
+                    /**
+                     * 判断参数 Keyword 是否已赋值
+                     * @return Keyword 是否已赋值
+                     */
+                    bool KeywordHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +133,12 @@ namespace TencentCloud
                      */
                     uint64_t m_rp;
                     bool m_rpHasBeenSet;
+
+                    /**
+                     * Search by keyword
+                     */
+                    std::string m_keyword;
+                    bool m_keywordHasBeenSet;
 
                 };
             }

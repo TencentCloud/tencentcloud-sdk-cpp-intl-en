@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeAccountPrivilegesResponse::DescribeAccountPrivilegesResponse() :
@@ -34,20 +33,20 @@ DescribeAccountPrivilegesResponse::DescribeAccountPrivilegesResponse() :
 
 CoreInternalOutcome DescribeAccountPrivilegesResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -58,21 +57,21 @@ CoreInternalOutcome DescribeAccountPrivilegesResponse::Deserialize(const string 
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
     if (rsp.HasMember("GlobalPrivileges") && !rsp["GlobalPrivileges"].IsNull())
     {
         if (!rsp["GlobalPrivileges"].IsArray())
-            return CoreInternalOutcome(Error("response `GlobalPrivileges` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `GlobalPrivileges` is not array type"));
 
-        const Value &tmpValue = rsp["GlobalPrivileges"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["GlobalPrivileges"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_globalPrivileges.push_back((*itr).GetString());
         }
@@ -82,10 +81,10 @@ CoreInternalOutcome DescribeAccountPrivilegesResponse::Deserialize(const string 
     if (rsp.HasMember("DatabasePrivileges") && !rsp["DatabasePrivileges"].IsNull())
     {
         if (!rsp["DatabasePrivileges"].IsArray())
-            return CoreInternalOutcome(Error("response `DatabasePrivileges` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `DatabasePrivileges` is not array type"));
 
-        const Value &tmpValue = rsp["DatabasePrivileges"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["DatabasePrivileges"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             DatabasePrivilege item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -102,10 +101,10 @@ CoreInternalOutcome DescribeAccountPrivilegesResponse::Deserialize(const string 
     if (rsp.HasMember("TablePrivileges") && !rsp["TablePrivileges"].IsNull())
     {
         if (!rsp["TablePrivileges"].IsArray())
-            return CoreInternalOutcome(Error("response `TablePrivileges` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `TablePrivileges` is not array type"));
 
-        const Value &tmpValue = rsp["TablePrivileges"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["TablePrivileges"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             TablePrivilege item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -122,10 +121,10 @@ CoreInternalOutcome DescribeAccountPrivilegesResponse::Deserialize(const string 
     if (rsp.HasMember("ColumnPrivileges") && !rsp["ColumnPrivileges"].IsNull())
     {
         if (!rsp["ColumnPrivileges"].IsArray())
-            return CoreInternalOutcome(Error("response `ColumnPrivileges` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `ColumnPrivileges` is not array type"));
 
-        const Value &tmpValue = rsp["ColumnPrivileges"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["ColumnPrivileges"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             ColumnPrivilege item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
@@ -141,6 +140,81 @@ CoreInternalOutcome DescribeAccountPrivilegesResponse::Deserialize(const string 
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeAccountPrivilegesResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_globalPrivilegesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GlobalPrivileges";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_globalPrivileges.begin(); itr != m_globalPrivileges.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_databasePrivilegesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DatabasePrivileges";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_databasePrivileges.begin(); itr != m_databasePrivileges.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_tablePrivilegesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TablePrivileges";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tablePrivileges.begin(); itr != m_tablePrivileges.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_columnPrivilegesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ColumnPrivileges";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_columnPrivileges.begin(); itr != m_columnPrivileges.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

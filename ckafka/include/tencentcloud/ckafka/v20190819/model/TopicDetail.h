@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/ckafka/v20190819/model/Config.h>
+#include <tencentcloud/ckafka/v20190819/model/TopicRetentionTimeConfigRsp.h>
 
 
 namespace TencentCloud
@@ -160,14 +161,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable IP authentication whitelist. true: yes, false: no
-                     * @return EnableWhiteList Whether to enable IP authentication whitelist. true: yes, false: no
+                     * 获取Whether to enable IP authentication allowlist. true: yes, false: no
+                     * @return EnableWhiteList Whether to enable IP authentication allowlist. true: yes, false: no
                      */
                     bool GetEnableWhiteList() const;
 
                     /**
-                     * 设置Whether to enable IP authentication whitelist. true: yes, false: no
-                     * @param EnableWhiteList Whether to enable IP authentication whitelist. true: yes, false: no
+                     * 设置Whether to enable IP authentication allowlist. true: yes, false: no
+                     * @param EnableWhiteList Whether to enable IP authentication allowlist. true: yes, false: no
                      */
                     void SetEnableWhiteList(const bool& _enableWhiteList);
 
@@ -178,14 +179,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool EnableWhiteListHasBeenSet() const;
 
                     /**
-                     * 获取Number of IPs in IP whitelist
-                     * @return IpWhiteListCount Number of IPs in IP whitelist
+                     * 获取Number of IPs in IP allowlist
+                     * @return IpWhiteListCount Number of IPs in IP allowlist
                      */
                     int64_t GetIpWhiteListCount() const;
 
                     /**
-                     * 设置Number of IPs in IP whitelist
-                     * @param IpWhiteListCount Number of IPs in IP whitelist
+                     * 设置Number of IPs in IP allowlist
+                     * @param IpWhiteListCount Number of IPs in IP allowlist
                      */
                     void SetIpWhiteListCount(const int64_t& _ipWhiteListCount);
 
@@ -275,6 +276,50 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool ConfigHasBeenSet() const;
 
+                    /**
+                     * 获取Message retention time configuration (for recording the latest retention time)
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @return RetentionTimeConfig Message retention time configuration (for recording the latest retention time)
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    TopicRetentionTimeConfigRsp GetRetentionTimeConfig() const;
+
+                    /**
+                     * 设置Message retention time configuration (for recording the latest retention time)
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @param RetentionTimeConfig Message retention time configuration (for recording the latest retention time)
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    void SetRetentionTimeConfig(const TopicRetentionTimeConfigRsp& _retentionTimeConfig);
+
+                    /**
+                     * 判断参数 RetentionTimeConfig 是否已赋值
+                     * @return RetentionTimeConfig 是否已赋值
+                     */
+                    bool RetentionTimeConfigHasBeenSet() const;
+
+                    /**
+                     * 获取`0`: normal, `1`: deleted, `2`: deleting
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @return Status `0`: normal, `1`: deleted, `2`: deleting
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetStatus() const;
+
+                    /**
+                     * 设置`0`: normal, `1`: deleted, `2`: deleting
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @param Status `0`: normal, `1`: deleted, `2`: deleting
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    void SetStatus(const int64_t& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     */
+                    bool StatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -315,13 +360,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Whether to enable IP authentication whitelist. true: yes, false: no
+                     * Whether to enable IP authentication allowlist. true: yes, false: no
                      */
                     bool m_enableWhiteList;
                     bool m_enableWhiteListHasBeenSet;
 
                     /**
-                     * Number of IPs in IP whitelist
+                     * Number of IPs in IP allowlist
                      */
                     int64_t m_ipWhiteListCount;
                     bool m_ipWhiteListCountHasBeenSet;
@@ -351,6 +396,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     Config m_config;
                     bool m_configHasBeenSet;
+
+                    /**
+                     * Message retention time configuration (for recording the latest retention time)
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    TopicRetentionTimeConfigRsp m_retentionTimeConfig;
+                    bool m_retentionTimeConfigHasBeenSet;
+
+                    /**
+                     * `0`: normal, `1`: deleted, `2`: deleting
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_status;
+                    bool m_statusHasBeenSet;
 
                 };
             }

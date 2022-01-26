@@ -18,16 +18,16 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Yunjing::V20180228::Model;
-using namespace rapidjson;
 using namespace std;
 
 MachineTag::MachineTag() :
     m_ridHasBeenSet(false),
-    m_nameHasBeenSet(false)
+    m_nameHasBeenSet(false),
+    m_tagIdHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome MachineTag::Deserialize(const Value &value)
+CoreInternalOutcome MachineTag::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +36,7 @@ CoreInternalOutcome MachineTag::Deserialize(const Value &value)
     {
         if (!value["Rid"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MachineTag.Rid` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MachineTag.Rid` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_rid = value["Rid"].GetInt64();
         m_ridHasBeenSet = true;
@@ -46,22 +46,32 @@ CoreInternalOutcome MachineTag::Deserialize(const Value &value)
     {
         if (!value["Name"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MachineTag.Name` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MachineTag.Name` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_name = string(value["Name"].GetString());
         m_nameHasBeenSet = true;
+    }
+
+    if (value.HasMember("TagId") && !value["TagId"].IsNull())
+    {
+        if (!value["TagId"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `MachineTag.TagId` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_tagId = value["TagId"].GetUint64();
+        m_tagIdHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void MachineTag::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MachineTag::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_ridHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Rid";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_rid, allocator);
@@ -69,10 +79,18 @@ void MachineTag::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_nameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_name.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_tagIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TagId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_tagId, allocator);
     }
 
 }
@@ -108,5 +126,21 @@ void MachineTag::SetName(const string& _name)
 bool MachineTag::NameHasBeenSet() const
 {
     return m_nameHasBeenSet;
+}
+
+uint64_t MachineTag::GetTagId() const
+{
+    return m_tagId;
+}
+
+void MachineTag::SetTagId(const uint64_t& _tagId)
+{
+    m_tagId = _tagId;
+    m_tagIdHasBeenSet = true;
+}
+
+bool MachineTag::TagIdHasBeenSet() const
+{
+    return m_tagIdHasBeenSet;
 }
 

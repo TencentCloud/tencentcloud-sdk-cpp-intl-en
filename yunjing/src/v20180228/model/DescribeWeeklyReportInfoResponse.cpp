@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Yunjing::V20180228::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeWeeklyReportInfoResponse::DescribeWeeklyReportInfoResponse() :
@@ -43,20 +42,20 @@ DescribeWeeklyReportInfoResponse::DescribeWeeklyReportInfoResponse() :
 
 CoreInternalOutcome DescribeWeeklyReportInfoResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -67,11 +66,11 @@ CoreInternalOutcome DescribeWeeklyReportInfoResponse::Deserialize(const string &
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -79,7 +78,7 @@ CoreInternalOutcome DescribeWeeklyReportInfoResponse::Deserialize(const string &
     {
         if (!rsp["CompanyName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CompanyName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CompanyName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_companyName = string(rsp["CompanyName"].GetString());
         m_companyNameHasBeenSet = true;
@@ -89,7 +88,7 @@ CoreInternalOutcome DescribeWeeklyReportInfoResponse::Deserialize(const string &
     {
         if (!rsp["MachineNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `MachineNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MachineNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_machineNum = rsp["MachineNum"].GetUint64();
         m_machineNumHasBeenSet = true;
@@ -99,7 +98,7 @@ CoreInternalOutcome DescribeWeeklyReportInfoResponse::Deserialize(const string &
     {
         if (!rsp["OnlineMachineNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `OnlineMachineNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OnlineMachineNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_onlineMachineNum = rsp["OnlineMachineNum"].GetUint64();
         m_onlineMachineNumHasBeenSet = true;
@@ -109,7 +108,7 @@ CoreInternalOutcome DescribeWeeklyReportInfoResponse::Deserialize(const string &
     {
         if (!rsp["OfflineMachineNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `OfflineMachineNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OfflineMachineNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_offlineMachineNum = rsp["OfflineMachineNum"].GetUint64();
         m_offlineMachineNumHasBeenSet = true;
@@ -119,7 +118,7 @@ CoreInternalOutcome DescribeWeeklyReportInfoResponse::Deserialize(const string &
     {
         if (!rsp["ProVersionMachineNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `ProVersionMachineNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProVersionMachineNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_proVersionMachineNum = rsp["ProVersionMachineNum"].GetUint64();
         m_proVersionMachineNumHasBeenSet = true;
@@ -129,7 +128,7 @@ CoreInternalOutcome DescribeWeeklyReportInfoResponse::Deserialize(const string &
     {
         if (!rsp["BeginDate"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BeginDate` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BeginDate` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_beginDate = string(rsp["BeginDate"].GetString());
         m_beginDateHasBeenSet = true;
@@ -139,7 +138,7 @@ CoreInternalOutcome DescribeWeeklyReportInfoResponse::Deserialize(const string &
     {
         if (!rsp["EndDate"].IsString())
         {
-            return CoreInternalOutcome(Error("response `EndDate` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EndDate` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_endDate = string(rsp["EndDate"].GetString());
         m_endDateHasBeenSet = true;
@@ -149,7 +148,7 @@ CoreInternalOutcome DescribeWeeklyReportInfoResponse::Deserialize(const string &
     {
         if (!rsp["Level"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Level` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Level` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_level = string(rsp["Level"].GetString());
         m_levelHasBeenSet = true;
@@ -159,7 +158,7 @@ CoreInternalOutcome DescribeWeeklyReportInfoResponse::Deserialize(const string &
     {
         if (!rsp["MalwareNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `MalwareNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MalwareNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_malwareNum = rsp["MalwareNum"].GetUint64();
         m_malwareNumHasBeenSet = true;
@@ -169,7 +168,7 @@ CoreInternalOutcome DescribeWeeklyReportInfoResponse::Deserialize(const string &
     {
         if (!rsp["NonlocalLoginNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `NonlocalLoginNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `NonlocalLoginNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_nonlocalLoginNum = rsp["NonlocalLoginNum"].GetUint64();
         m_nonlocalLoginNumHasBeenSet = true;
@@ -179,7 +178,7 @@ CoreInternalOutcome DescribeWeeklyReportInfoResponse::Deserialize(const string &
     {
         if (!rsp["BruteAttackSuccessNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `BruteAttackSuccessNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BruteAttackSuccessNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_bruteAttackSuccessNum = rsp["BruteAttackSuccessNum"].GetUint64();
         m_bruteAttackSuccessNumHasBeenSet = true;
@@ -189,7 +188,7 @@ CoreInternalOutcome DescribeWeeklyReportInfoResponse::Deserialize(const string &
     {
         if (!rsp["VulNum"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `VulNum` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `VulNum` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_vulNum = rsp["VulNum"].GetUint64();
         m_vulNumHasBeenSet = true;
@@ -199,7 +198,7 @@ CoreInternalOutcome DescribeWeeklyReportInfoResponse::Deserialize(const string &
     {
         if (!rsp["DownloadUrl"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DownloadUrl` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DownloadUrl` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_downloadUrl = string(rsp["DownloadUrl"].GetString());
         m_downloadUrlHasBeenSet = true;
@@ -207,6 +206,127 @@ CoreInternalOutcome DescribeWeeklyReportInfoResponse::Deserialize(const string &
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeWeeklyReportInfoResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_companyNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CompanyName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_companyName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_machineNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MachineNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_machineNum, allocator);
+    }
+
+    if (m_onlineMachineNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OnlineMachineNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_onlineMachineNum, allocator);
+    }
+
+    if (m_offlineMachineNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OfflineMachineNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_offlineMachineNum, allocator);
+    }
+
+    if (m_proVersionMachineNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProVersionMachineNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_proVersionMachineNum, allocator);
+    }
+
+    if (m_beginDateHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BeginDate";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_beginDate.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_endDateHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EndDate";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_endDate.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_levelHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Level";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_level.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_malwareNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MalwareNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_malwareNum, allocator);
+    }
+
+    if (m_nonlocalLoginNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NonlocalLoginNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_nonlocalLoginNum, allocator);
+    }
+
+    if (m_bruteAttackSuccessNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BruteAttackSuccessNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_bruteAttackSuccessNum, allocator);
+    }
+
+    if (m_vulNumHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VulNum";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_vulNum, allocator);
+    }
+
+    if (m_downloadUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DownloadUrl";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_downloadUrl.c_str(), allocator).Move(), allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

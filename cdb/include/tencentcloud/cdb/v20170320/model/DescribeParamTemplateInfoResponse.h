@@ -41,6 +41,7 @@ namespace TencentCloud
                     DescribeParamTemplateInfoResponse();
                     ~DescribeParamTemplateInfoResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -68,8 +69,8 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Parameter template description
-                     * @return EngineVersion Parameter template description
+                     * 获取Database engine version specified in the parameter template
+                     * @return EngineVersion Database engine version specified in the parameter template
                      */
                     std::string GetEngineVersion() const;
 
@@ -103,6 +104,18 @@ namespace TencentCloud
                      */
                     bool ItemsHasBeenSet() const;
 
+                    /**
+                     * 获取Parameter template description
+                     * @return Description Parameter template description
+                     */
+                    std::string GetDescription() const;
+
+                    /**
+                     * 判断参数 Description 是否已赋值
+                     * @return Description 是否已赋值
+                     */
+                    bool DescriptionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -118,7 +131,7 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Parameter template description
+                     * Database engine version specified in the parameter template
                      */
                     std::string m_engineVersion;
                     bool m_engineVersionHasBeenSet;
@@ -134,6 +147,12 @@ namespace TencentCloud
                      */
                     std::vector<ParameterDetail> m_items;
                     bool m_itemsHasBeenSet;
+
+                    /**
+                     * Parameter template description
+                     */
+                    std::string m_description;
+                    bool m_descriptionHasBeenSet;
 
                 };
             }

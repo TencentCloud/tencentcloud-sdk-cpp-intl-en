@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取Number of access requests. Value range: [1–10000]
-                     * @return ReqNumber Number of access requests. Value range: [1–10000]
+                     * 获取Number of access requests. Value range: [1-10000]
+                     * @return ReqNumber Number of access requests. Value range: [1-10000]
                      */
                     uint64_t GetReqNumber() const;
 
                     /**
-                     * 设置Number of access requests. Value range: [1–10000]
-                     * @param ReqNumber Number of access requests. Value range: [1–10000]
+                     * 设置Number of access requests. Value range: [1-10000]
+                     * @param ReqNumber Number of access requests. Value range: [1-10000]
                      */
                     void SetReqNumber(const uint64_t& _reqNumber);
 
@@ -127,7 +127,7 @@ namespace TencentCloud
                     bool m_periodHasBeenSet;
 
                     /**
-                     * Number of access requests. Value range: [1–10000]
+                     * Number of access requests. Value range: [1-10000]
                      */
                     uint64_t m_reqNumber;
                     bool m_reqNumberHasBeenSet;

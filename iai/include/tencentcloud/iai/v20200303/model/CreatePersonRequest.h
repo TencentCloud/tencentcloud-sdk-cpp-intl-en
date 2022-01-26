@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the group to add to.
-                     * @return GroupId ID of the group to add to.
+                     * 获取ID of the group to join, which is the `GroupId` in the `CreateGroup` API.
+                     * @return GroupId ID of the group to join, which is the `GroupId` in the `CreateGroup` API.
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置ID of the group to add to.
-                     * @param GroupId ID of the group to add to.
+                     * 设置ID of the group to join, which is the `GroupId` in the `CreateGroup` API.
+                     * @param GroupId ID of the group to join, which is the `GroupId` in the `CreateGroup` API.
                      */
                     void SetGroupId(const std::string& _groupId);
 
@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Person name, which can contain 1–60 characters and is modifiable and repeatable.
-                     * @return PersonName Person name, which can contain 1–60 characters and is modifiable and repeatable.
+                     * 获取Person name, which can contain 1 to 60 characters and is modifiable and repeatable.
+                     * @return PersonName Person name, which can contain 1 to 60 characters and is modifiable and repeatable.
                      */
                     std::string GetPersonName() const;
 
                     /**
-                     * 设置Person name, which can contain 1–60 characters and is modifiable and repeatable.
-                     * @param PersonName Person name, which can contain 1–60 characters and is modifiable and repeatable.
+                     * 设置Person name, which can contain 1 to 60 characters and is modifiable and repeatable.
+                     * @param PersonName Person name, which can contain 1 to 60 characters and is modifiable and repeatable.
                      */
                     void SetPersonName(const std::string& _personName);
 
@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool PersonNameHasBeenSet() const;
 
                     /**
-                     * 获取Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
-                     * @return PersonId Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
+                     * 获取Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
+                     * @return PersonId Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
                      */
                     std::string GetPersonId() const;
 
                     /**
-                     * 设置Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
-                     * @param PersonId Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
+                     * 设置Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
+                     * @param PersonId Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
                      */
                     void SetPersonId(const std::string& _personId);
 
@@ -116,14 +116,14 @@ namespace TencentCloud
                     bool GenderHasBeenSet() const;
 
                     /**
-                     * 获取Content of person description field, which is a `key-value` pair, can contain 0–60 characters, and is modifiable and repeatable.
-                     * @return PersonExDescriptionInfos Content of person description field, which is a `key-value` pair, can contain 0–60 characters, and is modifiable and repeatable.
+                     * 获取Content of person description field, which is a `key-value` pair, can contain 0 to 60 characters, and is modifiable and repeatable.
+                     * @return PersonExDescriptionInfos Content of person description field, which is a `key-value` pair, can contain 0 to 60 characters, and is modifiable and repeatable.
                      */
                     std::vector<PersonExDescriptionInfo> GetPersonExDescriptionInfos() const;
 
                     /**
-                     * 设置Content of person description field, which is a `key-value` pair, can contain 0–60 characters, and is modifiable and repeatable.
-                     * @param PersonExDescriptionInfos Content of person description field, which is a `key-value` pair, can contain 0–60 characters, and is modifiable and repeatable.
+                     * 设置Content of person description field, which is a `key-value` pair, can contain 0 to 60 characters, and is modifiable and repeatable.
+                     * @param PersonExDescriptionInfos Content of person description field, which is a `key-value` pair, can contain 0 to 60 characters, and is modifiable and repeatable.
                      */
                     void SetPersonExDescriptionInfos(const std::vector<PersonExDescriptionInfo>& _personExDescriptionInfos);
 
@@ -135,17 +135,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Base64-encoded image data, which cannot exceed 5 MB.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      * @return Image Base64-encoded image data, which cannot exceed 5 MB.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     std::string GetImage() const;
 
                     /**
                      * 设置Base64-encoded image data, which cannot exceed 5 MB.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      * @param Image Base64-encoded image data, which cannot exceed 5 MB.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     void SetImage(const std::string& _image);
 
@@ -157,29 +161,33 @@ namespace TencentCloud
 
                     /**
                      * 获取Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      * @return Url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      * @param Url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     void SetUrl(const std::string& _url);
 
@@ -247,17 +255,17 @@ Note: the higher the requirement, the lower the probability of duplicate person.
                      * 获取Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
                      * @return QualityControl Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
                      */
@@ -267,17 +275,17 @@ If the image quality does not meet the requirement, the returned result will pro
                      * 设置Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
                      * @param QualityControl Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
                      */
@@ -310,19 +318,19 @@ If the image quality does not meet the requirement, the returned result will pro
                 private:
 
                     /**
-                     * ID of the group to add to.
+                     * ID of the group to join, which is the `GroupId` in the `CreateGroup` API.
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * Person name, which can contain 1–60 characters and is modifiable and repeatable.
+                     * Person name, which can contain 1 to 60 characters and is modifiable and repeatable.
                      */
                     std::string m_personName;
                     bool m_personNameHasBeenSet;
 
                     /**
-                     * Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
+                     * Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
                      */
                     std::string m_personId;
                     bool m_personIdHasBeenSet;
@@ -334,24 +342,26 @@ If the image quality does not meet the requirement, the returned result will pro
                     bool m_genderHasBeenSet;
 
                     /**
-                     * Content of person description field, which is a `key-value` pair, can contain 0–60 characters, and is modifiable and repeatable.
+                     * Content of person description field, which is a `key-value` pair, can contain 0 to 60 characters, and is modifiable and repeatable.
                      */
                     std::vector<PersonExDescriptionInfo> m_personExDescriptionInfos;
                     bool m_personExDescriptionInfosHasBeenSet;
 
                     /**
                      * Base64-encoded image data, which cannot exceed 5 MB.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     std::string m_image;
                     bool m_imageHasBeenSet;
 
                     /**
                      * Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
@@ -375,9 +385,9 @@ Note: the higher the requirement, the lower the probability of duplicate person.
                      * Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
                      */

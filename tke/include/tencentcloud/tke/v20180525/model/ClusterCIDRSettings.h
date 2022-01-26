@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC’s CIDR or the CIDRs of other clusters in the same VPC
-                     * @return ClusterCIDR CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC’s CIDR or the CIDRs of other clusters in the same VPC
+                     * 获取CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC
+                     * @return ClusterCIDR CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC
                      */
                     std::string GetClusterCIDR() const;
 
                     /**
-                     * 设置CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC’s CIDR or the CIDRs of other clusters in the same VPC
-                     * @param ClusterCIDR CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC’s CIDR or the CIDRs of other clusters in the same VPC
+                     * 设置CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC
+                     * @param ClusterCIDR CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC
                      */
                     void SetClusterCIDR(const std::string& _clusterCIDR);
 
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool MaxNodePodNumHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of cluster services
-                     * @return MaxClusterServiceNum Maximum number of cluster services
+                     * 获取The maximum number of services in a cluster. The range is from 32 to 32768. When its power is not 2, it will round upward to the closest power of 2. Default value is 256.
+                     * @return MaxClusterServiceNum The maximum number of services in a cluster. The range is from 32 to 32768. When its power is not 2, it will round upward to the closest power of 2. Default value is 256.
                      */
                     uint64_t GetMaxClusterServiceNum() const;
 
                     /**
-                     * 设置Maximum number of cluster services
-                     * @param MaxClusterServiceNum Maximum number of cluster services
+                     * 设置The maximum number of services in a cluster. The range is from 32 to 32768. When its power is not 2, it will round upward to the closest power of 2. Default value is 256.
+                     * @param MaxClusterServiceNum The maximum number of services in a cluster. The range is from 32 to 32768. When its power is not 2, it will round upward to the closest power of 2. Default value is 256.
                      */
                     void SetMaxClusterServiceNum(const uint64_t& _maxClusterServiceNum);
 
@@ -175,7 +175,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC’s CIDR or the CIDRs of other clusters in the same VPC
+                     * CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC
                      */
                     std::string m_clusterCIDR;
                     bool m_clusterCIDRHasBeenSet;
@@ -193,7 +193,7 @@ namespace TencentCloud
                     bool m_maxNodePodNumHasBeenSet;
 
                     /**
-                     * Maximum number of cluster services
+                     * The maximum number of services in a cluster. The range is from 32 to 32768. When its power is not 2, it will round upward to the closest power of 2. Default value is 256.
                      */
                     uint64_t m_maxClusterServiceNum;
                     bool m_maxClusterServiceNumHasBeenSet;

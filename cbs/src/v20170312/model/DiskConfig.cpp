@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cbs::V20170312::Model;
-using namespace rapidjson;
 using namespace std;
 
 DiskConfig::DiskConfig() :
@@ -34,7 +33,7 @@ DiskConfig::DiskConfig() :
 {
 }
 
-CoreInternalOutcome DiskConfig::Deserialize(const Value &value)
+CoreInternalOutcome DiskConfig::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -43,7 +42,7 @@ CoreInternalOutcome DiskConfig::Deserialize(const Value &value)
     {
         if (!value["Available"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `DiskConfig.Available` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DiskConfig.Available` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_available = value["Available"].GetBool();
         m_availableHasBeenSet = true;
@@ -53,7 +52,7 @@ CoreInternalOutcome DiskConfig::Deserialize(const Value &value)
     {
         if (!value["DiskType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DiskConfig.DiskType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DiskConfig.DiskType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_diskType = string(value["DiskType"].GetString());
         m_diskTypeHasBeenSet = true;
@@ -63,7 +62,7 @@ CoreInternalOutcome DiskConfig::Deserialize(const Value &value)
     {
         if (!value["DiskUsage"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DiskConfig.DiskUsage` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DiskConfig.DiskUsage` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_diskUsage = string(value["DiskUsage"].GetString());
         m_diskUsageHasBeenSet = true;
@@ -73,7 +72,7 @@ CoreInternalOutcome DiskConfig::Deserialize(const Value &value)
     {
         if (!value["DiskChargeType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DiskConfig.DiskChargeType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DiskConfig.DiskChargeType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_diskChargeType = string(value["DiskChargeType"].GetString());
         m_diskChargeTypeHasBeenSet = true;
@@ -83,7 +82,7 @@ CoreInternalOutcome DiskConfig::Deserialize(const Value &value)
     {
         if (!value["MaxDiskSize"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DiskConfig.MaxDiskSize` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DiskConfig.MaxDiskSize` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_maxDiskSize = value["MaxDiskSize"].GetUint64();
         m_maxDiskSizeHasBeenSet = true;
@@ -93,7 +92,7 @@ CoreInternalOutcome DiskConfig::Deserialize(const Value &value)
     {
         if (!value["MinDiskSize"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `DiskConfig.MinDiskSize` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DiskConfig.MinDiskSize` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_minDiskSize = value["MinDiskSize"].GetUint64();
         m_minDiskSizeHasBeenSet = true;
@@ -103,7 +102,7 @@ CoreInternalOutcome DiskConfig::Deserialize(const Value &value)
     {
         if (!value["Zone"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DiskConfig.Zone` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DiskConfig.Zone` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_zone = string(value["Zone"].GetString());
         m_zoneHasBeenSet = true;
@@ -113,7 +112,7 @@ CoreInternalOutcome DiskConfig::Deserialize(const Value &value)
     {
         if (!value["DeviceClass"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DiskConfig.DeviceClass` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DiskConfig.DeviceClass` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_deviceClass = string(value["DeviceClass"].GetString());
         m_deviceClassHasBeenSet = true;
@@ -123,7 +122,7 @@ CoreInternalOutcome DiskConfig::Deserialize(const Value &value)
     {
         if (!value["InstanceFamily"].IsString())
         {
-            return CoreInternalOutcome(Error("response `DiskConfig.InstanceFamily` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DiskConfig.InstanceFamily` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceFamily = string(value["InstanceFamily"].GetString());
         m_instanceFamilyHasBeenSet = true;
@@ -133,12 +132,12 @@ CoreInternalOutcome DiskConfig::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void DiskConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DiskConfig::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_availableHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Available";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_available, allocator);
@@ -146,31 +145,31 @@ void DiskConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_diskTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_diskType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_diskType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_diskUsageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskUsage";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_diskUsage.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_diskUsage.c_str(), allocator).Move(), allocator);
     }
 
     if (m_diskChargeTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DiskChargeType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_diskChargeType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_diskChargeType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_maxDiskSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MaxDiskSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_maxDiskSize, allocator);
@@ -178,7 +177,7 @@ void DiskConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_minDiskSizeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "MinDiskSize";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_minDiskSize, allocator);
@@ -186,26 +185,26 @@ void DiskConfig::ToJsonObject(Value &value, Document::AllocatorType& allocator) 
 
     if (m_zoneHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Zone";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_zone.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_zone.c_str(), allocator).Move(), allocator);
     }
 
     if (m_deviceClassHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "DeviceClass";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_deviceClass.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_deviceClass.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceFamilyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceFamily";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceFamily.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceFamily.c_str(), allocator).Move(), allocator);
     }
 
 }

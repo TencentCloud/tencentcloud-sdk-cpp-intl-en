@@ -56,6 +56,20 @@
 #include <tencentcloud/cdn/v20180606/model/ImageOptimization.h>
 #include <tencentcloud/cdn/v20180606/model/UserAgentFilter.h>
 #include <tencentcloud/cdn/v20180606/model/AccessControl.h>
+#include <tencentcloud/cdn/v20180606/model/UrlRedirect.h>
+#include <tencentcloud/cdn/v20180606/model/Tag.h>
+#include <tencentcloud/cdn/v20180606/model/AdvancedAuthentication.h>
+#include <tencentcloud/cdn/v20180606/model/OriginAuthentication.h>
+#include <tencentcloud/cdn/v20180606/model/Ipv6Access.h>
+#include <tencentcloud/cdn/v20180606/model/AdvanceConfig.h>
+#include <tencentcloud/cdn/v20180606/model/OfflineCache.h>
+#include <tencentcloud/cdn/v20180606/model/OriginCombine.h>
+#include <tencentcloud/cdn/v20180606/model/PostSize.h>
+#include <tencentcloud/cdn/v20180606/model/Quic.h>
+#include <tencentcloud/cdn/v20180606/model/OssPrivateAccess.h>
+#include <tencentcloud/cdn/v20180606/model/WebSocket.h>
+#include <tencentcloud/cdn/v20180606/model/RemoteAuthentication.h>
+#include <tencentcloud/cdn/v20180606/model/ShareCname.h>
 
 
 namespace TencentCloud
@@ -445,18 +459,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool FollowRedirectHasBeenSet() const;
 
                     /**
-                     * 获取Custom error page configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ErrorPage Custom error page configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Configuration of custom error page
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return ErrorPage Configuration of custom error page
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     ErrorPage GetErrorPage() const;
 
                     /**
-                     * 设置Custom error page configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ErrorPage Custom error page configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Configuration of custom error page
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param ErrorPage Configuration of custom error page
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetErrorPage(const ErrorPage& _errorPage);
 
@@ -829,18 +843,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MaxAgeHasBeenSet() const;
 
                     /**
-                     * 获取IPv6 configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Ipv6 IPv6 configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取IPv6 origin-pull configuration (in beta)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Ipv6 IPv6 origin-pull configuration (in beta)
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     Ipv6 GetIpv6() const;
 
                     /**
-                     * 设置IPv6 configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Ipv6 IPv6 configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置IPv6 origin-pull configuration (in beta)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param Ipv6 IPv6 origin-pull configuration (in beta)
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetIpv6(const Ipv6& _ipv6);
 
@@ -1011,14 +1025,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AwsPrivateAccessHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SecurityConfig 
+                     * 获取SCDN configuration
+                     * @return SecurityConfig SCDN configuration
                      */
                     SecurityConfig GetSecurityConfig() const;
 
                     /**
-                     * 设置
-                     * @param SecurityConfig 
+                     * 设置SCDN configuration
+                     * @param SecurityConfig SCDN configuration
                      */
                     void SetSecurityConfig(const SecurityConfig& _securityConfig);
 
@@ -1029,14 +1043,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SecurityConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ImageOptimization 
+                     * 获取Image Optimization configuration
+                     * @return ImageOptimization Image Optimization configuration
                      */
                     ImageOptimization GetImageOptimization() const;
 
                     /**
-                     * 设置
-                     * @param ImageOptimization 
+                     * 设置Image Optimization configuration
+                     * @param ImageOptimization Image Optimization configuration
                      */
                     void SetImageOptimization(const ImageOptimization& _imageOptimization);
 
@@ -1047,14 +1061,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ImageOptimizationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UserAgentFilter 
+                     * 获取`UA` blocklist/allowlist configuration
+                     * @return UserAgentFilter `UA` blocklist/allowlist configuration
                      */
                     UserAgentFilter GetUserAgentFilter() const;
 
                     /**
-                     * 设置
-                     * @param UserAgentFilter 
+                     * 设置`UA` blocklist/allowlist configuration
+                     * @param UserAgentFilter `UA` blocklist/allowlist configuration
                      */
                     void SetUserAgentFilter(const UserAgentFilter& _userAgentFilter);
 
@@ -1066,17 +1080,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Access control
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AccessControl Access control
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     AccessControl GetAccessControl() const;
 
                     /**
                      * 设置Access control
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param AccessControl Access control
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetAccessControl(const AccessControl& _accessControl);
 
@@ -1085,6 +1095,366 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return AccessControl 是否已赋值
                      */
                     bool AccessControlHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to support advanced configuration items
+on: supported
+off: not supported
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return Advance Whether to support advanced configuration items
+on: supported
+off: not supported
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetAdvance() const;
+
+                    /**
+                     * 设置Whether to support advanced configuration items
+on: supported
+off: not supported
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param Advance Whether to support advanced configuration items
+on: supported
+off: not supported
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetAdvance(const std::string& _advance);
+
+                    /**
+                     * 判断参数 Advance 是否已赋值
+                     * @return Advance 是否已赋值
+                     */
+                    bool AdvanceHasBeenSet() const;
+
+                    /**
+                     * 获取URL redirect configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return UrlRedirect URL redirect configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    UrlRedirect GetUrlRedirect() const;
+
+                    /**
+                     * 设置URL redirect configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param UrlRedirect URL redirect configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetUrlRedirect(const UrlRedirect& _urlRedirect);
+
+                    /**
+                     * 判断参数 UrlRedirect 是否已赋值
+                     * @return UrlRedirect 是否已赋值
+                     */
+                    bool UrlRedirectHasBeenSet() const;
+
+                    /**
+                     * 获取Access port configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return AccessPort Access port configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<int64_t> GetAccessPort() const;
+
+                    /**
+                     * 设置Access port configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param AccessPort Access port configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetAccessPort(const std::vector<int64_t>& _accessPort);
+
+                    /**
+                     * 判断参数 AccessPort 是否已赋值
+                     * @return AccessPort 是否已赋值
+                     */
+                    bool AccessPortHasBeenSet() const;
+
+                    /**
+                     * 获取Tag configuration
+Note: this field may return null, indicating that no valid value is obtained.
+                     * @return Tag Tag configuration
+Note: this field may return null, indicating that no valid value is obtained.
+                     */
+                    std::vector<Tag> GetTag() const;
+
+                    /**
+                     * 设置Tag configuration
+Note: this field may return null, indicating that no valid value is obtained.
+                     * @param Tag Tag configuration
+Note: this field may return null, indicating that no valid value is obtained.
+                     */
+                    void SetTag(const std::vector<Tag>& _tag);
+
+                    /**
+                     * 判断参数 Tag 是否已赋值
+                     * @return Tag 是否已赋值
+                     */
+                    bool TagHasBeenSet() const;
+
+                    /**
+                     * 获取Timestamp hotlink protection advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return AdvancedAuthentication Timestamp hotlink protection advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    AdvancedAuthentication GetAdvancedAuthentication() const;
+
+                    /**
+                     * 设置Timestamp hotlink protection advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param AdvancedAuthentication Timestamp hotlink protection advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetAdvancedAuthentication(const AdvancedAuthentication& _advancedAuthentication);
+
+                    /**
+                     * 判断参数 AdvancedAuthentication 是否已赋值
+                     * @return AdvancedAuthentication 是否已赋值
+                     */
+                    bool AdvancedAuthenticationHasBeenSet() const;
+
+                    /**
+                     * 获取Origin-pull authentication advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return OriginAuthentication Origin-pull authentication advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    OriginAuthentication GetOriginAuthentication() const;
+
+                    /**
+                     * 设置Origin-pull authentication advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param OriginAuthentication Origin-pull authentication advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetOriginAuthentication(const OriginAuthentication& _originAuthentication);
+
+                    /**
+                     * 判断参数 OriginAuthentication 是否已赋值
+                     * @return OriginAuthentication 是否已赋值
+                     */
+                    bool OriginAuthenticationHasBeenSet() const;
+
+                    /**
+                     * 获取IPv6 access configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Ipv6Access IPv6 access configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    Ipv6Access GetIpv6Access() const;
+
+                    /**
+                     * 设置IPv6 access configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param Ipv6Access IPv6 access configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetIpv6Access(const Ipv6Access& _ipv6Access);
+
+                    /**
+                     * 判断参数 Ipv6Access 是否已赋值
+                     * @return Ipv6Access 是否已赋值
+                     */
+                    bool Ipv6AccessHasBeenSet() const;
+
+                    /**
+                     * 获取Advanced configuration settings
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return AdvanceSet Advanced configuration settings
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<AdvanceConfig> GetAdvanceSet() const;
+
+                    /**
+                     * 设置Advanced configuration settings
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param AdvanceSet Advanced configuration settings
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetAdvanceSet(const std::vector<AdvanceConfig>& _advanceSet);
+
+                    /**
+                     * 判断参数 AdvanceSet 是否已赋值
+                     * @return AdvanceSet 是否已赋值
+                     */
+                    bool AdvanceSetHasBeenSet() const;
+
+                    /**
+                     * 获取Offline cache (only available to beta users)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return OfflineCache Offline cache (only available to beta users)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    OfflineCache GetOfflineCache() const;
+
+                    /**
+                     * 设置Offline cache (only available to beta users)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param OfflineCache Offline cache (only available to beta users)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetOfflineCache(const OfflineCache& _offlineCache);
+
+                    /**
+                     * 判断参数 OfflineCache 是否已赋值
+                     * @return OfflineCache 是否已赋值
+                     */
+                    bool OfflineCacheHasBeenSet() const;
+
+                    /**
+                     * 获取Merging origin-pull requests (only available to beta users)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return OriginCombine Merging origin-pull requests (only available to beta users)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    OriginCombine GetOriginCombine() const;
+
+                    /**
+                     * 设置Merging origin-pull requests (only available to beta users)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param OriginCombine Merging origin-pull requests (only available to beta users)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetOriginCombine(const OriginCombine& _originCombine);
+
+                    /**
+                     * 判断参数 OriginCombine 是否已赋值
+                     * @return OriginCombine 是否已赋值
+                     */
+                    bool OriginCombineHasBeenSet() const;
+
+                    /**
+                     * 获取POST request configuration item
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return PostMaxSize POST request configuration item
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    PostSize GetPostMaxSize() const;
+
+                    /**
+                     * 设置POST request configuration item
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param PostMaxSize POST request configuration item
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetPostMaxSize(const PostSize& _postMaxSize);
+
+                    /**
+                     * 判断参数 PostMaxSize 是否已赋值
+                     * @return PostMaxSize 是否已赋值
+                     */
+                    bool PostMaxSizeHasBeenSet() const;
+
+                    /**
+                     * 获取QUIC configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Quic QUIC configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    Quic GetQuic() const;
+
+                    /**
+                     * 设置QUIC configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param Quic QUIC configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetQuic(const Quic& _quic);
+
+                    /**
+                     * 判断参数 Quic 是否已赋值
+                     * @return Quic 是否已赋值
+                     */
+                    bool QuicHasBeenSet() const;
+
+                    /**
+                     * 获取Access authentication for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return OssPrivateAccess Access authentication for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    OssPrivateAccess GetOssPrivateAccess() const;
+
+                    /**
+                     * 设置Access authentication for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param OssPrivateAccess Access authentication for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetOssPrivateAccess(const OssPrivateAccess& _ossPrivateAccess);
+
+                    /**
+                     * 判断参数 OssPrivateAccess 是否已赋值
+                     * @return OssPrivateAccess 是否已赋值
+                     */
+                    bool OssPrivateAccessHasBeenSet() const;
+
+                    /**
+                     * 获取WebSocket configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return WebSocket WebSocket configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    WebSocket GetWebSocket() const;
+
+                    /**
+                     * 设置WebSocket configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param WebSocket WebSocket configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetWebSocket(const WebSocket& _webSocket);
+
+                    /**
+                     * 判断参数 WebSocket 是否已赋值
+                     * @return WebSocket 是否已赋值
+                     */
+                    bool WebSocketHasBeenSet() const;
+
+                    /**
+                     * 获取Remote authentication configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return RemoteAuthentication Remote authentication configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    RemoteAuthentication GetRemoteAuthentication() const;
+
+                    /**
+                     * 设置Remote authentication configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param RemoteAuthentication Remote authentication configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetRemoteAuthentication(const RemoteAuthentication& _remoteAuthentication);
+
+                    /**
+                     * 判断参数 RemoteAuthentication 是否已赋值
+                     * @return RemoteAuthentication 是否已赋值
+                     */
+                    bool RemoteAuthenticationHasBeenSet() const;
+
+                    /**
+                     * 获取Shared CNAME configuration (only available to beta users)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return ShareCname Shared CNAME configuration (only available to beta users)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    ShareCname GetShareCname() const;
+
+                    /**
+                     * 设置Shared CNAME configuration (only available to beta users)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param ShareCname Shared CNAME configuration (only available to beta users)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetShareCname(const ShareCname& _shareCname);
+
+                    /**
+                     * 判断参数 ShareCname 是否已赋值
+                     * @return ShareCname 是否已赋值
+                     */
+                    bool ShareCnameHasBeenSet() const;
 
                 private:
 
@@ -1206,8 +1576,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_followRedirectHasBeenSet;
 
                     /**
-                     * Custom error page configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Configuration of custom error page
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     ErrorPage m_errorPage;
                     bool m_errorPageHasBeenSet;
@@ -1326,8 +1696,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_maxAgeHasBeenSet;
 
                     /**
-                     * IPv6 configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * IPv6 origin-pull configuration (in beta)
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     Ipv6 m_ipv6;
                     bool m_ipv6HasBeenSet;
@@ -1382,29 +1752,142 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_awsPrivateAccessHasBeenSet;
 
                     /**
-                     * 
+                     * SCDN configuration
                      */
                     SecurityConfig m_securityConfig;
                     bool m_securityConfigHasBeenSet;
 
                     /**
-                     * 
+                     * Image Optimization configuration
                      */
                     ImageOptimization m_imageOptimization;
                     bool m_imageOptimizationHasBeenSet;
 
                     /**
-                     * 
+                     * `UA` blocklist/allowlist configuration
                      */
                     UserAgentFilter m_userAgentFilter;
                     bool m_userAgentFilterHasBeenSet;
 
                     /**
                      * Access control
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     AccessControl m_accessControl;
                     bool m_accessControlHasBeenSet;
+
+                    /**
+                     * Whether to support advanced configuration items
+on: supported
+off: not supported
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_advance;
+                    bool m_advanceHasBeenSet;
+
+                    /**
+                     * URL redirect configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    UrlRedirect m_urlRedirect;
+                    bool m_urlRedirectHasBeenSet;
+
+                    /**
+                     * Access port configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<int64_t> m_accessPort;
+                    bool m_accessPortHasBeenSet;
+
+                    /**
+                     * Tag configuration
+Note: this field may return null, indicating that no valid value is obtained.
+                     */
+                    std::vector<Tag> m_tag;
+                    bool m_tagHasBeenSet;
+
+                    /**
+                     * Timestamp hotlink protection advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    AdvancedAuthentication m_advancedAuthentication;
+                    bool m_advancedAuthenticationHasBeenSet;
+
+                    /**
+                     * Origin-pull authentication advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    OriginAuthentication m_originAuthentication;
+                    bool m_originAuthenticationHasBeenSet;
+
+                    /**
+                     * IPv6 access configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    Ipv6Access m_ipv6Access;
+                    bool m_ipv6AccessHasBeenSet;
+
+                    /**
+                     * Advanced configuration settings
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<AdvanceConfig> m_advanceSet;
+                    bool m_advanceSetHasBeenSet;
+
+                    /**
+                     * Offline cache (only available to beta users)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    OfflineCache m_offlineCache;
+                    bool m_offlineCacheHasBeenSet;
+
+                    /**
+                     * Merging origin-pull requests (only available to beta users)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    OriginCombine m_originCombine;
+                    bool m_originCombineHasBeenSet;
+
+                    /**
+                     * POST request configuration item
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    PostSize m_postMaxSize;
+                    bool m_postMaxSizeHasBeenSet;
+
+                    /**
+                     * QUIC configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    Quic m_quic;
+                    bool m_quicHasBeenSet;
+
+                    /**
+                     * Access authentication for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    OssPrivateAccess m_ossPrivateAccess;
+                    bool m_ossPrivateAccessHasBeenSet;
+
+                    /**
+                     * WebSocket configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    WebSocket m_webSocket;
+                    bool m_webSocketHasBeenSet;
+
+                    /**
+                     * Remote authentication configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    RemoteAuthentication m_remoteAuthentication;
+                    bool m_remoteAuthenticationHasBeenSet;
+
+                    /**
+                     * Shared CNAME configuration (only available to beta users)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    ShareCname m_shareCname;
+                    bool m_shareCnameHasBeenSet;
 
                 };
             }

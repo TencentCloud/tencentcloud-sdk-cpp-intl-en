@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Monitor::V20180724::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribePolicyConditionListConfigManual::DescribePolicyConditionListConfigManual() :
@@ -31,7 +30,7 @@ DescribePolicyConditionListConfigManual::DescribePolicyConditionListConfigManual
 {
 }
 
-CoreInternalOutcome DescribePolicyConditionListConfigManual::Deserialize(const Value &value)
+CoreInternalOutcome DescribePolicyConditionListConfigManual::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -40,7 +39,7 @@ CoreInternalOutcome DescribePolicyConditionListConfigManual::Deserialize(const V
     {
         if (!value["CalcType"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyConditionListConfigManual.CalcType` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyConditionListConfigManual.CalcType` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_calcType.Deserialize(value["CalcType"]);
@@ -57,7 +56,7 @@ CoreInternalOutcome DescribePolicyConditionListConfigManual::Deserialize(const V
     {
         if (!value["CalcValue"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyConditionListConfigManual.CalcValue` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyConditionListConfigManual.CalcValue` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_calcValue.Deserialize(value["CalcValue"]);
@@ -74,7 +73,7 @@ CoreInternalOutcome DescribePolicyConditionListConfigManual::Deserialize(const V
     {
         if (!value["ContinueTime"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyConditionListConfigManual.ContinueTime` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyConditionListConfigManual.ContinueTime` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_continueTime.Deserialize(value["ContinueTime"]);
@@ -91,7 +90,7 @@ CoreInternalOutcome DescribePolicyConditionListConfigManual::Deserialize(const V
     {
         if (!value["Period"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyConditionListConfigManual.Period` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyConditionListConfigManual.Period` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_period.Deserialize(value["Period"]);
@@ -108,7 +107,7 @@ CoreInternalOutcome DescribePolicyConditionListConfigManual::Deserialize(const V
     {
         if (!value["PeriodNum"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyConditionListConfigManual.PeriodNum` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyConditionListConfigManual.PeriodNum` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_periodNum.Deserialize(value["PeriodNum"]);
@@ -125,7 +124,7 @@ CoreInternalOutcome DescribePolicyConditionListConfigManual::Deserialize(const V
     {
         if (!value["StatType"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `DescribePolicyConditionListConfigManual.StatType` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DescribePolicyConditionListConfigManual.StatType` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_statType.Deserialize(value["StatType"]);
@@ -142,60 +141,60 @@ CoreInternalOutcome DescribePolicyConditionListConfigManual::Deserialize(const V
     return CoreInternalOutcome(true);
 }
 
-void DescribePolicyConditionListConfigManual::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void DescribePolicyConditionListConfigManual::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_calcTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CalcType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_calcType.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_calcValueHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CalcValue";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_calcValue.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_continueTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ContinueTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_continueTime.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_periodHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Period";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_period.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_periodNumHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PeriodNum";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_periodNum.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_statTypeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StatType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_statType.ToJsonObject(value[key.c_str()], allocator);
     }
 

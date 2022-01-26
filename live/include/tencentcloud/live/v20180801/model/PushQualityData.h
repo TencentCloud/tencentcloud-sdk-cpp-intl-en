@@ -388,6 +388,24 @@ namespace TencentCloud
                      */
                     bool MateFpsHasBeenSet() const;
 
+                    /**
+                     * 获取Push parameter
+                     * @return StreamParam Push parameter
+                     */
+                    std::string GetStreamParam() const;
+
+                    /**
+                     * 设置Push parameter
+                     * @param StreamParam Push parameter
+                     */
+                    void SetStreamParam(const std::string& _streamParam);
+
+                    /**
+                     * 判断参数 StreamParam 是否已赋值
+                     * @return StreamParam 是否已赋值
+                     */
+                    bool StreamParamHasBeenSet() const;
+
                 private:
 
                     /**
@@ -503,6 +521,12 @@ namespace TencentCloud
                      */
                     uint64_t m_mateFps;
                     bool m_mateFpsHasBeenSet;
+
+                    /**
+                     * Push parameter
+                     */
+                    std::string m_streamParam;
+                    bool m_streamParamHasBeenSet;
 
                 };
             }

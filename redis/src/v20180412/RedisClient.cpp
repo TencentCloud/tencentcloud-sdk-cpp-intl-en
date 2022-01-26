@@ -40,6 +40,49 @@ RedisClient::RedisClient(const Credential &credential, const string &region, con
 }
 
 
+RedisClient::ApplyParamsTemplateOutcome RedisClient::ApplyParamsTemplate(const ApplyParamsTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "ApplyParamsTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ApplyParamsTemplateResponse rsp = ApplyParamsTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ApplyParamsTemplateOutcome(rsp);
+        else
+            return ApplyParamsTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return ApplyParamsTemplateOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::ApplyParamsTemplateAsync(const ApplyParamsTemplateRequest& request, const ApplyParamsTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ApplyParamsTemplate(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RedisClient::ApplyParamsTemplateOutcomeCallable RedisClient::ApplyParamsTemplateCallable(const ApplyParamsTemplateRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ApplyParamsTemplateOutcome()>>(
+        [this, request]()
+        {
+            return this->ApplyParamsTemplate(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 RedisClient::AssociateSecurityGroupsOutcome RedisClient::AssociateSecurityGroups(const AssociateSecurityGroupsRequest &request)
 {
     auto outcome = MakeRequest(request, "AssociateSecurityGroups");
@@ -76,6 +119,49 @@ RedisClient::AssociateSecurityGroupsOutcomeCallable RedisClient::AssociateSecuri
         [this, request]()
         {
             return this->AssociateSecurityGroups(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+RedisClient::ChangeReplicaToMasterOutcome RedisClient::ChangeReplicaToMaster(const ChangeReplicaToMasterRequest &request)
+{
+    auto outcome = MakeRequest(request, "ChangeReplicaToMaster");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ChangeReplicaToMasterResponse rsp = ChangeReplicaToMasterResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ChangeReplicaToMasterOutcome(rsp);
+        else
+            return ChangeReplicaToMasterOutcome(o.GetError());
+    }
+    else
+    {
+        return ChangeReplicaToMasterOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::ChangeReplicaToMasterAsync(const ChangeReplicaToMasterRequest& request, const ChangeReplicaToMasterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ChangeReplicaToMaster(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RedisClient::ChangeReplicaToMasterOutcomeCallable RedisClient::ChangeReplicaToMasterCallable(const ChangeReplicaToMasterRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ChangeReplicaToMasterOutcome()>>(
+        [this, request]()
+        {
+            return this->ChangeReplicaToMaster(request);
         }
     );
 
@@ -255,6 +341,49 @@ RedisClient::CreateInstancesOutcomeCallable RedisClient::CreateInstancesCallable
     return task->get_future();
 }
 
+RedisClient::CreateParamTemplateOutcome RedisClient::CreateParamTemplate(const CreateParamTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateParamTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateParamTemplateResponse rsp = CreateParamTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateParamTemplateOutcome(rsp);
+        else
+            return CreateParamTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateParamTemplateOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::CreateParamTemplateAsync(const CreateParamTemplateRequest& request, const CreateParamTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateParamTemplate(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RedisClient::CreateParamTemplateOutcomeCallable RedisClient::CreateParamTemplateCallable(const CreateParamTemplateRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateParamTemplateOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateParamTemplate(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 RedisClient::DeleteInstanceAccountOutcome RedisClient::DeleteInstanceAccount(const DeleteInstanceAccountRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteInstanceAccount");
@@ -291,6 +420,49 @@ RedisClient::DeleteInstanceAccountOutcomeCallable RedisClient::DeleteInstanceAcc
         [this, request]()
         {
             return this->DeleteInstanceAccount(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+RedisClient::DeleteParamTemplateOutcome RedisClient::DeleteParamTemplate(const DeleteParamTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteParamTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteParamTemplateResponse rsp = DeleteParamTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteParamTemplateOutcome(rsp);
+        else
+            return DeleteParamTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteParamTemplateOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::DeleteParamTemplateAsync(const DeleteParamTemplateRequest& request, const DeleteParamTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteParamTemplate(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RedisClient::DeleteParamTemplateOutcomeCallable RedisClient::DeleteParamTemplateCallable(const DeleteParamTemplateRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteParamTemplateOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteParamTemplate(request);
         }
     );
 
@@ -377,6 +549,49 @@ RedisClient::DescribeBackupUrlOutcomeCallable RedisClient::DescribeBackupUrlCall
         [this, request]()
         {
             return this->DescribeBackupUrl(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+RedisClient::DescribeCommonDBInstancesOutcome RedisClient::DescribeCommonDBInstances(const DescribeCommonDBInstancesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCommonDBInstances");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCommonDBInstancesResponse rsp = DescribeCommonDBInstancesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCommonDBInstancesOutcome(rsp);
+        else
+            return DescribeCommonDBInstancesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCommonDBInstancesOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::DescribeCommonDBInstancesAsync(const DescribeCommonDBInstancesRequest& request, const DescribeCommonDBInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCommonDBInstances(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RedisClient::DescribeCommonDBInstancesOutcomeCallable RedisClient::DescribeCommonDBInstancesCallable(const DescribeCommonDBInstancesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCommonDBInstancesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCommonDBInstances(request);
         }
     );
 
@@ -943,6 +1158,49 @@ RedisClient::DescribeInstanceMonitorTopNCmdTookOutcomeCallable RedisClient::Desc
     return task->get_future();
 }
 
+RedisClient::DescribeInstanceNodeInfoOutcome RedisClient::DescribeInstanceNodeInfo(const DescribeInstanceNodeInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeInstanceNodeInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeInstanceNodeInfoResponse rsp = DescribeInstanceNodeInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeInstanceNodeInfoOutcome(rsp);
+        else
+            return DescribeInstanceNodeInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeInstanceNodeInfoOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::DescribeInstanceNodeInfoAsync(const DescribeInstanceNodeInfoRequest& request, const DescribeInstanceNodeInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeInstanceNodeInfo(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RedisClient::DescribeInstanceNodeInfoOutcomeCallable RedisClient::DescribeInstanceNodeInfoCallable(const DescribeInstanceNodeInfoRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeInstanceNodeInfoOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeInstanceNodeInfo(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 RedisClient::DescribeInstanceParamRecordsOutcome RedisClient::DescribeInstanceParamRecords(const DescribeInstanceParamRecordsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeInstanceParamRecords");
@@ -1115,6 +1373,49 @@ RedisClient::DescribeInstanceShardsOutcomeCallable RedisClient::DescribeInstance
     return task->get_future();
 }
 
+RedisClient::DescribeInstanceZoneInfoOutcome RedisClient::DescribeInstanceZoneInfo(const DescribeInstanceZoneInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeInstanceZoneInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeInstanceZoneInfoResponse rsp = DescribeInstanceZoneInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeInstanceZoneInfoOutcome(rsp);
+        else
+            return DescribeInstanceZoneInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeInstanceZoneInfoOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::DescribeInstanceZoneInfoAsync(const DescribeInstanceZoneInfoRequest& request, const DescribeInstanceZoneInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeInstanceZoneInfo(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RedisClient::DescribeInstanceZoneInfoOutcomeCallable RedisClient::DescribeInstanceZoneInfoCallable(const DescribeInstanceZoneInfoRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeInstanceZoneInfoOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeInstanceZoneInfo(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 RedisClient::DescribeInstancesOutcome RedisClient::DescribeInstances(const DescribeInstancesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeInstances");
@@ -1151,6 +1452,135 @@ RedisClient::DescribeInstancesOutcomeCallable RedisClient::DescribeInstancesCall
         [this, request]()
         {
             return this->DescribeInstances(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+RedisClient::DescribeMaintenanceWindowOutcome RedisClient::DescribeMaintenanceWindow(const DescribeMaintenanceWindowRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMaintenanceWindow");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMaintenanceWindowResponse rsp = DescribeMaintenanceWindowResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMaintenanceWindowOutcome(rsp);
+        else
+            return DescribeMaintenanceWindowOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMaintenanceWindowOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::DescribeMaintenanceWindowAsync(const DescribeMaintenanceWindowRequest& request, const DescribeMaintenanceWindowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeMaintenanceWindow(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RedisClient::DescribeMaintenanceWindowOutcomeCallable RedisClient::DescribeMaintenanceWindowCallable(const DescribeMaintenanceWindowRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeMaintenanceWindowOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeMaintenanceWindow(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+RedisClient::DescribeParamTemplateInfoOutcome RedisClient::DescribeParamTemplateInfo(const DescribeParamTemplateInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeParamTemplateInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeParamTemplateInfoResponse rsp = DescribeParamTemplateInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeParamTemplateInfoOutcome(rsp);
+        else
+            return DescribeParamTemplateInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeParamTemplateInfoOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::DescribeParamTemplateInfoAsync(const DescribeParamTemplateInfoRequest& request, const DescribeParamTemplateInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeParamTemplateInfo(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RedisClient::DescribeParamTemplateInfoOutcomeCallable RedisClient::DescribeParamTemplateInfoCallable(const DescribeParamTemplateInfoRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeParamTemplateInfoOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeParamTemplateInfo(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+RedisClient::DescribeParamTemplatesOutcome RedisClient::DescribeParamTemplates(const DescribeParamTemplatesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeParamTemplates");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeParamTemplatesResponse rsp = DescribeParamTemplatesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeParamTemplatesOutcome(rsp);
+        else
+            return DescribeParamTemplatesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeParamTemplatesOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::DescribeParamTemplatesAsync(const DescribeParamTemplatesRequest& request, const DescribeParamTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeParamTemplates(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RedisClient::DescribeParamTemplatesOutcomeCallable RedisClient::DescribeParamTemplatesCallable(const DescribeParamTemplatesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeParamTemplatesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeParamTemplates(request);
         }
     );
 
@@ -1287,6 +1717,49 @@ RedisClient::DescribeProjectSecurityGroupsOutcomeCallable RedisClient::DescribeP
     return task->get_future();
 }
 
+RedisClient::DescribeProxySlowLogOutcome RedisClient::DescribeProxySlowLog(const DescribeProxySlowLogRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeProxySlowLog");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeProxySlowLogResponse rsp = DescribeProxySlowLogResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeProxySlowLogOutcome(rsp);
+        else
+            return DescribeProxySlowLogOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeProxySlowLogOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::DescribeProxySlowLogAsync(const DescribeProxySlowLogRequest& request, const DescribeProxySlowLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeProxySlowLog(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RedisClient::DescribeProxySlowLogOutcomeCallable RedisClient::DescribeProxySlowLogCallable(const DescribeProxySlowLogRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeProxySlowLogOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeProxySlowLog(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 RedisClient::DescribeSlowLogOutcome RedisClient::DescribeSlowLog(const DescribeSlowLogRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeSlowLog");
@@ -1409,6 +1882,49 @@ RedisClient::DescribeTaskListOutcomeCallable RedisClient::DescribeTaskListCallab
         [this, request]()
         {
             return this->DescribeTaskList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+RedisClient::DescribeTendisSlowLogOutcome RedisClient::DescribeTendisSlowLog(const DescribeTendisSlowLogRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeTendisSlowLog");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeTendisSlowLogResponse rsp = DescribeTendisSlowLogResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeTendisSlowLogOutcome(rsp);
+        else
+            return DescribeTendisSlowLogOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeTendisSlowLogOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::DescribeTendisSlowLogAsync(const DescribeTendisSlowLogRequest& request, const DescribeTendisSlowLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeTendisSlowLog(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RedisClient::DescribeTendisSlowLogOutcomeCallable RedisClient::DescribeTendisSlowLogCallable(const DescribeTendisSlowLogRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeTendisSlowLogOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeTendisSlowLog(request);
         }
     );
 
@@ -1624,6 +2140,135 @@ RedisClient::EnableReplicaReadonlyOutcomeCallable RedisClient::EnableReplicaRead
         [this, request]()
         {
             return this->EnableReplicaReadonly(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+RedisClient::InquiryPriceCreateInstanceOutcome RedisClient::InquiryPriceCreateInstance(const InquiryPriceCreateInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "InquiryPriceCreateInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        InquiryPriceCreateInstanceResponse rsp = InquiryPriceCreateInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return InquiryPriceCreateInstanceOutcome(rsp);
+        else
+            return InquiryPriceCreateInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return InquiryPriceCreateInstanceOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::InquiryPriceCreateInstanceAsync(const InquiryPriceCreateInstanceRequest& request, const InquiryPriceCreateInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->InquiryPriceCreateInstance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RedisClient::InquiryPriceCreateInstanceOutcomeCallable RedisClient::InquiryPriceCreateInstanceCallable(const InquiryPriceCreateInstanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<InquiryPriceCreateInstanceOutcome()>>(
+        [this, request]()
+        {
+            return this->InquiryPriceCreateInstance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+RedisClient::InquiryPriceUpgradeInstanceOutcome RedisClient::InquiryPriceUpgradeInstance(const InquiryPriceUpgradeInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "InquiryPriceUpgradeInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        InquiryPriceUpgradeInstanceResponse rsp = InquiryPriceUpgradeInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return InquiryPriceUpgradeInstanceOutcome(rsp);
+        else
+            return InquiryPriceUpgradeInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return InquiryPriceUpgradeInstanceOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::InquiryPriceUpgradeInstanceAsync(const InquiryPriceUpgradeInstanceRequest& request, const InquiryPriceUpgradeInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->InquiryPriceUpgradeInstance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RedisClient::InquiryPriceUpgradeInstanceOutcomeCallable RedisClient::InquiryPriceUpgradeInstanceCallable(const InquiryPriceUpgradeInstanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<InquiryPriceUpgradeInstanceOutcome()>>(
+        [this, request]()
+        {
+            return this->InquiryPriceUpgradeInstance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+RedisClient::KillMasterGroupOutcome RedisClient::KillMasterGroup(const KillMasterGroupRequest &request)
+{
+    auto outcome = MakeRequest(request, "KillMasterGroup");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        KillMasterGroupResponse rsp = KillMasterGroupResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return KillMasterGroupOutcome(rsp);
+        else
+            return KillMasterGroupOutcome(o.GetError());
+    }
+    else
+    {
+        return KillMasterGroupOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::KillMasterGroupAsync(const KillMasterGroupRequest& request, const KillMasterGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->KillMasterGroup(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RedisClient::KillMasterGroupOutcomeCallable RedisClient::KillMasterGroupCallable(const KillMasterGroupRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<KillMasterGroupOutcome()>>(
+        [this, request]()
+        {
+            return this->KillMasterGroup(request);
         }
     );
 
@@ -1932,6 +2577,49 @@ RedisClient::ModifyInstanceParamsOutcomeCallable RedisClient::ModifyInstancePara
     return task->get_future();
 }
 
+RedisClient::ModifyMaintenanceWindowOutcome RedisClient::ModifyMaintenanceWindow(const ModifyMaintenanceWindowRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyMaintenanceWindow");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyMaintenanceWindowResponse rsp = ModifyMaintenanceWindowResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyMaintenanceWindowOutcome(rsp);
+        else
+            return ModifyMaintenanceWindowOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyMaintenanceWindowOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::ModifyMaintenanceWindowAsync(const ModifyMaintenanceWindowRequest& request, const ModifyMaintenanceWindowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyMaintenanceWindow(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RedisClient::ModifyMaintenanceWindowOutcomeCallable RedisClient::ModifyMaintenanceWindowCallable(const ModifyMaintenanceWindowRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyMaintenanceWindowOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyMaintenanceWindow(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 RedisClient::ModifyNetworkConfigOutcome RedisClient::ModifyNetworkConfig(const ModifyNetworkConfigRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyNetworkConfig");
@@ -1968,6 +2656,49 @@ RedisClient::ModifyNetworkConfigOutcomeCallable RedisClient::ModifyNetworkConfig
         [this, request]()
         {
             return this->ModifyNetworkConfig(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+RedisClient::ModifyParamTemplateOutcome RedisClient::ModifyParamTemplate(const ModifyParamTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyParamTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyParamTemplateResponse rsp = ModifyParamTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyParamTemplateOutcome(rsp);
+        else
+            return ModifyParamTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyParamTemplateOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::ModifyParamTemplateAsync(const ModifyParamTemplateRequest& request, const ModifyParamTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyParamTemplate(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RedisClient::ModifyParamTemplateOutcomeCallable RedisClient::ModifyParamTemplateCallable(const ModifyParamTemplateRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyParamTemplateOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyParamTemplate(request);
         }
     );
 
@@ -2226,6 +2957,92 @@ RedisClient::UpgradeInstanceOutcomeCallable RedisClient::UpgradeInstanceCallable
         [this, request]()
         {
             return this->UpgradeInstance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+RedisClient::UpgradeInstanceVersionOutcome RedisClient::UpgradeInstanceVersion(const UpgradeInstanceVersionRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpgradeInstanceVersion");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpgradeInstanceVersionResponse rsp = UpgradeInstanceVersionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpgradeInstanceVersionOutcome(rsp);
+        else
+            return UpgradeInstanceVersionOutcome(o.GetError());
+    }
+    else
+    {
+        return UpgradeInstanceVersionOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::UpgradeInstanceVersionAsync(const UpgradeInstanceVersionRequest& request, const UpgradeInstanceVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpgradeInstanceVersion(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RedisClient::UpgradeInstanceVersionOutcomeCallable RedisClient::UpgradeInstanceVersionCallable(const UpgradeInstanceVersionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpgradeInstanceVersionOutcome()>>(
+        [this, request]()
+        {
+            return this->UpgradeInstanceVersion(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+RedisClient::UpgradeVersionToMultiAvailabilityZonesOutcome RedisClient::UpgradeVersionToMultiAvailabilityZones(const UpgradeVersionToMultiAvailabilityZonesRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpgradeVersionToMultiAvailabilityZones");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpgradeVersionToMultiAvailabilityZonesResponse rsp = UpgradeVersionToMultiAvailabilityZonesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpgradeVersionToMultiAvailabilityZonesOutcome(rsp);
+        else
+            return UpgradeVersionToMultiAvailabilityZonesOutcome(o.GetError());
+    }
+    else
+    {
+        return UpgradeVersionToMultiAvailabilityZonesOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::UpgradeVersionToMultiAvailabilityZonesAsync(const UpgradeVersionToMultiAvailabilityZonesRequest& request, const UpgradeVersionToMultiAvailabilityZonesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpgradeVersionToMultiAvailabilityZones(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RedisClient::UpgradeVersionToMultiAvailabilityZonesOutcomeCallable RedisClient::UpgradeVersionToMultiAvailabilityZonesCallable(const UpgradeVersionToMultiAvailabilityZonesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpgradeVersionToMultiAvailabilityZonesOutcome()>>(
+        [this, request]()
+        {
+            return this->UpgradeVersionToMultiAvailabilityZones(request);
         }
     );
 

@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeTaskDetailResponse::DescribeTaskDetailResponse() :
@@ -36,26 +35,27 @@ DescribeTaskDetailResponse::DescribeTaskDetailResponse() :
     m_taskNotifyConfigHasBeenSet(false),
     m_tasksPriorityHasBeenSet(false),
     m_sessionIdHasBeenSet(false),
-    m_sessionContextHasBeenSet(false)
+    m_sessionContextHasBeenSet(false),
+    m_extInfoHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -66,11 +66,11 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -78,7 +78,7 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
     {
         if (!rsp["TaskType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TaskType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_taskType = string(rsp["TaskType"].GetString());
         m_taskTypeHasBeenSet = true;
@@ -88,7 +88,7 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
     {
         if (!rsp["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(rsp["Status"].GetString());
         m_statusHasBeenSet = true;
@@ -98,7 +98,7 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
     {
         if (!rsp["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(rsp["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -108,7 +108,7 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
     {
         if (!rsp["BeginProcessTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BeginProcessTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BeginProcessTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_beginProcessTime = string(rsp["BeginProcessTime"].GetString());
         m_beginProcessTimeHasBeenSet = true;
@@ -118,7 +118,7 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
     {
         if (!rsp["FinishTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FinishTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FinishTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_finishTime = string(rsp["FinishTime"].GetString());
         m_finishTimeHasBeenSet = true;
@@ -128,7 +128,7 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
     {
         if (!rsp["WorkflowTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `WorkflowTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WorkflowTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_workflowTask.Deserialize(rsp["WorkflowTask"]);
@@ -145,7 +145,7 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
     {
         if (!rsp["EditMediaTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `EditMediaTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EditMediaTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_editMediaTask.Deserialize(rsp["EditMediaTask"]);
@@ -162,7 +162,7 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
     {
         if (!rsp["LiveStreamProcessTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `LiveStreamProcessTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LiveStreamProcessTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_liveStreamProcessTask.Deserialize(rsp["LiveStreamProcessTask"]);
@@ -179,7 +179,7 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
     {
         if (!rsp["TaskNotifyConfig"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `TaskNotifyConfig` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskNotifyConfig` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_taskNotifyConfig.Deserialize(rsp["TaskNotifyConfig"]);
@@ -196,7 +196,7 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
     {
         if (!rsp["TasksPriority"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `TasksPriority` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TasksPriority` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_tasksPriority = rsp["TasksPriority"].GetInt64();
         m_tasksPriorityHasBeenSet = true;
@@ -206,7 +206,7 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
     {
         if (!rsp["SessionId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SessionId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SessionId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_sessionId = string(rsp["SessionId"].GetString());
         m_sessionIdHasBeenSet = true;
@@ -216,14 +216,149 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
     {
         if (!rsp["SessionContext"].IsString())
         {
-            return CoreInternalOutcome(Error("response `SessionContext` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SessionContext` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_sessionContext = string(rsp["SessionContext"].GetString());
         m_sessionContextHasBeenSet = true;
     }
 
+    if (rsp.HasMember("ExtInfo") && !rsp["ExtInfo"].IsNull())
+    {
+        if (!rsp["ExtInfo"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ExtInfo` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_extInfo = string(rsp["ExtInfo"].GetString());
+        m_extInfoHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeTaskDetailResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_taskTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TaskType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_taskType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_statusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Status";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_createTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CreateTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_beginProcessTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BeginProcessTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_beginProcessTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_finishTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FinishTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_finishTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_workflowTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WorkflowTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_workflowTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_editMediaTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EditMediaTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_editMediaTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_liveStreamProcessTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LiveStreamProcessTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_liveStreamProcessTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_taskNotifyConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TaskNotifyConfig";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_taskNotifyConfig.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_tasksPriorityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TasksPriority";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_tasksPriority, allocator);
+    }
+
+    if (m_sessionIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SessionId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sessionId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_sessionContextHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SessionContext";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sessionContext.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_extInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExtInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_extInfo.c_str(), allocator).Move(), allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 
@@ -345,6 +480,16 @@ string DescribeTaskDetailResponse::GetSessionContext() const
 bool DescribeTaskDetailResponse::SessionContextHasBeenSet() const
 {
     return m_sessionContextHasBeenSet;
+}
+
+string DescribeTaskDetailResponse::GetExtInfo() const
+{
+    return m_extInfo;
+}
+
+bool DescribeTaskDetailResponse::ExtInfoHasBeenSet() const
+{
+    return m_extInfoHasBeenSet;
 }
 
 

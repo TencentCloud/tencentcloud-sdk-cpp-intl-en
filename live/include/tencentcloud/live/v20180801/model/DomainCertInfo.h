@@ -216,6 +216,54 @@ namespace TencentCloud
                      */
                     bool StatusHasBeenSet() const;
 
+                    /**
+                     * 获取List of domain names in the certificate.
+["*.x.com"] for example.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return CertDomains List of domain names in the certificate.
+["*.x.com"] for example.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetCertDomains() const;
+
+                    /**
+                     * 设置List of domain names in the certificate.
+["*.x.com"] for example.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param CertDomains List of domain names in the certificate.
+["*.x.com"] for example.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetCertDomains(const std::vector<std::string>& _certDomains);
+
+                    /**
+                     * 判断参数 CertDomains 是否已赋值
+                     * @return CertDomains 是否已赋值
+                     */
+                    bool CertDomainsHasBeenSet() const;
+
+                    /**
+                     * 获取Tencent Cloud SSL certificate ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return CloudCertId Tencent Cloud SSL certificate ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetCloudCertId() const;
+
+                    /**
+                     * 设置Tencent Cloud SSL certificate ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param CloudCertId Tencent Cloud SSL certificate ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetCloudCertId(const std::string& _cloudCertId);
+
+                    /**
+                     * 判断参数 CloudCertId 是否已赋值
+                     * @return CloudCertId 是否已赋值
+                     */
+                    bool CloudCertIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -273,6 +321,21 @@ namespace TencentCloud
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
+
+                    /**
+                     * List of domain names in the certificate.
+["*.x.com"] for example.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_certDomains;
+                    bool m_certDomainsHasBeenSet;
+
+                    /**
+                     * Tencent Cloud SSL certificate ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_cloudCertId;
+                    bool m_cloudCertIdHasBeenSet;
 
                 };
             }

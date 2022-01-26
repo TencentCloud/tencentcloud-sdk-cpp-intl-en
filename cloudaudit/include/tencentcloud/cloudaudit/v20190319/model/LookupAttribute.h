@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Search criteria
+                * Search criterion
                 */
                 class LookupAttribute : public AbstractModel
                 {
@@ -47,14 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取AttributeKey value range: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
-                     * @return AttributeKey AttributeKey value range: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
+                     * 获取Valid values: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, and EventId
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @return AttributeKey Valid values: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, and EventId
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      */
                     std::string GetAttributeKey() const;
 
                     /**
-                     * 设置AttributeKey value range: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
-                     * @param AttributeKey AttributeKey value range: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
+                     * 设置Valid values: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, and EventId
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @param AttributeKey Valid values: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, and EventId
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      */
                     void SetAttributeKey(const std::string& _attributeKey);
 
@@ -65,14 +69,18 @@ namespace TencentCloud
                     bool AttributeKeyHasBeenSet() const;
 
                     /**
-                     * 获取AttributeValue
-                     * @return AttributeValue AttributeValue
+                     * 获取Value of `AttributeValue`
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @return AttributeValue Value of `AttributeValue`
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      */
                     std::string GetAttributeValue() const;
 
                     /**
-                     * 设置AttributeValue
-                     * @param AttributeValue AttributeValue
+                     * 设置Value of `AttributeValue`
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * @param AttributeValue Value of `AttributeValue`
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      */
                     void SetAttributeValue(const std::string& _attributeValue);
 
@@ -85,13 +93,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * AttributeKey value range: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
+                     * Valid values: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, and EventId
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      */
                     std::string m_attributeKey;
                     bool m_attributeKeyHasBeenSet;
 
                     /**
-                     * AttributeValue
+                     * Value of `AttributeValue`
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      */
                     std::string m_attributeValue;
                     bool m_attributeValueHasBeenSet;

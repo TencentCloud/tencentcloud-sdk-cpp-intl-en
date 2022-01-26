@@ -118,6 +118,60 @@ namespace TencentCloud
                      */
                     bool AutoScalingNotificationIdHasBeenSet() const;
 
+                    /**
+                     * 获取Notification receiver type.
+                     * @return TargetType Notification receiver type.
+                     */
+                    std::string GetTargetType() const;
+
+                    /**
+                     * 设置Notification receiver type.
+                     * @param TargetType Notification receiver type.
+                     */
+                    void SetTargetType(const std::string& _targetType);
+
+                    /**
+                     * 判断参数 TargetType 是否已赋值
+                     * @return TargetType 是否已赋值
+                     */
+                    bool TargetTypeHasBeenSet() const;
+
+                    /**
+                     * 获取CMQ queue name.
+                     * @return QueueName CMQ queue name.
+                     */
+                    std::string GetQueueName() const;
+
+                    /**
+                     * 设置CMQ queue name.
+                     * @param QueueName CMQ queue name.
+                     */
+                    void SetQueueName(const std::string& _queueName);
+
+                    /**
+                     * 判断参数 QueueName 是否已赋值
+                     * @return QueueName 是否已赋值
+                     */
+                    bool QueueNameHasBeenSet() const;
+
+                    /**
+                     * 获取CMQ topic name.
+                     * @return TopicName CMQ topic name.
+                     */
+                    std::string GetTopicName() const;
+
+                    /**
+                     * 设置CMQ topic name.
+                     * @param TopicName CMQ topic name.
+                     */
+                    void SetTopicName(const std::string& _topicName);
+
+                    /**
+                     * 判断参数 TopicName 是否已赋值
+                     * @return TopicName 是否已赋值
+                     */
+                    bool TopicNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -143,6 +197,24 @@ namespace TencentCloud
                      */
                     std::string m_autoScalingNotificationId;
                     bool m_autoScalingNotificationIdHasBeenSet;
+
+                    /**
+                     * Notification receiver type.
+                     */
+                    std::string m_targetType;
+                    bool m_targetTypeHasBeenSet;
+
+                    /**
+                     * CMQ queue name.
+                     */
+                    std::string m_queueName;
+                    bool m_queueNameHasBeenSet;
+
+                    /**
+                     * CMQ topic name.
+                     */
+                    std::string m_topicName;
+                    bool m_topicNameHasBeenSet;
 
                 };
             }

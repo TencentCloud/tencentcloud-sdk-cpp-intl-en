@@ -47,18 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Primary origin server list. The default format is ["ip1:port1", "ip2:port2"].
-Weights can be configured in the origin server list. The weight format of IP origin servers is ["ip1:port1:weight1", "ip2:port2:weight2"].
-                     * @return Origins Primary origin server list. The default format is ["ip1:port1", "ip2:port2"].
-Weights can be configured in the origin server list. The weight format of IP origin servers is ["ip1:port1:weight1", "ip2:port2:weight2"].
+                     * 获取Primary origin server list. IP and the domain name of the origin server cannot be entered at the same time. Configure origin server port in the format of ["origin1:port1", "origin2:port2"]. Configure origin-pull weight in the format of ["origin1::weight1", "origin2::weight2"]. Configure both port and weight in the format of ["origin1:port1:weight1", "origin2:port2:weight2"]. Valid range of weight value: 0 - 100.
+                     * @return Origins Primary origin server list. IP and the domain name of the origin server cannot be entered at the same time. Configure origin server port in the format of ["origin1:port1", "origin2:port2"]. Configure origin-pull weight in the format of ["origin1::weight1", "origin2::weight2"]. Configure both port and weight in the format of ["origin1:port1:weight1", "origin2:port2:weight2"]. Valid range of weight value: 0 - 100.
                      */
                     std::vector<std::string> GetOrigins() const;
 
                     /**
-                     * 设置Primary origin server list. The default format is ["ip1:port1", "ip2:port2"].
-Weights can be configured in the origin server list. The weight format of IP origin servers is ["ip1:port1:weight1", "ip2:port2:weight2"].
-                     * @param Origins Primary origin server list. The default format is ["ip1:port1", "ip2:port2"].
-Weights can be configured in the origin server list. The weight format of IP origin servers is ["ip1:port1:weight1", "ip2:port2:weight2"].
+                     * 设置Primary origin server list. IP and the domain name of the origin server cannot be entered at the same time. Configure origin server port in the format of ["origin1:port1", "origin2:port2"]. Configure origin-pull weight in the format of ["origin1::weight1", "origin2::weight2"]. Configure both port and weight in the format of ["origin1:port1:weight1", "origin2:port2:weight2"]. Valid range of weight value: 0 - 100.
+                     * @param Origins Primary origin server list. IP and the domain name of the origin server cannot be entered at the same time. Configure origin server port in the format of ["origin1:port1", "origin2:port2"]. Configure origin-pull weight in the format of ["origin1::weight1", "origin2::weight2"]. Configure both port and weight in the format of ["origin1:port1:weight1", "origin2:port2:weight2"]. Valid range of weight value: 0 - 100.
                      */
                     void SetOrigins(const std::vector<std::string>& _origins);
 
@@ -118,17 +114,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Origin-pull protocol type. Valid values: http (forced HTTP origin-pull), follow (protocol follow), https (HTTPS origin-pull).
-Note: this field may return null, indicating that no valid values can be obtained.
+If this parameter is left empty, HTTP origin-pull will be used by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return OriginPullProtocol Origin-pull protocol type. Valid values: http (forced HTTP origin-pull), follow (protocol follow), https (HTTPS origin-pull).
-Note: this field may return null, indicating that no valid values can be obtained.
+If this parameter is left empty, HTTP origin-pull will be used by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string GetOriginPullProtocol() const;
 
                     /**
                      * 设置Origin-pull protocol type. Valid values: http (forced HTTP origin-pull), follow (protocol follow), https (HTTPS origin-pull).
-Note: this field may return null, indicating that no valid values can be obtained.
+If this parameter is left empty, HTTP origin-pull will be used by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      * @param OriginPullProtocol Origin-pull protocol type. Valid values: http (forced HTTP origin-pull), follow (protocol follow), https (HTTPS origin-pull).
-Note: this field may return null, indicating that no valid values can be obtained.
+If this parameter is left empty, HTTP origin-pull will be used by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     void SetOriginPullProtocol(const std::string& _originPullProtocol);
 
@@ -185,8 +185,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Primary origin server list. The default format is ["ip1:port1", "ip2:port2"].
-Weights can be configured in the origin server list. The weight format of IP origin servers is ["ip1:port1:weight1", "ip2:port2:weight2"].
+                     * Primary origin server list. IP and the domain name of the origin server cannot be entered at the same time. Configure origin server port in the format of ["origin1:port1", "origin2:port2"]. Configure origin-pull weight in the format of ["origin1::weight1", "origin2::weight2"]. Configure both port and weight in the format of ["origin1:port1:weight1", "origin2:port2:weight2"]. Valid range of weight value: 0 - 100.
                      */
                     std::vector<std::string> m_origins;
                     bool m_originsHasBeenSet;
@@ -208,7 +207,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Origin-pull protocol type. Valid values: http (forced HTTP origin-pull), follow (protocol follow), https (HTTPS origin-pull).
-Note: this field may return null, indicating that no valid values can be obtained.
+If this parameter is left empty, HTTP origin-pull will be used by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string m_originPullProtocol;
                     bool m_originPullProtocolHasBeenSet;

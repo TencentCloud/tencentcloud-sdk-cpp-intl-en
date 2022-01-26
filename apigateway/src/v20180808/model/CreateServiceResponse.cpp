@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Apigateway::V20180808::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateServiceResponse::CreateServiceResponse() :
@@ -38,20 +37,20 @@ CreateServiceResponse::CreateServiceResponse() :
 
 CoreInternalOutcome CreateServiceResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -62,11 +61,11 @@ CoreInternalOutcome CreateServiceResponse::Deserialize(const string &payload)
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -74,7 +73,7 @@ CoreInternalOutcome CreateServiceResponse::Deserialize(const string &payload)
     {
         if (!rsp["ServiceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ServiceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_serviceId = string(rsp["ServiceId"].GetString());
         m_serviceIdHasBeenSet = true;
@@ -84,7 +83,7 @@ CoreInternalOutcome CreateServiceResponse::Deserialize(const string &payload)
     {
         if (!rsp["ServiceName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ServiceName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_serviceName = string(rsp["ServiceName"].GetString());
         m_serviceNameHasBeenSet = true;
@@ -94,7 +93,7 @@ CoreInternalOutcome CreateServiceResponse::Deserialize(const string &payload)
     {
         if (!rsp["ServiceDesc"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ServiceDesc` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceDesc` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_serviceDesc = string(rsp["ServiceDesc"].GetString());
         m_serviceDescHasBeenSet = true;
@@ -104,7 +103,7 @@ CoreInternalOutcome CreateServiceResponse::Deserialize(const string &payload)
     {
         if (!rsp["OuterSubDomain"].IsString())
         {
-            return CoreInternalOutcome(Error("response `OuterSubDomain` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `OuterSubDomain` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_outerSubDomain = string(rsp["OuterSubDomain"].GetString());
         m_outerSubDomainHasBeenSet = true;
@@ -114,7 +113,7 @@ CoreInternalOutcome CreateServiceResponse::Deserialize(const string &payload)
     {
         if (!rsp["InnerSubDomain"].IsString())
         {
-            return CoreInternalOutcome(Error("response `InnerSubDomain` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InnerSubDomain` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_innerSubDomain = string(rsp["InnerSubDomain"].GetString());
         m_innerSubDomainHasBeenSet = true;
@@ -124,7 +123,7 @@ CoreInternalOutcome CreateServiceResponse::Deserialize(const string &payload)
     {
         if (!rsp["CreatedTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CreatedTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createdTime = string(rsp["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
@@ -133,10 +132,10 @@ CoreInternalOutcome CreateServiceResponse::Deserialize(const string &payload)
     if (rsp.HasMember("NetTypes") && !rsp["NetTypes"].IsNull())
     {
         if (!rsp["NetTypes"].IsArray())
-            return CoreInternalOutcome(Error("response `NetTypes` is not array type"));
+            return CoreInternalOutcome(Core::Error("response `NetTypes` is not array type"));
 
-        const Value &tmpValue = rsp["NetTypes"];
-        for (Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        const rapidjson::Value &tmpValue = rsp["NetTypes"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
             m_netTypes.push_back((*itr).GetString());
         }
@@ -147,7 +146,7 @@ CoreInternalOutcome CreateServiceResponse::Deserialize(const string &payload)
     {
         if (!rsp["IpVersion"].IsString())
         {
-            return CoreInternalOutcome(Error("response `IpVersion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `IpVersion` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_ipVersion = string(rsp["IpVersion"].GetString());
         m_ipVersionHasBeenSet = true;
@@ -155,6 +154,92 @@ CoreInternalOutcome CreateServiceResponse::Deserialize(const string &payload)
 
 
     return CoreInternalOutcome(true);
+}
+
+string CreateServiceResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_serviceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ServiceId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_serviceId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_serviceNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ServiceName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_serviceName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_serviceDescHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ServiceDesc";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_serviceDesc.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_outerSubDomainHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OuterSubDomain";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_outerSubDomain.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_innerSubDomainHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InnerSubDomain";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_innerSubDomain.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_createdTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CreatedTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_netTypesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NetTypes";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_netTypes.begin(); itr != m_netTypes.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_ipVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IpVersion";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ipVersion.c_str(), allocator).Move(), allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 

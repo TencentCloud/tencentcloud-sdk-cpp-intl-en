@@ -20,51 +20,64 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Tke::V20180525::Model;
-using namespace rapidjson;
 using namespace std;
 
 CreateClusterInstancesRequest::CreateClusterInstancesRequest() :
     m_clusterIdHasBeenSet(false),
     m_runInstanceParaHasBeenSet(false),
-    m_instanceAdvancedSettingsHasBeenSet(false)
+    m_instanceAdvancedSettingsHasBeenSet(false),
+    m_skipValidateOptionsHasBeenSet(false)
 {
 }
 
 string CreateClusterInstancesRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_clusterIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ClusterId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_clusterId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_clusterId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_runInstanceParaHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "RunInstancePara";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_runInstancePara.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_runInstancePara.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceAdvancedSettingsHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceAdvancedSettings";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_instanceAdvancedSettings.ToJsonObject(d[key.c_str()], allocator);
     }
 
+    if (m_skipValidateOptionsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SkipValidateOptions";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+        for (auto itr = m_skipValidateOptions.begin(); itr != m_skipValidateOptions.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -116,6 +129,22 @@ void CreateClusterInstancesRequest::SetInstanceAdvancedSettings(const InstanceAd
 bool CreateClusterInstancesRequest::InstanceAdvancedSettingsHasBeenSet() const
 {
     return m_instanceAdvancedSettingsHasBeenSet;
+}
+
+vector<string> CreateClusterInstancesRequest::GetSkipValidateOptions() const
+{
+    return m_skipValidateOptions;
+}
+
+void CreateClusterInstancesRequest::SetSkipValidateOptions(const vector<string>& _skipValidateOptions)
+{
+    m_skipValidateOptions = _skipValidateOptions;
+    m_skipValidateOptionsHasBeenSet = true;
+}
+
+bool CreateClusterInstancesRequest::SkipValidateOptionsHasBeenSet() const
+{
+    return m_skipValidateOptionsHasBeenSet;
 }
 
 

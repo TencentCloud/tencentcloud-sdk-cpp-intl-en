@@ -99,14 +99,14 @@ namespace TencentCloud
                     bool RoWeightValuesHasBeenSet() const;
 
                     /**
-                     * 获取Whether to rebalance the loads of RO instances in the RO group. Supported values include `1` (yes) and `0` (no). The default value is `0`. Please note that if this value is set to `1`, connections to the RO instances in the RO group will be interrupted transiently; therefore, you should ensure that your application can reconnect to the databases.
-                     * @return IsBalanceRoLoad Whether to rebalance the loads of RO instances in the RO group. Supported values include `1` (yes) and `0` (no). The default value is `0`. Please note that if this value is set to `1`, connections to the RO instances in the RO group will be interrupted transiently; therefore, you should ensure that your application can reconnect to the databases.
+                     * 获取Whether to rebalance the loads of read-only replicas in the RO group. Valid values: `1` (yes), `0` (no). Default value: `0`. If this parameter is set to `1`, connections to the read-only replicas in the RO group will be interrupted transiently. Please ensure that your application has a reconnection mechanism.
+                     * @return IsBalanceRoLoad Whether to rebalance the loads of read-only replicas in the RO group. Valid values: `1` (yes), `0` (no). Default value: `0`. If this parameter is set to `1`, connections to the read-only replicas in the RO group will be interrupted transiently. Please ensure that your application has a reconnection mechanism.
                      */
                     int64_t GetIsBalanceRoLoad() const;
 
                     /**
-                     * 设置Whether to rebalance the loads of RO instances in the RO group. Supported values include `1` (yes) and `0` (no). The default value is `0`. Please note that if this value is set to `1`, connections to the RO instances in the RO group will be interrupted transiently; therefore, you should ensure that your application can reconnect to the databases.
-                     * @param IsBalanceRoLoad Whether to rebalance the loads of RO instances in the RO group. Supported values include `1` (yes) and `0` (no). The default value is `0`. Please note that if this value is set to `1`, connections to the RO instances in the RO group will be interrupted transiently; therefore, you should ensure that your application can reconnect to the databases.
+                     * 设置Whether to rebalance the loads of read-only replicas in the RO group. Valid values: `1` (yes), `0` (no). Default value: `0`. If this parameter is set to `1`, connections to the read-only replicas in the RO group will be interrupted transiently. Please ensure that your application has a reconnection mechanism.
+                     * @param IsBalanceRoLoad Whether to rebalance the loads of read-only replicas in the RO group. Valid values: `1` (yes), `0` (no). Default value: `0`. If this parameter is set to `1`, connections to the read-only replicas in the RO group will be interrupted transiently. Please ensure that your application has a reconnection mechanism.
                      */
                     void SetIsBalanceRoLoad(const int64_t& _isBalanceRoLoad);
 
@@ -115,6 +115,24 @@ namespace TencentCloud
                      * @return IsBalanceRoLoad 是否已赋值
                      */
                     bool IsBalanceRoLoadHasBeenSet() const;
+
+                    /**
+                     * 获取This field has been deprecated.
+                     * @return ReplicationDelayTime This field has been deprecated.
+                     */
+                    int64_t GetReplicationDelayTime() const;
+
+                    /**
+                     * 设置This field has been deprecated.
+                     * @param ReplicationDelayTime This field has been deprecated.
+                     */
+                    void SetReplicationDelayTime(const int64_t& _replicationDelayTime);
+
+                    /**
+                     * 判断参数 ReplicationDelayTime 是否已赋值
+                     * @return ReplicationDelayTime 是否已赋值
+                     */
+                    bool ReplicationDelayTimeHasBeenSet() const;
 
                 private:
 
@@ -137,10 +155,16 @@ namespace TencentCloud
                     bool m_roWeightValuesHasBeenSet;
 
                     /**
-                     * Whether to rebalance the loads of RO instances in the RO group. Supported values include `1` (yes) and `0` (no). The default value is `0`. Please note that if this value is set to `1`, connections to the RO instances in the RO group will be interrupted transiently; therefore, you should ensure that your application can reconnect to the databases.
+                     * Whether to rebalance the loads of read-only replicas in the RO group. Valid values: `1` (yes), `0` (no). Default value: `0`. If this parameter is set to `1`, connections to the read-only replicas in the RO group will be interrupted transiently. Please ensure that your application has a reconnection mechanism.
                      */
                     int64_t m_isBalanceRoLoad;
                     bool m_isBalanceRoLoadHasBeenSet;
+
+                    /**
+                     * This field has been deprecated.
+                     */
+                    int64_t m_replicationDelayTime;
+                    bool m_replicationDelayTimeHasBeenSet;
 
                 };
             }

@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Kubelet custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @return Kubelet Kubelet custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 获取Kubelet custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return Kubelet Kubelet custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::vector<std::string> GetKubelet() const;
 
                     /**
-                     * 设置Kubelet custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
-                     * @param Kubelet Kubelet custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
+                     * 设置Kubelet custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param Kubelet Kubelet custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     void SetKubelet(const std::vector<std::string>& _kubelet);
 
@@ -71,8 +71,8 @@ Note: this field may return null, indicating that no valid value is obtained.
                 private:
 
                     /**
-                     * Kubelet custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
+                     * Kubelet custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::vector<std::string> m_kubelet;
                     bool m_kubeletHasBeenSet;

@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool EnableMulticastHasBeenSet() const;
 
                     /**
-                     * 获取DNS address. A maximum of 4 addresses is supported. The first one is master server by default, and the rest are slave servers.
-                     * @return DnsServers DNS address. A maximum of 4 addresses is supported. The first one is master server by default, and the rest are slave servers.
+                     * 获取DNS address. A maximum of 4 addresses is supported. The first one is primary server by default, and the rest are secondary servers.
+                     * @return DnsServers DNS address. A maximum of 4 addresses is supported. The first one is primary server by default, and the rest are secondary servers.
                      */
                     std::vector<std::string> GetDnsServers() const;
 
                     /**
-                     * 设置DNS address. A maximum of 4 addresses is supported. The first one is master server by default, and the rest are slave servers.
-                     * @param DnsServers DNS address. A maximum of 4 addresses is supported. The first one is master server by default, and the rest are slave servers.
+                     * 设置DNS address. A maximum of 4 addresses is supported. The first one is primary server by default, and the rest are secondary servers.
+                     * @param DnsServers DNS address. A maximum of 4 addresses is supported. The first one is primary server by default, and the rest are secondary servers.
                      */
                     void SetDnsServers(const std::vector<std::string>& _dnsServers);
 
@@ -153,7 +153,7 @@ namespace TencentCloud
                     bool m_enableMulticastHasBeenSet;
 
                     /**
-                     * DNS address. A maximum of 4 addresses is supported. The first one is master server by default, and the rest are slave servers.
+                     * DNS address. A maximum of 4 addresses is supported. The first one is primary server by default, and the rest are secondary servers.
                      */
                     std::vector<std::string> m_dnsServers;
                     bool m_dnsServersHasBeenSet;

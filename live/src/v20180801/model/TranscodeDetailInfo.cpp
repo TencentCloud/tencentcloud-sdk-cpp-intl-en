@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Live::V20180801::Model;
-using namespace rapidjson;
 using namespace std;
 
 TranscodeDetailInfo::TranscodeDetailInfo() :
@@ -34,7 +33,7 @@ TranscodeDetailInfo::TranscodeDetailInfo() :
 {
 }
 
-CoreInternalOutcome TranscodeDetailInfo::Deserialize(const Value &value)
+CoreInternalOutcome TranscodeDetailInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -43,7 +42,7 @@ CoreInternalOutcome TranscodeDetailInfo::Deserialize(const Value &value)
     {
         if (!value["StreamName"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TranscodeDetailInfo.StreamName` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TranscodeDetailInfo.StreamName` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_streamName = string(value["StreamName"].GetString());
         m_streamNameHasBeenSet = true;
@@ -53,7 +52,7 @@ CoreInternalOutcome TranscodeDetailInfo::Deserialize(const Value &value)
     {
         if (!value["StartTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TranscodeDetailInfo.StartTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TranscodeDetailInfo.StartTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_startTime = string(value["StartTime"].GetString());
         m_startTimeHasBeenSet = true;
@@ -63,7 +62,7 @@ CoreInternalOutcome TranscodeDetailInfo::Deserialize(const Value &value)
     {
         if (!value["EndTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TranscodeDetailInfo.EndTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TranscodeDetailInfo.EndTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_endTime = string(value["EndTime"].GetString());
         m_endTimeHasBeenSet = true;
@@ -73,7 +72,7 @@ CoreInternalOutcome TranscodeDetailInfo::Deserialize(const Value &value)
     {
         if (!value["Duration"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TranscodeDetailInfo.Duration` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TranscodeDetailInfo.Duration` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_duration = value["Duration"].GetUint64();
         m_durationHasBeenSet = true;
@@ -83,7 +82,7 @@ CoreInternalOutcome TranscodeDetailInfo::Deserialize(const Value &value)
     {
         if (!value["ModuleCodec"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TranscodeDetailInfo.ModuleCodec` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TranscodeDetailInfo.ModuleCodec` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_moduleCodec = string(value["ModuleCodec"].GetString());
         m_moduleCodecHasBeenSet = true;
@@ -93,7 +92,7 @@ CoreInternalOutcome TranscodeDetailInfo::Deserialize(const Value &value)
     {
         if (!value["Bitrate"].IsUint64())
         {
-            return CoreInternalOutcome(Error("response `TranscodeDetailInfo.Bitrate` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TranscodeDetailInfo.Bitrate` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_bitrate = value["Bitrate"].GetUint64();
         m_bitrateHasBeenSet = true;
@@ -103,7 +102,7 @@ CoreInternalOutcome TranscodeDetailInfo::Deserialize(const Value &value)
     {
         if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TranscodeDetailInfo.Type` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TranscodeDetailInfo.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_type = string(value["Type"].GetString());
         m_typeHasBeenSet = true;
@@ -113,7 +112,7 @@ CoreInternalOutcome TranscodeDetailInfo::Deserialize(const Value &value)
     {
         if (!value["PushDomain"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TranscodeDetailInfo.PushDomain` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TranscodeDetailInfo.PushDomain` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_pushDomain = string(value["PushDomain"].GetString());
         m_pushDomainHasBeenSet = true;
@@ -123,7 +122,7 @@ CoreInternalOutcome TranscodeDetailInfo::Deserialize(const Value &value)
     {
         if (!value["Resolution"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TranscodeDetailInfo.Resolution` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TranscodeDetailInfo.Resolution` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_resolution = string(value["Resolution"].GetString());
         m_resolutionHasBeenSet = true;
@@ -133,36 +132,36 @@ CoreInternalOutcome TranscodeDetailInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void TranscodeDetailInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void TranscodeDetailInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_streamNameHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StreamName";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_streamName.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_streamName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_startTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "StartTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_startTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_startTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_endTimeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EndTime";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_endTime.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_endTime.c_str(), allocator).Move(), allocator);
     }
 
     if (m_durationHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Duration";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_duration, allocator);
@@ -170,15 +169,15 @@ void TranscodeDetailInfo::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_moduleCodecHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ModuleCodec";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_moduleCodec.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_moduleCodec.c_str(), allocator).Move(), allocator);
     }
 
     if (m_bitrateHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Bitrate";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_bitrate, allocator);
@@ -186,26 +185,26 @@ void TranscodeDetailInfo::ToJsonObject(Value &value, Document::AllocatorType& al
 
     if (m_typeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_type.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
     if (m_pushDomainHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "PushDomain";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_pushDomain.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_pushDomain.c_str(), allocator).Move(), allocator);
     }
 
     if (m_resolutionHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Resolution";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_resolution.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resolution.c_str(), allocator).Move(), allocator);
     }
 
 }

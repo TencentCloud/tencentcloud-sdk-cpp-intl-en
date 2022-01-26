@@ -41,13 +41,14 @@ namespace TencentCloud
                     DescribeTargetHealthResponse();
                     ~DescribeTargetHealthResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取List of CLB instances
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LoadBalancers List of CLB instances
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取CLB instance list
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return LoadBalancers CLB instance list
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<LoadBalancerHealth> GetLoadBalancers() const;
 
@@ -60,8 +61,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * List of CLB instances
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * CLB instance list
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<LoadBalancerHealth> m_loadBalancers;
                     bool m_loadBalancersHasBeenSet;

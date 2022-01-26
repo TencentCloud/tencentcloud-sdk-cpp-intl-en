@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Output of video editing task
                 */
                 class EditMediaTaskOutput : public AbstractModel
                 {
@@ -48,14 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return OutputStorage 
+                     * 获取Target storage of edited file.
+                     * @return OutputStorage Target storage of edited file.
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置
-                     * @param OutputStorage 
+                     * 设置Target storage of edited file.
+                     * @param OutputStorage Target storage of edited file.
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
 
@@ -66,14 +66,14 @@ namespace TencentCloud
                     bool OutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Path 
+                     * 获取Path of edited video file.
+                     * @return Path Path of edited video file.
                      */
                     std::string GetPath() const;
 
                     /**
-                     * 设置
-                     * @param Path 
+                     * 设置Path of edited video file.
+                     * @param Path Path of edited video file.
                      */
                     void SetPath(const std::string& _path);
 
@@ -86,13 +86,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Target storage of edited file.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
 
                     /**
-                     * 
+                     * Path of edited video file.
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;

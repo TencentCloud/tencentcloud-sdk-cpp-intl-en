@@ -48,14 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ResourceType 
+                     * 获取The type of resource that the tag is bound to. The type currently supported is `cluster`.
+                     * @return ResourceType The type of resource that the tag is bound to. The type currently supported is `cluster`.
                      */
                     std::string GetResourceType() const;
 
                     /**
-                     * 设置
-                     * @param ResourceType 
+                     * 设置The type of resource that the tag is bound to. The type currently supported is `cluster`.
+                     * @param ResourceType The type of resource that the tag is bound to. The type currently supported is `cluster`.
                      */
                     void SetResourceType(const std::string& _resourceType);
 
@@ -66,14 +66,14 @@ namespace TencentCloud
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Tags 
+                     * 获取List of tag pairs
+                     * @return Tags List of tag pairs
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置
-                     * @param Tags 
+                     * 设置List of tag pairs
+                     * @param Tags List of tag pairs
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
@@ -86,13 +86,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * The type of resource that the tag is bound to. The type currently supported is `cluster`.
                      */
                     std::string m_resourceType;
                     bool m_resourceTypeHasBeenSet;
 
                     /**
-                     * 
+                     * List of tag pairs
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;

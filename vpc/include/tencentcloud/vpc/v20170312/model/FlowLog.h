@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vpc/v20170312/model/Tag.h>
 
 
 namespace TencentCloud
@@ -101,14 +102,14 @@ namespace TencentCloud
                     bool FlowLogNameHasBeenSet() const;
 
                     /**
-                     * 获取The resource type of the flow log. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
-                     * @return ResourceType The resource type of the flow log. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
+                     * 获取The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
+                     * @return ResourceType The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
                      */
                     std::string GetResourceType() const;
 
                     /**
-                     * 设置The resource type of the flow log. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
-                     * @param ResourceType The resource type of the flow log. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
+                     * 设置The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
+                     * @param ResourceType The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
                      */
                     void SetResourceType(const std::string& _resourceType);
 
@@ -226,6 +227,24 @@ namespace TencentCloud
                      */
                     bool CreatedTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Tag list, such as [{"Key": "city", "Value": "shanghai"}]
+                     * @return TagSet Tag list, such as [{"Key": "city", "Value": "shanghai"}]
+                     */
+                    std::vector<Tag> GetTagSet() const;
+
+                    /**
+                     * 设置Tag list, such as [{"Key": "city", "Value": "shanghai"}]
+                     * @param TagSet Tag list, such as [{"Key": "city", "Value": "shanghai"}]
+                     */
+                    void SetTagSet(const std::vector<Tag>& _tagSet);
+
+                    /**
+                     * 判断参数 TagSet 是否已赋值
+                     * @return TagSet 是否已赋值
+                     */
+                    bool TagSetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -247,7 +266,7 @@ namespace TencentCloud
                     bool m_flowLogNameHasBeenSet;
 
                     /**
-                     * The resource type of the flow log. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
+                     * The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
                      */
                     std::string m_resourceType;
                     bool m_resourceTypeHasBeenSet;
@@ -287,6 +306,12 @@ namespace TencentCloud
                      */
                     std::string m_createdTime;
                     bool m_createdTimeHasBeenSet;
+
+                    /**
+                     * Tag list, such as [{"Key": "city", "Value": "shanghai"}]
+                     */
+                    std::vector<Tag> m_tagSet;
+                    bool m_tagSetHasBeenSet;
 
                 };
             }

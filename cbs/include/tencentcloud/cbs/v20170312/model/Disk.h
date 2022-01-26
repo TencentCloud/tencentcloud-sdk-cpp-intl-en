@@ -24,8 +24,8 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/cbs/v20170312/model/Placement.h>
 #include <tencentcloud/cbs/v20170312/model/Tag.h>
+#include <tencentcloud/cbs/v20170312/model/Placement.h>
 
 
 namespace TencentCloud
@@ -49,6 +49,344 @@ namespace TencentCloud
 
 
                     /**
+                     * 获取Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
+Note: This field may return null, indicating that no valid value was found.
+                     * @return DeleteWithInstance Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    bool GetDeleteWithInstance() const;
+
+                    /**
+                     * 设置Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
+Note: This field may return null, indicating that no valid value was found.
+                     * @param DeleteWithInstance Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    void SetDeleteWithInstance(const bool& _deleteWithInstance);
+
+                    /**
+                     * 判断参数 DeleteWithInstance 是否已赋值
+                     * @return DeleteWithInstance 是否已赋值
+                     */
+                    bool DeleteWithInstanceHasBeenSet() const;
+
+                    /**
+                     * 获取Auto renewal flag. Supported values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically<br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but not renew automatically<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
+Note: This field may return null, indicating that no valid value was found.
+                     * @return RenewFlag Auto renewal flag. Supported values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically<br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but not renew automatically<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    std::string GetRenewFlag() const;
+
+                    /**
+                     * 设置Auto renewal flag. Supported values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically<br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but not renew automatically<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
+Note: This field may return null, indicating that no valid value was found.
+                     * @param RenewFlag Auto renewal flag. Supported values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically<br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but not renew automatically<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    void SetRenewFlag(const std::string& _renewFlag);
+
+                    /**
+                     * 判断参数 RenewFlag 是否已赋值
+                     * @return RenewFlag 是否已赋值
+                     */
+                    bool RenewFlagHasBeenSet() const;
+
+                    /**
+                     * 获取Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
+                     * @return DiskType Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
+                     */
+                    std::string GetDiskType() const;
+
+                    /**
+                     * 设置Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
+                     * @param DiskType Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
+                     */
+                    void SetDiskType(const std::string& _diskType);
+
+                    /**
+                     * 判断参数 DiskType 是否已赋值
+                     * @return DiskType 是否已赋值
+                     */
+                    bool DiskTypeHasBeenSet() const;
+
+                    /**
+                     * 获取The state of the cloud disk. Value range: <br><li>UNATTACHED: Not mounted <br><li>ATTACHING: Mounting <br><li>ATTACHED: Mounted <br><li>DETACHING: Un-mounting <br><li>EXPANDING: Expanding <br><li>ROLLBACKING: Rolling back <br><li>TORECYCE: Pending recycling. <br><li>DUMPING: Copying the hard drive.
+                     * @return DiskState The state of the cloud disk. Value range: <br><li>UNATTACHED: Not mounted <br><li>ATTACHING: Mounting <br><li>ATTACHED: Mounted <br><li>DETACHING: Un-mounting <br><li>EXPANDING: Expanding <br><li>ROLLBACKING: Rolling back <br><li>TORECYCE: Pending recycling. <br><li>DUMPING: Copying the hard drive.
+                     */
+                    std::string GetDiskState() const;
+
+                    /**
+                     * 设置The state of the cloud disk. Value range: <br><li>UNATTACHED: Not mounted <br><li>ATTACHING: Mounting <br><li>ATTACHED: Mounted <br><li>DETACHING: Un-mounting <br><li>EXPANDING: Expanding <br><li>ROLLBACKING: Rolling back <br><li>TORECYCE: Pending recycling. <br><li>DUMPING: Copying the hard drive.
+                     * @param DiskState The state of the cloud disk. Value range: <br><li>UNATTACHED: Not mounted <br><li>ATTACHING: Mounting <br><li>ATTACHED: Mounted <br><li>DETACHING: Un-mounting <br><li>EXPANDING: Expanding <br><li>ROLLBACKING: Rolling back <br><li>TORECYCE: Pending recycling. <br><li>DUMPING: Copying the hard drive.
+                     */
+                    void SetDiskState(const std::string& _diskState);
+
+                    /**
+                     * 判断参数 DiskState 是否已赋值
+                     * @return DiskState 是否已赋值
+                     */
+                    bool DiskStateHasBeenSet() const;
+
+                    /**
+                     * 获取The total number of snapshots of the cloud disk.
+                     * @return SnapshotCount The total number of snapshots of the cloud disk.
+                     */
+                    int64_t GetSnapshotCount() const;
+
+                    /**
+                     * 设置The total number of snapshots of the cloud disk.
+                     * @param SnapshotCount The total number of snapshots of the cloud disk.
+                     */
+                    void SetSnapshotCount(const int64_t& _snapshotCount);
+
+                    /**
+                     * 判断参数 SnapshotCount 是否已赋值
+                     * @return SnapshotCount 是否已赋值
+                     */
+                    bool SnapshotCountHasBeenSet() const;
+
+                    /**
+                     * 获取Cloud disk already mounted to CVM, and both CVM and cloud disk use monthly subscription.<br><li>true: CVM has auto-renewal flag set up, but cloud disk does not.<br><li>false: Cloud disk auto-renewal flag set up normally.
+Note: This field may return null, indicating that no valid value was found.
+                     * @return AutoRenewFlagError Cloud disk already mounted to CVM, and both CVM and cloud disk use monthly subscription.<br><li>true: CVM has auto-renewal flag set up, but cloud disk does not.<br><li>false: Cloud disk auto-renewal flag set up normally.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    bool GetAutoRenewFlagError() const;
+
+                    /**
+                     * 设置Cloud disk already mounted to CVM, and both CVM and cloud disk use monthly subscription.<br><li>true: CVM has auto-renewal flag set up, but cloud disk does not.<br><li>false: Cloud disk auto-renewal flag set up normally.
+Note: This field may return null, indicating that no valid value was found.
+                     * @param AutoRenewFlagError Cloud disk already mounted to CVM, and both CVM and cloud disk use monthly subscription.<br><li>true: CVM has auto-renewal flag set up, but cloud disk does not.<br><li>false: Cloud disk auto-renewal flag set up normally.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    void SetAutoRenewFlagError(const bool& _autoRenewFlagError);
+
+                    /**
+                     * 判断参数 AutoRenewFlagError 是否已赋值
+                     * @return AutoRenewFlagError 是否已赋值
+                     */
+                    bool AutoRenewFlagErrorHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the cloud disk is in the status of snapshot rollback. Value range: <br><li>false: No <br><li>true: Yes
+                     * @return Rollbacking Whether the cloud disk is in the status of snapshot rollback. Value range: <br><li>false: No <br><li>true: Yes
+                     */
+                    bool GetRollbacking() const;
+
+                    /**
+                     * 设置Whether the cloud disk is in the status of snapshot rollback. Value range: <br><li>false: No <br><li>true: Yes
+                     * @param Rollbacking Whether the cloud disk is in the status of snapshot rollback. Value range: <br><li>false: No <br><li>true: Yes
+                     */
+                    void SetRollbacking(const bool& _rollbacking);
+
+                    /**
+                     * 判断参数 Rollbacking 是否已赋值
+                     * @return Rollbacking 是否已赋值
+                     */
+                    bool RollbackingHasBeenSet() const;
+
+                    /**
+                     * 获取For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk's Instance IDs currently mounted to the CVM.
+                     * @return InstanceIdList For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk's Instance IDs currently mounted to the CVM.
+                     */
+                    std::vector<std::string> GetInstanceIdList() const;
+
+                    /**
+                     * 设置For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk's Instance IDs currently mounted to the CVM.
+                     * @param InstanceIdList For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk's Instance IDs currently mounted to the CVM.
+                     */
+                    void SetInstanceIdList(const std::vector<std::string>& _instanceIdList);
+
+                    /**
+                     * 判断参数 InstanceIdList 是否已赋值
+                     * @return InstanceIdList 是否已赋值
+                     */
+                    bool InstanceIdListHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the cloud disk is encrypted. Value range: <br><li>false: Not encrypted <br><li>true: Encrypted.
+                     * @return Encrypt Whether the cloud disk is encrypted. Value range: <br><li>false: Not encrypted <br><li>true: Encrypted.
+                     */
+                    bool GetEncrypt() const;
+
+                    /**
+                     * 设置Whether the cloud disk is encrypted. Value range: <br><li>false: Not encrypted <br><li>true: Encrypted.
+                     * @param Encrypt Whether the cloud disk is encrypted. Value range: <br><li>false: Not encrypted <br><li>true: Encrypted.
+                     */
+                    void SetEncrypt(const bool& _encrypt);
+
+                    /**
+                     * 判断参数 Encrypt 是否已赋值
+                     * @return Encrypt 是否已赋值
+                     */
+                    bool EncryptHasBeenSet() const;
+
+                    /**
+                     * 获取Cloud disk name.
+                     * @return DiskName Cloud disk name.
+                     */
+                    std::string GetDiskName() const;
+
+                    /**
+                     * 设置Cloud disk name.
+                     * @param DiskName Cloud disk name.
+                     */
+                    void SetDiskName(const std::string& _diskName);
+
+                    /**
+                     * 判断参数 DiskName 是否已赋值
+                     * @return DiskName 是否已赋值
+                     */
+                    bool DiskNameHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies whether to create a snapshot when the cloud disk is terminated due to overdue payment or expiration. `true`: create snapshot; `false`: do not create snapshot.
+                     * @return BackupDisk Specifies whether to create a snapshot when the cloud disk is terminated due to overdue payment or expiration. `true`: create snapshot; `false`: do not create snapshot.
+                     */
+                    bool GetBackupDisk() const;
+
+                    /**
+                     * 设置Specifies whether to create a snapshot when the cloud disk is terminated due to overdue payment or expiration. `true`: create snapshot; `false`: do not create snapshot.
+                     * @param BackupDisk Specifies whether to create a snapshot when the cloud disk is terminated due to overdue payment or expiration. `true`: create snapshot; `false`: do not create snapshot.
+                     */
+                    void SetBackupDisk(const bool& _backupDisk);
+
+                    /**
+                     * 判断参数 BackupDisk 是否已赋值
+                     * @return BackupDisk 是否已赋值
+                     */
+                    bool BackupDiskHasBeenSet() const;
+
+                    /**
+                     * 获取The tag bound to the cloud disk. The value Null is used when no tag is bound to the cloud disk.
+Note: This field may return null, indicating that no valid value was found.
+                     * @return Tags The tag bound to the cloud disk. The value Null is used when no tag is bound to the cloud disk.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置The tag bound to the cloud disk. The value Null is used when no tag is bound to the cloud disk.
+Note: This field may return null, indicating that no valid value was found.
+                     * @param Tags The tag bound to the cloud disk. The value Null is used when no tag is bound to the cloud disk.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取ID of the CVM to which the cloud disk is mounted.
+                     * @return InstanceId ID of the CVM to which the cloud disk is mounted.
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置ID of the CVM to which the cloud disk is mounted.
+                     * @param InstanceId ID of the CVM to which the cloud disk is mounted.
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Cloud disk mount method. Valid values: <br><li>PF: mount as a PF (Physical Function)<br><li>VF: mount as a VF (Virtual Function)
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @return AttachMode Cloud disk mount method. Valid values: <br><li>PF: mount as a PF (Physical Function)<br><li>VF: mount as a VF (Virtual Function)
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    std::string GetAttachMode() const;
+
+                    /**
+                     * 设置Cloud disk mount method. Valid values: <br><li>PF: mount as a PF (Physical Function)<br><li>VF: mount as a VF (Virtual Function)
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     * @param AttachMode Cloud disk mount method. Valid values: <br><li>PF: mount as a PF (Physical Function)<br><li>VF: mount as a VF (Virtual Function)
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    void SetAttachMode(const std::string& _attachMode);
+
+                    /**
+                     * 判断参数 AttachMode 是否已赋值
+                     * @return AttachMode 是否已赋值
+                     */
+                    bool AttachModeHasBeenSet() const;
+
+                    /**
+                     * 获取ID of the periodic snapshot associated to the cloud disk. This parameter is returned only if the value of parameter ReturnBindAutoSnapshotPolicy is TRUE when the API DescribeDisks is called.
+Note: This field may return null, indicating that no valid value was found.
+                     * @return AutoSnapshotPolicyIds ID of the periodic snapshot associated to the cloud disk. This parameter is returned only if the value of parameter ReturnBindAutoSnapshotPolicy is TRUE when the API DescribeDisks is called.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    std::vector<std::string> GetAutoSnapshotPolicyIds() const;
+
+                    /**
+                     * 设置ID of the periodic snapshot associated to the cloud disk. This parameter is returned only if the value of parameter ReturnBindAutoSnapshotPolicy is TRUE when the API DescribeDisks is called.
+Note: This field may return null, indicating that no valid value was found.
+                     * @param AutoSnapshotPolicyIds ID of the periodic snapshot associated to the cloud disk. This parameter is returned only if the value of parameter ReturnBindAutoSnapshotPolicy is TRUE when the API DescribeDisks is called.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    void SetAutoSnapshotPolicyIds(const std::vector<std::string>& _autoSnapshotPolicyIds);
+
+                    /**
+                     * 判断参数 AutoSnapshotPolicyIds 是否已赋值
+                     * @return AutoSnapshotPolicyIds 是否已赋值
+                     */
+                    bool AutoSnapshotPolicyIdsHasBeenSet() const;
+
+                    /**
+                     * 获取Extra performance for a cloud disk, in MB/sec.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return ThroughputPerformance Extra performance for a cloud disk, in MB/sec.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetThroughputPerformance() const;
+
+                    /**
+                     * 设置Extra performance for a cloud disk, in MB/sec.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param ThroughputPerformance Extra performance for a cloud disk, in MB/sec.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetThroughputPerformance(const uint64_t& _throughputPerformance);
+
+                    /**
+                     * 判断参数 ThroughputPerformance 是否已赋值
+                     * @return ThroughputPerformance 是否已赋值
+                     */
+                    bool ThroughputPerformanceHasBeenSet() const;
+
+                    /**
+                     * 获取Whether cloud disk is in process of type change. Value range: <br><li>false: Cloud disk not in process of type change. <br><li>true: Cloud disk type change has been launched, and migration is in process.
+Note: This field may return null, indicating that no valid value was found.
+                     * @return Migrating Whether cloud disk is in process of type change. Value range: <br><li>false: Cloud disk not in process of type change. <br><li>true: Cloud disk type change has been launched, and migration is in process.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    bool GetMigrating() const;
+
+                    /**
+                     * 设置Whether cloud disk is in process of type change. Value range: <br><li>false: Cloud disk not in process of type change. <br><li>true: Cloud disk type change has been launched, and migration is in process.
+Note: This field may return null, indicating that no valid value was found.
+                     * @param Migrating Whether cloud disk is in process of type change. Value range: <br><li>false: Cloud disk not in process of type change. <br><li>true: Cloud disk type change has been launched, and migration is in process.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    void SetMigrating(const bool& _migrating);
+
+                    /**
+                     * 判断参数 Migrating 是否已赋值
+                     * @return Migrating 是否已赋值
+                     */
+                    bool MigratingHasBeenSet() const;
+
+                    /**
                      * 获取Cloud disk ID.
                      * @return DiskId Cloud disk ID.
                      */
@@ -65,6 +403,140 @@ namespace TencentCloud
                      * @return DiskId 是否已赋值
                      */
                     bool DiskIdHasBeenSet() const;
+
+                    /**
+                     * 获取The total capacity of the snapshots of the cloud disk. Unit: MB.
+                     * @return SnapshotSize The total capacity of the snapshots of the cloud disk. Unit: MB.
+                     */
+                    uint64_t GetSnapshotSize() const;
+
+                    /**
+                     * 设置The total capacity of the snapshots of the cloud disk. Unit: MB.
+                     * @param SnapshotSize The total capacity of the snapshots of the cloud disk. Unit: MB.
+                     */
+                    void SetSnapshotSize(const uint64_t& _snapshotSize);
+
+                    /**
+                     * 判断参数 SnapshotSize 是否已赋值
+                     * @return SnapshotSize 是否已赋值
+                     */
+                    bool SnapshotSizeHasBeenSet() const;
+
+                    /**
+                     * 获取Location of the cloud disk.
+                     * @return Placement Location of the cloud disk.
+                     */
+                    Placement GetPlacement() const;
+
+                    /**
+                     * 设置Location of the cloud disk.
+                     * @param Placement Location of the cloud disk.
+                     */
+                    void SetPlacement(const Placement& _placement);
+
+                    /**
+                     * 判断参数 Placement 是否已赋值
+                     * @return Placement 是否已赋值
+                     */
+                    bool PlacementHasBeenSet() const;
+
+                    /**
+                     * 获取Determines whether or not prepaid cloud disk supports active return. <br><li>true: Active return supported.<br><li>false: Active return not supported.
+Note: This field may return null, indicating that no valid value was found.
+                     * @return IsReturnable Determines whether or not prepaid cloud disk supports active return. <br><li>true: Active return supported.<br><li>false: Active return not supported.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    bool GetIsReturnable() const;
+
+                    /**
+                     * 设置Determines whether or not prepaid cloud disk supports active return. <br><li>true: Active return supported.<br><li>false: Active return not supported.
+Note: This field may return null, indicating that no valid value was found.
+                     * @param IsReturnable Determines whether or not prepaid cloud disk supports active return. <br><li>true: Active return supported.<br><li>false: Active return not supported.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    void SetIsReturnable(const bool& _isReturnable);
+
+                    /**
+                     * 判断参数 IsReturnable 是否已赋值
+                     * @return IsReturnable 是否已赋值
+                     */
+                    bool IsReturnableHasBeenSet() const;
+
+                    /**
+                     * 获取Expiration time of the cloud disk.
+                     * @return DeadlineTime Expiration time of the cloud disk.
+                     */
+                    std::string GetDeadlineTime() const;
+
+                    /**
+                     * 设置Expiration time of the cloud disk.
+                     * @param DeadlineTime Expiration time of the cloud disk.
+                     */
+                    void SetDeadlineTime(const std::string& _deadlineTime);
+
+                    /**
+                     * 判断参数 DeadlineTime 是否已赋值
+                     * @return DeadlineTime 是否已赋值
+                     */
+                    bool DeadlineTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the cloud disk is mounted to the CVM. Value range: <br><li>false: Unmounted <br><li>true: Mounted.
+                     * @return Attached Whether the cloud disk is mounted to the CVM. Value range: <br><li>false: Unmounted <br><li>true: Mounted.
+                     */
+                    bool GetAttached() const;
+
+                    /**
+                     * 设置Whether the cloud disk is mounted to the CVM. Value range: <br><li>false: Unmounted <br><li>true: Mounted.
+                     * @param Attached Whether the cloud disk is mounted to the CVM. Value range: <br><li>false: Unmounted <br><li>true: Mounted.
+                     */
+                    void SetAttached(const bool& _attached);
+
+                    /**
+                     * 判断参数 Attached 是否已赋值
+                     * @return Attached 是否已赋值
+                     */
+                    bool AttachedHasBeenSet() const;
+
+                    /**
+                     * 获取Cloud disk size (in GB).
+                     * @return DiskSize Cloud disk size (in GB).
+                     */
+                    uint64_t GetDiskSize() const;
+
+                    /**
+                     * 设置Cloud disk size (in GB).
+                     * @param DiskSize Cloud disk size (in GB).
+                     */
+                    void SetDiskSize(const uint64_t& _diskSize);
+
+                    /**
+                     * 判断参数 DiskSize 是否已赋值
+                     * @return DiskSize 是否已赋值
+                     */
+                    bool DiskSizeHasBeenSet() const;
+
+                    /**
+                     * 获取Migration progress of cloud disk type change, from 0 to 100.
+Note: This field may return null, indicating that no valid value was found.
+                     * @return MigratePercent Migration progress of cloud disk type change, from 0 to 100.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    uint64_t GetMigratePercent() const;
+
+                    /**
+                     * 设置Migration progress of cloud disk type change, from 0 to 100.
+Note: This field may return null, indicating that no valid value was found.
+                     * @param MigratePercent Migration progress of cloud disk type change, from 0 to 100.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    void SetMigratePercent(const uint64_t& _migratePercent);
+
+                    /**
+                     * 判断参数 MigratePercent 是否已赋值
+                     * @return MigratePercent 是否已赋值
+                     */
+                    bool MigratePercentHasBeenSet() const;
 
                     /**
                      * 获取Cloud disk type. Value range:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
@@ -121,24 +593,6 @@ namespace TencentCloud
                     bool PortableHasBeenSet() const;
 
                     /**
-                     * 获取Location of the cloud disk.
-                     * @return Placement Location of the cloud disk.
-                     */
-                    Placement GetPlacement() const;
-
-                    /**
-                     * 设置Location of the cloud disk.
-                     * @param Placement Location of the cloud disk.
-                     */
-                    void SetPlacement(const Placement& _placement);
-
-                    /**
-                     * 判断参数 Placement 是否已赋值
-                     * @return Placement 是否已赋值
-                     */
-                    bool PlacementHasBeenSet() const;
-
-                    /**
                      * 获取Whether the cloud disk has the capability to create snapshots. Value range: <br><li>false: Cannot create snapshots. true: Can create snapshots.
                      * @return SnapshotAbility Whether the cloud disk has the capability to create snapshots. Value range: <br><li>false: Cannot create snapshots. true: Can create snapshots.
                      */
@@ -155,248 +609,6 @@ namespace TencentCloud
                      * @return SnapshotAbility 是否已赋值
                      */
                     bool SnapshotAbilityHasBeenSet() const;
-
-                    /**
-                     * 获取Cloud disk name.
-                     * @return DiskName Cloud disk name.
-                     */
-                    std::string GetDiskName() const;
-
-                    /**
-                     * 设置Cloud disk name.
-                     * @param DiskName Cloud disk name.
-                     */
-                    void SetDiskName(const std::string& _diskName);
-
-                    /**
-                     * 判断参数 DiskName 是否已赋值
-                     * @return DiskName 是否已赋值
-                     */
-                    bool DiskNameHasBeenSet() const;
-
-                    /**
-                     * 获取Cloud disk size (in GB).
-                     * @return DiskSize Cloud disk size (in GB).
-                     */
-                    uint64_t GetDiskSize() const;
-
-                    /**
-                     * 设置Cloud disk size (in GB).
-                     * @param DiskSize Cloud disk size (in GB).
-                     */
-                    void SetDiskSize(const uint64_t& _diskSize);
-
-                    /**
-                     * 判断参数 DiskSize 是否已赋值
-                     * @return DiskSize 是否已赋值
-                     */
-                    bool DiskSizeHasBeenSet() const;
-
-                    /**
-                     * 获取The state of the cloud disk. Value range: <br><li>UNATTACHED: Not mounted <br><li>ATTACHING: Mounting <br><li>ATTACHED: Mounted <br><li>DETACHING: Un-mounting <br><li>EXPANDING: Expanding <br><li>ROLLBACKING: Rolling back <br><li>TORECYCE: Pending recycling. <br><li>DUMPING: Copying the hard drive.
-                     * @return DiskState The state of the cloud disk. Value range: <br><li>UNATTACHED: Not mounted <br><li>ATTACHING: Mounting <br><li>ATTACHED: Mounted <br><li>DETACHING: Un-mounting <br><li>EXPANDING: Expanding <br><li>ROLLBACKING: Rolling back <br><li>TORECYCE: Pending recycling. <br><li>DUMPING: Copying the hard drive.
-                     */
-                    std::string GetDiskState() const;
-
-                    /**
-                     * 设置The state of the cloud disk. Value range: <br><li>UNATTACHED: Not mounted <br><li>ATTACHING: Mounting <br><li>ATTACHED: Mounted <br><li>DETACHING: Un-mounting <br><li>EXPANDING: Expanding <br><li>ROLLBACKING: Rolling back <br><li>TORECYCE: Pending recycling. <br><li>DUMPING: Copying the hard drive.
-                     * @param DiskState The state of the cloud disk. Value range: <br><li>UNATTACHED: Not mounted <br><li>ATTACHING: Mounting <br><li>ATTACHED: Mounted <br><li>DETACHING: Un-mounting <br><li>EXPANDING: Expanding <br><li>ROLLBACKING: Rolling back <br><li>TORECYCE: Pending recycling. <br><li>DUMPING: Copying the hard drive.
-                     */
-                    void SetDiskState(const std::string& _diskState);
-
-                    /**
-                     * 判断参数 DiskState 是否已赋值
-                     * @return DiskState 是否已赋值
-                     */
-                    bool DiskStateHasBeenSet() const;
-
-                    /**
-                     * 获取Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-                     * @return DiskType Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-                     */
-                    std::string GetDiskType() const;
-
-                    /**
-                     * 设置Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-                     * @param DiskType Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-                     */
-                    void SetDiskType(const std::string& _diskType);
-
-                    /**
-                     * 判断参数 DiskType 是否已赋值
-                     * @return DiskType 是否已赋值
-                     */
-                    bool DiskTypeHasBeenSet() const;
-
-                    /**
-                     * 获取Whether the cloud disk is mounted to the CVM. Value range: <br><li>false: Unmounted <br><li>true: Mounted.
-                     * @return Attached Whether the cloud disk is mounted to the CVM. Value range: <br><li>false: Unmounted <br><li>true: Mounted.
-                     */
-                    bool GetAttached() const;
-
-                    /**
-                     * 设置Whether the cloud disk is mounted to the CVM. Value range: <br><li>false: Unmounted <br><li>true: Mounted.
-                     * @param Attached Whether the cloud disk is mounted to the CVM. Value range: <br><li>false: Unmounted <br><li>true: Mounted.
-                     */
-                    void SetAttached(const bool& _attached);
-
-                    /**
-                     * 判断参数 Attached 是否已赋值
-                     * @return Attached 是否已赋值
-                     */
-                    bool AttachedHasBeenSet() const;
-
-                    /**
-                     * 获取ID of the CVM to which the cloud disk is mounted.
-                     * @return InstanceId ID of the CVM to which the cloud disk is mounted.
-                     */
-                    std::string GetInstanceId() const;
-
-                    /**
-                     * 设置ID of the CVM to which the cloud disk is mounted.
-                     * @param InstanceId ID of the CVM to which the cloud disk is mounted.
-                     */
-                    void SetInstanceId(const std::string& _instanceId);
-
-                    /**
-                     * 判断参数 InstanceId 是否已赋值
-                     * @return InstanceId 是否已赋值
-                     */
-                    bool InstanceIdHasBeenSet() const;
-
-                    /**
-                     * 获取Creation time of the cloud disk.
-                     * @return CreateTime Creation time of the cloud disk.
-                     */
-                    std::string GetCreateTime() const;
-
-                    /**
-                     * 设置Creation time of the cloud disk.
-                     * @param CreateTime Creation time of the cloud disk.
-                     */
-                    void SetCreateTime(const std::string& _createTime);
-
-                    /**
-                     * 判断参数 CreateTime 是否已赋值
-                     * @return CreateTime 是否已赋值
-                     */
-                    bool CreateTimeHasBeenSet() const;
-
-                    /**
-                     * 获取Expiration time of the cloud disk.
-                     * @return DeadlineTime Expiration time of the cloud disk.
-                     */
-                    std::string GetDeadlineTime() const;
-
-                    /**
-                     * 设置Expiration time of the cloud disk.
-                     * @param DeadlineTime Expiration time of the cloud disk.
-                     */
-                    void SetDeadlineTime(const std::string& _deadlineTime);
-
-                    /**
-                     * 判断参数 DeadlineTime 是否已赋值
-                     * @return DeadlineTime 是否已赋值
-                     */
-                    bool DeadlineTimeHasBeenSet() const;
-
-                    /**
-                     * 获取Whether the cloud disk is in the status of snapshot rollback. Value range: <br><li>false: No <br><li>true: Yes
-                     * @return Rollbacking Whether the cloud disk is in the status of snapshot rollback. Value range: <br><li>false: No <br><li>true: Yes
-                     */
-                    bool GetRollbacking() const;
-
-                    /**
-                     * 设置Whether the cloud disk is in the status of snapshot rollback. Value range: <br><li>false: No <br><li>true: Yes
-                     * @param Rollbacking Whether the cloud disk is in the status of snapshot rollback. Value range: <br><li>false: No <br><li>true: Yes
-                     */
-                    void SetRollbacking(const bool& _rollbacking);
-
-                    /**
-                     * 判断参数 Rollbacking 是否已赋值
-                     * @return Rollbacking 是否已赋值
-                     */
-                    bool RollbackingHasBeenSet() const;
-
-                    /**
-                     * 获取Rollback progress of a cloud disk snapshot.
-                     * @return RollbackPercent Rollback progress of a cloud disk snapshot.
-                     */
-                    uint64_t GetRollbackPercent() const;
-
-                    /**
-                     * 设置Rollback progress of a cloud disk snapshot.
-                     * @param RollbackPercent Rollback progress of a cloud disk snapshot.
-                     */
-                    void SetRollbackPercent(const uint64_t& _rollbackPercent);
-
-                    /**
-                     * 判断参数 RollbackPercent 是否已赋值
-                     * @return RollbackPercent 是否已赋值
-                     */
-                    bool RollbackPercentHasBeenSet() const;
-
-                    /**
-                     * 获取Whether the cloud disk is encrypted. Value range: <br><li>false: Not encrypted <br><li>true: Encrypted.
-                     * @return Encrypt Whether the cloud disk is encrypted. Value range: <br><li>false: Not encrypted <br><li>true: Encrypted.
-                     */
-                    bool GetEncrypt() const;
-
-                    /**
-                     * 设置Whether the cloud disk is encrypted. Value range: <br><li>false: Not encrypted <br><li>true: Encrypted.
-                     * @param Encrypt Whether the cloud disk is encrypted. Value range: <br><li>false: Not encrypted <br><li>true: Encrypted.
-                     */
-                    void SetEncrypt(const bool& _encrypt);
-
-                    /**
-                     * 判断参数 Encrypt 是否已赋值
-                     * @return Encrypt 是否已赋值
-                     */
-                    bool EncryptHasBeenSet() const;
-
-                    /**
-                     * 获取Cloud disk already mounted to CVM, and both CVM and cloud disk use monthly subscription.<br><li>true: CVM has auto-renewal flag set up, but cloud disk does not.<br><li>false: Cloud disk auto-renewal flag set up normally.
-Note: This field may return null, indicating that no valid value was found.
-                     * @return AutoRenewFlagError Cloud disk already mounted to CVM, and both CVM and cloud disk use monthly subscription.<br><li>true: CVM has auto-renewal flag set up, but cloud disk does not.<br><li>false: Cloud disk auto-renewal flag set up normally.
-Note: This field may return null, indicating that no valid value was found.
-                     */
-                    bool GetAutoRenewFlagError() const;
-
-                    /**
-                     * 设置Cloud disk already mounted to CVM, and both CVM and cloud disk use monthly subscription.<br><li>true: CVM has auto-renewal flag set up, but cloud disk does not.<br><li>false: Cloud disk auto-renewal flag set up normally.
-Note: This field may return null, indicating that no valid value was found.
-                     * @param AutoRenewFlagError Cloud disk already mounted to CVM, and both CVM and cloud disk use monthly subscription.<br><li>true: CVM has auto-renewal flag set up, but cloud disk does not.<br><li>false: Cloud disk auto-renewal flag set up normally.
-Note: This field may return null, indicating that no valid value was found.
-                     */
-                    void SetAutoRenewFlagError(const bool& _autoRenewFlagError);
-
-                    /**
-                     * 判断参数 AutoRenewFlagError 是否已赋值
-                     * @return AutoRenewFlagError 是否已赋值
-                     */
-                    bool AutoRenewFlagErrorHasBeenSet() const;
-
-                    /**
-                     * 获取Auto renewal flag. Supported values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically<br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but not renew automatically<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
-Note: This field may return null, indicating that no valid value was found.
-                     * @return RenewFlag Auto renewal flag. Supported values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically<br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but not renew automatically<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
-Note: This field may return null, indicating that no valid value was found.
-                     */
-                    std::string GetRenewFlag() const;
-
-                    /**
-                     * 设置Auto renewal flag. Supported values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically<br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but not renew automatically<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
-Note: This field may return null, indicating that no valid value was found.
-                     * @param RenewFlag Auto renewal flag. Supported values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically<br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but not renew automatically<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
-Note: This field may return null, indicating that no valid value was found.
-                     */
-                    void SetRenewFlag(const std::string& _renewFlag);
-
-                    /**
-                     * 判断参数 RenewFlag 是否已赋值
-                     * @return RenewFlag 是否已赋值
-                     */
-                    bool RenewFlagHasBeenSet() const;
 
                     /**
                      * 获取This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false:Expiration time of cloud disk is later than that of the instance.
@@ -421,114 +633,22 @@ Note: This field may return null, indicating that no valid value was found.
                     bool DeadlineErrorHasBeenSet() const;
 
                     /**
-                     * 获取Determines whether or not prepaid cloud disk supports active return. <br><li>true: Active return supported.<br><li>false: Active return not supported.
-Note: This field may return null, indicating that no valid value was found.
-                     * @return IsReturnable Determines whether or not prepaid cloud disk supports active return. <br><li>true: Active return supported.<br><li>false: Active return not supported.
-Note: This field may return null, indicating that no valid value was found.
+                     * 获取Rollback progress of a cloud disk snapshot.
+                     * @return RollbackPercent Rollback progress of a cloud disk snapshot.
                      */
-                    bool GetIsReturnable() const;
+                    uint64_t GetRollbackPercent() const;
 
                     /**
-                     * 设置Determines whether or not prepaid cloud disk supports active return. <br><li>true: Active return supported.<br><li>false: Active return not supported.
-Note: This field may return null, indicating that no valid value was found.
-                     * @param IsReturnable Determines whether or not prepaid cloud disk supports active return. <br><li>true: Active return supported.<br><li>false: Active return not supported.
-Note: This field may return null, indicating that no valid value was found.
+                     * 设置Rollback progress of a cloud disk snapshot.
+                     * @param RollbackPercent Rollback progress of a cloud disk snapshot.
                      */
-                    void SetIsReturnable(const bool& _isReturnable);
+                    void SetRollbackPercent(const uint64_t& _rollbackPercent);
 
                     /**
-                     * 判断参数 IsReturnable 是否已赋值
-                     * @return IsReturnable 是否已赋值
+                     * 判断参数 RollbackPercent 是否已赋值
+                     * @return RollbackPercent 是否已赋值
                      */
-                    bool IsReturnableHasBeenSet() const;
-
-                    /**
-                     * 获取In circumstances where the prepaid cloud disk does not support active return, this parameter indicates the reason that return is not supported. Value range: <br><li>1: The cloud disk has already been returned. <br><li>2: The cloud disk has already expired. <br><li>3: The cloud disk does not support return. <br><li> 8: The limit on the number of returns is exceeded.
-Note: This field may return null, indicating that no valid value was found.
-                     * @return ReturnFailCode In circumstances where the prepaid cloud disk does not support active return, this parameter indicates the reason that return is not supported. Value range: <br><li>1: The cloud disk has already been returned. <br><li>2: The cloud disk has already expired. <br><li>3: The cloud disk does not support return. <br><li> 8: The limit on the number of returns is exceeded.
-Note: This field may return null, indicating that no valid value was found.
-                     */
-                    int64_t GetReturnFailCode() const;
-
-                    /**
-                     * 设置In circumstances where the prepaid cloud disk does not support active return, this parameter indicates the reason that return is not supported. Value range: <br><li>1: The cloud disk has already been returned. <br><li>2: The cloud disk has already expired. <br><li>3: The cloud disk does not support return. <br><li> 8: The limit on the number of returns is exceeded.
-Note: This field may return null, indicating that no valid value was found.
-                     * @param ReturnFailCode In circumstances where the prepaid cloud disk does not support active return, this parameter indicates the reason that return is not supported. Value range: <br><li>1: The cloud disk has already been returned. <br><li>2: The cloud disk has already expired. <br><li>3: The cloud disk does not support return. <br><li> 8: The limit on the number of returns is exceeded.
-Note: This field may return null, indicating that no valid value was found.
-                     */
-                    void SetReturnFailCode(const int64_t& _returnFailCode);
-
-                    /**
-                     * 判断参数 ReturnFailCode 是否已赋值
-                     * @return ReturnFailCode 是否已赋值
-                     */
-                    bool ReturnFailCodeHasBeenSet() const;
-
-                    /**
-                     * 获取ID of the periodic snapshot associated to the cloud disk. This parameter is returned only if the value of parameter ReturnBindAutoSnapshotPolicy is TRUE when the API DescribeDisks is called.
-Note: This field may return null, indicating that no valid value was found.
-                     * @return AutoSnapshotPolicyIds ID of the periodic snapshot associated to the cloud disk. This parameter is returned only if the value of parameter ReturnBindAutoSnapshotPolicy is TRUE when the API DescribeDisks is called.
-Note: This field may return null, indicating that no valid value was found.
-                     */
-                    std::vector<std::string> GetAutoSnapshotPolicyIds() const;
-
-                    /**
-                     * 设置ID of the periodic snapshot associated to the cloud disk. This parameter is returned only if the value of parameter ReturnBindAutoSnapshotPolicy is TRUE when the API DescribeDisks is called.
-Note: This field may return null, indicating that no valid value was found.
-                     * @param AutoSnapshotPolicyIds ID of the periodic snapshot associated to the cloud disk. This parameter is returned only if the value of parameter ReturnBindAutoSnapshotPolicy is TRUE when the API DescribeDisks is called.
-Note: This field may return null, indicating that no valid value was found.
-                     */
-                    void SetAutoSnapshotPolicyIds(const std::vector<std::string>& _autoSnapshotPolicyIds);
-
-                    /**
-                     * 判断参数 AutoSnapshotPolicyIds 是否已赋值
-                     * @return AutoSnapshotPolicyIds 是否已赋值
-                     */
-                    bool AutoSnapshotPolicyIdsHasBeenSet() const;
-
-                    /**
-                     * 获取The tag bound to the cloud disk. The value Null is used when no tag is bound to the cloud disk.
-Note: This field may return null, indicating that no valid value was found.
-                     * @return Tags The tag bound to the cloud disk. The value Null is used when no tag is bound to the cloud disk.
-Note: This field may return null, indicating that no valid value was found.
-                     */
-                    std::vector<Tag> GetTags() const;
-
-                    /**
-                     * 设置The tag bound to the cloud disk. The value Null is used when no tag is bound to the cloud disk.
-Note: This field may return null, indicating that no valid value was found.
-                     * @param Tags The tag bound to the cloud disk. The value Null is used when no tag is bound to the cloud disk.
-Note: This field may return null, indicating that no valid value was found.
-                     */
-                    void SetTags(const std::vector<Tag>& _tags);
-
-                    /**
-                     * 判断参数 Tags 是否已赋值
-                     * @return Tags 是否已赋值
-                     */
-                    bool TagsHasBeenSet() const;
-
-                    /**
-                     * 获取Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
-Note: This field may return null, indicating that no valid value was found.
-                     * @return DeleteWithInstance Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
-Note: This field may return null, indicating that no valid value was found.
-                     */
-                    bool GetDeleteWithInstance() const;
-
-                    /**
-                     * 设置Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
-Note: This field may return null, indicating that no valid value was found.
-                     * @param DeleteWithInstance Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
-Note: This field may return null, indicating that no valid value was found.
-                     */
-                    void SetDeleteWithInstance(const bool& _deleteWithInstance);
-
-                    /**
-                     * 判断参数 DeleteWithInstance 是否已赋值
-                     * @return DeleteWithInstance 是否已赋值
-                     */
-                    bool DeleteWithInstanceHasBeenSet() const;
+                    bool RollbackPercentHasBeenSet() const;
 
                     /**
                      * 获取Number of days from current time until disk expiration (only applicable for prepaid disks).
@@ -553,48 +673,26 @@ Note: This field may return null, indicating that no valid value was found.
                     bool DifferDaysOfDeadlineHasBeenSet() const;
 
                     /**
-                     * 获取Whether cloud disk is in process of type change. Value range: <br><li>false: Cloud disk not in process of type change. <br><li>true: Cloud disk type change has been launched, and migration is in process.
+                     * 获取In circumstances where the prepaid cloud disk does not support active return, this parameter indicates the reason that return is not supported. Value range: <br><li>1: The cloud disk has already been returned. <br><li>2: The cloud disk has already expired. <br><li>3: The cloud disk does not support return. <br><li> 8: The limit on the number of returns is exceeded.
 Note: This field may return null, indicating that no valid value was found.
-                     * @return Migrating Whether cloud disk is in process of type change. Value range: <br><li>false: Cloud disk not in process of type change. <br><li>true: Cloud disk type change has been launched, and migration is in process.
+                     * @return ReturnFailCode In circumstances where the prepaid cloud disk does not support active return, this parameter indicates the reason that return is not supported. Value range: <br><li>1: The cloud disk has already been returned. <br><li>2: The cloud disk has already expired. <br><li>3: The cloud disk does not support return. <br><li> 8: The limit on the number of returns is exceeded.
 Note: This field may return null, indicating that no valid value was found.
                      */
-                    bool GetMigrating() const;
+                    int64_t GetReturnFailCode() const;
 
                     /**
-                     * 设置Whether cloud disk is in process of type change. Value range: <br><li>false: Cloud disk not in process of type change. <br><li>true: Cloud disk type change has been launched, and migration is in process.
+                     * 设置In circumstances where the prepaid cloud disk does not support active return, this parameter indicates the reason that return is not supported. Value range: <br><li>1: The cloud disk has already been returned. <br><li>2: The cloud disk has already expired. <br><li>3: The cloud disk does not support return. <br><li> 8: The limit on the number of returns is exceeded.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param Migrating Whether cloud disk is in process of type change. Value range: <br><li>false: Cloud disk not in process of type change. <br><li>true: Cloud disk type change has been launched, and migration is in process.
+                     * @param ReturnFailCode In circumstances where the prepaid cloud disk does not support active return, this parameter indicates the reason that return is not supported. Value range: <br><li>1: The cloud disk has already been returned. <br><li>2: The cloud disk has already expired. <br><li>3: The cloud disk does not support return. <br><li> 8: The limit on the number of returns is exceeded.
 Note: This field may return null, indicating that no valid value was found.
                      */
-                    void SetMigrating(const bool& _migrating);
+                    void SetReturnFailCode(const int64_t& _returnFailCode);
 
                     /**
-                     * 判断参数 Migrating 是否已赋值
-                     * @return Migrating 是否已赋值
+                     * 判断参数 ReturnFailCode 是否已赋值
+                     * @return ReturnFailCode 是否已赋值
                      */
-                    bool MigratingHasBeenSet() const;
-
-                    /**
-                     * 获取Migration progress of cloud disk type change, from 0 to 100.
-Note: This field may return null, indicating that no valid value was found.
-                     * @return MigratePercent Migration progress of cloud disk type change, from 0 to 100.
-Note: This field may return null, indicating that no valid value was found.
-                     */
-                    uint64_t GetMigratePercent() const;
-
-                    /**
-                     * 设置Migration progress of cloud disk type change, from 0 to 100.
-Note: This field may return null, indicating that no valid value was found.
-                     * @param MigratePercent Migration progress of cloud disk type change, from 0 to 100.
-Note: This field may return null, indicating that no valid value was found.
-                     */
-                    void SetMigratePercent(const uint64_t& _migratePercent);
-
-                    /**
-                     * 判断参数 MigratePercent 是否已赋值
-                     * @return MigratePercent 是否已赋值
-                     */
-                    bool MigratePercentHasBeenSet() const;
+                    bool ReturnFailCodeHasBeenSet() const;
 
                     /**
                      * 获取Whether or not cloud disk is shareable cloud disk.
@@ -615,84 +713,202 @@ Note: This field may return null, indicating that no valid value was found.
                     bool ShareableHasBeenSet() const;
 
                     /**
-                     * 获取For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk's Instance IDs currently mounted to the CVM.
-                     * @return InstanceIdList For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk's Instance IDs currently mounted to the CVM.
+                     * 获取Creation time of the cloud disk.
+                     * @return CreateTime Creation time of the cloud disk.
                      */
-                    std::vector<std::string> GetInstanceIdList() const;
+                    std::string GetCreateTime() const;
 
                     /**
-                     * 设置For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk's Instance IDs currently mounted to the CVM.
-                     * @param InstanceIdList For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk's Instance IDs currently mounted to the CVM.
+                     * 设置Creation time of the cloud disk.
+                     * @param CreateTime Creation time of the cloud disk.
                      */
-                    void SetInstanceIdList(const std::vector<std::string>& _instanceIdList);
+                    void SetCreateTime(const std::string& _createTime);
 
                     /**
-                     * 判断参数 InstanceIdList 是否已赋值
-                     * @return InstanceIdList 是否已赋值
+                     * 判断参数 CreateTime 是否已赋值
+                     * @return CreateTime 是否已赋值
                      */
-                    bool InstanceIdListHasBeenSet() const;
+                    bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取The total number of snapshots of the cloud disk.
-                     * @return SnapshotCount The total number of snapshots of the cloud disk.
+                     * 获取Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+                     * @return DeleteSnapshot Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
                      */
-                    int64_t GetSnapshotCount() const;
+                    int64_t GetDeleteSnapshot() const;
 
                     /**
-                     * 设置The total number of snapshots of the cloud disk.
-                     * @param SnapshotCount The total number of snapshots of the cloud disk.
+                     * 设置Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+                     * @param DeleteSnapshot Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
                      */
-                    void SetSnapshotCount(const int64_t& _snapshotCount);
+                    void SetDeleteSnapshot(const int64_t& _deleteSnapshot);
 
                     /**
-                     * 判断参数 SnapshotCount 是否已赋值
-                     * @return SnapshotCount 是否已赋值
+                     * 判断参数 DeleteSnapshot 是否已赋值
+                     * @return DeleteSnapshot 是否已赋值
                      */
-                    bool SnapshotCountHasBeenSet() const;
-
-                    /**
-                     * 获取The total capacity of the snapshots of the cloud disk. Unit: MB.
-                     * @return SnapshotSize The total capacity of the snapshots of the cloud disk. Unit: MB.
-                     */
-                    uint64_t GetSnapshotSize() const;
-
-                    /**
-                     * 设置The total capacity of the snapshots of the cloud disk. Unit: MB.
-                     * @param SnapshotSize The total capacity of the snapshots of the cloud disk. Unit: MB.
-                     */
-                    void SetSnapshotSize(const uint64_t& _snapshotSize);
-
-                    /**
-                     * 判断参数 SnapshotSize 是否已赋值
-                     * @return SnapshotSize 是否已赋值
-                     */
-                    bool SnapshotSizeHasBeenSet() const;
-
-                    /**
-                     * 获取Indicates whether a snapshot should be created for backup when the cloud disk is terminated due to arrears or expiration. `True`: create a snapshot to backup the disk upon termination. `False`: terminate the disk without backup
-                     * @return BackupDisk Indicates whether a snapshot should be created for backup when the cloud disk is terminated due to arrears or expiration. `True`: create a snapshot to backup the disk upon termination. `False`: terminate the disk without backup
-                     */
-                    bool GetBackupDisk() const;
-
-                    /**
-                     * 设置Indicates whether a snapshot should be created for backup when the cloud disk is terminated due to arrears or expiration. `True`: create a snapshot to backup the disk upon termination. `False`: terminate the disk without backup
-                     * @param BackupDisk Indicates whether a snapshot should be created for backup when the cloud disk is terminated due to arrears or expiration. `True`: create a snapshot to backup the disk upon termination. `False`: terminate the disk without backup
-                     */
-                    void SetBackupDisk(const bool& _backupDisk);
-
-                    /**
-                     * 判断参数 BackupDisk 是否已赋值
-                     * @return BackupDisk 是否已赋值
-                     */
-                    bool BackupDiskHasBeenSet() const;
+                    bool DeleteSnapshotHasBeenSet() const;
 
                 private:
+
+                    /**
+                     * Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    bool m_deleteWithInstance;
+                    bool m_deleteWithInstanceHasBeenSet;
+
+                    /**
+                     * Auto renewal flag. Supported values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically<br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but not renew automatically<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    std::string m_renewFlag;
+                    bool m_renewFlagHasBeenSet;
+
+                    /**
+                     * Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
+                     */
+                    std::string m_diskType;
+                    bool m_diskTypeHasBeenSet;
+
+                    /**
+                     * The state of the cloud disk. Value range: <br><li>UNATTACHED: Not mounted <br><li>ATTACHING: Mounting <br><li>ATTACHED: Mounted <br><li>DETACHING: Un-mounting <br><li>EXPANDING: Expanding <br><li>ROLLBACKING: Rolling back <br><li>TORECYCE: Pending recycling. <br><li>DUMPING: Copying the hard drive.
+                     */
+                    std::string m_diskState;
+                    bool m_diskStateHasBeenSet;
+
+                    /**
+                     * The total number of snapshots of the cloud disk.
+                     */
+                    int64_t m_snapshotCount;
+                    bool m_snapshotCountHasBeenSet;
+
+                    /**
+                     * Cloud disk already mounted to CVM, and both CVM and cloud disk use monthly subscription.<br><li>true: CVM has auto-renewal flag set up, but cloud disk does not.<br><li>false: Cloud disk auto-renewal flag set up normally.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    bool m_autoRenewFlagError;
+                    bool m_autoRenewFlagErrorHasBeenSet;
+
+                    /**
+                     * Whether the cloud disk is in the status of snapshot rollback. Value range: <br><li>false: No <br><li>true: Yes
+                     */
+                    bool m_rollbacking;
+                    bool m_rollbackingHasBeenSet;
+
+                    /**
+                     * For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk's Instance IDs currently mounted to the CVM.
+                     */
+                    std::vector<std::string> m_instanceIdList;
+                    bool m_instanceIdListHasBeenSet;
+
+                    /**
+                     * Whether the cloud disk is encrypted. Value range: <br><li>false: Not encrypted <br><li>true: Encrypted.
+                     */
+                    bool m_encrypt;
+                    bool m_encryptHasBeenSet;
+
+                    /**
+                     * Cloud disk name.
+                     */
+                    std::string m_diskName;
+                    bool m_diskNameHasBeenSet;
+
+                    /**
+                     * Specifies whether to create a snapshot when the cloud disk is terminated due to overdue payment or expiration. `true`: create snapshot; `false`: do not create snapshot.
+                     */
+                    bool m_backupDisk;
+                    bool m_backupDiskHasBeenSet;
+
+                    /**
+                     * The tag bound to the cloud disk. The value Null is used when no tag is bound to the cloud disk.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * ID of the CVM to which the cloud disk is mounted.
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Cloud disk mount method. Valid values: <br><li>PF: mount as a PF (Physical Function)<br><li>VF: mount as a VF (Virtual Function)
+Note: this field may return `null`, indicating that no valid value is obtained.
+                     */
+                    std::string m_attachMode;
+                    bool m_attachModeHasBeenSet;
+
+                    /**
+                     * ID of the periodic snapshot associated to the cloud disk. This parameter is returned only if the value of parameter ReturnBindAutoSnapshotPolicy is TRUE when the API DescribeDisks is called.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    std::vector<std::string> m_autoSnapshotPolicyIds;
+                    bool m_autoSnapshotPolicyIdsHasBeenSet;
+
+                    /**
+                     * Extra performance for a cloud disk, in MB/sec.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_throughputPerformance;
+                    bool m_throughputPerformanceHasBeenSet;
+
+                    /**
+                     * Whether cloud disk is in process of type change. Value range: <br><li>false: Cloud disk not in process of type change. <br><li>true: Cloud disk type change has been launched, and migration is in process.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    bool m_migrating;
+                    bool m_migratingHasBeenSet;
 
                     /**
                      * Cloud disk ID.
                      */
                     std::string m_diskId;
                     bool m_diskIdHasBeenSet;
+
+                    /**
+                     * The total capacity of the snapshots of the cloud disk. Unit: MB.
+                     */
+                    uint64_t m_snapshotSize;
+                    bool m_snapshotSizeHasBeenSet;
+
+                    /**
+                     * Location of the cloud disk.
+                     */
+                    Placement m_placement;
+                    bool m_placementHasBeenSet;
+
+                    /**
+                     * Determines whether or not prepaid cloud disk supports active return. <br><li>true: Active return supported.<br><li>false: Active return not supported.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    bool m_isReturnable;
+                    bool m_isReturnableHasBeenSet;
+
+                    /**
+                     * Expiration time of the cloud disk.
+                     */
+                    std::string m_deadlineTime;
+                    bool m_deadlineTimeHasBeenSet;
+
+                    /**
+                     * Whether the cloud disk is mounted to the CVM. Value range: <br><li>false: Unmounted <br><li>true: Mounted.
+                     */
+                    bool m_attached;
+                    bool m_attachedHasBeenSet;
+
+                    /**
+                     * Cloud disk size (in GB).
+                     */
+                    uint64_t m_diskSize;
+                    bool m_diskSizeHasBeenSet;
+
+                    /**
+                     * Migration progress of cloud disk type change, from 0 to 100.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    uint64_t m_migratePercent;
+                    bool m_migratePercentHasBeenSet;
 
                     /**
                      * Cloud disk type. Value range:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
@@ -713,96 +929,10 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_portableHasBeenSet;
 
                     /**
-                     * Location of the cloud disk.
-                     */
-                    Placement m_placement;
-                    bool m_placementHasBeenSet;
-
-                    /**
                      * Whether the cloud disk has the capability to create snapshots. Value range: <br><li>false: Cannot create snapshots. true: Can create snapshots.
                      */
                     bool m_snapshotAbility;
                     bool m_snapshotAbilityHasBeenSet;
-
-                    /**
-                     * Cloud disk name.
-                     */
-                    std::string m_diskName;
-                    bool m_diskNameHasBeenSet;
-
-                    /**
-                     * Cloud disk size (in GB).
-                     */
-                    uint64_t m_diskSize;
-                    bool m_diskSizeHasBeenSet;
-
-                    /**
-                     * The state of the cloud disk. Value range: <br><li>UNATTACHED: Not mounted <br><li>ATTACHING: Mounting <br><li>ATTACHED: Mounted <br><li>DETACHING: Un-mounting <br><li>EXPANDING: Expanding <br><li>ROLLBACKING: Rolling back <br><li>TORECYCE: Pending recycling. <br><li>DUMPING: Copying the hard drive.
-                     */
-                    std::string m_diskState;
-                    bool m_diskStateHasBeenSet;
-
-                    /**
-                     * Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-                     */
-                    std::string m_diskType;
-                    bool m_diskTypeHasBeenSet;
-
-                    /**
-                     * Whether the cloud disk is mounted to the CVM. Value range: <br><li>false: Unmounted <br><li>true: Mounted.
-                     */
-                    bool m_attached;
-                    bool m_attachedHasBeenSet;
-
-                    /**
-                     * ID of the CVM to which the cloud disk is mounted.
-                     */
-                    std::string m_instanceId;
-                    bool m_instanceIdHasBeenSet;
-
-                    /**
-                     * Creation time of the cloud disk.
-                     */
-                    std::string m_createTime;
-                    bool m_createTimeHasBeenSet;
-
-                    /**
-                     * Expiration time of the cloud disk.
-                     */
-                    std::string m_deadlineTime;
-                    bool m_deadlineTimeHasBeenSet;
-
-                    /**
-                     * Whether the cloud disk is in the status of snapshot rollback. Value range: <br><li>false: No <br><li>true: Yes
-                     */
-                    bool m_rollbacking;
-                    bool m_rollbackingHasBeenSet;
-
-                    /**
-                     * Rollback progress of a cloud disk snapshot.
-                     */
-                    uint64_t m_rollbackPercent;
-                    bool m_rollbackPercentHasBeenSet;
-
-                    /**
-                     * Whether the cloud disk is encrypted. Value range: <br><li>false: Not encrypted <br><li>true: Encrypted.
-                     */
-                    bool m_encrypt;
-                    bool m_encryptHasBeenSet;
-
-                    /**
-                     * Cloud disk already mounted to CVM, and both CVM and cloud disk use monthly subscription.<br><li>true: CVM has auto-renewal flag set up, but cloud disk does not.<br><li>false: Cloud disk auto-renewal flag set up normally.
-Note: This field may return null, indicating that no valid value was found.
-                     */
-                    bool m_autoRenewFlagError;
-                    bool m_autoRenewFlagErrorHasBeenSet;
-
-                    /**
-                     * Auto renewal flag. Supported values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically<br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but not renew automatically<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
-Note: This field may return null, indicating that no valid value was found.
-                     */
-                    std::string m_renewFlag;
-                    bool m_renewFlagHasBeenSet;
 
                     /**
                      * This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false:Expiration time of cloud disk is later than that of the instance.
@@ -812,39 +942,10 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_deadlineErrorHasBeenSet;
 
                     /**
-                     * Determines whether or not prepaid cloud disk supports active return. <br><li>true: Active return supported.<br><li>false: Active return not supported.
-Note: This field may return null, indicating that no valid value was found.
+                     * Rollback progress of a cloud disk snapshot.
                      */
-                    bool m_isReturnable;
-                    bool m_isReturnableHasBeenSet;
-
-                    /**
-                     * In circumstances where the prepaid cloud disk does not support active return, this parameter indicates the reason that return is not supported. Value range: <br><li>1: The cloud disk has already been returned. <br><li>2: The cloud disk has already expired. <br><li>3: The cloud disk does not support return. <br><li> 8: The limit on the number of returns is exceeded.
-Note: This field may return null, indicating that no valid value was found.
-                     */
-                    int64_t m_returnFailCode;
-                    bool m_returnFailCodeHasBeenSet;
-
-                    /**
-                     * ID of the periodic snapshot associated to the cloud disk. This parameter is returned only if the value of parameter ReturnBindAutoSnapshotPolicy is TRUE when the API DescribeDisks is called.
-Note: This field may return null, indicating that no valid value was found.
-                     */
-                    std::vector<std::string> m_autoSnapshotPolicyIds;
-                    bool m_autoSnapshotPolicyIdsHasBeenSet;
-
-                    /**
-                     * The tag bound to the cloud disk. The value Null is used when no tag is bound to the cloud disk.
-Note: This field may return null, indicating that no valid value was found.
-                     */
-                    std::vector<Tag> m_tags;
-                    bool m_tagsHasBeenSet;
-
-                    /**
-                     * Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
-Note: This field may return null, indicating that no valid value was found.
-                     */
-                    bool m_deleteWithInstance;
-                    bool m_deleteWithInstanceHasBeenSet;
+                    uint64_t m_rollbackPercent;
+                    bool m_rollbackPercentHasBeenSet;
 
                     /**
                      * Number of days from current time until disk expiration (only applicable for prepaid disks).
@@ -854,18 +955,11 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_differDaysOfDeadlineHasBeenSet;
 
                     /**
-                     * Whether cloud disk is in process of type change. Value range: <br><li>false: Cloud disk not in process of type change. <br><li>true: Cloud disk type change has been launched, and migration is in process.
+                     * In circumstances where the prepaid cloud disk does not support active return, this parameter indicates the reason that return is not supported. Value range: <br><li>1: The cloud disk has already been returned. <br><li>2: The cloud disk has already expired. <br><li>3: The cloud disk does not support return. <br><li> 8: The limit on the number of returns is exceeded.
 Note: This field may return null, indicating that no valid value was found.
                      */
-                    bool m_migrating;
-                    bool m_migratingHasBeenSet;
-
-                    /**
-                     * Migration progress of cloud disk type change, from 0 to 100.
-Note: This field may return null, indicating that no valid value was found.
-                     */
-                    uint64_t m_migratePercent;
-                    bool m_migratePercentHasBeenSet;
+                    int64_t m_returnFailCode;
+                    bool m_returnFailCodeHasBeenSet;
 
                     /**
                      * Whether or not cloud disk is shareable cloud disk.
@@ -874,28 +968,16 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_shareableHasBeenSet;
 
                     /**
-                     * For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk's Instance IDs currently mounted to the CVM.
+                     * Creation time of the cloud disk.
                      */
-                    std::vector<std::string> m_instanceIdList;
-                    bool m_instanceIdListHasBeenSet;
+                    std::string m_createTime;
+                    bool m_createTimeHasBeenSet;
 
                     /**
-                     * The total number of snapshots of the cloud disk.
+                     * Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
                      */
-                    int64_t m_snapshotCount;
-                    bool m_snapshotCountHasBeenSet;
-
-                    /**
-                     * The total capacity of the snapshots of the cloud disk. Unit: MB.
-                     */
-                    uint64_t m_snapshotSize;
-                    bool m_snapshotSizeHasBeenSet;
-
-                    /**
-                     * Indicates whether a snapshot should be created for backup when the cloud disk is terminated due to arrears or expiration. `True`: create a snapshot to backup the disk upon termination. `False`: terminate the disk without backup
-                     */
-                    bool m_backupDisk;
-                    bool m_backupDiskHasBeenSet;
+                    int64_t m_deleteSnapshot;
+                    bool m_deleteSnapshotHasBeenSet;
 
                 };
             }

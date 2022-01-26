@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of real server IDs.
-                     * @return InstanceIds List of real server IDs.
+                     * 获取List of real server IDs
+                     * @return InstanceIds List of real server IDs
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置List of real server IDs.
-                     * @param InstanceIds List of real server IDs.
+                     * 设置List of real server IDs
+                     * @param InstanceIds List of real server IDs
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
@@ -63,7 +63,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of real server IDs.
+                     * List of real server IDs
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;

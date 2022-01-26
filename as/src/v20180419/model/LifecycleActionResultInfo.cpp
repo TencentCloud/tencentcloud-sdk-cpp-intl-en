@@ -18,7 +18,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::As::V20180419::Model;
-using namespace rapidjson;
 using namespace std;
 
 LifecycleActionResultInfo::LifecycleActionResultInfo() :
@@ -30,7 +29,7 @@ LifecycleActionResultInfo::LifecycleActionResultInfo() :
 {
 }
 
-CoreInternalOutcome LifecycleActionResultInfo::Deserialize(const Value &value)
+CoreInternalOutcome LifecycleActionResultInfo::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,7 +38,7 @@ CoreInternalOutcome LifecycleActionResultInfo::Deserialize(const Value &value)
     {
         if (!value["LifecycleHookId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LifecycleActionResultInfo.LifecycleHookId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LifecycleActionResultInfo.LifecycleHookId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_lifecycleHookId = string(value["LifecycleHookId"].GetString());
         m_lifecycleHookIdHasBeenSet = true;
@@ -49,7 +48,7 @@ CoreInternalOutcome LifecycleActionResultInfo::Deserialize(const Value &value)
     {
         if (!value["InstanceId"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LifecycleActionResultInfo.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LifecycleActionResultInfo.InstanceId` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_instanceId = string(value["InstanceId"].GetString());
         m_instanceIdHasBeenSet = true;
@@ -59,7 +58,7 @@ CoreInternalOutcome LifecycleActionResultInfo::Deserialize(const Value &value)
     {
         if (!value["NotificationResult"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LifecycleActionResultInfo.NotificationResult` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LifecycleActionResultInfo.NotificationResult` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_notificationResult = string(value["NotificationResult"].GetString());
         m_notificationResultHasBeenSet = true;
@@ -69,7 +68,7 @@ CoreInternalOutcome LifecycleActionResultInfo::Deserialize(const Value &value)
     {
         if (!value["LifecycleActionResult"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LifecycleActionResultInfo.LifecycleActionResult` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LifecycleActionResultInfo.LifecycleActionResult` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_lifecycleActionResult = string(value["LifecycleActionResult"].GetString());
         m_lifecycleActionResultHasBeenSet = true;
@@ -79,7 +78,7 @@ CoreInternalOutcome LifecycleActionResultInfo::Deserialize(const Value &value)
     {
         if (!value["ResultReason"].IsString())
         {
-            return CoreInternalOutcome(Error("response `LifecycleActionResultInfo.ResultReason` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `LifecycleActionResultInfo.ResultReason` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_resultReason = string(value["ResultReason"].GetString());
         m_resultReasonHasBeenSet = true;
@@ -89,47 +88,47 @@ CoreInternalOutcome LifecycleActionResultInfo::Deserialize(const Value &value)
     return CoreInternalOutcome(true);
 }
 
-void LifecycleActionResultInfo::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void LifecycleActionResultInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_lifecycleHookIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LifecycleHookId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_lifecycleHookId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_lifecycleHookId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_instanceIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_instanceId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_notificationResultHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "NotificationResult";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_notificationResult.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_notificationResult.c_str(), allocator).Move(), allocator);
     }
 
     if (m_lifecycleActionResultHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LifecycleActionResult";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_lifecycleActionResult.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_lifecycleActionResult.c_str(), allocator).Move(), allocator);
     }
 
     if (m_resultReasonHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ResultReason";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_resultReason.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_resultReason.c_str(), allocator).Move(), allocator);
     }
 
 }

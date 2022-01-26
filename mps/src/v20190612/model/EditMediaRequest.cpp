@@ -20,13 +20,13 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Mps::V20190612::Model;
-using namespace rapidjson;
 using namespace std;
 
 EditMediaRequest::EditMediaRequest() :
     m_fileInfosHasBeenSet(false),
     m_outputStorageHasBeenSet(false),
     m_outputObjectPathHasBeenSet(false),
+    m_outputConfigHasBeenSet(false),
     m_taskNotifyConfigHasBeenSet(false),
     m_tasksPriorityHasBeenSet(false),
     m_sessionIdHasBeenSet(false),
@@ -36,55 +36,64 @@ EditMediaRequest::EditMediaRequest() :
 
 string EditMediaRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_fileInfosHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FileInfos";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
         for (auto itr = m_fileInfos.begin(); itr != m_fileInfos.end(); ++itr, ++i)
         {
-            d[key.c_str()].PushBack(Value(kObjectType).Move(), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
     }
 
     if (m_outputStorageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OutputStorage";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_outputStorage.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_outputObjectPathHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "OutputObjectPath";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_outputObjectPath.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_outputObjectPath.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_outputConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OutputConfig";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_outputConfig.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_taskNotifyConfigHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TaskNotifyConfig";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_taskNotifyConfig.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_tasksPriorityHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "TasksPriority";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_tasksPriority, allocator);
@@ -92,23 +101,23 @@ string EditMediaRequest::ToJsonString() const
 
     if (m_sessionIdHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SessionId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_sessionId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_sessionId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_sessionContextHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SessionContext";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_sessionContext.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_sessionContext.c_str(), allocator).Move(), allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -160,6 +169,22 @@ void EditMediaRequest::SetOutputObjectPath(const string& _outputObjectPath)
 bool EditMediaRequest::OutputObjectPathHasBeenSet() const
 {
     return m_outputObjectPathHasBeenSet;
+}
+
+EditMediaOutputConfig EditMediaRequest::GetOutputConfig() const
+{
+    return m_outputConfig;
+}
+
+void EditMediaRequest::SetOutputConfig(const EditMediaOutputConfig& _outputConfig)
+{
+    m_outputConfig = _outputConfig;
+    m_outputConfigHasBeenSet = true;
+}
+
+bool EditMediaRequest::OutputConfigHasBeenSet() const
+{
+    return m_outputConfigHasBeenSet;
 }
 
 TaskNotifyConfig EditMediaRequest::GetTaskNotifyConfig() const

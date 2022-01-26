@@ -40,11 +40,12 @@ namespace TencentCloud
                     ModifyCertificateAliasResponse();
                     ~ModifyCertificateAliasResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
-                     * 获取ID of the successfully modified certificate.
-                     * @return CertificateId ID of the successfully modified certificate.
+                     * 获取ID of the successfully modified certificate
+                     * @return CertificateId ID of the successfully modified certificate
                      */
                     std::string GetCertificateId() const;
 
@@ -57,7 +58,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the successfully modified certificate.
+                     * ID of the successfully modified certificate
                      */
                     std::string m_certificateId;
                     bool m_certificateIdHasBeenSet;

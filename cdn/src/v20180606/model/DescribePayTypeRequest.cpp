@@ -20,32 +20,40 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using namespace TencentCloud::Cdn::V20180606::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribePayTypeRequest::DescribePayTypeRequest() :
-    m_areaHasBeenSet(false)
+    m_areaHasBeenSet(false),
+    m_productHasBeenSet(false)
 {
 }
 
 string DescribePayTypeRequest::ToJsonString() const
 {
-    Document d;
+    rapidjson::Document d;
     d.SetObject();
-    Document::AllocatorType& allocator = d.GetAllocator();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
     if (m_areaHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Area";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, Value(m_area.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_area.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_productHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Product";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_product.c_str(), allocator).Move(), allocator);
     }
 
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     d.Accept(writer);
     return buffer.GetString();
 }
@@ -65,6 +73,22 @@ void DescribePayTypeRequest::SetArea(const string& _area)
 bool DescribePayTypeRequest::AreaHasBeenSet() const
 {
     return m_areaHasBeenSet;
+}
+
+string DescribePayTypeRequest::GetProduct() const
+{
+    return m_product;
+}
+
+void DescribePayTypeRequest::SetProduct(const string& _product)
+{
+    m_product = _product;
+    m_productHasBeenSet = true;
+}
+
+bool DescribePayTypeRequest::ProductHasBeenSet() const
+{
+    return m_productHasBeenSet;
 }
 
 

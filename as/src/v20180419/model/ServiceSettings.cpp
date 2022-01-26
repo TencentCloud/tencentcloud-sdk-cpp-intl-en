@@ -18,16 +18,16 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::As::V20180419::Model;
-using namespace rapidjson;
 using namespace std;
 
 ServiceSettings::ServiceSettings() :
     m_replaceMonitorUnhealthyHasBeenSet(false),
-    m_scalingModeHasBeenSet(false)
+    m_scalingModeHasBeenSet(false),
+    m_replaceLoadBalancerUnhealthyHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ServiceSettings::Deserialize(const Value &value)
+CoreInternalOutcome ServiceSettings::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -36,7 +36,7 @@ CoreInternalOutcome ServiceSettings::Deserialize(const Value &value)
     {
         if (!value["ReplaceMonitorUnhealthy"].IsBool())
         {
-            return CoreInternalOutcome(Error("response `ServiceSettings.ReplaceMonitorUnhealthy` IsBool=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceSettings.ReplaceMonitorUnhealthy` IsBool=false incorrectly").SetRequestId(requestId));
         }
         m_replaceMonitorUnhealthy = value["ReplaceMonitorUnhealthy"].GetBool();
         m_replaceMonitorUnhealthyHasBeenSet = true;
@@ -46,22 +46,32 @@ CoreInternalOutcome ServiceSettings::Deserialize(const Value &value)
     {
         if (!value["ScalingMode"].IsString())
         {
-            return CoreInternalOutcome(Error("response `ServiceSettings.ScalingMode` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ServiceSettings.ScalingMode` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_scalingMode = string(value["ScalingMode"].GetString());
         m_scalingModeHasBeenSet = true;
+    }
+
+    if (value.HasMember("ReplaceLoadBalancerUnhealthy") && !value["ReplaceLoadBalancerUnhealthy"].IsNull())
+    {
+        if (!value["ReplaceLoadBalancerUnhealthy"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `ServiceSettings.ReplaceLoadBalancerUnhealthy` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_replaceLoadBalancerUnhealthy = value["ReplaceLoadBalancerUnhealthy"].GetBool();
+        m_replaceLoadBalancerUnhealthyHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-void ServiceSettings::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void ServiceSettings::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_replaceMonitorUnhealthyHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ReplaceMonitorUnhealthy";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_replaceMonitorUnhealthy, allocator);
@@ -69,10 +79,18 @@ void ServiceSettings::ToJsonObject(Value &value, Document::AllocatorType& alloca
 
     if (m_scalingModeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ScalingMode";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_scalingMode.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_scalingMode.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_replaceLoadBalancerUnhealthyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ReplaceLoadBalancerUnhealthy";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_replaceLoadBalancerUnhealthy, allocator);
     }
 
 }
@@ -108,5 +126,21 @@ void ServiceSettings::SetScalingMode(const string& _scalingMode)
 bool ServiceSettings::ScalingModeHasBeenSet() const
 {
     return m_scalingModeHasBeenSet;
+}
+
+bool ServiceSettings::GetReplaceLoadBalancerUnhealthy() const
+{
+    return m_replaceLoadBalancerUnhealthy;
+}
+
+void ServiceSettings::SetReplaceLoadBalancerUnhealthy(const bool& _replaceLoadBalancerUnhealthy)
+{
+    m_replaceLoadBalancerUnhealthy = _replaceLoadBalancerUnhealthy;
+    m_replaceLoadBalancerUnhealthyHasBeenSet = true;
+}
+
+bool ServiceSettings::ReplaceLoadBalancerUnhealthyHasBeenSet() const
+{
+    return m_replaceLoadBalancerUnhealthyHasBeenSet;
 }
 

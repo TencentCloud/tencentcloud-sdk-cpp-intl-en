@@ -40,6 +40,7 @@ namespace TencentCloud
                     CreateInstancesResponse();
                     ~CreateInstancesResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -55,8 +56,8 @@ namespace TencentCloud
                     bool DealIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID (this field is during beta test and is not displayed in some regions)
-                     * @return InstanceIds Instance ID (this field is during beta test and is not displayed in some regions)
+                     * 获取Instance ID
+                     * @return InstanceIds Instance ID
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
@@ -75,7 +76,7 @@ namespace TencentCloud
                     bool m_dealIdHasBeenSet;
 
                     /**
-                     * Instance ID (this field is during beta test and is not displayed in some regions)
+                     * Instance ID
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;

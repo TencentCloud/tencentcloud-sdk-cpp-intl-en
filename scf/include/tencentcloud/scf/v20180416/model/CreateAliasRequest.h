@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Alias name, which must be unique in the function, can contain 1–64 letters, digits, `_`, and `-`, and must begin with a letter
-                     * @return Name Alias name, which must be unique in the function, can contain 1–64 letters, digits, `_`, and `-`, and must begin with a letter
+                     * 获取Alias name, which must be unique in the function, can contain 1 to 64 letters, digits, `_`, and `-`, and must begin with a letter
+                     * @return Name Alias name, which must be unique in the function, can contain 1 to 64 letters, digits, `_`, and `-`, and must begin with a letter
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Alias name, which must be unique in the function, can contain 1–64 letters, digits, `_`, and `-`, and must begin with a letter
-                     * @param Name Alias name, which must be unique in the function, can contain 1–64 letters, digits, `_`, and `-`, and must begin with a letter
+                     * 设置Alias name, which must be unique in the function, can contain 1 to 64 letters, digits, `_`, and `-`, and must begin with a letter
+                     * @param Name Alias name, which must be unique in the function, can contain 1 to 64 letters, digits, `_`, and `-`, and must begin with a letter
                      */
                     void SetName(const std::string& _name);
 
@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool FunctionNameHasBeenSet() const;
 
                     /**
-                     * 获取Master version of alias
-                     * @return FunctionVersion Master version of alias
+                     * 获取Master version pointed to by the alias
+                     * @return FunctionVersion Master version pointed to by the alias
                      */
                     std::string GetFunctionVersion() const;
 
                     /**
-                     * 设置Master version of alias
-                     * @param FunctionVersion Master version of alias
+                     * 设置Master version pointed to by the alias
+                     * @param FunctionVersion Master version pointed to by the alias
                      */
                     void SetFunctionVersion(const std::string& _functionVersion);
 
@@ -154,7 +154,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Alias name, which must be unique in the function, can contain 1–64 letters, digits, `_`, and `-`, and must begin with a letter
+                     * Alias name, which must be unique in the function, can contain 1 to 64 letters, digits, `_`, and `-`, and must begin with a letter
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -166,7 +166,7 @@ namespace TencentCloud
                     bool m_functionNameHasBeenSet;
 
                     /**
-                     * Master version of alias
+                     * Master version pointed to by the alias
                      */
                     std::string m_functionVersion;
                     bool m_functionVersionHasBeenSet;

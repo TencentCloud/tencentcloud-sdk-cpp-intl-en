@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vpc/v20170312/model/Tag.h>
 
 
 namespace TencentCloud
@@ -43,24 +44,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the VPC instance
-                     * @return VpcId ID of the VPC instance
-                     */
-                    std::string GetVpcId() const;
-
-                    /**
-                     * 设置ID of the VPC instance
-                     * @param VpcId ID of the VPC instance
-                     */
-                    void SetVpcId(const std::string& _vpcId);
-
-                    /**
-                     * 判断参数 VpcId 是否已赋值
-                     * @return VpcId 是否已赋值
-                     */
-                    bool VpcIdHasBeenSet() const;
-
-                    /**
                      * 获取The name of the flow log instance.
                      * @return FlowLogName The name of the flow log instance.
                      */
@@ -79,14 +62,14 @@ namespace TencentCloud
                     bool FlowLogNameHasBeenSet() const;
 
                     /**
-                     * 获取The type of resources to which the flow log belongs. Valid values: 'VPC', 'SUBNET' and 'NETWORKINTERFACE'.
-                     * @return ResourceType The type of resources to which the flow log belongs. Valid values: 'VPC', 'SUBNET' and 'NETWORKINTERFACE'.
+                     * 获取The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
+                     * @return ResourceType The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
                      */
                     std::string GetResourceType() const;
 
                     /**
-                     * 设置The type of resources to which the flow log belongs. Valid values: 'VPC', 'SUBNET' and 'NETWORKINTERFACE'.
-                     * @param ResourceType The type of resources to which the flow log belongs. Valid values: 'VPC', 'SUBNET' and 'NETWORKINTERFACE'.
+                     * 设置The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
+                     * @param ResourceType The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
                      */
                     void SetResourceType(const std::string& _resourceType);
 
@@ -151,6 +134,24 @@ namespace TencentCloud
                     bool CloudLogIdHasBeenSet() const;
 
                     /**
+                     * 获取The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
+                     * @return VpcId The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
+                     */
+                    std::string GetVpcId() const;
+
+                    /**
+                     * 设置The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
+                     * @param VpcId The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
+                     */
+                    void SetVpcId(const std::string& _vpcId);
+
+                    /**
+                     * 判断参数 VpcId 是否已赋值
+                     * @return VpcId 是否已赋值
+                     */
+                    bool VpcIdHasBeenSet() const;
+
+                    /**
                      * 获取The description of the flow log instance
                      * @return FlowLogDescription The description of the flow log instance
                      */
@@ -168,13 +169,25 @@ namespace TencentCloud
                      */
                     bool FlowLogDescriptionHasBeenSet() const;
 
-                private:
+                    /**
+                     * 获取Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+                     * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+                     */
+                    std::vector<Tag> GetTags() const;
 
                     /**
-                     * ID of the VPC instance
+                     * 设置Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+                     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
                      */
-                    std::string m_vpcId;
-                    bool m_vpcIdHasBeenSet;
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
+                private:
 
                     /**
                      * The name of the flow log instance.
@@ -183,7 +196,7 @@ namespace TencentCloud
                     bool m_flowLogNameHasBeenSet;
 
                     /**
-                     * The type of resources to which the flow log belongs. Valid values: 'VPC', 'SUBNET' and 'NETWORKINTERFACE'.
+                     * The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
                      */
                     std::string m_resourceType;
                     bool m_resourceTypeHasBeenSet;
@@ -207,10 +220,22 @@ namespace TencentCloud
                     bool m_cloudLogIdHasBeenSet;
 
                     /**
+                     * The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
+                     */
+                    std::string m_vpcId;
+                    bool m_vpcIdHasBeenSet;
+
+                    /**
                      * The description of the flow log instance
                      */
                     std::string m_flowLogDescription;
                     bool m_flowLogDescriptionHasBeenSet;
+
+                    /**
+                     * Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

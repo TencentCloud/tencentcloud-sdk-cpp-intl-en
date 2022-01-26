@@ -18,19 +18,22 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 MediaProcessTaskTranscodeResult::MediaProcessTaskTranscodeResult() :
     m_statusHasBeenSet(false),
+    m_errCodeExtHasBeenSet(false),
     m_errCodeHasBeenSet(false),
     m_messageHasBeenSet(false),
     m_inputHasBeenSet(false),
-    m_outputHasBeenSet(false)
+    m_outputHasBeenSet(false),
+    m_progressHasBeenSet(false),
+    m_beginProcessTimeHasBeenSet(false),
+    m_finishTimeHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome MediaProcessTaskTranscodeResult::Deserialize(const Value &value)
+CoreInternalOutcome MediaProcessTaskTranscodeResult::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -39,17 +42,27 @@ CoreInternalOutcome MediaProcessTaskTranscodeResult::Deserialize(const Value &va
     {
         if (!value["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaProcessTaskTranscodeResult.Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaProcessTaskTranscodeResult.Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(value["Status"].GetString());
         m_statusHasBeenSet = true;
+    }
+
+    if (value.HasMember("ErrCodeExt") && !value["ErrCodeExt"].IsNull())
+    {
+        if (!value["ErrCodeExt"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `MediaProcessTaskTranscodeResult.ErrCodeExt` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_errCodeExt = string(value["ErrCodeExt"].GetString());
+        m_errCodeExtHasBeenSet = true;
     }
 
     if (value.HasMember("ErrCode") && !value["ErrCode"].IsNull())
     {
         if (!value["ErrCode"].IsInt64())
         {
-            return CoreInternalOutcome(Error("response `MediaProcessTaskTranscodeResult.ErrCode` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaProcessTaskTranscodeResult.ErrCode` IsInt64=false incorrectly").SetRequestId(requestId));
         }
         m_errCode = value["ErrCode"].GetInt64();
         m_errCodeHasBeenSet = true;
@@ -59,7 +72,7 @@ CoreInternalOutcome MediaProcessTaskTranscodeResult::Deserialize(const Value &va
     {
         if (!value["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `MediaProcessTaskTranscodeResult.Message` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaProcessTaskTranscodeResult.Message` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_message = string(value["Message"].GetString());
         m_messageHasBeenSet = true;
@@ -69,7 +82,7 @@ CoreInternalOutcome MediaProcessTaskTranscodeResult::Deserialize(const Value &va
     {
         if (!value["Input"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaProcessTaskTranscodeResult.Input` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaProcessTaskTranscodeResult.Input` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_input.Deserialize(value["Input"]);
@@ -86,7 +99,7 @@ CoreInternalOutcome MediaProcessTaskTranscodeResult::Deserialize(const Value &va
     {
         if (!value["Output"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `MediaProcessTaskTranscodeResult.Output` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `MediaProcessTaskTranscodeResult.Output` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_output.Deserialize(value["Output"]);
@@ -99,24 +112,62 @@ CoreInternalOutcome MediaProcessTaskTranscodeResult::Deserialize(const Value &va
         m_outputHasBeenSet = true;
     }
 
+    if (value.HasMember("Progress") && !value["Progress"].IsNull())
+    {
+        if (!value["Progress"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `MediaProcessTaskTranscodeResult.Progress` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_progress = value["Progress"].GetInt64();
+        m_progressHasBeenSet = true;
+    }
+
+    if (value.HasMember("BeginProcessTime") && !value["BeginProcessTime"].IsNull())
+    {
+        if (!value["BeginProcessTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `MediaProcessTaskTranscodeResult.BeginProcessTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_beginProcessTime = string(value["BeginProcessTime"].GetString());
+        m_beginProcessTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("FinishTime") && !value["FinishTime"].IsNull())
+    {
+        if (!value["FinishTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `MediaProcessTaskTranscodeResult.FinishTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_finishTime = string(value["FinishTime"].GetString());
+        m_finishTimeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-void MediaProcessTaskTranscodeResult::ToJsonObject(Value &value, Document::AllocatorType& allocator) const
+void MediaProcessTaskTranscodeResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_statusHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_status.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_errCodeExtHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ErrCodeExt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_errCodeExt.c_str(), allocator).Move(), allocator);
     }
 
     if (m_errCodeHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ErrCode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_errCode, allocator);
@@ -124,28 +175,52 @@ void MediaProcessTaskTranscodeResult::ToJsonObject(Value &value, Document::Alloc
 
     if (m_messageHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Message";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(m_message.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_message.c_str(), allocator).Move(), allocator);
     }
 
     if (m_inputHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Input";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_input.ToJsonObject(value[key.c_str()], allocator);
     }
 
     if (m_outputHasBeenSet)
     {
-        Value iKey(kStringType);
+        rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Output";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, Value(kObjectType).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_output.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_progressHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Progress";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_progress, allocator);
+    }
+
+    if (m_beginProcessTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BeginProcessTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_beginProcessTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_finishTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FinishTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_finishTime.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -165,6 +240,22 @@ void MediaProcessTaskTranscodeResult::SetStatus(const string& _status)
 bool MediaProcessTaskTranscodeResult::StatusHasBeenSet() const
 {
     return m_statusHasBeenSet;
+}
+
+string MediaProcessTaskTranscodeResult::GetErrCodeExt() const
+{
+    return m_errCodeExt;
+}
+
+void MediaProcessTaskTranscodeResult::SetErrCodeExt(const string& _errCodeExt)
+{
+    m_errCodeExt = _errCodeExt;
+    m_errCodeExtHasBeenSet = true;
+}
+
+bool MediaProcessTaskTranscodeResult::ErrCodeExtHasBeenSet() const
+{
+    return m_errCodeExtHasBeenSet;
 }
 
 int64_t MediaProcessTaskTranscodeResult::GetErrCode() const
@@ -229,5 +320,53 @@ void MediaProcessTaskTranscodeResult::SetOutput(const MediaTranscodeItem& _outpu
 bool MediaProcessTaskTranscodeResult::OutputHasBeenSet() const
 {
     return m_outputHasBeenSet;
+}
+
+int64_t MediaProcessTaskTranscodeResult::GetProgress() const
+{
+    return m_progress;
+}
+
+void MediaProcessTaskTranscodeResult::SetProgress(const int64_t& _progress)
+{
+    m_progress = _progress;
+    m_progressHasBeenSet = true;
+}
+
+bool MediaProcessTaskTranscodeResult::ProgressHasBeenSet() const
+{
+    return m_progressHasBeenSet;
+}
+
+string MediaProcessTaskTranscodeResult::GetBeginProcessTime() const
+{
+    return m_beginProcessTime;
+}
+
+void MediaProcessTaskTranscodeResult::SetBeginProcessTime(const string& _beginProcessTime)
+{
+    m_beginProcessTime = _beginProcessTime;
+    m_beginProcessTimeHasBeenSet = true;
+}
+
+bool MediaProcessTaskTranscodeResult::BeginProcessTimeHasBeenSet() const
+{
+    return m_beginProcessTimeHasBeenSet;
+}
+
+string MediaProcessTaskTranscodeResult::GetFinishTime() const
+{
+    return m_finishTime;
+}
+
+void MediaProcessTaskTranscodeResult::SetFinishTime(const string& _finishTime)
+{
+    m_finishTime = _finishTime;
+    m_finishTimeHasBeenSet = true;
+}
+
+bool MediaProcessTaskTranscodeResult::FinishTimeHasBeenSet() const
+{
+    return m_finishTimeHasBeenSet;
 }
 

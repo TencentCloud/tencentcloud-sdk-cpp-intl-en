@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Project ID. You can use the [project list querying API](https://cloud.tencent.com/document/product/378/4400) to query the project ID.
-                     * @return ProjectId Project ID. You can use the [project list querying API](https://cloud.tencent.com/document/product/378/4400) to query the project ID.
+                     * 获取Project ID.
+                     * @return ProjectId Project ID.
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID. You can use the [project list querying API](https://cloud.tencent.com/document/product/378/4400) to query the project ID.
-                     * @param ProjectId Project ID. You can use the [project list querying API](https://cloud.tencent.com/document/product/378/4400) to query the project ID.
+                     * 设置Project ID.
+                     * @param ProjectId Project ID.
                      */
                     void SetProjectId(const int64_t& _projectId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only).
-                     * @return InstanceTypes Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only).
+                     * 获取Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
+                     * @return InstanceTypes Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
                      */
                     std::vector<uint64_t> GetInstanceTypes() const;
 
                     /**
-                     * 设置Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only).
-                     * @param InstanceTypes Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only).
+                     * 设置Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
+                     * @param InstanceTypes Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
                      */
                     void SetInstanceTypes(const std::vector<uint64_t>& _instanceTypes);
 
@@ -205,14 +205,14 @@ namespace TencentCloud
                     bool InstanceNamesHasBeenSet() const;
 
                     /**
-                     * 获取Instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating slave <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance <br>15 - pending upgrade and switch <br>16 - upgrade and switch in progress <br>17 - upgrade and switch completed
-                     * @return TaskStatus Instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating slave <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance <br>15 - pending upgrade and switch <br>16 - upgrade and switch in progress <br>17 - upgrade and switch completed
+                     * 获取Instance task status. Valid values: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - enabling secondary instance access <br>4 - enabling public network access <br>5 - batch operation in progress <br>6 - rolling back <br>7 - disabling public network access <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built database <br>13 - dropping tables <br>14 - Disaster recovery instance creating sync task <br>15 - waiting for switch <br>16 - switching <br>17 - upgrade and switch completed <br>19 - parameter settings to be executed
+                     * @return TaskStatus Instance task status. Valid values: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - enabling secondary instance access <br>4 - enabling public network access <br>5 - batch operation in progress <br>6 - rolling back <br>7 - disabling public network access <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built database <br>13 - dropping tables <br>14 - Disaster recovery instance creating sync task <br>15 - waiting for switch <br>16 - switching <br>17 - upgrade and switch completed <br>19 - parameter settings to be executed
                      */
                     std::vector<uint64_t> GetTaskStatus() const;
 
                     /**
-                     * 设置Instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating slave <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance <br>15 - pending upgrade and switch <br>16 - upgrade and switch in progress <br>17 - upgrade and switch completed
-                     * @param TaskStatus Instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating slave <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance <br>15 - pending upgrade and switch <br>16 - upgrade and switch in progress <br>17 - upgrade and switch completed
+                     * 设置Instance task status. Valid values: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - enabling secondary instance access <br>4 - enabling public network access <br>5 - batch operation in progress <br>6 - rolling back <br>7 - disabling public network access <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built database <br>13 - dropping tables <br>14 - Disaster recovery instance creating sync task <br>15 - waiting for switch <br>16 - switching <br>17 - upgrade and switch completed <br>19 - parameter settings to be executed
+                     * @param TaskStatus Instance task status. Valid values: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - enabling secondary instance access <br>4 - enabling public network access <br>5 - batch operation in progress <br>6 - rolling back <br>7 - disabling public network access <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built database <br>13 - dropping tables <br>14 - Disaster recovery instance creating sync task <br>15 - waiting for switch <br>16 - switching <br>17 - upgrade and switch completed <br>19 - parameter settings to be executed
                      */
                     void SetTaskStatus(const std::vector<uint64_t>& _taskStatus);
 
@@ -439,14 +439,14 @@ namespace TencentCloud
                     bool InitFlagHasBeenSet() const;
 
                     /**
-                     * 获取Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a master instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
-                     * @return WithDr Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a master instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
+                     * 获取Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a primary instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
+                     * @return WithDr Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a primary instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
                      */
                     int64_t GetWithDr() const;
 
                     /**
-                     * 设置Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a master instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
-                     * @param WithDr Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a master instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
+                     * 设置Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a primary instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
+                     * @param WithDr Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a primary instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
                      */
                     void SetWithDr(const int64_t& _withDr);
 
@@ -475,14 +475,14 @@ namespace TencentCloud
                     bool WithRoHasBeenSet() const;
 
                     /**
-                     * 获取Whether master instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
-                     * @return WithMaster Whether master instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+                     * 获取Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+                     * @return WithMaster Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
                      */
                     int64_t GetWithMaster() const;
 
                     /**
-                     * 设置Whether master instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
-                     * @param WithMaster Whether master instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+                     * 设置Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+                     * @param WithMaster Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
                      */
                     void SetWithMaster(const int64_t& _withMaster);
 
@@ -510,16 +510,52 @@ namespace TencentCloud
                      */
                     bool DeployGroupIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to use the tag key as a filter condition
+                     * @return TagKeysForSearch Whether to use the tag key as a filter condition
+                     */
+                    std::vector<std::string> GetTagKeysForSearch() const;
+
+                    /**
+                     * 设置Whether to use the tag key as a filter condition
+                     * @param TagKeysForSearch Whether to use the tag key as a filter condition
+                     */
+                    void SetTagKeysForSearch(const std::vector<std::string>& _tagKeysForSearch);
+
+                    /**
+                     * 判断参数 TagKeysForSearch 是否已赋值
+                     * @return TagKeysForSearch 是否已赋值
+                     */
+                    bool TagKeysForSearchHasBeenSet() const;
+
+                    /**
+                     * 获取Financial cage IDs.
+                     * @return CageIds Financial cage IDs.
+                     */
+                    std::vector<std::string> GetCageIds() const;
+
+                    /**
+                     * 设置Financial cage IDs.
+                     * @param CageIds Financial cage IDs.
+                     */
+                    void SetCageIds(const std::vector<std::string>& _cageIds);
+
+                    /**
+                     * 判断参数 CageIds 是否已赋值
+                     * @return CageIds 是否已赋值
+                     */
+                    bool CageIdsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Project ID. You can use the [project list querying API](https://cloud.tencent.com/document/product/378/4400) to query the project ID.
+                     * Project ID.
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only).
+                     * Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
                      */
                     std::vector<uint64_t> m_instanceTypes;
                     bool m_instanceTypesHasBeenSet;
@@ -567,7 +603,7 @@ namespace TencentCloud
                     bool m_instanceNamesHasBeenSet;
 
                     /**
-                     * Instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating slave <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance <br>15 - pending upgrade and switch <br>16 - upgrade and switch in progress <br>17 - upgrade and switch completed
+                     * Instance task status. Valid values: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - enabling secondary instance access <br>4 - enabling public network access <br>5 - batch operation in progress <br>6 - rolling back <br>7 - disabling public network access <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built database <br>13 - dropping tables <br>14 - Disaster recovery instance creating sync task <br>15 - waiting for switch <br>16 - switching <br>17 - upgrade and switch completed <br>19 - parameter settings to be executed
                      */
                     std::vector<uint64_t> m_taskStatus;
                     bool m_taskStatusHasBeenSet;
@@ -645,7 +681,7 @@ namespace TencentCloud
                     bool m_initFlagHasBeenSet;
 
                     /**
-                     * Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a master instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
+                     * Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a primary instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
                      */
                     int64_t m_withDr;
                     bool m_withDrHasBeenSet;
@@ -657,7 +693,7 @@ namespace TencentCloud
                     bool m_withRoHasBeenSet;
 
                     /**
-                     * Whether master instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+                     * Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
                      */
                     int64_t m_withMaster;
                     bool m_withMasterHasBeenSet;
@@ -667,6 +703,18 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_deployGroupIds;
                     bool m_deployGroupIdsHasBeenSet;
+
+                    /**
+                     * Whether to use the tag key as a filter condition
+                     */
+                    std::vector<std::string> m_tagKeysForSearch;
+                    bool m_tagKeysForSearchHasBeenSet;
+
+                    /**
+                     * Financial cage IDs.
+                     */
+                    std::vector<std::string> m_cageIds;
+                    bool m_cageIdsHasBeenSet;
 
                 };
             }

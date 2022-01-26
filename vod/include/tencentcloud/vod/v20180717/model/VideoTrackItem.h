@@ -49,14 +49,26 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Source of media material for video segment, which can be an ID of a VOD file or URL of another file.
-                     * @return SourceMedia Source of media material for video segment, which can be an ID of a VOD file or URL of another file.
+                     * 获取Source of media material for video segment, which can be:
+<li>ID of VOD media files</li>
+<li>Download URL of other media files.</li>
+Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
+                     * @return SourceMedia Source of media material for video segment, which can be:
+<li>ID of VOD media files</li>
+<li>Download URL of other media files.</li>
+Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
                      */
                     std::string GetSourceMedia() const;
 
                     /**
-                     * 设置Source of media material for video segment, which can be an ID of a VOD file or URL of another file.
-                     * @param SourceMedia Source of media material for video segment, which can be an ID of a VOD file or URL of another file.
+                     * 设置Source of media material for video segment, which can be:
+<li>ID of VOD media files</li>
+<li>Download URL of other media files.</li>
+Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
+                     * @param SourceMedia Source of media material for video segment, which can be:
+<li>ID of VOD media files</li>
+<li>Download URL of other media files.</li>
+Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
                      */
                     void SetSourceMedia(const std::string& _sourceMedia);
 
@@ -311,7 +323,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Source of media material for video segment, which can be an ID of a VOD file or URL of another file.
+                     * Source of media material for video segment, which can be:
+<li>ID of VOD media files</li>
+<li>Download URL of other media files.</li>
+Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
                      */
                     std::string m_sourceMedia;
                     bool m_sourceMediaHasBeenSet;

@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vod/v20180717/model/ComposeMediaTaskInput.h>
 #include <tencentcloud/vod/v20180717/model/ComposeMediaTaskOutput.h>
+#include <tencentcloud/vod/v20180717/model/MediaMetaData.h>
 
 
 namespace TencentCloud
@@ -149,6 +150,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MessageHasBeenSet() const;
 
                     /**
+                     * 获取Progress of a media file composing task. Value range: [0, 100]
+                     * @return Progress Progress of a media file composing task. Value range: [0, 100]
+                     */
+                    int64_t GetProgress() const;
+
+                    /**
+                     * 设置Progress of a media file composing task. Value range: [0, 100]
+                     * @param Progress Progress of a media file composing task. Value range: [0, 100]
+                     */
+                    void SetProgress(const int64_t& _progress);
+
+                    /**
+                     * 判断参数 Progress 是否已赋值
+                     * @return Progress 是否已赋值
+                     */
+                    bool ProgressHasBeenSet() const;
+
+                    /**
                      * 获取Input of media file composing task.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Input Input of media file composing task.
@@ -192,6 +211,64 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool OutputHasBeenSet() const;
 
+                    /**
+                     * 获取Metadata of a source video.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return MetaData Metadata of a source video.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    MediaMetaData GetMetaData() const;
+
+                    /**
+                     * 设置Metadata of a source video.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param MetaData Metadata of a source video.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetMetaData(const MediaMetaData& _metaData);
+
+                    /**
+                     * 判断参数 MetaData 是否已赋值
+                     * @return MetaData 是否已赋值
+                     */
+                    bool MetaDataHasBeenSet() const;
+
+                    /**
+                     * 获取ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
+                     * @return SessionId ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
+                     */
+                    std::string GetSessionId() const;
+
+                    /**
+                     * 设置ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
+                     * @param SessionId ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
+                     */
+                    void SetSessionId(const std::string& _sessionId);
+
+                    /**
+                     * 判断参数 SessionId 是否已赋值
+                     * @return SessionId 是否已赋值
+                     */
+                    bool SessionIdHasBeenSet() const;
+
+                    /**
+                     * 获取The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+                     * @return SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+                     */
+                    std::string GetSessionContext() const;
+
+                    /**
+                     * 设置The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+                     * @param SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+                     */
+                    void SetSessionContext(const std::string& _sessionContext);
+
+                    /**
+                     * 判断参数 SessionContext 是否已赋值
+                     * @return SessionContext 是否已赋值
+                     */
+                    bool SessionContextHasBeenSet() const;
+
                 private:
 
                     /**
@@ -226,6 +303,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_messageHasBeenSet;
 
                     /**
+                     * Progress of a media file composing task. Value range: [0, 100]
+                     */
+                    int64_t m_progress;
+                    bool m_progressHasBeenSet;
+
+                    /**
                      * Input of media file composing task.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
@@ -238,6 +321,25 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     ComposeMediaTaskOutput m_output;
                     bool m_outputHasBeenSet;
+
+                    /**
+                     * Metadata of a source video.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    MediaMetaData m_metaData;
+                    bool m_metaDataHasBeenSet;
+
+                    /**
+                     * ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
+                     */
+                    std::string m_sessionId;
+                    bool m_sessionIdHasBeenSet;
+
+                    /**
+                     * The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+                     */
+                    std::string m_sessionContext;
+                    bool m_sessionContextHasBeenSet;
 
                 };
             }

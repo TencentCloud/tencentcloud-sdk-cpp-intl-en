@@ -126,6 +126,28 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     bool RelatedTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Policy association time
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @return AttachmentTime Policy association time
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetAttachmentTime() const;
+
+                    /**
+                     * 设置Policy association time
+Note: this field may return `null`, indicating that no valid value was found.
+                     * @param AttachmentTime Policy association time
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetAttachmentTime(const std::string& _attachmentTime);
+
+                    /**
+                     * 判断参数 AttachmentTime 是否已赋值
+                     * @return AttachmentTime 是否已赋值
+                     */
+                    bool AttachmentTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -153,6 +175,13 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     uint64_t m_relatedType;
                     bool m_relatedTypeHasBeenSet;
+
+                    /**
+                     * Policy association time
+Note: this field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_attachmentTime;
+                    bool m_attachmentTimeHasBeenSet;
 
                 };
             }

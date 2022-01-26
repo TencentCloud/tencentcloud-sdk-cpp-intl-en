@@ -41,6 +41,7 @@ namespace TencentCloud
                     DescribeLiveDomainsResponse();
                     ~DescribeLiveDomainsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
 
 
                     /**
@@ -67,6 +68,20 @@ namespace TencentCloud
                      */
                     bool DomainListHasBeenSet() const;
 
+                    /**
+                     * 获取The number of domain names that can be added
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return CreateLimitCount The number of domain names that can be added
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetCreateLimitCount() const;
+
+                    /**
+                     * 判断参数 CreateLimitCount 是否已赋值
+                     * @return CreateLimitCount 是否已赋值
+                     */
+                    bool CreateLimitCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -80,6 +95,13 @@ namespace TencentCloud
                      */
                     std::vector<DomainInfo> m_domainList;
                     bool m_domainListHasBeenSet;
+
+                    /**
+                     * The number of domain names that can be added
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_createLimitCount;
+                    bool m_createLimitCountHasBeenSet;
 
                 };
             }

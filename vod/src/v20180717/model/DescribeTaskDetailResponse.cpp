@@ -21,7 +21,6 @@
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
-using namespace rapidjson;
 using namespace std;
 
 DescribeTaskDetailResponse::DescribeTaskDetailResponse() :
@@ -34,32 +33,33 @@ DescribeTaskDetailResponse::DescribeTaskDetailResponse() :
     m_editMediaTaskHasBeenSet(false),
     m_wechatPublishTaskHasBeenSet(false),
     m_composeMediaTaskHasBeenSet(false),
+    m_splitMediaTaskHasBeenSet(false),
+    m_wechatMiniProgramPublishTaskHasBeenSet(false),
     m_pullUploadTaskHasBeenSet(false),
     m_transcodeTaskHasBeenSet(false),
-    m_snapshotByTimeOffsetTaskHasBeenSet(false),
     m_concatTaskHasBeenSet(false),
     m_clipTaskHasBeenSet(false),
     m_createImageSpriteTaskHasBeenSet(false),
-    m_wechatMiniProgramPublishTaskHasBeenSet(false)
+    m_snapshotByTimeOffsetTaskHasBeenSet(false)
 {
 }
 
 CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payload)
 {
-    Document d;
+    rapidjson::Document d;
     d.Parse(payload.c_str());
     if (d.HasParseError() || !d.IsObject())
     {
-        return CoreInternalOutcome(Error("response not json format"));
+        return CoreInternalOutcome(Core::Error("response not json format"));
     }
     if (!d.HasMember("Response") || !d["Response"].IsObject())
     {
-        return CoreInternalOutcome(Error("response `Response` is null or not object"));
+        return CoreInternalOutcome(Core::Error("response `Response` is null or not object"));
     }
-    Value &rsp = d["Response"];
+    rapidjson::Value &rsp = d["Response"];
     if (!rsp.HasMember("RequestId") || !rsp["RequestId"].IsString())
     {
-        return CoreInternalOutcome(Error("response `Response.RequestId` is null or not string"));
+        return CoreInternalOutcome(Core::Error("response `Response.RequestId` is null or not string"));
     }
     string requestId(rsp["RequestId"].GetString());
     SetRequestId(requestId);
@@ -70,11 +70,11 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
             !rsp["Error"].HasMember("Code") || !rsp["Error"]["Code"].IsString() ||
             !rsp["Error"].HasMember("Message") || !rsp["Error"]["Message"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Response.Error` format error").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Response.Error` format error").SetRequestId(requestId));
         }
         string errorCode(rsp["Error"]["Code"].GetString());
         string errorMsg(rsp["Error"]["Message"].GetString());
-        return CoreInternalOutcome(Error(errorCode, errorMsg).SetRequestId(requestId));
+        return CoreInternalOutcome(Core::Error(errorCode, errorMsg).SetRequestId(requestId));
     }
 
 
@@ -82,7 +82,7 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
     {
         if (!rsp["TaskType"].IsString())
         {
-            return CoreInternalOutcome(Error("response `TaskType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskType` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_taskType = string(rsp["TaskType"].GetString());
         m_taskTypeHasBeenSet = true;
@@ -92,7 +92,7 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
     {
         if (!rsp["Status"].IsString())
         {
-            return CoreInternalOutcome(Error("response `Status` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Status` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_status = string(rsp["Status"].GetString());
         m_statusHasBeenSet = true;
@@ -102,7 +102,7 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
     {
         if (!rsp["CreateTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `CreateTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CreateTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_createTime = string(rsp["CreateTime"].GetString());
         m_createTimeHasBeenSet = true;
@@ -112,7 +112,7 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
     {
         if (!rsp["BeginProcessTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `BeginProcessTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `BeginProcessTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_beginProcessTime = string(rsp["BeginProcessTime"].GetString());
         m_beginProcessTimeHasBeenSet = true;
@@ -122,7 +122,7 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
     {
         if (!rsp["FinishTime"].IsString())
         {
-            return CoreInternalOutcome(Error("response `FinishTime` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FinishTime` IsString=false incorrectly").SetRequestId(requestId));
         }
         m_finishTime = string(rsp["FinishTime"].GetString());
         m_finishTimeHasBeenSet = true;
@@ -132,7 +132,7 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
     {
         if (!rsp["ProcedureTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `ProcedureTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ProcedureTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_procedureTask.Deserialize(rsp["ProcedureTask"]);
@@ -149,7 +149,7 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
     {
         if (!rsp["EditMediaTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `EditMediaTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `EditMediaTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_editMediaTask.Deserialize(rsp["EditMediaTask"]);
@@ -166,7 +166,7 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
     {
         if (!rsp["WechatPublishTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `WechatPublishTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `WechatPublishTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_wechatPublishTask.Deserialize(rsp["WechatPublishTask"]);
@@ -183,7 +183,7 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
     {
         if (!rsp["ComposeMediaTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `ComposeMediaTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ComposeMediaTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_composeMediaTask.Deserialize(rsp["ComposeMediaTask"]);
@@ -196,11 +196,45 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
         m_composeMediaTaskHasBeenSet = true;
     }
 
+    if (rsp.HasMember("SplitMediaTask") && !rsp["SplitMediaTask"].IsNull())
+    {
+        if (!rsp["SplitMediaTask"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `SplitMediaTask` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_splitMediaTask.Deserialize(rsp["SplitMediaTask"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_splitMediaTaskHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("WechatMiniProgramPublishTask") && !rsp["WechatMiniProgramPublishTask"].IsNull())
+    {
+        if (!rsp["WechatMiniProgramPublishTask"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `WechatMiniProgramPublishTask` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_wechatMiniProgramPublishTask.Deserialize(rsp["WechatMiniProgramPublishTask"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_wechatMiniProgramPublishTaskHasBeenSet = true;
+    }
+
     if (rsp.HasMember("PullUploadTask") && !rsp["PullUploadTask"].IsNull())
     {
         if (!rsp["PullUploadTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `PullUploadTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `PullUploadTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_pullUploadTask.Deserialize(rsp["PullUploadTask"]);
@@ -217,7 +251,7 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
     {
         if (!rsp["TranscodeTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `TranscodeTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TranscodeTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_transcodeTask.Deserialize(rsp["TranscodeTask"]);
@@ -230,28 +264,11 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
         m_transcodeTaskHasBeenSet = true;
     }
 
-    if (rsp.HasMember("SnapshotByTimeOffsetTask") && !rsp["SnapshotByTimeOffsetTask"].IsNull())
-    {
-        if (!rsp["SnapshotByTimeOffsetTask"].IsObject())
-        {
-            return CoreInternalOutcome(Error("response `SnapshotByTimeOffsetTask` is not object type").SetRequestId(requestId));
-        }
-
-        CoreInternalOutcome outcome = m_snapshotByTimeOffsetTask.Deserialize(rsp["SnapshotByTimeOffsetTask"]);
-        if (!outcome.IsSuccess())
-        {
-            outcome.GetError().SetRequestId(requestId);
-            return outcome;
-        }
-
-        m_snapshotByTimeOffsetTaskHasBeenSet = true;
-    }
-
     if (rsp.HasMember("ConcatTask") && !rsp["ConcatTask"].IsNull())
     {
         if (!rsp["ConcatTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `ConcatTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ConcatTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_concatTask.Deserialize(rsp["ConcatTask"]);
@@ -268,7 +285,7 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
     {
         if (!rsp["ClipTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `ClipTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ClipTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_clipTask.Deserialize(rsp["ClipTask"]);
@@ -285,7 +302,7 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
     {
         if (!rsp["CreateImageSpriteTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `CreateImageSpriteTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CreateImageSpriteTask` is not object type").SetRequestId(requestId));
         }
 
         CoreInternalOutcome outcome = m_createImageSpriteTask.Deserialize(rsp["CreateImageSpriteTask"]);
@@ -298,25 +315,190 @@ CoreInternalOutcome DescribeTaskDetailResponse::Deserialize(const string &payloa
         m_createImageSpriteTaskHasBeenSet = true;
     }
 
-    if (rsp.HasMember("WechatMiniProgramPublishTask") && !rsp["WechatMiniProgramPublishTask"].IsNull())
+    if (rsp.HasMember("SnapshotByTimeOffsetTask") && !rsp["SnapshotByTimeOffsetTask"].IsNull())
     {
-        if (!rsp["WechatMiniProgramPublishTask"].IsObject())
+        if (!rsp["SnapshotByTimeOffsetTask"].IsObject())
         {
-            return CoreInternalOutcome(Error("response `WechatMiniProgramPublishTask` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `SnapshotByTimeOffsetTask` is not object type").SetRequestId(requestId));
         }
 
-        CoreInternalOutcome outcome = m_wechatMiniProgramPublishTask.Deserialize(rsp["WechatMiniProgramPublishTask"]);
+        CoreInternalOutcome outcome = m_snapshotByTimeOffsetTask.Deserialize(rsp["SnapshotByTimeOffsetTask"]);
         if (!outcome.IsSuccess())
         {
             outcome.GetError().SetRequestId(requestId);
             return outcome;
         }
 
-        m_wechatMiniProgramPublishTaskHasBeenSet = true;
+        m_snapshotByTimeOffsetTaskHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
+}
+
+string DescribeTaskDetailResponse::ToJsonString() const
+{
+    rapidjson::Document value;
+    value.SetObject();
+    rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_taskTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TaskType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_taskType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_statusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Status";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_createTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CreateTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_beginProcessTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BeginProcessTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_beginProcessTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_finishTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FinishTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_finishTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_procedureTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProcedureTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_procedureTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_editMediaTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EditMediaTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_editMediaTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_wechatPublishTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WechatPublishTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_wechatPublishTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_composeMediaTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ComposeMediaTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_composeMediaTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_splitMediaTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SplitMediaTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_splitMediaTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_wechatMiniProgramPublishTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WechatMiniProgramPublishTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_wechatMiniProgramPublishTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_pullUploadTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PullUploadTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_pullUploadTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_transcodeTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TranscodeTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_transcodeTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_concatTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ConcatTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_concatTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_clipTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClipTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_clipTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_createImageSpriteTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CreateImageSpriteTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_createImageSpriteTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_snapshotByTimeOffsetTaskHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SnapshotByTimeOffsetTask";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_snapshotByTimeOffsetTask.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    rapidjson::Value iKey(rapidjson::kStringType);
+    string key = "RequestId";
+    iKey.SetString(key.c_str(), allocator);
+    value.AddMember(iKey, rapidjson::Value().SetString(GetRequestId().c_str(), allocator), allocator);
+    
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+    return buffer.GetString();
 }
 
 
@@ -410,6 +592,26 @@ bool DescribeTaskDetailResponse::ComposeMediaTaskHasBeenSet() const
     return m_composeMediaTaskHasBeenSet;
 }
 
+SplitMediaTask DescribeTaskDetailResponse::GetSplitMediaTask() const
+{
+    return m_splitMediaTask;
+}
+
+bool DescribeTaskDetailResponse::SplitMediaTaskHasBeenSet() const
+{
+    return m_splitMediaTaskHasBeenSet;
+}
+
+WechatMiniProgramPublishTask DescribeTaskDetailResponse::GetWechatMiniProgramPublishTask() const
+{
+    return m_wechatMiniProgramPublishTask;
+}
+
+bool DescribeTaskDetailResponse::WechatMiniProgramPublishTaskHasBeenSet() const
+{
+    return m_wechatMiniProgramPublishTaskHasBeenSet;
+}
+
 PullUploadTask DescribeTaskDetailResponse::GetPullUploadTask() const
 {
     return m_pullUploadTask;
@@ -428,16 +630,6 @@ TranscodeTask2017 DescribeTaskDetailResponse::GetTranscodeTask() const
 bool DescribeTaskDetailResponse::TranscodeTaskHasBeenSet() const
 {
     return m_transcodeTaskHasBeenSet;
-}
-
-SnapshotByTimeOffsetTask2017 DescribeTaskDetailResponse::GetSnapshotByTimeOffsetTask() const
-{
-    return m_snapshotByTimeOffsetTask;
-}
-
-bool DescribeTaskDetailResponse::SnapshotByTimeOffsetTaskHasBeenSet() const
-{
-    return m_snapshotByTimeOffsetTaskHasBeenSet;
 }
 
 ConcatTask2017 DescribeTaskDetailResponse::GetConcatTask() const
@@ -470,14 +662,14 @@ bool DescribeTaskDetailResponse::CreateImageSpriteTaskHasBeenSet() const
     return m_createImageSpriteTaskHasBeenSet;
 }
 
-WechatMiniProgramPublishTask DescribeTaskDetailResponse::GetWechatMiniProgramPublishTask() const
+SnapshotByTimeOffsetTask2017 DescribeTaskDetailResponse::GetSnapshotByTimeOffsetTask() const
 {
-    return m_wechatMiniProgramPublishTask;
+    return m_snapshotByTimeOffsetTask;
 }
 
-bool DescribeTaskDetailResponse::WechatMiniProgramPublishTaskHasBeenSet() const
+bool DescribeTaskDetailResponse::SnapshotByTimeOffsetTaskHasBeenSet() const
 {
-    return m_wechatMiniProgramPublishTaskHasBeenSet;
+    return m_snapshotByTimeOffsetTaskHasBeenSet;
 }
 
 

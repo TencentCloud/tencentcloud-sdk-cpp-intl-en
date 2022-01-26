@@ -110,18 +110,18 @@ Note: This field may return null, indicating that no valid value was found.
                     bool ProjectNameHasBeenSet() const;
 
                     /**
-                     * 获取Alarm status ID.
-Note: This field may return null, indicating that no valid value was found.
-                     * @return Status Alarm status ID.
-Note: This field may return null, indicating that no valid value was found.
+                     * 获取Alarm status ID. Valid values: 0 (not resolved), 1 (resolved), 2/3/5 (insufficient data), 4 (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return Status Alarm status ID. Valid values: 0 (not resolved), 1 (resolved), 2/3/5 (insufficient data), 4 (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Alarm status ID.
-Note: This field may return null, indicating that no valid value was found.
-                     * @param Status Alarm status ID.
-Note: This field may return null, indicating that no valid value was found.
+                     * 设置Alarm status ID. Valid values: 0 (not resolved), 1 (resolved), 2/3/5 (insufficient data), 4 (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param Status Alarm status ID. Valid values: 0 (not resolved), 1 (resolved), 2/3/5 (insufficient data), 4 (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetStatus(const int64_t& _status);
 
@@ -132,18 +132,18 @@ Note: This field may return null, indicating that no valid value was found.
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Alarm status.
-Note: This field may return null, indicating that no valid value was found.
-                     * @return AlarmStatus Alarm status.
-Note: This field may return null, indicating that no valid value was found.
+                     * 获取Alarm status. Valid values: ALARM (not resolved), OK (resolved), NO_DATA (insufficient data), NO_CONF (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return AlarmStatus Alarm status. Valid values: ALARM (not resolved), OK (resolved), NO_DATA (insufficient data), NO_CONF (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetAlarmStatus() const;
 
                     /**
-                     * 设置Alarm status.
-Note: This field may return null, indicating that no valid value was found.
-                     * @param AlarmStatus Alarm status.
-Note: This field may return null, indicating that no valid value was found.
+                     * 设置Alarm status. Valid values: ALARM (not resolved), OK (resolved), NO_DATA (insufficient data), NO_CONF (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param AlarmStatus Alarm status. Valid values: ALARM (not resolved), OK (resolved), NO_DATA (insufficient data), NO_CONF (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     void SetAlarmStatus(const std::string& _alarmStatus);
 
@@ -550,15 +550,15 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_projectNameHasBeenSet;
 
                     /**
-                     * Alarm status ID.
-Note: This field may return null, indicating that no valid value was found.
+                     * Alarm status ID. Valid values: 0 (not resolved), 1 (resolved), 2/3/5 (insufficient data), 4 (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Alarm status.
-Note: This field may return null, indicating that no valid value was found.
+                     * Alarm status. Valid values: ALARM (not resolved), OK (resolved), NO_DATA (insufficient data), NO_CONF (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_alarmStatus;
                     bool m_alarmStatusHasBeenSet;

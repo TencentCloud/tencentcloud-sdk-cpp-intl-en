@@ -29,6 +29,7 @@
 #include <tencentcloud/ecdn/v20191012/model/Cache.h>
 #include <tencentcloud/ecdn/v20191012/model/Https.h>
 #include <tencentcloud/ecdn/v20191012/model/ForceRedirect.h>
+#include <tencentcloud/ecdn/v20191012/model/WebSocket.h>
 
 
 namespace TencentCloud
@@ -105,14 +106,14 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取IP blacklist/whitelist configuration.
-                     * @return IpFilter IP blacklist/whitelist configuration.
+                     * 获取IP blocklist/allowlist configuration.
+                     * @return IpFilter IP blocklist/allowlist configuration.
                      */
                     IpFilter GetIpFilter() const;
 
                     /**
-                     * 设置IP blacklist/whitelist configuration.
-                     * @param IpFilter IP blacklist/whitelist configuration.
+                     * 设置IP blocklist/allowlist configuration.
+                     * @param IpFilter IP blocklist/allowlist configuration.
                      */
                     void SetIpFilter(const IpFilter& _ipFilter);
 
@@ -248,6 +249,24 @@ namespace TencentCloud
                      */
                     bool AreaHasBeenSet() const;
 
+                    /**
+                     * 获取WebSocket configuration.
+                     * @return WebSocket WebSocket configuration.
+                     */
+                    WebSocket GetWebSocket() const;
+
+                    /**
+                     * 设置WebSocket configuration.
+                     * @param WebSocket WebSocket configuration.
+                     */
+                    void SetWebSocket(const WebSocket& _webSocket);
+
+                    /**
+                     * 判断参数 WebSocket 是否已赋值
+                     * @return WebSocket 是否已赋值
+                     */
+                    bool WebSocketHasBeenSet() const;
+
                 private:
 
                     /**
@@ -269,7 +288,7 @@ namespace TencentCloud
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * IP blacklist/whitelist configuration.
+                     * IP blocklist/allowlist configuration.
                      */
                     IpFilter m_ipFilter;
                     bool m_ipFilterHasBeenSet;
@@ -315,6 +334,12 @@ namespace TencentCloud
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
+
+                    /**
+                     * WebSocket configuration.
+                     */
+                    WebSocket m_webSocket;
+                    bool m_webSocketHasBeenSet;
 
                 };
             }

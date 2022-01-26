@@ -21,8 +21,8 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/gaap/v20180529/model/TagPair.h>
 #include <tencentcloud/gaap/v20180529/model/Filter.h>
+#include <tencentcloud/gaap/v20180529/model/TagPair.h>
 
 
 namespace TencentCloud
@@ -111,6 +111,36 @@ Other values: specified project
                     bool ProjectIdHasBeenSet() const;
 
                     /**
+                     * 获取Filter condition   
+Each request can have a maximum of 5 filter conditions for `Filter.Values`.
+RealServerRegion - String - Required: No - Filter by origin server region. You can also check the value of `RegionId` returned by the `DescribeDestRegions` API.
+PackageType - String - Required: No - Filter by type of connection groups, which can be `Thunder` (general connection group) or `Accelerator` (game accelerator connection group).
+                     * @return Filters Filter condition   
+Each request can have a maximum of 5 filter conditions for `Filter.Values`.
+RealServerRegion - String - Required: No - Filter by origin server region. You can also check the value of `RegionId` returned by the `DescribeDestRegions` API.
+PackageType - String - Required: No - Filter by type of connection groups, which can be `Thunder` (general connection group) or `Accelerator` (game accelerator connection group).
+                     */
+                    std::vector<Filter> GetFilters() const;
+
+                    /**
+                     * 设置Filter condition   
+Each request can have a maximum of 5 filter conditions for `Filter.Values`.
+RealServerRegion - String - Required: No - Filter by origin server region. You can also check the value of `RegionId` returned by the `DescribeDestRegions` API.
+PackageType - String - Required: No - Filter by type of connection groups, which can be `Thunder` (general connection group) or `Accelerator` (game accelerator connection group).
+                     * @param Filters Filter condition   
+Each request can have a maximum of 5 filter conditions for `Filter.Values`.
+RealServerRegion - String - Required: No - Filter by origin server region. You can also check the value of `RegionId` returned by the `DescribeDestRegions` API.
+PackageType - String - Required: No - Filter by type of connection groups, which can be `Thunder` (general connection group) or `Accelerator` (game accelerator connection group).
+                     */
+                    void SetFilters(const std::vector<Filter>& _filters);
+
+                    /**
+                     * 判断参数 Filters 是否已赋值
+                     * @return Filters 是否已赋值
+                     */
+                    bool FiltersHasBeenSet() const;
+
+                    /**
                      * 获取Tag list. If this field exists, the list of the resources with the tag will be pulled.
 It supports up to 5 tags. If there are two or more tags, the connection groups tagged any of them will be pulled.
                      * @return TagSet Tag list. If this field exists, the list of the resources with the tag will be pulled.
@@ -131,32 +161,6 @@ It supports up to 5 tags. If there are two or more tags, the connection groups t
                      * @return TagSet 是否已赋值
                      */
                     bool TagSetHasBeenSet() const;
-
-                    /**
-                     * 获取Filter conditions.   
-The limit on Filter.Values of each request is 5.
-RealServerRegion - String - Required: No - Filter by origin server region; Refer to the RegionId in the results returned by DescribeDestRegions API.
-                     * @return Filters Filter conditions.   
-The limit on Filter.Values of each request is 5.
-RealServerRegion - String - Required: No - Filter by origin server region; Refer to the RegionId in the results returned by DescribeDestRegions API.
-                     */
-                    std::vector<Filter> GetFilters() const;
-
-                    /**
-                     * 设置Filter conditions.   
-The limit on Filter.Values of each request is 5.
-RealServerRegion - String - Required: No - Filter by origin server region; Refer to the RegionId in the results returned by DescribeDestRegions API.
-                     * @param Filters Filter conditions.   
-The limit on Filter.Values of each request is 5.
-RealServerRegion - String - Required: No - Filter by origin server region; Refer to the RegionId in the results returned by DescribeDestRegions API.
-                     */
-                    void SetFilters(const std::vector<Filter>& _filters);
-
-                    /**
-                     * 判断参数 Filters 是否已赋值
-                     * @return Filters 是否已赋值
-                     */
-                    bool FiltersHasBeenSet() const;
 
                 private:
 
@@ -182,19 +186,20 @@ Other values: specified project
                     bool m_projectIdHasBeenSet;
 
                     /**
+                     * Filter condition   
+Each request can have a maximum of 5 filter conditions for `Filter.Values`.
+RealServerRegion - String - Required: No - Filter by origin server region. You can also check the value of `RegionId` returned by the `DescribeDestRegions` API.
+PackageType - String - Required: No - Filter by type of connection groups, which can be `Thunder` (general connection group) or `Accelerator` (game accelerator connection group).
+                     */
+                    std::vector<Filter> m_filters;
+                    bool m_filtersHasBeenSet;
+
+                    /**
                      * Tag list. If this field exists, the list of the resources with the tag will be pulled.
 It supports up to 5 tags. If there are two or more tags, the connection groups tagged any of them will be pulled.
                      */
                     std::vector<TagPair> m_tagSet;
                     bool m_tagSetHasBeenSet;
-
-                    /**
-                     * Filter conditions.   
-The limit on Filter.Values of each request is 5.
-RealServerRegion - String - Required: No - Filter by origin server region; Refer to the RegionId in the results returned by DescribeDestRegions API.
-                     */
-                    std::vector<Filter> m_filters;
-                    bool m_filtersHasBeenSet;
 
                 };
             }
